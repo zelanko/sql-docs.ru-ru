@@ -1,0 +1,58 @@
+---
+title: "Редактор источника &#171;XML&#187; (страница &#171;Вывод ошибок&#187;) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/01/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.xmlsourceadapter.erroroutput.f1"
+helpviewer_keywords: 
+  - "Редактор источника «XML»"
+ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
+caps.latest.revision: 18
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 18
+---
+# Редактор источника &#171;XML&#187; (страница &#171;Вывод ошибок&#187;)
+  Используйте страницу **Вывод ошибок** диалогового окна **Редактор источника «XML»** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
+  
+ Дополнительные сведения об источнике XML см. в разделе [XML Source](../../integration-services/data-flow/xml-source.md).  
+  
+## Параметры  
+ **Ввод-вывод**  
+ Просмотр имени источника данных.  
+  
+ **Столбец**  
+ Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника "XML"**.  
+  
+ **Ошибка**  
+ Задайте действие, которое необходимо выполнить при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
+  
+ **См. также:** [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Усечение**  
+ Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
+  
+ **Description**  
+ Просмотреть описание ошибки.  
+  
+ **Присвоить указанное значение выбранным ячейкам**  
+ Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
+  
+ **Применить**  
+ Применить параметр обработки ошибок к выбранным ячейкам.  
+  
+## См. также  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "XML" (страница "Диспетчер подключений")](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)   
+ [Редактор источника "XML" (страница "Столбцы")](../../integration-services/data-flow/xml-source-editor-columns-page.md)   
+ [Извлечение данных с помощью XML-источника](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+  
+  

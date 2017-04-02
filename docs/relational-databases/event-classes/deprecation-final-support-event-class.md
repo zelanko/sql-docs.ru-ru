@@ -1,0 +1,60 @@
+---
+title: "Класс событий Deprecation Final Support | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "класс событий Deprecation Final Support"
+  - "устаревание [SQL Server], события, поддержка которых завершается"
+ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
+caps.latest.revision: 26
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 26
+---
+# Класс событий Deprecation Final Support
+  Класс событий **Deprecation Final Support** возникает в случае использования функции, которая будет удалена из следующей основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для увеличения срока службы приложения избегайте использования функций, которые приводят к вызову класса событий **Deprecation Final Support** или **Deprecation Announcement** . Модифицируйте приложения, которые используют устаревшие функции, как можно быстрее.  
+  
+## Столбцы данных класса событий Deprecation Final Support  
+  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|----------------------|---------------|-----------------|---------------|----------------|  
+|ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
+|ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
+|DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
+|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|EventClass|**int**|Тип события = 126.|27|Нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
+|HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
+|IntegerData2|**int**|Смещение конца выполняемой инструкции (в байтах).|55|Да|  
+|IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
+|LoginName|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|LoginSid|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
+|NTUserName|**nvarchar**|Имя пользователя Windows.|6|Да|  
+|Offset|**int**|Начальное смещение инструкции в пределах хранимой процедуры или пакета.|61|Да|  
+|ObjectID|**int**|Идентификатор устаревшего компонента.|22|Да|  
+|ObjectName|**nvarchar**|Имя устаревшего компонента.|34|Да|  
+|RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
+|SessionLoginName|**nvarchar**|Имя входа пользователя, который инициировал сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются имена входа как на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и в Windows.|64|Да|  
+|SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
+|SqlHandle|**image**|Двоичный дескриптор, который может быть использован для идентификации пакетов SQL или хранимых процедур.|63|Да|  
+|StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
+|TextData|**ntext**|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
+|TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
+|XactSequence|**bigint**|Токен, который описывает текущую транзакцию.|50|Да|  
+  
+## См. также:  
+ [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [Класс событий Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
+ [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+  
+  

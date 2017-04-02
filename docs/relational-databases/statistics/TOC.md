@@ -1,0 +1,7 @@
+# [Удаление статистики](delete-statistics.md)
+# [Statistics](statistics.md)
+# [Изменение статистики](modify-statistics.md)
+# [Переименование статистики](rename-statistics.md)
+# [Создание статистики](create-statistics.md)
+# [Обновить статистику](update-statistics.md)
+# [Просмотр свойств статистики](view-statistics-properties.md)

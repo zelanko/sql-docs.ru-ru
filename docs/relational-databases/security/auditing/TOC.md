@@ -1,0 +1,7 @@
+# [Просмотр журнала подсистемы аудита SQL Server](view-a-sql-server-audit-log.md)
+# [Действия и группы действий подсистемы аудита SQL Server](sql-server-audit-action-groups-and-actions.md)
+# [Записи подсистемы аудита SQL Server](sql-server-audit-records.md)
+# [Запись событий подсистемы аудита SQL Server в журнал безопасности](write-sql-server-audit-events-to-the-security-log.md)
+# [Создание аудита сервера и спецификации аудита сервера](create-a-server-audit-and-server-audit-specification.md)
+# [Создание спецификация аудита для сервера и базы данных](create-a-server-audit-and-database-audit-specification.md)
+# [Подсистема аудита SQL Server (Database Engine)](sql-server-audit-database-engine.md)

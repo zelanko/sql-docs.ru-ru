@@ -1,0 +1,324 @@
+---
+title: "Каталог служб SSIS | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "integration-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
+caps.latest.revision: 28
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 26
+---
+# Каталог служб SSIS
+  Каталог **SSISDB** служит центральным пунктом для работы с проектами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), развернутыми на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+ Объекты, которые хранятся в каталоге **SSISDB** , включают проекты, пакеты, параметры, среды и журнал операций.  
+  
+ Для просмотра объектов, параметров и рабочих данных, которые хранятся в каталоге **SSISDB** , создайте запрос к представлениям в базе данных **SSISDB** . Для управления объектами вызывайте хранимые процедуры в базе данных **SSISDB** или используйте пользовательский интерфейс каталога **SSISDB** . Во многих случаях одну и ту же задачу можно выполнить и в пользовательском интерфейсе, и путем вызова хранимой процедуры.  
+  
+ Чтобы обеспечить поддержку базы данных **SSISDB** , рекомендуется применять предопределенные политики предприятия для управления пользовательскими базами данных. Дополнительные сведения о создании планов обслуживания см. в разделе [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
+  
+ Каталог базы данных **SSISDB** и база данных **SSISDB** поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+  
+ Дополнительные сведения о просмотре данных операций см. в разделе [Наблюдение за выполнением пакетов и других операций](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
+  
+ Для доступа к каталогу **SSISDB** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с ядром СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем разверните узел **Каталоги служб Integration Services** в обозревателе объектов. Для доступа к базе данных **SSISDB** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните узел «Базы данных» в обозревателе объектов.  
+  
+> [!NOTE] Невозможно переименовать базу данных **SSISDB** .  
+  
+> [!NOTE] Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому присоединена база данных **SSISDB** , остановлен или не отвечает, процесс ISServerExec.exe завершается. Сообщение записывается в журнал событий Windows.  
+>   
+>  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+  
+## <a name="in-this-topic"></a>В этом разделе  
+  
+-   [Идентификаторы объектов каталога](../../integration-services/service/ssis-catalog.md#CatalogObjectIdentifiers)  
+  
+-   [Конфигурация каталога](../../integration-services/service/ssis-catalog.md#Configuration)  
+  
+-   [Разрешения](../../integration-services/service/ssis-catalog.md#Permissions)  
+  
+-   [Папки](../../integration-services/service/ssis-catalog.md#Folders)  
+  
+-   [Проекты и пакеты](../../integration-services/service/ssis-catalog.md#ProjectsAndPackages)  
+  
+-   [Параметры](../../integration-services/service/ssis-catalog.md#Parameters)  
+  
+-   [Серверные среды, переменные сервера и ссылки на серверные среды](../../integration-services/service/ssis-catalog.md#ServerEnvironments)  
+  
+-   [Выполнение и проверки](../../integration-services/service/ssis-catalog.md#Executions)  
+  
+-   [Поддержка AlwaysOn](../../integration-services/service/ssis-catalog.md#AlwaysOn)  
+  
+-   [Связанные задачи](../../integration-services/service/ssis-catalog.md#RelatedTasks)  
+  
+-   [См. также](../../integration-services/service/ssis-catalog.md#RelatedContent)  
+  
+##  <a name="a-namecatalogobjectidentifiersa-catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> Идентификаторы объектов каталога  
+ При создании нового объекта в каталоге необходимо назначить имя объекта. Идентификатором объекта является его имя. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет правила, указывающие, какие символы могут использоваться в идентификаторе. Имена следующих объектов должны соответствовать правилам для идентификаторов.  
+  
+-   Папка  
+  
+-   Проект  
+  
+-   Среда  
+  
+-   Параметр  
+  
+-   Переменная среды  
+  
+###  <a name="a-namefoldera-folder-project-environment"></a><a name="Folder"></a> Папка, проект, среда  
+ Учитывайте следующие правила при переименовании папки, проекта или среды.  
+  
+-   Недопустимы символы ASCII/Юникода с кодами от 1 до 31, символ двойных кавычек ("), символ меньше (\<), символ больше (>), символ вертикальной черты (|), знак возврата на один символ (\b), символ NULL (\0) и знак табуляции (\t).  
+  
+-   Имя не должно содержать начальных и конечных пробелов.  
+  
+-   Символ @ не допускается в качестве первого символа, но в качестве последующих символов можно использовать @..  
+  
+-   Длина имени должна быть больше 0 и меньше или равна 128.  
+  
+###  <a name="a-nameparametera-parameter"></a><a name="Parameter"></a> Параметр  
+ Принимайте во внимание следующие правила при именовании параметра.  
+  
+-   Первым символом имени должна быть буква, по определению стандарта Юникод 2.0, или символ подчеркивания (_).  
+  
+-   Далее могут следовать буквы или цифры, по определению стандарта Юникод 2.0, или символы подчеркивания (_).  
+  
+###  <a name="a-nameenvironmentvariablea-environment-variable"></a><a name="EnvironmentVariable"></a> Переменная среды  
+ Учитывайте следующие правила при наименовании переменной среды  
+  
+-   Недопустимы символы ASCII/Юникода с кодами от 1 до 31, символ двойных кавычек ("), символ меньше (\<), символ больше (>), символ вертикальной черты (|), знак возврата на один символ (\b), символ NULL (\0) и знак табуляции (\t).  
+  
+-   Имя не должно содержать начальных и конечных пробелов.  
+  
+-   Символ @ не допускается в качестве первого символа, но в качестве последующих символов можно использовать @..  
+  
+-   Длина имени должна быть больше 0 и меньше или равна 128.  
+  
+-   Первым символом имени должна быть буква, по определению стандарта Юникод 2.0, или символ подчеркивания (_).  
+  
+-   Далее могут следовать буквы или цифры, по определению стандарта Юникод 2.0, или символы подчеркивания (_).  
+  
+##  <a name="a-nameconfigurationa-catalog-configuration"></a><a name="Configuration"></a> Конфигурация каталога  
+ Для точной настройки поведения каталога измените свойства каталога. Свойства каталога определяют методы шифрования конфиденциальных данных и способы хранения данных об управлении версиями операций и проектов. Задать свойства каталога можно в диалоговом окне **Свойства каталога** или с помощью хранимой процедуры [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md). Просмотреть свойства можно в диалоговом окне или с помощью запроса [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Диалоговое окно можно открыть, щелкнув **SSISDB** правой кнопкой мыши в обозревателе объектов.  
+  
+###  <a name="a-namecleanupa-operations-and-project-version-cleanup"></a><a name="Cleanup"></a> Очистка версий операций и проектов  
+ Данные о состоянии для многих из этих операций в каталоге хранятся во внутренних таблицах базы данных. Например, каталог отслеживает состояние выполнения пакета и развертывания проекта. Чтобы поддерживался размер данных операций, для удаления старых данных используется **задание по обслуживанию служб SSIS** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Это задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается при установке служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+ Вы можете обновить или повторно развернуть проект [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с тем же именем в той же папке в каталоге. По умолчанию при каждом повторном развертывании проекта в каталоге **SSISDB** сохраняется предыдущая версия проекта. Чтобы поддерживался размер данных операций, для удаления старых версий проектов используется **задание обслуживания сервера служб SSIS** .  
+ 
+Для запуска **задания обслуживания сервера служб SSIS** службы SSIS создают имя для входа SQL Server **##MS_SSISServerCleanupJobLogin##**. Это имя входа предназначено только для внутреннего использования службами SSIS.
+  
+ Следующие два свойства каталога **SSISDB** определяют поведение этого задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Просмотреть и изменить свойства вы можете в диалоговом окне **Свойства каталога** или с помощью процедур [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) и [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+  
+ **Периодическая очистка журналов**  
+ Шаг задания для очистки операций запускается в том случае, если это свойство имеет значение **True**.  
+  
+ **Срок хранения (в днях)**  
+ Определяет максимальный срок хранения данных о допустимых операциях (в днях). Более старые данные удаляются.  
+  
+ Минимальное значение срока хранения — 1 день. Максимальное значение ограничено только максимальным значением данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int**. Сведения об этом типе данных см. в разделе [int, bigint, smallint, and tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).  
+  
+ **Периодическое удаление старых версий**  
+ Шаг задания для очистки версий проекта запускается в том случае, если это свойство имеет значение **True**.  
+  
+ **Максимальное количество версий в проекте**  
+ Определяет, сколько версий проекта будет храниться в каталоге. Более старые версии проектов удаляются.  
+  
+###  <a name="a-nameencryptiona-encryption-algorithm"></a><a name="Encryption"></a> Алгоритм шифрования  
+ Свойство **Алгоритм шифрования** указывает тип шифрования, который используется при шифровании значений конфиденциальных параметров. Вы можете выбрать из следующих типов шифрования.  
+  
+-   AES_256 (по умолчанию)  
+  
+-   AES_192  
+  
+-   AES_128  
+  
+-   DESX  
+  
+-   TRIPLE_DES_3KEY  
+  
+-   TRIPLE_DES  
+  
+-   DES  
+  
+ При развертывании проекта [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]каталог автоматически шифрует данные пакета и конфиденциальные значения. Каталог также автоматически расшифровывает данные после их получения. Каталог SSISDB использует уровень защиты **ServerStorage** . Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+  
+ Изменение алгоритма шифрования занимает длительное время. Сначала сервер использует указанный ранее алгоритм для расшифровки всех значений конфигурации. Затем сервер использует новый алгоритм для повторного шифрования значений. При выполнении этого процесса на сервере не могут выполняться другие операции служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Таким образом, чтобы обеспечить непрерывное выполнение операций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , для алгоритма шифрования задается значение только для чтения в диалоговом окне в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  
+ Чтобы изменить настройку свойства **алгоритма шифрования** , переведите базу данных **SSISDB** в однопользовательский режим и вызовите хранимую процедуру catalog.configure_catalog. Используйте ENCRYPTION_ALGORITHM для аргумента *property_name*. Список поддерживаемых значений свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). Дополнительные сведения о хранимой процедуре см. в разделе [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+  
+ Дополнительные сведения об однопользовательском режиме см. в разделе [Установка однопользовательского режима базы данных](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Дополнительные сведения о шифровании и алгоритмах шифрования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделах раздела [Шифрование SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
+  
+ Для шифрования используется главный ключ базы данных. Ключ создается при создании каталога. Дополнительные сведения см. в разделе [Создание каталога служб SSIS](../../integration-services/service/create-the-ssis-catalog.md).  
+  
+ В следующей таблице приведены имена свойств, показанных в диалоговом окне **Свойства каталога** , а также соответствующие свойства в представлении базы данных.  
+  
+|Имя свойства (диалоговое окно**Свойства каталога** )|Имя свойства (представление базы данных)|  
+|---------------------------------------------------------|-------------------------------------|  
+|Имя алгоритма шифрования|ENCRYPTION_ALGORITHM|  
+|Периодическая очистка журналов|OPERATION_CLEANUP_ENABLED|  
+|Срок хранения (в днях)|RETENTION_WINDOW|  
+|Периодическое удаление старых версий|VERSION_CLEANUP_ENABLED|  
+|Максимальное количество версий в проекте|MAX_PROJECT_VERSIONS|  
+|Серверное значение уровня ведения журнала по умолчанию|SERVER_LOGGING_LEVEL|  
+  
+##  <a name="a-namepermissionsa-permissions"></a><a name="Permissions"></a> Разрешения  
+ Проекты, среды и пакеты содержатся в папках, которые являются защищаемыми объектами. Вы можете предоставить разрешения для папки, включая разрешение MANAGE_OBJECT_PERMISSIONS. Разрешение MANAGE_OBJECT_PERMISSIONS позволяет делегировать пользователю разрешения на администрирование содержимого папки, не предоставляя ему членства в роли ssis_admin. Вы можете также предоставлять разрешения проектам, средам и операциям. К операциям относятся инициализация [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], развертывание проектов, создание и запуск выполнений, проверка проектов и пакетов, а также настройка каталога **SSISDB** .  
+  
+ Дополнительные сведения о ролях баз данных см. в разделе [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md).  
+  
+ В каталоге SSISDB используется триггер DDL ddl_cleanup_object_permissions для принудительного обеспечения целостности сведений о разрешениях для защищаемых объектов служб SSIS. Триггер срабатывает, когда участник базы данных, например пользователь базы данных, роль базы данных или роль приложения базы данных, удаляется из базы данных SSISDB.  
+  
+ Если участник предоставлял или запрещал права доступа другим участникам, их необходимо отменить, прежде чем можно будет удалить этого участника. В противном случае возвращается сообщение об ошибке, если система пытается удалить участника. Триггер удаляет все записи разрешений, в которых участник базы данных является получателем разрешений.  
+  
+ Рекомендуется не отключать триггер, так как он гарантирует отсутствие потерянных записей разрешений после удаления участника базы данных из базы данных **SSISDB** .  
+  
+### <a name="managing-permissions"></a>Управление разрешениями  
+ Вы можете управлять разрешениями на основе пользовательского интерфейса [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , хранимых процедур и пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices> .  
+  
+ Для управления разрешениями с помощью пользовательского интерфейса [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] используются следующие диалоговые окна.  
+  
+-   Для папки пользуйтесь страницей **Разрешения** в диалоговом окне [Folder Properties Dialog Box](../../integration-services/service/folder-properties-dialog-box.md)  
+  
+-   Для проекта пользуйтесь страницей **Разрешения** в диалоговом окне [Project Properties Dialog Box](../../integration-services/service/project-properties-dialog-box.md).  
+  
+-   Для среды пользуйтесь страницей **Разрешения** в диалоговом окне [NIB: свойства среды](http://msdn.microsoft.com/ru-ru/6a91a8d4-0006-4cfd-9759-3e4295ae452b).  
+  
+ Для управления разрешениями с помощью Transact-SQL вызовите процедуру [catalog.grant_permission (SSISDB Database)](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission (SSISDB Database)](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) или [catalog.revoke_permission (SSISDB Database)](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). Чтобы просмотреть действующие разрешения текущего участника для всех объектов, выполните запрос [catalog.effective_object_permissions (база данных SSISDB)](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). В этом разделе содержатся описания различных типов разрешений. Для просмотра разрешений, явным образом назначенных пользователю, выполните запрос [catalog.explicit_object_permissions (база данных SSISDB)](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
+  
+##  <a name="a-namefoldersa-folders"></a><a name="Folders"></a> Папки  
+ Папка содержит один или несколько проектов и сред в каталоге **SSISDB** . Вы можете использовать представление [catalog.folders (база данных SSISDB)](../../integration-services/system-views/catalog-folders-ssisdb-database.md) для получения доступа к сведениям о папках в каталоге. Для управления папками вы можете использовать следующие хранимые процедуры.  
+  
+-   [catalog.create_folder (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
+  
+-   [catalog.delete_folder (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md)  
+  
+-   [catalog.rename_folder (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md)  
+  
+-   [catalog.set_folder_description (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
+  
+##  <a name="a-nameprojectsandpackagesa-projects-and-packages"></a><a name="ProjectsAndPackages"></a> Проекты и пакеты  
+ Каждый проект может содержать несколько пакетов. Как проекты, так и пакеты могут содержать параметры и ссылки на среды. Доступ к параметрам и ссылкам на среды возможен с использованием [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md).  
+  
+ Вы можете выполнять другие задачи администрирования проекта, вызывая следующие хранимые процедуры.  
+  
+-   [catalog.delete_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md)  
+  
+-   [catalog.deploy_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)  
+  
+-   [catalog.get_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
+  
+-   [catalog.move_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
+  
+-   [catalog.restore_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
+  
+ Эти представления содержат сведения о пакетах, проектах и версиях проектов.  
+  
+-   [catalog.projects (база данных SSISDB)](../../integration-services/system-views/catalog-projects-ssisdb-database.md)  
+  
+-   [catalog.packages (база данных SSISDB)](../../integration-services/system-views/catalog-packages-ssisdb-database.md)  
+  
+-   [catalog.object_versions (база данных SSISDB)](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
+  
+##  <a name="a-nameparametersa-parameters"></a><a name="Parameters"></a> Параметры  
+ Параметры используются для присвоения значений свойствам пакета во время выполнения пакета. Для задания значения параметра проекта или пакета и очистки этого значения следует вызвать процедуру [catalog.set_object_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) или [catalog.clear_object_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md). Чтобы задать значение параметра для экземпляра выполнения, следует вызвать [catalog.set_execution_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md). Значения параметров по умолчанию можно получить, вызвав процедуру [catalog.get_parameter_values (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md).  
+  
+ Эти представления показывают параметры для всех пакетов и проектов, а также значения параметров, используемые для экземпляра выполнения.  
+  
+-   [catalog.object_parameters (база данных SSISDB)](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)  
+  
+-   [catalog.execution_parameter_values (база данных SSISDB)](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
+  
+##  <a name="a-nameserverenvironmentsa-server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> Серверные среды, переменные сервера и ссылки на серверные среды  
+ Серверные среды содержат переменные сервера. Значения переменных могут использоваться при выполнении или проверке пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  
+ Следующие хранимые процедуры позволяют выполнять многие другие задачи управления для сред и переменных.  
+  
+-   [catalog.create_environment (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md)  
+  
+-   [catalog.delete_environment (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md)  
+  
+-   [catalog.move_environment (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
+  
+-   [catalog.rename_environment (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md)  
+  
+-   [catalog.set_environment_property (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md)  
+  
+-   [catalog.create_environment_variable (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md)  
+  
+-   [catalog.delete_environment_variable (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md)  
+  
+-   [catalog.set_environment_variable_property (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md)  
+  
+-   [catalog.set_environment_variable_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md)  
+  
+ Вызов хранимой процедуры [catalog.set_environment_variable_protection (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md) позволит установить бит конфиденциальности для переменной.  
+  
+ Для использования значения серверной переменной необходимо указать ссылку между проектом и серверной средой. Вы можете использовать следующие хранимые процедуры создания и удаления ссылок. Вы можете также указать, может ли среда находиться в той же папке, что и проект, или в другой папке.  
+  
+-   [catalog.create_environment_reference (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md)  
+  
+-   [catalog.delete_environment_reference (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md)  
+  
+-   [catalog.set_environment_reference_type (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md)  
+  
+ Чтобы получить дополнительные сведения о средах и переменных, выполните запрос к этим представлениям.  
+  
+-   [catalog.environments (база данных SSISDB)](../../integration-services/system-views/catalog-environments-ssisdb-database.md)  
+  
+-   [catalog.environment_variables (база данных SSISDB)](../../integration-services/system-views/catalog-environment-variables-ssisdb-database.md)  
+  
+-   [catalog.environment_references (база данных SSISDB)](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
+  
+##  <a name="a-nameexecutionsa-executions-and-validations"></a><a name="Executions"></a> Выполнение и проверки  
+ Выполнение — это экземпляр выполнения пакета. Процедуры [catalog.create_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) и [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) позволяют настроить и запустить выполнение пакета. Чтобы остановить выполнение или проверку пакета или проекта, вызовите [catalog.stop_operation (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
+  
+ Для приостановки выполняемого пакета и создания файла дампа вызовите хранимую процедуру catalog.create_execution_dump. Файл дампа предоставляет сведения о выполнении пакета, которые могут быть полезны при диагностике неполадок в ходе выполнения. Дополнительные сведения о создании и настройке файлов дампа см. в разделе [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
+  
+ Выполняйте запросы к этим представлениям для получения сведений о выполнениях, проверках и сообщениях, регистрируемых в ходе операций, а также контекстных сведений, связанных с ошибками.  
+  
+-   [catalog.executions (база данных SSISDB)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
+  
+-   [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)  
+  
+-   [catalog.operation_messages (база данных SSISDB)](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)  
+  
+-   [catalog.extended_operation_info (база данных SSISDB)](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)  
+  
+-   [catalog.event_messages](../../integration-services/system-views/catalog-event-messages.md)  
+  
+-   [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
+  
+ Для проверки проектов и пакетов можно вызвать хранимые процедуры [catalog.validate_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md) и [catalog.validate_package (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md). Представление [catalog.validations (база данных SSISDB)](../../integration-services/system-views/catalog-validations-ssisdb-database.md) содержит сведения о таких проверках, как ссылки серверной среды, учитываемые при проверке, имеет ли место проверка зависимостей или полная проверка и используется ли при запуске пакета 32-разрядная или 64-разрядная среда выполнения.  
+  
+##  <a name="a-namealwaysona-alwayson-support"></a><a name="AlwaysOn"></a> Поддержка AlwaysOn  
+ Группы доступности AlwaysOn — это решение высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые выполняют отработку отказа совместно. Дополнительные сведения см. в разделе [Группы доступности AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx).  
+  
+ В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]службы SQL Server Integration Services (SSIS) предоставляют новые возможности, обеспечивающие легкое развертывание в централизованном каталоге служб SSIS (например, в пользовательской базе данных SSISDB). Для обеспечения высокого уровня доступности для базы данных SSISDB и ее содержимого (проектов, пакетов, журналов выполнения и т. д.) можно добавить базу данных SSISDB (практически так же, как и любую другую пользовательскую базу данных) в группу доступности AlwaysOn. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
+  
+ Подробное описание и пошаговые инструкции по включению AlwaysOn для SSISDB см. в статье [AlwaysOn для каталога служб SSIS (SSISDB)](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md).  
+  
+##  <a name="a-namerelatedtasksa-related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
+  
+-   [Создание каталога служб SSIS](../../integration-services/service/create-the-ssis-catalog.md)  
+  
+-   [Резервное копирование, восстановление и перемещение каталога служб SSIS](../../integration-services/service/backup-restore-and-move-the-ssis-catalog.md)  
+  
+##  <a name="a-namerelatedcontenta-related-content"></a><a name="RelatedContent"></a> См. также  
+  
+-   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+  
+-   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](http://go.microsoft.com/fwlink/?LinkId=246669)на сайте blogs.msdn.com.  
+  
+-   Запись [Обзор модели управляемых объектов каталога служб SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)в блоге blogs.msdn.com.  
+  
+  

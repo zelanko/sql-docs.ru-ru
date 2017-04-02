@@ -1,0 +1,216 @@
+---
+title: "Устранение неполадок c PolyBase | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "10/25/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine-polybase"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "PolyBase, monitoring"
+  - "PolyBase, performance monitoring"
+helpviewer_keywords: 
+  - "PolyBase, устранение неполадок"
+ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
+caps.latest.revision: 22
+author: "barbkess"
+ms.author: "barbkess"
+manager: "jhubbard"
+caps.handback.revision: 18
+---
+# Устранение неполадок c PolyBase
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  В этом разделе описаны методы по устранению неполадок с PolyBase.  
+  
+## представлений каталога;  
+ Ниже приведены представления каталога,с помощью которых можно управлять операциями PolyBase.  
+  
+|||  
+|-|-|  
+|Просмотр|Описание|  
+|[sys.external_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Определяет внешние таблицы|  
+|[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Определяет источники внешних таблиц|  
+|[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Определяет форматы внешних файлов|  
+  
+## Динамические административные представления  
+  
+|||  
+|-|-|  
+|[sys.dm_exec_compute_node_errors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)|[sys.dm_exec_compute_node_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)|  
+|[sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|[sys.dm_exec_distributed_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|[sys.dm_exec_distributed_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-requests-transact-sql.md)|[sys.dm_exec_distributed_sql_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-sql-requests-transact-sql.md)|  
+|[sys.dm_exec_dms_services (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|[sys.dm_exec_external_operations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
+  
+## Мониторинг запросов PolyBase с использованием динамических административных представлений  
+ Здесь описаны динамические административные представления, которые можно использовать для мониторинга и устранения неполадок с запросами PolyBase.  
+  
+1.  **Поиск запросов с наиболее длительным временем выполнения.**  
+  
+     Запишите идентификатор выполнения запроса с наиболее длительным временем выполнения.  
+  
+    ```tsql  
+     -- Find the longest running query  
+    SELECT execution_id, st.text, dr.total_elapsed_time  
+    FROM sys.dm_exec_distributed_requests  dr  
+         cross apply sys.dm_exec_sql_text(sql_handle) st  
+    ORDER BY total_elapsed_time DESC;  
+  
+    ```  
+  
+2.  **Поиск действия распределенного запроса с наиболее длительным временем выполнения.**  
+  
+     Используйте идентификатор выполнения, записанный при выполнении предыдущего действия. Запишите индекс действия с наиболее длительным временем выполнения.  
+  
+     Просмотрите значение параметра location_type действия с наиболее длительным временем выполнения:  
+  
+    -   Головной или вычислительный: подразумевается операция SQL. Перейдите к шагу 3a.  
+  
+    -   DMS: подразумевается операция службы перемещения данных PolyBase. Перейдите к шагу 3b.  
+  
+    ```tsql  
+    -- Find the longest running step of the distributed query plan  
+    SELECT execution_id, step_index, operation_type, distribution_type,   
+    location_type, status, total_elapsed_time, command   
+    FROM sys.dm_exec_distributed_request_steps   
+    WHERE execution_id = 'QID4547'   
+    ORDER BY total_elapsed_time DESC;  
+  
+    ```  
+  
+3.  **Поиск данных о ходе выполнения действия с наиболее длительным временем выполнения.**  
+  
+    1.  **Поиск данных о ходе выполнения действия SQL.**  
+  
+         Используйте идентификатор выполнения и индекс действия, записанные при выполнении предыдущих действий. Используйте идентификатор выполнения и индекс действия, записанные при выполнении предыдущих действий.  
+  
+        ```tsql  
+        -- Find the execution progress of SQL step    
+        SELECT execution_id, step_index, distribution_id, status,   
+        total_elapsed_time, row_count, command   
+        FROM sys.dm_exec_distributed_sql_requests   
+        WHERE execution_id = 'QID4547' and step_index = 1;  
+  
+        ```  
+  
+    2.  **Поиск данных о ходе выполнения действия DMS.**  
+  
+         Используйте идентификатор выполнения и индекс действия, записанные при выполнении предыдущих действий.  
+  
+        ```tsql  
+        -- Find the execution progress of DMS step    
+        SELECT execution_id, step_index, dms_step_index, status,   
+        type, bytes_processed, total_elapsed_time  
+        FROM sys.dm_exec_dms_workers   
+        WHERE execution_id = 'QID4547'   
+        ORDER BY total_elapsed_time DESC;  
+  
+        ```  
+  
+4.  **Поиск сведений о внешних операциях DMS.**  
+  
+     Используйте идентификатор выполнения и индекс действия, записанные при выполнении предыдущих действий.  
+  
+    ```tsql  
+    SELECT execution_id, step_index, dms_step_index, compute_node_id,   
+    type, input_name, length, total_elapsed_time, status   
+    FROM sys.dm_exec_external_work   
+    WHERE execution_id = 'QID4547' and step_index = 7   
+    ORDER BY total_elapsed_time DESC;  
+  
+    ```  
+  
+## Просмотр плана запроса PolyBase  
+  
+1.  В SSMS включите параметр **Включить действительный план выполнения** (CTRL+M) и выполните запрос.  
+  
+2.  Перейдите на вкладку **План выполнения** .  
+  
+     ![PolyBase query plan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+  
+3.  Щелкните правой кнопкой мыши оператор **Удаленный запрос** и выберите пункт **Свойства**.  
+  
+4.  Скопируйте и вставьте значение оператора "Удаленный запрос" в текстовый редактор, чтобы просмотреть план удаленного запроса в формате XML.  Пример показан ниже.  
+  
+    ```xml  
+  
+    <dsql_query number_nodes="1" number_distributions="8" number_distributions_per_node="8">  
+      <sql>ExecuteMemo explain query</sql>  
+      <dsql_operations total_cost="0" total_number_operations="6">  
+        <dsql_operation operation_type="RND_ID">  
+          <identifier>TEMP_ID_74</identifier>  
+        </dsql_operation>  
+        <dsql_operation operation_type="ON">  
+          <location permanent="false" distribution="AllDistributions" />  
+          <sql_operations>  
+            <sql_operation type="statement">CREATE TABLE [tempdb].[dbo].[TEMP_ID_74] ([SensorKey] INT NOT NULL, [CustomerKey] INT NOT NULL, [GeographyKey] INT, [Speed] FLOAT(53) NOT NULL, [YearMeasured] INT NOT NULL ) WITH(DATA_COMPRESSION=PAGE);</sql_operation>  
+          </sql_operations>  
+        </dsql_operation>  
+        <dsql_operation operation_type="ON">  
+          <location permanent="false" distribution="AllDistributions" />  
+          <sql_operations>  
+            <sql_operation type="statement">EXEC [tempdb].[sys].[sp_addextendedproperty] @name=N'IS_EXTERNAL_STREAMING_TABLE', @value=N'true', @level0type=N'SCHEMA', @level0name=N'dbo', @level1type=N'TABLE', @level1name=N'TEMP_ID_74'</sql_operation>  
+          </sql_operations>  
+        </dsql_operation>  
+        <dsql_operation operation_type="ON">  
+          <location permanent="false" distribution="AllDistributions" />  
+          <sql_operations>  
+            <sql_operation type="statement">UPDATE STATISTICS [tempdb].[dbo].[TEMP_ID_74] WITH ROWCOUNT = 2401, PAGECOUNT = 7</sql_operation>  
+          </sql_operations>  
+        </dsql_operation>  
+        <dsql_operation operation_type="MULTI">  
+          <dsql_operation operation_type="STREAMING_RETURN">  
+            <operation_cost cost="1" accumulative_cost="1" average_rowsize="24" output_rows="5762.1" />  
+            <location distribution="AllDistributions" />  
+            <select>SELECT [T1_1].[SensorKey] AS [SensorKey],  
+           [T1_1].[CustomerKey] AS [CustomerKey],  
+           [T1_1].[GeographyKey] AS [GeographyKey],  
+           [T1_1].[Speed] AS [Speed],  
+           [T1_1].[YearMeasured] AS [YearMeasured]  
+    FROM   (SELECT [T2_1].[SensorKey] AS [SensorKey],  
+                   [T2_1].[CustomerKey] AS [CustomerKey],  
+                   [T2_1].[GeographyKey] AS [GeographyKey],  
+                   [T2_1].[Speed] AS [Speed],  
+                   [T2_1].[YearMeasured] AS [YearMeasured]  
+            FROM   [tempdb].[dbo].[TEMP_ID_74] AS T2_1  
+            WHERE  ([T2_1].[Speed] > CAST (6.50000000000000000E+001 AS FLOAT))) AS T1_1</select>  
+          </dsql_operation>  
+          <dsql_operation operation_type="ExternalRoundRobinMove">  
+            <operation_cost cost="16.594848" accumulative_cost="17.594848" average_rowsize="24" output_rows="19207" />  
+            <external_uri>hdfs://10.193.26.177:8020/Demo/car_sensordata.tbl/</external_uri>  
+            <destination_table>[TEMP_ID_74]</destination_table>  
+          </dsql_operation>  
+        </dsql_operation>  
+        <dsql_operation operation_type="ON">  
+          <location permanent="false" distribution="AllDistributions" />  
+          <sql_operations>  
+            <sql_operation type="statement">DROP TABLE [tempdb].[dbo].[TEMP_ID_74]</sql_operation>  
+          </sql_operations>  
+        </dsql_operation>  
+      </dsql_operations>  
+    </dsql_query>  
+    ```  
+  
+## Мониторинг узлов в группе PolyBase  
+ После настройки нескольких компьютеров в рамках масштабируемой группы PolyBase можно отслеживать состояние компьютеров. Дополнительные сведения о создании масштабируемой группы см. в разделе [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
+  
+1.  Подключитесь к SQL Server на головном узле группы.  
+  
+2.  Запустите [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) динамического административного представления, чтобы просмотреть все узлы в группе PolyBase.  
+  
+3.  Запустите [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) динамического административного представления, чтобы просмотреть состояние всех узлов в группе PolyBase.  
+  
+ ## Известные ограничения
+ 
+ PolyBase имеет следующие ограничения. 
+ - Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 32 767 байтов.
+ - PolyBase не поддерживает типы данных Hive 0.12+ (например, Char(), VarChar()).   
+  
+## Сообщения об ошибках и возможные решения
+
+Сведения об устранении ошибок во внешних таблицах см. в записи блога Муршеда Замана (Murshed Zaman) [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Ошибки установки PolyBase и возможные решения").

@@ -1,0 +1,2 @@
+<Token>**ПРИМЕНЯЕТСЯ К:**![да](../includes/media/yes.png)SQL Server (начиная с 2008)![да](../includes/media/yes.png)База данных SQL Azure![да](../includes/media/yes.png)Хранилище данных SQL Azure![да](../includes/media/yes.png)Parallel Data Warehouse
+ </Token>
