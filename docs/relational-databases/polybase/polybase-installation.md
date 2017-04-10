@@ -1,0 +1,137 @@
+---
+title: "Установка PolyBase | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "08/31/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine-polybase"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "PolyBase, установка"
+ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
+caps.latest.revision: 25
+author: "barbkess"
+ms.author: "barbkess"
+manager: "jhubbard"
+caps.handback.revision: 23
+---
+# Установка PolyBase
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Чтобы установить пробную версию SQL Server, перейдите на страницу [ознакомительных версий SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
+  
+## Предварительные требования  
+  
+-   64-разрядный выпуск ознакомительной версии SQL Server.  
+  
+-   Microsoft .NET Framework 4.5.  
+  
+-   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) (подойдет [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Программа установки завершится ошибкой, если отсутствует JRE.  
+  
+-   минимальный объем памяти: 4 ГБ;  
+  
+-   Минимальное свободное место на жестком диске: 2 ГБ.  
+  
+-   Должно присутствовать подключение по протоколу TCP/IP. (См. статью [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+  
+ **Примечания**  
+  
+ PolyBase можно установить только на одном экземпляре SQL Server на компьютере.  
+  
+## Установка при помощи мастера установки  
+  
+1.  Запустите **центр установки SQL Server**. Вставьте установочный носитель SQL Server и дважды щелкните **Setup.exe**.  
+  
+2.  Щелкните **Установка**, затем **Новая установка автономного SQL Server или добавление компонентов**.  
+  
+3.  На странице выбора компонентов выберите пункт **Служба запросов PolyBase для внешних данных**.  
+  
+4.  На странице "Конфигурация сервера" настройте **службу SQL Server PolyBase Engine** и службу перемещения данных SQL Server PolyBase для запуска под одной учетной записью.  
+  
+    > **ВАЖНО!** В масштабируемой группе PolyBase служба PolyBase Engine и служба перемещения данных PolyBase должны выполняться на всех узлах под одной доменной учетной записью.  
+    > См. статью о масштабировании PolyBase.  
+  
+5.  На **странице настройки PolyBase**выберите один из двух вариантов. Дополнительные сведения см. в статье [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
+  
+    -   Использование экземпляра SQL Server в качестве автономного экземпляра с поддержкой PolyBase  
+  
+         Выберите этот вариант, чтобы использовать данный экземпляр SQL Server в качестве автономного головного узла.  
+  
+    -   Использование экземпляра SQL Server в составе масштабируемой группы PolyBase  При выборе этого варианта брандмауэр откроет входящие подключения к SQL Server Database Engine, SQL Server PolyBase Engine, службе перемещения данных SQL Server PolyBase и обозревателю SQL. Брандмауэр будет открыт для входящих подключений от других узлов в масштабируемой группе PolyBase.  
+  
+         При выборе этого параметра также будут включены в брандмауэре подключения для координатора распределенных транзакций (MSDTC) и изменены параметры реестра для MSDTC.  
+  
+6.  На **странице настройки PolyBase**укажите диапазон портов, включающий не менее шести портов. Программа установки SQL Server выделит первые шесть доступных портов из указанного диапазона.  
+  
+##  <a name="installing"></a> Установка с помощью командной строки  
+ Используйте значения из этой таблицы для создания сценариев установки. Две службы (**SQL ServerPolyBase Engine** и **служба перемещения данных SQL Server PolyBase**) должны запускаться под одной и той же учетной записью. В масштабируемой группе PolyBase обе службы PolyBase должны выполняться на всех узлах под одной доменной учетной записью.  
+  
+|Компонент SQL Server|Параметр и значения|Описание|  
+|--------------------------|--------------------------|-----------------|  
+|Управление программой установки SQL Server|**Обязательное**<br /><br /> /FEATURES=PolyBase|Выбирает компонент PolyBase.|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCACCOUNT|Задает учетную запись для службы ядра. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCPASSWORD|Задает пароль для учетной записи службы ядра.|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для службы PolyBase Engine: Automatic (автоматически, используется по умолчанию), Disabled (отключена) или Manual (вручную).|  
+|Служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCACCOUNT|Задает учетную запись для службы перемещения данных. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
+|Служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCPASSWORD|Задает пароль для учетной записи службы перемещения данных.|  
+|Служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCSTARTUPTYPE|Задает режим запуска для службы перемещения данных: Automatic (автоматически, используется по умолчанию), Disabled (отключена) или Manual (вручную).|  
+|PolyBase|**Необязательно**<br /><br /> /PBSCALEOUT|Указывает, будет ли этот экземпляр SQL Server использоваться в составе вычислительной масштабируемой группы PolyBase. <br />Поддерживаемые значения: **True**, **False**|  
+|PolyBase|**Необязательно**<br /><br /> /PBPORTRANGE|Указывает диапазон портов для служб PolyBase, включающий не менее 6 портов. Пример<br /><br /> `/PBPORTRANGE=16450-16460`|  
+  
+ **Пример**  
+  
+ Далее представлен пример сценария установки.  
+  
+```  
+  
+Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,Polybase   
+/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<fabric-domain>\Administrator"   
+/INSTANCEDIR="C:\Program Files\Microsoft SQL Server" /PBSCALEOUT=TRUE   
+/PBPORTRANGE=16450-16460 /SECURITYMODE=SQL /SAPWD="<StrongPassword>"   
+/PBENGSVCACCOUNT="<DomainName>\<UserName>" /PBENGSVCPASSWORD="<StrongPassword>"   
+/PBDMSSVCACCOUNT="<DomainName>\<UserName>" /PBDMSSVCPASSWORD="<StrongPassword>"  
+  
+```  
+  
+## Действия после установки  
+ PolyBase устанавливает три пользовательские базы данных: DWConfiguration, DWDiagnostics и DWQueue.   Они предназначены для PolyBase, поэтому изменять или удалять их не следует.  
+  
+### Подтверждение установки  
+ Выполните следующую команду. Если служба PolyBase установлена, она возвращает значение 1, а если нет — значение 0.  
+  
+```tsql  
+SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
+```  
+  
+### Правила брандмауэра  
+ Программа установки SQL Server PolyBase создает на компьютере следующие правила брандмауэра:  
+  
+-   SQL Server PolyBase — ядро СУБД — \<SQLServerInstanceName> (TCP вход.);  
+  
+-   SQL Server PolyBase — службы PolyBase — \<SQLServerInstanceName> (TCP вход.);  
+  
+-   SQL Server PolyBase — обозреватель SQL — (UDP вход.).  
+  
+ Если во время установки вы выбрали использование экземпляра SQL Server в составе масштабируемой группы PolyBase, эти правила будут включены и брандмауэр будет открыт для входящих подключений к SQL Server Database Engine, SQL Server PolyBase Engine, к службе перемещения данных SQL Server PolyBase и обозревателю SQL. Но если во время установки служба брандмауэра не запущена на компьютере, программа установки SQL Server не сможет включить эти правила. В этом случае необходимо запустить службу брандмауэра и включить эти правила после установки.  
+  
+#### Включение правил брандмауэра  
+  
+-   Откройте **Панель управления**.  
+  
+-   Щелкните **Система и безопасность**, а затем — **Брандмауэр Windows**.  
+  
+-   Щелкните **Дополнительные параметры**, затем нажмите элемент **Правила для входящих подключений**.  
+  
+-   Щелкните отключенное правило правой кнопкой мыши и выберите пункт меню **Включить правило**.  
+  
+### Учетные записи служб PolyBase
+Чтобы изменить учетные записи служб для PolyBase Engine и служб перемещения данных PolyBase, удалите и снова установите компонент PolyBase.
+   
+## Следующие шаги  
+ См. раздел [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
+  
+  

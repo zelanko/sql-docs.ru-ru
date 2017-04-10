@@ -1,0 +1,92 @@
+---
+title: "обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "setup-install"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "пакеты служб Integration Services, обновление"
+  - "обновление пакетов служб Integration Services"
+ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
+caps.latest.revision: 22
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "jhubbard"
+caps.handback.revision: 22
+---
+# обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS
+  Пакеты, созданные в более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно обновить до формата служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используемых [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Мастер можно настроить так, что исходные пакеты останутся без изменений. Поэтому в случае каких-либо трудностей обновления можно продолжать использовать исходные пакеты.  
+  
+ Мастер миграции пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] устанавливается при установке служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  
+> [!NOTE]  
+>  Мастер миграции пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] доступен в следующих выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Standard, Enterprise, Developer.  
+  
+ Дополнительные сведения об обновлении пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
+  
+ В оставшейся части раздела описывается работа с мастером и создание резервных копий исходных пакетов.  
+  
+## Работа с мастером обновления пакетов служб SSIS  
+ Мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] можно запустить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]или из командной строки.  
+  
+#### Запуск мастера из SQL Server Data Tools  
+  
+1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создайте или откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  
+2.  Находясь в обозревателе решений, правой кнопкой мыши щелкните узел **Пакеты служб SSIS** и выберите команду **Обновить все пакеты**, чтобы обновить все пакеты, принадлежащие этому узлу.  
+  
+    > [!NOTE]  
+    >  При открытии проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], содержащего пакеты служб [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или более поздней версии, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] автоматически открывают мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+  
+#### Запуск мастера в среде SQL Server Management Studio  
+  
+-   В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], разверните узел **Сохраненные пакеты**, щелкните правой кнопкой мыши узел **Файловая система** или узел **MSDB** и выберите пункт **Обновить пакеты**.  
+  
+#### Запуск мастера из командной строки  
+  
+-   Из командной строки запустите файл SSISUpgrade.exe, расположенный в папке **C:\Program Files\Microsoft SQL Server\130\DTS\Binn**.  
+  
+## Резервное копирование исходных пакетов  
+ Чтобы создать резервные копии исходных пакетов перед их обновлением, исходные пакеты и обновленные пакеты должны храниться в той же папке файловой системы. В зависимости от способа запуска мастера, это место хранения может определяться автоматически.  
+  
+-   При запуске мастера обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]мастер автоматически сохраняет исходные и обновленные пакеты в одной папке файловой системы.  
+  
+-   При запуске мастера обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или из командной строки можно указать различное место хранения для первоначальных и обновленных пакетов. Чтобы мастер создавал резервные копии исходных пакетов, убедитесь, что исходные и обновленные пакеты хранятся в одной и той же папке файловой системы. Если задать другие параметры хранения, мастер не сможет создать резервные копии исходных пакетов.  
+  
+ Мастер будет создавать резервные копии исходных пакетов в папке **SSISBackupFolder** . Мастер создает папку **SSISBackupFolder** в папке, которая содержит исходные и обновленные пакеты.  
+  
+#### Создание резервных копий исходных пакетов в среде SQL Server Management Studio или из командной строки  
+  
+1.  Сохраните исходные пакеты в папке файловой системы.  
+  
+    > [!NOTE]  
+    >  Мастер может создавать резервные копии только для пакетов, хранящихся в файловой системе.  
+  
+2.  Запустите мастер обновления пакетов служб [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] из среды [!INCLUDE[ssIS](../../includes/ssis-md.md)] или из командной строки.  
+  
+3.  На странице **Выбор исходного расположения** мастера выберите для свойства **Источник пакета** значение **Файловая система**.  
+  
+4.  На странице **Выбор целевого расположения** мастера выберите **Сохранить в исходное расположение**, чтобы сохранить обновленные пакеты в ту же папку, где находятся исходные пакеты.  
+  
+    > [!NOTE]  
+    >  Этот параметр становится доступен только в случае, когда исходные и обновленные пакеты хранятся в одной и той же папке.  
+  
+5.  На странице мастера **Выбор параметров управления пакетами** выберите параметр **Создать резервную копию исходных пакетов** .  
+  
+#### Резервное копирование исходных пакетов в SQL Server Data Tools  
+  
+1.  Сохраните исходные пакеты в папке файловой системы.  
+  
+2.  На странице мастера **Выбор параметров управления пакетами** выберите параметр **Создать резервную копию исходных пакетов** .  
+  
+    > [!WARNING]  
+    >  При открытии проекта служб [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или более поздней версии в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], которое автоматически запускает мастер, параметр **Создать резервную копию исходных пакетов** не отображается.  
+  
+3.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] запустите мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+  
+  

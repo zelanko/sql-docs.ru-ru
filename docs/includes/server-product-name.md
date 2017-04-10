@@ -1,0 +1,1 @@
+\<Token xmlns:xlink="http://www.w3.org/1999/xlink">Службы SQL Server 2016 Reporting Services (SSRS)</Token>

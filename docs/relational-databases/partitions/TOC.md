@@ -1,0 +1,5 @@
+# [Справка F1 мастера управления секциями](manage-partition-wizard-f1-help.md)
+# [Секционированные таблицы и индексы](partitioned-tables-and-indexes.md)
+# [Изменение функции секционирования](modify-a-partition-function.md)
+# [Создание секционированных таблиц и индексов](create-partitioned-tables-and-indexes.md)
+# [Изменение схемы секционирования](modify-a-partition-scheme.md)

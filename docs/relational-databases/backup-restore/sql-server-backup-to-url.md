@@ -1,0 +1,415 @@
+---
+title: "Резервное копирование в SQL Server по URL-адресу | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-backup-restore"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
+caps.latest.revision: 44
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "jhubbard"
+caps.handback.revision: 41
+---
+# Резервное копирование в SQL Server по URL-адресу
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  В данном разделе представлены основные понятия, требования и компоненты, необходимые для использования службы хранилища больших двоичных объектов Microsoft Azure в качестве места назначения резервного копирования. Функции резервного копирования и восстановления аналогичны при использовании DISK и TAPE, но имеют некоторые отличия. В данном разделе описываются эти различия, а также приведено несколько примеров кода.  
+  
+## Требования, компоненты и основные понятия  
+ **В этом разделе:**  
+  
+-   [Безопасность](#security)  
+  
+-   [Введение в основные компоненты и понятия](#intorkeyconcepts)  
+  
+-   [Служба хранилища больших двоичных объектов Microsoft Azure](#Blob)  
+  
+-   [Компоненты SQL Server](#sqlserver)  
+  
+-   [Ограничения](#limitations)  
+  
+-   [Поддержка инструкций резервного копирования и восстановления](#Support)  
+  
+-   [Использование задачи резервного копирования в среде SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)  
+  
+-   [Резервное копирование SQL Server на URL-адрес с помощью мастера планов обслуживания](../../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
+  
+-   [Восстановление из хранилища SQL Windows Azure с помощью среды SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
+  
+###  <a name="security"></a> Безопасность  
+ Далее описаны вопросы безопасности и требования к резервному копированию и восстановлению с помощью службы хранилища больших двоичных объектов Microsoft Azure.  
+  
+-   При создании контейнера для службы хранилища больших двоичных объектов Microsoft Azure рекомендуется установить для него **закрытые**права доступа. Установка закрытых прав доступа означает, что доступ предоставляется только тем пользователям и учетным записям, которые могут предоставить необходимую информацию для проверки подлинности в учетной записи Windows Azure.  
+  
+    > [!IMPORTANT]  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требует, чтобы имя учетной записи Windows Azure и проверка подлинности с ключом доступа или подписанный URL-адрес и маркер доступа хранились в учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти сведения используются для проверки подлинности учетной записи Windows Azure при выполнении операций резервного копирования или восстановления.  
+  
+-   Учетная запись пользователя, применяемая для выдачи команды BACKUP или RESTORE, должна находиться в роли базы данных **db_backup operator** с разрешениями **Alter any credential**.  
+  
+###  <a name="intorkeyconcepts"></a> Введение в основные компоненты и понятия  
+ В следующих двух разделах приводятся общие сведения о службе хранилища больших двоичных объектов Microsoft Azure, а также о компонентах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используются при резервном копировании в службу хранилища больших двоичных объектов Microsoft Azure или при восстановлении из нее. Чтобы выполнять резервное копирование или восстановление с помощью службы хранилища больших двоичных объектов Microsoft Azure, важно понимать компоненты и то, как они взаимосвязаны.  
+  
+ Первым шагом этого процесса является создание учетной записи хранения Microsoft Azure в подписке Azure. Эта учетная запись хранения является административной учетной записью, имеющей полные административные разрешения на все контейнеры и объекты, созданные с помощью этой учетной записи хранения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать имя учетной записи хранения Microsoft Azure и значение ее ключа доступа для проверки подлинности, а также записи и чтения больших двоичных объектов в службе хранения больших двоичных объектов Microsoft Azure или использовать токен подписанного URL-адреса (токен SAS), созданный в конкретных контейнерах, предоставляющих права на чтение и запись. Дополнительные сведения об учетных записях хранения Azure см. в разделе [Об учетных записях хранения Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/) , а дополнительные сведения о подписанных URL-адресах (SAS) см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Учетные данные службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранят эту информацию для проверки подлинности и используются при выполнении операций резервного копирования или восстановления.  
+  
+###  <a name="Blob"></a> Служба хранилища больших двоичных объектов Microsoft Azure  
+ **Учетная запись хранения.** Учетная запись хранения является отправной точкой для всех служб хранилища. Для доступа к службе хранилища больших двоичных объектов Microsoft Azure необходимо сначала создать учетную запись хранения Microsoft Azure. Дополнительные сведения см. в разделе [Создание учетной записи хранения](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).  
+  
+ **Контейнер.** Контейнер обеспечивает группирование набора больших двоичных объектов и может хранить их неограниченное количество. Для создания резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службе хранилища больших двоичных объектов Microsoft Azure необходимо как минимум создать корневой контейнер. Вы можете создать токен SAS в контейнере и предоставить доступ к объектам только в определенном контейнере.  
+  
+ **Большой двоичный объект.** Файл любого типа и размера. Существует два типа больших двоичных объектов, которые можно хранить в службе хранилища больших двоичных объектов Microsoft Azure: блочные и страничные большие двоичные объекты. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Резервное копирование может использовать любой тип больших двоичных объектов в зависимости от применяемого синтаксиса Transact-SQL. Обращаться к большим двоичным объектам можно с помощью URL-адреса следующего вида: https://\<учетная запись хранения>.blob.core.windows.net/\<контейнер>/\<blob>. Дополнительные сведения о службе хранилища больших двоичных объектов Microsoft Azure см. в разделе [Как использовать хранилище больших двоичных объектов из .NET](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Дополнительные сведения о больших двоичных объектах см. в разделе [Основные сведения о блочных и страничных больших двоичных объектах](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
+  
+ ![Хранилище больших двоичных объектов Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Хранилище больших двоичных объектов Azure")  
+  
+ **Моментальный снимок Azure.** Снимок большого двоичного объекта Azure, сделанный в определенный момент времени. Дополнительные сведения см. в разделе [Создание моментального снимка большого двоичного объекта](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь поддерживает резервные копии моментальных снимков Azure файлов базы данных, хранящиеся в службе хранилища больших двоичных объектов Microsoft Azure. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  
+###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+ **URL-адрес.** URL-адрес указывает универсальный идентификатор ресурса (URI) для уникального файла резервной копии. URL-адрес используется для предоставления местоположения и имени файла резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. URL-адрес должен указывать на фактический большой двоичный объект, а не просто на контейнер. Если большой двоичный объект не существует, он создается. Если указан существующий большой двоичный объект, то команда BACKUP завершится ошибкой, если только не указан параметр WITH FORMAT для перезаписи существующего файла резервной копии в этом большом двоичном объекте.  
+  
+ Пример URL-адреса: http[s]://УЧЕТНАЯ_ЗАПИСЬ.Blob.core.windows.net/\<КОНТЕЙНЕР>/\<ИМЯ_ФАЙЛА.bak>. Указывать HTTPS необязательно, но рекомендуется.  
+  
+ **Учетные данные.** Учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] являются объектом, который используется для хранения информации о проверке подлинности, необходимой для подключения к ресурсу за пределами SQL Server. В данном случае процессы резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют учетные данные для проверки подлинности в службе хранилища больших двоичных объектов Microsoft Azure и ее контейнерах и больших двоичных объектах. Учетные данные хранят имя учетной записи хранения и значения **ключа доступа** этой учетной записи хранения или URL-адрес контейнера и его токен SAS. После создания учетных данных синтаксис инструкций BACKUP/RESTORE определяет тип большого двоичного объекта и необходимые учетные данные.  
+  
+ Порядок создания подписанного URL-адреса см. в примерах [Создание подписанного URL-адреса](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) далее в этом разделе, и порядок создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в примерах [Создание учетных данных](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) далее в этом разделе.  
+  
+ Общие сведения об учетных данных см. в разделе [Учетные данные](http://msdn.microsoft.com/library/ms161950.aspx).  
+  
+ Сведения о других примерах использования учетных данных см. в разделе [Создание прокси-агента SQL Server](http://msdn.microsoft.com/library/ms175834.aspx).  
+  
+###  <a name="limitations"></a> Ограничения  
+  
+-   Резервное копирование в хранилище класса Premium не поддерживается.  
+  
+-   Максимальный поддерживаемый размер резервной копии с использованием страничного большого двоичного объекта ограничивается максимальным размером одного страничного большого двоичного объекта, который составляет 1 ТБ. Максимальный поддерживаемый размер резервной копии с использованием блочных больших двоичных объектов не ограничивается максимальным размером блочного большого двоичного объекта, который составляет 200 ГБ, так как резервное копирование в блочные большие двоичные объекты поддерживает чередование дисков для обслуживания значительно больших размеров резервных копий.  
+  
+-   Инструкции резервного копирования и восстановления можно выполнить с помощью TSQL, SMO, командлетов PowerShell, мастера архивации и восстановления SQL Server Management Studio.   
+  
+-   Функция создания логического имени устройства не поддерживается. Таким образом, не поддерживается функция добавления URL-адреса в качестве устройства резервного копирования с помощью sp_dumpdevice или SQL Server Management Studio.  
+  
+-   Функция присоединения к существующим резервным большим двоичным объектам не поддерживается. Резервное копирование в существующий большой двоичный объект можно осуществлять только путем перезаписи с помощью параметра **WITH FORMAT** . Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT**) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования снимков файлов.  
+  
+-   Резервное копирование в несколько больших двоичных объектов в одной операции резервного копирования поддерживается только при использовании блочных больших двоичных объектов и с помощью токена SAS, а не ключа учетной записи хранения для учетных данных SQL.  
+  
+-   Функция указания размера блока с помощью **BACKUP** не поддерживается.  
+  
+-   Функция указания **MAXTRANSFERSIZE** не поддерживается.  
+  
+-   Указание параметров резервного набора данных **RETAINDAYS** и **EXPIREDATE** не поддерживается.  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — 259 символов. Функция BACKUP TO URL использует 36 символов для необходимых элементов, которые нужны для указания URL (https://.blob.core.windows.net//.bak), оставляя 223 символа для имен учетной записи, контейнера и большого двоичного объекта.  
+  
+###  <a name="Support"></a> Поддержка инструкций резервного копирования и восстановления  
+  
+|||||  
+|-|-|-|-|  
+|Инструкции BACKUP и RESTORE|Поддерживается|Исключения|Комментарии|  
+|BACKUP|√|BLOCKSIZE и MAXTRANSFERSIZE не поддерживаются.|Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE FILELISTONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|инструкция RESTORE HEADERONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE LABELONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE VERIFYONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE REWINDONLY|−|||  
+  
+ Общую информацию и синтаксис инструкций резервного копирования см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
+  
+ Общую информацию и синтаксис инструкций восстановления см. в разделе [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md).  
+  
+### Поддержка аргументов резервного копирования  
+  
+|||||  
+|-|-|-|-|  
+|Аргумент|Поддерживается|Исключение|Комментарии|  
+|DATABASE|√|||  
+|LOG|√|||  
+||  
+|TO (URL)|√|В отличие от DISK и TAPE URL-адрес не поддерживает функцию указания или создания логического имени.|Этот аргумент используется, чтобы указать URL-адрес для файла резервной копии.|  
+|MIRROR TO|√|||  
+|**WITH OPTIONS:**||||  
+|CREDENTIAL|√||WITH CREDENTIAL поддерживается только при использовании параметра BACKUP TO URL для резервного копирования в службу хранилища больших двоичных объектов Microsoft Azure и только если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с использованием ключа учетной записи хранения в качестве секрета.|  
+|FILE_SNAPSHOT|√|||  
+|ENCRYPTION|√||Если аргумент **WITH ENCRYPTION** указан, резервное копирование моментальных снимков файлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перед созданием резервной копии проверяет, была ли вся база данных зашифрована с помощью прозрачного шифрования данных, и если да, то шифрует ли файл резервной копии моментальных снимков файлов с помощью алгоритма, указанного для прозрачного шифрования данных в базе данных. Если все данные во всей базе данных не зашифрованы, произойдет сбой резервного копирования (например, когда процесс шифрования еще не завершен).|  
+|DIFFERENTIAL (разностная)|√|||  
+|COPY_ONLY|√|||  
+|COMPRESSION&#124;NO_COMPRESSION|√|Не поддерживается для резервного копирования моментальных снимков файлов.||  
+|DESCRIPTION|√|||  
+|NAME|√|||  
+|EXPIREDATE &#124; RETAINDAYS|−|||  
+|NOINIT &#124; INIT|−||Добавление к большим двоичным объектам невозможно. Для перезаписи резервной копии используйте аргумент **WITH FORMAT** . Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT**) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
+|NOSKIP &#124; SKIP|−|||  
+|NOFORMAT &#124; FORMAT|√||Создание резервных копий в существующем большом двоичном объекте завершается ошибкой, если не указан аргумент **WITH FORMAT** . Если аргумент **WITH FORMAT** указан, существующий большой двоичный объект будет перезаписан. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT**) аргумент FORMAT не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования снимков файлов. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT**) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
+|MEDIADESCRIPTION|√|||  
+|MEDIANAME|√|||  
+|BLOCKSIZE|−|||  
+|BUFFERCOUNT|√|||  
+|MAXTRANSFERSIZE|−|||  
+|NO_CHECKSUM &#124; CHECKSUM|√|||  
+|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|√|||  
+|STATS|√|||  
+|REWIND &#124; NOREWIND|−|||  
+|UNLOAD &#124; NOUNLOAD|−|||  
+|NORECOVERY &#124; STANDBY|√|||  
+|NO_TRUNCATE|√|||  
+  
+ Дополнительные сведения об аргументах резервного копирования см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
+  
+### Поддержка аргументов восстановления  
+  
+|||||  
+|-|-|-|-|  
+|Аргумент|Поддерживается|Исключения|Комментарии|  
+|DATABASE|√|||  
+|LOG|√|||  
+|FROM (URL)|√||Аргумент FROM URL используется, чтобы указать URL-адрес для файла резервной копии.|  
+|**Параметры WITH:**||||  
+|CREDENTIAL|√||WITH CREDENTIAL поддерживается только при использовании параметра RESTORE FROM URL для восстановления из службы хранилища больших двоичных объектов Microsoft Azure.|  
+|PARTIAL|√|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
+|LOADHISTORY|√|||  
+|MOVE|√|||  
+|REPLACE|√|||  
+|RESTART|√|||  
+|RESTRICTED_USER|√|||  
+|FILE|−|||  
+|PASSWORD|√|||  
+|MEDIANAME|√|||  
+|MEDIAPASSWORD|√|||  
+|BLOCKSIZE|√|||  
+|BUFFERCOUNT|−|||  
+|MAXTRANSFERSIZE|−|||  
+|CHECKSUM &#124; NO_CHECKSUM|√|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
+|FILESTREAM|√|Не поддерживается для резервного копирования моментальных снимков.||  
+|STATS|√|||  
+|REWIND &#124; NOREWIND|−|||  
+|UNLOAD &#124; NOUNLOAD|−|||  
+|KEEP_REPLICATION|√|||  
+|KEEP_CDC|√|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+  
+ Дополнительные сведения об аргументах восстановления см. в разделе [Аргументы инструкции RESTORE (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+  
+##  <a name="BackupTaskSSMS"></a> Использование задачи резервного копирования в среде SQL Server Management Studio  
+С помощью этой задачи можно выполнять резервное копирование на URL-адрес с использованием учетных данных SQL Server.  
+  
+> [!NOTE]  
+>  Для создания резервных копий моментальных снимков файлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или перезаписи существующего набора носителей необходимо использовать Transact-SQL, Powershell или C#, а не задачу резервного копирования в SQL Server Management Studio.  
+  
+ Следующие шаги описывают изменения, внесенные в задачу "Резервное копирование базы данных" в среде SQL Server Management Studio для создания резервной копии в хранилище Microsoft Azure.  
+  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
+
+2.  Разверните узел **Базы данных**, щелкните правой кнопкой мыши нужную базу данных, укажите пункт **Задачи** и выберите **Копировать базу данных**.
+  
+3.  На странице **Общие** в разделе **Назначение** в раскрывающемся списке **Создать резервную копию на:** доступен вариант **URL-адрес**.  Параметр **URL-адрес** используется для создания резервной копии в хранилище Windows Azure. Нажмите кнопку **Добавить**, чтобы открыть диалоговое окно **Выбор места расположения резервной копии**.
+   
+    1.  **Контейнер хранилища Azure.** Имя контейнера хранилища Windows Azure для хранения файлов резервной копии.  Выберите существующий контейнер в раскрывающемся списке или введите контейнер вручную. 
+  
+    2.  **Политика подписанных URL-адресов.** Введите подписанный URL-адрес для контейнера, указанного вручную.  Это поле недоступно, если был выбран существующий контейнер. 
+  
+    3.  **Файл резервной копии.** Имя файла резервной копии.
+    
+    4.  **Новый контейнер.** Используется для регистрации существующего контейнера, который не имеет подписанного URL-адреса.  См. раздел [Соединение с подпиской Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
+  
+> [!NOTE] 
+>  **Добавить** поддерживает несколько файлов резервных копий и контейнеров хранилища для одного набора носителей.
+  
+ При выборе **URL-адреса** в качестве назначения некоторые параметры на странице **Параметры носителя** отключаются.  Следующие разделы содержат дополнительные сведения о диалоговом окне «Резервное копирование базы данных»:  
+  
+ [Резервное копирование базы данных (страница "Общие")](../../relational-databases/backup-restore/back-up-database-general-page.md)  
+  
+ [Резервное копирование базы данных (страница "Параметры носителя")](../../relational-databases/backup-restore/back-up-database-media-options-page.md)  
+  
+ [Резервное копирование базы данных (страница "Параметры резервного копирования")](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
+  
+ [Создание учетных данных — проверка подлинности в хранилище Azure](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
+  
+##  <a name="MaintenanceWiz"></a> Резервное копирование SQL Server на URL-адрес с помощью мастера планов обслуживания  
+ Аналогично задаче резервного копирования, описанной выше, мастер планов обслуживания в SQL Server Management Studio включает **URL** как один из вариантов места назначения, а также другие вспомогательные объекты, необходимые для резервного копирования в хранилище Microsoft Azure, такие как учетные данные SQL. Дополнительные сведения см. в разделе **Определение задач резервного копирования** статьи [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+  
+> [!NOTE]  
+>  Для создания чередующегося набора архивации, резервных копий моментальных снимков файлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетных данных SQL с использованием маркера общего доступа необходимо использовать Transact-SQL, Powershell или C#, а не задачу резервного копирования в мастере планов обслуживания.  
+  
+##  <a name="RestoreSSMS"></a> Восстановление из хранилища SQL Windows Azure с помощью среды SQL Server Management Studio  
+При восстановлении базы данных **URL-адрес** включается в качестве устройства, с которого следует выполнить восстановление.  Следующие шаги описывают использование задачи восстановления для восстановления из службы хранилища больших двоичных объектов Microsoft Azure. 
+  
+1.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите команду **Восстановить базу данных**. 
+  
+2.  На странице **Общие** выберите пункт **Устройство** в разделе **Источник**.
+  
+3.  Нажмите кнопку обзора (...), после чего откроется диалоговое окно **Выбор устройств резервного копирования**. 
+
+4.  Выберите **URL-адрес** в раскрывающемся списке **Тип носителя резервной копии:**.  Нажмите кнопку **Добавить**, чтобы открыть диалоговое окно **Выберите расположение файла архивной копии**.
+
+    1.  **Контейнер хранилища Azure.** Полное имя контейнера хранилища Windows Azure для хранения файлов резервной копии.  Выберите существующий контейнер в раскрывающемся списке или введите полное имя контейнера вручную.
+      
+    2.  **Подписанный URL-адрес.** Используется для ввода подписанного URL-адреса для назначенного контейнера.
+      
+    3.  **Добавить.** Используется для регистрации существующего контейнера, который не имеет подписанного URL-адреса.  См. раздел [Соединение с подпиской Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
+      
+    4.  **ОК.** SQL Server подключится к хранилищу Windows Azure с помощью предоставленных учетных данных SQL и откроет диалоговое окно **Поиск файла резервной копии в Windows Azure**. На этой странице отобразятся файлы резервной копии, находящиеся в контейнере хранилища. Выберите файл, который требуется использовать для восстановления, и нажмите кнопку **ОК**. Вы вернетесь к диалоговому окну **Выберите устройства резервного копирования**, а нажав кнопку **ОК** в этом диалоговом окне — к главному диалоговому окну **Восстановление**, в котором можно будет завершить восстановление. 
+  
+     [Восстановление базы данных (страница "Общие")](../../relational-databases/backup-restore/restore-database-general-page.md)  
+  
+     [Восстановление базы данных (страница "Файлы")](../../relational-databases/backup-restore/restore-database-files-page.md)  
+  
+     [Восстановление базы данных (страница "Параметры")](../../relational-databases/backup-restore/restore-database-options-page.md)  
+  
+##  <a name="Examples"></a> Примеры кода  
+ В этом разделе содержатся следующие примеры.  
+  
+-   [Создание учетных данных](#credential)  
+  
+-   [Создание резервной копии всей базы данных](#complete)  
+    
+-   [Восстановление состояния на определенный момент времени с помощью STOPAT](#PITR)  
+  
+> [!NOTE]  
+>  Руководство по использованию SQL Server 2016 со службой хранилища BLOB-объектов Microsoft Azure см. в статье [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx) (Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases).  
+  
+###  <a name="SAS"></a> Создание подписанного URL-адреса  
+ В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)(Shared Access Signatures, Part 1: Understanding the SAS Model). Для этого примера требуется Microsoft Azure PowerShell. Сведения об установке и использовании Azure PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+
+> [!NOTE] 
+>  Эти сценарии были написаны с помощью Azure PowerShell 5.0.10586.
+
+**Подписанный URL-адрес, связанный с хранимой политикой доступа**  
+  
+```Powershell  
+# Define global variables for the script  
+$prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
+$subscriptionName='<your subscription name>'   # the name of subscription name you will use  
+$locationName = '<a data center location>'  # the data center region you will use  
+$storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
+$containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
+$policyName = $prefixName + 'policy' # the name of the SAS policy  
+
+
+# Set a variable for the name of the resource group you will create or use  
+$resourceGroupName=$prefixName + 'rg'   
+
+# adds an authenticated Azure account for use in the session   
+Login-AzureRmAccount
+
+# set the tenant, subscription and environment for use in the rest of   
+Set-AzureRmContext -SubscriptionName $subscriptionName   
+
+# create a new resource group - comment out this line to use an existing resource group  
+New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+
+# Create a new ARM storage account - comment out this line to use an existing ARM storage account  
+New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+
+# Get the access keys for the ARM storage account  
+$accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+
+# Create a new storage account context using an ARM storage account  
+$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Key1 
+
+# Creates a new container in blob storage  
+$container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+$cbc = $container.CloudBlobContainer  
+
+# Sets up a Stored Access Policy and a Shared Access Signature for the new container  
+$permissions = $cbc.GetPermissions();  
+$policyName = $policyName  
+$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
+$policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
+$policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
+$policy.Permissions = "Read,Write,List,Delete"  
+$permissions.SharedAccessPolicies.Add($policyName, $policy)  
+$cbc.SetPermissions($permissions);  
+
+# Gets the Shared Access Signature for the policy  
+$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
+$sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
+Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
+
+# Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
+Write-Host 'Credential T-SQL'  
+$tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.Substring(1)   
+$tSql | clip  
+Write-Host $tSql  
+```  
+  
+###  <a name="credential"></a> Создание учетных данных  
+ В следующих примерах создаются учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для проверки подлинности в службе хранилища больших двоичных объектов Microsoft Azure.  
+  
+1.  **Использование удостоверения учетной записи хранения и ключа доступа**  
+  
+    ```Transact-sql  
+    IF NOT EXISTS  
+    (SELECT * FROM sys.credentials   
+    WHERE name = '<mycredentialname>')  
+    CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
+    ,SECRET = '<mystorageaccountaccesskey>';  
+    ```  
+  
+2.  **Использование подписанного URL-адреса**  
+  
+    ```Transact-sql  
+    IF NOT EXISTS  
+    (SELECT * FROM sys.credentials   
+    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] WITH IDENTITY = 'SHARED ACCESS SIGNATURE'  
+    ,SECRET = '<SAS_TOKEN>';  
+    ```  
+  
+###  <a name="complete"></a> Выполнение полного резервного копирования базы данных  
+ В следующих примерах выполняется полное резервное копирование базы данных AdventureWorks2016 в службу хранилища больших двоичных объектов Microsoft Azure.  
+  
+1.  **На URL-адрес с использованием удостоверения учетной записи хранения и ключа доступа**  
+  
+    ```Transact-SQL
+    BACKUP DATABASE AdventureWorks2016  
+    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+          WITH CREDENTIAL = '<mycredentialname>'   
+         ,COMPRESSION  
+         ,STATS = 5;  
+    GO   
+    ```  
+  
+2.  **На URL-адрес с использованием подписанного URL-адреса**  
+  
+    ```Transact-SQL  
+    BACKUP DATABASE AdventureWorks2016   
+    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+    GO   
+    ```  
+  
+
+  
+  
+###  <a name="PITR"></a> Восстановление состояния на определенный момент времени с помощью STOPAT  
+ В следующем примере производится восстановление базы данных AdventureWorks2016 до ее состояния на определенный момент времени и демонстрируется операция восстановления.  
+  
+1.  **С URL-адреса с использованием подписанного URL-адреса**  
+  
+    ```Transact-SQL
+    RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
+    WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
+    ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+    ,NORECOVERY  
+    ,REPLACE  
+    ,STATS = 5;  
+    GO   
+  
+    RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+    WITH   
+    RECOVERY   
+    ,STOPAT = 'May 18, 2015 5:35 PM'   
+    GO  
+    ```  
+  
+## См. также:  
+ [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+ [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
+ [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016 (Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases)](https://msdn.microsoft.com/library/dn466438.aspx)  
+  
+  

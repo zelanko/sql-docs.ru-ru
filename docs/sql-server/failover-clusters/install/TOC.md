@@ -1,0 +1,7 @@
+# [Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)
+# [Установка отказоустойчивого кластера SQL Server](sql-server-failover-cluster-installation.md)
+# [Удаление экземпляра отказоустойчивого кластера SQL Server (программа установки)](remove-a-sql-server-failover-cluster-instance-setup.md)
+# [Подготовка к установке отказоустойчивого кластера](before-installing-failover-clustering.md)
+# [Установка клиентских средств на отказоустойчивом кластере SQL Server](install-client-tools-on-a-sql-server-failover-cluster.md)
+# [Создание нового отказоустойчивого кластера SQL Server (программа установки)](create-a-new-sql-server-failover-cluster-setup.md)
+# [переименовать экземпляр отказоустойчивого кластера SQL Server](rename-a-sql-server-failover-cluster-instance.md)
