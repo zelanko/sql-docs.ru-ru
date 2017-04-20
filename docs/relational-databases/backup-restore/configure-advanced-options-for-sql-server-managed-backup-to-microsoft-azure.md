@@ -1,22 +1,26 @@
 ---
-title: "Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure
   В этом руководстве описана настройка дополнительных параметров для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Эти процедуры необходимы, только если вам нужны соответствующие функции. В противном случае вы можете включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и использовать параметры по умолчанию.  
   
  В каждом сценарии резервное копирование настраивается с использованием параметра `database_name` . Если для `database_name` указать значение NUL или *, изменения затронут параметры по умолчанию на уровне экземпляра. Параметры на уровне экземпляра будут применены и к новым базам данных, созданным после такого изменения.  
@@ -26,7 +30,7 @@ caps.handback.revision: 7
 > [!WARNING]  
 >  Прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], нужно обязательно настроить дополнительные параметры и пользовательские параметры планирования, используя процедуру [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). В противном случае могут быть запущены нежелательные операции резервного копирования в период между активацией [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и настройкой параметров.  
   
-## Настройка шифрования  
+## <a name="configure-encryption"></a>Настройка шифрования  
  Следующие шаги описывают настройку параметров шифрования с помощью хранимой процедуры [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
   
 1.  **Выберите алгоритм шифрования:** прежде всего определитесь с алгоритмом шифрования, который вы будете использовать. Выберите один из следующих вариантов.  
@@ -78,7 +82,7 @@ caps.handback.revision: 7
     > [!WARNING]  
     >  Если в предыдущем примере указать для `@database_name` значение NULL, параметры будут применены к экземпляру SQL Server.  
   
-## Настройка расписания резервного копирования  
+## <a name="configure-a-custom-backup-schedule"></a>Настройка расписания резервного копирования  
  Следующие шаги описывают настройку параметров шифрования с помощью хранимой процедуры [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
   
 1.  **Определите частоту полного резервного копирования:** выберите, как часто будут создаваться полные резервные копии базы данных. Для полного резервного копирования доступны варианты "ежедневно" и "еженедельно".  
@@ -108,10 +112,10 @@ caps.handback.revision: 7
   
     ```  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  После настройки дополнительных параметров и пользовательского расписания следует включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для целевой базы данных или экземпляра SQL Server. Дополнительные сведения см. в статье [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Управляемое резервное копирование SQL Server в Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

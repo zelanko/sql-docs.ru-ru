@@ -1,22 +1,26 @@
 ---
-title: "Диалоговые окна репликации в среде SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Диалоговые окна репликации в среде SQL Server Management Studio | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22d90850650f386147ccc9b88b00f06cbd6813ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Диалоговые окна репликации в среде SQL Server Management Studio
+# <a name="sql-server-management-studio-replication-dialog-boxes"></a>Диалоговые окна репликации в среде SQL Server Management Studio
   Этот раздел содержит сведения о ряде диалоговых окон, доступных в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Безопасность агента моментальных снимков](../../relational-databases/replication/snapshot-agent-security.md)  
@@ -29,13 +33,13 @@ caps.handback.revision: 22
   
 -   [Безопасность агента чтения очереди](../../relational-databases/replication/queue-reader-agent-security.md)  
   
--   [Профили агента & #40; один агент & #41;](../../relational-databases/replication/agent-profiles-single-agent.md)  
+-   [Профили агента (один агент)](../../relational-databases/replication/agent-profiles-single-agent.md)  
   
 -   [Профили агентов](../../relational-databases/replication/agent-profiles.md)  
   
--   [& #60; AgentProfileName & #62; Свойства](../../relational-databases/replication/agentprofilename-properties.md)  
+-   [Свойства <имя_профиля_агента>](../../relational-databases/replication/agentprofilename-properties.md)  
   
--   [Создать профиль агента](../../relational-databases/replication/new-agent-profile.md)  
+-   [Создание профиля агента](../../relational-databases/replication/new-agent-profile.md)  
   
 -   [Проверка всех подписок](../../relational-databases/replication/validate-all-subscriptions.md)  
   
@@ -43,18 +47,18 @@ caps.handback.revision: 22
   
 -   [Проверка подписки](../../relational-databases/replication/validate-subscription.md)  
   
--   [Параметры проверки подписки & #40; Подписки на публикацию транзакций & #41;](../../relational-databases/replication/subscription-validation-options-transactional-subscriptions.md)  
+-   [Параметры проверки подписки (подписки на публикацию транзакций)](../../relational-databases/replication/subscription-validation-options-transactional-subscriptions.md)  
   
--   [Параметры проверки подписки & #40; Подписок на публикацию слиянием & #41;](../../relational-databases/replication/subscription-validation-options-merge-subscriptions.md)  
+-   [Параметры проверки подписки (подписка на публикацию слиянием)](../../relational-databases/replication/subscription-validation-options-merge-subscriptions.md)  
   
--   [Повторная инициализация подписки & #40; s & #41; -Все подписки](../../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md)  
+-   [Повторная инициализация подписок — все подписки](../../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md)  
   
--   [Повторная инициализация подписки & #40; s & #41; — Одна подписка](../../relational-databases/replication/reinitialize-subscription-s-one-subscription.md)  
+-   [Повторная инициализация подписок — одна подписка](../../relational-databases/replication/reinitialize-subscription-s-one-subscription.md)  
   
--   [Сформировать скрипт SQL & #40; Объекты репликации и #41;](../../relational-databases/replication/generate-sql-script-replication-objects.md)  
+-   [Формирование скрипта SQL (объекты репликации)](../../relational-databases/replication/generate-sql-script-replication-objects.md)  
   
--   [Подключение к серверу & #40; Oracle & #41; имя входа](../../relational-databases/replication/connect-to-server-oracle-login.md)  
+-   [Подключение к с серверу (Oracle), вход](../../relational-databases/replication/connect-to-server-oracle-login.md)  
   
--   [Подключение к серверу & #40; Oracle & #41; свойства соединения](../../relational-databases/replication/connect-to-server-oracle-connection-properties.md)  
+-   [Подключение к серверу (Oracle), свойства подключения](../../relational-databases/replication/connect-to-server-oracle-connection-properties.md)  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "Сохранение значений идентификаторов при массовом импорте данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "значения идентификаторов [репликация SQL Server], массовый импорт"
-  - "форматы данных [SQL Server], значения идентификаторов"
-  - "массовый импорт [SQL Server], значения идентификаторов"
+title: "Сохранение значений идентификаторов при массовом импорте данных (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 09/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- identity values [SQL Server], bulk imports
+- data formats [SQL Server], identity values
+- bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сохранение значений идентификаторов при массовом импорте данных (SQL Server)
+# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Сохранение значений идентификаторов при массовом импорте данных (SQL Server)
 Для файлов данных, содержащих значения идентификаторов, можно выполнить массовый импорт в экземпляр Microsoft SQL Server.  По умолчанию значения столбца идентификаторов в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает им уникальные значения  на основе начального значения и значения приращения, указанных при создании таблицы.
 
-Если файл данных не содержит значений для столбцов идентификаторов в таблице, то для указания того, что при импорте столбец идентификаторов в таблице нужно пропустить, применяется файл форматирования.  Дополнительные сведения см. в статье [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md).
+Если файл данных не содержит значений для столбцов идентификаторов в таблице, то для указания того, что при импорте столбец идентификаторов в таблице нужно пропустить, применяется файл форматирования.  Дополнительные сведения см. в статье [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) .
 
 |Контур|
 |---|
-|[Сохранение значений идентификаторов](#keep_identity)<br />[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />&emsp;&#9679;&emsp;[Образец файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />[Примеры](#examples)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений идентификаторов без файла форматирования](#bcp_identity)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[Использование команды bcp и созданных значений идентификаторов без файла форматирования](#bcp_default)<br />&emsp;&#9679;&emsp;[Использование команды bcp и созданных значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений идентификаторов без файла форматирования](#bulk_identity)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и созданных значений идентификаторов без файла форматирования](#bulk_default)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и созданных значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и сохранение значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и созданных значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
+|[Сохранение значений идентификаторов](#keep_identity)<br />[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />&emsp;&#9679;&emsp;[Образец файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />[Примеры](#examples)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений идентификаторов без файла форматирования](#bcp_identity)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений идентификаторов с файлом форматирования](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[Использование команды bcp и созданных значений идентификаторов без файла форматирования](#bcp_default)<br />&emsp;&#9679;&emsp;[Использование команды bcp и созданных значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений идентификаторов без файла форматирования](#bulk_identity)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и созданных значений идентификаторов без файла форматирования](#bulk_default)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и созданных значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и сохранение значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и созданных значений идентификаторов с помощью файла форматирования в формате, отличном от XML](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## Сохранение значений идентификаторов <a name="keep_identity"></a>  
 Чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не присваивал значения идентификаторов при массовом импорте строк в таблицу, используется соответствующий квалификатор команды для сохранения значений идентификаторов.  При указании квалификатора сохранения значений идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользуется значениями идентификаторов, имеющимися в файле данных.  Ниже приведены эти квалификаторы.
@@ -38,7 +42,7 @@ caps.handback.revision: 22
 |BULK INSERT|KEEPIDENTITY|Аргумент|  
 |Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).|KEEPIDENTITY|Табличное указание|  
    
- Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md), [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md), [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md) и [Табличные указания (Transact-SQL)](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+ Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md), [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md), [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md) и [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
 
 > [!NOTE]
 >  Сведения о том, как создать автоматически увеличивающееся числовое значение, которое может использоваться в нескольких таблицах или вызываться из приложений без ссылки на какие-либо таблицы, см. в разделе [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).
@@ -100,7 +104,7 @@ Invoke-Item $bcpFile;
 ```
 
 ### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
-SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myIdentity.fmt` в формате, отличном от XML, на основе схемы `myIdentity`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md), укажите аргумент **format**, а вместо пути файла данных задайте значение **nul**.  Параметр format также требует наличия параметра **-f**.  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, **t,** используется для указания запятой в качестве признака [конца поля](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), а **T** используется для указания доверенного подключения с использованием встроенной системы безопасности.  В командной строке введите следующую команду:
+SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myIdentity.fmt`в формате, отличном от XML, на основе схемы `myIdentity`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, **t,** используется для указания запятой в качестве признака [конца поля](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), а **T** используется для указания доверенного подключения с использованием встроенной системы безопасности.  В командной строке введите следующую команду:
   
 ```
 bcp TestDatabase.dbo.myIdentity format nul -c -f D:\BCP\myIdentity.fmt -t, -T
@@ -119,7 +123,7 @@ Notepad D:\BCP\myIdentity.fmt
 В приведенных ниже примерах используется база данных, файл данных и файлы форматирования, созданные ранее.
   
 ### **Использование команды [bcp](../../tools/bcp-utility.md) и сохранение значений идентификаторов без файла форматирования**<a name="bcp_identity"></a>
-Параметр **-E**.  В командной строке введите следующую команду:
+Параметр**-E** .  В командной строке введите следующую команду:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -132,7 +136,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
 ### **Использование команды [bcp](../../tools/bcp-utility.md) и сохранение значений идентификаторов с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_identity_fmt"></a>
-Параметры **-E** и **-f**.  В командной строке введите следующую команду:
+Параметры**-E** и **-f** .  В командной строке введите следующую команду:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -158,7 +162,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **Использование команды [bcp](../../tools/bcp-utility.md) и созданных значений идентификаторов с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
-Использование значений по умолчанию и параметра **-f**.  В командной строке введите следующую команду:
+Использование значений по умолчанию и параметра **-f** .  В командной строке введите следующую команду:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -171,7 +175,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и сохранение значений идентификаторов без файла форматирования**<a name="bulk_identity"></a>
-Аргумент **KEEPIDENTITY**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Аргумент**KEEPIDENTITY** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -190,7 +194,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и сохранение значений идентификаторов с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
-**KEEPIDENTITY** и аргумент **FORMATFILE**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+**KEEPIDENTITY** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -226,7 +230,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и созданных значений идентификаторов с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
-Использование значений по умолчанию и аргумента **FORMATFILE**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Использование значений по умолчанию и аргумента **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -243,7 +247,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и сохранение значений идентификаторов с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
-Табличное указание **KEEPIDENTITY** и аргумент **FORMATFILE**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Табличное указание**KEEPIDENTITY** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -263,7 +267,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
 ### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и созданных значений идентификаторов с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
-Использование значений по умолчанию и аргумента **FORMATFILE**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Использование значений по умолчанию и аргумента **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 USE TestDatabase;
 GO
@@ -319,11 +323,12 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 3.  [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Программа bcp](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [Табличные указания (Transact-SQL)](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
 [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
+

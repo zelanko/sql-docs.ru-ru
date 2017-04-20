@@ -1,24 +1,28 @@
 ---
-title: "Предоставление пользователям без прав администратора разрешения на использование монитора репликации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Монитор репликации, неадминистративный доступ"
+title: "Предоставление пользователям без прав администратора разрешений на использование монитора репликации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor, non-administrators access
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95a0b865d33d96b740a48971bfccbc1334b37807
+ms.lasthandoff: 04/11/2017
+
 ---
-# Предоставление пользователям без прав администратора разрешения на использование монитора репликации
+# <a name="allow-non-administrators-to-use-replication-monitor"></a>Предоставление пользователям без прав администратора разрешения на использование монитора репликации
   В этом разделе показано, как разрешить пользователям без прав администратора использовать монитор репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Монитор репликации может использоваться пользователями, которые являются членами следующих ролей:  
   
 -   Предопределенная роль сервера **sysadmin** .  
@@ -46,17 +50,17 @@ caps.handback.revision: 36
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Чтобы разрешить использование монитора репликации, член **sysadmin** предопределенной роли сервера необходимо добавить пользователя в базу данных распространителя и присвоить такому пользователю **replmonitor** роли.  
+ Чтобы разрешить пользователям без прав администратора использовать монитор репликации, член предопределенной роли сервера **sysadmin** должен добавить пользователя в базу данных распространителя и присвоить такому пользователю роль **replmonitor** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Предоставление пользователям без прав администратора разрешения на использование монитора репликации  
+#### <a name="to-allow-non-administrators-to-use-replication-monitor"></a>Предоставление пользователям без прав администратора разрешения на использование монитора репликации  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]подключитесь к распространителю, а затем разверните узел сервера.  
   
-2.  Разверните **базы данных**, разверните **системных баз данных**, а затем разверните базу данных распространителя (с именем **распространения** по умолчанию).  
+2.  Последовательно раскройте **Базы данных**, **Системные базы данных**и раскройте базу данных распространителя (по умолчанию называемую **distribution** ).  
   
-3.  Разверните **безопасности**, щелкните правой кнопкой мыши **пользователей**, а затем нажмите кнопку **нового пользователя**.  
+3.  Раскройте **Безопасность**, щелкните правой кнопкой **Пользователь**, а затем выберите **Создать пользователя...**.  
   
 4.  Введите имя пользователя и имя входа.  
   
@@ -68,18 +72,18 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Добавление пользователя к предопределенной роли «replmonitor» базы данных  
+#### <a name="to-add-a-user-to-the-replmonitor-fixed-database-role"></a>Добавление пользователя к предопределенной роли «replmonitor» базы данных  
   
-1.  На распространителе в базе данных распространителя, выполните [sp_helpuser & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md). Если пользователь не указан в **пользователя** в результирующем наборе, пользователь должен предоставляться доступ к базе данных распространителя с помощью [CREATE USER & #40; Transact-SQL & #41;](../../../t-sql/statements/create-user-transact-sql.md) инструкция.  
+1.  В базе данных на распространителе выполните процедуру [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md). Если пользователь не указан в поле **UserName** итогового набора, ему следует предоставить доступ к базе данных распространителя с помощью инструкции [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
-2.  На распространителе в базе данных распространителя, выполните [sp_helprolemember & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), указав значение **replmonitor** для **@rolename** параметр. Если пользователь указан в поле **MemberName** результирующего набора, он уже принадлежит этой роли.  
+2.  В базе данных распространителя на распространителе выполните процедуру [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), указав значение **replmonitor** в параметре **@rolename**. Если пользователь указан в поле **MemberName** результирующего набора, он уже принадлежит этой роли.  
   
-3.  Если пользователь не принадлежит к **replmonitor** роли, выполнение [sp_addrolemember & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) на распространителе в базе данных распространителя. Укажите значение **replmonitor** для **@rolename** , а также добавляемое имя пользователя базы данных или имя входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows login being added для **@membername**.  
+3.  Если пользователь не принадлежит роли **replmonitor**, выполните процедуру [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **replmonitor** для **@rolename** , а также добавляемое имя пользователя базы данных или имя входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows для **@membername**.  
   
-#### Удаление пользователя из предопределенной роли «replmonitor» базы данных  
+#### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>Удаление пользователя из предопределенной роли «replmonitor» базы данных  
   
-1.  Чтобы убедиться, что пользователь принадлежит к **replmonitor** роли, выполнение [sp_helprolemember & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) в базе данных распространителя на распространителе и указать значение **replmonitor** для **@rolename**. Если пользователь не указан в поле **MemberName** результирующего набора, в данный момент он не принадлежит этой роли.  
+1.  Чтобы убедиться, что пользователь принадлежит роли **replmonitor**, выполните в базе данных распространителя на распространителе процедуру [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) и задайте значение **replmonitor** для параметра **@rolename**. Если пользователь не указан в поле **MemberName** результирующего набора, в данный момент он не принадлежит этой роли.  
   
-2.  Если пользователь принадлежит **replmonitor** роли, выполнение [sp_droprolemember & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) на распространителе в базе данных распространителя. Укажите значение **replmonitor** для **@rolename** , а также имя пользователя базы данных или имя входа Windows, подлежащее удалению, для **@membername**.  
+2.  Если пользователь принадлежит роли **replmonitor**, выполните процедуру [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **replmonitor** для **@rolename** , а также имя пользователя базы данных или имя входа Windows, подлежащее удалению, для **@membername**.  
   
   

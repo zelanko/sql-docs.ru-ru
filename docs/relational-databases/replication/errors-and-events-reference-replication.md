@@ -1,34 +1,38 @@
 ---
-title: "Справочник по ошибкам и событиям (репликация) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ошибки [репликация SQL Server], диагностика"
-  - "диагностика [репликация SQL Server], ошибки"
-  - "репликация [SQL Server], диагностика"
-  - "ошибки [репликация SQL Server]"
-  - "справочник по ошибкам и событиям [репликация SQL Server]"
+title: "Справочник по ошибкам и событиям (репликация) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server replication], troubleshooting
+- troubleshooting [SQL Server replication], errors
+- replication [SQL Server], troubleshooting
+- errors [SQL Server replication]
+- errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
+ms.lasthandoff: 04/11/2017
+
 ---
-# Справочник по ошибкам и событиям (репликация)
+# <a name="errors-and-events-reference-replication"></a>Справочник по ошибкам и событиям (репликация)
   Этот раздел документации содержит информацию о причинах и способах устранения ошибок, связанных с репликацией.  
   
 |Ошибка|Сообщение|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Невозможно вставить повторяющуюся ключевую строку в объект ' %. * ls с уникальным индексом ' %.\*ls'.|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Нарушение ограничения "%.*ls" для %ls. Не удается вставить повторяющийся ключ в объект ' %.\*ls'.|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Не удается вставить повторяющуюся строку ключа в объект "%.*ls" с уникальным индексом "%.\*ls".|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Нарушение ограничения "%.*ls" для %ls. Не удается вставить повторяющийся ключ в объект "%.\*ls".|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|База данных "%ls" была восстановлена, однако во время восстановления или удаления репликации обнаружена ошибка. База данных находится в режиме «вне сети». См. раздел MSSQL_ENG003165 в электронной документации по SQL Server.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|Невозможно %S_MSG %S_MSG "%.*ls", так как она используется для репликации.|  
 |[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|Невозможно изменить %S_MSG "%.*ls", так как выполняется публикация для репликации.|  
@@ -50,7 +54,7 @@ caps.handback.revision: 25
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|Задан порог [%s:%s] для публикации [%s]. Убедитесь в том, что агент слияния запущен и соответствует предъявляемому требованию.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|Задан порог [%s:%s] для публикации [%s]. Убедитесь в том, что агент слияния запущен и соответствует предъявляемому требованию.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|Задан порог [%s:%s] для публикации [%s]. Убедитесь в том, что агент слияния запущен и соответствует предъявляемому требованию.|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Ошибка входа пользователя "%. * ls'.%.\*ls|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Ошибка входа пользователя '%.*ls'.%.\*ls|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|К базе данных одновременно может быть подключен лишь один агент чтения журнала или процедура, относящаяся к журналу (sp_repldone, sp_replcmds и sp_replshowcmds). Если выполняется процедура, относящаяся к журналу, удалите подключение, по которому выполнялась процедура, или выполните для этого подключения процедуру sp_replflush, прежде чем запустить агент чтения журнала или выполнить другую процедуру, относящуюся к журналу.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|Агент репликации не зарегистрировал сообщение о ходе выполнения в течение %ld минут. Это может указывать на то, что агент не отвечает, либо на высокую загрузку системы. Убедитесь, что записи реплицируются по назначению, а подключения к подписчику, издателю и распространителю все еще активны.|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|Завершение работы агента. Дополнительные сведения см. в журнале заданий агента SQL Server для задания «%s».|  

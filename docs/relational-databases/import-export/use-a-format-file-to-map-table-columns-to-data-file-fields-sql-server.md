@@ -1,30 +1,34 @@
 ---
-title: "Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сопоставление столбцов и полей при импорте [SQL Server]"
-  - "файлы форматирования [SQL Server], сопоставление столбцов с полями"
+title: "Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 09/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mapping columns to fields during import [SQL Server]
+- format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)
+# <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)
 Файл данных может содержать поля, выстроенные в порядке, отличном от порядка соответствующих столбцов в таблице. В этом подразделе описывается изменение файлов форматирования в формате XML и в формате, отличном от XML для импорта файла данных, поля которого выстроены в ином порядке, нежели столбцы таблицы. Измененный файл форматирования сопоставляет поля данных соответствующим столбцам таблицы.  Ознакомьтесь с разделом [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) для получения дополнительных сведений.
 
 |Контур|
 |---|
-|[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />[Создание файлов форматирования](#create_format_file)<br />&emsp;&#9679;&emsp;[Создание файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Изменение файла форматирования в формате, отличном от XML](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Создание XML-файла форматирования](#xml_format_file)<br />&emsp;&#9679;&emsp;[Изменение XML-файла форматирования](#modify_xml_format_file)<br />[Импорт данных с использованием файла форматирования для сопоставления столбцов таблицы полям файла данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование bcp и файла форматирования в формате, отличном от XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Использование bcp и XML-файла форматирования](#bcp_xml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и файла форматирования в формате, отличном от XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и XML-файла форматирования](#bulk_xml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK...) и файла форматирования в формате, отличном от XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK...) и XML-файла форматирования](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />[Создание файлов форматирования](#create_format_file)<br />&emsp;&#9679;&emsp;[Создание файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Изменение файла форматирования в формате, отличном от XML](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Создание XML-файла форматирования](#xml_format_file)<br />&emsp;&#9679;&emsp;[Изменение XML-файла форматирования](#modify_xml_format_file)<br />[Импорт данных с использованием файла форматирования для сопоставления столбцов таблицы полям файла данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование bcp и файла форматирования в формате, отличном от XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Использование bcp и XML-файла форматирования](#bcp_xml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и файла форматирования в формате, отличном от XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и XML-файла форматирования](#bulk_xml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и файла форматирования в формате, отличном от XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и XML-файла форматирования](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
 
 > [!NOTE]  
 >  И файлы форматирования, отличные от XML, и XML-файлы форматирования можно использовать для массового импорта файла данных в таблицу с помощью команды служебной программы [bcp](../../tools/bcp-utility.md), а также инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Дополнительные сведения см. в разделе [Использование файла форматирования для массового импорта данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
@@ -66,12 +70,12 @@ CREATE TABLE myRemap
 Простейший способ создать файл форматирования заключается в использовании [служебной программы bcp](../../tools/bcp-utility.md).  Во-первых, создайте базовый файл форматирования из существующей таблицы.  Во-вторых, измените его в соответствии с фактическим файлом данных.
 
 ### Создание файла форматирования в формате, отличном от XML<a name="nonxml_format_file"></a>
-Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md). Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myRemap.fmt`, отличного от XML, на основе схемы `myRemap`.  Кроме того, квалификатор `c` используется для указания символьных данных, `t,` используется для указания запятую в качестве признака конца поля, а `T` используется для указания доверенного соединения с использованием встроенной системы безопасности.  В командной строке введите следующую команду:
+Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) . Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myRemap.fmt`, отличного от XML, на основе схемы `myRemap`.  Кроме того, квалификатор `c` используется для указания символьных данных, `t,` используется для указания запятую в качестве признака конца поля, а `T` используется для указания доверенного соединения с использованием встроенной системы безопасности.  В командной строке введите следующую команду:
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### Изменение файла форматирования в формате, отличном от XML <a name="modify_nonxml_format_file"></a>
-Терминологию см. в разделе [Структура файлов форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure).  Откройте `D:\BCP\myRemap.fmt` в Блокноте и внесите следующие изменения:
+Терминологию см. в разделе [Структура файлов форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) .  Откройте `D:\BCP\myRemap.fmt` в Блокноте и внесите следующие изменения:
 1) Переупорядочите строки файла форматирования, чтобы они отображались в том же порядке, что и данные в `myRemap.bcp`.
 2) Убедитесь, что значения порядка полей в файле узлов идут последовательно.
 3) Убедитесь, что после последней строки файла форматирования расположен символ возврата каретки.
@@ -81,20 +85,20 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **После**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 Теперь измененный файл форматирования отображает:
@@ -104,12 +108,12 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 * Четвертое поле данных в `myRemap.bcp` сопоставляется с четвертым столбцом. ` myRemap.. Gender`
 
 ### Создание XML-файла форматирования <a name="xml_format_file"></a>  
-Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания XML-файла форматирования `myRemap.xml` на основе схемы `myRemap`.  Кроме того, квалификатор `c` используется для указания символьных данных, `t,` используется для указания запятую в качестве признака конца поля, а `T` используется для указания доверенного соединения с использованием встроенной системы безопасности.  Для создания XML-файла форматирования должен использоваться квалификатор `x`.  В командной строке введите следующую команду:
+Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания XML-файла форматирования `myRemap.xml`на основе схемы `myRemap`.  Кроме того, квалификатор `c` используется для указания символьных данных, `t,` используется для указания запятую в качестве признака конца поля, а `T` используется для указания доверенного соединения с использованием встроенной системы безопасности.  Для создания XML-файла форматирования должен использоваться квалификатор `x` .  В командной строке введите следующую команду:
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### Изменение XML-файла форматирования <a name="modify_xml_format_file"></a>
-Терминологию см. в разделе [Синтаксис схемы для XML-файлов форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs).  Откройте `D:\BCP\myRemap.xml` в Блокноте и внесите следующие изменения:
+Терминологию см. в разделе [Синтаксис схемы для XML-файлов форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) .  Откройте `D:\BCP\myRemap.xml` в Блокноте и внесите следующие изменения:
 1) Порядок, в котором объявлены элементы \<FIELD> в файле форматирования, является порядком, в котором эти поля будут расположены в файле данных, поэтому обратите порядок элементов \<FIELD> с атрибутами ID, равными 2 и 3.
 2) Убедитесь, что значения атрибутов ID \<FIELD> идут последовательно.
 3) Порядок элементов \<COLUMN> в элементе \<ROW> задает порядок, в котором они будут возвращены массовой операцией.  XML-файл форматирования назначает каждому элементу \<COLUMN> локальное имя, не имеющее отношения к столбцу целевой таблицы операции массового импорта.  Порядок элементов \<COLUMN> не зависит от порядка элементов \<FIELD> в определении \<RECORD>.  Каждый элемент \<COLUMN> соответствует элементу \<FIELD> (чей идентификатор задан в атрибуте SOURCE элемента \<COLUMN>).  Таким образом, единственными атрибутами, требующими пересмотра, являются значения SOURCE \<COLUMN>.  Обратите порядок атрибутов 2 и 3 SOURCE \<COLUMN>.
@@ -117,37 +121,37 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 Сравните изменения:  
 **Перед**
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
 **После**
 ```
-<?xml version="1.0"?>
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<?xml version="1.0"?>
+\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  \<COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
@@ -205,7 +209,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myRemap;
 ```
 
-### Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a> 
+### Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Выполните следующий код Transact-SQL в Microsoft SQL Server Management Studio (SSMS):
 ```tsql
 USE TestDatabase;
@@ -245,9 +249,10 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 
   
-## См. также:  
-[Программа bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>См. также:  
+[bcp Utility](../../tools/bcp-utility.md)   
  [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Использование файла форматирования для пропуска поля данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   
+

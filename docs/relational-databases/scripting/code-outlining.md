@@ -1,43 +1,47 @@
 ---
-title: "Структурирование кода | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "редактор запросов [среда SQL Server Management Studio], структурирование кода"
-  - "редактор запросов [среда SQL Server Management Studio], скрытие кода"
+title: "Структурирование кода | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio], outlining code
+- Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65a303f3cc995daacc29260c6a7ab176414f773f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Структурирование кода
+# <a name="code-outlining"></a>Структурирование кода
   Функция структурирования в редакторах запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет при редактировании запросов выборочно скрывать участки кода. Это делает просмотр кода при редактировании более удобным, особенно когда файл запроса имеет большой размер.  
   
-## Общие сведения о функции структурирования  
+## <a name="outlining-overview"></a>Общие сведения о функции структурирования  
  По умолчанию при открытии окна редактора запросов весь код является видимым. Участки кода можно свернуть, чтобы скрыть их. Квадрат со знаком «минус» (-) возле вертикальной линии, проходящей вдоль левого края окна редактора, обозначает начало каждого сворачиваемого участка кода. Если щелкнуть значок «минус», то текст участка кода будет заменен полем, содержащим три точки (…), а значок «минус» заменяется значком «плюс» (+). Если щелкнуть значок «плюс», то свернутый код будет отображен, а значок «плюс» заменен значком «минус». Если указатель находится над полем с тремя точками, то отображается всплывающая подсказка, содержащая код свернутого раздела.  
   
-## Системные структурные области  
+## <a name="system-outline-regions"></a>Системные структурные области  
  Каждый редактор в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] формирует набор структурных областей, по умолчанию определяемых системой.  
   
  Редакторы кода многомерных выражений и расширений интеллектуального анализа данных создают структурные области для каждой многострочной инструкции. Это единственный уровень структурирования, поддерживаемый этими редакторами.  
   
-### Области редактора запросов XMLA служб Analysis Services  
+### <a name="analysis-services-xmla-query-editor-regions"></a>Области редактора запросов XMLA служб Analysis Services  
  Редактор запросов XMLA служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] формирует структурную область для каждого многострочного XML-атрибута. Редактор создает вложенные структурные области для вложенных тегов. Например, редактор XMLA создает три структурные области в следующем документе.  
   
  ![XML-код, демонстрирующий структурирование](../../relational-databases/scripting/media/editoutlinexmlfull.gif "XML-код, демонстрирующий структурирование")  
   
  Если щелкнуть значок "минус" в строке \<InnerTag>, то будет свернут только InnerTag, как показано на следующей иллюстрации.  
   
- ![XML-код со скрытым внутренним узлом](../../relational-databases/scripting/media/editoutlinexmlinnercol.png "XML-код со скрытым внутренним узлом")  
+ ![XML-код со скрытым внутренним узлом](../../relational-databases/scripting/media/editoutlinexmlinnercol.gif "XML-код со скрытым внутренним узлом")  
   
  Когда указатель находится над полем с тремя точками (...), то код в свернутой области отображается во всплывающей подсказке, как показано на следующей иллюстрации.  
   
@@ -45,13 +49,13 @@ caps.handback.revision: 14
   
  Если щелкнуть значок "минус" в строке \<MiddleTag>, то будут свернуты и MiddleTag, и InnerTag, как показано на следующей иллюстрации.  
   
- ![XML-код со скрытыми внутренними и средними тегами](../../relational-databases/scripting/media/editoutlinexmlmiddlecol.png "XML-код со скрытыми внутренними и средними тегами")  
+ ![XML-код со скрытыми внутренним и средним тегами](../../relational-databases/scripting/media/editoutlinexmlmiddlecol.gif "XML-код со скрытыми внутренним и средним тегами")  
   
  Если щелкнуть значок "минус" в строке \<OuterTag>, то будут свернуты все три строки, как показано на следующей иллюстрации.  
   
- ![XML-код, где скрыты все три тега](../../relational-databases/scripting/media/editoutlinexmloutercol.png "XML-код, где скрыты все три тега")  
+ ![XML-код с тремя скрытыми тегами](../../relational-databases/scripting/media/editoutlinexmloutercol.gif "XML-код с тремя скрытыми тегами")  
   
-### Области редактора запросов к ядру СУБД  
+### <a name="database-engine-query-editor-regions"></a>Области редактора запросов к ядру СУБД  
  Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] формирует структурные области для каждого элемента в следующей иерархии.  
   
 1.  Пакеты. Первый пакет содержит код от начала файла до первой команды GO либо до конца файла, если он не содержит команд GO. Каждый последующий пакет после первой команды GO охватывает код от соответствующей команды GO до следующей команды GO, либо до конца файла.  

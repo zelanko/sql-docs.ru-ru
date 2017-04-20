@@ -1,34 +1,38 @@
 ---
-title: "Роли уровня сервера | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.Security.NT_AUTHORITY.SYSTEM"
-  - "sql13.Security.BUILTIN.administrators"
-helpviewer_keywords: 
-  - "роли [SQL Server], уровня сервера"
-  - "субъекты [SQL Server], уровня сервера"
-  - "разрешение УПРАВЛЕНИЕ СЕРВЕРОМ"
-  - "предопределенные роли сервера [SQL Server]"
-  - "учетные данные [SQL Server], роли"
-  - "предопределенная роль сервера sysadmin "
-  - "роли уровня сервера [SQL Server]"
-  - "проверка подлинности [SQL Server], роли"
+title: "Роли уровня сервера | Документация Майкрософт"
+ms.custom: 
+ms.date: 12/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.Security.NT_AUTHORITY.SYSTEM
+- sql13.Security.BUILTIN.administrators
+helpviewer_keywords:
+- roles [SQL Server], server-level
+- principals [SQL Server], server-level
+- CONTROL SERVER permission
+- fixed server roles [SQL Server]
+- credentials [SQL Server], roles
+- sysadmin fixed server role
+- server-level roles [SQL Server]
+- authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8850c5e74e5e77ecad1b847f6176713c0af9b537
+ms.lasthandoff: 04/11/2017
+
 ---
-# Роли уровня сервера
+# <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет роли уровня сервера и помогает управлять разрешениями на сервере. Эти роли являются субъектами безопасности, группирующими других участников. Разрешения ролей уровня сервера распространяются на весь сервер. (*Роли* похожи на *группы* в операционной системе Windows.)  
@@ -37,39 +41,42 @@ caps.handback.revision: 50
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет девять предопределенных ролей сервера. Разрешения, назначенные предопределенным ролям сервера, не могут быть изменены. Начиная с [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], можно создавать пользовательские роли сервера и добавлять разрешения на уровне сервера таким пользовательским ролям.  
   
- В роли уровня сервера можно добавлять субъекты уровня сервера (имена входа, учетные записи Windows и группы Windows [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Каждый член предопределенной роли сервера может добавлять другие имена входа к той же роли. Члены пользовательских ролей сервера не могут добавлять других участников на уровне сервера в роль.  
+ В роли уровня сервера можно добавлять субъекты уровня сервера (имена входа, учетные записи Windows и группы Windows[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). Каждый член предопределенной роли сервера может добавлять другие имена входа к той же роли. Члены пользовательских ролей сервера не могут добавлять других участников на уровне сервера в роль.  
+>  [!NOTE]
+>  Разрешения уровня сервера недоступны в базе данных SQL или хранилище данных SQL. Дополнительные сведения о базе данных SQL см. в статье [Предоставление доступа к базе данных и управление им](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
   
-## Предопределенные роли уровня сервера  
+## <a name="fixed-server-level-roles"></a>Предопределенные роли уровня сервера  
  В следующей таблице представлены предопределенные роли уровня сервера и их возможности.  
   
 |Предопределенная роль уровня сервера|Описание|  
 |------------------------------|-----------------|  
 |sysadmin|Члены предопределенной роли сервера sysadmin могут выполнять любые действия на сервере.|  
 |serveradmin|Члены предопределенной роли сервера serveradmin могут изменять параметры конфигурации на уровне сервера, а также выключать сервер.|  
-|securityadmin|Элементы предопределенной роли сервера securityadmin управляют именами входа и их свойствами. Они могут предоставлять, запрещать и отменять разрешения на уровне сервера (инструкции GRANT, DENY и REVOKE). Они также могут предоставлять, запрещать и отменять разрешения на уровне базы данных (инструкции GRANT, DENY и REVOKE) при наличии доступа к базе данных. Кроме того, они могут сбрасывать пароли для имен входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> **\*\*Примечание по безопасности.\*\*** Возможность предоставления доступа к компоненту [!INCLUDE[ssDE](../../../includes/ssde-md.md)] и настройки разрешений пользователей позволяют администратору безопасности назначать большинство разрешений сервера. Роль **securityadmin** должна считаться эквивалентной роли **sysadmin** .|  
+|securityadmin|Элементы предопределенной роли сервера securityadmin управляют именами входа и их свойствами. Они могут предоставлять, запрещать и отменять разрешения на уровне сервера (инструкции GRANT, DENY и REVOKE). Они также могут предоставлять, запрещать и отменять разрешения на уровне базы данных (инструкции GRANT, DENY и REVOKE) при наличии доступа к базе данных. Кроме того, они могут сбрасывать пароли для имен входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> **\*\* Примечание по безопасности. \*\*** Возможность предоставления доступа к компоненту [!INCLUDE[ssDE](../../../includes/ssde-md.md)] и настройки разрешений пользователей позволяют администратору безопасности назначать большинство разрешений сервера. Роль **securityadmin** должна считаться эквивалентной роли **sysadmin** .|  
 |processadmin|Члены предопределенной роли сервера processadmin могут завершать процессы, работающие на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|setupadmin|Члены предопределенной роли сервера setupadmin могут добавлять или удалять связанные серверы с помощью инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)]. (Членство в роли sysadmin необходимо при использовании службы [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
+|setupadmin|Члены предопределенной роли сервера setupadmin могут добавлять или удалять связанные серверы с помощью инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] . (Членство в роли sysadmin необходимо при использовании службы [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)|  
 |bulkadmin|Члены предопределенной роли сервера bulkadmin могут выполнять инструкцию BULK INSERT.|  
 |diskadmin|Предопределенная роль сервера diskadmin используется для управления файлами на диске.|  
 |dbcreator|Члены предопределенной роли сервера dbcreator могут создавать, изменять, удалять и восстанавливать любые базы данных.|  
 |public|Каждое имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] принадлежит к роли сервера public. Если для участника на уровне сервера не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли public на этот объект. Разрешения роли public следует назначать только тому объекту, который будет доступен всем пользователям. Нельзя изменить членство в роли public.<br /><br /> Примечание. Роль public реализована не так, как другие роли. Однако разрешения для роли public можно назначать, отменять или отзывать.|  
   
-## Разрешения Предопределенных Ролей Сервера  
- Каждая предопределенная роль сервера обладает определенными разрешениями, назначенными ей. Список разрешений, назначенных ролям сервера, доступен в [Предопределенные Роли Сервера Ядра СУБД и Предопределенные Роли Базы Данных](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
+## <a name="permissions-of-fixed-server-roles"></a>Разрешения Предопределенных Ролей Сервера  
+ Каждая предопределенная роль сервера обладает определенными разрешениями, назначенными ей. На следующем рисунке показаны разрешения, назначенные ролям сервера.   
+![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-server-role-permissions.png)   
   
 > [!IMPORTANT]  
->  Разрешение **CONTROL SERVER** похоже на, но не идентично **sysadmin** предопределенной роли сервера. Разрешения не влекут за собой членства роли, а членства роли не предоставляют разрешений. (Пример **CONTROL SERVER** не подразумевает членство в предопределенной роли сервера **sysadmin**.) Однако иногда возможно олицетворять между ролями и эквивалентными разрешениями. Большинство команд **DBCC** и многие системные процедуры требуют членство в **sysadmin** предопределенной роли сервера. Список из 171 системной хранимой процедуры, которым требуется членство в роли **sysadmin** , содержится в следующей записи блога Андреаса Волтера (Andreas Wolter) [Сравнение CONTROL SERVER и sysadmin/sa: разрешения, системные процедуры, DBCC, автоматическое создание схем и расширение привилегий — разъяснения](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Разрешение **CONTROL SERVER** похоже на, но не идентично **sysadmin** предопределенной роли сервера. Разрешения не влекут за собой членства роли, а членства роли не предоставляют разрешений. (Пример **CONTROL SERVER** не подразумевает членство в предопределенной роли сервера **sysadmin**.) Однако иногда возможно олицетворять между ролями и эквивалентными разрешениями. Большинство команд **DBCC** и многие системные процедуры требуют членство в **sysadmin** предопределенной роли сервера. Список из 171 системной хранимой процедуры, которым требуется членство в роли **sysadmin** , содержится в следующей записи блога Андреаса Волтера (Andreas Wolter) [Сравнение CONTROL SERVER и sysadmin/sa: разрешения, системные процедуры, DBCC, автоматическое создание схем и расширение привилегий — разъяснения](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
-## Разрешение на уровне сервера  
- В пользовательские роли сервера можно добавить только разрешения уровня сервера. Для составления списка разрешений уровня сервера, выполните следующее выражение.  Разрешениями уровня сервера являются:  
+## <a name="server-level-permissions"></a>Разрешение на уровне сервера  
+ В пользовательские роли сервера можно добавить только разрешения уровня сервера. Для составления списка разрешений уровня сервера, выполните следующее выражение. Разрешениями уровня сервера являются:  
   
 ```tsql  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   
- Дополнительные сведения о разрешениях см. в разделах [Разрешения (компонент Database Engine)](../../../relational-databases/security/permissions-database-engine.md) и [sys.fn_builtin_permissions (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
+ Дополнительные сведения о разрешениях см. в разделах [Разрешения (ядро СУБД)](../../../relational-databases/security/permissions-database-engine.md) и [sys.fn_builtin_permissions (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
-## Работа с ролями уровня сервера  
+## <a name="working-with-server-level-roles"></a>Работа с ролями уровня сервера  
  В следующей таблице описаны команды, представления и функции, предназначенные для работы с ролями уровня сервера.  
   
 |Компонент|Тип|Описание|  
@@ -86,7 +93,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[DROP SERVER ROLE (Transact-SQL)](../../../t-sql/statements/drop-server-role-transact-sql.md)|Command|Удаляет определяемую пользователем роль сервера.|  
 |[Функция IS_SRVROLEMEMBER (Transact-SQL)](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|Функция|Определяет членство роли сервера.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Роли уровня базы данных](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Представления каталога безопасности (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Функции безопасности (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)   
@@ -97,3 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [Создание роли сервера](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
   
   
+

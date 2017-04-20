@@ -1,46 +1,50 @@
 ---
-title: "Рекомендации по защите репликации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "безопасность [репликация SQL Server], рекомендации"
-  - "безопасность [репликация SQL Server], между доменами"
-  - "проверка подлинности [репликация SQL Server]"
-  - "Интернет [репликация SQL Server], безопасность"
+title: "Рекомендации по защите репликации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [SQL Server replication], best practices
+- security [SQL Server replication], between domains
+- authentication [SQL Server replication]
+- Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a14c884fd9abac0488a2a1cbf2744f52aee34770
+ms.lasthandoff: 04/11/2017
+
 ---
-# Рекомендации по защите репликации
+# <a name="replication-security-best-practices"></a>Рекомендации по защите репликации
   Репликация перемещает данные в распределенных средах, начиная с внутренних сетей в рамках одного домена и заканчивая приложениями, обеспечивающими передачу данных между доменами без доверия, а также через Интернет. Чтобы обеспечить безопасность соединения при репликации, важно выбрать способ, соответствующий конкретным обстоятельствам.  
   
  Сведения, указанные ниже, необходимо учитывать при проведении репликации в любых средах:  
   
--   При шифровании соединения между компьютерами, занятыми в топологии репликации, необходимо использовать общепризнанную стандартную технологию, такую как виртуальная частная сеть (VPN), протокол безопасных соединений (SSL) или IP-безопасность (IPSEC). Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре базы данных & #40; SQL Server Configuration Manager & #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md). Сведения об использовании VPN и SSL для репликации данных через Интернет см. в разделе [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
+-   При шифровании соединения между компьютерами, занятыми в топологии репликации, необходимо использовать общепризнанную стандартную технологию, такую как виртуальная частная сеть (VPN), протокол безопасных соединений (SSL) или IP-безопасность (IPSEC). Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Сведения об использовании VPN и SSL для репликации данных через Интернет см. в разделе [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
   
-     Если используется протокол SSL для защиты соединения между компьютерами в топологии репликации, укажите значение **1** или **2** для **- EncryptionLevel** параметр каждого агента репликации (значение **2** рекомендуется). Значение **1** указывает, что шифрование будет использоваться, но агент не будет проверять, подписан ли SSL-сертификат сервера доверенным издателем; значение **2** указывает, что будет проверяться подпись сертификата. Параметры агента могут задаваться в профилях агента или в командной строке. Дополнительные сведения см. в разделе:  
+     Если используется протокол SSL для защиты соединений между компьютерами в топологии репликации, задайте значение **1** или **2** для параметра **-EncryptionLevel** каждого агента репликации (рекомендуется значение **2** ). Значение **1** указывает, что шифрование будет использоваться, но агент не будет проверять, подписан ли SSL-сертификат сервера доверенным издателем; значение **2** указывает, что будет проверяться подпись сертификата. Параметры агента могут задаваться в профилях агента или в командной строке. Дополнительные сведения см. в разделе:  
   
     -   [Работа с профилями агента репликации](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
-    -   [Просмотр и изменение параметров командной строки агента репликации & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+    -   [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   При запуске каждого агента репликации необходимо использовать новую учетную запись Windows, а в отношении всех соединений агента репликации применять проверку подлинности Windows. Дополнительные сведения об определении учетных записей см. в разделе [Управление именами входа и паролями в репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+-   При запуске каждого агента репликации необходимо использовать новую учетную запись Windows, а в отношении всех соединений агента репликации применять проверку подлинности Windows. Дополнительные сведения об указании учетных записей см. в статье [Управление именами для входа и паролями в репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   
 -   Предоставляйте каждому из агентов только те разрешения, которые необходимы. Дополнительные сведения см. в подразделе «Разрешения, необходимые для агентов» раздела [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Убедитесь в том, что все учетные записи агента слияния и агента распространителя находятся в списке доступа к публикации (PAL). Дополнительные сведения см. в разделе [организация безопасности издателя](../../../relational-databases/replication/security/secure-the-publisher.md).  
+-   Убедитесь в том, что все учетные записи агента слияния и агента распространителя находятся в списке доступа к публикации (PAL). Дополнительные сведения см. в статье [Организация безопасности издателя](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
 -   Учетным записям в списке доступа к публикации необходимо предоставлять только те разрешения, которые им необходимы для выполнения задач репликации. Не добавляйте в предопределенные роли сервера имена входа, которые не требуются для репликации.  
   
@@ -64,14 +68,14 @@ caps.handback.revision: 42
   
     -   Убедитесь, что такой агент, например агент распространителя для подписки, устанавливает соединения под одной и той же учетной записью на каждом компьютере.  
   
-    -   В ситуациях, требующих проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], часто не предоставляется доступ к хранилищу моментального снимка UNC (например, доступ может быть заблокирован брандмауэром). В таком случае моментальный снимок может быть передан подписчикам при помощи протокола передачи данных (FTP). Дополнительные сведения см. в разделе [передачи моментальные снимки через FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   В ситуациях, требующих проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , часто не предоставляется доступ к хранилищу моментального снимка UNC (например, доступ может быть заблокирован брандмауэром). В таком случае моментальный снимок может быть передан подписчикам при помощи протокола передачи данных (FTP). Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
-## См. также:  
- [Включение шифрования соединений в ядре базы данных & #40; Диспетчер конфигурации SQL Server & #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)   
+## <a name="see-also"></a>См. также:  
+ [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Репликация через Интернет](../../../relational-databases/replication/replication-over-the-internet.md)   
- [Организация безопасности подписчика](../../../relational-databases/replication/security/secure-the-subscriber.md)   
+ [Защита подписчика](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Организация безопасности распространителя](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Организация безопасности издателя](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Безопасность и защита и #40; Репликация & #41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

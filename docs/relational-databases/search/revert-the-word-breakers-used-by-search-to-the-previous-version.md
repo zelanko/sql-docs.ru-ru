@@ -1,29 +1,33 @@
 ---
-title: "Перевод средств разбиения по словам, используемых поиском, на предыдущую версию | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# Перевод средств разбиения по словам, используемых поиском, на предыдущую версию
+# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Перевод средств разбиения по словам, используемых поиском, на предыдущую версию
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает и включает версию средств разбиения по словам и парадигматических модулей для всех языков, поддерживающих полнотекстовый поиск, за исключением корейского. В этом разделе описывается способ переключения из данной версии этих компонентов в предыдущую версию или обратно, из предыдущей версии в новую версию.  
   
  В этом разделе не обсуждаются следующие языки.  
   
 -   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
--   **Датский, польский и турецкий**. Средства разбиения по словам сторонних поставщиков для датского, польского и турецкого языков, входившие в предыдущие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заменены компонентами [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+-   **Датский, польский и турецкий**. Средства разбиения по словам сторонних поставщиков для датского, польского и турецкого языков, входившие в предыдущие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , заменены компонентами [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 -   **Чешский и греческий**. Добавлены средства разбиения по словам для чешского и греческого языков. В предыдущих выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент полнотекстового поиска (Full-Text Search) не поддерживал эти два языка.  
   
@@ -100,7 +104,7 @@ caps.handback.revision: 13
   
 2.  Скопируйте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] файла NaturalLanguage6.dll в другое место.  
   
-3.  Скопируйте предыдущую версию файла NaturalLanguage6.dll из папки Binn экземпляра [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Скопируйте предыдущую версию файла NaturalLanguage6.dll из папки Binn экземпляра [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Это изменение затрагивает все языки, использующие файл NaturalLanguage6.dll, в текущей и в предыдущей версии.  
@@ -111,7 +115,7 @@ caps.handback.revision: 13
   
 1.  Перейдите в папку, куда была скопирована версия [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] файла NaturalLanguage6.dll.  
   
-2.  Скопируйте текущую версию файла NaturalLanguage6.dll из этой папки в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+2.  Скопируйте текущую версию файла NaturalLanguage6.dll из этой папки в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Это изменение затрагивает все языки, использующие файл NaturalLanguage6.dll, в текущей и в предыдущей версии.  
@@ -146,12 +150,12 @@ caps.handback.revision: 13
   
 3.  Скопируйте версию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] файла NaturalLanguage6.dll в другое место.  
   
-4.  Скопируйте предыдущую версию файла NaturalLanguage6.dll из папки Binn экземпляра [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+4.  Скопируйте предыдущую версию файла NaturalLanguage6.dll из папки Binn экземпляра [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Это изменение затрагивает все языки, использующие файл NaturalLanguage6.dll, в текущей и в предыдущей версии.  
   
-5.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+5.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 6.  Чтобы добавить новые разделы для идентификаторов классов COM предыдущей версии интерфейсов средства разбиения по словам и парадигматического модуля для идентификатора выбранного языка, выполните следующие действия.  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 13
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла предыдущего парадигматического модуля из таблицы.  
   
-7.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+7.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 8.  Замените значение раздела **WBreakerClass** значением текущего средства разбиения по словам из таблицы.  
   
@@ -175,12 +179,12 @@ caps.handback.revision: 13
   
 1.  Перейдите в папку, куда была скопирована версия [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] файла NaturalLanguage6.dll.  
   
-2.  Скопируйте текущую версию файла NaturalLanguage6.dll из этой папки в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+2.  Скопируйте текущую версию файла NaturalLanguage6.dll из этой папки в папку Binn экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
     > [!WARNING]  
     >  Это изменение затрагивает все языки, использующие файл NaturalLanguage6.dll, в текущей и в предыдущей версии.  
   
-3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 4.  Если следующие разделы не существуют, выполните следующие шаги, чтобы добавить новые разделы для идентификаторов классов COM текущих интерфейсов средства разбиения по словам и парадигматического модуля для выбранного языка.  
   
@@ -192,7 +196,7 @@ caps.handback.revision: 13
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла текущего парадигматического модуля из таблицы.  
   
-5.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+5.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 6.  Замените значение раздела **WBreakerClass** значением предыдущего средства разбиения по словам из таблицы.  
   
@@ -221,7 +225,7 @@ caps.handback.revision: 13
 |Предыдущий идентификатор CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Текущее имя файла|MsWb7.dll|MsWb7.dll|  
+|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
   
  **Японский (jpn), LCID 1041**  
   
@@ -239,7 +243,7 @@ caps.handback.revision: 13
 |Предыдущий идентификатор CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Текущее имя файла|MsWb7.dll|MsWb7.dll|  
+|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
   
  **Русский (rus), LCID 1049**  
   
@@ -248,7 +252,7 @@ caps.handback.revision: 13
 |Предыдущий идентификатор CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Текущее имя файла|MsWb7.dll|MsWb7.dll|  
+|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Языки, у которых именем файла текущего и предыдущего средства разбиения по словам не является NaturalLanguage6.dll  
  Для языков в следующей таблице имена файлов предыдущей версии средств разбиения по словам и парадигматических модулей отличаются от имен файлов новой версии. NaturalLanguage6.dll не является ни текущим, ни предыдущим именем файла. Заменять файлы не требуется, поскольку программа установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] копирует и текущую и предыдущую версии компонентов в папку Binn. Однако необходимо изменить набор записей реестра, указав в них предыдущую или текущую версию компонентов.  
@@ -272,7 +276,7 @@ caps.handback.revision: 13
   
 1.  Не удаляйте файлы текущей версии компонентов из папки Binn.  
   
-2.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Чтобы добавить новые разделы для идентификаторов классов COM предыдущей версии интерфейсов средства разбиения по словам и парадигматического модуля для идентификатора выбранного языка, выполните следующие действия.  
   
@@ -284,7 +288,7 @@ caps.handback.revision: 13
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла предыдущего парадигматического модуля из таблицы.  
   
-4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 5.  Замените значение раздела **WBreakerClass** значением текущего средства разбиения по словам из таблицы.  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 13
   
 1.  Не удаляйте файлы предыдущей версии компонентов из папки Binn.  
   
-2.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Если следующие разделы не существуют, выполните следующие шаги, чтобы добавить новые разделы для идентификаторов классов COM текущих интерфейсов средства разбиения по словам и парадигматического модуля для выбранного языка.  
   
@@ -308,7 +312,7 @@ caps.handback.revision: 13
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла текущего парадигматического модуля из таблицы.  
   
-4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 5.  Замените значение раздела **WBreakerClass** значением предыдущего средства разбиения по словам из таблицы.  
   
@@ -375,8 +379,8 @@ caps.handback.revision: 13
 |Текущий идентификатор CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Текущее имя файла|MsWb70804.dll|  
   
-## См. также:  
- [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Изменения в функциях полнотекстового поиска](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+## <a name="see-also"></a>См. также:  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

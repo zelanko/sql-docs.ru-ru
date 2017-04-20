@@ -1,29 +1,33 @@
 ---
-title: "Веб-синхронизация для репликации слиянием | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "синхронизация репликации слиянием [репликация SQL Server]"
-  - "Интернет [репликация SQL Server], синхронизация"
-  - "синхронизация [репликация SQL Server], веб-синхронизация"
-  - "веб-публикация [репликация SQL Server], синхронизация"
-  - "веб-синхронизация, сведения"
-  - "веб-синхронизация"
+title: "Веб-синхронизация для репликации слиянием | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication synchronization [SQL Server replication]
+- Internet [SQL Server replication], synchronization
+- synchronization [SQL Server replication], Web Synchronization
+- Web publishing [SQL Server replication], synchronization
+- Web synchronization, about
+- Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cc2d5200c154a9857f2e634dcf91aef57c278c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Веб-синхронизация для репликации слиянием
+# <a name="web-synchronization-for-merge-replication"></a>Веб-синхронизация для репликации слиянием
   Веб-синхронизация для репликации слиянием позволяет производить репликацию данных по протоколу HTTPS и может оказаться полезной в следующих случаях.  
   
 -   Синхронизация данных от мобильных пользователей через Интернет.  
@@ -34,25 +38,25 @@ caps.handback.revision: 45
   
  Представители отдела информационных технологий [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] настраивают на портативных компьютерах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включают репликацию слиянием с использованием веб-синхронизации. Каждый из портативных компьютеров имеет в Интернете URL-адрес, указывающий на компоненты репликации, установленные на сервере [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS. Эти компоненты синхронизируют подписчика с издателем. Теперь каждый торговый представитель может, не пользуясь удаленным коммутируемым соединением, подключиться через любое доступное Интернет-соединение и передать или загрузить необходимые данные. При работе через Интернет-соединение используется протокол SSL, поэтому применение виртуальной частной сети (VPN) не потребуется.  
   
- Сведения о настройке компонентов, необходимых для веб-синхронизации см. в разделе [настройки веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md), [Настройка IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md), и [Настройка IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ Сведения о настройке компонентов, необходимых для веб-синхронизации, см. в статьях [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md), [Настройка сервера IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md) и [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  Веб-синхронизация рассчитана на работу с портативными компьютерами, карманными и другими клиентскими устройствами. Эта технология не предназначена для передачи больших объемов данных между серверными приложениями.  
   
-## Обзор работы веб-синхронизации  
+## <a name="overview-of-how-web-synchronization-works"></a>Обзор работы веб-синхронизации  
  При использовании веб-синхронизации обновления на подписчике упаковываются и отсылаются в виде XML-сообщений на IIS-сервер по протоколу HTTPS. Компьютер, на котором работает IIS-сервер, посылает команды на издатель в двоичном формате (обычно по протоколу TCP/IP). Обновления на издателе отсылаются на IIS-сервер, а затем упаковываются в XML-сообщения для доставки подписчику.  
   
  На приведенном ниже рисунке показаны некоторые из компонентов, участвующих в веб-синхронизации при репликации слиянием.  
   
- ![Компоненты веб-синхронизации и потоки данных](../../relational-databases/replication/media/web-sync01.gif "Компоненты веб-синхронизации и потоки данных")  
+ ![Компоненты и последовательности данных веб-синхронизации](../../relational-databases/replication/media/web-sync01.gif "Компоненты и последовательности данных веб-синхронизации")  
   
  Веб-синхронизация может использоваться только для подписок по запросу, поэтому на подписчике всегда будет запущен агент слияния. Это может быть стандартный агент слияния, элемент управления ActiveX агента слияния или приложение, которое обеспечивает синхронизацию с помощью объектов RMO. Для указания расположения компьютера с службами IIS служит параметр **–InternetUrl** агента слияния.  
   
  На сервере IIS настроено средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll), которое отвечает за обработку сообщений, поступающих на сервер от издателя и от подписчиков. Каждый узел в топологии обрабатывает поток XML-данных с помощью посредника репликации слиянием (replrec.dll).  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии.  
+ На всех компьютерах, участвующих в процессе веб-синхронизации, необходимо наличие[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии.  
   
-### Процесс синхронизации  
+### <a name="synchronization-process"></a>Процесс синхронизации  
  Во время синхронизации выполняются следующие шаги.  
   
 1.  На подписчике запускается агент слияния. Агент выполняет следующие действия:  
@@ -79,8 +83,8 @@ caps.handback.revision: 45
   
 3.  После получения HTTPS-ответа агент слияния на подписчике применяет загруженные изменения к базе данных подписки.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md)   
- [Топологии для веб-синхронизации](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

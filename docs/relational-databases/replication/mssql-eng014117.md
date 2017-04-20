@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014117 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014117, ошибка"
+title: "MSSQL_ENG014117 | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014117 error
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b53e204550ce8f48b14e2b76667eb74fadc86346
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014117
+# <a name="mssqleng014117"></a>MSSQL_ENG014117
     
-## Сведения о сообщении  
+## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
@@ -31,7 +35,7 @@ caps.handback.revision: 17
 |Символическое имя||  
 |Текст сообщения|"%s" не настроена в качестве базы данных распространителя.|  
   
-## Объяснение  
+## <a name="explanation"></a>Объяснение  
  Эта ошибка может произойти, если истинны одно или оба из следующих условий:  
   
 -   Отсутствует в **msdb..MSdistributiondbs**вход для указанной базы данных распространителя.  
@@ -42,7 +46,7 @@ caps.handback.revision: 17
   
      Репликация не поддерживается, если какой-либо из экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зарегистрирован при помощи IP-адреса или полностью определенного имени домена (FQDN). Эта ошибка может возникать, если при настройке репликации любой из экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был зарегистрирован по IP-адресу или по FQDN в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-## Действие пользователя  
+## <a name="user-action"></a>Действие пользователя  
  Убедитесь, что экземпляр распространителя зарегистрирован правильно. Если сетевое имя компьютера отличается от имени экземпляра SQL Server.  
   
 -   Добавьте уникальное имя данного экземпляра SQL Server в качестве допустимого сетевого имени. Один из методов установки альтернативного сетевого имени — это добавление имени в локальный файл hosts. Файл локальных узлов по умолчанию расположен в каталоге WINDOWS\system32\drivers\etc или WINNT\system32\drivers\etc. Дополнительные сведения см. в документации по Windows.  
@@ -51,7 +55,7 @@ caps.handback.revision: 17
   
      10.193.17.129 inst1  
   
--   Отключите распространение, зарегистрируйте экземпляр и восстановите распространение. Если значение @@SERVERNAME недопустимо для некластеризованного экземпляра, следуйте следующим инструкциям:  
+-   Отключите распространение, зарегистрируйте экземпляр и восстановите распространение. Если значение @@SERVERNAME недопустимо для некластеризованного экземпляра, выполните следующие действия:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -60,17 +64,17 @@ caps.handback.revision: 17
     go  
     ```  
   
-     После выполнения [sp_addserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) Хранимая процедура, необходимо перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы для изменения @@SERVERNAME вступили в силу.  
+     После выполнения хранимой процедуры [sp_addserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) необходимо перезапустить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы изменения параметра @@SERVERNAME вступили в силу.  
   
-     Если значение @@SERVERNAME недопустимо для кластеризованного экземпляра, необходимо изменить имя с помощью приложения Cluster Administrator. Дополнительные сведения см. в разделе [экземпляров отказоустойчивого кластера AlwaysOn & #40; SQL Server & #41;](../Topic/AlwaysOn%20Failover%20Cluster%20Instances%20\(SQL%20Server\).md).  
+     Если значение @@SERVERNAME недопустимо для кластеризованного экземпляра, необходимо изменить имя с помощью администратора кластера. Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
  После проверки верности регистрации экземпляра распространителя убедитесь в том, что база данных распространителя содержится в списке **msdb..MSdistributiondbs**. Если базы данных в списке нет:  
   
 1.  Создайте скрипт конфигурации распространения. Дополнительные сведения см. в статье [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
-2.  Отключите распространение, а затем включите его снова. Дополнительные сведения см. в разделе [Настройка распространения](../../relational-databases/replication/configure-distribution.md).  
+2.  Отключите распространение, а затем включите его снова. Дополнительные сведения см. в статье [Настройка распространителя](../../relational-databases/replication/configure-distribution.md).  
   
-## См. также:  
- [Ошибки и события ссылку & #40; Репликация & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

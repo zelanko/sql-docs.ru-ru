@@ -1,22 +1,26 @@
 ---
-title: "Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Резервное копирование в SQL Server по URL-адресу — рекомендации и устранение неполадок | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе рассматриваются рекомендации и советы по устранению неполадок SQL Server при создании резервных копий и восстановлении с помощью службы хранилища больших двоичных объектов Windows Azure.  
@@ -25,9 +29,9 @@ caps.handback.revision: 26
   
 -   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## Управление резервными копиями  
+## <a name="managing-backups"></a>Управление резервными копиями  
  В следующем списке перечислены общие рекомендации по управлению резервным копированием.  
   
 -   Рекомендуется присваивать каждому файлу уникальное имя, чтобы предотвратить случайное перезаписывание больших двоичных объектов.  
@@ -40,16 +44,16 @@ caps.handback.revision: 26
   
 -   Использование параметра **WITH COMPRESSION** во время резервного копирования может уменьшить стоимость хранения и транзакционные издержки хранения. Также может сократиться время, необходимое для выполнения резервного копирования.  
   
-## Обработка больших файлов  
+## <a name="handling-large-files"></a>Обработка больших файлов  
   
 -   Операция резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в несколько потоков, чтобы оптимизировать передачу данных к службам хранилищ больших двоичных объектов Windows Azure.  Однако производительность зависит от различных факторов, в том числе от пропускной способности ISV и размера базы данных. Если планируется создавать резервные копии больших баз данных или файловых групп в локальной базе данных SQL Server, вначале рекомендуется проверить пропускную способность. В [соглашении об уровне обслуживания для службы хранилища Azure](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) определены максимальные значения времени обработки для больших двоичных объектов, которыми можно руководствоваться.  
   
 -   При создании резервных копий больших файлов очень важно использовать параметр **WITH COMPRESSION** в соответствии с рекомендациями, приведенными в разделе **Управление резервным копированием** .  
   
-## Устранение неполадок при резервном копирование или восстановлении по URL-адресу  
+## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Устранение неполадок при резервном копирование или восстановлении по URL-адресу  
  Ниже приведено несколько простых способов устранения ошибок при создании резервной копии или восстановлении из службы хранилища больших двоичных объектов Windows Azure.  
   
- Чтобы избежать ошибок из-за неподдерживаемых параметров или ограничений, просмотрите список ограничений и информацию о поддержке для команд BACKUP и RESTORE в статье [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Чтобы избежать ошибок из-за неподдерживаемых параметров или ограничений, просмотрите список ограничений и информацию о поддержке для команд BACKUP и RESTORE в статье [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
   
  **Ошибки проверки подлинности:**  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 26
   
     ```  
   
--   Учетные данные существуют, но учетная запись, которая используется для запуска команды резервного копирования, не имеет разрешения доступа к учетным данным. Используйте учетную запись для входа в роль **db_backupoperator**с разрешением **Изменение любых учетных данных**.  
+-   Учетные данные существуют, но учетная запись, которая используется для запуска команды резервного копирования, не имеет разрешения доступа к учетным данным. Используйте учетную запись для входа в роль **db_backupoperator** с разрешением **Изменение любых учетных данных** .  
   
 -   Проверьте имя учетной записи хранилища и значение ключа. Информация, которая хранится в учетных данных, должна соответствовать значениям свойств учетной записи хранилища Windows Azure, которые используются в операциях резервного копирования и восстановления.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 26
   
     -   Установите флаг трассировки 3051, чтобы включить ведение записей в конкретном журнале ошибок в следующем формате:  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log, где \<action> может принимать одно из следующих значений:  
+         BackupToUrl-\<имя_экземпляра>-\<имя_базы_данных>-действие-\<идентификатор процесса>.log, где\<действие> может принимать одно из следующих значений:  
   
         -   **DB**  
   
@@ -94,10 +98,10 @@ caps.handback.revision: 26
   
 -   При восстановлении из сжатой резервной копии может появиться следующее сообщение об ошибке:  
   
-    -   **Возникло SqlException 3284. Серьезность: 16, состояние: 5**  
-        **Метка файла сообщения на устройстве https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak не согласована. Перезапустите инструкцию Restore с тем же размером блока, который использовался при создании резервного набора данных. Возможно, следует указать «65536».**  
+    -   **Возникло исключение SqlException 3284. Серьезность: 16, состояние: 5**  
+        **Метка файла сообщения на устройстве https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak не согласована. Перезапустите инструкцию Restore с тем же размером блока, который использовался при создании резервного набора данных. Возможно, следует указать 65536.**  
   
-         Чтобы устранить эту ошибку, издайте инструкцию **BACKUP** повторно и укажите для нее значение **BLOCKSIZE = 65536**.  
+         Чтобы устранить эту ошибку, издайте инструкцию **BACKUP** повторно и укажите для нее значение **BLOCKSIZE = 65536** .  
   
 -   Ошибка во время архивации из-за больших двоичных объектов с активной арендой: сбой операции архивации может привести к появлению больших двоичных объектов с активными арендами.  
   
@@ -111,7 +115,7 @@ caps.handback.revision: 26
   
      Если возникает такая ошибка, файлы больших двоичных объектов следует удалить. Дополнительные сведения об этом сценарии и устранении этой проблемы см. в разделе [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
   
-## Ошибки прокси-сервера  
+## <a name="proxy-errors"></a>Ошибки прокси-сервера  
  При использовании прокси-серверов для доступа к Интернету возможны следующие проблемы.  
   
  **Регулирование соединений прокси-серверами.**  
@@ -141,21 +145,22 @@ caps.handback.revision: 26
 1.  Создайте файл конфигурации BackuptoURL.exe.config со следующим XML-кодом:  
   
     ```  
-    <?xml version ="1.0"?>  
+    \<?xml version ="1.0"?>  
     <configuration>   
-                    <system.net>   
+                    \<system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    </system.net>  
+                    \</system.net>  
     </configuration>  
   
     ```  
   
-2.  Поместите файл конфигурации в папку Binn на экземпляре SQL Server. Например, если SQL Server установлен на диске C компьютера, поместите файл конфигурации сюда: *C:\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\>\MSSQL\Binn*.  
+2.  Поместите файл конфигурации в папку Binn на экземпляре SQL Server. Например, если SQL Server установлен на диске C компьютера, поместите файл конфигурации сюда: *C:\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\MSSQL\Binn*.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Восстановление из резервных копий в Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE (Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
+

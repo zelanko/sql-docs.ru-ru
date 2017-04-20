@@ -1,29 +1,33 @@
 ---
-title: "Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разрешение конфликтов при репликации слиянием [репликация SQL Server], уровни"
-  - "статьи [репликация SQL Server], разрешение конфликтов"
-  - "разрешение конфликтов [репликация SQL Server], репликация слиянием"
+title: "Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication conflict resolution [SQL Server replication], levels
+- articles [SQL Server replication], conflict resolution
+- conflict resolution [SQL Server replication], merge replication
 ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18b5650ce77b40deb101a16ebd1379600394dcbf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием
+# <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием
   В данном разделе описывается указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- При синхронизации подписки на публикацию слиянием репликация проверяет наличие конфликтов, вызванных изменениями в одних и тех же данных, внесенных на издателе и подписчике. Можно указать, чтобы конфликты определялись на уровне строки, где любое изменение строки будет считаться конфликтом, либо на уровне столбца, где конфликтом будет считаться только изменение в одних и тех же строке и столбце. Разрешение конфликтов статей выполняется на уровне строки. Дополнительные сведения по определению и разрешению конфликтов при использовании логических записей см. в разделе [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/detecting-and-resolving-conflicts-in-logical-records.md).  
+ При синхронизации подписки на публикацию слиянием репликация проверяет наличие конфликтов, вызванных изменениями в одних и тех же данных, внесенных на издателе и подписчике. Можно указать, чтобы конфликты определялись на уровне строки, где любое изменение строки будет считаться конфликтом, либо на уровне столбца, где конфликтом будет считаться только изменение в одних и тех же строке и столбце. Разрешение конфликтов статей выполняется на уровне строки. Дополнительные сведения по определению и разрешению конфликтов при использовании логических записей см. в разделе [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
  **В этом разделе**  
   
@@ -41,49 +45,49 @@ caps.handback.revision: 35
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Если изменить уровень отслеживания после инициализации подписок, то эти подписки потребуется инициализировать повторно. Дополнительные сведения о влиянии изменения свойств см. в разделе [Изменение публикации и свойства статей](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+-   Если изменить уровень отслеживания после инициализации подписок, то эти подписки потребуется инициализировать повторно. Дополнительные сведения о последствиях изменения свойств см. в статье [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 -   При отслеживании на уровне строк и столбцов устранение конфликтов всегда выполняется на уровне строк: победившая строка перезаписывает проигравшую строку. Репликация слиянием также позволяет указывать, что конфликты должны отслеживаться и разрешаться на уровне логических записей, но эти параметры недоступны из среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Сведения об установке данных параметров с помощью хранимых процедур репликации см. в разделе [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Укажите отслеживание для статей публикаций слиянием на уровне строк или столбцов **Свойства** Вкладка **Свойства статьи** диалоговое окно доступно в мастере создания публикаций и **Свойства публикации — \< публикация>** диалоговое окно. Дополнительные сведения об использовании мастера и о доступе к диалоговому окну см. в разделе [Создать публикацию](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Выберите отслеживание на уровне строк или столбцов для статей публикации слиянием на вкладке **Свойства** диалогового окна **Свойства статьи**, которое доступно в мастере создания публикаций и диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера создания публикаций и доступе к этому диалоговому окну см. в статьях о [создании публикаций](../../../relational-databases/replication/publish/create-a-publication.md) и [просмотре и изменении свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### Указание уровня отслеживания на уровне строк или столбцов  
+#### <a name="to-specify-row--or-column-level-tracking"></a>Указание уровня отслеживания на уровне строк или столбцов  
   
-1.  На **статьи** страница мастера создания публикаций или **Свойства публикации — \< публикация>** диалоговое окно, выберите таблицу.  
+1.  Выберите таблицу на странице **Статьи** мастера создания публикаций или в диалоговом окне **Свойства публикации — \<публикация>**.  
   
 2.  Щелкните **Свойства статьи**, затем щелкните **Указать свойства выделенной статьи таблицы** или **Указать свойства всех статей таблиц**.  
   
-3.  На **Свойства** Вкладка **Свойства статьи — \< статья>** выберите одно из следующих значений для **Уровень отслеживания** свойство: **Отслеживание на уровне строк** или **Отслеживание на уровне столбцов**.  
+3.  На вкладке **Свойства** диалогового окна **Свойства статьи — \<статья>** выберите одно из следующих значений для свойства **Уровень отслеживания**: **Отслеживание на уровне строк** или **Отслеживание на уровне столбцов**.  
   
-4.  При работе в **Свойства публикации — \< публикация>** диалоговом нажмите кнопку **ОК** Сохранить и закрыть диалоговое окно.  
+4.  Если вы находитесь в диалоговом окне **Свойства публикации — \<Публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Настройка параметров отслеживания конфликтов для новой статьи публикации слиянием  
+#### <a name="to-specify-conflict-tracking-options-for-a-new-merge-article"></a>Настройка параметров отслеживания конфликтов для новой статьи публикации слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и укажите один из следующих значений для **@column_tracking**:  
+1.  На издателе базы данных публикации выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и присвойте параметру **@column_tracking**одно из приведенных ниже значений:  
   
-    -   **значение true,** -использовать отслеживание на уровне столбца для статьи.  
+    -   **true** — использовать для статьи отслеживание на уровне столбцов;  
   
-    -   **false** -Отслеживание на уровне строк используется, по умолчанию.  
+    -   **false** — использовать отслеживание на уровне строк (значение по умолчанию).  
   
-#### Изменение параметров отслеживания конфликтов для статьи публикации слиянием  
+#### <a name="to-change-conflict-tracking-options-for-a-merge-article"></a>Изменение параметров отслеживания конфликтов для статьи публикации слиянием  
   
-1.  Чтобы определить параметры для статьи слияния отслеживания конфликтов, выполните [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Обратите внимание на значение **column_tracking** параметр в результирующем наборе для статьи. Значение **1** означает, что используется отслеживание на уровне столбцов, а значение **0** означает, что используется отслеживание на уровне строк.  
+1.  Чтобы определить текущие параметры отслеживания конфликтов для статьи публикации слиянием, выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Проверьте значение параметра **column_tracking** в результирующем наборе для статьи. Значение **1** показывает, что используется отслеживание конфликтов уровня столбца, а значение **0** — отслеживание конфликтов уровня строки.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите значение **column_tracking** для **@property** и одно из следующих значений для **@value**:  
+2.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). В качестве значения параметра **column_tracking** задайте значение **@property** , а параметру **@value**одно из приведенных ниже значений:  
   
-    -   **значение true,** -использовать отслеживание на уровне столбца для статьи.  
+    -   **true** — использовать для статьи отслеживание на уровне столбцов;  
   
-    -   **false** -Отслеживание на уровне строк используется, по умолчанию.  
+    -   **false** — использовать отслеживание на уровне строк (значение по умолчанию).  
   
-     Укажите значение **1** для обоих **@force_invalidate_snapshot** и **@force_reinit_subscription**.  
+     В качестве значения параметра **1** параметрам **@force_invalidate_snapshot** и **@force_reinit_subscription**.  
   
-## См. также:  
- [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Распознавание и разрешение конфликтов в логических записях](../../../relational-databases/replication/merge/detecting-and-resolving-conflicts-in-logical-records.md)   
- [Определение связи логических записей между статьями таблиц слияния](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
- [Обнаружение и разрешение конфликтов репликации слиянием](../../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md)  
+## <a name="see-also"></a>См. также:  
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Обнаружение и разрешение конфликтов репликации слиянием](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

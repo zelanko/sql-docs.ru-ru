@@ -1,32 +1,36 @@
 ---
-title: "Удаление статьи | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "статьи [репликация SQL Server], удаление"
-  - "sp_droparticle"
-  - "sp_dropmergearticle"
-  - "удаление статей"
-  - "удаление статей"
-  - "удаление статей"
+title: "Удаление статьи | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- articles [SQL Server replication], dropping
+- sp_droparticle
+- sp_dropmergearticle
+- deleting articles
+- removing articles
+- dropping articles
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b63af3439c13f16071b4db8124ad6d5668240cd8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление статьи
-  В данном разделе описывается удаление статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Сведения об условиях, при которых статьи могут быть удалены и ли удаление статьи требует создания нового моментального снимка или повторной инициализации подписок см. в разделе [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+# <a name="delete-an-article"></a>Удаление статьи
+  В данном разделе описывается удаление статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Сведения об условиях, при которых статьи могут быть удалены, и о том, требуется ли при удалении статьи создание нового моментального снимка или повторная инициализация подписок, см. в [этой статье](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  **В этом разделе**  
   
@@ -39,20 +43,20 @@ caps.handback.revision: 41
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Статьи можно удалять программно, с помощью хранимых процедур репликации. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит статья.  
   
-#### Удаление статьи из публикации моментальных снимков или публикации транзакций  
+#### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Удаление статьи из публикации моментальных снимков или публикации транзакций  
   
-1.  Выполнение [sp_droparticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) Удаление статьи, определяемое **@article**, из публикации, указанной параметром **@publication**. Укажите значение **1** для **@force_invalidate_snapshot**.  
+1.  Чтобы удалить статью, указанную в **@article**, из публикации, указанной в **@publication**, выполните процедуру [sp_droparticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md). Укажите значение **1** в параметре **@force_invalidate_snapshot**.  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
-#### Удаление статьи из публикации слиянием  
+#### <a name="to-delete-an-article-from-a-merge-publication"></a>Удаление статьи из публикации слиянием  
   
-1.  Выполнение [sp_dropmergearticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) Удаление статьи, определяемое **@article**, из публикации, указанной параметром **@publication**. При необходимости укажите значение **1** для **@force_invalidate_snapshot** и значение **1** для **@force_reinit_subscription**.  
+1.  Чтобы удалить статью, указанную в **@article**, из публикации, указанной в **@publication**, выполните процедуру [sp_dropmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md). При необходимости укажите значение **1** в параметре **@force_invalidate_snapshot** и значение **1** в параметре **@force_reinit_subscription**.  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
- В следующем примере удаляется статья из публикации транзакций. Поскольку это изменение делает недействительным существующий моментальный снимок значение **1** указан для **@force_invalidate_snapshot** параметр.  
+ В следующем примере удаляется статья из публикации транзакций. Поскольку это изменение приведет к недопустимости существующего моментального снимка, в параметре **1** указывается значение **@force_invalidate_snapshot** .  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -69,7 +73,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- В следующем примере две статьи удаляются из публикации слиянием. Так как эти изменения сделать недействительным существующий моментальный снимок значение **1** указан для **@force_invalidate_snapshot** параметр.  
+ В следующем примере две статьи удаляются из публикации слиянием. Поскольку эти изменения приведут к недействительности существующего моментального снимка, в параметре **1** указывается значение **@force_invalidate_snapshot** .  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -95,40 +99,40 @@ GO
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
  Удаление статьи можно произвести программным путем с помощью объектов RMO. Какие именно классы RMO будут для этого применяться, зависит от типа публикации, которой принадлежит подписка.  
   
-#### Удаление статьи, принадлежащей публикации моментальных снимков или транзакций  
+#### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Удаление статьи, принадлежащей публикации моментальных снимков или транзакций  
   
-1.  Создайте соединение с издателем с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.TransArticle> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransArticle>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>, и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> Свойства.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A>.  
   
-4.  Задайте соединение из шага 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> свойство.  
+4.  Установите полученное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-5.  Проверьте <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> свойство, чтобы убедиться, что статья существует. Если это свойство имеет значение **false**, значит, на шаге 3 были неправильно заданы свойства статьи либо статья не существует.  
+5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>, чтобы убедиться, что статья существует. Если это свойство имеет значение **false**, значит, на шаге 3 были неправильно заданы свойства статьи либо статья не существует.  
   
-6.  Вызов <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> метод.  
-  
-7.  Закройте все соединения.  
-  
-#### Удаление статьи, принадлежащей публикации слиянием  
-  
-1.  Создайте соединение с издателем с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
-  
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.MergeArticle> класса.  
-  
-3.  Задайте <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>, и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> Свойства.  
-  
-4.  Задайте соединение из шага 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> свойство.  
-  
-5.  Проверьте <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> свойство, чтобы убедиться, что статья существует. Если это свойство имеет значение **false**, значит, на шаге 3 были неправильно заданы свойства статьи либо статья не существует.  
-  
-6.  Вызов <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> метод.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Remove%2A>.  
   
 7.  Закройте все соединения.  
   
-## См. также:  
+#### <a name="to-delete-an-article-that-belongs-to-a-merge-publication"></a>Удаление статьи, принадлежащей публикации слиянием  
+  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
+  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A>.  
+  
+4.  Установите полученное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+  
+5.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>, чтобы убедиться, что статья существует. Если это свойство имеет значение **false**, значит, на шаге 3 были неправильно заданы свойства статьи либо статья не существует.  
+  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Remove%2A>.  
+  
+7.  Закройте все соединения.  
+  
+## <a name="see-also"></a>См. также:  
  [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Основные понятия системных хранимых процедур репликации](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

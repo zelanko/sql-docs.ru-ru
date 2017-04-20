@@ -1,1 +1,1 @@
-   **root\Microsoft\SqlServer\ReportServer\\<*ИмяЭкземпляра*>\v13\Admin**  
+   **root\Microsoft\SqlServer\ReportServer\\<*имя_экземпляра*>\v13\Admin**  

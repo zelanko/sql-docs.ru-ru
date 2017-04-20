@@ -1,46 +1,50 @@
 ---
-title: "Руководства планов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TEMPLATE, структура плана"
-  - "SQL, структуры планов"
-  - "указание запроса OPTIMIZE FOR"
-  - "указание запроса RECOMPILE"
-  - "OBJECT, руководство плана"
-  - "структуры планов [SQL Server], структуры планов"
-  - "OPTION, предложение"
-  - "структуры планов [SQL Server]"
-  - "USE PLAN, указание запроса"
+title: "Структуры планов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TEMPLATE plan guide
+- SQL plan guides
+- OPTIMIZE FOR query hint
+- RECOMPILE query hint
+- OBJECT plan guide
+- plan guides [SQL Server], about plan guides
+- OPTION clause
+- plan guides [SQL Server]
+- USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.lasthandoff: 04/11/2017
+
 ---
-# Руководства планов
+# <a name="plan-guides"></a>Руководства планов
   Структуры планов позволяют оптимизировать производительность запросов, если невозможно или нежелательно непосредственно изменять текст фактически имеющегося запроса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Структуры планов влияют на оптимизацию запросов путем присоединения к ним указаний запроса или постоянного плана запроса. Структуры планов полезны, когда небольшое подмножество запросов в приложении базы данных стороннего разработчика выполняются не так, как ожидается. В структуре плана задается инструкция Transact-SQL, которую нужно оптимизировать, и либо предложение OPTION, содержащее указания запросов, либо конкретный план запроса, с помощью которого планируется оптимизировать запрос. При выполнении запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет инструкцию Transact-SQL со структурой плана и присоединяет предложение OPTION к запросу во время выполнения или использует указанный план запроса.  
   
  Общее число структур планов, которые можно создать, ограничивается только доступными системными ресурсами. Тем не менее использование структур планов должно быть ограничено критически важными запросами, затрагиваемыми в целях улучшения или стабилизации производительности. Структуры планов не следует использовать для основной массы запросов развернутого приложения.  
   
 > [!NOTE]  
->  Структуру планов можно использовать не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Структуры планов видны в любом выпуске. Можно также присоединить базу данных, содержащую структуры планов, к любой версии. Структуры планов остаются нетронутыми при восстановлении или присоединении базы данных к обновленной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Структуру планов можно использовать не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Структуры планов видны в любом выпуске. Можно также присоединить базу данных, содержащую структуры планов, к любой версии. Структуры планов остаются нетронутыми при восстановлении или присоединении базы данных к обновленной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Типы структур планов  
+## <a name="types-of-plan-guides"></a>Типы структур планов  
  Могут быть созданы структуры планов следующих типов.  
   
  OBJECT, руководство плана  
- Структура плана OBJECT соответствует запросам, выполняемым в контексте хранимых процедур языка [!INCLUDE[tsql](../../includes/tsql-md.md)], определяемых пользователем скалярных функций, определяемых пользователем функций с несколькими инструкциями, возвращающих табличные значения, и триггеров DML.  
+ Структура плана OBJECT соответствует запросам, выполняемым в контексте хранимых процедур языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , определяемых пользователем скалярных функций, определяемых пользователем функций с несколькими инструкциями, возвращающих табличные значения, и триггеров DML.  
   
- Предположим, что следующая хранимая процедура, которая принимает параметр `@Country`_`region`, находится в приложении базы данных, развертываемом применительно к базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+ Предположим, что следующая хранимая процедура, которая принимает параметр `@Country`_`region` , находится в приложении базы данных, развертываемом применительно к базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -74,16 +78,16 @@ sp_create_plan_guide
 @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
- При выполнении запроса, указанного в инструкции `sp_create_plan_guide`, этот запрос изменяется до оптимизации: в него добавляется предложение `OPTIMIZE FOR (@Country = N''US'')`.  
+ При выполнении запроса, указанного в инструкции `sp_create_plan_guide` , этот запрос изменяется до оптимизации: в него добавляется предложение `OPTIMIZE FOR (@Country = N''US'')` .  
   
  Структура плана SQL  
- Структура плана SQL соответствует запросам, выполняющимся в контексте изолированных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и пакетов, не входящих ни в один объект базы данных. Структуры планов SQL также можно использовать для соответствия запросам с параметрами. Структуры планов SQL применяются к изолированным инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] и пакетам. Часто эти инструкции передаются приложением с помощью хранимой процедуры [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md). Например, рассмотрим следующий изолированный пакет:  
+ Структура плана SQL соответствует запросам, выполняющимся в контексте изолированных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и пакетов, не входящих ни в один объект базы данных. Структуры планов SQL также можно использовать для соответствия запросам с параметрами. Структуры планов SQL применяются к изолированным инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] и пакетам. Часто эти инструкции передаются приложением с помощью хранимой процедуры [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Например, рассмотрим следующий изолированный пакет:  
   
 ```  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
- Чтобы избежать создания параллельного плана выполнения для этого запроса, создайте приведенную ниже структуру плана и присвойте указанию запроса `MAXDOP` значение `1` в параметре `@hints`.  
+ Чтобы избежать создания параллельного плана выполнения для этого запроса, создайте приведенную ниже структуру плана и присвойте указанию запроса `MAXDOP` значение `1` в параметре `@hints` .  
   
 ```  
 sp_create_plan_guide   
@@ -96,7 +100,7 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  Значения, передаваемые для аргументов `@module_or_batch` и `@params` инструкции `sp_create_plan guide`, должны соответствовать тексту настоящего запроса. Дополнительные сведения см. в разделах [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) и [Использование приложения SQL Server Profiler для создания и проверки руководств планов](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+>  Значения, передаваемые для аргументов `@module_or_batch` и `@params` инструкции `sp_create_plan guide` , должны соответствовать тексту настоящего запроса. Дополнительные сведения см. в разделах [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) и [Использование приложения SQL Server Profiler для создания и проверки руководств планов](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
  Кроме того, структуры планов SQL можно создавать для запросов с той же параметризованной формой, если значением параметра базы данных PARAMETERIZATION является SET или FORCED либо если создана структура плана TEMPLATE, определяющая, что класс запросов должен быть параметризован.  
   
@@ -109,7 +113,7 @@ sp_create_plan_guide
   
 -   Параметр базы данных PARAMETERIZATION задается с помощью инструкции SET равным SIMPLE (настройка по умолчанию), но желательно произвести попытку принудительной параметризации определенного класса запросов.  
   
-## Требования по соответствию для структур планов  
+## <a name="plan-guide-matching-requirements"></a>Требования по соответствию для структур планов  
  Структуры планов действительны в области видимости базы данных, в которой они создаются. Поэтому с запросом могут быть согласованы только структуры планов, находящиеся в базе данных, которая является текущей при выполнении запроса. Например, если [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] является текущей базой данных и выполняется нижеследующий запрос:  
   
  `SELECT FirstName, LastName FROM Person.Person;`  
@@ -120,21 +124,21 @@ sp_create_plan_guide
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- Для согласования с запросом применимы только структуры планов в `DB1`, поскольку запрос выполняется в контексте `DB1`.  
+ Для согласования с запросом применимы только структуры планов в `DB1` , поскольку запрос выполняется в контексте `DB1`.  
   
- В структурах плана, основанных на SQL или TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет с запросом значения аргументов @module_or_batch и @params, сравнивая эти два значения посимвольно. Это означает, что необходимо предоставить текст точно в том же виде, в каком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получит его в действительном пакете.  
+ В структурах плана, основанных на SQL или TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посимвольно сравнивает значения аргументов @module_or_batch и @params, переданных в запросе. Это означает, что необходимо предоставить текст точно в том же виде, в каком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получит его в действительном пакете.  
   
- Если @type = 'SQL' и @module_or_batch имеет значение NULL, то значение @module_or_batch устанавливается равным @stmt. Из этого следует, что значение для *statement_text* должно быть предоставлено в идентичном формате, символ к символу, так как оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для упрощения соответствия формата внутренние преобразования не выполняются.  
+ Если @type = 'SQL' и @module_or_batch имеет значение NULL, параметр @module_or_batch получает значение @stmt. Из этого следует, что значение для *statement_text* должно быть предоставлено в идентичном формате, символ к символу, так как оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для упрощения соответствия формата внутренние преобразования не выполняются.  
   
  Если к инструкции могут быть применены и обычная структура плана (SQL или OBJECT), и структура плана TEMPLATE, то используется только обычная структура плана.  
   
 > [!NOTE]  
->  Пакет, содержащий инструкцию, для которой необходимо создать структуру плана, не может содержать инструкцию USE *database*.  
+>  Пакет, содержащий инструкцию, для которой необходимо создать структуру плана, не может содержать инструкцию USE *database* .  
   
-## Влияние структуры плана на кэш планов  
+## <a name="plan-guide-effect-on-the-plan-cache"></a>Влияние структуры плана на кэш планов  
  Создание структуры плана в модуле стирает план запроса для этого модуля из кэша планов. Создание структуры плана типа OBJECT или SQL в потоке стирает план запроса для потока, который имеет такое же значение хеш-функции. Создание структуры плана типа TEMPLATE стирает все потоки с одним оператором из кэша планов через базу данных.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Задача|Раздел|  
 |----------|-----------|  
@@ -147,7 +151,7 @@ sp_create_plan_guide
 |Описано, как использовать профилировщик SQL Server для создания и проверки структур планов.|[Использование приложения SQL Server Profiler для создания и проверки руководств планов](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Описано, как проверять структуры планов.|[Проверка руководств плана после обновления](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
@@ -155,3 +159,4 @@ sp_create_plan_guide
  [sys.fn_validate_plan_guide (Transact-SQL)](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
   
   
+

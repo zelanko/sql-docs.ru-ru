@@ -1,27 +1,31 @@
 ---
-title: "Создание подписки для подписчика, отличного от подписчика SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "подписки [репликация SQL Server], подписчики, отличные от подписчиков SQL Server"
-  - "подписчики [репликация SQL Server], подписчики, отличные от подписчиков SQL Server"
-  - "подписчики, отличные от SQL Server, подписки"
+title: "Создание подписки для подписчика, отличного от подписчика SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [SQL Server replication], non-SQL Server Subscribers
+- Subscribers [SQL Server replication], non-SQL Server Subscribers
+- non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 602fe4a40a45b404ec56386548f6fae36c1098b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание подписки для подписчика, отличного от подписчика SQL Server
-  В данном разделе описывается процесс создания подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для подписчика, отличного от подписчика SQL Server, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Репликация транзакций и репликация моментальных снимков поддерживают публикацию данных на подписчики, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о поддерживаемых платформах подписчиков см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+# <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
+  В данном разделе описывается процесс создания подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для подписчика, отличного от подписчика SQL Server, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Репликация транзакций и репликация моментальных снимков поддерживают публикацию данных на подписчики, отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о поддерживаемых платформах подписчиков см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **В этом разделе**  
   
@@ -32,54 +36,54 @@ caps.handback.revision: 28
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Чтобы создать подписку для подписчика, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните следующие действия.  
+ Чтобы создать подписку для подписчика, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполните следующие действия.  
   
 1.  Установите и настройте на распространителе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствующее клиентское программное обеспечение и соответствующий поставщик OLE DB. Дополнительные сведения см. в разделах [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) и [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-2.  Создайте публикацию с помощью мастера создания публикаций. Дополнительные сведения о создании публикаций см. в разделе [Создать публикацию](../../relational-databases/replication/publish/create-a-publication.md) и [Создание публикации из базы данных Oracle](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md). Укажите в мастере создания публикаций следующие параметры:  
+2.  Создайте публикацию с помощью мастера создания публикаций. Дополнительные сведения о создании публикаций см. в статьях [Создание публикации](../../relational-databases/replication/publish/create-a-publication.md) и [Создание публикации из базы данных Oracle](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md). Укажите в мастере создания публикаций следующие параметры:  
   
     -   На странице **Тип публикации** выберите **Публикация моментальных снимков** или **Публикация транзакций**.  
   
     -   На странице **Агент моментальных снимков** снимите флажок **Создать моментальный снимок немедленно**.  
   
-         Моментальный снимок создается после включения публикации для подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы гарантировать, что агент моментальных снимков создаст скрипты моментального снимка и инициализации, пригодные для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+         Моментальный снимок создается после включения публикации для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы гарантировать, что агент моментальных снимков создаст скрипты моментального снимка и инициализации, пригодные для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Включить для публикации отличное от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиками, использующими **Свойства публикации — \< ИмяПубликации>** диалоговое окно. Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
+3.  В диалоговом окне **Свойства публикации — \<имя_публикации>** разрешите публикацию для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
   
 4.  Создайте подписку с помощью мастера создания подписок. В этом разделе содержатся дополнительные сведения об этом шаге.  
   
-5.  (Необязательно) Изменение **pre_creation_cmd** свойство для сохранения таблиц на подписчике статьи. В этом разделе содержатся дополнительные сведения об этом шаге.  
+5.  (Необязательно) Измените свойство статьи **pre_creation_cmd** для сохранения таблиц на подписчике. В этом разделе содержатся дополнительные сведения об этом шаге.  
   
 6.  Создайте моментальный снимок для публикации. В этом разделе содержатся дополнительные сведения об этом шаге.  
   
 7.  Синхронизация подписки. Дополнительные сведения см. в статье [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-#### Включение публикации для подписчиков, отличных от подписчиков SQL Server  
+#### <a name="to-enable-a-publication-for-non-sql-server-subscribers"></a>Включение публикации для подписчиков, отличных от подписчиков SQL Server  
   
 1.  Подключитесь к издателю в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем папку **Локальные публикации** .  
   
-3.  Щелкните правой кнопкой мыши публикацию и выберите **Свойства**.  
+3.  Щелкните правой кнопкой мыши публикацию, а затем щелкните **Свойства**.  
   
-4.  На **Параметры подписки** выберите значение **True** для параметра **Разрешать подписчиков, отличных от подписчиков SQL Server**. Выбор этого параметра изменяет количество свойств так, чтобы публикация была совместимой с подписчиками, отличными от подписчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+4.  На странице **Параметры подписки** выберите значение **True** для параметра **Разрешать подписчики, отличные от подписчиков SQL Server**. Выбор этого параметра изменяет количество свойств так, чтобы публикация была совместимой с подписчиками, отличными от подписчика[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
-    >  Выбор **True** задает значение **pre_creation_cmd** Свойства для «drop» статьи. Этот параметр говорит о том, что репликация должна удалить таблицу на подписчике, если ее имя совпадает с именем таблицы в статье. При наличии существующих таблиц на подписчике, который требуется сохранить, используйте [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) хранимую процедуру для каждой статьи, указав значение «none» **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
+    >  Если выбрано значение **True** , то свойство статьи **pre_creation_cmd** устанавливается в значение «drop». Этот параметр говорит о том, что репликация должна удалить таблицу на подписчике, если ее имя совпадает с именем таблицы в статье. Если на подписчике имеются таблицы, которые необходимо сохранить, вызовите хранимую процедуру [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) для каждой статьи, указав значение none в качестве параметра **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Будет предложено создать новый моментальный снимок для публикации. Если не нужно создавать его в данный момент, выполните позднее шаги, описанные в следующей процедуре «Инструкции».  
   
-#### Создание подписки для подписчика, отличного от подписчика SQL Server  
+#### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server  
   
 1.  Раскройте папку **Репликация** , а затем папку **Локальные публикации** .  
   
-2.  Щелкните правой кнопкой мыши соответствующую публикацию, а затем нажмите кнопку **новые подписки**.  
+2.  Щелкните правой кнопкой мыши соответствующую публикацию, а затем щелкните **Создать подписку**.  
   
-3.  Убедитесь в том, что на странице **Расположение агента распространителя** установлен флажок **Выполнять все агенты на распространителе** . Подписчики, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не поддерживают выполнение агентов на подписчике.  
+3.  Убедитесь в том, что на странице **Расположение агента распространителя** установлен флажок **Выполнять все агенты на распространителе** . Подписчики, отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не поддерживают выполнение агентов на подписчике.  
   
-4.  На **подписчиков** щелкните **Добавить подписчик** и нажмите кнопку **Добавить подписчик не SQL Server**.  
+4.  На странице **Подписчики** щелкните **Добавить подписчик** , а затем — **Добавить подписчик, отличный от подписчика SQL Server**.  
   
-5.  В **Добавить подписчик не SQL Server** диалогового окна выберите тип подписчика.  
+5.  В диалоговом окне **Добавление подписчика, отличного от подписчика SQL Server** выберите тип подписчика.  
   
 6.  Введите значение в поле **Имя источника данных**:  
   
@@ -87,25 +91,25 @@ caps.handback.revision: 28
   
     -   Для IBM это может быть любое имя. Обычно указывается сетевой адрес подписчика.  
   
-     На этом этапе вводится имя источника данных, и учетные данные, указанные на шаге 9, этим мастером не проверяются. Они не используются репликацией, пока для этой подписки выполняется агент распространителя. Убедитесь, что все значения были протестированы, подключившись к подписчику с использованием клиентского средства (такие как **sqlplus** для Oracle). Дополнительные сведения см. в разделах [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) и [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+     На этом этапе вводится имя источника данных, и учетные данные, указанные на шаге 9, этим мастером не проверяются. Они не используются репликацией, пока для этой подписки выполняется агент распространителя. Подключившись к подписчику с помощью клиентского средства (например, **sqlplus** для Oracle), убедитесь в том, что все значения проверены. Дополнительные сведения см. в разделах [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) и [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] На **подписчиков** мастера подписчика будет отображаться в **подписчика** столбец только для чтения **(назначение по умолчанию)** в **базы данных подписки** столбца:  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Теперь на странице **Подписчики** мастера данный подписчик будет отображен в столбце **Подписчик** с доступным только для чтения значением **(назначение по умолчанию)** в столбце **База данных подписки** :  
   
     -   Для СУБД Oracle сервер имеет не более одной базы данных, поэтому нет необходимости указывать базу данных.  
   
     -   Для IBM DB2 база данных указывается в свойстве строки соединения DB2 **Исходный каталог** , которое может быть введено в поле **Дополнительные параметры соединения** , описанном далее в этом разделе.  
   
-8.  На **Безопасность агента распространителя** нажмите кнопку с многоточием (**...**) рядом с подписчиком для доступа к **Безопасность агента распространителя** диалоговое окно.  
+8.  Чтобы получить доступ к диалоговому окну **Безопасность агента распространителя** , на странице**Безопасность агента распространителя**нажмите кнопку свойств ( **…** ), расположенную рядом с подписчиком.  
   
 9. В диалоговом окне **Безопасность агента распространителя** выполните следующие действия:  
   
     -   Введите в поля **Учетная запись процесса**, **Пароль**и **Подтверждение пароля** учетную запись и пароль [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которыми будет выполняться агент распространителя, и установите локальное соединение с распространителем.  
   
-         Учетной записи требуются следующие минимальные разрешения: член **db_owner** фиксированной роли базы данных в базу данных распространителя; член списка доступа к публикации (PAL); разрешения на чтение в папке моментальных снимков и разрешение на чтение каталога установки поставщика OLE DB. Дополнительные сведения о списке доступа к публикации см. в разделе [организация безопасности издателя](../../relational-databases/replication/security/secure-the-publisher.md).  
+         Эта учетная запись должна иметь следующие минимальные разрешения: членство в предопределенной роли базы данных **db_owner** в базе данных распространителя; членство в списке доступа к публикации (PAL); разрешения на чтение хранилища моментального снимка; разрешение на чтение каталога установки поставщика OLE DB. Дополнительные сведения о списке доступа к публикации см. в статье [Защита издателя](../../relational-databases/replication/security/secure-the-publisher.md).  
   
     -   Под полем **Соединиться с подписчиком**введите в поля **Имя входа**, **Пароль**и **Подтверждение пароля** имя входа и пароль, которые следует использовать для соединения с подписчиком. Это имя входа уже должно быть сконфигурировано и иметь разрешения, достаточные для создания объектов в базе данных подписки.  
   
-    -   В **Дополнительные параметры соединения** Укажите любые параметры соединения для подписчика в форме строки соединения (Oracle не требует дополнительных параметров). Параметры разделяются точками с запятой. Ниже приводится пример строки соединения DB2 (переносы строк использованы для удобства чтения):  
+    -   В поле **Дополнительные параметры соединения** укажите любые параметры соединения для подписчика в форме строки соединения (Oracle не требует дополнительных параметров). Параметры разделяются точками с запятой. Ниже приводится пример строки соединения DB2 (переносы строк использованы для удобства чтения):  
   
         ```  
         Provider=DB2OLEDB;Initial Catalog=MY_SUBSCRIBER_DB;Network Transport Library=TCP;Host CCSID=1252;  
@@ -116,76 +120,76 @@ caps.handback.revision: 28
   
          Большая часть параметров в строке зависят от настраиваемого сервера DB2, но параметр **Обрабатывать двоичное значение как символ** всегда должен иметь значение **False**. Параметр **Исходный каталог** должен иметь значение для идентификации базы данных подписки.  
   
-10. На **расписание синхронизации** Выберите расписание для агента распространителя из **Расписание агента** меню (обычно используется расписание **непрерывно**).  
+10. На странице **Расписание синхронизации** выберите из меню **Расписание агента** расписание для агента распространителя (обычно используется расписание **Выполнять постоянно**).  
   
 11. На странице **Инициализация подписок** укажите, следует ли инициализировать подписку и, если да, когда ее необходимо инициализировать:  
   
     -   Снимите флажок **Инициализировать** , только если были созданы все объекты и были добавлены все необходимые данные в базу данных подписки.  
   
-    -   Выберите **немедленно** из раскрывающегося списка в **инициализировать, когда** столбец, чтобы агент распространителя передал моментальный снимок к подписчику после завершения этого мастера. Выберите пункт **При первой синхронизации** , чтобы агент переслал файлы при следующем запланированном запуске.  
+    -   Чтобы после завершения выполнения этого мастера агент распространителя передал файлы моментальных снимков подписчику, выберите в раскрывающемся списке столбца **Инициализировать, когда** значение **Немедленно** . Выберите пункт **При первой синхронизации** , чтобы агент переслал файлы при следующем запланированном запуске.  
   
 12. На странице **Действия мастера** при желании можно написать скрипт для подписки. Дополнительные сведения см. в статье [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
-#### Сохранение таблиц на подписчике  
+#### <a name="to-retain-tables-at-the-subscriber"></a>Сохранение таблиц на подписчике  
   
--   По умолчанию при разрешении публикации для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков устанавливает значение **pre_creation_cmd** Свойства для «drop» статьи. Этот параметр говорит о том, что репликация должна удалить таблицу на подписчике, если ее имя совпадает с именем таблицы в статье. При наличии существующих таблиц на подписчике, который требуется сохранить, используйте [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) хранимую процедуру для каждой статьи, указав значение «none» **pre_creation_cmd**. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
+-   По умолчанию при разрешении публикации для подписчиков, не являющихся подписчиками[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , значение свойства статьи **pre_creation_cmd** устанавливается в «drop». Этот параметр говорит о том, что репликация должна удалить таблицу на подписчике, если ее имя совпадает с именем таблицы в статье. Если на подписчике уже существуют таблицы, которые необходимо сохранить, то для каждой статьи вызовите хранимую процедуру [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) , указав в качестве параметра **pre_creation_cmd**значение «none». `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
-#### Создание моментального снимка для публикации  
+#### <a name="to-generate-a-snapshot-for-the-publication"></a>Создание моментального снимка для публикации  
   
 1.  Раскройте папку **Репликация** , а затем папку **Локальные публикации** .  
   
-2.  Щелкните правой кнопкой мыши публикацию и выберите **Просмотр состояния агента моментальных снимков**.  
+2.  Щелкните правой кнопкой мыши публикацию, а затем щелкните **Просмотреть состояние агента моментальных снимков**.  
   
-3.  В **Просмотр состояния агента моментальных снимков — \< публикация>** диалоговом нажмите кнопку **запустить**.  
+3.  В диалоговом окне **Просмотр состояния агента моментальных снимков — \<Публикация>** щелкните **Запуск**.  
   
  Когда агент моментальных снимков завершит создание моментального снимка, на экран будет выведено примерно следующее сообщение: «[100%] Создан моментальный снимок 17 статей».  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- Можно программно создавать принудительные подписки для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с помощью хранимых процедур репликации.  
+ Можно программно создавать принудительные подписки для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью хранимых процедур репликации.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
-#### Создание принудительной подписки для публикации транзакций или публикации моментальных снимков на подписчики, отличные от SQL Server  
+#### <a name="to-create-a-push-subscription-for-a-transactional-or-snapshot-publication-to-a-non-sql-server-subscriber"></a>Создание принудительной подписки для публикации транзакций или публикации моментальных снимков на подписчики, отличные от SQL Server  
   
-1.  Установите последнюю версию поставщика OLE DB для подписчика, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на издателе и распространителе. Требования к репликации для поставщика OLE DB см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), [подписчиков Oracle](../../relational-databases/replication/non-sql/oracle-subscribers.md), [подписчиков IBM DB2](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+1.  Установите последнюю версию поставщика OLE DB для подписчика, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на издателе и распространителе. Требования репликации к поставщику OLE DB см. в разделах [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md), [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-2.  На издателе в базе данных публикации, убедитесь, что публикация поддерживает отличных[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, выполнив [sp_helppublication & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
+2.  В издателе в базе данных издателя проверьте, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполнив процедуру [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
   
-    -   Если значение **enabled_for_het_sub** -1, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчики поддерживаются.  
+    -   Если параметр **enabled_for_het_sub** имеет значение 1, то подписчики, отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживаются.  
   
-    -   Если значение **enabled_for_het_sub** равно 0, выполнение [sp_changepublication & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав **enabled_for_het_sub** для **@property** и **true** для **@value**.  
+    -   Если значение **enabled_for_het_sub** равно 0, выполните процедуру [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав значение **enabled_for_het_sub** для параметра **@property** и **true** для параметра **@value**.  
   
         > [!NOTE]  
-        >  Перед изменением **enabled_for_het_sub** для **true**, необходимо удалить все существующие подписки на публикацию. Невозможно задать **enabled_for_het_sub** для **значение true,** при публикации также поддерживает обновляемые подписки. Изменение **enabled_for_het_sub** влияет на другие свойства публикации. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+        >  Перед изменением значения **enabled_for_het_sub** на **true**необходимо удалить все существующие подписки на публикацию. Нельзя присвоить параметру **enabled_for_het_sub** значение **true** , если публикация также поддерживает обновляемые подписки. Изменение параметра **enabled_for_het_sub** отразится на других свойствах публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите **@publication**, **@subscriber**, значение **(назначение по умолчанию)** для **@destination_db**, значение **push** для **@subscription_type**, а значение 3 для **@subscriber_type** (указывает поставщика OLE DB).  
+3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Задайте **@publication**, **@subscriber**, **(назначение по умолчанию)** @property **@destination_db**, **push** @property **@subscription_type**, а также 3 в качестве значения параметра **@subscriber_type** (задает поставщика OLE DB).  
   
-4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите следующее.  
+4.  В издателе в базе данных публикации выполните процедуру [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите следующее.  
   
     -   параметры **@subscriber**и **@publication** ;  
   
-    -   Значение **(назначение по умолчанию)** для **@subscriber_db**,  
+    -   значение **(назначение по умолчанию)** @property **@subscriber_db**,  
   
-    -   Свойства, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источник данных для **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**, и **@subscriber_catalog**.  
+    -   свойства источника данных, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для параметров **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**и **@subscriber_catalog**.  
   
-    -    [!INCLUDE[msCoName](../../includes/msconame-md.md)] Учетные данные Windows, под которыми агент распространителя на распространителе **@job_login** и **@job_password**.  
+    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password**.  
   
         > [!NOTE]  
-        >  Соединения с использованием встроенной проверки подлинности Windows всегда использовать учетные данные Windows, заданные **@job_login** и **@job_password**. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   Значение **0** для **@subscriber_security_mode** и данные входа поставщика OLE DB для **@subscriber_login** и **@subscriber_password**.  
+    -   значение **0** @property **@subscriber_security_mode** и сведения об имени входа поставщика OLE DB для параметров **@subscriber_login** и **@subscriber_password**.  
   
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, отправляются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре базы данных & #40; SQL Server Configuration Manager & #41;](../../database-engine/configure-windows/enable encrypted connections to the database engine.md).  
+    >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## См. также:  
- [подписчики IBM DB2](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
- [Подписчики Oracle](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
+## <a name="see-also"></a>См. также:  
+ [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
+ [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [Другие подписчики, отличные от SQL Server](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
- [Основные понятия системных хранимых процедур репликации](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

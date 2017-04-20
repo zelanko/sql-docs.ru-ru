@@ -1,26 +1,30 @@
 ---
-title: "Наблюдение за репликацией | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "мониторинг производительности [репликация SQL Server], монитор репликации"
-  - "монитор репликации, о мониторе репликации"
+title: "Наблюдение за репликацией | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
+ms.lasthandoff: 04/11/2017
+
 ---
-# Наблюдение за репликацией
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой графический инструмент для наблюдения за исправностью топологии репликации. Монитор репликации предоставляет детальные сведения о состоянии и производительности публикаций и подписок, позволяющие получать ответы на следующие общие вопросы:  
+# <a name="monitoring-replication-overview"></a>Обзор наблюдения за репликацией
+  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой графический инструмент для наблюдения за исправностью топологии репликации. Монитор репликации предоставляет детальные сведения о состоянии и производительности публикаций и подписок, позволяющие получать ответы на следующие общие вопросы:  
   
 -   Исправна ли система репликации?  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 37
   
  Для наблюдения за репликацией пользователь должен быть членом предопределенной роли сервера **sysadmin** на распространителе или членом предопределенной роли базы данных **replmonitor** в базе данных распространителя. Системный администратор может добавить любого пользователя в роль **replmonitor** , которая позволяет пользователю наблюдать операции репликации в мониторе репликации. Однако такой пользователь не может управлять репликацией.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В следующих разделах содержатся сведения о возможностях монитора репликации.  
   
  [Обзор интерфейса монитора репликации](../../../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md)  
@@ -45,7 +49,7 @@ caps.handback.revision: 37
  [Запуск монитора репликации](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)  
  Описывается запуск монитора репликации.  
   
- [Предоставление пользователям без прав администратора разрешения на использование монитора репликации](../../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
+ [Предоставление пользователям без прав администратора разрешений на использование монитора репликации](../../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
  Описывается выдача разрешений пользователю без прав администратора на использование монитора репликации.  
   
  [Добавление и удаление издателей в мониторе репликации](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)  
@@ -72,19 +76,19 @@ caps.handback.revision: 37
  [Просмотр состояний публикаций и подписок в мониторе репликации](../../../relational-databases/replication/monitor/view-publication-and-subscription-status-in-replication-monitor.md)  
  Описывается просмотр сведений о состоянии публикации или подписки с помощью монитора репликации.  
   
- [Просмотр сведений и выполнение задач для издателя и #40; Монитор репликации & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [Просмотр сведений и выполнение задач для издателя (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
  Описывается просмотр сведений и выполнение задач для издателя с помощью монитора репликации.  
   
- [Просмотр сведений и выполнение задач для публикации & #40; Монитор репликации & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
+ [Просмотр сведений и выполнение задач для публикации (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
  Описывается просмотр сведений и выполнение задач для публикации с помощью монитора репликации.  
   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией & #40; Монитор репликации & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)  
+ [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
  Описывается просмотр сведений и выполнение задач для агентов, связанных с публикацией, с помощью монитора репликации.  
   
- [Просмотр сведений и выполнение задач для подписки и #40; Монитор репликации & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+ [Просмотр сведений и выполнение задач для подписки (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
  Описывается просмотр сведений и выполнение задач для подписки с помощью монитора репликации.  
   
- [Просмотр сведений и выполнение задач для агентов, связанных с подпиской и #40; Монитор репликации & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)  
+ [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
  Описывается просмотр сведений и выполнение задач для агентов, связанных с подпиской, с помощью монитора репликации.  
   
   

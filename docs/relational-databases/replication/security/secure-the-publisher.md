@@ -1,29 +1,33 @@
 ---
-title: "Организация безопасности издателя | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "имена входа [репликация SQL Server], список доступа к публикации"
-  - "публикации [репликация SQL Server], списки доступа к публикации"
-  - "список доступа к публикации (PAL)"
-  - "PAL (список доступа к публикации)"
-  - "издатели [репликация SQL Server], безопасность"
-  - "публикации [репликация SQL Server], безопасность"
+title: "Организация безопасности издателя | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server replication], publication access list
+- publications [SQL Server replication], publication access lists
+- publication access list (PAL)
+- PAL (publication access list)
+- Publishers [SQL Server replication], security
+- publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e04431c75b87188f6b476b9d23e5b482730881
+ms.lasthandoff: 04/11/2017
+
 ---
-# Организация безопасности издателя
+# <a name="secure-the-publisher"></a>Организация безопасности издателя
   К издателю подключаются следующие агенты репликации:  
   
 -   Агент чтения журнала.  
@@ -38,13 +42,13 @@ caps.handback.revision: 48
   
  Помимо надлежащего управления именами входа и паролями, следует понимать роль, которую играет список доступа к публикации (PAL). Он позволяет именам входа производить доступ к данным публикации, ограничивая при этом нерегламентированный доступ к базе данных издателя.  
   
-## Список доступа к публикации  
+## <a name="publication-access-list"></a>Список доступа к публикации  
  Список доступа к публикации представляет собой первичный механизм защиты публикаций на издателе. Он работает так же, как и список управления доступом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. При создании публикации репликация создает список доступа для этой публикации. Список доступа к публикации может быть сконфигурирован таким образом, что будет содержать список имен входа и групп, которым предоставлен доступ к публикации. Когда агент подключается к издателю или распространителю и запрашивает доступ к публикации, данные проверки подлинности из списка доступа к публикации сравниваются с именем входа издателя, который предоставлен этим агентом. Этот процесс обеспечивает дополнительную защиту издателя, так как имена входа издателя и распространителя не могут использоваться клиентскими средствами для внесения изменений непосредственно на издателе.  
   
 > [!NOTE]  
->  Репликация создает для каждой публикации роль на издателе для ввода в действие списка доступа к публикации. Роль имеет имя в формате **Msmerge_***\< PublicationID>* для репликации слиянием и **MSReplPAL_***\< PublicationDatabaseID>***_***\< PublicationID>* для репликации транзакций или моментальных снимков.  
+>  Репликация создает для каждой публикации роль на издателе для ввода в действие списка доступа к публикации. Для репликации слиянием эта роль имеет имя вида **Msmerge_***\<ИД_публикации>*, а для репликации транзакций и репликации моментального снимка — вида **MSReplPAL_***\<ИД_базы_данных_публикации>***_***\<ИД_публикации>*.  
   
- По умолчанию в список доступа к публикации включаются члены предопределенной роли сервера **sysadmin** (существующие на момент создания публикации) и имя входа, использованное для ее создания. По умолчанию все имена входа, которые являются членами **sysadmin** предопределенной роли сервера или **db_owner** явным образом будет добавлено в список доступа к фиксированной роли базы данных в базе данных публикации могут подписаться на публикацию.  
+ По умолчанию в список доступа к публикации включаются члены предопределенной роли сервера **sysadmin** (существующие на момент создания публикации) и имя входа, использованное для ее создания. По умолчанию все имена входа, являющиеся членами предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** в базе данных публикации, могут подписываться на публикацию, даже если они отсутствуют в списке доступа к ней.  
   
  При работе со списком доступа к публикации следует учитывать следующие моменты:  
   
@@ -56,23 +60,23 @@ caps.handback.revision: 48
   
 -   Если список доступа к публикации содержит учетные записи Windows и домен использует службу Active Directory, то учетная запись, под которой выполняется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должна иметь разрешения на чтение в каталогах Active Directory. Если имеются проблемы с учетными записями Windows, убедитесь в том, что учетная запись, под которой выполняется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , имеет достаточные разрешения. Дополнительные сведения см. в документации по Windows.  
   
- Список доступа к публикации, в разделе [Управление именами входа в списке доступа к публикации](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md).  
+ Управление списками доступа к публикации описано в статье [Управление именами входа в списке доступа к публикации](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md).  
   
-## агент моментальных снимков  
+## <a name="snapshot-agent"></a>агент моментальных снимков  
  Для каждой публикации существует один агент моментальных снимков. Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-## Доставка моментальных снимков по FTP  
- Если указать, что моментальные снимки должны быть доступны через общий FTP-ресурс, а не через общий UNC-ресурс, при настройке доступа по FTP необходимо будет указать имя входа и пароль. Дополнительные сведения см. в разделе [Доставка моментального снимка через FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
+## <a name="ftp-snapshot-delivery"></a>Доставка моментальных снимков по FTP  
+ Если указать, что моментальные снимки должны быть доступны через общий FTP-ресурс, а не через общий UNC-ресурс, при настройке доступа по FTP необходимо будет указать имя входа и пароль. Дополнительные сведения см. в статье [Доставка моментального снимка через FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
-## Агент чтения журнала.  
+## <a name="log-reader-agent"></a>Агент чтения журнала.  
  У каждой базы данных, опубликованной для репликации транзакций, может быть только один агент чтения журнала. Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-## Агент чтения очереди.  
- Для всех издателей и публикаций (допускающих подписки, обновляемые посредством очередей), связанных с определенным распространителем, существует один агент чтения очереди. Дополнительные сведения см. в разделе [Включить обновление подписок для публикаций транзакций](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
+## <a name="queue-reader-agent"></a>Агент чтения очереди.  
+ Для всех издателей и публикаций (допускающих подписки, обновляемые посредством очередей), связанных с определенным распространителем, существует один агент чтения очереди. Дополнительные сведения см. в статье [Включение обновляемых подписок для публикации транзакций](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
-## См. также:  
- [Включение шифрования соединений в ядре базы данных & #40; Диспетчер конфигурации SQL Server & #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)   
- [Рекомендации по защите репликации](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Безопасность и защита и #40; Репликация & #41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

@@ -1,0 +1,1 @@
+![Скачать](../ssdt/media/download.png)[Установить драйвер Node.js](http://msdn.microsoft.com/library/mt652094.aspx)

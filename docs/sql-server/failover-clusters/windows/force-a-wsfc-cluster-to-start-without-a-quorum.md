@@ -1,32 +1,36 @@
 ---
-title: "Принудительный запуск кластера WSFC без кворума | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], кластеры WSFC"
-  - "кворум [SQL Server], AlwaysOn и кворум WSFC"
+title: "Принудительный запуск кластера WSFC без кворума | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7cef5f82996bc541f55bc8ec6560edce2e0d9acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Принудительный запуск кластера WSFC без кворума
-  В этом разделе описан порядок принудительного запуска узла отказоустойчивого кластера Windows Server (WSFC) без кворума.  Это может потребоваться в случае аварийного восстановления, в сценариях с несколькими подсетями и восстановлением данных и высокой доступности экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера WSFC без кворума
+  В этом разделе описан порядок принудительного запуска узла отказоустойчивого кластера Windows Server (WSFC) без кворума.  Это может потребоваться в случае аварийного восстановления, в сценариях с несколькими подсетями и восстановлением данных и высокой доступности экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Перед началом:**  [Рекомендации](#Recommendations), [Безопасность](#Security)  
+-   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
   
--   **Принудительный запуск кластера без кворума с использованием**  [Использование диспетчера отказоустойчивого кластера.](#FailoverClusterManagerProcedure), [Использование Powershell](#PowerShellProcedure), [Использование Net.exe](#CommandPromptProcedure)  
+-   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
   
--   **Дальнейшие действия:**  [Дальнейшие действия после принудительного запуска кластера без кворума](#FollowUp)  
+-   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом работы  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 21
   
 ##  <a name="FailoverClusterManagerProcedure"></a> Использование диспетчера отказоустойчивого кластера.  
   
-##### Принудительный запуск кластера без кворума  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера без кворума  
   
 1.  Откройте диспетчер отказоустойчивого кластера и подключитесь к требуемому узлу кластера в режиме «в сети».  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 21
   
 ##  <a name="PowerShellProcedure"></a> Использование Powershell  
   
-##### Принудительный запуск кластера без кворума  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера без кворума  
   
 1.  Запустите повышенный режим Windows PowerShell с помощью команды **Запуск от имени администратора**.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 21
   
 6.  Выведите свойства узла кластера в удобном для чтения формате.  
   
-### Пример (Powershell)  
+### <a name="example-powershell"></a>Пример (Powershell)  
  В следующем примере происходит принудительный запуск службы кластеров узла OnSrv02 AlwaysOn без кворума: задается значение `NodeWeight = 1`, затем перечисляется состояние узла кластера с вновь запущенного узла.  
   
 ```powershell  
@@ -83,7 +87,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ##  <a name="CommandPromptProcedure"></a> Использование Net.exe  
   
-##### Принудительный запуск кластера без кворума  
+##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера без кворума  
   
 1.  С помощью удаленного рабочего стола подключитесь к нужному узлу кластера в режиме «в сети».  
   
@@ -93,7 +97,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 4.  С помощью **net.exe** с `/forcequorum` принудительно запустите локальную службу кластеров.  
   
-### Пример (Net.exe)  
+### <a name="example-netexe"></a>Пример (Net.exe)  
  В следующем примере происходит принудительный запуск службы кластеров узла без кворума: задается значение `NodeWeight = 1`, затем перечисляется состояние узла кластера с вновь запущенного узла.  
   
 ```ms-dos  
@@ -109,7 +113,7 @@ net.exe start clussvc /forcequorum
   
 -   Процедуры в этом разделе представляют только один шаг в возвращении отказоустойчивого кластера Windows обратно в режим «в сети» в случае незапланированного сбоя кворума.  Кроме того, могут потребоваться дополнительные действия, позволяющие предотвратить помехи со стороны других узлов отказоустойчивого кластера WSFC в настройке нового кворума.  
   
--   Другие функции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], например [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], зеркальное отображение базы данных и доставка журналов, могут также требовать последующих действий по восстановлению данных и полному восстановлению высокой доступности.  
+-   Другие функции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , например [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], зеркальное отображение базы данных и доставка журналов, могут также требовать последующих действий по восстановлению данных и полному восстановлению высокой доступности.  
   
      **Дополнительные сведения см. в следующих разделах:**  
   
@@ -125,7 +129,7 @@ net.exe start clussvc /forcequorum
   
 -   [Командлет Get-ClusterLog отказоустойчивого кластера](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Настройка параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [Командлеты отказоустойчивого кластера в Windows PowerShell по выполняемым задачам](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

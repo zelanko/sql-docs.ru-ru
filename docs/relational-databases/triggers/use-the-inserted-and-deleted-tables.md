@@ -1,30 +1,34 @@
 ---
-title: "Использование таблиц inserted и deleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "inserted, таблицы"
-  - "инструкция UPDATE [SQL Server], триггеры DML"
-  - "инструкция DELETE [SQL Server], триггеры DML"
-  - "INSTEAD OF, триггеры"
-  - "deleted, таблицы"
-  - "инструкция INSERT [SQL Server], триггеры DML"
-  - "триггеры DML, таблицы deleted или inserted"
+title: "Использование таблиц inserted и deleted | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inserted tables
+- UPDATE statement [SQL Server], DML triggers
+- DELETE statement [SQL Server], DML triggers
+- INSTEAD OF triggers
+- deleted tables
+- INSERT statement [SQL Server], DML triggers
+- DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование таблиц inserted и deleted
+# <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
   Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
   
  В триггерах DML таблицы inserted и deleted в основном используются для выполнения следующих операций.  
@@ -46,19 +50,19 @@ caps.handback.revision: 35
  При задании условий триггера используйте таблицы inserted и deleted соответственно действию, заставившему триггер сработать. Хотя ссылка на таблицу deleted при проверке инструкции INSERT или ссылка на таблицу inserted при проверке инструкции DELETE не приводит к появлению ошибок, но данные тестовые таблицы триггера все равно не содержат в таких случаях никаких строк.  
   
 > [!NOTE]  
->  Если действия триггера зависят от количества строк, данные в которых были изменены, воспользуйтесь проверками (например, проверкой параметра @@ROWCOUNT) изменений данных в нескольких строках (инструкции INSERT, DELETE или UPDATE с инструкцией SELECT), а затем предпринимайте соответствующие действия.  
+>  Если действия триггера зависят от числа строк, данные в которых были изменены, воспользуйтесь проверками (например, проверкой параметра @@ROWCOUNT) при изменении данных в нескольких строках (инструкции INSERT, DELETE или UPDATE с инструкцией SELECT), а затем предпринимайте соответствующие действия.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext** или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)**, **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext**или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)**, **nvarchar(max)**и **varbinary(max)** . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)**, **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Примеры использования таблицы inserted в триггере для выполнения бизнес-правил**  
   
  Поскольку ограничение CHECK может содержать ссылки только на столбцы, для которых определены ограничения на уровне столбцов или таблицы, любые межтабличные ограничения (в данном случае бизнес-правила) должны быть заданы в виде триггеров.  
   
- В следующем примере создается триггер DML. Этот триггер проверяет уровень кредитоспособности поставщика при попытке добавить новый заказ на покупку в таблицу `PurchaseOrderHeader`. Чтобы получить оценку кредитоспособности поставщика, связанного с только что добавленным заказом на покупку, таблица inserted должна ссылаться на таблицу `Vendor` и быть связана с ней. В случае слишком низкой кредитоспособности выводится соответствующее сообщение и вставка не выполняется. Обратите внимание, что в этом примере не допускается изменение многострочных данных. Дополнительные сведения см. в статье [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ В следующем примере создается триггер DML. Этот триггер проверяет уровень кредитоспособности поставщика при попытке добавить новый заказ на покупку в таблицу `PurchaseOrderHeader` . Чтобы получить оценку кредитоспособности поставщика, связанного с только что добавленным заказом на покупку, таблица inserted должна ссылаться на таблицу `Vendor` и быть связана с ней. В случае слишком низкой кредитоспособности выводится соответствующее сообщение и вставка не выполняется. Обратите внимание, что в этом примере не допускается изменение многострочных данных. Дополнительные сведения см. в статье [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
-## Использование таблиц inserted и deleted в триггерах INSTEAD OF  
+## <a name="using-the-inserted-and-deleted-tables-in-instead-of-triggers"></a>Использование таблиц inserted и deleted в триггерах INSTEAD OF  
  Таблицы inserted и deleted в триггерах INSTEAD OF подчиняются тем же правилам, что и таблицы inserted и deleted в триггерах AFTER. Формат таблиц inserted и deleted совпадает с форматом таблицы, для которой задан триггер INSTEAD OF. Каждый столбец таблиц inserted и deleted прямо сопоставляется с определенным столбцом базовой таблицы.  
   
  Следующие правила относятся к инструкциям INSERT или UPDATE, ссылающимся на таблицу с триггером INSTEAD OF, которые должны предоставлять такие значения для столбцов, как если бы в таблице не было триггера INSTEAD OF.  
@@ -86,7 +90,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- Результирующий набор для этого представления содержит три столбца: один **int** и два **nvarchar** . Таблицы inserted и deleted триггера INSTEAD OF, заданного для представления, также содержат столбец типа **int** с именем `BusinessEntityID`, столбец типа **nvarchar** с именем `LName` и столбец типа **nvarchar** с именем `FName`.  
+ Результирующий набор для этого представления содержит три столбца: один **int** и два **nvarchar** . Таблицы inserted и deleted триггера INSTEAD OF, заданного для представления, также содержат столбец типа **int** с именем `BusinessEntityID`, столбец типа **nvarchar** с именем `LName`и столбец типа **nvarchar** с именем `FName`.  
   
  Список выборки представления также может содержать выражения, которые не сопоставлены напрямую с каким-либо одним столбцом базовой таблицы. Некоторые выражения представления, такие как вызов функции или константы, могут не ссылаться на столбцы и просто пропускаться. Сложные выражения могут ссылаться на несколько столбцов, однако таблицы inserted и deleted содержат только по одному значению для каждой вставляемой строки. Такие же проблемы появляются и в простых выражениях представления, если они ссылаются на вычисляемый столбец со сложным выражением. Триггер INSTEAD OF в представлении должен обрабатывать такие типы выражений.  
   

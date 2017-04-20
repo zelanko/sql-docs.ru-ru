@@ -1,27 +1,31 @@
 ---
-title: "Переключение между режимами обновления для обновляемой подписки на публикацию транзакций | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "репликация транзакций, обновляемые подписки"
-  - "обновляемые подписки, режимы обновления"
-  - "подписки [репликация SQL Server], обновляемые"
+title: "Переключение между режимами обновления для обновляемой подписки на публикацию транзакций | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, updatable subscriptions
+- updatable subscriptions, update modes
+- subscriptions [SQL Server replication], updatable
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
+ms.lasthandoff: 04/11/2017
+
 ---
-# Переключение между режимами обновления для обновляемой подписки на публикацию транзакций
-  В этом разделе описывается переключение между режимами обновления для обновляемой подписки на публикацию транзакций в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Режим обновляемых подписок можно указать с помощью мастера создания подписки. Сведения об установке режима с помощью этого мастера см. в разделе [Просмотр и изменение свойств подписки по запросу](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+# <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Переключение между режимами обновления для обновляемой подписки на публикацию транзакций
+  В этом разделе описывается переключение между режимами обновления для обновляемой подписки на публикацию транзакций в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Режим обновляемых подписок можно указать с помощью мастера создания подписки. Сведения об установке режима с помощью этого мастера см. в статье [Просмотр и изменение свойств подписки по запросу](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  **В этом разделе**  
   
@@ -50,41 +54,41 @@ caps.handback.revision: 38
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 > [!NOTE]  
->  Чтобы изменить режим обновления после создания подписки **update_mode** свойство должно быть присвоено **отработки отказа** (что позволяет переключиться с немедленного обновления на обновление посредством очередей) или **в очередь отработки отказа** (что позволяет переключиться с обновления по очереди на немедленное обновление) при создании подписки. Эти свойства устанавливаются автоматически в мастере создания подписки.  
+>  Чтобы изменить режим обновления после создания подписки, необходимо установить для свойства **update_mode** значение **failover** (что позволяет переключиться с немедленного обновления на обновление посредством очередей) или значение **queued failover** (что позволяет переключиться с обновления по очереди на немедленное обновление), когда подписка создана. Эти свойства устанавливаются автоматически в мастере создания подписки.  
   
-#### Установка режима обновления для принудительной подписки  
+#### <a name="to-set-the-updating-mode-for-a-push-subscription"></a>Установка режима обновления для принудительной подписки  
   
 1.  Подключитесь к подписчику в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]и раскройте узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем — папку **Локальные подписки** .  
   
-3.  Щелкните правой кнопкой мыши подписку, для которой вы хотите установить режим обновления и нажмите кнопку **Выбор метода обновления**.  
+3.  Щелкните правой кнопкой подписку, для которой хотите установить режим обновления, и щелкните **Выбор метода обновления**.  
   
-4.  В **значение метода обновления — \< подписчик>: \< база данных подписки>** диалоговом **немедленное обновление** или **обновление посредством очереди**.  
+4.  В диалоговом окне **Выбор метода обновления — \<подписчик>: \<база_данных_подписки>** выберите **Немедленное обновление** или **Обновление посредством очереди**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### Установка режима обновления для подписки по запросу  
+#### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Установка режима обновления для подписки по запросу  
   
-1.  В **Свойства подписки — \< издатель>: \< база данных публикации>** диалоговое окно, выберите значение **немедленно реплицировать изменения** или **очередь помещаются изменения** для **метод обновления подписчика** параметр.  
+1.  В диалоговом окне **Свойства подписки — \<издатель>: \<база данных публикации>** выберите значение **Немедленно реплицировать изменения** или **Ставить изменения в очередь** для параметра **Метод обновления подписчика**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Дополнительные сведения о доступе к **Свойства подписки — \< издатель>: \< база данных публикации>** диалоговом разделе [Просмотр и изменение свойств подписки по запросу](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Дополнительные сведения о доступе к диалоговому окну **Свойства подписки — \<издатель>: \<база данных публикации>** см. в статье [Просмотр и изменение свойств подписки по запросу](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Переключение режимов обновления  
+#### <a name="to-switch-between-update-modes"></a>Переключение режимов обновления  
   
-1.  Убедитесь, что подписка поддерживает переход на другой ресурс, выполнив [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) для подписки по запросу или [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) для принудительной подписки. Если значение **update mode** результирующего набора равен **3** или **4**, то отработка отказа поддерживается.  
+1.  Удостоверьтесь в том, что данная подписка поддерживает отработку отказа, выполнив хранимую процедуру [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) для подписки по запросу или [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) для принудительной подписки. Если значение **update mode** результирующего набора равен **3** или **4**, то отработка отказа поддерживается.  
   
-2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Укажите **@publisher**, **@publisher_db**, **@publication**, и одно из следующих значений для **@failover_mode**:  
+2.  На подписчике в базе данных подписки выполните процедуру [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Задайте значения параметров **@publisher**, **@publisher_db**, **@publication**, а в качестве параметра **@failover_mode**укажите одно из следующих значений:  
   
-    -   **в очереди** -отработку отказа для обновления посредством очередей при временной потере подключения.  
+    -   **queued** — переход в режим обновления посредством очередей при временной потере соединения;  
   
-    -   **немедленное** -переключиться на немедленное обновление, при восстановлении подключения.  
+    -   **immediate** — переход в режим немедленного обновления, при восстановлении.  
   
-## См. также:  
- [Обновляемые подписки для репликации транзакций](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

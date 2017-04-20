@@ -1,30 +1,34 @@
 ---
-title: "Скрипт для предоставления разрешений Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "публикация Oracle [репликация SQL Server], скрипт для предоставления разрешений"
+title: "Скрипт для предоставления разрешений Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Скрипт для предоставления разрешений Oracle
-  Скрипт, предложенный в этом разделе, используется во время конфигурации базы данных Oracle, которая будет публиковать данные с помощью репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот сценарий доступен также в следующем каталоге после установки: *\< диск>*:\\\Program Files\Microsoft SQL Server\\*\< имя_экземпляра>*\MSSQL\Install\oracleadmin.sql. Дополнительные сведения о настройке базы данных Oracle см. в разделе [настроить издатель Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+# <a name="script-to-grant-oracle-permissions"></a>Скрипт для предоставления разрешений Oracle
+  Скрипт, предложенный в этом разделе, используется во время конфигурации базы данных Oracle, которая будет публиковать данные с помощью репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот скрипт доступен также в следующем каталоге после установки *: \<диск>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>*\MSSQL\Install\oracleadmin.sql. Дополнительные сведения о настройке базы данных Oracle см. в разделе [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Скрипт включает инструкцию `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, требующуюся для триггеров, которые используются репликацией транзакций. Если необходима только репликация моментальных снимков, удалите из скрипта эту строку.  
   
- **Чтобы запустить сценарий из Oracle SQL\*плюс программы**  
+ **Выполнение скрипта в программе Oracle SQL\*Plus**  
   
 1.  На распространителе SQL Server откройте окно командной строки.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 37
     sqlplus system/P@$$W0rd@orcl @"c:\Program Files\Microsoft SQL Server\<InstanceName>\MSSQL\Install\oracleadmin.sql"  
     ```  
   
-     В этом примере встроенная учетная запись Oracle **системы** используется для подключения к базе данных Oracle с сетевым именем «orcl».  
+     В этом примере встроенная учетная запись Oracle **system** используется для подключения к базе данных Oracle с сетевым именем «orcl».  
   
 3.  В случае необходимости задайте имя пользователя, пароль пользователя и табличное пространство по умолчанию.  
   
@@ -123,7 +127,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

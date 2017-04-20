@@ -1,43 +1,47 @@
 ---
-title: "Организация безопасности подписчика | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "подписки [репликация SQL Server], безопасность"
-  - "безопасность [репликация SQL Server], безопасность"
-  - "безопасность [репликация SQL Server], подписчики"
+title: "Организация безопасности подписчика | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [SQL Server replication], security
+- Subscribers [SQL Server replication], security
+- security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb68bca5ffa78120a8435049e9333335e9adf87c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Организация безопасности подписчика
+# <a name="secure-the-subscriber"></a>Организация безопасности подписчика
   Агенты слияния и распространителей подключаются к подписчику. Эти подключения могут выполняться в контексте имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или имени входа Windows. Важно предоставить для этих агентов соответствующее имя входа, придерживаясь принципа предоставления минимально необходимых прав и обеспечивая защиту хранилища всех паролей. Сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-## Агент распространителя  
+## <a name="distribution-agent"></a>Агент распространителя  
  Может использоваться либо один агент распространителя на подписку (независимый агент, установленный по умолчанию для публикаций, созданных в мастере создания публикаций), либо один агент распространителя на пару баз данных публикации и подписки (общий агент). T  
   
- Указание сведений о подключении для принудительной подписки, в разделе [создания принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
+ Указание сведений о подключении для принудительной подписки рассматривается в статье [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
   
- Указание сведений о подключении для подписки по запросу в разделе [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md)  
+ Указание сведений о подключении для подписки по запросу рассматривается в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-## Агент слияния.  
+## <a name="merge-agent"></a>Агент слияния.  
  Каждая подписка на публикацию слиянием имеет собственный агент, который подключается к издателю и обновляет как издателя, так и подписчика.  
   
- Указание сведений о подключении для принудительной подписки, в разделе [создания принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
+ Указание сведений о подключении для принудительной подписки рассматривается в статье [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
   
- Указание сведений о подключении для подписки по запросу в разделе [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
+ Указание сведений о подключении для подписки по запросу рассматривается в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-## Немедленно обновляемые подписки  
+## <a name="immediate-updating-subscriptions"></a>Немедленно обновляемые подписки  
  Когда выполняется настройка немедленно обновляемой подписки, на подписчике выбирается учетная запись, от имени которой устанавливается подключение к издателю. Соединения используются триггерами, которые запускаются на подписчике и распространяют изменения на издатель. Для этого типа соединения имеются следующие три параметра.  
   
 -   Связанный сервер, который создает репликация. Подключение устанавливается с учетными данными, задаваемыми во время настройки.  
@@ -47,14 +51,14 @@ caps.handback.revision: 36
 -   Уже определенный связанный или удаленный сервер.  
   
 > [!IMPORTANT]  
->  Чтобы указать сведения о соединении, используйте хранимую процедуру [sp_link_publication & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Можно также использовать **имя входа для обновляемых подписок** страницы мастера создания подписки, который вызывает **sp_link_publication**. При определенных обстоятельствах выполнение этой хранимой процедуры может завершиться ошибкой, если подписчик работает с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1, а издатель работает с более ранней версией. Если хранимая процедура завершается ошибкой в этом сценарии, обновите издатель до версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1 (SP1) или более поздней версии.  
+>  Чтобы указать сведения о подключении, используйте хранимую процедуру [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Также можно воспользоваться страницей **Имя входа для обновляемых подписок** в мастере создания подписки, который вызывает хранимую процедуру **sp_link_publication**. При определенных обстоятельствах выполнение этой хранимой процедуры может завершиться ошибкой, если подписчик работает с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1, а издатель работает с более ранней версией. Если хранимая процедура завершается ошибкой в этом сценарии, обновите издатель до версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1 (SP1) или более поздней версии.  
   
- Дополнительные сведения см. в разделе [Создание обновляемых подписок на публикацию транзакций](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) и [Просмотр и изменение настроек безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+ Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления в базе данных публикации, которые именуются в форме **syncobj_***\< Шестнадцатеричное_число>* для учетной записи, настроенной на каждом подписчике.  
+>  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_***\<<шестнадцатеричный_номер>*, для учетной записи, настроенной на каждом подписчике.  
   
-## Подписки, обновляемые посредством очередей  
+## <a name="queued-updating-subscriptions"></a>Подписки, обновляемые посредством очередей  
  При настройке обновляемых посредством очередей подписок необходимо учитывать два аспекта, касающихся безопасности:  
   
 -   Для каждого распространителя существует только один агент чтения очереди. Рекомендуется настраивать для каждого распространителя не более одной публикации, для которой включены обновляемые посредством очередей подписки.  
@@ -68,13 +72,13 @@ caps.handback.revision: 36
     -   Учетная запись, под которой агент выполняет подключения к подписчику, задается при создании подписки.  
   
     > [!IMPORTANT]  
-    >  Используйте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключений к подписчикам, и задавайте разные учетные записи для подключения к каждому подписчику. При использовании подписки по запросу репликация всегда устанавливает соединение для использования проверки подлинности Windows (для подписок по запросу репликация не может обратиться к метаданным на подписчике, необходимым для использования проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). В этом случае измените соединение таким образом, чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после настройки подписки.  
+    >  Используйте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключений к подписчикам, и задавайте разные учетные записи для подключения к каждому подписчику. При использовании подписки по запросу репликация всегда устанавливает соединение для использования проверки подлинности Windows (для подписок по запросу репликация не может обратиться к метаданным на подписчике, необходимым для использования проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). В этом случае измените соединение таким образом, чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после настройки подписки.  
   
-     Дополнительные сведения см. в разделе Практическое руководство: создание обновляемая подписка на публикацию транзакций (среда SQL Server Management Studio) и [Просмотр и изменение настроек безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Дополнительные сведения см. в статьях "Инструкции. Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
-## См. также:  
- [Включение шифрования соединений в ядре базы данных & #40; Диспетчер конфигурации SQL Server & #41;](../../../database-engine/configure-windows/enable encrypted connections to the database engine.md)   
- [Рекомендации по защите репликации](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Безопасность и защита и #40; Репликация & #41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

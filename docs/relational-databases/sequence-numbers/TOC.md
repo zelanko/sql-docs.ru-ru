@@ -1,2 +1,2 @@
-# [Порядковые номера](sequence-numbers.md)
-# [Свойства последовательности (страница «Общие»)](sequence-properties-general-page.md)
+# [Обзор](sequence-numbers.md)  
+# [Свойства последовательности](sequence-properties-general-page.md)  

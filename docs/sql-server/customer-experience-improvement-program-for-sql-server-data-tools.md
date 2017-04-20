@@ -1,31 +1,35 @@
 ---
-title: "Программа улучшения качества SQL Server Data Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssdt"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Программа улучшения качества для SQL Server Data Tools | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 caps.latest.revision: 11
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7abf9d52d0e8fa4a4c6b16e479891db5f7e95529
+ms.lasthandoff: 04/11/2017
+
 ---
-# Программа улучшения качества SQL Server Data Tools
+# <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Программа улучшения качества SQL Server Data Tools
   Узнайте, как программа улучшения качества программного обеспечения (CEIP) позволяет корпорации Майкрософт определять способы улучшения своей продукции.  Вы можете в любой момент согласиться на участие в программе или отказаться от него.  
   
 > [!NOTE]  
 >  Описание методик сбора и использования данных в выпусках Microsoft SQL Server 2016, а также в других продуктах и службах см. в [заявлении о конфиденциальности компании Майкрософт](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
   
-## Согласие на участие в программе улучшения качества SQL Server Data Tools и отказ от него  
+## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Согласие на участие в программе улучшения качества SQL Server Data Tools и отказ от него  
  Программа улучшения качества программного обеспечения разработана, чтобы помочь корпорации Майкрософт улучшать свои продукты. Эта программа собирает сведения об аппаратном обеспечении и способах использования продукта людьми, не вмешиваясь в ход выполнения пользовательских задач на компьютере. Собранные сведения помогают корпорации Майкрософт определить, что нужно доработать. В этом документе мы расскажем, как согласиться на участие в программе улучшения качества SQL Server Data Tools (SSDT) для Visual Studio 2015 и Visual Studio 2013, а также как отказаться от участия.  
   
-### Выбор вариантов и управление участием в программе улучшения качества программного обеспечения (CEIP) для SQL Server Data Tools для Visual Studio 2015  
+### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Выбор вариантов и управление участием в программе улучшения качества программного обеспечения (CEIP) для SQL Server Data Tools для Visual Studio 2015  
  SSDT для Visual Studio 2015 — это средство моделирования данных, поставляемое с SQL Server 2016. SSDT использует стандартные параметры CEIP, встроенные в Visual Studio 2015. Дополнительные сведения о том, как отправить отзыв о программе CEIP в Visual Studio 2015, см. в [справочной документации по Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
   
  В предварительных версиях SQL Server 2016 участие пользователя в программе улучшения качества программного обеспечения предусмотрено по умолчанию. Вы можете изменять эту настройку в соответствии с приведенными ниже инструкциями.  
@@ -67,7 +71,7 @@ caps.handback.revision: 11
   
  Дополнительные сведения о данных, собираемых, обрабатываемых или передаваемых в рамках программы CEIP, см. в статье [Заявление о конфиденциальности для программы улучшения качества программного обеспечения](http://go.microsoft.com/fwlink/?LinkId=52143).  
   
-### Выбор вариантов и управление участием в программе CEIP для SQL Server Data Tools — BI (SSDT-BI)  
+### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Выбор вариантов и управление участием в программе CEIP для SQL Server Data Tools — BI (SSDT-BI)  
  Если вы используете SSDT-BI, вы сможете принять участие в программе улучшения качества программного обеспечения во время установки. Параметры участия в программе CEIP для SSDT-BI можно изменить позже с помощью клиентских средств или путем изменения параметров реестра.  
   
  **В SSDT и SSDT-BI для Visual Studio 2013**  
@@ -99,3 +103,4 @@ caps.handback.revision: 11
 -   1 — участвовать  
   
   
+

@@ -1,39 +1,43 @@
 ---
-title: "Решения высокого уровня доступности (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "высокий уровень доступности [SQL Server], решения"
-  - "ядро СУБД [SQL Server], доступность"
-  - "доступность базы данных [SQL Server]"
-  - "доступность [SQL Server]"
-  - "доступность сервера [SQL Server]"
+title: "Решения высокого уровня доступности (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 05/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- high availability [SQL Server], solutions
+- Database Engine [SQL Server], availability
+- database availability [SQL Server]
+- availability [SQL Server]
+- server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 84
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: dd78349c495ceb9b653ae3b44915da327c489152
+ms.lasthandoff: 04/11/2017
+
 ---
-# Решения высокого уровня доступности (SQL Server)
-  В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.    
+# <a name="high-availability-solutions-sql-server"></a>Решения высокого уровня доступности (SQL Server)
+  В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.    
     
    
->  **Примечание.** Хотите узнать, какие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают определенное решение высокой доступности? См. подраздел "Высокий уровень доступности (всегда ВКЛ)" раздела [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).    
+>  **Примечание.** Хотите узнать, какие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают определенное решение высокой доступности? См. подраздел "Высокий уровень доступности (всегда ВКЛ)" раздела [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
      
     
 ##  <a name="TermsAndDefinitions"></a> Общие сведения о решениях SQL Server с высоким уровнем доступности    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет несколько вариантов обеспечения высокого уровня доступности сервера или базы данных. Существуют следующие режимы обеспечения высокого уровня доступности.    
     
 *  Экземпляры отказоустойчивого кластера AlwaysOn    
- В рамках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.    
+ В рамках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.    
     
  Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).    
     
@@ -43,24 +47,26 @@ caps.handback.revision: 84
   
 >  **Примечание.** Экземпляр отказоустойчивого кластера (FCI) может эффективно использовать [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] для выполнения удаленного аварийного восстановления на уровне базы данных. Дополнительные сведения см. в разделе [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).    
     
-*  Зеркальное отображение базы данных. **Примечание.** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо нее рекомендуется пользоваться представлением [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].     
+*  Зеркальное отображение базы данных. **Примечание.** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо нее рекомендуется пользоваться представлением [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .     
 Зеркальное отображение базы данных — это решение, предназначенное главным образом для увеличения доступности базы данных за счет почти мгновенного перехода на отработку отказа. Зеркальное отображение базы данных может использоваться для поддержки одиночной резервной базы данных или *зеркальной базы данных*, соответствующей базе данных, которая доступна для чтения и записи и называется *основной базой данных*. Дополнительные сведения см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).    
     
 *  доставка журналов;    
  Подобно [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] и зеркальному отображению базы данных, доставка журналов функционирует на уровне базы данных. Доставку журналов можно использовать для поддержки одной или нескольких баз данных "горячего" резервирования (которые называются *базами данных-получателями*) для единой рабочей базы данных, называемой *базой данных-источником*. Дополнительные сведения о доставке журналов см. в разделе [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).    
     
 ##  <a name="RecommendedSolutions"></a> Рекомендуемые решения для использования SQL Server в целях защиты данных    
- Рекомендации для обеспечения защиты данных в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
+ Рекомендации для обеспечения защиты данных в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :    
     
 -   Для защиты данных посредством решения общего диска сторонних разработчиков (SAN) рекомендуется использовать экземпляры отказоустойчивой кластеризации AlwaysOn.    
     
--   Для защиты данных с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].    
+-   Для защиты данных с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]рекомендуется использовать [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].    
     
-       >  При использовании выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который не поддерживает [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], рекомендуется применять доставку журналов. Сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживающих [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], см. в подразделе "Высокий уровень доступности (AlwaysOn)" раздела [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).    
+       >  При использовании выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не поддерживает [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], рекомендуется применять доставку журналов. Сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], см. в подразделе "Высокий уровень доступности (AlwaysOn)" раздела [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
     
-## См. также:    
+## <a name="see-also"></a>См. также:    
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)     
  [Зеркальное отображение базы данных: взаимодействие и сосуществание (SQL Server)](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)     
- [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
+ [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
     
   
+
+

@@ -1,27 +1,31 @@
 ---
-title: "Объекты T-SQL PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase, основные понятия"
-  - "PolyBase, инструкции SQL"
-  - "PolyBase, объекты SQL"
+title: "Объекты PolyBase T-SQL | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase, fundamentals
+- PolyBase, SQL statements
+- PolyBase, SQL objects
 ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: be34605990368fbbccdb8b81c119318c01431ced
+ms.lasthandoff: 04/11/2017
+
 ---
-# Объекты T-SQL PolyBase
+# <a name="polybase-t-sql-objects"></a>Объекты T-SQL PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Чтобы использовать PolyBase, необходимо создать внешние таблицы для ссылок на внешние данные.  
@@ -36,11 +40,11 @@ caps.handback.revision: 18
   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Настройте PolyBase. См. раздел [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## Создание внешних таблиц для Hadoop  
- **1. Создайте учетные данные области базы данных.**  
+## <a name="create-external-tables-for-hadoop"></a>Создание внешних таблиц для Hadoop  
+ **1. Создание учетных данных области базы данных**  
   
  Этот шаг является обязательным только для кластеров Hadoop, защищенных с помощью Kerberos.  
   
@@ -59,7 +63,7 @@ WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';
   
 ```  
   
- **2. Создайте внешний источник данных.**  
+ **2. Создание внешнего источника данных**  
   
 ```sql  
 -- Create an external data source.  
@@ -76,7 +80,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
   
 ```  
   
- **3. Создайте формат внешнего файла.**  
+ **3. Создание формата внешнего файла**  
   
 ```sql  
 -- Create an external file format.  
@@ -89,7 +93,7 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
   
 ```  
   
- **4. Создайте внешнюю таблицу.**  
+ **4. Создание внешней таблицы**  
   
 ```sql  
 -- Create an external table pointing to data stored in Hadoop.  
@@ -117,8 +121,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## Создание внешней таблицы для хранилища BLOB-объектов Azure  
- **1. Создайте учетные данные области базы данных.**  
+## <a name="create-external-tables-for-azure-blob-storage"></a>Создание внешней таблицы для хранилища BLOB-объектов Azure  
+ **1. Создание учетных данных области базы данных**  
   
 ```sql  
 -- Create a master key on the database.  
@@ -135,7 +139,7 @@ WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
   
 ```  
   
- **2. Создайте внешний источник данных.**  
+ **2. Создание внешнего источника данных**  
   
 ```sql  
 -- Create an external data source.  
@@ -150,7 +154,7 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
   
 ```  
   
- **3. Создайте формат внешнего файла.**  
+ **3. Создание формата внешнего файла**  
   
 ```sql  
 -- Create an external file format.  
@@ -163,7 +167,7 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
   
 ```  
   
- **4. Создайте внешнюю таблицу.**  
+ **4. Создание внешней таблицы**  
   
 ```sql  
 -- Create an external table pointing to data stored in Azure storage.  
@@ -191,12 +195,105 @@ WITH (LOCATION='/Demo/',
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
   
 ```  
+ 
+## <a name="create-external-tables-for-azure-data-lake-store"></a>Создание внешних таблиц для Azure Data Lake Store
+Хранилище Azure Data Lake Store поддерживается только PolyBase в хранилище данных SQL.
+Дополнительные сведения об использовании Azure Data Lake Store совместно с ADLS см. в статье [Загрузка данных из Azure Data Lake Store в хранилище данных SQL](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
+ 
+ **1. Создание учетных данных области базы данных**  
   
-## Следующие шаги  
+
+```sql
+-- Create a Database Master Key.
+-- Only necessary if one does not already exist.
+-- Required to encrypt the credential secret in the next step.
+
+CREATE MASTER KEY;
+
+-- Create a database scoped credential
+-- IDENTITY: Pass the client id and OAuth 2.0 Token Endpoint taken from your Azure Active Directory Application
+-- SECRET: Provide your AAD Application Service Principal key.
+-- For more information on Create Database Scoped Credential: https://msdn.microsoft.com/en-us/library/mt270260.aspx
+
+CREATE DATABASE SCOPED CREDENTIAL ADL_User
+WITH
+    IDENTITY = '<client_id>@<OAuth_2.0_Token_EndPoint>'
+    ,SECRET = '<key>'
+;
+```  
+  
+ **2. Создание внешнего источника данных**  
+  
+```sql  
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
+-- LOCATION: Provide Azure storage account name and blob container name.
+-- CREDENTIAL: Provide the credential created in the previous step.
+
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH (
+    TYPE = HADOOP,
+    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net,
+    CREDENTIAL = AzureStorageCredential
+);
+```  
+  
+ **3. Создание формата внешнего файла**  
+  
+```sql  
+-- FIELD_TERMINATOR: Marks the end of each field (column) in a delimited text file
+-- STRING_DELIMITER: Specifies the field terminator for data of type string in the text-delimited file.
+-- DATE_FORMAT: Specifies a custom format for all date and time data that might appear in a delimited text file.
+-- Use_Type_Default: Store all Missing values as NULL
+
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH
+(   FORMAT_TYPE = DELIMITEDTEXT
+,    FORMAT_OPTIONS    (   FIELD_TERMINATOR = '|'
+                    ,    STRING_DELIMITER = ''
+                    ,    DATE_FORMAT         = 'yyyy-MM-dd HH:mm:ss.fff'
+                    ,    USE_TYPE_DEFAULT = FALSE
+                    )
+);
+```  
+  
+ **4. Создание внешней таблицы**  
+  
+```sql  
+-- LOCATION: Folder under the ADLS root folder.
+-- DATA_SOURCE: Specifies which Data Source Object to use.
+-- FILE_FORMAT: Specifies which File Format Object to use
+-- REJECT_TYPE: Specifies how you want to deal with rejected rows. Either Value or percentage of the total
+-- REJECT_VALUE: Sets the Reject value based on the reject type.
+
+-- DimProduct
+CREATE EXTERNAL TABLE [dbo].[DimProduct_external] (
+    [ProductKey] [int] NOT NULL,
+    [ProductLabel] [nvarchar](255) NULL,
+    [ProductName] [nvarchar](500) NULL
+)
+WITH
+(
+    LOCATION='/DimProduct/'
+,   DATA_SOURCE = AzureDataLakeStore
+,   FILE_FORMAT = TextFileFormat
+,   REJECT_TYPE = VALUE
+,   REJECT_VALUE = 0
+)
+;
+```  
+  
+ **5. Создание статистики**  
+  
+```sql     
+CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
+```  
+
+## <a name="next-steps"></a>Следующие шаги  
  Примеры запросов см. в разделе [Запросы PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
+

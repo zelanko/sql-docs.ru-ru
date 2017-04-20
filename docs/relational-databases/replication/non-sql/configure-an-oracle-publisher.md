@@ -1,24 +1,28 @@
 ---
-title: "Настройка издателя Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "публикация Oracle [репликация SQL Server], настройка"
+title: "Настройка издателя Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка издателя Oracle
+# <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
   Публикации издателей Oracle создаются таким же способом, как и публикации моментальных снимков и публикации транзакций, но перед тем как создать публикацию от издателя Oracle, необходимо выполнить следующие шаги (в данном разделе подробно описаны шаги 1, 3 и 4):  
   
 1.  Используя предоставленный скрипт, создайте в базе данных Oracle административного пользователя для репликации.  
@@ -29,22 +33,22 @@ caps.handback.revision: 60
   
 4.  Настройте базу данных Oracle как издатель на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Список объектов, которые могут быть реплицированы из базы данных Oracle см. в разделе [вопросы проектирования и ограничений издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ Список объектов, которые могут реплицироваться из базы данных Oracle, приводится в статье [Рассмотрение структуры и ограничений издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
->  Необходимо быть членом **sysadmin** фиксированной серверной роли для включения издатель или распространитель и создать публикацию Oracle или подписки из публикации Oracle.  
+>  Необходимо быть членом предопределенной роли сервера **sysadmin** , чтобы включить издатель или распространитель и создать публикацию или подписку Oracle из публикации Oracle.  
   
-## Создание схемы администратора репликации в базе данных Oracle  
+## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Создание схемы администратора репликации в базе данных Oracle  
  Агенты репликации подключаются к базе данных Oracle и выполняют операции в контексте созданной пользовательской схемы. Этой схеме должны быть предоставлены некоторые разрешения, перечисленные далее. Данная схема является владельцем всех объектов, созданных в процессе репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на издателе Oracle, за исключением открытого синонима **MSSQLSERVERDISTRIBUTOR**. Дополнительные сведения об объектах, создаваемых в базе данных Oracle, см. в разделе [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
->  Удаление **MSSQLSERVERDISTRIBUTOR** открытого синонима и пользователя настроенной репликации Oracle с **CASCADE** удаляются все объекты репликации из издателя Oracle.  
+>  При удалении открытого синонима **MSSQLSERVERDISTRIBUTOR** и пользователя сконфигурированной репликации Oracle с параметром **CASCADE** из издателя Oracle удаляются все объекты репликации.  
   
- Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Сценарий можно найти в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\< диск>*:\\\Program Files\Microsoft SQL Server\\*\< имя_экземпляра>*\MSSQL\Install\oracleadmin.sql. Он также содержится в разделе [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
+ Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Этот скрипт доступен также в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<диск>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>*\MSSQL\Install\oracleadmin.sql. Он также содержится в разделе [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
- Подключитесь к базе данных Oracle под учетной записью с правами доступа администратора базы данных (DBA) и выполните скрипт. Данный скрипт запрашивает имя пользователя и пароль для схемы администратора репликации, а также табличное пространство по умолчанию, в котором будут создаваться объекты (табличное пространство уже должно существовать в базе данных Oracle). Сведения об указании других табличных пространств для объектов см. в разделе [Управление табличными пространствами Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Выберите любое имя пользователя и надежный пароль, запишите их, так как позднее при настройке базы данных Oracle как издателя запрашиваются это имя и пароль. Рекомендуется использовать схему только для объектов, которые требуются для репликации. Не создавайте таблиц, которые будут публиковаться в этой схеме.  
+ Подключитесь к базе данных Oracle под учетной записью с правами доступа администратора базы данных (DBA) и выполните скрипт. Данный скрипт запрашивает имя пользователя и пароль для схемы администратора репликации, а также табличное пространство по умолчанию, в котором будут создаваться объекты (табличное пространство уже должно существовать в базе данных Oracle). Сведения об указании других табличных пространств для объектов см. в статье [Управление табличными пространствами Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Выберите любое имя пользователя и надежный пароль, запишите их, так как позднее при настройке базы данных Oracle как издателя запрашиваются это имя и пароль. Рекомендуется использовать схему только для объектов, которые требуются для репликации. Не создавайте таблиц, которые будут публиковаться в этой схеме.  
   
-### Создание пользовательской схемы вручную  
+### <a name="creating-the-user-schema-manually"></a>Создание пользовательской схемы вручную  
  При создании схемы администратора репликации необходимо предоставить схеме следующие разрешения, непосредственно или через роль базы данных:  
   
 -   CREATE PUBLIC SYNONYM and DROP PUBLIC SYNONYM  
@@ -63,8 +67,8 @@ caps.handback.revision: 60
   
 -   CREATE VIEW  
   
-## Установка и настройка клиентского сетевого ПО Oracle на распространителе SQL Server  
- На распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо установить и настроить клиентское сетевое ПО Oracle и поставщик OLE DB Oracle, чтобы распространитель мог подключаться к издателю Oracle. После установки ПО задайте для папок установки соответствующие разрешения, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], чтобы обеспечить обновление всех параметров (разрешения описаны ниже в разделе «Установка разрешений для каталогов»).  
+## <a name="installing-and-configuring-oracle-client-networking-software-on-the-sql-server-distributor"></a>Установка и настройка клиентского сетевого ПО Oracle на распространителе SQL Server  
+ На распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо установить и настроить клиентское сетевое ПО Oracle и поставщик OLE DB Oracle, чтобы распространитель мог подключаться к издателю Oracle. После установки ПО задайте для папок установки соответствующие разрешения, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чтобы обеспечить обновление всех параметров (разрешения описаны ниже в разделе «Установка разрешений для каталогов»).  
   
 > [!NOTE]  
 >  Необходимо использовать клиентское сетевое ПО Oracle последней доступной версии. Oracle рекомендует пользователям установить самую новую версию клиентского программного обеспечения. Клиентское программное обеспечение часто бывает новее, чем программное обеспечение баз данных.  
@@ -88,10 +92,10 @@ caps.handback.revision: 60
 |Выберите сетевой протокол.|Выберите соответствующие поддерживаемые протоколы. Большинство приложений использует протокол TCP.|  
 |Задайте сведения об узле для идентификации прослушивателя базы данных|Узел — это имя или DNS-псевдоним компьютера, на котором запущен прослушиватель Oracle. Обычно это тот же компьютер, на котором расположена база данных. Для некоторых протоколов, возможно, нужно будет указать дополнительные сведения. Например если выбрать протокол ТСР, нужно будет указать порт, который слушается прослушивателем для запросов на подключение к целевой базе данных. По умолчанию для протокола TCP используется порт 1521.|  
   
-### Установка разрешений для каталогов  
+### <a name="setting-directory-permissions"></a>Установка разрешений для каталогов  
  Учетной записи, под которой выполняется служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на распространителе, должны быть предоставлены разрешения на чтение и выполнение для каталога (и всех подкаталогов), в котором установлено клиентское сетевое ПО Oracle.  
   
-### Проверка соединения между распространителем SQL Server и издателем Oracle  
+### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>Проверка соединения между распространителем SQL Server и издателем Oracle  
  Перед завершением программы Net Configuration Assistant есть возможность проверить подключения к издателю Oracle. До начала проверки соединения убедитесь в том, что экземпляр базы данных Oracle находится в режиме «в сети» и запущен прослушиватель Oracle. Если проверка не удалась, свяжитесь с администратором Oracle, ответственным за базу данных, к которой была предпринята попытка подключиться.  
   
  После успешного подключения к издателю Oracle попробуйте подключиться к базе данных под учетной записью и паролем, связанным с созданной схемой администратора репликации. Необходимо выполнить следующие действия при использовании той же учетной записи Windows, которую использует служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -108,29 +112,29 @@ caps.handback.revision: 60
   
 4.  Если настройка сети прошла удачно, будет выполнен вход и появится окно сеанса `SQL` .  
   
-5.  Если возникают проблемы при подключении к базе данных Oracle, см. раздел « [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распространителю не удается подключиться к экземпляру базы данных Oracle» в [Устранение неполадок издателей Oracle](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
+5.  Если при подключении к базе данных Oracle возникли проблемы, см. раздел «Распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не удается подключиться к экземпляру базы данных Oracle» в [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
-### Рассмотрение Oracle Home  
+### <a name="considerations-for-oracle-home"></a>Рассмотрение Oracle Home  
  Oracle поддерживает параллельную установку двоичных файлов приложений, но только один набор двоичных файлов может использоваться для репликации в текущий момент. Каждый набор двоичных файлов связан с Oracle Home; двоичные файлы находятся в каталоге %ORACLE_HOME%\bin. Когда репликация выполняет подключение к издателю Oracle, необходимо убедиться в том, что используется правильный набор двоичных файлов (а именно, последняя версия клиентского сетевого ПО).  
   
  Войдите на распространитель под учетными записями, используемыми службой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и службой агентов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , установите соответствующие переменные среды. Переменная %ORACLE_HOME% должна указывать на точку установки, заданную при установке сетевого клиентского программного обеспечения. Переменная %PATH% должна включать каталог %ORACLE_HOME% \bin в качестве первой записи, относящейся к Oracle. Сведения о настройке переменных среды см. в документации по операционной системе Windows.  
   
-## Настройка базы данных Oracle как издателя на распространителе SQL Server  
- Издатели Oracle всегда используют удаленный распространитель. Необходимо настроить экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], чтобы он работал как распространитель для издателя Oracle (издатель Oracle может использовать только один распределитель, но отдельный распространитель может обслуживать несколько издателей Oracle). После настройки распространителя определите экземпляр базы данных Oracle как издатель на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL или объектов RMO. Дополнительные сведения о настройке распространителя см. в разделе [Настройка распространения](../../../relational-databases/replication/configure-distribution.md).  
+## <a name="configuring-the-oracle-database-as-a-publisher-at-the-sql-server-distributor"></a>Настройка базы данных Oracle как издателя на распространителе SQL Server  
+ Издатели Oracle всегда используют удаленный распространитель. Необходимо настроить экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чтобы он работал как распространитель для издателя Oracle (издатель Oracle может использовать только один распределитель, но отдельный распространитель может обслуживать несколько издателей Oracle). После настройки распространителя определите экземпляр базы данных Oracle как издатель на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL или объектов RMO. Дополнительные сведения о настройке распространителя см. в [этой статье](../../../relational-databases/replication/configure-distribution.md).  
   
 > [!NOTE]  
->  Издатель Oracle не может иметь то же имя, что и его распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], или имя любого из издателей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], использующих тот же распространитель.  
+>  Издатель Oracle не может иметь то же имя, что и его распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , или имя любого из издателей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующих тот же распространитель.  
   
  При идентификации баз данных Oracle в качестве издателя необходимо выбрать параметр публикации Oracle: Complete или Oracle Gateway. После идентификации издателя изменить данный параметр без удаления и перенастройки издателя невозможно. Параметр «Complete» предназначен для обеспечения публикаций моментальными снимками и публикаций транзакций полным набором поддерживаемых функций, необходимых для публикаций Oracle. Параметр «Oracle Gateway» обеспечивает оптимизацию производительности для случаев, когда шлюзом между системами выступает репликация.  
   
- После идентификации издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] репликация создает связанный сервер с таким же именем, как и служба TNS базы данных Oracle. Этот связанный сервер может использоваться только репликацией. Если необходимо подключиться к издателю Oracle через соединение связанного сервера, создайте другое имя службы TNS и затем использовать это имя при вызове [sp_addlinkedserver & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ После идентификации издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] репликация создает связанный сервер с таким же именем, как и служба TNS базы данных Oracle. Этот связанный сервер может использоваться только репликацией. Если вам нужно подключиться к издателю Oracle через подключение связанного сервера, создайте другое имя службы TNS и используйте это имя при вызове процедуры [sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  Чтобы настроить издатель Oracle и создать публикацию, см. раздел [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Вопросы управления издателями Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Сопоставление типов данных для издателей Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [Глоссарий терминов публикации Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Глоссарий терминов по публикации Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

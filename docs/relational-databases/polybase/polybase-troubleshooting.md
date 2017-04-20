@@ -1,33 +1,37 @@
 ---
-title: "Устранение неполадок c PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PolyBase, monitoring"
-  - "PolyBase, performance monitoring"
-helpviewer_keywords: 
-  - "PolyBase, устранение неполадок"
+title: "Устранение неполадок с PolyBase| Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PolyBase, monitoring
+- PolyBase, performance monitoring
+helpviewer_keywords:
+- PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bef55c15906ea76d2993d41e3eb7cbfd4bac9a4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Устранение неполадок c PolyBase
+# <a name="polybase-troubleshooting"></a>Устранение неполадок c PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описаны методы по устранению неполадок с PolyBase.  
   
-## представлений каталога;  
+## <a name="catalog-views"></a>представлений каталога;  
  Ниже приведены представления каталога,с помощью которых можно управлять операциями PolyBase.  
   
 |||  
@@ -37,7 +41,7 @@ caps.handback.revision: 18
 |[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Определяет источники внешних таблиц|  
 |[sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Определяет форматы внешних файлов|  
   
-## Динамические административные представления  
+## <a name="dynamic-management-views"></a>Динамические административные представления  
   
 |||  
 |-|-|  
@@ -47,7 +51,18 @@ caps.handback.revision: 18
 |[sys.dm_exec_dms_services (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-## Мониторинг запросов PolyBase с использованием динамических административных представлений  
+  Запросы PolyBase разбиваются на серии шагов в sys.dm_exec_distributed_request_steps. В следующей таблице приводится сопоставление имен шагов и динамических административных представлений.
+  
+ |Шаг PolyBase|Связанное динамическое административное представление|  
+ |-|-| 
+ |HadoopJobOperation | sys.dm_exec_external_operations|
+ |RandomIdOperation | sys.dm_exec_distributed_request_steps|
+ |HadoopRoundRobinOperation | sys.dm_exec_dms_workers|
+ |StreamingReturnOperation | sys.dm_exec_dms_workers|
+ |OnOperation | sys.dm_exec_distributed_sql_requests |
+  
+  
+## <a name="to-monitor-polybase-queries-using-dmvs"></a>Мониторинг запросов PolyBase с использованием динамических административных представлений  
  Здесь описаны динамические административные представления, которые можно использовать для мониторинга и устранения неполадок с запросами PolyBase.  
   
 1.  **Поиск запросов с наиболее длительным временем выполнения.**  
@@ -125,13 +140,13 @@ caps.handback.revision: 18
   
     ```  
   
-## Просмотр плана запроса PolyBase  
+## <a name="to-view-the--polybase-query-plan"></a>Просмотр плана запроса PolyBase  
   
 1.  В SSMS включите параметр **Включить действительный план выполнения** (CTRL+M) и выполните запрос.  
   
 2.  Перейдите на вкладку **План выполнения** .  
   
-     ![PolyBase query plan](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![План запроса PolyBase](../../relational-databases/polybase/media/polybase-query-plan.png "План запроса PolyBase")  
   
 3.  Щелкните правой кнопкой мыши оператор **Удаленный запрос** и выберите пункт **Свойства**.  
   
@@ -196,21 +211,24 @@ caps.handback.revision: 18
     </dsql_query>  
     ```  
   
-## Мониторинг узлов в группе PolyBase  
+## <a name="to-monitor-nodes-in-a-polybase-group"></a>Мониторинг узлов в группе PolyBase  
  После настройки нескольких компьютеров в рамках масштабируемой группы PolyBase можно отслеживать состояние компьютеров. Дополнительные сведения о создании масштабируемой группы см. в разделе [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 1.  Подключитесь к SQL Server на головном узле группы.  
   
-2.  Запустите [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) динамического административного представления, чтобы просмотреть все узлы в группе PolyBase.  
+2.  Запустите [sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) динамического административного представления, чтобы просмотреть все узлы в группе PolyBase.  
   
-3.  Запустите [sys.dm_exec_compute_node_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) динамического административного представления, чтобы просмотреть состояние всех узлов в группе PolyBase.  
+3.  Запустите [sys.dm_exec_compute_node_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) динамического административного представления, чтобы просмотреть состояние всех узлов в группе PolyBase.  
   
- ## Известные ограничения
+ ## <a name="known-limitations"></a>Известные ограничения
  
  PolyBase имеет следующие ограничения. 
- - Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 32 767 байтов.
+ - Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 1 МБ. 
  - PolyBase не поддерживает типы данных Hive 0.12+ (например, Char(), VarChar()).   
+ - При экспорте данных в формате файлов ORC из SQL Server или хранилища данных SQL Azure столбцы с большим объемом текста могут ограничиваться всего 50 столбцами из-за ошибок нехватки памяти в Java. Чтобы обойти эту проблему, экспортируйте подмножество столбцов.
+- [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
-## Сообщения об ошибках и возможные решения
+## <a name="error-messages-and-possible-solutions"></a>Сообщения об ошибках и возможные решения
 
 Сведения об устранении ошибок во внешних таблицах см. в записи блога Муршеда Замана (Murshed Zaman) [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Ошибки установки PolyBase и возможные решения").
+

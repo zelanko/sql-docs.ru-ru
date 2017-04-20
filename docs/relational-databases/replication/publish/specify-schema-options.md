@@ -1,27 +1,31 @@
 ---
-title: "Указание параметров схемы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "схемы [репликация SQL Server], параметры"
-  - "статьи [репликация SQL Server], параметры репликации транзакций"
-  - "статьи [репликация SQL Server], параметры репликации слиянием"
-  - "статьи [репликация SQL Server], параметры схемы"
+title: "Указание параметров схемы | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schemas [SQL Server replication], options
+- articles [SQL Server replication], transactional replication options
+- articles [SQL Server replication], merge replication options
+- articles [SQL Server replication], schema options
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ef7d237d005c8be5892125841de73084110f1e5e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Указание параметров схемы
+# <a name="specify-schema-options"></a>Указание параметров схемы
   В этом разделе описывается указание параметров схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. При публикации таблицы или представления можно управлять параметрами создания объектов, применяемых к опубликованному объекту. Эти параметры можно задать при создании статьи, а также изменить их позднее. Если эти параметры не заданы в явном виде, то применяется набор параметров по умолчанию.  
   
 > [!NOTE]  
@@ -49,77 +53,77 @@ caps.handback.revision: 39
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Полный список параметров схемы см. в разделе **@schema_option** параметра [процедуры sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и [sp_addmergearticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+-   Полный список параметров схемы есть в описании параметра **@schema_option** для [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Укажите параметры схемы, например, нужно ли копировать ограничения и триггеры на подписчики, на **Свойства** вкладке **Свойства статьи — \< статья>** диалоговое окно. Эта вкладка доступна в мастере создания публикаций и **Свойства публикации — \< публикация>** диалоговое окно. Дополнительные сведения об использовании мастера и о доступе к диалоговому окну см. в разделе [Создать публикацию](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ На вкладке **Свойства** диалогового окна **Свойства статьи - \<статья>** задайте параметры схемы, например укажите, необходимо ли копировать ограничения и триггеры для подписчиков. Эта вкладка доступна в мастере создания публикаций, а также в диалоговом окне **Свойства публикации - \<публикация>**. Дополнительные сведения об использовании мастера создания публикаций и доступе к этому диалоговому окну см. в статьях о [создании публикаций](../../../relational-databases/replication/publish/create-a-publication.md) и [просмотре и изменении свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-#### Указание параметров схемы  
+#### <a name="to-specify-schema-options"></a>Указание параметров схемы  
   
-1.  На **статьи** страница мастера создания публикаций или **Свойства публикации — \< публикация>** диалоговое окно, выберите статью и нажмите кнопку **Свойства статьи**.  
+1.  На странице **Статьи** мастера создания публикаций или в диалоговом окне **Свойства публикации - \<публикация>** выберите нужную статью и щелкните **Свойства статьи**.  
   
 2.  Выберите статьи, для которых необходимо внести изменения в параметры схемы:  
   
-    -   Щелкните **указать свойства выделенной \< ObjectType> статьи** для запуска **Свойства статьи — \< имя_объекта>** диалоговое окно; свойство изменения, внесенные в этом диалоговом окне, применяются только объект, который будет выделен на панели объектов на **статьи** страницы.  
+    -   Щелкните **Указать свойства выделенной статьи \<тип_объекта>**, чтобы открыть диалоговое окно **Свойства статьи — \<имя_объекта>**. Изменения, внесенные в этом диалоговом окне, применяются только к объекту, который будет выделен на панели объектов на странице **Статьи**.  
   
-    -   Щелкните **Установка свойств всех \< ObjectType> статьи** для запуска **Свойства всех \< ObjectType> статьи** диалоговое окно; свойство изменения, внесенные в этом диалоговом окне применяются ко всем объектам этого типа на панели объектов на **статьи** страницы, включая объекты, не выбранные для публикации.  
+    -   Щелкните **Указать свойства всех статей \<тип_объекта>**, чтобы открыть диалоговое окно **Свойства всех статей \<тип_объекта>**. Изменения свойств, внесенные в этом диалоговом окне, применяются ко всем объектам этого типа на панели объектов на странице **Статьи**, включая объекты, не выбранные для публикации.  
   
         > [!NOTE]  
-        >  Изменения, произведенные в **Свойства для всех \< ObjectType> статьи** диалоговое окно отменяют изменения, сделанные ранее в **Свойства статьи — \< имя_объекта>** диалоговое окно. Например, если нужно установить некоторое количество значений по умолчанию для всех статей типа объекта, но при этом задать некоторые свойства для отдельных объектов, сначала установите значения по умолчанию для всех статей. Затем установите свойства для отдельных объектов.  
+        >  Изменения свойств, внесенные в диалоговом окне **Свойства всех статей \<тип_объекта>** переопределяют изменения, сделанные ранее в диалоговом окне **Свойства статьи — \<имя_объекта>**. Например, если нужно установить некоторое количество значений по умолчанию для всех статей типа объекта, но при этом задать некоторые свойства для отдельных объектов, сначала установите значения по умолчанию для всех статей. Затем установите свойства для отдельных объектов.  
   
-3.  В **Копировать объекты и настройки на подписчик** и **целевой объект** разделы **Свойства** вкладке **Свойства статьи — \< статья>** диалогового окна укажите значения для параметров.  
+3.  Укажите значения параметров в разделах **Копировать объекты и установки на подписчик** и **Целевой объект** на вкладке **Свойства** диалогового окна **Свойства статьи - \<статья>**.  
   
 4.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-5.  При работе в **Свойства публикации — \< публикация>** диалоговом нажмите кнопку **ОК** Сохранить и закрыть диалоговое окно.  
+5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<Публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- Параметры схемы указываются как шестнадцатеричное значение, представляющее [| (Побитовое или)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) результат один или несколько параметров. Дополнительные сведения см. в разделе [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
+ Параметры схемы указываются в виде шестнадцатеричных значений, которые являются результатом выполнения операции [| (побитовое ИЛИ)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) к одному или нескольким параметрам. Дополнительные сведения см. в разделах [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 > [!NOTE]  
->  Прежде чем применять битовые операции к значениям параметров схемы, необходимо преобразовать их значения из типа **binary** в тип **int** . Дополнительные сведения см. в разделе [CAST и CONVERT & #40; Transact-SQL & #41;](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
+>  Прежде чем применять битовые операции к значениям параметров схемы, необходимо преобразовать их значения из типа **binary** в тип **int** . Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-#### Задание параметров схемы при определении статьи для публикации моментальных снимков или транзакций  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>Задание параметров схемы при определении статьи для публикации моментальных снимков или транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Укажите имя публикации, к которой принадлежит статья, для **@publication**, имя статьи для **@article**, объект базы данных, публикуемые для **@source_object**, тип объекта базы данных для **@type**, и [| (Побитовое или)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) результат одного или нескольких параметров схемы для **@schema_option**. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication**задайте имя публикации, к которой принадлежит статья, в параметре **@article**— имя статьи, в параметре **@source_object**— базу данных, в параметре **@type**— объект базы данных, в параметре [| (побитовое ИЛИ)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) — результат выполнения операции **@schema_option**. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Задание параметров схемы при определении статьи для публикации слиянием  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>Задание параметров схемы при определении статьи для публикации слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите имя публикации, к которой принадлежит статья, для **@publication**, имя статьи для **@article**, объект базы данных, публикуемые для **@source_object**, и [| (Побитовое или)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) результат одного или нескольких параметров схемы для **@schema_option**. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). В параметре **@publication**задайте имя публикации, к которой принадлежит статья, в параметре **@article**— имя статьи, в параметре **@source_object**— объект базы данных, в параметре [| (побитовое ИЛИ)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) — результат выполнения операции **@schema_option**. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-#### Изменение параметров схемы в существующей статье публикации моментальных снимков или транзакций  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>Изменение параметров схемы в существующей статье публикации моментальных снимков или транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). Укажите имя публикации, которой принадлежит статья, в параметре **@publication** и имя статьи в параметре **@article**. Обратите внимание на значение **schema_option** столбца в результирующем наборе.  
+1.  В базе данных публикации на издателе выполните процедуру [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md). В параметре **@publication** и имя статьи в параметре **@article**. Запомните значение столбца **schema_option** в результирующем наборе.  
   
-2.  Выполнение [& (побитовое и)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) значение для определения, если параметр имеет значение параметра операции, используя значение из шага 1 и необходимой схемой.  
-  
-    -   Если результат равен **0**, параметр не установлен.  
-  
-    -   Если результатом является значение параметра, то он уже установлен.  
-  
-3.  Если параметр не установлен, выполнение [| (Побитовое или)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) операции, используя значения из шага 1 и значение параметра необходимой схемой.  
-  
-4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Укажите имя публикации, к которой принадлежит статья, для **@publication**, имя статьи для **@article**, значение **schema_option** для **@property**, и шестнадцатеричный результат с шага 3 для **@value**.  
-  
-5.  Запустите агент моментальных снимков, чтобы создать новый моментальный снимок. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
-  
-#### Изменение параметров схемы для существующей статьи в публикации слиянием  
-  
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Укажите имя публикации, которой принадлежит статья, в параметре **@publication** и имя статьи в параметре **@article**. Обратите внимание на значение **schema_option** столбца в результирующем наборе.  
-  
-2.  Выполнение [& (побитовое и)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) значение для определения, если параметр имеет значение параметра операции, используя значение из шага 1 и необходимой схемой.  
+2.  Чтобы определить, установлен ли определенный параметр, выполните операцию [побитового сложения (&)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) требуемого значения параметра схемы со значением, полученным на шаге 1.  
   
     -   Если результат равен **0**, параметр не установлен.  
   
     -   Если результатом является значение параметра, то он уже установлен.  
   
-3.  Если параметр не установлен, выполнение [| (Побитовое или)](../Topic/%7C%20\(Bitwise%20OR\)%20\(Transact-SQL\).md) операции, используя значения из шага 1 и значение параметра необходимой схемой.  
+3.  Если параметр не установлен, выполните операцию [| (побитовое ИЛИ)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) , используя значение из шага 1 и требуемое значение параметра схемы.  
   
-4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите имя публикации, к которой принадлежит статья, для **@publication**, имя статьи для **@article**, значение **schema_option** для **@property**, и шестнадцатеричный результат с шага 3 для **@value**.  
+4.  Выполните процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication**, имя статьи в параметре **@article**, значение **schema_option** в параметре **@property**и шестнадцатеричный результат с шага 3 в параметре **@value**.  
   
 5.  Запустите агент моментальных снимков, чтобы создать новый моментальный снимок. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-## См. также:  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>Изменение параметров схемы для существующей статьи в публикации слиянием  
+  
+1.  В базе данных публикации на издателе выполните процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). В параметре **@publication** и имя статьи в параметре **@article**. Запомните значение столбца **schema_option** в результирующем наборе.  
+  
+2.  Чтобы определить, установлен ли определенный параметр, выполните операцию [побитового сложения (&)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) требуемого значения параметра схемы со значением, полученным на шаге 1.  
+  
+    -   Если результат равен **0**, параметр не установлен.  
+  
+    -   Если результатом является значение параметра, то он уже установлен.  
+  
+3.  Если параметр не установлен, выполните операцию [| (побитовое ИЛИ)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) , используя значение из шага 1 и требуемое значение параметра схемы.  
+  
+4.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). В параметре **@publication**, имя статьи в параметре **@article**, значение **schema_option** в параметре **@property**и шестнадцатеричный результат с шага 3 в параметре **@value**.  
+  
+5.  Запустите агент моментальных снимков, чтобы создать новый моментальный снимок. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+  
+## <a name="see-also"></a>См. также:  
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Параметры статьи для репликации транзакций](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   

@@ -1,26 +1,30 @@
 ---
-title: "Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "отслеживание условного удаления [репликация SQL Server]"
-  - "репликация слиянием [репликация SQL Server], отслеживание условного удаления"
-  - "статьи [репликация SQL Server], отслеживание условного удаления"
+title: "Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional delete tracking [SQL Server replication]
+- merge replication [SQL Server replication], conditional delete tracking
+- articles [SQL Server replication], conditional delete tracking
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61f3c832be62fb53a82713182dc026d7a6fc3fb5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
+# <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -45,10 +49,10 @@ caps.handback.revision: 23
   
  **Указание того, что удаления не должны отслеживаться**  
   
--   Репликация [!INCLUDE[tsql](../../../includes/tsql-md.md)] программирования: [указать что удаляет должен не быть отслеживаются для слияния статьи & #40; Программирование репликации Transact-SQL и #41;](../../../relational-databases/replication/publish/specify that deletes should not be tracked for merge articles.md)  
+-   Программирование репликации в [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Отключение отслеживания операций удаления для статей публикации слиянием (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Параметры статьи для репликации слиянием](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
- [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
+ [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для скачивания](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

@@ -1,0 +1,49 @@
+---
+title: "Сортировка с помощью предложения ORDER BY (визуальные инструменты для баз данных) | Документация Майкрософт"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ORDER BY clause [Visual Database Tools]
+ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
+caps.latest.revision: 4
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 01bb085d1946c5e6ac407c6baa8a9049892bc4df
+ms.lasthandoff: 04/11/2017
+
+---
+# <a name="sort-with-order-by-visual-database-tools"></a>Произведение сортировки с помощью предложения ORDER BY (визуальные инструменты для баз данных)
+Предложение ORDER BY позволяет сортировать результаты запроса по одному или нескольким столбцам. Его можно определить, выбрав параметры на панели «Подробности критериев».  
+  
+### <a name="to-sort-a-query-using-an-order-by-clause"></a>Для сортировки результатов запроса с помощью предложения ORDER BY:  
+  
+1.  Откройте запрос или создайте новый.  
+  
+2.  На [панели критериев](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)щелкните в столбце **Тип сортировки** строку, соответствующую столбцу, по которому нужно отсортировать результаты запроса.  
+  
+3.  В раскрывающемся списке выберите *По возрастанию* или *По убыванию* .  
+  
+> [!NOTE]  
+> Очистка элемента **Тип сортировки** для столбца удаляет этот столбец из предложения ORDER BY.  
+  
+Обратите внимание, что во время работы с панелью критериев предложение UNION запроса изменяется в соответствии с последними действиями.  
+  
+> [!NOTE]  
+> При сортировке результатов по нескольким столбцам в столбце **Порядок сортировки** укажите порядок, в котором будут просматриваться столбцы при сортировке. Дополнительные сведения см. в разделе **Как производить сортировку нескольких столбцов в запросе**.  
+  
+## <a name="see-also"></a>См. также:  
+[Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Резюмирование результатов запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+  
+

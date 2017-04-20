@@ -1,27 +1,31 @@
 ---
-title: "Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кластеры [SQL Server], восстановление после сбоя"
-  - "отказоустойчивая кластеризация [SQL Server], восстановление после сбоя"
-  - "сбои оборудования [SQL Server]"
-  - "восстановление после сбоя отказоустойчивого кластера [SQL Server]"
+title: "Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], recovery from failure
+- failover clustering [SQL Server], recovery from failure
+- hardware failures [SQL Server]
+- recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b0e95b00a334c4c0391d800f7846e2f431107892
+ms.lasthandoff: 04/11/2017
+
 ---
-# Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера
+# <a name="recover-from-failover-cluster-instance-failure"></a>Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера
   В этом разделе описывается восстановление кластера с помощью оснастки «Диспетчер отказоустойчивости кластеров» после отработки отказа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Оснастка «Диспетчер отказоустойчивости кластеров» — это приложение управления кластером для службы WSFC.  
   
 -   [Восстановление после неустранимого сбоя](#Scenario1)  

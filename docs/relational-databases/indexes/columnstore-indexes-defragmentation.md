@@ -1,28 +1,32 @@
 ---
-title: "Дефрагментация индексов columnstore | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Дефрагментация индексов columnstore | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 caps.latest.revision: 17
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: eea1da9c6a3c9dd30b89c72488570ae98737eaa5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Дефрагментация индексов columnstore
+# <a name="columnstore-indexes---defragmentation"></a>Дефрагментация индексов columnstore
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Задачи по дефрагментации индексов columnstore.  
   
-## Дефрагментация индекса columnstore в оперативном режиме с помощью инструкции ALTER INDEX REORGANIZE  
+## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>Дефрагментация индекса columnstore в оперативном режиме с помощью инструкции ALTER INDEX REORGANIZE  
  ПРИМЕНЯЕТСЯ К: SQL Server (начиная с версии 2016), база данных SQL Azure  
   
   После выполнения загрузок любого типа таблица deltastore может содержать несколько небольших групп строк. С помощью инструкции ALTER INDEX REORGANIZE можно принудительно отправить все группы строк в columnstore, а затем объединить их в меньшее число групп строк с большим количеством строк внутри.  Операция реорганизации также приведет к удалению строк, которые были удалены из columnstore.  
@@ -33,15 +37,15 @@ caps.handback.revision: 15
   
 -   [Индексы columnstore и политика слияния для групп строк](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-### Рекомендации по реорганизации  
+### <a name="recommendations-for-reorganizing"></a>Рекомендации по реорганизации  
  Реорганизуйте индекс columnstore после одной или нескольких загрузок данных, чтобы как можно быстрее повысить производительность запросов. Реорганизация изначально потребует дополнительных ресурсов ЦП для сжатия данных, что может снизить общую производительность системы. Однако после сжатия данных производительность запросов может возрасти.  
   
  Для расчета фрагментации воспользуйтесь примером из статьи [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). Это поможет вам определить, стоит ли выполнять операцию REORGANIZE.  
   
-### Пример. Как работает реорганизация  
+### <a name="example-how-reorganizing-works"></a>Пример. Как работает реорганизация  
  В этом примере показано, как инструкция ALTER INDEX REORGANIZE может принудительно отправить все группы строк deltastore в columnstore, а затем объединить эти группы строк.  
   
-1.  Запустите этот код Transact-SQL, чтобы создать промежуточную таблицу, содержащую 300 000 строк. Мы воспользуемся ею для массовой загрузки строк в индекс columnstore.  
+1.  Запустите этот код Transact-SQL, чтобы создать промежуточную таблицу, содержащую 300 000 строк. Мы воспользуемся ею для массовой загрузки строк в индекс columnstore.  
   
     ```  
     USE master;  
@@ -145,9 +149,9 @@ caps.handback.revision: 15
   
     ```  
   
-     В данном примере результаты показывают 8 групп строк OPEN, в каждой из которых 37 500 строк. Количество групп строк OPEN зависит от параметра max_degree_of_parallelism.  
+     В данном примере результаты показывают 8 групп строк OPEN, в каждой из которых 37 500 строк. Количество групп строк OPEN зависит от параметра max_degree_of_parallelism.  
   
-     ![OPEN rowgroups](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN rowgroups")  
+     ![Группы строк OPEN](../../relational-databases/indexes/media/cci-openrowgroups.png "Группы строк OPEN")  
   
 5.  С помощью инструкции ALTER INDEX REORGANIZE с параметром COMPRESS_ALL_ROW_GROUPS принудительно отправьте все группы строк для сжатия в columnstore.  
   
@@ -165,7 +169,7 @@ caps.handback.revision: 15
   
      В результатах отобразится 8 групп строк COMPRESSED и 8 групп строк TOMBSTONE. Каждая группа строк сжимается в columnstore независимо от ее размера. Группы строк TOMBSTONE будут удалены системой.  
   
-     ![TOMBSTONE and COMPRESSED rowgroups](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "TOMBSTONE and COMPRESSED rowgroups")  
+     ![Группы строк TOMBSTONE и COMPRESSED](../../relational-databases/indexes/media/cci-tombstone-compressed-rowgroups.png "Группы строк TOMBSTONE и COMPRESSED")  
   
 6.  Для повышения производительности запросов гораздо лучше объединять небольшие группы строк вместе.  Инструкция ALTER INDEX REORGANIZE объединит группы строк COMPRESSED. Теперь, когда разностные группы строк сжаты в columnstore, еще раз запустите инструкцию ALTER INDEX REORGANIZE, чтобы объединить небольшие группы строк COMPRESSED. На этот раз не нужно указывать параметр COMPRESS_ALL_ROW_GROUPS.  
   
@@ -182,21 +186,21 @@ caps.handback.revision: 15
   
      В результатах будет видно, что 8 групп строк COMPRESSED теперь объединены в одну группу строк COMPRESSED.  
   
-     ![Combined rowgroups](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Combined rowgroups")  
+     ![Комбинированные группы строк](../../relational-databases/indexes/media/cci-compressed-rowgroups.png "Комбинированные группы строк")  
   
 ##  <a name="rebuild"></a> Дефрагментация индекса columnstore в автономном режиме с помощью инструкции ALTER INDEX REBUILD  
  Для SQL Server 2016 и более поздних версий перестройка индекса columnstore обычно не требуется, так как инструкция REORGANIZE выполняет необходимые действия для перестройки в фоновом режиме как операцию в оперативном режиме.  
   
  Перестройка индекса columnstore устраняет фрагментацию и перемещает все строки в columnstore. Для полного перестроения существующего кластеризованного индекса columnstore можно использовать инструкцию [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) или [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md). Кроме того, можно использовать инструкцию ALTER INDEX... REBUILD, чтобы перестроить конкретную секцию.  
   
-### Процесс перестроения  
+### <a name="rebuild-process"></a>Процесс перестроения  
  Чтобы перестроить индекс columnstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполняет следующие действия.  
   
 1.  Приобретает монопольную блокировку на таблице или секции на то время, как происходит перестроение.  Во время перестройки данные находятся в автономном режиме и недоступны даже при использовании NOLOCK, RCSI или SI.  
   
 2.  Повторно сжимает все данные в columnstore. Во время перестроения существуют две копии индекса columnstore. После завершения перестроения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляет исходный индекс columnstore.  
   
-### Рекомендации по перестройке индекса Columnstore  
+### <a name="recommendations-for-rebuilding-a-columnstore-index"></a>Рекомендации по перестройке индекса Columnstore  
  Перестройка индекса columnstore полезна для устранения фрагментации, а также для перемещения всех строк в columnstore. Предлагаются следующие рекомендации.  
   
 1.  Перестраивайте секцию, а не всю таблицу.  
@@ -211,15 +215,15 @@ caps.handback.revision: 15
   
 3.  Перестраивайте секцию после загрузки данных.  
   
-    -   Это гарантирует, что все данные будут храниться в columnstore. Если каждый из параллельных процессов одновременно загружает менее 100 тысяч строк в одну и ту же секцию, в итоге в секции может оказаться несколько таблиц deltastore. Перестроение переместит все строки из deltastore в columnstore.  
+    -   Это гарантирует, что все данные будут храниться в columnstore. Если каждый из параллельных процессов одновременно загружает менее 100 тысяч строк в одну и ту же секцию, в итоге в секции может оказаться несколько таблиц deltastore. Перестроение переместит все строки из deltastore в columnstore.  
   
-## См. также:  
- [Руководство по индексам columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Загрузка данных индексов ColumnStore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Сводка функций индексов columnstore по версиям](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
- [Производительность запросов индексов columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Индексы сolumnstore для хранилищ данных](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
- [Индексы ColumnStore для задач обслуживания](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+## <a name="see-also"></a>См. также:        
+[Новые возможности индексов columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
+
+[Производительность запросов по индексам columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
+[Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ [Хранилище данных для индексов columnstore](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+   
   
   
+

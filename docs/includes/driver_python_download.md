@@ -1,0 +1,1 @@
+![Скачать](../ssdt/media/download.png)[Установить драйвер pyodbc для Python](../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md) ![Скачать](../ssdt/media/download.png)[Установить драйвер pymssql для Python](../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md) 

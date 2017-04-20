@@ -1,22 +1,26 @@
 ---
-title: "Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти | Документация Майкрософт"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
+# <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,7 +34,7 @@ caps.handback.revision: 19
 - образец кода, демонстрирующий преимущества оптимизации для памяти в плане производительности.
   
   
-## A. Основные сведения о табличных переменных, оптимизированных для памяти  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Основные сведения о табличных переменных, оптимизированных для памяти  
   
 Оптимизированная для памяти табличная переменная позволяет повысить эффективность благодаря использованию тех же алгоритмов и структур данных, которые применяются в оптимизированных для памяти таблицах. Эффективность максимальна в случае, если доступ к табличной переменной осуществляется из модуля, скомпилированного в собственном коде.  
   
@@ -42,11 +46,11 @@ caps.handback.revision: 19
 - не требуется использования базы данных tempdb и не создает соответствующих конфликтов;  
 - может передаваться в хранимую процедуру как возвращающий табличное значение параметр;  
 - должна иметь по крайней мере один индекс (некластеризованный или хэш-индекс):  
-  - для хэш-индекса число контейнеров в идеале должно в 1–2 раза превышать предполагаемое число уникальных ключей индекса, но допускается и более значительное превышение (до 10 раз). Дополнительные сведения см. в разделе [Индексы для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
+  - для хэш-индекса число контейнеров в идеале должно в 1–2 раза превышать предполагаемое число уникальных ключей индекса, но допускается и более значительное превышение (до 10 раз). Дополнительные сведения см. в разделе [Индексы для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
 
   
   
-#### Типы Object  
+#### <a name="object-types"></a>Типы Object  
   
 Выполняющаяся в памяти OLTP предоставляет следующие объекты, которые можно использовать для оптимизированных для памяти временных таблиц и табличных переменных:  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 19
     - `DECLARE @mytablevariable my_type;`.  
   
   
-## Б. Сценарий: замена глобальной таблицы tempdb &#x23;&#x23;table  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>Б. Сценарий: замена глобальной таблицы tempdb &#x23;&#x23;table  
   
 Предположим, что у вас есть приведенная ниже глобальная временная таблица.  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 19
   
   
   
-#### Б.1. Этапы  
+#### <a name="b1-steps"></a>Б.1. Этапы  
   
 Чтобы преобразовать глобальную временную таблицу в таблицу с параметром SCHEMA_ONLY, выполните указанные ниже действия.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 19
 3. В коде T-SQL замените все упоминания таблицы **&#x23;&#x23;tempGlobalB** на **dbo.soGlobalB**.  
   
   
-## В. Сценарий: замена таблицы сеансов tempdb &#x23;table  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>В. Сценарий: замена таблицы сеансов tempdb &#x23;table  
   
 Для подготовки к замене временной таблицы сеансов требуется больше кода T-SQL, чем в предыдущем сценарии с глобальной временной таблицей. К счастью, больший объем кода T-SQL не означает, что для преобразования потребуется больше усилий.  
   
@@ -159,7 +163,7 @@ caps.handback.revision: 19
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
     )  
-        WITH  
+        на  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
     go  
@@ -176,14 +180,16 @@ caps.handback.revision: 19
   
 Наконец, в общем коде T-SQL сделайте следующее:  
   
-1. Удалите все инструкции CREATE TABLE, относящиеся к старой временной таблице сеансов.  
-2. Замените старое имя таблицы на новое:  
-  - _Старое имя:_ &#x23;tempSessionC  
-  - _Новое имя:_ dbo.soSessionC  
+1. Измените все ссылки на временную таблицу в инструкциях Transact-SQL, чтобы они указывали на новую таблицу, оптимизированную для работы в памяти.
+    - _Старое имя:_ &#x23;tempSessionC  
+    - _Новое имя:_ dbo.soSessionC  
+2. Замените инструкции `CREATE TABLE #tempSessionC` в своем коде `DELETE FROM dbo.soSessionC`, чтобы сеанс не обращался к содержимому таблицы, добавленному в предыдущем сеансе с тем же идентификатором session_id.
+3. Удалите из кода инструкции `DROP TABLE #tempSessionC`. Если есть опасения относительно размера используемой памяти, вы можете добавить инструкцию `DELETE FROM dbo.soSessionC`.
   
   
   
-## Г. Сценарий: табличная переменная может иметь параметр MEMORY_OPTIMIZED=ON  
+  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>Г. Сценарий: табличная переменная может иметь параметр MEMORY_OPTIMIZED=ON  
   
   
 Традиционная табличная переменная представляет таблицу в базе данных tempdb. Чтобы значительно повысить производительность, можно оптимизировать табличную переменную для памяти.  
@@ -200,9 +206,9 @@ caps.handback.revision: 19
   
   
   
-#### Г.1. Преобразование встроенной переменной в явную  
+#### <a name="d1-convert-inline-to-explicit"></a>Г.1. Преобразование встроенной переменной в явную  
   
-Предыдущий синтаксис создает так называемую *встроенную* табличную переменную. Встроенный синтаксис не поддерживает оптимизацию для памяти. Поэтому давайте преобразуем встроенный синтаксис в явный для TYPE.  
+Предыдущий синтаксис создает так называемую *встроенную*табличную переменную. Встроенный синтаксис не поддерживает оптимизацию для памяти. Поэтому давайте преобразуем встроенный синтаксис в явный для TYPE.  
   
 *Область действия.* Определение TYPE, созданное первым пакетом, отделенным командой GO, сохраняется даже после завершения работы и перезапуска сервера. Но после первого разделителя GO объявленная таблица @tvTableC сохраняется только до тех пор, пока не будет достигнут следующий разделитель GO и пакет не завершится.  
   
@@ -228,9 +234,9 @@ caps.handback.revision: 19
   
   
   
-#### Г.2. Преобразование явной таблицы на диске в оптимизированную для памяти таблицу  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>Г.2. Преобразование явной таблицы на диске в оптимизированную для памяти таблицу  
   
-Оптимизированная для памяти табличная переменная не хранится в базе данных tempdb. Оптимизация для памяти приводит к повышению скорости работы до 10 раз и более.  
+Оптимизированная для памяти табличная переменная не хранится в базе данных tempdb. Оптимизация для памяти приводит к повышению скорости работы до 10 раз и более.  
   
 Преобразование таблиц в оптимизированные для памяти производится в один шаг. Оптимизируйте явное создание TYPE следующим образом. При этом добавляются:  
   
@@ -246,7 +252,7 @@ caps.handback.revision: 19
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
         )  
-        WITH  
+        на  
             (MEMORY_OPTIMIZED = ON);  
   
   
@@ -255,7 +261,7 @@ caps.handback.revision: 19
 Готово.  
   
   
-## Д. Файловая группа, необходимая для SQL Server  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>Д. Файловая группа, необходимая для SQL Server  
   
 Для использования оптимизированных для памяти функций в Microsoft SQL Server база данных должна иметь файловую группу, объявленную с параметром **MEMORY_OPTIMIZED_DATA**.  
   
@@ -294,20 +300,20 @@ caps.handback.revision: 19
   
 Дополнительные сведения о `ALTER DATABASE ... ADD` для FILE и FILEGROUP см. в следующих разделах:  
   
-- [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [Оптимизированная для памяти файловая группа](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## Е. Небольшой тест для проверки повышения быстродействия  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>Е. Небольшой тест для проверки повышения быстродействия  
   
   
 В этом разделе приводится код Transact-SQL, с помощью которого можно протестировать и оценить прирост скорости выполнения операций INSERT-DELETE при использовании табличной переменной, оптимизированной для памяти. Код состоит из двух половин, которые почти одинаковы за тем исключением, что в первой половине используется таблица оптимизированного для памяти типа.  
   
-Сравнительный тест длится примерно 7 секунд. Запуск примера:  
+Сравнительный тест длится примерно 7 секунд. Запуск примера:  
   
 1. *Предварительное требование.* Вы уже должны были выполнить код T-SQL для файловой группы из предыдущего подраздела.  
 2. Выполните приведенный ниже скрипт T-SQL INSERT-DELETE.  
-  - Обратите внимание на инструкцию GO 5001, которая повторно отправляет код T-SQL 5001 раз. Вы можете изменить это число и перезапустить тест.  
+  - Обратите внимание на инструкцию GO 5001, которая повторно отправляет код T-SQL 5001 раз. Вы можете изменить это число и перезапустить тест.  
   
 В базе данных SQL скрипт следует запускать из виртуальной машины, находящейся в вашем регионе.
   
@@ -407,7 +413,7 @@ caps.handback.revision: 19
   
   
   
-## Ж. Прогнозирование потребления активной памяти  
+## <a name="g-predict-active-memory-consumption"></a>Ж. Прогнозирование потребления активной памяти  
   
 Чтобы узнать, как прогнозировать потребность оптимизированных для памяти таблиц в активной памяти, обратитесь к следующим ресурсам:  
   
@@ -418,43 +424,45 @@ caps.handback.revision: 19
   
 Если в каждой операции доступа к оптимизированной для памяти табличной переменной используется только одно точное значение ключа, хэш-индекс может быть предпочтительнее некластеризованного индекса. Однако, если вы не можете оценить подходящее значение BUCKET_COUNT, можно использовать и некластеризованный индекс.  
   
-## З. См. также:  
+## <a name="h-see-also"></a>З. См. также:  
   
-- [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Определение устойчивости для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
   
   
   
 \<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
+Заголовок: "Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти"  
   
 https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
   
   
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
+[Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
   
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
+[Оптимизированная для памяти файловая группа](http://msdn.microsoft.com/library/dn639109.aspx)  
   
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
+[Пул ресурсов регулятора ресурсов](http://msdn.microsoft.com/library/hh510189.aspx)  
   
   
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
+[Помощник по оптимизации памяти](http://msdn.microsoft.com/library/dn284308.aspx)  
   
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
+[Оценка требований к объему памяти для таблиц, оптимизированных для памяти](http://msdn.microsoft.com/library/dn282389.aspx)  
+  
+[Размер строк и таблицы для таблиц, оптимизированных для памяти: пример вычисления](http://msdn.microsoft.com/library/dn205318.aspx)  
+  
+  
+[Устойчивость таблиц, оптимизированных для памяти](http://msdn.microsoft.com/library/dn553125.aspx)  
+  
+[Определение устойчивости для оптимизированных для памяти объектов](http://msdn.microsoft.com/library/dn553122.aspx)  
   
 [Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
   
   
-GeneMi , 2016-05-02  Monday  18:40pm  
+GeneMi 02.05.2016, понедельник, 18:40:00  
 -->  
   
   
   
+
+

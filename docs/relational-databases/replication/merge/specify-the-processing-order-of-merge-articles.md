@@ -1,33 +1,37 @@
 ---
-title: "Указание порядка обработки статей публикации слиянием | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "статьи [репликация SQL Server], порядок обработки"
-  - "репликация слиянием [репликация SQL Server], порядок обработки статей"
+title: "Определение порядка обработки для статей публикации слиянием | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- articles [SQL Server replication], processing order
+- merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8682c27e9d94410f8ffc902d2c03af491ec758ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# Указание порядка обработки статей публикации слиянием
+# <a name="specify-the-processing-order-of-merge-articles"></a>Указание порядка обработки статей публикации слиянием
   Начиная с версии [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], порядок обработки статей для публикаций слиянием, принятый по умолчанию, можно переопределять. Это полезно, например, при определении ссылочной целостности с помощью триггеров и при этом триггеры должны запускаться в конкретном порядке.  
   
  **Указание порядка обработки статей**  
   
--   Программирование репликации Transact-SQL: [Укажите обработки заказа из слияния статей таблиц & #40; Программирование репликации Transact-SQL и #41;](../../../relational-databases/replication/publish/specify the processing order of merge table articles.md)  
+-   Программирование репликации на Transact-SQL: [Определение порядка обработки для статей таблиц слияния (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/publish/specify-the-processing-order-of-merge-table-articles.md)  
   
-## Как определяется порядок обработки  
- Во время синхронизации слияния статьи по умолчанию обрабатываются в том порядке, который требуют зависимости между объектами, в том числе ограничения декларативной ссылочной целостности (DRI), определенные для базовых таблиц. Обработка включает нумерацию изменений в таблице и применение этих изменений. Если DRI отсутствуют, но для статей таблиц имеются фильтры соединения или логические записи, то статьи обрабатываются в том порядке, который требуют эти фильтры и логические записи. Статьи не относится к другой статьей через DRI, фильтры соединения, логические записи или другие зависимости, обрабатываются в соответствии с псевдонимами в [sysmergearticles & #40; Transact-SQL & #41;](../../../relational-databases/system-tables/sysmergearticles-transact-sql.md) Системная таблица.  
+## <a name="how-processing-order-is-determined"></a>Как определяется порядок обработки  
+ Во время синхронизации слияния статьи по умолчанию обрабатываются в том порядке, который требуют зависимости между объектами, в том числе ограничения декларативной ссылочной целостности (DRI), определенные для базовых таблиц. Обработка включает нумерацию изменений в таблице и применение этих изменений. Если DRI отсутствуют, но для статей таблиц имеются фильтры соединения или логические записи, то статьи обрабатываются в том порядке, который требуют эти фильтры и логические записи. Статьи, не связанные с какой-либо другой статьей через DRI, фильтры соединения, логические записи и другие зависимости обрабатываются в соответствии с псевдонимами в системной таблице [sysmergearticles (Transact-SQL)](../../../relational-databases/system-tables/sysmergearticles-transact-sql.md).  
   
  Рассмотрим публикацию, включающую таблицы **SalesOrderHeader** и **SalesOrderDetail** с первичным ключевым столбцом **SalesOrderID** в таблице **SalesOrderHeader** и соответствующим внешним ключевым столбцом **SalesOrderID** в таблице **SalesOrderDetail** . Во время синхронизации репликация слиянием препятствует нарушениям внешнего ключа путем вставки новых строк в столбец **SalesOrderHeader** перед тем, как вставить соответствующие строки в столбец **SalesOrderDetail**. Точно так же строки удаляются из столбца **SalesOrderDetail** перед удалением соответствующих строк из столбца **SalesOrderHeader**.  
   
@@ -35,9 +39,9 @@ caps.handback.revision: 34
   
  Если ссылочная целостность сохраняется с помощью триггеров или на уровне приложения, необходимо задать порядок, в котором будут обрабатываться статьи. В примере с триггерами следовало бы указать, что таблица **SalesOrderHeader** должна обрабатываться раньше **SalesOrderDetail**, потому что упорядочивание статей основано на порядке вставки. Репликация слиянием автоматически меняет этот порядок на обратный для удалений. Репликация слиянием не завершится неудачей, если статьи не упорядочены, потому что, если происходит нарушение ограничения, агент слияния продолжает обрабатывать статьи. Затем, после обработки остальных статей, он пытается выполнить сбойные операции. При указании порядка статей просто исключаются повторные попытки и связанная с ними дополнительная обработка. Если указать неверный порядок (например, если он задает обработку записей с подробными данными до обработки записей заголовков), репликация слиянием будет продолжать обработку до ее успешного завершения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Параметры статьи для репликации слиянием](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
- [Изменения группирования связанных строк с логическими записями](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
- [Фильтры соединения](../../../relational-databases/replication/merge/join-filters.md)  
+ [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
+ [Join Filters](../../../relational-databases/replication/merge/join-filters.md)  
   
   

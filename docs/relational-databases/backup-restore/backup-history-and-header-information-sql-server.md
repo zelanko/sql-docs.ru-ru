@@ -1,46 +1,50 @@
 ---
-title: "Журнал и сведения о заголовке резервной копии (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "заголовки резервных копий [SQL Server]"
-  - "таблицы журналов [SQL Server]"
-  - "восстановления файлов [SQL Server], сведения о состоянии"
-  - "резервные наборы данных [SQL Server], сведения о состоянии"
-  - "составление списка баз данных, имеющих резервную копию"
-  - "сведения о состоянии [SQL Server], резервные копии"
-  - "резервное копирование [SQL Server], просмотр резервных наборов данных"
-  - "восстановление [SQL Server], таблицы журналов"
-  - "восстановление баз данных [SQL Server], сведения о состоянии"
-  - "резервные копии [SQL Server], сведения о состоянии"
-  - "заголовки [SQL Server]"
-  - "заголовки носителей [SQL Server]"
-  - "таблицы журнала резервного копирования [SQL Server]"
-  - "просмотр сведений о резервной копии"
-  - "восстановление файлов [SQL Server], просмотр сведений о резервной копии"
-  - "восстановление баз данных [SQL Server], таблицы журналов"
-  - "отображение сведений о резервной копии"
-  - "восстановление файлов [SQL Server], сведения о состоянии"
-  - "журнальные данные [SQL Server], резервные копии"
-  - "восстановления баз данных [SQL Server], таблицы журналов"
-  - "таблицы журналов восстановления [SQL Server]"
-  - "список файлов в резервной копии"
+title: "Журнал резервных копий и сведения о заголовке резервной копии (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# Журнал и сведения о заголовке резервной копии (SQL Server)
-  Полный журнал резервных копий и операций восстановления на экземпляре сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранится в базе данных **msdb** . В этом разделе рассказывается о таблицах журнала восстановления, а также об инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)], которые используются для доступа к журналам резервного копирования. В этом разделе также обсуждается удобство составления списка файлов базы данных и журнала транзакций и использование данных в заголовке носителя в сравнении с использованием данных в заголовке резервной копии.  
+# <a name="backup-history-and-header-information-sql-server"></a>Журнал и сведения о заголовке резервной копии (SQL Server)
+  Полный журнал резервных копий и операций восстановления на экземпляре сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранится в базе данных **msdb** . В этом разделе рассказывается о таблицах журнала восстановления, а также об инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые используются для доступа к журналам резервного копирования. В этом разделе также обсуждается удобство составления списка файлов базы данных и журнала транзакций и использование данных в заголовке носителя в сравнении с использованием данных в заголовке резервной копии.  
   
 > [!IMPORTANT]  
 >  Чтобы снизить риск потери недавних изменений, следует чаще создавать резервные копии базы данных **msdb** и журнала. Сведения о том, резервную копию какой системной базы данных нужно создать, см. в разделе [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |Информационная инструкция|Таблица журнала резервного копирования|Описание|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile;](../../relational-databases/system-tables/backupfile-transact-sql.md)|Возвращает результирующий набор со списком файлов базы данных и журнала, которые содержит указанный резервный набор данных.<br /><br /> Дополнительные сведения см. далее в разделе «Составление списка файлов базы данных и журналов транзакций».|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset;](../../relational-databases/system-tables/backupset-transact-sql.md)|Извлекает все данные заголовка резервной копии для всех резервных наборов данных в определенном устройстве резервного копирования. Результатом выполнения RESTORE HEADERONLY является результирующий набор.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка резервной копии».|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Возвращает результирующий набор, который содержит сведения о резервном носителе в указанном устройстве резервного копирования.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка носителя».|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile;](../../relational-databases/system-tables/backupfile-transact-sql.md)|Возвращает результирующий набор со списком файлов базы данных и журнала, которые содержит указанный резервный набор данных.<br /><br /> Дополнительные сведения см. далее в разделе «Составление списка файлов базы данных и журналов транзакций».|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset;](../../relational-databases/system-tables/backupset-transact-sql.md)|Извлекает все данные заголовка резервной копии для всех резервных наборов данных в определенном устройстве резервного копирования. Результатом выполнения RESTORE HEADERONLY является результирующий набор.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка резервной копии».|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Возвращает результирующий набор, который содержит сведения о резервном носителе в указанном устройстве резервного копирования.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка носителя».|  
   
 ##  <a name="ListDbTlogFiles"></a> Файлы базы данных и журнала транзакций  
  При подготовке списка файлов базы данных и журнала транзакций в резервной копии отображаются сведения о логическом имени, физическом имени, типе файла (база данных или журнал), членстве в файловой группе, размере файла (в байтах), максимально допустимом размере файла и заранее заданный рост файла (в байтах). Эти сведения позволяют в следующих ситуациях определять имена файлов в резервной копии базы данных перед восстановлением.  
@@ -109,18 +113,18 @@ caps.handback.revision: 54
 > [!NOTE]  
 >  Просмотр данных в заголовке носителя занимает мало времени.  
   
- Дополнительные сведения см. далее в подразделе [Сравнение данных в заголовках носителя и резервной копии](#CompareMediaHeaderBackupHeader) далее в этом разделе.  
+ Дополнительные сведения см. далее в подразделе [Сравнение данных в заголовках носителя и резервной копии](#CompareMediaHeaderBackupHeader)далее в этом разделе.  
   
 ##  <a name="BackupHeader"></a> Данные в заголовке резервной копии  
- В заголовке резервной копии отображаются сведения обо всех резервных наборах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на носителях. К отображаемым сведениям относятся типы применяемых устройств резервного копирования, типы резервных копий (например: копия базы данных, транзакции, файла или разностная копия базы данных), дата-время начала и конца резервного копирования. С помощью этих сведений можно определить, какой резервный набор данных на ленте подлежит восстановлению или какие резервные копии находятся на носителе.  
+ В заголовке резервной копии отображаются сведения обо всех резервных наборах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на носителях. К отображаемым сведениям относятся типы применяемых устройств резервного копирования, типы резервных копий (например: копия базы данных, транзакции, файла или разностная копия базы данных), дата-время начала и конца резервного копирования. С помощью этих сведений можно определить, какой резервный набор данных на ленте подлежит восстановлению или какие резервные копии находятся на носителе.  
   
 > [!NOTE]  
 >  Просмотр данных в заголовке носителя для магнитных лент большой емкости может занимать длительное время, так как для отображения информации обо всех резервных копиях на носителе необходимо просмотреть весь носитель.  
   
- Дополнительные сведения см. далее в подразделе [Сравнение данных в заголовках носителя и резервной копии](#CompareMediaHeaderBackupHeader) далее в этом разделе.  
+ Дополнительные сведения см. далее в подразделе [Сравнение данных в заголовках носителя и резервной копии](#CompareMediaHeaderBackupHeader)далее в этом разделе.  
   
-### Резервные наборы, которые необходимо восстановить  
- Сведения из заголовка резервной копии можно использовать для определения резервного набора данных, который будет использован в процессе восстановления. Компонент Database Engine нумерует каждый резервный набор данных на резервном носителе. Это позволяет выявить резервный набор данных, подлежащий восстановлению, по его положению на носителе. Например, на следующем носителе содержатся три резервных набора данных.  
+### <a name="which-backup-set-to-restore"></a>Резервные наборы, которые необходимо восстановить  
+ Сведения из заголовка резервной копии можно использовать для определения резервного набора данных, который будет использован в процессе восстановления. Ядро СУБД нумерует каждый резервный набор данных на резервном носителе. Это позволяет выявить резервный набор данных, подлежащий восстановлению, по его положению на носителе. Например, на следующем носителе содержатся три резервных набора данных.  
   
  ![Носитель данных резервных копий, содержащий резервные наборы данных SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Носитель данных резервных копий, содержащий резервные наборы данных SQL Server")  
   
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **Просмотр файлов данных и журналов в резервном наборе данных**  
   
--   [RESTORE FILELISTONLY (Transact-SQL)](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A> (SMO)  
   
  **Просмотр данных в заголовке носителя**  
   
--   [RESTORE LABELONLY (Transact-SQL)](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Просмотр свойств и содержимого логического устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **Просмотр данных в заголовке резервной копии**  
   
--   [RESTORE HEADERONLY (Transact-SQL)](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Просмотр содержимого ленты или файла резервной копии (SQL Server)](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **Просмотр данных в заголовке носителя**  
   
--   [RESTORE LABELONLY (Transact-SQL)](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [Просмотр свойств и содержимого логического устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **Просмотр данных в заголовке резервной копии**  
   
--   [RESTORE HEADERONLY (Transact-SQL)](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [Просмотр содержимого ленты или файла резервной копии (SQL Server)](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [Просмотр файлов данных и журналов в резервном наборе данных (SQL Server)](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY (Transact-SQL)](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **Проверка резервной копии**  
   
--   [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

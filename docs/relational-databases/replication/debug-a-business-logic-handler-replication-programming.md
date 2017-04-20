@@ -1,42 +1,46 @@
 ---
-title: "выполнить отладку обработчика бизнес-логики (программирование репликации) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "обработчики бизнес-логики репликации слиянием [репликация SQL Server]"
-  - "обработчики бизнес-логики [репликация SQL Server]"
-  - "BusinessLogicModule, класс"
+title: "Отладка обработчика бизнес-логики (программирование репликации) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- merge replication business logic handlers [SQL Server replication]
+- business logic handlers [SQL Server replication]
+- BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
+ms.lasthandoff: 04/11/2017
+
 ---
-# выполнить отладку обработчика бизнес-логики (программирование репликации)
-  Используйте обработчик бизнес-логики для вызова пользовательской бизнес-логики во время синхронизации подписки на публикацию слиянием. Дополнительные сведения см. в разделе [выполнение бизнес логики во время слияния синхронизации](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+# <a name="debug-a-business-logic-handler-replication-programming"></a>выполнить отладку обработчика бизнес-логики (программирование репликации)
+  Используйте обработчик бизнес-логики для вызова пользовательской бизнес-логики во время синхронизации подписки на публикацию слиянием. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
  Посредник репликации слиянием (replrec.dll) осуществляет вызов сборки управляемого кода, содержащей бизнес-логику. В большинстве случаев файл replrec.dll и пользовательская бизнес-логика выполняются на компьютере с запущенным агентом слияния (на сервере подписчика для подписки по запросу или на сервере распространителя для принудительной подписки). При веб-синхронизации или для подписчика [!INCLUDE[ssEW](../../includes/ssew-md.md)] посредник и пользовательская бизнес-логика выполняются на веб-сервере.  
   
-### Отладка обработчика бизнес-логики на локальном компьютере  
+### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Отладка обработчика бизнес-логики на локальном компьютере  
   
-1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в разделе [настройки публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md) и [Создание, изменение, удаление публикаций и статей и #40; Репликация & #41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в статьях [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md) и [Создание, изменение и удаление публикаций и статей (репликация)](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
   
 2.  Создайте и зарегистрируйте обработчик бизнес-логики. Дополнительные сведения см. в статье [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio создайте проект объектов RMO, который программным путем производит синхронный запуск агента слияния. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-4.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать обработчик бизнес-логики см. в разделе <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> разделе методов.  
+4.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать в обработчике бизнес-логики, см. в статье о методах <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
   
 5.  Откройте обработчик бизнес-логики в режиме отладки и произведите развертывание сборки и файла отладки (PDB) в папке, заданной на шаге 1.  
   
@@ -49,13 +53,13 @@ caps.handback.revision: 34
   
 8.  Если не заданы другие точки останова и репликацию проходят нужные команды, выполнение будет остановлено по достижении точки останова в обработчике бизнес-логики.  
   
-### Отладка обработчика бизнес-логики на веб-сервере в режиме веб-синхронизации либо при использовании подписчика SQL Server Compact  
+### <a name="to-debug-a-business-logic-handler-on-a-web-server-using-web-synchronization-or-for-a-sql-server-compact-subscriber"></a>Отладка обработчика бизнес-логики на веб-сервере в режиме веб-синхронизации либо при использовании подписчика SQL Server Compact  
   
 1.  Настройте публикацию и распространение, создайте публикацию по запросу и подписку на нее. Публикация должна поддерживать веб-синхронизации или подписчиков [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
 2.  Создайте и зарегистрируйте обработчик бизнес-логики. Дополнительные сведения см. в статье [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать обработчик бизнес-логики см. в разделе <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> разделе методов.  
+3.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать в обработчике бизнес-логики, см. в статье о методах <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
   
 4.  Откройте обработчик бизнес-логики в режиме отладки и произведите развертывание сборки и файла отладки (PDB) на сервере, заданном на шаге 1.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 34
   
 5.  Произведите синхронизацию подписки в режиме веб-синхронизации. В процессе ее выполнения веб-сервер загрузит зарегистрированную сборку.  
   
-6.  С помощью отладчика Visual Studio .NET подключитесь к одному из следующих процессов на веб-сервере.  
+6.  С помощью отладчика Visual Studio .NET подключитесь к одному из следующих процессов на веб-сервере.  
   
     -   w3wp.exe — Windows Server 2003.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
   
 11. Если не заданы другие точки останова и репликацию проходят нужные команды, выполнение будет остановлено по достижении точки останова в обработчике бизнес-логики.  
   
-## См. также:  
- [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+## <a name="see-also"></a>См. также:  
+ [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

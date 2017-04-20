@@ -1,22 +1,26 @@
 ---
-title: "Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Документация Майкрософт"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
+# <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -42,7 +46,7 @@ caps.handback.revision: 44
 
  Полные сведения о неподдерживаемых конструкциях и о том, как обойти некоторые неподдерживаемые функции в модулях, скомпилированных в собственном коде, см. в разделе [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Дополнительные сведения о неподдерживаемых компонентах см. в разделе [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
-##  <a name="a-nameqsancspa-query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Контактная зона запросов в собственных модулях  
+##  <a name="qsancsp"></a> Контактная зона запросов в собственных модулях  
 
 Здесь приведены поддерживаемые конструкции запросов.  
 
@@ -64,9 +68,9 @@ caps.handback.revision: 44
 
 Предложение FROM:  
 
--   FROM \<оптимизированная_для_памяти_таблица_или_табличная_переменная >  
+-   FROM \<оптимизированная_для_памяти_таблица_или_табличная_переменная>  
 
--   FROM \<скомпилированные_в_собственном_коде_встроенные_функции_с_табличными_значениями >  
+-   FROM \<скомпилированные_в_собственном_коде_встроенные_функции_с_табличными_значениями>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN и INNER JOIN;  
 
@@ -79,19 +83,19 @@ caps.handback.revision: 44
 -   AND, OR, NOT, IN, EXISTS, BETWEEN;  
 
 
-Предложение[GROUP BY](../Topic/GROUP%20BY%20%28Transact-SQL%29.md) :
+Предложение[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
 
 - поддерживается вместе с агрегатными функциями AVG, COUNT, COUNT_BIG, MIN, MAX и SUM.  
 
 - Функции MIN и MAX не поддерживаются для типов nvarchar, char, varchar, varchar, varbinary и binary.  
 
-Предложение[ORDER BY](../Topic/ORDER%20BY%20Clause%20%28Transact-SQL%29.md) :
+Предложение[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md) :
 
 
 - **DISTINCT** не поддерживается в предложении **ORDER BY** .
 
 
-- Поддерживается с [GROUP BY (Transact-SQL)](../Topic/GROUP%20BY%20\(Transact-SQL\).md), если выражение в списке ORDER BY появляется дословно в списке GROUP BY.
+- Поддерживается с [GROUP BY (Transact-SQL)](../../t-sql/queries/select-group-by-transact-sql.md), если выражение в списке ORDER BY появляется дословно в списке GROUP BY.
   - Например, GROUP BY a + b ORDER BY a + b поддерживается; GROUP BY a, b ORDER BY a + b не поддерживается.  
 
 
@@ -123,7 +127,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 В [!INCLUDE[tsql](../../includes/tsql-md.md)] , скомпилированном в собственном коде, эти ограничения не применяются к интерпретированному доступу [!INCLUDE[tsql](../../includes/tsql-md.md)] оптимизированных для памяти таблиц.  
 
 
-##  <a name="a-namedmla-data-modification"></a><a name="dml"></a> Изменение данных  
+##  <a name="dml"></a> Изменение данных  
 
 Поддерживаются следующие инструкции DML:  
 
@@ -135,7 +139,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   предложение WHERE поддерживается вместе с инструкциями UPDATE и DELETE.  
 
-##  <a name="a-namecofa-control-of-flow-language"></a><a name="cof"></a> Язык управления потоком  
+##  <a name="cof"></a> Язык управления потоком  
  Поддерживаются следующие конструкции языка управления потоком:  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -154,9 +158,9 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
--   BEGIN ATOMIC (на внешнем уровне хранимой процедуры). Дополнительные сведения см. в разделе [Atomic Blocks](../../relational-databases/in-memory-oltp/атомарные-блоки-в-собственных-процедурах.md).  
+-   BEGIN ATOMIC (на внешнем уровне хранимой процедуры). Дополнительные сведения см. в разделе [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
 
-##  <a name="a-namesoa-supported-operators"></a><a name="so"></a> Поддерживаемые операторы  
+##  <a name="so"></a> Поддерживаемые операторы  
  Поддерживаются следующие операторы.  
 
 -   [Операторы сравнения (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md) (например, >, \<, >= и <=)  
@@ -172,10 +176,10 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 оператор APPLY поддерживается в модулях, скомпилированных в собственном коде.
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 оператор APPLY поддерживается в модулях, скомпилированных в собственном коде.
 
-##  <a name="a-namebfncspa-built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
+##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
  В ограничениях таблиц, оптимизированных для памяти, и в модулях, скомпилированных в собственном коде T-SQL, поддерживаются следующие функции.  
 
 -   Все [математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -183,8 +187,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
 -   Функции идентификации: SCOPE_IDENTITY.  
 
@@ -193,26 +197,26 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 функции JSON поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 функции JSON поддерживаются в модулях, скомпилированных в собственном коде.
 
 -   Функции обработки ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE.  
 
--   Системные функции: @@rowcount. Инструкции в хранимых процедурах, скомпилированных в собственном коде, обновляют @@rowcount, и вы можете использовать @@rowcount в таких процедурах для определения числа строк, затронутых последней инструкцией, выполненной в пределах данной хранимой процедуры. Но @@rowcount сбрасываются в 0 в начале и в конце выполнения хранимой процедуры, скомпилированной в собственном коде.  
+-   Системные функции: @@rowcount. Инструкции в хранимых процедурах, скомпилированных в собственном коде, обновляют @@rowcount, и вы можете использовать @@rowcount в таких процедурах для определения числа строк, затронутых последней инструкцией, выполненной в пределах этой хранимой процедуры. Но @@rowcount сбрасывается до 0 в начале и в конце выполнения каждой хранимой процедуры, скомпилированной в собственном коде.  
 
 -   Функции безопасности: IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal']), IS_SRVROLEMEMBER ('role' [, 'login']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login']), SUSER_SID(['login'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
 -   Выполнение собственных модулей может быть вложенным.
 
-##  <a name="a-nameauditinga-auditing"></a><a name="auditing"></a> Аудит  
+##  <a name="auditing"></a> Аудит  
  Аудит на уровне процедуры поддерживается для хранимых процедур, скомпилированных в собственном коде.  
 
  Дополнительные сведения об аудите см. в разделе [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
-##  <a name="a-nametqha-table-and-query-hints"></a><a name="tqh"></a> Табличные указания и указания запросов  
+##  <a name="tqh"></a> Табличные указания и указания запросов  
  Поддерживаются следующие конструкции:  
 
--   Табличные указания INDEX, FORCESCAN и FORCESEEK в синтаксисе табличных указаний или в [предложении OPTION (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md) запроса. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](../Topic/Table%20Hints%20\(Transact-SQL\).md).  
+-   Табличные указания INDEX, FORCESCAN и FORCESEEK в синтаксисе табличных указаний или в [предложении OPTION (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md) запроса. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
 
 -   FORCE ORDER  
 
@@ -220,12 +224,12 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   OPTIMIZE FOR  
 
- Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+ Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
 
-##  <a name="a-namelosa-limitations-on-sorting"></a><a name="los"></a> Ограничения на сортировку  
- В запросе с использованием [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) и [предложения ORDER BY (Transact-SQL)](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md) [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
+##  <a name="los"></a> Ограничения на сортировку  
+ В запросе с использованием [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) и [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
 
- Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md), для оператора TOP можно указать не более 8192 строк. Указав более 8192 строк, вы получите сообщение об ошибке: **сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>\>*, строка *\<номер_строки>\>*. Оператор TOP может возвращать не более 8192 строк; запрошено: *\<число>\>*.**  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md), для оператора TOP можно указать не более 8192 строк. Если строк будет больше, чем 8192, вы получите такое сообщение об ошибке: **сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>*, строка *\<номер_строки>*. Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>*.**  
 
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
 
@@ -284,4 +288,6 @@ GO
 ## <a name="see-also"></a>См. также  
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+
+
 

@@ -1,31 +1,35 @@
 ---
-title: "Аварийное восстановление WSFC через принудительный кворум (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Группы доступности [SQL Server], кластеры WSFC"
-  - "кворум [SQL Server], AlwaysOn и кворум WSFC"
-  - "отказоустойчивая кластеризация [SQL Server], группы доступности AlwaysOn"
+title: "Аварийное восстановление WSFC через принудительный кворум (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Аварийное восстановление WSFC через принудительный кворум (SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
   Обычно сбой кворума бывает вызван системной аварией, постоянным сбоем связи или ошибкой конфигурации, затрагивающей несколько узлов в кластере WSFC.  Для восстановления после сбоя кворума требуется участие пользователя.  
   
--   **Перед началом:**  [Предварительные требования](#Prerequisites), [Безопасность](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **Аварийное восстановление WSFC с помощью процедуры принудительного кворума** [Аварийное восстановление WSFC с помощью процедуры принудительного кворума](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
@@ -37,15 +41,15 @@ caps.handback.revision: 20
  В процедуре принудительного кворума предполагается, что перед сбоем кворума кворум был работоспособен.  
   
 > [!WARNING]  
->  Пользователь должен хорошо представлять основные понятия и принципы взаимодействия кластера WSFC, моделей кворума WSFC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и конфигурации развертывания, зависящей от среды.  
+>  Пользователь должен хорошо представлять основные понятия и принципы взаимодействия кластера WSFC, моделей кворума WSFC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и конфигурации развертывания, зависящей от среды.  
 >   
->  Дополнительные сведения см. в следующих статьях: [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Режим кворума и участвующая в голосовании конфигурация WSFC (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Дополнительные сведения см. в следующих статьях:  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Режим кворума и участвующая в голосовании конфигурация WSFC (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Безопасность  
  Пользователь должен входить в учетную запись домена, которая является членом локальной группы администраторов, на каждом узле кластера WSFC.  
   
 ##  <a name="Main"></a> Аварийное восстановление WSFC с помощью процедуры принудительного кворума  
- Помните, что сбой кворума приведет к переходу в режим «вне сети» всех служб, поддерживающих работу в кластере, экземпляров SQL Server, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и групп доступности в кластере WSFC, поскольку настроенный таким образом кластер не сможет гарантировать отказоустойчивость на уровне узлов.  Сбой кворума означает, что исправные голосующие узлы в кластере WSFC более не удовлетворяют модели кворума. Некоторые узлы, возможно, полностью вышли из строя, на других могла просто отключиться служба WSFC, а в остальном они работают исправно, за исключением потери возможности взаимодействовать с кворумом.  
+ Помните, что сбой кворума приведет к переходу в режим «вне сети» всех служб, поддерживающих работу в кластере, экземпляров SQL Server, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]и групп доступности в кластере WSFC, поскольку настроенный таким образом кластер не сможет гарантировать отказоустойчивость на уровне узлов.  Сбой кворума означает, что исправные голосующие узлы в кластере WSFC более не удовлетворяют модели кворума. Некоторые узлы, возможно, полностью вышли из строя, на других могла просто отключиться служба WSFC, а в остальном они работают исправно, за исключением потери возможности взаимодействовать с кворумом.  
   
  Чтобы вернуть кластер WSFC в режим в сети, следует исправить главную причину сбоя кворума при существующей конфигурации, восстановить, как требуется, затронутые базы данных и провести повторную настройку оставшихся узлов в кластере WSFC, чтобы они отражали сложившуюся топологию кластера.  
   
@@ -53,12 +57,12 @@ caps.handback.revision: 20
   
  Этот тип процесса аварийного восстановления после аварий должен включать следующие этапы.  
   
-#### Для восстановления после сбоя кворума:  
+#### <a name="to-recover-from-quorum-failure"></a>Для восстановления после сбоя кворума:  
   
 1.  **Определите область сбоя.** Определите, какие группы доступности или экземпляры SQL Server не отвечают, какие узлы кластера работают в сети и доступны для использования после аварии, изучите журналы событий Windows и системные журналы SQL Server.  Там, где это практически возможно, следует сохранить аналитические данные и системные журналы для последующего анализа.  
   
     > [!TIP]  
-    >  На главном экземпляре [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] можно получить сведения о работоспособности групп доступности, которые имеют реплику доступности на экземпляре локального сервера, выполнив запрос к динамическому административному представлению (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md).  
+    >  На главном экземпляре [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]можно получить сведения о работоспособности групп доступности, которые имеют реплику доступности на экземпляре локального сервера, выполнив запрос к динамическому административному представлению (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) .  
   
 2.  **Запустите кластер WSFC с помощью принудительного кворума на одном узле.** Определите узел с минимальным количеством сбоев компонентов, отличный от того, на котором служба кластеров WSFC была закрыта.  Убедитесь, что этот узел может взаимодействовать с большинством других узлов.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 20
     > [!NOTE]  
     >  Если при запуске мастера WSFC по проверке конфигурации в кластере WSFC имеется прослушиватель группы доступности, то мастер выдает следующее предупреждающее сообщение.  
     >   
-    >  "Свойство RegisterAllProviderIP для сетевого имени "Name:\<имя_сети>" имеет значение 1, для текущей конфигурации кластера данное свойство должно иметь значение 0".  
+    >  "Свойство RegisterAllProviderIP для сетевого имени "Name:<имя_сети>" имеет значение 1, для текущей конфигурации кластера данное свойство должно иметь значение 0".  
     >   
     >  Не обращайте внимания на это сообщение.  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [Настройка параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> См. также  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Командлет Get-ClusterLog отказоустойчивого кластера](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

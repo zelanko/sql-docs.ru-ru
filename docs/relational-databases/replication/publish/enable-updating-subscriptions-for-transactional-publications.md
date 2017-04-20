@@ -1,26 +1,30 @@
 ---
-title: "Включение обновляемых подписок для публикаций транзакций | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "репликация транзакций, обновляемые подписки"
-  - "обновляемые подписки, включение"
-  - "подписки [репликация SQL Server], обновляемые"
+title: "Включение обновляемых подписок для публикации транзакций | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactional replication, updatable subscriptions
+- updatable subscriptions, enabling
+- subscriptions [SQL Server replication], updatable
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37269f8738b6020ce6d05501251161f8c40c3c9b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Включение обновляемых подписок для публикаций транзакций
+# <a name="enable-updating-subscriptions-for-transactional-publications"></a>Включение обновляемых подписок для публикаций транзакций
   В этом разделе описывается включение обновляемых подписок для публикаций транзакций в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > **ПРИМЕЧАНИЕ.** [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -36,77 +40,77 @@ caps.handback.revision: 42
   
  Для использования обновляемых подписок необходимо также настроить параметры в мастере создания подписки.  
   
-#### Включение обновляемых подписок  
+#### <a name="to-enable-updating-subscriptions"></a>Включение обновляемых подписок  
   
 1.  На странице **Тип публикации** мастера создания публикаций выберите **Публикация транзакций с обновляемыми подписками**.  
   
 2.  На странице **Безопасность агентов** укажите настройки безопасности агента чтения очереди в дополнение к агенту моментальных снимков и агенту чтения журнала. Дополнительные сведения о разрешениях, необходимых для учетной записи, под которой запускается агент чтения очереди, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    > **Примечание:** настроен агент чтения очереди, даже при использовании только подписок, обновляемых немедленно.  
+    > **Примечание.** Настройка агента чтения очереди осуществляется даже в том случае, если вы используете только немедленно обновляемые подписки.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  При создании публикации транзакций программным путем при помощи хранимых процедур репликации подписки на нее могут быть настроены как на немедленное обновление, так и на обновление посредством очередей.  
   
-#### Создание публикации с поддержкой немедленно обновляемых подписок  
+#### <a name="to-create-a-publication-that-supports-immediate-updating-subscriptions"></a>Создание публикации с поддержкой немедленно обновляемых подписок  
   
 1.  В случае необходимости создайте задание агента чтения журнала для базы данных публикации.  
   
     -   Если задание агента чтения журнала для базы данных публикации уже существует, переходите к шагу 2.  
   
-    -   Если вы не знаете, существует ли задание агента чтения журнала для опубликованной базы данных, выполнение [sp_helplogreader_agent &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) на издателе в базе данных публикации. Если результирующий набор пуст, то необходимо создать задание агента чтения журнала.  
+    -   Если вы не уверены, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) в издателе в базе данных публикации. Если результирующий набор пуст, то необходимо создать задание агента чтения журнала.  
   
-    -   На издателе, хранимую [sp_addlogreader_agent &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите [!INCLUDE[msCoName](../../../includes/msconame-md.md)] учетные данные Windows, под которыми работает агент **@job_name** и **@password**. Если агент будет использовать проверку подлинности SQL Server при подключении к издателю, необходимо также указать значение **0** для **@publisher_security_mode** и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об имени входа **@publisher_login** и **@publisher_password**.  
+    -   На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите в параметрах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] @job_name **@job_name** @password **@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password**.  
   
-2.  Выполнение [sp_addpublication &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав значение **true** для параметра **@allow_sync_tran**.  
+2.  Выполните [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав значение **true** для параметра **@allow_sync_tran**.  
   
-3.  На издателе, хранимую [sp_addpublication_snapshot &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся на шаге 2 для **@publication** учетные данные Windows, с которыми работает агент моментальных снимков и **@job_name** и **@password**. Если агент будет использовать проверку подлинности SQL Server при подключении к издателю, необходимо также указать значение **0** для **@publisher_security_mode** и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об имени входа **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
+3.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, используемое на шаге 2, для параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — для параметров **@job_name** @password **@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
 4.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 5.  Создайте на подписчике обновляемую подписку на эту публикацию.   
   
-#### Создание публикации с поддержкой обновления подписок посредством очередей  
+#### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>Создание публикации с поддержкой обновления подписок посредством очередей  
   
 1.  В случае необходимости создайте задание агента чтения журнала для базы данных публикации.  
   
     -   Если задание агента чтения журнала для базы данных публикации уже существует, переходите к шагу 2.  
   
-    -   Если вы не знаете, существует ли задание агента чтения журнала для опубликованной базы данных, выполнение [sp_helplogreader_agent &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) на издателе в базе данных публикации. Если результирующий набор пуст, необходимо создать задание агента чтения журнала.  
+    -   Если вы не уверены, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) в издателе в базе данных публикации. Если результирующий набор пуст, необходимо создать задание агента чтения журнала.  
   
-    -   На издателе, хранимую [sp_addlogreader_agent &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите учетные данные Windows, под которыми работает агент **@job_name** и **@password**. Если агент будет использовать проверку подлинности SQL Server при подключении к издателю, необходимо также указать значение **0** для **@publisher_security_mode** и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об имени входа **@publisher_login** и **@publisher_password**.  
+    -   На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите в параметрах **@job_name** @password **@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password**.  
   
 2.  Если необходимо, создайте на распространителе задание агента чтения очереди.  
   
     -   Если он уже существует для указанной базы данных распространителя, то перейдите к шагу 3.  
   
-    -   Если вы не знаете, существует ли задание агента чтения очереди для базы данных распространителя, выполните [sp_helpqreader_agent &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md) на распространителе в базе данных распространителя. Если результирующий набор пуст, то задание агента чтения очереди необходимо создать.  
+    -   Чтобы выяснить, существует ли в базе данных распространителя задание агента чтения очереди, запустите в ней хранимую процедуру [sp_helpqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md). Если результирующий набор пуст, то задание агента чтения очереди необходимо создать.  
   
-    -   На распространителе выполните хранимую процедуру [sp_addqreader_agent &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Укажите учетные данные Windows, под которыми работает агент **@job_name** и **@password**. Указанные учетные данные используются при подключении агента чтения очереди к издателю или подписчику. Дополнительные сведения см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+    -   В распространителе выполните хранимую процедуру [sp_helpqreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Укажите в параметрах **@job_name** @password **@password**. Указанные учетные данные используются при подключении агента чтения очереди к издателю или подписчику. Дополнительные сведения см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-3.  Выполнение [sp_addpublication &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав значение **true** для параметра **@allow_queued_tran** и значение **pub wins**, **sub reinit**, или **sub wins** для **@conflict_policy**.  
+3.  Выполните хранимую процедуру [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав значение **true** в параметре **@allow_queued_tran** и значение **pub wins**, **sub reinit** или **sub wins** в параметре **@conflict_policy**.  
   
-4.  На издателе, хранимую [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся на шаге 3 для **@publication** учетные данные Windows, с которыми работает агент моментальных снимков и **@snapshot_job_name** и **@password**. Если агент будет использовать проверку подлинности SQL Server при подключении к издателю, необходимо также указать значение **0** для **@publisher_security_mode** и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об имени входа **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
+4.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся на шаге 3, в параметре **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — для параметров **@snapshot_job_name** @password **@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
 5.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 6.  Создайте на подписчике обновляемую подписку на эту публикацию.  
   
-#### Изменение политики разрешения конфликтов для публикации с поддержкой обновления подписок посредством очередей  
+#### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>Изменение политики разрешения конфликтов для публикации с поддержкой обновления подписок посредством очередей  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changepublication &#40; Transact-SQL &#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Укажите значение **conflict_policy** для **@property** и задайте режим политики конфликтов из **pub wins**, **sub reinit**, или **sub wins** для **@value**.  
+1.  В издателе в базе данных публикации выполните процедуру [sp_changepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Укажите значение **conflict_policy** в параметре **@property** и задайте режим политики конфликтов, передав значение **pub wins**, **sub reinit**или **sub wins** в параметре **@value**.  
   
 ###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
  В следующем примере создается публикация, поддерживающая оба режима обновления подписок по запросу: немедленное и посредством очередей.  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../relational-databases/replication/codesnippet/tsql/enable-updating-subscrip_1.sql)]  
   
-## См. также:  
- [Задание параметров разрешения конфликтов в очереди обновления &#40; SQL Server Management Studio &#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка параметров разрешения конфликтов для обновления посредством очередей](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
  [Типы публикации для репликации транзакций](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
- [Обновляемые подписки для репликации транзакций](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Создание обновляемых подписок для публикаций транзакций](https://msdn.microsoft.com/library/mt740635.aspx)   
- [Обновляемые подписки для репликации транзакций](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Использование программы sqlcmd с переменными скрипта](../../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md)  
+ [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/mt740635.aspx)   
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Использование программы sqlcmd с переменными скрипта](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

@@ -1,31 +1,35 @@
 ---
-title: "Подписчики Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "типы данных [репликация SQL Server], подписчики, отличные от SQL Server"
-  - "подписчики Oracle [репликация SQL Server]"
-  - "подписчики, отличные от SQL Server, Oracle"
-  - "разнородные подписчики, Oracle"
-  - "сопоставление типов данных [репликация SQL Server]"
+title: "Подписчики Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data types [SQL Server replication], non-SQL Server Subscribers
+- Oracle Subscribers [SQL Server replication]
+- non-SQL Server Subscribers, Oracle
+- heterogeneous Subscribers, Oracle
+- mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Подписчики Oracle
+# <a name="oracle-subscribers"></a>Подписчики Oracle
   Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки Oracle через поставщик Oracle OLE DB, предоставляемый Oracle.  
   
-## Настройка подписчика Oracle  
+## <a name="configuring-an-oracle-subscriber"></a>Настройка подписчика Oracle  
  Для настройки подписчика Oracle выполните следующие шаги:  
   
 1.  Установите и настройте клиентское сетевое программное обеспечение Oracle и поставщика OLE DB Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чтобы распространитель мог подключаться к подписчику Oracle. Клиентское сетевое программное обеспечение Oracle должно быть самой последней доступной версии. Oracle рекомендует пользователям установить самую новую версию клиентского программного обеспечения. Клиентское программное обеспечение часто бывает новее, чем программное обеспечение баз данных. Наиболее простым способом установки программного обеспечения является использование универсального установщика Oracle с диска Oracle Client. В универсальном установщике Oracle необходимо ввести следующие сведения:  
@@ -47,12 +51,12 @@ caps.handback.revision: 55
     |Выберите сетевой протокол.|Выберите соответствующие поддерживаемые протоколы. Большинство приложений использует протокол TCP.|  
     |Задайте сведения об узле для идентификации прослушивателя базы данных|Узел — это имя или DNS-псевдоним компьютера, на котором запущен прослушиватель Oracle. Обычно это тот же компьютер, на котором расположена база данных. Для некоторых протоколов, возможно, нужно будет указать дополнительные сведения. Например если выбрать протокол ТСР, нужно будет указать порт, который слушается прослушивателем для запросов на подключение к целевой базе данных. По умолчанию для протокола TCP используется порт 1521.|  
   
-3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в разделе [Создать подписку для подписчика не SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
-### Настройте разрешения для каталога  
+### <a name="setting-directory-permissions"></a>Настройте разрешения для каталога  
  Учетной записи, под которой запускается служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на распространителе, должны быть предоставлены права на чтение и выполнение для каталога (и всех вложенных каталогов), где установлено клиентское сетевое программное обеспечение Oracle.  
   
-### Проверка соединения между распространителем SQL Server и издателем Oracle  
+### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>Проверка соединения между распространителем SQL Server и издателем Oracle  
  Перед завершением выполнения приложения Net Configuration Assistant может быть предложено протестировать соединение с подписчиком Oracle. До начала проверки соединения убедитесь в том, что экземпляр базы данных Oracle находится в режиме «в сети» и запущен прослушиватель Oracle. Если проверка не удалась, свяжитесь с администратором Oracle, ответственным за базу данных, к которой была предпринята попытка подключиться.  
   
  После успешного подключения к подписчику Oracle попытайтесь войти в базу данных, используя учетную запись и пароль, которые были настроены для агента распространителя подписки:  
@@ -69,7 +73,7 @@ caps.handback.revision: 55
   
 4.  Если настройка сети прошла удачно, будет выполнен вход и появится окно сеанса `SQL` .  
   
-### Рассмотрение Oracle Home  
+### <a name="considerations-for-oracle-home"></a>Рассмотрение Oracle Home  
  Oracle поддерживает параллельную установку двоичных файлов приложений, но только один набор двоичных файлов может использоваться для репликации в текущий момент. Каждый набор двоичных файлов связан с Oracle Home; двоичные файлы находятся в каталоге %ORACLE_HOME%\bin. Необходимо обеспечить использование правильного набора двоичных файлов (а именно — самой последней версии клиентского сетевого программного обеспечения) при установке репликацией соединения с подписчиком Oracle.  
   
  Войдите на распространитель под учетными записями, используемыми службой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и службой агентов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , установите соответствующие переменные среды. Переменная %ORACLE_HOME% должна указывать на точку установки, заданную при установке сетевого клиентского программного обеспечения. Переменная %PATH% должна включать каталог %ORACLE_HOME% \bin в качестве первой записи, относящейся к Oracle. Сведения о настройке переменных среды см. в документации по операционной системе Windows.  
@@ -77,8 +81,8 @@ caps.handback.revision: 55
 > [!NOTE]  
 >  При наличии нескольких каталогов установки Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] убедитесь в том, что агент распространителя использует самую последнюю версию поставщика OLE DB Oracle. В некоторых случаях Oracle по умолчанию не обновляет поставщика OLE DB при обновлении клиентских компонентов на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Удалите старого поставщика OLE DB и установите его самую последнюю версию. Дополнительные сведения об установке и удалении поставщика см. в документации Oracle.  
   
-## Вопросы, касающиеся подписчиков Oracle  
- Помимо вопросов, описанных в разделе [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), при репликации на подписчики Oracle, необходимо учитывать следующее:  
+## <a name="considerations-for-oracle-subscribers"></a>Вопросы, касающиеся подписчиков Oracle  
+ Помимо вопросов, описанных в разделе [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), необходимо рассмотреть следующие вопросы при репликации на подписчики Oracle:  
   
 -   Oracle обрабатывает как пустые строки, так и значения NULL как NULL. Это важно, если столбец [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] определен как NOT NULL и реплицируется на подписчик Oracle. Во избежание сбоев при применении изменений на подписчике Oracle необходимо выполнить одно из следующих действий:  
   
@@ -86,11 +90,11 @@ caps.handback.revision: 55
   
     -   Использовать параметр **–SkipErrors** для агента распространителя, если желательно получать уведомления об ошибках в журнал агента распространителя и продолжать обработку. Задать код ошибки Oracle 1400 (**-SkipErrors1400**).  
   
-    -   Изменить сценарий создания таблицы, удалив атрибут NOT NULL из всех символьных столбцов, которые могут быть связаны пустые строки и предоставить измененный сценарий в качестве пользовательского скрипта создания для статьи, используя параметр @creation_script [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+    -   Измените сформированный скрипт создания таблицы, удалив атрибут NOT NULL из любого символьного столбца, с которым могут быть связаны пустые строки, и предоставьте измененный скрипт в качестве пользовательского скрипта создания для статьи, используя параметр @creation_script хранимой процедуры [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
--   Подписчики Oracle поддерживают параметр схемы 0x4071. Дополнительные сведения о параметрах схемы см. в разделе [sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   Подписчики Oracle поддерживают параметр схемы 0x4071. Дополнительные сведения о параметрах схемы см. в статье [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
-## Сопоставление типов данных SQL Server и Oracle  
+## <a name="mapping-data-types-from-sql-server-to-oracle"></a>Сопоставление типов данных SQL Server и Oracle  
  В следующей таблице показаны соответствия типов данных, используемые при репликации данных на подписчик, в котором выполняется программное обеспечение Oracle.  
   
 |Тип данных SQL Server|Тип данных Oracle|  
@@ -98,17 +102,17 @@ caps.handback.revision: 55
 |**bigint**|NUMBER(19,0)|  
 |**binary(1-2000)**|RAW(1-2000)|  
 |**binary(2001-8000)**|BLOB|  
-|**bit**|NUMBER(1)|  
+|**бит**|NUMBER(1)|  
 |**char(1-2000)**|CHAR(1-2000)|  
 |**char(2001-4000)**|VARCHAR2(2001-4000)|  
 |**char(4001-8000)**|CLOB|  
-|**DATE**|DATE|  
-|**DateTime**|DATE|  
+|**date**|DATE|  
+|**datetime**|DATE|  
 |**datetime2(0-7)**|TIMESTAMP(7) для Oracle 9 и Oracle 10, VARCHAR(27) для Oracle 8|  
-|**DateTimeOffset(0-7)**|TIMESTAMP(7) WITH TIME ZONE для Oracle 9 и Oracle 10, VARCHAR(34) для Oracle 8|  
-|**Decimal (1-38, 0-38)**|NUMBER(1-38, 0-38)|  
+|**datetimeoffset(0-7)**|TIMESTAMP(7) WITH TIME ZONE для Oracle 9 и Oracle 10, VARCHAR(34) для Oracle 8|  
+|**decimal(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
 |**float(53)**|FLOAT|  
-|**FLOAT**|FLOAT|  
+|**float**|FLOAT|  
 |**geography**|BLOB|  
 |**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
@@ -118,18 +122,18 @@ caps.handback.revision: 55
 |**nchar(1-1000)**|CHAR(1-1000)|  
 |**nchar(1001-4000)**|NCLOB|  
 |**ntext**|NCLOB|  
-|**Числовой (1-38, 0-38)**|NUMBER(1-38, 0-38)|  
+|**numeric(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**REAL**|REAL|  
+|**real**|REAL|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
 |**sql_variant**|Недоступно|  
 |**sysname**|VARCHAR2(128)|  
 |**text**|CLOB|  
-|**Time(0-7)**|VARCHAR(16)|  
+|**time(0-7)**|VARCHAR(16)|  
 |**timestamp**|RAW(8)|  
 |**tinyint**|NUMBER(3,0)|  
 |**uniqueidentifier**|CHAR(38)|  
@@ -141,8 +145,8 @@ caps.handback.revision: 55
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## См. также:  
- [Подписчики, отличные от подписчиков SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
+## <a name="see-also"></a>См. также:  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   

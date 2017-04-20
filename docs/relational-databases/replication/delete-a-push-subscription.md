@@ -1,28 +1,32 @@
 ---
-title: "Удаление принудительной подписки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "удаление подписок"
-  - "принудительные подписки [репликация SQL Server], удаление"
-  - "удаление подписок"
-  - "принудительные подписки [репликация SQL Server], отправка"
+title: "Удаление принудительной подписки | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing subscriptions
+- push subscriptions [SQL Server replication], deleting
+- deleting subscriptions
+- subscriptions [SQL Server replication], push
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71f708b2b5424d51fb6730a12ab54d4e6b2d26b7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление принудительной подписки
-  В данном разделе описывается удаление принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или объектов RMO.  
+# <a name="delete-a-push-subscription"></a>Удаление принудительной подписки
+  В данном разделе описывается удаление принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  
   
@@ -35,9 +39,9 @@ caps.handback.revision: 35
      [объекты RMO;](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Удаление принудительной подписки на издателе (из **Локальные публикации** папки в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) или на подписчике (из **Локальные подписки** папки). При удалении подписки объекты и данные не удаляются из подписки, они должны быть удалены вручную.  
+ Удалите принудительную подписку на издателе (из папки **Локальные публикации** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) или на подписчике (из папки **Локальные подписки** ). При удалении подписки объекты и данные не удаляются из подписки, они должны быть удалены вручную.  
   
-#### Удаление принудительной подписки на издателе  
+#### <a name="to-delete-a-push-subscription-at-the-publisher"></a>Удаление принудительной подписки на издателе  
   
 1.  Подключитесь к издателю в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера.  
   
@@ -45,34 +49,34 @@ caps.handback.revision: 35
   
 3.  Раскройте публикацию, связанную с удаляемой подпиской.  
   
-4.  Щелкните правой кнопкой мыши подписку и нажмите кнопку **Удаление**.  
+4.  Правой кнопкой мыши щелкните подписку и затем щелкните **Удалить**.  
   
 5.  В окне подтверждения укажите, надо ли подключаться к подписчику для удаления сведений подписки. Если флажок **Соединиться с подписчиком** снят, необходимо позднее соединиться с подписчиком, чтобы удалить данные.  
   
-#### Удаление принудительной подписки на подписчике  
+#### <a name="to-delete-a-push-subscription-at-the-subscriber"></a>Удаление принудительной подписки на подписчике  
   
 1.  Подключитесь к подписчику в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и раскройте узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем — папку **Локальные подписки** .  
   
-3.  Щелкните правой кнопкой мыши подписку, которую нужно удалить и нажмите кнопку **Удаление**.  
+3.  Правой кнопкой мыши щелкните подписку, которую желаете удалить, и затем щелкните **Удалить**.  
   
 4.  В окне подтверждения укажите, надо ли подключаться к издателю для удаления сведений подписки. Если снять флажок **Соединиться с издателем** , то для удаления сведений потребуется соединиться с издателем позже.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Принудительные подписки можно удалять программно с помощью хранимых процедур репликации. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит подписка.  
   
-#### Удаление принудительной подписки на публикацию моментальных снимков или транзакций  
+#### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Удаление принудительной подписки на публикацию моментальных снимков или транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropsubscription & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Укажите параметры **@publication** и **@subscriber**. Задайте значение **all** в параметре **@article**. (Необязательно) Если распространитель недоступен, задайте значение **1** для **@ignore_distributor** для удаления подписки без удаления связанных объектов на распространителе.  
+1.  В издателе в базе данных публикации выполните процедуру [sp_dropsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Задайте значения для параметров **@publication** и **@subscriber**. Задайте значение **all** в параметре **@article**. Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
   
-2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_subscription_cleanup & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) Чтобы удалить метаданные репликации в базе данных подписки.  
+2.  Чтобы удалить все метаданные репликации, оставшиеся в базе данных подписки, выполните в подписчике хранимую процедуру [sp_subscription_cleanup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md).  
   
-#### Удаление принудительной подписки на публикацию слиянием  
+#### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Удаление принудительной подписки на публикацию слиянием  
   
-1.  На издателе, хранимую [sp_dropmergesubscription & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), указав **@publication**, **@subscriber** и **@subscriber_db**. (Необязательно) Если распространитель недоступен, задайте значение **1** для **@ignore_distributor** для удаления подписки без удаления связанных объектов на распространителе.  
+1.  В подписчике выполните процедуру [sp_dropmergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), указав параметры **@publication**, **@subscriber** и **@subscriber_db**. Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
   
-2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_mergesubscription_cleanup & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Укажите **@publisher**, **@publisher_db**, и **@publication**. Тем самым из базы данных подписки удаляются метаданные слияния.  
+2.  В базе данных подписчика в подписчике выполните процедуру [sp_mergesubscription_cleanup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Задайте значения для параметров **@publisher**, **@publisher_db**и **@publication**. Тем самым из базы данных подписки удаляются метаданные слияния.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере удаляется принудительная подписка на публикацию транзакций.  
@@ -86,43 +90,43 @@ caps.handback.revision: 35
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
  Какие именно классы объектов RMO для этого применяются, зависит от типа публикации этой подписки.  
   
-#### Удаление принудительной подписки на публикацию моментальных снимков или транзакций  
+#### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Удаление принудительной подписки на публикацию моментальных снимков или транзакций  
   
-1.  Создайте соединение с подписчиком с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Создайте подключение к подписчику с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.TransSubscription> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, и <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> Свойства.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> и <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
-4.  Задайте <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> свойство.  
+4.  Задайте значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, полученное на шаге 1, для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-5.  Проверьте <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> свойство, чтобы убедиться, что подписка существует. Если это свойство имеет значение **false**, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка не существует.  
+5.  Чтобы убедиться в существовании подписки, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>. Если это свойство имеет значение **false**, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка не существует.  
   
-6.  Вызов <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> метод.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A>.  
   
-#### Удаление принудительной подписки на публикацию слиянием  
+#### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Удаление принудительной подписки на публикацию слиянием  
   
-1.  Создайте соединение с подписчиком с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Создайте подключение к подписчику с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.MergeSubscription> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, и <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> Свойства.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> и <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>.  
   
-4.  Задайте <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> свойство.  
+4.  Задайте значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, полученное на шаге 1, для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-5.  Проверьте <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> свойство, чтобы убедиться, что подписка существует. Если это свойство имеет значение **false**, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка не существует.  
+5.  Чтобы убедиться в существовании подписки, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>. Если это свойство имеет значение **false**, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка не существует.  
   
-6.  Вызов <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> метод.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A>.  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  Принудительные подписки могут быть удалены программно с помощью объектов RMO.  
   
- [!code-csharp[HowTo#rmo_DropTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpushsub)]  
+ [!code-cs[HowTo#rmo_DropTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_droptranpushsub)]  
   
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
- [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

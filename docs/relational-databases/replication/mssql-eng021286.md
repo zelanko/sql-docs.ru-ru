@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG021286 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG021286, ошибка"
+title: "MSSQL_ENG021286 | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG021286 error
 ms.assetid: b63620b7-1c6d-46f7-90ea-3a8e99af8de4
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 94e5042a99ef6ea6df482cf86323f9444e006dbd
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG021286
+# <a name="mssqleng021286"></a>MSSQL_ENG021286
     
-## Сведения о сообщении  
+## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
@@ -31,15 +35,15 @@ caps.handback.revision: 12
 |Символическое имя||  
 |Текст сообщения|Таблица конфликтов "%s" не существует.|  
   
-## Объяснение  
- Эта ошибка возникает в том случае, если в таблице конфликтов для статьи [sysmergearticles & #40; Transact-SQL & #41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) на самом деле нет. Эта ошибка может возникнуть при попытке добавить или удалить столбец в таблице, опубликованной для репликации слиянием.  
+## <a name="explanation"></a>Объяснение  
+ Эта ошибка возникает, если для статьи, указанной в [sysmergearticles (Transact-SQL)](../../relational-databases/system-tables/sysmergearticles-transact-sql.md), не существует таблица конфликтов. Эта ошибка может возникнуть при попытке добавить или удалить столбец в таблице, опубликованной для репликации слиянием.  
   
-## Действие пользователя  
- Выполнение [DBCC CHECKDB & #40; Transact-SQL & #41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) в базе данных с отсутствующей таблицей конфликтов, чтобы проверить нет вопросов, согласованности данных.  
+## <a name="user-action"></a>Действие пользователя  
+ Выполните инструкцию [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) в базе данных с отсутствующей таблицей конфликтов, чтобы убедиться в отсутствии проблем согласованности данных.  
   
- Если таблица конфликтов отсутствует на подписчике, удалите подписку и создайте ее заново. Если таблица конфликтов отсутствует на издателе, удалите все подписки, удалите публикацию, а затем заново создайте публикацию и все подписки. Дополнительные сведения см. в разделе [публикации данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md) и [подписаться на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
+ Если таблица конфликтов отсутствует на подписчике, удалите подписку и создайте ее заново. Если таблица конфликтов отсутствует на издателе, удалите все подписки, удалите публикацию, а затем заново создайте публикацию и все подписки. Дополнительные сведения см. в статьях [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md) и [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
   
-## См. также:  
- [Ошибки и события ссылку & #40; Репликация & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

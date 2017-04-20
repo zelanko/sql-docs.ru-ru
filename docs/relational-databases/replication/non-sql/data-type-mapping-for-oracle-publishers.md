@@ -1,26 +1,30 @@
 ---
-title: "Сопоставление типов данных для издателей Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "публикация Oracle [репликация SQL Server], сопоставление типов данных"
-  - "типы данных [репликация SQL Server], публикация Oracle"
-  - "сопоставление типов данных [репликация SQL Server]"
+title: "Сопоставление типов данных для издателей Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], data type mapping
+- data types [SQL Server replication], Oracle publishing
+- mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6eb74ce4647046c91fa199c260abeb1ae1845f66
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сопоставление типов данных для издателей Oracle
+# <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
   Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
   
  Следующая таблица показывает, как по умолчанию осуществляется преобразование типов данных между Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , когда данные передаются издателем Oracle распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В столбце «Альтернатива» показано, допустимы ли альтернативные соответствия.  
@@ -58,10 +62,10 @@ caps.handback.revision: 47
 |UROWID|CHAR(18)|Нет|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Да|  
   
-## Вопросы сопоставления типов данных  
+## <a name="considerations-for-data-type-mapping"></a>Вопросы сопоставления типов данных  
  При репликации данных из базы данных Oracle нужно помнить о следующих особенностях типов данных.  
   
-### Неподдерживаемые типы данных  
+### <a name="unsupported-data-types"></a>Неподдерживаемые типы данных  
  Следующие типы данных не поддерживаются; столбцы, имеющие эти типы, невозможно реплицировать.  
   
 -   Типы Object  
@@ -74,10 +78,10 @@ caps.handback.revision: 47
   
 -   Столбцы, использующие REF  
   
-### Тип данных DATE  
+### <a name="the-date-data-type"></a>Тип данных DATE  
  Даты в диапазоне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] от 1753 нашей эры. до 9999 г. нашей эры, тогда как даты в Oracle распределяются в диапазоне от 4712 г. до нашей эры до 4712 г. нашей эры. Если столбец, имеющий тип DATE, содержит значения, выходящие за диапазон SQL Server, выберите для столбца альтернативный тип данных, которым является VARCHAR(19).  
   
-### Типы FLOAT и NUMBER  
+### <a name="float-and-number-types"></a>Типы FLOAT и NUMBER  
  Масштаб и точность, задаваемые при сопоставлении типов данных FLOAT и NUMBER, зависят от масштаба и точности, указанных для столбца, использующего этот тип данных в базе данных Oracle. Точность представляет собой количество цифр в числе. Масштаб представляет собой количество цифр справа от десятичной запятой в числе. Например, у числа 123,45 точность равна 5, а масштаб равен 2.  
   
  Oracle позволяет определять числа, имеющие масштаб больший, чем точность, например NUMBER(4,5), в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы точность была не меньше масштаба. Чтобы исключить усечение данных, когда в данных издателя Oracle масштаб больше, чем точность, при преобразовании данных точность приравнивается к масштабу: тип данных NUMBER(4,5) был бы преобразован в NUMERIC(5,5).  
@@ -85,16 +89,16 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  Если для типа NUMBER не указать масштаб и точность, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет использовать по умолчанию максимальные масштаб (8) и точность (38). Для оптимизации хранения данных и производительности при репликации данных рекомендуется установить специальные значения масштаба и точности в Oracle.  
   
-### Типы больших объектов  
+### <a name="large-object-types"></a>Типы больших объектов  
  Oracle поддерживает до 4 гигабайт (ГБ), в то время как SQL Server поддерживает до 2 ГБ. Реплицируемые данные свыше 2 ГБ усекаются.  
   
  Если таблица Oracle включает столбец типа BFILE, данные для этого столбца хранятся в файловой системе. Административной учетной записи репликации должно быть предоставлено право доступа в каталог, в котором хранятся данные. С этой целью должно использоваться следующее синтаксическое выражение:  
   
  `GRANT READ ON DIRECTORY <directory_name> TO <replication_administrative_user_schema>`  
   
- Дополнительные сведения о больших типах объектов, обратитесь к разделу «Вопросы использования больших объектов» в [вопросы проектирования и ограничений издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ Дополнительные сведения о типах больших объектов см. в разделе с рекомендациями по большим объектам статьи [Рекомендации по структуре и ограничения для издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
-## Указание альтернативных сопоставлений типов данных  
+## <a name="specifying-alternative-data-type-mappings"></a>Указание альтернативных сопоставлений типов данных  
  Обычно целесообразно использовать сопоставление типов данных по умолчанию, но для многих типов данных Oracle вместо сопоставления по умолчанию можно выбрать тип данных из набора альтернативных вариантов. Существует два способа указания альтернативных сопоставлений:  
   
 -   Переопределяйте значения по умолчанию для каждой статьи отдельно, используя хранимые процедуры или мастер создания публикаций.  
@@ -103,9 +107,9 @@ caps.handback.revision: 47
   
  Чтобы указать альтернативные сопоставления типов данных, см. раздел [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Рассмотрение структуры и ограничений издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Рекомендации по структуре и ограничения для издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

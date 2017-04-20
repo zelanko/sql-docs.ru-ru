@@ -1,40 +1,44 @@
 ---
-title: "Включение базы данных Stretch для базы данных | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "База данных Stretch, включение базы данных"
-  - "включение базы данных для базы данных Stretch"
+title: "Настройка базы данных Stretch для базы данных | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, enabling database
+- enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Включение базы данных Stretch для базы данных
+# <a name="enable-stretch-database-for-a-database"></a>Настройка базы данных Stretch для базы данных
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Чтобы настроить существующую базу данных для базы данных Stretch, в SQL Server Management Studio выберите для базы данных команду **Задачи | Растяжение | Включить**, чтобы открыть мастер **разрешения операции растяжения для базы данных**. Кроме того, вы можете использовать Transact-SQL, чтобы включить базу данных Stretch для базы данных.  
   
- Если выбрать для таблицы команду **Задачи |Растяжение | Включить**, предварительно не включив базу данных для базы данных Stretch, мастер сначала настроит базу данных для базы данных Stretch и позволит вам выбрать таблицы в рамках этого процесса. Выполните шаги из этой статьи вместо статьи [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+ Если выбрать для таблицы команду **Задачи |Растяжение | Включить** , предварительно не включив базу данных для базы данных Stretch, мастер сначала настроит базу данных для базы данных Stretch и позволит вам выбрать таблицы в рамках этого процесса. Выполните шаги из этой статьи вместо статьи [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
  Чтобы настроить базу данных Stretch для таблицы или базы данных, требуются права db_owner. Кроме того, чтобы настроить базу данных Stretch для базы данных, требуются права CONTROL DATABASE.  
 
- >   [!NOTE] Если позднее вы решите отключить Базу данных Stretch, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure. 
+ >   [!NOTE]
+ > Если позднее вы решите отключить Базу данных Stretch, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure. 
  
-## Перед началом работы  
+## <a name="before-you-get-started"></a>Перед началом работы  
   
--   Перед настройкой базы данных для Stretch рекомендуется запустить помощник по настройке базы данных Stretch, чтобы определить базы данных и таблицы, подходящие для Stretch. Помощник по настройке базы данных Stretch, кроме того, обнаруживает блокирующие проблемы. Дополнительные сведения см. в разделе [Определение баз данных и таблиц для базы данных Stretch с использованием помощника базы данных Stretch](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md).  
+-   Перед настройкой базы данных для Stretch рекомендуется запустить помощник по настройке базы данных Stretch, чтобы определить базы данных и таблицы, подходящие для Stretch. Помощник по настройке базы данных Stretch, кроме того, обнаруживает блокирующие проблемы. Дополнительные сведения см. в разделе [Определение баз данных и таблиц для базы данных Stretch с использованием помощника базы данных Stretch](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
 -   Изучите раздел [Ограничения для базы данных Stretch](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 69
   
 -   Если у вас нет необходимых разрешений, администратор должен вручную включить этот параметр, выполнив команду **sp_configure** перед запуском мастера, либо администратор должен запустить этот мастер.  
   
- Чтобы включить базу данных Stretch на сервере вручную, выполните команду **sp_configure** и включите параметр **remote data archive**. В следующем примере включается параметр **remote data archive** путем изменения его значения на 1.  
+ Чтобы включить базу данных Stretch на сервере вручную, выполните команду **sp_configure** и включите параметр **remote data archive** . В следующем примере включается параметр **remote data archive** путем изменения его значения на 1.  
   
 ```  
 EXEC sp_configure 'remote data archive' , '1';  
@@ -132,7 +136,7 @@ GO
     GO
     ```  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
 -   Перемещение дополнительных таблиц описано в статье[Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) .  
   
 -   Инструкции по отслеживанию статуса переноса данных см. в разделе [Мониторинг и устранение неполадок переноса данных (база данных Stretch)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
@@ -145,8 +149,9 @@ GO
   
 -   [Восстановление баз данных с поддержкой Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## См. также:  
- [Определение баз данных и таблиц для базы данных Stretch с использованием помощника базы данных Stretch](../../sql-server/stretch-database/stretch database databases and tables - stretch database advisor.md)   
- [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>См. также:  
+ [Определение баз данных и таблиц для базы данных Stretch с использованием помощника базы данных Stretch](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
+

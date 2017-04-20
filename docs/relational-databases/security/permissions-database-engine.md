@@ -1,50 +1,51 @@
 ---
-title: "Разрешения (компонент Database Engine) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
-  - "sql13.swb.databaseuser.permissions.object.f1--May use common.permissions"
-helpviewer_keywords: 
-  - "REFERENCES, разрешение"
-  - "разрешения [SQL Server]"
-  - "безопасность [SQL Server], разрешения"
-  - "соглашения об именах [SQL Server]"
+title: "Разрешения (ядро СУБД) | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
+- sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
+helpviewer_keywords:
+- REFERENCES permission
+- permissions [SQL Server]
+- security [SQL Server], permissions
+- naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Разрешения (компонент Database Engine)
+# <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. Управление разрешениями в [!INCLUDE[ssDE](../../includes/ssde-md.md)] осуществляется на уровне сервера (назначение разрешений именам входа и ролям сервера) и на уровне базы данных (назначение разрешений пользователям и ролям базы данных). Модель для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] использует ту же систему для разрешений базы данных, однако разрешения на уровне сервера недоступны. Здесь содержится полный список разрешений. Сведения о типичной реализации разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
+  С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. Управление разрешениями в [!INCLUDE[ssDE](../../includes/ssde-md.md)] осуществляется на уровне сервера (назначение разрешений именам входа и ролям сервера) и на уровне базы данных (назначение разрешений пользователям и ролям базы данных). Модель для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] использует ту же систему для разрешений базы данных, однако разрешения на уровне сервера недоступны. Здесь содержится полный список разрешений. Советы по проектированию системы разрешений см. в статье [Начало работы с разрешениями ядра СУБД](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Общее количество разрешений для [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] — 236. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например, разрешения на уровне сервера нельзя предоставить для [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], а некоторые разрешения действуют только для нее. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) описаны нововведения последних версий. На следующей схеме показаны разрешения и их связи друг с другом. Некоторые из разрешений более высокого уровня (например, `CONTROL SERVER`) указаны несколько раз.
+Общее количество разрешений для [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] составляет 237. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например, разрешения на уровне сервера нельзя предоставить для [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], а некоторые разрешения действуют только для нее. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] предоставлены 230 разрешений. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] предоставлены 219 разрешений. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] предоставлены 214 разрешений. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] предоставлены 195 разрешений. В разделе [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) описаны нововведения последних версий. На следующей схеме показаны разрешения и их связи друг с другом. Некоторые из разрешений более высокого уровня (например, `CONTROL SERVER`) указаны несколько раз. Щелкните изображение, чтобы скачать **плакат разрешений для ядра СУБД** в формате PDF.  
   
-![Разрешения для ядра СУБД](../../relational-databases/security/media/database-engine-permissions.PNG) 
+[![Разрешения для ядра СУБД](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
->[!NOTE]
-> Рисунок в этой статье слишком мал для чтения. Полную схему разрешений ядра СУБД можно скачать на странице [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
-
-Если вы знаете, как применять разрешения, примените их на уровне сервера к именам для входа и пользователям разрешений на уровне базы данных, используя инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md) и [DENY](../../t-sql/statements/deny-transact-sql.md). Пример:   
+Если вы знаете, как применять разрешения, примените их на уровне сервера к именам для входа и пользователям разрешений на уровне базы данных, используя инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)и [DENY](../../t-sql/statements/deny-transact-sql.md) . Пример:   
 ```tsql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
-Советы по проектированию системы разрешений см. в разделе [Приступая к работе с разрешениями Database Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Советы по проектированию системы разрешений см. в разделе [Начало работы с разрешениями ядра СУБД](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="a-nameconventionsa-permissions-naming-conventions"></a><a name="_conventions"></a> Соглашения об именовании разрешений  
+##  <a name="_conventions"></a> Permissions Naming Conventions  
  Ниже описаны общие соглашения, которые соблюдаются при задании имен разрешениям.  
   
 -   CONTROL  
@@ -55,11 +56,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      Предоставляет возможность изменения свойств определенной защищаемой сущности, кроме ее владельца. При предоставлении разрешения ALTER на ту или иную область также предоставляется возможность изменения, создания или удаления любой защищаемой сущности, содержащейся в пределах данной области. Например, разрешение ALTER на схему включает возможность создания, изменения и удаления объектов этой схемы.  
   
--   ALTER ANY \<*Защищаемая сущность сервера*>, где *Защищаемая сущность сервера* может быть любым защищаемым объектом на уровне сервера.  
+-   ALTER ANY \<*Защищаемый объект сервера*>, где *Защищаемый объект сервера* может быть любым защищаемым объектом на уровне сервера.  
   
      Предоставляет возможность создавать, изменять и удалять отдельные экземпляры *Защищаемой сущности сервера*. Например, разрешение ALTER ANY LOGIN предоставляет возможность создания, изменения и удаления любого имени входа в экземпляре.  
   
--   ALTER ANY \<*Защищаемая сущность базы данных*>, где *Защищаемая сущность базы данных* может быть любым защищаемым объектом на уровне базы данных.  
+-   ALTER ANY \<*Защищаемый объект базы данных*>, где *Защищаемый объект базы данных* может быть любым защищаемым объектом на уровне базы данных.  
   
      Предоставляет возможность СОЗДАВАТЬ, ИЗМЕНЯТЬ и УДАЛЯТЬ отдельные экземпляры *Защищаемой сущности базы данных*. Например, разрешение ALTER ANY SCHEMA предоставляет возможность создания, изменения и удаления любой схемы в базе данных.  
   
@@ -100,7 +101,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
  Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-##  <a name="a-namesecurablesa-permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Разрешения, применяемые к конкретным защищаемым объектам  
+##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  В следующей таблице перечислены главные классы разрешений и защищаемых объектов, к которым эти разрешения могут применяться.  
   
 |Разрешение|Область применения|  
@@ -111,7 +112,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |EXECUTE|Типы CLR, внешние сценарии, процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), а также синонимы|  
 |IMPERSONATE|Имена входа и пользователи|  
 |INSERT|Синонимы, таблицы и столбцы, а также представления и столбцы. Разрешение можно предоставить на уровне базы данных, схемы или объектов.|  
-|RECEIVE|Очереди [!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW и<br />XML SCHEMA COLLECTION|  
 |SELECT|Синонимы, таблицы и столбцы, а также представления и столбцы. Разрешение можно предоставить на уровне базы данных, схемы или объектов.|  
 |TAKE OWNERSHIP|Все классы объектов, кроме DATABASE SCOPED CONFIGURATION, LOGIN, SERVER и USER.|  
@@ -122,8 +123,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 > [!CAUTION]  
 >  Разрешения по умолчанию, которые предоставляются системным объектам во время установки, тщательно оцениваются на предмет возможных угроз, и их не нужно будет изменять для защиты установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Любые изменения разрешений в системных объектах могут ограничить или нарушить функциональность, а также перевести установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в неподдерживаемое состояние.  
   
-##  <a name="a-namepermissionsa-sql-server-permissions"></a><a name="_permissions"></a> Разрешения SQL Server  
- В следующей таблице приведен полный список разрешений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Разрешения [!INCLUDE[ssSDS](../../includes/sssds-md.md)] доступны только для поддерживаемых базовых защищаемых объектов. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)]невозможно предоставлять разрешения на уровне сервера, но в некоторых случаях вместо них доступны разрешения базы данных.  
+##  <a name="_permissions"></a> SQL Server Permissions  
+ В следующей таблице приведен полный список разрешений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Разрешения[!INCLUDE[ssSDS](../../includes/sssds-md.md)] доступны только для поддерживаемых базовых защищаемых объектов. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)]невозможно предоставлять разрешения на уровне сервера, но в некоторых случаях вместо них доступны разрешения базы данных.  
   
 |Базовая защищаемая сущность|Гранулярные разрешения на базовую защищаемую сущность|Код типа разрешения|Защищаемая сущность, содержащая базовую сущность|Разрешение на защищаемую сущность контейнера, неявно предоставляющее гранулярное разрешение на базовую сущность|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -250,10 +251,10 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Имя входа|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Имя входа|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Имя входа|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Имя входа|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|Имя_для_входа|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|Имя_для_входа|CONTROL|CL|SERVER|CONTROL SERVER|  
+|Имя_для_входа|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|Имя_для_входа|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -364,7 +365,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="a-namealgorithma-summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Общие сведения об алгоритме проверки разрешений  
+##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
  Проверка разрешений может оказаться сложной задачей. Алгоритм проверки разрешений учитывает перекрывающееся членство в группах и цепочки владения, явные и неявные разрешения. На его работу могут влиять разрешения на защищаемые классы, содержащие защищаемые сущности. Общая процедура алгоритма состоит в сборе всех применимых разрешений. Если не обнаружена блокирующая инструкция DENY, алгоритм выполняет поиск инструкции GRANT, которая предоставляет достаточные права доступа. Алгоритм содержит три необходимых элемента: **контекст безопасности**, **область разрешения**и **требуемое разрешение**.  
   
 > [!NOTE]  
@@ -386,7 +387,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   **Область разрешения**  
   
-     Это защищаемая сущность и все защищаемые классы, содержащие защищаемый объект. Например, таблица (защищаемая сущность) содержится в защищаемом классе схемы и в защищаемом классе базы данных. На доступ могут влиять разрешения на уровне таблицы, схемы, базы данных и сервера. Дополнительные сведения см. в разделе [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+     Это защищаемая сущность и все защищаемые классы, содержащие защищаемый объект. Например, таблица (защищаемая сущность) содержится в защищаемом классе схемы и в защищаемом классе базы данных. На доступ могут влиять разрешения на уровне таблицы, схемы, базы данных и сервера. Дополнительные сведения см. в разделе [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 -   **Требуемое разрешение**  
   
@@ -420,13 +421,13 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="secial-considerations-for-column-level-permissions"></a>Особые замечания относительно разрешений на уровне столбца
 
-Разрешения на уровне столбца предоставляются с помощью синтаксиса *\<имя_таблицы> (\<имя_столбцы>)*. Например:
+Разрешения на уровне столбца предоставляются с помощью синтаксиса *<имя_таблицы> (\<имя_столбца>)*. Например:
 ```tsql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Разрешение GRANT на столбец переопределяет разрешение DENY на таблицу. При этом последующее разрешение DENY на таблицу удалит разрешение GRANT на столбец. 
   
-##  <a name="a-nameexamplesa-examples"></a><a name="_examples"></a> Примеры  
+##  <a name="_examples"></a> Examples  
  В примерах этого раздела показано, как получить сведения о разрешениях.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>А. Получение полного списка разрешений, которые могут быть предоставлены  
@@ -463,7 +464,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

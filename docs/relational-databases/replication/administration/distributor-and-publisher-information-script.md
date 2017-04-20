@@ -1,30 +1,34 @@
 ---
-title: "Скрипт вывода сведений о распространителе и издателе | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "издатели [репликация SQL Server], скрипты вывода сведений"
-  - "распространители [репликация SQL Server], скрипты вывода сведений"
+title: "Скрипт вывода сведений о распространителе и издателе | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publishers [SQL Server replication], information scripts
+- Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dec278a7a34d1e6f3c056dcd6ea8ec65d0acdfc5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Скрипт вывода сведений о распространителе и издателе
+# <a name="distributor-and-publisher-information-script"></a>Скрипт вывода сведений о распространителе и издателе
   Этот скрипт использует системные таблицы и хранимые процедуры репликации, позволяющие получить ответы на часто задаваемые вопросы об объектах на распространителе и издателе. Скрипт может использоваться «как есть», а также может служить основой для пользовательских скриптов. Для выполнения в вашей среде, возможно, потребуется внести в скрипт два изменения:  
   
 -   Изменить строку `use AdventureWorks2012` для использования имени вашей базы данных публикации.  
   
--   Удалить комментарии (`--`) из строки `exec sp_helparticle @publication='<PublicationName>'` и замените \< ИмяПубликации> Имя публикации.  
+-   Удалить комментарии (`--`) из строки `exec sp_helparticle @publication='<PublicationName>'` и заменить \<PublicationName> именем публикации.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
@@ -94,23 +98,23 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Вопросы, часто задаваемые администраторам репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
- [Хранимая процедура sp_get_distributor & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
- [sp_helparticle & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helpdistributiondb & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpdistpublisher & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [sp_helpdistributor & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpmergearticle & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
- [sp_helpmergepublication & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
- [sp_helppublication & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [sp_helpreplicationdboption & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
- [sp_helpsubscriberinfo & #40; Transact-SQL и #41;](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sys.Columns & #40; Transact-SQL и #41;](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.databases & #40; Transact-SQL и #41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.Procedures & #40; Transact-SQL и #41;](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
- [sys.Servers & #40; Transact-SQL и #41;](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
- [sys.Tables & #40; Transact-SQL и #41;](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.Views & #40; Transact-SQL и #41;](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
+ [sp_get_distributor (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)   
+ [sp_helparticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helpdistributiondb (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistributor (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helppublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helpreplicationdboption (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpreplicationdboption-transact-sql.md)   
+ [sp_helpsubscriberinfo (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.databases (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.procedures (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
+ [sys.servers (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)   
+ [sys.tables (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [sys.views (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   
   

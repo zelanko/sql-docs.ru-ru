@@ -1,1 +1,2 @@
-<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ ЭТОЙ СТАТЬИ:**![да](../includes/media/yes.png)SQL Server (начиная с 2014)![нет](../includes/media/no.png)База данных SQL Azure![нет](../includes/media/no.png)Хранилище данных SQL Azure![нет](../includes/media/no.png)Parallel Data Warehouse </Token>
+<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ ЭТОЙ СТАТЬИ:**![да](media/yes.png)SQL Server (начиная с версии 2014)![нет](media/no.png)База данных SQL Azure![нет](media/no.png)Хранилище данных SQL Azure![нет](media/no.png)Parallel Data Warehouse</Token>
+

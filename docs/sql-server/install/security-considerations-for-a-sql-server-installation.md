@@ -1,41 +1,45 @@
 ---
-title: "Вопросы безопасности при установке SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "системы брандмауэров [SQL Server]"
-  - "блоки сообщений сервера [SQL Server]"
-  - "запрет протоколов"
-  - "безопасность [SQL Server], установки"
-  - "протоколы [SQL Server], отключение"
-  - "NetBIOS [SQL Server]"
-  - "службы [SQL Server], безопасность"
-  - "SMB [SQL Server]"
-  - "изоляция служб [SQL Server]"
-  - "программа установки [SQL Server], безопасность"
-  - "ограниченные права доступа установки SQL Server"
-  - "NTFS [SQL Server]"
-  - "физическая безопасность [SQL Server]"
-  - "безопасность файловой системы [SQL Server]"
-  - "установка SQL Server, безопасность"
+title: "Вопросы безопасности при установке SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- firewall systems [SQL Server]
+- server message blocks [SQL Server]
+- disabling protocols
+- security [SQL Server], installations
+- protocols [SQL Server], disabling
+- NetBIOS [SQL Server]
+- services [SQL Server], security
+- SMB [SQL Server]
+- isolating services [SQL Server]
+- Setup [SQL Server], security
+- low SQL Server installation privileges
+- NTFS [SQL Server]
+- physical security [SQL Server]
+- file system security [SQL Server]
+- installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: af11eb46f2c213e85f0b1bbff80e98e5eeb436c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Вопросы безопасности при установке SQL Server
-  Безопасность является важной характеристикой для любого продукта и любого предприятия. Следуя простым рекомендациям, можно избежать многих уязвимостей в безопасности. В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения по безопасности для конкретных компонентов приводятся в справочных разделах по этим компонентам.  
+# <a name="security-considerations-for-a-sql-server-installation"></a>Вопросы безопасности при установке SQL Server
+  Безопасность является важной характеристикой для любого продукта и любого предприятия. Следуя простым рекомендациям, можно избежать многих уязвимостей в безопасности. В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения по безопасности для конкретных компонентов приводятся в справочных разделах по этим компонентам.  
   
-## Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  При настройке среды сервера выполняйте следующие рекомендации.  
   
 -   [Повышение физической безопасности](#physical_security)  
@@ -50,8 +54,8 @@ caps.handback.revision: 48
   
 -   [Установка SQL Server на контроллере домена](../../sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Повышение физической безопасности  
- Физическая и логическая изоляции составляют основу безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для повышения физической безопасности установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполните следующие действия.  
+###  <a name="physical_security"></a> Enhance Physical Security  
+ Физическая и логическая изоляции составляют основу безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для повышения физической безопасности установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполните следующие действия.  
   
 -   Установите сервер в помещении, недоступном для посторонних.  
   
@@ -61,8 +65,8 @@ caps.handback.revision: 48
   
 -   Регулярно создавайте резервные копии данных и храните их в безопасном месте за пределами расположения компьютера.  
   
-###  <a name="firewalls"></a> Использование брандмауэров  
- Брандмауэры играют важную роль в обеспечении безопасности установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Брандмауэры будут более эффективны, если следовать приведенным ниже правилам.  
+###  <a name="firewalls"></a> Use Firewalls  
+ Брандмауэры играют важную роль в обеспечении безопасности установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Брандмауэры будут более эффективны, если следовать приведенным ниже правилам.  
   
 -   Установите брандмауэр между сервером и Интернетом. Разрешите работу брандмауэра. Если он отключен, включите его. Если он включен, не отключайте.  
   
@@ -74,14 +78,14 @@ caps.handback.revision: 48
   
 -   Если приложение работает с распределенными транзакциями, настройте брандмауэр на обмен данными между отдельными экземплярами координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC). Кроме того, нужно настроить брандмауэр на разрешение обмена данными между MS DTC и диспетчерами ресурсов (например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
- Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="isolated_services"></a> Изолирование служб  
+###  <a name="isolated_services"></a> Isolate Services  
  Изолирование служб уменьшает риск того, что подвергнувшаяся опасности служба подвергнет опасности другие службы. Чтобы изолировать службы, следуйте приведенным ниже правилам.  
   
 -   Запускайте разные службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под разными учетными записями Windows. Если возможно, пользуйтесь для каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отдельными учетными записями Windows или локальных пользователей, обладающих наименьшими правами. Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-###  <a name="sa_with_least_privileges"></a> Настройка безопасной файловой системы  
+###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Правильный выбор файловой системы повышает уровень безопасности. Для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо выполнить следующие действия.  
   
 -   Используйте файловую систему NTFS. Рекомендуется устанавливать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на файловую систему NTFS, так как она обеспечивает более высокую стабильность и восстанавливаемость, чем файловые системы FAT. Кроме того, NTFS реализует параметры управления доступом к файлам и каталогам (ACL), шифрование файловой системы (EFS) и другие средства обеспечения безопасности. Во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит необходимые списки ACL на разделы реестра и файлы, если программа установки обнаружит NTFS. Эти разрешения не должны меняться. В будущих выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не поддерживаться установка на компьютеры с файловой системой FAT.  
@@ -91,7 +95,7 @@ caps.handback.revision: 48
   
 -   Используйте дисковый массив (RAID) для наиболее критичных файлов данных.  
   
-###  <a name="disabled_protocols"></a> Отключение протоколов NetBIOS и SMB  
+###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  На внешних серверах сети должны быть отключены все ненужные протоколы, включая NetBIOS и SMB.  
   
  NetBIOS использует следующие порты:  
@@ -123,8 +127,8 @@ caps.handback.revision: 48
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки не может создавать группы безопасности или подготавливать учетные записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена, доступном только для чтения. В такой ситуации программа установки завершается ошибкой.  
   
-## Во время или после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- После установки вы можете повысить безопасность установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следуя приведенным ниже рекомендациям относительно учетных записей и режимов проверки подлинности.  
+## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Во время или после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ После установки вы можете повысить безопасность установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , следуя приведенным ниже рекомендациям относительно учетных записей и режимов проверки подлинности.  
   
  **Учетные записи службы**  
   
@@ -142,7 +146,7 @@ caps.handback.revision: 48
   
  **Надежные пароли**  
   
--   Всегда назначайте надежный пароль для учетной записи **sa**.  
+-   Всегда назначайте надежный пароль для учетной записи **sa** .  
   
 -   Всегда включайте проверку политики паролей для определения надежности и срока действия пароля.  
   
@@ -151,9 +155,9 @@ caps.handback.revision: 48
 > [!IMPORTANT]  
 >  Во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] для группы BUILTIN\Users добавляется имя входа. Благодаря этому все прошедшие проверку подлинности пользователи компьютера получают доступ к экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] как члены роли public. Имя входа группы BUILTIN\Users можно удалить, чтобы ограничить доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] только пользователям компьютера, у которых есть отдельные имена входа, или членам других групп Windows с именами входа.  
   
-## См. также:  
- [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)   
+## <a name="see-also"></a>См. также:  
+ [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Сетевые протоколы и библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)   
- [Регистрация имя участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
+ [Регистрация имени участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   
   

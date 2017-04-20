@@ -1,39 +1,43 @@
 ---
-title: "Invoke-Sqlcmd, командлет | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], Invoke-Sqlcmd"
-  - "Командлеты [SQL Server], Invoke-Sqlcmd"
-  - "Invoke-Sqlcmd, командлет"
-  - "Служебная программа sqlcmd, PowerShell"
+title: "Командлет Invoke-Sqlcmd | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], Invoke-Sqlcmd
+- Cmdlets [SQL Server], Invoke-Sqlcmd
+- Invoke-Sqlcmd cmdlet
+- sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Invoke-Sqlcmd, командлет
-  **Invoke-Sqlcmd** представляет собой командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], предназначенный для выполнения скриптов, которые содержат инструкции определенных языков ([!INCLUDE[tsql](../includes/tsql-md.md)] и XQuery) и команды, поддерживаемые служебной программой **sqlcmd**.  
+# <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd, командлет
+  **Invoke-Sqlcmd** представляет собой командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , предназначенный для выполнения скриптов, которые содержат инструкции определенных языков ([!INCLUDE[tsql](../includes/tsql-md.md)] и XQuery) и команды, поддерживаемые служебной программой **sqlcmd** .  
   
-## Использование командлета Invoke-Sqlcmd  
- Командлет **Invoke-Sqlcmd** позволяет запускать файлы сценариев **sqlcmd** в среде Windows PowerShell. Значительная часть действий, выполняемых с помощью программы **sqlcmd**, может быть также выполнена с помощью командлета **Invoke-Sqlcmd**.  
+## <a name="using-invoke-sqlcmd"></a>Использование командлета Invoke-Sqlcmd  
+ Командлет **Invoke-Sqlcmd** позволяет запускать файлы сценариев **sqlcmd** в среде Windows PowerShell. Значительная часть действий, выполняемых с помощью программы **sqlcmd** , может быть также выполнена с помощью командлета **Invoke-Sqlcmd**.  
   
- Ниже приведен пример вызова командлета Invoke-Sqlcmd для выполнения простого запроса, аналогичного тому, который выполняется путем задания команды **sqlcmd** с параметрами **-Q** и **-S**:  
+ Ниже приведен пример вызова командлета Invoke-Sqlcmd для выполнения простого запроса, аналогичного тому, который выполняется путем задания команды **sqlcmd** с параметрами **-Q** и **-S** :  
   
 ```  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
- В этом примере вызывается командлет **Invoke-Sqlcmd**, указывается входной файл и вывод перенаправляется прямо в файл. Это аналогично заданию команды **sqlcmd** с параметрами **-i** и **-o**:  
+ В этом примере вызывается командлет **Invoke-Sqlcmd**, указывается входной файл и вывод перенаправляется прямо в файл. Это аналогично заданию команды **sqlcmd** с параметрами **-i** и **-o** :  
   
 ```  
 Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
@@ -59,7 +63,7 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Ite
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
-## Путь к контексту в Invoke-Sqlcmd  
+## <a name="path-context-in-invoke-sqlcmd"></a>Путь к контексту в Invoke-Sqlcmd  
  Если параметр -Database не используется, контекст базы данных для Invoke-Sqlcmd задается активным путем при вызове командлета.  
   
 |Путь|Контекст базы данных|  
@@ -87,20 +91,20 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  Командлет Invoke-Sqlcmd выдает предупреждение при использовании пути к контексту базы данных. Чтобы отключить сообщение с предупреждением, используется параметр -SuppressProviderContextWarning. Чтобы указать командлету Invoke-Sqlcmd операцию «всегда использовать для входа базу данных» по умолчанию, используется параметр -IgnoreProviderContext.  
   
-## Сравнение командлета Invoke-Sqlcmd и программы sqlcmd  
- Командлет **Invoke-Sqlcmd** может использоваться для запуска многих сценариев, которые могут быть также выполнены с помощью служебной программы **sqlcmd**. Но командлет **Invoke-Sqlcmd** функционирует в среде Windows PowerShell, отличной от среды командной строки, в которой работает **sqlcmd**. Поведение **Invoke-Sqlcmd** было изменено в целях обеспечения работы в среде Windows PowerShell.  
+## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Сравнение командлета Invoke-Sqlcmd и программы sqlcmd  
+ Командлет**Invoke-Sqlcmd** может использоваться для запуска многих сценариев, которые могут быть также выполнены с помощью служебной программы **sqlcmd** . Но командлет **Invoke-Sqlcmd** функционирует в среде Windows PowerShell, отличной от среды командной строки, в которой работает **sqlcmd** . Поведение **Invoke-Sqlcmd** было изменено в целях обеспечения работы в среде Windows PowerShell.  
   
- Тем не менее в командлете **Invoke-Sqlcmd** реализованы не все команды **sqlcmd**. Нереализованные команды включают следующее: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace** и **:serverlist**.  
+ Тем не менее в командлете **Invoke-Sqlcmd** реализованы не все команды **sqlcmd**. Нереализованные команды включают следующее: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**и **:serverlist**.  
   
- Командлет **Invoke-Sqlcmd** не инициализирует среду **sqlcmd** или переменные сценария, такие как SQLCMDDBNAME или SQLCMDWORKSTATION.  
+ Командлет**Invoke-Sqlcmd** не инициализирует среду **sqlcmd** или переменные сценария, такие как SQLCMDDBNAME или SQLCMDWORKSTATION.  
   
- Командлет **Invoke-Sqlcmd** не отображает сообщения, такие как выходные данные инструкций PRINT, если не указан общий параметр **-Verbose** среды Windows PowerShell. Например:  
+ Командлет**Invoke-Sqlcmd** не отображает сообщения, такие как выходные данные инструкций PRINT, если не указан общий параметр **-Verbose** среды Windows PowerShell. Например:  
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
- В среде PowerShell требуются не все параметры **sqlcmd** . Например, среда Windows PowerShell форматирует все выходные данные командлетов, поэтому параметры форматирования **sqlcmd** не реализованы в командлете **Invoke-Sqlcmd**. В следующей таблице показана связь между параметрами **Invoke-Sqlcmd** и параметрами **sqlcmd**.  
+ В среде PowerShell требуются не все параметры **sqlcmd** . Например, среда Windows PowerShell форматирует все выходные данные командлетов, поэтому параметры форматирования **sqlcmd** не реализованы в командлете **Invoke-Sqlcmd**. В следующей таблице показана связь между параметрами **Invoke-Sqlcmd** и параметрами **sqlcmd** .  
   
 |Описание|Параметр sqlcmd|Параметр Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
@@ -114,8 +118,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Прекращение выполнения в случае ошибки|-b|-AbortOnError|  
 |Выделенное административное соединение|-A|-DedicatedAdministratorConnection|  
 |Отключение интерактивных команд, скрипта запуска и переменных среды|-X|-DisableCommands|  
-|Отключение подстановки переменных|-x|-DisableVariables|  
-|Минимальная степень серьезности для формирования отчета|-V|-SeverityLevel|  
+|Отключение подстановки переменных|-X|-DisableVariables|  
+|Минимальная степень серьезности для формирования отчета|-v|-SeverityLevel|  
 |Минимальный уровень ошибки для формирования отчета|-m|-ErrorLevel|  
 |Интервал времени ожидания входа|-l|-ConnectionTimeout|  
 |Имя узла|-H|-HostName|  
@@ -126,28 +130,29 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Подключаться с помощью шифрования SSL|Параметр отсутствует|-EncryptConnection|  
 |Отображать сообщения об ошибках|Параметр отсутствует|-OutputSqlErrors|  
 |Выводить сообщения в поток stderr|-r|Параметр отсутствует|  
-|Использовать региональные настройки клиента|-R|Параметр отсутствует|  
-|Выполнить указанный запрос и продолжить работу|-q|Параметр отсутствует|  
+|Использовать региональные настройки клиента|-r|Параметр отсутствует|  
+|Выполнить указанный запрос и продолжить работу|-Q|Параметр отсутствует|  
 |Кодовая страница, применяемая для выходных данных|-f|Параметр отсутствует|  
-|Сменить пароль и продолжить работу|-z|Параметр отсутствует|  
-|Размер пакета|-a|Параметр отсутствует|  
-|Разделитель столбцов|-s|Параметр отсутствует|  
-|Управлять заголовками выходных данных|-h|Параметр отсутствует|  
+|Сменить пароль и продолжить работу|-Z|Параметр отсутствует|  
+|Размер пакета|-A|Параметр отсутствует|  
+|Разделитель столбцов|-S|Параметр отсутствует|  
+|Управлять заголовками выходных данных|-H|Параметр отсутствует|  
 |Указать управляющие символы|-k|Параметр отсутствует|  
 |Постоянная ширина экрана|-Y|Параметр отсутствует|  
-|Переменная ширина экрана|-y|Параметр отсутствует|  
+|Переменная ширина экрана|-Y|Параметр отсутствует|  
 |Эхо-повтор входных данных|-e|Параметр отсутствует|  
-|Включить использование заключенных в кавычки идентификаторов|-I|Параметр отсутствует|  
-|Удалить конечные пробелы|-W|Параметр отсутствует|  
-|Перечислить экземпляры|-L|Параметр отсутствует|  
-|Форматировать выходные данные в формате Юникод|-u|Параметр отсутствует|  
-|Напечатать статистику|-p|Параметр отсутствует|  
+|Включить использование заключенных в кавычки идентификаторов|-i|Параметр отсутствует|  
+|Удалить конечные пробелы|-w|Параметр отсутствует|  
+|Перечислить экземпляры|-l|Параметр отсутствует|  
+|Форматировать выходные данные в формате Юникод|-U|Параметр отсутствует|  
+|Напечатать статистику|-P|Параметр отсутствует|  
 |Окончание команды|-c|Параметр отсутствует|  
-|Подключение с помощью проверки подлинности Windows|-E|Параметр отсутствует|  
+|Подключение с помощью проверки подлинности Windows|-e|Параметр отсутствует|  
   
-## См. также:  
- [Использование командлетов компонента Database Engine](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
+## <a name="see-also"></a>См. также:  
+ [Использование командлетов ядра СУБД](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
  [Программа sqlcmd](../tools/sqlcmd-utility.md)   
- [Использование программы sqlcmd](../relational-databases/scripting/use-the-sqlcmd-utility.md)  
+ [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
   
+

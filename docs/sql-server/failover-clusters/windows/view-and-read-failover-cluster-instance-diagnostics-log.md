@@ -1,41 +1,45 @@
 ---
-title: "Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Просмотр и чтение журнала диагностики для экземпляра отказоустойчивого кластера | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
+# <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
   Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG*).  
   
 -   **Перед началом работы**: [рекомендации](#Recommendations), [безопасность](#Security)  
   
--   **Просмотр журнала диагностики с помощью следующих средств**: [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Настройка параметров журнала диагностики с помощью** [Transact-SQL](#TsqlConfigure)  
+-   **To Configure Diagnostic Log settings, using:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Recommendations"></a> Рекомендации  
- По умолчанию журналы SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например C\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\MSSQL\LOG, узла-владельца экземпляра отказоустойчивого кластера AlwaysOn (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
+ По умолчанию журналы SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например C\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\MSSQL\LOG, на том узле, где выполняется экземпляр отказоустойчивого кластера (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
   
- В журналах используется формат файлов расширенных событий. Для чтения файлов, созданных расширенными событиями, можно использовать системную функцию **sys.fn_xe_file_target_read_file**. Возвращается одно событие в каждой строке в формате XML. Выполните запрос к системному представлению для синтаксического анализа XML-данных в виде результирующего набора. Дополнительные сведения см. в разделе [sys.fn_xe_file_target_read_file (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
+ В журналах используется формат файлов расширенных событий. Для чтения файлов, созданных расширенными событиями, можно использовать системную функцию **sys.fn_xe_file_target_read_file** . Возвращается одно событие в каждой строке в формате XML. Выполните запрос к системному представлению для синтаксического анализа XML-данных в виде результирующего набора. Дополнительные сведения см. в разделе [sys.fn_xe_file_target_read_file (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Для запуска **fn_xe_file_target_read_file** требуется разрешение VIEW SERVER STATE.  
+ Для запуска **fn_xe_file_target_read_file**требуется разрешение VIEW SERVER STATE.  
   
  Откройте среду SQL Server Management Studio в качестве администратора  
   
@@ -90,30 +94,30 @@ ORDER BY Time;
  **Настройка свойств журнала диагностики**  
   
 > [!NOTE]  
->  Пример этой процедуры см. в подразделе [Пример (Transact-SQL)](#TsqlExample) далее в этом разделе.  
+>  Пример этой процедуры см. в подразделе [Пример (Transact-SQL)](#TsqlExample)далее в этом разделе.  
   
  С помощью инструкции языка описания данных DDL **ALTER SERVER CONFIGURATION** можно запускать или останавливать запись в журнал диагностических данных, полученных с помощью хранимой процедуры [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), а также задавать такие параметры конфигурации журналов SQLDIAG, как количество переключений файлов журнала, размер файлов журнала и расположение файлов. Дополнительные сведения о синтаксисе см. в разделе [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
 ###  <a name="ConfigTsqlExample"></a> Примеры (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Настройка параметров журнала диагностики  
+####  <a name="TsqlExample"></a> Setting diagnostic log options  
  В примерах этого раздела показана установка значений параметра журнала диагностики.  
   
-##### A. Запуск регистрации диагностических данных в журнале  
+##### <a name="a-starting-diagnostic-logging"></a>A. Запуск регистрации диагностических данных в журнале  
  В следующем примере запускается запись в журнал диагностических данных.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### Б. Останов регистрации диагностических данных в журнале  
+##### <a name="b-stopping-diagnostic-logging"></a>Б. Останов регистрации диагностических данных в журнале  
  В следующем примере запись в журнал диагностических данных прекращается.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### В. Задание расположения журналов диагностических данных  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>В. Задание расположения журналов диагностических данных  
  В следующем примере для журналов диагностических данных задается расположение по указанному пути к файлам.  
   
 ```  
@@ -121,7 +125,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### Г. Задание максимального размера каждого из журналов диагностики  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>Г. Задание максимального размера каждого из журналов диагностики  
  В следующем примере задан максимальный размер каждого из журналов диагностики, равный 10 мегабайтам.  
   
 ```  
@@ -129,7 +133,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "Подготовка к установке отказоустойчивого кластера | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кластеры [SQL Server], предварительная проверка"
-  - "установка отказоустойчивых кластеров"
-  - "отказоустойчивая кластеризация [SQL Server], предварительная проверка"
+title: "Подготовка к установке отказоустойчивого кластера | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], preinstallation checklist
+- installing failover clusters
+- failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 141
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 141
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
+ms.lasthandoff: 04/11/2017
+
 ---
-# Подготовка к установке отказоустойчивого кластера
+# <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
   Перед тем как установить отказоустойчивый кластер SQL Server, необходимо выбрать оборудование и операционную систему, на которых SQL Server будет работать. Кроме того, необходимо настроить отказоустойчивую кластеризацию Windows Server (WSFC) и проверить настройки сети, безопасности и другого программного обеспечения, которое будет запускаться на отказоустойчивом кластере.  
   
  Если в кластере Windows есть локальный диск и при этом диск с такой же буквой используется на одном или нескольких узлах кластера в качестве общего диска, то установить [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этот диск невозможно.  
@@ -29,22 +33,22 @@ caps.handback.revision: 141
   
 |Описание раздела|Раздел|  
 |-----------------------|-----------|  
-|Содержит описание основных понятий отказоустойчивых кластеров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а также ссылки на связанное содержимое и задачи.|[Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|Содержит описание основных понятий политик отработки отказов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а также ссылки на сведения о настройке политики отработки отказов для обеспечения потребностей организации.|[Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
-|Содержит описание обеспечения работоспособности существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Администрирование и обслуживание экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
+|Содержит описание основных понятий отказоустойчивых кластеров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а также ссылки на связанное содержимое и задачи.|[Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
+|Содержит описание основных понятий политик отработки отказов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а также ссылки на сведения о настройке политики отработки отказов для обеспечения потребностей организации.|[Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|Содержит описание обеспечения работоспособности существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Администрирование и обслуживание экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Описание установки служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в отказоустойчивый кластер Windows Server (WSFC).|[Кластеризация служб SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
  
   
 ##  <a name="BestPractices"></a> Рекомендации  
   
--   Просмотрите [заметки о выпуске](http://go.microsoft.com/fwlink/?LinkId=296445) [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+-   Просмотрите [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [](http://go.microsoft.com/fwlink/?LinkId=296445)заметки о выпуске  
   
 -   Обязательное программное обеспечение для установки. Перед запуском программы установки для установки или обновления [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]установите следующие компоненты, чтобы сократить время установки. Можно установить обязательное программное обеспечение на каждом узле отказоустойчивого кластера, а затем один раз перезапустить узлы перед началом работы программы установки.  
   
     -   Windows PowerShell больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Оболочка Windows PowerShell является обязательной для установки компонентов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Если оболочка Windows PowerShell отсутствует на компьютере, ее можно включить, следуя указаниям на странице [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) .  
   
-    -   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в старых операционных системах Windows. Дополнительные сведения см. в статье [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Заметки о выпуске](http://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в старых операционных системах Windows. Дополнительные сведения см. в статье [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Заметки о выпуске](http://go.microsoft.com/fwlink/?LinkId=296445).  
   
     -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] :** чтобы избежать перезагрузки компьютера из-за установки .NET Framework 4 во время установки, программа установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] требует установки на компьютере обновления [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  Это обновление включено в установку [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] в Windows 7 с пакетом обновления 1 (SP1) или [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2). При установке в более старой операционной системе Windows загрузите его по ссылке: [Центр обновления Майкрософт для .NET Framework 4.0 в Windows Vista и Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=198093).  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 141
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически задает зависимости между кластерной группой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и дисками, которые будут находиться в отказоустойчивом кластере. Не задавайте зависимости перед запуском программы установки.  
   
-    -   При установке отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создается объект компьютера (учетные записи Active Directory) для имени сетевого ресурса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. В кластере [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] учетная запись имени кластера (учетная запись компьютера для самого кластера) должна иметь разрешение на создание объектов компьютера. Дополнительные сведения см. в статье [Настройка учетных записей в Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
+    -   При установке отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создается объект компьютера (учетные записи Active Directory) для имени сетевого ресурса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В кластере [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] учетная запись имени кластера (учетная запись компьютера для самого кластера) должна иметь разрешение на создание объектов компьютера. Дополнительные сведения см. в статье [Настройка учетных записей в Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
   
     -   Если в качестве файлового хранилища используется общая папка SMB, учетная запись программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup должна иметь права доступа SeSecurityPrivilege на этом файловом сервере. Для этого с помощью консоли локальной политики безопасности на файловом сервере назначьте учетной записи программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] права **Управление журналом аудита и безопасности** .  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 141
   
 -   Конфигурации SAN поддерживаются также в операционных системах [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] выпусков Advanced Server и Datacenter Edition. В категории «Кластеры и многокластерные устройства» каталога Windows и перечня совместимого оборудования дан перечень устройств хранения, поддерживающих сети SAN, прошедших испытания и поддерживаемых в качестве элементов хранения сетей SAN с подключением нескольких кластеров WSFC. После нахождения необходимых сертифицированных компонентов запустите проверку кластеров.  
   
--   При установке файлов данных также поддерживается файловый ресурс общего доступа SMB. Дополнительные сведения см. в разделе [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md#StorageTypes).  
+-   При установке файлов данных также поддерживается файловый ресурс общего доступа SMB. Дополнительные сведения см. в разделе [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).  
   
     > [!WARNING]  
     >  Если в качестве общего хранилища файлового сервера SMB используется файловый сервер Windows, то учетная запись программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должна иметь права доступа SeSecurityPrivilege на этом файловом сервере. Для этого с помощью консоли локальной политики безопасности на файловом сервере назначьте учетной записи программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] права **Управление журналом аудита и безопасности** .  
@@ -114,7 +118,7 @@ caps.handback.revision: 141
   
     -   Форматирование диска после установки дополнительных дисков не поддерживается.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает локальные диски только для установки файлов tempdb. Проверьте правильность пути, указанного для файлов tempdb и файлов журнала на всех узлах кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка. Дополнительные сведения см. в разделах [Типы хранилищ для файлов данных](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md#StorageTypes) и [Настройка компонента Database Engine — каталоги данных](../Topic/Database%20Engine%20Configuration%20-%20Data%20Directories.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает локальные диски только для установки файлов tempdb. Проверьте правильность пути, указанного для файлов tempdb и файлов журнала на всех узлах кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка. Дополнительные сведения см. в разделах [Типы хранилищ для файлов данных](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) и [Настройка ядра СУБД — каталоги данных](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
 -   При развертывании отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на компонентах технологии iSCSI рекомендуется предпринимать соответствующие меры предосторожности. Дополнительные сведения см. в статье [Support for SQL Server on iSCSI technology components](http://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -131,7 +135,7 @@ caps.handback.revision: 141
     > [!IMPORTANT]  
     >  Не устанавливайте флажок **Принудительное шифрование протокола** до того, как на всех узлах, входящих в экземпляр отказоустойчивого кластера, будут установлены сертификаты.  
   
--   В случае установок [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в конфигурациях параллельно с предыдущими версиями службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны использовать только учетные записи, входящие в глобальную группу доменов. Кроме того, учетные записи, которые используют службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], не должны присутствовать в локальной группе администраторов. При несоблюдении этой рекомендации система безопасности может повести себя непредвиденным образом.  
+-   В случае установок [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в конфигурациях параллельно с предыдущими версиями службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны использовать только учетные записи, входящие в глобальную группу доменов. Кроме того, учетные записи, которые используют службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , не должны присутствовать в локальной группе администраторов. При несоблюдении этой рекомендации система безопасности может повести себя непредвиденным образом.  
   
 -   Чтобы создать отказоустойчивый кластер, необходимо иметь разрешения локального администратора с правом входа в качестве службы и выполнять действия от имени компонента операционной системы на всех экземплярах отказоустойчивого кластера.  
   
@@ -152,17 +156,17 @@ caps.handback.revision: 141
 -   Сетевое имя и IP-адрес [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не должны использоваться для других целей, например, для совместного использования файлов. Если требуется создать ресурс общей папки, используйте для этого ресурса другое уникальное сетевое имя и IP-адрес.  
   
     > [!IMPORTANT]  
-    >  Корпорация Майкрософт рекомендует не размещать общие папки на дисках с данными, поскольку это негативно влияет на поведение и производительность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    >  Корпорация Майкрософт рекомендует не размещать общие папки на дисках с данными, поскольку это негативно влияет на поведение и производительность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Хотя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает в кластерах как именованные каналы, так и сокеты TCP/IP, корпорация Майкрософт рекомендует в кластеризованных конфигурациях использовать сокеты TCP/IP.  
   
--   Обратите внимание, что ISA Server не поддерживается службой кластеров Windows и, следовательно, не поддерживается в отказоустойчивых кластерах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Обратите внимание, что ISA Server не поддерживается службой кластеров Windows и, следовательно, не поддерживается в отказоустойчивых кластерах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Служба удаленного реестра должна быть запущена.  
   
 -   Удаленное администрирование должно быть разрешено.  
   
--   Для порта [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверьте конфигурацию сети [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для протокола TCP/IP для экземпляра, который требуется разблокировать, при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для обеспечения соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по протоколу TCP после установки необходимо включить TCP-порт для IPALL. По умолчанию браузер SQL Server ведет прослушивание UDP-соединений по порту 1434.  
+-   Для порта [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверьте конфигурацию сети [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для протокола TCP/IP для экземпляра, который требуется разблокировать, при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Для обеспечения соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по протоколу TCP после установки необходимо включить TCP-порт для IPALL. По умолчанию браузер SQL Server ведет прослушивание UDP-соединений по порту 1434.  
   
 -   К числу операций по установке отказоустойчивого кластера относится правило, которое проверяет порядок привязки к сети. Даже в случаях, когда порядок привязки выглядит правильным, в системе могут оказаться отключенные или фантомные конфигурации сетевых адаптеров. Фантомные конфигурации сетевых адаптеров могут повлиять на порядок привязки, и в результате правило порядка привязки выдаст предупреждение. Чтобы избежать такой ситуации, выполните следующие действия для обнаружения и удаления отключенных сетевых адаптеров.  
   
@@ -190,14 +194,14 @@ caps.handback.revision: 141
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не поддерживаются в режиме WOW. Это также относится к обновлению с предыдущих версий отказоустойчивых кластеров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , первоначально установленных в режиме WOW. В этих случаях единственная возможность обновления состоит в установке в той же среде новой версии и проведении миграции.  
   
- **Поддерживается при отказоустойчивой кластеризации с использованием нескольких подсетей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ **Поддерживается при отказоустойчивой кластеризации с использованием нескольких подсетей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="MultiSubnet"></a> Дополнительные соображения по конфигурациям отказоустойчивого кластера с несколькими подсетями  
  В приведенных далее разделах описываются требования, которые необходимо учитывать при установке отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями. При реализации конфигурации с несколькими подсетями кластеризация охватывает несколько подсетей, в связи с чем используются несколько IP-адресов и происходит изменение зависимостей ресурсов IP-адресов.  
   
-### [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и операционным системам  
+### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и операционным системам  
   
--   Сведения о выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые поддерживают отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями, см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Сведения о выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которые поддерживают отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями, см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Чтобы создать кластер отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями, необходимо сначала создать отказоустойчивый кластер [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] на нескольких объектах и в нескольких подсетях.  
   
@@ -205,33 +209,33 @@ caps.handback.revision: 141
   
 -   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] требует, чтобы все серверы кластера находились в одном домене Active Directory. Поэтому отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими подсетями требует, чтобы все узлы отказоустойчивого кластера находились в одном и том же домене Active Directory, даже если они все находятся в разных подсетях.  
   
-#### IP-адреса и зависимости ресурсов IP-адресов  
+#### <a name="ip-address-and-ip-address-resource-dependencies"></a>IP-адреса и зависимости ресурсов IP-адресов  
   
 1.  В конфигурации с несколькими подсетями для зависимости ресурса "IP-адрес" задается значение OR. Дополнительные сведения см. на странице [Создание нового отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
   
-2.  Смешанные конфигурации зависимостей IP-адресов со значением AND-OR не поддерживаются. Например,  \<IP1> AND \<IP2> OR \<IP3> не поддерживается.  
+2.  Смешанные конфигурации зависимостей IP-адресов со значением AND-OR не поддерживаются. Например, не поддерживается конструкция \<IP1> AND \<IP2> OR \<IP3>.  
   
 3.  Также не поддерживается несколько IP-адресов в одной в подсети.  
   
      При использовании нескольких IP-адресов в одной подсети во время запуска [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиенты могут сталкиваться со сбоями соединений.  
   
-#### См. также  
+#### <a name="related-content"></a>См. также  
  Дополнительные сведения об отказоустойчивых кластерах на платформе [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] на нескольких сайтах см. в статьях [Сайт кластеризации отработки отказа на платформе Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) и [Проектирование службы, поддерживающей работу в кластере, или приложения в пределах кластера отработки отказа, размещенного на нескольких сайтах](http://go.microsoft.com/fwlink/?LinkId=177873).  
   
 ##  <a name="WSFC"></a> Настройка отказоустойчивого кластера Windows Server  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Служба кластеров (Майкрософт) (WSFC) должна быть настроена как минимум на одном узле серверного кластера. Кроме того, совместно со службой WSFC должен работать выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise поддерживает кластеры отработки отказа с числом узлов до 16. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуски Business Intelligence и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard поддерживают отказоустойчивые кластеры, состоящие из двух узлов.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Служба кластеров (Майкрософт) (WSFC) должна быть настроена как минимум на одном узле серверного кластера. Кроме того, совместно со службой WSFC должен работать выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise поддерживает кластеры отработки отказа с числом узлов до 16. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Выпуски Business Intelligence и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard поддерживают отказоустойчивые кластеры, состоящие из двух узлов.  
   
--   Библиотека ресурсов DLL для службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экспортирует две функции, которые используются диспетчером кластеров WSFC для проверки доступности ресурса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+-   Библиотека ресурсов DLL для службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экспортирует две функции, которые используются диспетчером кластеров WSFC для проверки доступности ресурса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
 -   Служба WSFC должна иметь возможность проверять состояние экземпляра отказоустойчивого кластера с помощью проверки IsAlive. Для этого необходимо установить доверительное соединение с сервером. По умолчанию учетная запись, с которой работает служба кластеров, не является учетной записью администратора на всех узлах в кластере, кроме того, группа BUILTIN\Администраторы не имеет разрешение для входа на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Эти параметры изменяются только в случае изменения разрешений на узлах кластера.  
   
--   Настройте службы DNS или WINS. В среде, где будет устанавливаться отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], должен быть запущен DNS-сервер или WINS-сервер. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для виртуальной ссылки на IP-интерфейс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходима зарегистрированная служба динамических доменных имен. Конфигурация DNS-сервера должна позволять узлам кластера динамически регистрировать привязку оперативного IP-адреса к сетевому имени. Если динамическая регистрация не может быть завершена, программа установки выдает сообщение об ошибке и выполняет откат установки. Дополнительные сведения см. в [этой статье базы знаний Майкрософт](http://support.microsoft.com/kb/947048).  
+-   Настройте службы DNS или WINS. В среде, где будет устанавливаться отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должен быть запущен DNS-сервер или WINS-сервер. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для виртуальной ссылки на IP-интерфейс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходима зарегистрированная служба динамических доменных имен. Конфигурация DNS-сервера должна позволять узлам кластера динамически регистрировать привязку оперативного IP-адреса к сетевому имени. Если динамическая регистрация не может быть завершена, программа установки выдает сообщение об ошибке и выполняет откат установки. Дополнительные сведения см. в [этой статье базы знаний Майкрософт](http://support.microsoft.com/kb/947048).  
   
 ##  <a name="MSDTC"></a> Установить координатор распределенных транзакций [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
- Перед установкой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в отказоустойчивом кластере определите, есть ли необходимость создания кластерного ресурса координатора распределенных транзакций ([!INCLUDE[msCoName](../../../includes/msconame-md.md)]) (MSDTC). Если устанавливается только компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)], кластерный ресурс MSDTC не требуется. Если устанавливается компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)] и службы SSIS, компоненты рабочей станции или если планируется использовать распределенные транзакции, необходимо установить MSDTC. Обратите внимание, что MSDTC не требуется для экземпляров только со службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Перед установкой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в отказоустойчивом кластере определите, есть ли необходимость создания кластерного ресурса координатора распределенных транзакций ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) (MSDTC). Если устанавливается только компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)], кластерный ресурс MSDTC не требуется. Если устанавливается компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)] и службы SSIS, компоненты рабочей станции или если планируется использовать распределенные транзакции, необходимо установить MSDTC. Обратите внимание, что MSDTC не требуется для экземпляров только со службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- На платформах [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] в одном кластере отработки отказа можно установить несколько экземпляров MSDTC. Первым установленным экземпляром MSDTC будет экземпляр MSDTC по умолчанию для кластера. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет автоматически использовать экземпляр MSDTC, установленный в локальной группе ресурсов кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако отдельные приложения можно сопоставить с любым экземпляром MSDTC в кластере.  
+ На платформах [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]в одном кластере отработки отказа можно установить несколько экземпляров MSDTC. Первым установленным экземпляром MSDTC будет экземпляр MSDTC по умолчанию для кластера. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет автоматически использовать экземпляр MSDTC, установленный в локальной группе ресурсов кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако отдельные приложения можно сопоставить с любым экземпляром MSDTC в кластере.  
   
  Для экземпляра MSDTC, выбираемого [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], применяются следующие правила.  
   
@@ -246,12 +250,14 @@ caps.handback.revision: 141
 > [!IMPORTANT]  
 >  В случае сбоя экземпляра MSDTC, установленного в локальной группе кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не будет автоматически пытаться использовать экземпляр MSDTC по умолчанию для кластера или экземпляр MSDTC, установленный на локальном компьютере. Чтобы начать использовать другой экземпляр MSDTC, потребуется полностью удалить сбойный экземпляр MSDTC из группы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Точно так же, как при создании сопоставления для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и сбоя сопоставленного экземпляра MSDTC, в распределенных транзакциях произойдет сбой. Если потребуется, чтобы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовал другой экземпляр MSDTC, необходимо либо добавить другой экземпляр MSDTC в локальную группу кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или удалить сопоставление.  
   
-### Настройте координатор распределенных транзакций ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] )  
- После установки операционной системы и настройки кластера необходимо настроить координатор MSDTC для работы в кластере с помощью администратора кластера. Если MSDTC не будет настроен для работы в кластере, это не помешает установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но может ограничить функциональные возможности приложений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Настройте координатор распределенных транзакций ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] )  
+ После установки операционной системы и настройки кластера необходимо настроить координатор MSDTC для работы в кластере с помощью администратора кластера. Если MSDTC не будет настроен для работы в кластере, это не помешает установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может ограничить функциональные возможности приложений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## См. также:  
- [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)   
+## <a name="see-also"></a>См. также:  
+ [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Параметры для средства проверки конфигурации системы](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Администрирование и обслуживание экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
   
   
+
+

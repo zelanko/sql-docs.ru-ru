@@ -1,38 +1,42 @@
 ---
-title: "Полные резервные копии баз данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "полные резервные копии [SQL Server]"
-  - "резервные копии [SQL Server], база данных"
-  - "резервное копирование баз данных [SQL Server], полные резервные копии"
-  - "оценка размера резервной копии базы данных"
-  - "резервное копирование [SQL Server], размер резервной копии"
-  - "резервные копии баз данных [SQL Server], полные резервные копии"
-  - "размер [SQL Server], резервные копии"
-  - "резервные копии баз данных [SQL Server], о резервном копировании баз данных"
+title: "Полные резервные копии баз данных (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backups [SQL Server], database
+- backing up databases [SQL Server], full backups
+- estimating database backup size
+- backing up [SQL Server], size of backup
+- database backups [SQL Server], full backups
+- size [SQL Server], backups
+- database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5d2d58da7040d54d49ae9f6b3daae5c31024f65
+ms.lasthandoff: 04/11/2017
+
 ---
-# Полные резервные копии баз данных (SQL Server)
+# <a name="full-database-backups-sql-server"></a>Полные резервные копии баз данных (SQL Server)
   При полном резервном копировании создается резервная копия всей базы данных целиком. В нее входит часть журнала транзакций, что позволяет восстановить полную базу данных из полной резервной копии базы данных. Полные резервные копии базы данных отображают состояние базы данных на момент завершения резервного копирования.  
   
 > [!TIP]  
 >  Однако по мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше пространства для хранения. Поэтому для больших баз данных может потребоваться, кроме полных резервных копий, создавать также и *разностные резервные копии баз данных*. Дополнительные сведения см. в разделе [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
 > [!IMPORTANT]  
->  Для резервной копии базы данных свойству TRUSTWORTHY присваивается значение OFF. Дополнительные сведения о том, как установить параметр TRUSTWORTHY в значение ON, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+>  Для резервной копии базы данных свойству TRUSTWORTHY присваивается значение OFF. Дополнительные сведения о том, как задать для параметра TRUSTWORTHY значение ON, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **В этом разделе:**  
   
@@ -47,9 +51,9 @@ caps.handback.revision: 64
 ##  <a name="DbBuRMs"></a> Резервные копии баз данных при простой модели восстановления  
  При использовании простой модели восстановления после создания каждой резервной копии база данных уязвима для потенциальной потери данных в случае аварийной ситуации. Потенциальные потери работы растут с каждым внесенным изменением до следующего создания резервной копии, после чего объем потенциальных потерь работы снова уменьшается до нуля и начинается новый цикл. Потенциальные потери работы становятся тем больше, чем больше времени прошло со времени создания последней резервной копии. На следующем рисунке показана вероятность потери данных при использовании стратегии резервного копирования, в которой применяются только полные резервные копии базы данных.  
   
- ![Показывает риск потери результатов работы в промежутках между созданием резервных копий базы данных](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Показывает риск потери результатов работы в промежутках между созданием резервных копий базы данных")  
+ ![Демонстрирует риск потери результатов работы в промежутках между созданием резервных копий базы данных](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Демонстрирует риск потери результатов работы в промежутках между созданием резервных копий базы данных")  
   
-### Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  В следующем примере показано, как создать полную резервную копию базы данных с помощью предложения WITH FORMAT, чтобы перезаписать все существующие резервные копии и создать новый набор носителей.  
   
 ```  
@@ -67,7 +71,7 @@ GO
   
  Сведения о том, как создавать резервные копии журналов, см. в разделе [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  В следующем примере показано, как создать полную резервную копию базы данных с помощью предложения WITH FORMAT, чтобы перезаписать все существующие резервные копии и создать новый набор носителей. Затем в примере производится резервное копирование журнала транзакций. В реальной ситуации, возможно, придется создать ряд обычных резервных копий журнала. В этом примере образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] должен быть переключен на модель полного восстановления.  
   
 ```  
@@ -100,7 +104,7 @@ GO
   
  [Использование мастера планов обслуживания](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

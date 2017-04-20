@@ -1,25 +1,29 @@
 ---
-title: "Топологии для веб-синхронизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Веб-синхронизация, топологии"
-  - "конфигурация сервера IIS [репликация SQL Server]"
+title: "Топологии для веб-синхронизации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Web synchronization, topologies
+- IIS server configuration [SQL Server replication]
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e2045d5c7485207c52d6cf45229c3d2bd6d7c94
+ms.lasthandoff: 04/11/2017
+
 ---
-# Топологии для веб-синхронизации
+# <a name="topologies-for-web-synchronization"></a>Топологии для веб-синхронизации
   Существует несколько топологий репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для веб-синхронизации. Наиболее часто используемые способы настройки веб-синхронизации включают в себя следующие.  
   
 -   Одиночный сервер  
@@ -28,22 +32,22 @@ caps.handback.revision: 31
   
 -   Несколько системы на основе служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS и переиздание с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Сведения о настройке веб-синхронизации см. в разделе [настройки веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md).  
+ Дополнительные сведения о конфигурации для веб-синхронизации см. в статье [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md).  
   
-## Одиночный сервер  
+## <a name="single-server"></a>Одиночный сервер  
  В самой простой топологии, службах IIS, издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вместе находятся на одиночном сервере. Подписчики осуществляют синхронизацию, подключаясь к службам IIS на издателе. Издатель может быть защищен брандмауэром.  
   
 > [!NOTE]  
 >  Данная конфигурация рекомендуется только для сценариев, использующих корпоративные сети. Для других сценариев рекомендуется, чтобы сервер IIS и издатель/распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находились на разных компьютерах.  
   
- ![Веб-синхронизация с одиночным сервером](../../relational-databases/replication/media/web-sync02.gif "Веб-синхронизация с одиночным сервером")  
+ ![Веб-синхронизация с одним сервером](../../relational-databases/replication/media/web-sync02.gif "Веб-синхронизация с одним сервером")  
   
-## Два сервера  
+## <a name="two-servers"></a>Два сервера  
  Можно установить службы IIS на один сервер и настроить издатель и распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другом сервере. Сервер, на котором запускаются службы IIS, может быть изолирован от Интернета брандмауэром. Подписчики осуществляют синхронизацию, подключаясь к службам IIS.  
   
  ![Веб-синхронизация с двумя серверами](../../relational-databases/replication/media/web-sync03.gif "Веб-синхронизация с двумя серверами")  
   
-## Несколько систем IIS и переиздание с помощью SQL Server  
+## <a name="multiple-iis-systems-and-sql-server-republishing"></a>Несколько систем IIS и переиздание с помощью SQL Server  
  При необходимости поддержки очень большого количества подписчиков, одновременно осуществляющих синхронизацию, можно разделить работу между несколькими компьютерам, на которых выполняются службы IIS.  
   
  ![Веб-синхронизация с несколькими серверами IIS](../../relational-databases/replication/media/web-sync04.gif "Веб-синхронизация с несколькими серверами IIS")  
@@ -55,8 +59,8 @@ caps.handback.revision: 31
   
  ![Веб-синхронизация с повторной публикацией](../../relational-databases/replication/media/web-sync05.gif "Веб-синхронизация с повторной публикацией")  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md)   
- [Веб-синхронизация для репликации слиянием](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

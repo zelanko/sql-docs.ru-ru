@@ -1,27 +1,31 @@
 ---
-title: "переименовать экземпляр отказоустойчивого кластера SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кластеры [SQL Server], виртуальные серверы"
-  - "переименование виртуальных серверов"
-  - "виртуальные серверы [SQL Server], отказоустойчивая кластеризация"
-  - "отказоустойчивая кластеризация [SQL Server], виртуальные серверы"
+title: "Переименование экземпляра отказоустойчивого кластера SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], virtual servers
+- renaming virtual servers
+- virtual servers [SQL Server], failover clustering
+- failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0d98bc0762d800a4fc86c56c37ee815fd189a4cd
+ms.lasthandoff: 04/11/2017
+
 ---
-# переименовать экземпляр отказоустойчивого кластера SQL Server
+# <a name="rename-a-sql-server-failover-cluster-instance"></a>переименовать экземпляр отказоустойчивого кластера SQL Server
   Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] является частью отказоустойчивого кластера, процесс переименования виртуального сервера отличается от процесса переименования изолированного экземпляра. Дополнительные сведения см. в статье [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
   
  Имя виртуального сервера всегда совпадает с сетевым именем SQL-сервера (сетевое имя виртуального SQL-сервера). Несмотря на то, что имя виртуального сервера можно изменить, изменить имя экземпляра нельзя. Например, можно изменить имя виртуального сервера «VS1\экземпляр1» на другое имя, например «SQL35\экземпляр1», но часть имени, содержащая имя экземпляра (т. е. экземпляр1) останется неизменной.  
@@ -32,7 +36,7 @@ caps.handback.revision: 16
   
 -   При переименовании виртуального сервера, настроенного для использования зеркального отображения базы данных, прежде чем приступить к переименованию, необходимо отключить зеркальное отображение базы данных, а затем заново установить зеркальное отображение базы данных с новым именем виртуального сервера. Метаданные для зеркального отображения базы данных не будут обновлены автоматически для отражения нового имени виртуального сервера.  
   
-### Переименование виртуального сервера  
+### <a name="to-rename-a-virtual-server"></a>Переименование виртуального сервера  
   
 1.  С помощью программы «Администратор кластера» измените сетевое имя SQL Server.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 16
   
 3.  Переведите ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обратно в режим «в сети».  
   
-## Проверка операции переименования  
+## <a name="verify-the-renaming-operation"></a>Проверка операции переименования  
  После того как виртуальный сервер переименован, любые соединения, использовавшие старое имя, должны осуществляться с использованием нового имени.  
   
  Чтобы убедиться в том, что операция переименования завершена, выберите необходимые данные из **@@servername** или **sys.servers**. Функция **@@servername** возвращает новое имя виртуального сервера, а в таблице **sys.servers** отображается новое имя виртуального сервера. Чтобы проверить правильность отработки отказа с новым именем, попытайтесь создать сбойную ситуацию на ресурсе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через другие узлы.  
@@ -49,7 +53,7 @@ caps.handback.revision: 16
   
  Чтобы уменьшить задержки сетевого распространения операции переименования виртуального сервера, выполните следующие шаги.  
   
-#### Минимизация задержки сетевого распространения  
+#### <a name="to-minimize-network-propagation-delay"></a>Минимизация задержки сетевого распространения  
   
 1.  Выполните следующие команды в командной строке на узле сервера:  
   
@@ -59,20 +63,18 @@ caps.handback.revision: 16
     nbtstat –RR  
     ```  
   
-## Дополнительные меры после операции переименования  
+## <a name="additional-considerations-after-the-renaming-operation"></a>Дополнительные меры после операции переименования  
  После изменения сетевого имени кластера отработки отказа необходимо выполнить проверку и следующие инструкции для включения всех сценариев в агенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
-  
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].** При изменении сетевого имени экземпляра отказоустойчивого кластера [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] с помощью средства Windows "Администратор кластера" последующая операция обновления или удаления может завершиться ошибкой. Для решения данной проблемы обновите запись **ClusterName** в реестре, следуя указаниям, приведенным в разделе решения проблемы [этой](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .** Проверьте и выполните следующие дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
--   Исправьте параметры в реестре, если агент SQL Server настроен на пересылку событий. Дополнительные сведения см. в статье [Назначение сервера пересылки событий (среда SQL Server Management Studio)](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
+-   Исправьте параметры в реестре, если агент SQL Server настроен на пересылку событий. Дополнительные сведения см. в статье [Назначение сервера пересылки событий (среда SQL Server Management Studio)](http://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
 -   Исправьте имена экземпляра главного сервера (MSX) и целевых серверов (TSX), если сетевое имя компьютеров / кластера было изменено. Дополнительные сведения см. в следующих разделах:  
   
-    -   [Отключение нескольких целевых серверов от главного](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Отключение нескольких целевых серверов от главного](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
   
-    -   [Создание многосерверной среды](../../../ssms/agent/create-a-multiserver-environment.md)  
+    -   [Создание многосерверной среды](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
   
 -   Измените конфигурацию доставки журналов, чтобы для резервного копирования и восстановления журналов использовалось обновленное имя сервера. Дополнительные сведения см. в следующих разделах:  
   
@@ -80,9 +82,9 @@ caps.handback.revision: 16
   
     -   [Удаление доставки журналов (SQL Server)](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   Обновите шаги заданий, зависящие от имени сервера. Дополнительные сведения см. в статье [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
+-   Обновите шаги заданий, зависящие от имени сервера. Дополнительные сведения см. в статье [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

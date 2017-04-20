@@ -1,30 +1,34 @@
 ---
-title: "Проверка сведений о секции для подписчика на публикацию слиянием | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка данных репликации слиянием [репликация SQL Server], секции"
-  - "параметризированные фильтры [репликация SQL Server], проверка данных секции"
-  - "проверка данных секции"
+title: "Проверка сведений о секции для подписчика на публикацию слиянием | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- merge replication data validation [SQL Server replication], partitions
+- parameterized filters [SQL Server replication], validating partition information
+- validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0675e88ff16a1999d801d9cc43b44ad206dc3530
+ms.lasthandoff: 04/11/2017
+
 ---
-# Проверка сведений о секции для подписчика на публикацию слиянием
-  При определении параметризованного фильтра строк для публикации слиянием используется функция, ссылающаяся на данные подписчика, например на имя входа подписчика. По умолчанию репликация проверяет данные подписчика на основании этой функции перед каждой синхронизацией и при использовании моментального снимка на подписчике. Процесс проверки обеспечивает правильность секционирования данных для каждого подписчика. Характер проверки контролируется **validate_subscriber_info** свойство публикации, который может быть изменен с помощью [sp_changemergepublication & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) или на **Параметры подписки** Страница **Свойства публикации** диалоговое окно. Дополнительные сведения об изменении свойств публикаций см. в разделе [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+# <a name="validate-partition-information-for-a-merge-subscriber"></a>Проверка сведений о секции для подписчика на публикацию слиянием
+  При определении параметризованного фильтра строк для публикации слиянием используется функция, ссылающаяся на данные подписчика, например на имя входа подписчика. По умолчанию репликация проверяет данные подписчика на основании этой функции перед каждой синхронизацией и при использовании моментального снимка на подписчике. Процесс проверки обеспечивает правильность секционирования данных для каждого подписчика. Характер проверки контролируется свойством публикации **validate_subscriber_info**, изменить которое можно при помощи процедуры [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) или на странице **Параметры подписки** диалогового окна **Свойства публикаций**. Дополнительные сведения об изменении свойств публикаций см. в разделе [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-## Сведения о работе проверки секции  
- Если публикация фильтруется, например, с помощью функции **SUSER_SNAME()**, агент слияния применяет исходный моментальный снимок к каждому подписчику, на основе данных, допустимый для **SUSER_SNAME()** выражение.  
+## <a name="how-partition-validation-works"></a>Сведения о работе проверки секции  
+ Например, при фильтрации публикации при помощи функции **SUSER_SNAME()**агент слияния использует исходный моментальный снимок для каждого подписчика на основании данных, допустимых для выражения **SUSER_SNAME()** .  
   
  Если проверка включена, когда подписчик вновь подключается к издателю для следующей синхронизации, агент слияния проверяет данные на подписчике и гарантирует, что каждая секция подписчика является именно той секцией, которая была получена в исходном моментальном снимке. Для каждого последующего применения слияния или моментального снимка агент слияния проверяет каждую секцию подписчика.  
   
@@ -32,8 +36,8 @@ caps.handback.revision: 36
   
  Когда агент слияния проверяет секцию, наряду с проверкой значений секции, возвращаемых функциями, используемыми в выражениях фильтрации, агент проверяет также, сформирован ли моментальный снимок перед изменениями, которые сделали его недействительным, например перед выполнением операций очистки метаданных или изменениями схемы. Если секционированный моментальный снимок слишком стар, агент слияния возвращает ошибку, и пользователь должен вновь сформировать секционированный моментальный снимок для этого подписчика на основании текущего стандартного моментального снимка.  
   
-## См. также:  
- [Администрирование и #40; Репликация & #41;](../../relational-databases/replication/administration/administration-replication.md)   
+## <a name="see-also"></a>См. также:  
+ [Администрирование (репликация)](../../relational-databases/replication/administration/administration-replication.md)   
  [Рекомендации по администрированию репликации](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Проверка реплицированных данных](../../relational-databases/replication/validate-replicated-data.md)  

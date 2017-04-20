@@ -1,33 +1,37 @@
 ---
-title: "Мониторинг производительности с использованием хранилища запросов | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Хранилище запросов"
-  - "Хранилище запросов, описание"
+title: "Мониторинг производительности с использованием хранилища запросов | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store
+- Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5785d0283be2fe40b5010f6f9373f9a2ea81554a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Мониторинг производительности с использованием хранилища запросов
+# <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Хранилище запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет подробные сведения о выборе и производительности плана запроса. Оно упрощает устранение неполадок с производительностью, помогая быстро находить разницу в производительности, вызванную изменением плана запроса. Хранилище запросов автоматически собирает журнал запросов, планов и статистики выполнения, сохраняя эти данные для просмотра. Данные разделяются по временным диапазонам, благодаря чему вы можете просматривать закономерности использования и узнавать об изменениях плана запроса на сервере. Хранилище запросов можно настроить с помощью инструкции [ALTER DATABASE SET](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) . 
+  Хранилище запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет подробные сведения о выборе и производительности плана запроса. Оно упрощает устранение неполадок с производительностью, помогая быстро находить разницу в производительности, вызванную изменением плана запроса. Хранилище запросов автоматически собирает журнал запросов, планов и статистики выполнения, сохраняя эти данные для просмотра. Данные разделяются по временным диапазонам, благодаря чему вы можете просматривать закономерности использования и узнавать об изменениях плана запроса на сервере. Хранилище запросов можно настроить с помощью инструкции [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
  Сведения о работе с хранилищем запросов в базе данных SQL Azure см. в разделе [Работа с хранилищем запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
   
-##  <a name="a-nameenablinga-enabling-the-query-store"></a><a name="Enabling"></a> Включение хранилища запросов  
+##  <a name="Enabling"></a> Enabling the Query Store  
  Хранилище запросов неактивно для новых баз данных по умолчанию.  
   
 #### <a name="use-the-query-store-page-in-management-studio"></a>Использование страницы "Хранилище запросов" в Management Studio  
@@ -49,16 +53,16 @@ caps.handback.revision: 38
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
-     Другие параметры синтаксиса, связанные с хранилищем запросов, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+     Другие параметры синтаксиса, связанные с хранилищем запросов, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 > [!NOTE]  
 >  Нельзя включить хранилище запросов для базы данных **master** или **tempdb** .  
  
   
-##  <a name="a-nameabouta-information-in-the-query-store"></a><a name="About"></a> Сведения о хранилище запросов  
+##  <a name="About"></a> Сведения о хранилище запросов  
  Планы выполнения для любого специального запроса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно меняются со временем по разным причинам, например из-за изменения статистики, схемы, создания и удаления индексов и т. д. В кэше процедур (где хранятся кэшированные планы запросов) хранится только последний план выполнения. Планы исключаются из кэша планов из-за нехватки памяти. В результате устранение проблем со снижением производительности запросов, вызванным изменениями планов выполнения, может оказаться сложным и требующим много времени.  
   
- Так как хранилище запросов сохраняет несколько планов выполнения на запрос, оно может принудительно применить политики, чтобы заставить процессор запросов использовать конкретный план выполнения для запроса. Это называется принудительным выполнением плана. Принудительное выполнение плана в хранилище запросов обеспечивается с использованием механизма, аналогичного указанию запроса [USE PLAN](../Topic/Query%20Hints%20\(Transact-SQL\).md) , но не требует изменений в приложениях пользователей. Принудительное выполнение плана может решить проблему со снижением производительности запросов, вызванным изменением плана за очень короткий период времени.  
+ Так как хранилище запросов сохраняет несколько планов выполнения на запрос, оно может принудительно применить политики, чтобы заставить процессор запросов использовать конкретный план выполнения для запроса. Это называется принудительным выполнением плана. Принудительное выполнение плана в хранилище запросов обеспечивается с использованием механизма, аналогичного указанию запроса [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) , но не требует изменений в приложениях пользователей. Принудительное выполнение плана может решить проблему со снижением производительности запросов, вызванным изменением плана за очень короткий период времени.  
   
  Ниже перечислены стандартные сценарии использования хранилища запросов.  
   
@@ -86,30 +90,30 @@ JOIN sys.query_store_query_text AS Txt
 ```  
  
   
-##  <a name="a-nameregresseda-use-the-regressed-queries-feature"></a><a name="Regressed"></a> Использование функции "Регрессионные запросы"  
+##  <a name="Regressed"></a> Use the Regressed Queries Feature  
  Включив хранилище запросов, обновите информацию о базе данных на панели обозревателя объектов, чтобы добавить раздел **Хранилище запросов** .  
   
- ![Query store tree in Object Explorer](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Query store tree in Object Explorer")  
+ ![Дерево запросов к хранилищу в обозревателе объектов](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Дерево запросов к хранилищу в обозревателе объектов")  
   
  Выберите пункт **Запросы со сниженной производительностью** , чтобы открыть панель **Запросы со сниженной производительностью** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. На панели "Запросы со сниженной производительностью" отображаются запросы и планы, сохраненные в хранилище запросов. В раскрывающихся списках вверху можно выбирать запросы по разным критериям. Выберите план для просмотра графического плана запросов. С помощью кнопок можно просмотреть исходный запрос, принудительно применить и отменить план запросов, а также обновить отображаемые на экране сведения.  
   
- ![Regressed queries in object explorer](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Regressed queries in object explorer")  
+ ![Регрессированные запросы в обозревателе объектов](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Регрессированные запросы в обозревателе объектов")  
   
  Чтобы принудительно выполнить план, выберите запрос и план, а затем щелкните **Принудительно выполнить план**. Принудительно выполнять можно только те планы, которые были сохранены с помощью функции плана запросов и все еще хранятся в кэше плана запросов.  
  
   
-##  <a name="a-nameoptionsa-configuration-options"></a><a name="Options"></a> Параметры конфигурации  
+##  <a name="Options"></a> Configuration Options  
  OPERATION_MODE  
  Может быть равен READ_WRITE (по умолчанию) или READ_ONLY.  
   
  CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)  
- Настройте аргумент STALE_QUERY_THRESHOLD_DAYS, чтобы указать длительность хранения данных в хранилище запросов в днях. Значение по умолчанию — 30. Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — семь дней.
+ Настройте аргумент STALE_QUERY_THRESHOLD_DAYS, чтобы указать длительность хранения данных в хранилище запросов в днях. Значение по умолчанию — 30. Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — семь дней.
   
  DATA_FLUSH_INTERVAL_SECONDS  
  Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Частота, с которой происходит эта асинхронная передача, настраивается с помощью параметра DATA_FLUSH_INTERVAL_SECONDS. Значение по умолчанию ― 900 (15 минут).  
   
  MAX_STORAGE_SIZE_MB  
- Настраивает максимальный размер хранилища запросов. Если данные в хранилище запросов достигают ограничения, заданного для параметра MAX_STORAGE_SIZE_MB, хранилище запросов автоматически изменяет состояние с "чтение и запись" на "только чтение" и прекращает сбор новых данных.  Значение по умолчанию — 100 МБ. Для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition значение по умолчанию — 1 ГБ, а для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition — 10 МБ.
+ Настраивает максимальный размер хранилища запросов. Если данные в хранилище запросов достигают ограничения, заданного для параметра MAX_STORAGE_SIZE_MB, хранилище запросов автоматически изменяет состояние с "чтение и запись" на "только чтение" и прекращает сбор новых данных.  Значение по умолчанию — 100 МБ. Для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition значение по умолчанию — 1 ГБ, а для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition — 10 МБ.
   
  INTERVAL_LENGTH_MINUTES  
  Определяет временной интервал вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные времени выполнения в хранилище вычисляются для фиксированного интервала времени. Этот интервал настраивается с помощью параметра INTERVAL_LENGTH_MINUTES. Значение по умолчанию ― 60. 
@@ -128,7 +132,7 @@ JOIN sys.query_store_query_text AS Txt
  Дополнительные сведения о настройке параметров с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Управление параметрами](#OptionMgmt).  
  
   
-##  <a name="a-namerelateda-related-views-functions-and-procedures"></a><a name="Related"></a> Связанные представления, функции и процедуры  
+##  <a name="Related"></a> Related Views, Functions, and Procedures  
  Просматривать хранилище запросов и управлять им можно с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или следующих представлений и процедур.  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
@@ -166,9 +170,9 @@ JOIN sys.query_store_query_text AS Txt
 -   [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
  
   
-##  <a name="a-namescenariosa-key-usage-scenarios"></a><a name="Scenarios"></a> Основные сценарии использования  
+##  <a name="Scenarios"></a> Основные сценарии использования  
   
-###  <a name="a-nameoptionmgmta-option-management"></a><a name="OptionMgmt"></a> Управление параметрами  
+###  <a name="OptionMgmt"></a> Option Management  
  В этом разделе представлены некоторые рекомендации по управлению самой функцией хранилища запросов.  
   
  **Активно ли сейчас хранилище запросов?**  
@@ -292,10 +296,10 @@ DEALLOCATE adhoc_queries_cursor;
 -   **sp_query_store_remove_plan** — чтобы удалить отдельный план.  
  
   
-###  <a name="a-namepeformancea-performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Аудит производительности и устранение проблем  
+###  <a name="Peformance"></a> Performance Auditing and Troubleshooting  
  Хранилище запросов ведет журнал компиляции и метрик выполнения во время выполнения запросов, что позволяет анализировать использование рабочей нагрузки.  
   
- **Последние *n* запросов, выполненных в базе данных. **  
+ **Последние *n* запросов, выполненных в базе данных.**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -343,7 +347,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **У скольких запросов самое высокое значение среднего количества операций чтения среди физических операций ввода-вывода за последние 24 часа с соответствующим числом строк и выполнений?**  
+ **У скольких запросов самое высокое значение среднего количества операций чтения среди физических операций ввода-вывода за последние 24 часа с соответствующим числом строк и выполнений?**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -457,9 +461,9 @@ hist AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @history_start_time   
                AND rs.last_execution_time < @history_end_time)  
-        OR (rs.first_execution_time <= @history_start_time   
+        OR (rs.first_execution_time \<= @history_start_time   
                AND rs.last_execution_time > @history_start_time)  
-        OR (rs.first_execution_time <= @history_end_time   
+        OR (rs.first_execution_time \<= @history_end_time   
                AND rs.last_execution_time > @history_end_time)  
     GROUP BY p.query_id  
 ),  
@@ -474,9 +478,9 @@ recent AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @recent_start_time   
                AND rs.last_execution_time < @recent_end_time)  
-        OR (rs.first_execution_time <= @recent_start_time   
+        OR (rs.first_execution_time \<= @recent_start_time   
                AND rs.last_execution_time > @recent_start_time)  
-        OR (rs.first_execution_time <= @recent_end_time   
+        OR (rs.first_execution_time \<= @recent_end_time   
                AND rs.last_execution_time > @recent_end_time)  
     GROUP BY p.query_id  
 )  
@@ -514,7 +518,7 @@ OPTION (MERGE JOIN);
 ```  
  
   
-###  <a name="a-namestabilitya-maintaining-query-performance-stability"></a><a name="Stability"></a> Обеспечение стабильной производительности запросов  
+###  <a name="Stability"></a> Maintaining Query Performance Stability  
  Вы могли заметить, что для запросов, которые выполняются несколько раз, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует разные планы. Это приводит к изменению уровня потребления ресурсов и продолжительности выполнения. В хранилище запросов вы можете быстро узнать, когда произошло снижение производительности, а также определить оптимальный план за интересующий вас период. Затем вы можете принудительно выполнить этот оптимальный план для последующего выполнения запроса.  
   
  Вы можете также определить несоответствующую производительность запросов для запроса с параметрами (заданными автоматически или вручную). Разнообразие планов позволяет выбрать такой план, который будет достаточно быстрым и эффективным для всех (или большинства) значений параметров. Принудительное выполнение такого плана обеспечит прогнозируемую производительность в самых разных пользовательских сценариях.  
@@ -549,3 +553,4 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
  [Управление хранилищем запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   
+

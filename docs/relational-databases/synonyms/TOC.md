@@ -1,2 +1,2 @@
-# [Создание синонимов](create-synonyms.md)
-# [Синонимы (компонент Database Engine)](synonyms-database-engine.md)
+# [Обзор](synonyms-database-engine.md)  
+# [Создание синонимов](create-synonyms.md)  

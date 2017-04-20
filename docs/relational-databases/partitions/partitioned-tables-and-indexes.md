@@ -1,28 +1,32 @@
 ---
-title: "Секционированные таблицы и индексы | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "секционированные таблицы [SQL Server], о секционированных таблицах"
-  - "секционированные индексы [SQL Server], архитектура"
-  - "секционированные таблицы [SQL Server], архитектура"
-  - "секционированные индексы [SQL Server], о секционированных индексах"
+title: "Секционированные таблицы и индексы | Документация Майкрософт"
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitioned tables [SQL Server], about partitioned tables
+- partitioned indexes [SQL Server], architecture
+- partitioned tables [SQL Server], architecture
+- partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.lasthandoff: 04/11/2017
+
 ---
-# Секционированные таблицы и индексы
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает секционирование таблиц и индексов. Данные секционированных таблиц и индексов подразделяются на блоки, которые могут быть распределены по нескольким файловым группам в базе данных. Данные секционируются горизонтально, поэтому группы строк сопоставляются с отдельными секциями. Все секции одного индекса или таблицы должны находиться в одной и той же базе данных. Таблица или индекс рассматриваются как единая логическая сущность при выполнении над данными запросов или обновлений. До версии [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP! секционированные таблицы и индексы были доступны не в каждом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+# <a name="partitioned-tables-and-indexes"></a>Секционированные таблицы и индексы
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает секционирование таблиц и индексов. Данные секционированных таблиц и индексов подразделяются на блоки, которые могут быть распределены по нескольким файловым группам в базе данных. Данные секционируются горизонтально, поэтому группы строк сопоставляются с отдельными секциями. Все секции одного индекса или таблицы должны находиться в одной и той же базе данных. Таблица или индекс рассматриваются как единая логическая сущность при выполнении над данными запросов или обновлений. До версии [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 секционированные таблицы и индексы были доступны не в каждом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает по умолчанию до 15 000 секций. В версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], количество секций ограничивалось 1000 по умолчанию. В системах x86 создание таблицы или индекса с числом секций более 1000 возможно, но не поддерживается.  
@@ -111,16 +115,17 @@ caps.handback.revision: 46
 ## <a name="related-content"></a>См. также  
  Следующие публикации по стратегиям секционированных таблиц и индексов и примеры внедрения могут оказаться полезными.  
   
--   [Partitioned Table and Index Strategies Using SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx) (Стратегии секционирования таблиц и индексов с помощью SQL Server 2008)  
+-   [Partitioned Table and Index Strategies Using SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [How to Implement an Automatic Sliding Window in a Partitioned Table on SQL Server 2005](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx) (Как реализовать автоматическое скользящее окно в секционированной таблице в SQL Server 2005)  
+-   [How to Implement an Automatic Sliding Window](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [Массовая загрузка в секционированную таблицу](http://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Проект REAL: жизненный цикл данных — секционирование](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Проект REAL: жизненный цикл данных — секционирование](https://technet.microsoft.com/library/cc966424.aspx)  
   
 -   [Улучшенные возможности обработки запросов для секционированных таблиц и индексов](http://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [10 лучших методов для построения реляционного хранилища данных в больших масштабах](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   
+

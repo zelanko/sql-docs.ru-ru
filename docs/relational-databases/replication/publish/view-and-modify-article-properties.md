@@ -1,34 +1,38 @@
 ---
-title: "Просмотр и изменение свойств статьи | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_changearticle"
-  - "sp_helparticle"
-  - "просмотр свойств репликации"
-  - "sp_changemergearticle"
-  - "sp_helpmergearticle"
-  - "изменение свойств репликации, статьи"
-  - "статьи [репликация SQL Server], изменение"
-  - "статьи [репликация SQL Server], свойства"
+title: "Просмотр и изменение свойств статьи | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_changearticle
+- sp_helparticle
+- viewing replication properties
+- sp_changemergearticle
+- sp_helpmergearticle
+- modifying replication properties, articles
+- articles [SQL Server replication], modifying
+- articles [SQL Server replication], properties
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7dd32148c10d940808986a58e78c6528bc772d9b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр и изменение свойств статьи
-  В данном разделе описывается процесс просмотра и изменения свойств статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO.  
+# <a name="view-and-modify-article-properties"></a>Просмотр и изменение свойств статьи
+  В данном разделе описывается процесс просмотра и изменения свойств статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  
   
@@ -54,10 +58,10 @@ caps.handback.revision: 37
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   После создания публикации для некоторых изменений свойств требуется новый моментальный снимок. Если на публикацию имеются подписки, для некоторых изменений также требуется повторная инициализация всех подписок. Дополнительные сведения см. в разделе [Изменение публикации и свойства статей](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) и [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+-   После создания публикации для некоторых изменений свойств требуется новый моментальный снимок. Если на публикацию имеются подписки, для некоторых изменений также требуется повторная инициализация всех подписок. Дополнительные сведения см. в статьях [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) и [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Просмотр и изменение свойств статьи в **Свойства публикации — \< публикация>** диалоговое окно доступно в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и мониторе репликации. Сведения о запуске монитора репликации см. в разделе [запустить монитор репликации](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Просмотрите и измените свойства статьи в диалоговом окне **Свойства публикации — \<публикация>**, доступном в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 -   Страница **Общие** включает имя и описание публикации, имя базы данных, тип публикации и настройки срока окончания действия подписки.  
   
@@ -67,9 +71,9 @@ caps.handback.revision: 37
   
 -   Страница **Моментальный снимок** позволяет задать формат и местоположение моментального снимка, необходимость его сжатия, а также скрипты для запуска до и после применения моментального снимка.  
   
--    **Моментальный снимок — FTP** страницы (для моментального снимка и публикаций транзакций и публикаций слиянием с издателей, использующих версии до SQL Server 2005) позволяет указать, могут ли подписчикам загружать файлы моментальных снимков через протокол передачи файлов (FTP).  
+-   Страница **Моментальный снимок FTP** (для публикаций моментальных снимков и транзакций, а также для публикаций слиянием для издателей, использующих версии более ранние, чем SQL Server 2005) позволяет указать возможность загрузки файлов моментальных снимков подписчиками через протокол передачи файлов (FTP).  
   
--    **Моментальный снимок — FTP и Интернет** страницы (для публикаций слиянием от издателей, использующих SQL Server 2005 или более позднюю) позволяет указать ли подписчики могут загрузить файлы моментальных снимков по протоколу FTP и ли подписчики могут синхронизировать подписки по протоколу HTTPS.  
+-   Страница **Моментальный снимок FTP и Интернет** (для публикаций слиянием от издателей, использующих версию SQL Server 2005 или более позднюю) позволяет указать возможность загрузки файлов моментальных снимков подписчиками через протокол FTP и возможность синхронизации подписки подписчиками через протокол HTTPS.  
   
 -   Страница **Параметры подписки** позволяет устанавливать ряд параметров, которые применяются ко всем подпискам. Параметры отличаются в зависимости от типа публикации.  
   
@@ -77,53 +81,53 @@ caps.handback.revision: 37
   
 -   Страница **Безопасность агентов** предоставляет доступ к настройкам учетных записей, под которыми запускаются и устанавливают соединения с компьютерами в топологии репликации следующие агенты: агент моментальных снимков для всех публикаций, агент чтения журнала для всех публикаций транзакций и агент чтения очереди для публикаций транзакций, в которых допускаются подписки, обновляемые посредством очередей.  
   
--    **Секции данных** страницы (для публикаций слиянием от издателей, использующих SQL Server 2005 или более позднюю) позволяет указать ли подписчики на публикации с параметризованными фильтрами запрашивать моментальный снимок, если он не доступен. Эта страница также позволяет создавать моментальные снимки для одной или нескольких секций либо однократно, либо по расписанию.  
+-   Страница **Секции данных** (для публикаций слиянием от издателей, использующих версию SQL Server 2005 или более позднюю) позволяет указать, могут ли подписчики на публикации с параметризованными фильтрами запрашивать моментальный снимок, если он не доступен. Эта страница также позволяет создавать моментальные снимки для одной или нескольких секций либо однократно, либо по расписанию.  
   
-#### Просмотр и изменение свойства статьи  
+#### <a name="to-view-and-modify-article-properties"></a>Просмотр и изменение свойства статьи  
   
-1.  На **статьи** Страница **Свойства публикации — \< публикация>** диалоговое окно, выберите статью и нажмите кнопку **Свойства статьи**.  
+1.  На странице **Статьи** диалогового окна **Свойства публикации — \<публикация>** выберите статью и щелкните **Свойства статьи**.  
   
 2.  Выберите статьи, для которых необходимо внести изменения в свойства:  
   
-    -   Щелкните **указать свойства выделенной \< ObjectType> статьи** для запуска **Свойства статьи — \< имя_объекта>** диалоговое окно; свойство изменения, внесенные в этом диалоговом окне, применяются только объект, который будет выделен на панели объектов на **статьи** страницы.  
+    -   Щелкните **Указать свойства выделенной статьи \<тип_объекта>**, чтобы открыть диалоговое окно **Свойства статьи — \<имя_объекта>**. Изменения, внесенные в этом диалоговом окне, применяются только к объекту, который будет выделен на панели объектов на странице **Статьи**.  
   
-    -   Щелкните **Установка свойств всех \< ObjectType> статьи**, чтобы открыть **Свойства всех \< ObjectType> статьи** диалоговое окно; свойство изменения, внесенные в этом диалоговом окне применяются ко всем объектам этого типа на панели объектов на **статьи** страницы, включая объекты, не выбранные для публикации.  
+    -   Щелкните **Указать свойства всех статей \<тип_объекта>**, чтобы открыть диалоговое окно **Свойства всех статей \<тип_объекта>**. Изменения свойств, внесенные в этом диалоговом окне, применяются ко всем объектам этого типа на панели объектов на странице **Статьи**, включая объекты, не выбранные для публикации.  
   
         > [!NOTE]  
-        >  Изменения, произведенные в **Свойства для всех \< ObjectType> статьи** диалоговое окно отменяют изменения, сделанные ранее в **Свойства статьи — \< имя_объекта>** диалоговое окно. Например, если нужно установить некоторое количество значений по умолчанию для всех статей типа объекта, но при этом задать некоторые свойства для отдельных объектов, сначала установите значения по умолчанию для всех статей. Затем установите свойства для отдельных объектов.  
+        >  Изменения свойств, внесенные в диалоговом окне **Свойства всех статей \<тип_объекта>** переопределяют изменения, сделанные ранее в диалоговом окне **Свойства статьи — \<имя_объекта>**. Например, если нужно установить некоторое количество значений по умолчанию для всех статей типа объекта, но при этом задать некоторые свойства для отдельных объектов, сначала установите значения по умолчанию для всех статей. Затем установите свойства для отдельных объектов.  
   
 3.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-4.  Щелкните **ОК** на **Свойства публикации — \< публикация>** диалоговое окно.  
+4.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Хранимые процедуры репликации позволяют программным путем вносить изменения в статьи и получать их свойства. Хранимые процедуры, используемые для этого, зависят от типа публикации, к которой принадлежит статья.  
   
-#### Просмотр свойств статьи, принадлежащей публикации транзакций или моментальных снимков  
+#### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Просмотр свойств статьи, принадлежащей публикации транзакций или моментальных снимков  
   
-1.  Выполнение [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), указав имя публикации для **@publication** и имя статьи для **@article** параметр. Если не указан параметр **@article**, то сведения будут возвращены по всем статьям публикации.  
+1.  Выполните хранимую процедуру [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), задав в качестве параметров **@publication** и **@article** имя публикации и имя статьи соответственно. Если не указан параметр **@article**, то сведения будут возвращены по всем статьям публикации.  
   
-2.  Выполнение [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) для статьи таблицы, список всех столбцов в базовой таблице.  
+2.  Чтобы получить список всех столбцов базовой таблицы, выполните хранимую процедуру [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) для статей таблиц.  
   
-#### Изменение свойств статьи, принадлежащей публикации транзакций или моментальных снимков  
+#### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Изменение свойств статьи, принадлежащей публикации транзакций или моментальных снимков  
   
-1.  Выполнение [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), указав свойство статьи, изменяемых в **@property** параметр и новое значение этого свойства в **@value** параметр.  
-  
-    > [!NOTE]  
-    >  Если данное изменение требует создания нового моментального снимка, необходимо также указать значение **1** для **@force_invalidate_snapshot**, и если изменение потребует повторной инициализации подписчиков, необходимо также указать значение **1** для **@force_reinit_subscription**. Дополнительные сведения о свойствах, при изменении которых требуется новый моментальный снимок или повторной инициализации, в разделе [Изменение публикации и свойства статей](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
-  
-#### Просмотр свойств статьи, принадлежащей публикации слиянием  
-  
-1.  Выполнение [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), указав имя публикации для **@publication** и имя статьи для **@article** параметр. Если эти параметры не указаны, то сведения будут возвращены по всем статьям в публикации или на издателе.  
-  
-2.  Выполнение [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) для статьи таблицы, список всех столбцов в базовой таблице.  
-  
-#### Изменение свойств статьи, принадлежащей публикации слиянием  
-  
-1.  Выполнение [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав свойство статьи, изменяемых в **@property** параметр и новое значение этого свойства в **@value** параметр.  
+1.  Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), указав изменяемое свойство статьи в параметре **@property** , а его новое значение — в параметре **@value** имя публикации и имя статьи соответственно.  
   
     > [!NOTE]  
-    >  Если данное изменение требует создания нового моментального снимка, необходимо также указать значение **1** для **@force_invalidate_snapshot**, и если изменение потребует повторной инициализации подписчиков, необходимо также указать значение **1** для **@force_reinit_subscription**. Дополнительные сведения о свойствах, при изменении которых требуется новый моментальный снимок или повторной инициализации, в разделе [Изменение публикации и свойства статей](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Если в результате изменения необходимо создать новый моментальный снимок, необходимо также задать значение **1** в параметре **@force_invalidate_snapshot**, а если в результате изменения необходима повторная инициализация подписчиков, также необходимо указать значение **1** в параметре **@force_reinit_subscription**. Дополнительные сведения о свойствах, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+  
+#### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Просмотр свойств статьи, принадлежащей публикации слиянием  
+  
+1.  Выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), задав в качестве параметров **@publication** и **@article** имя публикации и имя статьи соответственно. Если эти параметры не указаны, то сведения будут возвращены по всем статьям в публикации или на издателе.  
+  
+2.  Чтобы получить список всех столбцов базовой таблицы, выполните хранимую процедуру [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) для статей таблиц.  
+  
+#### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Изменение свойств статьи, принадлежащей публикации слиянием  
+  
+1.  Выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав изменяемое свойство статьи в параметре **@property** , а его новое значение — в параметре **@value** имя публикации и имя статьи соответственно.  
+  
+    > [!NOTE]  
+    >  Если в результате изменения необходимо создать новый моментальный снимок, необходимо также задать значение **1** в параметре **@force_invalidate_snapshot**, а если в результате изменения необходима повторная инициализация подписчиков, также необходимо указать значение **1** в параметре **@force_reinit_subscription**. Дополнительные сведения о свойствах, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
  Следующий пример репликации транзакций производит получение свойств опубликованной статьи.  
@@ -145,50 +149,50 @@ caps.handback.revision: 37
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
  Статьи можно изменять программно, кроме того, с помощью объектов RMO можно программно получить доступ к их свойствам. Конкретные классы объектов RMO, используемые для этого, зависят от типа публикации, которой принадлежит статья.  
   
-#### Просмотр или изменение свойств статьи, принадлежащей публикации моментальных снимков или публикации транзакций  
+#### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Просмотр или изменение свойств статьи, принадлежащей публикации моментальных снимков или публикации транзакций  
   
-1.  Создайте соединение с издателем с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.TransArticle> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransArticle>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>, и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> Свойства.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A>.  
   
-4.  Задайте соединение из шага 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> свойство.  
+4.  Установите полученное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-5.  Вызов <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> метод, чтобы получить свойства объекта. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства статьи, либо статья не существует.  
+5.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства статьи, либо статья не существует.  
   
-6.  (Необязательно) Чтобы изменить свойства, установите новое значение для одного из <xref:Microsoft.SqlServer.Replication.TransArticle> Свойства, которые могут быть установлены.  
+6.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.TransArticle>, которое можно установить (необязательно).  
   
-7.  (Необязательно) Если задано значение **true** для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, вызовите <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> метод для внесения изменений на сервере. Если задано значение **false** для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения отправляются на сервер немедленно.  
+7.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, то вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
   
-#### Просмотр или изменение свойств статьи, принадлежащей публикации слиянием  
+#### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>Просмотр или изменение свойств статьи, принадлежащей публикации слиянием  
   
-1.  Создайте соединение с издателем с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.MergeArticle> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>, и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> Свойства.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A>.  
   
-4.  Задайте соединение из шага 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> свойство.  
+4.  Установите полученное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-5.  Вызов <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> метод, чтобы получить свойства объекта. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства статьи, либо статья не существует.  
+5.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства статьи, либо статья не существует.  
   
-6.  (Необязательно) Чтобы изменить свойства, установите новое значение для одного из <xref:Microsoft.SqlServer.Replication.MergeArticle> Свойства, которые могут быть установлены.  
+6.  Чтобы изменить свойства, установите новое значение для любого из редактируемых свойств <xref:Microsoft.SqlServer.Replication.MergeArticle>(необязательно).  
   
-7.  (Необязательно) Если задано значение **true** для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, вызовите <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> метод для внесения изменений на сервере. Если задано значение **false** для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения отправляются на сервер немедленно.  
+7.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, то вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
   
 ###  <a name="PShellExample"></a> Пример (объекты RMO)  
  В этом примере изменяется статья публикации слиянием, при этом указывается обработчик бизнес-логики, используемый этой статьей.  
   
- [!code-csharp[HowTo#rmo_ChangeMergeArticle_BLH](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changemergearticle_blh)]  
+ [!code-cs[HowTo#rmo_ChangeMergeArticle_BLH](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changemergearticle_blh)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Основные понятия системных хранимых процедур репликации](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

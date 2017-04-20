@@ -1,22 +1,26 @@
 ---
-title: "Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2ecd5bafd4a2092ea51556b898284456d8abf2d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде
+# <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде
   Скомпилированные в собственном коде хранимые процедуры:  
   
 -   обычно используются в критически важных для производительности частях приложения;  
@@ -45,13 +49,11 @@ caps.handback.revision: 8
   
 -   Используйте параметры с порядковыми номерами (безымянные) при вызове скомпилированных в собственном коде хранимых процедур. Для наиболее эффективного выполнения не используйте именованные параметры.  
   
- Использование именованных параметров с хранимыми процедурами, скомпилированными в собственном коде, можно обнаружить с помощью XEvent **hekaton_slow_parameter_passing**, с **reason=named_parameters**.  
+ Неэффективное использование параметров с хранимыми процедурами, скомпилированными в собственном коде, можно обнаружить с помощью XEvent **natively_compiled_proc_slow_parameter_passing**:
+ - Несоответствие типов: **причина = преобразование_параметра**
+ - Именованные параметры: **причина = именованные_параметры**
+ - Значения по умолчанию: **причина = по_умолчанию** 
   
- Аналогично можно определить использование несовместимых типов через то же событие XEvent **hekaton_slow_parameter_passing** с **reason=parameter_conversion**.  
-  
- Чтобы реализовать логику повторного выполнения при использовании таблиц с оптимизацией для памяти (во многих сценариях) и обойти ограничения некоторых функций, можно создать интерпретируемую оболочкой хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)]. Пример см. в разделе [Операции с таблицами, оптимизированными для памяти](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
-  
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
-  
+

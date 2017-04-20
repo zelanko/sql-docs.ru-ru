@@ -1,26 +1,30 @@
 ---
-title: "Удаление Power Pivot для SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Удаление Power Pivot для SharePoint | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление Power Pivot для SharePoint
+# <a name="uninstall-power-pivot-for-sharepoint"></a>Удаление Power Pivot для SharePoint
   Удаление установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] — это многоэтапная процедура, состоящая из подготовки к удалению, удаления компонентов и решений из фермы и удаления файлов программ и параметров реестра.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
  **В этом разделе:**  
   
@@ -42,9 +46,9 @@ caps.handback.revision: 27
   
 -   Для удаления функций и решений из фермы необходимо обладать правами администратора фермы SharePoint или администратора служебного приложения.  
   
--   Если также требуется удалить компонент Database Engine, то необходимо быть системным администратором SQL Server и членом локальной группы администраторов.  
+-   Если также требуется удалить ядро СУБД, то необходимо быть системным администратором SQL Server и членом локальной группы администраторов.  
   
--   Для удаления служб Analysis Services и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
+-   Для удаления служб Analysis Services и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
 ##  <a name="bkmk_before"></a> Шаг 1. Контрольный список действий перед удалением  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В качестве первого шага необходимо предварительно удалить файлы и библиотеки, работа с которыми далее будет невозможна. Это позволит решить все проблемы «отсутствия данных» перед началом удаления программного обеспечения.  
@@ -112,7 +116,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  Чтобы найти и удалить задание развертывания или отката, уже поставленное в очередь, выполните следующие действия.  
   
-1.  Сведения о других ошибках см. в журналах ULS. Дополнительные сведения см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики (Power Pivot для SharePoint)](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+1.  Сведения о других ошибках см. в журналах ULS. Дополнительные сведения см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики (Power Pivot для SharePoint)](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 2.  Запустите консоль управления SharePoint с учетной записью администратора и выполните следующую команду для просмотра заданий, поставленных в очередь:  
   
@@ -122,7 +126,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  Просмотрите существующие развертывания для уточнения следующих сведений: **Тип** — откат или развертывание, **Файл** — powerpivotwebapp.wsp или powerpivotfarm.wsp.  
   
-4.  Для развертываний или откатов, связанных с решениями [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], скопируйте значение GUID для **JobId** и вставьте его в следующую команду (чтобы скопировать значение GUID, в меню правки консоли используйте команды выделения, копирования и вставки):  
+4.  Для развертываний или откатов, связанных с решениями [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , копируйте значение GUID для **JobId** и вставьте его в следующую команду (воспользуйтесь командами "Пометить", "Копировать" и "Вставить" в меню правки Shell, чтобы копировать GUID):  
   
     ```  
     Stsadm –o canceldeployment –id “<GUID>”  
@@ -137,7 +141,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  Частично удалить установленные компоненты можно, не затрагивая другие уже установленные экземпляры SQL Server (или функции в том же экземпляре). Например, можно удалить [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и оставить другие компоненты, например службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или ядро СУБД.  
   
-1.  Выберите в списке программ **Microsoft SQL Server 2014 (64-разрядная)**.  
+1.  Выберите в списке программ **Microsoft SQL Server 2014 (64-разрядная)** .  
   
 2.  Нажмите кнопку **Удалить/изменить**.  
   
@@ -146,7 +150,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      В программе установки можно выбрать экземпляр **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , а затем установить флажки **Службы Analysis Services** и **Интеграция служб Analysis Services с SharePoint** , чтобы удалить только эти компоненты, оставив все остальные.  
   
 ##  <a name="bkmk_addin"></a> Шаг 4. Удаление надстройки Power Pivot для SharePoint  
- Если развертывание служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] имеет два или более сервера и установлена надстройка служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], то, чтобы полностью удалить все файлы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], удалите надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на каждом сервере, где она установлена. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+ Если развертывание служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] имеет два или более сервера и установлена надстройка служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , то, чтобы полностью удалить все файлы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , удалите надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на каждом сервере, где она установлена. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
 ##  <a name="verify"></a> Шаг 5. Проверка удаления  
   
@@ -179,7 +183,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  В службе Secure Store удалите все целевые приложения, которые содержат сохраненные учетные данные, которые используются в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Некоторые, но не все записи в службе Secure Store стираются при удалении [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Целевые приложения, созданные для учетной записи автоматического обновления данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , а также все целевые приложения, созданные для обновления данных, еще существуют и должны быть удалены вручную.  
   
-     В отличие от них, отдельные целевые приложения, созданные автоматически системной службой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], удаляются автоматически при удалении [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+     В отличие от них, отдельные целевые приложения, созданные автоматически системной службой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , удаляются автоматически при удалении [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 4.  На панели управления щелкните **Программы**, а затем **Удалить программу** . Удалите все клиентские библиотеки служб Analysis Services, которые больше не используются. Объекты ADOMD.NET и управляющие объекты Microsoft SQL Server Analysis Services при удалении [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint не удаляются. Поскольку эти библиотеки могут использоваться другими программами, работающими с данными служб Analysis Services, программа установки SQL Server не удаляет их автоматически. Клиентские библиотеки, которые больше не нужны, необходимо удалять по отдельности.  
   
@@ -187,8 +191,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Не удаляйте поставщик OLE DB для служб Analysis Services. SharePoint устанавливает поставщик OLE DB как предварительное требование для книг Excel, которые устанавливают соединение с базами данных служб Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливает новую версию, но эта версия обратно совместима, поэтому ее лучше оставить в системе, чтобы впоследствии избежать проблем при подключении к данным.  
   
-## См. также:  
- [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
+## <a name="see-also"></a>См. также:  
+ [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
+

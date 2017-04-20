@@ -1,29 +1,33 @@
 ---
-title: "Compute Capacity Limits by Edition of SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processors [SQL Server], supported"
-  - "number of processors supported"
-  - "maximum number of processors supported"
+title: "Ограничения по производительности вычислений для разных выпусков SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compute Capacity Limits by Edition of SQL Server
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   В этом разделе описываются ограничения вычислительной мощности в разных выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и различия в их работе в физических и виртуальных средах с процессорами Hyper-Threading.  
   
- ![Сопоставления с ограничениями вычислительной мощности](../sql-server/media/compute-capacity-limits.gif "Сопоставления с ограничениями вычислительной мощности")  
+ ![Сопоставление с ограничениями вычислительной мощности](../sql-server/media/compute-capacity-limits.gif "Сопоставление с ограничениями вычислительной мощности")  
   
  В следующей таблице описаны обозначения, используемые на схеме выше.  
   
@@ -83,18 +87,20 @@ caps.handback.revision: 60
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: лицензирование по числу ядер*|Максимум, поддерживаемый операционной системой|Максимум, поддерживаемый операционной системой|  
 |Разработчик|Максимум, поддерживаемый операционной системой|Максимум, поддерживаемый операционной системой|  
-|Standard Edition|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 24 ядер|  
-|Express|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
- * Использование выпуска Enterprise Edition с лицензированием по принципу "лицензия на сервер и клиентские лицензии (Server+CAL)" (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В модели лицензирования по числу ядер никаких ограничений нет.  
+|Standard Edition|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 24 ядер|  
+|Express|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
+ * Использование выпуска Enterprise Edition с лицензированием по принципу "лицензия на сервер и клиентские лицензии (Server+CAL)" (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В модели лицензирования по числу ядер никаких ограничений нет.  
   
  В виртуальной среде ограничение вычислительной мощности зависит от числа логических процессоров, а не ядер, поскольку архитектура процессора скрыта от гостевых приложений.  Например, сервер с четырьмя четырехъядерными процессорами и технологией Hyper-Threading, поддерживающей два потока на ядро, содержит 32 логических процессора, если технология Hyper-Threading включена, и 16, если она отключена. Такие логические процессоры могут сопоставляться с виртуальными машинами на сервере, а вычислительная нагрузка виртуальных машин на данный логический процессор сопоставляется с потоком выполнения в физическом процессоре на сервере.  
   
  Если важна производительность в пересчете на виртуальный процессор, может понадобиться отключить технологию Hyper-Threading. Технологию Hyper-Threading можно включать и отключать в параметрах процессора в BIOS, но обычно это операция на уровне сервера, которая действует на всю рабочую нагрузку, активную на сервере. Это обстоятельство делает разумным отделение рабочей нагрузки, действующей в виртуальных средах, от нагрузки, для которой технология Hyper-Threading обеспечит прирост производительности в среде физической операционной системы.  
   
-## См. также:  
- [Выпуски и компоненты SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+## <a name="see-also"></a>См. также:  
+ [Выпуски и компоненты SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
+ [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Задание максимальной вместимости SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Быстрая установка SQL Server 2016](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [Быстрая установка SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+
+

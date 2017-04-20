@@ -1,29 +1,33 @@
 ---
-title: "Расширенные события для базы данных Stretch | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Расширенные события для базы данных Stretch | Документация Майкрософт"
+ms.custom: 
+ms.date: 06/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 caps.latest.revision: 4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
+ms.lasthandoff: 04/11/2017
+
 ---
-# Расширенные события для базы данных Stretch
+# <a name="extended-events-for-stretch-database"></a>Расширенные события для базы данных Stretch
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 База данных Stretch предоставляет набор расширенных событий для поиска и устранения неполадок.  
   
-Дополнительные сведения см. в статье [Расширенные события](../../relational-databases/extended-events/extended-events.md). Сведения о запуске сеанса расширенных событий для поиска и устранения неполадок см. в статье [Создание сеанса расширенных событий](Create%20an%20Extended%20Events%20Session.md).  
+Дополнительные сведения см. в статье [Расширенные события](../../relational-databases/extended-events/extended-events.md). Сведения о запуске сеанса расширенных событий для поиска и устранения неполадок см. в статье [Создание сеанса расширенных событий](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   
-## Список расширенных событий для базы данных Stretch  
+## <a name="list-of-extended-events-for-stretch-database"></a>Список расширенных событий для базы данных Stretch  
   
 Имя события|Описание события   
 ---------|---------  
@@ -80,5 +84,7 @@ stretch_table_unprovision_completed|Сообщает о завершении у�
 stretch_table_validation_error|Сообщает о завершении проверки таблицы, когда пользователь включает расширение.  
 stretch_unprovision_table_start|Сообщает о начале отмены подготовки таблицы расширения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [Управление базой данных Stretch и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+
+

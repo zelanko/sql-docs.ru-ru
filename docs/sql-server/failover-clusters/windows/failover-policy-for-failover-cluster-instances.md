@@ -1,24 +1,28 @@
 ---
-title: "Политика отработки отказа для экземпляров отказоустойчивого кластера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "гибкая политика отработки отказа"
+title: "Политика отработки отказа для экземпляров отказоустойчивого кластера | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
+ms.lasthandoff: 04/11/2017
+
 ---
-# Политика отработки отказа для экземпляров отказоустойчивого кластера
+# <a name="failover-policy-for-failover-cluster-instances"></a>Политика отработки отказа для экземпляров отказоустойчивого кластера
   В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI зависит от возможностей базовой службы WSFC по обнаружению сбоев. Поэтому порядок отработки отказа для FCI определяется двумя механизмами: собственными функциями WSFC и функциями, добавленными в процессе установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -103,11 +107,11 @@ caps.handback.revision: 45
  *Значение по умолчанию  
   
 ####  <a name="respond"></a> Действия при сбоях  
- После обнаружения одного или нескольких условий сбоя реакция службы WSFC зависит от состояния кворума WSFC и параметров перезапуска и отработки отказа для группы ресурсов FCI. Если в FCI потерян кворум WSFC, то весь экземпляр FCI переводится в режим «вне сети» и высокий уровень доступности FCI утрачивается. Если в FCI сохраняется кворум WSFC, то служба WSFC сначала может перезапустить сбойный узел, а затем выполнить отработку отказа, если попытки перезапуска не завершаются успехом. Параметры перезапуска и отработки отказа настраиваются в оснастке «Диспетчер отказоустойчивости кластеров». Дополнительные сведения об этих параметрах см. в статье [Свойства: \<ресурс>: вкладка "Политики"](http://technet.microsoft.com/library/cc725685.aspx).  
+ После обнаружения одного или нескольких условий сбоя реакция службы WSFC зависит от состояния кворума WSFC и параметров перезапуска и отработки отказа для группы ресурсов FCI. Если в FCI потерян кворум WSFC, то весь экземпляр FCI переводится в режим «вне сети» и высокий уровень доступности FCI утрачивается. Если в FCI сохраняется кворум WSFC, то служба WSFC сначала может перезапустить сбойный узел, а затем выполнить отработку отказа, если попытки перезапуска не завершаются успехом. Параметры перезапуска и отработки отказа настраиваются в оснастке «Диспетчер отказоустойчивости кластеров». Дополнительные сведения об этих параметрах см. в статье [Свойства: \<ресурс> вкладка "Политики"](http://technet.microsoft.com/library/cc725685.aspx).  
   
  Дополнительные сведения о поддержании работоспособности кворума см. в статье [Режимы кворума и конфигурация голосования WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

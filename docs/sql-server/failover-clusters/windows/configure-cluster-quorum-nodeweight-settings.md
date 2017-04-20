@@ -1,30 +1,34 @@
 ---
-title: "Настройка параметров NodeWeight кворума кластера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], кластеры WSFC"
-  - "кворум [SQL Server], AlwaysOn и кворум WSFC"
+title: "Настройка параметров NodeWeight кворума кластера | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2c43965a7e6b0021bb4bcf2d6fdca14e66cafa18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка параметров NodeWeight кворума кластера
-  В этом разделе описан порядок настройки параметров NodeWeight для узла элемента в отказоустойчивом кластере Windows Server (WSFC). Параметры NodeWeight используются при определении голосов в кворуме для поддержки аварийного восстановления и сценариев с несколькими подсетями для экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="configure-cluster-quorum-nodeweight-settings"></a>Настройка параметров NodeWeight кворума кластера
+  В этом разделе описан порядок настройки параметров NodeWeight для узла элемента в отказоустойчивом кластере Windows Server (WSFC). Параметры NodeWeight используются при определении голосов в кворуме для поддержки аварийного восстановления и сценариев с несколькими подсетями для экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Перед началом:**  [Предварительные требования](#Prerequisites), [Безопасность](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **Просмотр параметров NodeWeight кворума с помощью:** [Использование Powershell](#PowerShellProcedure), [Использование Cluster.exe](#CommandPromptProcedure)  
+-   **To view quorum NodeWeight settings using:** [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
   
 -   [См. также](#RelatedContent)  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="PowerShellProcedure"></a> Использование Powershell  
   
-##### Настройка параметров NodeWeight  
+##### <a name="to-configure-nodeweight-settings"></a>Настройка параметров NodeWeight  
   
 1.  Запустите повышенный режим Windows PowerShell с помощью команды **Запуск от имени администратора**.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 15
   
 4.  Выведите свойства узла кластера в удобном для чтения формате.  
   
-### Пример (Powershell)  
+### <a name="example-powershell"></a>Пример (Powershell)  
  В приведенном ниже примере изменяется параметр NodeWeight в целях удаления голоса кворума для узла "Always OnSrv1", а затем происходит вывод параметров для всех узлов в этом кластере.  
   
 ```powershell  
@@ -76,13 +80,13 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 > [!NOTE]  
 >  Программа cluster.exe является устаревшей в выпуске [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Для будущих разработок используйте PowerShell с отказоустойчивым кластером.  Программа cluster.exe будет удалена в следующем выпуске Windows Server. Дополнительные сведения см. в разделе [Сопоставление команд Cluster.exe с командлетами Windows PowerShell для отказоустойчивых кластеров](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
-##### Настройка параметров NodeWeight  
+##### <a name="to-configure-nodeweight-settings"></a>Настройка параметров NodeWeight  
   
 1.  Запустите повышенный режим командной строки с помощью команды **Запуск от имени администратора**.  
   
 2.  Используйте программу **cluster.exe** для задания значений `NodeWeight` .  
   
-### Пример (Cluster.exe)  
+### <a name="example-clusterexe"></a>Пример (Cluster.exe)  
  В приведенном ниже примере изменяется значение NodeWeight для удаления голоса кворума узла "Always OnSrv1" в кластере "Cluster001".  
   
 ```ms-dos  
@@ -95,7 +99,7 @@ cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0
   
 -   [Командлет Get-ClusterLog отказоустойчивого кластера](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Режим кворума и участвующая в голосовании конфигурация WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Просмотр параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)   
  [Командлеты отказоустойчивого кластера в Windows PowerShell по выполняемым задачам](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

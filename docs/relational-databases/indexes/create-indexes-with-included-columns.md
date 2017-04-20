@@ -1,35 +1,39 @@
 ---
-title: "Создание индексов с включенными столбцами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "размер индекса [SQL Server]"
-  - "ключи индекса [SQL Server]"
-  - "столбцы индекса [SQL Server]"
-  - "размер [SQL Server], индексы"
-  - "ключевые столбцы [SQL Server]"
-  - "включенные столбцы"
-  - "некластеризованные индексы [SQL Server], включенные столбцы"
-  - "проектирование индексов [SQL Server], включенные столбцы"
-  - "неключевые столбцы"
+title: "Создание индексов с включенными столбцами | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index size [SQL Server]
+- index keys [SQL Server]
+- index columns [SQL Server]
+- size [SQL Server], indexes
+- key columns [SQL Server]
+- included columns
+- nonclustered indexes [SQL Server], included columns
+- designing indexes [SQL Server], included columns
+- nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание индексов с включенными столбцами
+# <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  В этой теме описывается добавление невключенных или неключевых столбцов, чтобы расширить функциональные возможности некластеризованных индексов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление неключевых столбцов позволяет создавать некластеризованные индексы, покрывающие больше запросов. Это обусловлено следующими преимуществами неключевых столбцов.  
+  В этой теме описывается добавление невключенных или неключевых столбцов, чтобы расширить функциональные возможности некластеризованных индексов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление неключевых столбцов позволяет создавать некластеризованные индексы, покрывающие больше запросов. Это обусловлено следующими преимуществами неключевых столбцов.  
   
 -   Они могут содержать типы данных, не разрешенные для ключевых столбцов индекса.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 -   Переопределите некластеризованные индексы с большим размером ключа индекса, чтобы только столбцы, используемые для поиска и уточняющего запроса, были ключевыми. Все остальные столбцы, покрывающие запрос, сделайте неключевыми столбцами. Таким образом, в наличии будут все столбцы, покрывающие запрос, но сам ключ индекса будет небольшим и эффективным.  
   
--   Включите неключевые столбцы в некластеризованный индекс, чтобы избежать превышения текущих ограничений на размер индекса (16 ключевых столбцов) и размер ключа индекса (900 байт). Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не учитывает неключевые столбцы при расчете количества ключевых столбцов индекса и размера ключа индекса.  
+-   Включите неключевые столбцы в некластеризованный индекс, чтобы не превышать существующие ограничения на размер индекса (32 столбца) и размер ключа индекса (1 700 байт). До версии [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] использовались ограничения в 16 столбцов и 900 байт. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не учитывает неключевые столбцы при расчете количества ключевых столбцов индекса и размера ключа индекса.  
   
 ###  <a name="Restrictions"></a> Ограничения  
   
@@ -85,11 +89,11 @@ caps.handback.revision: 28
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание индекса с неключевыми столбцами  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>Создание индекса с неключевыми столбцами  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо создать индекс с неключевыми столбцами.  
   
@@ -97,7 +101,7 @@ caps.handback.revision: 28
   
 3.  Щелкните знак «плюс», чтобы развернуть таблицу, в которой необходимо создать индекс с неключевыми столбцами.  
   
-4.  Щелкните правой кнопкой мыши папку **Индексы**, выберите **Создать индекс** и **Некластеризованный индекс…**  
+4.  Щелкните правой кнопкой мыши папку **Индексы** , выберите **Создать индекс**и **Некластеризованный индекс…**  
   
 5.  В диалоговом окне **Создание индекса** на странице **Общие** введите имя нового индекса в поле **Имя индекса** .  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание индекса с неключевыми столбцами  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>Создание индекса с неключевыми столбцами  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -140,3 +144,4 @@ caps.handback.revision: 28
  Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+
