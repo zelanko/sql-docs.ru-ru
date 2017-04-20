@@ -1,31 +1,35 @@
 ---
-title: "Использование собственного формата для импорта или экспорта данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "собственный формат данных [SQL Server]"
-  - "форматы данных [SQL Server], собственные"
+title: "Использование собственного формата для импорта или экспорта данных (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование собственного формата для импорта или экспорта данных
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
 Собственный формат данных рекомендуется использовать при массовой передаче данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через файл данных, который не содержит символов в расширенной кодировке или символов в двухбайтовой кодировке (DBCS).  
 
 > [!NOTE]
->  При массовой передаче данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи файла данных, содержащего символы в расширенной кодировке или символы DBCS, необходимо использовать собственный формат в Юникоде. Дополнительные сведения см. в разделе [Использование собственного формата Юникод для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
+>  При массовой передаче данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи файла данных, содержащего символы в расширенной кодировке или символы DBCS, необходимо использовать собственный формат в Юникоде. Дополнительные сведения см. в разделе [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).
 
-В собственном формате используются собственные типы данных базы данных. Собственный формат предназначен для высокоскоростной передачи данных между таблицами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если используется файл форматирования, то исходная и целевая таблицы не обязаны быть идентичными. Передача данных происходит в два этапа:  
+В собственном формате используются собственные типы данных базы данных. Собственный формат предназначен для высокоскоростной передачи данных между таблицами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если используется файл форматирования, то исходная и целевая таблицы не обязаны быть идентичными. Передача данных происходит в два этапа:  
   
 1.  Массовый экспорт данных из исходной таблицы в файл данных.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 43
 |[Как bcp обрабатывает данные в собственном формате](#considerations)|
 |[Параметры командной строки для собственного формата](#command_options)|
 |[Пример условий теста](#etc)<br /><br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла форматирования в формате, отличном от XML](#nonxml_format_file)|
-|[Примеры](#examples)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для экспорта данных](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для импорта данных без файла форматирования](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата без файла форматирования](#bulk_native)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата с файлом форматирования, не являющимся XML](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и собственного формата с файлом форматирования, не являющимся XML](#openrowset_native_fmt)|
+|[Примеры](#examples)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для экспорта данных](#bcp_native_export)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для импорта данных без файла форматирования](#bcp_native_import)<br />&emsp;&#9679;&emsp;[Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML-файлом](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата без файла форматирования](#bulk_native)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и собственного формата с файлом форматирования, не являющимся XML-файлом](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET и собственного формата с файлом форматирования, не являющимся XML-файлом](#openrowset_native_fmt)|
 |[Связанные задачи](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 ## Ограничения<a name="restrictions"></a>  
@@ -61,22 +65,22 @@ caps.handback.revision: 43
   
 -   Несимвольные данные.  
   
-     [Программа bcp](../../tools/bcp-utility.md) использует для записи несимвольных данных из таблицы в файл данных внутренний двоичный формат данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     [Программа bcp](../../tools/bcp-utility.md) использует для записи несимвольных данных из таблицы в файл данных внутренний двоичный формат данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Данные типа[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) или [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) .  
+-   Данные типа[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) или [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
   
      В начале каждого поля [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) или [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) программа [bcp](../../tools/bcp-utility.md) добавляет длину префикса.  
   
     > [!IMPORTANT]
-    >  По умолчанию при использовании собственного режима программа [bcp](../../tools/bcp-utility.md) перед копированием в файл данных преобразует символы из формата [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в символы OEM. [Программа bcp](../../tools/bcp-utility.md) преобразует символы из файла данных в символы ANSI перед их массовым импортом в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Во время подобных преобразований расширенные символьные данные могут быть потеряны. Для расширенных наборов символов необходимо либо использовать собственный формат в Юникоде, либо задать кодовую страницу.
+    >  По умолчанию при использовании собственного режима программа [bcp](../../tools/bcp-utility.md) перед копированием в файл данных преобразует символы из формата [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в символы OEM. [Программа bcp](../../tools/bcp-utility.md) преобразует символы из файла данных в символы ANSI перед их массовым импортом в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Во время подобных преобразований расширенные символьные данные могут быть потеряны. Для расширенных наборов символов необходимо либо использовать собственный формат в Юникоде, либо задать кодовую страницу.
   
 -   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) data  
   
-     Если данные типа [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) сохраняются как SQLVARIANT в файле данных в собственном формате, то все характеристики данных сохраняются. Метаданные, в которых записан тип данных каждой величины, записываются вместе со значениями данных. Эти метаданные используются для повторного создания значений данных с тем же типом данных, что и в столбце назначения [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md).  
+     Если данные типа [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) сохраняются как SQLVARIANT в файле данных в собственном формате, то все характеристики данных сохраняются. Метаданные, в которых записан тип данных каждой величины, записываются вместе со значениями данных. Эти метаданные используются для повторного создания значений данных с тем же типом данных, что и в столбце назначения [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) .  
   
      Если в столбце назначения тип данных отличается от [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md), то каждое значение данных преобразуется в тип данных столбца назначений согласно стандартным правилам неявного преобразования данных. При возникновении ошибки во время преобразования данных происходит откат текущего пакета. С любыми значениями [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) и [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), которые передаются между столбцами [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md), могут возникнуть проблемы преобразования кодовых страниц.  
   
-     Дополнительные сведения о преобразовании данных см. в статье [Преобразование типов данных (Database Engine)](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+     Дополнительные сведения о преобразовании данных см. в статье [Преобразование типов данных (ядро СУБД)](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 ## Параметры командной строки для собственного формата<a name="command_options"></a>  
 Импортировать в таблицу данные в собственном формате можно при помощи программы [bcp](../../tools/bcp-utility.md), инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Для команды [bcp](../../tools/bcp-utility.md) или инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) формат данных можно указать в инструкции.  Для инструкции [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) нужно указать формат данных в файле форматирования.  
@@ -85,12 +89,12 @@ caps.handback.revision: 43
 
 |Command|Параметр|Описание|  
 |-------------|------------|-----------------|  
-|bcp|**-n**|Приводит к использованию служебной программой bcp собственных типов данных. *|  
+|bcp|**-n**|Приводит к использованию служебной программой bcp собственных типов данных. *|  
 |BULK INSERT|DATAFILETYPE **="native"**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  
 |OPENROWSET|Недоступно|Требуется использовать файл форматирования.|
 
   
- \*Чтобы загрузить собственные (**-n**) данные в формате, совместимом с клиентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, используйте параметр **-V**. Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*Чтобы загрузить собственные (**-n**) данные в формате, совместимом с клиентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, используйте параметр **-V** . Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
 > [!NOTE]
 >  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см. в статье [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -126,7 +130,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
-SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myNative.fmt` в формате, отличном от XML, на основе схемы `myNative`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md), укажите аргумент **format**, а вместо пути файла данных задайте значение **nul**.  Параметр format также требует наличия параметра **-f**.  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующие команды:
+SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myNative.fmt`в формате, отличном от XML, на основе схемы `myNative`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующие команды:
 
 ```
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
@@ -145,7 +149,7 @@ Notepad D:\BCP\myNative.fmt
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
 ### **Использование bcp и собственного формата для экспорта данных**<a name="bcp_native_export"></a>
-Параметр **-n** и команда **OUT**.  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
+Параметр**-n** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -154,7 +158,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Использование bcp и собственного формата для импорта данных без файла форматирования**<a name="bcp_native_import"></a>
-Параметр **-n** и команда **IN**.  В командной строке введите следующие команды:
+Параметр**-n** и команда **IN** .  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -167,7 +171,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_native_import_fmt"></a>
-Параметры **-n** и **-f** и команда **IN**.  В командной строке введите следующие команды:
+Параметры**-n** и **-f** switches и **IN** commи.  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -180,7 +184,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Использование инструкции BULK INSERT и собственного формата без файла форматирования**<a name="bulk_native"></a>
-Аргумент **DATAFILETYPE**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Аргумент**DATAFILETYPE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -194,7 +198,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Использование инструкции BULK INSERT и собственного формата с файлом форматирования, не являющимся XML**<a name="bulk_native_fmt"></a>
-Аргумент **FORMATFILE**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -208,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **Использование инструкции OPENROWSET и собственного формата с файлом форматирования, не являющимся XML**<a name="openrowset_native_fmt"></a>
-Аргумент **FORMATFILE**.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative
@@ -233,8 +237,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
   
 -   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## См. также:  
- [Программа bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>См. также:  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)   
@@ -243,3 +247,4 @@ SELECT * FROM TestDatabase.dbo.myNative;
  [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   
+
