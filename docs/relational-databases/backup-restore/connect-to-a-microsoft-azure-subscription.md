@@ -1,28 +1,32 @@
 ---
-title: "Соединение с подпиской Microsoft Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Соединение с подпиской Microsoft Azure | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 caps.latest.revision: 4
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6db65c242dc6dd9fd1c6c910d583d026f45422c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Соединение с подпиской Microsoft Azure
+# <a name="connect-to-a-microsoft-azure-subscription"></a>Соединение с подпиской Microsoft Azure
 Параметр **Соединиться с подпиской Майкрософт** используется для регистрации существующего контейнера больших двоичных объектов в экземпляре SQL Server.  С помощью параметров, приведенных в диалоговом окне, в контейнере больших двоичных объектов будет создан подписанный URL-адрес и политика подписанных URL-адресов, после чего будут созданы учетные данные SQL Server.  Это диалоговое окно открывается при использовании задачи резервного копирования или восстановления в SQL Server Management Studio. Для выполнения операции требуется URL-адрес устройства.
 
-## Ограничение
-Параметр **Соединиться с подпиской Майкрософт** работает только с учетной записью хранилища Azure, созданной с помощью модели развертывания управления службами (классической модели развертывания).  Дополнительные сведения о моделях развертывания Azure см. в статье [Azure Resource Manager и классическое развертывание](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/).
+## <a name="limitation"></a>Ограничение
+Параметр**Соединиться с подпиской Майкрософт** работает только с учетной записью хранилища Azure, созданной с помощью модели развертывания управления службами (классической модели развертывания).  Дополнительные сведения о моделях развертывания Azure см. в статье [Azure Resource Manager и классическое развертывание](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/).
 
-## Параметры
+## <a name="options"></a>Параметры
 **Вход**     
 Вход с использованием соответствующей учетной записи Azure.
 
@@ -43,3 +47,4 @@ caps.handback.revision: 4
 
 **Создать учетные данные**   
 Кнопка для создания политики подписанных URL-адресов и подписанного URL-адреса и последующего создания учетных данных SQL Server.
+

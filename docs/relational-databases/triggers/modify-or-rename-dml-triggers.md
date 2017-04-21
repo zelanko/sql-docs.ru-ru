@@ -1,26 +1,30 @@
 ---
-title: "Изменение или переименование триггеров DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "переименование триггеров"
-  - "изменение триггеров"
-  - "триггеры DML, изменение"
+title: "Изменение или переименование триггеров DML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение или переименование триггеров DML
+# <a name="modify-or-rename-dml-triggers"></a>Изменение или переименование триггеров DML
   В этом разделе описывается процедура изменения или переименования триггера DML в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -47,7 +51,7 @@ caps.handback.revision: 29
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Не рекомендуется использовать для переименования триггера хранимую процедуру [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md). Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. При переименовании триггера не изменяется имя соответствующего объекта в определении столбца представления каталога [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md). Вместо этого рекомендуется удалить триггер и снова создать его.  
+-   Не рекомендуется использовать для переименования триггера хранимую процедуру [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md) . Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. При переименовании триггера не изменяется имя соответствующего объекта в определении столбца представления каталога [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) . Вместо этого рекомендуется удалить триггер и снова создать его.  
   
 -   Если изменилось имя объекта, на который ссылается триггер, текст триггера необходимо соответствующим образом изменить. Поэтому перед переименованием объекта вначале отобразите зависимости объекта, чтобы определить, не повлияет ли предлагаемое изменение на работу каких-либо триггеров.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Изменение триггера DML  
+#### <a name="to-modify-a-dml-trigger"></a>Изменение триггера DML  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 29
   
 4.  Измените триггер и нажмите кнопку **Выполнить**.  
   
-#### Переименование триггера DML  
+#### <a name="to-rename-a-dml-trigger"></a>Переименование триггера DML  
   
 1.  [Удалите триггер](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) , который нужно переименовать.  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Изменение триггера с помощью ALTER TRIGGER  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>Изменение триггера с помощью ALTER TRIGGER  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующие примеры в запрос. Выполните первый пример, чтобы создать триггер DML, который выводит на клиент определяемое пользователем сообщение, когда пользователь пытается добавить или изменить данные в таблице `SalesPersonQuotaHistory`. Выполните инструкцию [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) , чтобы изменить триггер так, чтобы он срабатывал только на операции `INSERT` . Этот триггер полезен, так как он напоминает пользователям, что при обновлениях и вставках строк в эту таблицу необходимо направить уведомление в отдел `Compensation` .  
+3.  Скопируйте следующие примеры в запрос. Выполните первый пример, чтобы создать триггер DML, который выводит на клиент определяемое пользователем сообщение, когда пользователь пытается добавить или изменить данные в таблице `SalesPersonQuotaHistory` . Выполните инструкцию [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) , чтобы изменить триггер так, чтобы он срабатывал только на операции `INSERT` . Этот триггер полезен, так как он напоминает пользователям, что при обновлениях и вставках строк в эту таблицу необходимо направить уведомление в отдел `Compensation` .  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### Переименование триггера с помощью инструкций DROP TRIGGER и ALTER TRIGGER  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>Переименование триггера с помощью инструкций DROP TRIGGER и ALTER TRIGGER  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER (Transact-SQL)](../../t-sql/statements/enable-trigger-transact-sql.md)   

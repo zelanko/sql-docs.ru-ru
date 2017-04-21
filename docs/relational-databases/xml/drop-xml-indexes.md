@@ -1,31 +1,35 @@
 ---
-title: "Удаление XML-индексов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "удаление индексов"
-  - "удаление индексов"
-  - "XML-индексы [SQL Server], удаление"
+title: "Удаление XML-индексов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- dropping indexes
+- XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление XML-индексов
+# <a name="drop-xml-indexes"></a>Удаление XML-индексов
   Инструкция [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет удалить существующие первичные и вторичные XML-индексы и индексы других типов. Однако к XML-индексам не применяется ни один из параметров DROP INDEX. Если удаляется первичный XML-индекс, то вместе с ним удаляются также и все имеющиеся вторичные индексы.  
   
  Синтаксис инструкции DROP для *TableName.IndexName* постепенно вытесняется и для XML-индексов не поддерживается.  
   
-## Пример. Создание и удаление первичного XML-индекса  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Пример. Создание и удаление первичного XML-индекса  
  В следующем примере создается XML-индекс для столбца типа **xml** .  
   
 ```  
@@ -67,8 +71,8 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## Пример. Создание XML-индекса с помощью параметра DROP_EXISTING  
- В следующем примере XML-индекс создается для столбца `XmlColx`. Затем для другого столбца (`XmlColy`) создается другой XML-индекс с тем же именем. Так как задан параметр `DROP_EXISTING`, существующий XML-индекс для столбца (`XmlColx)`) удаляется и вместо него создается новый XML-индекс для столбца (`XmlColy`).  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Пример. Создание XML-индекса с помощью параметра DROP_EXISTING  
+ В следующем примере XML-индекс создается для столбца`XmlColx`. Затем для другого столбца (`XmlColy`) создается другой XML-индекс с тем же именем. Так как задан параметр `DROP_EXISTING` , существующий XML-индекс для столбца (`XmlColx)` ) удаляется и вместо него создается новый XML-индекс для столбца (`XmlColy`).  
   
 ```  
 DROP TABLE T  
@@ -95,7 +99,7 @@ AND    si.object_id=object_id('T')
   
  Запрос возвращает имя столбца, для которого создан XML-индекс.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

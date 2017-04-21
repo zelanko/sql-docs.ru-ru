@@ -1,27 +1,31 @@
 ---
-title: "Отсоединение базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.detachdatabase.f1"
-helpviewer_keywords: 
-  - "отсоединение баз данных [SQL Server]"
-  - "отсоединение баз данных [SQL Server]"
+title: "Отсоединение базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.detachdatabase.f1
+helpviewer_keywords:
+- database detaching [SQL Server]
+- detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d22af54732f9e9042a7aea3dd830be712b80fdd8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Отсоединение базы данных
+# <a name="detach-a-database"></a>Отсоединение базы данных
   В этом разделе описывается отсоединение базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Отсоединенные файлы останутся на диске и могут быть повторно подсоединены с помощью инструкции CREATE DATABASE с параметрами FOR ATTACH или FOR ATTACH_REBUILD_LOG. Файлы можно также переместить на другой сервер и подсоединить там.  
   
  **В этом разделе**  
@@ -50,7 +54,7 @@ caps.handback.revision: 36
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Отсоединение базы данных  
+#### <a name="to-detach-a-database"></a>Отсоединение базы данных  
   
 1.  В обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , а затем раскройте его.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
      **Базы данных для отсоединения**  
      Перечисляет базы данных для отсоединения.  
   
-     **Имя базы данных**  
+     **Database Name**  
      Отображает имя базы данных для отсоединения.  
   
      **Удалить соединения**  
@@ -74,7 +78,7 @@ caps.handback.revision: 36
      По умолчанию операция отсоединения сохраняет устаревшую статистику оптимизации. Для ее обновления установите этот флажок.  
   
      **Сохранять полнотекстовые каталоги**  
-     По умолчанию операция отсоединения сохраняет связанные с базой данных полнотекстовые каталоги. Для удаления этих каталогов сбросьте флажок **Сохранять полнотекстовые каталоги**. Этот параметр доступен только при обновлении базы данных с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     По умолчанию операция отсоединения сохраняет связанные с базой данных полнотекстовые каталоги. Для удаления этих каталогов сбросьте флажок **Сохранять полнотекстовые каталоги** . Этот параметр доступен только при обновлении базы данных с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Состояние**  
      Отображает одно из следующих состояний: **Готов** или **Не готов**.  
@@ -84,7 +88,7 @@ caps.handback.revision: 36
   
     -   Если база данных участвует в репликации, то ее **Состояние** имеет значение **Не готово** , а в столбце **Сообщение** отображается строка **База данных реплицирована**.  
   
-    -   Если имеется одно или несколько активных соединений с базой данных, то ее **Состояние** имеет значение **Не готово**, а в столбце **Сообщение** отображается *Активных соединений:***\<число_активных_соединений>**, например **Активных соединений: 1**. Прежде чем можно будет отсоединить базу данных, необходимо отключить активные соединений, выбрав команду **Удалить соединения**.  
+    -   Если имеется одно или несколько активных соединений с базой данных, то ее **Состояние** имеет значение **Не готово**, а в столбце **Сообщение** отображается *Активных соединений:***<число_активных_соединений>**, например **Активных соединений: 1**. Прежде чем можно будет отсоединить базу данных, необходимо отключить активные соединений, выбрав команду **Удалить соединения**.  
   
      Чтобы получить сведения о сообщении, откройте монитор активности, щелкнув текст с гиперссылкой.  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 36
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Отсоединение базы данных  
+#### <a name="to-detach-a-database"></a>Отсоединение базы данных  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 36
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

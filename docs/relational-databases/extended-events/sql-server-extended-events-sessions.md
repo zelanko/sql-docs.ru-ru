@@ -1,27 +1,31 @@
 ---
-title: "Сеансы расширенных событий SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe, расширенные события"
-  - "сеансы"
-  - "расширенные события [SQL Server]"
+title: "Сеансы расширенных событий SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сеансы расширенных событий SQL Server
+# <a name="sql-server-extended-events-sessions"></a>Сеансы расширенных событий SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Сеанс расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается в процессе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором выполняется подсистема расширенных событий. Следующие аспекты сеанса расширенных событий предоставляют контекст, необходимый для понимания инфраструктуры и принципов работы расширенных событий.  
@@ -30,7 +34,7 @@ caps.handback.revision: 20
   
 -   Содержимое и характеристики сеанса. Содержимое сеанса расширенных событий, например цели и события, и связь этих объектов в сеансе и между сеансами.  
   
-## Состояния сеанса  
+## <a name="session-states"></a>Состояния сеанса  
  На следующем рисунке показаны различные состояния сеанса расширенных событий.  
   
  ![Состояние сеанса расширенных событий](../../relational-databases/extended-events/media/xesessionstate.gif "Состояние сеанса расширенных событий")  
@@ -47,12 +51,12 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Инструкции ALTER EVENT SESSION и DROP EVENT SESSION могут применяться к метаданным или к активному сеансу и метаданным.  
   
-## Содержимое и характеристики сеанса  
+## <a name="session-content-and-characteristics"></a>Содержимое и характеристики сеанса  
  Сеансы расширенных событий имеют неявные границы, выражающиеся в том, что конфигурация одного сеанса не изменяет конфигурацию другого сеанса. Однако эти границы не мешают использованию одного события или одной цели в нескольких сеансах.  
   
  На следующем рисунке показано содержимое сеанса и связь между пакетами и сеансами.  
   
- ![Совместные работа и использование объектов в сеансах.](../../relational-databases/extended-events/media/xesessions.gif "Совместные работа и использование объектов в сеансах.")  
+ ![Совместное существование и совместное использование объектов в сеансах.] (../../relational-databases/extended-events/media/xesessions.gif "Совместное существование и совместное использование объектов в сеансах.")  
   
  Обратите внимание, что на предыдущем рисунке:  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  Архитектура расширенных событий представляет собой гибкую систему, позволяющую совместно использовать разнообразные объекты для решения конкретных проблем.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -1,28 +1,32 @@
 ---
-title: "Перекомпиляция хранимой процедуры | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sp_recompile"
-  - "WITH RECOMPILE, предложение"
-  - "перекомпиляция хранимых процедур"
-  - "хранимые процедуры [SQL Server], перекомпиляция"
+title: "Перекомпиляция хранимой процедуры | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sp_recompile
+- WITH RECOMPILE clause
+- recompiling stored procedures
+- stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2c8f7940c224d22fc93eea4d2c269658e97f266
+ms.lasthandoff: 04/11/2017
+
 ---
-# Перекомпиляция хранимой процедуры
-  В этом разделе описывается, как перекомпилировать хранимую процедуру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это можно сделать тремя способами: указать параметр **WITH RECOMPILE** в определении процедуры или при вызове процедуры, задать указание запроса **RECOMPILE** в отдельных инструкциях или использовать системную хранимую процедуру **sp_recompile**. В этом разделе описывается использование параметра WITH RECOMPILE при создании определения процедуры и выполнении существующей процедуры. Также описывается использование системной хранимой процедуры sp_recompile для перекомпиляции существующей процедуры.  
+# <a name="recompile-a-stored-procedure"></a>Перекомпиляция хранимой процедуры
+  В этом разделе описывается, как перекомпилировать хранимую процедуру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это можно сделать тремя способами: указать параметр **WITH RECOMPILE** в определении процедуры или при вызове процедуры, задать указание запроса **RECOMPILE** в отдельных инструкциях или использовать системную хранимую процедуру **sp_recompile** . В этом разделе описывается использование параметра WITH RECOMPILE при создании определения процедуры и выполнении существующей процедуры. Также описывается использование системной хранимой процедуры sp_recompile для перекомпиляции существующей процедуры.  
   
  **В этом разделе**  
   
@@ -48,12 +52,12 @@ caps.handback.revision: 37
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обладает возможностью перекомпиляции процедур на уровне инструкций. Во время перекомпиляции хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заново компилирует только вызвавшую этот процесс инструкцию, а не всю процедуру.  
   
--   Если некоторые запросы в процедуре регулярно используют нетипичные или временные значения, то можно повысить производительность процедуры, используя указание запроса RECOMPILE в таких запросах. Поскольку перекомпиляцию будут проходить только запросы, использующие это указание, а не вся процедура, то повторная компиляция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет работать на уровне инструкций. Однако, помимо использования текущих значений параметров процедуры, указание запроса RECOMPILE при компиляции инструкции также использует значения локальных переменных в хранимой процедуре. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../Topic/Query%20Hints%20\(Transact-SQL\).md).  
+-   Если некоторые запросы в процедуре регулярно используют нетипичные или временные значения, то можно повысить производительность процедуры, используя указание запроса RECOMPILE в таких запросах. Поскольку перекомпиляцию будут проходить только запросы, использующие это указание, а не вся процедура, то повторная компиляция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]будет работать на уровне инструкций. Однако, помимо использования текущих значений параметров процедуры, указание запроса RECOMPILE при компиляции инструкции также использует значения локальных переменных в хранимой процедуре. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Параметр **WITH RECOMPILE**  
+ Параметр**WITH RECOMPILE**   
  Если этот параметр используется при создании определения процедуры, то необходимо разрешение CREATE PROCEDURE в базе данных и разрешение ALTER на схему, в которой создается процедура.  
   
  Если этот параметр используется в инструкции EXECUTE, требуются разрешения EXECUTE на процедуру. Разрешения на саму инструкцию EXECUTE не требуются, однако требуются разрешения на выполнение процедуры, упоминаемой в инструкции EXECUTE. Дополнительные сведения см. в разделе [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -61,12 +65,12 @@ caps.handback.revision: 37
  Указание запроса **RECOMPILE**  
  Эта возможность используется при создании процедуры, и указание включается в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в процедуре. Таким образом, требуется разрешение CREATE PROCEDURE в базе данных и разрешение ALTER на схему, в которой создается процедура.  
   
- Выполнение системной хранимой процедуры **sp_recompile**  
+ Выполнение системной хранимой процедуры**sp_recompile**   
  Необходимо разрешение ALTER на указанную процедуру.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Перекомпиляция хранимой процедуры с использованием параметра WITH RECOMPILE  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Перекомпиляция хранимой процедуры с использованием параметра WITH RECOMPILE  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -94,7 +98,7 @@ AS
   
 ```  
   
-#### Перекомпиляция хранимой процедуры с использованием параметра WITH RECOMPILE  
+#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Перекомпиляция хранимой процедуры с использованием параметра WITH RECOMPILE  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -112,7 +116,7 @@ GO
   
 ```  
   
-#### Перекомпиляция хранимой процедуры с использованием процедуры sp_recompile  
+#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>Перекомпиляция хранимой процедуры с использованием процедуры sp_recompile  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -130,7 +134,7 @@ GO
   
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание хранимой процедуры](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Изменение хранимой процедуры](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Изменение имени хранимой процедуры](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

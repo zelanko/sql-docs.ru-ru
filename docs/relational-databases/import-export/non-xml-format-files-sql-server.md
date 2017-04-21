@@ -1,27 +1,31 @@
 ---
-title: "Файлы формата, отличные от XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "файлы форматирования в формате, отличном от XML"
-  - "файлы форматирования [SQL Server], файлы форматирования, отличные от XML"
-  - "массовый импорт [SQL Server], файлы форматирования"
+title: "Файлы форматирования, отличные от XML (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- non-XML format files
+- format files [SQL Server], non-XML format files
+- bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.lasthandoff: 04/11/2017
+
 ---
-# Файлы формата, отличные от XML (SQL Server)
-  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживаются два типа файлов форматирования для массового экспорта и импорта: *файлы формата, отличного от XML*, и *XML-файлы форматирования*.  
+# <a name="non-xml-format-files-sql-server"></a>Файлы формата, отличные от XML (SQL Server)
+  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживаются два типа файлов форматирования для массового экспорта и импорта: *файлы формата, отличного от XML* , и *XML-файлы форматирования*.  
   
  **В этом разделе.**  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 63
   
 ##  <a name="Benefits"></a> Преимущества использования файлов формата, отличных от XML.  
   
--   Можно автоматически создать файл формата, отличного от XML, указав параметр **format** в команде **bcp**.  
+-   Можно автоматически создать файл формата, отличного от XML, указав параметр **format** в команде **bcp** .  
   
 -   Если в команде **bcp** задан существующий файл формата, то в команде используются значения, содержащиеся в файле, поэтому пользователь не получает приглашений указать тип хранения файла, длину префикса, длину поля или признак конца поля.  
   
@@ -44,21 +48,21 @@ caps.handback.revision: 63
      Можно создать файл форматирования в формате, отличном от XML, который будет содержать определяемые в интерактивном режиме атрибуты для каждого поля данных. Дополнительные сведения см. в разделе [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
->  XML-файлы формата имеют несколько преимуществ над файлами формата, отличными от XML. Дополнительные сведения см в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
+>  XML-файлы формата имеют несколько преимуществ над файлами формата, отличными от XML. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
 ##  <a name="Structure"></a> Структура файлов форматирования в формате, отличном от XML  
  Файл форматирования в формате, отличном от XML — это текстовый файл, имеющий специальную структуру. Он содержит сведения о типе хранения, длине префикса, длине и признаке конца поля для каждого из столбцов таблицы.  
   
  На следующей схеме показаны поля учебного файла форматирования в формате, отличном от XML.  
   
- ![Идентифицирует поля файла в формате, отличном от XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Идентифицирует поля файла в формате, отличном от XML")  
+ ![Идентифицирует поля файла форматирования в формате, отличном от XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Идентифицирует поля файла форматирования в формате, отличном от XML")  
   
  Поля **Version** и **Number of columns** встречаются только один раз. Описание этих параметров приводится в следующей таблице.  
   
 |Поле файла форматирования|Описание|  
 |------------------------|-----------------|  
-|Version|Номер версии программы **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Номер версии распознается по программе **bcp[!INCLUDE[tsql](../../includes/tsql-md.md)], а не по **.<br /><br /> <br /><br /> Примечание. Версия служебной программы **bcp** (Bcp.exe), используемая для считывания файла форматирования, должна быть той же или более поздней по сравнению с программой, с помощью которой создавался файл форматирования. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** не может считать файл форматирования версии 12.0, созданный служебной программой [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
-|Число столбцов|Число полей в файле данных. Это значение должно быть одинаковым во всех строках.|  
+|Version|Номер версии программы **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Номер версии распознается по программе **bcp[!INCLUDE[tsql](../../includes/tsql-md.md)], а не по**.<br /><br /> <br /><br /> Примечание. Версия служебной программы **bcp** (Bcp.exe), используемая для считывания файла форматирования, должна быть той же или более поздней по сравнению с программой, с помощью которой создавался файл форматирования. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** не может считать файл форматирования версии 12.0, созданный служебной программой [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
+|Number of columns|Число полей в файле данных. Это значение должно быть одинаковым во всех строках.|  
   
  Другие поля файла форматирования описывают поля данных, массовый импорт и экспорт которых должен быть произведен. Для каждого поля данных необходима отдельная строка файла форматирования. Каждая строка файла форматирования содержит значения полей файла форматирования, описание которых находится в следующей таблице.  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 63
 >  Можно изменить файл форматирования так, чтобы обеспечить возможность массового импорта данных из файла, в котором количество или порядок полей отличаются от количества или порядка столбцов в таблице. Дополнительные сведения см. в списке [Связанные задачи](#RelatedTasks) далее в этом разделе.  
   
 ##  <a name="Examples"></a> Пример файла формата, отличного от XML  
- В следующем примере показан ранее созданный файл форматирования (`myDepartmentIdentical-f-c.fmt`) в формате, отличном от XML. В этом файле описываются поля символьных данных для каждого столбца таблицы `HumanResources.Department` в образце таблицы `AdventureWorks2012`.  
+ В следующем примере показан ранее созданный файл форматирования (`myDepartmentIdentical-f-c.fmt`) в формате, отличном от XML. В этом файле описываются поля символьных данных для каждого столбца таблицы `HumanResources.Department` в образце таблицы `AdventureWorks2012` .  
   
- Созданный файл форматирования `myDepartmentIdentical-f-c.fmt` содержит следующие данные:  
+ Созданный файл форматирования `myDepartmentIdentical-f-c.fmt`содержит следующие данные:  
   
 ```  
 12.0  
@@ -105,7 +109,7 @@ caps.handback.revision: 63
   
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Программа bcp](../../tools/bcp-utility.md)   
  [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)   
  [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)   

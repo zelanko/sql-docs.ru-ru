@@ -1,24 +1,28 @@
 ---
-title: "Отмена разрешений на коллекцию схем XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "отмена разрешений [SQL Server]"
+title: "Отзыв разрешения на коллекцию схем XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Отмена разрешений на коллекцию схем XML
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>Отмена разрешений на коллекцию схем XML
   Разрешение на создание коллекции XML-схем можно отменить, выполнив одну из следующих операций:  
   
 -   Отменить разрешение ALTER для реляционной схемы. Тогда участник не сможет создать коллекцию XML-схем в реляционной схеме. Однако участник сможет создавать коллекции XML-схем в других реляционных схемах той же базы данных.  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   Отменить для участника разрешения CREATE XML SCHEMA COLLECTION или ALTER XML SCHEMA COLLECTION в базе данных. Это не позволит участнику осуществлять импортирование коллекции XML-схем в пределах базы данных. Отмена разрешения ALTER или CONTROL в базе данных приводит к тому же результату.  
   
-## Отмена разрешений на существующий объект коллекции XML-схем  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>Отмена разрешений на существующий объект коллекции XML-схем  
  Здесь представлены разрешения, которые можно отменить для коллекции XML-схем, и результаты такой отмены:  
   
 -   Отмена разрешения ALTER лишает участника возможности изменять содержимое коллекции XML-схем.  
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   Отмена разрешения EXECUTE лишает участника возможности вставлять или обновлять значения в столбцах, переменных и параметрах, которые набраны или ограничены XML-коллекцией. Кроме того, отмена лишает права делать запрос столбцов, переменных или параметров типа **xml** .  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  Представленные в следующих примерах сценарии отображают организацию разрешений на XML-схемы. В каждом примере создается соответствующая тестовая база данных, реляционные схемы и имена входа. Этим именам входа предоставляются необходимые разрешения на коллекции XML-схем. После завершения работы каждый пример выполняет необходимые действия по очистке.  
   
-### A. Отмена разрешений на создание коллекции XML-схем  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. Отмена разрешений на создание коллекции XML-схем  
  Этот пример создает имя входа и образец базы данных. Он также добавляет реляционную схему в базу данных. Изначально имени входа предоставляется разрешение ALTER на обе реляционные схемы и другие необходимые разрешения на создание коллекций XML-схем. Этот пример отменяет разрешение ALTER на одну из реляционных схем в базе данных. Это лишает имя входа возможности создания коллекции XML-схем.  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

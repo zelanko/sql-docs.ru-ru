@@ -1,28 +1,32 @@
 ---
-title: "Создание ограничений уникальности | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "UNIQUE_TSQL"
-helpviewer_keywords: 
-  - "ограничения UNIQUE [SQL Server], создание"
-  - "ограничения [SQL Server], создание"
-  - "ограничения [SQL Server], уникальность"
+title: "Создание ограничения уникальности | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- UNIQUE_TSQL
+helpviewer_keywords:
+- UNIQUE constraints [SQL Server], creating
+- constraints [SQL Server], creating
+- constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8721056ce88631e4f86c71d8e557e0badcf13c48
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание ограничений уникальности
+# <a name="create-unique-constraints"></a>Создание ограничений уникальности
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Можно создать ограничение уникальности в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы гарантировать, что в определенных столбцах, не участвующих в первичном ключе, не будут встречаться повторяющиеся значения. Создание ограничения уникальности автоматически приводит к созданию соответствующего уникального индекса.  
@@ -48,21 +52,21 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание ограничения уникальности  
+#### <a name="to-create-a-unique-constraint"></a>Создание ограничения уникальности  
   
-1.  В **Обозревателе объектов** щелкните правой кнопкой мыши таблицу, в которую необходимо добавить ограничение уникальности, и выберите **Конструктор**.  
+1.  В **Обозревателе объектов**щелкните правой кнопкой мыши таблицу, в которую необходимо добавить ограничение уникальности, и выберите **Конструктор**.  
   
 2.  В меню **Конструктор таблиц** выберите пункт **Индексы и ключи**.  
   
 3.  В диалоговом окне **Индексы и ключи** нажмите **Добавить**.  
   
-4.  В сетке в разделе **Общие** щелкните **Тип** и выберите **Уникальный ключ** в раскрывающемся списке справа от свойства.  
+4.  В сетке в разделе **Общие**щелкните **Тип** и выберите **Уникальный ключ** в раскрывающемся списке справа от свойства.  
   
 5.  В меню **Файл** выберите пункт **Сохранить***table name*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание ограничения уникальности  
+#### <a name="to-create-a-unique-constraint"></a>Создание ограничения уникальности  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Создание ограничения уникальности в существующей таблице  
+#### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>Создание ограничения уникальности в существующей таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Создание ограничения уникальности в новой таблице  
+#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Создание ограничения уникальности в новой таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,6 +123,7 @@ caps.handback.revision: 18
   
     ```  
   
-     Дополнительные сведения см. в статьях [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [table_constraint (Transact-SQL)](../Topic/table_constraint%20\(Transact-SQL\).md).  
+     Дополнительные сведения см. в статьях [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+

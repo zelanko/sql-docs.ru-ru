@@ -1,24 +1,28 @@
 ---
-title: "Создание учетных данных — проверка подлинности в хранилище Azure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2014"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backuptourl.createcred.f1"
+title: "Создание учетных данных — аутентификация в хранилище Azure | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2014
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backuptourl.createcred.f1
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3bf85ebdf78e42466474e6c68a43219fbb546bd1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание учетных данных — проверка подлинности в хранилище Azure
+# <a name="create-credential---authenticate-to-azure-storage"></a>Создание учетных данных — проверка подлинности в хранилище Azure
   Чтобы создать новые учетные данные SQL, воспользуйтесь диалоговым окном **Резервное копирование по URL-адресу — создать учетные данные** .  
   
  При создании учетных данных с помощью этого диалогового окна необходимо предоставить сертификат управления Windows Azure, добавленный в локальное хранилище сертификатов, или профиль публикации, загруженный на компьютер для проверки подписки и сведений об учетной записи хранения.  
@@ -26,7 +30,7 @@ caps.handback.revision: 7
  **Учетные данные SQL**  
  Задайте имя создаваемых учетных данных SQL.  
   
-## Учетные данные Windows Azure  
+## <a name="windows-azure-credentials"></a>Учетные данные Windows Azure  
  **Сертификат управления**  
  Используйте этот параметр, чтобы указать сертификат из локального хранилища сертификатов, соответствующий сертификату управления из Windows Azure. Дополнительные сведения по сертификату управления Windows Azure см. в разделе [Создание и передача сертификата для Windows Azure](http://go.microsoft.com/fwlink/?LinkId=320781).  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 7
 > [!CAUTION]  
 >  SQL Server в настоящий момент поддерживает версию 2.0 профиля публикации. Для загрузки поддерживаемой версии профиля публикации см. раздел [Загрузка профиля публикации 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
   
-## Учетная запись хранения  
+## <a name="storage-account"></a>Учетная запись хранения  
  Выберите учетную запись хранения, которую нужно использовать для хранения файлов резервных копий.  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Пример. Получение сведений о сотрудниках | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT, режим"
+title: "Пример. Получение сведений о сотрудниках | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01f3d95b92757ba51a7e8466a9c8d9d535a0a773
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пример. Получение сведений о сотрудниках
+# <a name="example-retrieving-employee-information"></a>Пример. Получение сведений о сотрудниках
   В этом примере извлекаются идентификаторы и имена всех работников. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] значение employeeID может быть получено из столбца BusinessEntityID таблицы Employee. Имена работников могут быть получены из таблицы Person. Столбец BusinessEntityID можно использовать для соединения этих таблиц.  
   
  Предположим, что требуется произвести преобразование FOR XML EXPLICIT, чтобы сформировать XML так, как показано далее:  
@@ -128,7 +132,7 @@ FOR XML EXPLICIT;
   
  Процесс повторяется для оставшихся строк набора строк. Обратите внимание на важность порядка строк в универсальной таблице, чтобы FOR XML EXPLICIT, обработав набор строк по порядку, мог создать желаемый XML.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

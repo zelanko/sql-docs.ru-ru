@@ -1,27 +1,31 @@
 ---
-title: "Удаление представлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "удаление представлений"
-  - "удаление представлений"
-  - "представления [SQL Server], удаление"
-  - "удаление представлений"
+title: "Удаление представлений | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dropping views
+- deleting views
+- views [SQL Server], deleting
+- removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление представлений
+# <a name="delete-views"></a>Удаление представлений
   Представления можно удалить в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
@@ -53,7 +57,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Удаление представления из базы данных  
+#### <a name="to-delete-a-view-from-a-database"></a>Удаление представления из базы данных  
   
 1.  В **обозревателе объектов**разверните базу данных, в которой содержится представление, подлежащее удалению, а затем разверните папку **Представления** .  
   
@@ -62,11 +66,11 @@ caps.handback.revision: 15
 3.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
   
     > [!IMPORTANT]  
-    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта**, чтобы открыть диалоговое окно *имя_представления***Зависимости**. При этом будут отображены все объекты, зависящие от представления, и все объекты, от которых зависит представление.  
+    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта** , чтобы открыть диалоговое окно *имя_представления***Зависимости** . При этом будут отображены все объекты, зависящие от представления, и все объекты, от которых зависит представление.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Удаление представления из базы данных  
+#### <a name="to-delete-a-view-from-a-database"></a>Удаление представления из базы данных  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

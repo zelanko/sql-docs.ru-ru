@@ -1,36 +1,40 @@
 ---
-title: "Подсистема аудита SQL Server (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "подсистема аудита SQL Server"
-  - "аудит [SQL Server], подсистема аудита SQL Server"
+title: "Подсистема аудита SQL Server (ядро СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/11/2017
+
 ---
-# Подсистема аудита SQL Server (Database Engine)
+# <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  *Аудит* экземпляра среды [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] или отдельной базы данных включает в себя отслеживание и протоколирование событий, происходящих в компоненте [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Аудит среды [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет проводить аудит сервера, который может включать в себя спецификации аудита сервера для событий на уровне сервера, а также спецификации аудита базы данных для событий на уровне базы данных. События аудита могут записываться в журналы событий или файлы аудита.  
+  *Аудит* экземпляра среды [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] или отдельной базы данных включает в себя отслеживание и протоколирование событий, происходящих в компоненте [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Аудит среды[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет проводить аудит сервера, который может включать в себя спецификации аудита сервера для событий на уровне сервера, а также спецификации аудита базы данных для событий на уровне базы данных. События аудита могут записываться в журналы событий или файлы аудита.  
   
- В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]доступно несколько уровней аудита, применение которых зависит от существующих требований или стандартов установки. Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет средства и процессы, необходимые для включения, хранения и просмотра аудитов на различных объектах серверов и баз данных.  
+ В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]доступно несколько уровней аудита, применение которых зависит от существующих требований или стандартов установки. Подсистема аудита[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет средства и процессы, необходимые для включения, хранения и просмотра аудитов на различных объектах серверов и баз данных.  
   
  Группы действий аудита сервера можно записывать для всего экземпляра, а также группы действий аудита базы данных либо действия аудита базы данных для каждой базы данных. Событие аудита будет происходить каждый раз при обнаружении действия, подлежащего аудиту.  
   
- Аудит на уровне сервера поддерживается во всех выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Все выпуски поддерживают аудит на уровне базы данных, начиная с [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1). Раньше аудит на уровне базы банных был доступен только в выпусках Enterprise Edition, Developer Edition и Evaluation Edition. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Аудит на уровне сервера поддерживается во всех выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Все выпуски поддерживают аудит на уровне базы данных, начиная с [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1). Раньше аудит на уровне базы банных был доступен только в выпусках Enterprise Edition, Developer Edition и Evaluation Edition. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  Этот раздел относится к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Дополнительные сведения для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]см. в статье [Приступая к работе с аудитом базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
@@ -38,7 +42,7 @@ caps.handback.revision: 58
 ## <a name="sql-server-audit-components"></a>Компоненты подсистемы аудита SQL Server  
  *Аудит* — это сочетание в едином пакете нескольких элементов для определенной группы действий сервера или базы данных. Компоненты подсистемы аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] совместно формируют выходные данные, называемые аудитом, аналогично тому, как определение отчета в сочетании с элементами графики и данных формирует отчет.  
   
- Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует *расширенные события* для создания аудита. Дополнительные сведения о расширенных событиях см. в разделе [Расширенные события](../../../relational-databases/extended-events/extended-events.md).  
+ Подсистема аудита[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует *расширенные события* для создания аудита. Дополнительные сведения о расширенных событиях см. в разделе [Расширенные события](../../../relational-databases/extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>подсистема аудита SQL Server  
  Объект *Подсистема аудита SQL Server* объединяет отдельные экземпляры действий или групп действий уровня сервера или базы данных, за которыми нужно проводить наблюдение. Аудит работает на уровне экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . На одном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может существовать несколько аудитов.  
@@ -123,7 +127,7 @@ caps.handback.revision: 58
 ### <a name="database-mirroring-and-sql-server-audit"></a>Зеркальное отображение баз данных и подсистема аудита SQL Server  
  Если для базы данных определена спецификация аудита базы данных и используется зеркальное отображение базы данных, то в нее будет включена спецификация аудита базы данных. Для правильной работы на зеркальном экземпляре SQL необходимо выполнить настройку следующих элементов.  
   
--   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID**=***\<GUID from source Server Audit*>.  
+-   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID**=***\<идентификатор GUID подсистемы аудита целевого сервера*>.  
   
 -   При использовании в качестве цели двоичного файла учетная запись службы зеркального сервера должна обладать необходимыми разрешениями на место назначения, куда производится запись аудиторского следа.  
   
@@ -178,7 +182,7 @@ caps.handback.revision: 58
  Дополнительные сведения о предоставлении прав и разрешений см. в разделе [GRANT (Transact-SQL)](../../../t-sql/statements/grant-transact-sql.md).  
   
 > [!CAUTION]  
->  Члены роли sysadmin могут изменять любой компонент аудита; члены роли db_owner могут изменять спецификации аудита в базе данных. Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполнит проверку наличия у имени входа, пытающегося выполнить создание или изменение спецификации аудита (хотя бы разрешения ALTER ANY DATABASE AUDIT). Однако при присоединении базы данных проверка не производится. Следует считать, что спецификации аудита базы данных настолько надежны, насколько надежны участники, имеющие роли sysadmin или db_owner.  
+>  Члены роли sysadmin могут изменять любой компонент аудита; члены роли db_owner могут изменять спецификации аудита в базе данных. Подсистема аудита[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполнит проверку наличия у имени входа, пытающегося выполнить создание или изменение спецификации аудита (хотя бы разрешения ALTER ANY DATABASE AUDIT). Однако при присоединении базы данных проверка не производится. Следует считать, что спецификации аудита базы данных настолько надежны, насколько надежны участники, имеющие роли sysadmin или db_owner.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Создание аудита сервера и спецификации аудита сервера](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [Записи подсистемы аудита SQL Server](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

@@ -1,24 +1,28 @@
 ---
-title: "Считывание страниц | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "страницы"
+title: "Считывание страниц | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 caps.latest.revision: 3
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7ac5398f3b10db59812539e58abaff9ef2c7cd0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Считывание страниц
+# <a name="reading-pages"></a>Считывание страниц
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Процесс ввода-вывода экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в базе данных SQL Server включает физические и логические операции чтения. Логическое чтение выполняется каждый раз, когда компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] запрашивает страницу из [буферного кэша](../relational-databases/memory-management-architecture-guide.md). Если в этот момент страница не находится в кэше, то сначала при помощи операции физического чтения она копируется в него с диска.
@@ -33,7 +37,7 @@ caps.handback.revision: 3
 Упреждающее чтение бывает двух видов: для страниц данных и для страниц индексов.
 
 ### <a name="reading-data-pages"></a>Чтение страниц данных
-Просмотр таблиц для чтения страниц данных выполняется в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)] весьма эффективно. Страницы карты распределения индекса (IAM) в базе данных SQL Server содержат указатели на экстенты, используемые таблицей или индексом. Подсистема хранилища может считывать IAM для построения отсортированного списка адресов на диске, которые необходимо считать. Это позволяет подсистеме хранилища оптимизировать операции ввода-вывода выполняемые последовательно в виде больших операций чтения на основе их размещения на диске. Дополнительные сведения о страницах IAM см. в статье [Управление дисковым пространством, занятым объектами](../relational-databases/pages-and-extents-architecture-guide.md).
+Просмотр таблиц для чтения страниц данных выполняется в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)]весьма эффективно. Страницы карты распределения индекса (IAM) в базе данных SQL Server содержат указатели на экстенты, используемые таблицей или индексом. Подсистема хранилища может считывать IAM для построения отсортированного списка адресов на диске, которые необходимо считать. Это позволяет подсистеме хранилища оптимизировать операции ввода-вывода выполняемые последовательно в виде больших операций чтения на основе их размещения на диске. Дополнительные сведения о страницах IAM см. в статье [Управление дисковым пространством, занятым объектами](../relational-databases/pages-and-extents-architecture-guide.md).
 
 ### <a name="reading-index-pages"></a>Считывание страниц индекса
 Подсистема хранилища считывает страницы индекса последовательно, в порядке значений ключей. На приведенном ниже рисунке показан пример упрощенного представления набора конечных страниц, которое содержит набор ключей и промежуточный узел индекса, сопоставляющий концевые страницы. Дополнительные сведения о структуре страниц в индексе см. в статье [Структуры кластеризованного индекса](../relational-databases/pages-and-extents-architecture-guide.md).

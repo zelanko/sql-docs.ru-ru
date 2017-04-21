@@ -1,32 +1,36 @@
 ---
-title: "Реализация уведомлений о событиях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "уведомления о событиях [SQL Server], целевая служба"
-  - "целевая служба [SQL Server]"
-  - "уведомления о событии [SQL Server], создание"
+title: "Реализация уведомлений о событиях | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], target service
+- target service [SQL Server]
+- event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eac9804c15bfcafbb5581875258d4499df130db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Реализация уведомлений о событиях
+# <a name="implement-event-notifications"></a>Реализация уведомлений о событиях
   Для реализации уведомлений о событиях необходимо сперва создать целевую службу, которая будет получать уведомления о событиях, а затем создать уведомление о событиях.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] на удаленном сервере, необходимо настроить безопасность диалога. Безопасность диалога должна быть настроена вручную согласно модели полной безопасности.  
   
-## Создание целевой службы  
+## <a name="creating-the-target-service"></a>Создание целевой службы  
  Не нужно создавать службу, инициирующую компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)], так как [!INCLUDE[ssSB](../../includes/sssb-md.md)] включает в себя следующий специальный тип сообщения и контракт для уведомлений о событиях:  
   
 ```  
@@ -66,7 +70,7 @@ ADDRESS = 'LOCAL';
 GO  
 ```  
   
-## Создание уведомления о событии  
+## <a name="creating-the-event-notification"></a>Создание уведомления о событии  
  Уведомления о событиях создаются при помощи инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE EVENT NOTIFICATION и удаляются при помощи инструкции DROP EVENT NOTIFICATION. Чтобы изменить уведомление о событии, его нужно удалить, а затем создать заново.  
   
  В следующем примере создается уведомление о событии `CreateDatabaseNotification`. Это уведомление отправляет предварительно созданной службе `CREATE_DATABASE` сообщения обо всех событиях `NotifyService`, происходящих на сервере.  
@@ -95,7 +99,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Получение сведений об уведомлениях о событиях](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

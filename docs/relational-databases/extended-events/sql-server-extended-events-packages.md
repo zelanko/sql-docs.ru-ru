@@ -1,38 +1,42 @@
 ---
-title: "Пакеты обработки расширенных событий SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "расширенные события [SQL Server], пакеты"
-  - "xe, расширенные события"
+title: "Пакеты обработки расширенных событий SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пакеты обработки расширенных событий SQL Server
+# <a name="sql-server-extended-events-packages"></a>Пакеты обработки расширенных событий SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Пакет представляет собой контейнер для объектов средства обработки расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Существуют три типа пакетов расширенных событий.  
   
 -   package0 — системные объекты расширенных событий. Это пакет по умолчанию.  
   
--   sqlserver — объекты, связанные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   sqlserver — объекты, связанные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   sqlos — объекты, связанные с операционной системой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOS).  
   
 > [!NOTE]  
->  Пакет SecAudit используется аудитом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты в пакете недоступны для языка описания данных DDL расширенных событий.  
+>  Пакет SecAudit используется аудитом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты в пакете недоступны для языка описания данных DDL расширенных событий.  
   
  Пакеты определяются по имени, идентификатору GUID и двоичному модулю, содержащему этот пакет. Дополнительные сведения см. в статье [sys.dm_xe_packages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md).  
   
@@ -52,12 +56,12 @@ caps.handback.revision: 21
   
  В сеансе событий могут содержаться объекты из разных пакетов. Дополнительные сведения см. в разделе [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
-## Содержимое пакета  
+## <a name="package-contents"></a>Содержимое пакета  
  На следующем рисунке показаны объекты, которые имеются в пакете, содержащемся в модуле. Модуль может быть исполняемым файлом или динамической библиотекой.  
   
  ![Связь между модулем, пакетами и объектом](../../relational-databases/extended-events/media/xepackagesobjects.gif "Связь между модулем, пакетами и объектом")  
   
-### События  
+### <a name="events"></a>События  
  События представляют собой точки наблюдения в пути выполнения программы, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возникновение события означает тот факт, что была достигнута точка наблюдения и был запущен сбор сведений о состоянии.  
   
  События можно использовать только в целях отслеживания или для запуска действий. Эти действия могут быть синхронными или асинхронными.  
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  Все события имеют вариант схемы, определяющей их содержимое. Эта схема состоит из столбцов событий с явно определенными типами. Событие конкретного типа должно всегда предоставлять свои данные точно в том порядке, который задан в схеме. Тем не менее цель события не должна использовать все предоставляемые ей данные.  
   
-#### Категоризация событий  
+#### <a name="event-categorization"></a>Категоризация событий  
  При обработке расширенных событий используется модель категоризации событий, подобная отслеживанию событий для Windows (ETW). Для категоризации событий используются два свойства, канал и ключевое слово. Тем самым поддерживается интеграция обработки расширенных событий с ETW и его средствами.  
   
  **Channel**  
@@ -95,10 +99,10 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Ключевые слова наиболее точно соответствуют текущему группированию событий трассировки SQL.  
   
-### Цели  
- Цели являются объектами-получателями событий. Цели обрабатывают события или синхронно в потоке, запускающем событие, или асинхронно в потоке, предоставленном системой. Расширенные события предоставляют несколько целей, которые можно использовать по собственному усмотрению для направления выхода событий. Дополнительные сведения см. в статье [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md).  
+### <a name="targets"></a>Цели  
+ Цели являются объектами-получателями событий. Цели обрабатывают события или синхронно в потоке, запускающем событие, или асинхронно в потоке, предоставленном системой. Расширенные события предоставляют несколько целей, которые можно использовать по собственному усмотрению для направления выхода событий. Дополнительные сведения см. в статье [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
-### Действия  
+### <a name="actions"></a>Действия  
  Действие — это программный ответ или серия ответов на событие. Действия привязаны к событию, и каждое событие может иметь уникальный набор действий.  
   
 > [!NOTE]  
@@ -118,15 +122,15 @@ where name = 'keyword_map'
   
 -   Сборщик данных стека  
   
--   Определение плана выполнения (только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   Определение плана выполнения (только для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] Сбор данных стека (только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Сбор данных стека (только для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )  
   
 -   Вычисление статистики времени выполнения  
   
 -   Сбор пользовательского ввода для обработки исключений  
   
-### Предикаты  
+### <a name="predicates"></a>Предикаты  
  Предикаты представляют собой набор логических правил, которые используются для оценки событий при их обработке. Благодаря этому пользователь подсистемы расширенных событий получает возможность избирательно получать данные события на основе заданных критериев.  
   
  Предикаты могут сохранять данные в локальном контексте, который можно использовать для создания предикатов, возвращающих значение TRUE каждые *n* минут или каждые *n* раз при запуске события. С помощью такого хранилища в локальном контексте можно динамически обновлять предикаты, тем самым подавляя последующий запуск событий, содержащих подобные данные.  
@@ -136,7 +140,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Предикаты с побочными эффектами могут не оцениваться, если проверка предыдущего предиката завершится ошибкой.  
   
-### Типы  
+### <a name="types"></a>Типы  
  Поскольку данные являются набором связанных байтов, для интерпретации данных необходимы длина и характеристики набора байтов. Следующие сведения содержатся в объекте Type. Для объектов пакета представлены следующие типы:  
   
 -   event  
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  Дополнительные сведения см. в разделе [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
-### Карты  
+### <a name="maps"></a>Карты  
  Таблица соответствий устанавливает соответствие внутреннего значения строке, что дает пользователю возможность узнать, что именно представляет это значение. В результате пользователь может получить значимое описание внутреннего значения, а не числовое значение. В следующем запросе показан способ установки соответствий.  
   
 ```  
@@ -215,9 +219,9 @@ where name = 'lock_mode'
   
  Используя эту таблицу в качестве примера, предположим, что имеется столбец с именем mode и значением 5. В таблице указано, что значение 5 соответствует X, а это означает тип блокировки «Монопольная».  
   
-## См. также:  
- [Сеансы расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Подсистема расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Цели расширенных событий SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

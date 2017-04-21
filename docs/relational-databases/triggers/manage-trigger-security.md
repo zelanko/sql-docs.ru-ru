@@ -1,25 +1,29 @@
 ---
-title: "Управление безопасностью триггеров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "триггеры [SQL Server], безопасность"
+title: "Управление безопасностью триггеров | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], security
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d86813b142cbd85527fb1e4e1c11d87884258ecf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Управление безопасностью триггеров
-  Как триггеры DML, так и триггеры DDL по умолчанию выполняются в контексте того пользователя, который вызывает триггер. Это пользователь, который выполняет инструкцию, вызывающую запуск триггера. Например, если пользователь **Mary** выполняет инструкцию DELETE, которая запускает триггер DML **DML_trigMary**, то код внутри **DML_trigMary** выполняется в контексте прав доступа пользователя **Mary**. Этим поведением по умолчанию могут воспользоваться те пользователи, которые хотят внести небезопасный код в экземпляр базы данных или сервера. Например, следующий триггер DDL создан пользователем `JohnDoe`:  
+# <a name="manage-trigger-security"></a>Управление безопасностью триггеров
+  Как триггеры DML, так и триггеры DDL по умолчанию выполняются в контексте того пользователя, который вызывает триггер. Это пользователь, который выполняет инструкцию, вызывающую запуск триггера. Например, если пользователь **Mary** выполняет инструкцию DELETE, которая запускает триггер DML **DML_trigMary** , то код внутри **DML_trigMary** выполняется в контексте прав доступа пользователя **Mary**. Этим поведением по умолчанию могут воспользоваться те пользователи, которые хотят внести небезопасный код в экземпляр базы данных или сервера. Например, следующий триггер DDL создан пользователем `JohnDoe`:  
   
  `CREATE TRIGGER DDL_trigJohnDoe`  
   
@@ -35,10 +39,10 @@ caps.handback.revision: 19
   
  В этом триггере подразумевается, что как только пользователь с разрешением на выполнение инструкции `GRANT CONTROL SERVER` , например член предопределенной роли сервера **sysadmin** , выполнит инструкцию `ALTER TABLE` , пользователь `JohnDoe` получит права `CONTROL SERVER` . Другими словами, хотя `JohnDoe` не может предоставить права `CONTROL SERVER` самому себе, он создал код триггера, который предоставит ему разрешение работать с повышенными правами доступа. Эта уязвимость относится как к триггерам DML, так и к триггерам DDL.  
   
-## Способы защиты триггеров  
+## <a name="trigger-security-best-practices"></a>Способы защиты триггеров  
  Чтобы предотвратить выполнение кода триггера с повышенными правами доступа, примите следующие меры.  
   
--   Проверьте базу данных и экземпляр сервера на наличие триггеров DDL и DDL. Для этого выполните соответствующие запросы к представлениям каталогов [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) и [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md). Следующий запрос возвращает все триггеры DML и DDL уровня базы данных в текущей базе данных, а также все триггеры DDL уровня сервера на экземпляре сервера.  
+-   Проверьте базу данных и экземпляр сервера на наличие триггеров DDL и DDL. Для этого выполните соответствующие запросы к представлениям каталогов [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) и [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . Следующий запрос возвращает все триггеры DML и DDL уровня базы данных в текущей базе данных, а также все триггеры DDL уровня сервера на экземпляре сервера.  
   
     ```  
     SELECT type, name, parent_class_desc FROM sys.triggers  
@@ -91,7 +95,7 @@ caps.handback.revision: 19
     DEALLOCATE trig_cur;  
     ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Триггеры DML](../../relational-databases/triggers/dml-triggers.md)   
  [Триггеры DDL](../../relational-databases/triggers/ddl-triggers.md)  

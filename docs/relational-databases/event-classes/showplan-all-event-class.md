@@ -1,31 +1,35 @@
 ---
-title: "Класс событий Showplan All | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Showplan All, класс событий"
+title: "Класс событий Showplan All | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan All event class
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4714cd313bef93a5b91b5124ee739fb10824a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Showplan All
+# <a name="showplan-all-event-class"></a>Showplan All, класс событий
   Класс событий Showplan All происходит, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Содержит только часть сведений, доступных при использовании классов событий Showplan XML Statistics Profile или Showplan XML.  
   
  События класса Showplan All отображают полные данные на момент компиляции, поэтому трассировки, включающие такие события, могут вызвать значительные накладные расходы. Чтобы уменьшить этот эффект, используйте данный класс событий только в тех трассировках, которые применяются для наблюдения за конкретными проблемами в течение непродолжительного времени.  
   
  Если класс событий Showplan All включен в трассировку, то должен быть выбран столбец данных BinaryData. В противном случае в трассировке не отображаются данные для этого класса событий.  
   
-## Столбцы данных класса событий Showplan All  
+## <a name="showplan-all-event-class-data-columns"></a>Столбцы данных класса событий Showplan All  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -41,7 +45,7 @@ caps.handback.revision: 38
 |Integer Data|**Целочисленный**|Предполагаемое количество возвращаемых строк.|25|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |LineNumber|**int**|Отображает номер строки, содержащей ошибку.|5|Да|  
-|LoginName|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|LoginName|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
 |LoginSID|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Нет|  
 |NestLevel|**int**|Целочисленное значение, представляющее данные, возвращаемые функцией @@NESTLEVEL.|29|Да|  
 |NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
@@ -50,13 +54,13 @@ caps.handback.revision: 38
 |ObjectType|**int**|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу type в таблице sys.objects. Значения см. в разделе [Столбец события ObjectType Trace](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и имена входа Windows.|64|Да|  
+|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|**bigint**|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   

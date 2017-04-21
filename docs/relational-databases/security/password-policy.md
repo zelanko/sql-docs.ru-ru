@@ -1,52 +1,56 @@
 ---
-title: "Политика паролей | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/25/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALTER LOGIN, инструкция"
-  - "пароли [SQL Server], применение политики"
-  - "имена входа [SQL Server], пароли"
-  - "параметр CHECK_EXPIRATION"
-  - "сложные пароли [SQL Server]"
-  - "пароли [SQL Server], имена для срок действия"
-  - "сброс счетчика неверных паролей вручную"
-  - "параметр MUST_CHANGE"
-  - "истечение срока действия [SQL Server]"
-  - "пароль с истекшим сроком действия [SQL Server]"
-  - "символы [SQL Server]"
-  - "API-интерфейс NetValidatePasswordPolicy()"
-  - "пароли [SQL Server]"
-  - "политика паролей [SQL Server]"
-  - "сброс счетчика неверных паролей"
-  - "безопасность [SQL Server], пароли"
-  - "параметр CHECK_POLICY"
-  - "пароли [SQL Server], символы"
-  - "счетчик неверных паролей"
-  - "пароли [SQL Server], сложность"
-  - "знаки [SQL Server], политики паролей"
+title: "Политика паролей | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/25/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALTER LOGIN statement
+- passwords [SQL Server], policy enforcement
+- logins [SQL Server], passwords
+- CHECK_EXPIRATION option
+- complex passwords [SQL Server]
+- passwords [SQL Server], expiration
+- manual bad password count resets
+- MUST_CHANGE option
+- expiration [SQL Server]
+- expired password [SQL Server]
+- symbols [SQL Server]
+- NetValidatePasswordPolicy() API
+- passwords [SQL Server]
+- password policy [SQL Server]
+- resetting bad password counts
+- security [SQL Server], passwords
+- CHECK_POLICY option
+- passwords [SQL Server], symbols
+- bad password counts
+- passwords [SQL Server], complexity
+- characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Политика паролей
+# <a name="password-policy"></a>Политика паролей
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается использование механизмов политики паролей Windows. Политика паролей применяется к имени входа, которое использует проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и к пользователю автономной базы данных с паролем.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут применяться политики сложности и истечения срока действия, которые применяются в Windows к паролям, используемым в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти возможности построены на API-интерфейсе `NetValidatePasswordPolicy` .  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] принудительно применяет сложность пароля. Разделы истечения срока действия и принудительного применения политики паролей не применяются к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## Сложность пароля  
+## <a name="password-complexity"></a>Сложность пароля  
  Политика сложности паролей позволяет отражать атаки, использующие простой перебор, путем увеличения числа возможных паролей. Если применяется политика сложности паролей, новые пароли должны удовлетворять следующим требованиям.  
   
 -   Пароль не содержит имя учетной записи пользователя.  
@@ -65,11 +69,11 @@ caps.handback.revision: 41
   
  Пароли могут иметь длину до 128 символов. Рекомендуется использовать максимально длинные и сложные пароли.  
   
-## Истечение срока действия пароля  
+## <a name="password-expiration"></a>Истечение срока действия пароля  
  Политика истечения срока действия паролей используется для управления продолжительностью действия пароля. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет политику истечения срока действия паролей, пользователи получают уведомления о необходимости изменения старых паролей, а учетные записи с истекшим сроком действия пароля отключаются.  
   
-## Применение политики  
- Применение политики паролей можно настроить отдельно для каждого имени входа SQL Server. Чтобы настроить параметры политики паролей для имени входа SQL Server, выполните инструкцию [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md). Для настройки принудительного применения политики паролей действуют следующие правила.  
+## <a name="policy-enforcement"></a>Применение политики  
+ Применение политики паролей можно настроить отдельно для каждого имени входа SQL Server. Чтобы настроить параметры политики паролей для имени входа SQL Server, выполните инструкцию [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) . Для настройки принудительного применения политики паролей действуют следующие правила.  
   
 -   При переключении параметра CHECK_POLICY на значение ON происходит следующее:  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
  Политика безопасности может быть настроена в Windows или получена из домена. Для просмотра политики паролей на компьютере используется оснастка консоли управления "Локальная политика безопасности" (**secpol.msc**).  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -116,7 +120,8 @@ caps.handback.revision: 41
   
  [Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Надежные пароли](../../relational-databases/security/strong-passwords.md)  
   
   
+

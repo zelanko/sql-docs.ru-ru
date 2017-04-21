@@ -1,25 +1,29 @@
 ---
-title: "Пример скрипта OLE-автоматизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLE-автоматизация [SQL Server], примеры"
+title: "Пример скрипта OLE-автоматизации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLE Automation [SQL Server], examples
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9db090a1bf5d4cf53896bb0de2e7390f426bdb5b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пример скрипта OLE-автоматизации
-  В этом разделе содержится пример пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], который использует хранимые процедуры OLE-автоматизации для создания и использования объекта SQLServer языка SQL-DMO в логическом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Части приведенного кода используются в качестве примеров в разделах справки по системным хранимым процедурам OLE-автоматизации.  
+# <a name="ole-automation-sample-script"></a>Пример скрипта OLE-автоматизации
+  В этом разделе содержится пример пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , который использует хранимые процедуры OLE-автоматизации для создания и использования объекта SQLServer языка SQL-DMO в логическом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Части приведенного кода используются в качестве примеров в разделах справки по системным хранимым процедурам OLE-автоматизации.  
   
 ```  
 USE AdventureWorks2012;  
@@ -137,7 +141,7 @@ RETURN;
 GO  
 ```  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Объекты OLE-автоматизации в Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
  [sp_OACreate (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  

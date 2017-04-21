@@ -1,39 +1,34 @@
 ---
-title: "Файлы форматирования для импорта или экспорта данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "массовый экспорт [SQL Server], файлы форматирования"
-  - "массовый импорт [SQL Server], файлы форматирования"
-  - "файлы форматирования [SQL Server]"
+title: "Файлы форматирования для импорта или экспорта данных (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk exporting [SQL Server], format files
+- bulk importing [SQL Server], format files
+- format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c7cb16d7e4aebb8844c175d98b73daaf8b34ede4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Файлы форматирования для импорта или экспорта данных (SQL Server)
+# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Файлы форматирования для импорта или экспорта данных (SQL Server)
   Если выполняется массовый импорт данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или массовый экспорт данных из таблицы, можно использовать *файл форматирования* для сохранения всех сведений о формате, необходимых для массового экспорта или массового импорта данных. Это включает сведения о формате каждого поля в файле данных для этой таблицы.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает два типа файлов форматирования: XML-файлы форматирования и файлы форматирования в формате, отличном от XML. Файлы форматирования как в XML, так и в другом формате, содержат описания каждого поля в файле данных, а XML-файлы форматирования содержат еще описания соответствующих столбцов таблицы. Как правило, XML-файлы и файлы форматирования в формате, отличном от XML взаимозаменяемы. Однако рекомендуется пользоваться XML-синтаксисом новых файлов форматирования, так как он обеспечивает ряд преимуществ перед файлами форматирования в формате, отличном от XML. Дополнительные сведения см в статье [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает два типа файлов форматирования: XML-файлы форматирования и файлы форматирования в формате, отличном от XML. Файлы форматирования как в XML, так и в другом формате, содержат описания каждого поля в файле данных, а XML-файлы форматирования содержат еще описания соответствующих столбцов таблицы. Как правило, XML-файлы и файлы форматирования в формате, отличном от XML взаимозаменяемы. Однако рекомендуется пользоваться XML-синтаксисом новых файлов форматирования, так как он обеспечивает ряд преимуществ перед файлами форматирования в формате, отличном от XML. Дополнительные сведения см в статье [Файлы в формате XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- **В этом разделе.**  
-  
--   [Преимущества файлов форматирования](#Benefits)  
-  
--   [Примеры файлов форматирования](#ExamplesOfFFs)  
-  
--   [Когда необходим файл форматирования?](#WhenFFrequired)  
-  
--   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> Преимущества файлов форматирования  
   
@@ -42,13 +37,13 @@ caps.handback.revision: 39
 -   Позволяет выполнять массовый импорт данных без необходимости добавлять или удалять ненужные данные, а также изменять порядок существующих данных в файле данных. Файлы форматирования особенно полезны в том случае, если существует несоответствие между полями в файле данных и столбцами в таблице.  
   
 ##  <a name="ExamplesOfFFs"></a> Примеры файлов форматирования  
- В следующих примерах показана структура файлов форматирования в формате, отличном от XML, и XML-файлов форматирования. Эти файлы форматирования соответствуют таблице `HumanResources.myTeam` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Эта таблица содержит четыре столбца: `EmployeeID`, `Name`, `Title` и `ModifiedDate`.  
+ В следующих примерах показана структура файлов форматирования в формате, отличном от XML, и XML-файлов форматирования. Эти файлы форматирования соответствуют таблице `HumanResources.myTeam` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Эта таблица содержит четыре столбца: `EmployeeID`, `Name`, `Title` и `ModifiedDate`.  
   
 > [!NOTE]  
 >  Дополнительные сведения о таблице и способе ее создания см. в разделе [Образец таблицы HumanResources.myTeam (SQL Server)](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  
   
-### A. Использование файла форматирования в формате, отличном от XML  
- Следующий файл форматирования в формате, отличном от XML использует собственный формат данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы `HumanResources.myTeam`. Этот файл форматирования был создан с помощью следующей команды `bcp`:  
+### <a name="a-using-a-non-xml-format-file"></a>A. Использование файла форматирования в формате, отличном от XML  
+ Следующий файл форматирования в формате, отличном от XML использует собственный формат данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы `HumanResources.myTeam` . Этот файл форматирования был создан с помощью следующей команды `bcp` :  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
@@ -60,12 +55,11 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- Дополнительные сведения см в разделе [Файлы d формате, отличном от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
+ Дополнительные сведения см в статье [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
- [&#91;В начало&#93;](#Top)  
   
-### Б. Использование XML-файла форматирования  
- Следующий XML-файл форматирования использует собственный формат данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы `HumanResources.myTeam`. Этот файл форматирования был создан с помощью следующей команды `bcp`:  
+### <a name="b-using-an-xml-format-file"></a>Б. Использование XML-файла форматирования  
+ Следующий XML-файл форматирования использует собственный формат данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы `HumanResources.myTeam` . Этот файл форматирования был создан с помощью следующей команды `bcp` :  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   
@@ -91,9 +85,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 </BCPFORMAT>  
 ```  
   
- Дополнительные сведения см в статье [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
+ Дополнительные сведения см в статье [Файлы в формате XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="WhenFFrequired"></a> Когда необходим файл форматирования?  
  Инструкция INSERT... SELECT * FROM OPENROWSET(BULK...) всегда требует наличия файла форматирования.  
@@ -117,9 +110,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   завершающие символы или длины префиксов отличаются в столбцах файла данных.  
   
 > [!NOTE]  
->  Если файл форматирования отсутствует и в команде **bcp** задан параметр формата данных (**-n**, **-c**, **-w** или **-N**) либо в операции BULK INSERT задан параметр DATAFILETYPE, указанный формат данных используется как метод интерпретации полей в файле данных по умолчанию.  
+>  Если файл форматирования отсутствует и в команде **bcp** задан параметр формата данных (**-n**, **-c**, **-w**или **-N**) либо в операции BULK INSERT задан параметр DATAFILETYPE, указанный формат данных используется как метод интерпретации полей в файле данных по умолчанию.  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -133,9 +125,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
- [&#91;В начало&#93;](#Top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Файлы в формате XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)   
  [Форматы данных для массового экспорта или импорта (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

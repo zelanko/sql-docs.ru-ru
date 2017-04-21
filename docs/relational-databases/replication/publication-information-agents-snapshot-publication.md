@@ -1,27 +1,31 @@
 ---
-title: "Сведения о публикации, агенты (публикация моментального снимка) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1"
+title: "Сведения о публикации, вкладка &quot;Агенты&quot; (публикация моментального снимка) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e8cdcea6f91b4126170c7590cc5e98f4ae3af1f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сведения о публикации, агенты (публикация моментального снимка)
+# <a name="publication-information-agents-snapshot-publication"></a>Сведения о публикации, агенты (публикация моментального снимка)
   Вкладка **Агенты** отображает общие сведения об агенте моментальных снимков для выбранной публикации.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  Для получения более подробных сведений и задач, относящихся к агенту моментальных снимков, щелкните правой кнопкой мыши строку этого агента и выберите параметр в контекстном меню. Чтобы изменить способ отображения данных в сетке, щелкните правой кнопкой мыши сетку, а затем один из следующих параметров.  
   
 -   **Сортировать**: сортировка по одному или нескольким столбцам в диалоговом окне **Сортировка столбцов** .  
@@ -46,7 +50,7 @@ caps.handback.revision: 23
 -   Завершен  
   
  **Агент**  
- Агент моментальных снимков. Это единственный агент, связанный с публикацией моментальных снимков. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в разделе [Просмотр сведений и выполнение задач для агентов, связанных с подпиской и #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+ Агент моментальных снимков. Это единственный агент, связанный с публикацией моментальных снимков. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
  **Время последнего запуска**  
  Время последнего запуска агента.  
@@ -57,10 +61,10 @@ caps.handback.revision: 23
  **Последнее действие**  
  Последнее действие выполнено во время самого последнего выполнения агента.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для публикации & #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией & #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [Просмотр сведений и выполнение задач для публикации (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы FileTable [SQL Server], доступ к файлам с помощью API"
+title: "Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
+# <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
   Описание работы файловой системы ввода-вывода с таблицами FileTable.  
   
 ##  <a name="accessing"></a> Начало использования API-интерфейсов файлового ввода-вывода с таблицами FileTable  
@@ -35,7 +39,7 @@ caps.handback.revision: 16
   
 -   Создание нового файла или каталога соответствует созданию новой строки в базовой таблице FileTable.  
   
--   Для файлов потоковые данные хранятся в столбце **file_stream**, в то время как для каталогов этот столбец содержит значение null.  
+-   Для файлов потоковые данные хранятся в столбце **file_stream** , в то время как для каталогов этот столбец содержит значение null.  
   
 -   Для файлов столбец **is_directory** содержит значение **false**. Для каталогов этот столбец содержит значение **true**.  
   
@@ -124,10 +128,11 @@ caps.handback.revision: 16
 |**Безопасность**|Нет|Принудительно применяются настройки безопасности уровня общего ресурса Windows и уровня таблицы или столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Журнал USN**|Нет|Изменения метаданных для файлов и каталогов в таблице FileTable являются операциями DML в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поэтому они записываются в соответствующий файл журнала базы данных. Однако они не регистрируются в журнале USN файловой системы NTFS (за исключением изменения размера).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [выполнить загрузку файлов в таблицу FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Работа с каталогами и путями в таблицах FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Доступ к таблицам FileTable с помощью Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

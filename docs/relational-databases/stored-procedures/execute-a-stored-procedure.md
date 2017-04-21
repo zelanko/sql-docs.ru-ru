@@ -1,31 +1,35 @@
 ---
-title: "Выполнение хранимой процедуры | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "хранимые процедуры [SQL Server], параметры"
-  - "расширенные хранимые процедуры [SQL Server], выполнение"
-  - "системные хранимые процедуры [SQL Server], выполнение"
-  - "хранимые процедуры [SQL Server], выполнение"
-  - "определяемые пользователем хранимые процедуры [SQL Server]"
+title: "Выполнение хранимой процедуры | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Выполнение хранимой процедуры
+# <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
   В этом разделе описывается, как выполнить хранимую процедуру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Существует два способа выполнения хранимой процедуры. Первым и наиболее распространенным подходом является вызов процедуры приложением или пользователем. Второй подход — настройка автоматического выполнения процедуры при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если процедура вызывается приложением или пользователем, то в вызове явно указывается ключевое слово [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE или EXEC. Процедуру также можно вызывать и выполнять без ключевого слова, если она является первой инструкцией в пакете [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -56,7 +60,7 @@ caps.handback.revision: 38
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
-     Чтобы показать точные имена системных процедур, запросите представления каталога [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) и [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md).  
+     Чтобы показать точные имена системных процедур, запросите представления каталога [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) и [sys.system_parameters](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md) .  
   
 -   Если определяемая пользователем процедура имеет имя, совпадающее с системной процедурой, то такая определяемая пользователем процедура никогда не будет выполняться.  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 38
   
 -   Автоматическое выполнение хранимых процедур  
   
-     Процедуры, помеченные для автоматического выполнения, выполняются каждый раз, когда запускается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в процессе запуска восстанавливается база данных **master** . Настройка процедур для автоматического выполнения удобна для операций обслуживания базы данных и для постоянного выполнения процедур в фоновом процессе. Кроме того, автоматический запуск процедур может применяться для выполнения системных или служебных задач в базе данных **tempdb**, таких как создание глобальной временной таблицы. Это обеспечивает наличие такой временной таблицы при повторном создании базы данных **tempdb** во время запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Процедуры, помеченные для автоматического выполнения, выполняются каждый раз, когда запускается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в процессе запуска восстанавливается база данных **master** . Настройка процедур для автоматического выполнения удобна для операций обслуживания базы данных и для постоянного выполнения процедур в фоновом процессе. Кроме того, автоматический запуск процедур может применяться для выполнения системных или служебных задач в базе данных **tempdb**, таких как создание глобальной временной таблицы. Это обеспечивает наличие такой временной таблицы при повторном создании базы данных **tempdb** во время запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Автоматически выполняемая процедура работает с теми же разрешениями, что и члены предопределенной роли сервера **sysadmin** . Любое сообщение об ошибке, сформированное такой процедурой, записывается в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -126,7 +130,7 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Выполнение хранимой процедуры  
+#### <a name="to-execute-a-stored-procedure"></a>Выполнение хранимой процедуры  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Выполнение хранимой процедуры  
+#### <a name="to-execute-a-stored-procedure"></a>Выполнение хранимой процедуры  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -170,13 +174,13 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### Установка и отмена автоматического запуска процедуры  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>Установка и отмена автоматического запуска процедуры  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md), чтобы задать автоматическое выполнение процедуры.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) , чтобы задать автоматическое выполнение процедуры.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -186,13 +190,13 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### Отмена автоматического выполнения процедуры  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>Отмена автоматического выполнения процедуры  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md), чтобы отменить автоматическое выполнение процедуры.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) , чтобы отменить автоматическое выполнение процедуры.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Указание параметров](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Настройка параметра конфигураци и сервера scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   

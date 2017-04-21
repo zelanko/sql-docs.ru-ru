@@ -1,30 +1,34 @@
 ---
-title: "Внесение изменений схем в базы данных публикации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "репликация [SQL Server], изменения схемы"
-  - "репликация моментальных снимков [SQL Server], репликация изменений схемы"
-  - "репликация слиянием [репликация SQL Server], репликация изменений схемы"
-  - "репликация транзакций, репликация изменений схемы"
-  - "схемы [репликация SQL Server], репликация изменений"
-  - "публикация [репликация SQL Server], изменения схемы"
+title: "Внесение изменений в схемы баз данных публикации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], schema changes
+- snapshot replication [SQL Server], replicating schema changes
+- merge replication [SQL Server replication], replicating schema changes
+- transactional replication, replicating schema changes
+- schemas [SQL Server replication], replicating changes
+- publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# Внесение изменений схем в базы данных публикации
-  Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. При выполнении любого из следующих изменений схемы для соответствующего опубликованного объекта на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] издатель, это изменение распространяется по умолчанию на все [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчики:  
+# <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
+  Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -39,24 +43,24 @@ caps.handback.revision: 73
      Параметр ALTER TRIGGER можно использовать только для триггеров языка обработки данных DML, поскольку триггеры языка описания данных DDL не могут быть реплицированы.  
   
 > [!IMPORTANT]  
->  Изменения схем таблиц должны выполняться с использованием [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов SMO [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Когда изменения схемы выполняются в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], среда [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] пытается удалить и затем повторно создать таблицу. Опубликованные объекты невозможно удалить, поэтому изменения схемы завершаются ошибкой.  
+>  Изменения схем таблиц должны выполняться с использованием [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов SMO [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Когда изменения схемы выполняются в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], среда [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] пытается удалить и затем повторно создать таблицу. Опубликованные объекты невозможно удалить, поэтому изменения схемы завершаются ошибкой.  
   
  При репликации транзакций и репликации слиянием изменения схемы распространяются в режиме последовательных добавлений при запусках агента распространителя или агента слияния. В случае репликации моментальных снимков изменения схемы распространяются при применении нового моментального снимка на подписчике. В репликации моментальных снимков при каждой синхронизации подписчику отправляется новая копия схемы. Поэтому все изменения схемы (не только перечисленные выше) в ранее опубликованных объектах автоматически распространяются при каждой синхронизации.  
   
- Сведения о добавлении и удалении статей из публикаций см. в разделе [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Дополнительные сведения о добавлении и удалении статей в существующих публикациях см. в [этой статье](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  **Репликация изменений схемы**  
   
- Перечисленные выше изменения схемы реплицируются по умолчанию. Сведения об отключении репликации изменений схемы см. в разделе [репликация изменений схемы](../../../relational-databases/replication/publish/replicate-schema-changes.md).  
+ Перечисленные выше изменения схемы реплицируются по умолчанию. Сведения об отключении репликации изменений схемы см. в разделе [Replicate Schema Changes](../../../relational-databases/replication/publish/replicate-schema-changes.md).  
   
-## Вопросы изменений схемы  
+## <a name="considerations-for-schema-changes"></a>Вопросы изменений схемы  
  При репликации изменений схемы учитывайте следующее.  
   
-### Общие рекомендации  
+### <a name="general-considerations"></a>Общие рекомендации  
   
 -   Изменения схемы подвержены любым ограничениям, накладываемым языком [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Например, ALTER TABLE не позволяет изменять первичные ключевые столбцы.  
   
--   Сопоставление типов данных выполняется только для исходного моментального снимка. Изменения схемы не сопоставляются с предыдущими версиями типов данных. Например если инструкция `ALTER TABLE ADD datetime2 column` используется в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], не преобразуется в тип данных **nvarchar** для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] подписчиков. В некоторых случаях изменения схемы блокируются на издателе.  
+-   Сопоставление типов данных выполняется только для исходного моментального снимка. Изменения схемы не сопоставляются с предыдущими версиями типов данных. Например, если инструкция `ALTER TABLE ADD datetime2 column` используется в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], тип данных не преобразуется в **nvarchar** для подписчиков [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . В некоторых случаях изменения схемы блокируются на издателе.  
   
 -   Если в публикации разрешено распространение изменений схемы, то изменения схемы распространяются независимо от того, как установлен соответствующий параметр схемы для статьи в публикации. Например, если вы указываете не реплицировать ограничения внешних ключей для статьи таблицы, а затем выполняете команду ALTER TABLE, которая добавляет внешний ключ в таблицу на издателе, внешний ключ будет добавлен в таблицу на подписчике. Чтобы предотвратить это, отключите распространение изменений схемы перед выполнением команды ALTER TABLE.  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 73
   
 -   Явное добавление, удаление и изменение индексов не поддерживаются. Поддерживается неявное создание индексов для ограничений (например, для ограничения первичного ключа).  
   
--   Изменение или удаление столбцов идентификаторов, управляемых репликацией, не поддерживается. Дополнительные сведения об автоматическом управлении столбцами идентификаторов см. в разделе [репликации столбцов идентификаторов](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+-   Изменение или удаление столбцов идентификаторов, управляемых репликацией, не поддерживается. Дополнительные сведения об автоматическом управлении столбцами идентификаторов см. в статье [Репликация столбцов идентификаторов](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
--   Изменения схемы, включающие недетерминированные функции, не поддерживаются, поскольку они могут привести к разным данным на издателе и на подписчике (эта разница данных называется расхождением). Например, если выполнить следующую команду на издателе: `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, значения различаются, когда команда реплицируются на подписчик и выполняется. Дополнительные сведения о недетерминированных функциях см. в разделе [Deterministic and Nondeterministic Functions](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+-   Изменения схемы, включающие недетерминированные функции, не поддерживаются, поскольку они могут привести к разным данным на издателе и на подписчике (эта разница данных называется расхождением). Например, если на издателе выполнить команду `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, значения будут отличаться от случая, когда команда реплицируется на подписчик и выполняется. Дополнительные сведения о недетерминированных функциях см. в разделе [Deterministic and Nondeterministic Functions](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 -   Рекомендуется именовать ограничения явным образом. Если ограничение не именовано явным образом, то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создает для него имя. Эти имена будут отличаться для издателя и подписчика. Это может стать причиной проблем во время репликации изменений схемы. Например, если на издателе удаляется столбец и зависимое ограничение, то во время репликации будет произведена попытка удалить ограничение на подписчике. Эта попытка удаления на подписчике завершится ошибкой, так как имена ограничения на издателе и на подписчике различаются. Если синхронизация завершается сбоем из-за различия имен ограничения, то удалите ограничение на подписчике вручную, а затем перезапустите агент слияния.  
   
@@ -80,25 +84,25 @@ caps.handback.revision: 73
   
 -   Уровень изоляции «read uncommitted» не является поддерживаемым уровнем изоляции при выполнении DDL в опубликованной таблице.  
   
--   **SET CONTEXT_INFO** не будет использовать для изменения контекста транзакции когда выполняются изменения схемы для опубликованных объектов.  
+-   Аргумент**SET CONTEXT_INFO** не следует использовать для изменения контекста транзакций, изменения схемы выполняются для опубликованных объектов.  
   
-#### Добавление столбцов  
+#### <a name="adding-columns"></a>Добавление столбцов  
   
--   Чтобы добавить новый столбец в таблицу и включить этот столбец в существующую публикацию, выполните ALTER TABLE \< таблица> Добавить \< столбец>. По умолчанию этот столбец затем реплицируется на все подписчики. Столбец должен допускать использование значений NULL или содержать ограничение по умолчанию. Дополнительные сведения о добавлении столбцов см. в подразделе «Репликация слиянием» этого раздела.  
+-   Для добавления в таблицу нового столбца и включения этого столбца в существующую публикацию выполните инструкцию ALTER TABLE \<таблица> ADD \<столбец>. По умолчанию этот столбец затем реплицируется на все подписчики. Столбец должен допускать использование значений NULL или содержать ограничение по умолчанию. Дополнительные сведения о добавлении столбцов см. в подразделе «Репликация слиянием» этого раздела.  
   
--   Чтобы добавить новый столбец в таблицу и не включить этот столбец в существующую публикацию, отключите репликацию изменений схемы, а затем выполните ALTER TABLE \< таблица> Добавить \< столбец>.  
+-   Чтобы добавить в таблицу новый столбец и не включить его в существующую публикацию, отключите репликацию изменений схемы, а затем выполните инструкцию ALTER TABLE \<таблица> ADD \<столбец>.  
   
--   Чтобы включить существующий столбец в существующую публикацию, используйте [sp_articlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), или **Свойства публикации — \< публикация>** диалоговое окно.  
+-   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
      Дополнительные сведения см. в статье [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
   
 -   Добавление столбца идентификаторов в опубликованную таблицу не поддерживается, поскольку это может привести к расхождению данных при репликации столбца на подписчик. Значения в столбце идентификаторов на издателе зависят от порядка, в котором строки изменяемой таблицы хранятся физически. Строки могут храниться по-разному на подписчике. Поэтому значение для столбца идентификаторов может быть разным для одинаковых строк.  
   
-#### Удаление столбцов  
+#### <a name="dropping-columns"></a>Удаление столбцов  
   
--   Чтобы удалить столбец из существующей публикации и удалить столбец из таблицы на издателе, выполните ALTER TABLE \< таблица> DROP \< столбец>. По умолчанию столбец затем удаляется из таблицы на всех подписчиках.  
+-   Для удаления столбца из имеющийся публикации и удаления столбца из таблицы на издателе выполните инструкцию ALTER TABLE \<таблица> DROP \<столбец>. По умолчанию столбец затем удаляется из таблицы на всех подписчиках.  
   
--   Чтобы удалить столбец из существующей публикации, но сохранить столбец в таблице на издателе, используйте [sp_articlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), или **Свойства публикации — \< публикация>** диалоговое окно.  
+-   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
      Дополнительные сведения см. в статье [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
   
@@ -114,54 +118,54 @@ caps.handback.revision: 73
   
     -   Ограничения следует именовать явным образом для удаления. Дополнительные сведения см. в подразделе «Общие вопросы» этого раздела.  
   
-### Репликация транзакций  
+### <a name="transactional-replication"></a>Репликация транзакций  
   
 -   Изменения схемы распространяются на подписчики, использующие предыдущие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], однако инструкция DDL должна содержать только тот синтаксис, который поддерживается версией подписчика.  
   
-     Если подписчик публикует данные повторно, поддерживаемые изменения схемы включают только добавление и удаление столбца. Необходимо внести эти изменения на издатель с помощью [sp_repladdcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) вместо синтаксиса ALTER DDL таблицы.  
+     Если подписчик публикует данные повторно, поддерживаемые изменения схемы включают только добавление и удаление столбца. Эти изменения нужно выполнить на издателе с использованием процедуры [sp_repladdcolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) вместо применения синтаксиса ALTER TABLE DDL.  
   
 -   Репликация изменений схемы не выполняется для подписчиков, отличных от подписчиков SQL Server.  
   
--   Изменения схемы не распространяются на издатели, не относящиеся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Изменения схемы не распространяются на издатели, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Индексированные представления, которые реплицируются в виде таблиц, невозможно изменить. Индексированные представления, которые реплицируются как индексированные представления, могут быть изменены, однако их изменение приведет к тому, что они станут обычными, а не индексированными представлениями.  
   
 -   Если публикация поддерживает подписки с немедленным обновлением или обновляемой посредством очередей подписки, перед выполнением изменений схемы следует заморозить систему: любые действия в опубликованной таблице должны быть прекращены на издателе и подписчиках, а отложенные изменения данных должны быть распространены на все узлы. После распространения изменений схемы на все узлы можно возобновить действия в опубликованных таблицах.  
   
--   Если публикация находится в одноранговой топологии, перед выполнением изменений схемы система должна быть приостановлена. Дополнительные сведения см. в разделе [замораживание топологии репликации & #40; Программирование репликации Transact-SQL & #41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+-   Если публикация находится в одноранговой топологии, перед выполнением изменений схемы система должна быть приостановлена. Дополнительные сведения см. в разделе [Замораживание топологии репликации (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 -   Добавление в таблицу столбца типа timestamp и сопоставление типа timestamp с типом binary(8) вызывает повторную инициализацию статьи для всех активных подписок.  
   
-### Репликация слиянием  
+### <a name="merge-replication"></a>Репликация слиянием  
   
 -   Способ обработки изменений схемы при репликации слиянием определяется уровнем совместимости публикации и режимом моментального снимка — собственным (по умолчанию) или символьным.  
   
-    -   Для репликации изменений схемы уровень совместимости публикации должен быть не меньше 90RTM. Если подписчики использующие предыдущие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или уровень совместимости меньше 90RTM, можно использовать [sp_repladdcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) для добавления и удаления столбцов. Однако эти процедуры являются устаревшими.  
+    -   Для репликации изменений схемы уровень совместимости публикации должен быть не меньше 90RTM. Если на подписчиках используются предыдущие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или уровень совместимости ниже 90RTM, для удаления и добавления столбцов по-прежнему можно использовать хранимые процедуры [sp_repladdcolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Однако эти процедуры являются устаревшими.  
   
     -   Если попытаться добавить в существующую статью столбец с типом данных, появившимся в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет вести себя следующим образом.  
   
         ||100RTM, собственный режим моментального снимка|100RTM, символьный режим моментального снимка|Все другие уровни совместимости|  
         |-|-----------------------------|--------------------------------|------------------------------------|  
         |**hierarchyid**|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
-        |**География** и **geometry**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
+        |**geography** и **geometry**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
         |**файловый поток**|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
-        |**Дата**, **время**, **datetime2**, и **datetimeoffset**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
+        |**date**, **time**, **datetime2**и **datetimeoffset**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
   
-         * Подписчики SQL Server Compact преобразуют эти типы данных на подписчике.  
+         * Подписчики SQL Server Compact преобразуют эти типы данных на подписчике.  
   
 -   Если при применении изменения схемы возникает ошибка (например, ошибка по причине добавления внешнего ключа, ссылающегося на таблицу, которая недоступна на подписчике), синхронизация завершается ошибкой, и подписка должна быть инициализирована повторно.  
   
 -   Если изменение схемы выполняется в столбце, входящем в фильтр соединения или параметризованный фильтр, потребуется повторно инициализировать все подписки и заново создать моментальный снимок.  
   
--   Репликация слиянием обеспечивает игнорирование хранимыми процедурами изменений схемы во время устранения неполадок. Дополнительные сведения см. в разделе [sp_markpendingschemachange & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) и [sp_enumeratependingschemachanges & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
+-   Репликация слиянием обеспечивает игнорирование хранимыми процедурами изменений схемы во время устранения неполадок. Дополнительные сведения см. в статьях [sp_markpendingschemachange (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) и [sp_enumeratependingschemachanges (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## См. также:  
- [Инструкция ALTER TABLE & #40; Transact-SQL и #41;](../../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER VIEW & #40; Transact-SQL и #41;](../../../t-sql/statements/alter-view-transact-sql.md)   
- [ALTER PROCEDURE & #40; Transact-SQL и #41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   
- [ALTER FUNCTION & #40; Transact-SQL и #41;](../../../t-sql/statements/alter-function-transact-sql.md)   
- [ALTER TRIGGER & #40; Transact-SQL и #41;](../../../t-sql/statements/alter-trigger-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md)   
+ [ALTER VIEW (Transact-SQL)](../../../t-sql/statements/alter-view-transact-sql.md)   
+ [ALTER PROCEDURE (Transact-SQL)](../../../t-sql/statements/alter-procedure-transact-sql.md)   
+ [ALTER FUNCTION (Transact-SQL)](../../../t-sql/statements/alter-function-transact-sql.md)   
+ [ALTER TRIGGER (Transact-SQL)](../../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Повторное создание пользовательских процедур транзакций для отражения изменений схем](../../../relational-databases/replication/transactional/regenerate-custom-transactional-procedures-to-reflect-schema-changes.md)  
+ [Regenerate Custom Transactional Procedures to Reflect Schema Changes](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md) (Повторное создание пользовательских процедур транзакций для отражения изменений схем)  
   
   

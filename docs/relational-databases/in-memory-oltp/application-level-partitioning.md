@@ -1,29 +1,33 @@
 ---
-title: "Секционирование уровня приложения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Секционирование уровня приложения | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Секционирование уровня приложения
+# <a name="application-level-partitioning"></a>Секционирование уровня приложения
   Это приложение обрабатывает заказы. Большой объем обработки последних заказов. По старым заказам объем обработки меньше. Последние заказы находятся в оптимизированной для памяти таблице. Старые заказы размещены в таблице на диске. Все заказы с датой после *hotDate* размещены в оптимизированной для памяти таблице. Все заказы до *hotDate* находятся в таблице на диске. Предположим наличие предельной рабочей нагрузки OLTP с большим количеством параллельных транзакций. Это бизнес-правило (последние заказы находятся в оптимизированной для памяти таблице) необходимо обеспечить даже в том случае, когда несколько параллельных транзакций пытаются изменить *hotDate*.  
   
  Этот пример не использует секционированную таблицу для дисковых таблиц, но отслеживает точную точку разбиения между двумя таблицами с помощью третьей. Точку разбиения можно использовать для того, чтобы на основе даты вновь добавленные данные всегда вставлялись в подходящую таблицу. Он также может использоваться для определения местоположения, где следует искать данные. Поздно поступающие данные всегда направляются в соответствующую таблицу.  
   
  Подходящий пример см. в разделе [Модель приложения для секционирования таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md).  
   
-## Листинг кода  
+## <a name="code-listing"></a>Листинг кода  
   
 ```tsql  
 USE MASTER  
@@ -213,7 +217,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Примеры кода In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

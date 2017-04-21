@@ -1,24 +1,28 @@
 ---
-title: "Миграция на частично автономную базу данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "автономная база данных, миграция на"
+title: "Миграция на частично автономную базу данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Миграция на частично автономную базу данных
+# <a name="migrate-to-a-partially-contained-database"></a>Миграция на частично автономную базу данных
   В этом разделе описано, как подготовить к переходу на частично автономную модель базы данных, и приведены шаги по миграции.  
   
  **В этом разделе:**  
@@ -44,13 +48,13 @@ caps.handback.revision: 17
   
 -   Выполнив запрос к представлению [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md), найдите в базе данных неавтономные объекты или функции. Дополнительные сведения см. в разделе  
   
--   Мониторьте XEvent **database_uncontained_usage**, чтобы определить, когда используются неавтономные функции.  
+-   Мониторьте XEvent **database_uncontained_usage** , чтобы определить, когда используются неавтономные функции.  
   
 ##  <a name="enable"></a> Включение автономных баз данных  
  Перед созданием автономных баз данных поддержка автономных баз данных должна быть включена на экземпляре [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-### Включение автономных баз данных с помощью Transact-SQL  
- В следующем примере в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создаются автономные базы данных.  
+### <a name="enabling-contained-databases-using-transact-sql"></a>Включение автономных баз данных с помощью Transact-SQL  
+ В следующем примере в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]создаются автономные базы данных.  
   
 ```tsql  
 sp_configure 'contained database authentication', 1;  
@@ -59,8 +63,8 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### Включение автономных баз данных с помощью среды Management Studio  
- В следующем примере в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создаются автономные базы данных.  
+#### <a name="enabling-contained-databases-using-management-studio"></a>Включение автономных баз данных с помощью среды Management Studio  
+ В следующем примере в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]создаются автономные базы данных.  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши имя сервера и выберите пункт **Свойства**.  
   
@@ -71,7 +75,7 @@ GO
 ##  <a name="convert"></a> Преобразование базы данных в частично автономную  
  База данных преобразуется в автономную путем изменения ее параметра **CONTAINMENT** .  
   
-### Преобразование базы данных в частично автономную с помощью Transact-SQL  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Преобразование базы данных в частично автономную с помощью Transact-SQL  
  В следующем примере база данных показано преобразование `Accounting` в частично автономную базу данных.  
   
 ```tsql  
@@ -81,7 +85,7 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### Преобразование базы данных в частично автономную с помощью среды Management Studio  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Преобразование базы данных в частично автономную с помощью среды Management Studio  
  В следующем примере база данных преобразуется в частично автономную базу данных.  
   
 1.  В обозревателе объектов разверните узел **Базы данных**, щелкните правой кнопкой мыши базу данных, которую нужно преобразовать, а затем выберите пункт **Свойства**.  
@@ -116,8 +120,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## См. также:  
- [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
+## <a name="see-also"></a>См. также:  
+ [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

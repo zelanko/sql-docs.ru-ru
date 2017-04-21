@@ -1,27 +1,31 @@
 ---
-title: "Создание, проектирование и создание запросов к экземплярам типа данных geography | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography, тип данных [SQL Server]"
-  - "geodetic, тип данных (SQL Server)"
-  - "тип данных geography [SQL Server], о типе данных geography"
+title: "Создание и конструирование географических экземпляров и отправка запросов к ним | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server]
+- geodetic data type [SQL Server]
+- geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание, проектирование и создание запросов к экземплярам типа данных geography
-  Тип пространственных данных **geography** представляет данные в системе координат круглой земли. Этот тип реализован как тип данных среды CLR .NET в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных **geography** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит данные эллипсоидальной (сферической) Земли, такие как координаты широты и долготы GPS.  
+# <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
+  Тип пространственных данных **geography**представляет данные в системе координат круглой земли. Этот тип реализован как тип данных среды CLR .NET в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
  Тип **geography** является стандартным и доступен в каждой базе данных. В таблице можно создать столбцы типа **geography** и обращаться с данными **geography** так же, как с данными других предусмотренных в системе типов.  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 14
  [STEndpoint (тип данных geography)](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a> Измерение  
- Непустой объект **geography** может иметь 0, 1 или 2 измерения. Объекты **geography**, имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString**, **CompoundCurve**и **MultiLineString**, имеют длину. Двухмерные экземпляры, такие как **Polygon, CurvePolygon** и **MultiPolygon**, имеют длину и площадь. В отчете пустых экземпляров указывается измерение -1, а в отчетах **GeometryCollection** — максимальное измерение содержимого.  
+ Непустой объект **geography** может иметь 0, 1 или 2 измерения. Объекты **geography** , имеющие 0 измерений, например **Point** и **MultiPoint**, не имеют ни длины, ни площади. Одномерные объекты, такие как **LineString, CircularString**, **CompoundCurve**и **MultiLineString**, имеют длину. Двухмерные экземпляры, такие как **Polygon, CurvePolygon**и **MultiPolygon**, имеют длину и площадь. В отчете пустых экземпляров указывается измерение -1, а в отчетах **GeometryCollection** — максимальное измерение содержимого.  
   
  **Получение измерения экземпляра**  
  [STDimension (тип данных geography)](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -192,7 +196,7 @@ caps.handback.revision: 14
  [RingN (тип данных geography)](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
 ###  <a name="srid"></a> Идентификатор пространственной ссылки (SRID)  
- Идентификатор пространственной ссылки (SRID) представляет собой идентификатор, указывающий на систему эллиптических координат, в которой находится экземпляр **geography**. Сравнение двух экземпляров **geography** с различными идентификаторами SRID невозможно.  
+ Идентификатор пространственной ссылки (SRID) представляет собой идентификатор, указывающий на систему эллиптических координат, в которой находится экземпляр **geography** . Сравнение двух экземпляров **geography** с различными идентификаторами SRID невозможно.  
   
  **Задание или возврат идентификатора SRID экземпляра**  
  [STSrid (тип данных geography)](../../t-sql/spatial-geography/stsrid-geography-data-type.md)  
@@ -200,7 +204,7 @@ caps.handback.revision: 14
  Это свойство можно изменять.  
   
 ##  <a name="rel"></a> Определение связей между экземплярами географических объектов  
- Тип данных **geography** предоставляет множество встроенных методов, с помощью которых можно определить связи между двумя объектами типа **geography**.  
+ Тип данных **geography** предоставляет множество встроенных методов, с помощью которых можно определить связи между двумя объектами типа **geography** .  
   
  **Определение возможного наличия одинакового набора точек в двух объектах**  
  [STEquals (тип данных geometry)](../../t-sql/spatial-geometry/stequals-geometry-data-type.md)  
@@ -224,14 +228,14 @@ caps.handback.revision: 14
  [STSymDifference (тип данных geography)](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> Обязательное использование поддерживаемых SRID в экземплярах географических объектах  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются идентификаторы SRID, основанные на стандартах EPSG. При выполнении вычислений или применении методов работы с географическими пространственными данными должны использоваться поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификаторы SRID для экземпляров **geography**. Заданный SRID должен соответствовать одному из идентификаторов SRID, отображенных в представлении каталога **sys.spatial_reference_systems**. Как было упомянуто ранее, результаты вычислений на пространственных данных с использованием типа данных **geography** зависят от эллипсоида, использованного при создании рабочих данных, поскольку каждому эллипсоиду назначается отдельный идентификатор пространственной ссылки (SRID).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются идентификаторы SRID, основанные на стандартах EPSG. При выполнении вычислений или применении методов работы с географическими пространственными данными должны использоваться поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]идентификаторы SRID для экземпляров **geography** . Заданный SRID должен соответствовать одному из идентификаторов SRID, отображенных в представлении каталога **sys.spatial_reference_systems** . Как было упомянуто ранее, результаты вычислений на пространственных данных с использованием типа данных **geography** зависят от эллипсоида, использованного при создании рабочих данных, поскольку каждому эллипсоиду назначается отдельный идентификатор пространственной ссылки (SRID).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **geometry** . Если используются данные системы пространственных ссылок, отличной от WGS 84 (или если значение SRID отличается от 4326), для собственных географических пространственных данных необходимо определить отдельный идентификатор SRID.  
   
 ##  <a name="examples"></a> Примеры  
  В следующих примерах иллюстрируется добавление и запрос географических данных.  
   
--   В первом примере создается таблица со столбцом идентификаторов и столбцом `geography` типа `GeogCol1`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()`. Затем вставляются две строки: одна строка содержит объект `LineString` типа `geography`, а другая — объект `Polygon`.  
+-   В первом примере создается таблица со столбцом идентификаторов и столбцом `geography` типа `GeogCol1`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geography`, а другая — объект `Polygon` .  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -252,7 +256,7 @@ caps.handback.revision: 14
     GO  
     ```  
   
--   Во втором примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленные ранее объекта `geography`.  
+-   Во втором примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленные ранее объекта `geography` .  
   
     ```  
     DECLARE @geog1 geography;  
@@ -265,7 +269,7 @@ caps.handback.revision: 14
     SELECT @result.STAsText();  
     ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

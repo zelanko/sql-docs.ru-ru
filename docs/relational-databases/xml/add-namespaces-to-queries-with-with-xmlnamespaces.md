@@ -1,40 +1,44 @@
 ---
-title: "Добавление пространств имен в запросы с WITH XMLNAMESPACES | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL, директива"
-  - "добавление пространств имен"
-  - "XSINIL, директива"
-  - "пространства имен по умолчанию"
-  - "запросы [XML в SQL Server] предложение WITH XMLNAMESPACES"
-  - "стандартные пространства имен [XML в SQL Server]"
-  - "предложение FOR XML, предложение WITH XMLNAMESPACES"
-  - "пространства имен [XML в SQL Server]"
-  - "тип данных XML [SQL Server], предложение WITH XMLNAMESPACES"
-  - "WITH XMLNAMESPACES,предложение"
+title: "Добавление пространств имен в запросы с помощью WITH XMLNAMESPACES | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Добавление пространств имен в запросы с WITH XMLNAMESPACES
-  Предложение [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md) поддерживает пространство имен URI следующим образом:  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Добавление пространств имен в запросы с WITH XMLNAMESPACES
+  Предложение[WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) поддерживает пространство имен URI следующим образом:  
   
 -   Разрешается сопоставление префикса пространства имен с адресом URI при [создании XML с помощью предложения FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
   
 -   Разрешается сопоставление пространства имен с адресом URI в статическом контексте пространств имен [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md).  
   
-## Использование предложения WITH XMLNAMESPACES в запросах FOR XML  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>Использование предложения WITH XMLNAMESPACES в запросах FOR XML  
  Использование предложения WITH XMLNAMESPACES позволяет включать пространства имен XML в запросы FOR XML. Например, рассмотрим следующий запрос FOR XML:  
   
 ```  
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## Использование директивы XSINIL  
+## <a name="using-the-xsinil-directive"></a>Использование директивы XSINIL  
  При использовании директивы ELEMENTS XSINIL xsi-префиксы в предложении WITH XMLNAMESPACES использовать нельзя. При использовании директивы ELEMENTS XSINIL префиксы добавляются автоматически. В следующем запросе используется директива ELEMENTS XSINIL, формирующая ориентированный на элементы XML-документ, в котором пустые значения сопоставляются с элементами, для которых атрибут **xsi:nil** имеет значение True.  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## Указание пространств имен по умолчанию  
+## <a name="specifying-default-namespaces"></a>Указание пространств имен по умолчанию  
  Вместо объявления префикса пространства имени можно объявить пространство имени с помощью ключевого слова DEFAULT. В запросе FOR XML таким образом происходит привязка пространства имен по умолчанию к XML-узлам результирующего XML-документа. В представленном ниже примере с помощью предложения WITH XMLNAMESPACES задается два префикса пространства имен, которые определяются вместе с пространством имен по умолчанию.  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## Использование предопределенных пространств имен  
+## <a name="using-predefined-namespaces"></a>Использование предопределенных пространств имен  
  При использовании предопределенных пространств имен, кроме случаев использования пространств имен xml и xsi в директиве ELEMENTS XSINIL, необходимо явно указывать привязку пространств имен в предложении WITH XMLNAMESPACES. В следующем запросе происходит задание префикса пространства имен для привязки к адресу URI для предопределенного пространства имен (`urn:schemas-microsoft-com:xml-sql`).  
   
 ```  
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## Использование предложения WITH XMLNAMESPACES с методами типа данных xml  
- Все [методы типа данных xml](../../t-sql/xml/xml-data-type-methods.md), указанные в запросе SELECT (или UPDATE в случае метода **modify()**), должны повторять в своем прологе объявление пространства имен. Это может занять некоторое время. Например, в результате выполнения следующего запроса получаются идентификаторы моделей, в описание каталогов которых включены спецификации. То есть те, для которых существует элемент <`Specifications`>.  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>Использование предложения WITH XMLNAMESPACES с методами типа данных xml  
+ Все [методы типа данных xml](../../t-sql/xml/xml-data-type-methods.md) , указанные в запросе SELECT (или UPDATE в случае метода **modify()** ), должны повторять в своем прологе объявление пространства имен. Это может занять некоторое время. Например, в результате выполнения следующего запроса получаются идентификаторы моделей, в описание каталогов которых включены спецификации. То есть те, для которых существует элемент <`Specifications`>.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -223,7 +227,7 @@ WHERE CatalogDescription.exist('
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
- Того же результата можно достичь, если вначале объявить предложение WITH XMLNAMESPACES, а затем использовать указанные в нем префиксы пространства имен в запросе. В таком случае в прологах обоих методов (**query()** и **exist()**) пространства имен не объявляются.  
+ Того же результата можно достичь, если вначале объявить предложение WITH XMLNAMESPACES, а затем использовать указанные в нем префиксы пространства имен в запросе. В таком случае в прологах обоих методов ( **query()** и **exist()** ) пространства имен не объявляются.  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -241,10 +245,10 @@ Go
   
  Обратите внимание, что при явном объявлении в прологе запроса на языке XQuery, указанные в нем префиксы пространства имен переопределяют все указанные ранее и заданные по умолчанию с помощью предложения WITH префиксы.  
   
-## См. также:  
- [Методы типа данных XML](../../t-sql/xml/xml-data-type-methods.md)   
+## <a name="see-also"></a>См. также:  
+ [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES (Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

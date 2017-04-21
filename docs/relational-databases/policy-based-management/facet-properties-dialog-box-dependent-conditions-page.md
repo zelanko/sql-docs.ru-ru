@@ -1,31 +1,35 @@
 ---
-title: "Диалоговое окно &#171;Свойства аспекта&#187;, вкладка &#171;Зависимые условия&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.facet.dependentconditions.f1"
+title: "Диалоговое окно &quot;Свойства аспекта&quot;, вкладка &quot;Зависимые условия&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.facet.dependentconditions.f1
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 212154e385d63663bcd858ddd83fd5ad73431c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# Диалоговое окно &#171;Свойства аспекта&#187;, вкладка &#171;Зависимые условия&#187;
+# <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Диалоговое окно «Свойства аспекта», вкладка «Зависимые условия»
   Используйте это диалоговое окно для отображения списка условий, которые в данный момент ссылаются на этот аспект управления на основе политик.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Название**  
  Перечисляет имена всех условий, упоминающих данный текущий аспект.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

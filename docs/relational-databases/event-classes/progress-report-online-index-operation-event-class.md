@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Progress Report: Online Index Operation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Класс событий Progress Report: Online Index Operation [SQL Server]"
+title: "Класс событий Progress Report: Online Index Operation | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'Progress Report: Online Index Operation event class [SQL Server]'
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74cab49e651efabd8862e4d6ddf78a8fbdf739b8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Progress Report: Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Класс событий Progress Report: Online Index Operation
   Класс событий Progress Report: класс событий Online Index Operation указывает ход операции оперативного построения индекса.  
   
-## Столбцы данных класса событий Progress Report: Online Index Operation  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Столбцы данных класса событий Progress Report: Online Index Operation  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,12 +39,12 @@ caps.handback.revision: 23
 |EndTime|**datetime**|Время завершения операции с индексами в сети.|15|Да|  
 |EventClass|**int**|Тип события = 190.|27|Нет|  
 |EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
-|EventSubClass|**int**|Тип подкласса события. <br /><br /> 1 = начало<br /><br /> 2 = начало выполнения этапа 1<br /><br /> 3 = этап 1. Выполнение закончилось<br /><br /> 2 = этап 2. Выполнение началось<br /><br /> 3 = этап 2. Выполнение закончилось<br /><br /> 6 = счетчик вставленных строк<br /><br /> 7 = готово<br /><br /> Этап 1 относится к базовому объекту (кластеризованному индексу или куче), или если в операции индексирования содержится только один некластеризованный индекс. Этап 2 используется в случае, когда в операции построения индекса участвуют и исходное перестроение, и дополнительные некластеризованные индексы.  Например, если у объекта имеется кластеризованный индекс и несколько некластеризованных индексов, инструкция «rebuild all» вызовет перестроение всех индексов. При этом базовый объект (кластеризованный индекс) перестраивается на этапе 1, а все некластеризованные индексы — на этапе 2.|21|Да|  
+|EventSubClass|**int**|Тип подкласса события.<br /><br /> 1 = начало<br /><br /> 2 = начало выполнения этапа 1<br /><br /> 3 = этап 1. Выполнение закончилось<br /><br /> 2 = этап 2. Выполнение началось<br /><br /> 3 = этап 2. Выполнение закончилось<br /><br /> 6 = счетчик вставленных строк<br /><br /> 7 = готово<br /><br /> Этап 1 относится к базовому объекту (кластеризованному индексу или куче), или если в операции индексирования содержится только один некластеризованный индекс. Этап 2 используется в случае, когда в операции построения индекса участвуют и исходное перестроение, и дополнительные некластеризованные индексы.  Например, если у объекта имеется кластеризованный индекс и несколько некластеризованных индексов, инструкция «rebuild all» вызовет перестроение всех индексов. При этом базовый объект (кластеризованный индекс) перестраивается на этапе 1, а все некластеризованные индексы — на этапе 2.|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IndexID|**int**|Идентификатор индекса объекта, связанного с событием.|24|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|LoginName|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|LoginName|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
 |LoginSid|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|**nvarchar**|Имя пользователя Windows.|6|Да|  
@@ -49,12 +53,12 @@ caps.handback.revision: 23
 |PartitionId|**bigint**|ID формируемой секции.|65|Да|  
 |PartitionNumber|**int**|Порядковый номер формируемой секции.|25|Да|  
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и имена входа Windows.|64|Да|  
+|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события.|14|Да|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

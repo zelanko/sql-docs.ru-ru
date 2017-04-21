@@ -1,28 +1,32 @@
 ---
-title: "Создание определяемых пользователем функций (компонент Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SCHEMABINDING, предложение"
-  - "функции, привязанные к схеме [SQL Server]"
-  - "пользовательские функции [SQL Server], создание"
-  - "CREATE FUNCTION, инструкция"
-  - "допустимые инструкции [SQL Server]"
+title: "Создание пользовательских функций (ядро СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SCHEMABINDING clause
+- schema-bound functions [SQL Server]
+- user-defined functions [SQL Server], creating
+- CREATE FUNCTION statement
+- valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4ea2a247e4d8a55cd3467510f19115cc3163bc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание определяемых пользователем функций (компонент Database Engine)
+# <a name="create-user-defined-functions-database-engine"></a>Создание определяемых пользователем функций (компонент Database Engine)
   В этом разделе описывается создание определяемой пользователем функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   
@@ -177,11 +181,12 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## Другие примеры  
+## <a name="more-examples"></a>Другие примеры  
  - [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 
   - [ALTER FUNCTION (Transact-SQL)](https://msdn.microsoft.com/library/ms173799.aspx) 
  - [DROP FUNCTION (Transact-SQL)](https://msdn.microsoft.com/library/ms173799.aspx)
  - [DROP PARTITION FUNCTION (Transact-SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
- - Другие примеры ([сообщество](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712))
+ - Другие примеры ( [сообщество](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712))
   
+

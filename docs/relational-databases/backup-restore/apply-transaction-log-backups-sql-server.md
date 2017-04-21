@@ -1,28 +1,32 @@
 ---
-title: "Применение резервных копий журналов транзакций (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление [SQL Server], резервные копии журналов"
-  - "резервные копии журналов транзакций [SQL Server], применение резервных копий"
-  - "оперативное восстановление [SQL Server], резервные копии журналов"
-  - "резервные копии журналов транзакций [SQL Server], количество, необходимое для последовательности восстановления"
-  - "резервные копии [SQL Server], резервные копии журналов"
+title: "Использование резервных копий журнала транзакций (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Применение резервных копий журналов транзакций (SQL Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>Применение резервных копий журналов транзакций (SQL Server)
   Этот раздел относится только к модели полного восстановления и модели восстановления с неполным протоколированием.  
   
  В этом разделе описано применение резервных копий журнала транзакции в процессе восстановления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -31,7 +35,7 @@ caps.handback.revision: 38
 ##  <a name="Requirements"></a> Требования к восстановлению резервных копий журналов транзакций  
  Для применения резервной копии журнала транзакций необходимо выполнить следующие требования.  
   
--   **Достаточное количество резервных копий журналов для последовательности восстановления.** Записей в резервных копиях журнала должно быть достаточно, чтобы провести полную последовательность восстановления. Необходимые резервные копии журнала, включая при необходимости [резервные копии конца журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md), должны быть доступны перед запуском последовательности восстановления.  
+-   **Достаточное количество резервных копий журналов для последовательности восстановления.** Записей в резервных копиях журнала должно быть достаточно, чтобы провести полную последовательность восстановления. Необходимые резервные копии журнала, включая при необходимости [резервные копии конца журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) , должны быть доступны перед запуском последовательности восстановления.  
   
 -   **Правильный порядок восстановления.**  Необходимо сначала восстановить последнюю полную или разностную резервную копию базы данных. После этого в хронологическом порядке необходимо восстановить все журналы транзакций, созданные после указанной полной или разностной резервной копии. Если резервная копия журнала транзакций в этой цепочке журналов утрачена или повреждена, то восстановить можно только журналы транзакций до отсутствующего журнала.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
  **Восстановление до нужной точки восстановления**  
   
--   [Восстановление базы данных до точки сбоя в модели полного восстановления (Transact-SQL)](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [Восстановление базы данных до точки сбоя в модели полного восстановления (Transact-SQL)](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [Восстановление базы данных без восстановления данных (Transact-SQL)](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

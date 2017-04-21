@@ -1,28 +1,32 @@
 ---
-title: "Определение логического устройства резервного копирования для дискового файла (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "устройства резервного копирования [SQL Server], определение"
-  - "устройства резервного копирования [SQL Server], диски"
-  - "дисковые устройства резервного копирования [SQL Server]"
-  - "резервные копии баз данных [SQL Server], диски"
-  - "резервное копирование баз данных [SQL Server], диски"
+title: "Определение логического устройства резервного копирования для дискового файла (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup devices [SQL Server], defining
+- backup devices [SQL Server], disks
+- disk backup devices [SQL Server]
+- database backups [SQL Server], disks
+- backing up databases [SQL Server], disks
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd550f0690603132f53452f064af24e05426398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Определение логического устройства резервного копирования для дискового файла (SQL Server)
+# <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Определение логического устройства резервного копирования для дискового файла (SQL Server)
   В данном разделе описывается процесс определения логического устройства резервного копирования для дискового файла в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Логическое устройство представляет собой определяемое пользователем имя, которое указывает на конкретное физическое устройство резервного копирования (дисковый файл или ленточный накопитель).  Инициализация физического устройства происходит позже, при записи на него резервной копии.  
   
  **В этом разделе**  
@@ -45,7 +49,7 @@ caps.handback.revision: 39
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Каждое имя логического устройства должно быть уникальным в пространстве имен всех логических устройств резервного копирования на экземпляре сервера. Чтобы просмотреть имена существующих логических устройств, запросите представление каталога [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).  
+-   Каждое имя логического устройства должно быть уникальным в пространстве имен всех логических устройств резервного копирования на экземпляре сервера. Чтобы просмотреть имена существующих логических устройств, запросите представление каталога [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) .  
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
@@ -60,11 +64,11 @@ caps.handback.revision: 39
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Определение логического устройства резервного копирования для дискового файла  
+#### <a name="to-define-a-logical-backup-device-for-a-disk-file"></a>Определение логического устройства резервного копирования для дискового файла  
   
 1.  После соединения с соответствующим экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   
-2.  Разверните **Объекты сервера** и щелкните правой кнопкой мыши **Устройства резервного копирования**.  
+2.  Разверните **Объекты сервера**и щелкните правой кнопкой мыши **Устройства резервного копирования**.  
   
 3.  Выберите команду **Создать устройство резервного копирования**. Откроется диалоговое окно **Устройство резервного копирования** .  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 39
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Определение логического устройства резервного копирования для дискового файла  
+#### <a name="to-define-a-logical-backup-for-a-disk-file"></a>Определение логического устройства резервного копирования для дискового файла  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -93,7 +97,7 @@ EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak' ;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   

@@ -1,27 +1,31 @@
 ---
-title: "Системные базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "системные базы данных [SQL Server]"
-  - "отображение данных системной базы данных"
-  - "изменение системных данных"
-  - "просмотр данных системной базы данных"
+title: "Системные базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- system databases [SQL Server]
+- displaying system database data
+- modifying system data
+- viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ed6df401b8bdac3926c919d4dda039c2b4a1fa6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Системные базы данных
+# <a name="system-databases"></a>Системные базы данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входят следующие системные базы данных.  
   
 |Системная база данных|Описание|  
@@ -32,7 +36,7 @@ caps.handback.revision: 25
 |[База данных Resource](../../relational-databases/databases/resource-database.md)|База данных только для чтения. Содержит системные объекты, которые входят в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Системные объекты физически хранятся в базе данных **Resource** , но логически отображаются в схеме **sys** любой базы данных.|  
 |[База данных tempdb](../../relational-databases/databases/tempdb-database.md)|Рабочее пространство для временных объектов или взаимодействия результирующих наборов.|  
   
-## Изменение системных данных  
+## <a name="modifying-system-data"></a>изменение системных данных  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает прямое обновление пользователями данных в таких системных объектах, как таблицы, системные хранимые процедуры и представления каталогов. Вместо этого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет полный набор административных средств, позволяющих пользователям управлять всей системой, пользователями и объектами базы данных. следующие основные параметры.  
   
 -   Административные программы, например [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -48,7 +52,7 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Системные базы данных не могут размещаться в общих каталогах UNC.  
   
-## Просмотр данных системной базы данных  
+## <a name="viewing-system-database-data"></a>просмотр данных системной базы данных  
  Не следует создавать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые выполняют запросы непосредственно к системным таблицам, если только это не единственный способ получить данные, необходимые для приложения. Приложения должны получать данные каталога и системные данные с помощью следующих средств:  
   
 -   представлений системного каталога;  
@@ -61,12 +65,12 @@ caps.handback.revision: 25
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] встроенных функций и системных хранимых процедур.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Скрытие системных объектов в обозревателе объектов](../../ssms/object/hide-system-objects-in-object-explorer.md)  
+ [Скрытие системных объектов в обозревателе объектов](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
  [Базы данных](../../relational-databases/databases/databases.md)  

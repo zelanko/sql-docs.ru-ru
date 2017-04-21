@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Attention | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Attention, класс событий"
+title: "Класс событий Attention | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Attention event class
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efe8ebb8481cafd35d36b2e9594626b940cf754e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Attention
+# <a name="attention-event-class"></a>Attention, класс событий
   Класс событий **Attention** указывает, что произошло событие, требующее внимания пользователя (отмена, прерванный клиентом запрос, обрыв соединения). Операции отмены также могут появляться при истечении времени ожидания драйвером доступа к данным.  
   
-## Столбцы данных класса событий Attention  
+## <a name="attention-event-class-data-columns"></a>Столбцы данных класса событий Attention  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,8 +39,8 @@ caps.handback.revision: 28
 |**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
@@ -46,7 +50,7 @@ caps.handback.revision: 28
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

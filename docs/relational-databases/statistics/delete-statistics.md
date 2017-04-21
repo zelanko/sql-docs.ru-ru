@@ -1,25 +1,29 @@
 ---
-title: "Удаление статистики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "статистика [SQL Server], удаление"
-  - "удаление статистических данных"
+title: "Удаление статистики | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistics [SQL Server], deleting
+- deleting statistics
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51349f58a29f7a0702e719f83e5f60632fb8d7c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление статистики
+# <a name="delete-statistics"></a>Удаление статистики
   Удалить статистику из таблиц и представлений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
@@ -51,7 +55,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Удаление статистики из таблицы или представления  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>Удаление статистики из таблицы или представления  
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть базу данных, в которой нужно удалить статистику.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Удаление статистики из таблицы или представления  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>Удаление статистики из таблицы или представления  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,29 +1,33 @@
 ---
-title: "Создание учетных данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "учетные данные [SQL Server], создание"
-  - "проверка подлинности [SQL Server], учетные данные"
-  - "имена входа [SQL Server], учетные данные"
+title: "Создание учетных данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [SQL Server], creating
+- authentication [SQL Server], credentials
+- logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание учетных данных
+# <a name="create-a-credential"></a>Создание учетных данных
   В этом разделе описано, как создать учетные данные в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Учетные данные обеспечивают возможность проходить проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пользователям, имеющим удостоверение вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Это в первую очередь необходимо для выполнения программного кода в сборках с набором разрешений EXTERNAL_ACCESS. Учетные данные также применяются в случае, когда пользователям, использующим проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], требуется доступ к ресурсам домена, например к хранилищу файлов для создания резервной копии.  
+ Учетные данные обеспечивают возможность проходить проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пользователям, имеющим удостоверение вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Это в первую очередь необходимо для выполнения программного кода в сборках с набором разрешений EXTERNAL_ACCESS. Учетные данные также применяются в случае, когда пользователям, использующим проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , требуется доступ к ресурсам домена, например к хранилищу файлов для создания резервной копии.  
   
  Набор учетных данных может быть одновременно сопоставлен с несколькими именами входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . С одним именем входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может одновременно быть сопоставлен только один набор учетных данных. После создания учетных данных в окне **Свойства имени входа (страница "Общие")** сопоставьте их с именем входа.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание учетных данных  
+#### <a name="to-create-a-credential"></a>Создание учетных данных  
   
 1.  В обозревателе объектов разверните папку **Безопасность** .  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 17
   
 4.  В поле **Удостоверение** введите имя учетной записи, используемой для исходящих соединений (при выходе из контекста [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Как правило, это будет учетная запись пользователя Windows, но удостоверение может быть и учетной записью другого типа.  
   
-     Либо нажмите кнопку с многоточием **(...)**, чтобы открыть диалоговое окно **Выбор пользователя или группы**.  
+     Либо нажмите кнопку с многоточием **(...)** , чтобы открыть диалоговое окно **Выбор пользователя или группы** .  
   
 5.  В полях **Пароль** и **Подтверждение пароля** введите пароль учетной записи, указанной в поле **Удостоверение** . Если в поле **Удостоверение** указана учетная запись пользователя Windows, то это будет пароль Windows. Поле **Пароль** может быть пустым, если пароль не требуется.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание учетных данных  
+#### <a name="to-create-a-credential"></a>Создание учетных данных  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

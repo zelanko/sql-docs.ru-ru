@@ -1,24 +1,28 @@
 ---
-title: "Предоставление разрешения для участника | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Предоставление разрешения для участника"
+title: "Предоставление разрешения для субъекта | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# Предоставление разрешения для участника
+# <a name="grant-a-permission-to-a-principal"></a>Предоставление разрешения для участника
   В данном разделе содержатся инструкции по предоставлению разрешения участнику [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Предоставление разрешения участнику  
+#### <a name="to-grant-permission-to-a-principal"></a>Предоставление разрешения участнику  
   
 1.  В обозревателе объектов разверните базу данных, содержащую объект, которому необходимо предоставить разрешение.  
   
@@ -64,13 +68,13 @@ caps.handback.revision: 12
   
 4.  Щелкните правой кнопкой мыши хранимую процедуру и выберите **Свойства**.  
   
-5.  В разделе выбора страницы диалогового окна **Свойства хранимой процедуры —***имя_хранимой_процедуры* щелкните **Разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
+5.  В разделе выбора страницы диалогового окна **Свойства хранимой процедуры —***имя_хранимой_процедуры* щелкните **Разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
   
 6.  После завершения нажмите кнопку **ОК**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Предоставление разрешения участнику  
+#### <a name="to-grant-permission-to-a-principal"></a>Предоставление разрешения участнику  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  Дополнительные сведения см. в статьях [GRANT (Transact-SQL)](../../../t-sql/statements/grant-transact-sql.md) и [Разрешения объекта GRANT (Transact-SQL)](../../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Участники (компонент Database Engine)](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

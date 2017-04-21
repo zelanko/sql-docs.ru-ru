@@ -1,28 +1,32 @@
 ---
-title: "Глоссарий терминов публикации Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "публикация Oracle [репликация SQL Server], глоссарий"
+title: "Глоссарий терминов по публикации Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b6050bf02c897e14ba643bb170423b1614cf0207
+ms.lasthandoff: 04/11/2017
+
 ---
-# Глоссарий терминов публикации Oracle
+# <a name="glossary-of-terms-for-oracle-publishing"></a>Глоссарий терминов публикации Oracle
   Для администрирования и настройки конфигурации публикации Oracle необходимо ознакомиться со следующей терминологией Oracle. Полный список терминов Oracle см. в электронной документации Oracle.  
   
  Индексно организованные таблицы (IOT)  
- Таблицы, данные которой физически отсортированы на диске в индексном порядке; Это похоже на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицу с кластеризованным индексом. IOT реплицируется на подписчик в виде таблицы с кластеризованным индексом.  
+ Таблица, данные которой физически отсортированы на диске в индексном порядке; аналог таблицы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с кластеризованным индексом. IOT реплицируется на подписчик в виде таблицы с кластеризованным индексом.  
   
  Экземпляр  
  База данных Oracle связана с экземпляром. Экземпляр содержит память и фоновые процессы, поддерживающие базу данных. Экземпляр Oracle всегда сопоставляется с одной базой данных, тогда как экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может содержать множество баз данных. Существуют обстоятельства, при которых база данных Oracle может иметь несколько экземпляров.  
@@ -36,11 +40,11 @@ caps.handback.revision: 32
  Последовательность  
  Объект базы данных, который используется для формирования уникальных чисел. Репликация использует последовательности дл упорядочивания изменений, произведенных в опубликованных таблицах.  
   
- SQL\*плюс  
+ SQL\*Plus  
  Приложение, используемое для доступа и отправки запросов к базам данных Oracle. Похоже на программу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**.  
   
  Синоним  
- Псевдоним для объекта. При настройке издателя Oracle автоматически создается специальный открытый синоним **MSSQLSERVERDISTRIBUTOR** . Синоним ссылается на **HREPL_Distributor** таблицы и обеспечивает логический указатель на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распространитель, обслуживающий издателя.  
+ Псевдоним для объекта. При настройке издателя Oracle автоматически создается специальный открытый синоним **MSSQLSERVERDISTRIBUTOR** . Синоним ссылается на таблицу **HREPL_Distributor** и обеспечивает логический указатель на распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обслуживающий издателя.  
   
  После публикации базы данных Oracle последующие попытки переустановить конфигурацию издателя для использования иного распространителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будут неудачны, поскольку этот открытый синоним идентифицирует определенный распространитель с установленной конфигурацией для обслуживания издателя.  
   
@@ -53,10 +57,10 @@ caps.handback.revision: 32
  Пользовательская схема  
  Пользовательская схема может рассматриваться как пользователь базы данных, владеющий определенным набором ее объектов. Схема администратора репликации владеет всеми объектами, созданными процессом репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в базе данных Oracle, за исключением открытого синонима **MSSQLSERVERDISTRIBUTOR** .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Объекты, создаваемые на издателе Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
+ [Объекты, создаваемые в издателе Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [Издатели, отличные от издателей SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   
- [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

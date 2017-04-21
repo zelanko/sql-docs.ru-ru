@@ -1,27 +1,31 @@
 ---
-title: "Объект базы данных (страница &#171;Расширенные свойства&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.common.extendedproperties.f1"
+title: "Объект базы данных (страница &quot;Расширенные свойства&quot;) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec5710e412a5e29399f897cf4e6e1c5ca3c88ce4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Объект базы данных (страница &#171;Расширенные свойства&#187;)
+# <a name="database-object-extended-properties-page"></a>Объект базы данных (страница «Расширенные свойства»)
   Расширенные свойства позволяют добавлять пользовательские характеристики объектам базы данных. Используйте эту страницу, чтобы просмотреть или изменить свойства выбранного объекта. Страница **Расширенные свойства** отображается одинаково для всех типов объектов базы данных.  
   
-## Список элементов пользовательского интерфейса  
+## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **База данных**  
  Отображает имя выбранной базы данных. Это поле доступно только для чтения.  
   
@@ -32,12 +36,12 @@ caps.handback.revision: 24
  Просмотрите или укажите расширенные свойства объекта. Каждое расширенное свойство состоит из пары имя/значение метаданных, связанных с объектом.  
   
  **Кнопка обзора**  
- Нажмите кнопку обзора (...) после поля **Значение**, чтобы открыть диалоговое окно **Значение расширенного свойства**. Введите или просмотрите значение расширенного свойства в этом более просторном окне.  
+ Нажмите кнопку обзора (...) после поля **Значение** , чтобы открыть диалоговое окно **Значение расширенного свойства** . Введите или просмотрите значение расширенного свойства в этом более просторном окне.  
   
  **Delete**  
  Удаляет выбранное расширенное свойство.  
   
-## См. также:  
- [Представления каталога расширенных свойств (Transact-SQL)](../Topic/Extended%20Properties%20Catalog%20Views%20\(Transact-SQL\).md)  
+## <a name="see-also"></a>См. также:  
+ [Представления каталога расширенных свойств (Transact-SQL)](http://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
   
   

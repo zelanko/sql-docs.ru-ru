@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Broker:Conversation Group | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Conversation Group, класс событий"
+title: "Класс событий Broker:Conversation Group | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Conversation Group event class
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9208fcec2046feb785e2cedfd0b3a66a851cc7d6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Broker:Conversation Group
+# <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Conversation Group** , когда компонент Service Broker создает новую или удаляет существующую группу сообщений.  
   
-## Класс событий «Broker:Conversation Group»  
+## <a name="brokerconversation-group-event-class-data-columns"></a>Класс событий «Broker:Conversation Group»  
   
 |Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  

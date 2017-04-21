@@ -1,28 +1,32 @@
 ---
-title: "Диалоговое окно &#171;Создание нового условия&#187; или &#171;Открытие условия&#187;, страница &#171;Описание&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.condition.description.f1"
-  - "sql13.swb.dmf.policy.description.f1"
+title: "Диалоговое окно &quot;Создание нового условия&quot; или &quot;Открытие условия&quot;, страница &quot;Описание&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.condition.description.f1
+- sql13.swb.dmf.policy.description.f1
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e053294a414ae2baefc90f20ff3fc80adf78a0e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Диалоговое окно &#171;Создание нового условия&#187; или &#171;Открытие условия&#187;, страница &#171;Описание&#187;
+# <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Описание»
   С помощью данного диалогового окна добавляется описание к условию управления на основе политик.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Описание**  
  Введите описание условия.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 37
  **Кем изменен**  
  Имя входа, внесшее последнее изменение в условие.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

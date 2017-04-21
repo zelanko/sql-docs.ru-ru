@@ -1,44 +1,48 @@
 ---
-title: "Управление отслеживанием изменений (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "отслеживание изменений в данных [SQL Server]"
-  - "отслеживание изменений [SQL Server], служебные данные"
-  - "отслеживание изменений [SQL Server]"
-  - "отслеживание изменений [SQL Server], управление"
+title: "Управление отслеживанием изменений (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], overhead
+- change tracking [SQL Server]
+- change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
+ms.lasthandoff: 04/11/2017
+
 ---
-# Управление отслеживанием изменений (SQL Server)
+# <a name="manage-change-tracking-sql-server"></a>Управление отслеживанием изменений (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается процесс управления отслеживанием изменений. А также процесс настройки безопасности и определение влияния отслеживания изменений на хранение данных и производительность.  
   
-## Управление отслеживанием изменений  
+## <a name="managing-change-tracking"></a>Управление отслеживанием изменений  
  В следующих разделах перечислены представления каталога, разрешения и параметры, имеющие отношение к управлению отслеживанием изменений.  
   
-### Представления каталога  
+### <a name="catalog-views"></a>Представления каталога  
  Чтобы определить, для каких таблиц и баз данных включено отслеживание изменений, воспользуйтесь следующими представлениями каталога.  
   
--   [sys.change_tracking_databases (Transact-SQL)](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables (Transact-SQL)](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
  Кроме того, представление каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) отражает внутренние таблицы, созданные при включении отслеживания изменений для пользовательской таблицы.  
   
-### Безопасность  
+### <a name="security"></a>Безопасность  
  Для доступа к данным отслеживания изменений с помощью [функций отслеживания изменений](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)участник должен иметь следующие разрешения.  
   
 -   Разрешение SELECT как минимум для первичных ключевых столбцов отслеживаемой таблицы, для которой выполняется запрос.  
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
     -   Данные отслеживания изменений могут содержать сведения о столбцах, измененных в процессе выполнения инструкций обновления. Участнику можно запретить доступ к столбцу, содержащему конфиденциальные сведения. Но, поскольку доступны данные об отслеживании изменений, участник может определить, что значение столбца изменилось, но не выяснить значение этого столбца.  
   
-## Основные сведения о затратах на отслеживание изменений  
+## <a name="understanding-change-tracking-overhead"></a>Основные сведения о затратах на отслеживание изменений  
  Включение отслеживания изменений для таблицы затрагивает некоторые операции администрирования. В следующей таблице приведен список этих операций и их воздействие, которое нужно учитывать.  
   
 |Операция|При включении отслеживания изменений|  
@@ -65,7 +69,7 @@ caps.handback.revision: 9
   
  Использование отслеживания изменений связано с некоторыми дополнительными затратами при операциях DML из-за сведений об отслеживании затрат, сохраняемых в ходе операции.  
   
-### Влияние на DML  
+### <a name="effects-on-dml"></a>Влияние на DML  
  Отслеживание изменений оптимизировано для снижения нагрузки на DML-операции. Постепенное снижение производительности для таблицы, связанной с отслеживанием изменений, сопоставимо с затратами, возникающими при создании и обслуживании индекса для таблицы.  
   
  При изменении каждой строки при выполнении операции DML во внутреннюю таблицу отслеживания изменений добавляется строка. Эффект в отношении операций DML зависит от различных факторов, в том числе перечисленных ниже.  
@@ -78,7 +82,7 @@ caps.handback.revision: 9
   
  Изоляция моментальных снимков, если она используется, оказывает влияние на все операции DML, независимо от того, включено ли отслеживание изменений.  
   
-### Влияние на хранилище данных  
+### <a name="effects-on-storage"></a>Влияние на хранилище данных  
  Данные отслеживания изменений хранятся во внутренних таблицах следующих типов.  
   
 -   Внутренняя таблица изменений  
@@ -95,22 +99,23 @@ caps.handback.revision: 9
   
 -   Для каждой зафиксированной транзакции во внутреннюю таблицу транзакций добавляется строка.  
   
- Как для других внутренних таблиц, место, занимаемое таблицами отслеживания изменений, можно определить с помощью хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Названия внутренних таблиц можно определить с помощью представления каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md), как показано в следующем примере.  
+ Как для других внутренних таблиц, место, занимаемое таблицами отслеживания изменений, можно определить с помощью хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . Названия внутренних таблиц можно определить с помощью представления каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , как показано в следующем примере.  
   
 ```tsql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [Свойства базы данных (страница "Отслеживание изменений")](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases (Transact-SQL)](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables (Transact-SQL)](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Об отслеживании изменений (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Работа с информацией об изменениях (SQL Server)](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
+

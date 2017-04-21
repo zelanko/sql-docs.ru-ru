@@ -1,23 +1,27 @@
 ---
-title: "Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6120bdfcead0939218958888ca3a223a8c1385
+ms.lasthandoff: 04/11/2017
+
 ---
-# Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями
+# <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этом разделе обсуждается, как работа с оптимизированной для памяти темпоральной таблицей с системным управлением версиями отличается от работы с дисковой темпоральной таблицей с системным управлением версиями.  
@@ -25,7 +29,7 @@ caps.handback.revision: 12
 > [!NOTE]  
 >  Использование Temporal с оптимизированными для памяти таблицами применяется только к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и не относится к [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-## Обнаружение метаданных  
+## <a name="discovering-metadata"></a>Обнаружение метаданных  
  Для обнаружения метаданных об оптимизированной для памяти темпоральной таблице с системным управлением версиями необходимо объединить информацию из разделов [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) и [sys.internal_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md). Темпоральная таблица с системным управлением версиями представляется в виде parent_object_id внутренней таблицы журнала в памяти.  
   
  В этом примере показано, как выполнить запрос к этим таблицам и их соединение.  
@@ -46,7 +50,7 @@ WHERE T1.is_memory_optimized  = 1 AND T1.temporal_type = 2
   
 ```  
   
-## Изменение данных  
+## <a name="modifying-data"></a>Изменение данных  
  Оптимизированные для памяти темпоральные таблицы с системным управлением версиями можно изменять посредством хранимых процедур, скомпилированных в собственном коде. Это позволяет преобразовывать нетемпоральные оптимизированные для памяти таблицы в таблицы с системным управлением версиями и сохранять при этом существующие собственные хранимые процедуры.  
   
  В этом примере показано, как можно изменить ранее созданную таблицу в модуле, скомпилированном в собственном коде.  
@@ -72,10 +76,10 @@ GO ;
   
 ```  
   
-## Эта статья помогла вам? Мы слушаем  
+## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
  Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Мониторинг оптимизированных для памяти темпоральных таблиц с системным управлением версиями](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
@@ -86,3 +90,4 @@ GO ;
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

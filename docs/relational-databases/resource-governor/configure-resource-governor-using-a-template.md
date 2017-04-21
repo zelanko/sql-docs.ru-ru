@@ -1,29 +1,33 @@
 ---
-title: "Настройка регулятора ресурсов с помощью шаблона | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Регулятор ресурсов, шаблоны"
+title: "Настройка регулятора ресурсов с помощью шаблона | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37a30ac49e0b7af05e0c7fb8e2ac1a32824186f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка регулятора ресурсов с помощью шаблона
+# <a name="configure-resource-governor-using-a-template"></a>Настройка регулятора ресурсов с помощью шаблона
   Можно настроить регулятор ресурсов с помощью шаблона, имеющегося в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **Создание группы рабочей нагрузки с использованием:**  [шаблон](#ConfRGTemplate)  
+-   **To create a workload group, using:**  [a template](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  С помощью дополнительных шагов можно открыть и изменить шаблон, который создает пул ресурсов и группу рабочей нагрузки для этого пула. Кроме того, данный шаблон позволяет создавать определяемую пользователем функцию-классификатор, направляющую новые соединения либо в группу по умолчанию, либо в пользовательскую группу рабочей нагрузки.  
@@ -36,7 +40,7 @@ caps.handback.revision: 15
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в меню **Вид** выберите пункт **Обозреватель шаблонов**.  
   
-2.  В **Обозревателе шаблонов** разверните **Регулятор ресурсов**, затем дважды щелкните значок **Настройка регулятора ресурсов**.  
+2.  В **Обозревателе шаблонов**разверните **Регулятор ресурсов**, затем дважды щелкните значок **Настройка регулятора ресурсов**.  
   
 3.  В разделе **Подключение к компоненту Database Engine**введите необходимые сведения и нажмите кнопку **ОК**. В составе редактора запросов поставляется шаблон Configure Resource Governor.sql. С помощью этого шаблона можно создать и настроить пул ресурсов, группу рабочей нагрузки и функцию-классификатор.  
   
@@ -46,8 +50,8 @@ caps.handback.revision: 15
   
 6.  Чтобы запустить запрос, нажмите кнопку **Выполнить**.  
   
-## См. также:  
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>См. также:  
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

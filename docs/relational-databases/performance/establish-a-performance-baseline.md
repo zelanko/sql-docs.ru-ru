@@ -1,32 +1,36 @@
 ---
-title: "Формирование базовых показателей производительности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "производительность базы данных [SQL Server], базовые уровни"
-  - "мониторинг производительности [SQL Server], базовые уровни"
-  - "настройка баз данных [SQL Server], базовые уровни"
-  - "производительность сервера [SQL Server], базовые уровни"
-  - "производительность [SQL Server], базовые уровни"
-  - "базовый уровень производительности [SQL Server]"
-  - "измерения для статистики базового уровня [SQL Server]"
-  - "мониторинг производительности сервера [SQL Server], установка базового уровня"
-  - "мониторинг базы данных [SQL Server], базовые уровни"
+title: "Определение базовых показателей производительности | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database performance [SQL Server], baselines
+- monitoring performance [SQL Server], baselines
+- tuning databases [SQL Server], baselines
+- server performance [SQL Server], baselines
+- performance [SQL Server], baselines
+- baseline performance [SQL Server]
+- measurements for baseline statistics [SQL Server]
+- monitoring server performance [SQL Server], establishing baseline
+- database monitoring [SQL Server], baselines
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d1c546387df6352a1eb59b0c0310d86a630a342
+ms.lasthandoff: 04/11/2017
+
 ---
-# Формирование базовых показателей производительности
+# <a name="establish-a-performance-baseline"></a>Формирование базовых показателей производительности
   Чтобы определить, оптимально ли функционирует система [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо измерять производительность через определенные промежутки времени, даже если не возникает никаких проблем, для установления базового уровня производительности. Сравните каждый новый набор измерений с полученными ранее.  
   
  Ниже представлены зоны, влияющие на производительность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -51,7 +55,7 @@ caps.handback.revision: 22
   
  После установления базового уровня производительности сервера сравните статистику базовых строк с текущей производительностью сервера. Числа намного выше и намного ниже базового уровня являются кандидатами для дальнейшего изучения. Они могут указывать зоны, которым необходимы настройка или повторная конфигурация. Например, если количество времени для выполнения набора запросов увеличивается, изучите запросы, чтобы определить, могут ли они быть переписаны и есть ли необходимость добавлять статистику столбца или новые индексы.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Создание таблиц (компонент Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание таблиц [SQL Server], визуальные инструменты для баз данных"
+title: "Создание таблиц (ядро СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание таблиц (компонент Database Engine)
+# <a name="create-tables-database-engine"></a>Создание таблиц (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Предусмотрена возможность создавать новые таблицы, присваивать им имена и добавлять к существующим базам данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -35,9 +39,9 @@ caps.handback.revision: 19
  Если какие-либо столбцы в инструкции CREATE TABLE имеют связанную коллекцию схем XML, необходимо быть владельцем этого набора схем или иметь разрешение REFERENCES на него.  
   
  
-## С помощью конструктора таблиц  
+## <a name="using-table-designer"></a>С помощью конструктора таблиц  
   
-1.  В SSMS в **обозревателе объектов** подключитесь к экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)], который содержит изменяемую базу данных.  
+1.  В SSMS в **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который содержит изменяемую базу данных.  
   
 2.  В **обозревателе объектов**разверните узел **Базы данных** , а затем базу данных, в которой будет размещена новая таблица.  
   
@@ -55,9 +59,9 @@ caps.handback.revision: 19
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
-     Дополнительные сведения об этих объектах см. в разделах [Create Foreign Key Relationships](../../relational-databases/tables/создание-связей-по-внешнему-ключу.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) и [Indexes](../../relational-databases/indexes/indexes.md).  
+     Дополнительные сведения об этих объектах см. в разделах [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md), [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) и [Indexes](../../relational-databases/indexes/indexes.md).  
   
-8.  По умолчанию таблица содержится в схеме **dbo** . Чтобы указать другую схему для таблицы, щелкните правой кнопкой мыши панель конструктора таблиц и выберите **Свойства**, как показано на следующей иллюстрации. Выберите нужную схему из раскрывающегося списка **Схема**.  
+8.  По умолчанию таблица содержится в схеме **dbo** . Чтобы указать другую схему для таблицы, щелкните правой кнопкой мыши панель конструктора таблиц и выберите **Свойства** , как показано на следующей иллюстрации. Выберите нужную схему из раскрывающегося списка **Схема** .  
   
      ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-## С помощью редактора запросов  
+## <a name="using-query-editor"></a>С помощью редактора запросов  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,3 +100,4 @@ caps.handback.revision: 19
  Дополнительные сведения см. в разделе [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).  
   
   
+

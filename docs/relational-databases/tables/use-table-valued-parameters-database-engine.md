@@ -1,34 +1,38 @@
 ---
-title: "Использование параметров, возвращающих табличные значения (компонент Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "возвращающий табличное значение параметр"
-  - "Параметры, возвращающие табличные значения, о возвращающих табличные значения параметрах"
-  - "параметры [SQL Server], возвращающие табличные значения"
-  - "TVP. См. возвращающие табличные значения параметры"
+title: "Использование параметров, возвращающих табличные значения (ядро СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование параметров, возвращающих табличные значения (компонент Database Engine)
+# <a name="use-table-valued-parameters-database-engine"></a>Использование параметров, возвращающих табличные значения (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Возвращающие табличные значения параметры объявляются с помощью определяемых пользователем табличных типов. Возвращающие табличные значения параметры можно использовать, чтобы отправить несколько строк данных в инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или в процедуру, например хранимую процедуру или функцию, не создавая при этом временной таблицы или большого количества параметров.  
   
  Возвращающие табличные значения параметры похожи на массивы параметров в OLE DB и ODBC, но они обеспечивают большую гибкость и больше интегрированы с [!INCLUDE[tsql](../../includes/tsql-md.md)]. Преимуществом возвращающих табличные значения параметров также является возможность участия в операциях, основанных на наборах.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] передает возвращающие табличные значения параметры подпрограммам по ссылке, чтобы избежать создания копий входных данных. Можно создавать и выполнять процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] с возвращающими табличные значения параметрами и вызывать их из кода [!INCLUDE[tsql](../../includes/tsql-md.md)], управляемых и собственных клиентов на любом управляемом языке.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] передает возвращающие табличные значения параметры подпрограммам по ссылке, чтобы избежать создания копий входных данных. Можно создавать и выполнять процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] с возвращающими табличные значения параметрами и вызывать их из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] , управляемых и собственных клиентов на любом управляемом языке.  
   
  **В этом разделе:**  
   
@@ -36,12 +40,12 @@ caps.handback.revision: 31
   
  [Ограничения](#Restrictions)  
   
- [Возвращающие табличные значения параметры и Операции BULK INSERT](#BulkInsert)  
+ [Возвращающие табличные значения параметры и операции BULK INSERT](#BulkInsert)  
   
  [Пример](#Example)  
   
 ##  <a name="Benefits"></a> Преимущества  
- Область действия возвращающего табличное значение параметра такая же, как и у других параметров, — хранимая процедура, функция или динамический текст [!INCLUDE[tsql](../../includes/tsql-md.md)]. Аналогично область действия у переменной типа table точно такая же, как и у любой другой переменной, созданной с помощью инструкции DECLARE. Возвращающие табличные значения переменные можно объявлять в динамических инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)], а затем передавать эти переменные как возвращающие табличные значения параметры хранимым процедурам и функциям.  
+ Область действия возвращающего табличное значение параметра такая же, как и у других параметров, — хранимая процедура, функция или динамический текст [!INCLUDE[tsql](../../includes/tsql-md.md)] . Аналогично область действия у переменной типа table точно такая же, как и у любой другой переменной, созданной с помощью инструкции DECLARE. Возвращающие табличные значения переменные можно объявлять в динамических инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , а затем передавать эти переменные как возвращающие табличные значения параметры хранимым процедурам и функциям.  
   
  Возвращающие табличные значения параметры обеспечивают большую гибкость и в некоторых случаях более высокую производительность, чем временные таблицы или другие методы передачи списка параметров. Возвращающие табличные значения параметры имеют следующие преимущества.  
   
@@ -117,9 +121,9 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
- [DECLARE @локальная_переменная (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
  [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [sys.parameter_type_usages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)   

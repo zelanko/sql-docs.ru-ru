@@ -1,25 +1,29 @@
 ---
-title: "Запуск или остановка набора элементов сбора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "наборы элементов сбора [SQL Server], остановка"
-  - "наборы элементов сбора [SQL Server], запуск"
+title: "Запуск и остановка набора элементов сбора | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection sets [SQL Server], stopping
+- collection sets [SQL Server], starting
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Запуск или остановка набора элементов сбора
+# <a name="start-or-stop-a-collection-set"></a>Запуск или остановка набора элементов сбора
   В этом разделе описывается запуск и остановка набора элементов сбора в среде [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -54,16 +58,16 @@ caps.handback.revision: 20
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Для получения информации о наборах элементов сбора запросите представление каталога [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md).  
+-   Для получения информации о наборах элементов сбора запросите представление каталога [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Требуется членство в предопределенной роли базы данных **dc_operator**. Если набор элементов сбора не имеет учетной записи-посредника, требуется членство в предопределенной роли сервера **sysadmin** . Примеры  
+ Требуется членство в предопределенной роли базы данных **dc_operator** . Если набор элементов сбора не имеет учетной записи-посредника, требуется членство в предопределенной роли сервера **sysadmin** . Примеры  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Запуск набора сбора  
+#### <a name="to-start-a-collection-set"></a>Запуск набора сбора  
   
 1.  В обозревателе объектов разверните узел **Управление** , затем узел **Сбор данных**и узел **Наборы элементов сбора системных данных**.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 20
   
      Результат этого действия выводится в окне, а зеленая стрелка на значке набора сбора означает его запуск.  
   
-#### Остановка набора элементов сбора:  
+#### <a name="to-stop-a-collection-set"></a>Остановка набора элементов сбора:  
   
 1.  В обозревателе объектов разверните узел **Управление** , затем узел **Сбор данных**и узел **Наборы элементов сбора системных данных**.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Запуск набора сбора  
+#### <a name="to-start-a-collection-set"></a>Запуск набора сбора  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
 ```  
   
-#### Остановка набора элементов сбора:  
+#### <a name="to-stop-a-collection-set"></a>Остановка набора элементов сбора:  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -109,7 +113,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Представления сборщика данных (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

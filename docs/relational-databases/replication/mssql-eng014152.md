@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014152 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014152, ошибка"
+title: "MSSQL_ENG014152 | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014152 error
 ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06008fe3c31133feab100628a7f0e813acefa17c
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014152
+# <a name="mssqleng014152"></a>MSSQL_ENG014152
     
-## Сведения о сообщении  
+## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
@@ -31,7 +35,7 @@ caps.handback.revision: 11
 |Символическое имя||  
 |Текст сообщения|Репликация-%s: назначено повторное выполнение агента %s. %s|  
   
-## Объяснение  
+## <a name="explanation"></a>Объяснение  
  Для указанного агента репликации было запланировано повторное выполнение запрошенной операции. Повторные попытки продолжаются до тех пор, пока не будет достигнуто максимальное число попыток, настроенное для шага задания.  
   
  Причиной повторного выполнения обычно становится одно из следующего.  
@@ -42,14 +46,14 @@ caps.handback.revision: 11
   
 -   Процесс репликации был выбран как жертва взаимоблокировки.  
   
-## Действие пользователя  
+## <a name="user-action"></a>Действие пользователя  
  Если сообщение о повторном выполнении появляется нечасто, никакие пользовательские действия не требуются.  
   
- Используйте [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) для просмотра текущего параметра максимальное количество раз **запустить агент** шаг для указанного агента репликации повторит попытку. Можно использовать **@retry_attempts** параметр [sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) хранимую процедуру, чтобы настроить число попыток шага задания.  
+ Используйте процедуру [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) для проверки текущего значения максимального числа повторений шага **Запустить агент** для указанного агента репликации. Для корректировки допустимого числа повторений шага задания можно использовать параметр **@retry_attempts** хранимой процедуры [sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) .  
   
  Если сообщение о повторном выполнении появляется часто, способ устранения неполадок зависит от сообщения, вызывающего повтор. Проверьте в журнале агента наличие сообщений, указывающих причину назначения повторного выполнения. В некоторых случаях может потребоваться включить ведение более подробного журнала для агента репликации. Дополнительные сведения о настройке ведения журнала репликации см. в статье базы знаний Майкрософт [312292](http://support.microsoft.com/kb/312292).  
   
-## См. также:  
- [Ошибки и события ссылку & #40; Репликация & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

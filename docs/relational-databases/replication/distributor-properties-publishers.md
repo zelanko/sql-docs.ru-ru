@@ -1,37 +1,41 @@
 ---
-title: "Свойства распространителя, страница &#171;Издатели&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.configdistwizard.distproperties.publishers.f1"
-helpviewer_keywords: 
-  - "диалоговое окно «Свойства распространителя»"
+title: "Свойства распространителя, страница &quot;Издатели&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.configdistwizard.distproperties.publishers.f1
+helpviewer_keywords:
+- Distributor Properties dialog box
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93e8e7f09e6aa75b0ad1b9248a7a0c004695cfeb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Свойства распространителя, страница &#171;Издатели&#187;
+# <a name="distributor-properties-publishers"></a>Свойства распространителя, страница «Издатели»
   Страница **Издатели** диалогового окна **Свойства распространителя** позволяет включить использование издателями данного распространителя. Также можно устанавливать свойства, связанные с этими издателями. Учтите, что разрешение для издателя использовать данный сервер в качестве своего удаленного распространителя не превращает данный сервер в издатель. Необходимо подключиться к издателю, настроить его для публикации и выбрать этот сервер в качестве распространителя. Возможна настройка издателя и выбор распространителя с помощью мастера создания публикаций.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Издатели**  
- Выберите серверы, которым разрешено использование данного распространителя. Нажмите кнопку Свойства **(...)** рядом с издателем для просмотра и установки дополнительных свойств.  
+ Выберите серверы, которым разрешено использование данного распространителя. Нажмите кнопку свойств ( **(...)** ) рядом с издателем для просмотра и установки дополнительных свойств.  
   
  **Добавить**  
- Если сервер, чтобы разрешить отсутствует в списке, нажмите кнопку **Добавить** Добавление [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя или Oracle к списку доступных издателей. Если добавляемый сервер будет первым использовать данного распространителя в качестве удаленного распространителя, то будет выдано приглашение к вводу пароля административного соединения.  
+ Если нужный сервер не представлен в списке, нажмите кнопку **Добавить** , чтобы добавить издателей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Oracle к списку доступных издателей. Если добавляемый сервер будет первым использовать данного распространителя в качестве удаленного распространителя, то будет выдано приглашение к вводу пароля административного соединения.  
   
  **Пароль административного соединения**  
- Используется для задания или обновления пароля для соединения репликации делает между издателем и удаленным распространителем, используя **distributor_admin** входа:  
+ Используется для задания или обновления пароля для соединения, создаваемого репликацией между издателем и удаленным распространителем с использованием имени входа **distributor_admin** :  
   
 -   Если распространитель выступает только в качестве локального распространителя, то данный пароль формируется случайным образом и настраивается автоматически.  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 21
   
 -   При включении первого удаленного издателя для данного распространителя будет выдано приглашение к вводу пароля.  
   
- Дополнительные сведения о безопасности распространителей см. в разделе [организация безопасности распространителя](../../relational-databases/replication/security/secure-the-distributor.md).  
+ Дополнительные сведения о безопасности распространителей см. в разделе [Защита распространителя](../../relational-databases/replication/security/secure-the-distributor.md).  
   
-## См. также:  
- [Настройка распространителя](../../relational-databases/replication/configure-distribution.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка распространения](../../relational-databases/replication/configure-distribution.md)   
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Создание публикации](../../relational-databases/replication/publish/create-a-publication.md)   
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  

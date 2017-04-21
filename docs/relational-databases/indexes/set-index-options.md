@@ -1,35 +1,39 @@
 ---
-title: "Установка параметров индекса | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALLOW_ROW_LOCKS, параметр"
-  - "SORT_IN_TEMPDB, параметр"
-  - "DROP_EXISTING, предложение"
-  - "данные большого объема, индексы"
-  - "PAD_INDEX"
-  - "STATISTICS_NORECOMPUTE"
-  - "параметр индекса MAXDOP, параметр"
-  - "параметры индекса [SQL Server]"
-  - "MAXDOP, параметр индекса"
-  - "IGNORE_DUP_KEY, параметр"
-  - "ALLOW_PAGE_LOCKS, параметр"
-  - "ONLINE"
+title: "Установка параметров индекса | Документация Майкрософт"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALLOW_ROW_LOCKS option
+- SORT_IN_TEMPDB option
+- DROP_EXISTING clause
+- large data, indexes
+- PAD_INDEX
+- STATISTICS_NORECOMPUTE
+- MAXDOP index option, setting
+- index options [SQL Server]
+- MAXDOP index option
+- IGNORE_DUP_KEY option
+- ALLOW_PAGE_LOCKS option
+- ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cd0050887729a84dfa637ce86e51b5edcc8ee45
+ms.lasthandoff: 04/11/2017
+
 ---
-# Установка параметров индекса
+# <a name="set-index-options"></a>Установка параметров индекса
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается процесс изменения свойств индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +67,7 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Изменение свойств индекса при помощи конструктора таблиц.  
+#### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Изменение свойств индекса при помощи конструктора таблиц.  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо изменить свойства индекса.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 44
   
 8.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   
-#### Изменение свойств индекса при помощи обозревателя объектов.  
+#### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Изменение свойств индекса при помощи обозревателя объектов.  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо изменить свойства индекса.  
   
@@ -97,11 +101,11 @@ caps.handback.revision: 44
   
 7.  Измените значения любого или всех свойств, чтобы внести изменения в индекс.  
   
-8.  Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите в диалоговом окне **Свойства индекса ― ** *имя_индекса* страницу **Общие**. Дополнительные сведения см. в разделе [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
+8.  Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите в диалоговом окне **Свойства индекса ―**  **имя_индекса** *Общие* . Дополнительные сведения см. в разделе [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Просмотр свойств всех индексов в таблице  
+#### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>Просмотр свойств всех индексов в таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 44
   
     ```  
   
-#### Задание свойств индекса  
+#### <a name="to-set-the-properties-of-an-index"></a>Задание свойств индекса  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 44
  Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

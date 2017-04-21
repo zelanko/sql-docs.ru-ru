@@ -1,27 +1,31 @@
 ---
-title: "Просмотр свойств структуры плана | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "структуры планов [SQL Server], просмотр свойств структуры плана"
-  - "просмотр свойств структуры плана"
+title: "Просмотр свойств структуры плана | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.planguideprop.general.f1
+helpviewer_keywords:
+- plan guides [SQL Server], view plan guide properties
+- viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр свойств структуры плана
+# <a name="view-plan-guide-properties"></a>Просмотр свойств структуры плана
   Свойства структур планов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно просмотреть при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
@@ -45,7 +49,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Просмотр свойств структуры плана  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Просмотр свойств структуры плана  
   
 1.  Щелкните значок «+», чтобы развернуть базу данных, в которой требуется просмотреть свойства структуры планов, после чего щелкните значок «+», чтобы развернуть папку **Программирование** .  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 19
      Следующие свойства отображаются в диалоговом окне **Свойства структуры плана** .  
   
      **Указания**  
-     Отображает указания запросов или план запроса для применения к инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если план запроса задан как указание, отображаются выходные данные инструкции XML Showplan для этого плана.  
+     Отображает указания запросов или план запроса для применения к инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Если план запроса задан как указание, отображаются выходные данные инструкции XML Showplan для этого плана.  
   
      **Отключен**  
      Отображает состояние структуры плана. Допустимые значения — **True** и **False**.  
@@ -65,28 +69,28 @@ caps.handback.revision: 19
      Отображает имя структуры плана.  
   
      **Параметры**  
-     Если тип области равен «SQL» или «TEMPLATE», отображает имя и тип данных для всех параметров, внедренных в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Если тип области равен «SQL» или «TEMPLATE», отображает имя и тип данных для всех параметров, внедренных в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Поток области**  
-     Отображает текст пакета, в котором находится инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Отображает текст пакета, в котором находится инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Имя объекта области**  
-     Если тип области равен «OBJECT», отображает имя хранимой процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], определяемой пользователем скалярной функции, многооператорной возвращающей табличное значение функции или триггера DML, где содержится инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+     Если тип области равен «OBJECT», отображает имя хранимой процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] , определяемой пользователем скалярной функции, многооператорной возвращающей табличное значение функции или триггера DML, где содержится инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Имя схемы области**  
      Если тип области равен «OBJECT», отображает имя схемы, содержащей объект.  
   
      **Тип области**  
-     Отображает тип сущности, в которой присутствует инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это указывает контекст для сопоставления оператора [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана. Возможными значениями являются **OBJECT**, **SQL**и **TEMPLATE**.  
+     Отображает тип сущности, в которой присутствует инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] . Это указывает контекст для сопоставления оператора [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана. Возможными значениями являются **OBJECT**, **SQL**и **TEMPLATE**.  
   
      **Инструкция**  
-     Отображает инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)], для которой необходимо применить структуру плана.  
+     Отображает инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которой необходимо применить структуру плана.  
   
 4.  Нажмите кнопку **ОК**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Просмотр свойств структуры плана  
+#### <a name="to-view-the-properties-of-a-plan-guide"></a>Просмотр свойств структуры плана  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,26 +1,30 @@
 ---
-title: "Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "модель полного восстановления [SQL Server], пример RESTORE"
-  - "восстановление в сети [SQL Server]"
-  - "последовательности восстановления [SQL Server], автономное"
+title: "Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- offline restores [SQL Server]
+- restore sequences [SQL Server], offline
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a89ca3ffb79c4ca4001356f0963f7fffdefd954f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)
+# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Данный раздел относится только к базам данных с моделью полного восстановления, содержащим несколько файловых групп.  
@@ -32,7 +36,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  В последовательности восстановления вне сети предусмотрено меньше шагов, чем для восстановления файлов в сети только для чтения. Например, см. раздел [Пример. Оперативное восстановление файла, доступного только для чтения (модель полного восстановления)](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md). Однако в процессе выполнения последовательности в режиме «вне сети» находится вся база данных.  
   
-## Резервная копия заключительного фрагмента журнала  
+## <a name="tail-log-backup"></a>Резервная копия заключительного фрагмента журнала  
  Перед тем как восстановить базу данных из копии, администратор этой базы данных должен создать резервную копию заключительного фрагмента журнала. Поскольку база данных повреждена, для создания резервной копии заключительного фрагмента журнала требуется применение параметра NO_TRUNCATE:  
   
 ```  
@@ -42,7 +46,7 @@ BACKUP LOG adb TO tailLogBackup
   
  Резервная копия заключительного фрагмента журнала — это последняя резервная копия, используемая в следующих последовательностях восстановления.  
   
-## Последовательность восстановления  
+## <a name="restore-sequence"></a>Последовательность восстановления  
  Чтобы восстановить первичную файловую группу и файловую группу `B`, администратор базы данных использует последовательность восстановления без параметра PARTIAL, как указано ниже:  
   
 ```  
@@ -58,11 +62,11 @@ RESTORE LOG adb FROM tailLogBackup WITH RECOVERY
   
  Файлы, которые не затрагивает процесс восстановления, автоматически переводятся в режим «в сети». Сейчас все файловые группы переведены в режим «в сети».  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Восстановление в сети (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [Восстановление файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

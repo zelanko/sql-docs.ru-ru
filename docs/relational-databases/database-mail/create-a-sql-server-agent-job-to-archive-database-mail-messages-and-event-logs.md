@@ -1,43 +1,47 @@
 ---
-title: "Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "архивация почтовых сообщений и вложений [SQL Server]"
-  - "удаление почтовых сообщений и вложений"
-  - "компонент Database Mail [SQL Server], архивация"
-  - "сохранение почтовых сообщений и вложений"
+title: "Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных
   Копии сообщений компонента Database Mail и их вложения хранятся в таблицах **msdb** , расположенных в журнале событий компонента Database Mail. Может возникнуть потребность периодического уменьшения объема ненужных таблиц и архивных сообщений и событий. Представленные ниже процедуры используются для создания задания агента SQL Server для автоматизации указанного процесса.  
   
 -   **Перед началом работы:**  , [Необходимые компоненты](#Prerequisites), [Рекомендации](#Recommendations), [Разрешения](#Permissions)  
   
--   **Архивация сообщений и журналов компонента Database Mail с использованием**  [агента SQL Server](#Process_Overview)  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a> Необходимые компоненты  
  Новые таблицы для хранения архивных данных могут быть расположены в специальной архивной базе данных. Кроме того, строки можно экспортировать в текстовый файл.  
    
 ###  <a name="Recommendations"></a> Рекомендации  
  В случае сбоя задания в процессе работы, возможно, понадобится провести дополнительную проверку и отправить уведомления операторам.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Разрешения  
  Чтобы выполнить хранимые процедуры, описанные в данном разделе, пользователь должен быть членом предопределенной роли сервера **sysadmin** .  
   
   
@@ -45,11 +49,11 @@ caps.handback.revision: 19
   
 -   Первая процедура, которая создает задание с именем «Archive Database Mail», состоит из следующих действий.  
   
-    1.  Скопируйте все сообщения из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_***\<год_месяц>*.  
+    1.  Скопируйте все сообщения из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_***<год_месяц>*.  
   
-    2.  Скопируйте вложения, прикрепленные к сообщениям, скопированным на первом шаге из таблиц компонента Database Mail, в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Attachments_***\<год_месяц>*.  
+    2.  Скопируйте вложения, прикрепленные к сообщениям, скопированным на первом шаге из таблиц компонента Database Mail, в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Attachments_***<год_месяц>*.  
   
-    3.  Скопируйте из журналов событий компонента Database Mail события, имеющие отношение к сообщениям, скопированным на первом шаге, из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Log_***\<год_месяц>*.  
+    3.  Скопируйте из журналов событий компонента Database Mail события, имеющие отношение к сообщениям, скопированным на первом шаге, из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Log_***<год_месяц>*.  
   
     4.  Удаление всех скопированных элементов из таблиц компонента Database Mail.  
   
@@ -58,9 +62,9 @@ caps.handback.revision: 19
 -   Планирование задания для периодического выполнения.  
   
   
-## Создание задания агента SQL Server  
+## <a name="to-create-a-sql-server-agent-job"></a>Создание задания агента SQL Server  
   
-1.  В обозревателе объектов разверните узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], правой кнопкой мыши щелкните элемент **Задания** и выберите команду **Создать задание**.  
+1.  В обозревателе объектов разверните узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , правой кнопкой мыши щелкните элемент **Задания**и выберите команду **Создать задание**.  
   
 2.  В диалоговом окне **Создание задания** в поле **Имя** введите **Archive Database Mail**.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 19
   
  [Обзор](#Process_Overview)  
   
-## Создание шага по архивации сообщений компонента Database Mail  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Создание шага по архивации сообщений компонента Database Mail  
   
 1.  На странице **Шаги** нажмите кнопку **Создать**.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 19
   
  [Обзор](#Process_Overview)  
   
-## Создание шага по архивации вложений компонента Database Mail  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Создание шага по архивации вложений компонента Database Mail  
   
 1.  На странице **Шаги** нажмите кнопку **Создать**.  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 19
   
  [Обзор](#Process_Overview)  
   
-## Создание шага по архивации журнала компонента Database Mail  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Создание шага по архивации журнала компонента Database Mail  
   
 1.  На странице **Шаги** нажмите кнопку **Создать**.  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 19
   
  [Обзор](#Process_Overview)  
   
-## Создание шага по удалению архивных строк из компонента Database Mail  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Создание шага по удалению архивных строк из компонента Database Mail  
   
 1.  На странице **Шаги** нажмите кнопку **Создать**.  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 19
   
  [Обзор](#Process_Overview)  
   
-## Создание шага по удалению архивных элементов из журнала событий компонента Database Mail  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Создание шага по удалению архивных элементов из журнала событий компонента Database Mail  
   
 1.  На странице **Шаги** нажмите кнопку **Создать**.  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [Обзор](#Process_Overview)  
   
-## Планирование периодического выполнения задания  
+## <a name="to-schedule-the-job-to-run-periodically"></a>Планирование периодического выполнения задания  
   
 1.  В диалоговом окне **Создание задания** выберите **Расписания**.  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [Обзор](#Process_Overview)  
   
   
+

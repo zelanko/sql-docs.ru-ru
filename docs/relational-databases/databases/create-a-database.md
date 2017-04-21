@@ -1,26 +1,30 @@
 ---
-title: "Создание базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "базы данных [SQL Server], создание"
-  - "создание баз данных [SQL Server], среда SQL Server Management Studio"
-  - "создание баз данных"
+title: "Создание базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [SQL Server], creating
+- database creation [SQL Server], SQL Server Management Studio
+- creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06b00c9eceac816935b2c0fa69306a6681383d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание базы данных
+# <a name="create-a-database"></a>Создание базы данных
   В этом разделе описывается создание базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -66,7 +70,7 @@ caps.handback.revision: 38
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание базы данных  
+#### <a name="to-create-a-database"></a>Создание базы данных  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 38
 5.  Чтобы изменить имя владельца, нажмите (**…**) и выберите другого владельца.  
   
     > [!NOTE]  
-    >  Параметр **Использовать полнотекстовое индексирование** всегда установлен и недоступен (т. к. начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] все пользовательские базы данных поддерживают полнотекстовый поиск).  
+    >  Параметр **Использовать полнотекстовое индексирование** всегда установлен и недоступен (т. к. начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]все пользовательские базы данных поддерживают полнотекстовый поиск).  
   
 6.  Чтобы изменить значения первичных данных по умолчанию и файлов журнала транзакций, щелкните соответствующую ячейку в сетке **Файлы базы данных** и введите новое значение. Дополнительные сведения см. в статье [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
 8.  Чтобы изменить модель восстановления, выберите страницу **Параметры** и модель восстановления из списка.  
   
-9. Чтобы изменить параметры базы данных, выберите страницу **Параметры** и измените параметры базы данных. Описание каждого параметра см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+9. Чтобы изменить параметры базы данных, выберите страницу **Параметры** и измените параметры базы данных. Описание каждого параметра см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 10. Чтобы добавить новую файловую группу, перейдите на страницу **Группы файлов** . Нажмите **Добавить** и введите значения для файловой группы.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание базы данных  
+#### <a name="to-create-a-database"></a>Создание базы данных  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -130,10 +134,10 @@ GO
   
  Дополнительные примеры см. в статье [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Добавление файлов данных или журналов в базу данных](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

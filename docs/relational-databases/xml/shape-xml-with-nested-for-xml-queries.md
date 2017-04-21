@@ -1,29 +1,33 @@
 ---
-title: "Формирование XML-кода с вложенными запросами FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML, запрос"
-  - "запросы [XML в SQL Server], вложенный FOR XML"
-  - "XML [SQL Server], запросы FOR XML"
+title: "Формирование XML-кода с вложенными запросами FOR XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], nested FOR XML
+- XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9dd8e345930a2e4ed7d036e9969ec8600f85853e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Формирование XML-кода с вложенными запросами FOR XML
+# <a name="shape-xml-with-nested-for-xml-queries"></a>Формирование XML-кода с вложенными запросами FOR XML
   В следующем примере к таблице `Production.Product` выполняется запрос, чтобы получить значения `ListPrice` и `StandardCost` указанного продукта. Чтобы сделать пример более информативным, обе цены возвращаются как элемент <`Price`> и у каждого элемента <`Price`> имеется атрибут `PriceType`.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Это прогнозируемая форма XML:  
   
 ```  
@@ -96,7 +100,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование вложенных запросов FOR XML](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

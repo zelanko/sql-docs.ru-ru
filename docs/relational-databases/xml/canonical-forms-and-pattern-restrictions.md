@@ -1,25 +1,29 @@
 ---
-title: "Канонические формы и ограничения шаблона | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ограничения шаблона"
-  - "канонические формы"
+title: "Канонические формы и ограничения шаблона | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pattern restrictions
+- canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91512853c317e905feaf4c799516191458264c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Канонические формы и ограничения шаблона
+# <a name="canonical-forms-and-pattern-restrictions"></a>Канонические формы и ограничения шаблона
   Аспект шаблона XSD позволяет вводить ограничение лексического пространства простых типов. Когда ограничение шаблона наложено на тип, для которого есть больше одного возможного лексического представления, некоторые значения могут вызвать непредвиденное поведение в ходе проверки.  
   
  Такое поведение возникает, потому что лексические представления этих значений не сохраняются в базе данных. Поэтому значения будут преобразованы к их каноническим представлениям при сериализации вывода. Если документ содержит значение, каноническая форма которого не соответствует ограничению шаблона для его типа, то документ будет отклонен, если пользователь попытается вставить его повторно.  
@@ -30,7 +34,7 @@ caps.handback.revision: 10
   
  Неточная сериализация значений с плавающей запятой вызывает подобную проблему. Из-за алгоритма сериализации с плавающей запятой, используемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для подобных значений можно совместно использовать одну каноническую форму. Когда значение с плавающей запятой сериализовано и затем повторно вставлено, его значение может немного измениться. В редких случаях это может привести к значению, нарушающему любой из следующих аспектов для его типа при повторной вставке: **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**или **maxExclusive**. Чтобы это предотвратить, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отклоняет любые значения типов, полученных из `xs:float` или `xs:double` , которые не могут быть сериализованы и повторно вставлены.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

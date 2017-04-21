@@ -1,29 +1,33 @@
 ---
-title: "определить запросы, удерживающие блокировки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "запросы [SQL Server], расширенные события"
-  - "запросы [SQL Server], удержание блокировок"
-  - "xe, расширенные события"
-  - "расширенные события [SQL Server], блокировки"
-  - "расширенные события [SQL Server], удержание блокировок"
+title: "Определение запросов, удерживающих блокировки | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], extended events
+- queries [SQL Server], holding locks
+- xe
+- extended events [SQL Server], locks
+- extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291043a0e143f876db5091a18c655bcd78a9857f
+ms.lasthandoff: 04/11/2017
+
 ---
-# определить запросы, удерживающие блокировки
+# <a name="determine-which-queries-are-holding-locks"></a>определить запросы, удерживающие блокировки
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Администраторам баз данных часто нужно определить источник блокировок, приводящих к ухудшению производительности базы данных.  
@@ -39,7 +43,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  В примере используется база данных AdventureWorks.  
   
-### Определение запросов, удерживающих блокировки  
+### <a name="to-determine-which-queries-are-holding-locks"></a>Определение запросов, удерживающих блокировки  
   
 1.  В редакторе запросов выполните следующие инструкции.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 15
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)   

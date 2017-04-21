@@ -1,31 +1,35 @@
 ---
-title: "Указание первого и последнего триггеров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "первые триггеры [SQL Server]"
-  - "последние триггеры"
-  - "Триггеры DML, первые или последние триггеры"
-  - "INSTEAD OF, триггеры"
-  - "AFTER, триггеры"
+title: "Указание первого и последнего триггеров | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- first triggers [SQL Server]
+- last triggers
+- DML triggers, first or last triggers
+- INSTEAD OF triggers
+- AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 99935796043bf8ea14c32a2f98867ca2c7612a2d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Указание первого и последнего триггеров
+# <a name="specify-first-and-last-triggers"></a>Указание первого и последнего триггеров
   Возможно указать, что один из триггеров AFTER, связанных с таблицей, является либо первым триггером AFTER, либо последним триггером AFTER, срабатывающим для каждого запускающего действия INSERT, DELETE и UPDATE. Порядок запуска триггеров AFTER, срабатывающих в промежутке между первым и последним триггерами, не определен.  
   
- Задать порядок срабатывания для триггера AFTER можно с помощью хранимой процедуры **sp_settriggerorder**. Хранимая процедура **sp_settriggerorder** имеет следующие параметры.  
+ Задать порядок срабатывания для триггера AFTER можно с помощью хранимой процедуры **sp_settriggerorder** . Хранимая процедура**sp_settriggerorder** имеет следующие параметры.  
   
 |Параметр|Описание|  
 |------------|-----------------|  
@@ -52,9 +56,9 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  Функция OBJECTPROPERTY сообщает, является ли триггер первым или последним триггером, используя свойства **ExecIsFirstTrigger** и **ExecIsLastTrigger**.  
   
- Репликация автоматически создает первый триггер для любой таблицы, включенной в подписку немедленным обновлением или обновлением с постановкой в очередь. Репликация требует, чтобы ее триггер был первым. При попытке вставить таблицу с указанным первым триггером в немедленно обновляемую подписку или подписку, обновляемую посредством очередей, репликация инициирует ошибку. При попытке сделать триггер первым триггером после включения таблицы в подписку **sp_settriggerorder** возвращает ошибку. В случае использования ALTER для триггера репликации или использования **sp_settriggerorder**, чтобы сделать триггер репликации последним или триггером вне порядка, подписка не будет функционировать должным образом.  
+ Репликация автоматически создает первый триггер для любой таблицы, включенной в подписку немедленным обновлением или обновлением с постановкой в очередь. Репликация требует, чтобы ее триггер был первым. При попытке вставить таблицу с указанным первым триггером в немедленно обновляемую подписку или подписку, обновляемую посредством очередей, репликация инициирует ошибку. При попытке сделать триггер первым триггером после включения таблицы в подписку **sp_settriggerorder** возвращает ошибку. В случае использования ALTER для триггера репликации или использования **sp_settriggerorder** , чтобы сделать триггер репликации последним или триггером вне порядка, подписка не будет функционировать должным образом.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_settriggerorder (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)  
   

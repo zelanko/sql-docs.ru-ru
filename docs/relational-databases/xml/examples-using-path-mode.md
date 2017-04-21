@@ -1,27 +1,31 @@
 ---
-title: "Примеры, использование режима PATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "режим PATH FOR XML, примеры"
+title: "Примеры: использование режима PATH | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Примеры, использование режима PATH
+# <a name="examples-using-path-mode"></a>Примеры, использование режима PATH
   В следующих примерах показано использование режима PATH при формировании XML из запроса SELECT. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel.  
   
-## Указание простого запроса в режиме PATH  
+## <a name="specifying-a-simple-path-mode-query"></a>Указание простого запроса в режиме PATH  
  Этот запрос указывает режим FOR XML PATH.  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## Указание имен столбцов, подобных синтаксису языка XPath  
+## <a name="specifying-xpath-like-column-names"></a>Указание имен столбцов, подобных синтаксису языка XPath  
  В следующем запросе указанное имя столбца `ProductModelID` начинается с символа «@» и не содержит косой черты (/). Поэтому в итоговом XML-документе создается атрибут элемента <`row`>, имеющий соответствующее значение столбца.  
   
 ```  
@@ -185,7 +189,7 @@ GO
   
  `</Root>`  
   
- Следующий запрос извлекает не только код модели продукта и его имя, но и расположения производственных инструкций для модели продукции. Поскольку столбец Instructions имеет тип **xml**, то для получения расположения указывается метод **query()** типа данных **xml**.  
+ Следующий запрос извлекает не только код модели продукта и его имя, но и расположения производственных инструкций для модели продукции. Поскольку столбец Instructions имеет тип **xml** , то для получения расположения указывается метод **query()** типа данных **xml** .  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## Формирование списка значений с помощью режима PATH  
+## <a name="generating-a-value-list-using-path-mode"></a>Формирование списка значений с помощью режима PATH  
  Данный запрос строит список значений кодов продуктов для каждой модели продукции. Кроме того, для каждого кода продукта запрос создает вложенные элементы <`ProductName`>, как показано в следующем фрагменте XML:  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -354,7 +358,7 @@ FOR XML PATH('ProductModelData');
   
  `</ProductModelData>`  
   
- Вложенный запрос, формирующий имена продуктов, возвращает результат в виде строки, которая преобразуется в сущность и затем добавляется в XML-документ. Если добавить директиву типа `FOR XML PATH (''), type`, вложенный запрос возвращает результат как тип **xml**, а преобразования в сущность не происходит.  
+ Вложенный запрос, формирующий имена продуктов, возвращает результат в виде строки, которая преобразуется в сущность и затем добавляется в XML-документ. Если добавить директиву типа `FOR XML PATH (''), type`, вложенный запрос возвращает результат как тип **xml** , а преобразования в сущность не происходит.  
   
 ```  
 USE AdventureWorks2012;  
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## Добавление пространств имен в итоговый XML-документ  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>Добавление пространств имен в итоговый XML-документ  
  Как описано в разделе [Добавление пространств имен с помощью предложения WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md), предложение WITH XMLNAMESPACES может использоваться для включения пространств имен в запросы в режиме PATH. Например, имена, указанные в предложении SELECT, имеют префиксы пространства имен. Следующий запрос в режиме `PATH` строит XML-документ с пространствами имен.  
   
 ```  
@@ -404,7 +408,7 @@ GO
   
  `</Translation>`  
   
- Следующий запрос похож на приведенный в примере В, отличаясь тем, что в нем пространства имен добавляются в результирующий XML-документ с помощью предложения `WITH XMLNAMESPACES`. Дополнительные сведения с. в разделе [Добавление пространств имен в запросы с помощью WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Следующий запрос похож на приведенный в примере В, отличаясь тем, что в нем пространства имен добавляются в результирующий XML-документ с помощью предложения `WITH XMLNAMESPACES` . Дополнительные сведения с. в разделе [Добавление пространств имен в запросы с помощью WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование режима PATH совместно с FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

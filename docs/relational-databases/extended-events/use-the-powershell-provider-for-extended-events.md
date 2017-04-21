@@ -1,34 +1,38 @@
 ---
-title: "Использование поставщика PowerShell для расширенных событий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], xevent"
-  - "расширенные события [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], расширенные события"
+title: "Использование поставщика PowerShell для расширенных событий | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], xevent
+- extended events [SQL Server], PowerShell
+- PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a89501cc32ec51bd081230ea897058d3956c7a2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование поставщика PowerShell для расширенных событий
+# <a name="use-the-powershell-provider-for-extended-events"></a>Использование поставщика PowerShell для расширенных событий
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Управлять расширенными событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Вложенная папка XEvent находится на диске SQLSERVER. Получить доступ к папке можно одним из следующих способов.  
+  Управлять расширенными событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Вложенная папка XEvent находится на диске SQLSERVER. Получить доступ к папке можно одним из следующих способов.  
   
--   В командной строке введите команду **sqlps** и нажмите клавишу ВВОД. Введите **cd xevent** и нажмите клавишу ВВОД. Из этого расположения с помощью команд **cd** и **dir** (или командлетов **Set-Location** и **Get-Childitem**) можно перейти к нужному серверу и экземпляру по его имени.  
+-   В командной строке введите команду **sqlps**и нажмите клавишу ВВОД. Введите **cd xevent**и нажмите клавишу ВВОД. Из этого расположения с помощью команд **cd** и **dir** (или командлетов **Set-Location** и **Get-Childitem** ) можно перейти к нужному серверу и экземпляру по его имени.  
   
--   В обозревателе объектов разверните узел имени экземпляра, разверните узел **Управление**, щелкните правой кнопкой мыши **Расширенные события** и выберите команду **Запустить PowerShell**. Оболочка PowerShell будет запущена в следующем пути:  
+-   В обозревателе объектов разверните узел имени экземпляра, разверните узел **Управление**, щелкните правой кнопкой мыши **Расширенные события**и выберите команду **Запустить PowerShell**. Оболочка PowerShell будет запущена в следующем пути:  
   
      PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 14
   
  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell предоставляет широкий набор функций для создания, изменения сеансов расширенных событий и управления ими. В следующем разделе приведены некоторые простые примеры использования скриптов PowerShell с расширенными событиями.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В приведенных далее примерах обратите внимание на следующие моменты.  
   
 -   Скрипты должны запускаться из расположения PS SQLSERVER:\\> (для перехода в него введите в командной строке **sqlps**).  
@@ -50,7 +54,7 @@ caps.handback.revision: 14
   
 -   Скрипты должны сохраняться с расширением PS1.  
   
--   Политика выполнения PowerShell должна разрешать выполнения скриптов. Чтобы задать политику выполнения, воспользуйтесь командлетом **Set-Executionpolicy**. (Для получения дополнительных сведений введите **get-help set-executionpolicy -detailed** и нажмите клавишу ВВОД.)  
+-   Политика выполнения PowerShell должна разрешать выполнения скриптов. Чтобы задать политику выполнения, воспользуйтесь командлетом **Set-Executionpolicy** . (Для получения дополнительных сведений введите **get-help set-executionpolicy -detailed**и нажмите клавишу ВВОД.)  
   
  Следующий скрипт создает новый сеанс с именем «TestSession».  
   
@@ -68,7 +72,7 @@ $event.AddAction("package0.callstack")
 $session.Create()  
 ```  
   
- Следующий скрипт добавляет цель «Кольцевой буфер» в сеанс, созданный в предыдущем примере. (В этом примере демонстрируется использование метода **Alter**. Помните, что добавлять цель можно только после создания сеанса.)  
+ Следующий скрипт добавляет цель «Кольцевой буфер» в сеанс, созданный в предыдущем примере. (В этом примере демонстрируется использование метода **Alter** . Помните, что добавлять цель можно только после создания сеанса.)  
   
 ```  
 #Script to alter a session.  
@@ -108,10 +112,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## Безопасность  
+## <a name="security"></a>Безопасность  
  Чтобы создать, изменить или удалить сеанс расширенных событий, требуется разрешение ALTER ANY EVENT SESSION.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Использование сеанса system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Средства расширенных событий](../../relational-databases/extended-events/extended-events-tools.md)  

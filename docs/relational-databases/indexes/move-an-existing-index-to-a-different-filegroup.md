@@ -1,28 +1,32 @@
 ---
-title: "Перемещение существующего индекса в другую файловую группу | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "перемещение таблиц"
-  - "переключение файловых групп для индекса"
-  - "перемещение индекса"
-  - "индексы [SQL Server], перемещение"
-  - "файловые группы [SQL Server], переключение"
+title: "Перемещение существующего индекса в другую файловую группу | Документация Майкрософт"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving tables
+- switching filegroups for index
+- moving indexes
+- indexes [SQL Server], moving
+- filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cfc19f15cee7ca1185a2a9177474510c368b56bf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Перемещение существующего индекса в другую файловую группу
+# <a name="move-an-existing-index-to-a-different-filegroup"></a>Перемещение существующего индекса в другую файловую группу
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается, как переместить текущий индекс из текущей файловой группы в другую файловую группу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -47,16 +51,16 @@ caps.handback.revision: 44
   
 -   Если таблица имеет кластеризованный индекс, то перемещение кластеризованного индекса в новую файловую группу перемещает в эту файловую группу саму таблицу.  
   
--   В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] нельзя перемещать индексы, созданные с помощью ограничения UNIQUE или PRIMARY KEY. Для перемещения этих индексов используйте инструкцию [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) с параметром (DROP_EXISTING=ON) в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]нельзя перемещать индексы, созданные с помощью ограничения UNIQUE или PRIMARY KEY. Для перемещения этих индексов используйте инструкцию [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) с параметром (DROP_EXISTING=ON) в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Перемещение существующего индекса в другую файловую группу с помощью конструктора таблиц  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Перемещение существующего индекса в другую файловую группу с помощью конструктора таблиц  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, где находится индекс, который нужно переместить.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 44
   
 9. В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   
-#### Перемещение существующего индекса в другую файловую группу в обозревателе объектов  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Перемещение существующего индекса в другую файловую группу в обозревателе объектов  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, где находится индекс, который нужно переместить.  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 44
   
      если перемещается кластеризованный индекс, можно использовать обработку в сети. Обработка в сети разрешает одновременный доступ пользователей к основным данным и к некластеризованным индексам в течение операции с индексами. Дополнительные сведения см. в статье [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     На многопроцессорных компьютерах с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно настроить количество ЦП, используемых для выполнения инструкции индекса, указав значение максимальной степени параллелизма. Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Дополнительные сведения о параллельных операциях с индексами см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     На многопроцессорных компьютерах с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно настроить количество ЦП, используемых для выполнения инструкции индекса, указав значение максимальной степени параллелизма. Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье "Возможности, поддерживаемые выпусками SQL Server 2016". Дополнительные сведения о параллельных операциях с индексами см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Нажмите кнопку **ОК**.  
   
- На странице **Хранение** диалогового окна **Свойства индекса ―** *имя_индекса* доступны следующие сведения:  
+ На странице **Хранение** диалогового окна **Свойства индекса ―** *имя_индекса* доступны следующие сведения:  
   
  **Файловая группа**  
  Сохраняет индекс в указанной файловой группе. Этот список содержит только стандартные файловые группы (ROW). По умолчанию из этого списка выбирается первичная файловая группа (PRIMARY) текущей базы данных.  
@@ -144,7 +148,7 @@ caps.handback.revision: 44
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Перемещение существующего индекса в другую файловую группу  
+#### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Перемещение существующего индекса в другую файловую группу  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -185,3 +189,4 @@ caps.handback.revision: 44
  Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

@@ -1,24 +1,28 @@
 ---
-title: "Создание клиентских приложений для данных FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32"
+title: "Создание клиентских приложений для данных FILESTREAM | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание клиентских приложений для данных FILESTREAM
+# <a name="create-client-applications-for-filestream-data"></a>Создание клиентских приложений для данных FILESTREAM
   Win32 можно использовать для считывания и записи данных в объект FILESTREAM BLOB. Требуются следующие шаги.  
   
 -   Считывание пути к файлу FILESTREAM.  
@@ -46,19 +50,19 @@ caps.handback.revision: 18
 ##  <a name="steps"></a> Действия для доступа к данным FILESTREAM  
   
 ###  <a name="path"></a> Чтение пути файла FILESTREAM  
- Каждая ячейка в таблице FILESTREAM имеет связанный с ней путь к файлу. Для считывания этого пути используйте свойство **PathName** столбца **varbinary(max)** в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. В следующем примере показано, как считать путь файла столбца **varbinary(max)**.  
+ Каждая ячейка в таблице FILESTREAM имеет связанный с ней путь к файлу. Для считывания этого пути используйте свойство **PathName** столбца **varbinary(max)** в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . В следующем примере показано, как считать путь файла столбца **varbinary(max)** .  
   
  [!code-sql[FILESTREAM#FS_PathName](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_1.sql)]  
   
 ###  <a name="trx"></a> Чтение контекста транзакции  
- Чтобы получить текущий контекст транзакции, используйте функцию [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md). В следующем примере показано, как запустить транзакцию и считать текущий контекст транзакции.  
+ Чтобы получить текущий контекст транзакции, используйте функцию [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) . В следующем примере показано, как запустить транзакцию и считать текущий контекст транзакции.  
   
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="handle"></a> Получение дескриптора файла Win32  
  API OpenSqlFilestream получает дескриптор файла Win32. Этот API-интерфейс экспортируется из файла sqlncli.dll. Возвращенный дескриптор может быть передан в любой из следующих API-интерфейсов Win32: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)или [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). В следующих примерах показано, как получить дескриптор файла Win32 и использовать его для чтения и записи данных в объект FILESTREAM BLOB.  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
+ [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
  [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/visualbasic/create-client-applicatio_4.vb)]  
   
@@ -74,17 +78,17 @@ caps.handback.revision: 18
   
 -   В приложениях, использующих репликацию, следует применять функцию NEWSEQUENTIALID() вместо NEWID(). Функция NEWSEQUENTIALID() создает идентификаторы GUID в этих приложениях эффективнее, чем NEWID().  
   
--   Функции API FILESTREAM предназначены для потокового доступа к данным на платформе Win32. Старайтесь не использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] для чтения или записи двоичных объектов FILESTREAM, если их размер больше 2 МБ. Если необходимо выполнять чтение или запись больших двоичных объектов из [!INCLUDE[tsql](../../includes/tsql-md.md)], убедитесь, что данные объекта использованы до того, как открывать такой объект FILESTREAM BLOB из Win32. Неиспользование всех данных [!INCLUDE[tsql](../../includes/tsql-md.md)] может привести к сбою при открытии или закрытии любого последующего объекта FILESTREAM.  
+-   Функции API FILESTREAM предназначены для потокового доступа к данным на платформе Win32. Старайтесь не использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] для чтения или записи двоичных объектов FILESTREAM, если их размер больше 2 МБ. Если необходимо выполнять чтение или запись больших двоичных объектов из [!INCLUDE[tsql](../../includes/tsql-md.md)], убедитесь, что данные объекта использованы до того, как открывать такой объект FILESTREAM BLOB из Win32. Неиспользование всех данных [!INCLUDE[tsql](../../includes/tsql-md.md)] может привести к сбою при открытии или закрытии любого последующего объекта FILESTREAM.  
   
--   Старайтесь не использовать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], которые обновляют большие двоичные объекты FILESTREAM или прикрепляют к ним данные. Это приводит к буферизации данных таких объектов в базе данных tempdb с последующей передачей в новый физический файл.  
+-   Старайтесь не использовать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые обновляют большие двоичные объекты FILESTREAM или прикрепляют к ним данные. Это приводит к буферизации данных таких объектов в базе данных tempdb с последующей передачей в новый физический файл.  
   
--   Старайтесь избегать мелких обновлений больших двоичных объектов FILESTREAM. Каждая такая операция приводит к копированию базовых файлов FILESTREAM. Если приложению приходится прикреплять небольшие двоичные объекты, их следует записывать в столбец **varbinary(max)**, а затем выполнять одиночную операцию записи в большой двоичный объект FILESTREAM, когда число объектов достигнет установленного предела.  
+-   Старайтесь избегать мелких обновлений больших двоичных объектов FILESTREAM. Каждая такая операция приводит к копированию базовых файлов FILESTREAM. Если приложению приходится прикреплять небольшие двоичные объекты, их следует записывать в столбец **varbinary(max)** , а затем выполнять одиночную операцию записи в большой двоичный объект FILESTREAM, когда число объектов достигнет установленного предела.  
   
 -   Старайтесь не получать размер большого количества файлов больших двоичных объектов в приложении. На эту операцию уходит много времени, поскольку размер не хранится в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если необходимо выяснить размер файла большого двоичного объекта, воспользуйтесь функцией [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH(), чтобы определить размер объекта, если он закрыт. Функция DATALENGTH() не открывает объект, чтобы определить его размер.  
   
 -   Если в приложении используется протокол Message Block1 (SMB1), то для оптимизации производительности данные больших двоичных объектов FILESTREAM должны считываться блоками по 60 килобайт.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Избегание конфликтов в операциях баз данных в приложениях FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [Доступ к данным FILESTREAM с OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

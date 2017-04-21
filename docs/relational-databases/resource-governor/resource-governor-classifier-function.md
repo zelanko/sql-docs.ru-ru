@@ -1,30 +1,34 @@
 ---
-title: "Функция-классификатор регулятора ресурсов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулятор ресурсов, функция-классификатор"
-  - "пользовательские функции [SQL Server], функция-классификатор"
-  - "функция-классификатор [SQL Server]"
-  - "функция-классификатор [SQL Server], обзор"
+title: "Функция-классификатор регулятора ресурсов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function
+- user-defined functions [SQL Server], classifier function
+- classifier function [SQL Server]
+- classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
+ms.lasthandoff: 04/11/2017
+
 ---
-# Функция-классификатор регулятора ресурсов
+# <a name="resource-governor-classifier-function"></a>Функция-классификатор регулятора ресурсов
   Процесс классификации регулятора ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает входящие сеансы группе рабочей нагрузки с учетом характеристик сеанса. Логику классификации можно адаптировать путем написания определяемой пользователем функции, называемой функцией-классификатором.  
   
-## Классификация  
+## <a name="classification"></a>Классификация  
  Регулятор ресурсов поддерживает классификацию входящих сеансов. Классификация основывается на наборе пользовательских критериев, содержащихся в функции. Результаты логики функции позволяют регулятору ресурсов классифицировать сеансы по существующим группам рабочей нагрузки.  
   
 > [!NOTE]  
@@ -64,7 +68,7 @@ caps.handback.revision: 7
 > [!IMPORTANT]  
 >  Рекомендуется включить на сервере выделенное административное соединение (DAC). Выделенное административное соединение не подлежит классификации регулятором ресурсов и может использоваться для наблюдения за неполадками классифицирующей функции и их устранения. Дополнительные сведения см. в разделе [Диагностическое соединение для администраторов баз данных](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Если выделенное административное соединение недоступно для устранения неполадок, другой вариант — перезапустить систему в однопользовательском режиме. Хотя однопользовательский режим не подлежит классификации, он не дает возможности выполнить диагностику классификации регулятора ресурсов, если тот запущен.  
   
-### Процесс классификации  
+### <a name="classification-process"></a>Процесс классификации  
  В контексте регулятора ресурсов процесс входа в сеанс состоит из следующих этапов.  
   
 1.  Проверка подлинности имени входа.  
@@ -78,14 +82,14 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Сведения о выполнении классифицирующей функции и триггеров LOGON содержатся в представлениях [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) и [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
-## Задачи классифицирующей функции  
+## <a name="classification-function-tasks"></a>Задачи классифицирующей функции  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Описывает, как создать и проверить определяемую пользователем функцию-классификатор.|[Создать и проверить определяемую пользователем функцию-классификатор](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## См. также:  
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>См. также:  
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

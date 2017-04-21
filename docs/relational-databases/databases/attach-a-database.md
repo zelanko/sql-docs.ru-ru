@@ -1,27 +1,31 @@
 ---
-title: "Присоединение базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "присоединение баз данных [SQL Server]"
-  - "присоединение баз данных [SQL Server]"
+title: "Присоединение базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.attachdatabase.f1
+helpviewer_keywords:
+- database attaching [SQL Server]
+- attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
+ms.lasthandoff: 04/11/2017
+
 ---
-# Присоединение базы данных
+# <a name="attach-a-database"></a>Присоединение базы данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается присоединение базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно использовать для копирования, перемещения или обновления базы данных SQL Server.  
@@ -51,9 +55,9 @@ caps.handback.revision: 52
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Присоединение базы данных  
+#### <a name="to-attach-a-database"></a>Присоединение базы данных  
   
-1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]обозревателе объектов[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] подключитесь к экземпляру компонента и разверните его представление в SSMS.  
+1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обозревателе объектов [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]подключитесь к экземпляру компонента и разверните его представление в SSMS.  
   
 2.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите команду **Присоединить**.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 52
      **Расположение файла MDF**  
      Отображается путь и имя выбранного MDF-файла.  
   
-     **Имя базы данных**  
+     **Database Name**  
      Отображается имя базы данных.  
   
      **Присоединить как**  
@@ -123,7 +127,7 @@ caps.handback.revision: 52
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Присоединение базы данных  
+#### <a name="to-attach-a-database"></a>Присоединение базы данных  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -147,7 +151,7 @@ caps.handback.revision: 52
 ##  <a name="FollowUp"></a> Продолжение: после обновления базы данных SQL Server  
  После обновления базы данных при помощи описанного метода присоединения, эта база данных сразу становится доступной, после чего обновляется автоматически. Если база данных содержит полнотекстовые индексы, то в процессе обновления будет произведен их импорт, сброс или перестроение в зависимости от установленного значения свойства сервера **Режим обновления полнотекстового каталога** . Если при обновлении выбран режим **Импортировать** или **Перестроить**, то полнотекстовые индексы во время обновления будут недоступны. В зависимости от объема индексируемых данных процесс импорта может занять несколько часов, а перестроение — в несколько (до десяти) раз больше. Обратите внимание, что если при обновлении выбран режим **Импортировать**, а полнотекстовый каталог недоступен, то связанные с ним полнотекстовые индексы будут перестроены.  
   
- Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, в обновленной базе данных он устанавливается в 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, в обновленной базе данных он устанавливается в 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   > [!NOTE]
   > Для подключения базы данных из экземпляра под управлением SQL Server 2014 или более ранней версии, в которой включена система отслеживания измененных данных (CDC), потребуется также выполнить следующую команду, чтобы обновить метаданные системы отслеживания измененных данных (CDC).
@@ -156,8 +160,9 @@ caps.handback.revision: 52
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Отладчик Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Отладчик Transact-SQL, знакомство"
+title: "Отладчик Transact-SQL | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Отладчик Transact-SQL
-  Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
+  Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Пошаговая отладка кода Transact-SQL  
+## <a name="stepping-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL  
  Если окно редактора компонента [!INCLUDE[tsql](../../includes/tsql-md.md)] находится в режиме отладки, отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет следующие возможности для перемещения по коду [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 -   Установка точек останова на отдельных инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -40,10 +44,10 @@ caps.handback.revision: 16
   
  Дополнительные сведения о том, как отладчик позволяет переходить по коду, см. в разделе [Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
   
-## Просмотр сведений отладчика  
- Каждый раз, когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], с текущим состоянием выполнения можно ознакомиться при помощи следующих окон отладчика.  
+## <a name="viewing-debugger-information"></a>Просмотр сведений отладчика  
+ Каждый раз, когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , с текущим состоянием выполнения можно ознакомиться при помощи следующих окон отладчика.  
   
--   **Локальные значения** и **Просмотр значений**. В этих окнах отображаются выделенные в данный момент выражения [!INCLUDE[tsql](../../includes/tsql-md.md)]. Выражения — это предложения [!INCLUDE[tsql](../../includes/tsql-md.md)], значением которых является отдельное скалярное выражение. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживает просмотр выражений, которые ссылаются на переменные, параметры или встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)], имена которых начинаются с @@. В этих окнах также отображаются значения данных, которые назначены выражениям на текущий момент.  
+-   **Locals** and **Watch.** В этих окнах отображаются выделенные в данный момент выражения [!INCLUDE[tsql](../../includes/tsql-md.md)] . Выражения — это предложения [!INCLUDE[tsql](../../includes/tsql-md.md)] , значением которых является отдельное скалярное выражение. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживает просмотр выражений, которые ссылаются на переменные, параметры или встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)], имена которых начинаются с @@. В этих окнах также отображаются значения данных, которые назначены выражениям на текущий момент.  
   
 -   **Быстрая проверка.** Это окно отображает значение выражения [!INCLUDE[tsql](../../includes/tsql-md.md)] и позволяет сохранять это выражение в окне **Просмотр значений** .  
   
@@ -53,18 +57,18 @@ caps.handback.revision: 16
   
 -   **Вывод.** В этом окне отображаются различные сообщения и программные данные, например системные сообщения от отладчика.  
   
--   **Результаты** и **Сообщения**. На этих вкладках окна редактора запросов отображаются результаты ранее выполненных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   **Results** and **Messages.** На этих вкладках окна редактора запросов отображаются результаты ранее выполненных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Задачи отладчика Transact-SQL  
+## <a name="transact-sql-debugger-tasks"></a>Задачи отладчика Transact-SQL  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает настройку удаленной отладки в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Настройка правил брандмауэра перед запуском отладчика TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Описывает настройку удаленной отладки в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Настройка правил брандмауэра перед запуском отладчика TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |Описывает запуск, остановку операций отладчика и управление ими.|[Запуск отладчика Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
 |Описание использования отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового выполнения кода.|[Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|Описание использования отладчика для просмотра таких данных [!INCLUDE[tsql](../../includes/tsql-md.md)], как параметры и переменные, а также системные сведения.|[Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|Описание использования отладчика для просмотра таких данных [!INCLUDE[tsql](../../includes/tsql-md.md)] , как параметры и переменные, а также системные сведения.|[Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Редакторы запросов и текста (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

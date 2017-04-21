@@ -1,27 +1,31 @@
 ---
-title: "Пример. Запросы к столбцам XMLType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "режим RAW, пример запросов XML"
+title: "Пример. Запросы к столбцам XMLType | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4b6c214f3097fce58d3f2ac131642503c62641
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пример. Запросы к столбцам XMLType
-  В следующий запрос включены столбцы типа **xml** . Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа **xml**.  
+# <a name="example-querying-xmltype-columns"></a>Пример. Запросы к столбцам XMLType
+  В следующий запрос включены столбцы типа **xml** . Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа **xml** .  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +79,7 @@ go
 </ProductModelData>  
 ```  
   
- В следующем запросе задана директива `ELEMENTS`. Поэтому результат будет состоять из элементов. Параметр `XSINIL`, заданный вместе с директивой `ELEMENTS`, возвращает элементы <`ManuSteps`>, даже если соответствующий столбец в наборе строк имеет значение NULL.  
+ В следующем запросе задана директива `ELEMENTS` . Поэтому результат будет состоять из элементов. Параметр `XSINIL`, заданный вместе с директивой `ELEMENTS`, возвращает элементы <`ManuSteps`>, даже если соответствующий столбец в наборе строк имеет значение NULL.  
   
 ```  
 USE AdventureWorks2012;  
@@ -112,7 +116,7 @@ go
 </MyRoot>  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

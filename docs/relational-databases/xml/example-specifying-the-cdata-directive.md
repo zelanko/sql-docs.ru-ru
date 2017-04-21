@@ -1,24 +1,28 @@
 ---
-title: "Пример. Задание директивы CDATA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CDATA, директива"
+title: "Пример. Указание директивы CDATA | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 212c754807d0ef2c6da1effca60d47f0896c239d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пример. Задание директивы CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Пример. Задание директивы CDATA
   Если указана директива **CDATA**, содержащиеся данные не будут закодированы в сущность, а будут помещены в раздел CDATA. Атрибуты **CDATA** должны быть безымянными.  
   
  Следующий запрос упаковывает описания итога модели продукта в раздел CDATA.  
@@ -45,7 +49,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

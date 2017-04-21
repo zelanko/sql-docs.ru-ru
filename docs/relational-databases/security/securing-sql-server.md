@@ -1,38 +1,42 @@
 ---
-title: "Обеспечение безопасности SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Security [SQL Server]"
-helpviewer_keywords: 
-  - "объекты базы данных [SQL Server], безопасность"
-  - "SQL Server, безопасность"
-  - "операционные системы [SQL Server], безопасность"
-  - "безопасность [SQL Server], планирование"
-  - "приложения [SQL Server], безопасность"
+title: "Защита SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 01/31/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Security [SQL Server]
+helpviewer_keywords:
+- database objects [SQL Server], security
+- SQL Server, security
+- operating systems [SQL Server], security
+- security [SQL Server], planning
+- applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9397a4279a769cc6504c0a37a09f1b42a810cdd0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Обеспечение безопасности SQL Server
-  Защиту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно рассматривать как последовательность шагов, затрагивающих четыре области: платформу, проверку подлинности, объекты (включая данные) и приложения, получающие доступ к системе. В приведенных ниже разделах описано создание и реализация эффективного плана обеспечения безопасности.  
+# <a name="securing-sql-server"></a>Обеспечение безопасности SQL Server
+  Защиту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно рассматривать как последовательность шагов, затрагивающих четыре области: платформу, проверку подлинности, объекты (включая данные) и приложения, получающие доступ к системе. В приведенных ниже разделах описано создание и реализация эффективного плана обеспечения безопасности.  
   
  Дополнительные сведения о безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . Они включают руководство с рекомендациями и контрольный список безопасности. Кроме того, этот веб-сайт содержит сведения о пакетах обновлений и файлы для загрузки.  
   
-## Безопасность платформы и сети  
+## <a name="platform-and-network-security"></a>Безопасность платформы и сети  
  Платформа для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает в себя физическое оборудование и сетевые компьютеры, с помощью которых клиенты соединяются с серверами базы данных, а также двоичные файлы, применяемые для обработки запросов базы данных.  
   
-### Физическая безопасность  
+### <a name="physical-security"></a>Физическая безопасность  
  Рекомендуется строго ограничивать доступ к физическим серверам и компонентам оборудования. Например, оборудование сервера базы данных и сетевые устройства должны находиться в закрытых охраняемых помещениях. Доступ к резервным носителям также следует ограничить. Для этого их рекомендуется хранить в отдельных охраняемых помещениях.  
   
  Реализация физической сетевой безопасности начинается с запрета доступа неавторизованных пользователей к сети. Следующая таблица содержит дополнительные сведения об источниках сведений по сетевой безопасности.  
@@ -41,7 +45,7 @@ caps.handback.revision: 30
 |---------------------------|---------|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] и сетевой доступ к другим выпускам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Раздел «Настройка и обеспечение безопасности среды сервера» в электронной документации по [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
   
-### Безопасность операционной системы  
+### <a name="operating-system-security"></a>Безопасность операционной системы  
  В состав пакетов обновления и отдельных обновлений для операционной системы входят важные дополнения, позволяющие усилить безопасность. Все обновления для операционной системы необходимо устанавливать только после их тестирования с приложениями базы данных.  
   
  Кроме того, эффективную безопасность можно реализовать с помощью брандмауэров. Брандмауэр, распределяющий или ограничивающий сетевой трафик, можно настроить в соответствии с корпоративной политикой информационной безопасности. Использование брандмауэра повышает безопасность на уровне операционной системы, обеспечивая узкую область, на которой можно сосредоточить меры безопасности. Следующая таблица содержит дополнительные сведения по использованию брандмауэра с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,7 +53,7 @@ caps.handback.revision: 30
 |Сведения о|См.|  
 |---------------------------|---------|  
 |Настройка брандмауэра для работы со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|Настройка брандмауэра для работы со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Настройка параметров брандмауэра Windows для доступа к службам SSIS](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|Настройка брандмауэра для работы со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Службы Integration Services (службы SSIS)](../../integration-services/service/integration-services-service-ssis-service.md)|  
 |Настройка брандмауэра для работы со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Открытие конкретных портов брандмауэра, чтобы предоставить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Настройка поддержки расширенной защиты для проверки подлинности с помощью привязки каналов и привязки служб|[Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
@@ -68,7 +72,7 @@ caps.handback.revision: 30
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Проверка подлинности|[Проверка подлинности в службах Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] и доступ к службам IIS|«Блок-схема безопасности служб IIS» в электронной документации по [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
   
-### Безопасность файлов операционной системы SQL Server  
+### <a name="sql-server-operating-system-files-security"></a>Безопасность файлов операционной системы SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует файлы операционной системы для работы и хранения данных. Оптимальным решением для обеспечения безопасности файлов будет ограничение доступа к ним. Следующая таблица содержит сведения об этих файлах.  
   
 |Сведения о|См.|  
@@ -84,7 +88,7 @@ SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));
 GO  
 ```  
   
-## Безопасность участников и объектов базы данных  
+## <a name="principals-and-database-object-security"></a>Безопасность участников и объектов базы данных  
  Участники — это отдельные пользователи, группы и процессы, которым предоставлен доступ к ресурсам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Защищаемые объекты — это сервер, база данных и объекты, которые содержит база данных. У каждого из них существует набор разрешений, с помощью которых можно уменьшить контактную зону [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Следующая таблица содержит сведения об участниках и защищаемых объектах.  
   
 |Сведения о|См.|  
@@ -93,13 +97,13 @@ GO
 |Безопасность объектов сервера и базы данных|[Защищаемые объекты](../../relational-databases/security/securables.md)|  
 |Иерархия безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)|  
   
-### Шифрование и сертификаты  
+### <a name="encryption-and-certificates"></a>Шифрование и сертификаты  
  Шифрование не решает проблемы управления доступом. Однако оно повышает безопасность, ограничивая потерю данных даже в тех редких случаях, когда средства управления доступом удается обойти. Например, если главный компьютер, на котором установлена база данных, был настроен неправильно, и злонамеренный пользователь смог получить конфиденциальные данные (например, номера кредитных карточек), то украденная информация будет бесполезна, если она была предварительно зашифрована. В следующей таблице содержатся дополнительные сведения о шифровании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Сведения о|См.|  
 |---------------------------|---------|  
 |Иерархия шифрования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)|  
-|Реализация безопасных соединений|[Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable encrypted connections to the database engine.md)|  
+|Реализация безопасных соединений|[Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
 |Функции шифрования|[Криптографические функции (Transact-SQL)](../../t-sql/functions/cryptographic-functions-transact-sql.md)|  
   
  Сертификаты — это совместно используемые на двух серверах программные «ключи», которые позволяют обеспечить безопасную передачу данных с помощью надежной проверки подлинности. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать и использовать сертификаты для повышения безопасности объектов и соединений. Следующая таблица содержит дополнительные сведения об использовании сертификатов с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -109,26 +113,26 @@ GO
 |Создание сертификата, который будет использоваться [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)|  
 |Использование сертификатов при зеркальном отображении базы данных|[Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
-## Безопасность приложений  
+## <a name="application-security"></a>Безопасность приложений  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется разрабатывать защищенные клиентские приложения.  
   
  Дополнительные сведения об обеспечении безопасности клиентских приложений на сетевом уровне см. в разделе [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md).  
   
-## Средства, программы, представления и функции безопасности SQL Server  
+## <a name="sql-server-security-tools-utilities-views-and-functions"></a>Средства, программы, представления и функции безопасности SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены средства, программы, представления и функции, которые используются для настройки и управления безопасностью.  
   
-### Средства и программы безопасности SQL Server  
+### <a name="sql-server-security-tools-and-utilities"></a>Средства и программы безопасности SQL Server  
  Следующая таблица содержит сведения о средствах и программах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью которых можно настраивать и администрировать безопасность.  
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Использование среды SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)|  
+|Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Использование среды SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и запуск запросов из командной строки|[Программа sqlcmd](../../tools/sqlcmd-utility.md)|  
 |Настройка сети и управление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Включение и отключение компонентов с помощью средства управления на основе политики|[Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Управление симметричными ключами для сервера отчетов|[Программа rskeymgmt (SSRS)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
   
-### Представления каталога и функции безопасности SQL Server  
+### <a name="sql-server-security-catalog-views-and-functions"></a>Представления каталога и функции безопасности SQL Server  
  В компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] сведения о безопасности доступны через несколько представлений и функций, оптимизированных для наибольшей производительности и полезности. Следующая таблица содержит сведения о представлениях и функциях безопасности.  
   
 |Сведения о|См.|  
@@ -137,18 +141,14 @@ GO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые возвращают сведения о текущем пользователе, разрешениях и схемах.|[Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Динамические представления управления и функции, связанные с безопасностью (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-  
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-
-[Оптимальные методы обеспечения безопасности SQL Server 2012 — рабочие и административные задачи](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)
-
-[Блог по безопасности SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
-
-[Оптимальные методы обеспечения безопасности и безопасность на уровне меток (технические описания)](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)
-
-[Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
-
-[Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)
+[Оптимальные методы обеспечения безопасности SQL Server 2012 — рабочие и административные задачи](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[Блог по безопасности SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
+[Оптимальные методы обеспечения безопасности и безопасность на уровне меток (технические описания)](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
+[Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+[Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   
+[Защита интеллектуальной собственности SQL Server](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
+

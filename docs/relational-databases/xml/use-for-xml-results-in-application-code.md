@@ -1,30 +1,34 @@
 ---
-title: "Использование результатов FOR XML в коде приложений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "предложение FOR XML, использование кода приложения"
-  - "XML [SQL Server], предложение FOR XML"
-  - "ASP.NET [SQL Server]"
-  - "платформа .NET Framework [SQL Server], данные FOR XML"
-  - "ADO [SQL Server]"
-  - "острова XML-данных [SQL Server]"
-  - "острова данных [SQL Server]"
+title: "Использование результатов FOR XML в коде приложений | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование результатов FOR XML в коде приложений
+# <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
   При помощи предложения FOR XML в SQL-запросах можно получать и даже преобразовывать результаты запросов в формат XML. Если приложение способно обрабатывать XML-данные, эта возможность позволяет выполнять следующие задачи:  
   
 -   Запрашивать из таблиц SQL экземпляры значений [данных XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -33,8 +37,8 @@ caps.handback.revision: 23
   
  В этом подразделе содержатся примеры, демонстрирующие перечисленные возможности.  
   
-## Получение данных FOR XML при использовании ADO и островов XML-данных  
- Результаты, возвращаемые запросами FOR XML, могут быть сохранены объектом **Stream** ADO или другим объектом, поддерживающим COM-интерфейс **IStream** (например, объектами ASP **Request** и **Response**).  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Получение данных FOR XML при использовании ADO и островов XML-данных  
+ Результаты, возвращаемые запросами FOR XML, могут быть сохранены объектом **Stream** ADO или другим объектом, поддерживающим COM-интерфейс **IStream** (например, объектами ASP **Request** и **Response** ).  
   
  Например, следующий код ASP отображает результаты запроса к столбцу Demographics типа **xml** таблицы Sales.Store в образце в базе данных AdventureWorks. В частности, запрос производит поиск значения столбца для строки, в которой значение CustomerID равно 3.  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  Этот пример ASP-страницы содержит работающий на стороне сервера скрипт VBScript, выполняющий запрос FOR XML через ADO и возвращающий результат в виде острова XML-данных с именем MyDataIsle. Затем этот остров XML-данных возвращается браузеру и подвергается дополнительной обработке на стороне клиента После этого на стороне клиента дополнительный код скрипта VBScript используется для обработки содержимого острова XML-данных. После этого этапа обработки содержимое отображается в виде результирующего DHTML и открывается окно сообщения, где отображается обработанное содержимое острова XML-данных.  
   
-#### Проверка этого примера  
+#### <a name="to-test-this-example"></a>Проверка этого примера  
   
 1.  Убедитесь, что установлены службы IIS и образец базы данных AdventureWorks для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  Результаты, сформированные в виде страниц HTML, будут выглядеть следующим образом:  
   
-##### Обработка на стороне сервера  
+##### <a name="server-side-processing"></a>Обработка на стороне сервера  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  Передача кода XML для обработки на клиенте.  
   
-##### Обработка XML-документа MyDataIsle на стороне клиента  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Обработка XML-документа MyDataIsle на стороне клиента  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## Получение данных FOR XML при использовании ASP.NET и .NET Framework  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>Получение данных FOR XML при использовании ASP.NET и .NET Framework  
  Как и в предыдущем примере, код ASP.NET отображает результаты запроса столбца Demographics типа **xml** из таблицы Sales.Store в образце базы данных AdventureWorks. Как и в предыдущем случае, запрос ищет значение этого столбца, соответствующее строке, в которой CustomerID равен значению 3.  
   
  В этом примере применяются следующие управляемые интерфейсы прикладных программ (API) Microsoft .NET Framework для возврата и подготовки просмотра результатов запроса FOR XML:  
@@ -206,7 +210,7 @@ caps.handback.revision: 23
   
 3.  После выполнения запроса вызывается метод **SqlDataAdapter.Fill** , который передает экземпляр **DataSet,** MyDataSet, чтобы заполнить набор данных результатами выполнения запроса FOR XML.  
   
-4.  Затем вызывается метод **DataSet.GetXml**, который возвращает результаты запроса в виде строки, отображаемой на странице HTML, формируемой на сервере.  
+4.  Затем вызывается метод **DataSet.GetXml** , который возвращает результаты запроса в виде строки, отображаемой на странице HTML, формируемой на сервере.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### Проверка этого примера  
+#### <a name="to-test-this-example"></a>Проверка этого примера  
   
 1.  Убедитесь, что установлены службы IIS и образец базы данных AdventureWorks для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  Результаты, сформированные в виде страниц HTML, будут выглядеть следующим образом:  
   
-##### Обработка на стороне сервера  
+##### <a name="server-side-processing"></a>Обработка на стороне сервера  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -291,7 +295,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  Поддержка типа данных **xml** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет реализовать требование, согласно которому результат запроса FOR XML должен быть возвращен в качестве типа данных **xml**, а не типов данных string или image, с помощью задания [директивы TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Если в запросе FOR XML указана директива TYPE, она предоставляет программный доступ к результатам FOR XML, как описано в разделе [Использование XML-данных в приложениях](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

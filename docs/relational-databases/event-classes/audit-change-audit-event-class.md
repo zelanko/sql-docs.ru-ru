@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Audit Change Audit | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Change Audit, класс событий"
+title: "Класс событий Audit Change Audit | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Change Audit event class
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2b1e73cf35ce58b7e1fb001944ee9271db45489
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Audit Change Audit
+# <a name="audit-change-audit-event-class"></a>Audit Change Audit, класс событий
   Класс событий **Audit Change Audit** происходят при изменении трассировки.  
   
-## Столбцы данных класса событий Audit Change Audit  
+## <a name="audit-change-audit-event-class-data-columns"></a>Столбцы данных класса событий Audit Change Audit  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -33,25 +37,25 @@ caps.handback.revision: 30
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|40|Да|  
 |**EventClass**|**int**|Тип события = 117.|27|Нет|  
 |**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
-|**EventSubClass**|**int**|Тип подкласса события. <br /><br /> 1 = начало аудита,<br /><br /> 2 = завершение аудита,<br /><br /> 3 = режим C2 включен (ON),<br /><br /> 4 = режим C2 выключен (OFF).|21|Да|  
+|**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 1 = начало аудита,<br /><br /> 2 = завершение аудита,<br /><br /> 3 = режим C2 включен (ON),<br /><br /> 4 = режим C2 выключен (OFF).|21|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения доступны в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NestLevel**|**int**|Целочисленное значение, представляющее данные, возвращаемые функцией @@NESTLEVEL.|29|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
-|**OwnerName**|**nvarchar**|Имя пользователя базы данных, владеющего объектом. |37|Да|  
+|**OwnerName**|**nvarchar**|Имя пользователя базы данных, владеющего объектом.|37|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого выполняется трассировка.|26|Нет|  
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием имени «Имя_входа1» и выполнении инструкции под именем «Имя_входа2» в столбце **SessionLoginName** выводится значение «Имя_входа1», а в столбце **LoginName** — значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
-|**Успешно **|**int**|1 = успешное завершение.  0 = неуспешное завершение.  Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  
+|**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  
 |**TextData**|**ntext**|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
 |**XactSequence**|**bigint**|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

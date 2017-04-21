@@ -1,31 +1,35 @@
 ---
-title: "Настройки базы данных-получателя | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+title: "Настройки базы данных-получателя | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройки базы данных-получателя
+# <a name="secondary-database-settings"></a>Настройки базы данных-получателя
   При помощи этого диалогового окна можно настроить и изменить свойства базы данных-получателя в конфигурации доставки журналов.  
   
  Основные сведения о доставке журналов изложены в статье [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Экземпляр сервера-получателя**  
- Отображает имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который в конфигурации доставки журналов является сервером-получателем.  
+ Отображает имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который в конфигурации доставки журналов является сервером-получателем.  
   
  **База данных-получатель**  
  Отображает имя базы данных-получателя для конфигурации доставки журналов. При добавлении в конфигурацию доставки журналов новой базы данных-получателя можно выбрать эту базу из списка или ввести ее имя в текстовое поле. При вводе имени новой базы данных необходимо выбрать параметр на вкладке **Инициализация** , который произведет восстановление полной копии базы данных-источника в базу данных-получатель. Новая база данных создается как часть операции восстановления.  
@@ -70,7 +74,7 @@ caps.handback.revision: 32
  Выберите промежуток времени хранения файлов резервной копии журналов транзакций в папке назначения перед их удалением.  
   
  **Имя задания**  
- Отображает имя задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используемого для копирования файлов резервной копии журналов транзакций с сервера-источника на сервер-получатель. При первом создании этого задания можно изменить имя, введя в текстовом поле новое.  
+ Отображает имя задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемого для копирования файлов резервной копии журналов транзакций с сервера-источника на сервер-получатель. При первом создании этого задания можно изменить имя, введя в текстовом поле новое.  
   
  **Расписание**  
  Показывает текущее расписание для задания агента SQL Server, которое копирует резервные копии журналов транзакций с сервера-источника на сервер-получатель. Можно изменить это расписание, нажав кнопку **Расписание...**.  
@@ -114,7 +118,7 @@ caps.handback.revision: 32
  **Отключить это задание**  
  Позволяет приостанавливать операции восстановления в базе данных-получателе.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

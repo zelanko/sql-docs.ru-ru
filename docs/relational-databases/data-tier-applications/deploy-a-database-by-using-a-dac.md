@@ -1,31 +1,35 @@
 ---
-title: "Развертывание базы данных с помощью приложения уровня данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbdeployment.settings.f1"
-  - "sql13.swb.dbdeployment.progress.f1"
-  - "sql13.swb.dbdeployment.summary.f1"
-  - "sql13.swb.dbdeployment.results.f1"
-  - "sql13.swb.dbdeployment.welcome.f1"
-helpviewer_keywords: 
-  - "мастер развертывания базы данных"
-  - "развертывание базы данных [SQL Server]"
+title: "Развертывание базы данных с помощью приложения уровня данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbdeployment.settings.f1
+- sql13.swb.dbdeployment.progress.f1
+- sql13.swb.dbdeployment.summary.f1
+- sql13.swb.dbdeployment.results.f1
+- sql13.swb.dbdeployment.welcome.f1
+helpviewer_keywords:
+- deploy database wizard
+- database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57703923bd142330e2a46e72eb4faaee18fa7285
+ms.lasthandoff: 04/11/2017
+
 ---
-# Развертывание базы данных с помощью приложения уровня данных
+# <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
   С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Перед началом  
@@ -43,24 +47,24 @@ caps.handback.revision: 11
   
 -   С [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] в экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   Между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+-   Между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
  Мастер не поддерживает развертывание баз данных между двумя экземплярами компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Для работы с мастером на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен быть запущен [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. Если база данных на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] содержит объекты, неподдерживаемые в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], то использовать мастер развертывания базы данных на [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] нельзя. Если база данных на [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] содержит объекты, неподдерживаемые в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то использовать мастер для развертывания базы данных на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нельзя.  
+ Для работы с мастером на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен быть запущен [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. Если база данных на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] содержит объекты, неподдерживаемые в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], то использовать мастер развертывания базы данных на [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]нельзя. Если база данных на [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] содержит объекты, неподдерживаемые в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то использовать мастер для развертывания базы данных на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя.  
   
 ###  <a name="Security"></a> Безопасность  
  В целях повышения безопасности имена входа в SQL Server хранятся в файле экспорта приложения уровня данных BACPAC без пароля. При импорте файла BACPAC имя входа создается как отключенное имя входа с созданным паролем. Чтобы включить имена входа, войдите в систему под учетной записью, имеющей разрешение ALTER ANY LOGIN и с помощью команды ALTER LOGIN включите имя входа и присвойте ему новый пароль, который можно передать пользователю. Это не требуется для имен входа, использующих проверку подлинности Windows, поскольку SQL Server не управляет их паролями.  
   
-#### Разрешения  
- Мастеру необходимы разрешения на экспорт приложения уровня данных в базе данных-источнике. Для имени входа необходимы как минимум разрешения ALTER ANY LOGIN и VIEW DEFINITION на уровне базы данных, а также разрешение SELECT для представления каталога **sys.sql_expression_dependencies**. Экспорт приложения уровня данных может выполняться членами предопределенной роли сервера securityadmin, которые также входят в предопределенную роль базы данных database_owner для базы данных, из которой экспортируется приложение уровня данных. Экспортировать приложение уровня данных могут также члены предопределенной роли сервера sysadmin или встроенной роли системного администратора SQL Server с названием **sa**.  
+#### <a name="permissions"></a>Разрешения  
+ Мастеру необходимы разрешения на экспорт приложения уровня данных в базе данных-источнике. Для имени входа необходимы как минимум разрешения ALTER ANY LOGIN и VIEW DEFINITION на уровне базы данных, а также разрешение SELECT для представления каталога **sys.sql_expression_dependencies**. Экспорт приложения уровня данных может выполняться членами предопределенной роли сервера securityadmin, которые также входят в предопределенную роль базы данных database_owner для базы данных, из которой экспортируется приложение уровня данных. Экспортировать приложение уровня данных могут также члены предопределенной роли сервера sysadmin или встроенной роли системного администратора SQL Server с названием **sa** .  
   
- Мастеру необходимы разрешения на импорт приложения уровня данных на экземпляре или сервере назначения. Имя входа должно быть членом предопределенных ролей сервера **sysadmin** или **serveradmin** либо членом предопределенной роли сервера **dbcreator** с разрешениями ALTER ANY LOGIN. Импорт приложения уровня данных также можно запустить от имени учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем **sa**. Для импорта приложения уровня данных с именами входа в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] необходимо быть участником группы с ролью loginmanager или serveradmin. Для импорта приложения уровня данных без имен входа в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] необходимо быть участником группы с ролью dbmanager или serveradmin.  
+ Мастеру необходимы разрешения на импорт приложения уровня данных на экземпляре или сервере назначения. Имя входа должно быть членом предопределенных ролей сервера **sysadmin** или **serveradmin** либо членом предопределенной роли сервера **dbcreator** с разрешениями ALTER ANY LOGIN. Импорт приложения уровня данных также можно запустить от имени учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем **sa** . Для импорта приложения уровня данных с именами входа в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] необходимо быть участником группы с ролью loginmanager или serveradmin. Для импорта приложения уровня данных без имен входа в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] необходимо быть участником группы с ролью dbmanager или serveradmin.  
   
 ##  <a name="UsingDeployDACWizard"></a> Использование мастера развертывания баз данных  
  **Перенос базы данных с помощью мастера развертывания баз данных**  
   
-1.  Подключитесь к расположению базы данных, которую необходимо развернуть. Вы можете указать либо экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], либо сервер [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+1.  Подключитесь к расположению базы данных, которую необходимо развернуть. Вы можете указать либо экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , либо сервер [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] .  
   
 2.  В **обозревателе объектов**разверните узел экземпляра, содержащего базу данных.  
   
@@ -74,10 +78,10 @@ caps.handback.revision: 11
   
     -   [Параметры развертывания](#Deployment_settings)  
   
-    -   [Проверка](#Validation)  
-  
     -   [Страница «Сводка»](#Summary)  
   
+    -   [Ход выполнения](#Progress)  
+    
     -   [Результаты](#Results)  
   
 ##  <a name="Introduction"></a> Вводная страница  
@@ -87,7 +91,7 @@ caps.handback.revision: 11
   
 -   **Больше не показывать эту страницу.** — установите этот флажок, чтобы предотвратить отображение страницы «Введение» в будущем.  
   
--   **Далее** — осуществляет переход на страницу **Параметры развертывания**.  
+-   **Далее** — осуществляет переход на страницу **Параметры развертывания** .  
   
 -   **Отмена** — отмена операции и закрытие мастера.  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 11
   
 -   **Выпуск [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** — выберите выпуск [!INCLUDE[ssSDS](../../includes/sssds-md.md)] из раскрывающегося списка.  
   
--   **Максимальный размер базы данных** — выберите максимальный размер базы данных в раскрывающемся меню.  
+-   **Максимальный размер базы данных** — выберите максимальный размер базы данных в раскрывающемся меню.  
   
  **Другие параметры:**  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 11
   
  Чтобы завершить работу мастера, нажмите кнопку **Готово** .  
   
-## Использование приложения .NET Framework  
+## <a name="using-a-net-framework-application"></a>Использование приложения .NET Framework  
  **Развертывание базы данных с помощью методов DacStore Export() и Import() в приложении .NET Framework.**  
   
  Чтобы просмотреть пример кода, загрузите пример приложения DAC на сайте [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
@@ -138,7 +142,7 @@ caps.handback.revision: 11
   
 6.  Вызовите метод **Import** типа **Microsoft.SqlServer.Management.Dac.DacStore** для импорта BACPAC. Укажите файл BACPAC, созданный при экспорте.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Экспорт приложения уровня данных](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Импорт файла BACPAC для создания новой пользовательской базы данных](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

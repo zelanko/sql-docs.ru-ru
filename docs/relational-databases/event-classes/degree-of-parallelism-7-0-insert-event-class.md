@@ -1,29 +1,33 @@
 ---
-title: "Класс событий Degree of Parallelism (7.0 Insert) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Degree of Parallelism, класс событий"
+title: "Класс событий Degree of Parallelism (7.0 Insert) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58892a606e417bc95b2744fcd3abc1e58ee1ff84
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Degree of Parallelism (7.0 Insert)
+# <a name="degree-of-parallelism-70-insert-event-class"></a>Класс событий Degree of Parallelism (7.0 Insert)
   События класса **Degree of Parallelism (7.0 Insert)** происходят каждый раз, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции SELECT, INSERT, UPDATE или DELETE.  
   
  Если этот класс событий включен в трассировку, то полученный объем затрат может значительно снизить производительность, если такие события будут происходить часто. Чтобы свести к минимуму затраты, ограничьте этот класс событий трассировками, которые лишь короткое время следят за конкретными неполадками.  
   
-## Столбцы класса событий Degree of Parallelism (7.0 Insert)  
+## <a name="degree-of-parallelism-70-insert-event-class-data-columns"></a>Столбцы класса событий Degree of Parallelism (7.0 Insert)  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -39,7 +43,7 @@ caps.handback.revision: 35
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**Integer Data**|**int**|Объем «памяти рабочей области» (в килобайтах), предоставленной запросу для выполнения операций, к которым относится хэширование, сортировка или создание индекса. Эта память будет использоваться в период выполнения по мере необходимости.|25|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа Windows в формате "ДОМЕН\\*имя_пользователя*").|11|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа Windows в формате "ДОМЕН\\*имя_пользователя*").|11|Да|  
 |**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
@@ -50,7 +54,7 @@ caps.handback.revision: 35
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)  
   

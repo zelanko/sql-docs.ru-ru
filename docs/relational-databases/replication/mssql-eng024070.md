@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG024070 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG024070, ошибка"
+title: "MSSQL_ENG024070 | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 205b2f0da8ad8a8f3523b8d554c84235df45d619
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG024070
+# <a name="mssqleng024070"></a>MSSQL_ENG024070
     
-## Сведения о сообщении  
+## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
@@ -31,14 +35,14 @@ caps.handback.revision: 14
 |Символическое имя||  
 |Текст сообщения|Клиент не располагает требуемыми правами доступа.|  
   
-## Объяснение  
+## <a name="explanation"></a>Объяснение  
  Это общая ошибка, которая может возникнуть независимо от того, реплицируется база данных или нет. Для сервера в топологии репликации эта ошибка обычно означает, что учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была изменена с использованием диспетчера управления службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] , а не с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если попытаться выполнить задание агента после изменения учетной записи службы, выполнение задания может закончится выдачей примерно следующего сообщения об ошибке:  
   
- «Выполняется от имени: \< Имя_учетной_записи>. Репликация — Подсистема моментальных снимков: агента \< ИмяАгента> сбой. Выполняется от имени: \< Имя_учетной_записи>. Клиент не располагает требуемыми правами доступа. Шаг завершился с ошибкой. [SQLSTATE 42000] (Ошибка 14151). Шаг завершился с ошибкой».  
+ `Executed as user: \<UserAccount>. Replication-Replication Snapshot Subsystem: agent \<AgentName> failed. Executed as user: \<UserAccount>. A required privilege is not held by the client. The step failed. [SQLSTATE 42000] (Error 14151). The step failed.`  
   
  Эта проблема возникает из-за того, что диспетчер управления службами Windows не может предоставить новой учетной записи службы для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуемые разрешения.  
   
-## Действие пользователя  
+## <a name="user-action"></a>Действие пользователя  
  Чтобы в дальнейшем избежать появления этой проблемы, при изменении учетных записей служб и паролей всегда пользуйтесь диспетчером конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а не диспетчером управления службами Windows.  
   
  Чтобы устранить эту проблему, при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] смените учетную запись службы обратно на исходную. Затем при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перейдите на новую учетную запись. При этом диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавляет новую учетную запись в следующую группу безопасности:  
@@ -47,9 +51,10 @@ caps.handback.revision: 14
   
  Членство в ней предоставляет новой учетной записи разрешения, необходимые для выполнения задания агента репликации.  
   
-## См. также:  
- [Ошибки и события ссылку & #40; Репликация & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Управление именами входа и паролями в репликации](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)   
+ [Управление именами для входа и паролями при репликации](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)  
   
   
+

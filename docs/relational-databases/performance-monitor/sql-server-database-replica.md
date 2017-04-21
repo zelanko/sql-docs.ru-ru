@@ -1,28 +1,32 @@
 ---
-title: "SQL Server, реплика базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Группы доступности [SQL Server], мониторинг"
-  - "SQL Server: реплика базы данных"
-  - "счетчики производительности [SQL Server], группы доступности AlwaysOn"
-  - "группы доступности [SQL Server], счетчики производительности"
+title: "SQL Server, реплика базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- SQLServer:Database Replica
+- performance counters [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc96130b21ccef9c95dbe8172ef5ef4fc5185616
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, реплика базы данных
-  Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором размещена вторичная реплика.  
+# <a name="sql-server-database-replica"></a>SQL Server, реплика базы данных
+  Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена вторичная реплика.  
   
 |Имя счетчика|Описание|Просмотр в…|  
 |------------------|-----------------|--------------|  
@@ -40,10 +44,11 @@ caps.handback.revision: 27
 |**Число данных журнала, требующих отмены**|Общий объем журнала, который должен быть обработан для отмены, в килобайтах.|Вторичная реплика|  
 |**Задержка транзакции**|Задержки в ожидании подтверждения незавершенной фиксации, в миллисекундах.|Первичная реплика|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, реплика доступности](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, объект Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,34 +1,38 @@
 ---
-title: "Просмотр эквивалентов расширенных событий для классов событий трассировки SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "трассировка SQL, эквивалентные расширенные события"
-  - "расширенные события [SQL Server], эквиваленты трассировки SQL"
-  - "расширенные события [SQL Server], пользовательские события"
+title: "Просмотр эквивалентов расширенных событий для классов событий трассировки SQL | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр эквивалентов расширенных событий для классов событий трассировки SQL
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Просмотр эквивалентов расширенных событий для классов событий трассировки SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Если требуется с помощью расширенных событий выполнять сбор данных о событиях, эквивалентных классам и столбцам событий трассировки SQL, желательно иметь представление о том, как события SQL-трассировки сопоставляются с событиями и действиями расширенных событий.  
   
  С помощью приведенной ниже процедуры можно просматривать события и действия расширенных событий, аналогичных каждому событию трассировки SQL со связанными столбцами.  
   
-## Просмотр эквивалентов расширенных событий для событий трассировки SQL с помощью редактора запросов  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Просмотр эквивалентов расширенных событий для событий трассировки SQL с помощью редактора запросов  
   
 -   В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выполните следующий запрос:  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   Что касается настраиваемых пользователем классов событий трассировки SQL (с UserConfigurable:1 по UserConfigurable:9), в расширенных событиях вместо них используется одно событие. Имя события — user_event. Это событие вызывается с помощью хранимой процедуры sp_trace_generateevent, которая используется и в трассировке SQL. Событие user_event возвращается независимо от того, какой идентификатор события передается хранимой процедуре. Однако поле event_id возвращается вместе с другими данными о событии. Это позволяет составлять предикат на основе идентификатора события. Например, если в коде используется UserConfigurable:0 (идентификатор события = 82), то можно добавить событие user_event в сеанс и указать предикат "event_id = 82". Таким образом, нет необходимости менять код, поскольку хранимая процедура sp_trace_generateevent формирует событие расширенных событий user_event и эквивалентный класс событий трассировки SQL.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_generateevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

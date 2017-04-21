@@ -1,29 +1,31 @@
 ---
-title: "Поиск похожих и связанных документов с использованием семантического поиска | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "семантический поиск [SQL Server], запросы подобия документов"
+title: "Поиск похожих и связанных документов с помощью семантического поиска | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
+ms.lasthandoff: 04/11/2017
+
 ---
-# Поиск похожих и связанных документов с использованием семантического поиска
+# <a name="find-similar-and-related-documents-with-semantic-search"></a>Поиск похожих и связанных документов с использованием семантического поиска
   Описывает процесс поиска схожих или связанных документов или текстовых значений и сведений об их сходстве или связи в столбцах, настроенных для статистического семантического индексирования.  
-  
-##  <a name="BasicsQuerySimilar"></a> Поиск схожих или связанных документов  
-  
-###  <a name="HowToQuerySimilar"></a> Как найти аналогичные или связанные документы с помощью функции SEMANTICSIMILARITYTABLE  
+   
+##  <a name="HowToQuerySimilar"></a> Поиск похожих и связанных документов с помощью SEMANTICSIMILARITYTABLE  
  Чтобы найти схожие или связанные документы в данном столбце, запросите функцию [semanticsimilaritytable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
   
  Функция**SEMANTICSIMILARITYTABLE** возвращает таблицу, состоящую из нуля, одной или нескольких строк, содержимое которых в указанном столбце семантически схоже с заданным документом. На эту функцию набора строк можно ссылаться в предложении FROM инструкции SELECT как на обычное имя таблицы.  
@@ -35,7 +37,7 @@ caps.handback.revision: 17
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToIdentifySimilar"></a> Пример: поиск наиболее важных документов, больше всего схожих с другим документом  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  В следующем примере извлекается до 10 кандидатов, подобных указанному кандидату, обозначенному *@CandidateID* из таблицы HumanResources.JobCandidate в образце базы данных AdventureWorks2012.  
   
 ```scr  
@@ -50,9 +52,7 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="BasicsQuerySimilarity"></a> Поиск сведений о схожести или связи документов  
-  
-###  <a name="HowToQuerySimilarity"></a> Как искать сведения о схожести или связи документов с помощью функции SEMANTICSIMILARITYDETAILSTABLE  
+##  <a name="HowToQuerySimilarity"></a>Узнайте, как правильно искать сведения о схожести или связи документов с помощью функции SEMANTICSIMILARITYDETAILSTABLE  
  Чтобы получить дополнительные сведения о ключевых фразах, которые делают документы схожими или связанными, вызовите функцию [semanticsimilaritydetailstable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
   
  Функция **SEMANTICSIMILARITYDETAILSTABLE** возвращает таблицу из нуля, одной или нескольких строк с ключевыми фразами, общими для двух документов (исходного документа и сопоставленного документа), содержимое которых семантически схоже. На эту функцию набора строк можно ссылаться в предложении FROM инструкции SELECT как на обычное имя таблицы.  
@@ -62,7 +62,7 @@ GO
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToSimilarPhrases"></a> Пример: поиск ключевых фраз, которые больше всего схожи в разных документах  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  В следующем примере производится извлечение 5 ключевых фраз, имеющих высший показатель подобия среди указанных кандидатов в таблице **HumanResources.JobCandidate** образца базы данных AdventureWorks2012.  
   
 ```tsql  

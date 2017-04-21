@@ -1,31 +1,35 @@
 ---
-title: "Репликация секционированных таблиц и индексов | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/10/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "секционированные индексы [SQL Server], репликация"
-  - "секционированные таблицы [SQL Server], репликация"
-  - "репликация [SQL Server], секционированные таблицы"
-  - "публикация [репликация SQL Server], секционированные таблицы"
-  - "репликация транзакций, секционированные таблицы"
+title: "Репликация секционированных таблиц и индексов | Документация Майкрософт"
+ms.custom: 
+ms.date: 09/10/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitioned indexes [SQL Server], replicating
+- partitioned tables [SQL Server], replicating
+- replication [SQL Server], partitioned tables
+- publishing [SQL Server replication], partitioned tables
+- transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca19ef9e234653e490e8c9b92bcf221b2175a341
+ms.lasthandoff: 04/11/2017
+
 ---
-# Репликация секционированных таблиц и индексов
+# <a name="replicate-partitioned-tables-and-indexes"></a>Репликация секционированных таблиц и индексов
   Секционирование делает большие таблицы и индексы более управляемыми, так как позволяет быстро и эффективно получать доступ к подмножествам данных и управлять ими, при этом сохраняя целостность всей коллекции данных. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Репликация поддерживает секционирование, предоставляя набор свойств, которые указывают, как работать с секционированными таблицами и индексами.  
   
-## Свойства статьи для репликации слиянием и репликации транзакций  
+## <a name="article-properties-for-transactional-and-merge-replication"></a>Свойства статьи для репликации слиянием и репликации транзакций  
  В таблице перечислены объекты, применяемые для секционирования данных.  
   
 |Объект|Создан с помощью|  
@@ -36,13 +40,13 @@ caps.handback.revision: 20
   
  Первый набор свойств, связанных с секционированием, — параметры схемы статьи, определяющие, следует ли копировать объекты секционирования в экземпляр подписчика. Эти параметры схемы могут быть установлены следующими способами.  
   
--   На странице **Свойства статьи** мастера создания публикаций или в диалоговом окне «Свойства публикации». Чтобы копировать объекты, перечисленные в предыдущей таблице, задайте значение **true** для свойств **Копировать схемы секционирования таблиц** и **Копировать схемы секционирования индекса**. Дополнительные сведения о доступе к **Свойства статьи** см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+-   На странице **Свойства статьи** мастера создания публикаций или в диалоговом окне «Свойства публикации». Чтобы копировать объекты, перечисленные в предыдущей таблице, задайте значение **true** для свойств **Копировать схемы секционирования таблиц** и **Копировать схемы секционирования индекса**. Сведения о доступе к странице **Свойства статьи** см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
--   С помощью *schema_option* параметр одного из следующих хранимых процедур:  
+-   С помощью параметра *schema_option* одной из следующих хранимых процедур:  
   
-    -   [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) или [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) для репликации транзакций  
+    -   [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) или [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) для репликации транзакций;  
   
-    -   [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) или [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) для репликации слиянием  
+    -   [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) или [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) для репликации слиянием.  
   
      Чтобы копировать объекты, перечисленные в предыдущей таблице, выберите соответствующие значения параметров схемы. Дополнительные сведения об указании параметров схемы см. в разделе [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md).  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 20
   
  После инициализации подписчика изменения данных распространяются на подписчик и применяются к соответствующим секциям. Однако изменения схемы секционирования не поддерживаются. Репликация транзакций и репликация слиянием не поддерживают репликацию следующих команд: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, а также инструкции REBUILD WITH PARTITION команды ALTER INDEX. Изменения, связанные с ними, не будут автоматически реплицироваться на подписчика. Пользователь должен вручную внести соответствующие изменения.  
   
-## Поддержка переключения секций при репликации  
+## <a name="replication-support-for-partition-switching"></a>Поддержка переключения секций при репликации  
  Одно из главных преимуществ секционирования — способность быстро и эффективно перемещать подмножества данных между секциями. Данные перемещаются командой SWITCH PARTITION. По умолчанию, если таблица включена для репликации, операции SWITCH PARTITION блокированы по следующим причинам.  
   
 -   Если данные перемещаются в таблицу или из таблицы, которая существует на издателе, но не на подписчике, издатель и подписчик могут оказаться несогласованными друг с другом. Эта проблема обычно возникает при перемещении данных в промежуточную таблицу или из нее.  
@@ -59,23 +63,24 @@ caps.handback.revision: 20
   
  Несмотря на эти возможные проблемы, переключение секций можно включить при репликации транзакций. Прежде чем включить переключение секций, убедитесь, что все таблицы, участвующие в переключении секций, существуют на издателе и на подписчике и что определения таблиц и разделов совпадают.  
   
- Если все секции имеют одинаковую схему на издателях и подписчиках, можно включить *allow_partition_switch* вместе с *replication_partition_switch* которого позволит выполнить репликацию только инструкции switch partition на подписчик. Также можно включить *allow_partition_switch* без репликации DDL. Это полезно, когда из раздела требуется убрать сведения за прошлые месяцы, однако сохранить реплицированную секцию в течение следующего года в целях резервного копирования на подписчике.  
+ Если все секции имеют одинаковую схему на издателях и подписчиках, можно включить параметр *allow_partition_switch* вместе с *replication_partition_switch* , что позволит выполнить репликацию только инструкции о смене секции для подписчика. Можно также включить параметр *allow_partition_switch* без репликации DDL. Это полезно, когда из раздела требуется убрать сведения за прошлые месяцы, однако сохранить реплицированную секцию в течение следующего года в целях резервного копирования на подписчике.  
   
  При включении переключения секций в SQL Server 2008 R2 через текущую версию вам могут также потребоваться операции разбиения и слияния в ближайшем будущем. Перед выполнением разбиения или слияния секций в реплицированной таблице убедитесь, что нужная секция не содержит реплицированные команды в режиме ожидания. Также следует учитывать, что при разбиении или слиянии в секции не должны выполняться операции DML. Наличие транзакций, не обработанных агентом чтения журнала, или выполнение операций DML в секции реплицируемой таблицы во время выполнения операции разбиения или слияния (с использованием одной секции) может привести к ошибке обработки агентом чтения журнала. Чтобы ее исправить , может потребоваться повторная инициализация подписки.  
   
 > [!WARNING]  
 >  Не нужно включать переключения секций для одноранговых публикаций из-за наличия скрытых столбцов, используемых для обнаружения и разрешения конфликтов.  
   
-### Включение переключения секций  
+### <a name="enabling-partition-switching"></a>Включение переключения секций  
  Следующие свойства публикации транзакций позволяют пользователям управлять переключением секций в реплицируемой среде.  
   
--   **@allow_partition_switch**, если задано значение **true**, SWITCH PARTITION можно выполнять в базе данных публикации.  
+-   **@allow_partition_switch**. Если его значение равно **true**, команду SWITCH PARTITION можно выполнять в базе данных публикации.  
   
--   **@replicate_partition_switch** определяет, должны ли инструкцию SWITCH PARTITION DDL реплицироваться на подписчики. Этот параметр доступен, только если **@allow_partition_switch** равен **true**.  
+-   **@replicate_partition_switch** определяет, реплицировать ли инструкцию DDL SWITCH PARTITION на подписчик. Этот параметр доступен, если свойство **@allow_partition_switch** имеет значение **true**.  
   
- Эти свойства можно задать с помощью [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) при создании публикации или с помощью [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) После создания публикации. Как уже отмечалось, репликация слиянием не поддерживает переключение секций. Чтобы выполнить команду SWITCH PARTITION для таблицы, для которой включена репликация слиянием, удалите эту таблицу из публикации.  
+ Эти свойства можно задать с помощью хранимой процедуры [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) при создании публикации или с помощью процедуры [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) после создания публикации. Как уже отмечалось, репликация слиянием не поддерживает переключение секций. Чтобы выполнить команду SWITCH PARTITION для таблицы, для которой включена репликация слиянием, удалите эту таблицу из публикации.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Класс событий CursorClose | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CursorClose, класс событий"
+title: "Класс событий CursorClose | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b76e4b9cf7734011725d519ecb961fa15619bb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий CursorClose
+# <a name="cursorclose-event-class"></a>CursorClose, класс событий
   События класса Cursor Close возникают, когда компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] закрывает и освобождает курсор. Класс событий **CursorClose** описывает события закрытия курсора, которые возникают в интерфейсе прикладных программ (API) курсоров. События этого класса возникают при закрытии инструкции курсора [!INCLUDE[tsql](../../includes/tsql-md.md)] через интерфейсы ODBC, OLE DB или DB-Library.  
   
  Рекомендуется включать класс событий **CursorClose** в трассировки, регистрирующие производительность работы курсоров. Объем дополнительной нагрузки зависит от частоты, с которой курсоры используются в базе данных во время трассировки. Если курсоры используются интенсивно, трассировка может привести к значительному снижению производительности.  
   
-## Столбцы данных класса событий CursorClose  
+## <a name="cursorclose-event-class-data-columns"></a>Столбцы данных класса событий CursorClose  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,9 +41,9 @@ caps.handback.revision: 37
 |**Дескриптор**|**int**|Дескриптор объекта, относящегося к событию.|33|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
-|**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**NTDomainName**|**Nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**RequestID**|**int**|Идентификация запроса, закрывшего курсор.|49|Да|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
@@ -49,7 +53,7 @@ caps.handback.revision: 37
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |**XactSequence**|**bigint**|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

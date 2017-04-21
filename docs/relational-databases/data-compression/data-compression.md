@@ -1,38 +1,42 @@
 ---
-title: "Сжатие данных | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сжатие страниц [компонент Database Engine]"
-  - "индексы [SQL Server], сжатые"
-  - "сжатые индексы [SQL Server]"
-  - "сжатие хранилища [компонент Database Engine]"
-  - "таблицы [SQL Server], сжатые"
-  - "хранилище [SQL Server], сжатое"
-  - "сжатие [SQL Server]"
-  - "сжатие строки [компонент Database Engine]"
-  - "сжатие [SQL Server], сведения о сжатых таблицах и индексах"
-  - "сжатие данных [компонент Database Engine]"
-  - "сжатые таблицы [SQL Server]"
+title: "Сжатие данных | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- indexes [SQL Server], compressed
+- compressed indexes [SQL Server]
+- storage compression [Database Engine]
+- tables [SQL Server], compressed
+- storage [SQL Server], compressed
+- compression [SQL Server]
+- row compression [Database Engine]
+- compression [SQL Server], about compressed tables and indexes
+- data compression [Database Engine]
+- compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сжатие данных
+# <a name="data-compression"></a>Data Compression
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживают сжатие строк и страниц для таблиц и индексов rowstore, а также поддерживает columnstore и архивное сжатие columnstore для таблиц и индексов columnstore.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживают сжатие строк и страниц для таблиц и индексов rowstore, а также поддерживают columnstore и архивное сжатие columnstore для таблиц и индексов columnstore.  
   
  Для таблиц и индексов rowstore используйте функцию сжатия данных, чтобы уменьшить размер базы данных. Помимо экономии места, сжатие данных позволяет повысить производительность при рабочих нагрузках с интенсивным вводом-выводом, поскольку данные хранятся в меньшем количестве страниц и в запросах требуется считывать меньше страниц с диска. Однако для сжатия и распаковки данных при обмене данными с приложениями требуются дополнительные ресурсы ЦП на сервере баз данных. Можно настроить сжатие строк и страниц для следующих объектов баз данных:  
   
@@ -57,14 +61,14 @@ caps.handback.revision: 60
 > [!NOTE]  
 >  Данные могут быть сжаты с использованием формата алгоритма GZIP. Этот дополнительный шаг лучше всего подходит для сжатия фрагментов данных при архивации старых данных для долговременного хранения. Данные, сжатые с помощью этой функции COMPRESS, невозможно проиндексировать. Дополнительные сведения см. в статье [COMPRESS (Transact-SQL)](../../t-sql/functions/compress-transact-sql.md).  
   
-## Замечания по использованию сжатия строк и страниц  
+## <a name="considerations-for-when-you-use-row-and-page-compression"></a>Замечания по использованию сжатия строк и страниц  
  При использовании сжатия строк и страниц следует учитывать следующее.  
   
 -   Подробности сжатия данных могут меняться без предварительного уведомления в пакетах обновлений или в последующих версиях.
 
 -   Сжатие доступно в [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
   
--   Сжатие поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Сжатие поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Для системных таблиц сжатие недоступно.  
   
@@ -111,20 +115,20 @@ caps.handback.revision: 60
     > [!NOTE]  
     >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает формат хранения vardecimal, однако сжатие на уровне строк достигает тех же целей, поэтому данный формат является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## Использование Columnstore и архивного сжатия Columnstore  
+## <a name="using-columnstore-and-columnstore-archive-compression"></a>Использование Columnstore и архивного сжатия Columnstore  
   
 ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
+|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
   
-### Основы  
+### <a name="basics"></a>Основы  
  Таблицы и индексы Columnstore всегда сохраняются со сжатием columnstore. Можно еще более уменьшить размер данных columnstore, настроив дополнительное сжатие, именуемое архивным сжатием.  Чтобы выполнить архивное сжатие, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет к данным алгоритм сжатия XPress корпорации Майкрософт. Добавьте или удалите архивное сжатие, используя следующие типы сжатия данных.  
   
 -   Используйте сжатие данных **COLUMNSTORE_ARCHIVE** для сжатия данных columnstore с помощью архивного сжатия.  
   
 -   Используйте сжатие данных **COLUMNSTORE** для распаковки архивного сжатия. Эти результирующие данные по-прежнему будут сжаты с использованием сжатия columnstore.  
   
- Чтобы добавить архивное сжатие, используйте команды [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE.  
+ Чтобы добавить архивное сжатие, используйте команды [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE.  
   
  Примеры:  
   
@@ -140,7 +144,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 ```  
   
- Чтобы удалить архивное сжатие и восстановление данных для сжатия columnstore, используйте [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE.  
+ Чтобы удалить архивное сжатие и восстановление данных для сжатия columnstилиe, используйте [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) или [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE.  
   
  Примеры:  
   
@@ -166,12 +170,12 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### Производительность  
+### <a name="performance"></a>Производительность  
  Сжатие индексов columnstore с использованием архивного сжатия приводит к увеличению времени обработки индекса по сравнению с индексами columnstore, к которым не применяется архивное сжатие.  Используйте архивное сжатие только при наличии дополнительного времени и ресурсов ЦП для сжатия и получения данных.  
   
  При снижении производительности удается уменьшить объем хранилища, что полезно для данных, доступ к которым выполняется нечасто. Например, если имеется секция для данных за каждый месяц и основная часть активности пришлась на последние месяцы, то можно архивировать предыдущие месяцы, чтобы уменьшить требования к хранилищу.  
   
-### Метаданные  
+### <a name="metadata"></a>Метаданные  
  Следующие системные представления содержат сведения о сжатии данных для кластеризованных индексов.  
   
 -   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) — столбцы **type** и **type_desc** включают параметры CLUSTERED COLUMNSTORE и NONCLUSTERED COLUMNSTORE.  
@@ -180,7 +184,7 @@ REBUILD PARTITION = ALL WITH (
   
  Процедура [sp_estimate_data_compression_savings (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) не применяется к индексам columnstore.  
   
-## Влияние сжатия на секционированные таблицы и индексы  
+## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Влияние сжатия на секционированные таблицы и индексы  
  При использовании сжатия данных в секционированных таблицах или индексах следует учитывать следующее.  
   
 -   При разбиении секций с помощью инструкции ALTER PARTITION обе секции наследуют атрибут сжатия данных исходной секции.  
@@ -217,10 +221,10 @@ REBUILD PARTITION = ALL WITH (
   
      Удаление кластеризованного индекса в режиме вне сети происходит очень быстро, поскольку удаляются только верхние уровни кластеризованных индексов. При удалении кластеризованного индекса в режиме в сети [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен перестроить кучу два раза — один для первого шага, один для второго.  
   
-## Влияние сжатия на репликацию 
+## <a name="how-compression-affects-replication"></a>Влияние сжатия на репликацию 
 ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
+|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
  При использовании сжатия данных с репликацией следует учитывать следующее.  
   
 -   Если агент моментальных снимков формирует первичный скрипт схемы, в новой схеме для таблицы и ее индексов будет использован один и тот же режим сжатия. Сжатие нельзя включить только для таблицы, но не для индекса.  
@@ -242,10 +246,10 @@ REBUILD PARTITION = ALL WITH (
 |Не выполнять репликацию схемы секционирования и не сжимать данные на подписчике.|False|False|Не создавать скрипты для настроек секций или сжатия.|  
 |Выполнить сжатие таблицы на подписчике при условии, что на издателе были сжаты все секции, но не выполнять репликацию схемы секционирования.|False|True|Проверить, что для всех секций включено сжатие.<br /><br /> Создать скрипт сжатия на уровне таблицы.|  
   
-## Влияние сжатия на другие компоненты SQL Server 
+## <a name="how-compression-affects-other-sql-server-components"></a>Влияние сжатия на другие компоненты SQL Server 
 ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
+|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
    
  Сжатие происходит в подсистеме хранилища, и данные предоставляются большинству других компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в распакованном состоянии. Это ограничивает влияние сжатия на другие компоненты следующим.  
   
@@ -265,7 +269,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   Включение сжатия может вызвать изменение планов запросов, поскольку данные будут занимать при хранении другое число страниц с другим числом строк на страницу.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Реализация сжатия строк](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Реализация сжатия страниц](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Реализация сжатия Юникода](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -277,3 +281,5 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+
+

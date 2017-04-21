@@ -1,24 +1,28 @@
 ---
-title: "SQL Server, объект метаданных каталога | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Catalog Metadata"
+title: "Объект метаданных каталога (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Catalog Metadata
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 caps.latest.revision: 4
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6397e547f46c68c29a70739ccaff2be8edd51416
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, объект метаданных каталога
+# <a name="sql-server-catalog-metadata-object"></a>SQL Server, объект метаданных каталога
 Объект производительности **SQLServer:Catalog Metadata** предоставляет счетчики для метаданных каталога SQL Server.
 
 В следующей таблице представлены объекты производительности **Catalog Metadata** SQL Server.
@@ -33,5 +37,5 @@ caps.handback.revision: 4
 
 Для каждой базы данных существует один экземпляр счетчика.
 
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

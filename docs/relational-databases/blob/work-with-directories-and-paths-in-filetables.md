@@ -1,24 +1,28 @@
 ---
-title: "Работа с каталогами и путями в таблицах FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы FileTable [SQL Server], каталоги"
+title: "Работа с каталогами и путями в таблицах FileTable | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# Работа с каталогами и путями в таблицах FileTable
+# <a name="work-with-directories-and-paths-in-filetables"></a>Работа с каталогами и путями в таблицах FileTable
   Описывает структуру каталогов, в которой файлы хранятся в таблицах FileTable.  
   
 ##  <a name="HowToDirectories"></a> Практическое руководство. Работа с каталогами и путями в таблицах FileTable  
@@ -60,7 +64,7 @@ GO
 ##  <a name="fullpath"></a> Полный путь к элементу, хранящемуся в таблице FileTable  
  Полный путь к файлу или каталогу, сохраненный в таблице FileTable, начинается со следующих элементов.  
   
-1.  Общий ресурс с поддержкой доступа файлового ввода-вывода к данным FILESTREAM на уровне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Общий ресурс с поддержкой доступа файлового ввода-вывода к данным FILESTREAM на уровне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  Имя **DIRECTORY_NAME** на уровне базы данных.  
   
@@ -77,7 +81,7 @@ GO
 ##  <a name="roots"></a> Семантика корневых каталогов на уровне экземпляра, базы данных и таблицы FileTable  
  Эта иерархия каталогов имеет следующую семантику.  
   
--   Общий ресурс FILESTREAM на уровне экземпляра настраивается администратором и хранится в виде свойства сервера. Этот общий ресурс можно переименовать с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Операция переименования вступает в силу только после перезапуска сервера.  
+-   Общий ресурс FILESTREAM на уровне экземпляра настраивается администратором и хранится в виде свойства сервера. Этот общий ресурс можно переименовать с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Операция переименования вступает в силу только после перезапуска сервера.  
   
 -   Параметр **DIRECTORY_NAME** уровня базы данных при создании базы данных по умолчанию имеет значение null. Администратор может задать или изменить это имя с помощью инструкции **ALTER DATABASE** . Это имя должно быть уникальным (при сравнении без учета регистра) в этом экземпляре.  
   
@@ -88,11 +92,11 @@ GO
 -   Эти корневые каталоги нельзя открыть с использованием дескрипторов файлов для монопольного доступа.  
   
 ##  <a name="is_directory"></a> Столбец is_directory в схеме FileTable  
- В приведенной ниже таблице описывается взаимодействие между столбцом **is_directory** и столбцом **file_stream**, в котором находятся данные FILESTREAM в таблице FileTable.  
+ В приведенной ниже таблице описывается взаимодействие между столбцом **is_directory** и столбцом **file_stream** , в котором находятся данные FILESTREAM в таблице FileTable.  
   
 ||||  
 |-|-|-|  
-|*is_directory* **значение**|*file_stream* **значение**|**Поведение**|  
+|*is_directory* **value**|*file_stream* **value**|**Поведение**|  
 |FALSE|NULL|Это недопустимое сочетание, которое будет перехвачено системным ограничением.|  
 |FALSE|\<значение>|Этот элемент представляет файл.|  
 |TRUE|NULL|Этот элемент представляет каталог.|  
@@ -105,10 +109,11 @@ GO
   
 -   При осуществлении любого доступа к данным FILESTREAM или FileTable посредством API-интерфейса файловой системы будут использоваться имена виртуальной сети, а не имена компьютеров. Дополнительные сведения см. в разделе [FILESTREAM и FileTable с группами доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Включение необходимых компонентов для таблицы FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [Создание, изменение и удаление таблиц FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Доступ к таблицам FileTable с помощью Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

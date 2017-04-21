@@ -1,60 +1,64 @@
 ---
-title: "Настройка хранилища данных управления (среда SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "хранилище данных [SQL Server] несколько экземпляров"
-  - "хранилище данных [SQL Server] настройка"
-  - "Мастер настройки хранилища управляющих данных"
-  - "хранилище данных управления, настройка"
+title: "Настройка хранилища данных управления (среда SQL Server Management Studio) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка хранилища данных управления (среда SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
   В этом разделе описано, как настроить склад данных управления для поддержки хранилища данных управления на одном интерфейсе или на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих сборщик данных. Эти экземпляры могут быть на одном или на разных серверах. Здесь также приведены описания пользовательского интерфейса диалогового окна [мастера настройки хранилища данных управления](#Wizard) . Сведения о настройке сборщика данных см. в разделе [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Если агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для работы под одной из системных учетных записей (Local System, Network Service или Local Service), а хранилище данных управления создано на другом (нежели сборщик данных) экземпляре, то необходимо настроить наборы элементов сбора на использование учетной записи-посредника для передачи данных в хранилище данных управления.  
   
-### Настройте хранилище данных управления на одном экземпляре или нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Настройте хранилище данных управления на одном экземпляре или нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Убедитесь, что запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  В обозревателе объектов раскройте узел **Управление** .  
   
-3.  Щелкните правой кнопкой мыши элемент **Сбор данных**, разверните пункт **Задачи** и выберите **Настройка хранилища управляющих данных**.  
+3.  Щелкните правой кнопкой мыши элемент **Сбор данных**, разверните пункт **Задачи**и выберите **Настройка хранилища управляющих данных**.  
   
 4.  [Мастер настройки хранилища данных управления](#Wizard) предназначен для создания хранилища данных , настройки имен входа, включения сбора данных и запуска **наборов элементов сбора системных данных**.  
   
      Чтобы настроить несколько экземпляров, перейдите к шагу 5.  
   
     > [!NOTE]  
-    >  В развертываниях, в которых сборщик данных устанавливается на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использующих одно хранилище данных управления, рекомендуется пользоваться посредниками.  
+    >  В развертываниях, в которых сборщик данных устанавливается на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих одно хранилище данных управления, рекомендуется пользоваться посредниками.  
   
 5.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на другом экземпляре и выполните одно из следующих действий.  
   
     -   Используйте мастер настройки хранилища данных управления, чтобы настроить сбор данных для существующего хранилища управляющих данных.  
   
-    -   Щелкните правой кнопкой мыши элемент **Сбор данных** и выберите пункт **Свойства**. На вкладке **Общие** укажите существующее хранилище данных управления и сервер, на котором оно установлено.  
+    -   Щелкните правой кнопкой мыши элемент **Сбор данных**и выберите пункт **Свойства**. На вкладке **Общие** укажите существующее хранилище данных управления и сервер, на котором оно установлено.  
   
 6.  Повторяйте шаг 5 до тех пор, пока все экземпляры базы данных, в которых используется сборщик данных, не будут настроены для передачи данных в общее хранилище управляющих данных.  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  Укажите имя входа, выбрав флажок **Сопоставление** для имени входа.  
   
- **Членство в роли базы данных для**: *\<имя хранилища данных>*  
+ **Членство в роли базы данных для:***\<имя_хранилища_данных>*  
  Выберите роль хранилища управляющих данных, с которой сопоставлено имя входа, щелкнув флажок одного или нескольких из следующих параметров:  
   
 -   **mdw_admin**  
@@ -113,7 +117,7 @@ caps.handback.revision: 28
  Эта страница используется для просмотра результатов каждого шага настройки.  
   
  **Сведения**  
- Отображает каждый шаг настройки как строку в сетке **Сведения**. Каждая строка содержит столбец **Действие** , который описывает шаг, и столбец **Состояние** , который отображает успешное выполнение или ошибку шага. При возникновении ошибки сообщение появляется в столбце **Сообщение** .  
+ Отображает каждый шаг настройки как строку в сетке **Сведения** . Каждая строка содержит столбец **Действие** , который описывает шаг, и столбец **Состояние** , который отображает успешное выполнение или ошибку шага. При возникновении ошибки сообщение появляется в столбце **Сообщение** .  
   
  **Остановить**  
  Останавливает работу мастера.  
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **Закрыть**  
  Завершение работы мастера.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sp_syscollector_enable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   

@@ -1,23 +1,27 @@
 ---
-title: "Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение средства разбиения текста на слова, используемого для английского языка (США и Великобритания) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
+# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
   
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовались другие средства разбиения по словам, представленные другими идентификаторами CLSID для английского языка (США) (LCID 1033) и английского языка (Великобритания) (LCID 2057). В этом выпуске оба идентификатора LCID используют одни и те же компоненты с общими идентификаторами CLSID, как показано в следующей таблице.  
   
@@ -30,9 +34,9 @@ caps.handback.revision: 10
   
  Дополнительные сведения о средствах разбиения по словам и парадигматических модулях см. в статье [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## Переключение из текущего средства разбиения по словам для английского языка в предыдущие средства разбиения по словам для английского языка  
+## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>Переключение из текущего средства разбиения по словам для английского языка в предыдущие средства разбиения по словам для английского языка  
   
-#### Переход от текущей версии средства разбиения по словам для английского языка (США) к предыдущей версии  
+#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (США) к предыдущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 10
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### Переход от текущей версии средства разбиения по словам для английского языка (Великобритания) к предыдущей версии  
+#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (Великобритания) к предыдущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -76,9 +80,9 @@ caps.handback.revision: 10
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Переключение обратно из предыдущего средства разбиения по словам для английского языка в текущее средство разбиения по словам для английского языка  
+## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>Переключение обратно из предыдущего средства разбиения по словам для английского языка в текущее средство разбиения по словам для английского языка  
   
-#### Переход обратно от предыдущей версии средства разбиения по словам для английского языка (США) к текущей версии  
+#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (США) к текущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -100,7 +104,7 @@ caps.handback.revision: 10
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### Переход обратно от предыдущей версии средства разбиения по словам для английского языка (Великобритания) к текущей версии  
+#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (Великобритания) к текущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -122,8 +126,8 @@ caps.handback.revision: 10
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Перевод средств разбиения по словам, используемых поиском, на предыдущую версию](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Изменения в функциях полнотекстового поиска](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+ [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

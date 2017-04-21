@@ -1,32 +1,36 @@
 ---
-title: "Перезапуск прерванной операции восстановления (язык Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "прерванная операция восстановления"
-  - "восстановление баз данных [SQL Server], перезапуск прерванной операции"
-  - "переустановка параметров, измененных после создания резервной копии"
-  - "восстановление баз данных [SQL Server], перезапуск прерванной операции"
-  - "перезапуск прерванной операции восстановления"
-  - "прерванная операция восстановления [SQL Server]"
+title: "Перезапуск прерванной операции восстановления (язык Transact-SQL) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interrupted restore operation
+- restoring databases [SQL Server], restarting interrupted operation
+- resetting options changed after backup
+- database restores [SQL Server], restarting interrupted operation
+- restarting interrupted restore operation
+- restoring interrupted operation [SQL Server]
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a41e345b6122be18ca05186e7bc82d48c566fb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Перезапуск прерванной операции восстановления (язык Transact-SQL)
+# <a name="restart-an-interrupted-restore-operation-transact-sql"></a>Перезапуск прерванной операции восстановления (язык Transact-SQL)
   В этом разделе объясняется, как перезапустить прерванную операцию восстановления.  
   
-### Перезапуск прерванной операции восстановления  
+### <a name="to-restart-an-interrupted-restore-operation"></a>Перезапуск прерванной операции восстановления  
   
 1.  Инициируйте прерванную операцию RESTORE еще раз, указав следующую информацию.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 24
   
     -   Предложение RESTART.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий программный код перезапускает прерванную операцию восстановления:  
   
 ```tsql  
@@ -50,9 +54,9 @@ RESTORE DATABASE AdventureWorks
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Выполнение полного восстановления базы данных (модель полного восстановления)](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Выполнение полного восстановления базы данных (простая модель восстановления)](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

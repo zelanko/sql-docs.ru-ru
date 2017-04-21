@@ -1,25 +1,29 @@
 ---
-title: "Переименование статистики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "переименование статистики"
-  - "статистика [SQL Server], переименование"
+title: "Переименование статистики | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming statistics
+- statistics [SQL Server], renaming
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00d72d7a3fc3d152cd5b05056812ba93041be67d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Переименование статистики
+# <a name="rename-statistics"></a>Переименование статистики
   Объект статистики в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно переименовать с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
@@ -48,7 +52,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Переименование объекта статистики  
+#### <a name="to-rename-a-statistics-object"></a>Переименование объекта статистики  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

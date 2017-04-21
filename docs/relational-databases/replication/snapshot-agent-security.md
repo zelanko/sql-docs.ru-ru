@@ -1,26 +1,30 @@
 ---
-title: "Безопасность агента моментальных снимков | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.security.SSA.f1"
-helpviewer_keywords: 
-  - "диалоговое окно «Безопасность агента моментальных снимков»"
+title: "Защита агента моментальных снимков | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.security.SSA.f1
+helpviewer_keywords:
+- Snapshot Agent Security dialog box
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a3834548fba6eb52e57836eefdb9f8917cb35d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Безопасность агента моментальных снимков
+# <a name="snapshot-agent-security"></a>Безопасность агента моментальных снимков
   Диалоговое окно **Безопасность агента моментальных снимков** позволяет указать следующее:  
   
 -   Учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которой агент моментальных снимков работает в качестве распространителя. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью.  
@@ -30,15 +34,15 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  Агент моментальных снимков устанавливает соединение с издателем, даже если издатель и распространитель находятся на одном компьютере. Кроме того, агент моментальных снимков подключается к распространителю. Эти соединения всегда устанавливаются путем олицетворения учетной записи Windows, под которой запущен агент.  
   
-     Для издателей Oracle укажите контекст, под которой агент моментальных снимков подключается к издателю в **Свойства издателя** диалоговое окно (доступные из **Свойства распространителя** диалоговое окно). Дополнительные сведения см. в статье [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Для издателей Oracle укажите в диалоговом окне **Свойства издателя** контекст, в котором агент моментальных снимков подключается к издателю (это окно находится в окне **Свойства распространителя** ). Дополнительные сведения см. в статье [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  Все учетные записи должны быть допустимыми, а для каждой учетной записи должен быть указан правильный пароль. Учетные записи и пароли могут быть проверены только после запуска агента.  
   
-## Параметры  
- **Учетная запись процесса**  
+## <a name="options"></a>Параметры  
+ **Process account**  
  Введите учетную запись Windows, под которой агент моментальных снимков работает в качестве распространителя. Необходимо, чтобы эта учетная запись Windows удовлетворяла следующим условиям:  
   
--   Минимум быть членом **db_owner** фиксированной роли базы данных в базе данных распространителя.  
+-   Она должна быть как минимум членом предопределенной роли базы данных **db_owner** в базе данных распространителя.  
   
 -   Она должна обладать разрешениями на запись в хранилище моментальных снимков.  
   
@@ -46,17 +50,17 @@ caps.handback.revision: 21
  Введите пароль для учетной записи Windows.  
   
  **Соединиться с издателем**  
- Выберите, будет ли агент моментальных снимков должен подключаться к издателю путем олицетворения учетной записи, указанной в **учетную запись процесса** текстовое поле или с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи. Если выбрано использование учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , введите имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль.  
+ Укажите, следует ли агенту моментальных снимков подключаться к издателю путем олицетворения учетной записи, указанной в текстовом поле **Учетная запись процесса** , либо через учетную запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если выбрано использование учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , введите имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль.  
   
 > [!NOTE]  
->  Рекомендуется использовать олицетворение учетной записи Windows вместо учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Рекомендуется использовать олицетворение учетной записи Windows вместо учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Учетная запись Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись, используемая для соединения необходимо как минимум быть членом **db_owner** фиксированной роли базы данных в базе данных публикации.  
+ Учетная запись Windows или учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемая для соединения, должна быть, как минимум, членом предопределенной роли базы данных **db_owner** в базе данных публикации.  
   
-## См. также:  
- [Управление именами входа и паролями в репликации](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+## <a name="see-also"></a>См. также:  
+ [Управление именами для входа и паролями при репликации](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "Идентификаторы баз данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "обычные идентификаторы [SQL Server]"
-  - "идентификаторы [SQL Server]"
-  - "имена [SQL Server], идентификаторы"
-  - "идентификаторы [SQL Server], об идентификаторах"
-  - "идентификаторы SQL Server"
-  - "идентификаторы языка Transact-SQL"
-  - "объекты базы данных [SQL Server], имена"
+title: "Идентификаторы баз данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- regular identifiers [SQL Server]
+- identifiers [SQL Server]
+- names [SQL Server], identifiers
+- identifiers [SQL Server], about identifiers
+- SQL Server identifiers
+- Transact-SQL identifiers
+- database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6ec8d756aa5aa0c728ba5a3456a30809b4a0484
+ms.lasthandoff: 04/11/2017
+
 ---
-# Идентификаторы баз данных
+# <a name="database-identifiers"></a>Идентификаторы баз данных
   Имя объекта базы данных называется его идентификатором. Идентификаторы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут присваиваться любым сущностям: серверам, базам данных и их объектам, например таблицам, представлениям, столбцам, индексам, триггерам, процедурам, ограничениям и правилам. Для большинства объектов идентификаторы необходимы, а для некоторых, например ограничений, необязательны.  
   
  Идентификатор объекта создается при определении объекта. Затем идентификатор используется для обращения к объекту. Например, следующая инструкция создает таблицу с идентификатором `TableX`и двумя столбцами с идентификаторами `KeyCol` и `Description`:  
@@ -41,13 +45,13 @@ CREATE TABLE TableX
  Параметры сортировки идентификатора зависят от уровня, для которого определен этот идентификатор. К идентификаторам объектов на уровне экземпляров, таких как имена входа и имена базы данных, применяются параметры сортировки по умолчанию для экземпляра. Идентификаторам объектов в пределах базы данных, например таблиц, представлений или имен столбцов, назначаются параметры сортировки, установленные по умолчанию для базы данных. Например, две таблицы с именами, отличающимися только регистром, могут быть созданы в базе данных с параметрами сортировки c учетом регистра, но не могут быть созданы в базе данных с параметрами сортировки без учета регистра.  
   
 > [!NOTE]  
->  Имена переменных или параметров функций и хранимых процедур должны соответствовать правилам для идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Имена переменных или параметров функций и хранимых процедур должны соответствовать правилам для идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Классы идентификаторов  
+## <a name="classes-of-identifiers"></a>Классы идентификаторов  
  Существует два класса идентификаторов.  
   
  Обычные идентификаторы  
- Соответствуют правилам форматирования идентификаторов. Обычные идентификаторы не разделяются при использовании в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Соответствуют правилам форматирования идентификаторов. Обычные идентификаторы не разделяются при использовании в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
 SELECT *  
@@ -74,7 +78,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
  И обычные идентификаторы, и идентификаторы с разделителями должны содержать от 1 до 128 символов. Для локальных временных таблиц идентификатор может содержать не более 116 символов.  
   
-## Правила для обычных идентификаторов  
+## <a name="rules-for-regular-identifiers"></a>Правила для обычных идентификаторов  
  Имена переменных, функций и хранимых процедур должны соответствовать этим правилам для идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 1.  Первым символом должен быть один из следующих.  
@@ -83,7 +87,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   подчеркивание (_), символ @ или решетка (#).  
   
-         Определенные символы в начале идентификатора в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют особое значение. Обычный идентификатор, начинающийся символом @, означает локальную переменную или параметр и не может использоваться в качестве имени объекта какого-либо иного типа. Идентификатор, начинающийся символом решетки (#), означает временную таблицу или процедуру. Идентификатор, начинающийся двойным символом решетки (##), означает глобальный временный объект. Хотя символы решетки и двойной решетки могут использоваться в начале имен объектов других типов, мы не рекомендуем такой способ именования.  
+         Определенные символы в начале идентификатора в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]имеют особое значение. Обычный идентификатор, начинающийся символом @, означает локальную переменную или параметр и не может использоваться в качестве имени объекта какого-либо иного типа. Идентификатор, начинающийся символом решетки (#), означает временную таблицу или процедуру. Идентификатор, начинающийся двойным символом решетки (##), означает глобальный временный объект. Хотя символы решетки и двойной решетки могут использоваться в начале имен объектов других типов, мы не рекомендуем такой способ именования.  
   
          Некоторые функции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] имеют имена, начинающиеся с двойного символа «@» (@@). Во избежание путаницы с этими функциями не следует использовать имена, начинающиеся символами @@.  
   
@@ -95,7 +99,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   символ @, знак доллара ($), решетка или подчеркивание.  
   
-3.  Идентификатор не должен быть зарезервированным словом [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] резервирует версии зарезервированных слов как в верхнем, так и в нижнем регистре. Если идентификаторы используются в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , идентификаторы, которые не соответствуют этим правилам, должны быть заключены в двойные кавычки или квадратные скобки. Состав зарезервированных слов зависит от уровня совместимости базы данных. Этот уровень можно установить с помощью инструкции [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md) .  
+3.  Идентификатор не должен быть зарезервированным словом [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] резервирует версии зарезервированных слов как в верхнем, так и в нижнем регистре. Если идентификаторы используются в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , идентификаторы, которые не соответствуют этим правилам, должны быть заключены в двойные кавычки или квадратные скобки. Состав зарезервированных слов зависит от уровня совместимости базы данных. Этот уровень можно установить с помощью инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) .  
   
 4.  Внутри идентификаторов запрещается использовать символы пробела или специальные символы.  
   
@@ -104,9 +108,9 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  Если идентификаторы используются в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , идентификаторы, которые не соответствуют этим правилам, должны быть заключены в двойные кавычки или квадратные скобки.  
   
 > [!NOTE]  
->  Некоторые правила форматирования обычных идентификаторов зависят от уровня совместимости базы данных. Этот уровень можно установить с помощью процедуры [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+>  Некоторые правила форматирования обычных идентификаторов зависят от уровня совместимости базы данных. Этот уровень можно установить с помощью процедуры [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
@@ -115,7 +119,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)   
- [DECLARE @локальная_переменная (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [Зарезервированные ключевые слова (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   

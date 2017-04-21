@@ -1,41 +1,28 @@
 ---
-title: "Шифрование резервной копии | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Шифрование резервной копии | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 30654c4f7950f188cf08608cf946f4fe42e6d3e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Шифрование резервной копии
+# <a name="backup-encryption"></a>Шифрование резервной копии
   В этом разделе приводится общее описание параметров шифрования для резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он содержит сведения об использовании, преимуществах и рекомендациях для шифрования при резервном копировании.  
   
- **В этом разделе.**  
-  
--   [Обзор](../../relational-databases/backup-restore/backup-encryption.md#Overview)  
-  
--   [Преимущества](#Benefits)  
-  
--   [Предварительные требования](../../relational-databases/backup-restore/backup-encryption.md#Prerequisites)  
-  
--   [Ограничения](#Restrictions)  
-  
--   [Разрешения](../../relational-databases/backup-restore/backup-encryption.md#Permissions)  
-  
--   [Методы шифрования резервной копии](../../relational-databases/backup-restore/backup-encryption.md#Methods)  
-  
--   [Рекомендации](../../relational-databases/backup-restore/backup-encryption.md#RecommendedPractices)  
-  
--   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="Overview"></a> Обзор  
  Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], в SQL Server имеется возможность шифровать данные при создании резервных копий. Указав алгоритм шифрования и шифратор (сертификат или асимметричный ключ), можно задать для резервных копий создание зашифрованного файла резервной копии. Все назначения хранилища: поддерживаются локальное хранилище и хранилище Windows Azure. Кроме того, можно настроить параметры шифрования для операций служб [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] (новая функция, введенная в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).  
@@ -65,7 +52,6 @@ caps.handback.revision: 16
   
 5.  Ключи шифрования можно интегрировать с поставщиками расширенного управления ключами (EKM).  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
  Предварительные требования, обязательные для шифрования резервной копии:  
@@ -88,7 +74,6 @@ caps.handback.revision: 16
   
 -   Присоединение к существующему резервному набору данных для зашифрованных резервных копий не поддерживается.  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="Permissions"></a> Разрешения  
  **Для шифрования резервной копии или восстановления из зашифрованной резервной копии требуется следующее:**  
@@ -101,14 +86,14 @@ caps.handback.revision: 16
 ##  <a name="Methods"></a> Методы шифрования резервной копии  
  В разделах ниже представлен краткий обзор шагов шифрования данных при резервном копировании. Полное пошаговое руководство по различным этапам шифрования резервных копий с помощью Transact-SQL см. в разделе [Создание зашифрованной резервной копии](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-### Использование среды SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Использование среды SQL Server Management Studio  
  Резервную копию базы данных можно зашифровать при ее создании в одном из следующих диалоговых окон:  
   
 1.  [Резервное копирование базы данных (страница "Параметры резервного копирования")](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) На странице **Параметры резервного копирования** можно выбрать **Шифрование** и указать алгоритм шифрования и сертификат или асимметричный ключ, используемый для него.  
   
 2.  [Использование мастера планов обслуживания](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) При выборе задачи резервного копирования на вкладке **Параметры** страницы **Определение задач резервного копирования** можно выбрать **Шифрование резервной копии** и указать алгоритм шифрования и ключ или сертификат, используемый для него.  
   
-### Использование Transact-SQL  
+### <a name="using-transact-sql"></a>Использование Transact-SQL  
  Ниже приведен пример инструкции Transact-SQL для шифрования файла резервной копии.  
   
 ```  
@@ -128,7 +113,7 @@ GO
   
  Полный синтаксис инструкции Transact-SQL см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
   
-### Использование PowerShell  
+### <a name="using-powershell"></a>Использование PowerShell  
  В этом примере создаются параметры шифрования, которые используются в качестве значения параметра в командлете **Backup-SqlDatabase** для создания зашифрованной резервной копии.  
   
 ```  
@@ -155,7 +140,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[Создание зашифрованной резервной копии](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Описывает основные шаги, которые необходимо выполнить, чтобы создать зашифрованную резервную копию.|  
 |[Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Предоставлен пример создания зашифрованной резервной копии, защищенной ключами в хранилище ключей Azure.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

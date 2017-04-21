@@ -1,25 +1,29 @@
 ---
-title: "Создание представления для XML-столбцов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "представления [XML в SQL Server]"
+title: "Создание представлений для столбцов XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5f71a5ebacb8af3a58c6eada233c16b955b6ae5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание представления для XML-столбцов
-  Чтобы создавать представления, можно использовать столбец типа **xml** . В следующем примере создается представление, в котором для получения значения из столбца типа `xml` используется метод **value()** типа данных **xml**.  
+# <a name="create-views-over-xml-columns"></a>Создание представления для XML-столбцов
+  Чтобы создавать представления, можно использовать столбец типа **xml** . В следующем примере создается представление, в котором для получения значения из столбца типа `xml` используется метод **value()** типа данных **xml** .  
   
 ```  
 -- Create the table.  

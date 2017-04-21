@@ -1,30 +1,34 @@
 ---
-title: "Восстановление файлов и файловых групп поверх существующих файлов (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление файлов [SQL Server], инструкции"
-  - "восстановление файлов [SQL Server], шаги"
-  - "восстановления файлов [SQL Server], инструкции"
-  - "файловые группы [SQL Server], восстановление"
-  - "восстановление файловых групп [SQL Server]"
-  - "перезапись файловых групп"
-  - "перезапись файлов"
+title: "Восстановление файлов и файловых групп поверх существующих файлов (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring files [SQL Server], how-to topics
+- restoring files [SQL Server], steps
+- file restores [SQL Server], how-to topics
+- filegroups [SQL Server], restoring
+- restoring filegroups [SQL Server]
+- overwriting filegroups
+- overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
+ms.lasthandoff: 04/11/2017
+
 ---
-# Восстановление файлов и файловых групп поверх существующих файлов (SQL Server)
+# <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Восстановление файлов и файловых групп поверх существующих файлов (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается восстановление файлов и файловых групп для существующих файлов в среде [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -58,17 +62,17 @@ caps.handback.revision: 29
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator**, а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
+ Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Восстановление файлов и файловых групп поверх существующих файлов  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Восстановление файлов и файловых групп поверх существующих файлов  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
   
-2.  Щелкните правой кнопкой мыши нужную базу данных, наведите указатель на пункт **Задачи**, а затем выберите пункты **Восстановить** и **Файлы и файловые группы**.  
+2.  Щелкните правой кнопкой мыши нужную базу данных, наведите указатель на пункт **Задачи**, а затем выберите пункты **Восстановить**и **Файлы и файловые группы**.  
   
 3.  На странице **Общие** в списке **В базу данных** введите имя восстанавливаемой базы данных. Можно ввести новую базу данных или выбрать уже существующую из раскрывающегося списка. Список включает все базы данных на сервере кроме системных баз данных **master** и **tempdb**.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 29
     |-----------------|------------|  
     |**Восстановить**|Установленные флажки обозначают резервные наборы данных, отмеченные для восстановления.|  
     |**Название**|Имя резервного набора данных.|  
-    |**Тип файла**|Задает тип данных в резервной копии: **Данные**, **Журнал**или **Данные Filestream**. Данные, содержащиеся в таблицах, хранятся в файлах типа **Данные** . Данные журнала транзакций хранятся в файлах типа **Журнал** . Данные больших двоичных объектов (BLOB), которые хранятся в файловой системе, находятся в файлах типа **Данные Filestream**.|  
+    |**Тип файла**|Задает тип данных в резервной копии: **Данные**, **Журнал**или **Данные Filestream**. Данные, содержащиеся в таблицах, хранятся в файлах типа **Данные** . Данные журнала транзакций хранятся в файлах типа **Журнал** . Данные больших двоичных объектов (BLOB), которые хранятся в файловой системе, находятся в файлах типа **Данные Filestream** .|  
     |**Тип**|Тип выполненного резервного копирования: **Полное**, **Разностное**или **Журнал транзакций**.|  
     |**Server**|Имя экземпляра ядра СУБД, выполнившего операцию резервного копирования.|  
     |**Логическое имя файла**|Логическое имя файла.|  
@@ -108,7 +112,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Восстановление файлов и файловых групп поверх существующих файлов  
+#### <a name="to-restore-files-and-filegroups-over-existing-files"></a>Восстановление файлов и файловых групп поверх существующих файлов  
   
 1.  Выполните инструкцию RESTORE DATABASE для восстановления резервной копии файлов и файловых групп, указав следующее:  
   
@@ -165,9 +169,9 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Восстановление файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   
  [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  
   

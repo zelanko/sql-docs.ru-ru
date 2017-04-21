@@ -1,29 +1,33 @@
 ---
-title: "Свойства &lt;AgentProfileName&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.profiles.perfprofileprops.f1"
-helpviewer_keywords: 
-  - "диалоговое окно свойств профилей агента"
+title: "Свойства &lt;AgentProfileName&gt; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.profiles.perfprofileprops.f1
+helpviewer_keywords:
+- Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6932152bce33b84877287560d2ec769005c0c20f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Свойства &lt;AgentProfileName&gt;
-  Используйте **свойств профилей агента** диалоговое окно для просмотра значений каждого параметра агента в профиль и изменить значения для пользовательских профилей.  
+# <a name="ltagentprofilenamegt-properties"></a>Свойства &lt;AgentProfileName&gt;
+  Диалоговое окно **Свойства профиля агента** позволяет просматривать значения всех параметров агента, указанных в профиле, и изменять эти значения для пользовательских профилей.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Название**  
  Имя профиля.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 17
   
 -   [Агент чтения журнала репликации](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Агент распространения репликации](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 17
  **Показывать только параметры, используемые в этом профиле**  
  Снимите флажок, чтобы отобразить все корректные параметры для данного агента.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Работа с профилями агента репликации](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)  

@@ -1,25 +1,29 @@
 ---
-title: "Агент SQL Server, объект Jobs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLAgent:Jobs"
-  - "Jobs, объект"
+title: "Объект заданий (агент SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLAgent:Jobs
+- Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8f2931c070c0ed3816fb348b4ca41f3705b19a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Агент SQL Server, объект Jobs
+# <a name="sql-server-agent-jobs-object"></a>Агент SQL Server, объект Jobs
   Объект производительности **Jobs** агента SQL Server содержит счетчики производительности, отображающие сведения о заданиях агента SQL Server. В следующей таблице перечислены счетчики этого объекта.  
   
  Приведенная ниже таблица содержит счетчики объекта **SQLAgent:Jobs** .  
@@ -42,9 +46,9 @@ caps.handback.revision: 21
 |**Прочие**|Сведения о заданиях, запущенных не по предупреждению и не по расписанию. Обычно это задания, запущенные вручную с помощью процедуры **sp_start_job**.|  
 |**Расписания**|Сведения о заданиях, запущенных по расписанию.|  
   
-## См. также:  
- [Реализация заданий](../../ssms/agent/implement-jobs.md)   
- [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
+## <a name="see-also"></a>См. также:  
+ [Реализация заданий](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Использование объектов производительности](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "Устройства резервного копирования (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ленточные устройства резервного копирования, о ленточных устройствах резервного копирования"
-  - "устройства резервного копирования [SQL Server]"
-  - "дисковые устройства резервного копирования [SQL Server]"
-  - "резервные копии баз данных [SQL Server],  устройства резервного копирования"
-  - "логические устройства [SQL Server]"
-  - "устройства резервного копирования [SQL Server], об устройствах резервного копирования"
-  - "резервное копирование [SQL Server], устройства резервного копирования"
-  - "съемный носитель [SQL Server]"
-  - "общие сетевые ресурсы [SQL Server]"
-  - "резервные копии [SQL Server], устройства резервного копирования"
-  - "ленточные устройства резервного копирования"
-  - "физические устройства [SQL Server]"
-  - "резервное копирование баз данных [SQL Server], устройства резервного копирования"
-  - "устройства [SQL Server]"
+title: "Устройства резервного копирования (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tape backup devices, about tape backup devices
+- backup devices [SQL Server]
+- disk backup devices [SQL Server]
+- database backups [SQL Server], backup devices
+- logical devices [SQL Server]
+- backup devices [SQL Server], about backup devices
+- backing up [SQL Server], backup devices
+- removable media [SQL Server]
+- network shares [SQL Server]
+- backups [SQL Server], backup devices
+- tape backup devices
+- physical devices [SQL Server]
+- backing up databases [SQL Server], backup devices
+- devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 93
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 93
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49a10147e48ece974a5ac64bead3b626556ad29c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Устройства резервного копирования (SQL Server)
+# <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
   Во время выполнения операции резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается резервная копия данных (*резервная копия*), которая записывается на физическое устройство резервного копирования. Данное физическое устройство резервного копирования инициализируется при записи на него первой резервной копии в наборе носителей. Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей.  
    
 ##  <a name="TermsAndDefinitions"></a> Термины и определения  
@@ -74,7 +78,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
- Базовый синтаксис для указания физического жесткого диска в инструкции [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) :  
+ Базовый синтаксис для указания физического жесткого диска в инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) :  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -89,7 +93,7 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="BackupFileDiskPath"></a> &Указание пути к файлу дисковой резервной копии 
- При указании файла резервного копирования следует ввести полный путь и имя файла. Если введено только имя файла или относительный путь для резервного копирования на диск, то файл резервной копии будет помещен в определенный по умолчанию каталог для резервных копий. Резервным каталогом по умолчанию является C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, где *n* — номер экземпляра сервера. Поэтому для экземпляра сервера по умолчанию каталогом, использующимся по умолчанию для резервного копирования, является C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
+ При указании файла резервного копирования следует ввести полный путь и имя файла. Если введено только имя файла или относительный путь для резервного копирования на диск, то файл резервной копии будет помещен в определенный по умолчанию каталог для резервных копий. Резервным каталогом по умолчанию является C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, где *n* — номер экземпляра сервера. Поэтому для экземпляра сервера по умолчанию каталогом, использующимся по умолчанию для резервного копирования, является C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
   
  Чтобы избежать неоднозначности, особенно в скриптах, рекомендуется явно указывать путь каталога резервного копирования в каждом предложении DISK. Однако это менее важно при использовании редактора запросов. В этом случае, если вы уверены, что файл резервного копирования находится в определенном по умолчанию каталоге для резервных копий, можно опустить путь в предложении DISK. В следующем примере с помощью инструкции `BACKUP` создается резервная копия базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в определенном по умолчанию каталоге резервных копий.  
   
@@ -111,9 +115,9 @@ GO
   
 -   Можно подключиться, используя учетную запись сетевой службы, если вместо пользователя домена указать учетную запись компьютера. Чтобы разрешить выполнение резервного копирования с определенных компьютеров на общий диск, нужно предоставить доступ к учетным записям компьютеров. Пока процесс Sqlservr.exe имеет доступ на запись резервных копий, было бы неправильно предоставлять доступ пользователю, посылающему инструкцию BACKUP.  
   
-    > **ВАЖНО!** Резервное копирование данных через сеть может быть причиной сетевых ошибок. Поэтому при использовании удаленного диска рекомендуется проверять операцию резервного копирования после ее завершения. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md).  
+    > **ВАЖНО!** Резервное копирование данных через сеть может быть причиной сетевых ошибок. Поэтому при использовании удаленного диска рекомендуется проверять операцию резервного копирования после ее завершения. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## Указание имени в формате UNC  
+## <a name="specify-a-universal-naming-convention-unc-name"></a>Указание имени в формате UNC  
  Чтобы указать сетевой ресурс в команде резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, следует использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\***Имя_системы***\\***Имя_общего_ресурса***\\***Путь***\\***Имя_файла*.  
   
  Например:  
@@ -154,7 +158,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
- Базовый синтаксис для указания физического ленточного устройства в инструкции [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) :  
+ Базовый синтаксис для указания физического ленточного устройства в инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) :  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
@@ -171,25 +175,25 @@ GO
   
      С помощью этого параметра можно определить — оставит ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ленту открытой после операции резервного копирования или восстановления или освободит и перемотает после того, как она будет заполнена. Поведение по умолчанию — перемотка ленты (REWIND).  
   
-> **ПРИМЕЧАНИЕ.** Дополнительные сведения о синтаксисе BACKUP и его аргументах см. в разделе [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Дополнительные сведения о синтаксисе RESTORE и его аргументах см. в разделах [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) и [Аргументы RESTORE (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) соответственно.  
+> **ПРИМЕЧАНИЕ.** Дополнительные сведения о синтаксисе BACKUP и его аргументах см. в разделе [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Дополнительные сведения о синтаксисе RESTORE и его аргументах см. в разделах [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) и [Аргументы RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) соответственно.  
   
 ###  <a name="OpenTapes"></a> Управление открытыми магнитными лентами  
- Для просмотра списка открытых ленточных устройств и состояния запросов на подключение запросите динамическое представление управления [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md). Данное представление показывает все открытые ленты. Сюда относятся все используемые ленты, которые временно простаивают в ожидании следующей операции BACKUP или RESTORE.  
+ Для просмотра списка открытых ленточных устройств и состояния запросов на подключение запросите динамическое представление управления [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Данное представление показывает все открытые ленты. Сюда относятся все используемые ленты, которые временно простаивают в ожидании следующей операции BACKUP или RESTORE.  
   
- Если лента была случайно оставлена открытой, то самый быстрый способ освободить ее — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../Topic/RESTORE%20REWINDONLY%20\(Transact-SQL\).md).  
+ Если лента была случайно оставлена открытой, то самый быстрый способ освободить ее — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
-## Использование службы хранилища BLOB-объектов Microsoft Azure  
+## <a name="using-the-windows-azure-blob-storage-service"></a>Использование службы хранилища BLOB-объектов Microsoft Azure  
  Резервные копии SQL Server могут быть записаны в службу хранилища BLOB-объектов Windows Azure.  Дополнительные сведения о том, как использовать службу хранилища BLOB-объектов Microsoft Azure для резервного копирования, см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Использование логического устройства резервного копирования  
  *Логическое устройство резервного копирования* представляет собой необязательное, определяемое пользователем имя, которое указывает на конкретное физическое устройство резервного копирования (дисковый файл или ленточный накопитель). Логическое устройство резервного копирования позволяет использовать возможность косвенного обращения к соответствующему физическому устройству резервного копирования.  
   
- Определение логического устройства резервного копирования включает в себя назначение логического имени физическому устройству. Например, логическое устройство AdventureWorksBackups можно определить таким образом, чтобы оно указывало на файл Z:\SQLServerBackups\AdventureWorks2012.bak или ленточный накопитель \\\\.\tape0. Затем в командах резервного копирования и восстановления в качестве устройства резервного копирования можно указывать AdventureWorksBackups вместо DISK = "Z:\SQLServerBackups\AdventureWorks2012.bak" или \\\\.\tape0.  
+ Определение логического устройства резервного копирования включает в себя назначение логического имени физическому устройству. Например, логическое устройство AdventureWorksBackups можно определить таким образом, чтобы оно указывало на файл Z:\SQLServerBackups\AdventureWorks2012.bak или ленточный накопитель \\\\.\tape0. Затем в командах резервного копирования и восстановления в качестве устройства резервного копирования можно указывать AdventureWorksBackups вместо DISK = "Z:\SQLServerBackups\AdventureWorks2012.bak" или\\\\.\tape0.  
   
- Каждое имя логического устройства должно быть уникальным в пространстве имен всех логических устройств резервного копирования на экземпляре сервера. Чтобы просмотреть имена существующих логических устройств, запросите представление каталога [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md). Это представление отображает имя каждого логического устройства резервного копирования и описывает тип и имя физического файла или путь к соответствующему физическому устройству резервного копирования.  
+ Каждое имя логического устройства должно быть уникальным в пространстве имен всех логических устройств резервного копирования на экземпляре сервера. Чтобы просмотреть имена существующих логических устройств, запросите представление каталога [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) . Это представление отображает имя каждого логического устройства резервного копирования и описывает тип и имя физического файла или путь к соответствующему физическому устройству резервного копирования.  
   
- После того как определено логическое устройство резервного копирования в инструкциях BACKUP или RESTORE, можно указывать логическое устройство резервного копирования вместо использования физического имени устройства. Например, следующая инструкция создает резервную копию базы данных `AdventureWorks2012` в логическое устройство резервного копирования `AdventureWorksBackups`.  
+ После того как определено логическое устройство резервного копирования в инструкциях BACKUP или RESTORE, можно указывать логическое устройство резервного копирования вместо использования физического имени устройства. Например, следующая инструкция создает резервную копию базы данных `AdventureWorks2012` в логическое устройство резервного копирования `AdventureWorksBackups` .  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -247,7 +251,7 @@ GO
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
--   [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **Просмотр сведений об устройствах резервного копирования**  
   
@@ -263,15 +267,16 @@ GO
   
 -   [Удаление устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SQL Server, объект Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY (Transact-SQL)](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sys.dm_io_backup_tapes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)   
  [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)  
   
   
+

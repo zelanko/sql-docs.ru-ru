@@ -1,49 +1,53 @@
 ---
-title: "Мастер постоянного шифрования | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.alwaysencryptedwizard.encryption.f1"
-  - "sql13.swb.alwaysencryptedwizard.f1"
-  - "sql.swb.alwaysencryptedwizard.masterkey.f1"
-helpviewer_keywords: 
-  - "Мастер, постоянное шифрование"
+title: "Мастер постоянного шифрования | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.alwaysencryptedwizard.encryption.f1
+- sql13.swb.alwaysencryptedwizard.f1
+- sql.swb.alwaysencryptedwizard.masterkey.f1
+helpviewer_keywords:
+- Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e2d16b6082708a23bb83de101bc6d8d16251027
+ms.lasthandoff: 04/11/2017
+
 ---
-# Мастер постоянного шифрования
+# <a name="always-encrypted-wizard"></a>Мастер постоянного шифрования
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Используйте **мастер постоянного шифрования** для защиты конфиденциальных данных, хранящихся в базе данных SQL Server. Функция Always Encrypted позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования для SQL Server. Таким образом, постоянное шифрование позволяет разделить пользователей на тех, кто владеет данными (или имеет право их просматривать) и тех, кто управляет данными (но не должен иметь к ним доступа).  Полное описание функции см. в разделе [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
  Пошаговое руководство по настройке функции постоянного шифрования с помощью мастера и ее использованию в клиентском приложении см. в документе [Учебник по базе данных SQL. Защита конфиденциальных данных с помощью функции постоянного шифрования](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
   
- Видео, в котором демонстрируется использование мастера, можно просмотреть на странице [Keeping Sensitive Data Secure with Always Encrypted (Безопасное хранение конфиденциальных данных с помощью постоянного шифрования)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Кроме того, в блоге группы безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] есть запись [Мастер шифрования SSMS — несколько простых шагов для включения постоянного шифрования](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
+ Видео, в котором демонстрируется использование мастера, можно просмотреть на странице [Keeping Sensitive Data Secure with Always Encrypted (Безопасное хранение конфиденциальных данных с помощью постоянного шифрования)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Кроме того, в блоге группы безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] есть запись [Мастер шифрования SSMS — несколько простых шагов для включения постоянного шифрования](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
   
- **Разрешения:** чтобы запросить зашифрованные столбцы и выбрать ключи с использованием этого мастера, необходимо иметь разрешения `VIEW ANY COLUMN MASTER KEY DEFINITION` и `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Чтобы создать новые ключи, необходимо также иметь разрешения `ALTER ANY COLUMN MASTER KEY` и `ALTER ANY COLUMN ENCRYPTION KEY`.  
+ **Разрешения:** чтобы запросить зашифрованные столбцы и выбрать ключи с использованием этого мастера, необходимо иметь разрешения `VIEW ANY COLUMN MASTER KEY DEFINITION` и `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Чтобы создать новые ключи, необходимо также иметь разрешения `ALTER ANY COLUMN MASTER KEY` и `ALTER ANY COLUMN ENCRYPTION KEY` .  
   
-#### Как запустить мастер постоянного шифрования  
+#### <a name="to-open-the-always-encrypted-wizard"></a>Как запустить мастер постоянного шифрования  
   
 1.  Подключитесь к своему серверу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью обозревателя объектов [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-2.  Щелкните правой кнопкой мыши вашу базу данных, укажите на пункт **Задачи** и щелкните **Зашифровать столбцы**.  
+2.  Щелкните правой кнопкой мыши вашу базу данных, укажите на пункт **Задачи**и щелкните **Зашифровать столбцы**.  
   
-## Страница выбора столбцов  
- Найдите нужную таблицу и столбец, а затем выберите тип шифрования (детерминированное или случайное) и ключ шифрования для выбранных столбцов. Чтобы расшифровать зашифрованный столбец, выберите вариант **Открытый текст**. Чтобы сменить ключ шифрования столбца, выберите новый ключ шифрования. Мастер выполнит расшифровку столбца, а затем повторно зашифрует его с помощью нового ключа. ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает шифрование темпоральных таблиц и таблиц в памяти, но его невозможно настроить с помощью этого мастера.)  
+## <a name="column-selection-page"></a>Страница выбора столбцов  
+ Найдите нужную таблицу и столбец, а затем выберите тип шифрования (детерминированное или случайное) и ключ шифрования для выбранных столбцов. Чтобы расшифровать зашифрованный столбец, выберите вариант **Открытый текст**. Чтобы сменить ключ шифрования столбца, выберите новый ключ шифрования. Мастер выполнит расшифровку столбца, а затем повторно зашифрует его с помощью нового ключа. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает шифрование темпоральных таблиц и таблиц в памяти, но его невозможно настроить с помощью этого мастера.)  
   
-## Страница конфигурации главного ключа  
+## <a name="master-key-configuration-page"></a>Страница конфигурации главного ключа  
  Новый главный ключ для столбца можно создать в хранилище сертификатов Windows или в хранилище ключей Azure. Дополнительные сведения см. в статьях, ссылки на которые приведены ниже в разделе "Хранилище ключей".  
   
  Если на странице выбора столбца вы укажете автоматическое создание ключа шифрования для столбца, следует настроить главный ключ, с помощью которого будет зашифрован этот автоматически созданный ключ шифрования столбца. Если в вашей базе данных уже определен главный ключ столбца, можно выбрать его. (Чтобы использовать существующий главный ключ столбца, пользователь должен иметь разрешение на доступ к ключу). Также можно создать главный ключ столбца в выбранном хранилище ключей (хранилище сертификатов Windows или хранилище ключей Azure), а затем определить этот ключ в базе данных.  
@@ -56,11 +60,11 @@ caps.handback.revision: 17
   
 -   **Хранение главного ключа в AKV** : дополнительные сведения см. в статье [Приступая к работе с хранилищем ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
   
- Чтобы создать главный ключ столбца в хранилище ключей Azure, у пользователя должны быть разрешения **WrapKey**, **UnwrapKey**, **Verify**и **Sign** для хранилища ключей. Также могут потребоваться разрешения **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**и **Restore** . Дополнительные сведения см. в статье [Что такое хранилище ключей Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) и [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ Чтобы создать главный ключ столбца в хранилище ключей Azure, у пользователя должны быть разрешения **WrapKey**, **UnwrapKey**, **Verify**и **Sign** для хранилища ключей. Также могут потребоваться разрешения **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**и **Restore** . Дополнительные сведения см. в статье [Что такое хранилище ключей Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) и   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
   
  Мастер поддерживает только два варианта. Аппаратные модули безопасности и клиентские хранилища должны быть настроены с помощью инструкции [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## Условия постоянного шифрования  
+## <a name="always-encrypted-terms"></a>Условия постоянного шифрования  
   
 -   **Детерминированное шифрование** использует метод, который всегда создает одно и то же зашифрованное значение для любого текстового значения. Это позволяет выполнять группирование, фильтрацию на основе равенства, а также объединение таблиц по зашифрованным значениям. При этом несанкционированные пользователи могут определять некоторую информацию о зашифрованных значениях путем анализа повторов в зашифрованном столбце. Этот недостаток особенно ощущается, когда шифруются параметры с небольшим набором возможных значений, например True или False, а также север, запад, юг или восток. При использовании детерминированного шифрования необходимо указать порядок сортировки binary2 в параметрах сортировки для символьных столбцов.  
   
@@ -70,8 +74,9 @@ caps.handback.revision: 17
   
 -   **Ключи шифрования столбца** используются для шифрования конфиденциальных данных, хранящихся в столбцах базы данных. Все значения в столбце могут быть зашифрованы с использованием одного ключа шифрования столбца. Зашифрованные значения ключей шифрования столбца хранятся в базе данных в системных представлениях каталога. Резервные копии ключей шифрования столбцов следует хранить в надежном и защищенном месте.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   
+

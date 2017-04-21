@@ -1,29 +1,33 @@
 ---
-title: "Просмотр свойств регулятора ресурсов | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "регулятор ресурсов, свойства"
+title: "Просмотр свойств регулятора ресурсов | Документация Майкрософт"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр свойств регулятора ресурсов
+# <a name="view-resource-governor-properties"></a>Просмотр свойств регулятора ресурсов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  На странице свойств регулятора ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предусмотрена возможность создания и настройки сущности регуляторов ресурсов — пулов ресурсов и групп рабочей нагрузки.  
+  На странице свойств регулятора ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предусмотрена возможность создания и настройки сущности регуляторов ресурсов — пулов ресурсов и групп рабочей нагрузки.  
   
  ##  <a name="BeforeYouBegin"></a> Связанные разделы 
  Кроме просмотра свойств сущностей регулятора ресурсов, на странице **Свойства регулятора ресурсов** можно выполнить некоторые задачи настройки. Дополнительные сведения см. в разделах:  
@@ -46,7 +50,7 @@ caps.handback.revision: 28
   
  Если операция создания или изменения конфигурации пула ресурсов или группы рабочей нагрузки завершилась неуспешно, под заголовком страницы свойств будет отображено сводное сообщение об ошибке. Чтобы просмотреть подробное сообщение об ошибке, щелкните стрелку вниз рядом с ним.  
   
- Чтобы выяснить, находится ли конфигурация в состоянии ожидания, выполните запрос к динамическому административному представлению [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md), получив текущее состояние is_configuration_pending.  
+ Чтобы выяснить, находится ли конфигурация в состоянии ожидания, выполните запрос к динамическому административному представлению [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) , получив текущее состояние is_configuration_pending.  
   
 ##  <a name="Permissions"></a> Разрешения  
  Для просмотра свойств регулятора ресурсов требуется разрешение VIEW SERVER STATER. Для задач настройки конфигурации регулятора ресурсов требуется разрешение CONTROL SERVER.  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
   
-2.  Щелкните правой кнопкой мыши **Регулятор ресурсов** и выберите пункт **Свойства**, после чего откроется страница **Свойства регулятора ресурсов**.  
+2.  Щелкните правой кнопкой мыши **Регулятор ресурсов** и выберите пункт **Свойства**, после чего откроется страница **Свойства регулятора ресурсов** .  
   
 3.  Описания полей этой страницы см. в разделе [Свойства регулятора ресурсов](#RGProp).  
   
 4.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
   
-##  <a name="RGProp"></a> Свойства регулятора ресурсов  
+##  <a name="RGProp"></a> Resource Governor properties  
  **Имя функции-классификатора**  
  Укажите функцию-классификатор, выбрав ее из списка.  
   
@@ -115,18 +119,19 @@ caps.handback.revision: 28
   
  Дополнительные сведения см. в разделе [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).  
   
-## Просмотр свойств регулятора ресурсов с помощью Transact-SQL  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Просмотр свойств регулятора ресурсов с помощью Transact-SQL  
  **Просмотр свойств регулятора ресурсов с помощью Transact-SQL**  
   
 1.  Для просмотра определений сущностей регулятора ресурсов используются [представления каталога регулятора ресурсов (Transact-SQL)](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).  
   
 2.  Для просмотра текущей конфигурации сущностей регулятора ресурсов используются [динамические административные представления регулятора ресурсов (Transact-SQL)](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
-## Дополнительные сведения
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="more-information"></a>Дополнительные сведения
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Функция-классификатор регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

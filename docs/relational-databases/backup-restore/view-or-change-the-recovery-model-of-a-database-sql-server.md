@@ -1,43 +1,47 @@
 ---
-title: "Просмотр или изменение модели восстановления базы данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "резервные копии баз данных [SQL Server], модели восстановления"
-  - "восстановление [SQL Server], модель восстановления"
-  - "резервное копирование баз данных [SQL Server], модели восстановления"
-  - "модели восстановления [SQL Server], переключение"
-  - "модели восстановления [SQL Server], просмотр"
-  - "восстановление баз данных [SQL Server], модели восстановления"
-  - "изменение моделей восстановления баз данных"
+title: "Просмотр или изменение модели восстановления для базы данных (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], recovery models
+- recovery [SQL Server], recovery model
+- backing up databases [SQL Server], recovery models
+- recovery models [SQL Server], switching
+- recovery models [SQL Server], viewing
+- database restores [SQL Server], recovery models
+- modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр или изменение модели восстановления базы данных (SQL Server)
+# <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается просмотр и изменение базы данных с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
   
   *Модель восстановления* — это свойство базы данных, которое управляет процессом регистрации транзакций, определяет, требуется ли для журнала транзакций резервное копирование, а также определяет, какие типы операций восстановления доступны. Существует три модели восстановления: простая модель восстановления, модель полного восстановления и модель восстановления с неполным протоколированием. Обычно в базе данных используется модель полного восстановления или простая модель восстановления. Базу данных можно в любой момент переключить на использование другой модели восстановления. База данных **model** задает модель восстановления по умолчанию для новых баз данных.  
   
-  Более подробное описание [моделей восстановления](https://msdn.microsoft.com/library/ms189275.aspx) см. в статье [Модели восстановления SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/), составленной ребятами из [MSSQLTips!](https://www.mssqltips.com/)
+  Более подробное описание [моделей восстановления](https://msdn.microsoft.com/library/ms189275.aspx)см. в статье [Модели восстановления SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) , составленной ребятами из [MSSQLTips!](https://www.mssqltips.com/)
   
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 
--   [Перед](https://msdn.microsoft.com/library/ms179478.aspx) переключением с **модели полного восстановления или восстановления с неполным протоколированием** создайте [резервную копию журнала транзакций](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
   
 -   Восстановление на момент времени невозможно в модели с неполным протоколированием. Выполнение транзакций в модели восстановления с неполным протоколированием, которая может потребовать восстановления журнала транзакций, может привести к потере данных. Чтобы до максимума повысить восстанавливаемость данных в сценарии аварийного восстановления, следует переключаться в модель восстановления с неполным протоколированием только в следующих случаях.  
   
@@ -54,25 +58,25 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Просмотр или изменение модели восстановления  
+#### <a name="to-view-or-change-the-recovery-model"></a>Просмотр или изменение модели восстановления  
   
 1.  После подключения к соответствующему экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   
 2.  Раскройте узел **Базы данных**и в зависимости от типа восстанавливаемой базы данных выберите пользовательскую базу данных или раскройте узел **Системные базы данных** и выберите системную базу данных.  
   
-3.  Щелкните базу данных правой кнопкой мыши и выберите **Свойства**. Откроется диалоговое окно **Свойства базы данных**.  
+3.  Щелкните базу данных правой кнопкой мыши и выберите **Свойства**. Откроется диалоговое окно **Свойства базы данных** .  
   
 4.  На панели **Выбор страницы** щелкните **Параметры**.  
   
 5.  Текущая модель восстановления будет указана в списке **Модель восстановления** .  
   
-6.  Если нужно изменить модель восстановления, выберите в этом списке другую модель. Возможные варианты модели восстановления: **Полная**, **С неполным протоколированием** и **Простая**.  
+6.  Если нужно изменить модель восстановления, выберите в этом списке другую модель. Возможные варианты модели восстановления: **Полная**, **С неполным протоколированием**и **Простая**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Просмотр модели восстановления  
+#### <a name="to-view-the-recovery-model"></a>Просмотр модели восстановления  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -88,13 +92,13 @@ GO
   
 ```  
   
-#### Изменение модели восстановления  
+#### <a name="to-change-the-recovery-model"></a>Изменение модели восстановления  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как переключить модель восстановления в базе данных `model` в режим `FULL` с помощью параметра `SET RECOVERY` инструкции [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) .  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как переключить модель восстановления в базе данных `model` в режим `FULL` с помощью параметра `SET RECOVERY` инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
 ```tsql  
 USE master ;  
@@ -133,15 +137,15 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Создание задания](../../ssms/agent/create-a-job.md)  
+-   [Создание задания](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [Отключение или включение задания](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Отключение или включение задания](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Планы обслуживания базы данных](http://msdn.microsoft.com/library/ms187658.aspx) (в электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])  
+-   [Планы обслуживания базы данных](http://msdn.microsoft.com/library/ms187658.aspx) (в электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
@@ -149,3 +153,4 @@ ALTER DATABASE model SET RECOVERY FULL ;
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

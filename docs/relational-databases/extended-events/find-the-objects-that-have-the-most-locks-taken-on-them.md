@@ -1,28 +1,32 @@
 ---
-title: "найти объекты, на которые наложено наибольшее число блокировок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "объекты [SQL Server], расширенные события"
-  - "xe, расширенные события"
-  - "расширенные события [SQL Server], блокировки"
-  - "объекты [SQL Server], блокировки"
+title: "Поиск объектов, на которые наложено наибольшее число блокировок | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- objects [SQL Server], extended events
+- xe
+- extended events [SQL Server], locks
+- objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd171596bf52ebc25887b378103ffe751955fd03
+ms.lasthandoff: 04/11/2017
+
 ---
-# найти объекты, на которые наложено наибольшее число блокировок
+# <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>найти объекты, на которые наложено наибольшее число блокировок
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Администраторам баз данных часто нужно определить источник блокировок, приводящих к ухудшению производительности базы данных.  
@@ -31,7 +35,7 @@ caps.handback.revision: 15
   
  Для этого воспользуйтесь редактором запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-### Поиск объектов с наибольшим количеством блокировок  
+### <a name="to-find-the-objects-that-have-the-most-locks"></a>Поиск объектов с наибольшим количеством блокировок  
   
 1.  В редакторе запросов выполните следующие инструкции.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 15
   
 -   lock_count  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   

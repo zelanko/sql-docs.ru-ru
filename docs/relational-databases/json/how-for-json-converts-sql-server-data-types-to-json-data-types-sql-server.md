@@ -1,25 +1,29 @@
 ---
-title: "Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR JSON, преобразование типов данных"
+title: "Как SQL Server преобразует типы данных в формат JSON с помощью предложения FOR JSON (SQL Server) | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-json
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR JSON, data type conversion
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c256bc9ecc0e518bb54d206a04f36d2b736500d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON (SQL Server)
+# <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Предложение **FOR JSON** использует приведенные здесь правила для преобразования типов данных SQL в JSON в выходных данных JSON.  
@@ -31,10 +35,11 @@ caps.handback.revision: 11
 |Битовый тип|bit|Логическое значение (true или false)|  
 |Типы даты и времени|date, datetime, datetime2, time, datetimeoffset|строка|  
 |Двоичные типы|varbinary, binary, image, timestamp, rowversion|Строка в кодировке Base64|  
-|Типы CLR|CLR, geometry, geography|Не поддерживается. При их использовании возвращается ошибка.<br /><br /> В инструкции SELECT для преобразования данных в тип данных, который можно конвертировать в тип JSON, используйте CAST или CONVERT либо свойство или метод CLR. Например, для любого типа CLR используйте **ToString()**, а для типа geometry — **STAsText()** . Тип выходного значения JSON определяется по типу данных, полученному после конвертации, которая была указана в инструкции SELECT.|  
+|Типы CLR|CLR, geometry, geography|Не поддерживается. При их использовании возвращается ошибка.<br /><br /> В инструкции SELECT для преобразования данных в тип данных, который можно конвертировать в тип JSON, используйте CAST или CONVERT либо свойство или метод CLR. Например, для любого типа CLR используйте **ToString()** , а для типа geometry — **STAsText()** . Тип выходного значения JSON определяется по типу данных, полученному после конвертации, которая была указана в инструкции SELECT.|  
 |Другие типы|uniqueidentifier, money|строка|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
   
   
+

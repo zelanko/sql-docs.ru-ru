@@ -1,25 +1,29 @@
 ---
-title: "Тип подписки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.newsubwizard.subscriptiontype.f1"
+title: "Тип подписки | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.newsubwizard.subscriptiontype.f1
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0541842347278d70b5d759737bf0c37b1f91bfab
+ms.lasthandoff: 04/11/2017
+
 ---
-# Тип подписки
-  Репликация слиянием предлагает подписки двух типов: сервер и клиент (в предыдущих версиях называется [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как глобальная и локальная соответственно). Подписчики с серверной подпиской могут:  
+# <a name="subscription-type"></a>Тип подписки
+  Репликация слиянием реализует два типа подписки: серверную и клиентскую (в предыдущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] им соответствуют глобальная и локальная, соответственно). Подписчики с серверной подпиской могут:  
   
 -   повторно публиковать данные для других подписчиков;  
   
@@ -32,13 +36,13 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Тип подписки нельзя изменить после ее создания.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Свойства подписки**  
- Для каждого подписчика, выберите **клиента** или **сервера** из раскрывающегося списка в **Тип подписки** столбца. Для подписчиков с серверными подписками введите число между 0 и 99,99 в **Приоритет разрешения конфликтов** столбца (чем больше число, тем выше приоритет подписчика).  
+ Выберите **Клиентская** или **Серверная** из раскрывающегося списка в столбце **Тип подписки** для каждого подписчика. Для подписчиков с серверными подписками введите число между 0 и 99,99 в столбце **Приоритет устранения конфликтов** (чем выше число, тем выше приоритет подписчика).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

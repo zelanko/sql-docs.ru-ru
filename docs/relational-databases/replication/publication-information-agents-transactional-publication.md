@@ -1,27 +1,31 @@
 ---
-title: "Сведения о публикации, агенты (публикация транзакций) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1"
+title: "Сведения о публикации, вкладка &quot;Агенты&quot; (публикация транзакций) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1e666793719f1a277fffe23d02d4a6630585f61
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сведения о публикации, агенты (публикация транзакций)
+# <a name="publication-information-agents-transactional-publication"></a>Сведения о публикации, агенты (публикация транзакций)
   На вкладке **Агенты** отображаются общие сведения об агентах для выбранной публикации. Сведения об агенте моментальных снимков и агенте чтения журнала выводятся для всех публикаций транзакций. Сведения об агенте чтения очереди отображается только для тех публикаций транзакций, которые включены для очереди обновляемых подписок.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  Чтобы получить дополнительные сведения и задачи, связанные с агентом, щелкните правой кнопкой мыши строку агента и в контекстном меню выберите нужный пункт Чтобы изменить способ отображения данных в сетке, щелкните правой кнопкой мыши сетку, а затем один из следующих параметров.  
   
 -   **Сортировать**: сортировка по одному или нескольким столбцам в диалоговом окне **Сортировка столбцов** .  
@@ -48,7 +52,7 @@ caps.handback.revision: 23
 -   Завершен  
   
  **Агент**  
- Имя каждого агента репликации, связанного с публикацией. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в разделе [Просмотр сведений и выполнение задач для агентов, связанных с подпиской и #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md).  
+ Имя каждого агента репликации, связанного с публикацией. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
  **Время последнего запуска**  
  Время последнего запуска агента.  
@@ -59,10 +63,10 @@ caps.handback.revision: 23
  **Последнее действие**  
  Последнее действие выполнено во время самого последнего выполнения агента.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для публикации & #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией & #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [Просмотр сведений и выполнение задач для публикации (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

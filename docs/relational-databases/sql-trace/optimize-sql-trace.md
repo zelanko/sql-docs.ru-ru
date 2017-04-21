@@ -1,27 +1,31 @@
 ---
-title: "Оптимизация трассировки SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "время [SQL Server], трассировки"
-  - "трассировка SQL, производительность"
-  - "трассировки [SQL Server], производительность"
-  - "производительность [SQL Server], трассировка"
+title: "Оптимизация трассировки SQL | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time [SQL Server], traces
+- SQL Trace, performance
+- traces [SQL Server], performance
+- performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb701bd4ade246ebaf7b796a49c207b0f89e5e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Оптимизация трассировки SQL
+# <a name="optimize-sql-trace"></a>Оптимизация трассировки SQL
   Выполнение трассировки SQL негативно сказывается на производительности, поскольку этот процесс использует системные ресурсы для сбора данных, однако существует несколько способов минимизировать потери производительности. Чтобы минимизировать потери производительности, вызванные трассировкой:  
   
 -   Рассмотрите возможность использования командной строки для запуска трассировок. Использование графического пользовательского интерфейса уменьшает производительность. Дополнительные сведения см. в разделе [sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
@@ -42,7 +46,7 @@ caps.handback.revision: 25
   
 -   Ограничьте число возвращаемых событий. В [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно ограничить число возвращаемых событий, сохранив трассировку в таблицу с установленным максимальным числом строк. Результаты трассировки продолжают возвращаться на экран [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] после достижения максимального числа строк, но при этом можно избежать затрат производительности на запись результатов.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

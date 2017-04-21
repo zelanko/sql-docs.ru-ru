@@ -1,27 +1,31 @@
 ---
-title: "Запись страниц | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "страницы"
+title: "Запись страниц | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f8e6bff396499886a23182787d84a84e6ceaf17
+ms.lasthandoff: 04/11/2017
+
 ---
-# Запись страниц
+# <a name="writing-pages"></a>Запись страниц
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Операции ввода-вывода, выполняемые экземпляром компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], включают в себя операции логической и физической записи. Логическая запись выполняется при изменении данных страницы в буферном кэше. Физическая запись производится при записи страницы из [буферного кэша](../relational-databases/memory-management-architecture-guide.md) на диск.
+Операции ввода-вывода, выполняемые экземпляром компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , включают в себя операции логической и физической записи. Логическая запись выполняется при изменении данных страницы в буферном кэше. Физическая запись производится при записи страницы из [буферного кэша](../relational-databases/memory-management-architecture-guide.md) на диск.
 
 Если какая-либо из страниц в буферном кэше изменилась, она не записывается сразу на диск, а помечается как "грязная". Это означает, что до момента ее физической записи на диск к странице применялась одна или несколько операций логической записи. При каждой логической операции записи в кэш журнала, который записывает изменения, добавляется запись журнала транзакций. Записи журнала должны быть перенесены на диск до того, как соответствующая «грязная» страница будет удалена из буферного кэша и записана на диск. SQL Server использует метод, называемый ведением журнала с упреждающей записью, который предотвращает записывание "грязных" страниц до записывания на диск соответствующих записей журнала. Это особенно важно для правильной работы диспетчера восстановления. Дополнительные сведения см. в статье [Журнал транзакций с упреждающей записью](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 

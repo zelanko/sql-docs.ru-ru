@@ -1,42 +1,46 @@
 ---
-title: "создать трассировку (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "трассировки [SQL Server], пример"
-  - "трассировки [SQL Server], создание"
+title: "Создание трассировки (Transact-SQL) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], example
+- traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b765401c07820ed80a92a2393544253106abb512
+ms.lasthandoff: 04/11/2017
+
 ---
-# создать трассировку (Transact-SQL)
+# <a name="create-a-trace-transact-sql"></a>создать трассировку (Transact-SQL)
   В этом подразделе описано, как использовать хранимые процедуры для создания трассировки.  
   
-### Создание трассировки  
+### <a name="to-create-a-trace"></a>Создание трассировки  
   
 1.  Выполните хранимую процедуру **sp_trace_create** с необходимыми аргументами для создания новой трассировки. Новая трассировка будет находиться в остановленном состоянии (*status* имеет значение **0**).  
   
 2.  Выполните хранимую процедуру **sp_trace_setevent** с необходимыми аргументами, чтобы выбрать события и столбцы для трассировки.  
   
-3.  Дополнительно выполните хранимую процедуру **sp_trace_setfilter**, чтобы установить любой фильтр или комбинацию фильтров.  
+3.  Дополнительно выполните хранимую процедуру **sp_trace_setfilter** , чтобы установить любой фильтр или комбинацию фильтров.  
   
-     Хранимые процедуры **sp_trace_setevent** и **sp_trace_setfilter** могут быть выполнены только для существующих остановленных трассировок.  
+     Хранимые процедуры**sp_trace_setevent** и **sp_trace_setfilter** могут быть выполнены только для существующих остановленных трассировок.  
   
     > [!IMPORTANT]  
     >  В отличие от обычных хранимых процедур, аргументы всех хранимых процедур приложения SQL Server Profiler (**sp_trace_*xx***) жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
-## Пример  
- В следующем примере кода с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] создается трассировка. Он состоит из трех разделов: создание трассировки, заполнение файла трассировки и остановка трассировки. Настройте трассировку, добавив события, которые необходимо отслеживать. Список событий и столбцов см. в статье [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+## <a name="example"></a>Пример  
+ В следующем примере кода с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]создается трассировка. Он состоит из трех разделов: создание трассировки, заполнение файла трассировки и остановка трассировки. Настройте трассировку, добавив события, которые необходимо отслеживать. Список событий и столбцов см. в статье [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)создается трассировка.  
   
  Следующий код создает трассировку, добавляет в нее события и затем запускает ее:  
   
@@ -70,7 +74,7 @@ GO
   
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  Теперь, когда трассировка создана и запущена, выполните следующий код, чтобы заполнить трассировку активностью.  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  Трассировку можно в любое время остановить и перезапустить. В этом примере выполнение следующего кода позволит остановить трассировку, закрыть ее и удалить ее определение.  
   
 ```  
@@ -97,10 +101,10 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  Чтобы изучить файл трассировки, откройте файл SampleTrace.trc в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   
  [Хранимая процедура sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

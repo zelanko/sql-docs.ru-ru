@@ -1,27 +1,31 @@
 ---
-title: "Объекты обмена сообщениями компонента Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "компонент Database Mail [SQL Server], базы данных обслуживания почты"
-  - "компонент Database Mail [SQL Server], объекты обмена сообщениями"
-  - "базы данных обслуживания почты [SQL Server]"
-  - "базы данных обслуживания почты [компонент Database Mail]"
+title: "Объекты обмена сообщениями компонента Database Mail | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], host databases
+- Database Mail [SQL Server], messaging objects
+- mail host databases [SQL Server]
+- host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0ac02628b0b385841805994ec17dd121d84d7399
+ms.lasthandoff: 04/11/2017
+
 ---
-# Объекты обмена сообщениями компонента Database Mail
+# <a name="database-mail-messaging-objects"></a>Объекты обмена сообщениями компонента Database Mail
   Для размещения компонента Database Mail используется база данных обслуживания почты **msdb** . Она содержит хранимые процедуры и объекты обмена сообщениями компонента Database Mail. Используя входящий в среду Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] мастер настройки компонента Database Mail, можно активировать компонент Database Mail, создавать и администрировать профили и учетные записи и настраивать параметры компонента Database Mail.  
   
 ##  <a name="ComponentsAndConcepts"></a> Объекты в базе данных **msdb**  
@@ -46,9 +50,8 @@ caps.handback.revision: 31
 |[sysmail_start_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|**Хранимая процедура**|Запускает объекты компонента Service Broker, используемые внешней программой. Эти объекты запускаются по умолчанию.|  
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**Хранимая процедура**|Останавливает объекты компонента Service Broker, используемые внешней программой.|  
   
- [&#91;В начало&#93;](#Top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

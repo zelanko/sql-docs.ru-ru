@@ -1,40 +1,44 @@
 ---
-title: "Создание резервных копий и восстановление полнотекстовых каталогов и индексов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "полнотекстовые индексы [SQL Server], резервное копирование"
-  - "полнотекстовый поиск [SQL Server], резервное копирование и восстановление"
-  - "восстановление [компонент Full-Text Search]"
-  - "резервные копии [SQL Server], полнотекстовые индексы"
-  - "полнотекстовые индексы [SQL Server], восстановление"
-  - "операции восстановления [компонент Full-Text Search]"
+title: "Создание резервных копий и восстановление полнотекстовых каталогов и индексов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], backing up
+- full-text search [SQL Server], back up and restore
+- recovery [full-text search]
+- backups [SQL Server], full-text indexes
+- full-text indexes [SQL Server], restoring
+- restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 36c621b35e944fe536e3a2983113ba7586e6e461
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание резервных копий и восстановление полнотекстовых каталогов и индексов
+# <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Создание резервных копий и восстановление полнотекстовых каталогов и индексов
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе рассказывается о создании резервных копий и восстановлении полнотекстовых индексов, созданных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстовый каталог — это логическое понятие, он не хранится в файловой группе. Следовательно, для того чтобы создать резервную копию полнотекстового каталога в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует определить все файловые группы, содержащие полнотекстовый индекс, принадлежащий каталогу. Затем необходимо создать резервные копии этих файловых групп, одну за другой.  
+  В этом разделе рассказывается о создании резервных копий и восстановлении полнотекстовых индексов, созданных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]полнотекстовый каталог — это логическое понятие, он не хранится в файловой группе. Следовательно, для того чтобы создать резервную копию полнотекстового каталога в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует определить все файловые группы, содержащие полнотекстовый индекс, принадлежащий каталогу. Затем необходимо создать резервные копии этих файловых групп, одну за другой.  
   
 > [!IMPORTANT]  
->  Импортировать полнотекстовые каталоги можно при обновлении базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Каждый полнотекстовый каталог — это файл базы данных в собственной файловой группе. Чтобы создать резервную копию импортированного каталога, достаточно создать резервную копию его файловой группы. Дополнительные сведения см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](http://go.microsoft.com/fwlink/?LinkID=121052) электронной документации по [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  Импортировать полнотекстовые каталоги можно при обновлении базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Каждый полнотекстовый каталог — это файл базы данных в собственной файловой группе. Чтобы создать резервную копию импортированного каталога, достаточно создать резервную копию его файловой группы. Дополнительные сведения см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](http://go.microsoft.com/fwlink/?LinkID=121052)электронной документации по [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backingup"></a> Резервное копирование полнотекстовых индексов полнотекстового каталога  
   
 ###  <a name="Find_FTIs_of_a_Catalog"></a> Поиск полнотекстовых индексов полнотекстового каталога  
- Свойства полнотекстовых индексов можно получить с помощью инструкции [SELECT](../../t-sql/queries/select-transact-sql.md), выбирающей столбцы из представлений каталога [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) и [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md).  
+ Свойства полнотекстовых индексов можно получить с помощью инструкции [SELECT](../../t-sql/queries/select-transact-sql.md) , выбирающей столбцы из представлений каталога [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) и [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) .  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,7 +52,6 @@ SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,
 GO  
 ```  
   
- [В этом разделе](#top)  
   
 ###  <a name="Find_FG_of_FTI"></a> Поиск файловой группы или файла, содержащего полнотекстовый индекс  
  При создании полнотекстовый индекс размещается в одном из следующих мест.  
@@ -62,7 +65,7 @@ GO
 > [!NOTE]  
 >  Сведения о создании полнотекстового индекса см. в разделах [Создание полнотекстовых индексов и управление ими](../../relational-databases/search/create-and-manage-full-text-indexes.md) и [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
- Чтобы найти файловую группу полнотекстового индекса таблицы или представления, можно использовать следующий запрос, в котором *object_name* — это имя таблицы или представления:  
+ Чтобы найти файловую группу полнотекстового индекса таблицы или представления, можно использовать следующий запрос, в котором *object_name* — это имя таблицы или представления:  
   
 ```  
 SELECT name FROM sys.filegroups f, sys.fulltext_indexes i   
@@ -72,7 +75,6 @@ GO
   
 ```  
   
- [В этом разделе](#top)  
   
 ###  <a name="Back_up_FTIs_of_FTC"></a> Создание резервных копий файловых групп, содержащих полнотекстовые индексы  
  После того как были найдены файловые группы с индексами полнотекстового каталога, следует создать резервные копии всех файловых групп. Во время резервного копирования удалять или добавлять полнотекстовые каталоги нельзя.  
@@ -85,7 +87,6 @@ GO
   
 -   [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
- [В этом разделе](#top)  
   
 ##  <a name="Restore_FTI"></a> Восстановление полнотекстового индекса  
  При восстановлении резервной копии файловой группы выполняется восстановление файлов полнотекстового индекса, а также остальных файлов файловой группы. По умолчанию файловая группа восстанавливается в том месте на диске, где была создана резервная копия.  
@@ -100,11 +101,10 @@ GO
   
 -   [Восстановление файлов в новое место (SQL Server)](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- [В этом разделе](#top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md)  
   

@@ -1,31 +1,35 @@
 ---
-title: "Задача &#171;Очистка журнала&#187; (план обслуживания) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.historycleanup.f1"
-helpviewer_keywords: 
-  - "диалоговое окно «Задача "Очистка журнала"»"
+title: "Задача &quot;Очистка журнала&quot; (план обслуживания) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.historycleanup.f1
+helpviewer_keywords:
+- History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbf4cfd2254dbe3e5f482e603ca7535682102d80
+ms.lasthandoff: 04/11/2017
+
 ---
-# Задача &#171;Очистка журнала&#187; (план обслуживания)
-  Используйте диалоговое окно **Задача «Очистка журнала»** , чтобы исключить устаревшие данные предыстории из таблиц в базе данных msdb. Эта задача поддерживает удаление и восстановление журнала резервного копирования, журнала заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также журнала плана обслуживания.  
+# <a name="history-cleanup-task-maintenance-plan"></a>Задача «Очистка журнала» (план обслуживания)
+  Используйте диалоговое окно **Задача «Очистка журнала»** , чтобы исключить устаревшие данные предыстории из таблиц в базе данных msdb. Эта задача поддерживает удаление и восстановление журнала резервного копирования, журнала заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также журнала плана обслуживания.  
   
- Эта инструкция применяет инструкции **sp_purge_jobhistory** и **sp_delete_backuphistory**.  
+ Эта инструкция применяет инструкции **sp_purge_jobhistory** и **sp_delete_backuphistory** .  
   
-## Список элементов пользовательского интерфейса  
+## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Соединение**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   
@@ -45,12 +49,12 @@ caps.handback.revision: 21
  Укажите возраст элементов, которые следует удалить.  
   
  **Просмотр T-SQL**  
- Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
+ Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
 >  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
-## Диалоговое окно «Создание соединения»  
+## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
  **Имя соединения**  
  Введите имя нового соединения.  
   
@@ -70,12 +74,12 @@ caps.handback.revision: 21
  Подключитесь к экземпляру компонента SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью проверки подлинности SQL Server. Этот параметр недоступен.  
   
  **Имя пользователя**  
- Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр недоступен.  
+ Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

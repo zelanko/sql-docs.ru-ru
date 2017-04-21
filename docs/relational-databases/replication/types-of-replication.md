@@ -1,31 +1,35 @@
 ---
-title: "Типы репликации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "репликация [SQL Server], типы"
+title: "Типы репликации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], types
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e73bdd657a12e4eda65ce7cc16f2e9d139ce9913
+ms.lasthandoff: 04/11/2017
+
 ---
-# Типы репликации
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие типы репликации для использования в распределенных приложениях:  
+# <a name="types-of-replication"></a>Типы репликации
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
   
--   Репликация транзакций. Дополнительные сведения см. в разделе [репликации транзакций](../../relational-databases/replication/transactional/transactional-replication.md).  
+-   Репликация транзакций. Дополнительные сведения см. в статье [Репликация транзакций](../../relational-databases/replication/transactional/transactional-replication.md).  
   
--   Репликация слиянием. Дополнительные сведения см. в разделе [репликации слиянием](../../relational-databases/replication/merge/merge-replication.md).  
+-   Репликация слиянием. Дополнительные сведения см. в статье [Репликация слиянием](../../relational-databases/replication/merge/merge-replication.md).  
   
--   Репликация моментальных снимков. Дополнительные сведения см. в разделе [репликации моментальных снимков](../../relational-databases/replication/snapshot-replication.md).  
+-   Репликация моментальных снимков. Дополнительные сведения см. в статье [Репликация моментальных снимков](../../relational-databases/replication/snapshot-replication.md).  
   
  Тип репликации, которая выбирается для приложения, зависит от многих факторов, в том числе от физической среды репликации, типа и объема реплицируемых данных, а также от того, обновляются данные на подписчике или нет. Физическая среда включает в себя количество и расположение компьютеров, участвующих в репликации, и зависит от того, являются эти компьютеры клиентами (рабочие станции, переносные или карманные компьютеры) или серверами.  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 38
   
  В репликации моментальных снимков изменения данных не отслеживаются. При каждом применении моментального снимка он полностью переписывает существующие данные. Репликации транзакций отслеживают изменения при помощи журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а репликации слиянием отслеживают изменения при помощи триггеров и таблиц метаданных.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

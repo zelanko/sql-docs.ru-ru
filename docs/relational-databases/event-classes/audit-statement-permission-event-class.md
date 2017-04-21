@@ -1,29 +1,33 @@
 ---
-title: "Класс событий Audit Statement Permission | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Statement Permission, класс событий"
+title: "Класс событий Audit Statement Permission | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d56e8d3bac8ca36333b3fe68f7bb80a94c19578
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Audit Statement Permission
+# <a name="audit-statement-permission-event-class"></a>Audit Statement Permission, класс событий
   Класс событий **Audit Statement Permission** происходит при использовании разрешений на инструкции, например CREATE TABLE.  
   
  Класс событий **Audit Statement Permission** в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может быть удален. Вместо него рекомендуется использовать класс событий **Audit Schema Object Management** .  
   
-## Столбцы данных класса событий Audit Statement Permission  
+## <a name="audit-statement-permission-event-class-data-columns"></a>Столбцы данных класса событий Audit Statement Permission  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -36,8 +40,8 @@ caps.handback.revision: 31
 |**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**Разрешения**|**bigint**|Целочисленное значение, отражающее тип проверяемых разрешений.<br /><br /> 1 = CREATE DATABASE (только база данных master)<br /><br /> 2 = CREATE TABLE<br /><br /> 4 = CREATE PROCEDURE<br /><br /> 8 = CREATE VIEW<br /><br /> 16 = CREATE RULE<br /><br /> 32 = CREATE DEFAULT<br /><br /> 64 = BACKUP DATABASE<br /><br /> 128 = BACKUP LOG<br /><br /> 256 = BACKUP TABLE<br /><br /> 512 = CREATE FUNCTION|19|Да|  
@@ -46,12 +50,12 @@ caps.handback.revision: 31
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
-|**Успешно **|**int**|1 = успешное завершение.  0 = неуспешное завершение.  Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  
+|**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  
 |**TextData**|**ntext**|Текст SQL инструкции, для которой требуются разрешения.|1|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |**XactSequence**|**bigint**|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Класс событий Audit Schema Object Management](../../relational-databases/event-classes/audit-schema-object-management-event-class.md)  

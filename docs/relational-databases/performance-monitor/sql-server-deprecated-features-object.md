@@ -1,30 +1,34 @@
 ---
-title: "SQL Server, объект Deprecated Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Deprecated Features"
-  - "счетчики производительности [SQL Server], устаревшие функции"
-  - "устаревание [SQL Server], счетчики производительности"
-  - "Объект Deprecated Features"
+title: "SQL Server, объект Deprecated Features | Документация Майкрософт"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, объект Deprecated Features
+# <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Значение этих счетчиков также можно получить, выполнив следующую инструкцию:  
   
@@ -41,11 +45,11 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
  В следующей таблице представлены экземпляры счетчика SQL Server Deprecated Features.  
   
-|Экземпляры счетчика SQL Server Deprecated Features|Описание|  
+|Экземпляры счетчика SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
 |Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|Обнаружен идентификатор, не содержащий других символов, кроме #. Используйте по крайней мере один дополнительный символ. Происходит один раз на каждую компиляцию.|  
-|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` *\<имя_функции>*`()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
-|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)].|Обнаружен идентификатор, начинающийся с символов @ и @@. Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@. Происходит один раз на каждую компиляцию.|  
+|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` *<имя_функции>*`()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
+|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)] .|Обнаружен идентификатор, начинающийся с символов @ или @@. Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@. Происходит один раз на каждую компиляцию.|  
 |ADDING TAPE DEVICE|Обнаружена нерекомендуемая функция sp_addumpdevice'**лента**'. Вместо нее используйте процедуру sp_addumpdevice'**диск**'. Происходит один раз на каждое выполнение.|  
 |Разрешение ALL.|Число раз, когда был обнаружен синтаксис GRANT ALL, DENY ALL или REVOKE ALL. Измените синтаксис, чтобы запретить конкретные разрешения. Происходит один раз для каждого запроса.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Общее число использований устаревшего параметра TORN_PAGE_DETECTION инструкции ALTER DATABASE с момента последнего запуска экземпляра сервера. Вместо этого параметра используйте синтаксис PAGE_VERIFY. Происходит один раз для каждой инструкции DDL.|  
@@ -60,9 +64,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|Обнаружена инструкция CREATE TRIGGER с предложением WITH APPEND. Создайте триггер повторно. Происходит один раз для каждой инструкции DDL.|  
 |CREATE_DROP_DEFAULT|Обнаружен синтаксис CREATE DEFAULT or DROP DEFAULT. Перепишите команду, используя параметр DEFAULT инструкции CREATE TABLE или ALTER TABLE. Происходит один раз на каждую компиляцию.|  
 |CREATE_DROP_RULE|Обнаружен синтаксис CREATE RULE. Перепишите команду, используя ограничения. Происходит один раз на каждую компиляцию.|  
-|Типы данных: text, ntext или image|Обнаружены типы данных **text**, **ntext** или **image**. Перепишите приложения, чтобы использовался тип данных **varchar(max)**, и удалите типы данных **text**, **ntext** и **image**. Происходит один раз для каждого запроса.|  
+|Типы данных: text, ntext или image|Обнаружены типы данных **text**, **ntext**или **image** . Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
 ||Общее число изменений базы данных изменено на уровень совместимости 80. Запланируйте обновить базу данных и приложение перед выходом следующей версии. Также происходит при запуске базы данных с уровнем совместимости 80.|  
-|Уровень совместимости базы данных 100, 110 120|Общее число изменений уровня совместимости базы данных. Запланируйте обновление базы данных и приложения для следующего выпуска. Также происходит при запуске базы данных с нерекомендуемым уровнем совместимости.|  
+|Уровень совместимости базы данных 100, 110 120|Общее число изменений уровня совместимости базы данных. Запланируйте обновление базы данных и приложения для следующего выпуска. Также происходит при запуске базы данных с нерекомендуемым уровнем совместимости.|  
 |DATABASE_MIRRORING|Обнаружены ссылки на функцию зеркального отображения базы данных. Рассмотрите возможность перехода на использование групп доступности AlwaysOn либо, если ваш выпуск SQL Server не поддерживает группы доступности AlwaysOn, возможность перехода на использование доставки журналов.|  
 |database_principal_aliases|Обнаружены ссылки на устаревшую процедуру sys.database_principal_aliases. Использование ролей вместо псевдонимов. Происходит один раз на каждую компиляцию.|  
 |DATABASEPROPERTY|Инструкция ссылается на DATABASEPROPERTY. Обновите инструкцию DATABASEPROPERTY на DATABASEPROPERTYEX. Происходит один раз на каждую компиляцию.|  
@@ -76,7 +80,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Нерекомендуемый хэш-алгоритм|Используйте алгоритмы MD2, MD4, MD5, SHA или SHA1.|  
 |Алгоритм DESX|Обнаружена инструкция, использующая алгоритм шифрования DESX. Используйте другой алгоритм шифрования. Происходит один раз на каждую компиляцию.|  
 |dm_fts_active_catalogs|Счетчик dm_fts_active_catalogs всегда имеет значение 0, поскольку некоторые столбцы в представлении sys.dm_fts_active_catalogs не устарели. Для отслеживания устаревшего столбца используется счетчик для конкретного столбца, например dm_fts_active_catalogs.is_paused.|  
-|dm_fts_active_catalogs.is_paused|Обнаружен столбец is_paused динамического административного представления [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md). Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
+|dm_fts_active_catalogs.is_paused|Обнаружен столбец is_paused динамического административного представления [sys.dm_fts_active_catalogs](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md) . Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |dm_fts_active_catalogs.previous_status|Обнаружен столбец previous_status динамического административного представления sys.dm_fts_active_catalogs. Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |dm_fts_active_catalogs.previous_status_description|Обнаружен столбец previous_status_description динамического административного представления sys.dm_fts_active_catalogs. Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |dm_fts_active_catalogs.row_count_in_thousands|Обнаружен столбец row_count_in_thousands динамического административного представления sys.dm_fts_active_catalogs. Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
@@ -84,7 +88,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |dm_fts_active_catalogs.status_description|Обнаружен столбец status_description динамического административного представления sys.dm_fts_active_catalogs. Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |dm_fts_active_catalogs.worker_count|Обнаружен столбец worker_count динамического административного представления sys.dm_fts_active_catalogs. Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |dm_fts_memory_buffers|Счетчик dm_fts_memory_buffers всегда имеет значение 0, поскольку большинство столбцов в представлении sys.dm_fts_memory_buffers не устарели. Для отслеживания нерекомендуемого столбца используйте зависящий от столбца счетчик dm_fts_memory_buffers.row_count.|  
-|dm_fts_memory_buffers.row_count|Обнаружен столбец row_count динамического административного представления [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md). Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
+|dm_fts_memory_buffers.row_count|Обнаружен столбец row_count динамического административного представления [sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) . Избегайте использования этого столбца. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |DROP INDEX с двухкомпонентным именем|Синтаксис DROP INDEX содержит синтаксис формата *table_name.index_name* в инструкции DROP INDEX. Замените синтаксис *имя_индекса* ON *имя_таблицы* в инструкции DROP INDEX. Происходит один раз на каждую компиляцию.|  
 |EXT_CREATE_ALTER_SOAP_ENDPOINT|Обнаружена инструкция CREATE или ALTER ENDPOINT с параметром FOR SOAP. Собственные XML-веб-службы устарели. Вместо этого следует использовать технологию WCF (Windows Communications Foundation) или ASP.NET.|  
 |EXT_endpoint_webmethods|Обнаружено sys.endpoint_webmethods. Собственные XML-веб-службы устарели. Вместо этого следует использовать технологию WCF (Windows Communications Foundation) или ASP.NET.|  
@@ -97,7 +101,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |fn_servershareddrives|Скомпилирована функция fn_servershareddrives. Вместо нее используйте sys.dm_io_cluster_shared_drives. Происходит один раз на каждую компиляцию.|  
 |fn_virtualservernodes|Скомпилирована функция fn_virtualservernodes. Вместо нее используйте sys.dm_os_cluster_nodes. Происходит один раз на каждую компиляцию.|  
 |fulltext_catalogs|Счетчик fulltext_catalogs всегда имеет значение 0, поскольку некоторые столбцы в представлении sys.fulltext_catalogs не устарели. Для отслеживания устаревшего столбца используется счетчик для конкретного столбца, например fulltext_catalogs.data_space_id. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
-|fulltext_catalogs.data_space_id|Обнаружен столбец data_space_id представления каталога [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md). Не используйте этот столбец. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
+|fulltext_catalogs.data_space_id|Обнаружен столбец data_space_id представления каталога [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) . Не используйте этот столбец. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |fulltext_catalogs.file_id|Обнаружен столбец file_id представления каталога sys.fulltext_catalogs. Не используйте этот столбец. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |fulltext_catalogs.path|Обнаружен столбец path представления каталога sys.fulltext_catalogs. Не используйте этот столбец. Происходит каждый раз, когда экземпляр сервера обнаруживает ссылку на этот столбец.|  
 |FULLTEXTCATALOGPROPERTY('LogSize')|Обнаружено свойство LogSize функции FULLTEXTCATALOGPROPERTY. Избегайте использования этого свойства.|  
@@ -123,7 +127,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Имя столбца, состоящее более чем из двух компонентов|Запрос использовал 3- или 4-компонентное имя в списке столбцов. Измените запрос для использования стандартных 2-компонентных имен. Происходит один раз на каждую компиляцию.|  
 |Несколько табличных указаний без запятых|Между табличными указаниями в качестве разделителя использовался пробел. Вместо него используйте запятую. Происходит один раз на каждую компиляцию.|  
 |NOLOCK или READUNCOMMITTED в инструкции UPDATE или DELETE|В предложении FROM инструкции UPDATE или DELETE обнаружены подсказки NOLOCK или READUNCOMMITTED. Удалите табличные указания NOLOCK и READUNCOMMITTED из предложения FROM.|  
-|Не совместимые с ANSI операторы внешнего соединения *= или =\*|Обнаружена инструкция, использующая синтаксис соединения *= или =\*. Перепишите инструкции для использования синтаксиса соединения, совместимого с ANSI. Происходит один раз на каждую компиляцию.|  
+|Не совместимые с ANSI операторы внешнего соединения *= или =\*|Обнаружена инструкция, использующая синтаксис соединения *= или =\* . Перепишите инструкции для использования синтаксиса соединения, совместимого с ANSI. Происходит один раз на каждую компиляцию.|  
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Обнаружены ссылки на устаревшее представление sys.numbered_procedure_parameters. Не используйте. Происходит один раз на каждую компиляцию.|  
 |numbered_procedures|Обнаружены ссылки на устаревшее представление sys.numbered_procedures. Не используйте. Происходит один раз на каждую компиляцию.|  
@@ -131,7 +135,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |OLEDB для нерегламентированных соединений|Поставщик SQLOLEDB не поддерживается. Используйте собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных соединений.|  
 |PERMISSIONS|Обнаружены ссылки на встроенную функцию PERMISSIONS. Запросите sys.fn_my_permissions. Происходит один раз для каждого запроса.|  
 |ProcNums|Обнаружен устаревший синтаксис ProcNums. Перепишите инструкции, чтобы удалить эти ссылки. Происходит один раз на каждую компиляцию.|  
-|READTEXT|Обнаружен синтаксис READTEXT. Перепишите приложения так, чтобы в них использовался тип данных **varchar(max)**, и удалите тип данных **text**. Происходит один раз для каждого запроса.|  
+|READTEXT|Обнаружен синтаксис READTEXT. Перепишите приложения так, чтобы в них использовался тип данных **varchar(max)** , и удалите тип данных **text** . Происходит один раз для каждого запроса.|  
 |RESTORE DATABASE или LOG WITH DBO_ONLY|Обнаружен синтаксис RESTORE … WITH DBO_ONLY. Вместо этого используйте синтаксис RESTORE … RESTRICTED_USER.|  
 |RESTORE DATABASE или LOG WITH MEDIAPASSWORD|Обнаружен синтаксис RESTORE … WITH MEDIAPASSWORD. Параметр WITH MEDIAPASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
 |RESTORE DATABASE или LOG WITH PASSWORD|Обнаружен синтаксис RESTORE … WITH PASSWORD. Параметр WITH PASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
@@ -176,7 +180,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_configure 'set working set size'|Обнаружен параметр «set working set size» хранимой процедуры sp_configure. Размер рабочего множества больше не настраивается. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_control_dbmasterkey_password|Хранимая процедура sp_control_dbmasterkey_password не проверяет наличие главного ключа. Это разрешено для обратной совместимости, но при этом отображается предупреждение. Такое поведение является устаревшим. В следующем выпуске главный ключ должен существовать, а пароль из хранимой процедуры sp_control_dbmasterkey_password должен совпадать с одним из паролей, которые используются для шифрования главного ключа базы данных.|  
 |sp_create_removable|Обнаружена хранимая процедура sp_create_removable. Вместо нее используйте инструкцию CREATE DATABASE. Происходит один раз для каждого запроса.|  
-|sp_db_vardecimal_storage_format|Обнаружено использование формата хранения **vardecimal**. Используйте вместо него сжатие данных.|  
+|sp_db_vardecimal_storage_format|Обнаружено использование формата хранения **vardecimal** . Используйте вместо него сжатие данных.|  
 |sp_dbcmptlevel|Обнаружена хранимая процедура sp_dbcmptlevel. Вместо этого используйте синтаксис ALTER DATABASE … SET COMPATIBILITY_LEVEL. Происходит один раз для каждого запроса.|  
 |sp_dbfixedrolepermission|Обнаружена хранимая процедура sp_dbfixedrolepermission. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_dboption|Обнаружена хранимая процедура sp_dboption. Вместо этого следует использовать инструкции ALTER DATABASE и DATABASEPROPERTYEX. Происходит один раз на каждую компиляцию.|  
@@ -185,7 +189,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_defaultlanguage|Обнаружена хранимая процедура sp_defaultlanguage. Используйте вместо нее инструкцию ALTER LOGIN. Происходит один раз на каждую компиляцию.|  
 |sp_denylogin|Обнаружена хранимая процедура sp_denylogin. Вместо нее используйте инструкцию ALTER LOGIN DISABLE. Происходит один раз для каждого запроса.|  
 |процедура sp_depends|Обнаружена хранимая процедура sp_depends. Вместо нее используйте динамические функции управления sys.dm_sql_referencing_entities и sys.dm_sql_referenced_entities. Происходит один раз для каждого запроса.|  
-|sp_detach_db @keepfulltextindexfile|Обнаружен аргумент @keepfulltextindexfile инструкции sp_detach_db. Не используйте этот аргумент.|  
+|sp_detach_db @keepfulltextindexfile|Аргумент @keepfulltextindexfile обнаружен в инструкции sp_detach_db statement. Не используйте этот аргумент.|  
 |sp_dropalias|Обнаружена хранимая процедура sp_dropalias. Псевдонимы заменены сочетанием учетных записей пользователей и ролями базы данных. Удалите псевдонимы в обновленных базах данных с помощью хранимой процедуры sp_dropalias. Происходит один раз на каждую компиляцию.|  
 |sp_dropapprole, хранимая процедура|Обнаружена хранимая процедура sp_dropapprole. Вместо нее используйте инструкцию DROP APPLICATION ROLE. Происходит один раз для каждого запроса.|  
 |sp_dropextendedproc|Обнаружена хранимая процедура sp_dropextendedproc. Используйте вместо нее среду CLR. Происходит один раз на каждую компиляцию.|  
@@ -194,7 +198,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_droprole|Обнаружена хранимая процедура sp_droprole. Вместо нее используйте инструкцию DROP ROLE. Происходит один раз для каждого запроса.|  
 |хранимая процедура sp_droptype|Обнаружена хранимая процедура sp_droptype. Вместо нее используйте инструкцию DROP TYPE.|  
 |sp_dropuser|Обнаружена хранимая процедура sp_dropuser. Используйте вместо нее инструкцию DROP USER. Происходит один раз для каждого запроса.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|Обнаружено использование формата хранения **vardecimal**. Используйте сжатие данных и хранимую процедуру sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|Обнаружено использование формата хранения **vardecimal** . Используйте сжатие данных и хранимую процедуру sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|Обнаружена хранимая процедура sp_fulltext_catalog. Вместо нее используйте инструкцию CREATE/ALTER/DROP FULLTEXT CATALOG. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_column|Обнаружена хранимая процедура sp_fulltext_column. Используйте вместо нее инструкцию ALTER FULLTEXT INDEX. Происходит один раз на каждую компиляцию.|  
 |sp_fulltext_database, хранимая процедура|Обнаружена хранимая процедура sp_fulltext_database. Используйте вместо нее инструкцию ALTER DATABASE. Происходит один раз на каждую компиляцию.|  
@@ -264,26 +268,27 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|Обнаружены ссылки на таблицу sysusers. Для этого необходимо использовать sys.database_principals. Происходит один раз на каждую компиляцию.|  
 |Табличное указание без ключевого слова WITH|Обнаружена инструкция, использующая табличное указание без ключевого слова WITH. Измените инструкции так, чтобы они содержали ключевое слово WITH. Происходит один раз на каждую компиляцию.|  
 |Параметр таблицы «text in row»|Обнаружены ссылки на параметр таблицы «text in row». Вместо этого используйте параметр хранимой процедуры sp_tableoption «large value types out of row». Происходит один раз для каждого запроса.|  
-|TEXTPTR|Обнаружены ссылки на функцию TEXTPTR. Перепишите приложения, чтобы использовался тип данных **varchar(max)**, и удалите типы данных **text**, **ntext** и **image**. Происходит один раз для каждого запроса.|  
-|TEXTVALID|Обнаружены ссылки на функцию TEXTVALID. Перепишите приложения, чтобы использовался тип данных **varchar(max)**, и удалите типы данных **text**, **ntext** и **image**. Происходит один раз для каждого запроса.|  
-|TIMESTAMP|Общее число вхождений нерекомендуемого типа данных **timestamp**, обнаруженных в инструкции DDL. Используйте вместо него тип данных **rowversion**.|  
-|UPDATETEXT или WRITETEXT|Обнаружена инструкция UPDATETEXT или WRITETEXT. Перепишите приложения, чтобы использовался тип данных **varchar(max)**, и удалите типы данных **text**, **ntext** и **image**. Происходит один раз для каждого запроса.|  
+|TEXTPTR|Обнаружены ссылки на функцию TEXTPTR. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
+|TEXTVALID|Обнаружены ссылки на функцию TEXTVALID. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
+|TIMESTAMP|Общее число вхождений нерекомендуемого типа данных **timestamp** , обнаруженных в инструкции DDL. Используйте вместо него тип данных **rowversion** .|  
+|UPDATETEXT или WRITETEXT|Обнаружена инструкция UPDATETEXT или WRITETEXT. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
 |USER_ID|Обнаружены ссылки на функцию USER_ID. Вместо этого используйте функцию DATABASE_PRINCIPAL_ID. Происходит один раз на каждую компиляцию.|  
 |Использование OLEDB для связанных серверов||  
-|Формат хранения vardecimal|Обнаружено использование формата хранения **vardecimal**. Используйте вместо него сжатие данных.|  
+|Формат хранения vardecimal|Обнаружено использование формата хранения **vardecimal** . Используйте вместо него сжатие данных.|  
 |XMLDATA|Обнаружен синтаксис FOR XML. Используйте создание схем XSD для режимов RAW и AUTO. Для явного режима нет замены. Происходит один раз на каждую компиляцию.|  
 |XP_API|Обнаружена инструкция расширенной хранимой процедуры. Не используйте.|  
 |xp_grantlogin|Обнаружена процедура xp_grantlogin. Используйте вместо нее инструкцию CREATE LOGIN. Происходит один раз на каждую компиляцию.|  
 |xp_loginconfig|Обнаружена процедура xp_loginconfig. Вместо нее используйте аргумент IsIntegratedSecurityOnly функции SERVERPROPERTY. Происходит один раз для каждого запроса.|  
 |xp_revokelogin|Обнаружена процедура xp_revokelogin. Вместо нее используйте инструкцию ALTER LOGIN DISABLE DROP LOGIN. Происходит один раз на каждую компиляцию.|  
   
-## См. также:  
- [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Нерекомендуемые функции полнотекстового поиска в SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+## <a name="see-also"></a>См. также:  
+ [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Нерекомендуемые функции полнотекстового поиска в SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Класс событий Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Класс событий Deprecation Final Support](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
- [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Неподдерживаемые функции полнотекстового поиска в SQL Server 2016](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Неподдерживаемые функции полнотекстового поиска в SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

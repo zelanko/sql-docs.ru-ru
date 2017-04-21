@@ -1,31 +1,35 @@
 ---
-title: "LineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "LineString, подтип geometry [SQL Server]"
-  - "geometry, подтипы [SQL Server]"
+title: "LineString | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9132c20fb46f36511a781c934026ebf01503375d
+ms.lasthandoff: 04/11/2017
+
 ---
-# LineString
+# <a name="linestring"></a>LineString
   **LineString** является одномерным объектом, представляющим последовательность точек и соединяющих их линейных сегментов.  
   
-## Экземпляры LineString  
+## <a name="linestring-instances"></a>Экземпляры LineString  
  На рисунке ниже приведены примеры экземпляров **LineString** .  
   
- ![Примеры объектов LineString типа geometry](../../relational-databases/spatial/media/linestring.png "Примеры объектов LineString типа geometry")  
+ ![Примеры геометрических экземпляров LineString](../../relational-databases/spatial/media/linestring.gif "Примеры геометрических экземпляров LineString")  
   
  На рисунке представлены:  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 24
   
 -   на рисунке 4 продемонстрирован замкнутый непростой экземпляр объекта **LineString** , не являющийся кольцом.  
   
-### Принимаемые экземпляры  
+### <a name="accepted-instances"></a>Принимаемые экземпляры  
  Принятые экземпляры **LineString** могут быть введены в переменную геометрии, но они могут быть недействительными экземплярами **LineString** . Для принятия экземпляра **LineString** должны соблюдаться следующие критерии. Экземпляр должен быть сформирован по меньшей мере двумя точками или же должен быть пустым. Следующие экземпляры LineString допустимы.  
   
 ```  
@@ -54,7 +58,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
-### Допустимые экземпляры  
+### <a name="valid-instances"></a>Допустимые экземпляры  
  Чтобы экземпляр **LineString** был действителен, он должен соответствовать следующим критериям.  
   
 1.  Экземпляр **LineString** должен быть принят.  
@@ -85,7 +89,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 > [!WARNING]  
 >  Определение пересечений **LineString** основано на расчетах с плавающей запятой, которые не являются точными.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующем примере показано, как создать экземпляр `geometry``LineString` с тремя точками и значением SRID, равным 0:  
   
 ```  
@@ -93,7 +97,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- Каждая точка экземпляра `LineString` может содержать значения Z (уровень) и M (мера). В данном примере значения М добавляются к экземпляру `LineString`, созданному в примере выше. M и Z могут принимать значения NULL.  
+ Каждая точка экземпляра `LineString` может содержать значения Z (уровень) и M (мера). В данном примере значения М добавляются к экземпляру `LineString` , созданному в примере выше. M и Z могут принимать значения NULL.  
   
 ```  
 DECLARE @g geometry;  
@@ -125,7 +129,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [STLength (тип данных geometry)](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint (тип данных geometry)](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint (тип данных geometry)](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

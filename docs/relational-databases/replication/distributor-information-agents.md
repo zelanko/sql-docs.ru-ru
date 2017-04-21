@@ -1,34 +1,38 @@
 ---
-title: "Сведения о распространителе, агенты | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.Distributor.commonjobs..f1"
+title: "Сведения о распространителе, вкладка &quot;Агенты&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5b1db16b9faf24e2255857203ac4a685d5326ca3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сведения о распространителе, агенты
+# <a name="distributor-information-agents"></a>Сведения о распространителе, агенты
   На вкладке **Агенты** отображаются сведения об агентах и заданиях обслуживания, связанных с издателем и подписчиком.  
   
  В списке агентов на вкладке **Агенты** и в представлении «Распространитель» для распространителя присутствуют все агенты, имеющиеся на вкладке **Агенты** для издателя. Однако на вкладке **Агенты** в представлении «Распространитель» для распространителя указаны также агент распространителя и агент слияния.  
   
  Дополнительные сведения о заданиях обслуживания и об агентах моментальных снимков, чтения журнала и чтения очереди см. в разделе [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md). Обратите внимание, что при просмотре сведений об агенте на вкладке **Агенты** для издателя, для агентов моментальных снимков и чтения журнала выводятся сведения о распространителе. Однако на вкладке **Агенты** в представлении «Распространитель» для распространителя можно также выбрать **Агент распространителя** и **Агент слияния**.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  В следующих разделах описаны данные, которые отображаются на этой вкладке для агента распространителя и агента слияния.  
   
-### Агент распространителя  
+### <a name="distributor-agent"></a>Агент распространителя  
  **Состояние**  
  Состояние агента. Возможные значения состояния показаны в следующем списке:  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 13
  Имя публикации, с которой связан агент.  
   
  **Подписка**  
- Имя подписки, в формате: [*подписки*]. [*База данных*].  
+ Имя подписки, представленное в форме: [*SubscriberName*].[*Database*].  
   
  **Тип**  
  Тип репликации: push (принудительная), pull (по запросу) или Anonymous (анонимная).  
@@ -72,13 +76,13 @@ caps.handback.revision: 13
  **#Trans**  
  Количество транзакций, зафиксированных в базе данных распространителя во время самого последнего выполнения агента.  
   
- **#Команды**  
+ **#Cmds**  
  Количество команд, зафиксированных в базе данных распространителя во время самого последнего выполнения агента. Команда является эквивалентом изменения данных, например обновления.  
   
- **Ср. #Команды**  
+ **Ср. кол-во команд**  
  Среднее количество команд за транзакцию во время самого последнего выполнения агента.  
   
-### Агент слияния.  
+### <a name="merge-agent"></a>Агент слияния  
  **Состояние**  
  Состояние агента. Возможные значения состояния показаны в следующем списке:  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 13
  Имя публикации, с которой связан агент.  
   
  **Подписка**  
- Имя подписки, в формате: [*подписки*]. [*База данных*].  
+ Имя подписки, представленное в форме: [*SubscriberName*].[*Database*].  
   
  **Тип**  
  Тип репликации: push (принудительная), pull (по запросу) или Anonymous (анонимная).  
@@ -140,10 +144,10 @@ caps.handback.revision: 13
  **Конфликты подписчика**  
  Число конфликтов, произошедших на подписчике в течение процесса слияния.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для издателя и #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией & #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [Просмотр сведений и выполнение задач для издателя (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

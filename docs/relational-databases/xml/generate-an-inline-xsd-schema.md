@@ -1,30 +1,34 @@
 ---
-title: "Создание встроенных схем XSD | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD-схемы [SQL Server]"
-  - "XMLSCHEMA, параметр"
-  - "схемы [SQL Server], XML"
-  - "XDR-схемы"
-  - "предложение FOR XML, создание встроенных схем XSD"
-  - "создание встроенных схем XSD [SQL Server]"
-  - "XMLDATA, параметр"
+title: "Создание встроенных схем XSD | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание встроенных схем XSD
+# <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
   В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  
   
  В этом разделе описывается ключевое слово XMLSCHEMA и объясняется структура результирующей встроенной XSD-схемы. Далее приведены ограничения, возникающие при запросе встроенных схем.  
@@ -81,7 +85,7 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## Элементы сущности  
+## <a name="entity-elements"></a>Элементы сущности  
  Для описания особенностей создания структуры XSD-схемы для результата запроса необходимо вначале привести общие сведения про элемент сущности.  
   
  Элемент сущности XML-данных, возвращаемых запросом FOR XML, является элементом, создаваемым таблицей, а не столбцом. Например, следующий запрос FOR XML возвращает контактную информацию из таблицы `Person` базы данных `AdventureWorks2012` .  
@@ -159,7 +163,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   <`SalesOrderID`>, <`ProductID`> и <`OrderQty`> не являются элементами сущности, так как они сопоставлены столбцам. Из-за директивы ELEMENTS данные столбца возвращаются в виде элементов в XML. Они сопоставлены локальным элементам сложного типа элемента сущности. Заметьте, что если директива ELEMENTS не задана, то значения `SalesOrderID`, `ProductID` и `OrderQty` сопоставляются с локальными атрибутами соответствующего сложного типа элемента сущности.  
   
-## Конфликты имен атрибутов  
+## <a name="attribute-name-clashes"></a>Конфликты имен атрибутов  
  В следующих рассуждениях используются таблицы `CustOrder` и `CustOrderDetail` . Для проверки следующих образцов создайте такие же таблицы и добавьте собственные образцы данных:  
   
 ```  
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## Конфликты имен элементов  
+## <a name="element-name-clashes"></a>Конфликты имен элементов  
  В предложении FOR XML одинаковые имена иногда соответствуют различным подэлементам. Например, следующий запрос получает значения продуктов ListPrice и DealerPrice, но определяет для этих двух столбцов один и тот же псевдоним Price. Поэтому в результирующем наборе строк будут присутствовать два столбца с одинаковым именем.  
   
-### Вариант 1. Оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Вариант 1. Оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL  
  В следующем запросе оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL.  
   
 ```  
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### Вариант 2. Один ключевой столбец и один неключевой столбец одинакового типа  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Вариант 2. Один ключевой столбец и один неключевой столбец одинакового типа  
  В следующем запросе находится один ключевой столбец и один неключевой столбец одинакового типа.  
   
 ```  
@@ -390,7 +394,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Обратите внимание, что во встроенной XSD-схеме элемент <`Col`> соответствует столбцу Col2 с параметром minOccurs, равным 0.  
   
-### Вариант 3. Оба элемента различных типов, и соответствующие столбцы могут иметь значение NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Вариант 3. Оба элемента различных типов, и соответствующие столбцы могут иметь значение NULL  
  Для случая 2 показан следующий запрос, заданный относительно таблицы-образца:  
   
 ```  

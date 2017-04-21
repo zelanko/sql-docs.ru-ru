@@ -1,25 +1,29 @@
 ---
-title: "Создание зашифрованной резервной копии | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание зашифрованной резервной копии | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание зашифрованной резервной копии
-  В этом разделе описаны шаги, необходимые для создания зашифрованной резервной копии с помощью Transact-SQL.  Пример использования [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
+# <a name="create-an-encrypted-backup"></a>Создание зашифрованной резервной копии
+  В этом разделе описаны шаги, необходимые для создания зашифрованной резервной копии с помощью Transact-SQL.  Пример использования [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
-## Резервное копирование на диск с шифрованием  
+## <a name="backup-to-disk-with-encryption"></a>Резервное копирование на диск с шифрованием  
  **Предварительные условия.**  
   
 -   Доступ к локальному диску или хранилищу с достаточным количеством места для создания резервной копии базы данных.  
@@ -70,12 +74,12 @@ caps.handback.revision: 17
   
  Пример шифрования резервной копии, защищенной с помощью EKM, см. в статье [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### Резервное копирование в хранилище больших двоичных объектов Windows Azure с шифрованием  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>Резервное копирование в хранилище больших двоичных объектов Windows Azure с шифрованием  
  При создании резервной копии в хранилище Windows Azure с помощью опции **Резервное копирование SQL Server на URL-адрес** шаги шифрования остаются теми же, но в качестве места назначения необходимо использовать URL-адрес, а для проверки подлинности в хранилище Windows Azure — учетные данные SQL. Сведения о настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами шифрования см. в статье [Включение управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
  **Предварительные условия.**  
   
--   Учетная запись хранения Windows и контейнер. Дополнительные сведения см. в разделе [Lesson 1: Create Windows Azure Storage Objects](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md).  
+-   Учетная запись хранения Windows и контейнер. Дополнительные сведения см. в разделе [Lesson 1: Create Windows Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Главный ключ базы данных для базы данных master и сертификат или асимметричный ключ на экземпляре SQL Server. Требования и разрешения шифрования см. в разделе [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 17
   
     ```  
   
-4.  **Создание резервной копии базы данных.** Укажите алгоритм шифрования и сертификат для использования. Скопируйте и вставьте следующий пример в окно запроса и нажмите кнопку **Выполнить**  
+4.  **Создание резервной копии базы данных.** Укажите алгоритм шифрования и сертификат для использования. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -129,3 +133,4 @@ caps.handback.revision: 17
     ```  
   
   
+

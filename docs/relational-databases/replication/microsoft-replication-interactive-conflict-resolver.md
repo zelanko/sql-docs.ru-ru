@@ -1,30 +1,34 @@
 ---
-title: "Интерактивный сопоставитель конфликтов репликации (Microsoft) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.replconflictviewer.interactiveresolver.f1"
+title: "Интерактивный сопоставитель конфликтов репликации (Майкрософт) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.replconflictviewer.interactiveresolver.f1
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6622e91544ac1b66357a317644558df4820d33a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Интерактивный сопоставитель конфликтов репликации (Microsoft)
+# <a name="microsoft-replication-interactive-conflict-resolver"></a>Интерактивный сопоставитель конфликтов репликации (Microsoft)
   Интерактивный сопоставитель конфликтов может применяться для подписок на публикации слиянием, которые синхронизируются с помощью диспетчера синхронизации Windows. Он позволяет просматривать, сравнивать, редактировать и выбирать результаты для конфликтов данных. Репликация также содержит средство просмотра конфликтов, позволяющее просматривать и изменять результаты конфликта после их фиксации. Интерактивный сопоставитель конфликтов позволяет выбирать результаты во время выполнения синхронизации.  
   
 > [!NOTE]  
->  Конфликты, затрагивающие логические записи, не отображаются в интерактивном сопоставителе. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в разделе [просмотреть сведения о конфликтах для публикаций слиянием & #40; Программирование репликации Transact-SQL & #41;](../../relational-databases/replication/view conflict information for merge publications.md).  
+>  Конфликты, затрагивающие логические записи, не отображаются в интерактивном сопоставителе. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Имя столбца**  
  Имена всех столбцов в таблице. Один или несколько столбцов могли содержать конфликтующие данные. Независимо от того, какие столбцы конфликтуют, вся строка, в пользу которой был разрешен конфликт, переписывает всю проигравшую строку.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 23
  **Подписчик**  
  Значение данных на подписчике.  
   
- **Принять предлагаемый вариант**, **Принять вариант издателя**, и **Принять вариант подписчика**  
+ **Принять предлагаемый вариант**, **Принять вариант издателя**и **Принять вариант подписчика**  
  Щелкните, чтобы принять строку, которая будет применена на издателе или подписчике, в зависимости от того, в пользу какого участника был разрешен конфликт. Если конфликт был разрешен в пользу подписчика, все другие подписчики получат победившую в конфликте строку при следующей их синхронизации с издателем.  
   
  **Разрешить оставшиеся конфликты автоматически**  
@@ -46,10 +50,10 @@ caps.handback.revision: 23
  **Регистрация подробностей конфликта для последующего обращения**  
  Регистрация подробностей конфликта в системные таблицы.  
   
-## См. также:  
- [Интерактивное разрешение конфликтов](../../relational-databases/replication/merge/interactive-conflict-resolution.md)   
- [Просмотр и разрешение конфликтов данных для публикаций слиянием & #40; SQL Server Management Studio & #41;](../../relational-databases/replication/view and resolve data conflicts for merge publications.md)   
- [Синхронизировать подписку с помощью диспетчера синхронизации Windows & #40; Диспетчер синхронизации Windows & #41;](../../relational-databases/replication/synchronize a subscription using windows synchronization manager.md)   
- [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+## <a name="see-also"></a>См. также:  
+ [Интерактивное разрешение конфликтов](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
+ [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Синхронизация подписки с помощью диспетчера синхронизации Windows (Windows Synchronization Manager)](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

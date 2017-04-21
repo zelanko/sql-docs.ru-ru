@@ -1,29 +1,33 @@
 ---
-title: "Использование вложенных запросов FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Предложение FOR XML, вложенные запросы FOR XML"
-  - "запросы [XML в SQL Server], вложенный FOR XML"
-  - "вложенные запросы FOR XML"
+title: "Использование вложенных запросов FOR XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], nested FOR XML
+- nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование вложенных запросов FOR XML
+# <a name="use-nested-for-xml-queries"></a>Использование вложенных запросов FOR XML
   Тип данных **xml** и директива [TYPE в запросах FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) позволяют обрабатывать XML-документы, возвращаемые запросами FOR XML, как на сервере, так и на клиенте.  
   
-## Обработка переменных типа XML  
+## <a name="processing-with-xml-type-variables"></a>Обработка переменных типа XML  
  Результат запроса FOR XML можно присвоить переменной типа **xml** или воспользоваться языком XQuery, чтобы выполнить к нему запрос, после чего и присвоить полученный результат переменной типа **xml** для дополнительной обработки.  
   
 ```  
@@ -38,7 +42,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- XML-данные, возвращаемые в переменной `@x`, можно дополнительно обработать с применением методов типа данных **xml** . Например, с помощью метода [value()](../../t-sql/xml/value-method-xml-data-type.md) можно получить значение атрибута `ProductModelID`.  
+ XML-данные, возвращаемые в переменной `@x`, можно дополнительно обработать с применением методов типа данных **xml** . Например, с помощью метода `ProductModelID` value() [можно получить значение атрибута](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 DECLARE @i int;  
@@ -81,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
-## Передача результатов внутреннего запроса FOR XML внешним запросам в виде экземпляров типа xml  
+## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Передача результатов внутреннего запроса FOR XML внешним запросам в виде экземпляров типа xml  
  Можно создать вложенные запросы `FOR XML` , в которых результат внутреннего запроса возвращает внешнему запросу данные типа **xml** . Например:  
   
 ```  
@@ -103,7 +107,7 @@ FOR XML AUTO, TYPE;
   
 -   Во внутреннем запросе указана директива `TYPE` . Таким образом, возвращаемые внутренним запросом XML-данные имеют тип **xml** . Если директива TYPE не указана, внутренний запрос `FOR XML` возвращает результат типа **nvarchar(max)** и XML-данные преобразуются в сущности.  
   
-## Управление формой результирующих XML-данных  
+## <a name="controlling-the-shape-of-resulting-xml-data"></a>Управление формой результирующих XML-данных  
  Вложенные запросы FOR XML предоставляют больше возможностей управления формой результирующих XML-данных. При помощи вложенных запросов FOR XML можно конструировать XML-данные, сочетающие в себе атрибутивную и элементную модели.  
   
  Дополнительные сведения об указании атрибутивного и элементного XML с помощью вложенных запросов FOR XML см. в разделах [Сравнение запросов FOR XML и вложенных запросов FOR XML](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md) и [Формирование XML-кода с вложенными запросами FOR XML](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md).  
@@ -112,7 +116,7 @@ FOR XML AUTO, TYPE;
   
  Независимо от используемого режима вложенные запросы FOR XML предоставляют больший контроль при описании формата результирующих XML-данных. Их можно использовать вместо запросов в режиме EXPLICIT.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующих разделах содержатся примеры использования запросов FOR XML.  
   
  [Сравнение запросов FOR XML и вложенных запросов FOR XML](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  

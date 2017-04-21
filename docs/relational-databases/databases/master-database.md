@@ -1,38 +1,42 @@
 ---
-title: "База данных master | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "база данных master [SQL Server], сведения"
-  - "master, база данных [SQL Server]"
+title: "База данных master | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], about
+- master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778915dbe6c89b17520ca44b6d437862a882b078
+ms.lasthandoff: 04/11/2017
+
 ---
-# База данных master
-  База данных **master** содержит всю системную информацию о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. в том числе общие для всего экземпляра метаданные, такие как сведения об учетных записях входа, конечных точках и связанных серверах, а также параметры конфигурации системы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системные объекты больше не хранятся в базе данных **master** ; они хранятся в [базе данных ресурсов](../../relational-databases/databases/resource-database.md). Кроме этого, в базе данных **master** регистрируются все остальные базы данных и хранится информация о расположении их файлов. Здесь же [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранит сведения об инициализации. Таким образом, если база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **недоступна, запустить** невозможно.  
+# <a name="master-database"></a>База данных master
+  База данных **master** содержит всю системную информацию о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в том числе общие для всего экземпляра метаданные, такие как сведения об учетных записях входа, конечных точках и связанных серверах, а также параметры конфигурации системы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системные объекты больше не хранятся в базе данных **master** ; они хранятся в [базе данных ресурсов](../../relational-databases/databases/resource-database.md). Кроме этого, в базе данных **master** регистрируются все остальные базы данных и хранится информация о расположении их файлов. Здесь же [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранит сведения об инициализации. Таким образом, если база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **недоступна, запустить** невозможно.  
   
-## Физические свойства базы данных master  
+## <a name="physical-properties-of-master"></a>Физические свойства базы данных master  
  Исходные конфигурационные значения файлов данных и журнала базы данных **master** приведены в следующей таблице. Размеры этих файлов могут немного изменяться в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Файл|Логическое имя|Физическое имя|Увеличение размера файлов|  
 |----------|------------------|-------------------|-----------------|  
-|Первичные данные|master|master.mdf|Автоувеличение на 10 % до заполнения диска.|  
-|Журнал|mastlog|mastlog.ldf|Автоувеличение на 10 % до максимального размера в 2 ТБ.|  
+|Первичные данные|master|master.mdf|Автоувеличение на 10 % до заполнения диска.|  
+|Журнал|mastlog|mastlog.ldf|Автоувеличение на 10 % до максимального размера в 2 ТБ.|  
   
  Сведения о перемещении файлов данных и журнала базы данных **master** см. в разделе [Перемещение системных баз данных](../../relational-databases/databases/move-system-databases.md).  
   
-### Параметры базы данных  
+### <a name="database-options"></a>Параметры базы данных  
  Значения по умолчанию всех параметров базы данных **master** и сведения о том, можно ли их изменять, приведены в следующей таблице. Чтобы просмотреть текущие настройки этих параметров, используйте представление каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 |Параметр базы данных|Значение по умолчанию|Можно ли изменить|  
@@ -69,7 +73,7 @@ caps.handback.revision: 50
   
  Описание этих параметров баз данных см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## Ограничения  
+## <a name="restrictions"></a>Ограничения  
  База данных **master** не поддерживает следующие операции:  
   
 -   добавление файлов или файловых групп;  
@@ -98,7 +102,7 @@ caps.handback.revision: 50
   
 -   Перевод базы данных или первичной файловой группы в режим READ_ONLY.  
   
-## Рекомендации  
+## <a name="recommendations"></a>Рекомендации  
  При работе с базой данных **master** учитывайте следующие рекомендации:  
   
 -   всегда имейте в наличии актуальную резервную копию базы данных **master** ;  
@@ -115,7 +119,7 @@ caps.handback.revision: 50
   
 -   не устанавливайте в базе данных **master** параметр TRUSTWORTHY в значение ON.  
   
-## Что делать, если база данных master становится непригодна к использованию  
+## <a name="what-to-do-if-master-becomes-unusable"></a>Что делать, если база данных master становится непригодна к использованию  
  Если база данных **master** непригодна к использованию, ее можно вернуть в нормальное состояние следующими способами.  
   
 -   Восстановить базу данных **master** на основе актуальной резервной копии.  
@@ -124,12 +128,12 @@ caps.handback.revision: 50
   
 -   Перестроить базу данных **master** с нуля.  
   
-     Если серьезное повреждение базы данных **master** не позволяет запустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базу данных **master**нужно перестроить. Дополнительные сведения см. в разделе [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
+     Если серьезное повреждение базы данных **master** не позволяет запустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базу данных **master**нужно перестроить. Дополнительные сведения см. в статье [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
   
     > [!IMPORTANT]  
     >  При перестроении базы данных **master** все системные базы данных также перестраиваются.  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md)  
   
  [Системные базы данных](../../relational-databases/databases/system-databases.md)  
@@ -141,3 +145,4 @@ caps.handback.revision: 50
  [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)  
   
   
+

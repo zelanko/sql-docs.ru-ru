@@ -1,30 +1,34 @@
 ---
-title: "Подписка, журнал от распространителя к подписчику (подписка на публикацию транзакций) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.subscription.disttosub.f1"
+title: "Подписка, вкладка &quot;Журнал операций от распространителя к подписчику&quot; (транзакционная подписка) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.subscription.disttosub.f1
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e14832b1b0fa335eadd80b65e1d01c727132b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Подписка, журнал от распространителя к подписчику (подписка на публикацию транзакций)
+# <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Подписка, журнал от распространителя к подписчику (подписка на публикацию транзакций)
   Вкладка **Журнал операций от распространителя к подписчику** отображает подробные сведения об агенте распространителя, включая состояние, журнал, информационные сообщения и любые сообщения об ошибках.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  В меню **Вид** выберите сеансы, какого агента распространителя необходимо просмотреть, а затем в сетке **Сеансы агента распространителя**выберите определенный сеанс. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
   
- **Просмотр**  
+ **Вид**  
  Выберите агента распространителя, сеансы которого необходимо просмотреть. Как правило, агент распространителя работает постоянно, поэтому просмотреть можно только один сеанс.  
   
  **Состояние**  
@@ -54,15 +58,15 @@ caps.handback.revision: 20
  Все информационные сообщения и сообщения об ошибках, зарегистрированные агентом распространителя в течение выбранного сеанса.  
   
  **Время действия**  
- Время, когда действие, описанное в **Указание** было выполнено.  
+ Время, когда было выполнено действие, описанное в столбце **Сообщение действия** .  
   
  **Описание ошибки или сообщение выбранного сеанса**  
- Отображается только в том случае, если выбранный сеанс отображает значение **Ошибка** в **состояние** столбца. Это текстовое поле отображает подробные данные об ошибке и о выполняемой во время возникновения ошибки команде. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
+ Выводится, только если выбранный сеанс отображает значение **Ошибка** в столбце **Состояние** . Это текстовое поле отображает подробные данные об ошибке и о выполняемой во время возникновения ошибки команде. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с подпиской и #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)   
+ [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

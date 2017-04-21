@@ -1,37 +1,41 @@
 ---
-title: "Восстановление связанных баз данных, которые содержат помеченную транзакцию | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "журналы транзакций [SQL Server], метки"
-  - "STOPBEFOREMARK, параметр [инструкция RESTORE]"
-  - "STOPATMARK, параметр [инструкция RESTORE]"
-  - "восстановление на момент времени [SQL Server]"
-  - "восстановление баз данных [SQL Server], определенный момент времени"
-  - "восстановление [SQL Server], базы данных"
-  - "восстановление [SQL Server], на определенный момент времени"
-  - "транзакции [SQL Server], восстановление до метки"
-  - "восстановление базы данных [SQL Server]"
-  - "помеченные транзакции [SQL Server], восстановление"
-  - "восстановление баз данных [SQL Server], на определенный момент времени"
+title: "Восстановление связанных баз данных, которые содержат помеченную транзакцию | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction logs [SQL Server], marks
+- STOPBEFOREMARK option [RESTORE statement]
+- STOPATMARK option [RESTORE statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
+- recovery [SQL Server], databases
+- restoring [SQL Server], point in time
+- transactions [SQL Server], recovering to a mark
+- database recovery [SQL Server]
+- marked transactions [SQL Server], restoring
+- database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8848fbbe73b377a329c8b3af29c8a6a32881f50b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Восстановление связанных баз данных, которые содержат помеченную транзакцию
+# <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Восстановление связанных баз данных, которые содержат помеченную транзакцию
   Этот раздел относится только к базам данных, содержащим помеченные транзакции и использующим полную модель восстановления или модель восстановления с неполным протоколированием.  
   
- Дополнительные сведения о требованиях к восстановлению до указанной точки восстановления см. в статье [Восстановление базы данных SQL Server на определенный момент времени с помощью (модели полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+ Дополнительные сведения о требованиях к восстановлению до указанной точки восстановления см. в статье [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает вставку именованных меток в журнал транзакций, чтобы обеспечить возможность восстановления до определенной метки. Метки журнала являются специальным средством транзакции и вставляются только в случае, если связанная с ними транзакция зафиксирована. В итоге, метки могут быть привязаны к конкретной работе, и можно выполнить восстановление до точки, которая включает или не включает эту работу.  
   
@@ -41,13 +45,13 @@ caps.handback.revision: 37
   
 -   После фиксации помеченной транзакции в таблицу [logmarkhistory](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) базы данных **msdb**вставляется строка.  
   
--   Если в помеченной транзакции задействованы несколько баз данных на одном сервере баз данных или на разных серверах, то метки должны записываться в журналах всех задействованных баз данных. Дополнительные сведения см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+-   Если в помеченной транзакции задействованы несколько баз данных на одном сервере баз данных или на разных серверах, то метки должны записываться в журналах всех задействованных баз данных. Дополнительные сведения см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о том, как пометить транзакции, см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+>  Дополнительные сведения о том, как пометить транзакции, см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
-## Синтаксис языка Transact-SQL для вставки именованных меток в журнал транзакций  
- Чтобы вставлять метки в журналы транзакций, используйте инструкцию [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) и предложение WITH MARK [*описание*]. Имя метки совпадает с именем транзакции. Необязательное *описание* представляет собой текстовое описание, а не имя метки. Например, именем транзакции и метки, которые созданы следующей инструкцией `BEGIN TRANSACTION`, будет `Tx1`.  
+## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>Синтаксис языка Transact-SQL для вставки именованных меток в журнал транзакций  
+ Чтобы вставлять метки в журналы транзакций, используйте инструкцию [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) и предложение WITH MARK [*описание*]. Имя метки совпадает с именем транзакции. Необязательное *описание* представляет собой текстовое описание, а не имя метки. Например, именем транзакции и метки, которые созданы следующей инструкцией `BEGIN TRANSACTION` , будет `Tx1`.  
   
 ```wmimof  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
@@ -55,16 +59,16 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  В журнале транзакций записывается имя метки (имя транзакции), описание, база данных, пользователь, данные **datetime** и регистрационный номер транзакции в журнале (LSN). Данные **datetime** используются с именем метки, чтобы уникально идентифицировать метку.  
   
- Дополнительные сведения о вставке метки в транзакцию, которая охватывает несколько баз данных, см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+ Дополнительные сведения о вставке метки в транзакцию, которая охватывает несколько баз данных, см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
-## Синтаксис языка Transact-SQL для восстановления до метки  
- Отметив помеченную транзакцию с помощью инструкции[RESTORE LOG](../Topic/RESTORE%20\(Transact-SQL\).md), можно использовать одно из следующих предложений, чтобы остановиться на метке или перед ней.  
+## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Синтаксис языка Transact-SQL для восстановления до метки  
+ Отметив помеченную транзакцию с помощью инструкции[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), можно использовать одно из следующих предложений, чтобы остановиться на метке или перед ней.  
   
--   Используйте предложение WITH STOPATMARK = **'***\<имя_метки>***'**, чтобы указать, что помеченная транзакция представляет собой точку восстановления.  
+-   Используйте предложение WITH STOPATMARK = **'***<имя_метки>***'**, чтобы указать, что помеченная транзакция представляет собой точку восстановления.  
   
      С помощью предложения STOPATMARK выполняется накат к метке, при этом помеченная транзакция включается в накат.  
   
--   Используйте предложение WITH STOPBEFOREMARK = **'***\<имя_метки>***'**, чтобы указать, что запись журнала непосредственно перед меткой представляет собой точку восстановления.  
+-   Используйте предложение WITH STOPBEFOREMARK = **'***<имя_метки>***'**, чтобы указать, что запись журнала непосредственно перед меткой представляет собой точку восстановления.  
   
      С помощью предложения STOPBEFOREMARK выполняется накат к метке, при этом помеченная транзакция не включается в накат.  
   
@@ -79,9 +83,9 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  [Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio)](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-### Подготовка резервных копий журнала  
+### <a name="preparing-the-log-backups"></a>Подготовка резервных копий журнала  
  Например, подходящей стратегией резервного копирования для этих связанных баз данных будет следующая.  
   
 1.  Использование модели полного восстановления для обеих баз данных.  
@@ -90,11 +94,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      Отдельное или одновременное резервное копирование баз данных.  
   
-3.  Перед созданием резервной копии журнала транзакций необходимо отметить транзакцию, выполняющуюся во всех базах данных. Дополнительные сведения о создании помеченных транзакций см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md).  
+3.  Перед созданием резервной копии журнала транзакций необходимо отметить транзакцию, выполняющуюся во всех базах данных. Дополнительные сведения о создании помеченных транзакций см. в статье [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 4.  Резервное копирование журнала транзакции в каждой базе данных.  
   
-### Восстановление базы данных до помеченной транзакции  
+### <a name="recovering-the-database-to-a-marked-transaction"></a>Восстановление базы данных до помеченной транзакции  
  **Восстановление резервной копии**  
   
 1.  При необходимости создайте [резервные копии заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) неповрежденных баз данных, если возможно.  
@@ -109,11 +113,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Восстановите каждую базу данных.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use marked transactions to recover related databases consistently.md)   
+ [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Планирование и выполнение последовательностей восстановления (модель полного восстановления)](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

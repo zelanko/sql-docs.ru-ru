@@ -1,35 +1,39 @@
 ---
-title: "Диалоговое окно &#171;Выполнение политик&#187;, страница &#171;Выбор политики&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.runnow.f1"
+title: "Диалоговое окно &quot;Выполнение политик&quot;, страница &quot;Выбор политики&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.runnow.f1
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 54f93115b0663a033fda00e85a2128a58a3db063
+ms.lasthandoff: 04/11/2017
+
 ---
-# Диалоговое окно &#171;Выполнение политик&#187;, страница &#171;Выбор политики&#187;
+# <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Диалоговое окно «Выполнение политик», страница «Выбор политики»
   Используйте это диалоговое окно для оценки политик управления на основе политик. При выборе страницы **Результаты оценки** можно применить политики к элементам в наборе целей, которые не соответствуют политикам.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Source**  
- Задает источник политик. Чтобы изменить источник, нажмите кнопку обзора (**...**), чтобы открыть диалоговое окно **Выбор источника**.  
+ Задает источник политик. Чтобы изменить источник, нажмите кнопку обзора (**...**), чтобы открыть диалоговое окно **Выбор источника** .  
   
  **Files**  
  Введите путь к файлу, содержащему политику управления на основе политик, или нажмите кнопку обзора (**...**), чтобы выбрать файл.  
   
  **Server**  
- Выберите, чтобы подключиться к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], содержащего нужную политику.  
+ Выберите, чтобы подключиться к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , содержащего нужную политику.  
   
  **Политики: политика**  
  Нажмите, чтобы открыть диалоговое окно для указанной политики.  
@@ -43,7 +47,7 @@ caps.handback.revision: 36
  **Вычислить**  
  Запускает политику в режиме оценки. Создает отчет о соответствии политике для набора целей, но не изменяет конфигурацию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не обеспечивает соблюдение политики в дальнейшем.  
   
-## Возможные ошибки  
+## <a name="possible-errors"></a>Возможные ошибки  
   
 -   **Цели не найдены**  
   
@@ -51,15 +55,15 @@ caps.handback.revision: 36
   
     -   В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет целей с типом, указанным в политике.  
   
-    -   Ограничение сервера может исключить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащий цель.  
+    -   Ограничение сервера может исключить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащий цель.  
   
     -   Если политика задана для объекта в базе данных (таблицы, представления или пользователя), возможно, база данных не может подписаться на категорию политики.  
   
     -   Фильтр целевого набора может исключить все цели в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Тип целевого сервера отличается от типа сервера, на котором оценивается политика. Например, в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] при попытке оценки политики, созданной для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], будет получен пустой набор целей.  
+    -   Тип целевого сервера отличается от типа сервера, на котором оценивается политика. Например, в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]при попытке оценки политики, созданной для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], будет получен пустой набор целей.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Диалоговое окно «Выполнение политик», страница «Результаты выполнения»](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
   

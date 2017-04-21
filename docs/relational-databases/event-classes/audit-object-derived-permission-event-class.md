@@ -1,29 +1,33 @@
 ---
-title: "Класс событий Audit Object Derived Permission | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Object Derived Permission, класс событий"
+title: "Класс событий Audit Object Derived Permission | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Object Derived Permission event class
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2df546e2381a0e05b12a1e7ce993f47fb1575f9c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Audit Object Derived Permission
+# <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission, класс событий
   События класса **Audit Object Derived Permission** регистрируются при выполнении команд CREATE, ALTER и DROP для определенных объектов. Эти события происходят, если с объектом непосредственно не связаны разрешения или владельцы.  
   
  В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот класс событий может быть удален. Вместо него рекомендуется использовать класс событий **Audit Schema Object Management** .  
   
-## Столбцы данных класса событий Audit Object Derived Permission  
+## <a name="audit-object-derived-permission-event-class-data-columns"></a>Столбцы данных класса событий Audit Object Derived Permission  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -34,12 +38,12 @@ caps.handback.revision: 35
 |**DBUserName**|**nvarchar**|Имя пользователя базы данных, выполнившего команду.|40|Да|  
 |**EventClass**|**int**|Тип события = 118.|27|Нет|  
 |**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
-|**EventSubClass**|**int**|Тип подкласса события. <br /><br /> 1 = создать<br /><br /> 2 = изменить<br /><br /> 3 = удалить<br /><br /> 4 = создать дамп<br /><br /> 11 = загрузить|21|Да|  
+|**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 1 = создать<br /><br /> 2 = изменить<br /><br /> 3 = удалить<br /><br /> 4 = создать дамп<br /><br /> 11 = загрузить|21|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |**LineNumber**|**int**|Отображает номер строки, содержащей ошибку.|5|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NestLevel**|**int**|Целочисленное значение, представляющее данные, возвращаемые функцией @@NESTLEVEL.|29|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
@@ -51,12 +55,12 @@ caps.handback.revision: 35
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
-|**Успешно **|**int**|1 = успешное завершение.  0 = неуспешное завершение.  Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  
+|**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  
 |**TextData**|**ntext**|Текст инструкции на языке SQL.|1|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |**XactSequence**|**bigint**|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Класс событий Audit Schema Object Management](../../relational-databases/event-classes/audit-schema-object-management-event-class.md)  

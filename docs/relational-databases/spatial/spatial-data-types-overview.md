@@ -1,32 +1,36 @@
 ---
-title: "Основные сведения о типах пространственных данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "тип данных geometry [SQL Server], общие сведения"
-  - "тип данных geography [SQL Server], пространственные данные"
-  - "плоские пространственные данные [SQL Server], тип данных geometry"
-  - "типы пространственных данных [SQL Server]"
+title: "Общие сведения о пространственных типах данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/01/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry data type [SQL Server], understanding
+- geography data type [SQL Server], spatial data
+- planar spatial data [SQL Server], geometry data type
+- spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4bfd021048962cb632a2d5e553ea9d6bb35a8c20
+ms.lasthandoff: 04/11/2017
+
 ---
-# Основные сведения о типах пространственных данных
+# <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Существует два типа пространственных данных. Тип данных **geometry** поддерживает планарные или эвклидовы данные (система координат для плоской Земли). Тип данных **geometry** соответствует спецификации "Simple Features for SQL" консорциума OGC версии 1.1.0 и стандарту SQL MM (стандарт ISO).  
   
- Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает тип данных **geography**, который используется для хранения эллиптических данных, таких как координаты GPS широты и долготы.  
+ Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает тип данных **geography** , который используется для хранения эллиптических данных, таких как координаты GPS широты и долготы.  
   
 > [!IMPORTANT]  
 >  Подробное описание и примеры использования функций обработки пространственных данных, реализованные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе улучшения пространственных типов данных, можно получить, загрузив технический документ [Новые функции обработки пространственных данных в SQL Server с рабочим названием "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
@@ -36,15 +40,15 @@ caps.handback.revision: 51
   
  На рисунке ниже изображена иерархия **geometry** , на которой основаны типы данных **geometry** и **geography** . Инстанциируемые типы **geometry** и **geography** выделены синим.  
   
- ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.png) 
+ ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
   
- Как показано на рисунке, десятью материализуемыми типами **geometry** и **geography** являются **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**и **GeometryCollection**. Есть один дополнительный тип, допускающий создание экземпляров, для типа данных geography: **FullGlobe**. Типы данных **geometry** и **geography** могут распознавать определенный экземпляр, если он имеет правильный формат, даже в том случае, если он не был определен явно. Например, если определить экземпляр **Point** явно с помощью метода STPointFromText(), то типы данных **geometry** и **geography** будут распознавать экземпляр как **Point**, если входные данные метода имели правильный формат. Если определить такой же экземпляр с помощью метода `STGeomFromText()`, то оба типа данных **geometry** и **geography** будут распознавать экземпляр как **Point**.  
+ Как показано на рисунке, десятью материализуемыми типами **geometry** и **geography** являются **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**и **GeometryCollection**. Есть один дополнительный тип, допускающий создание экземпляров, для типа данных geography: **FullGlobe**. Типы данных **geometry** и **geography** могут распознавать определенный экземпляр, если он имеет правильный формат, даже в том случае, если он не был определен явно. Например, если определить экземпляр **Point** явно с помощью метода STPointFromText(), то типы данных **geometry** и **geography** будут распознавать экземпляр как **Point**, если входные данные метода имели правильный формат. Если определить такой же экземпляр с помощью метода `STGeomFromText()` , то оба типа данных **geometry** и **geography** будут распознавать экземпляр как **Point**.  
   
  Подтипы для типов geometry и geography делятся на простые типы и типы-коллекции.  Некоторые методы, например `STNumCurves()` , работают только с простыми типами.  
   
  Простые типы:  
   
--   [Точка](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -70,18 +74,18 @@ caps.handback.revision: 51
 ##  <a name="differences"></a> Различия между типами данных geometry и geography  
  Два типа пространственных данных часто демонстрируют одинаковое поведение, однако у них имеется ряд ключевых различий в способе хранения и управления данными.  
   
-### Определение границ соединения  
+### <a name="how-connecting-edges-are-defined"></a>Определение границ соединения  
  Определяющими данными для типов **LineString** и **Polygon** могут быть только вершины.  Границей соединения между двумя вершинами в типе geometry является прямая линия.  Однако границей соединения между двумя вершинами в типе geography является короткая большая эллиптическая кривая, проложенная между вершинами.  Большой эллипс представляет собой пересечение эллипсоида с плоскостью, проходящей через его центр, а большая эллиптическая кривая представляет собой сегмент кривой на большом эллипсе.  
   
-### Определение сегментов дуги  
+### <a name="how-circular-arc-segments-are-defined"></a>Определение сегментов дуги  
  Сегменты дуги для типов geometry определяются на декартовой координатной плоскости XY (значения Z не учитываются). Сегменты дуги для типов geography определяются сегментами кривой на эталонной сфере. Любую параллель на эталонной сфере можно определить двумя взаимодополняющими дугами, где точки для обеих дуг имеют постоянный угол широты.  
   
-### Измерения в пространственных типах данных  
+### <a name="measurements-in-spatial-data-types"></a>Измерения в пространственных типах данных  
  В планарной модели (или модели плоской Земли) измерение расстояний и площадей проводятся в таких же единицах измерения, в каких представляются координаты. При использовании типа данных **geometry** расстояние между точками (2, 2) и (5, 6) составляет 5 единиц, независимо от используемых единиц.  
   
- В эллиптической модели, или модели круглой Земли, координаты указываются в градусах долготы и широты. Однако длины и площади обычно измеряются в метрах и квадратных метрах, хотя измерения могут зависеть от идентификатора пространственной ссылки (SRID) экземпляра **geography**. Самой распространенной единицей измерения типа данных **geography** является метр.  
+ В эллиптической модели, или модели круглой Земли, координаты указываются в градусах долготы и широты. Однако длины и площади обычно измеряются в метрах и квадратных метрах, хотя измерения могут зависеть от идентификатора пространственной ссылки (SRID) экземпляра **geography** . Самой распространенной единицей измерения типа данных **geography** является метр.  
   
-### Ориентация пространственных данных  
+### <a name="orientation-of-spatial-data"></a>Ориентация пространственных данных  
  В планарной системе ориентация кольца многоугольника является несущественным фактором. Например, многоугольник ((0, 0), (10, 0), (0, 20), (0, 0)) идентичен многоугольнику ((0, 0), (0, 20), (10, 0), (0, 0)). Спецификация «Simple Features for SQL» консорциума OGC не определяет положение кольца, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] его не учитывает.  
   
  В эллиптической модели без указания ориентации многоугольник не определен или является неоднозначным. Например, описывает ли кольцо вокруг экватора северное или южное полушарие? При использовании типа данных **geography** для хранения пространственного экземпляра необходимо указать ориентацию кольца и точно описать расположение экземпляра. Внутренняя часть многоугольника в эллиптической модели определяется правилом левой руки.  
@@ -92,12 +96,12 @@ caps.handback.revision: 51
   
 -   Любой экземпляр **geography** в представлении консорциума OGC Well-Known Text (WKT) или Well-Known Binary (WKB), порождающий объект больше полушария, приводит к возникновению исключения **ArgumentException**.  
   
--   Методы типа данных **geography**, требующие указания двух экземпляров **geography**, такие как STIntersection(), STUnion(), STDifference() и STSymDifference(), возвратят NULL, если результаты методов не умещаются в одном полушарии. Метод STBuffer() также возвращает значение NULL, если выходные данные выходят за пределы одного полушария.  
+-   Методы типа данных **geography** , требующие указания двух экземпляров **geography** , такие как STIntersection(), STUnion(), STDifference() и STSymDifference(), возвратят NULL, если результаты методов не умещаются в одном полушарии. Метод STBuffer() также возвращает значение NULL, если выходные данные выходят за пределы одного полушария.  
   
- В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] тип **FullGlobe** представляет разновидность Polygon, охватывающую весь земной шар. Объект**FullGlobe** имеет площадь, но не имеет границ и вершин.  
+ В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]тип **FullGlobe** представляет разновидность Polygon, охватывающую весь земной шар. Объект**FullGlobe** имеет площадь, но не имеет границ и вершин.  
   
-### Для типа данных geography внешнее и внутреннее кольца не важны.  
- В спецификации "Simple Features for SQL" консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого значения для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography**. Любое кольцо многоугольника можно считать внешним кольцом.  
+### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Для типа данных geography внешнее и внутреннее кольца не важны.  
+ В спецификации "Simple Features for SQL" консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого значения для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** . Любое кольцо многоугольника можно считать внешним кольцом.  
   
  Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 51
 > [!NOTE]  
 >  Если для сегментов дуги даются значения Z, они должны совпадать для всех точек сегмента дуги. Только в этом случае они могут быть приняты в качестве ввода. Например: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` принимается, но `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` не принимается.  
   
-### Сравнение типов LineString и CircularString  
+### <a name="linestring-and-circularstring-comparison"></a>Сравнение типов LineString и CircularString  
  На следующей диаграмме показаны одинаковые равнобедренные треугольники (треугольник A для определения треугольника использует сегменты линии, а треугольник B — сегменты дуги).  
   
   ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
@@ -154,13 +158,13 @@ LS LengthCS Length
 5.65685…6.28318…  
 ```  
   
- На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает ** **`@g1`, а синяя линия — **CircularString**`@g2`).  
+ На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает ****`@g1`, а синяя линия — **CircularString**`@g2`).  
   
  ![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
   
- Как показано на рисунке выше, объекты **CircularString** используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем объекты **LineString** . Объекты **CircularString** полезны для хранения круговых границ, например область поиска радиусом в двадцать миль от указанной точки. Объекты**LineString** хорошо подходят для хранения линейных границ, например городского квартала.  
+ Как показано на рисунке выше, объекты **CircularString** используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем объекты **LineString** . Объекты**CircularString** полезны для хранения круговых границ, например область поиска радиусом в двадцать миль от указанной точки. Объекты**LineString** хорошо подходят для хранения линейных границ, например городского квартала.  
   
-### Сравнение типов LineString и CompoundCurve  
+### <a name="linestring-and-compoundcurve-comparison"></a>Сравнение типов LineString и CompoundCurve  
  В следующем примере кода показано, как одна и та же фигура сохраняется с помощью экземпляров **LineString** и **CompoundCurve** :  
   
 ```tsql  
@@ -179,7 +183,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
   
  Экземпляр **CompoundCurve** может хранить сегмент дуги (2 2, 1 3, 0 2) непосредственно, в то время как экземпляру **LineString** пришлось бы преобразовать кривую в несколько сегментов строки меньшего размера.  
   
-### Сравнение типов CircularString и CompoundCurve  
+### <a name="circularstring-and-compoundcurve-comparison"></a>Сравнение типов CircularString и CompoundCurve  
  В следующем примере кода показано, как можно сохранить срезы круговой диаграммы в экземпляре **CircularString** :  
   
 ```tsql  
@@ -202,18 +206,19 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246
 SELECT @g.ToString(), @g.STLength();  
 ```  
   
-### Сравнение типов Polygon и CurvePolygon  
+### <a name="polygon-and-curvepolygon-comparison"></a>Сравнение типов Polygon и CurvePolygon  
  Экземпляры**CurvePolygon** могут использовать экземпляры **CircularString** и **CompoundCurve** instances when defining their exterior и interior rings.  Экземпляры**Polygon** не могут использовать типы сегментов дуги: **CircularString** и **CompoundCurve**.  
  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
 
 - [Пространственные данные (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Справочник по методам типа данных geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Справочник по методам типа данных geography](../Topic/geography%20Data%20Type%20Method%20Reference.md)   
+- [Справочник по методам типа данных geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves (тип данных geometry)](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves (тип данных geography)](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText (тип данных geometry)](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
 - [STGeomFromText (тип данных geography)](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   
   
+

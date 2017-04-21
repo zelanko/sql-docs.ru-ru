@@ -1,33 +1,37 @@
 ---
-title: "осуществлять поиск в документах в интерактивном режиме | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "интерактивный поиск [среда SQL Server Management Studio]"
-  - "поиск [среда SQL Server Management Studio], интерактивный"
-  - "редактор запросов [среда SQL Server Management Studio], интерактивный поиск"
+title: "Поиск в документах в интерактивном режиме | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interactive searches [SQL Server Management Studio]
+- searches [SQL Server Management Studio], interactive
+- Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a87a33ea63725ae2db48d61d557ff4bf91704490
+ms.lasthandoff: 04/11/2017
+
 ---
-# осуществлять поиск в документах в интерактивном режиме
+# <a name="search-documents-interactively"></a>осуществлять поиск в документах в интерактивном режиме
   С помощью диалогового окна **Найти и заменить** можно производить поиск в одном или нескольких открытых файлах или окнах и последовательно перемещаться по найденным совпадениям. Этот метод позволяет просматривать каждое отдельное найденное совпадение в контексте окружающего текста. Кроме того, с помощью диалогового окна **Найти и заменить** можно выполнять операции группового поиска и просматривать найденные совпадения в виде отчета.  
   
-### Поиск во всех открытых документах  
+### <a name="to-search-all-open-documents"></a>Поиск во всех открытых документах  
   
 1.  Откройте элементы, в которых надо произвести поиск.  
   
-2.  В меню **Правка** наведите указатель на пункт **Найти и заменить**, а затем выберите **Быстрый поиск**.  
+2.  В меню **Правка** наведите указатель на пункт **Найти и заменить** , а затем выберите **Быстрый поиск**.  
   
 3.  В текстовом поле **Найти и заменить** введите текст, который необходимо найти.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 22
   
  Когда поиск проходит через начало или конец документа, в строке состояния появляется соответствующее сообщение. Когда поиск достигает своей начальной точки, также появится сообщение.  
   
-#### Замена во всех активных файлах в интерактивном режиме  
+#### <a name="to-replace-in-all-active-files-interactively"></a>Замена во всех активных файлах в интерактивном режиме  
   
 1.  В меню **Правка** наведите указатель на пункт **Найти и заменить**, а затем выберите **Быстрая замена**.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 22
   
  Команда **Заменить все** заменяет все найденные совпадения, включая и те, которые были пропущены нажатием кнопки **Найти далее** . Чтобы отменить команду **Заменить все**, перед тем как закрыть какой-либо файл в меню **Правка** выберите пункт **Отменить** .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Выполнение добавочного поиска в активном документе](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
  [Поиск и замена](../../relational-databases/scripting/search-and-replace.md)   
  [Поиск документов с помощью списков результатов](../../relational-databases/scripting/search-documents-using-results-lists.md)   

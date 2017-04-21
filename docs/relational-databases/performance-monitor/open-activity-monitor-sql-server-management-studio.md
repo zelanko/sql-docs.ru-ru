@@ -1,27 +1,31 @@
 ---
-title: "Открытие монитора активности (среда SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "монитор активности [SQL Server], задание интервала обновления"
-  - "интервал обновления монитора активности"
-  - "монитор активности [SQL Server], открытие"
-  - "opening Activity Monitor"
+title: "Открытие монитора активности (среда SQL Server Management Studio) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Activity Monitor [SQL Server], setting the refresh interval
+- refresh interval for Activity Monitor
+- Activity Monitor [SQL Server], opening
+- opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 45e63d53b65730136bbc0a4f20ad5d4215020c58
+ms.lasthandoff: 04/11/2017
+
 ---
-# Открытие монитора активности (среда SQL Server Management Studio)
+# <a name="open-activity-monitor-sql-server-management-studio"></a>Открытие монитора активности (среда SQL Server Management Studio)
 
    
  Монитор активности выполняет запросы в отслеживаемом экземпляре, чтобы получать данные для панелей отображения монитора активности. Если установлен интервал обновления менее 10 секунд, то время, затрачиваемое на выполнение этих запросов, может повлиять на производительность сервера.  
@@ -33,25 +37,25 @@ caps.handback.revision: 38
  Для вызова инструкции KILL для процесса пользователь должен быть членом предопределенных ролей сервера sysadmin или processadmin.  
   
   
-## Открытие монитора активности  
+## <a name="open-activity-monitor"></a>Открытие монитора активности  
 
-### Сочетание клавиш  
- - Нажмите клавиши **CTRL+ALT+A**, чтобы открыть монитор активности в любое время.
+### <a name="keyboard-shortcut"></a>Сочетание клавиш  
+ - Нажмите клавиши **CTRL+ALT+A** , чтобы открыть монитор активности в любое время.
 
  >**Подсказка.** Наведите указатель мыши на значок в SSMS, чтобы узнать, что это за функция и какое сочетание клавиш активирует ее.
 
-### Панель инструментов
+### <a name="toolbar"></a>Панель инструментов
 
-На стандартной панели инструментов щелкните значок **Монитор активности**. Он находится в середине, справа от кнопок отмены и повтора.
+На стандартной панели инструментов щелкните значок **Монитор активности** . Он находится в середине, справа от кнопок отмены и повтора.
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
-Заполните данные в диалоговом окне **Соединение с сервером**, если вы еще не подключены к экземпляру SQL Server, которые требуется отслеживать.
+Заполните данные в диалоговом окне **Соединение с сервером** , если вы еще не подключены к экземпляру SQL Server, которые требуется отслеживать.
   
-## Открытие монитора активности и обозревателя объектов при запуске
+## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>Открытие монитора активности и обозревателя объектов при запуске
   
 1.  В меню **Сервис** щелкните пункт **Параметры**.  
   
-2.  В диалоговом окне **Параметры** разверните узел **Среда** и выберите **Запуск**.  
+2.  В диалоговом окне **Параметры** разверните узел **Среда**и выберите **Запуск**.  
   
 3.  В раскрывающемся списке **При запуске** выберите **Открыть обозреватель объектов и монитор активности**.  
 
@@ -60,10 +64,11 @@ caps.handback.revision: 38
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   
-## Задание интервала обновления монитора активности  
+## <a name="set-the-activity-monitor-refresh-interval"></a>Задание интервала обновления монитора активности  
   
 1.   Откройте монитор активности.  
   
-2.   Щелкните правой кнопкой мыши пункт **Обзор**, выберите пункт **Интервал обновления**, а затем — интервал, в котором монитор активности будет получать новые данные экземпляра.  
+2.   Щелкните правой кнопкой мыши пункт **Обзор**, выберите пункт **Интервал обновления**, а затем — интервал, в котором монитор активности будет получать новые данные экземпляра.  
   
   
+

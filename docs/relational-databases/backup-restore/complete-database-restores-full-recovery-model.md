@@ -1,29 +1,33 @@
 ---
-title: "Выполнение полного восстановления базы данных (модель полного восстановления) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "полное восстановление базы данных"
-  - "восстановление баз данных [SQL Server], полная база данных"
-  - "восстановление баз данных [SQL Server], полная база данных"
-  - "восстановление [SQL Server], база данных"
-  - "модель полного восстановления [SQL Server], выполнение восстановления"
-  - "резервные копии журналов [SQL Server]"
+title: "Полное восстановление базы данных (модель полного восстановления) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# Выполнение полного восстановления базы данных (модель полного восстановления)
+# <a name="complete-database-restores-full-recovery-model"></a>Выполнение полного восстановления базы данных (модель полного восстановления)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Задача полного восстановления — восстановить базу данных целиком. В период восстановления база данных находится вне сети. Прежде чем какая-либо часть базы данных перейдет в режим «в сети», все данные восстанавливаются до точки согласования, в которой все части базы данных находятся в одном и том же моменте времени и в которой нет незафиксированных транзакций.  
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [Связанные задачи](#RelatedTasks)  
   
 > [!NOTE]  
->  Сведения о поддержке резервных копий более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в подразделе "Поддержка совместимости" раздела [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md).  
+>  Сведения о поддержке резервных копий более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделе "Поддержка совместимости" раздела [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ##  <a name="PointOfFailure"></a> Восстановление базы данных до точки сбоя  
  Обычно восстановление базы данных до точки сбоя включает следующие основные шаги:  
@@ -74,7 +78,7 @@ caps.handback.revision: 77
 >  Если база данных восстанавливается на другой экземпляр сервера, см. раздел [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Базовый синтаксис инструкции Transact-SQL RESTORE  
- Базовый синтаксис инструкции [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] для последовательности восстановления в предыдущей иллюстрации выглядит следующим образом:  
+ Базовый синтаксис инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] для последовательности восстановления в предыдущей иллюстрации выглядит следующим образом:  
   
 1.  RESTORE DATABASE *база_данных* FROM *full database backup* WITH NORECOVERY;  
   
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> Восстановление базы данных на момент времени в пределах резервной копии журнала  
  При работе в режиме полного восстановления можно провести полное восстановление базы данных до состояния на момент времени, до помеченной транзакции или до номера LSN в резервной копии журнала. Однако в модели восстановления с неполным протоколированием, если в резервной копии журнала содержатся изменения с неполным протоколированием, восстановление до момента времени невозможно.  
   
-### Образцы сценариев восстановления на определенный момент времени  
+### <a name="sample-point-in-time-restore-scenarios"></a>Образцы сценариев восстановления на определенный момент времени  
  В следующем примере предполагается использование критически важной системы баз данных, в которой полная резервная копия баз данных создается ежедневно в полночь, разностная резервная копия — каждый час, с понедельника до субботы. Резервные копии журнала создаются каждые 10 минут в течение дня. Чтобы восстановить базу данных до ее состояния на 05:19 среды, необходимо выполнить следующие действия.  
   
 1.  Восстановить полную резервную копию базы данных, полученную в полночь вторника.  
@@ -176,8 +180,8 @@ GO
   
 -   [Восстановление до номера LSN (SQL Server)](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## См. также:  
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>См. также:  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

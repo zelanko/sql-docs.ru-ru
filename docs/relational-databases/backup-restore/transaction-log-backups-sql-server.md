@@ -1,28 +1,32 @@
 ---
-title: "Резервные копии журналов транзакций (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "резервное копирование [SQL Server], журналы транзакций"
-  - "резервные копии журналов транзакций [SQL Server], создание"
-  - "резервные копии журналов [SQL Server]"
-  - "резервные копии журналов транзакций [SQL Server], последовательности"
+title: "Резервные копии журнала транзакций (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up [SQL Server], transaction logs
+- transaction log backups [SQL Server], creating
+- log backups [SQL Server[
+- transaction log backups [SQL Server], sequencing
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7bad833291d3ad6b61cb4fac99334284404b97f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Резервные копии журналов транзакций (SQL Server)
-  Этот раздел относится только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или модель восстановления с неполным протоколированием. В этом разделе рассматривается создание резервной копии журнала транзакций базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="transaction-log-backups-sql-server"></a>Резервные копии журналов транзакций (SQL Server)
+  Этот раздел относится только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или модель восстановления с неполным протоколированием. В этом разделе рассматривается создание резервной копии журнала транзакций базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Перед созданием любой резервной копии журнала необходимо создать как минимум одну полную резервную копию. После этого резервное копирование журнала транзакций может выполняться в любое время, кроме времени другого резервного копирования журнала. 
  
@@ -47,9 +51,9 @@ caps.handback.revision: 52
   
 -   Если журнал транзакций поврежден, будут потеряны все результаты работы, начиная с момента самого последнего действительного резервного копирования. Поэтому настоятельно рекомендуется помещать файлы журнала в отказоустойчивое хранилище.  
   
--   Если база данных повреждена или требуется восстановить базу данных, рекомендуется создать [резервную копию заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md), чтобы можно было восстановить базу данных до текущего момента.  
+-   Если база данных повреждена или требуется восстановить базу данных, рекомендуется создать [резервную копию заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) , чтобы можно было восстановить базу данных до текущего момента.  
   
--   По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если создание резервной копии журналов производится очень часто, это приводит к быстрому накоплению сообщений об успешном завершении. Это приводит к увеличению журналов ошибок, затрудняя поиск других сообщений. Если работа существующих скриптов не зависит от этих записей, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md).  
+-   По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если создание резервной копии журналов производится очень часто, это приводит к быстрому накоплению сообщений об успешном завершении. Это приводит к увеличению журналов ошибок, затрудняя поиск других сообщений. Если работа существующих скриптов не зависит от этих записей, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Создание резервной копии журнала транзакций**  
@@ -61,10 +65,11 @@ caps.handback.revision: 52
  Описание планирования заданий резервного копирования см. в разделе [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   
+

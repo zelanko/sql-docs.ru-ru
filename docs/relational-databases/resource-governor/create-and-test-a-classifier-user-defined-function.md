@@ -1,27 +1,31 @@
 ---
-title: "Создать и проверить определяемую пользователем функцию-классификатор | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулятор ресурсов, создание функции-классификатора"
-  - "функция-классификатор [SQL Server], тест"
-  - "функция-классификатор [SQL Server], создание"
-  - "регулятор ресурсов, тест функции-классификатора"
+title: "Создание и тестирование пользовательской функции-классификатора | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создать и проверить определяемую пользователем функцию-классификатор
+# <a name="create-and-test-a-classifier-user-defined-function"></a>Создать и проверить определяемую пользователем функцию-классификатор
   В этом разделе описывается создание и проверка определяемой пользователем функции-классификатора (UDF). Шаги включают выполнение инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в редакторе запросов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Пример, показанный в следующей процедуре, иллюстрирует возможности создания довольно сложной определяемой пользователем функции-классификатора.  
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  Функция-классификатор увеличивает время входа в систему. Излишне сложная функция может вызвать истечение времени ожидания при входе или снизить скорость быстрых соединений.  
   
-### Создание определяемой пользователем функции-классификатора  
+### <a name="to-create-the-classifier-user-defined-function"></a>Создание определяемой пользователем функции-классификатора  
   
 1.  Создайте и настройте новые пулы ресурсов и группы рабочей нагрузки. Назначьте каждую группу рабочей нагрузки соответствующему пулу ресурсов.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Проверка пулов ресурсов, групп рабочей нагрузки и определяемой пользователем функции-классификатора  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>Проверка пулов ресурсов, групп рабочей нагрузки и определяемой пользователем функции-классификатора  
   
 1.  Получите пул ресурсов и настройку группы рабочей нагрузки при помощи следующего запроса.  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### Рекомендации по использованию таблиц подстановки в функции-классификаторе  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Рекомендации по использованию таблиц подстановки в функции-классификаторе  
   
 1.  Не используйте таблицу подстановки без крайней необходимости. Если таблицу подстановки необходимо использовать, ее можно включить в саму функцию, однако при этом следует учитывать сложность и динамические изменения функции-классификатора.  
   
@@ -261,8 +265,8 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  Рекомендуется использовать именно эти методы. Если что-то не позволяет использовать эти методы, рекомендуем связаться со службой технической поддержки Майкрософт для эффективного устранения возможных проблем.  
   
-## См. также:  
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>См. также:  
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

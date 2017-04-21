@@ -1,29 +1,33 @@
 ---
-title: "Включение индексов и ограничений | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "индексы [SQL Server], включение"
-  - "некластеризованные индексы [SQL Server], включение отключенного индекса"
-  - "активация индекса [SQL Server]"
-  - "отключенные индексы [SQL Server], как включить"
-  - "ограничения [SQL Server], включение"
-  - "кластеризованные индексы, включение отключенных индексов"
+title: "Включение индексов и ограничений | Документация Майкрософт"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], enabling
+- nonclustered indexes [SQL Server], enabling a disabled index
+- index enabling [SQL Server]
+- disabled indexes [SQL Server], how to enable
+- constraints [SQL Server], enabling
+- clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Включение индексов и ограничений
+# <a name="enable-indexes-and-constraints"></a>Включение индексов и ограничений
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается включение отключенного индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. После отключения индекс остается в отключенном состоянии до тех пор, пока он не будет перестроен или удален.  
@@ -72,11 +76,11 @@ caps.handback.revision: 27
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. При использовании инструкции DBCC DBREINDEX пользователь должен быть владельцем таблицы, членом предопределенной роли сервера **sysadmin** либо предопределенной роли базы данных **db_ddladmin** или **db_owner**.  
+ Необходимо разрешение ALTER для таблицы или представления. При использовании инструкции DBCC DBREINDEX пользователь должен быть владельцем таблицы, членом предопределенной роли сервера **sysadmin** либо предопределенной роли базы данных **db_ddladmin** или **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Включение отключенного индекса  
+#### <a name="to-enable-a-disabled-index"></a>Включение отключенного индекса  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо включить индекс.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 27
   
 6.  В диалоговом окне **Перестроение индексов** убедитесь, что нужный индекс приведен в сетке **Индексы для перестройки** и нажмите кнопку **ОК**.  
   
-#### Включение всех индексов таблицы  
+#### <a name="to-enable-all-indexes-on-a-table"></a>Включение всех индексов таблицы  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо включить индексы.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Использование инструкции ALTER INDEX для включения отключенного индекса  
+#### <a name="to-enable-a-disabled-index-using-alter-index"></a>Использование инструкции ALTER INDEX для включения отключенного индекса  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Использование инструкции CREATE INDEX для включения отключенного индекса  
+#### <a name="to-enable-a-disabled-index-using-create-index"></a>Использование инструкции CREATE INDEX для включения отключенного индекса  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -146,7 +150,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Использование инструкции DBCC DBREINDEX для включения отключенного индекса  
+#### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>Использование инструкции DBCC DBREINDEX для включения отключенного индекса  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Использование инструкции ALTER INDEX для включения всех индексов в таблице  
+#### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>Использование инструкции ALTER INDEX для включения всех индексов в таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -181,7 +185,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### Использование инструкции DBCC DBREINDEX для включения всех индексов в таблице  
+#### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>Использование инструкции DBCC DBREINDEX для включения всех индексов в таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -201,3 +205,4 @@ caps.handback.revision: 27
  Дополнительные сведения см. в разделах [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md), [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) и [DBCC DBREINDEX (Transact-SQL)](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md).  
   
   
+

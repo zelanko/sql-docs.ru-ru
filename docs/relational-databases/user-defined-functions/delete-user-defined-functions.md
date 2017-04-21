@@ -1,22 +1,26 @@
 ---
-title: "Удаление определенных пользователем функций | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Удаление определяемых пользователем функций | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление определенных пользователем функций
+# <a name="delete-user-defined-functions"></a>Удаление определенных пользователем функций
   Определяемые пользователем функции в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно удалить с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
@@ -48,7 +52,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Удаление определяемой пользователем функции  
+#### <a name="to-delete-a-user-defined-function"></a>Удаление определяемой пользователем функции  
   
 1.  Щелкните значок плюса рядом с базой данных, содержащей функцию, которую надо изменить.  
   
@@ -67,11 +71,11 @@ caps.handback.revision: 7
 5.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
   
     > [!IMPORTANT]  
-    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта**, чтобы открыть диалоговое окно *имя_функции***Зависимости**. При этом будут отображены все объекты, зависящие от функции, и все объекты, от которых зависит функция.  
+    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта** , чтобы открыть диалоговое окно *имя_функции***Зависимости** . При этом будут отображены все объекты, зависящие от функции, и все объекты, от которых зависит функция.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Удаление определяемой пользователем функции  
+#### <a name="to-delete-a-user-defined-function"></a>Удаление определяемой пользователем функции  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

@@ -1,24 +1,28 @@
 ---
-title: "Указание вычисляемых столбцов в таблице | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "вычисляемые столбцы, определение"
+title: "Указание вычисляемых столбцов в таблице | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Указание вычисляемых столбцов в таблице
+# <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Вычисляемый столбец представляет собой виртуальный столбец, физически не хранящийся в таблице, если для него не установлен признак PERSISTED. В выражении вычисляемого столбца для вычисления значения могут использоваться данные из других столбцов. Можно задать выражение для вычисляемого столбца в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -69,9 +73,9 @@ caps.handback.revision: 19
   
 6.  В меню **Файл** выберите пункт **Сохранить***table name*.  
   
-#### Добавление определения вычисляемого столбца к существующему столбцу  
+#### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Добавление определения вычисляемого столбца к существующему столбцу  
   
-1.  В **обозревателе объектов** щелкните правой кнопкой мыши таблицу со столбцом, определение которого необходимо изменить, и разверните папку **Столбцы**.  
+1.  В **обозревателе объектов**щелкните правой кнопкой мыши таблицу со столбцом, определение которого необходимо изменить, и разверните папку **Столбцы** .  
   
 2.  Щелкните правой кнопкой мыши столбец, для которого необходимо задать формулу вычисляемого столбца, и выберите пункт **Удалить**. Нажмите кнопку **ОК**.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Добавление вычисляемого столбца при создании таблицы  
+#### <a name="to-add-a-computed-column-when-creating-a-table"></a>Добавление вычисляемого столбца при создании таблицы  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Добавление нового вычисляемого столбца в существующую таблицу  
+#### <a name="to-add-a-new-computed-column-to-an-existing-table"></a>Добавление нового вычисляемого столбца в существующую таблицу  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 19
   
     ```  
   
-#### Замена существующего столбца на вычисляемый столбец  
+#### <a name="to-change-an-existing-column-to-a-computed-column"></a>Замена существующего столбца на вычисляемый столбец  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

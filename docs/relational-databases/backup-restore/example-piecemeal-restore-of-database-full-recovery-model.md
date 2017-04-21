@@ -1,33 +1,37 @@
 ---
-title: "Пример. Поэтапное восстановление базы данных (модель полного восстановления) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "модель полного восстановления [SQL Server], пример RESTORE"
-  - "поэтапное восстановление [SQL Server], модель полного восстановления"
-  - "последовательности восстановления [SQL Server], поэтапного"
+title: "Пример. Поэтапное восстановление базы данных (модель полного восстановления) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a939ad4e9e5313961f681c06f896a9f53a906e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пример. Поэтапное восстановление базы данных (модель полного восстановления)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Пример. Поэтапное восстановление базы данных (модель полного восстановления)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   При поэтапной последовательности восстановления база данных восстанавливается в течение нескольких этапов на уровне файловой группы, начиная с первичной и всех вторичных файловых групп, доступных для чтения и записи.  
   
- В данном примере база данных `adb` восстанавливается после сбоя на новом компьютере. Используется полная модель восстановления базы данных, поэтому перед началом восстановления необходимо сделать резервную копию заключительного фрагмента журнала базы данных. До сбоя все файловые группы работали в режиме «в сети». Файловая группа `B` доступна только для чтения. Необходимо восстановить все вторичные файловые группы, но они восстанавливаются в порядке важности: `A` (наивысшая), `C` и `B`. В этом примере существует четыре резервные копии журнала, включая резервную копию заключительного фрагмента журнала.  
+ В данном примере база данных `adb` восстанавливается после сбоя на новом компьютере. Используется полная модель восстановления базы данных, поэтому перед началом восстановления необходимо сделать резервную копию заключительного фрагмента журнала базы данных. До сбоя все файловые группы работали в режиме «в сети». Файловая группа `B` доступна только для чтения. Необходимо восстановить все вторичные файловые группы, но они восстанавливаются в порядке важности: `A` (наивысшая), `C`и `B`. В этом примере существует четыре резервные копии журнала, включая резервную копию заключительного фрагмента журнала.  
   
-## Резервная копия заключительного фрагмента журнала  
+## <a name="tail-log-backup"></a>Резервная копия заключительного фрагмента журнала  
  Перед тем как восстановить базу данных из копии, администратор этой базы данных должен создать резервную копию заключительного фрагмента журнала. Поскольку база данных повреждена, для создания резервной копии заключительного фрагмента журнала требуется применение параметра NO_TRUNCATE:  
   
 ```  
@@ -36,7 +40,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
  Резервная копия заключительного фрагмента журнала — это последняя резервная копия, используемая в следующих последовательностях восстановления.  
   
-## Последовательности восстановления  
+## <a name="restore-sequences"></a>Последовательности восстановления  
   
 > [!NOTE]  
 >  Синтаксис последовательности восстановления в сети тот же самый, что и в случае последовательности восстановления вне сети.  
@@ -82,7 +86,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
      Теперь все файловые группы находятся в режиме «в сети».  
   
-## Дополнительные примеры  
+## <a name="additional-examples"></a>Дополнительные примеры  
   
 -   [Пример. Поэтапное восстановление базы данных (простая модель восстановления)](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [Пример. Оперативное восстановление файла, доступного только для чтения (модель полного восстановления)](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Восстановление в сети (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

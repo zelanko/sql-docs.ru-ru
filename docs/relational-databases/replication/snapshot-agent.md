@@ -1,32 +1,36 @@
 ---
-title: "агент моментальных снимков | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.snapshotagent.f1"
-helpviewer_keywords: 
-  - "диалоговое окно «Агент моментальных снимков»"
+title: "Агент моментальных снимков | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.snapshotagent.f1
+helpviewer_keywords:
+- Snapshot Agent dialog box
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d1972719748124aedd5eb15cb7c0822745dc76
+ms.lasthandoff: 04/11/2017
+
 ---
-# агент моментальных снимков
+# <a name="snapshot-agent"></a>агент моментальных снимков
   В диалоговом окне **Агент моментальных снимков** отображаются подробные сведения об агенте моментальных снимков, в том числе состояние, журнал, информационные сообщения и сообщения об ошибках.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  Выберите в меню **Вид** , какие сеансы агента моментальных снимков нужно просматривать, затем выберите определенный сеанс в сетке с именем **Сеансы агента моментальных снимков**. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
   
- **Просмотр**  
+ **Вид**  
  Выберите сеансы агента моментальных снимков, которые нужно просмотреть.  
   
  **Состояние**  
@@ -56,15 +60,15 @@ caps.handback.revision: 20
  Все информационные сообщения и сообщения об ошибках, зарегистрированные агентом моментальных снимков во время выбранного сеанса.  
   
  **Время действия**  
- Время, когда действие, описанное в **Указание** было выполнено.  
+ Время, когда было выполнено действие, описанное в столбце **Сообщение действия** .  
   
  **Описание ошибки или сообщение выбранного сеанса**  
- Отображается только в том случае, если выбранный сеанс отображает значение **Ошибка** в **состояние** столбца. Это текстовое поле отображает подробные данные об ошибке и о выполняемой во время возникновения ошибки команде. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
+ Выводится, только если выбранный сеанс отображает значение **Ошибка** в столбце **Состояние** . Это текстовое поле отображает подробные данные об ошибке и о выполняемой во время возникновения ошибки команде. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией & #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

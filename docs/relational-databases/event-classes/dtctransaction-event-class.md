@@ -1,27 +1,31 @@
 ---
-title: "Класс событий DTCTransaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DTCTransaction, класс событий"
+title: "Класс событий DTCTransaction | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7832dce3ed058f5ddd599fd19abd9703b20ff06
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий DTCTransaction
-  Используйте класс событий **DTCTransaction** для контроля состояния транзакций компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], координируемых с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Сюда входят транзакции, задействующие две или более баз данных на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], или распределенные транзакции, задействующие несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+# <a name="dtctransaction-event-class"></a>DTCTransaction, класс событий
+  Используйте класс событий **DTCTransaction** для контроля состояния транзакций компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , координируемых с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Сюда входят транзакции, задействующие две или более баз данных на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], или распределенные транзакции, задействующие несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## Столбцы данных класса событий DTCTransaction  
+## <a name="dtctransaction-event-class-data-columns"></a>Столбцы данных класса событий DTCTransaction  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -32,13 +36,13 @@ caps.handback.revision: 37
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |**EventClass**|**int**|Тип события = 19.|27|Нет|  
 |**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
-|**EventSubClass**|**int**|Тип подкласса события. <br /><br /> 0=Получить адрес<br /><br /> 1=Распространить транзакцию<br /><br /> 3=Закрыть соединение<br /><br /> 6=Создание новой транзакции DTC<br /><br /> 7=Прикрепление транзакции с координатором DTC<br /><br /> 9=Внутренняя фиксация<br /><br /> 10=Внутреннее прекращение<br /><br /> 14=Подготовка транзакции<br /><br /> 15=Транзакция подготовлена<br /><br /> 16=Транзакция прекращается<br /><br /> 17=Транзакция фиксируется<br /><br /> 22=Сбой TM в подготовленном состоянии<br /><br /> 23=Неизвестно|21|Да|  
+|**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 0=Получить адрес<br /><br /> 1=Распространить транзакцию<br /><br /> 3=Закрыть соединение<br /><br /> 6=Создание новой транзакции DTC<br /><br /> 7=Прикрепление транзакции с координатором DTC<br /><br /> 9=Внутренняя фиксация<br /><br /> 10=Внутреннее прекращение<br /><br /> 14=Подготовка транзакции<br /><br /> 15=Транзакция подготовлена<br /><br /> 16=Транзакция прекращается<br /><br /> 17=Транзакция фиксируется<br /><br /> 22=Сбой TM в подготовленном состоянии<br /><br /> 23=Неизвестно|21|Да|  
 |**GroupID**|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IntegerData**|**int**|Уровень изоляции транзакции.|25|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо имя входа безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
@@ -50,7 +54,7 @@ caps.handback.revision: 37
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |**XactSequence**|**bigint**|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

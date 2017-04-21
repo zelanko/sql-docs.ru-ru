@@ -1,31 +1,35 @@
 ---
-title: "Предпроцессор схемы для слияния включаемых схем | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка препроцессора"
-  - "xsd:include"
-  - "коллекции схем XML [SQL Server], средство препроцессора"
-  - "включить элемент"
-  - "схемы XML [SQL Server], предварительная обработка"
-  - "коллекции схем [SQL Server], средство препроцессора"
-  - "препроцессор [XML-схемы]"
-  - "XML-схемы [SQL Server]"
+title: "Предварительная обработка схемы для слияния включаемых схем | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Предпроцессор схемы для слияния включаемых схем
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>Предпроцессор схемы для слияния включаемых схем
   Элемент W3C XSD **include** обеспечивает поддержку модульного принципа, при котором схема XML может быть разделена на несколько физических файлов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, будут отклонены сервером.  
   
  Чтобы решить эту проблему, XML-схемы, включающие директиву \<xsd:include>, могут быть предварительно обработаны для копирования и слияния содержимого всех включенных схем в единую схему для передачи на сервер. Для такой предварительной обработки можно использовать следующий код С#. Примечания в начале этого кода содержат сведения по его использованию.  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## Проверка препроцессора  
+## <a name="testing-the-preprocessor-tool"></a>Проверка препроцессора  
  Для проверки препроцессора можно использовать следующие XSD-схемы:  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

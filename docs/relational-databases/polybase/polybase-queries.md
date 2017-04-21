@@ -1,39 +1,43 @@
 ---
-title: "PolyBase Queries | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "PolyBase"
-helpviewer_keywords: 
-  - "PolyBase, импорт и экспорт данных"
-  - "Hadoop, импорт данных с помощью PolyBase"
-  - "Hadoop, экспорт данных с помощью PolyBase"
-  - "хранилище BLOB-объектов Azure, импорт данных с помощью PolyBase"
-  - "хранилище BLOB-объектов Azure, экспорт данных с помощью PolyBase"
+title: "Запросы PolyBase | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- PolyBase
+helpviewer_keywords:
+- PolyBase, import and export
+- Hadoop, import with PolyBase
+- Hadoop, export with PolyBase
+- Azure blob storage, import with PolyBase
+- Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase Queries
+# <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Здесь приведены примеры запросов, в которых применяется компонент [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md) службы SQL Server 2016. Прежде чем использовать эти запросы, следует ознакомиться с инструкциями T-SQL, необходимыми для установки PolyBase. (Дополнительные сведения см. в статье [Объекты T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).)  
   
-## Запросы  
+## <a name="queries"></a>Запросы  
  Отправить запрос к внешним таблицам можно с помощью инструкций Transact-SQL или средств бизнес-аналитики.  
   
-## Выбор данных из внешней таблицы (SELECT)  
+## <a name="select-from-external-table"></a>Выбор данных из внешней таблицы (SELECT)  
  Простой запрос, возвращающий данные из определенной внешней таблицы.  
   
 ```tsql  
@@ -47,7 +51,7 @@ SELECT * FROM [dbo].[SensorData]
 WHERE Speed > 65;   
 ```  
   
-## Соединение внешних и локальных таблиц (JOIN)  
+## <a name="join-external-tables-with-local-tables"></a>Соединение внешних и локальных таблиц (JOIN)  
   
 ```  
 SELECT InsuranceCustomers.FirstName,   
@@ -60,13 +64,13 @@ ORDER BY SensorData.Speed DESC
   
 ```  
   
-## Включение вычислений для Hadoop  
+## <a name="pushdown-computation-to-hadoop"></a>Включение вычислений для Hadoop  
  Варианты включения показаны ниже.  
   
-### Включение выбора подмножества строк  
+### <a name="pushdown-for-selecting-a-subset-of-rows"></a>Включение выбора подмножества строк  
  Включение предиката позволяет повысить производительность для запроса, отбирающего подмножество строк из внешней таблицы.  
   
- Здесь SQL Server 2016 инициирует задание map-reduce для получения строк, соответствующих предикату customer.account_balance < 200000 в Hadoop. Поскольку запрос может быть выполнен и без сканирования всех строк в таблице, в SQL Server копируются только строки, удовлетворяющие условиям предиката. Это существенно экономит время и место для временного хранения данных, если число клиентов с балансом \< 200 000 меньше числа клиентов с балансом >= 200 000.  
+ Здесь SQL Server 2016 инициирует задание map-reduce для получения строк, соответствующих предикату customer.account_balance < 200000 в Hadoop. Поскольку запрос может быть выполнен и без сканирования всех строк в таблице, в SQL Server копируются только строки, удовлетворяющие условиям предиката. Это существенно экономит время и место для временного хранения данных, если число клиентов с балансом < 200 000 меньше числа клиентов с балансом >= 200 000.  
   Copy imageCopy Code   
 SELECT * FROM customer WHERE customer.account_balance < 200000.  
   
@@ -74,20 +78,20 @@ SELECT * FROM customer WHERE customer.account_balance < 200000.
 SELECT * FROM SensorData WHERE Speed > 65;  
 ```  
   
-### Включение выбора подмножества столбцов  
+### <a name="pushdown-for-selecting-a-subset-of-columns"></a>Включение выбора подмножества столбцов  
  Включение предиката позволяет повысить производительность для запроса, отбирающего подмножество столбцов из внешней таблицы.  
   
- В этом запросе SQL Server запускает задание map-reduce, предназначенное для предварительной обработки текстового файла Hadoop, разделенного запятыми, при которой в параллельное хранилище данных SQL Server попадают данные только для двух столбцов — customer.name и customer.zip_code.  
+ В этом запросе SQL Server запускает задание map-reduce, предназначенное для предварительной обработки текстового файла Hadoop, разделенного запятыми, при которой в параллельное хранилище данных SQL Server попадают данные только для двух столбцов — customer.name и customer.zip_code.  
   
 ```  
 SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_balance < 200000  
   
 ```  
   
-### Включение основных выражений и операторов  
+### <a name="pushdown-for-basic-expressions-and-operators"></a>Включение основных выражений и операторов  
  SQL Server позволяет использовать для включения предикатов следующие основные выражения и операторы:  
   
--   Двоичные операторы сравнения (<>,, =,! =, <>, > =, < =) для чисел, дат и значений времени.  
+-   Операторы двоичного сравнения (\<, >, =,! =, <>, > =, < =) для чисел, дат и значений времени.  
   
 -   Арифметические операторы (+, -, *, /, %).  
   
@@ -106,7 +110,7 @@ SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zip
   
 ```  
   
-### Принудительное включение  
+### <a name="force-pushdown"></a>Принудительное включение  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -114,7 +118,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);   
 ```  
   
-### Отключить включение  
+### <a name="disable-pushdown"></a>Отключить включение  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -122,7 +126,7 @@ WHERE Speed > 65
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## импорт данных  
+## <a name="import-data"></a>импорт данных  
  Вы можете импортировать данные из Hadoop или службы хранилища Azure в SQL Server для постоянного хранения. Чтобы импортировать данные, на которые ссылается внешняя таблица, следует использовать инструкцию SELECT INTO. Оперативно создайте реляционную таблицу, а затем индекс хранилища столбца на основе таблицы, описанной на втором шаге.  
   
 ```sql  
@@ -143,8 +147,8 @@ ORDER BY YearlyIncome
 CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;  
 ```  
   
-## Экспорт данных  
-Вы можете экспортировать данные из SQL Server в службу хранилища Azure или Hadoop. В первую очередь включите функцию экспорта, задав для аргумента sp_configure параметра 'allow polybase export' значение 1. Затем создайте внешнюю таблицу, которая указывает на целевой каталог. Затем используйте инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. При выполнении инструкции INSERT INTO создается целевой каталог (если его не существует), а результаты выполнения инструкции SELECT экспортируются в указанное расположение в заданном формате. Внешние файлы получают имена вида *ИДзапроса_дата_время_ИД.формат*, где *ИД* — это нарастающий идентификатор, а *формат* — это формат экспортированных данных. Пример: QID776_20160130_182739_0.orc.  
+## <a name="export-data"></a>Экспорт данных  
+Вы можете экспортировать данные из SQL Server в службу хранилища Azure или Hadoop. В первую очередь включите функцию экспорта, задав для аргумента sp_configure параметра 'allow polybase export' значение 1. Затем создайте внешнюю таблицу, которая указывает на целевой каталог. Затем используйте инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. При выполнении инструкции INSERT INTO создается целевой каталог (если его не существует), а результаты выполнения инструкции SELECT экспортируются в указанное расположение в заданном формате. Внешние файлы получают имена вида *ИДзапроса_дата_время_ИД.формат*, где *ИД* — это нарастающий идентификатор, а *формат* — это формат экспортированных данных. Пример: QID776_20160130_182739_0.orc.  
   
 ```sql  
 -- PolyBase Scenario 3: Export data from SQL Server to Hadoop.  
@@ -170,7 +174,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-## Новые представления каталога  
+## <a name="new-catalog-views"></a>Новые представления каталога  
  В новых представлениях каталога, указанных ниже, отображаются внешние ресурсы.  
   
 ```sql  
@@ -185,7 +189,8 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'   
 ```  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  Дополнительные сведения об устранении неполадок см. в статье [Устранение неполадок с PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md).  
   
   
+

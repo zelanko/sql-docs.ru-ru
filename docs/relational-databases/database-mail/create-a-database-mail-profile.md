@@ -1,41 +1,45 @@
 ---
-title: "Создание профиля компонента Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Компонент Database Mail [SQL Server], общие профили"
-  - "Профили [SQL Server], компонент Database Mail"
-  - "открытые профили [компонент Database Mail]"
+title: "Создание профиля компонента Database Mail | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], public profiles
+- profiles [SQL Server], Database Mail
+- public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание профиля компонента Database Mail
+# <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
   Открытые и закрытые профили компонента Database Mail можно создать с помощью **мастера настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о профилях электронной почты см. в разделе [Профиль компонента Database Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
   
 -   **Перед началом работы** [необходимые компоненты](#Prerequisites), [безопасность](#Security)  
   
--   **Создание частного профиля Database Mail с помощью следующих средств: **[мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Создание частного профиля Database Mail с помощью следующих средств:**[мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Создание общего профиля Database Mail с помощью следующих средств: **[мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Создание общего профиля Database Mail с помощью следующих средств:**[мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a> необходимые компоненты  
  Создайте одну или несколько учетных записей компонента Database Mail для профиля. Дополнительные сведения о создании компонента Database Mail см. в разделе [Создание учетной записи компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
-###  <a name="Security"></a> Безопасность  
- Открытый профиль дает возможность всем пользователям получать доступ к базе данных **msdb**, отправив туда почтовое сообщение из этого профиля. Персональный профиль может использоваться как пользователем, так и ролью. Предоставление роли доступа к профилю создает более простую обслуживаемую архитектуру. Для отправки почты пользователь должен быть членом роли **DatabaseMailUserRole** в базе данных **msdb** , а также иметь доступ как минимум к одному профилю Database Mail.  
+###  <a name="Security"></a> безопасность  
+ Открытый профиль дает возможность всем пользователям получать доступ к базе данных **msdb** , отправив туда почтовое сообщение из этого профиля. Персональный профиль может использоваться как пользователем, так и ролью. Предоставление роли доступа к профилю создает более простую обслуживаемую архитектуру. Для отправки почты пользователь должен быть членом роли **DatabaseMailUserRole** в базе данных **msdb** , а также иметь доступ как минимум к одному профилю Database Mail.  
   
 ####  <a name="Permissions"></a> Разрешения  
  Пользователь, создающий учетные записи профилей и выполняющий хранимые процедуры, должен быть членом предопределенной роли сервера sysadmin.  
@@ -81,11 +85,11 @@ caps.handback.revision: 34
   
     -   На странице **Завершение работы мастера** просмотрите действия, которые необходимо выполнить, и нажмите кнопку **Готово** , чтобы завершить настройку профиля.  
   
-## Использование Transact-SQL  
+## <a name="using-transact-sql"></a>Использование Transact-SQL  
   
 ###  <a name="PrivateProfile"></a> Создание закрытого профиля компонента Database Mail  
   
--   Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы создать новый профиль, выполните системную хранимую процедуру [sysmail_add_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) следующим образом:  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 34
   
      *@sequence_number* = '*порядковый номер учетной записи в профиле.* '  
   
-     где *@profile_name* — имя профиля, *@account_name* — имя учетной записи, добавляемой к профилю, а *@sequence_number* определяет порядок использования учетных записей в профиле.  
+     где *@profile_name* — имя профиля, а *@account_name* — имя учетной записи, добавляемой к профилю, а *@sequence_number* определяет порядок использования учетных записей в профиле.  
   
 -   Всем ролям или пользователям баз данных, отправляющим письма с использованием этого профиля, следует предоставить доступ к профилю. Для этого выполните хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md), как показано ниже.  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 34
   
      *@is_default* = '*Статус профиля по умолчанию* '  
   
-     где *@profile_name* — имя профиля, *@principal_name* — имя пользователя или роли базы данных, а *@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
+     где *@profile_name* — имя профиля, а *@principal_name* — имя пользователя или роли базы данных, а *@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
   
  В следующем примере создается учетная запись компонента Database Mail, создается закрытый профиль компонента Database Mail, затем учетная запись добавляется к профилю и предоставляется доступ к профилю для роли базы данных **DBMailUsers** в базе данных **msdb** .  
   
@@ -153,7 +157,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ###  <a name="PublicProfile"></a> Создание открытого профиля компонента Database Mail  
   
--   Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы создать новый профиль, выполните системную хранимую процедуру [sysmail_add_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md) следующим образом:  
   
@@ -175,7 +179,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@sequence_number* = '*порядковый номер учетной записи в профиле.* '  
   
-     где *@profile_name* — имя профиля, *@account_name* — имя учетной записи, добавляемой к профилю, а *@sequence_number* определяет порядок использования учетных записей в профиле.  
+     где *@profile_name* — имя профиля, а *@account_name* — имя учетной записи, добавляемой к профилю, а *@sequence_number* определяет порядок использования учетных записей в профиле.  
   
 -   Чтобы предоставить открытый доступ, выполните хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md), как показано ниже.  
   
@@ -187,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Статус профиля по умолчанию* '  
   
-     где *@profile_name* — имя профиля, *@principal_name* указывает, что этот профиль является общим, а *@is_default* определяет, является ли он профилем по умолчанию для пользователя или роли базы данных.  
+     где *@profile_name* — имя профиля, а *@principal_name* указывает, что этот профиль является общим, а *@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
   
  В следующем примере создается учетная запись компонента Database Mail, создается закрытый профиль компонента Database Mail, затем учетная запись добавляется к профилю и предоставляется общий доступ к профилю.  
   
@@ -224,3 +228,4 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
+

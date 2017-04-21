@@ -1,30 +1,34 @@
 ---
-title: "Использование хранилища запросов с выполняющейся в памяти OLTP | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Хранилище запросов, в памяти"
+title: "Использование хранилища запросов с выполняющейся в памяти OLTP | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование хранилища запросов с выполняющейся в памяти OLTP
+# <a name="using-the-query-store-with-in-memory-oltp"></a>Использование хранилища запросов с выполняющейся в памяти OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Хранилище запросов позволяет отслеживать производительность скомпилированного машинного кода для рабочих нагрузок выполняющейся в памяти OLTP.  
 Статистика компиляции и выполнения собирается и отображается так же, как и для рабочих нагрузок на диске.   
-При переходе на выполняющуюся в памяти OLTP можно продолжать использовать представления хранилища запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а также специальные скрипты, разработанные вами для дисковых рабочих нагрузок до миграции. Это позволяет сохранить инвестиции в обучение технологии хранилища запросов, делая ее пригодной для устранения неполадок всех типов рабочих нагрузок.  
+При переходе на выполняющуюся в памяти OLTP можно продолжать использовать представления хранилища запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а также специальные скрипты, разработанные вами для дисковых рабочих нагрузок до миграции. Это позволяет сохранить инвестиции в обучение технологии хранилища запросов, делая ее пригодной для устранения неполадок всех типов рабочих нагрузок.  
 Общие сведения об использовании хранилища запросов см. в статье [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
  Использование хранилища запросов с выполняющейся в памяти OLTP не требует какой-либо дополнительной настройки компонентов. Если включить эту функцию в базе данных, она будет работать для всех типов рабочих нагрузок.   
@@ -32,7 +36,7 @@ caps.handback.revision: 10
   
 -   При включении хранилища запросов по умолчанию собираются запросы, планы и статистика времени компиляции. Тем не менее сбор статистики выполнения не активируется, если только не включить его явно с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   При установке для *@new_collection_value* значения 0 хранилище запросов прекращает сбор статистики выполнения для соответствующей процедуры или всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   При установке для *@new_collection_value* значения 0 хранилище запросов прекращает сбор статистики выполнения для соответствующей процедуры или всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Значение, настроенное с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md), не сохраняется. Не забудьте проверить и заново настроить сбор статистики после перезагрузки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 10
   
 -   Метрики временно предоставляемых буферов памяти в [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) не заполняются для запросов, скомпилированных в собственном коде. Их значения всегда равны 0. Столбцы временно предоставляемых буферов памяти: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory и stdev_query_max_used_memory.  
   
-## Включение и использование хранилища запросов с выполняющейся в памяти OLTP  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>Включение и использование хранилища запросов с выполняющейся в памяти OLTP  
  Следующий простой пример демонстрирует использование хранилища запросов с выполняющейся в памяти OLTP в сквозном пользовательском сценарии. В этом примере предполагается, что для базы данных (`MemoryOLTP`) включена выполняющаяся в памяти OLTP.  
     Дополнительные сведения о необходимых компонентах для таблиц, оптимизированных для памяти, см. в разделе [Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## См. также:  
- [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>См. также:  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Хранимые процедуры в хранилище запросов (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Представления каталога хранилища запросов (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

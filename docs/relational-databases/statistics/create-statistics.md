@@ -1,30 +1,34 @@
 ---
-title: "Создание статистики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.stat.properties.f1"
-  - "sql13.swb.statistics.filter.f1"
-  - "sql13.swb.stat.columns.f1"
-  - "sql13.swb.statistics.propertis.f1"
-helpviewer_keywords: 
-  - "создание статистики"
-  - "статистика [SQL Server], создание"
+title: "Создание статистики | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.stat.properties.f1
+- sql13.swb.statistics.filter.f1
+- sql13.swb.stat.columns.f1
+- sql13.swb.statistics.propertis.f1
+helpviewer_keywords:
+- creating statistics
+- statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание статистики
+# <a name="create-statistics"></a>Создание статистики
   Создать статистику по оптимизации запроса для одного или нескольких столбцов таблицы или индексированного представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях нужно создавать дополнительные статистические данные.  
   
  **В этом разделе**  
@@ -54,11 +58,11 @@ caps.handback.revision: 9
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Пользователь должен быть владельцем таблицы или индексированного представления либо членом одной из следующих ролей: предопределенная роль сервера **sysadmin**, предопределенная роль базы данных **db_owner** или предопределенная роль базы данных **db_ddladmin**.  
+ Пользователь должен быть владельцем таблицы или индексированного представления либо членом одной из следующих ролей: предопределенная роль сервера **sysadmin** , предопределенная роль базы данных **db_owner** или предопределенная роль базы данных **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание статистики  
+#### <a name="to-create-statistics"></a>Создание статистики  
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть базу данных, в которой нужно создать новую статистику.  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 9
      **Идентификатор**  
      Указывает на столбец идентификаторов, если этот параметр выбран.  
   
-     **Разрешить значения NULL**  
+     **Allow NULLs**  
      Указывает, допускает ли столбец значения NULL.  
   
 6.  В диалоговом окне **Выбор столбцов** установите флажки рядом со всеми столбцами, для которых нужно создать статистику, и нажмите кнопку **ОК**.  
@@ -142,7 +146,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание статистики  
+#### <a name="to-create-statistics"></a>Создание статистики  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

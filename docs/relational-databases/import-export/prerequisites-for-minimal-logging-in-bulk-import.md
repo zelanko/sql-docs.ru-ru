@@ -1,29 +1,33 @@
 ---
-title: "Предварительные условия для минимального протоколирования массового импорта данных | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "минимальное протоколирование [SQL Server]"
-  - "ведение журнала массового копирования [SQL Server]"
-  - "журналы [SQL Server], минимальное протоколирование"
-  - "операции с минимальным протоколированием [SQL Server]"
-  - "массовый импорт [SQL Server], минимальное протоколирование"
+title: "Предварительные условия для минимального протоколирования массового импорта данных | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- minimal logging [SQL Server]
+- logged bulk copy [SQL Server]
+- logs [SQL Server], minimal logging
+- minimally logged operations [SQL Server]
+- bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# Предварительные условия для минимального протоколирования массового импорта данных
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Предварительные условия для минимального протоколирования массового импорта данных
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В базе данных, использующей модель полного восстановления, все операции вставки строк, выполняющиеся при массовом импорте, полностью записываются в журнал транзакций. Если используется модель полного восстановления, импорт большого количества данных может привести к быстрому заполнению журнала транзакций. При использовании простой модели восстановления или модели восстановления с неполным протоколированием минимальное протоколирование операций массового импорта, напротив, снижает вероятность того, что операция массового импорта заполнит все пространство журнала. Минимальное протоколирование также более эффективно, чем полное.  
@@ -31,7 +35,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  Модель восстановления с неполным протоколированием предназначена для временной замены модели полного восстановления на период проведения массовых операций.  
   
-## Требования к таблицам для минимального протоколирования операций массового импорта  
+## <a name="table-requirements-for-minimally-logging-bulk-import-operations"></a>Требования к таблицам для минимального протоколирования операций массового импорта  
  Минимальное протоколирование требует, чтобы целевая таблица удовлетворяла следующим условиям.  
   
 -   В данный момент таблица не реплицируется.  
@@ -68,16 +72,15 @@ caps.handback.revision: 47
   
 -   [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [&#91;В начало&#93;](#Top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Программа bcp](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Табличные указания (Transact-SQL)](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
+ [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)  
   
   

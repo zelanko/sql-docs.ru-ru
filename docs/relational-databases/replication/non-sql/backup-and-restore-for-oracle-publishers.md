@@ -1,27 +1,31 @@
 ---
-title: "Резервное копирование и восстановление для издателей Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление [репликация SQL Server], публикация Oracle"
-  - "резервные копии [репликация SQL Server], публикация Oracle"
-  - "публикация Oracle [репликация SQL Server], резервное копирование и восстановление"
-  - "восстановление [репликация SQL Server], публикация Oracle"
+title: "Резервное копирование и восстановление для издателей Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], Oracle publishing
+- backups [SQL Server replication], Oracle publishing
+- Oracle publishing [SQL Server replication], backup and restore
+- restoring [SQL Server replication], Oracle publishing
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 802d157cd886f5656513904c0b519a65b61d67b3
+ms.lasthandoff: 04/11/2017
+
 ---
-# Резервное копирование и восстановление для издателей Oracle
+# <a name="backup-and-restore-for-oracle-publishers"></a>Резервное копирование и восстановление для издателей Oracle
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   При резервном копировании и восстановлении соблюдайте следующие рекомендации:  
@@ -32,7 +36,7 @@ caps.handback.revision: 33
   
 -   Если издатель или распространитель подлежат восстановлению, то повторно инициализируйте все подписки.  
   
--   Чтобы восстановить подписчика из резервной копии (без необходимости повторной инициализации подписки), должны быть сохранены транзакции, доставленные в базу данных подписки после последнего завершенного резервного копирования этой базы данных. Отрезок времени, в течение которого транзакции все еще доступны, зависит от установок хранения распространения. Сведения об этих параметрах см. в разделе [сроке](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
+-   Чтобы восстановить подписчика из резервной копии (без необходимости повторной инициализации подписки), должны быть сохранены транзакции, доставленные в базу данных подписки после последнего завершенного резервного копирования этой базы данных. Отрезок времени, в течение которого транзакции все еще доступны, зависит от установок хранения распространения. Сведения об этих настройках см. в статье [Окончание срока действия и отключение подписки](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
 -   Если издатель или распространитель становятся несинхронизированными в результате восстановления базы данных, агент репликации производит в журнал записи об ошибке. В этом случае следует удалить и повторно создать все соответствующие публикации и подписки:  
   
@@ -46,9 +50,9 @@ caps.handback.revision: 33
   
      Если издатель должен быть удален и перенастроен заново, удалите открытый синоним **MSSQLSERVERDISTRIBUTOR** и пользователя настроенной репликации Oracle с помощью параметра **CASCADE** для удаления всех объектов репликации из издателя Oracle.  
   
-## См. также:  
- [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание резервных копий реплицируемых баз данных и восстановление из них](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

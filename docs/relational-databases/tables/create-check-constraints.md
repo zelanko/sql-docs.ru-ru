@@ -1,28 +1,32 @@
 ---
-title: "Создание ограничений CHECK | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ограничения таблицы [SQL Server]"
-  - "привязка проверочных ограничений"
-  - "столбцы [SQL Server], ограничения"
-  - "ограничения [SQL Server], проверка"
-  - "Ограничения CHECK, присоединение"
+title: "Создание проверочного ограничения | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table constraints [SQL Server]
+- attaching check constraints
+- columns [SQL Server], constraints
+- constraints [SQL Server], check
+- CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a7d6d12e6a2673fd38c8c7341c4703dd7588501
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание ограничений CHECK
+# <a name="create-check-constraints"></a>Создание ограничений CHECK
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать в таблице проверочное ограничение, чтобы указать значения данных, допустимые в одном или нескольких столбцах, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,9 +52,9 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание нового проверочного ограничения  
+#### <a name="to-create-a-new-check-constraint"></a>Создание нового проверочного ограничения  
   
-1.  В **обозревателе объектов** разверните таблицу, в которую необходимо добавить проверочное ограничение, щелкните правой кнопкой пункт **Ограничения** и выберите команду **Создать ограничение**.  
+1.  В **обозревателе объектов**разверните таблицу, в которую необходимо добавить проверочное ограничение, щелкните правой кнопкой пункт **Ограничения** и выберите команду **Создать ограничение**.  
   
 2.  В диалоговом окне **Проверочные ограничения** установите курсор в поле **Выражение** и щелкните многоточие **(…)**.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание нового проверочного ограничения  
+#### <a name="to-create-a-new-check-constraint"></a>Создание нового проверочного ограничения  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

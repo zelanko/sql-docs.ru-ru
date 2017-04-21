@@ -1,27 +1,31 @@
 ---
-title: "Включение или отключение структуры плана. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "структуры планов [SQL Server], отключение"
-  - "включение структур планов"
-  - "структуры планов [SQL Server], включение"
-  - "отключение структур планов"
+title: "Включение или отключение структуры плана | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Включение или отключение структуры плана.
+# <a name="enable-or-disable-a-plan-guide"></a>Включение или отключение структуры плана.
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] отключать и включать руководства планов можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Включить или отключить можно как одно руководство планов, так и все сразу.  
   
  **В этом разделе**  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Включение или отключение структуры плана  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Включение или отключение структуры плана  
   
 1.  Щелкните значок «+», чтобы развернуть базу данных, в которой требуется включить или отключить структуру плана, затем щелкните значок «+», чтобы развернуть папку **Программирование** .  
   
@@ -63,17 +67,17 @@ caps.handback.revision: 6
   
 4.  В диалоговом окне **Отключение структуры плана** или **Включение структуры плана** убедитесь, что выбранное действие выполнено успешно, и нажмите кнопку **Закрыть**.  
   
-#### Отключение или включение всех структур планов в базе данных  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Отключение или включение всех структур планов в базе данных  
   
 1.  Щелкните значок «+», чтобы развернуть базу данных, в которой требуется включить или отключить структуру плана, затем щелкните значок «+», чтобы развернуть папку **Программирование** .  
   
-2.  Правой кнопкой мыши щелкните папку **Структуры планов**, после чего выберите команду **Включить все** или **Отключить все**.  
+2.  Правой кнопкой мыши щелкните папку **Структуры планов** , после чего выберите команду **Включить все** или **Отключить все**.  
   
 3.  В диалоговом окне **Отключение всех структур планов** или **Включение всех структур планов** убедитесь, что выбранное действие выполнено успешно, и нажмите кнопку **Закрыть**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Включение или отключение структуры плана  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>Включение или отключение структуры плана  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### Отключение или включение всех структур планов в базе данных  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Отключение или включение всех структур планов в базе данных  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

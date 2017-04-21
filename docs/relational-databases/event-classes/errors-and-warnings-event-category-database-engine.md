@@ -1,29 +1,33 @@
 ---
-title: "Категория событий Errors and Warnings (компонент Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Errors and Warnings, категория событий [SQL Server]"
-  - "классы событий SQL Server, категория событий Errors and Warnings"
-  - "классы событий [SQL Server], категория событий Errors and Warnings"
+title: "Категория событий &quot;Ошибки и предупреждения&quot; (ядро СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
+- SQL Server event classes, Errors and Warnings event category
+- event classes [SQL Server], Errors and Warnings event category
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0c7673b15dec984e81cc7dd8207006a0b278fe7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Категория событий Errors and Warnings (компонент Database Engine)
+# <a name="errors-and-warnings-event-category-database-engine"></a>Категория событий Errors and Warnings (компонент Database Engine)
   В категорию событий **Ошибки и предупреждения** входят общие события ошибок и предупреждений.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
@@ -32,9 +36,9 @@ caps.handback.revision: 28
 |[Класс событий Bitmap Warning](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Указывает, что в запросе отключена фильтрация по битовым картам.|  
 |[Класс событий Blocked Process Report](../../relational-databases/event-classes/blocked-process-report-event-class.md)|Указывает, что задача заблокирована дольше указанного времени.|  
 |[класс событий CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Указывает, что регулятор ресурсов обнаружил запрос, превышающий заданное пороговое значение загрузки ЦП.|  
-|[Класс событий ErrorLog](../../relational-databases/event-classes/errorlog-event-class.md)|Показывает, что связанные с ошибками события были записаны в журнал ошибок сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Класс событий ErrorLog](../../relational-databases/event-classes/errorlog-event-class.md)|Показывает, что связанные с ошибками события были записаны в журнал ошибок сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Класс событий EventLog](../../relational-databases/event-classes/eventlog-event-class.md)|Указывает, что события были записаны в журнал событий Windows.|  
-|[Класс событий Exception](../../relational-databases/event-classes/exception-event-class.md)|Указывает, что в сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] произошло исключение.|  
+|[Класс событий Exception](../../relational-databases/event-classes/exception-event-class.md)|Указывает, что в сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]произошло исключение.|  
 |[Класс событий Exchange Spill](../../relational-databases/event-classes/exchange-spill-event-class.md)|Указывает, что буферы связи в параллельном плане запроса были записаны в базу данных tempdb.|  
 |[Класс событий Execution Warnings](../../relational-databases/event-classes/execution-warnings-event-class.md)|Указывает, что за время выполнения инструкции или хранимой процедуры сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] были выданы предупреждения предоставления памяти.|  
 |[Класс событий Hash Warning](../../relational-databases/event-classes/hash-warning-event-class.md)|Указывает, что во время операции хэширования произошли рекурсия или аварийное хэширование.|  
@@ -43,7 +47,7 @@ caps.handback.revision: 28
 |[Класс событий Sort Warnings](../../relational-databases/event-classes/sort-warnings-event-class.md)|Указывает, что операциям сортировки не хватает памяти.|  
 |[Класс событий User Error Message](../../relational-databases/event-classes/user-error-message-event-class.md)|Отображаются сообщения об ошибках, видимые пользователю.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

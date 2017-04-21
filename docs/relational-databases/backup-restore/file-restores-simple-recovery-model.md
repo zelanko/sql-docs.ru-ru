@@ -1,31 +1,35 @@
 ---
-title: "Восстановления файлов (простая модель восстановления) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление файлов [SQL Server]"
-  - "простая модель восстановления [SQL Server]"
-  - "восстановление файлов [SQL Server], последовательность восстановления Transact-SQL"
-  - "восстановление файлов [SQL Server]"
-  - "последовательность восстановления Transact-SQL"
-  - "восстановление файлов [SQL Server], простая модель восстановления"
-  - "восстановление файлов [SQL Server], простая модель восстановления"
-  - "восстановление файлов [SQL Server], последовательность восстановления Transact-SQL"
+title: "Восстановление файлов (простая модель восстановления) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- simple recovery model [SQL Server]
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- Transact-SQL restore sequence
+- restoring files [SQL Server], simple recovery model
+- file restores [SQL Server], simple recovery model
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5fdd6a65718ab54c60fcea09317146aa2342e517
+ms.lasthandoff: 04/11/2017
+
 ---
-# Восстановления файлов (простая модель восстановления)
+# <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Сведения в этом разделе относятся только к базам данных, использующим простую модель восстановления и содержащим хотя бы одну вторичную файловую группу только для чтения.  
@@ -44,10 +48,10 @@ caps.handback.revision: 56
   
      При *оперативном восстановлении файлов*, если база данных во время восстановления находится в режиме «в сети», то остается в этом режиме в течение времени восстановления файлов. Однако каждая файловая группа, в которой восстанавливается файл, во время операции восстановления находится в состоянии «вне сети». После восстановления всех файлов, входящих в файловую группу в режиме «вне сети», она автоматически переключается в режим «в сети».  
   
-     Дополнительные сведения о поддерживаемых выпусках см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md). Дополнительные сведения об оперативном восстановлении см. в статье [Оперативное восстановление (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     Сведения о поддержке оперативного восстановления страниц и файлов см. в статье [Функции и задачи ядра СУБД](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34). Дополнительные сведения об оперативном восстановлении см. в разделе [Оперативное восстановление (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Если желательно, чтобы база данных находилась в режиме "вне сети" при восстановлении файлов, переведите ее в режим "вне сети" перед запуском последовательности восстановления путем выполнения следующей инструкции [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md): ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
+    >  Если желательно, чтобы база данных находилась в режиме "вне сети" при восстановлении файлов, переведите ее в режим "вне сети" перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) : ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
   
  **В этом разделе.**  
   
@@ -62,10 +66,10 @@ caps.handback.revision: 56
   
 2.  Восстановите базу данных и самую свежую разностную резервную копию файлов для каждого восстанавливаемого файла.  
   
-### Шаги Transact-SQL для последовательности восстановления файлов (простая модель восстановления)  
- В этом разделе показаны основные параметры инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) для простой последовательности восстановления файлов. Синтаксис и прочие подробности, несущественные для данной цели, опущены.  
+### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>Шаги Transact-SQL для последовательности восстановления файлов (простая модель восстановления)  
+ В этом разделе показаны основные параметры инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)][RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) для простой последовательности восстановления файлов. Синтаксис и прочие подробности, несущественные для данной цели, опущены.  
   
- Последовательность восстановления содержит только две инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Первая инструкция восстанавливает вторичный файл `A`, который восстанавливается с параметром WITH NORECOVERY. Вторая операция восстанавливает файлы `B` и `C`, которые восстанавливаются с другого устройства резервного копирования с параметром WITH RECOVERY:  
+ Последовательность восстановления содержит только две инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Первая инструкция восстанавливает вторичный файл `A`, который восстанавливается с параметром WITH NORECOVERY. Вторая операция восстанавливает файлы `B` и `C` , которые восстанавливаются с другого устройства резервного копирования с параметром WITH RECOVERY:  
   
 1.  RESTORE DATABASE *база_данных* FILE **=***имя_файла_A*  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 56
   
      WITH RECOVERY**;**  
   
-### Примеры  
+### <a name="examples"></a>Примеры  
   
 -   [Пример. Оперативное восстановление доступного только для чтения файла (простая модель восстановления)](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
@@ -94,15 +98,15 @@ caps.handback.revision: 56
   
 -   [Восстановление файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Метод Restore.SqlRestore (сервер)](../Topic/SqlRestore%20Method.md) (SMO)  
+-   [Метод Restore.SqlRestore (сервер) (SMO)](http://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Выполнение полного восстановления базы данных (простая модель восстановления)](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

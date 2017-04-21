@@ -1,76 +1,80 @@
 ---
-title: "Роли уровня базы данных | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.database.f1"
-  - "sql13.swb.roleproperties.object.f1"
-  - "SQL13.SWB.DBROLEPROPERTIES.GENERAL.F1"
-  - "sql13.swb.roleproperties.general.f1"
-helpviewer_keywords: 
-  - "db_denydatareader, роль"
-  - "пользователи [SQL Server], роли базы данных"
-  - "роли уровня базы данных [SQL Server]"
-  - "db_denydatawriter, роль"
-  - "роли [SQL Server], база данных"
-  - "субъекты [SQL Server], уровень базы данных"
-  - "роль db_backupoperator"
-  - "учетные данные [SQL Server], роли"
-  - "роль db_accessadmin"
-  - "схемы [SQL Server], роли"
-  - "разрешения [SQL Server], роли"
-  - "роли базы данных [SQL Server], перечисленные"
-  - "db_datareader, роль"
-  - "роль db_ddladmin"
-  - "db_datawriter, роль"
-  - "db_securityadmin, роль"
-  - "db_owner, роль"
-  - "роли базы данных [SQL Server]"
-  - "предопределенные роли базы данных [SQL Server]"
-  - "проверка подлинности [SQL Server], роли"
-  - "группы [SQL Server], роли"
+title: "Роли уровня базы данных | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.database.f1
+- sql13.swb.roleproperties.object.f1
+- SQL13.SWB.DBROLEPROPERTIES.GENERAL.F1
+- sql13.swb.roleproperties.general.f1
+helpviewer_keywords:
+- db_denydatareader role
+- users [SQL Server], database roles
+- database-level roles [SQL Server]
+- db_denydatawriter role
+- roles [SQL Server], database
+- principals [SQL Server], database-level
+- db_backupoperator role
+- credentials [SQL Server], roles
+- db_accessadmin role
+- schemas [SQL Server], roles
+- permissions [SQL Server], roles
+- database roles [SQL Server], listed
+- db_datareader role
+- db_ddladmin role
+- db_datawriter role
+- db_securityadmin role
+- db_owner role
+- database roles [SQL Server]
+- fixed database roles [SQL Server]
+- authentication [SQL Server], roles
+- groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.lasthandoff: 04/11/2017
+
 ---
-# Роли уровня базы данных
+# <a name="database-level-roles"></a>Роли уровня базы данных
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Для удобства управления разрешениями в базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет несколько *ролей* , которые являются субъектами безопасности, группирующими других участников. Они подобны ***группам*** в операционной системе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Разрешения ролей уровня базы данных распространяются на всю базу данных.  
 
-Чтобы добавлять и удалять пользователей в роли базы данных, используйте параметры `ADD MEMBER` и `DROP MEMBER` инструкции [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md). [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] не поддерживает такое использование `ALTER ROLE`. Используйте вместо этого более старые процедуры [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) и [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).
+Чтобы добавлять и удалять пользователей в роли базы данных, используйте параметры `ADD MEMBER` и `DROP MEMBER` инструкции [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] не поддерживает такое использование `ALTER ROLE`. Используйте вместо этого более старые процедуры [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) и [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
   
- Существует два типа ролей уровня базы данных: *предопределенные роли базы данных*, являющиеся стандартными для базы данных, и *пользовательские роли базы данных*, которые можно создавать.  
+ Существует два типа ролей уровня базы данных: *предопределенные роли базы данных* , являющиеся стандартными для базы данных, и *пользовательские роли базы данных* , которые можно создавать.  
   
  Предопределенные роли базы данных задаются на уровне базы данных и предусмотрены в каждой базе данных. Члены ролей базы данных **db_owner** могут управлять членством в предопределенных ролях базы данных. Кроме того, в базе данных msdb имеются специальные роли базы данных.  
   
- В роли уровня базы данных можно добавить любую учетную запись базы данных и другие роли [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Каждый член предопределенной роли базы данных может добавлять других пользователей в ту же самую роль.  
+ В роли уровня базы данных можно добавить любую учетную запись базы данных и другие роли [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Каждый член предопределенной роли базы данных может добавлять других пользователей в ту же самую роль.  
   
 > [!TIP]  
 >  Не добавляйте пользовательские роли базы данных в качестве членов предопределенных ролей. Это может привести к непреднамеренному повышению прав доступа.  
 
 Разрешения пользовательских ролей базы данных можно настроить с помощью инструкций GRANT, DENY и REVOKE. Дополнительные сведения см. в разделе [Разрешения (компонент Database Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-Список всех разрешений см. в афише с [разрешениями для ядра СУБД](http://go.microsoft.com/fwlink/?LinkId=229142). (Разрешения уровня сервера нельзя предоставлять роли базы данных. Имена входа и другие субъекты уровня сервера (например, роли сервера) нельзя добавлять в роли базы данных. Для обеспечения безопасности на уровне сервера в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] используйте вместо этого [роли сервера](../../../relational-databases/security/authentication-access/server-level-roles.md). Разрешения уровня сервера нельзя предоставлять посредством ролей в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Список всех разрешений см. в афише с [разрешениями для ядра СУБД](http://go.microsoft.com/fwlink/?LinkId=229142) . (Разрешения уровня сервера нельзя предоставлять роли базы данных. Имена входа и другие субъекты уровня сервера (например, роли сервера) нельзя добавлять в роли базы данных. Для обеспечения безопасности на уровне сервера в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]используйте вместо этого [роли сервера](../../../relational-databases/security/authentication-access/server-level-roles.md) . Разрешения уровня сервера нельзя предоставлять посредством ролей в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
 
-## <a name="fixed-database-roles"></a>Предопределенные роли базы данных
+## <a name="fixed-database-roles"></a>предопределенные роли базы данных
   
  В следующей таблице представлены предопределенные роли базы данных и их возможности. Эти роли существуют во всех базах данных. Нельзя изменить разрешения, назначенные предопределенным ролям базы данных.   
   
 |Имя предопределенной роли базы данных|Description|  
 |-------------------------------|-----------------|  
-|**db_owner**|Члены предопределенной роли базы данных **db_owner** могут выполнять все действия по настройке и обслуживанию базы данных, а также удалять базу данных в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (В [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] некоторые операции по обслуживанию требуют наличие разрешений на уровне сервера и не может быть выполнены членами **db_owner**.)|  
+|**db_owner**|Члены предопределенной роли базы данных **db_owner** могут выполнять все действия по настройке и обслуживанию базы данных, а также удалять базу данных в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (В [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]некоторые операции по обслуживанию требуют наличие разрешений на уровне сервера и не может быть выполнены членами **db_owner**.)|  
 |**db_securityadmin**|Элементы предопределенной роли базы данных **db_securityadmin** могут изменять членство в роли и управлять разрешениями. Добавление участников к этой роли может привести к непреднамеренному повышению прав доступа.|  
 |**db_accessadmin**|Члены предопределенной роли базы данных **db_accessadmin** могут добавлять или удалять права удаленного доступа к базе данных для имен входа и групп Windows, а также имен входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Члены предопределенной роли базы данных **db_backupoperator** могут создавать резервные копии базы данных.|  
@@ -84,7 +88,7 @@ caps.handback.revision: 49
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
 
-## <a name="special-roles-for-includesssdsmdtokensssdsmdmd-and-includesssdwmdtokensssdwmdmd"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Эти роли базы данных существуют только в виртуальной базе данных master. Их разрешения ограничены действиями, выполняемыми в базе данных master. В эти роли можно добавить только пользователей из базы данных master. Для этих ролей нельзя добавить имена входа, однако можно создать пользователей на основе имен входа, а затем добавить этих пользователей в роли. Кроме того, в эти роли можно добавить пользователей автономной базы данных из базы данных master.
 
@@ -94,7 +98,7 @@ caps.handback.revision: 49
 **loginmanager** | Может создать и удалять имена входа в виртуальной базе данных master.  
 
 > [!NOTE]
-> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] без необходимости участия в каких-либо ролях. Дополнительные сведения см. в разделе [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/) (Проверка подлинности и авторизация базы данных SQL: предоставление доступа). 
+> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] без необходимости участия в каких-либо ролях. Дополнительные сведения см. в разделе [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)(Проверка подлинности и авторизация базы данных SQL: предоставление доступа). 
   
 ## <a name="msdb-roles"></a>Роли базы данных msdb  
  База данных msdb содержит специальные роли, показанные в следующей таблице.  
@@ -108,7 +112,7 @@ caps.handback.revision: 49
 |**dbm_monitor**|Создается в базе данных **msdb** при регистрации в мониторе зеркального отображения базы данных первой базы данных. Роль **dbm_monitor** не имеет членов до тех пор, пока системный администратор не назначит ее пользователям.|  
   
 > [!IMPORTANT]  
->  Члены роли **db_ssisadmin** и роли **dc_admin** могут повышать свои права доступа до sysadmin. Такое повышение права доступа может произойти, так как эти роли могут изменять пакеты служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], а пакеты [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] могут выполняться [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при помощи контекста безопасности sysadmin агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы предотвратить такое повышение прав доступа при выполнении планов обслуживания, наборов элементов сбора данных и других пакетов служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , настройте задания агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запускающие пакеты, на использование учетной записи-посредника с ограниченными правами доступа или добавьте в роли **db_ssisadmin** и **dc_admin** только членов роли **sysadmin** .  
+>  Члены роли **db_ssisadmin** и роли **dc_admin** могут повышать свои права доступа до sysadmin. Такое повышение права доступа может произойти, так как эти роли могут изменять пакеты служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , а пакеты [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] могут выполняться [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при помощи контекста безопасности sysadmin агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы предотвратить такое повышение прав доступа при выполнении планов обслуживания, наборов элементов сбора данных и других пакетов служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , настройте задания агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запускающие пакеты, на использование учетной записи-посредника с ограниченными правами доступа или добавьте в роли **db_ssisadmin** и **dc_admin** только членов роли **sysadmin** .  
 
 ## <a name="working-with-r-services"></a>Работа со службами R Services  
 
@@ -139,14 +143,14 @@ caps.handback.revision: 49
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|Создает новую роль базы данных в текущей базе данных.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Удаляет роль базы данных из текущей базы данных.|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)], должны использовать вместо этого `ALTER ROLE`.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Удаляет учетную запись безопасности из роли SQL Server в текущей базе данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)], должны использовать вместо этого `ALTER ROLE`.|
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Удаляет учетную запись безопасности из роли SQL Server в текущей базе данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , должны использовать вместо этого `ALTER ROLE` .|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Добавляет разрешение для роли.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Запрещает разрешение для роли.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Удаляет разрешения, выданные или запрещенные ранее.
   
   
 ## <a name="public-database-role"></a>Роль базы данных public  
- Каждый пользователь базы данных является членом роли базы данных **public** . Если для пользователя не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли **public** на этот объект. Пользователей базы данных нельзя удалить из роли **public**. 
+ Каждый пользователь базы данных является членом роли базы данных **public** . Если для пользователя не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли **public** на этот объект. Пользователей базы данных нельзя удалить из роли **public** . 
   
 ## <a name="related-content"></a>См. также  
  [Представления каталога безопасности &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
@@ -160,3 +164,4 @@ caps.handback.revision: 49
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
   
   
+

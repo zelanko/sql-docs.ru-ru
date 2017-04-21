@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, объект Wait Statistics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Объект Wait Statistics"
-  - "SQLServer:Wait Statistics"
+title: "Объект статистики ожидания (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Wait Statistics object
+- SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e81641439bc17a678f7713e6b8088495b09db618
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, объект Wait Statistics
+# <a name="sql-server-wait-statistics-object"></a>SQL Server, объект Wait Statistics
   Объект производительности **SQLServer:Wait Statistics** содержит счетчики производительности, сообщающие сведения о состоянии ожидания.  
   
  В таблице ниже перечислены счетчики, содержащиеся в объекте статистики ожидания.  
@@ -48,7 +52,7 @@ caps.handback.revision: 15
 |**Выполняющиеся сеансы ожидания**|Количество ожидающих в данный момент процессов для определенного типа ожидания.|  
 |**Начатые сеансы ожидания (в секунду)**|Число ожиданий, запущенных за одну секунду, для выбранного типа ожидания.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

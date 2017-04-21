@@ -1,30 +1,34 @@
 ---
-title: "Сжатие резервных копий (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "доставка журналов [SQL Server], сжатие резервных копий"
-  - "сжатие резервных копий [SQL Server], информация о сжатии резервных копий"
-  - "сжатие [SQL Server], сжатие резервных копий"
-  - "резервные копии, сжатие"
-  - "создание резервных копий [SQL Server], сжатие резервных копий"
-  - "сжатие резервных копий [SQL Server]"
+title: "Сжатие резервных копий (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], backup compression
+- backup compression [SQL Server], about backup compression
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- backing up [SQL Server], backup compression
+- backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сжатие резервных копий (SQL Server)
-  В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]: Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
+# <a name="backup-compression-sql-server"></a>Сжатие резервных копий (SQL Server)
+  В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
  
   
 ##  <a name="Benefits"></a> Преимущества  
@@ -45,7 +49,7 @@ caps.handback.revision: 51
   
   
 ##  <a name="PerfImpact"></a> Воздействие сжатых резервных копий на производительность  
- По умолчанию сжатие существенно повышает загрузку ЦП. Дополнительная нагрузка на ЦП может помешать выполнению других операций. Поэтому может потребоваться создать сжатые резервные копии с низким приоритетом в сеансе, для которого использование ЦП ограничивается [регулятором ресурсов](../../relational-databases/resource-governor/resource-governor.md). Дополнительные сведения см. в разделе [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+ По умолчанию сжатие существенно повышает загрузку ЦП. Дополнительная нагрузка на ЦП может помешать выполнению других операций. Поэтому может потребоваться создать сжатые резервные копии с низким приоритетом в сеансе, для которого использование ЦП ограничивается[регулятором ресурсов](../../relational-databases/resource-governor/resource-governor.md). Дополнительные сведения см. ниже в подразделе [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  В целях оптимизации производительности операций ввода-вывода резервной копии их можно изолировать от устройств или закрепить за устройствами в зависимости от оценки следующих видов счетчиков производительности.  
   
@@ -105,8 +109,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Флаги трассировки (Transact-SQL)](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

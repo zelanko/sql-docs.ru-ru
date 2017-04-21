@@ -1,25 +1,29 @@
 ---
-title: "Переименование представлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "представления [SQL Server], переименование"
-  - "переименование представлений"
+title: "Переименование представлений | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- renaming views
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9577d5597eff0cb2bd3e30771c4e2765eadb42b6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Переименование представлений
+# <a name="rename-views"></a>Переименование представлений
   Представление в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно переименовать, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!WARNING]  
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Продолжение:**  [после переименования представления](#FollowUp)  
+-   **Follow Up:**  [After renaming a view](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Переименование представления  
+#### <a name="to-rename-a-view"></a>Переименование представления  
   
 1.  В **обозревателе объектов**разверните базу данных, содержащую представление, которое необходимо переименовать, а затем разверните папку **Представление** .  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 17
   
  Дополнительные сведения см. в разделах [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) и [DROP VIEW (Transact-SQL)](../../t-sql/statements/drop-view-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Продолжение: после переименования представления  
+##  <a name="FollowUp"></a> Продолжение: после переименования представления  
  Убедитесь, что все объекты, скрипты и приложения, ссылающиеся на предыдущее имя представления, теперь используют новое имя.  
   
   

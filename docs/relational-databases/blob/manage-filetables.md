@@ -1,25 +1,29 @@
 ---
-title: "Управление таблицами FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы FileTable [SQL Server], безопасность"
-  - "таблицы FileTable [SQL Server], управление доступом"
+title: "Управление таблицами Filetable | Документация Майкрософт"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Управление таблицами FileTable
+# <a name="manage-filetables"></a>Управление таблицами FileTable
   Описывает стандартные административные задачи по управлению таблицами FileTables.  
   
 ##  <a name="HowToEnumerate"></a> Практическое руководство. Получение списка таблиц FileTable и связанных объектов  
@@ -79,7 +83,7 @@ GO
 -   Если FILESTREAM отключен на уровне экземпляра, невидимыми будут все каталоги уровня базы данных этого экземпляра.  
   
 ###  <a name="HowToDisable"></a> Практическое руководство. Отключение и повторное включение нетранзакционного доступа на уровне базы данных  
- Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+ Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Отключение полного нетранзакционного доступа**  
  Вызовите инструкцию **ALTER DATABASE** и задайте параметру **NON_TRANSACTED_ACCESS** значение **READ_ONLY** или **OFF**.  
@@ -138,7 +142,7 @@ GO
 -   Каталог таблицы FileTable, а также содержащиеся в нем файлы и каталоги появляются в файловой системе и становятся доступными для файлового ввода-вывода.  
   
 ###  <a name="HowToEnableNS"></a> Практическое руководство. Отключение и повторное включение пространства имен FileTable на уровне таблицы  
- Вызовите инструкцию ALTER TABLE с параметром **{ ENABLE | DISABLE } FILETABLE_NAMESPACE**.  
+ Вызовите инструкцию ALTER TABLE с параметром **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Отключение пространства имен FileTable**  
  ```tsql  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> Практическое руководство. Уничтожение открытых дескрипторов файлов, связанных с таблицей FileTable  
- Чтобы уничтожить все открытые дескрипторы файлов в базе данных или в таблице FileTable либо конкретный дескриптор, вызовите хранимую процедуру [sp_kill_filestream_non_transacted_handles (Transact-SQL)](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md).  
+ Чтобы уничтожить все открытые дескрипторы файлов в базе данных или в таблице FileTable либо конкретный дескриптор, вызовите хранимую процедуру [sp_kill_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md).  
   
 ```  
 USE database_name;  
@@ -202,7 +206,7 @@ GO
 ```  
   
 ##  <a name="BasicsSecurity"></a> Безопасность таблицы FileTable  
- Файлы и каталоги, хранящиеся в таблицах FileTable, защищаются только средствами безопасности SQL Server. Средства безопасности на уровне таблицы и столбцов применяются для доступа файловой системы, а также для доступа [!INCLUDE[tsql](../../includes/tsql-md.md)]. API-интерфейсы безопасности файловой системы Windows и параметры ACL не поддерживаются.  
+ Файлы и каталоги, хранящиеся в таблицах FileTable, защищаются только средствами безопасности SQL Server. Средства безопасности на уровне таблицы и столбцов применяются для доступа файловой системы, а также для доступа [!INCLUDE[tsql](../../includes/tsql-md.md)] . API-интерфейсы безопасности файловой системы Windows и параметры ACL не поддерживаются.  
   
  Права и разрешения на доступ, применимые к группам файлов и контейнерам FILESTREAM, также применяются и к таблице FileTable, поскольку данные файлов хранятся в столбце FILESTREAM таблицы FileTable.  
   
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC и таблицы FileTable  
  С помощью инструкции DBCC CHECKCONSTRAINTS можно проверить ограничения для таблицы FileTable, включая системные ограничения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Совместимость FileTable с другими компонентами SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

@@ -1,30 +1,34 @@
 ---
-title: "Курсоры | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "результаты [SQL Server], курсоры"
-  - "курсоры Transact-SQL, о курсорах"
-  - "курсоры [SQL Server]"
-  - "доступ к данным [SQL Server], курсоры"
-  - "результирующие наборы [SQL Server], курсоры"
-  - "запросы курсоров"
-  - "курсоры [SQL Server], о курсорах"
+title: "Курсоры | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- results [SQL Server], cursors
+- Transact-SQL cursors, about cursors
+- cursors [SQL Server]
+- data access [SQL Server], cursors
+- result sets [SQL Server], cursors
+- requesting cursors
+- cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Курсоры
+# <a name="cursors"></a>Курсоры
   Операции в реляционной базе данных выполняются над множеством строк. Например, набор строк, возвращаемый инструкцией SELECT, содержит все строки, которые удовлетворяют условиям, указанным в предложении WHERE инструкции. Такой полный набор строк, возвращаемых инструкцией, называется результирующим набором. Приложения, особенно интерактивные, не всегда эффективно работают с результирующим набором как с единым целым. Им нужен механизм, позволяющий обрабатывать одну строку или небольшое их число за один раз. Курсоры являются расширением результирующих наборов, которые предоставляют такой механизм.  
   
  Курсоры позволяют усовершенствовать обработку результатов:  
@@ -39,12 +43,12 @@ caps.handback.revision: 29
   
 -   предоставляя инструкциям [!INCLUDE[tsql](../includes/tsql-md.md)] в скриптах, хранимых процедурах и триггерах доступ к данным результирующего набора.  
   
-## Основные понятия  
+## <a name="concepts"></a>Основные понятия  
  Реализации курсоров  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает три способа реализации курсоров.  
   
  курсоры Transact-SQL  
- Основаны на синтаксисе DECLARE CURSOR и в основном используются в скриптах, хранимых процедурах и триггерах [!INCLUDE[tsql](../includes/tsql-md.md)]. [!INCLUDE[tsql](../includes/tsql-md.md)] реализуются на сервере и управляются инструкциями [!INCLUDE[tsql](../includes/tsql-md.md)] , отправляемыми от клиента серверу. Они также могут содержаться в пакетах, хранимых процедурах или триггерах.  
+ Основаны на синтаксисе DECLARE CURSOR и в основном используются в скриптах, хранимых процедурах и триггерах [!INCLUDE[tsql](../includes/tsql-md.md)] . [!INCLUDE[tsql](../includes/tsql-md.md)] реализуются на сервере и управляются инструкциями [!INCLUDE[tsql](../includes/tsql-md.md)] , отправляемыми от клиента серверу. Они также могут содержаться в пакетах, хранимых процедурах или триггерах.  
   
  Серверные курсоры интерфейса прикладного программирования (API)  
  Поддерживают функции курсоров API в OLE DB и ODBC. Курсоры API реализуются на сервере. Всякий раз, когда клиентское приложение вызывает функцию курсора API, поставщик OLE DB или драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] передает требование на сервер для выполнения действия в отношении серверного курсора API.  
@@ -77,7 +81,7 @@ caps.handback.revision: 29
  Динамический  
  Динамические курсоры — это противоположность статических курсоров. Динамические курсоры отражают все изменения строк в результирующем наборе при прокрутке курсора. Значения типа данных, порядок и членство строк в результирующем наборе могут меняться для каждой выборки. Все инструкции UPDATE, INSERT и DELETE, выполняемые пользователями, видимы посредством курсора. Обновление видимы сразу, если они сделаны посредством курсора с помощью либо API-функции (например, **SQLSetPos** ), либо предложения WHERE CURRENT OF [!INCLUDE[tsql](../includes/tsql-md.md)] . Обновления, сделанные вне курсора, не видны до момента фиксации, если только уровень изоляции транзакций с курсорами не имеет значение READ UNCOMMITTED. В планах динамических курсоров никогда не используются пространственные индексы.  
   
-## Запрос курсора  
+## <a name="requesting-a-cursor"></a>Запрос курсора  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает два метода запроса курсоров.  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
@@ -98,7 +102,7 @@ caps.handback.revision: 29
   
  Если не был запрошен ни [!INCLUDE[tsql](../includes/tsql-md.md)] , ни API-курсор, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] целиком возвращает по умолчанию результирующий набор приложению (это называется результирующим набором по умолчанию).  
   
-## Обработка курсоров  
+## <a name="cursor-process"></a>Обработка курсоров  
  [!INCLUDE[tsql](../includes/tsql-md.md)] и API-курсоры имеют различный синтаксис, но для всех курсоров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используется одинаковый цикл обработки.  
   
 1.  Связать курсор с результирующим набором инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] и задать его характеристики (например возможность обновления строк).  
@@ -111,10 +115,10 @@ caps.handback.revision: 29
   
 5.  Закрыть курсор.  
   
-## См. также  
- [Режимы работы курсоров](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [Способы реализации курсоров](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+## <a name="related-content"></a>См. также  
+ [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [DECLARE CURSOR (Transact-SQL)](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Курсоры (Transact-SQL)](../t-sql/language-elements/cursors-transact-sql.md)   
  [Функции работы с курсорами (Transact-SQL)](../t-sql/functions/cursor-functions-transact-sql.md)   

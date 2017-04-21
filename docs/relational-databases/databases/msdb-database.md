@@ -1,32 +1,36 @@
 ---
-title: "База данных msdb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "агент SQL Server, база данных msdb"
-  - "предупреждения [SQL Server], база данных msdb"
-  - "задания [SQL Server], база данных msdb"
-  - "msdb, база данных [SQL Server]"
+title: "База данных msdb | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Agent, msdb database
+- alerts [SQL Server], msdb database
+- jobs [SQL Server], msdb database
+- msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# База данных msdb
+# <a name="msdb-database"></a>База данных msdb
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   База данных **msdb** используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания расписания предупреждений и заданий, а также другими компонентами, такими как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и компоненты [!INCLUDE[ssSB](../../includes/sssb-md.md)] и Database Mail.  
   
- Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически поддерживает полный журнал резервного копирования и восстановления "в сети" в таблицах в базе данных **msdb**. В эти сведения включено имя стороны, выполнившей резервное копирование, время резервного копирования и устройства или файлы, в которых храниться резервная копия. Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует эти сведения для создания плана восстановления базы данных и применения существующих резервных копий журнала транзакций. События резервного копирования для всех баз данных записываются, даже если они создаются средствами пользовательских приложений или сторонних разработчиков. Например, если приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] при выполнении операций резервного копирования обращается к объектам SMO, то событие заносится в системные таблицы базы данных **msdb** , в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы защитить сведения, хранящиеся в базе данных **msdb**, рекомендуется разместить журнал транзакций **msdb** в отказоустойчивом хранилище.  
+ Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически поддерживает полный журнал резервного копирования и восстановления "в сети" в таблицах в базе данных **msdb**. В эти сведения включено имя стороны, выполнившей резервное копирование, время резервного копирования и устройства или файлы, в которых храниться резервная копия. Среда[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует эти сведения для создания плана восстановления базы данных и применения существующих резервных копий журнала транзакций. События резервного копирования для всех баз данных записываются, даже если они создаются средствами пользовательских приложений или сторонних разработчиков. Например, если приложение [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] при выполнении операций резервного копирования обращается к объектам SMO, то событие заносится в системные таблицы базы данных **msdb** , в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы защитить сведения, хранящиеся в базе данных **msdb**, рекомендуется разместить журнал транзакций **msdb** в отказоустойчивом хранилище.  
   
  По умолчанию, для базы данных **msdb** используется простая модель восстановления. Если используются таблицы [журнала резервного копирования и восстановления](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) , рекомендуется использовать для базы данных **msdb**модель полного восстановления. Дополнительные сведения см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md). Обратите внимание, что при установке или обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также при каждом перестроении системных баз данных с помощью программы Setup.exe для базы данных **msdb** автоматически устанавливается модель простого восстановления.  
   
@@ -104,9 +108,9 @@ caps.handback.revision: 46
 ## <a name="related-content"></a>См. также  
  [Системные базы данных](../../relational-databases/databases/system-databases.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
  [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 46
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

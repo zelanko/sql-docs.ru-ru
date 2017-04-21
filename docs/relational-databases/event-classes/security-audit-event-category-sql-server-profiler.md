@@ -1,29 +1,33 @@
 ---
-title: "Категория событий Security Audit (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Security Audit, категория событий [SQL Server]"
-  - "классы событий [SQL Server], категория событий Security Audit"
-  - "классы событий SQL Server, категория событий Security Audit"
+title: "Категория событий Security Audit (приложение SQL Server Profiler) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [SQL Server], Security Audit event category
+- SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
+ms.lasthandoff: 04/11/2017
+
 ---
-# Категория событий Security Audit (приложение SQL Server Profiler)
+# <a name="security-audit-event-category-sql-server-profiler"></a>Категория событий Security Audit (приложение SQL Server Profiler)
   Категория событий **Security Audit** включает в себя события аудита безопасности.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
@@ -50,10 +54,10 @@ caps.handback.revision: 36
 |[Класс событий Audit Database Scope GDR](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Указывает на выполнение пользователем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]инструкции GRANT, REVOKE или DENY.|  
 |[Класс событий Audit DBCC](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Указывает, что была выполнена команда DBCC.|  
 |[Класс событий Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Указывает, что произошло полнотекстовое событие.|  
-|[Класс событий Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Указывает, что пользователь изменил пароль, используемый для входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Класс событий Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Указывает, что для изменения свойства имени входа была использована хранимая процедура **sp_defaultdb**, **sp_defaultlanguage** или инструкция ALTER LOGIN.|  
+|[Класс событий Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Указывает, что пользователь изменил пароль, используемый для входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Класс событий Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Указывает, что для изменения свойства имени входа была использована хранимая процедура **sp_defaultdb**, **sp_defaultlanguage**или инструкция ALTER LOGIN.|  
 |[Класс событий Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)|Указывает, что пользователь успешно выполнил вход на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Класс событий Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Указывает, что пользователь выполнил попытку входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая завершилась неудачно.|  
+|[Класс событий Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Указывает, что пользователь выполнил попытку входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая завершилась неудачно.|  
 |[Класс событий Audit Login GDR](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Указывает, что право входа в систему [!INCLUDE[msCoName](../../includes/msconame-md.md)] было добавлено или удалено.|  
 |[Класс событий Audit Logout](../../relational-databases/event-classes/audit-logout-event-class.md)|Указывает, что пользователь вышел из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Класс событий Audit Object Derived Permission](../../relational-databases/event-classes/audit-object-derived-permission-event-class.md)|Указывает, что инструкция CREATE, ALTER или DROP была выполнена в отношении объекта.|  
@@ -69,10 +73,10 @@ caps.handback.revision: 36
 |[Класс событий Audit Server Principal Impersonation](../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)|Указывает на то, что в области сервера произошло олицетворение.|  
 |[Класс событий Audit Server Principal Management](../../relational-databases/event-classes/audit-server-principal-management-event-class.md)|Указывает, что событие CREATE, ALTER или DROP произошло в отношении основного сервера.|  
 |[Класс событий Audit Server Scope GDR](../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)|Указывает, что произошло событие GDR для разрешений сервера.|  
-|[Класс событий Audit Server Starts and Stops](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Указывает, что изменено состояние службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Класс событий Audit Server Starts and Stops](../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)|Указывает, что изменено состояние службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Класс событий Audit Statement Permission](../../relational-databases/event-classes/audit-statement-permission-event-class.md)|Указывает, что было использовано разрешение на инструкцию.|  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

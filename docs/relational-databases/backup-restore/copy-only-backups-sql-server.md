@@ -1,26 +1,30 @@
 ---
-title: "Резервные копии только для копирования (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "резервные копии только для копирования [SQL Server]"
-  - "COPY_ONLY, параметр [BACKUP, инструкция]"
-  - "резервные копии [SQL Server], резервные копии только для копирования"
+title: "Резервные копии только для копирования (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copy-only backups [SQL Server]
+- COPY_ONLY option [BACKUP statement]
+- backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9a63e882e79ec725cca126e80369a70bbc4bc774
+ms.lasthandoff: 04/11/2017
+
 ---
-# Резервные копии только для копирования (SQL Server)
+# <a name="copy-only-backups-sql-server"></a>Резервные копии только для копирования (SQL Server)
   *Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая не зависит от обычной последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.  
   
  Резервные копии только для копирования имеют следующие типы.  
@@ -37,20 +41,20 @@ caps.handback.revision: 47
   
      Журнал транзакций никогда не усекается после создания резервной копии только для копирования.  
   
- Резервные копии только для копирования записываются в столбец **is_copy_only** таблицы [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).  
+ Резервные копии только для копирования записываются в столбец **is_copy_only** таблицы [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
   
-## Создание резервной копии только для копирования  
- Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или PowerShell.  
+## <a name="to-create-a-copy-only-backup"></a>Создание резервной копии только для копирования  
+ Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
 
-### Примеры  
+### <a name="examples"></a>Примеры  
 ###  <a name="SSMSProcedure"></a> A.  Использование среды SQL Server Management Studio  
 В этом примере резервная копия только для копирования для базы данных `Sales` будет заархивирована на диск в папку резервных копий по умолчанию.
 
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
 
 2.  Разверните узел **Базы данных**, щелкните правой кнопкой `Sales`, укажите на пункт **Задачи**и выберите **Создать резервную копию...**
 
-3.  На странице **Общие** в разделе **Источник** установите флажок **Архивная копия только для копирования**.
+3.  На странице **Общие** в разделе **Источник** установите флажок **Архивная копия только для копирования** .
 
 4.  Нажмите кнопку **ОК**.
 
@@ -93,9 +97,8 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
 -   [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
- [&#91;В начало&#93;](#Top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
@@ -104,3 +107,4 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
 
   
+

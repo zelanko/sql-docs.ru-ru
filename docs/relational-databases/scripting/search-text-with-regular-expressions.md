@@ -1,35 +1,39 @@
 ---
-title: "Поиск текста с помощью регулярных выражений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "регулярные выражения [среда SQL Server Management Studio]"
-  - "редактор запросов [среда SQL Server Management Studio], поиск с использованием регулярных выражений"
-  - "поиск [среда SQL Server Management Studio], регулярные выражения"
+title: "Поиск текста с помощью регулярных выражений | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# Поиск текста с помощью регулярных выражений
+# <a name="search-text-with-regular-expressions"></a>Поиск текста с помощью регулярных выражений
   Регулярные выражения представляют компактный и гибкий формат записи условий для поиска и замены в тексте по шаблону. Определенный набор регулярных выражений может быть использован в поле **Найти** диалогового окна [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** .  
   
-#### Выполнение поиска с помощью регулярных выражений  
+#### <a name="to-find-using-regular-expressions"></a>Выполнение поиска с помощью регулярных выражений  
   
-1.  Чтобы включить использование регулярных выражений в поле **Найти** во время операций **Быстрый поиск**, **Найти в файлах**, **Быстрая замена** или **Заменить в файлах**, выберите параметр **Использовать** в разделе **Параметры поиска** и выберите **Регулярные выражения**.  
+1.  Чтобы включить использование регулярных выражений в поле **Найти** во время операций **Быстрый поиск**, **Найти в файлах**, **Быстрая замена**или **Заменить в файлах** , выберите параметр **Использовать** в разделе **Параметры поиска**и выберите **Регулярные выражения**.  
   
 2.  В этом случае становится доступной треугольная кнопка **Список ссылок** , расположенная рядом с полем **Найти** . Нажмите кнопку для просмотра списка наиболее часто используемых регулярных выражений. При выборе любого элемента в построителе выражений он автоматически вставляется в поле **Найти** .  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 25
 |Знак, отличный от пробельного|:Mn|Совпадает со всеми знаками, отличными от пробельных.|  
 |Объединяющий знак|:Mc|Совпадает с объединяющими знаками.|  
 |Закрывающий знак|:Me|Совпадает с закрывающими знаками.|  
-|Математический символ|:Sm|Совпадает с +, =, ~, &#124;, \< и >.|  
+|Математический символ|:Sm|Совпадает со знаками +, =, ~, &#124;, \< и >.|  
 |Символ валют|:Sc|Совпадает со знаком $ и остальными символами валют.|  
 |Символ-модификатор|:Sk|Совпадает с символами-модификаторами, например двойным, одинарным диакритическим ударением и знаком долготы над гласными.|  
 |Другие символы|:So|Совпадает с другими символами, например знаком авторских прав, знаком абзаца и знаком градуса.|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |Катакана|:Ka|Совпадает с символами катаканы.|  
 |Идеографические символы / символы Хань / символы Кандзи|:Id|Совпадает со всеми идеографическими символами, например символами Хань и Кандзи.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поиск и замена](../../relational-databases/scripting/search-and-replace.md)   
  [Поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

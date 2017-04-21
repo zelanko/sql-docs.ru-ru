@@ -1,29 +1,33 @@
 ---
-title: "Удаление или отключение триггеров DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "триггеры DML, отключение"
-  - "удаление триггеров DML"
-  - "отключение триггеров DML"
-  - "сброс триггеров DML"
-  - "удаление триггеров DML"
-  - "триггеры DML, удаление"
+title: "Удаление или отключение триггеров DML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DML triggers, disabling
+- removing DML triggers
+- disabling DML triggers
+- dropping DML triggers
+- deleting DML triggers
+- DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление или отключение триггеров DML
+# <a name="delete-or-disable-dml-triggers"></a>Удаление или отключение триггеров DML
   В этом разделе описывается удаление или отключение триггера DML в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -59,7 +63,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Удаление триггера DML  
+#### <a name="to-delete-a-dml-trigger"></a>Удаление триггера DML  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 4.  В диалоговом окне **Удаление объекта** проверьте триггер и нажмите кнопку **ОК**.  
   
-#### Отключение и включение триггера DML  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>Отключение и включение триггера DML  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и разверните его.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Удаление триггера DML  
+#### <a name="to-delete-a-dml-trigger"></a>Удаление триггера DML  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,7 +119,7 @@ GO
   
 ```  
   
-#### Отключение и включение триггера DML  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>Отключение и включение триггера DML  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -156,7 +160,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   

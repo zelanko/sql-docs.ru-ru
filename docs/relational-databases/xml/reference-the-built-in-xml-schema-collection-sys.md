@@ -1,28 +1,32 @@
 ---
-title: "Создание ссылки на встроенную коллекцию XML-схем (sys) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "системные коллекции XML-схем [SQL Server]"
-  - "коллекции схем [SQL Server], предопределенные"
-  - "предопределенные коллекции XML-схем [SQL Server]"
-  - "коллекции схем XML [SQL Server], предопределенные"
-  - "встроенные коллекции XML-схем [SQL Server]"
+title: "Создание ссылки на встроенную коллекцию схем XML (sys) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sys XML schema collections [SQL Server]
+- schema collections [SQL Server], predefined
+- predefined XML schema collections [SQL Server]
+- XML schema collections [SQL Server], predefined
+- built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание ссылки на встроенную коллекцию XML-схем (sys)
+# <a name="reference-the-built-in-xml-schema-collection-sys"></a>Создание ссылки на встроенную коллекцию XML-схем (sys)
   Любая созданная база данных содержит предопределенную коллекцию XML-схем **sys** в реляционной схеме **sys** . Она содержит эти предопределенные схемы, к которым можно получить доступ из любой другой созданной пользователем коллекции XML-схем. В языке XQuery имеют значение префиксы, используемые для предопределенных схем. К зарезервированным относится только префикс **xml** .  
   
 ```  
@@ -91,7 +95,7 @@ GO
   
  Обратите внимание на следующее.  
   
--   Нельзя модифицировать XML-схемы с данными пространствами имен в пользовательской коллекции XML-схем. Например, следующая коллекция XML-схем завершается неудачно, так как она добавляет компонент в защищенное пространство имен `sqltypes`:  
+-   Нельзя модифицировать XML-схемы с данными пространствами имен в пользовательской коллекции XML-схем. Например, следующая коллекция XML-схем завершается неудачно, так как она добавляет компонент в защищенное пространство имен `sqltypes` :  
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
@@ -148,7 +152,7 @@ GO
   
  Выражение `instance of sqltypes:varchar?` возвращает значение TRUE, потому что значение элемента <`root`> имеет тип данных, производный от типа данных **varchar** в соответствии со схемой, связанной с переменной `@var`.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

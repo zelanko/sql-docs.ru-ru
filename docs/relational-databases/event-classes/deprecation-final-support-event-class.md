@@ -1,28 +1,32 @@
 ---
-title: "Класс событий Deprecation Final Support | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "класс событий Deprecation Final Support"
-  - "устаревание [SQL Server], события, поддержка которых завершается"
+title: "Класс событий Deprecation Final Support | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Deprecation Final Support event class
+- deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a73d33e3e6ace9f1ac3d1b7ab02888f2ef6ca0f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Deprecation Final Support
+# <a name="deprecation-final-support-event-class"></a>класс событий Deprecation Final Support
   Класс событий **Deprecation Final Support** возникает в случае использования функции, которая будет удалена из следующей основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для увеличения срока службы приложения избегайте использования функций, которые приводят к вызову класса событий **Deprecation Final Support** или **Deprecation Announcement** . Модифицируйте приложения, которые используют устаревшие функции, как можно быстрее.  
   
-## Столбцы данных класса событий Deprecation Final Support  
+## <a name="deprecation-final-support-event-class-data-columns"></a>Столбцы данных класса событий Deprecation Final Support  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,8 +39,8 @@ caps.handback.revision: 26
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData2|**int**|Смещение конца выполняемой инструкции (в байтах).|55|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|LoginName|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|LoginSid|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|LoginName|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|LoginSid|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |Offset|**int**|Начальное смещение инструкции в пределах хранимой процедуры или пакета.|61|Да|  
@@ -52,9 +56,9 @@ caps.handback.revision: 26
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|**bigint**|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Класс событий Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
- [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "Агент чтения очереди. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.queuereaderagent.f1"
-helpviewer_keywords: 
-  - "диалоговое окно «Агент чтения очереди»"
+title: "Агент чтения очереди | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.queuereaderagent.f1
+helpviewer_keywords:
+- Queue Reader Agent dialog box
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25110b487226028d9d24c6709e59cd2643fb4aac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Агент чтения очереди.
+# <a name="queue-reader-agent"></a>Агент чтения очереди.
   В диалоговом окне **Агент чтения очереди** предоставляются подробные данные об агенте чтения очереди, в том числе состояние, данные журнала, информационные сообщения и любые сообщения об ошибках.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  Выберите для просмотра в меню **Просмотр** сеансы агента чтения очереди, а затем конкретный сеанс в сетке, обозначенный как **Сеансы агента чтения очереди**. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
   
  **Просмотр**  
@@ -56,15 +60,15 @@ caps.handback.revision: 18
  Все информационные сообщения и сообщения об ошибках, которые агент чтения очереди записал во время выбранного сеанса.  
   
  **Время действия**  
- Время, когда действие, описанное в **Указание** было выполнено.  
+ Время, когда было выполнено действие, описанное в столбце **Сообщение действия** .  
   
  **Описание ошибки или сообщение выбранного сеанса**  
- Отображается только в том случае, если выбранный сеанс отображает значение **Ошибка** в **состояние** столбца. Это текстовое поле отображает подробные данные об ошибке и о выполняемой во время возникновения ошибки команде. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
+ Выводится, только если выбранный сеанс отображает значение **Ошибка** в столбце **Состояние** . Это текстовое поле отображает подробные данные об ошибке и о выполняемой во время возникновения ошибки команде. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией & #40; Монитор репликации & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

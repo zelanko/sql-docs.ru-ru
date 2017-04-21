@@ -1,32 +1,36 @@
 ---
-title: "Использование режима AUTO совместно с FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Предложение FOR XML, режим AUTO"
-  - "ELEMENTS, параметр"
-  - "FOR XML AUTO, режим"
-  - "AUTO FOR XML, режим"
+title: "Использование режима AUTO для FOR XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование режима AUTO совместно с FOR XML
+# <a name="use-auto-mode-with-for-xml"></a>Использование режима AUTO совместно с FOR XML
   Как описано в статье [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md), в режиме AUTO результаты запросов возвращаются в виде вложенных XML-элементов. Такой механизм не обеспечивает достаточное управление структурой XML, формируемой из результатов запроса. Запросы в режиме AUTO полезны, если необходимо формировать простые иерархии. При этом [использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) и [использование режима PATH совместно с FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) дают больше контроля и гибкости при выборе формы XML из результатов запроса.  
   
  Каждая таблица в предложении FROM, из которой по крайней мере один столбец присутствует в предложении SELECT, представляется как элемент XML. Столбцы, перечисляемые в предложении SELECT, сопоставляются атрибутам или подчиненным элементам, если в предложении FOR XML указан необязательный аргумент ELEMENTS.  
   
- XML-иерархия (порядок вложенности элементов) в результирующих XML-данных основана на порядке таблиц, определяемых столбцами, которые указаны в предложении SELECT. Поэтому важен порядок, в котором в предложении SELECT указываются имена столбцов. Первая, самая левая идентифицируемая таблица образует верхний элемент в результирующем XML-документе. Вторая слева таблица, идентифицируемая столбцами в инструкции SELECT, образует элемент, подчиненный верхнему элементу и т. д.  
+ XML-иерархия (порядок вложенности элементов) в результирующих XML-данных основана на порядке таблиц, определяемых столбцами, которые указаны в предложении SELECT. Поэтому важен порядок, в котором в предложении SELECT указываются имена столбцов. Первая, самая левая идентифицируемая таблица образует верхний элемент в результирующем XML-документе. Вторая слева таблица, идентифицируемая столбцами в инструкции SELECT, образует элемент, подчиненный верхнему элементу и т. д.  
   
  Если столбец, имя которого указывается в предложении SELECT, принадлежит таблице, уже идентифицируемой столбцом, заданным до этого в предложении SELECT, вместо открытия нового уровня иерархии этот столбец добавляется как атрибут уже созданного элемента. Если указан аргумент ELEMENTS, столбец добавляется как атрибут.  
   
@@ -128,7 +132,7 @@ FOR XML AUTO, ELEMENTS
   
  Если в предложении SELECT задается символ-шаблон «*», вложенность определяется таким же образом, как это описано выше, на основании порядка, в котором строки возвращаются механизмом запроса.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В следующих подразделах представлены дополнительные сведения о режиме AUTO.  
   
 -   [Использование параметра BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  
@@ -137,7 +141,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Примеры. Использование режима AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   

@@ -1,26 +1,30 @@
 ---
-title: "Устранение неполадок полнотекстового индексирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "индексы [полнотекстовый поиск]"
-  - "устранение неполадок [SQL Server], полнотекстовый поиск"
-  - "устранение неполадок [полнотекстовый поиск]"
+title: "Устранение неполадок полнотекстового индексирования | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [full-text search]
+- troubleshooting [SQL Server], full-text search
+- troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d3238bdf788f27c7e004139b66d0fcb501a57a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Устранение неполадок полнотекстового индексирования
+# <a name="troubleshoot-full-text-indexing"></a>Устранение неполадок полнотекстового индексирования
      
 ##  <a name="failure"></a> Устранение неполадок при неудачном завершении полнотекстового индексирования  
  При заполнении или обслуживании полнотекстового индекса полнотекстовый индексатор по изложенным ниже причинам может пропустить одну или несколько строк. Данные ошибки на уровне строк не препятствуют завершению заполнения. Индексатор просто пропускает эти строки, что означает, что их содержимое останется недосягаемым для запросов.  
@@ -45,20 +49,18 @@ caps.handback.revision: 43
   
  По окончании любой крупной операции заполнения полнотекстового индекса или в случае обнаружения незавершенной операции заполнения рекомендуется изучить журнал сканирования.  
   
-### Неподписанные компоненты  
+### <a name="unsigned-components"></a>Неподписанные компоненты  
  По умолчанию полнотекстовый индексатор требует, чтобы загружаемые им фильтры и средства разбиения по словам были подписаны. Если они не подписаны, что иногда случается при установке пользовательских компонентов, необходимо настроить полнотекстовый индексатор так, чтобы он пропускал проверку подписей.  
   
 > [!IMPORTANT]  
->  Игнорирование проверки подписей снижает защищенность экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рекомендуется подписывать все самостоятельно внедряемые компоненты либо контролировать наличие подписей у всех приобретаемых компонентов. Дополнительные сведения о подписании компонентов см. в разделе [sp_fulltext_service (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+>  Игнорирование проверки подписей снижает защищенность экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Рекомендуется подписывать все самостоятельно внедряемые компоненты либо контролировать наличие подписей у всех приобретаемых компонентов. Дополнительные сведения о подписании компонентов см. в разделе [sp_fulltext_service (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
- [В этом разделе](#top)  
   
 ##  <a name="state"></a> Полнотекстовый индекс в несогласованном состоянии после восстановления журнала транзакций  
  При восстановлении журнала транзакций базы данных может появиться предупреждение о том, что полнотекстовый индекс находится в рассогласованном состоянии. Причина заключается в том, что этот полнотекстовый индекс в таблице был изменен после резервного копирования базы данных. Чтобы привести полнотекстовый индекс в согласованное состояние, необходимо выполнить в таблице полное заполнение (сканирование). Дополнительные сведения см. в разделе [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md).  
   
- [В этом разделе](#top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md)  
   

@@ -1,29 +1,33 @@
 ---
-title: "Категория событий Broker | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы событий SQL Server, категория событий Broker"
-  - "Broker, категория событий [SQL Server]"
-  - "классы событий [SQL Server], категория событий Broker"
+title: "Категория событий Broker | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Broker event category
+- Broker event category [SQL Server]
+- event classes [SQL Server], Broker event category
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f0c5c0459128bde182665d39f6907bfe057db97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Категория событий Broker
+# <a name="broker-event-category"></a>Категория событий Broker
   Категория событий **Broker** содержит общие события компонента Service Broker.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 17
   
  Также компонент Service Broker поддерживает два события аудита безопасности. Дополнительные сведения об этих событиях см. в статьях [Класс событий Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md) и [Класс событий Audit Broker Conversation](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Категория событий «Аудит безопасности»](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

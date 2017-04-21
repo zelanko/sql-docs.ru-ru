@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Broker:Activation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Activation, класс событий"
+title: "Класс событий Broker:Activation | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Activation event class
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cb8daa2f1a9388cb5f57fb3bd90f8ef959795a2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Broker:Activation
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Activation**, если монитор очереди запускает хранимую процедуру активации, отправляет уведомление QUEUE_ACTIVATION или если существует хранимая процедура активации, запущенная монитором очереди.  
+# <a name="brokeractivation-event-class"></a>Broker:Activation, класс событий
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Activation** , если монитор очереди запускает хранимую процедуру активации, отправляет уведомление QUEUE_ACTIVATION или если существует хранимая процедура активации, запущенная монитором очереди.  
   
-## Столбцы данных класса событий Broker:Activation  
+## <a name="brokeractivation-event-class-data-columns"></a>Столбцы данных класса событий Broker:Activation  
   
 |Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  

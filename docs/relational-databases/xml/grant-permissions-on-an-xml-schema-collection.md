@@ -1,28 +1,32 @@
 ---
-title: "Предоставление разрешений на коллекции схем XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "предоставление разрешений [SQL Server], коллекции схем XML"
-  - "ALTER, разрешение"
+title: "Предоставление разрешений на коллекцию схем XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- granting permissions [SQL Server], XML schema collections
+- ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Предоставление разрешений на коллекции схем XML
+# <a name="grant-permissions-on-an-xml-schema-collection"></a>Предоставление разрешений на коллекции схем XML
   На создание коллекции схем XML, а также на объекты коллекции схем XML можно предоставлять разрешения.  
   
-## Предоставление разрешений на создание коллекции XML-схем  
+## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Предоставление разрешений на создание коллекции XML-схем  
  Для создания коллекции XML-схем требуются следующие разрешения.  
   
 -   Участнику требуется разрешение CREATE XML SCHEMA COLLECTION на уровне базы данных.  
@@ -47,7 +51,7 @@ caps.handback.revision: 32
   
  Владелец реляционной схемы становится владельцем коллекции XML-схем, созданной в данной схеме. Этот владелец получает полный контроль над коллекцией XML-схем. Поэтому он может изменять коллекцию XML-схем, вводить XML-столбец и удалять коллекцию XML-схем.  
   
-## Предоставление разрешений на объект коллекции XML-схем  
+## <a name="granting-permissions-on-an-xml-schema-collection-object"></a>Предоставление разрешений на объект коллекции XML-схем  
  В коллекции XML-схем допускаются следующие разрешения.  
   
 -   Разрешение ALTER требуется при изменении содержимого существующей коллекции XML-схем с помощью инструкции ALTER XML SCHEMA COLLECTION.  
@@ -62,10 +66,10 @@ caps.handback.revision: 32
   
 -   Разрешение EXECUTE необходимо для проверки значений, вставленных или обновленных участником, по коллекции схем XML, которая типизирует или ограничивает столбцы, переменные и параметры типа **xml** . Это разрешение требуется также для запросов к XML-данным, хранящимся в этих столбцах и переменных.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  Представленные в следующих примерах сценарии отображают организацию разрешений на XML-схемы. В каждом примере создается соответствующая тестовая база данных, реляционные схемы и имена входа. Этим именам входа предоставляются необходимые разрешения на коллекции XML-схем. После завершения работы в каждом примере выполняются действия по очистке.  
   
-### A. Предоставление разрешений на создание коллекции схем XML  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Предоставление разрешений на создание коллекции схем XML  
  В следующем примере показано предоставление разрешений на создание участником коллекции схем XML. В примере создается образец базы данных и пользователь `TestLogin1`. `TestLogin1` предоставляется разрешение `ALTER` в реляционной схеме и разрешение `CREATE XML SCHEMA COLLECTION` в базе данных. С этими разрешениями пользователь `TestLogin1` успешно создает образец коллекции схем XML.  
   
 ```  
@@ -119,7 +123,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### Б. Предоставление разрешений на использование существующей коллекции схем XML  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>Б. Предоставление разрешений на использование существующей коллекции схем XML  
  Следующий пример далее иллюстрирует модель разрешений для коллекции схем XML. В нем показаны различные разрешения, необходимые для создания коллекции схем XML и работы с ней.  
   
  В примере создается образец базы данных и имя входа `TestLogin1`. `TestLogin1` создает коллекцию схем XML в базе данных. Имя входа создает таблицу и с помощью коллекции схем XML создает типизированный XML-столбец. Затем пользователь вставляет данные и выполняет к ним запрос. Для всех этих шагов необходимы соответствующие разрешения схемы, что отражается в программном коде.  
@@ -236,7 +240,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### В. Предоставление разрешения ALTER на коллекцию схем XML  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>В. Предоставление разрешения ALTER на коллекцию схем XML  
  Для изменения существующей коллекции схем XML в базе данных пользователю необходимо разрешение ALTER. В следующем примере показано предоставление разрешения `ALTER` .  
   
 ```  
@@ -311,7 +315,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### Г. Предоставление разрешения TAKE OWNERSHIP на коллекцию схем XML  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>Г. Предоставление разрешения TAKE OWNERSHIP на коллекцию схем XML  
  В следующем примере показано, как права владельца коллекции схем XML могут передаваться от одного пользователя другому. Чтобы пример был более интересным, пользователи работают в разных реляционных схемах.  
   
  Код в примере выполняет следующие действия.  
@@ -429,7 +433,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### Д. Предоставление разрешения VIEW DEFINITION на коллекцию схем XML  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>Д. Предоставление разрешения VIEW DEFINITION на коллекцию схем XML  
  В примере показано, каким образом предоставляются разрешения VIEW DEFINITION на коллекцию схем XML.  
   
 ```  
@@ -501,7 +505,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

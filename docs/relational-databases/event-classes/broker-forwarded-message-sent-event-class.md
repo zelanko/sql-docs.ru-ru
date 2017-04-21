@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Broker:Forwarded Message Sent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Sent, класс событий"
+title: "Класс событий Broker:Forwarded Message Sent | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0462975232b9391c8cd57bc6811934f82ea5cdc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Broker:Forwarded Message Sent
+# <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие класса Broker:Forwarded Message Sent, когда компонент Service Broker перенаправляет сообщение.  
   
-## Столбцы данных класса событий Broker:Forwarded Message Sent  
+## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Столбцы данных класса событий Broker:Forwarded Message Sent  
   
 |Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -48,7 +52,7 @@ caps.handback.revision: 26
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|Нет|  
 |SPID|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |StartTime|**datetime**|Время начала события, если доступно.|14|Да|  
-|Успешно |**int**|Количество времени, затраченного на процесс перенаправления.|23|Нет|  
+|Успешно|**int**|Количество времени, затраченного на процесс перенаправления.|23|Нет|  
 |TargetLoginName|**nvarchar**|Сетевой адрес, по которому экземпляр отправляет сообщение. Обратите внимание, что он может отличаться от конечного места назначения сообщения.|42|Нет|  
 |TargetUserName|**nvarchar**|Имя вызывающей службы для сообщения.|39|Нет|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Нет|  

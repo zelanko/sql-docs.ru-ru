@@ -1,24 +1,28 @@
 ---
-title: "Добавление бизнес-логики для XML-данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "бизнес-логика [XML]"
+title: "Добавление бизнес-логики для данных XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Добавление бизнес-логики для XML-данных
+# <a name="add-business-logic-to-xml-data"></a>Добавление бизнес-логики для XML-данных
   Бизнес-логику можно добавить в XML-данные несколькими способами.  
   
 -   Можно создать ограничения строк или столбцов, чтобы наложить ограничения, специфические для домена, во время вставки и модификации XML-данных.  
@@ -29,8 +33,8 @@ caps.handback.revision: 18
   
 -   Можно создать хранимые процедуры и функции Transact-SQL, инициирующие обработку XML-столбца в соответствии с бизнес-потребностями.  
   
-## Пример. Применение преобразования XSL  
- Рассмотрим функцию CLR **TransformXml()**, которая принимает экземпляр типа данных **xml** и находящееся в файле преобразование XSL, применяет преобразование к XML-данным и возвращает результат преобразования. Вот ее основа, написанная на C#:  
+## <a name="example-applying-xsl-transformation"></a>Пример. Применение преобразования XSL  
+ Рассмотрим функцию CLR **TransformXml()** , которая принимает экземпляр типа данных **xml** и находящееся в файле преобразование XSL, применяет преобразование к XML-данным и возвращает результат преобразования. Вот ее основа, написанная на C#:  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  
@@ -50,7 +54,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)] **SqlXslTransform()**, соответствующей **TransformXml()**, эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
+ После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)] **SqlXslTransform()** , соответствующей **TransformXml()**, эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

@@ -1,47 +1,44 @@
 ---
-title: "Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ошибки носителя [SQL Server]"
-  - "CONTINUE_AFTER_ERROR, параметр"
-  - "ошибки [SQL Server], резервные копии"
-  - "резервные копии [SQL Server], ошибки"
-  - "RESTORE VERIFYONLY, инструкция"
-  - "резервные носители [SQL Server], управление обработкой ошибок"
-  - "контрольные суммы страниц [SQL Server]"
-  - "контрольные суммы резервных копий [SQL Server]"
-  - "резервное копирование [SQL Server], ошибки носителя"
-  - "инструкция RESTORE, ошибки носителя"
-  - "NO_CHECKSUM, параметр"
-  - "контрольные суммы [SQL Server]"
+title: "Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- media errors [SQL Server]
+- CONTINUE_AFTER_ERROR option
+- errors [SQL Server], backups
+- backups [SQL Server], errors
+- RESTORE VERIFYONLY statement
+- backup media [SQL Server], error management
+- page checksums [SQL Server]
+- backup checksums [SQL Server]
+- backing up [SQL Server], media errors
+- RESTORE statement, media errors
+- NO_CHECKSUM option
+- checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)
+# <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет восстанавливать базу данных, несмотря на обнаруженные ошибки. Новый важный механизм обнаружения ошибок состоит в возможном создании контрольной суммы резервной копии, которую можно создать операцией резервного копирования и проверить операцией восстановления. Можно управлять тем, будет ли операция проверять наличие ошибок и будет ли она останавливаться или продолжаться при обнаружении ошибки. Если резервная копия содержит контрольную сумму, инструкции RESTORE и RESTORE VERIFYONLY могут выполнять проверку на наличие ошибок.  
   
 > [!NOTE]  
 >  Зеркальные резервные копии могут содержать до четырех копий (зеркал) наборов носителей, предоставляя другие копии для исправления ошибок, вызванных повреждением носителей. Дополнительные сведения см. в разделе [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
- **В этом разделе.**  
-  
--   [Контрольные суммы резервных копий](#BckChecksums)  
-  
--   [Реакция на ошибки контрольной суммы страниц при операциях резервного копирования или восстановления](#ResponsetoPageChecksumErrors)  
-  
--   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="BckChecksums"></a> Контрольные суммы резервных копий  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает три типа контрольных сумм: на страницах, в блоках журналов и резервных копиях. При создании контрольной суммы резервной копии инструкция BACKUP проверяет согласованность данных, считанных из базы данных, со всеми контрольными суммами или признаками обрыва страниц в этой базе.  
@@ -59,7 +56,7 @@ caps.handback.revision: 36
      Если во время проверки операция резервного копирования обнаруживает ошибку страницы, резервное копирование прерывается с ошибкой.  
   
     > [!NOTE]  
-    >  Дополнительные сведения о контрольной сумме страниц и обнаружении разрывов страниц см. в описании параметра PAGE_VERIFY инструкции ALTER DATABASE. Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).  
+    >  Дополнительные сведения о контрольной сумме страниц и обнаружении разрывов страниц см. в описании параметра PAGE_VERIFY инструкции ALTER DATABASE. Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 2.  Независимо от того, присутствует ли контрольная сумма страницы или нет, инструкция BACKUP создает отдельные контрольные суммы резервных копий для потока резервных файлов. Дополнительно операции восстановления могут использовать контрольные суммы резервных копий для проверки наличия повреждений в резервных файлах. Контрольная сумма резервной копии хранится на носителе резервных файлов, а не на страницах базы данных. Контрольную сумму резервной копии также можно использовать во время восстановления.  
   
@@ -67,7 +64,7 @@ caps.handback.revision: 36
   
  Во время операции восстановления, если на резервном носителе имеются контрольные суммы, по умолчанию и инструкция RESTORE, и инструкция RESTORE VERIFYONLY проверяют контрольные суммы резервных копий и страниц. Если у резервной копии нет контрольной суммы, все операции восстановления продолжаются без проверок. Данное поведение объясняется тем, что без контрольной суммы резервной копии операция восстановления не может достоверно проверять контрольные суммы страниц.  
   
-## Реакция на ошибки контрольной суммы страниц при операциях резервного копирования или восстановления  
+## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>Реакция на ошибки контрольной суммы страниц при операциях резервного копирования или восстановления  
  По умолчанию после обнаружения ошибки контрольной суммы страницы операция BACKUP или RESTORE прерывается, а операция RESTORE VERIFYONLY продолжает работу. Однако вы можете определить, будет ли та или иная операция прерываться при возникновении ошибки или пытаться продолжать работу.  
   
  Если операция BACKUP продолжает работу при возникновении ошибок, она производит следующие действия:  
@@ -87,14 +84,14 @@ caps.handback.revision: 36
   
  **Управление реакцией на ошибку во время операции резервного копирования**  
   
--   [Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки (SQL Server)](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки (SQL Server)](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
   

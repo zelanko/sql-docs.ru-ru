@@ -1,37 +1,41 @@
 ---
-title: "создать точку управления служебной программы SQL Server (служебная программа SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.create.ucp.validation.F1"
-  - "sql13.SWB.create.ucp.Summary.F1"
-  - "sql13.SWB.create.ucp.progress.F1"
-  - "sql13.SWB.create.ucp.agentconfiguration.F1"
-  - "sql13.SWB.create.ucp.welcome.F1"
-  - "sql13.SWB.create.ucp.instancename.F1"
-helpviewer_keywords: 
-  - "создание точки управления служебной программой"
-  - "точка управления служебной программой"
+title: "Создание точки управления служебной программой SQL Server (служебная программа SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.create.ucp.validation.F1
+- sql13.SWB.create.ucp.Summary.F1
+- sql13.SWB.create.ucp.progress.F1
+- sql13.SWB.create.ucp.agentconfiguration.F1
+- sql13.SWB.create.ucp.welcome.F1
+- sql13.SWB.create.ucp.instancename.F1
+helpviewer_keywords:
+- Create UCP
+- UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06506dffa7c0d8497a6fc0986e8a29a701d0415
+ms.lasthandoff: 04/11/2017
+
 ---
-# создать точку управления служебной программы SQL Server (служебная программа SQL Server)
-  На предприятии может работать несколько служебных программ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], при этом каждая служебная программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может управлять несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениями уровня данных. У каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется одна и только одна точка управления служебной программой (UCP). Для каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать точку управления служебной программой. Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой.  
+# <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>создать точку управления служебной программы SQL Server (служебная программа SQL Server)
+  На предприятии может работать несколько служебных программ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при этом каждая служебная программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может управлять несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениями уровня данных. У каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется одна и только одна точка управления служебной программой (UCP). Для каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать точку управления служебной программой. Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой.  
   
  Точка управления служебной программой выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
   
-## Перед началом  
+## <a name="before-you-begin"></a>Перед началом  
  Перед созданием точки управления служебной программой ознакомьтесь со следующими требованиями и рекомендациями.  
   
  В этом выпуске точка управления служебной программой и все управляемые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны удовлетворять следующим требованиям.  
@@ -46,7 +50,7 @@ caps.handback.revision: 13
   
  В этом выпуске точка управления служебной программой должна удовлетворять следующим требованиям.  
   
--   Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь поддерживаемый выпуск. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь поддерживаемый выпуск. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Рекомендуется размещать точку управления служебной программой на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], учитывающем регистр.  
   
@@ -60,14 +64,14 @@ caps.handback.revision: 13
   
  В этой версии все управляемые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны удовлетворять приведенным ниже требованиям.  
   
--   Если точка управления служебной программой находится на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с учетом регистра, рекомендуется, чтобы на управляемых экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также учитывался регистр.  
+-   Если точка управления служебной программой находится на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с учетом регистра, рекомендуется, чтобы на управляемых экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также учитывался регистр.  
   
 -   Данные FILESTREAM не поддерживаются при наблюдении с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
- Дополнительные сведения см. в статьях [Задание максимальной вместимости SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Дополнительные сведения см. в статьях [Задание максимальной вместимости SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-### Удаление предыдущих точек управления служебной программой перед установкой новой точки  
- Если точка управления служебной программой устанавливается в экземпляре SQL Server, который когда-либо ранее был настроен в качестве точки управления служебной программой, то перед установкой новой точки необходимо удалить все управляемые экземпляры SQL Server и точку управления служебной программой. Для этого можно выполнить хранимую процедуру **sp_sysutility_ucp_remove**.  
+### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>Удаление предыдущих точек управления служебной программой перед установкой новой точки  
+ Если точка управления служебной программой устанавливается в экземпляре SQL Server, который когда-либо ранее был настроен в качестве точки управления служебной программой, то перед установкой новой точки необходимо удалить все управляемые экземпляры SQL Server и точку управления служебной программой. Для этого можно выполнить хранимую процедуру **sp_sysutility_ucp_remove** .  
   
  Перед запуском процедуры ознакомьтесь со следующими требованиями.  
   
@@ -90,14 +94,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой. Дополнительные сведения об основных понятиях служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
- Точка управления служебной программой представляет собой централизованный логический центр для программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . С помощью точки управления служебной программой можно просматривать данные конфигурации и производительности, полученные от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложений уровня данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также выполнять общие действия по планированию загрузки. Кроме того, точка управления служебной программой является отправной точкой для регистрации и удаления экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Точка управления служебной программой представляет собой централизованный логический центр для программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . С помощью точки управления служебной программой можно просматривать данные конфигурации и производительности, полученные от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложений уровня данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также выполнять общие действия по планированию загрузки. Кроме того, точка управления служебной программой является отправной точкой для регистрации и удаления экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  После регистрации экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно наблюдать за работоспособностью ресурсов в управляемых экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениях уровня данных, что позволяет определить потенциальные возможности консолидации и выделить связанные с ресурсами узкие места. Дополнительные сведения см. в разделе [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  Набор элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается параллельно с наборами элементов сбора, не касающимися служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом, управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно наблюдать по другим наборам элементов сбора, поскольку он является элементом служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует, однако, отметить, что все наборы элементов сбора, находящиеся в управляемом экземпляре, передают свои данные в хранилище данных управления служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделах [Замечания по выполнению программы, не относящиеся к прочим наборам элементов сбора на том же экземпляре SQL Server](../../relational-databases/manage/run utility and non-utility collection sets on same sql instance.md) и [Настройка хранилища данных для точки управления служебной программой (служебная программа SQL Server)](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
+>  Набор элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается параллельно с наборами элементов сбора, не касающимися служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Таким образом, управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно наблюдать по другим наборам элементов сбора, поскольку он является элементом служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Следует, однако, отметить, что все наборы элементов сбора, находящиеся в управляемом экземпляре, передают свои данные в хранилище данных управления служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделах [Замечания по выполнению программы, не относящиеся к прочим наборам элементов сбора на том же экземпляре SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) и [Настройка хранилища данных для точки управления служебной программой (служебная программа SQL Server)](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
-## Шаги мастера  
+## <a name="wizard-steps"></a>Шаги мастера  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
  В следующих разделах содержатся сведения о каждой странице потока операций мастера по созданию нового пункта управления программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы запустить мастер для создания новой точки управления служебной программой (UCP), откройте область проводника служебной программы из меню "Вид" в SSMS, затем нажмите кнопку ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Создать UCP** в верхней части области проводника служебной программы.  
@@ -130,14 +134,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Укажите экземпляр  
  Укажите следующие сведения для создаваемого UCP.  
   
--   **Имя экземпляра**. Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, щелкните **Подключить…**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра".  
+-   **Имя экземпляра** . Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, щелкните **Подключить…**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра".  
   
 -   **Имя программы.** Укажите имя, которое будет использоваться для обозначения служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сети.  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="Connection_dialog"></a> Диалоговое окно соединения  
- Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Если соединение является зашифрованных, то будет использоваться это соединение. Если же соединение не зашифровано, программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит новое зашифрованное соединение.  
@@ -147,7 +151,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Agent_configuration"></a> Учетная запись набора элементов сбора служебной программы  
  Укажите учетную запись домена Windows для выполнения набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта учетная запись используется как учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно также использовать имеющуюся служебную учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы требования проверки были удовлетворены, следуйте приведенным ниже рекомендациям по настройке учетной записи.  
   
- Если выбран вариант со служебной учетной записью службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Если выбран вариант со служебной учетной записью службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Служебная учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должна быть встроенной учетной записью домена Windows (например, LocalSystem, NetworkService или LocalService).  
   
@@ -160,14 +164,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |Пользователь должен обладать правами администратора на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором будет создана точка управления служебной программой.|Войдите в систему под учетной записью с правами администратора для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь версию 10.50 или более позднюю.|Укажите другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для размещения точки управления служебной программой.|  
-|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь поддерживаемый выпуск. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).|Укажите другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для размещения точки управления служебной программой.|  
+|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь поддерживаемый выпуск. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|Укажите другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для размещения точки управления служебной программой.|  
 |Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , зарегистрированным в какой-либо другой точке управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Укажите другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для размещения точки управления служебной программой, или удалите регистрацию экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в точке управления служебной программой, в котором этот экземпляр в данный момент является управляемым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |На экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должна быть уже размещена точка управления служебной программой.|Укажите другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для размещения точки управления служебной программой.|  
 |На указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть включена поддержка TCP/IP.|Включите поддержку TCP/IP для указанного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может иметь базу данных с именем sysutility_mdw.|При выполнении операции создания точки управления служебной программой формируется хранилище данных управления программы (UMDW) под именем «sysutility_mdw». Для выполнения этой операции требуется, чтобы имя не существовало на компьютере в момент выполнения правил проверки. Для продолжения необходимо удалить или переименовать любую базу данных с именем «sysutility_mdw». Дополнительные сведения об операциях переименования см. в разделе [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |Наборы элементов сбора на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть остановлены.|Остановите работу существующих наборов элементов сбора на время создания UCP на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если сборщик данных отключен, включите его, остановите все работающие наборы элементов сбора, а затем снова запустите правила проверки для операции создания точки управления служебной программой.<br /><br /> Включение сборщика данных:<br /><br /> В обозревателе объектов раскройте узел **Управление** .<br /><br /> Щелкните правой кнопкой мыши **Сбор данных**, затем выберите **Включить сбор данных**.<br /><br /> Остановка набора элементов сбора:<br /><br /> В обозревателе объектов разверните узел **Управление**, затем узел **Сбор данных**и узел &amp;lt;ui&amp;gt;Наборы элементов сбора системных данных&amp;lt;/ui&amp;gt;.<br /><br /> Щелкните правой кнопкой мыши набор элементов сбора, который необходимо остановить, и выберите команду **Остановить набор сбора данных**.<br /><br /> Результат этого действия будет отображен в окне сообщения, а красный круг на значке набора элементов сбора означает его остановку.|  
 |Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть запущена на указанном экземпляре. Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо настроить ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае следует настроить автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Запустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|WMI должна быть правильно настроена.|Сведения об устранении неполадок настройки WMI см. в статье [Устранение неполадок служебной программы SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md).|  
+|WMI должна быть правильно настроена.|Сведения об устранении неполадок настройки WMI см. в статье [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |Учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть встроенной учетной записью, например записью "Сетевая служба".|Если учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является встроенной, например записью "Сетевая служба", следует выполнить переназначение учетной записи, указав учетную запись домена Windows, то есть запись sysadmin.|  
 |Если установлен параметр учетной записи-посредника, то учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть допустимой учетной записью домена Windows.|Укажите допустимую учетную запись домена Windows. Чтобы проверить допустимость учетной записи, войдите на указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью этой учетной записи домена Windows.|  
 |Если выбирается учетная запись службы, то учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть встроенной учетной записью, такой как учетная запись "Сетевая служба".|Если учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является встроенной, например учетной записью "Сетевая служба", следует выполнить переназначение учетной записи, указав учетную запись домена Windows.|  
@@ -197,7 +201,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   Создание хранилища данных управления программы (UMDW).  
   
--   Инициализация [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UMDW. Имя файла UMDW — sysutility_mdw.  
+-   Инициализация [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UMDW. Имя файла UMDW — sysutility_mdw.  
   
 -   Настройка точки управления служебной программой.  
   
@@ -213,7 +217,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  Чтобы отобразить панель мониторинга, в меню среды SSMS выберите **Вид** , а затем **Содержимое обозревателя программ** . Чтобы обновить данные, щелкните правой кнопкой мыши имя программы на панели проводника служебной программы и выберите команду **Обновить**.  
   
- Дополнительные сведения о регистрации дополнительных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Регистрация экземпляра SQL Server &#40;служебная программа SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md). Чтобы удалить точку управления служебной программой из служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на панели **Обозреватель программы** выберите **Управляемые экземпляры**, чтобы отобразить список управляемых экземпляров, щелкните правой кнопкой мыши имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в представлении списка **Содержимое обозревателя программы** и выберите **Make Instance Unmanaged** (Удалить из списка управляемых экземпляров).  
+ Дополнительные сведения о регистрации дополнительных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Регистрация экземпляра SQL Server &#40;служебная программа SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md). Чтобы удалить точку управления служебной программой из служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на панели **Обозреватель программы** выберите **Управляемые экземпляры** , чтобы отобразить список управляемых экземпляров, щелкните правой кнопкой мыши имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в представлении списка **Содержимое обозревателя программы** и выберите **Make Instance Unmanaged**(Удалить из списка управляемых экземпляров).  
   
 ##  <a name="PowerShell_create_UCP"></a> Создание нового пункта управления программой с помощью PowerShell  
  Для создания нового пункта управления программой используйте следующий пример:  
@@ -224,8 +228,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Устранение неполадок служебной программы SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "Диалоговое окно &#171;Подробный просмотр результатов&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.results.f1"
-  - "sql13.swb.dmf.policy.resultdetails.f1"
+title: "Диалоговое окно &quot;Подробный просмотр результатов&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.results.f1
+- sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7893f4dbf2a91106721e2d6c266a7f938bce3c45
+ms.lasthandoff: 04/11/2017
+
 ---
-# Диалоговое окно &#171;Подробный просмотр результатов&#187;
+# <a name="results-detailed-view-dialog-box"></a>Диалоговое окно «Подробный просмотр результатов»
   В этом диалоговом окне отображаются результаты оценки политики после ее запуска с помощью диалогового окна **Выполнить политики** и нажатия кнопки **Оценить**. Это диалоговое окно доступно только для чтения; оно помогает понять, в какой части выражения свойства может содержаться ошибка.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **AndOr**  
  Если присутствует более одного выражения свойства, показывает, являются ли выражения свойств совокупными или альтернативными.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 21
  **Дополнительная справка**  
  Перейдите по гиперссылке, чтобы открыть веб-страницу, связанную с данной политикой. Эта дополнительная гиперссылка справки настраивается при создании политики, она может быть пустой или недоступной.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Узел управления политиками (обозреватель объектов)](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

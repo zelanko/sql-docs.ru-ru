@@ -1,29 +1,33 @@
 ---
-title: "Раздельное сохранение события Showplan XML (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "события Showplan XML"
-  - "сохранение событий Showplan XML"
-  - "события [SQL Server], Showplan XML"
+title: "Раздельное сохранение событий Showplan XML (приложение SQL Server Profiler) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML events
+- saving Showplan XML events
+- events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e92884b770e55cbd1b34203d7979041ee3821159
+ms.lasthandoff: 04/11/2017
+
 ---
-# Раздельное сохранение события Showplan XML (приложение SQL Server Profiler)
+# <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Раздельное сохранение события Showplan XML (приложение SQL Server Profiler)
   В этом разделе описано сохранение событий инструкции **Showplan XML** , захваченных при трассировке в отдельные файлы .SQLPlan с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Файлы событий **Showplan XML** можно открыть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], позволяющей просматривать графическое представление плана выполнения для каждого события.  
   
-### Отдельное сохранение событий Showplan XML  
+### <a name="to-save-showplan-xml-events-separately"></a>Отдельное сохранение событий Showplan XML  
   
 1.  В меню **Файл** выберите пункт **Создать трассировку**, а затем подключитесь к экземпляру SQL Server.  
   
@@ -46,19 +50,19 @@ caps.handback.revision: 25
   
 6.  Перейдите на вкладку **Выбор событий**.  
   
-7.  В столбце данных **События** разверните категорию событий **Производительность** и установите флажок **Showplan XML**. Если категория событий **Производительность** недоступна, установите флажок **Показать все события** , чтобы отобразить ее.  
+7.  В столбце данных **События**разверните категорию событий **Производительность**и установите флажок **Showplan XML**. Если категория событий **Производительность** недоступна, установите флажок **Показать все события** , чтобы отобразить ее.  
   
-     Вкладка **Настройки извлечения событий** добавлена в диалоговое окно **Свойства трассировки**.  
+     Вкладка **Настройки извлечения событий**добавлена в диалоговое окно **Свойства трассировки**.  
   
-8.  На вкладке **Настройки извлечения событий** установите флажок **Сохранить события XML Showplan отдельно**.  
+8.  На вкладке **Настройки извлечения событий**установите флажок **Сохранить события XML Showplan отдельно**.  
   
 9. В диалоговом окне **Сохранить как** введите имя файла для сохранения событий **Showplan XML** .  
   
-10. Щелкните **Все пакеты XML Showplan в один файл**, чтобы сохранить все события **Showplan XML** в одном XML-файле, или щелкните **Каждый пакет XML Showplan в отдельный файл**, чтобы создать новый XML-файл для каждого события **Showplan XML**.  
+10. Щелкните **Все пакеты XML Showplan в один файл** , чтобы сохранить все события **Showplan XML** в одном XML-файле, или щелкните **Каждый пакет XML Showplan в отдельный файл**, чтобы создать новый XML-файл для каждого события **Showplan XML** .  
   
 11. Для просмотра события **Showplan XML** в среде SQL Server Management Studio выберите в меню **Файл** пункт **Открыть**, затем выберите **Файл**. Чтобы выбрать и открыть один из файлов событий **Showplan XML** , перейдите в каталог с этими файлами. Файлы событий**Showplan XML** имеют расширение .SQLPlan.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Анализ запросов с помощью результатов инструкции SHOWPLAN в приложении SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

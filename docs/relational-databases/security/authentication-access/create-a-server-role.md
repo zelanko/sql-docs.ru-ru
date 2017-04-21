@@ -1,28 +1,32 @@
 ---
-title: "Создание роли сервера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.SERVERROLE.GENERAL.F1"
-  - "sql13.swb.serverrole.memberships.f1"
-  - "sql13.swb.serverrole.members.f1"
-helpviewer_keywords: 
-  - "SERVER ROLE, создание"
+title: "Создание роли сервера | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.SERVERROLE.GENERAL.F1
+- sql13.swb.serverrole.memberships.f1
+- sql13.swb.serverrole.members.f1
+helpviewer_keywords:
+- SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be798eb132d37378b94659eda0efc1b586e7110a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание роли сервера
+# <a name="create-a-server-role"></a>Создание роли сервера
   В этом разделе описывается создание новой роли сервера в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -60,7 +64,7 @@ caps.handback.revision: 13
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание новой роли сервера  
+#### <a name="to-create-a-new-server-role"></a>Создание новой роли сервера  
   
 1.  В обозревателе объектов разверните сервер, на котором необходимо создать новую роль сервера.  
   
@@ -68,11 +72,11 @@ caps.handback.revision: 13
   
 3.  Щелкните правой кнопкой мыши папку **Роли сервера** и выберите **Создать роль сервера…**  
   
-4.  В диалоговом окне **Новая роль сервера —***server_role_name* на странице **Общие** введите имя новой роли сервера в поле **Имя роли сервера**.  
+4.  В диалоговом окне **Новая роль сервера —***server_role_name* на странице **Общие** введите имя новой роли сервера в поле **Имя роли сервера** .  
   
-5.  В поле **Владелец** введите имя участника на уровне сервера, которому будет принадлежать новая роль. Также можно нажать кнопку с многоточием **(...)**, чтобы открыть диалоговое окно **Выбор имени входа или роли сервера**.  
+5.  В поле **Владелец** введите имя участника на уровне сервера, которому будет принадлежать новая роль. Также можно нажать кнопку с многоточием **(...)** , чтобы открыть диалоговое окно **Выбор имени входа или роли сервера** .  
   
-6.  В поле **Защищаемые объекты** выберите один или несколько защищаемых объектов уровня сервера. Когда выбран защищаемый объект, роли сервера могут быть предоставлены или запрещены разрешения для этого объекта.  
+6.  В поле **Защищаемые объекты**выберите один или несколько защищаемых объектов уровня сервера. Когда выбран защищаемый объект, роли сервера могут быть предоставлены или запрещены разрешения для этого объекта.  
   
 7.  В поле **Разрешения: явный** установите флажок, чтобы предоставить, предоставить с правом передачи или отменить разрешение для этой роли сервера на выделенные защищаемые объекты. Если разрешение не может быть предоставлено или отменено для всех выделенных защищаемых объектов, разрешение представляется как частично выбранное.  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 13
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание новой роли сервера  
+#### <a name="to-create-a-new-server-role"></a>Создание новой роли сервера  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

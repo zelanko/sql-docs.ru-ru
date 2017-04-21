@@ -1,28 +1,32 @@
 ---
-title: "Резервное копирование и восстановление: взаимодействие и сосуществование | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление файлов [SQL Server], связанные функции"
-  - "восстановление [SQL Server], файлы"
-  - "восстановление файлов [SQL Server], связанные функции"
-  - "резервные копии [SQL Server], файлы или файловые группы"
-  - "резервные копии файлов [SQL Server], связанные функции"
+title: "Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server], related features
+- restoring [SQL Server], files
+- restoring files [SQL Server], related features
+- backups [SQL Server], files or filegroups
+- file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Резервное копирование и восстановление: взаимодействие и сосуществование
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление: взаимодействие и сосуществование
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются вопросы резервного копирования и восстановления для нескольких функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это восстановление файлов и запуск базы данных, оперативное восстановление и отключенные индексы, зеркальное отображение базы данных, поэтапное восстановление и полнотекстовые индексы.  
@@ -42,7 +46,7 @@ caps.handback.revision: 45
 -   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="FileRestoreAndDbStartup"></a> Восстановление файлов и запуск базы данных  
- Этот раздел относится только к базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащим несколько файловых групп.  
+ Этот раздел относится только к базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащим несколько файловых групп.  
   
 > [!NOTE]  
 >  При запуске баз данных восстанавливаются и переводятся в режим «в сети» только те файловые группы, чьи файлы были в этом режиме при закрытии базы.  
@@ -64,19 +68,19 @@ caps.handback.revision: 45
  Этот раздел относится только к тем базам данных, которые используют модель полного восстановления и содержат несколько файловых групп.  
   
 > [!NOTE]  
->  В следующих версиях Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможность зеркального отображения базы данных будет исключена. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  В следующих версиях Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]возможность зеркального отображения базы данных будет исключена. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
  Зеркальное отображение базы данных — это решение, нацеленное на повышение ее доступности. Зеркальное отображение каждой базы данных осуществляется отдельно и работает только с теми базами данных, которые используют модель полного восстановления. Дополнительные сведения см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!NOTE]  
 >  Для распространения копий подмножества файловых групп в базе данных используется репликация: реплицируются только те объекты в файловых группах, которые необходимо копировать на другие серверы. Дополнительные сведения о репликации см. в разделе [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
-### Создание зеркальной базы данных  
+### <a name="creating-the-mirror-database"></a>Создание зеркальной базы данных  
  Зеркальная база данных создается посредством восстановления с параметром WITH NORECOVERY резервных копий основной базы данных на зеркальном сервере. При восстановлении базы данных должно сохраняться ее имя. Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  Зеркальная база данных может быть создана при использовании последовательности поэтапного восстановления, если она поддерживается. Однако зеркальное отображение не может быть начато до тех пор, пока не будут восстановлены все файловые группы (и, как правило, резервные копии журналов), чтобы привести состояние зеркальной базы данных как можно ближе к основной. Дополнительные сведения см. в разделе [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
-### Ограничения на резервное копирование и восстановление в процессе зеркального отображения  
+### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>Ограничения на резервное копирование и восстановление в процессе зеркального отображения  
  Во время активного сеанса зеркального отображения базы данных применяются следующие ограничения.  
   
 -   Резервное копирование и восстановление зеркальной базы данных недопустимо.  
@@ -93,7 +97,7 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  Чтобы просмотреть идентификатор файловой группы, содержащей полнотекстовый индекс, выберите столбец data_space_id представления [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
-### Полнотекстовые индексы и таблицы в разных файловых группах  
+### <a name="full-text-indexes-and-tables-in-separate-filegroups"></a>Полнотекстовые индексы и таблицы в разных файловых группах  
  Если полнотекстовый индекс расположен в другой файловой группе, отдельно от всех связанных с ним табличных данных, поведение поэтапного восстановления зависит от того, какие файловые группы восстанавливаются и переводятся в режим «в сети» первыми.  
   
 -   Если файловая группа, содержащая полнотекстовый индекс, восстанавливается и переводится в режим «в сети» перед файловыми группами, содержащими связанные табличные данные, после перевода индекса в режим «в сети» полнотекстовый поиск работает предсказуемым образом.  
@@ -130,9 +134,10 @@ caps.handback.revision: 45
   
 -   [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
+ [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [Активные вторичные реплики: резервное копирование во вторичных репликах \(группы доступности AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

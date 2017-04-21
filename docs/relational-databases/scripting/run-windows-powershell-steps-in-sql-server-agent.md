@@ -1,29 +1,33 @@
 ---
-title: "Использование Windows PowerShell в шагах агента SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование Windows PowerShell в шагах агента SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae35fb3deecc8b77940ab76d1b0f016f00f39e27
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование Windows PowerShell в шагах агента SQL Server
+# <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
   Агент SQL Server применяется для запуска скриптов SQL Server PowerShell в запланированное время.  
   
-1.  **Перед началом работы выполните следующие действия.**  [Ограничения](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **Запуск PowerShell из агента SQL Server с помощью следующих средств:**  [шаг задания PowerShell](#PShellJob), [шаг задания командной строки](#CmdExecJob)  
+2.  **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   
-## Перед началом  
+## <a name="before-you-begin"></a>Перед началом  
  Существует несколько типов шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Каждый тип связан с некоторой подсистемой, в которой реализуется определенная среда, например агент репликации или среда командной строки. Можно создавать скрипты Windows PowerShell, а затем использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы включить скрипты в задания, которые выполняются в запланированное время или в ответ на события [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Скрипты Windows PowerShell можно запускать либо с помощью шагов задания командной строки, либо с помощью шагов задания PowerShell.  
   
 1.  Используйте шаги задания PowerShell для запуска подсистемой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программы **sqlps** , запускающей PowerShell и импортирующей модуль **sqlps** .  
@@ -38,7 +42,7 @@ caps.handback.revision: 10
 ##  <a name="PShellJob"></a> Создание шага задания PowerShell  
  **Создание шага задания PowerShell**  
   
-1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../../ssms/agent/create-jobs.md).  
+1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
   
 2.  В диалоговом окне **Свойства задания** выберите страницу **Шаги** и нажмите кнопку **Добавить**.  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 10
 ##  <a name="CmdExecJob"></a> Создание шага задания командной строки  
  **Создание шага задания CmdExec**  
   
-1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](../../ssms/agent/create-jobs.md).  
+1.  Разверните **Агент SQL Server**, создайте задание или щелкните правой кнопкой мыши существующее задание и выберите пункт **Свойства**. Дополнительные сведения о создании заданий см. в разделе [Создание заданий](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
   
 2.  В диалоговом окне **Свойства задания** выберите страницу **Шаги** и нажмите кнопку **Добавить**.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 10
   
 8.  Выберите вкладку **Дополнительно** , чтобы задать следующие параметры шага задания: действие, которое необходимо выполнить при успешном или неуспешном выполнении шага задания, количество попыток агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнить шаг задания и файл, в который агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может записывать результат выполнения шага задания. Только члены предопределенной роли сервера **sysadmin** могут записывать выходные данные шага задания в файл операционной системы.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

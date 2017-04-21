@@ -1,24 +1,28 @@
 ---
-title: "Рассмотрение структуры и ограничений издателей Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "публикация Oracle [репликация SQL Server], вопросы проектирования и ограничения"
+title: "Рассмотрение структуры и ограничений издателей Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], design considerations and limitations
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 54634ceaf94c4bc4cc050d364e19a1e99c328974
+ms.lasthandoff: 04/11/2017
+
 ---
-# Рассмотрение структуры и ограничений издателей Oracle
+# <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
   Публикация из баз данных Oracle спроектирована таким образом, чтобы работать идентично публикации из базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако необходимо знать о следующих ограничениях и проблемах:  
   
 -   Параметр Oracle Gateway обеспечивает большую производительность по сравнению с параметром Oracle Complete. Тем не менее этот параметр нельзя использовать для публикации одной и той же таблицы в нескольких публикациях транзакций. Таблица может присутствовать только в одной публикации транзакций и в любом количестве публикаций моментальных снимков. Если необходимо опубликовать одну таблицу в нескольких публикациях транзакций, выберите параметр Oracle Complete.  
@@ -29,7 +33,7 @@ caps.handback.revision: 48
   
 -   При использовании издателя Oracle существует ряд различий в способе поддержки свойств репликации транзакций.  
   
-## Поддержка публикации объектов из Oracle  
+## <a name="support-for-publishing-objects-from-oracle"></a>Поддержка публикации объектов из Oracle  
  Репликация поддерживает копирование следующих объектов из баз данных Oracle:  
   
 -   Таблицы  
@@ -68,17 +72,17 @@ caps.handback.revision: 48
   
 -   Синонимы  
   
- Сведения о поддерживаемых типах данных см. в разделе [сопоставления типов данных для издателей Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
+ Сведения о поддерживаемых типах данных см. в разделе [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## Различия между Oracle и SQL Server  
+## <a name="differences-between-oracle-and-sql-server"></a>Различия между Oracle и SQL Server  
   
--   Oracle имеет другие ограничения максимального размера для некоторых объектов. Любые объекты, созданные в базе данных публикации Oracle, не должны превышать максимальных размеров для соответствующих объектов в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения об ограничениях в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в разделе [спецификации максимальной емкости для SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+-   Oracle имеет другие ограничения максимального размера для некоторых объектов. Любые объекты, созданные в базе данных публикации Oracle, не должны превышать максимальных размеров для соответствующих объектов в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения об ограничениях в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в статье [Maximum Capacity Specifications for SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md) (Спецификации максимально допустимых параметров SQL Server).  
   
 -   Имена объектов Oracle по умолчанию создаются в верхнем регистре. Убедитесь, что имена объектов Oracle передаются набранными в верхнем регистре при их публикации с помощью распространителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , если эти имена введены прописными буквами в базе данных Oracle. Неправильный регистр букв в имени объекта может привести к сообщению об ошибке, указывающему, что объект не найден.  
   
 -   Oracle имеет диалект SQL, немного отличающийся от SQL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; синтаксис фильтров строк должен поддерживаться Oracle.  
   
-### Вопросы использования больших объектов  
+### <a name="considerations-for-large-objects"></a>Вопросы использования больших объектов  
  Данные больших объектов (Large object, LOB) не хранятся в таблице журнала статьи; обновления данных больших объектов всегда извлекаются непосредственно из опубликованной таблицы. Обновления копируются в публикации транзакций только в тех случаях, когда операция, изменяющая большой объект, вызывает срабатывание триггера репликации в реплицируемой таблице. Триггеры Oracle срабатывают, когда вставляются или удаляются строки, содержащие большие объекты; однако обновления столбцов больших объектов не приводят к запуску триггеров. Обновление столбца больших объектов будет немедленно реплицировано только в том случае, если в той же самой транзакции Oracle будет также выполняться обновление столбца небольших объектов, находящегося в той же самой строке. В противном случае столбец больших объектов будет обновлен на подписчике при следующем обновлении столбца небольших объектов, находящегося в той же самой строке. Убедитесь, что данная логика действий приемлема для вашего приложения.  
   
  Для репликации обновлений столбцов больших объектов в публикациях транзакций рассмотрите одну из следующих стратегий записи приложения.  
@@ -89,7 +93,7 @@ caps.handback.revision: 48
   
  Дополнительные сведения о больших объектах (LOB) см. в разделе [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-### Уникальные индексы и ограничения  
+### <a name="unique-indexes-and-constraints"></a>Уникальные индексы и ограничения  
  Для репликации моментальных снимков и репликации транзакций столбцы, содержащиеся в уникальных индексах и ограничениях (включая ограничения первичных ключей), должны соответствовать определенным условиям. Если они не соответствуют этим условиям, то ограничение или индекс не реплицируется.  
   
 -   Максимальное число столбцов в индексе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] равно 16.  
@@ -108,7 +112,7 @@ caps.handback.revision: 48
   
  Как и в репликации транзакций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , таблицы в публикациях транзакций Oracle требуют наличия первичного ключа; первичный ключ должен быть уникальным на основе правил, указанных выше. В случае если первичный ключ не соответствует правилам, указанным выше, таблица не может быть опубликована для репликации транзакций.  
   
-## Различия между публикациями Oracle и стандартными репликациями транзакций  
+## <a name="differences-between-oracle-publishing-and-standard-transactional-replication"></a>Различия между публикациями Oracle и стандартными репликациями транзакций  
   
 -   Издатель Oracle не может иметь то же имя, что и его распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , любой из издателей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующих этот распространитель, а также любой из подписчиков, которые получают публикацию. Публикации, обслуживаемые одним и тем же распространителем, должны иметь уникальное имя.  
   
@@ -118,55 +122,55 @@ caps.handback.revision: 48
   
 -   Стандартные публикации транзакций поддерживают таблицы, содержащие до 1000 столбцов. Публикации транзакций Oracle поддерживают 995 столбцов (репликация добавляет пять столбцов в каждую публикуемую таблицу).  
   
--   К инструкциям CREATE TABLE добавляются выражения порядка следования, чтобы сделать возможными сравнения, учитывающие регистр, которые имеют важные значения для первичных ключей и уникальных ограничений. Это поведение управляется параметром схемы 0x1000, который указывается с помощью **@schema_option** параметра [процедуры sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   К инструкциям CREATE TABLE добавляются выражения порядка следования, чтобы сделать возможными сравнения, учитывающие регистр, которые имеют важные значения для первичных ключей и уникальных ограничений. Эта логика поведения управляется параметром схемы 0x1000, который указывается с помощью параметра **@schema_option** хранимой процедуры [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Если для настройки или обслуживания издателя Oracle используются хранимые процедуры, не вставляйте эти процедуры в явную транзакцию. Такая вложенность не поддерживается связанным сервером, используемым для подключения к издателю Oracle.  
   
--   При создании подписки по запросу на публикацию Oracle с помощью мастера следует использовать мастер создания подписок, поставляемый с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздними версиями. Тем не менее для предыдущих версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно использовать хранимые процедуры и интерфейсы SQL-DMO, чтобы настроить подписки по запросу на публикации Oracle.  
+-   При создании подписки по запросу на публикацию Oracle с помощью мастера следует использовать мастер создания подписок, поставляемый с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздними версиями. Тем не менее для предыдущих версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]можно использовать хранимые процедуры и интерфейсы SQL-DMO, чтобы настроить подписки по запросу на публикации Oracle.  
   
--   Если для распространения изменений на подписчики используются хранимые процедуры (по умолчанию), учтите, что синтаксис MCALL поддерживается, но имеет другую логику поведения, если публикация исходит от издателя Oracle. Обычно MCALL предоставляет битовую схему, которая показывает, какие столбцы у издателя были обновлены. В случае публикации Oracle битовая схема всегда показывает, что все столбцы были обновлены. Дополнительные сведения об использовании хранимых процедур см. в разделе [указания способа распространения изменений для транзакционных статей](../../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md).  
+-   Если для распространения изменений на подписчики используются хранимые процедуры (по умолчанию), учтите, что синтаксис MCALL поддерживается, но имеет другую логику поведения, если публикация исходит от издателя Oracle. Обычно MCALL предоставляет битовую схему, которая показывает, какие столбцы у издателя были обновлены. В случае публикации Oracle битовая схема всегда показывает, что все столбцы были обновлены. Дополнительные сведения об использовании хранимых процедур см. в статье [Указание способа распространения изменений для статей транзакций](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-### Поддержка функций репликации транзакций  
+### <a name="transactional-replication-feature-support"></a>Поддержка функций репликации транзакций  
   
--   Публикации Oracle не поддерживают все параметры схемы, поддерживаемые публикациями SQL Server. Дополнительные сведения о параметрах схемы см. в разделе [sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   Публикации Oracle не поддерживают все параметры схемы, поддерживаемые публикациями SQL Server. Дополнительные сведения о параметрах схемы см. в статье [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Подписчики на публикации Oracle не могут использовать немедленное обновление или очереди обновляемых подписок, а также не могут действовать в качестве узлов в одноранговой или двунаправленной топологии.  
   
 -   Подписчики на публикации Oracle не могут быть повторно автоматически инициализированы из резервной копии.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два типа проверки данных: двоичную и количества строк. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в разделе [проверки репликации данных](../../../relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два типа проверки данных: двоичную и количества строк. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в статье [Проверка реплицированных данных](../../../relational-databases/replication/validate-replicated-data.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предлагает два формата моментальных снимков: собственный bcp режим и символьный режим. Издатели Oracle поддерживают символьный режим моментальных снимков.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предусматривает два формата моментальных снимков: собственный режим bcp и символьный режим. Издатели Oracle поддерживают символьный режим моментальных снимков.  
   
 -   Изменения схем для опубликованных таблиц Oracle не поддерживаются. Для внесения изменения схемы сначала надо удалить публикацию, внести изменения, и затем вновь создать публикацию и все подписки.  
   
     > [!NOTE]  
-    >  Если изменения схемы и последующее удаление с воссозданием публикации и подписок выполняются во время отсутствия активности на публикуемых таблицах, можно установить для подписок параметр «поддержка только репликации». Это позволяет им синхронизироваться без необходимости копировать моментальный снимок на каждый подписчик. Дополнительные сведения см. в разделе [инициализировать транзакционной подписки без моментального снимка](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+    >  Если изменения схемы и последующее удаление с воссозданием публикации и подписок выполняются во время отсутствия активности на публикуемых таблицах, можно установить для подписок параметр «поддержка только репликации». Это позволяет им синхронизироваться без необходимости копировать моментальный снимок на каждый подписчик. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-### Модель безопасности репликации  
+### <a name="replication-security-model"></a>Модель безопасности репликации  
  Модель безопасности публикации Oracle — та же самая, что и модель безопасности стандартной репликации транзакций, за следующими исключениями.  
   
 -   Учетная запись, под которой агент моментальных снимков и агент чтения журналов устанавливают подключения от распространителя к издателю, указывается с помощью одного из следующих методов:  
   
-    -    **@Security_mode** параметр [sp_adddistpublisher & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (можно также указать значения для **@login** и **@password** Если используется проверка подлинности Oracle)  
+    -   Параметр **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (также указываются параметры **@login** и **@password**, если используется проверка подлинности Oracle).  
   
     -   в диалоговом окне **Соединение с сервером** в среде SQL Server Management Studio, которое используется при настройке издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-     В стандартной репликации транзакций учетная запись указывается с [sp_addpublication_snapshot & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) и [sp_addlogreader_agent & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md).  
+     В стандартной репликации транзакций учетная запись указывается с помощью хранимых процедур [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) и [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md).  
   
--   Учетная запись, под которой агент моментальных снимков и агент чтения журнала устанавливать подключения не может изменяться с помощью [sp_changedistpublisher & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) или через свойство таблицы стилей, но пароль может изменяться.  
+-   Учетную запись, под которой агент моментальных снимков и агент чтения журналов устанавливают подключения, невозможно изменить с помощью хранимой процедуры [sp_changedistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) или таблицы свойств, но пароль можно изменить.  
   
--   Если задано значение 1 (встроенная проверка подлинности Windows) для **@security_mode** параметр [sp_adddistpublisher & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
+-   Если указывается значение 1 (встроенная проверка подлинности Windows) для параметра **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
   
-    -   Учетная запись процесса и пароль, используемый для агента моментальных снимков и агент чтения журнала ( **@job_login** и **@job_password** Параметры [sp_addpublication_snapshot & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) и [sp_addlogreader_agent & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) должен быть таким же, как учетная запись и пароль для подключения к издателю Oracle.  
+    -   Учетная запись процесса и пароль, используемые и агентом моментальных снимков, и агентом чтения журнала (параметры **@job_login** и **@job_password** хранимых процедур [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) и [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) должны совпадать с учетной записью и паролем, используемыми для подключения к издателю Oracle.  
   
-    -   Нельзя изменить **@job_login** параметр [sp_changepublication_snapshot & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) или [sp_changelogreader_agent & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), но пароль может быть изменен.  
+    -   Параметр **@job_login** невозможно изменить с помощью хранимой процедуры [sp_changepublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) или [sp_changelogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), но пароль можно изменить.  
   
- Дополнительные сведения о безопасности репликации см. в разделе [безопасности и защиты & #40; Репликация & #41;](../../../relational-databases/replication/security/security-and-protection-replication.md).  
+ Дополнительные сведения о безопасности репликации см. в статье [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md).  
   
-## См. также:  
- [Вопросы управления издателями Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
+## <a name="see-also"></a>См. также:  
+ [Administrative Considerations for Oracle Publishers](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)  (Вопросы управления издателями Oracle)  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

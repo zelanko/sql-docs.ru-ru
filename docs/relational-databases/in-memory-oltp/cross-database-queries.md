@@ -1,34 +1,39 @@
 ---
-title: "Межбазовые запросы | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Межбазовые запросы | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
+ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Межбазовые запросы
+# <a name="cross-database-queries"></a>Межбазовые запросы
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], оптимизированные для памяти таблицы не поддерживают межбазовые транзакции. Нельзя получить доступ к другой базе данных из той же транзакции или того же запроса, которые также получают доступ к оптимизированной для памяти таблицы. Нельзя скопировать данные из одной таблицы в базе данных в оптимизированную для памяти таблицу в другой базе данных.  
   
  Табличные переменные не является транзакционными. Поэтому табличные переменные, оптимизированные для памяти, можно использовать в запросах между базами данных. Такие переменные упрощают перемещение данных из таблицы в одной базе данных в оптимизированные для памяти таблицы в другой базе данных. Можно использовать две транзакции. В первой транзакции вставьте данные из удаленной таблицы в переменную. Во второй транзакции вставьте данные в локальную оптимизированную для памяти таблицу из переменной.  Дополнительные сведения о табличных переменных, оптимизированных для памяти, см. в разделе [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-## Пример
+## <a name="example"></a>Пример
 В этом примере показан способ передачи данных из одной базы данных в оптимизированную для памяти таблицу в другой базе данных.
 
 1. Создайте тестовые объекты.  Выполните приведенный ниже код [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
     ```tsql
+
     USE master;
     GO
     
@@ -51,13 +56,12 @@ caps.handback.revision: 8
     VALUES (1, N'Bob'),
         (2, N'Susan');
     GO
-    ---------------------------------------------------------------
-
 
     -- Create a database with a MEMORY_OPTIMIZED_DATA filegroup
+
     CREATE DATABASE DestinationDatabase
      ON  PRIMARY 
-    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',   SIZE = 8MB), 
+    ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',    SIZE = 8MB), 
      FILEGROUP [DestinationDatabase_mod] CONTAINS MEMORY_OPTIMIZED_DATA  DEFAULT
     ( NAME = N'DestinationDatabase_mod', FILENAME = N'D:\DATA\DestinationDatabase_mod', MAXSIZE = UNLIMITED)
      LOG ON 
@@ -119,7 +123,8 @@ caps.handback.revision: 8
     GO 
     ```
    
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

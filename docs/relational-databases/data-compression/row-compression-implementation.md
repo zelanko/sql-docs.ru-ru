@@ -1,25 +1,29 @@
 ---
-title: "Реализация сжатия строк | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сжатие [SQL Server], строка"
-  - "сжатие строки [компонент Database Engine]"
+title: "Реализация сжатия строк | Документация Майкрософт"
+ms.custom: 
+ms.date: 06/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- compression [SQL Server], row
+- row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad6f5f97c0bd57fa4b9dc97d204a87fb865d31eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Реализация сжатия строк
+# <a name="row-compression-implementation"></a>Реализация сжатия строк
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Этот раздел содержит описание того, как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] реализует сжатие строки. В этой сводке представлены основные сведения, которые помогут при планировании объема хранения.  
@@ -28,14 +32,14 @@ caps.handback.revision: 19
   
 -   Он уменьшает нагрузку на метаданные, связанные с записью. Эти метаданные являются носителями информации о столбцах, их длине и смещениях. В некоторых случаях нагрузка на метаданные может быть больше, чем в старом формате хранения.  
   
--   В нем используется переменная длина для числовых типов (например, **integer**, **decimal** и **float**) и для типов, основанных на числовых типах (например, **datetime** и **money**).  
+-   В нем используется переменная длина для числовых типов (например, **integer**, **decimal**и **float**) и для типов, основанных на числовых типах (например, **datetime** и **money**).  
   
 -   Он сохраняет фиксированные символьные строки, используя формат переменной длины, не сохраняя пустые символы.  
   
 > [!NOTE]  
 >  Значения NULL и 0 всех типов данных оптимизированы и не занимают места.  
   
-## Влияние сжатия строки на хранение  
+## <a name="how-row-compression-affects-storage"></a>Влияние сжатия строки на хранение  
  В следующей таблице описано, как сжатие строки влияет на существующие типы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]. В данной таблице не учитывается экономия, которую можно достичь, используя сжатие страниц.  
   
 |Тип данных|Изменилось ли хранение?|Описание|  
@@ -75,8 +79,9 @@ caps.handback.revision: 19
 |Определяемые пользователем типы|Нет|Имеет внутреннее представление **varbinary**.|  
 |FILESTREAM|Нет|Имеет внутреннее представление **varbinary**.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Сжатие данных](../../relational-databases/data-compression/data-compression.md)   
  [Реализация сжатия страниц](../../relational-databases/data-compression/page-compression-implementation.md)  
   
   
+

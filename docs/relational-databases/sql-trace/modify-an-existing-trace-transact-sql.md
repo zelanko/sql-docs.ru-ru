@@ -1,32 +1,36 @@
 ---
-title: "изменить существующую трассировку (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "трассировки [SQL Server], изменение"
-  - "изменение трассировок"
+title: "Изменение существующей трассировки (Transact-SQL) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], modifying
+- modifying traces
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f58e12e1c04c65974dbc985c8acc525ed44be06
+ms.lasthandoff: 04/11/2017
+
 ---
-# изменить существующую трассировку (Transact-SQL)
+# <a name="modify-an-existing-trace-transact-sql"></a>изменить существующую трассировку (Transact-SQL)
   В этом подразделе описано, как при помощи хранимых процедур изменить существующую трассировку.  
   
-### Изменение существующей трассировки  
+### <a name="to-modify-an-existing-trace"></a>Изменение существующей трассировки  
   
-1.  Если трассировка уже выполняется, остановите ее, выполнив процедуру **sp_trace_setstatus** с параметром **@status = 0**.  
+1.  Чтобы остановить трассировку, если она уже выполняется, выполните процедуру **sp_trace_setstatus** , указав параметр **@status =0**.  
   
-2.  Чтобы изменить события трассировки, выполните процедуру **sp_trace_setevent**, указав изменения с помощью параметров. Эти параметры перечислены ниже (по порядку):  
+2.  Чтобы изменить события трассировки, выполните процедуру **sp_trace_setevent** , указав изменения с помощью параметров. Эти параметры перечислены ниже (по порядку):  
   
     -   **@traceid** (идентификатор трассировки)  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 18
 > [!IMPORTANT]  
 >  Параметры всех хранимых процедур [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_*xx***), в отличие от обычных хранимых процедур, жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

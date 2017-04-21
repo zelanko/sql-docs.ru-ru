@@ -1,46 +1,50 @@
 ---
-title: "Настройка публикации и распространения | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "репликация [SQL Server], распространение"
-  - "конфигурация распространителя [репликация SQL Server]"
-  - "публикация [репликация SQL Server], настройка"
+title: "Настройка публикации и распространения | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], distribution
+- distribution configuration [SQL Server replication]
+- publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd4ea4d94bb9986127e4d5ffd2b8801f73528b93
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка публикации и распространения
-  В данном разделе описывается процесс настройки публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или объектов RMO.  
+# <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
+  В данном разделе описывается процесс настройки публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
 
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  Дополнительные сведения см. в разделе [Безопасное развертывание (репликация)](../../relational-databases/replication/security/secure-deployment-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Настройте распространение с помощью мастера создания публикаций или мастера настройки распространителя. После настройки распространителя просмотрите и измените его свойства в диалоговом окне **Свойства распространителя — \<распространитель>**. Используйте мастер настройки распространителя, если требуется настроить распространитель так, чтобы члены предопределенных ролей базы данных **db_owner** могли создавать публикации, или если требуется настроить удаленный распространитель, который не является издателем.  
   
-#### Настройка распространения  
+#### <a name="to-configure-distribution"></a>Настройка распространения  
   
-1.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к серверу, который будет выступать в роли распространителя (в большинстве случаев издатель и распространитель являются одним сервером), и разверните узел сервера.  
+1.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к серверу, который будет выступать в роли распространителя (в большинстве случаев издатель и распространитель являются одним сервером), и разверните узел сервера.  
   
-2.  Щелкните правой кнопкой мыши папку **Репликация**, затем щелкните **Настройка распространения**.  
+2.  Щелкните правой кнопкой мыши папку **Репликация** , затем щелкните **Настройка распространения**.  
   
 3.  Выполняйте инструкции мастера настройки распространителя:  
   
-    -   Выберите распространитель. Чтобы использовать локальный распространитель, выберите **\<Имя_сервера>\>, которое будет выступать в качестве своего собственного распространителя; SQL Server создаст базу данных распространения и журнал**. Для использования удаленного распространителя выберите **Использовать следующий сервер в качестве распространителя**, а затем выберите сервер. Сервер должен быть сконфигурирован в качестве распространителя, а издатель должен быть включен для использования распространителя. Дополнительные сведения см. в разделе [Включение удаленного издателя на распространителе (среда SQL Server Management Studio)](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
+    -   Выберите распространитель. Чтобы использовать локальный распространитель, выберите **\<Имя_сервера>, которое будет выступать в качестве своего собственного распространителя; SQL Server создаст базу данных распространения и журнал**. Для использования удаленного распространителя выберите **Использовать следующий сервер в качестве распространителя**, а затем выберите сервер. Сервер должен быть сконфигурирован в качестве распространителя, а издатель должен быть включен для использования распространителя. Дополнительные сведения см. в разделе [Включение удаленного издателя на распространителе (среда SQL Server Management Studio)](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
   
          Если выбран удаленный распространитель, необходимо ввести пароль на странице **Административный пароль** , который требуется для соединения издателя с распространителем. Пароль должен совпадать с паролем, указанным при включении издателя на удаленном распространителе.  
   
@@ -55,7 +59,7 @@ caps.handback.revision: 42
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Публикацию и распространение репликации можно настроить программно с помощью хранимых процедур репликации.  
   
-#### Настройка публикации с помощью локального распространителя  
+#### <a name="to-configure-publishing-using-a-local-distributor"></a>Настройка публикации с помощью локального распространителя  
   
 1.  Чтобы определить, настроен ли сервер в качестве распространителя, выполните процедуру, описанную в разделе [sp_get_distributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md).  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 42
   
 3.  На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Укажите опубликованную базу данных в параметре **@dbname**, тип репликации в параметре **@optname**и значение **true** в параметре **@value**.  
   
-#### Настройка публикации с помощью удаленного распространителя  
+#### <a name="to-configure-publishing-using-a-remote-distributor"></a>Настройка публикации с помощью удаленного распространителя  
   
 1.  Чтобы определить, настроен ли сервер в качестве распространителя, выполните процедуру, описанную в разделе [sp_get_distributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md).  
   
@@ -88,84 +92,85 @@ caps.handback.revision: 42
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
   
-#### Настройка публикации и распространения на одиночном сервере  
+#### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>Настройка публикации и распространения на одиночном сервере  
   
-1.  Создайте соединение с сервером с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Установите соединение с сервером с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.ReplicationServer> класса. Передайте значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 1.  
   
-3.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.DistributionDatabase> класса.  
+3.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.  
   
-4.  Задайте <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> свойство с именем базы данных и набор <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> Свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+4.  Задайте для свойства <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> имя базы данных, а для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> — значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-5.  Установите распространитель, вызвав <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> метод. Передайте <xref:Microsoft.SqlServer.Replication.DistributionDatabase> из шага 3.  
+5.  Установите распространитель, вызвав метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Передайте объект <xref:Microsoft.SqlServer.Replication.DistributionDatabase>, созданный на шаге 3.  
   
-6.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.DistributionPublisher> класса.  
+6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.  
   
-7.  Задайте следующие свойства <xref:Microsoft.SqlServer.Replication.DistributionPublisher>:  
+7.  Установите следующие свойства <xref:Microsoft.SqlServer.Replication.DistributionPublisher>:  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> — Имя издателя.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> — имя издателя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> — значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> -имя базы данных, созданный на шаге 5.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> — имя базы данных, созданной на шаге 5.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> -Общая папка, используемая для доступа к файлам моментальных снимков.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> — общая папка для доступа к файлам моментальных снимков.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> -режим безопасности, используемый при соединении с издателем. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> рекомендуется.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> — режим безопасности, используемый при соединении с издателем. Рекомендуется <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>.  
   
-8.  Вызов <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> метод.  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
   
-#### Настройка публикации и распространения с использованием удаленного распространителя  
+#### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>Настройка публикации и распространения с использованием удаленного распространителя  
   
-1.  Создайте соединение с удаленным распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Установите соединение с сервером удаленного распространителя с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.ReplicationServer> класса. Передайте значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 1.  
   
-3.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.DistributionDatabase> класса.  
+3.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.  
   
-4.  Задайте <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> Свойства для имени базы данных и набор <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> Свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+4.  Задайте для свойства <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> имя базы данных, а для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> — значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-5.  Установите распространитель, вызвав <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> метод. Укажите безопасный пароль (используемый издателем при соединении с удаленным распространителем) и <xref:Microsoft.SqlServer.Replication.DistributionDatabase> из шага 3. Дополнительные сведения см. в разделе [Организация безопасности распространителя](../../relational-databases/replication/security/secure-the-distributor.md).  
+5.  Установите распространитель, вызвав метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Укажите безопасный пароль (используемый издателем для соединения с удаленным распространителем) и объект <xref:Microsoft.SqlServer.Replication.DistributionDatabase> из шага 3. Дополнительные сведения см. в разделе [Организация безопасности распространителя](../../relational-databases/replication/security/secure-the-distributor.md).  
   
     > **ВАЖНО!** По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
-6.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.DistributionPublisher> класса.  
+6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.  
   
-7.  Задайте следующие свойства <xref:Microsoft.SqlServer.Replication.DistributionPublisher>:  
+7.  Установите следующие свойства <xref:Microsoft.SqlServer.Replication.DistributionPublisher>:  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> — имя локального сервера издателя.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> — имя сервера локального издателя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> — значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> -имя базы данных, созданный на шаге 5.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> — имя базы данных, созданной на шаге 5.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> -Общая папка, используемая для доступа к файлам моментальных снимков.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> — общая папка для доступа к файлам моментальных снимков.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> -режим безопасности, используемый при соединении с издателем. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> рекомендуется.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> — режим безопасности, используемый при соединении с издателем. Рекомендуется <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>.  
   
-8.  Вызов <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> метод.  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
   
-9. Создайте соединение с локальным издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+9. Установите соединение с сервером локального издателя с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-10. Создайте экземпляр <xref:Microsoft.SqlServer.Replication.ReplicationServer> класса. Передайте значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 9.  
+10. Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 9.  
   
-11. Вызов <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> метод. Передайте имя удаленного распространителя и пароль для удаленного распространителя, указанный в шаге 5.  
+11. Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Передайте имя удаленного распространителя и пароль для удаленного распространителя, указанный в шаге 5.  
   
     > **ВАЖНО!**  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой Windows .NET Framework.  
   
 ###  <a name="PShellExample"></a> Пример (объекты RMO)  
  Публикацию и распространение репликации можно настраивать программно, с помощью объектов RMO.  
   
- [!code-csharp[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)]  
+ [!code-cs[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)]  
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Основные понятия системных хранимых процедур репликации](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Настройка распространителя](../../relational-databases/replication/configure-distribution.md)   
- [Основные понятия объектов RMO](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Настройка репликации для групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Настройка распространения](../../relational-databases/replication/configure-distribution.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Configure Replication for Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) (Настройка репликации для групп доступности AlwaysOn (SQL Server))  
   
   
+

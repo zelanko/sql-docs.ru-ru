@@ -1,22 +1,26 @@
 ---
-title: "Определение устойчивости для оптимизированных для памяти объектов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Определение устойчивости для оптимизированных для памяти объектов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4f8bab5cfa0cc83737bb5736dfe4dcac84b8c13
+ms.lasthandoff: 04/11/2017
+
 ---
-# Определение устойчивости для оптимизированных для памяти объектов
+# <a name="defining-durability-for-memory-optimized-objects"></a>Определение устойчивости для оптимизированных для памяти объектов
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Существует два параметра устойчивости для оптимизированных для памяти таблиц:  
@@ -40,7 +44,7 @@ caps.handback.revision: 8
  Устойчивость при сбое носителя  
  Если поврежденный или недоступный диск содержит одну или несколько копий устойчивых, оптимизированных для памяти объектов, то компонент резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] восстанавливает оптимизированные для памяти таблицы на новом носителе.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -1,23 +1,27 @@
 ---
-title: "Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
 caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bec2e3337ff41756a7a23ba63627d420056d11fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде
+# <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описываются некоторые проблемы, связанные с созданием скомпилированных в собственном коде хранимых процедур.  
@@ -36,7 +40,7 @@ caps.handback.revision: 12
   
 -   [Создание внешнего соединения](../../relational-databases/in-memory-oltp/implementing-an-outer-join.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

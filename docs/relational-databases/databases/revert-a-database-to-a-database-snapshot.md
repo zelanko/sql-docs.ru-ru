@@ -1,25 +1,29 @@
 ---
-title: "Восстановление базы данных до состояния, сохраненного в моментальном снимке | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "моментальные снимки базы данных [SQL Server], восстановление до"
-  - "возврат баз данных"
+title: "Восстановление базы данных из моментального снимка | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# Восстановление базы данных до состояния, сохраненного в моментальном снимке
+# <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
   При повреждении данных в базе данных в сети в некоторых случаях вместо восстановления базы данных из резервной копии будет уместно восстановить базу данных из моментального снимка базы данных, соответствующего времени, предшествующему повреждению. Например, с помощью возврата базы данных можно устранить такую серьезную недавнюю ошибку пользователя, как удаление таблицы. Однако все изменения данных, внесенные после создания моментального снимка, будут утеряны.  
   
 -   **Перед началом работы выполните следующие действия.**  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
      [Безопасность](#Security)  
   
--   **Восстановление моментального снимка базы данных из базы данных с помощью** [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 58
     > [!NOTE]  
     >  Если база данных повреждена, ее необходимо восстановить из резервной копии. Дополнительные сведения см. в разделе [Выполнение полного восстановления базы данных (простая модель восстановления)](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) или [Выполнение полного восстановления базы данных (модель полного восстановления)](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).  
   
--   Найдите последний моментальный снимок, созданный до ошибки. Дополнительные сведения см. в разделе [Просмотр снимка базы данных (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
+-   Найдите последний моментальный снимок, созданный до ошибки. Дополнительные сведения см. в разделе [Просмотр моментального снимка базы данных (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
 -   Удалите все прочие моментальные снимки, существующие в базе данных. Дополнительные сведения см. в разделе [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
@@ -86,9 +90,9 @@ caps.handback.revision: 58
  **Восстановление базы данных до состояния, сохраненного в моментальном снимке**  
   
 > [!NOTE]  
->  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample) далее в этом разделе.  
+>  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample)далее в этом разделе.  
   
-1.  Выберите моментальный снимок базы данных, до которого ее необходимо восстановить. Просмотреть моментальные снимки базы данных можно в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (см. раздел [Просмотр снимка базы данных (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Также базу данных-источник можно задать с помощью столбца **source_database_id** представления каталога [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+1.  Выберите моментальный снимок базы данных, до которого ее необходимо восстановить. Просмотреть моментальные снимки базы данных можно в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (см. раздел [Просмотр моментального снимка базы данных (SQL Server)](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). Также базу данных-источник можно задать с помощью столбца **source_database_id** представления каталога [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 2.  Удалите другие моментальные снимки.  
   
@@ -100,9 +104,9 @@ caps.handback.revision: 58
   
      RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
-     где *database_name* — это база данных-источник, а *database_snapshot_name* — имя моментального снимка, к состоянию на момент создания которого необходимо восстановить базу данных. Обратите внимание, что в данной инструкции необходимо задавать имя моментального снимка, а не устройство резервного копирования.  
+     где *database_name* — это база данных-источник, а *database_snapshot_name* — имя моментального снимка, к состоянию на момент создания которого необходимо восстановить базу данных. Обратите внимание, что в данной инструкции необходимо задавать имя моментального снимка, а не устройство резервного копирования.  
   
-     Дополнительные сведения см. в разделе [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Дополнительные сведения см. в разделе [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
     >  В процессе выполнения операции восстановления моментальный снимок и база данных-источник являются недоступными. База данных-источник и моментальный снимок помечаются как «Восстанавливаемый». В случае возникновения ошибки в процессе восстановления система попытается продолжить его при следующем запуске базы данных.  
@@ -124,7 +128,7 @@ caps.handback.revision: 58
 -   Б. [Восстановление базы данных Sales к состоянию моментального снимка](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Восстановление базы данных AdventureWorks к состоянию моментального снимка  
- В этом примере предполагается наличие единственного моментального снимка базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Пример создания снимка, к состоянию на момент создания которого необходимо восстановить базу данных, см. в разделе [Создание моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ В этом примере предполагается наличие единственного моментального снимка базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Пример создания снимка, к состоянию на момент создания которого необходимо восстановить базу данных, см. в разделе [Создание моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -141,7 +145,7 @@ GO
   
 -   Сведения о создании базы данных **Sales** и моментального снимка **sales_snapshot0600** см. в подразделах "Создание баз данных с файловыми группами" и "Создание моментального снимка базы данных" раздела [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
--   Сведения о моментальном снимке **sales_snapshot1200** см. в подразделе "Создание моментального снимка базы данных Sales" в разделе [Создание моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+-   Сведения о создании базы данных **sales_snapshot1200** см. в подразделе "Создание моментального снимка базы данных Sales" в разделе [Создание моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -164,9 +168,9 @@ GO
   
 -   [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Зеркальное отображение и моментальные снимки баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

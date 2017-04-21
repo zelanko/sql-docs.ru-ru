@@ -1,36 +1,40 @@
 ---
-title: "Создание триггеров DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "шифрование [SQL Server], триггеры DML"
-  - "отложенное разрешение имен, триггеры DML"
-  - "WITH ENCRYPTION, предложение"
-  - "IF UPDATE"
-  - "инструкция SET, триггеры DML"
-  - "триггеры DML, программирование"
-  - "проверка столбцов на предмет изменений"
-  - "результаты [SQL Server], триггеры DML"
+title: "Создание триггеров DML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], DML triggers
+- deferred name resolution, DML triggers
+- WITH ENCRYPTION clause
+- IF UPDATE
+- SET statement, DML triggers
+- DML triggers, programming
+- testing column changes
+- results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание триггеров DML
+# <a name="create-dml-triggers"></a>Создание триггеров DML
   В этом разделе описано, как создать триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
 ##  <a name="Top"></a> Перед началом  
   
-### Ограничения  
+### <a name="limitations-and-restrictions"></a>Ограничения  
  Список ограничений, связанных с созданием триггеров DML, см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ###  <a name="Permissions"></a> Разрешения  
@@ -51,7 +55,7 @@ caps.handback.revision: 31
   
 3.  Правой кнопкой мыши щелкните элемент **Триггеры**, а затем выберите пункт **Создать триггер**.  
   
-4.  В меню **Запрос** выберите пункт **Указать значения для параметров шаблона**. Можно также нажать клавиши CTRL-SHIFT-M, чтобы открыть диалоговое окно **Задание значений для параметров шаблона**.  
+4.  В меню **Запрос** выберите пункт **Указать значения для параметров шаблона**. Можно также нажать клавиши CTRL-SHIFT-M, чтобы открыть диалоговое окно **Задание значений для параметров шаблона** .  
   
 5.  В диалоговом окне **Задание значений для параметров шаблона** введите для показанных параметров следующие значения.  
   

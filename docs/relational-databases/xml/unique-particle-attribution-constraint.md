@@ -1,29 +1,33 @@
 ---
-title: "Ограничение однозначного соответствия примитивов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unique particle attribution"
-helpviewer_keywords: 
-  - "коллекции схем [SQL Server], однозначное соответствие примитивов"
-  - "коллекции схем XML [SQL Server], однозначное соответствие примитивов"
-  - "правило ограничения однозначного соответствия примитивов"
-  - "правило ограничения однозначного соответствия примитивов"
+title: "Ограничение однозначного соответствия примитивов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unique particle attribution
+helpviewer_keywords:
+- schema collections [SQL Server], unique particle attribution
+- XML schema collections [SQL Server], unique particle attribution
+- UPA constraint rule
+- unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e8b99a18280070f3960e6e9259e36144e22889c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Ограничение однозначного соответствия примитивов
+# <a name="unique-particle-attribution-constraint"></a>Ограничение однозначного соответствия примитивов
   В XSD сложные модели содержимого ограничены правилом ограничения однозначного соответствия примитивов. Это правило требует, чтобы каждый элемент в экземпляре документа однозначно соответствовал единственному примитиву `<xsd:element>` или `<xsd:any>` в родительской модели содержимого. Любая схема, которая содержит тип с потенциально неоднозначной моделью содержимого, отклоняется.  
   
  Чаще всего неоднозначность возникает при использовании символов-шаблонов `<xsd:any>` и примитивов, имеющих переменные диапазоны, например minOccurs < maxOccurs. Приведенная ниже модель содержимого является неоднозначной, так как элемент <`e1`> может соответствовать элементам `<xsd:element>` и `<xsd:any>`.  
@@ -76,7 +80,7 @@ caps.handback.revision: 14
   
  Для такого документа, как `<root><e1/><e3/></root>`, последовательность `<e1/><e3/>` однозначно совпадает со вторым элементом `<xsd:sequence>`. Тем не менее, поскольку элемент `<xsd:element>` , к которому относится `<e1/>` , нельзя определить, не заглядывая вперед в `<e3/>`, модель содержимого нарушает правило ограничения однозначного соответствия примитивов.  
   
-## Дополнительные сведения  
+## <a name="finding-more-information"></a>Дополнительные сведения  
  Следующий документ опубликован консорциумом World Wide Web (W3C) и содержит техническое описание ограничения однозначного соответствия примитивов:  
   
  «XML-схема. Часть 1, структуры, второе издание, W3C Proposed Edited Recommendation»:  
@@ -87,7 +91,7 @@ caps.handback.revision: 14
   
  Эти документы можно найти по адресу [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

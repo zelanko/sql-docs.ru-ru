@@ -1,27 +1,31 @@
 ---
-title: "Изменение представлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "представления [SQL Server], переименование"
-  - "представления [SQL Server], изменение"
-  - "изменение представлений"
-  - "переименование представлений"
+title: "Изменение представлений | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], renaming
+- views [SQL Server], modifying
+- modifying views
+- renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение представлений
+# <a name="modify-views"></a>Изменение представлений
   После определения представления это определение можно изменить в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] без удаления и повторного создания представления с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -55,7 +59,7 @@ caps.handback.revision: 22
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Изменение представления  
+#### <a name="to-modify-a-view"></a>Изменение представления  
   
 1.  В **обозревателе объектов**щелкните знак «плюс» рядом с базой данных, в которой содержится представление, а затем щелкните знак «плюс» рядом с папкой **Представления** .  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 22
   
     1.  Установите или снимите флажки элементов, которые необходимо добавить или удалить.  
   
-    2.  Щелкните правой кнопкой мыши на панели диаграмм, выберите **Добавить таблицу…**, а затем выберите дополнительные столбцы, которые необходимо добавить к представлению в диалоговом окне **Добавить таблицу**.  
+    2.  Щелкните правой кнопкой мыши на панели диаграмм, выберите **Добавить таблицу…**, а затем выберите дополнительные столбцы, которые необходимо добавить к представлению в диалоговом окне **Добавить таблицу** .  
   
     3.  Щелкните правой кнопкой мыши строку заголовка таблицы, которую необходимо удалить, и выберите **Удалить**.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 22
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Изменение представления  
+#### <a name="to-modify-a-view"></a>Изменение представления  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

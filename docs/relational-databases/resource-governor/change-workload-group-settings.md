@@ -1,34 +1,38 @@
 ---
-title: "Изменение параметров группы рабочей нагрузки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группы рабочей нагрузки [SQL Server], изменение"
-  - "Регулятор ресурсов, изменение группы рабочей нагрузки"
+title: "Изменение параметров группы рабочей нагрузки | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], alter
+- Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ee33f07052addb06e1dd2fe56f6153498fdbc9b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение параметров группы рабочей нагрузки
+# <a name="change-workload-group-settings"></a>Изменение параметров группы рабочей нагрузки
   Параметры группы рабочей нагрузки можно изменить с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Перед началом работы:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Изменение параметров для группы рабочей нагрузки с использованием следующих средств:** [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
+-   **To change the settings for a workload group, using:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
   
-## Перед началом  
+## <a name="before-you-begin"></a>Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
  Можно изменить параметры группы рабочей нагрузки по умолчанию и групп рабочей нагрузки, определяемых пользователем.  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -37,7 +41,7 @@ caps.handback.revision: 15
   
  Разрешено создание индексов для использования большего объема памяти рабочей области, чем было указано изначально, в целях повышения производительности. Эта специальная обработка поддерживается регулятором ресурсов, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
   
-###  <a name="Permissions"></a> Разрешения  
+###  <a name="Permissions"></a> разрешения  
  Для изменения параметров группы рабочей нагрузки требуется разрешение CONTROL SERVER.  
   
 ##  <a name="ChgWGProp"></a> Изменение параметров группы рабочей нагрузки с использованием среды SQL Server Management Studio  
@@ -60,7 +64,7 @@ caps.handback.revision: 15
   
 2.  Выполните инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
-### Пример (Transact-SQL)  
+### <a name="example-transact-sql"></a>Пример (Transact-SQL)  
  В следующем примере изменяется значение параметра максимального объема выделенной памяти в процентах для группы рабочей нагрузки с именем `groupAdhoc`.  
   
 ```  
@@ -71,7 +75,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Создание группы рабочей нагрузки](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   

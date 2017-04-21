@@ -1,44 +1,48 @@
 ---
-title: "Приступая к работе с разрешениями Database Engine | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "permissions [SQL Server], getting started"
+title: "Приступая к работе с разрешениями ядра СУБД | Документация Майкрософт"
+ms.custom: 
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Приступая к работе с разрешениями Database Engine
+# <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Управление разрешениями в [!INCLUDE[ssDE](../../../includes/ssde-md.md)] осуществляется на уровне сервера с помощью имен входа и ролей сервера и на уровне базы данных с помощью пользователей и ролей базы данных. Модель для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] предоставляет ту же систему в каждой базе данных, однако разрешения на уровне сервера недоступны. В этом разделе рассматриваются некоторые основные понятия безопасности, а затем описывается типичная реализация разрешений.  
   
-## Субъекты безопасности  
+## <a name="security-principals"></a>Субъекты безопасности  
  Субъект безопасности — это официальное название удостоверений, которые используют [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и которым можно назначать разрешения для выполнения действий. Обычно это пользователи или группы пользователей, однако субъектами безопасности могут быть и другие сущности, олицетворяющие пользователей. Создавать субъекты безопасности и управлять ими можно с помощью списков [!INCLUDE[tsql](../../../includes/tsql-md.md)] или [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  Имена входа  
- Имена входа — это учетные записи отдельных пользователей для входа в [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] поддерживают имена входа на основе проверки подлинности Windows и на основе проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этих двух типах имен входа см. в разделе [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
+ Имена входа — это учетные записи отдельных пользователей для входа в [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] поддерживают имена входа на основе проверки подлинности Windows и на основе проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этих двух типах имен входа см. в разделе [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
  Предопределенные роли сервера  
- В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предопределенные роли сервера — это набор предварительно настроенных ролей, который представляет собой удобную группу разрешений на уровне сервера. Имена входа можно добавить в роли, используя инструкцию `ALTER SERVER ROLE ... ADD MEMBER` . Дополнительные сведения см. в разделе [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не поддерживает предопределенные роли сервера, однако включает две роли в базе данных master (`dbmanager` и `loginmanager`), которые выполняют аналогичные функции.  
+ В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]предопределенные роли сервера — это набор предварительно настроенных ролей, который представляет собой удобную группу разрешений на уровне сервера. Имена входа можно добавить в роли, используя инструкцию `ALTER SERVER ROLE ... ADD MEMBER` . Дополнительные сведения см. в разделе [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не поддерживает предопределенные роли сервера, однако включает две роли в базе данных master (`dbmanager` и `loginmanager`), которые выполняют аналогичные функции.  
   
  Определяемые пользователем роли сервера  
- В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно создавать собственные роли сервера и назначать им разрешения на уровне сервера. Имена входа можно добавить в роли сервера, используя инструкцию `ALTER SERVER ROLE ... ADD MEMBER` . Дополнительные сведения см. в разделе [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не поддерживает определяемые пользователем роли сервера.  
+ В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]можно создавать собственные роли сервера и назначать им разрешения на уровне сервера. Имена входа можно добавить в роли сервера, используя инструкцию `ALTER SERVER ROLE ... ADD MEMBER` . Дополнительные сведения см. в разделе [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не поддерживает определяемые пользователем роли сервера.  
   
  Пользователи базы данных  
  Именам входа доступ к базе данных предоставляется путем создания пользователя базы данных в базе данных и сопоставления этого пользователя базы данных с именем входа. Как правило, имя пользователя базы данных совпадает с именем входа, хотя это и необязательно. Один пользователь базы данных сопоставляется с одним именем входа. Имя входа может быть сопоставлено только с одним пользователем в базе данных, однако может сопоставляться как пользователь базы данных в нескольких базах данных.  
   
- Кроме того, можно создать пользователей базы данных без соответствующих имен входа. Они называются *пользователями автономной базы данных*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендуют использовать пользователей автономной базы данных, поскольку это упрощает перенос базы данных на другой сервер. Как и для имен входа, для пользователей автономной базы данных можно использовать проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ Кроме того, можно создать пользователей базы данных без соответствующих имен входа. Они называются *пользователями автономной базы данных*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендуют использовать пользователей автономной базы данных, поскольку это упрощает перенос базы данных на другой сервер. Как и для имен входа, для пользователей автономной базы данных можно использовать проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Существует 12 типов пользователей с незначительными различиями в способах проверки подлинности и представляемых сущностях. Список пользователей см. в разделе [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md).  
   
@@ -53,10 +57,10 @@ caps.handback.revision: 12
   
  График, отображающий связи между пользователями Windows, группами Windows, именами входа и пользователями базы данных, см. в разделе [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
   
-## Типичный сценарий  
+## <a name="typical-scenario"></a>Типичный сценарий  
  В следующем примере представлен типичный и рекомендуемый способ настройки разрешений.  
   
-#### В Active Directory или Azure Active Directory  
+#### <a name="in-active-directory-or-azure-active-directory"></a>В Active Directory или Azure Active Directory  
   
 1.  Создайте пользователя Windows для каждого пользователя.  
   
@@ -64,9 +68,9 @@ caps.handback.revision: 12
   
 3.  Добавьте пользователей Windows в группы Windows.  
   
-#### Если пользователь будет подключаться к нескольким базам данных  
+#### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Если пользователь будет подключаться к нескольким базам данных  
   
-1.  Создайте имя входа для групп Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте имена входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].)  
+1.  Создайте имя входа для групп Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте имена входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
   
 2.  В базе данных пользователей создайте пользователя базы данных для имени входа, представляющего группы Windows.  
   
@@ -76,9 +80,9 @@ caps.handback.revision: 12
   
 5.  Предоставьте разрешения для определяемых пользователем ролей базы данных.  
   
-#### Если пользователь будет подключаться к только к одной базе данных  
+#### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Если пользователь будет подключаться к только к одной базе данных  
   
-1.  Создайте имя входа для групп Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте имена входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].)  
+1.  Создайте имя входа для групп Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте имена входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
   
 2.  В базе данных пользователей создайте пользователя автономной базы данных для группы Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для пользователя автономной базы данных.)  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 12
   
  Как правило, результатом на этом этапе является пользователь Windows, являющийся членом группы Windows. Группа Windows имеет имя входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Имя входа сопоставляется с удостоверением пользователя в базе данных пользователей. Пользователь является членом роли базы данных. Теперь необходимо добавить разрешения для роли.  
   
-## Назначение разрешений  
+## <a name="assigning-permissions"></a>Назначение разрешений  
  Большинство инструкций назначения разрешений имеет следующий формат:  
   
 ```  
@@ -111,7 +115,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
 GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;  
 ```  
   
- Разрешения предоставляются субъектам безопасности (именам входа, пользователям и ролям) с помощью инструкции `GRANT`. Разрешения явно отклоняются с помощью команды  `DENY` . Для удаления ранее предоставленного или отклоненного разрешения используется инструкция `REVOKE` . Разрешения накапливаются, то есть пользователь получает все разрешения, предоставленные пользователю, имени входа и любой группе, членом которой он является. При этом отклонение разрешения отменяет все предоставленные ранее разрешения.  
+ Разрешения предоставляются субъектам безопасности (именам входа, пользователям и ролям) с помощью инструкции `GRANT` . Разрешения явно отклоняются с помощью команды  `DENY` . Для удаления ранее предоставленного или отклоненного разрешения используется инструкция `REVOKE` . Разрешения накапливаются, то есть пользователь получает все разрешения, предоставленные пользователю, имени входа и любой группе, членом которой он является. При этом отклонение разрешения отменяет все предоставленные ранее разрешения.  
   
 > [!TIP]  
 >  Распространенная ошибка — попытка удалить `GRANT` с помощью команды `DENY` вместо `REVOKE`. Это может повлечь за собой проблемы, если пользователь получает разрешения из нескольких источников, что довольно распространено. Этот принцип демонстрируется в следующем примере.  
@@ -125,7 +129,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 > [!NOTE]  
 >  Разрешения можно настроить с помощью [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. В обозревателе объектов найдите защищаемый объект, щелкните его правой кнопкой мыши и выберите пункт **Свойства**. Перейдите на страницу **Разрешения** . Справочные сведения о странице разрешений см. в разделе [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
-## Иерархия разрешений  
+## <a name="permission-hierarchy"></a>Иерархия разрешений  
  К разрешениям применяется иерархия "родители — потомки". То есть при предоставлении разрешения `SELECT` для базы данных оно включает разрешение `SELECT` для всех (дочерних) схем в базе данных. При предоставлении разрешения `SELECT` для схемы оно включает разрешение `SELECT` для всех (дочерних) таблиц и представлений в схеме. Разрешения являются транзитивными; то есть при предоставлении разрешения `SELECT` для базы данных оно включает разрешение `SELECT` для всех (дочерних) схем и всех (внучатых) таблиц и представлений.  
   
  Кроме того, предусмотрены покрывающие разрешения. Разрешение `CONTROL` для объекта, как правило, предоставляет все прочие разрешения для этого объекта.  
@@ -152,60 +156,57 @@ GRANT SELECT ON DATABASE::SalesDB TO Ted;
 GRANT CONTROL ON DATABASE::SalesDB TO Ted;  
 ```  
   
-## Предоставление минимального разрешения  
- Первое указанное выше разрешение (`GRANT SELECT ON OBJECT::Region TO Ted;`) — наиболее гранулярное, то есть эта инструкция предоставляет минимально возможное разрешение `SELECT`. Вместе с ним не предоставляются разрешения для каких-либо вложенных объектов. Рекомендуется всегда предоставлять минимально возможное разрешение, однако (напротив) на более высоких уровнях для упрощения системы предоставления разрешений. Таким образом, если пользователю Ted нужны разрешения для всей схемы, предоставьте разрешение `SELECT` один раз на уровне схемы, вместо того чтобы предоставлять `SELECT` на уровне таблицы или представления несколько раз. Структура базы данных имеет большое влияние на успешность применения этой стратегии. Стратегия наиболее эффективна, когда объекты в базе данных, которым требуются одинаковые разрешения, включаются в одну схему.  
+## <a name="grant-the-least-permission"></a>Предоставление минимального разрешения  
+ Первое указанное выше разрешение (`GRANT SELECT ON OBJECT::Region TO Ted;`) — наиболее гранулярное, то есть эта инструкция предоставляет минимально возможное разрешение `SELECT`. Вместе с ним не предоставляются разрешения для каких-либо вложенных объектов. Рекомендуется всегда предоставлять минимально возможное разрешение, однако (напротив) на более высоких уровнях для упрощения системы предоставления разрешений. Таким образом, если пользователю Ted нужны разрешения для всей схемы, предоставьте разрешение `SELECT` один раз на уровне схемы, вместо того чтобы предоставлять `SELECT` на уровне таблицы или представления несколько раз. Структура базы данных имеет большое влияние на успешность применения этой стратегии. Стратегия наиболее эффективна, когда объекты в базе данных, которым требуются одинаковые разрешения, включаются в одну схему.  
   
-## Список разрешений  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] предусмотрено 230 разрешений. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] предусмотрено 219 разрешений. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] предусмотрено 214 разрешений. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] предусмотрено 195 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]и [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] разрешений меньше, так как они определяют только часть ядра СУБД, тогда как отдельные их разрешения не применяются к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. На следующей схеме показаны разрешения и их связи друг с другом. Некоторые из разрешений более высокого уровня (например, `CONTROL SERVER`) указаны несколько раз. Рисунок в этой статье слишком мал для чтения. Полную схему разрешений ядра СУБД можно скачать на странице [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+## <a name="list-of-permissions"></a>Список разрешений  
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] предусмотрено 230 разрешений. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] предусмотрено 219 разрешений. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] предусмотрено 214 разрешений. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] предусмотрено 195 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]и [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] разрешений меньше, так как они определяют только часть ядра СУБД, тогда как отдельные их разрешения не применяются к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. На следующей схеме показаны разрешения и их связи друг с другом. Некоторые из разрешений более высокого уровня (например, `CONTROL SERVER`) указаны несколько раз. Рисунок в этой статье слишком мал для чтения. Щелкните изображение, чтобы скачать **плакат разрешений для ядра СУБД** в формате PDF.  
   
- ![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG "Database Engine Permissions")  
-  
+[![Разрешения для ядра СУБД](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ 
  Схему связей между субъектами [!INCLUDE[ssDE](../../../includes/ssde-md.md)] и объектами сервера и базы данных см. в разделе [Иерархия разрешений (компонент Database Engine)](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
-## Различия разрешений и предопределенных ролей сервера и базы данных  
+## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Различия разрешений и предопределенных ролей сервера и базы данных  
  Разрешения предопределенных ролей сервера и базы данных схожи с гранулярными разрешениями, но все же отличаются от них. Например, члены предопределенной роли сервера `sysadmin` имеют все разрешения для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], как и имена входа с разрешением `CONTROL SERVER` . Однако предоставление разрешения `CONTROL SERVER` не делает имя входа членом предопределенной роли сервера sysadmin, а добавление имени входа в предопределенную роль сервера  `sysadmin` не подразумевает явного предоставления имени входа разрешения  `CONTROL SERVER` . Иногда хранимая процедура выполняет проверку разрешений путем проверки предопределенной роли, а не гранулярного разрешения. Например, для отключения базы данных требуется членство в предопределенной роли базы данных `db_owner` . Эквивалентного разрешения `CONTROL DATABASE` недостаточно. Эти две системы работают параллельно, но редко взаимодействуют друг с другом. Специалисты Майкрософт рекомендуют по возможности использовать более новую систему гранулярных разрешений вместо предопределенных ролей.  
   
-## Отслеживание разрешений  
+## <a name="monitoring-permissions"></a>Отслеживание разрешений  
  В следующих представлениях отображаются сведения о безопасности.  
   
--   Имена входа и определяемые пользователем роли сервера на сервере можно просмотреть в представлении `sys.server_principals`. Это представление недоступно в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
+-   Имена входа и определяемые пользователем роли сервера на сервере можно просмотреть в представлении `sys.server_principals` . Это представление недоступно в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
--   Пользователей и определяемые пользователями роли в базе данных можно просмотреть в представлении `sys.database_principals`.  
+-   Пользователей и определяемые пользователями роли в базе данных можно просмотреть в представлении `sys.database_principals` .  
   
--   Разрешения, предоставленные именам входа и определяемым пользователями предопределенным ролям сервера, можно просмотреть в представлении `sys.server_permissions`. Это представление недоступно в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
+-   Разрешения, предоставленные именам входа и определяемым пользователями предопределенным ролям сервера, можно просмотреть в представлении `sys.server_permissions` . Это представление недоступно в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
--   Разрешения, предоставленные пользователям и определяемым пользователем предопределенным ролям базы данных, можно просмотреть в представлении `sys.database_permissions`.  
+-   Разрешения, предоставленные пользователям и определяемым пользователем предопределенным ролям базы данных, можно просмотреть в представлении `sys.database_permissions` .  
   
 -   Членство в роли базы данных можно проверить с помощью представления `sys. sys.database_role_members` .  
   
 -   Членство в роли сервера можно проверить с помощью представления `sys.server_role_members` . Это представление недоступно в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
--   Другие представления, связанные с безопасностью, описываются в разделе [Представления каталога безопасности (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md).  
+-   Другие представления, связанные с безопасностью, описываются в разделе [Представления каталога безопасности (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md) .  
   
-### Полезные инструкции Transact-SQL  
+### <a name="useful-transact-sql-statements"></a>Полезные инструкции Transact-SQL  
  Следующие инструкции возвращают полезные сведения о разрешениях.  
   
  Чтобы получить список явных разрешений, предоставленных или отклоненных в базе данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), выполните приведенную ниже инструкцию в базе данных.  
   
-```  
+```tsql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
     obj.name AS [on Object],   
-    dPrinc.name AS [to User Name],   
-    sPrinc.name AS [who is Login Name]  
+    dPrinc.name AS [to User Name]  
 FROM sys.database_permissions AS perms  
 JOIN sys.database_principals AS dPrinc  
     ON perms.grantee_principal_id = dPrinc.principal_id  
 JOIN sys.objects AS obj  
-    ON perms.major_id = obj.object_id  
-LEFT OUTER JOIN sys.server_principals AS sPrinc  
-    ON dPrinc.sid = sPrinc.sid;  
+    ON perms.major_id = obj.object_id;  
 ```  
   
- Чтобы получить список членов ролей сервера (только [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), выполните приведенную ниже инструкцию.  
+ Чтобы получить список членов ролей сервера (только[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), выполните приведенную ниже инструкцию.  
   
-```  
+```tsql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -214,9 +215,10 @@ JOIN sys.server_principals AS sRole
     ON sRo.role_principal_id = sRole.principal_id;  
 ```  
   
+ 
  Чтобы получить список членов ролей базы данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), выполните приведенную ниже инструкцию в базе данных.  
   
-```  
+```tsql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -225,20 +227,22 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  Другие разделы, посвященные началу работы:  
   
--   [Учебник. Приступая к работе с компонентом Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Создание базы данных (учебник)](../../../t-sql/creating-a-database-tutorial.md)  
+-   [Учебник. Приступая к работе с компонентом Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Создание базы данных (учебник)](../../../t-sql/lesson-1-1-creating-a-database.md)  
   
 -   [Руководство: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Учебник. Составление инструкций Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Функции безопасности (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Динамические административные представления и функции, связанные с безопасностью (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Представления каталога безопасности (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [sys.fn_builtin_permissions (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)  
+ [sys.fn_builtin_permissions (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Определение действующих разрешений для ядра СУБД](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+

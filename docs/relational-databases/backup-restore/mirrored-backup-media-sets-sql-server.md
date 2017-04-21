@@ -1,38 +1,42 @@
 ---
-title: "Зеркальные наборы носителей резервных копий (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление [SQL Server], зеркальные резервные копии"
-  - "зеркальные наборы носителей [SQL Server]"
-  - "серверы зеркального резервного копирования [SQL Server]"
-  - "дублирование резервных копий"
-  - "взаимозаменяемые резервные копии [SQL Server]"
-  - "набор носителей [SQL Server], зеркальные наборы носителей резервных копий"
-  - "резервные носители [SQL Server], зеркальные носители"
+title: "Зеркальные наборы носителей резервных копий | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Зеркальные наборы носителей резервных копий (SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>Зеркальные наборы носителей резервных копий (SQL Server)
     
 > [!NOTE]  
->  Зеркальные наборы носителей резервной копии поддерживаются только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise.  
+>  Зеркальные наборы носителей резервной копии поддерживаются только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise.  
   
  Зеркальное отображение набора носителей повышает надежность резервного копирования за счет уменьшения влияния сбоев в работе устройства резервного копирования на сохранность резервной копии. Эти сбои имеют особо серьезное значение, поскольку резервные копии являются последней линией обороны перед потерей данных. По мере роста баз данных в объеме увеличивается вероятность того, что сбой в работе устройства резервного копирования или носителя сделает резервную копию невосстановимой. Зеркальное отображение носителей резервных копий повышает надежность резервных копий за счет избыточности.  
   
 > [!NOTE]  
->  Общие сведения о наборах носителей см. в разделе [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+>  Общие сведения о наборах носителей см. в разделе [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)Enterprise.  
   
  **В этом разделе.**  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 38
   
 -   [Создание резервной копии на зеркальном наборе носителей (Transact-SQL)](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY (Transact-SQL)](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

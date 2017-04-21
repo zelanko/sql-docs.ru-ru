@@ -1,54 +1,59 @@
 ---
-title: "Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OPENJSON"
-  - "JSON, импорт"
-  - "Импорт JSON"
+title: "Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server) | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/31/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-json
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OPENJSON
+- JSON, importing
+- importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ea85d2dff3afe1b5e5b56117255576f8d0ae2180
+ms.lasthandoff: 04/11/2017
+
 ---
-# Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server)
+# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Функция набора строк **OPENJSON** позволяет преобразовать текст JSON в набор строк и столбцов. Функцию **OPENJSON** можно использовать для выполнения запросов SQL к коллекциям JSON или для импорта текста JSON в таблицы SQL Server.  
+Функция набора строк **OPENJSON** позволяет преобразовать текст JSON в набор строк и столбцов. Используйте функцию **OPENJSON** для выполнения запросов SQL к коллекциям JSON или для импорта текста JSON в таблицы SQL Server.  
   
-> [!NOTE] Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON**. Другие функции JSON доступны на всех уровнях совместимости. Проверить уровень совместимости можно в представлении sys.databases или в свойствах базы данных.
-> 
->   Изменить уровень совместимости базы данных можно с помощью следующей команды:   
->   ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130  
+ Функция **OPENJSON** принимает один объект JSON или коллекцию объектов JSON и преобразовывает их в одну или несколько строк. По умолчанию **эта** функция возвращает следующие данные.
+-   Из объекта JSON — все пары "ключ —значение", которые находятся на первом уровне.
+-   Из массива JSON — все элементы массива вместе с индексами.  
   
- Функция **OPENJSON** примет один объект JSON или коллекцию объектов JSON и преобразует их в одну или несколько строк. По умолчанию функция **OPENJSON** возвращает все пары ключ:значение, которые могут находиться на первом уровне объекта JSON, или все элементы в массивах JSON вместе с индексами.  
+При необходимости добавьте предложение **WITH** для указания схемы строк, которую возвращает функция **OPENJSON**. Эта явная схема определяет структуру выходных данных.  
   
- Указать схему строк, которые нужно получить с помощью функции **OPENJSON**, можно с помощью предложения WITH. Эта явная схема определяет структуру выходных данных.  
-  
-## Использование функции OPENJSON без схемы результатов
+## <a name="use-openjson-without-an-explicit-schema-for-the-output"></a>Использование функции OPENJSON без явной схемы вывода
+Если функция **OPENJSON** используется без указания явной схемы результатов (т. е. без предложения **WITH** после OPENJSON), она возвращает таблицу со следующими тремя столбцами:
+1.  Имя свойства входного объекта (или индекс элемента входного массива).
+2.  Значение свойства или элемента массива.
+3.  Тип (например, строка, число, логическое значение, массив или объект).
 
-Ниже приведен краткий пример, который использует **OPENJSON**  со схемой по умолчанию и возвращает одну строку для каждого свойства объекта JSON.  
+Каждое свойство объекта JSON или каждый элемент массива возвращается в виде отдельной строки.  
+
+Ниже приведен краткий пример, который использует **OPENJSON** со схемой по умолчанию и возвращает одну строку для каждого свойства объекта JSON.  
  
-Если функция **OPENJSON** используется без указанной схемы необходимых результатов (т. е. без предложения WITH после OPENJSON), она возвращает таблицу с тремя столбцами: имя свойства для входного объекта (или индекс элемента для входного массива), значение свойства или элемента массива и тип (например, строка, число, логическое значение, массив или объект). Свойства объекта JSON (или элементов массива) возвращаются в отдельных строках.  
-
--   Дополнительные сведения и примеры см. в статье [Использование функции OPENJSON со схемой по умолчанию (SQL Server)](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md).
--   Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md). 
-
+**Пример**
 ```tsql  
-SET @json = '{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';  
-  
-SELECT *  
-FROM OPENJSON(@json);  
+DECLARE @json NVARCHAR(MAX)
+
+SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
+
+SELECT *
+FROM OPENJSON(@json);
 ```  
   
 **Результаты**  
@@ -59,51 +64,57 @@ FROM OPENJSON(@json);
 |surname|Doe|1|  
 |age|45|2|  
 |навыки|["SQL","C#","MVC"]|4|
+
+### <a name="more-info"></a>Дополнительные сведения
+
+Дополнительные сведения и примеры см. в статье [Использование функции OPENJSON со схемой по умолчанию (SQL Server)](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md).
+
+Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md). 
+
     
-## Использование функции OPENJSON с явной схемой
+## <a name="use-openjson-with-an-explicit-schema-for-the-output"></a>Использование функции OPENJSON с явной схемой вывода
+Если указана схема результатов (с помощью предложения **WITH** функции **OPENJSON**), функция возвращает таблицу только со столбцами, заданными в предложении **WITH**. В предложении **WITH** укажите набор выходных столбцов, их типы и пути исходных свойств JSON для каждого выходного значения. **OPENJSON** перебирает массив объектов JSON, считывает значение по указанному пути для каждого столбца и конвертирует его в заданный тип.  
 
-Ниже представлен краткий пример использования функции **OPENJSON** с явно заданной схемой.  
+Ниже представлен краткий пример использования функции **OPENJSON** с явно заданной схемой результатов.  
   
-Если указана схема необходимых результатов (с помощью предложения WITH функции **OPENJSON**), функция возвращает таблицу со столбцами, заданными в предложении WITH. В предложении WITH можно указать набор выходных столбцов, их типы и пути исходных свойств JSON для каждого выходного значения. **OPENJSON** переберет массив объектов JSON, считает значение по указанному пути для каждого столбца и конвертирует его в заданный тип.  
-
--   Дополнительные сведения и примеры см. в статье [Использование функции OPENJSON с явной схемой (SQL Server)](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md).
--   Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).
+**Пример**
   
 ```tsql  
+DECLARE @json NVARCHAR(MAX)
 SET @json =   
- N'[  
-      {  
-        "Order": {  
-          "Number":"SO43659",  
-          "Date":"2011-05-31T00:00:00"  
-        },  
-        "AccountNumber":"AW29825",  
-        "Item": {  
-          "Price":2024.9940,  
-          "Quantity":1  
-        }  
-      },  
-      {  
-        "Order": {  
-          "Number":"SO43661",  
-          "Date":"2011-06-01T00:00:00"  
-        },  
-        "AccountNumber":"AW73565",  
-        "Item": {  
-          "Price":2024.9940,  
-          "Quantity":3  
-        }  
-     }  
-]'  
-  
+  N'[  
+       {  
+         "Order": {  
+           "Number":"SO43659",  
+           "Date":"2011-05-31T00:00:00"  
+         },  
+         "AccountNumber":"AW29825",  
+         "Item": {  
+           "Price":2024.9940,  
+           "Quantity":1  
+         }  
+       },  
+       {  
+         "Order": {  
+           "Number":"SO43661",  
+           "Date":"2011-06-01T00:00:00"  
+         },  
+         "AccountNumber":"AW73565",  
+         "Item": {  
+           "Price":2024.9940,  
+           "Quantity":3  
+         }  
+      }  
+ ]'  
+   
 SELECT * FROM  
-OPENJSON ( @json )  
+ OPENJSON ( @json )  
 WITH (   
-             Number   varchar(200) '$.Order.Number' ,  
-             Date     datetime     '$.Order.Date',  
-             Customer varchar(200) '$.AccountNumber',  
-             Quantity int          '$.Item.Quantity'  
-)  
+              Number   varchar(200) '$.Order.Number' ,  
+              Date     datetime     '$.Order.Date',  
+              Customer varchar(200) '$.AccountNumber',  
+              Quantity int          '$.Item.Quantity'  
+ ) 
 ```  
   
 **Результаты**  
@@ -117,14 +128,26 @@ WITH (
   
 -   Для каждого элемента в массиве JSON функция **OPENJSON** создает новую строку в выходной таблице. Два элемента в массиве JSON конвертируются в две строки в таблице результатов.  
   
--   Для каждого столбца, указанного с помощью синтаксиса `colName type json_path`, функция **OPENJSON** конвертирует значение, найденное в элементах массива по указанному пути, в указанный тип и заполняет ячейки в таблице результатов. В этом примере значения для столбца дат взяты из каждого объекта в пути `$.Order.Date` и конвертированы в значения даты и времени.  
+-   Для каждого столбца, указанного с помощью синтаксиса `colName type json_path`, функция **OPENJSON** конвертирует значение, найденное в каждом элементе массива по указанному пути, в указанный тип и заполняет ячейки в таблице результатов. В этом примере значения для столбца `Date` взяты из каждого объекта в пути `$.Order.Date` и конвертированы в значения даты и времени.  
   
-После того как коллекция данных JSON будет преобразована в набор строк, можно выполнить любой запрос SQL к полученным данным или вставить их в любую таблицу.  
-  
-## Дополнительные сведения о функции OPENJSON и встроенной поддержке JSON в SQL Server  
+После того как коллекция данных JSON будет преобразована в набор строк с помощью **OPENJSON**, можно выполнить любой запрос SQL к полученным данным или вставить их в любую таблицу.  
+
+### <a name="more-info"></a>Дополнительные сведения
+Дополнительные сведения и примеры см. в статье [Использование функции OPENJSON с явной схемой (SQL Server)](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md).
+
+Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).
+
+## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON необходим уровень совместимости 130
+Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON** . Другие встроенные функции JSON доступны на всех уровнях совместимости. Проверить уровень совместимости можно в представлении sys.databases или в свойствах базы данных.
+
+Изменить уровень совместимости базы данных можно с помощью следующей команды:   
+`ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
+
+## <a name="learn-more-about-openjson-and-built-in-json-support-in-sql-server"></a>Дополнительные сведения о функции OPENJSON и встроенной поддержке JSON в SQL Server  
  [Публикации блога Йована Поповича (Jovan Popovic), руководителя программы Microsoft](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  
   
   
+

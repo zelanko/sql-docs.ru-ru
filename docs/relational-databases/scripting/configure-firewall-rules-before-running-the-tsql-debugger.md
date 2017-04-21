@@ -1,36 +1,40 @@
 ---
-title: "Настройка правил брандмауэра перед запуском отладчика TSQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "отладчик Transact-SQL, удаленные подключения"
-  - "брандмауэр Windows [ядро СУБД], отладчик Transact-SQL"
-  - "отладчик Transact-SQL, брандмауэр Windows"
-  - "отладчик Transact-SQL, настройка"
-  - "порты [SQL Server], отладчик Transact-SQL"
-  - "TCP/IP [SQL Server], номера портов"
+title: "Настройка правил брандмауэра перед запуском отладчика TSQL | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка правил брандмауэра перед запуском отладчика TSQL
-  Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Настройка правил брандмауэра перед запуском отладчика TSQL
+  Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## Настройка отладчика Transact-SQL  
+## <a name="configuring-the-transact-sql-debugger"></a>Настройка отладчика Transact-SQL  
  Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] имеет как серверные, так и клиентские компоненты. Серверные компоненты отладчика устанавливаются с каждым экземпляром ядра СУБД из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) или более поздней версии. Клиентские компоненты отладчика устанавливаются в следующих случаях:  
   
 -   При установке клиентских средств из [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии.  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  Добавление правил в брандмауэр Windows может подвергнуть компьютер угрозам безопасности, которые брандмауэр должен блокировать. Включение правил для удаленной отладки заключается в разблокировании портов и программ, перечисленных в данном разделе.  
   
-## Правила брандмауэра на сервере  
+## <a name="firewall-rules-on-the-server"></a>Правила брандмауэра на сервере  
  На компьютере, где установлен экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], через пункт **Брандмауэр Windows в режиме повышенной безопасности** задайте следующие параметры.  
   
 -   Добавьте правило входящего соединения для программы sqlservr.exe. Необходимо иметь правила для каждого экземпляра, к которому должны поддерживаться сеансы удаленной отладки.  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   Если согласно политике домена требуется, чтобы сетевые соединения осуществлялись через протокол IPsec, то необходимо также добавить правила входящих подключений для открытия портов 4500 и 500 по протоколу UDP.  
   
-## Правила брандмауэра на клиенте  
+## <a name="firewall-rules-on-the-client"></a>Правила брандмауэра на клиенте  
  На компьютере, где запущен редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , программа установки SQL Server или среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] могла уже настроить брандмауэр Windows, разрешив удаленную отладку.  
   
  Если возникают ошибки при попытке открытия сеанса удаленной отладки, то вы можете вручную настроить исключения для программ и портов, настроив правила брандмауэра в окне **Брандмауэр Windows в режиме повышенной безопасности** .  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. В поле **Тип протокола** выберите **TCP** , в поле **Локальный порт** выберите **Динамические порты RPC** , нажмите кнопку **Применить**, а затем — кнопку **ОК**.  
   
-## Требования к запуску отладчика  
+## <a name="requirements-for-starting-the-debugger"></a>Требования к запуску отладчика  
  Все попытки запустить отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] должны также отвечать следующим требованиям.  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] должна быть запущена под учетной записью, которая является членом предопределенной роли сервера sysadmin.  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * Сервер должен обмениваться данными с клиентом через RPC. Учетная запись, под которой запущена служба SQL Server должен иметь разрешения на проверку подлинности для клиента.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Запуск отладчика Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

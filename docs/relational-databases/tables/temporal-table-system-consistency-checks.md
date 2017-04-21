@@ -1,31 +1,35 @@
 ---
-title: "Проверка согласованности системной темпоральной таблицы | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Проверка согласованности системной темпоральной таблицы | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 caps.latest.revision: 10
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb67454080657b99983e33e4c46858124b735433
+ms.lasthandoff: 04/11/2017
+
 ---
-# Проверка согласованности системной темпоральной таблицы
+# <a name="temporal-table-system-consistency-checks"></a>Проверка согласованности системной темпоральной таблицы
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   При использовании темпоральных таблиц система выполняет ряд проверок согласованности. Они необходимы для обеспечения соответствия схемы требованиям, чтобы данные в таблице были и оставались согласованными. Кроме того, проверки темпоральных таблиц были добавлены в инструкцию **DBCC CHECKCONSTRAINTS** .  
   
-## Системные проверки согласованности  
+## <a name="system-consistency-checks"></a>Системные проверки согласованности  
  Прежде чем **SYSTEM_VERSIONING** примет значение **ON**, выполняется ряд проверок таблицы журнала и текущей таблицы. Эти проверки подразделяются на проверки схемы и проверки данных (если таблица журнала содержит данные). Кроме того, система выполняет проверку согласованности среды выполнения.  
   
-### Проверка схемы  
+### <a name="schema-check"></a>Проверка схемы  
  При создании или изменении таблицы, которая становится темпоральной, система проверяет соблюдение следующих требований.  
   
 1.  Имена и количество столбцов в текущей таблице и таблице журнала совпадают.  
@@ -48,21 +52,21 @@ caps.handback.revision: 10
   
 10. Таблица журнала не настроена на отслеживание изменений или запись измененных данных.  
   
-### Проверка согласованности данных  
- Прежде чем **SYSTEM_VERSIONING** примет значение **ON**, в рамках операции DML система выполнит следующую проверку: **SysEndTime** ≥**SysStartTime**  
+### <a name="data-consistency-check"></a>Проверка согласованности данных  
+ Прежде чем **SYSTEM_VERSIONING** примет значение **ON** , в рамках операции DML система выполнит следующую проверку: **SysEndTime** ≥**SysStartTime**  
   
  При создании ссылки на существующую таблицу журнала вы можете указать необходимость проверки согласованности данных. Проверка согласованности данных гарантирует, что существующие записи не будут перекрываться и что для каждой записи будут выполняться временные требования. Проверка согласованности данных является проверкой по умолчанию. Как правило, выполнение проверки согласованности данных рекомендуется, когда данные текущей таблицы и таблицы журнала могут оказаться несинхронизированными. Например, такая ситуация может возникнуть при внедрении существующей таблицы журнала, заполненной данными журнала.  
   
 > [!WARNING]  
 >  Ручное внесение изменений в системные часы приведет к неожиданному сбою системы, так как текущие проверки согласованности данных в среде выполнения не допускают перекрытия данных (т.е. время окончания записи не может быть меньше времени начала).  
   
-## DBCC CHECKCONSTRAINTS  
+## <a name="dbcc-checkconstraints"></a>DBCC CHECKCONSTRAINTS  
  Команда **DBCC CHECKCONSTRAINTS** включает проверки согласованности темпоральных данных. Дополнительные сведения см. в разделе [DBCC CHECKCONSTRAINTS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md).  
   
-## Эта статья помогла вам? Мы слушаем  
- Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20System%20Consistency%20Checks%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
+ Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20System%20Consistency%20Checks%20page)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md)   
  [Приступая к работе c темпоральными таблицами с системным управлением версиями](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Секционирование с помощью темпоральных таблиц](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
@@ -73,3 +77,4 @@ caps.handback.revision: 10
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

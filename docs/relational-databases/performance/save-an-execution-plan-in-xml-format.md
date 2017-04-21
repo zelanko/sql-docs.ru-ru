@@ -1,33 +1,37 @@
 ---
-title: "Сохранение плана выполнения в формате XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "планы запроса в формате XML [SQL Server]"
-  - "открытие планов выполнения"
-  - "Showplan XML, инструкции [SQL Server]"
-  - "планы выполнения [SQL Server], сохранение"
-  - "сохранение планов выполнения"
+title: "Сохранение плана выполнения в формате XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML query plans [SQL Server]
+- opening execution plans
+- XML Showplans [SQL Server]
+- execution plans [SQL Server], saving
+- saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сохранение плана выполнения в формате XML
+# <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
   Используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы сохранить планы выполнения в XML-файле и открыть их для просмотра.  
   
  Чтобы использовать функциональные возможности плана выполнения в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или параметры XML Showplan SET, пользователи должны иметь соответствующие разрешения на выполнение запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которого формируется план выполнения, и им нужно предоставить разрешение SHOWPLAN для всех баз данных, на которые ссылается запрос.  
   
-### Сохранение плана запроса с помощью параметров XML Showplan SET  
+### <a name="to-save-a-query-plan-by-using-the-xml-showplan-set-options"></a>Сохранение плана запроса с помощью параметров XML Showplan SET  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] откройте редактор запросов и подключитесь к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -62,13 +66,13 @@ caps.handback.revision: 25
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan**, содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
+4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan** , содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
   
-5.  В диалоговом окне **Сохранение** \<сетка или текст> **результатов** в поле **Тип файла** выберите **Все файлы (\*.\*)**.  
+5.  В диалоговом окне **Сохранить результаты** \<сетка или текст> **** найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)**.  
   
 6.  В поле **Имя файла** укажите имя в формате \<имя**>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
   
-### Сохранение плана выполнения с помощью параметров среды SQL Server Management Studio  
+### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Сохранение плана выполнения с помощью параметров среды SQL Server Management Studio  
   
 1.  Сформируйте либо прогнозируемый, либо фактический план выполнения с помощью среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в разделах [Отображение предполагаемого плана выполнения](../../relational-databases/performance/display-the-estimated-execution-plan.md) или [Отображение фактического плана выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md).  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 25
   
 4.  В поле **Имя файла** укажите имя в формате \<имя**>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
   
-### Открытие сохраненного плана запроса в формате XML в среде SQL Server Management Studio  
+### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Открытие сохраненного плана запроса в формате XML в среде SQL Server Management Studio  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в меню **Файл** выберите **Открыть**, а затем нажмите **Файл**.  
   
@@ -88,9 +92,9 @@ caps.handback.revision: 25
   
 3.  Выберите файл плана запроса XML, который нужно просмотреть, и нажмите **Открыть**.  
   
-     Также можно дважды щелкнуть файл с расширением **sqlplan** в проводнике Windows. План откроется в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+     Также можно дважды щелкнуть файл с расширением **sqlplan**в проводнике Windows. План откроется в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SET SHOWPLAN_XML (Transact-SQL)](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [SET STATISTICS XML (Transact-SQL)](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   

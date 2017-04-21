@@ -1,27 +1,31 @@
 ---
-title: "Синхронизация подписки по запросу | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "подписки по запросу [репликация SQL Server], синхронизация"
-  - "синхронизация [репликация SQL Server], подписки по запросу"
-  - "подписки [репликация SQL Server], по запросу"
+title: "Синхронизация подписки по запросу | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pull subscriptions [SQL Server replication], synchronizing
+- synchronization [SQL Server replication], pull subscriptions
+- subscriptions [SQL Server replication], pull
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b72e808e19854400bf8d4baa867148f4c5a867
+ms.lasthandoff: 04/11/2017
+
 ---
-# Синхронизация подписки по запросу
-  В этом разделе описывается синхронизация подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [агенты репликации](../../relational-databases/replication/agents/replication-agents-overview.md), или объекты управления репликацией (RMO).  
+# <a name="synchronize-a-pull-subscription"></a>Синхронизация подписки по запросу
+  В данном разделе описывается синхронизация подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)или объектов RMO.  
   
  **В этом разделе**  
   
@@ -29,36 +33,36 @@ caps.handback.revision: 45
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
-     [Агенты репликации](#ReplProg)  
+     [Replication Agents](#ReplProg)  
   
      [объекты RMO;](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Подписки синхронизируются агентом распространителя (для репликации моментальных снимков и репликации транзакций) или агентом слияния (для репликации слиянием). Агенты могут работать непрерывно, запускаться по запросу или по расписанию. Дополнительные сведения об указании расписаний синхронизации см. в разделе [Укажите расписания синхронизации](../../relational-databases/replication/specify-synchronization-schedules.md).  
+ Подписки синхронизируются агентом распространителя (для репликации моментальных снимков и репликации транзакций) или агентом слияния (для репликации слиянием). Агенты могут работать непрерывно, запускаться по запросу или по расписанию. Дополнительные сведения о настройке расписаний синхронизации см. в [этой статье](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Синхронизируйте подписку по запросу из папки **Локальные подписки** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-#### Синхронизация по запросу подписки по запросу в среде Management Studio  
+#### <a name="to-synchronize-a-pull-subscription-on-demand-in-management-studio"></a>Синхронизация по запросу подписки по запросу в среде Management Studio  
   
 1.  Подключитесь к подписчику в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]и раскройте узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем — папку **Локальные подписки** .  
   
-3.  Щелкните правой кнопкой мыши подписку, которую нужно синхронизировать затем нажмите кнопку **Просмотр состояния синхронизации**.  
+3.  Щелкните подписку правой кнопкой мыши и выберите **Просмотреть состояние синхронизации**.  
   
-4.  В **Просмотр состояния синхронизации — \< подписчик>: \< база данных подписки>** диалоговом нажмите кнопку **запустить**. Когда синхронизация будет завершена, появится сообщение **Синхронизация завершена** .  
+4.  В диалоговом окне **Просмотр состояния синхронизации — \<подписчик>:\<база_данных_подписки>** нажмите кнопку **Запустить**. Когда синхронизация будет завершена, появится сообщение **Синхронизация завершена** .  
   
 5.  Щелкните **Закрыть**.  
   
-##  <a name="ReplProg"></a> Агенты репликации  
+##  <a name="ReplProg"></a> Replication Agents  
  Подписки по запросу могут синхронизироваться программно и по требованию, с помощью вызова из командной строки нужного исполняемого файла агента репликации. Вызываемый исполняемый файл агента репликации зависит от типа публикации, к которой принадлежит подписка по запросу. Дополнительные сведения см. в разделе [Replication Agents](../../relational-databases/replication/agents/replication-agents.md).  
   
 > [!NOTE]  
 >  Агенты репликации подключаются к локальному серверу, используя учетные данные проверки подлинности Windows пользователя, запустившего агент из командной строки. Эти учетные данные Windows также применяются при соединении с удаленными серверами с использованием встроенной проверки подлинности Windows.  
   
-#### Запуск агента распространителя из командной строки или из пакетного файла  
+#### <a name="to-start-the-distribution-agent-from-the-command-prompt-or-from-a-batch-file"></a>Запуск агента распространителя из командной строки или из пакетного файла  
   
-1.  Запуск из командной строки или пакетного файла [агента распространителя репликации](../../relational-databases/replication/agents/replication-distribution-agent.md) выполнив **distrib.exe**, указав следующие аргументы командной строки:  
+1.  Из командной строки или из пакетного файла запустите [агент распространения репликации](../../relational-databases/replication/agents/replication-distribution-agent.md) , вызвав программу **distrib.exe**со следующими параметрами командной строки.  
   
     -   **-Publisher**  
   
@@ -96,9 +100,9 @@ caps.handback.revision: 45
   
     -   **-SubscriberSecurityMode** = **0**  
   
-#### Запуск агента слияния из командной строки или из пакетного файла  
+#### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>Запуск агента слияния из командной строки или из пакетного файла  
   
-1.  Запуск из командной строки или пакетного файла [агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md) запустив **replmerg.exe**, указав следующие аргументы командной строки:  
+1.  Из командной строки или из пакетного файла запустите [агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md) , вызвав программу **replmerg.exe**со следующими параметрами командной строки.  
   
     -   **-Publisher**  
   
@@ -182,61 +186,61 @@ SET Publication=AdvWorksSalesOrdersMerge
  Подписки по запросу можно синхронизировать программно с помощью объектов RMO и доступа к функциональности агента репликации из управляемого кода. Конкретные классы, используемые для синхронизации, зависят от типа публикации, к которой принадлежит подписка.  
   
 > [!NOTE]  
->  Если нужно выполнить синхронизацию, которая выполняется автономно и не влияет на ваше приложение, запустите агент асинхронно. Однако если нужно наблюдать за результатами синхронизации и получать обратные вызовы от агента во время процесса синхронизации (например, если нужно отображать индикатор выполнения), то следует запускать агент синхронно. Для подписчиков [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] также необходимо запускать агент синхронно.  
+>  Если нужно выполнить синхронизацию, которая выполняется автономно и не влияет на ваше приложение, запустите агент асинхронно. Однако если нужно наблюдать за результатами синхронизации и получать обратные вызовы от агента во время процесса синхронизации (например, если нужно отображать индикатор выполнения), то следует запускать агент синхронно. For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
   
-#### Синхронизация подписки по запросу на публикацию моментальных снимков или транзакций  
+#### <a name="to-synchronize-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Синхронизация подписки по запросу на публикацию моментальных снимков или транзакций  
   
-1.  Создайте соединение с подписчиком с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Установите соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.TransPullSubscription> класса и задайте следующие свойства:  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription> и укажите следующие свойства:  
   
-    -   Имя базы данных подписки для <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
+    -   Имя базы данных подписки в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
-    -   Имя публикации, к которой принадлежит подписка для <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
+    -   Имя публикации, к которой принадлежит подписка, в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   Имя базы данных публикации для <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
+    -   Имя базы данных публикации в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
   
-    -   Имя издателя для <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+    -   Имя издателя в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
   
-    -   Соединение, созданное на шаге 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   соединение, созданное на шаге 1, в свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызов <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> метод, чтобы получить оставшиеся свойства подписки. Если этот метод возвращает значение **false**, проверьте, существует ли подписка.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>, чтобы получить остальные свойства подписки. Если этот метод возвращает значение **false**, проверьте, существует ли подписка.  
   
 4.  На распространителе запустите агент распространителя одним из следующих способов.  
   
-    -   Вызов <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> метод экземпляра <xref:Microsoft.SqlServer.Replication.TransPullSubscription> из шага 2. Этот метод запускает агент распространителя асинхронно, а управление сразу после его вызова передается обратно приложению; задание агента при этом продолжает выполняться. Не удается вызвать этот метод для [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] подписчиков, или если подписка была создана со значением **false** для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию).  
+    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> экземпляра класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription>, созданного на шаге 2. Этот метод запускает агент распространителя асинхронно, а управление сразу после его вызова передается обратно приложению; задание агента при этом продолжает выполняться. Этот метод нельзя вызывать для подписчиков [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)], а также в том случае, если подписка была создана со значением **false** свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (значение по умолчанию).  
   
-    -   Получить экземпляр <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> свойство и вызвать <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> метод. Этот метод запускает агент синхронно, и управление не возвращается приложению до тех пор, пока выполнение задания агента не будет завершено. Во время синхронного выполнения можно обрабатывать <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> событий во время выполнения агента.  
+    -   Получите экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> из свойства <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> и вызовите метод <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A>. Этот метод запускает агент синхронно, и управление не возвращается приложению до тех пор, пока выполнение задания агента не будет завершено. При синхронном выполнении событие <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> можно обрабатывать одновременно с работой агента.  
   
         > [!NOTE]  
-        >  Если задано значение **false** для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу, необходимо указать <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>, и при необходимости <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> потому, что задание агента связанные метаданные для подписки не доступен в [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
+        >  Если значение **false** задано для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу, необходимо указать <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>, а при необходимости <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>, так как метаданные подписки, относящиеся к заданию агента, в таблице [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) недоступны.  
   
-#### Синхронизация подписки по запросу на публикацию слиянием  
+#### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>Синхронизация подписки по запросу на публикацию слиянием  
   
-1.  Создайте соединение с подписчиком с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Установите соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.MergePullSubscription> класса и задайте следующие свойства:  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription> и укажите следующие свойства:  
   
-    -   Имя базы данных подписки для <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
+    -   Имя базы данных подписки в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
-    -   Имя публикации, к которой принадлежит подписка для <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
+    -   Имя публикации, к которой принадлежит подписка, в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   Имя опубликованной базы данных для <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
+    -   Имя опубликованной базы данных в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>.  
   
-    -   Имя издателя для <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
+    -   Имя издателя в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>.  
   
-    -   Соединение, созданное на шаге 1 для <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   соединение, созданное на шаге 1, в свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызов <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> метод, чтобы получить оставшиеся свойства подписки. Если этот метод возвращает значение **false**, проверьте, существует ли подписка.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>, чтобы получить остальные свойства подписки. Если этот метод возвращает значение **false**, проверьте, существует ли подписка.  
   
 4.  На подписчике запустите агент слияния одним из следующих способов:.  
   
-    -   Вызов <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> метод экземпляра <xref:Microsoft.SqlServer.Replication.MergePullSubscription> из шага 2. Этот метод запускает агент слияния асинхронно, а управление сразу после его вызова передается обратно приложению, задание агента при этом продолжает выполняться. Не удается вызвать этот метод для [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] подписчиков, или если подписка была создана со значением **false** для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию).  
+    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> экземпляра класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription>, созданного на шаге 2. Этот метод запускает агент слияния асинхронно, а управление сразу после его вызова передается обратно приложению, задание агента при этом продолжает выполняться. Этот метод нельзя вызывать для подписчиков [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)], а также в том случае, если подписка была создана со значением **false** свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (значение по умолчанию).  
   
-    -   Получить экземпляр <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> свойство и вызвать <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> метод. Этот метод запускает агент слияния синхронно, и управление не возвращается приложению до тех пор, пока не будет закончено выполнение задания агента. Во время синхронного выполнения можно обрабатывать <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> событий во время выполнения агента.  
+    -   Получите экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> из свойства <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> и вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A>. Этот метод запускает агент слияния синхронно, и управление не возвращается приложению до тех пор, пока не будет закончено выполнение задания агента. При синхронном выполнении событие <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> можно обрабатывать одновременно с работой агента.  
   
         > [!NOTE]  
-        >  Если задано значение **false** для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу, необходимо указать <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>, и при необходимости <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>, и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> потому, что задание агента связанные метаданные для подписки не доступен в [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
+        >  Если значение **false** задано для <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (по умолчанию) при создании подписки по запросу, необходимо указать <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>, а при необходимости <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>, так как метаданные подписки, относящиеся к заданию агента, в таблице [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) недоступны.  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере синхронизируется подписка по запросу на публикацию транзакций, в которой агент запускается асинхронно через задание агента.  
@@ -826,9 +830,9 @@ Finally
 End Try  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Синхронизация данных](../../relational-databases/replication/synchronize-data.md)   
  [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

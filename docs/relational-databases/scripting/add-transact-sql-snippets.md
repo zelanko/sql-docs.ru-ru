@@ -1,35 +1,39 @@
 ---
-title: "Добавление фрагментов кода Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление фрагментов кода Transact-SQL | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2498e15c9927adde026e426ead756be389ce08d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Добавление фрагментов кода Transact-SQL
-  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно добавить собственные фрагменты кода Transact-SQL в набор предварительно определенных фрагментов.  
+# <a name="add-transact-sql-snippets"></a>Добавление фрагментов кода Transact-SQL
+  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить собственные фрагменты кода Transact-SQL в набор предварительно определенных фрагментов.  
   
-## Создание файла фрагмента Transact-SQL  
+## <a name="creating-a-transact-sql-snippet-file"></a>Создание файла фрагмента Transact-SQL  
  Первая часть создания фрагмента кода [!INCLUDE[tsql](../../includes/tsql-md.md)] заключается в создании XML-файла с текстом фрагмента кода. Файл должен иметь расширение SNIPPET и отвечать требованиям [Схемы фрагментов кода](http://go.microsoft.com/fwlink/?LinkId=207504). Укажите SQL в качестве языка фрагмента кода.  
   
  Можно использовать предварительно определенные фрагменты, которые поставляются вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве примеров. Чтобы найти предустановленные фрагменты кода, откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем в меню **Сервис** выберите пункт **Диспетчер фрагментов кода**. Выберите **SQL** из списка полей **Язык** , путь к фрагментам [!INCLUDE[tsql](../../includes/tsql-md.md)] отображается в поле **Расположение** .  
   
-## Регистрация фрагмента кода  
+## <a name="registering-the-code-snippet"></a>Регистрация фрагмента кода  
  После создания файла фрагмента используйте диспетчер фрагментов кода для регистрации фрагмента с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Можно либо добавить папку, содержащую несколько фрагментов, либо импортировать отдельные фрагменты в папку **Мои фрагменты кода** .  
   
-## Процедуры  
+## <a name="procedures"></a>Процедуры  
   
-#### Добавление папки фрагментов  
+#### <a name="adding-a-snippet-folder"></a>Добавление папки фрагментов  
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 9
   
 4.  Перейдите к папке, содержащей собственные фрагменты кода, и нажмите кнопку **Выбор папки** .  
   
-#### Импорт фрагмента  
+#### <a name="importing-a-snippet"></a>Импорт фрагмента  
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
 4.  Перейдите к папке, содержащей собственный фрагмент кода, выберите файл с расширением SNIPPET и нажмите кнопку **Открыть** .  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В приведенном ниже примере создается окружающий блок **TRY-CATCH** для фрагмента кода, который будет импортирован в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Вставьте следующий код в блокнот, сохраните файл с именем TryCatch.snippet.  
@@ -109,7 +113,7 @@ caps.handback.revision: 9
   
 5.  Перейдите к папке, содержащей файл TryCatch.snippet, щелкните файл TryCatch.snippet и нажмите кнопку **Открыть** . В папке **Мои фрагменты кода** не должно быть фрагмента TryCatch.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Вставка фрагментов кода окружения Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

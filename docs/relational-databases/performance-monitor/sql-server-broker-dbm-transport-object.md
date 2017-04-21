@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Broker - DBM Transport Object | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Объект Service Broker / DBM Transport"
-  - "SQL Server:Service Broker / DBM Transport"
+title: "Брокер SQL Server, объект DBM Transport | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker / DBM Transport object
+- SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bad82d13370dfba9e1067986d1f1789ecf006ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Broker - DBM Transport Object
+# <a name="sql-server-broker---dbm-transport-object"></a>Брокер SQL Server, объект DBM Transport
   В объекте производительности **Broker/DBM Transport** содержатся счетчики производительности, сообщающие сведении о работе в сети служб Service Broker и зеркального отображения баз данных. В следующей таблице перечислены счетчики этого объекта.  
   
 |Счетчик «SQL Server: Service Broker / транспорт зеркального отображения баз данных»|Описание|  
@@ -61,7 +65,7 @@ caps.handback.revision: 34
 |**Баз. ср. длина отправляемого ввода-вывода**|Только для внутреннего применения.|
 |**Количество отправок данных в сек.**|Этот счетчик сообщает количество выполненных транспортных операций ввода-вывода по отправке за одну секунду. Обратите внимание, что транспортная операция отправки может содержать более одного фрагмента сообщения.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sys.dm_broker_forwarded_messages (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

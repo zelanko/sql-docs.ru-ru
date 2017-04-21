@@ -1,27 +1,31 @@
 ---
-title: "Класс событий SQL:StmtRecompile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL:StmtRecompile, класс событий"
+title: "Класс событий SQL:StmtRecompile | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfed0cde775d2274f6a9e09e6f9dc43a9e5def23
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий SQL:StmtRecompile
+# <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, класс событий
   Класс событий SQL:StmtRecompile указывает на повторные компиляции уровня инструкций, инициированные всеми типами пакетов: хранимыми процедурами, триггерами, нерегламентированными пакетами и запросами. Запросы могут передаваться с помощью sp_executesql, динамического SQL, методов Prepare, методов Execute или аналогичных интерфейсов. Вместо класса событий SP:Recompile должен использоваться класс событий SQL:StmtRecompile.  
   
-## Столбцы данных класса событий SQL:StmtRecompile  
+## <a name="sqlstmtrecompile-event-class-data-columns"></a>Столбцы данных класса событий SQL:StmtRecompile  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -46,8 +50,8 @@ caps.handback.revision: 17
 |ObjectType|**int**|Значение, представляющее тип объекта, связанного с событием. Дополнительные сведения см. в статье [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |Offset|**int**|Начальное смещение инструкции внутри хранимой процедуры или пакета, вызвавшего повторную компиляцию.|61|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя отслеживаемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|26|Нет|  
-|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и имена входа Windows.|64|Да|  
+|ServerName|**nvarchar**|Имя отслеживаемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|Нет|  
+|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор серверного процесса соединения.|12|Да|  
 |SqlHandle|**varbinary**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|Нет|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
@@ -55,7 +59,7 @@ caps.handback.revision: 17
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|**bigint**|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Класс событий SP:Recompile](../../relational-databases/event-classes/sp-recompile-event-class.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -1,30 +1,34 @@
 ---
-title: "Сбор данных в хранилище запросов | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "хранилище запросов, сбор данных"
+title: "Как хранилище запросов собирает данные | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сбор данных в хранилище запросов
+# <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Хранилище запросов работает подобно **бортовому регистратору данных в самолете** , непрерывно собирая сведения о компиляции и времени выполнения, связанные с запросами и планами. Связанные с запросами данные сохраняются во внутренних таблицах и предоставляются пользователям с помощью набора представлений.  
   
-## Представления  
+## <a name="views"></a>Представления  
  На схеме ниже показаны представления хранилища запросов и их логические связи. Сведения о времени компиляции показаны в виде элементов синего цвета.  
   
  ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
@@ -37,12 +41,12 @@ caps.handback.revision: 10
 |**sys.query_context_settings**|Показывает уникальные комбинации влияющих на план параметров, при которых выполняются запросы. Тот же текст запроса, выполненного с другими влияющими на план параметрами, создает запись отдельного запроса в хранилище запросов, так как элемент `context_settings_id` является частью ключа запроса.|  
 |**sys.query_store_query**|Записи запросов, которые отслеживаются и принудительно выполняются отдельно в хранилище запросов. Текст одного запроса может создать несколько записей, если он выполняется при других контекстных параметрах или вне одних модулей [!INCLUDE[tsql](../../includes/tsql-md.md)] и внутри других (хранимые процедуры, триггеры и т. д.).|  
 |**sys.query_store_plan**|Показывает предполагаемый план запроса со статистикой времени компиляции. Хранимый план эквивалентен плану, получаемому при использовании `SET SHOWPLAN_XML ON`.|  
-|**sys.query_store_runtime_stats_interval**|Хранилище запросов делит время на автоматически создаваемые интервалы времени и сохраняет сводные статистические данные в таких интервалах для каждого выполненного плана. Размер интервала регулируется параметром конфигурации "Интервал сбора статистики" (в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) или параметром `INTERVAL_LENGTH_MINUTES` с помощью [параметров ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md).|  
+|**sys.query_store_runtime_stats_interval**|Хранилище запросов делит время на автоматически создаваемые интервалы времени и сохраняет сводные статистические данные в таких интервалах для каждого выполненного плана. Размер интервала регулируется параметром конфигурации "Интервал сбора статистики" (в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) или параметром `INTERVAL_LENGTH_MINUTES` с помощью [параметров ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Сводная статистика времени выполнения для выполненных планов. Все собранные показатели выражаются в виде четырех статистических функций: среднее, минимальное, максимальное и стандартное отклонение.|  
   
  Дополнительные сведения о представлениях хранилища запросов см. в разделе **Связанные представления, функции и процедуры** статьи [Мониторинг производительности с использованием хранилища запросов](https://msdn.microsoft.com/library/dn817826.aspx).  
   
-## Обработка запросов  
+## <a name="query-processing"></a>Обработка запросов  
  Хранилище запросов взаимодействует с конвейером обработки запросов в следующих ключевых моментах:  
   
 1.  При первой компиляции запросов текст запроса и исходный план отправляются в хранилище запросов.  
@@ -57,7 +61,7 @@ caps.handback.revision: 10
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- Чтобы свести к минимуму издержки ввода-вывода, новые данные записываются в память. Операции записи ставятся в очередь и записываются на диск позже. Сведения о запросах и планах (на схеме ниже это Plan Store) записываются на диск с минимальной задержкой. Статистика времени выполнения (Runtime Stats) хранится в памяти в течение времени, заданного параметром `DATA_FLUSH_INTERVAL_SECONDS` инструкции `SET QUERY_STORE`. Диалоговое окно хранилища запросов SSMS позволяет ввести **Интервал записи данных на диск (в минутах)**, которое преобразуется в секунды.  
+ Чтобы свести к минимуму издержки ввода-вывода, новые данные записываются в память. Операции записи ставятся в очередь и записываются на диск позже. Сведения о запросах и планах (на схеме ниже это Plan Store) записываются на диск с минимальной задержкой. Статистика времени выполнения (Runtime Stats) хранится в памяти в течение времени, заданного параметром `DATA_FLUSH_INTERVAL_SECONDS` инструкции `SET QUERY_STORE` . Диалоговое окно хранилища запросов SSMS позволяет ввести **Интервал записи данных на диск (в минутах)**, которое преобразуется в секунды.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
@@ -68,9 +72,10 @@ caps.handback.revision: 10
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Представления каталога хранилища запросов (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

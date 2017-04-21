@@ -1,35 +1,39 @@
 ---
-title: "Отключение индексов и ограничений | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "отключенные индексы [SQL Server], операции с индексами"
-  - "некластеризованные индексы [SQL Server], отключение"
-  - "отключенные индексы [SQL Server], рекомендации"
-  - "кластеризованные индексы, отключение"
-  - "ограничения [SQL Server], отключение"
-  - "отключенные индексы [SQL Server], просмотр"
-  - "ограничения FOREIGN KEY, отключение"
-  - "статистическая информация [SQL Server], индексы"
-  - "отключение индексов [SQL Server]"
-  - "индексированные представления [SQL Server], отключенные индексы"
+title: "Отключение индексов и ограничений | Документация Майкрософт"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# Отключение индексов и ограничений
+# <a name="disable-indexes-and-constraints"></a>Отключение индексов и ограничений
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается отключение индекса или ограничений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Отключение индексов предотвращает доступ пользователя к индексам в случае использования кластеризованных индексов к данным базовой таблицы. Определение индекса остается в метаданных, и статистики индекса сохраняются на некластеризованных индексах. Данные индекса при отключении некластеризованных или кластеризованных индексов в представлении удаляются физически. Отключение кластеризованного индекса в таблице позволяет предотвратить доступ к данным; данные остаются в таблице, но являются недоступными для операций языка обработки данных DML до удаления или перестроения индекса.  
@@ -93,7 +97,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Отключение индекса  
+#### <a name="to-disable-an-index"></a>Отключение индекса  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо отключить индекс.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 28
   
 6.  В диалоговом окне **Отключение индексов** убедитесь, что нужный индекс указан в сетке **Индексы для отключения** , и нажмите кнопку **ОК**.  
   
-#### Отключение всех индексов таблицы  
+#### <a name="to-disable-all-indexes-on-a-table"></a>Отключение всех индексов таблицы  
   
 1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо отключить индексы.  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 28
  Отображает имя таблицы или представления, для которых был создан индекс.  
   
  **Тип индекса**  
- Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный** или **XML**.  
+ Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный**или **XML**.  
   
  **Состояние**  
  Отображает состояние операции отключения. Возможные значения после выполнения.  
@@ -141,7 +145,7 @@ caps.handback.revision: 28
   
      Отключение индексов было начато, но еще не завершено.  
   
--   **Успешно **  
+-   **Успешно**  
   
      Операция отключения успешно завершена.  
   
@@ -162,7 +166,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Отключение индекса  
+#### <a name="to-disable-an-index"></a>Отключение индекса  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### Отключение всех индексов таблицы  
+#### <a name="to-disable-all-indexes-on-a-table"></a>Отключение всех индексов таблицы  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  Дополнительные сведения см. в статье [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
+

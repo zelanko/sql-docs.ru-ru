@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Audit Broker Login | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Login, класс событий"
+title: "Класс событий Audit Broker Login | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b3ba2426634e4cd405d91318cd92de93bfa2c24
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Audit Broker Login
+# <a name="audit-broker-login-event-class"></a>Audit Broker Login, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Audit Broker Login** для информирования о сообщениях аудита, связанных с механизмом обеспечения безопасности транспорта, реализованным в компоненте Service Broker.  
   
-## Столбцы класса событий Audit Broker Login  
+## <a name="audit-broker-login-event-class-data-columns"></a>Столбцы класса событий Audit Broker Login  
   
 |Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -45,7 +49,7 @@ caps.handback.revision: 30
 |**SPID**|**int**|Идентификатор процесса сервера, который SQL Server присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
 |**Состояние**|**int**|Указывает место в исходном коде SQL Server, которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. Сотрудник службы технической поддержки Microsoft может использовать этот код состояния для обнаружения участка, выполнение которого привело к событию.|30|Нет|  
-|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> **Примечание**. ISC = Initiate Security Context (инициировать контекст безопасности). ASC = Accept Security Context (принять контекст безопасности).|39|Нет|  
+|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> **Примечание**. ISC = Initiate Security Context (инициировать контекст безопасности). ASC = Accept Security Context (принять контекст безопасности).|39|Нет|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Нет|  
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
@@ -59,7 +63,7 @@ caps.handback.revision: 30
 |5|Ошибка проверки подлинности|Событие Authentication Failure (ошибка проверки подлинности) извещает о том, что компонент Service Broker не может выполнить для соединения проверку подлинности из-за ошибки. При проверке подлинности Windows это событие свидетельствует о том, что компонент Service Broker не может использовать проверку подлинности Windows. В случае проверки подлинности на основе сертификатов это событие извещает о том, что компонент Service Broker не может получить доступ к сертификату.|  
 |6|Ошибка авторизации|Событие Authorization Failure (ошибка авторизации) извещает о том, что компонент Service Broker отклонил авторизацию соединения. Для проверки подлинности Windows это событие сообщает, что идентификатор защиты соединения не совпадает с пользователем базы данных. При проверке подлинности на основе сертификатов это событие свидетельствует о том, что открытый ключ, доставленный в сообщении, не соответствует сертификату в базе данных.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  

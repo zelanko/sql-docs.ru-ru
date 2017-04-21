@@ -1,26 +1,30 @@
 ---
-title: "идентификаторы пространственных ссылок (SRID) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "идентификаторы пространственных ссылок (SRID)"
-  - "геодезические пространственные данные [SQL Server], идентификаторы"
-  - "SRID"
+title: "Идентификаторы пространственных ссылок | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Spatial Reference Identifiers (SRIDs)
+- geodetic spatial data [SQL Server], identifiers
+- SRID
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57420f270daa88e61add4810a7792ed6fdea8278
+ms.lasthandoff: 04/11/2017
+
 ---
-# идентификаторы пространственных ссылок (SRID)
+# <a name="spatial-reference-identifiers-srids"></a>идентификаторы пространственных ссылок (SRID)
   У каждого пространственного экземпляра имеется идентификатор пространственной ссылки (SRID). Идентификатор SRID соответствует системе пространственных ссылок, основанной на конкретном эллипсоиде, используемом для плоского или сферического сопоставления.  
   
 > [!IMPORTANT]  
@@ -28,14 +32,14 @@ caps.handback.revision: 20
   
  Пространственный столбец может содержать объекты с различными идентификаторами SRID. Однако при выполнении операций над собственными данными при помощи методов работы с пространственными данными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать только пространственные экземпляры с одним и тем же индексом пространственной ссылки SRID. Результат любого пространственного метода, извлеченный на основе двух экземпляров с пространственными данными, допустим только в случае, если эти экземпляры имеют один и тот же идентификатор SRID, основанный на одних и тех же единице измерения, исходной точке и проекции, использованных для определения координат экземпляров. Наиболее распространенными единицами измерения идентификатора SRID являются метры или квадратные метры.  
   
- Если идентификаторы SRID двух пространственных экземпляров различаются, в результате применения к этим экземплярам методов работы с типами данных **geometry** или **geography** будет возвращено значение NULL. Например, чтобы при следующем условии предиката получить результат, отличный от значения NULL, два экземпляра **geometry** типа `geometry1` и `geometry2` должны иметь один и тот же идентификатор SRID:  
+ Если идентификаторы SRID двух пространственных экземпляров различаются, в результате применения к этим экземплярам методов работы с типами данных **geometry** или **geography** будет возвращено значение NULL. Например, чтобы при следующем условии предиката получить результат, отличный от значения NULL, два экземпляра **geometry** типа `geometry1` и `geometry2`должны иметь один и тот же идентификатор SRID:  
   
  `geometry1.STIntersects(geometry2) = 1`  
   
 > [!NOTE]  
->  Система идентификации пространственных ссылок определена стандартом [Европейской группы Petroleum Survey (EPSG)](http://go.microsoft.com/fwlink/?LinkId=99349), представляющим собой набор стандартов, разработанных для картографии, геодезии и хранилищ геодезических данных. Владельцем данного стандарта является комитет Oil and Gas Producers (OGP) Surveying and Positioning Committee.  
+>  Система идентификации пространственных ссылок определена стандартом [Европейской группы Petroleum Survey (EPSG)](http://go.microsoft.com/fwlink/?LinkId=99349) , представляющим собой набор стандартов, разработанных для картографии, геодезии и хранилищ геодезических данных. Владельцем данного стандарта является комитет Oil and Gas Producers (OGP) Surveying and Positioning Committee.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

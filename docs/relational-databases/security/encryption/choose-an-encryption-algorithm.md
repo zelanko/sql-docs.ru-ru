@@ -1,36 +1,40 @@
 ---
-title: "Выбор алгоритма шифрования | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "шифрование [SQL Server], алгоритмы"
-  - "шифрование [SQL Server], алгоритмы"
-  - "безопасность [SQL Server], шифрование"
-  - "алгоритмы [шифрование SQL Server]"
+title: "Выбор алгоритма шифрования | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# Выбор алгоритма шифрования
+# <a name="choose-an-encryption-algorithm"></a>Выбор алгоритма шифрования
   Шифрование — одно из нескольких эффективных средств защиты, позволяющих администраторам обеспечивать безопасность экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Алгоритмы шифрования определяют преобразования данных, исключающие возможность легкого восстановления исходного текста неавторизированными пользователями. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет администраторам и разработчикам выбирать из нескольких алгоритмов, в том числе DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 со 128-разрядным ключом, DESX, AES со 128-разрядным ключом, AES со 192-разрядным ключом и AES с 256-разрядным ключом.  
   
 > [!NOTE]  
->  Начиная с версии [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] все алгоритмы, отличные от AES_128, AES_192 и AES_256, являются нерекомендуемыми. Чтобы использовать старые алгоритмы (что не рекомендуется), необходимо установить уровень совместимости базы данных 120 или ниже.  
+>  Начиная с версии [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]все алгоритмы, отличные от AES_128, AES_192 и AES_256, являются нерекомендуемыми. Чтобы использовать старые алгоритмы (что не рекомендуется), необходимо установить уровень совместимости базы данных 120 или ниже.  
   
- Не существует одного алгоритма, идеально подходящего для всех случаев. Информация по качеству каждого из них лежит за пределами электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Однако можно руководствоваться следующими общими принципами:  
+ Не существует одного алгоритма, идеально подходящего для всех случаев. Информация по качеству каждого из них лежит за пределами электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако можно руководствоваться следующими общими принципами:  
   
 -   Надежные алгоритмы шифрования обычно потребляют больше ресурсов ЦП, чем менее надежные средства шифрования.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
   
 -   Симметричные ключи, созданные с параметром ALGORITHM = TRIPLE_DES, используют шифр TRIPLE DES с 128-битным ключом.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |Шифрование файлов базы данных с помощью прозрачного шифрования данных.|[Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |Как зашифровать столбец таблицы.|[Шифрование столбца данных](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Шифрование SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Иерархия средств шифрования](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

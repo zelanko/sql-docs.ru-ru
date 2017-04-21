@@ -1,34 +1,38 @@
 ---
-title: "Категория событий CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы событий [SQL Server], категория событий CLR"
-  - "классы событий SQL Server, категория событий CLR"
-  - "CLR, категория событий [SQL Server]"
+title: "Категория событий CLR | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event classes [SQL Server], CLR event category
+- SQL Server event classes, CLR event category
+- CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31222b30465a65341e3a00c0567790ae93bf24ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# Категория событий CLR
+# <a name="clr-event-category"></a>Категория событий CLR
   Категория событий среды **CLR** включает классы событий, возникающих при выполнении объектов среды CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
- ## Класс событий Assembly Load 
+ ## <a name="assembly-load-event-class"></a>Класс событий Assembly Load 
   Класс событий **Assembly Load** происходит при выполнении запроса на загрузку сборки.  
   
  Включайте класс событий **Assembly Load** в трассировку, если возникает необходимость контролировать загрузку сборки. Это может быть полезно при диагностике запроса, использующего среду CLR, при диагностике медленно работающего сервера, выполняющего запросы среды CLR, а также при мониторинге сервера для сбора сведений о пользователях, базе данных, успешном завершении и других сведений, касающихся загрузки сборки.  
   
-## Столбцы данных класса событий Assembly Load  
+## <a name="assembly-load-event-class-data-columns"></a>Столбцы данных класса событий Assembly Load  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -39,8 +43,8 @@ caps.handback.revision: 17
 |**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**GroupID**|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSID**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения доступны в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSID**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**ObjectID**|**int**|Идентификатор сборки.|22|Да|  
@@ -50,16 +54,16 @@ caps.handback.revision: 17
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
-|**Успешно **|**int**|Указывает, завершилась ли загрузка сборки успешно (1) или неуспешно (0).|23|Да|  
+|**Успешно**|**int**|Указывает, завершилась ли загрузка сборки успешно (1) или неуспешно (0).|23|Да|  
 |**TextData**|**ntext**|«Assembly Load Succeeded» в случае успешной загрузки; иначе — «Assembly Load Failed».|1|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Сборки (компонент Database Engine)](../../relational-databases/clr-integration/assemblies-database-engine.md)  
   
    
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

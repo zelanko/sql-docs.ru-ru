@@ -1,31 +1,35 @@
 ---
-title: "FOR XML (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "предложение FOR XML, о предложении FOR XML"
-  - "режим PATH FOR XML, создание"
-  - "EXPLICIT FOR XML, режим"
-  - "RAW FOR XML, режим"
-  - "поиск XML-данных"
-  - "XML [SQL Server], предложение FOR XML"
-  - "AUTO FOR XML, режим"
-  - "XML [SQL Server], создание"
+title: "FOR XML (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, about FOR XML clause
+- PATH FOR XML mode, construction
+- EXPLICIT FOR XML mode
+- RAW FOR XML mode
+- retrieving XML data
+- XML [SQL Server], FOR XML clause
+- AUTO FOR XML mode
+- XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML (SQL Server)
+# <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Запрос SELECT возвращает результаты в виде набора строк. При необходимости можно получать результаты SQL-запроса в формате XML. Для этого в запросе необходимо указать предложение FOR XML. Предложение FOR XML может использоваться в запросах верхнего уровня и во вложенных запросах. Предложение FOR XML верхнего уровня можно использовать только в инструкции SELECT. Во вложенных запросах предложение FOR XML можно использовать в инструкциях INSERT, UPDATE и DELETE. Оно также может использоваться в инструкциях присваивания.  
   
  В предложении FOR XML можно указать один из следующих режимов:  
@@ -52,7 +56,7 @@ caps.handback.revision: 44
   
  Предложение FOR XML недопустимо для выборки с использованием предложений FOR BROWSE.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующая инструкция `SELECT` получает данные из таблиц `Sales.Customer` и `Sales.SalesOrderHeader` базы данных `AdventureWorks2012` . В этом запросе задается режим `AUTO` в предложении `FOR XML` :  
   
 ```  
@@ -68,7 +72,7 @@ ON Cust.CustomerID = OrderHeader.CustomerID
 FOR XML AUTO  
 ```  
   
-## Предложение FOR XML и имена сервера  
+## <a name="the-for-xml-clause-and-server-names"></a>Предложение FOR XML и имена сервера  
  Если в инструкции SELECT, использующей предложение FOR XML, указано четырехкомпонентное имя, в возвращаемом документе имя сервера отсутствует, если запрос выполняется на локальном компьютере. Однако имя сервера возвращается как часть имени, если запрос выполняется на сетевом сервере.  
   
  В качестве примера рассмотрим запрос:  
@@ -105,11 +109,11 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Базовый синтаксис предложения FOR XML](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)   
  [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
- [Использование режима AUTO совместно с FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
- [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
+ [Использование с AUTO Mode для FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
+ [Использование с EXPLICIT Mode для FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
  [Использование режима PATH совместно с FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
  [OPENXML (SQL Server)](../../relational-databases/xml/openxml-sql-server.md)   
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  

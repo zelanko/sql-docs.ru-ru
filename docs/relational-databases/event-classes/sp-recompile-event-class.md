@@ -1,29 +1,33 @@
 ---
-title: "Класс событий SP:Recompile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SP:Recompile, класс событий"
+title: "Класс событий SP:Recompile | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cab2f6fc0007ea591ab2fc11ce231519fa71bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий SP:Recompile
+# <a name="sprecompile-event-class"></a>SP:Recompile, класс событий
   События класса SP:Recompile указывают на то, что хранимая процедура, триггер или пользовательская функция были перекомпилированы. Перекомпиляции, о которых сообщают события этого класса, производятся на уровне инструкций.  
   
  Трассировать повторные компиляции на уровне инструкций предпочтительнее с помощью класса событий SQL:StmtRecompile. Класс событий SP:Recompile использовать не рекомендуется. Дополнительные сведения см. в статье [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  
   
-## Столбцы данных класса событий SP:Recompile  
+## <a name="sprecompile-event-class-data-columns"></a>Столбцы данных класса событий SP:Recompile  
   
 |Имя столбца данных|**Тип данных**|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
@@ -33,12 +37,12 @@ caps.handback.revision: 43
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |EventClass|**int**|Тип события = 37.|27|Нет|  
 |EventSequence|**int**|Порядковый номер данного события в запросе.|51|Нет|  
-|EventSubClass|**int**|Тип подкласса события.  Указывает причину перекомпиляции.<br /><br /> 1 = изменение схемы<br /><br /> 2 = изменение статистики<br /><br /> 3 = перекомпиляция с разрешением имен<br /><br /> 4 = изменение установленного параметра<br /><br /> 5 = изменение временной таблицы<br /><br /> 6 = изменение удаленного набора строк<br /><br /> 7 = изменение разрешений на обзор<br /><br /> 8 = изменение среды уведомлений о запросах<br /><br /> 9 = изменение представления MPI<br /><br /> 10 = изменение параметров курсора<br /><br /> 11 = по значению параметра перекомпиляции|21|Да|  
+|EventSubClass|**int**|Тип подкласса события. Указывает причину перекомпиляции.<br /><br /> 1 = изменение схемы<br /><br /> 2 = изменение статистики<br /><br /> 3 = перекомпиляция с разрешением имен<br /><br /> 4 = изменение установленного параметра<br /><br /> 5 = изменение временной таблицы<br /><br /> 6 = изменение удаленного набора строк<br /><br /> 7 = изменение разрешений на обзор<br /><br /> 8 = изменение среды уведомлений о запросах<br /><br /> 9 = изменение представления MPI<br /><br /> 10 = изменение параметров курсора<br /><br /> 11 = по значению параметра перекомпиляции|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData2|**int**|Конечное смещение инструкции внутри хранимой процедуры или пакета, вызвавшего повторную компиляцию. Конечное смещение равно -1 в том случае, если инструкция является последней инструкцией в пакете.|55|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|LoginName|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|LoginName|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
 |LoginSid|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NestLevel|**int**|Уровень вложенности хранимой процедуры.|29|Да|  
 |NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
@@ -49,7 +53,7 @@ caps.handback.revision: 43
 |Offset|**int**|Начальное смещение инструкции внутри хранимой процедуры или пакета, вызвавшего повторную компиляцию.|61|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и имена входа Windows.|64|Да|  
+|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |SqlHandle|**varbinary**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
@@ -57,8 +61,8 @@ caps.handback.revision: 43
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|**bigint**|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Класс событий SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
+ [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
   
   

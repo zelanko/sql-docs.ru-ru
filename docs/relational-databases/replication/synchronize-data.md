@@ -1,33 +1,37 @@
 ---
-title: "Синхронизация данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "синхронизация [репликация SQL Server], о синхронизации"
-  - "синхронизация репликации слиянием [репликация SQL Server]"
-  - "скрипты [репликация SQL Server], синхронизация и"
-  - "синхронизация [репликация SQL Server]"
-  - "репликация моментального снимка [SQL Server], синхронизация"
-  - "репликация транзакций, синхронизация"
-  - "подписки [репликация SQL Server], синхронизация"
-  - "выполнение скриптов по запросу"
-  - "репликация [SQL Server], синхронизация"
-  - "скрипты [репликация SQL Server]"
+title: "Синхронизация данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- synchronization [SQL Server replication], about synchronization
+- merge replication synchronization [SQL Server replication]
+- scripts [SQL Server replication], synchronization and
+- synchronization [SQL Server replication]
+- snapshot replication [SQL Server], synchronization
+- transactional replication, synchronization
+- subscriptions [SQL Server replication], synchronizing
+- on demand script execution
+- replication [SQL Server], synchronization
+- scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
+ms.lasthandoff: 04/11/2017
+
 ---
-# Синхронизация данных
+# <a name="synchronize-data"></a>Синхронизация данных
   Под синхронизацией данных подразумевается процесс распространения изменений данных и схем между издателем и подписчиками, после того как был применен исходный моментальный снимок на подписчике. Синхронизация может происходить:  
   
 -   Непрерывно, что типично для репликации транзакций.  
@@ -46,7 +50,7 @@ caps.handback.revision: 36
   
 -   Репликация слиянием. Синхронизация означает, что агент слияния передает изменения с подписчика на издатель, а затем передает изменения с издателя на подписчик. Конфликты, если они присутствуют, обнаруживаются и разрешаются. Выполняется конвергенция данных, а издатель и все подписчики в итоге достигают состояния с одинаковыми значениями данных. Если были обнаружены и разрешены конфликты, работа, зафиксированная некоторыми из пользователей, изменяется, чтобы разрешить конфликт в соответствии с определенными правилами.  
   
- Публикации моментальных снимков полностью обновляют схему на подписчике при каждой синхронизации, так что все изменения схемы применяются на подписчике. Репликация транзакций и репликация слиянием также поддерживают наиболее распространенные изменения схем. Дополнительные сведения см. в разделе [внесение изменений схемы в базах данных публикаций](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Публикации моментальных снимков полностью обновляют схему на подписчике при каждой синхронизации, так что все изменения схемы применяются на подписчике. Репликация транзакций и репликация слиянием также поддерживают наиболее распространенные изменения схем. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
  Сведения о синхронизации принудительной подписки см. в разделе [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
@@ -56,18 +60,18 @@ caps.handback.revision: 36
   
  **Просмотр и разрешение конфликтов синхронизации**  
   
--   [! ВКЛЮЧИТЬ [ssManStudioFull] (.. / Token/ssManStudioFull_md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view and resolve data conflicts for merge publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [! ВКЛЮЧИТЬ [ssManStudioFull] (.. / Token/ssManStudioFull_md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
-## Выполнение кода во время синхронизации  
+## <a name="executing-code-during-synchronization"></a>Выполнение кода во время синхронизации  
  Репликация поддерживает два метода выполнения кода во время синхронизации  
   
--   Выполнение скрипта по запросу поддерживается для репликации транзакций и репликации слиянием. С помощью выполнения скрипта по запросу можно указать, какой скрипт SQL будет выполняться во время синхронизации. скрипт копируется на подписчик и выполняется с помощью программы **sqlcmd** в начале процесса синхронизации. скрипт не имеет доступа к реплицированным изменениям, когда они применяются к подписчику. Дополнительные сведения см. в разделе [#40; & выполнение скриптов во время синхронизации Программирование репликации Transact-SQL & #41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Выполнение скрипта по запросу поддерживается для репликации транзакций и репликации слиянием. С помощью выполнения скрипта по запросу можно указать, какой скрипт SQL будет выполняться во время синхронизации. скрипт копируется на подписчик и выполняется с помощью программы **sqlcmd** в начале процесса синхронизации. скрипт не имеет доступа к реплицированным изменениям, когда они применяются к подписчику. Дополнительные сведения см. в статье [Выполнение скриптов во время синхронизации (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
--   Обработчики бизнес-логики поддерживаются для репликации слиянием. С помощью платформы обработчиков бизнес-логики можно создать сборку управляемого кода, которая будет вызываться в процессе синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Дополнительные сведения см. в разделе [выполнение бизнес логики во время слияния синхронизации](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+-   Обработчики бизнес-логики поддерживаются для репликации слиянием. С помощью платформы обработчиков бизнес-логики можно создать сборку управляемого кода, которая будет вызываться в процессе синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Дополнительные сведения см. в статье [Выполнение бизнес логики при синхронизации слиянием](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-## См. также:  
- [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/detect-and-resolve-merge-replication-conflicts.md)  
+## <a name="see-also"></a>См. также:  
+ [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

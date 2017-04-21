@@ -1,37 +1,41 @@
 ---
-title: "Использование приложения SQL Server Profiler для создания и проверки руководств планов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка структур планов"
-  - "структуры планов [SQL Server]. тестирование"
-  - "структуры планов [SQL Server], SQL Server Profiler"
-  - "сопоставление запросов со структурами планов [SQL Server]"
-  - "тестирование структур планов"
-  - "SQL Server Profiler, структуры планов"
-  - "структуры планов [SQL Server]. создание"
-  - "извлечение текста запроса [SQL Server]"
-  - "проверка структур планов"
-  - "Profiler [SQL Server Profiler], структуры планов"
-  - "сопоставление запроса со структурой плана [SQL Server]"
+title: "Использование приложения SQL Server Profiler для создания и проверки структур плана | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- checking plan guides
+- plan guides [SQL Server], testing
+- plan guides [SQL Server], SQL Server Profiler
+- matching queries to plan guides [SQL Server]
+- testing plan guides
+- SQL Server Profiler, plan guides
+- plan guides [SQL Server], creating
+- capturing query text [SQL Server]
+- verifying plan guides
+- Profiler [SQL Server Profiler], plan guides
+- query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06df9d04d443ee83ab188bf56b08afd7126e70b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование приложения SQL Server Profiler для создания и проверки руководств планов
-  При создании структуры плана приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может применяться для извлечения точного текста запроса, который может использоваться в аргументе *statement_text* хранимой процедуры **sp_create_plan_guide**. Тем самым гарантируется, что во время компиляции структура плана будет соответствовать запросу. После создания структуры плана приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может также использоваться для проверки того, что структура плана действительно соответствует запросу. Обычно проверка структуры плана приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] нужна, чтобы убедиться в том, что запрос соответствует структуре плана.  
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Использование приложения SQL Server Profiler для создания и проверки руководств планов
+  При создании структуры плана приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может применяться для извлечения точного текста запроса, который может использоваться в аргументе *statement_text* хранимой процедуры **sp_create_plan_guide** . Тем самым гарантируется, что во время компиляции структура плана будет соответствовать запросу. После создания структуры плана приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может также использоваться для проверки того, что структура плана действительно соответствует запросу. Обычно проверка структуры плана приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] нужна, чтобы убедиться в том, что запрос соответствует структуре плана.  
   
-## Извлечение текста запроса при помощи приложения SQL Server Profiler  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Извлечение текста запроса при помощи приложения SQL Server Profiler  
  Если выполняется запрос и при помощи приложения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] извлекается текст точно в том виде, в котором он был представлен [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], можно создать структуру плана типа SQL или TEMPLATE, которое будет точно соответствовать тексту запроса. Благодаря этому структура плана может использоваться оптимизатором запросов.  
   
  Рассмотрим следующий запрос, представленный приложением в виде изолированного пакета:  
@@ -65,7 +69,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Откройте в блокноте файл текста пакета и скопируйте текст в буфер копирования и вставки.  
   
-8.  Создайте структуру плана и вставьте скопированный текст внутри кавычек (**''**), заданных для аргумента **@stmt**. Одинарные кавычки в аргументе **@stmt** следует экранировать, поставив перед каждой одинарной кавычкой еще одну одинарную кавычку. Следите за тем, чтобы при вставке одинарных кавычек не были вставлены или удалены другие символы. Например, литерал даты **'**20000101**'** должен быть указан в следующем формате: **''**20000101**''**.  
+8.  Создайте структуру плана и вставьте скопированный текст внутри кавычек (**''**), заданных для аргумента **@stmt** . Одинарные кавычки в аргументе **@stmt** следует экранировать, поставив перед каждой одинарной кавычкой еще одну одинарную кавычку. Следите за тем, чтобы при вставке одинарных кавычек не были вставлены или удалены другие символы. Например, литерал даты **'**20000101**'** должен быть указан в следующем формате: **''**20000101**''**.  
   
  Далее приводится структура плана:  
   
@@ -79,10 +83,10 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## Проверка структур планов при помощи приложения SQL Server Profiler  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Проверка структур планов при помощи приложения SQL Server Profiler  
  Чтобы убедиться в том, что структура плана соответствует запросу, выполните следующие шаги.  
   
-1.  Запустите трассировку в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], выбрав тип события **Showplan XML** (находится в узле **Производительность**).  
+1.  Запустите трассировку в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , выбрав тип события **Showplan XML** (находится в узле **Производительность** ).  
   
 2.  Позвольте приложению выполнить запрос.  
   
@@ -93,9 +97,9 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  Событие **XML-код инструкции Showplan компиляции запроса** использовать нельзя. **PlanGuideDB** не существует в этом событии.  
   
-5.  Если структура плана имеет тип OBJECT или SQL, убедитесь, что событие **Showplan XML** содержит атрибуты **PlanGuideDB** и **PlanGuideName** для структуры плана, которая, как ожидается, соответствует запросу. Если структура плана имеет тип TEMPLATE, убедитесь, что событие **Showplan XML** содержит атрибуты **TemplatePlanGuideDB** и **TemplatePlanGuideName** для ожидаемой структуры плана. Тем самым производится проверка работы структуры плана. Эти атрибуты содержатся в элементе **<StmtSimple>\>** плана.  
+5.  Если структура плана имеет тип OBJECT или SQL, убедитесь, что событие **Showplan XML** содержит атрибуты **PlanGuideDB** и **PlanGuideName** для структуры плана, которая, как ожидается, соответствует запросу. Если структура плана имеет тип TEMPLATE, убедитесь, что событие **Showplan XML** содержит атрибуты **TemplatePlanGuideDB** и **TemplatePlanGuideName** для ожидаемой структуры плана. Тем самым производится проверка работы структуры плана. Эти атрибуты содержатся в элементе плана **\<StmtSimple>**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

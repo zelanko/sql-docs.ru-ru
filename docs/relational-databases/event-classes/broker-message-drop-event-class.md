@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Broker: Message Drop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker: Message Drop, класс событий"
+title: "Класс событий Broker:Message Drop | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Message Drop event class
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47fd82b02e3d808d2609e5c9830099d11627795f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Broker: Message Drop
+# <a name="brokermessage-drop-event-class"></a>Broker: Message Drop, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает события **Broker:Message Drop** , когда компонент Service Broker не может сохранить полученное сообщение, которое нужно доставить службе в этом экземпляре. Сведения о сообщениях, которые должны были быть перенаправлены, см. в разделе [Broker:Forwarded Message Dropped Event Class](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
   
-## Столбцы данных класса событий Broker:Message Drop  
+## <a name="brokermessage-drop-event-class-data-columns"></a>Столбцы данных класса событий Broker:Message Drop  
   
 |Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -53,7 +57,7 @@ caps.handback.revision: 25
 |**TextData**|**ntext**|Причина, по которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удалил сообщение.|1|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Нет|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

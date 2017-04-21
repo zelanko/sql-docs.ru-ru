@@ -1,32 +1,36 @@
 ---
-title: "Администрирование серверов с помощью управления на основе политик | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "аспект. См. аспекты"
-  - "DMF. См. управление на основе политик"
-  - "конфигурация контактной зоны [SQL Server], управление на основе политик"
-  - "управление на основе политик"
-  - "аспекты [управление на основе политик]"
-  - "управление на основе политик, администрирование"
-  - "условия [управление на основе политик]"
-  - "аспекты [управление на основе политик], об аспектах"
-  - "PolicyAdministratorRole, роль"
+title: "Администрирование серверов с помощью управления на основе политик | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- facet See facets
+- Declarative Management Framework See Policy-Based Management
+- surface area configuration [SQL Server], Policy-Based Management
+- Policy-Based Management
+- facets [Policy-Based Management]
+- Policy-Based Management, administering
+- conditions [Policy-Based Management]
+- facets [Policy-Based Management], about facets
+- PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 76
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.lasthandoff: 04/11/2017
+
 ---
-# Администрирование серверов с помощью управления на основе политик
+# <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
    Управление на основе политик — это система, основанная на политиках, для управления одним или несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте его для создания условий, содержащих выражения условия. Затем создайте политики, применяющие условия к целевым объектам базы данных.  
 
 Например, вы как администратор базы данных должны убедиться, что компонент Database Mail отключен на определенных серверах, и поэтому создаете условие и политику, задающую этот параметр сервера. 
@@ -47,7 +51,7 @@ caps.handback.revision: 76
   
 > **ПРИМЕЧАНИЕ.** Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
-## Три компонента управления на основе политик  
+## <a name="three-policy-based-management-components"></a>Три компонента управления на основе политик  
  Управление на основе политик включает три следующих компонента.  
   
 -   Управление политиками. Администраторы политик создают политики.  
@@ -64,11 +68,11 @@ caps.handback.revision: 76
   
     -   **При изменении: только внесение в журнал**. В этом автоматизированном режиме используется уведомление о событии для определения политики при возникновении соответствующего изменения.  
   
-    -   **По расписанию**. В этом автоматизированном режиме для периодического определения политики используется задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   **По расписанию**. В этом автоматизированном режиме для периодического определения политики используется задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Если автоматизированные политики не включены, то управление на основе политик не оказывает влияния на производительность системы.  
   
-## Термины  
+## <a name="terms"></a>Термины  
  **Цель управления на основе политик** 
  Сущности, управляемые на основе политик, например: экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], база данных, таблица или индекс. Все цели на экземпляре сервера формируют иерархию целей. Набор целей — это набор целей, являющихся результатом применения набора фильтров к иерархии целей, например: все таблицы базы данных, владельцем которой является схема HumanResources.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 76
   
 -   Цель или один из ее предков подписан к группе политики, содержащей эту политику.  
   
-## Ссылки на конкретные задачи 
+## <a name="links-to-specific-tasks"></a>Ссылки на конкретные задачи 
 
  - [Хранение политик управления на основе политик.](https://msdn.microsoft.com/library/hh213476.aspx)|  
  - [Настройка предупреждений для уведомления администраторов политик об ошибках политик](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -115,10 +119,11 @@ caps.handback.revision: 76
  - [Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
   
- ## Примеры
+ ## <a name="examples"></a>Примеры
  - [Создание политики, отключенной по умолчанию](https://msdn.microsoft.com/library/bb500172.aspx)
   - [Настройка сервера для выполнения политики «Отключено по умолчанию»](https://msdn.microsoft.com/library/bb522470.aspx)
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
+

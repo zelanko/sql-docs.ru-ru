@@ -1,34 +1,38 @@
 ---
-title: "Базовый синтаксис предложения FOR XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BINARY BASE64, директива"
-  - "ROOT, директива"
-  - "предложение FOR XML, директива BINARY BASE64"
-  - "предложение FOR XML, синтаксис"
-  - "предложение FOR XML, директива ROOT"
+title: "Базовый синтаксис предложения FOR XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BINARY BASE64 directive
+- ROOT directive
+- FOR XML clause, BINARY BASE64 directive
+- FOR XML clause, syntax
+- FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55ad10ef334f0e5f754060c5abb619db6e837e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# Базовый синтаксис предложения FOR XML
+# <a name="basic-syntax-of-the-for-xml-clause"></a>Базовый синтаксис предложения FOR XML
   Режимом предложения FOR XML может быть RAW, AUTO, EXPLICIT или PATH. Он определяет форму получаемого в результате XML-документа.  
   
 > [!IMPORTANT]  
 >  Директива XMLDATA для параметра XML FOR является устаревшей. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICT для директивы XMLDATA замены нет. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Далее приводится базовый синтаксис, описанный в [предложении FOR (Transact-SQL)](../Topic/FOR%20Clause%20\(Transact-SQL\).md):  
+ Далее приводится базовый синтаксис, описанный в [предложении FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -59,9 +63,9 @@ XML
    [ , ROOT [ ('RootName') ] ]  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  RAW[('*ElementName*')]  
- Берет результаты запроса и преобразует каждую строку в результирующем наборе в элемент XML с универсальным идентификатором \<row /> в качестве тега элемента. При использовании этой директивы можно дополнительно указать имя для элемента строки. Полученный в результате XML-документ будет использовать указанное имя *ElementName* в качестве элемента, сформированного для каждой строки. Дополнительные сведения см. в статье [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
+ Принимает результат запроса и преобразует каждую строку результирующего набора в элемент XML с универсальным идентификатором \<row /> в качестве тега элемента. При использовании этой директивы можно дополнительно указать имя для элемента строки. Полученный в результате XML-документ будет использовать указанное имя *ElementName* в качестве элемента, сформированного для каждой строки. Дополнительные сведения см. в статье [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  AUTO  
  Возвращает результаты запроса в виде простого вложенного дерева XML. Каждая таблица в предложении FROM, в которой хотя бы один столбец перечислен в предложении SELECT, представлена в виде элемента XML. Столбцы, перечисленные в предложении SELECT, сопоставлены с соответствующими атрибутами элемента. Дополнительные сведения см. в статье [Использование с AUTO Mode для FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).  
@@ -85,16 +89,16 @@ XML
  Если указан параметр BINARY Base64, любые двоичные данные, возвращенные запросом, будут представлены в формате base64. Чтобы получить двоичные данные при помощи режимов RAW и EXPLICIT, необходимо указать этот параметр. В режиме AUTO двоичные данные возвращаются по умолчанию. Работающий пример см. в статье [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  TYPE  
- Указывает на то, что запрос возвращает результаты в виде типа **xml**. Дополнительные сведения см. в статье [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
+ Указывает на то, что запрос возвращает результаты в виде типа **xml** . Дополнительные сведения см. в статье [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
  ROOT [('*RootName*')]  
  Указывает, что к результирующему XML-документу будет добавлен один элемент верхнего уровня. Дополнительно можно указать имя корневого элемента, который необходимо сформировать. Значение по умолчанию — «root».  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
- [Использование режима AUTO совместно с FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
- [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
- [Использование режима PATH совместно с FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
+ [Использование с AUTO Mode для FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
+ [Использование с EXPLICIT Mode для FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
+ [Использование с PATH Mode для FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   

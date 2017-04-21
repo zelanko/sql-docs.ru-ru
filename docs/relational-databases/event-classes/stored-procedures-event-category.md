@@ -1,29 +1,33 @@
 ---
-title: "Категория событий Stored Procedures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stored Procedures, категория событий [SQL Server]"
-  - "классы событий SQL Server, категория событий Stored Procedures"
-  - "классы событий [SQL Server], категория событий Stored Procedures"
+title: "Категория событий Stored Procedures | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stored Procedures event category [SQL Server]
+- SQL Server event classes, Stored Procedures event category
+- event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1c72514c72b06b9fea644848df952879619d43c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Категория событий Stored Procedures
+# <a name="stored-procedures-event-category"></a>Категория событий Stored Procedures
   Категория событий **Stored Procedures** содержит общие события хранимых процедур.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
@@ -42,7 +46,7 @@ caps.handback.revision: 29
 |[Класс событий SP:StmtCompleted](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|Указывает, что завершено выполнение инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимой процедуре.|  
 |[Класс событий SP:StmtStarting](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Указывает на начало выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимой процедуре.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

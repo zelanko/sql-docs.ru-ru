@@ -1,23 +1,27 @@
 ---
-title: "Приступая к работе c темпоральными таблицами с системным управлением версиями | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Начало работы c темпоральными таблицами с системным управлением версиями | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0318f2a574bcdb2f02016fc6d865252deb6fef4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Приступая к работе c темпоральными таблицами с системным управлением версиями
+# <a name="getting-started-with-system-versioned-temporal-tables"></a>Приступая к работе c темпоральными таблицами с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В зависимости от сценария можно создать новые или изменить существующие темпоральные таблицы с системным управлением версиями, добавив темпоральные атрибуты в существующую схему таблицы.   
@@ -25,7 +29,7 @@ caps.handback.revision: 12
 Кроме обычных инструкций DML и запросов, темпоральные таблицы также предоставляют удобные и простые способы получения сведений из журнала данных с помощью расширенного синтаксиса Transact-SQL.   
 Каждая таблица с системным управлением версиями имеет назначенную таблицу журнала. Она полностью прозрачна для пользователей, если только они не решат оптимизировать производительность рабочей нагрузки или сократить объем хранилища, создав дополнительные индексы или выбрав различные параметры хранения.    
 На схеме ниже показан типичный рабочий процесс в темпоральных таблицах с системным управлением версиями:   
-![Getting Started with Temporal](../../relational-databases/tables/media/getting-started-with-temporal.png "Getting Started with Temporal")  
+![Начало работы с темпоральными таблицами](../../relational-databases/tables/media/getting-started-with-temporal.png "Getting Started with Temporal")  
   
  В этом разделе содержится 5 подразделов:  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 12
   
 -   [Остановка системного управления версиями в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
-## Эта статья помогла вам? Мы слушаем  
- Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Getting%20Started%20with%20System-Versioned%20Temporal%20Tables%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
+ Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Getting%20Started%20with%20System-Versioned%20Temporal%20Tables%20page)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md)   
  [Проверка согласованности системной темпоральной таблицы](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
  [Секционирование с помощью темпоральных таблиц](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
@@ -53,3 +57,4 @@ caps.handback.revision: 12
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

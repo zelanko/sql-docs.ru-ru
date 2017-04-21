@@ -1,33 +1,37 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "context switching [SQL Server], tutorials"
-  - "ownership chains [SQL Server]"
+title: "Руководство. Цепочки владения и переключение контекста | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- context switching [SQL Server], tutorials
+- ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 858ca3c26c6d5297de86e5b0710a3b464ed4ce18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
   
 > [!NOTE]  
 > Для запуска кода в этом учебнике необходимо, чтобы был настроен режим смешанной безопасности. Кроме того, необходимо установить базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Дополнительные сведения о смешанном режиме безопасности см. в разделе [Выбор режима проверки подлинности](../relational-databases/security/choose-an-authentication-mode.md).  
   
-## Сценарий  
+## <a name="scenario"></a>Сценарий  
 В этом сценарии двум пользователям нужны учетные записи для доступа к данным о заказах на покупку, которые хранятся в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Требования:  
   
 -   Пользователь первой учетной записи (ТестовыйМенеджер) должен видеть все сведения о каждом заказе на покупку.  
@@ -48,7 +52,7 @@ caps.handback.revision: 16
   
 Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.  
   
-## 1. Настройка среды  
+## <a name="1-configure-the-environment"></a>1. Настройка среды  
 С помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и приведенного ниже кода откройте базу данных `AdventureWorks2012`, затем с помощью инструкции `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] проверьте, отображается ли пользователь dbo в качестве контекста.  
   
 ```  
@@ -81,7 +85,7 @@ GO
   
 Дополнительные сведения об инструкции CREATE USER см. в разделе [CREATE USER (Transact-SQL)](../t-sql/statements/create-user-transact-sql.md). Дополнительные сведения об инструкции CREATE LOGIN см. в разделе [CREATE LOGIN (Transact-SQL)](../t-sql/statements/create-login-transact-sql.md).  
   
-Изменить владельца схемы `Purchasing` на учетную запись `TestManagerUser` можно с помощью приведенного ниже кода. Это позволит учетной записи использовать все инструкции доступа языка обработки данных DML (например, разрешения `SELECT` или `INSERT`) для объектов, которые содержит эта схема. `TestManagerUser` также предоставляет возможность создавать хранимые процедуры.  
+Изменить владельца схемы `Purchasing` на учетную запись `TestManagerUser` можно с помощью приведенного ниже кода. Это позволит учетной записи использовать все инструкции доступа языка обработки данных DML (например, разрешения `SELECT` или `INSERT` ) для объектов, которые содержит эта схема. `TestManagerUser` также предоставляет возможность создавать хранимые процедуры.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -98,7 +102,7 @@ GO
   
 Дополнительные сведения об инструкции GRANT см. в разделе [GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md). Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (компонент Database Engine)](../relational-databases/stored-procedures/stored-procedures-database-engine.md). Плакат со всеми разрешениями компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] см. по ссылке [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-## 2. Создание хранимой процедуры для доступа к данным  
+## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Создание хранимой процедуры для доступа к данным  
 Для переключения контекста внутри базы данных используйте инструкцию EXECUTE AS. Инструкции EXECUTE AS требуются разрешения IMPERSONATE.  
   
 С помощью инструкции `EXECUTE AS` в приведенном ниже коде измените контекст на `TestManagerUser` и создайте хранимую процедуру, показывающую только те данные, которые должны быть видны пользователю `TestEmployeeUser`. Для соответствия требованиям хранимая процедура принимает одну переменную для номера заказа на покупку и не показывает финансовую информацию, а предложение WHERE ограничивает результаты для частичных отгрузок.  
@@ -125,7 +129,7 @@ END
 GO  
 ```  
   
-В данный момент пользователь `TestEmployeeUser` не имеет доступа к объектам базы данных. Следующий код (все еще в контексте `TestManagerUser`) предоставляет учетной записи пользователя возможность запрашивать информацию из базовой таблицы через хранимую процедуру.  
+В данный момент пользователь `TestEmployeeUser` не имеет доступа к объектам базы данных. Следующий код (все еще в контексте `TestManagerUser` ) предоставляет учетной записи пользователя возможность запрашивать информацию из базовой таблицы через хранимую процедуру.  
   
 ```  
 GRANT EXECUTE  
@@ -156,8 +160,8 @@ GO
   
 Дополнительные сведения об инструкции REVERT см. в разделе [REVERT (Transact-SQL)](../t-sql/statements/revert-transact-sql.md).  
   
-## 3. Доступ к данным через хранимую процедуру  
-`TestEmployeeUser` не обладает разрешениями на объекты базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], кроме разрешения на вход в систему и прав, присвоенных роли базы данных public. Следующий код возвращает ошибку при попытке обращения `TestEmployeeUser` к базовым таблицам.  
+## <a name="3-access-data-through-the-stored-procedure"></a>3. Доступ к данным через хранимую процедуру  
+`TestEmployeeUser` не обладает разрешениями на объекты базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , кроме разрешения на вход в систему и прав, присвоенных роли базы данных public. Следующий код возвращает ошибку при попытке обращения `TestEmployeeUser` к базовым таблицам.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -180,7 +184,7 @@ EXEC Purchasing.usp_ShowWaitingItems 952
 GO  
 ```  
   
-## 4. Сброс среды  
+## <a name="4-reset-the-environment"></a>4. Сброс среды  
 Следующий код с помощью команды `REVERT` изменяет контекст текущей учетной записи обратно на `dbo`и затем выполняет сброс среды.  
   
 ```  
@@ -322,8 +326,9 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

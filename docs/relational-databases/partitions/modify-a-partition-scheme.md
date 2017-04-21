@@ -1,22 +1,26 @@
 ---
-title: "Изменение схемы секционирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение схемы секционирования | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 685eb349ecbd054ed37b77e6a8472ee47db78e0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение схемы секционирования
+# <a name="modify-a-partition-scheme"></a>Изменение схемы секционирования
   Можно изменить схему секционирования в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , назначив файловую группу для размещения следующей секции, которая добавляется в секционированную таблицу, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это делается путем присваивания файловой группе свойства NEXT USED. Можно присвоить свойство NEXT USED пустой файловой группе или группе, уже хранящей секцию. Другими словами, файловая группа может содержать несколько секций.  
   
  **В этом разделе**  
@@ -43,7 +47,7 @@ caps.handback.revision: 10
 ####  <a name="Permissions"></a> Разрешения  
  Для выполнения инструкции ALTER PARTITION SCHEME необходимы следующие разрешения.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
   
 -   Разрешение CONTROL или ALTER на базу данных, в которой была создана схема секционирования.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 10
   
  Это действие не может быть выполнено при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы изменить схему секционирования, необходимо сначала удалить схему, после чего создать новую с нужными свойствами при помощи мастера создания секций. Дополнительные сведения см. в разделе [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)[Using SQL Server Management Studio](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md#SSMSProcedure) в подразделе **Создание секционированных таблиц и индексов**.  
   
-#### Удаление схемы секционирования  
+#### <a name="to-delete-a-partition-scheme"></a>Удаление схемы секционирования  
   
 1.  Щелкните знак «плюс», чтобы развернуть базу данных, в которой нужно удалить схему секционирования.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Изменение схемы секционирования  
+#### <a name="to-modify-a-partition-scheme"></a>Изменение схемы секционирования  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

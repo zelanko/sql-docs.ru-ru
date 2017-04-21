@@ -1,22 +1,26 @@
 ---
-title: "Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Поддержка управляющих объектов SQL Server для выполняющейся в памяти OLTP | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
+# <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
   В этом разделе описаны изменения управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) для OLTP в памяти.  
   
  Следующие типы и члены поддерживают OLTP в памяти.  
@@ -47,7 +51,7 @@ caps.handback.revision: 28
   
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
-## Образец кода  
+## <a name="code-sample"></a>Образец кода  
  Образец выполняет следующие действия.  
   
 -   Создает базу данных с оптимизированной для памяти файловой группой и оптимизированным для памяти файлом.  
@@ -164,7 +168,7 @@ public class A {
 }  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поддержка SQL Server для In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

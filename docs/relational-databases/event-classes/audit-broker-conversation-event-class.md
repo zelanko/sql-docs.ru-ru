@@ -1,27 +1,31 @@
 ---
-title: "Класс событий Audit Broker Conversation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Conversation, класс событий"
+title: "Класс событий Audit Broker Conversation | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Audit Broker Conversation
+# <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Audit Broker Conversation** для выдачи сообщений аудита, относящихся к безопасности диалога компонента Service Broker.  
   
-## Столбцы данных класса события Audit Broker Conversation  
+## <a name="audit-broker-conversation-event-class-data-columns"></a>Столбцы данных класса события Audit Broker Conversation  
   
 |Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -34,7 +38,7 @@ caps.handback.revision: 25
 |**EventSubClass**|**int**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Приведенная ниже таблица содержит список подклассов для данного класса событий.|21|Да|  
 |**FileName**|**nvarchar**|Причина ошибки входа. Если вход произведен успешно, этот столбец пуст.|36|Нет|  
 |**GUID**|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|Нет|  
-|**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию **HOST_NAME**.|8|Да|  
+|**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию **HOST_NAME** .|8|Да|  
 |**IntegerData**|**int**|Номер фрагмента сообщения.|25|Нет|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя, которому принадлежит соединение, создавшее это событие.|6|Да|  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
 |3|Неверная цифровая подпись|Service Broker не смог, используя открытый ключ сертификата отправителя, проверить цифровую подпись сообщения. Это может указывать на то, что сообщение повреждено или фальсифицировано, что для удаленной и локальной служб установлен не один и тот же сертификат или что срок действия сертификата истек.|  
 |4|Ошибка выполнения на целевом сервере|Пользователю назначения не предоставлены разрешения на очередь назначения. Чтобы предотвратить получение сообщений неавторизованными пользователями, компонент Service Broker не ставит в очередь сообщения, адресованные пользователю, который не сможет получить их, независимо от того, имеет ли вызывающий пользователь разрешения на помещение сообщений в очередь.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

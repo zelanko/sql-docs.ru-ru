@@ -1,25 +1,29 @@
 ---
-title: "Указание значений по умолчанию для столбца | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "столбцы [SQL Server], по умолчанию"
-  - "значения по умолчанию"
+title: "Указание значений по умолчанию для столбцов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], defaults
+- default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e23e61cb97d5d1adecf4a06f40f734da42948
+ms.lasthandoff: 04/11/2017
+
 ---
-# Указание значений по умолчанию для столбца
+# <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Можно указать значение по умолчанию, которое будет введено в столбец в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если значение по умолчанию не задано и пользователь оставляет столбец пустым, происходит следующее:  
@@ -46,7 +50,7 @@ caps.handback.revision: 18
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Если данные, введенные в поле **Значение по умолчанию**, заменяют связанное со столбцом значение по умолчанию (которое отображается без скобок), то будет предложено отменить привязку значения по умолчанию и заменить его новым значением.  
+-   Если данные, введенные в поле **Значение по умолчанию** , заменяют связанное со столбцом значение по умолчанию (которое отображается без скобок), то будет предложено отменить привязку значения по умолчанию и заменить его новым значением.  
   
 -   При вводе текстовых строк заключайте их в одинарные кавычки ('); не используйте двойные кавычки ("), потому что они зарезервированы для идентификаторов.  
   
@@ -61,9 +65,9 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Указание для столбца значения по умолчанию  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Указание для столбца значения по умолчанию  
   
-1.  В **Обозревателе объектов** щелкните правой кнопкой мыши таблицу со столбцами, масштаб которых необходимо изменить, и выберите пункт **Конструктор**.  
+1.  В **Обозревателе объектов**щелкните правой кнопкой мыши таблицу со столбцами, масштаб которых необходимо изменить, и выберите пункт **Конструктор**.  
   
 2.  Выберите столбец, для которого нужно задать значение по умолчанию.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Указание для столбца значения по умолчанию  
+#### <a name="to-specify-a-default-value-for-a-column"></a>Указание для столбца значения по умолчанию  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

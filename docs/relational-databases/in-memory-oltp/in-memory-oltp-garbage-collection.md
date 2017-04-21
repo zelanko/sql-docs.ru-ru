@@ -1,22 +1,26 @@
 ---
-title: "Сборка мусора модулем In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сборка мусора для выполняемой в памяти OLTP | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 167a464de760b5eef4c5c2beebde2eab3c3cf69e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сборка мусора модулем In-Memory OLTP
+# <a name="in-memory-oltp-garbage-collection"></a>Сборка мусора модулем In-Memory OLTP
   Строка данных считается устаревшей, если она была удалена транзакцией, которая больше не активна. Для устаревших строк применяется сборка мусора. Далее следуют характеристики сборки мусора в [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
 -   Без блокировки. Сборка мусора распространяется равномерно со временем с минимальным влиянием на рабочую нагрузку.  
@@ -41,7 +45,7 @@ caps.handback.revision: 5
   
  После фиксации пользовательской транзакции она определяет все элементы, помещенные в очередь, связанную с их выполнением планировщиком, а затем освобождает память. Если очередь в планировщике сборки мусора пуста, то он выполняет поиск всех непустых очередей в текущем узле NUMA. При низкой активности транзакций или дефиците памяти главный поток сборщика мусора может включить в сбор мусора строки из любой очереди. Если после, например, удаления большого числа строк транзакций нет и память не потребляется, сборщик мусора не будет трогать удаленные строки до возобновления транзакций или формирования потребности в памяти.  
   
-## См. также:  
- [Управление памятью для компонента In-Memory OLTP](../Topic/Managing%20Memory%20for%20In-Memory%20OLTP.md)  
+## <a name="see-also"></a>См. также:  
+ [Управление памятью для компонента In-Memory OLTP](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
   
   

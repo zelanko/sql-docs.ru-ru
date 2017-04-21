@@ -1,44 +1,48 @@
 ---
-title: "Удаление группы рабочей нагрузки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группы рабочей нагрузки [SQL Server], удаление"
-  - "регулятор ресурсов, удаление группы рабочей нагрузки"
+title: "Удаление группы рабочей нагрузки | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление группы рабочей нагрузки
+# <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
   Группу рабочей нагрузки или пул ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] либо с помощью Transact-SQL.  
   
--   **Перед началом работы:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Удаление группы рабочей нагрузки с использованием следующих средств:** [обозреватель объектов](#DelWGObjEx), [свойства регулятора ресурсов](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Группу рабочей нагрузки нельзя удалить, если она содержит активные сеансы.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
  Если группа рабочей нагрузки содержит активные сеансы, то удалить или переместить ее в другой пул ресурсов путем вызова инструкции ALTER RESOURCE GOVERNOR RECONFIGURE для применения изменений не удастся. Во избежание этой проблемы можно предпринять одно из следующих действий.  
   
 -   Подождать, пока все сеансы затронутых групп завершатся, и заново выполнить инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
--   Явно остановить сеанс в затронутой группе, используя команду KILL, и затем заново выполнить инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE. Если сеансы не следует прерывать принудительно, то используется кнопка **Удалить**, но перед этим необходимо остановить активные сеансы, повторно создать группу с первоначальным именем и переместить ее в первоначальный пул ресурсов.  
+-   Явно остановить сеанс в затронутой группе, используя команду KILL, и затем заново выполнить инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE. Если сеансы не следует прерывать принудительно, то используется кнопка **Удалить** , но перед этим необходимо остановить активные сеансы, повторно создать группу с первоначальным именем и переместить ее в первоначальный пул ресурсов.  
   
 -   Перезапустите сервер. После завершения процесса перезапуска удаленная группа не будет создана, а перемещенная группа будет использовать новое назначение пула ресурсов.  
   
-###  <a name="Permissions"></a> Разрешения  
+###  <a name="Permissions"></a> разрешения  
  Для удаления группы рабочей нагрузки требуется разрешение CONTROL SERVER.  
   
 ##  <a name="DelWGObjEx"></a> Удаление группы рабочей нагрузки с помощью обозревателя объектов  
@@ -80,7 +84,7 @@ caps.handback.revision: 19
   
 3.  Выполните инструкцию **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
   
-### Пример (Transact-SQL)  
+### <a name="example-transact-sql"></a>Пример (Transact-SQL)  
  В следующем примере удаляется группа рабочей нагрузки с именем `groupAdhoc`.  
   
 ```  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Создание группы рабочей нагрузки](../../relational-databases/resource-governor/create-a-workload-group.md)   

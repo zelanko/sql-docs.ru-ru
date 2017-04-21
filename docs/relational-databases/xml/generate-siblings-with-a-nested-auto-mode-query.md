@@ -1,28 +1,32 @@
 ---
-title: "Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "запросы [XML в SQL Server], вложенный режим AUTO"
-  - "вложенные запросы, режим AUTO"
+title: "Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO
   В следующем примере показано, как создавать элементы с общим родителем при помощи вложенного запроса в режиме AUTO. Единственный способ создать такой XML — использовать режим EXPLICIT. Однако пользоваться этим способом не всегда удобно.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Этот запрос создает XML, который предоставляет сведения о заказах на продажу. Это включает следующие действия.  
   
 -   Данные заголовка заказа на продажу, `SalesOrderID`, `SalesPersonID`и `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] сохраняет эти данные в таблице `SalesOrderHeader` .  
@@ -65,13 +69,13 @@ FOR XML AUTO, TYPE
   
 -   Запрашивает набор строк `SalesOrder`, указанный в предложении `FROM`. Результат — XML с одним или несколькими элементами <`SalesOrder`>.  
   
--   Указывает режим `AUTO` и директиву `TYPE`. `AUTO` результат запроса преобразуется в XML, а директива `TYPE` возвращает результат типа **xml** .  
+-   Указывает режим `AUTO` и директиву `TYPE` . `AUTO` результат запроса преобразуется в XML, а директива `TYPE` возвращает результат типа **xml** .  
   
 -   Содержит две вложенные инструкции `SELECT` , разделенные запятой. Первая вложенная инструкция `SELECT` получает сведения о заказе на продажу, заголовок и дополнительные сведения, а вторая инструкция `SELECT` получает сведения о менеджере по продажам.  
   
-    -   Инструкция `SELECT`, получающая `SalesOrderID`, `SalesPersonID` и `CustomerID`, содержит вложенную инструкцию `SELECT ... FOR XML` (с режимом `AUTO` и директивой `TYPE`), возвращающую подробные данные о заказе на продажу.  
+    -   Инструкция `SELECT` , получающая `SalesOrderID`, `SalesPersonID`и `CustomerID` , содержит вложенную инструкцию `SELECT ... FOR XML` (с режимом `AUTO` и директивой `TYPE` ), возвращающую подробные данные о заказе на продажу.  
   
- Инструкция `SELECT`, которая получает сведения о менеджере по продажам, запрашивает набор строк `SalesPerson`, созданный в предложении `FROM`. Для работы запросов `FOR XML` необходимо указать имя для анонимного набора строк, создаваемого в предложении `FROM` . В данном случае указано имя `SalesPerson`.  
+ Инструкция `SELECT` , которая получает сведения о менеджере по продажам, запрашивает набор строк `SalesPerson`, созданный в предложении `FROM` . Для работы запросов `FOR XML` необходимо указать имя для анонимного набора строк, создаваемого в предложении `FROM` . В данном случае указано имя `SalesPerson`.  
   
  Частичный результат:  
   
@@ -143,7 +147,7 @@ FOR XML AUTO, TYPE
   
 -   Предшествующий запрос добавлен в предложении `FROM` . Результат запроса возвращается в виде таблицы. Следует обратить внимание, что добавлен псевдоним `XmlCol` .  
   
--   Предложение `SELECT` определяет запрос XQuery к `XmlCol`, возвращаемому в предложении `FROM`. Метод **query()** типа данных **xml** используется для определения запроса XQuery. Дополнительные сведения см. в разделе [Метод query&40;) (тип данных xml)](../../t-sql/xml/query-method-xml-data-type.md).  
+-   Предложение `SELECT` определяет запрос XQuery к `XmlCol` , возвращаемому в предложении `FROM` . Метод **query()** типа данных **xml** используется для определения запроса XQuery. Дополнительные сведения см. в разделе [Метод query&40;) (тип данных xml)](../../t-sql/xml/query-method-xml-data-type.md).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование вложенных запросов FOR XML](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

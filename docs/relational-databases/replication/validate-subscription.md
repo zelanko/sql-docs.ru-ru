@@ -1,31 +1,35 @@
 ---
-title: "Проверка подписки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.validate.validateandresynch.f1"
-helpviewer_keywords: 
-  - "диалоговое окно «Проверка подписки»"
+title: "Проверка подписки | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.validate.validateandresynch.f1
+helpviewer_keywords:
+- Validate Subscription dialog box
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ec35a68110b658b505cb47324118af557b95d6c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Проверка подписки
+# <a name="validate-subscription"></a>Проверка подписки
   Используйте диалоговое окно **Проверка подписки** , чтобы установить, что подписка на публикацию слиянием должна быть проверена при следующем запуске агента слияния для этой подписки. Результаты подтверждения отображаются в мониторе репликации. Дополнительные сведения см. в статье [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
- Можно также проверить все подписки на публикацию слиянием щелкните правой кнопкой мыши публикацию в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и щелкнув **Проверка всех подписок**.  
+ Кроме того, проверить все подписки на публикацию слиянием можно, щелкнув правой кнопкой мыши публикацию в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выбрав пункт **Проверить все подписки**.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Дата последней попытки проверки**  
  Дата последнего сеанса работы агента слияния, в ходе которого производилась проверка подписки, независимо от успешности этой проверки.  
   
@@ -36,9 +40,9 @@ caps.handback.revision: 19
  Выберите, чтобы проверить подписку.  
   
  **Параметры**  
- Щелкните, чтобы получить доступ к **Параметры проверки подписки** диалоговое окно позволяет указать, следует ли использовать проверку по количеству строк и двоичной контрольной сумме.  
+ Нажмите, чтобы получить доступ к диалоговому окну **Параметры проверки подписки** , которое позволит указать, следует ли использовать проверку по количеству строк или по двоичной контрольной сумме.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Проверка реплицированных данных](../../relational-databases/replication/validate-replicated-data.md)  
   
   

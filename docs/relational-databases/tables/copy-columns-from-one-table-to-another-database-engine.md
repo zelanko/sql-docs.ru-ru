@@ -1,25 +1,29 @@
 ---
-title: "Копирование столбцов из одной таблицы в другую (компонент Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "копирование столбцов"
-  - "столбцы [SQL Server], копирование"
+title: "Копирование столбцов из одной таблицы в другую (ядро СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# Копирование столбцов из одной таблицы в другую (компонент Database Engine)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>Копирование столбцов из одной таблицы в другую (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   В этом разделе описывается копирование столбцов из одной таблицы в другую, когда копируется либо только определение столбца, либо определение и данные из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +54,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Копирование определения столбца из одной таблицы в другую  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Копирование определения столбца из одной таблицы в другую  
   
 1.  Щелкнув правой кнопкой мыши, откройте таблицу со столбцами, предназначенными к копированию, и таблицу, в которую необходимо выполнить копирование, затем нажмите кнопку **Разработка**.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  Выделите столбец, после которого нужно поместить вставляемые столбцы, и в меню **Правка** выберите **Вставить**.  
   
-#### Копирование данных из одной таблицы в другую  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Копирование данных из одной таблицы в другую  
   
 1.  Следуйте приведенным выше инструкциям для копирования определения столбцов.  
   
@@ -73,9 +77,9 @@ caps.handback.revision: 23
 
 3.  Щелкните редактор запросов правой кнопкой мыши и выберите **Создать запрос в редакторе**. 
 
-4.  В диалоговом окне **Добавление таблицы** выберите исходную и целевую таблицы, нажмите кнопку **Добавить**, а затем закройте диалоговое окно **Добавление таблицы**. 
+4.  В диалоговом окне **Добавление таблицы** выберите исходную и целевую таблицы, нажмите кнопку **Добавить**, а затем закройте диалоговое окно **Добавление таблицы** . 
 
-5.  Щелкните правой кнопкой мыши пустую область редактора запросов, наведите указатель на пункт **Изменить тип** и выберите **Вставить результаты**.  
+5.  Щелкните правой кнопкой мыши пустую область редактора запросов, наведите указатель на пункт **Изменить тип**и выберите **Вставить результаты**.  
 
 6.  В диалоговом окне **Выбор целевой таблицы для инструкции Insert Results** выберите целевую таблицу. 
 
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Копирование определения столбца из одной таблицы в другую  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Копирование определения столбца из одной таблицы в другую  
   
-1.  Нельзя копировать отдельные столбцы из одной таблицы в другую (существующую) с использованием инструкций Transact-SQL. Однако можно создать новую таблицу в файловой группе по умолчанию и вставить в нее результирующие строки из запроса с помощью инструкции SELECT INTO. Дополнительные сведения см. в разделе [Предложение INTO (Transact-SQL)](../Topic/INTO%20Clause%20\(Transact-SQL\).md).  
+1.  Нельзя копировать отдельные столбцы из одной таблицы в другую (существующую) с использованием инструкций Transact-SQL. Однако можно создать новую таблицу в файловой группе по умолчанию и вставить в нее результирующие строки из запроса с помощью инструкции SELECT INTO. Дополнительные сведения см. в разделе [Предложение INTO (Transact-SQL)](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-#### Копирование данных из одной таблицы в другую  
+#### <a name="to-copy-data-from-one-table-to-another"></a>Копирование данных из одной таблицы в другую  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

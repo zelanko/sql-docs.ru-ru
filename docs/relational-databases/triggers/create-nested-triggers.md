@@ -1,32 +1,36 @@
 ---
-title: "Создание вложенных триггеров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "рекурсивные триггеры DML [SQL Server]"
-  - "триггеры DML, вложенные"
-  - "триггеры [SQL Server], вложенные"
-  - "прямая рекурсия [SQL Server]"
-  - "триггеры [SQL Server], рекурсивные"
-  - "триггеры DML, рекурсивные"
-  - "RECURSIVE_TRIGGERS, параметр"
-  - "косвенная рекурсия [SQL Server]"
-  - "вложенные триггеры DML"
+title: "Создание вложенных триггеров | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание вложенных триггеров
+# <a name="create-nested-triggers"></a>Создание вложенных триггеров
   При выполнении триггером действия, инициирующего другой триггер, триггеры DML и DDL становятся вложенными. Эти действия могут инициировать другие триггеры и т.д. Вложенность триггеров DML и DDL может составлять до 32 уровней. Можно разрешать или запрещать вложенность триггеров AFTER с помощью параметра конфигурации сервера **nested triggers** . Вложенность триггеров INSTEAD OF (только триггеры DML могут быть триггерами INSTEAD OF) не зависит от этого параметра.  
   
 > [!NOTE]  
@@ -50,7 +54,7 @@ AS
 > [!NOTE]  
 >  Так как триггеры исполняются в пределах транзакции, сбой на любом уровне набора вложенных триггеров приведет к отмене всей транзакции, а также будет выполнен откат всех изменений данных. Включите инструкции PRINT в триггеры, чтобы определить, где происходит сбой.  
   
-## Рекурсивные триггеры  
+## <a name="recursive-triggers"></a>Рекурсивные триггеры  
  Триггер AFTER не вызывает самого себя рекурсивно, если только не установлен параметр базы данных RECURSIVE_TRIGGERS.  
   
  Существует два типа рекурсии.  
@@ -67,7 +71,7 @@ AS
   
  Когда для параметра базы данных RECURSIVE_TRIGGERS устанавливается значение OFF, предотвращается только прямая рекурсия триггеров AFTER. Чтобы отключить косвенную рекурсию триггеров AFTER, присвойте параметру сервера **nested triggers** значение **0**.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  Следующий пример демонстрирует использование рекурсивных триггеров для разрешения ссылающейся на себя связи (также называемой транзитивным закрытием). Например, таблица `emp_mgr` определяет:  
   
 -   сотрудника (`emp`) компании;  
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **Установка параметра базы данных RECURSIVE_TRIGGERS**  
   
--   [Параметры ALTER DATABASE SET (Transact-SQL)](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Настройка конфигурации сервера nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

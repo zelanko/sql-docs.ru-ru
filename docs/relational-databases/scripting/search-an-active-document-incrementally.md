@@ -1,31 +1,35 @@
 ---
-title: "Выполнение добавочного поиска в активном документе | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "поиски [среда SQL Server Management Studio], последовательные"
-  - "редактор запросов [среда SQL Server Management Studio], последовательный поиск"
-  - "добавочный поиск [среда SQL Server Management Studio]"
+title: "Выполнение добавочного поиска в активном документе | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], incremental
+- Query Editor [SQL Server Management Studio], incremental search
+- incremental searches [SQL Server Management Studio]
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3d3c79129936f6764261ec3f0ac1e0d54daf03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Выполнение добавочного поиска в активном документе
+# <a name="search-an-active-document-incrementally"></a>Выполнение добавочного поиска в активном документе
   В отдельном документе или окне можно осуществлять добавочный поиск с уточнением критериев путем ввода текста. При операции поиска первый набор символов, соответствующий введенным в ходе добавочного поиска в документе или окне, выделяется цветом. При добавочном поиске производится автоматический поиск во всем тексте документа или окна, кроме скрытого текста.  
   
  Для параметра **Учитывать регистр** во время добавочного поиска используется значение, заданное при предыдущем поиске. Например, если производился поиск в нескольких файлах с помощью диалогового окна **Поиск в файлах** при установленном флажке **Учитывать регистр**, а следующий поиск осуществляется добавочно, при этом поиске будет учитываться регистр.  
   
-### Выполнение добавочного поиска  
+### <a name="to-search-incrementally"></a>Выполнение добавочного поиска  
   
 1.  Откройте файл или окно, в котором требуется произвести поиск.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  Полный список сочетаний клавиш см. в статье [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поиск и замена](../../relational-databases/scripting/search-and-replace.md)   
  [осуществлять поиск в документах в интерактивном режиме](../../relational-databases/scripting/search-documents-interactively.md)   
  [Поиск документов с помощью списков результатов](../../relational-databases/scripting/search-documents-using-results-lists.md)   

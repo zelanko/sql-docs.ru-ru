@@ -1,30 +1,34 @@
 ---
-title: "переместить базу данных с поддержкой FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], перемещение базы данных с поддержкой FILESTREAM"
+title: "Перемещение базы данных с поддержкой FILESTREAM | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af3800a6e604289944a340cee7f469654c495e2
+ms.lasthandoff: 04/11/2017
+
 ---
-# переместить базу данных с поддержкой FILESTREAM
+# <a name="move-a-filestream-enabled-database"></a>переместить базу данных с поддержкой FILESTREAM
   В этом разделе показано перемещение базы данных с поддержкой FILESTREAM.  
   
 > [!NOTE]  
 >  В примерах этого раздела требуется база данных Archive, созданная в разделе [Создание базы данных с поддержкой FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md).  
   
-### Перемещение базы данных с поддержкой FILESTREAM  
+### <a name="to-move-a-filestream-enabled-database"></a>Перемещение базы данных с поддержкой FILESTREAM  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]нажмите кнопку **Создать запрос** , чтобы открыть редактор запросов.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 11
     GO  
     ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

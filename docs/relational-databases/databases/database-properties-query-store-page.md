@@ -1,31 +1,35 @@
 ---
-title: "Свойства базы данных (страница хранилища запросов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.querystore.f1"
+title: "Свойства базы данных (страница &quot;Хранилище запросов&quot;) | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89d782e0fa62c2b4b4332e9818b93f87f797710f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Свойства базы данных (страница хранилища запросов)
-  Откройте эту страницу из основной базы данных и используйте ее для настройки и изменения свойств хранилища запросов базы данных. Эти параметры можно также настроить с помощью [параметров ALTER DATABASE SET](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md). Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+# <a name="database-properties-query-store-page"></a>Свойства базы данных (страница хранилища запросов)
+  Откройте эту страницу из основной базы данных и используйте ее для настройки и изменения свойств хранилища запросов базы данных. Эти параметры можно также настроить с помощью [параметров ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  Режим работы  
  Допустимые значения: OFF, READ_ONLY и READ_WRITE. OFF отключает хранилище запросов. В режиме READ_WRITE хранилище запросов собирает и сохраняет план запросов и статистические данные о выполнении. В режиме READ_ONLY можно считывать данные из хранилища запросов, но новые сведения не добавляется. Если выделенное свободное место в хранилище запросов будет исчерпано, хранилище переключится в режим работы READ_ONLY.  
   
@@ -45,11 +49,11 @@ caps.handback.revision: 10
  Получает и задает свободное место, выделенное для хранилища запросов.  
   
  Режим записи хранилища запросов  
- -   None — новые запросы не записываются.  
+ -   None — новые запросы не записываются.  
   
--   All — записываются все запросы.  
+-   All — записываются все запросы.  
   
--   Auto — запросы записываются с учетом потребления ресурсов.  
+-   Auto — запросы записываются с учетом потребления ресурсов.  
   
  Пороговое значение устаревших запросов (в днях)  
  Получает и задает пороговое значение устаревшего запроса. Настройте аргумент STALE_QUERY_THRESHOLD_DAYS, чтобы указать длительность хранения данных в хранилище запросов в днях.  
@@ -62,11 +66,12 @@ caps.handback.revision: 10
   
  На схеме справа показана часть квоты хранилища запросов, которая сейчас занята. Обратите внимание, что на левой схеме квота не показана. Квота может превышать текущий размер базы данных.  
   
-## Замечания  
- Хранилище запросов предоставляет DBA подробные сведения о выборе и производительности плана запросов. Оно упрощает устранение неполадок с производительностью, позволяя быстро находить разницу в производительности, вызванную изменениями в планах запросов. Функция автоматически записывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра. Она разделяет данные по временным окнам, позволяя просмотреть шаблоны использования и понять, когда изменения плана запросов произошли на сервере. Хранилище запросов можно настроить на странице свойств базы данных хранилища запросов или с помощью параметра [ALTER DATABASE SET](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) . Сведения в хранилище запросов представлены в диалоговом окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+## <a name="remarks"></a>Замечания  
+ Хранилище запросов предоставляет DBA подробные сведения о выборе и производительности плана запросов. Оно упрощает устранение неполадок с производительностью, позволяя быстро находить разницу в производительности, вызванную изменениями в планах запросов. Функция автоматически записывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра. Она разделяет данные по временным окнам, позволяя просмотреть шаблоны использования и понять, когда изменения плана запросов произошли на сервере. Хранилище запросов можно настроить на странице свойств базы данных хранилища запросов или с помощью параметра [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . Сведения в хранилище запросов представлены в диалоговом окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры в хранилище запросов (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Представления каталога хранилища запросов (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

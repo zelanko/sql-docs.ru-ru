@@ -1,29 +1,33 @@
 ---
-title: "Создание схемы базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.schemas.general.f1"
-helpviewer_keywords: 
-  - "создание схем с помощью среды Management Studio"
-  - "CREATE SCHEMA [среда Management Studio]"
-  - "схемы базы данных"
-  - "схемы [SQL Server], создание"
+title: "Создание схемы базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.schemas.general.f1
+helpviewer_keywords:
+- creating schemas with Management Studio
+- CREATE SCHEMA [Management Studio]
+- database schemas
+- schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание схемы базы данных
+# <a name="create-a-database-schema"></a>Создание схемы базы данных
   В этом разделе описывается создание схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -58,21 +62,21 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-##### Создание схемы  
+##### <a name="to-create-a-schema"></a>Создание схемы  
   
 1.  В обозревателе объектов раскройте папку **Базы данных** .  
   
 2.  Разверните базу данных, в которой создается новая схема базы данных.  
   
-3.  Щелкните правой кнопкой мыши папку **Безопасность**, укажите на пункт **Создать** и выберите **Схема**.  
+3.  Щелкните правой кнопкой мыши папку **Безопасность** , укажите на пункт **Создать**и выберите **Схема**.  
   
-4.  В диалоговом окне **Схема — создать** на странице **Общие** введите имя новой схемы в поле **Имя схемы**.  
+4.  В диалоговом окне **Схема — создать** на странице **Общие** введите имя новой схемы в поле **Имя схемы** .  
   
 5.  В поле **Владелец схемы** введите имя пользователя или роли базы данных, которые будут владельцем схемы. Также можно нажать кнопку **Поиск** , чтобы открыть диалоговое окно **Поиск ролей и пользователей** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### Дополнительные параметры  
+### <a name="additional-options"></a>Дополнительные параметры  
  Диалоговое окно **Схема — Создать** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
   
 -   На странице **Разрешения** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа.  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Создание схемы  
+#### <a name="to-create-a-schema"></a>Создание схемы  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

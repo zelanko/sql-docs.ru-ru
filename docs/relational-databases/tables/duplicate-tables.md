@@ -1,30 +1,34 @@
 ---
-title: "Дублирование таблиц | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "копирование таблиц"
-  - "таблицы [репликация SQL Server], дублирование"
-  - "дублирование таблиц"
-  - "копирование таблиц [SQL Server]"
+title: "Дублирование таблиц | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying tables
+- tables [SQL Server], duplicating
+- duplicating tables
+- table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7bbc956b852d4a7af1a8b9e3d26920fa4aeeebe
+ms.lasthandoff: 04/11/2017
+
 ---
-# Дублирование таблиц
+# <a name="duplicate-tables"></a>Дублирование таблиц
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать копию существующей таблицы с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)], создав новую таблицу и скопировав в нее сведения о столбцах из существующей таблицы.  
+  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать копию существующей таблицы с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] , создав новую таблицу и скопировав в нее сведения о столбцах из существующей таблицы.  
   
 > [!IMPORTANT]  
 >  Эта операция дублирует только структуру таблицы. При этом не происходит дублирования строк таблицы.  
@@ -50,11 +54,11 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Дублирование таблицы  
+#### <a name="to-duplicate-a-table"></a>Дублирование таблицы  
   
 1.  Убедитесь, что есть подключение к базе данных, в которой нужно создать таблицу, и эта база данных выбрана в обозревателе объектов.  
   
-2.  В обозревателе объектов щелкните правой кнопкой мыши пункт **Таблицы**, а затем выберите **Создать таблицу**.  
+2.  В обозревателе объектов щелкните правой кнопкой мыши пункт **Таблицы** , а затем выберите **Создать таблицу**.  
   
 3.  В обозревателе объектов щелкните правой кнопкой мыши таблицу, которую нужно скопировать, и выберите пункт **Конструктор**.  
   
@@ -70,11 +74,11 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Дублирование таблицы в редакторе запросов  
+#### <a name="to-duplicate-a-table-in-query-editor"></a>Дублирование таблицы в редакторе запросов  
   
 1.  Убедитесь, что есть подключение к базе данных, в которой нужно создать таблицу, и эта база данных выбрана в обозревателе объектов.  
   
-2.  Щелкните правой кнопкой таблицу, копию которой необходимо создать, выберите команду **Создать скрипт таблицы как**, укажите **CREATE для** и выберите вариант **Создать окно редактора запросов**.  
+2.  Щелкните правой кнопкой таблицу, копию которой необходимо создать, выберите команду **Создать скрипт таблицы как**, укажите **CREATE для**и выберите вариант **Создать окно редактора запросов**.  
   
 3.  Измените имя таблицы.  
   

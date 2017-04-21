@@ -1,30 +1,34 @@
 ---
-title: "Объекты, создаваемые на издателе Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "публикация Oracle [репликация SQL Server], создаваемые объекты"
+title: "Объекты, создаваемые в издателе Oracle | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97a45c8f524f81d01dceda7a616932b18e799d82
+ms.lasthandoff: 04/11/2017
+
 ---
-# Объекты, создаваемые на издателе Oracle
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] репликация устанавливает объекты базы данных на издателе Oracle для включения отслеживания и перенаправления изменений ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не устанавливает никаких двоичных файлов на издателе Oracle). В следующей таблице перечисляются объекты, которые создаются на издателе Oracle, если он определяется на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как издатель. Описания объектов предоставляются только в информационных целях. Не следует изменять эти объекты.  
+# <a name="objects-created-on-the-oracle-publisher"></a>Объекты, создаваемые на издателе Oracle
+  Репликация[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает объекты базы данных на издателе Oracle для включения отслеживания и перенаправления изменений ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не устанавливает никаких двоичных файлов на издателе Oracle). В следующей таблице перечисляются объекты, которые создаются на издателе Oracle, если он определяется на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как издатель. Описания объектов предоставляются только в информационных целях. Не следует изменять эти объекты.  
   
 |Имя объекта|Тип объекта|Описание|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Таблица|Таблица отслеживания изменений, используемая для хранения данных об изменениях, выполненных в опубликованной таблице. Таблица отслеживания изменений создается для каждой опубликованной таблицы.|  
-|HREPL_Changes|Таблица|Внутренняя таблица, используемая заданием «Набор транзакций» для определения количества изменений, ожидающих назначения в набор транзакций. Дополнительные сведения об этом задании см. в разделе [Настройка производительности для издателей Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
+|HREPL_Changes|Таблица|Внутренняя таблица, используемая заданием «Набор транзакций» для определения количества изменений, ожидающих назначения в набор транзакций. Дополнительные сведения об этом задании см. в статье [Настройка производительности для издателей Oracle](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).|  
 |HREPL_Distributor|Таблица|Таблица состояния распространителя, используемая для сохранения данных о распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , связанном с издателем Oracle.|  
 |HREPL_Event|Таблица|Таблица событий, используемая для синхронизации моментальных снимков и запросов количества строк.|  
 |HREPL_Mutex|Таблица|Таблица, используемая для обеспечения того, чтобы пакетная процедура PopulatePollTable не выполнялась одновременно агентом чтения журнала и заданием базы данных.|  
@@ -47,9 +51,9 @@ caps.handback.revision: 33
 |HREPL_Article_I_J|Просмотр|Представление, создаваемое для каждой опубликованной таблицы и используемое для запроса опубликованной таблицы.|  
 |HREPL_Log_I_J_K|Просмотр|Представление, создаваемое для каждой опубликованной таблицы и используемое для запроса таблицы отслеживания изменений.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Глоссарий терминов публикации Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Глоссарий терминов по публикации Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

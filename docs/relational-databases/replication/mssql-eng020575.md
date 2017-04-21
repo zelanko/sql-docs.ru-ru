@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG020575 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG020575, ошибка"
+title: "MSSQL_ENG020575 | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG020575 error
 ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5293e9e9a8471dc4cb9ae7e12ce2b1026ab5bd89
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG020575
+# <a name="mssqleng020575"></a>MSSQL_ENG020575
     
-## Сведения о сообщении  
+## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
@@ -31,10 +35,10 @@ caps.handback.revision: 9
 |Символическое имя||  
 |Текст сообщения|Подписка подписчика "%s" на статью "%s" в публикации "%s" прошла проверку данных.|  
   
-## Объяснение  
- Было проверено и обнаружено соответствие данных на подписчике данным на издателе; таким образом, проверка успешно пройдена. Дополнительные сведения о проверке см. в разделе [проверки репликации данных](../../relational-databases/replication/validate-replicated-data.md).  
+## <a name="explanation"></a>Объяснение  
+ Было проверено и обнаружено соответствие данных на подписчике данным на издателе; таким образом, проверка успешно пройдена. Дополнительные сведения о проверке см. в разделе [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md).  
   
-## См. также:  
- [Ошибки и события ссылку & #40; Репликация & #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

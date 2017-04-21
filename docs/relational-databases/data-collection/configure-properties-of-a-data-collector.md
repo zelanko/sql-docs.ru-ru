@@ -1,28 +1,32 @@
 ---
-title: "Настройка свойств сборщика данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollectionprop.general.f1"
-  - "sql13.swb.dc.datacollectionprop.advanced.f1"
+title: "Настройка свойств сборщика данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollectionprop.general.f1
+- sql13.swb.dc.datacollectionprop.advanced.f1
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a0aad98c302e55b3edc76b01fc0c5eae4e249ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка свойств сборщика данных
+# <a name="configure-properties-of-a-data-collector"></a>Настройка свойств сборщика данных
   В этом разделе рассматривается настройка свойств сборщика данных.  
   
-## Свойства сбора данных (вкладка «Общие»)  
+## <a name="data-collection-properties-general-tab"></a>Свойства сбора данных (вкладка «Общие»)  
  Эта страница используется для настройки параметров хранилища данных управления и указания места хранения собранных данных перед передачей в хранилище данных.  
   
  **Включить сбор данных**  
@@ -40,13 +44,13 @@ caps.handback.revision: 5
  **Каталог кэша**  
  Указывает каталог, в котором хранятся собранные данные на локальном компьютере до их передачи в хранилище управляющих данных. Если **Каталог кэша** не указан, сборщик данных предпринимает попытку обнаружить переменные среды %TEMP% и %TMP% и использует одно из этих мест в качестве временного хранилища по умолчанию. Если эти переменные среды не заданы, выдается ошибка и запрос для создания каталога кэша.  
   
-## Свойства сбора данных (вкладка «Дополнительно»)  
+## <a name="data-collection-properties-advanced-tab"></a>Свойства сбора данных (вкладка «Дополнительно»)  
  Эта страница используется для настройки параметров повторных попыток соединения с хранилищем данных управления.  
   
  **Количество повторных попыток в случае ошибки передачи**  
  Указывает число повторных попыток передачи в хранилище управляющих данных, если передача завершается ошибкой. Значение по умолчанию равно 1.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md)   
  [Настройка хранилища данных управления (среда SQL Server Management Studio)](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

@@ -1,26 +1,30 @@
 ---
-title: "Средства расширенных событий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "расширенные события [SQL Server], использование"
-  - "расширенные события [SQL Server], параметры для использования"
+title: "Средства расширенных событий | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], using
+- extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 923b012345d18abb393479744a65b4572cb20a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# Средства расширенных событий
+# <a name="extended-events-tools"></a>Средства расширенных событий
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Для создания сеансов расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управления ими можно использовать следующие средства:  
@@ -33,11 +37,11 @@ caps.handback.revision: 19
   
 -   Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Предоставляет широкий набор функций для создания, изменения сеансов расширенных событий и управления ими. Дополнительные сведения см. в статье [Использование поставщика PowerShell для расширенных событий](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Позволяет создавать и выполнять образцы кода, приведенные в разделах справочника по расширенным событиям. Дополнительные сведения см. в статье [Семантический поиск](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Позволяет создавать и выполнять образцы кода, приведенные в разделах справочника по расширенным событиям. Дополнительные сведения см. в статье [Семантический поиск](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2).  
   
  Помимо сеансов, которые создает пользователь, на сервере существует системный сеанс по умолчанию для сбора данных о работоспособности системы. В этом сеансе собираются системные данные, которые можно использовать для решения проблем производительности. Дополнительные сведения см. в статье [Использование сеанса system_health](../../relational-databases/extended-events/use-the-system-health-session.md).  
   
-## Инструкции DDL  
+## <a name="ddl-statements"></a>Инструкции DDL  
  Следующие инструкции DDL можно использовать для создания, изменения и удаления сеансов расширенных событий.  
   
 |Название|Описание|  
@@ -46,7 +50,7 @@ caps.handback.revision: 19
 |[ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)|Запускает или останавливает сеанс событий или изменяет конфигурацию сеанса.|  
 |[DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)|Удаляет сеанс событий.|  
   
-## Представления каталога  
+## <a name="catalog-views"></a>Представления каталога  
  Следующие представления каталога используются для получения метаданных, сформированных при создании сеанса событий.  
   
 |Название|Описание|  
@@ -57,7 +61,7 @@ caps.handback.revision: 19
 |[sys.server_event_session_fields (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|Возвращает строку для каждого настраиваемого столбца, явно установленного на события и цели.|  
 |[sys.server_event_session_targets (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|Возвращает строку для каждой цели события для сеанса событий.|  
   
-## Динамические административные представления  
+## <a name="dynamic-management-views"></a>Динамические административные представления  
  Следующие динамические административные представления используются для получения метаданных и данных сеанса. Метаданные получают из представлений каталога, а данные сеанса создаются при запуске и работе сеанса событий.  
   
 > [!NOTE]  
@@ -76,19 +80,20 @@ caps.handback.revision: 19
 |[sys.dm_xe_map_values (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-map-values-transact-sql.md)|Содержит сопоставления внутренних цифровых ключей с понятным текстом.|  
 |[sys.dm_xe_session_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-object-columns-transact-sql.md)|Отображает значения конфигурации объектов, привязанных к сеансу.|  
   
-## Системные таблицы  
+## <a name="system-tables"></a>Системные таблицы  
  Следующие системные таблицы используются для получения сведений об эквивалентах расширенных событий для классов и столбцов событий трассировки SQL.  
   
 |Название|Описание|  
 |----------|-----------------|  
-|[trace_xe_event_map (Transact-SQL)](../Topic/trace_xe_event_map%20\(Transact-SQL\).md)|Содержит одну строку для каждого события из числа расширенных событий, сопоставленного с классом событий трассировки SQL.|  
-|[trace_xe_action_map (Transact-SQL)](../Topic/trace_xe_action_map%20\(Transact-SQL\).md)|Содержит одну строку для каждого действия из числа расширенных событий, сопоставленного с идентификатором столбца трассировки SQL.|  
+|[trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|Содержит одну строку для каждого события из числа расширенных событий, сопоставленного с классом событий трассировки SQL.|  
+|[trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Содержит одну строку для каждого действия из числа расширенных событий, сопоставленного с идентификатором столбца трассировки SQL.|  
   
-## См. также:  
- [Динамические административные представления и функции (Transact-SQL)](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Таблицы расширенных событий SQL Server (Transact-SQL)](../Topic/SQL%20Server%20Extended%20Events%20Tables%20\(Transact-SQL\).md)   
+ [Таблицы расширенных событий SQL Server (Transact-SQL)](http://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)   
  [Использование сеанса system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Использование поставщика PowerShell для расширенных событий](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)  
   
   
+

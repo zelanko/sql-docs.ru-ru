@@ -1,33 +1,37 @@
 ---
-title: "Настройка оповещения базы данных SQL Server (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "предупреждения [SQL Server], создание"
+title: "Настройка предупреждения базы данных SQL Server (Windows) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eabe827b89c3931523bda848e01471853cbde6b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Настройка оповещения базы данных SQL Server (Windows)
+# <a name="set-up-a-sql-server-database-alert-windows"></a>Настройка оповещения базы данных SQL Server (Windows)
   Используя системный монитор, можно создать предупреждение, которое будет выводиться при достижении порогового значения счетчика системного монитора. В ответ на оповещение системный монитор может запустить то или иное приложение — скажем, приложение, решающее связанную с оповещением проблему. Например, можно создать предупреждение, которое будет выводиться, когда число взаимоблокировок превысит заданное значение.  
   
- Оповещения можно также определять при помощи среды Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Оповещения](../../ssms/agent/alerts.md).  
+ Оповещения можно также определять при помощи среды Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Оповещения](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
   
-### Настройка оповещения базы данных SQL Server  
+### <a name="to-set-up-a-sql-server-database-alert"></a>Настройка оповещения базы данных SQL Server  
   
 1.  В дереве навигации окна «Производительность» раскройте узел **Журналы и оповещения производительности**.  
   
-2.  Щелкните правой кнопкой мыши пункт **Оповещения** и выберите пункт **Новые параметры оповещений**.  
+2.  Щелкните правой кнопкой мыши пункт **Оповещения**и выберите пункт **Новые параметры оповещений**.  
   
 3.  В диалоговом окне **Новые параметры оповещений** введите имя нового оповещения и щелкните **OK**.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 23
   
 10. На вкладке **Расписание** укажите время начала и прекращения наблюдения за оповещениями.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание предупреждения для базы данных SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)  
   
   

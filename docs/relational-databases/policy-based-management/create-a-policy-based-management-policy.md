@@ -1,24 +1,28 @@
 ---
-title: "Создание политики управления на основе политик | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Управление на основе политик, создание политик"
+title: "Создание политики управления на основе политик | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 28d614d27647f0466abd5a6715244b6334ec56be
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание политики управления на основе политик
+# <a name="create-a-policy-based-management-policy"></a>Создание политики управления на основе политик
   В этом разделе описывается создание политики управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **В этом разделе**  
@@ -40,9 +44,9 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание политики  
+#### <a name="to-create-a-policy"></a>Создание политики  
   
-1.  В **обозревателе объектов** щелкните знак "плюс", чтобы развернуть сервер, на котором необходимо создать новую политику управления на основе политик.  
+1.  В **обозревателе объектов**щелкните знак "плюс", чтобы развернуть сервер, на котором необходимо создать новую политику управления на основе политик.  
   
 2.  Щелкните знак «плюс», чтобы развернуть папку **Управление** .  
   

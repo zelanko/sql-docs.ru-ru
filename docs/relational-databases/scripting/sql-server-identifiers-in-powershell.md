@@ -1,35 +1,39 @@
 ---
-title: "Идентификаторы SQL Server в PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "командлеты [SQL Server], Encode-Sqlname"
-  - "PowerShell [SQL Server], идентификаторы"
-  - "Encode-Sqlname, командлет"
-  - "PowerShell [SQL Server], Encode-Sqlname"
-  - "Decode-Sqlname, командлет"
-  - "PowerShell [SQL Server], Decode-Sqlname"
-  - "идентификаторы [SQL Server], PowerShell"
-  - "командлеты [SQL Server], Decode-Sqlname"
+title: "Идентификаторы SQL Server в PowerShell | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Cmdlets [SQL Server], Encode-Sqlname
+- PowerShell [SQL Server], identifiers
+- Encode-Sqlname cmdlet
+- PowerShell [SQL Server], Encode-Sqlname
+- Decode-Sqlname cmdlet
+- PowerShell [SQL Server], Decode-Sqlname
+- identifiers [SQL Server], PowerShell
+- Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9910f8221f3fbbb7a44bf504f52c6f74250bd63c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Идентификаторы SQL Server в PowerShell
+# <a name="sql-server-identifiers-in-powershell"></a>Идентификаторы SQL Server в PowerShell
   Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell использует идентификаторы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в путях Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать символы, которые не поддерживаются в путях Windows PowerShell. Такие символы при использовании в идентификаторах в составе путей Windows PowerShell следует экранировать или применять для них специальную кодировку.  
   
-## Идентификаторы SQL Server в путях Windows PowerShell  
- Поставщики Windows PowerShell предоставляют доступ к иерархиям данных с помощью структуры путей, аналогичной используемой в файловой системе Windows. В поставщике [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализуются пути к объектам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] жесткий диск задается как SQLSERVER, а первая папка — как \SQL. Объекты базы данных указываются как контейнеры и элементы. Ниже приведен путь к таблице Vendor в схеме Purchasing базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию:  
+## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Идентификаторы SQL Server в путях Windows PowerShell  
+ Поставщики Windows PowerShell предоставляют доступ к иерархиям данных с помощью структуры путей, аналогичной используемой в файловой системе Windows. В поставщике [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализуются пути к объектам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]жесткий диск задается как SQLSERVER, а первая папка — как \SQL. Объекты базы данных указываются как контейнеры и элементы. Ниже приведен путь к таблице Vendor в схеме Purchasing базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]по умолчанию:  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
@@ -41,10 +45,10 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
   
 -   В идентификаторах с разделителями можно использовать символы, неподдерживаемые в именах путей Windows PowerShell. Идентификаторами с разделителями называют идентификаторы, заключенные в квадратные скобки (например: [ИмяИдентификатора]) и заключенные в кавычки (например: "ИмяИдентификатора"). Если в идентификаторе с разделителями используются символы, неподдерживаемые в путях Windows PowerShell, эти символы нужно кодировать или экранировать перед использованием идентификатора в качестве имени элемента или контейнера. Кодировка применяется для всех символов. С другой стороны, экранирование некоторых символов, таких как символ двоеточия (:), невозможно.  
   
-## Идентификаторы SQL Server в командлетах  
+## <a name="sql-server-identifiers-in-cmdlets"></a>Идентификаторы SQL Server в командлетах  
  Некоторые командлеты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют параметры, в которые в качестве входных данных передается идентификатор. Значения таких параметров обычно задаются в виде строковых констант, заключенных в кавычки, или строковых переменных. Если идентификаторы задаются в виде строковых констант или в переменных, то конфликты с набором символов, поддерживаемых Windows PowerShell, не возникают.  
   
-## Работа с идентификаторами SQL Server  
+## <a name="sql-server-identifier-tasks"></a>Работа с идентификаторами SQL Server  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -52,7 +56,7 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |Описывает, как указывать шестнадцатеричную кодировку для символов в идентификаторах с разделителями, которые не поддерживаются Windows PowerShell. Кроме того, описывает, как декодировать шестнадцатеричные символы.|[Шифрование и расшифровка идентификаторов SQL Server](../../relational-databases/scripting/encode-and-decode-sql-server-identifiers.md)|  
 |Описывает, как использовать escape-символ Windows PowerShell для символов, не поддерживаемых в путях PowerShell.|[Применение escape-символов к идентификаторам SQL Server](../../relational-databases/scripting/escape-sql-server-identifiers.md)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md)  

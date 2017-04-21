@@ -1,36 +1,40 @@
 ---
-title: "Подготовка массового импорта данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "массовый импорт [SQL Server], о массовом импорте"
-  - "инструкция BULK INSERT, рекомендации"
-  - "инструкция BULK INSERT, ограничения"
-  - "программа bcp [SQL Server], рекомендации"
-  - "программа bcp [SQL Server], ограничения"
-  - "скрытые символы"
-  - "функция OPENROWSET, рекомендации по BCP"
+title: "Подготовка массового импорта данных (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# Подготовка массового импорта данных (SQL Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>Подготовка массового импорта данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Команда **bcp**, инструкция BULK INSERT и функция OPENROWSET(BULK) могут быть использованы только для массового импорта из файла данных.  
+  Команда **bcp** , инструкция BULK INSERT и функция OPENROWSET(BULK) могут быть использованы только для массового импорта из файла данных.  
   
 > [!NOTE]  
->  Однако можно написать пользовательское приложение, которое будет выполнять массовый импорт из объектов, отличных от текстовых файлов. Чтобы выполнить массовый импорт из буферов памяти, можно использовать либо расширения bcp API-интерфейса собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ODBC), либо интерфейс OLE DB **IRowsetFastLoad**.  Чтобы выполнить массовый импорт из таблицы данных C#, необходимо использовать API-интерфейс ADO.NET для операций массового копирования **SqlBulkCopy**.  
+>  Однако можно написать пользовательское приложение, которое будет выполнять массовый импорт из объектов, отличных от текстовых файлов. Чтобы выполнить массовый импорт из буферов памяти, можно использовать либо расширения bcp API-интерфейса собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ODBC), либо интерфейс OLE DB **IRowsetFastLoad** .  Чтобы выполнить массовый импорт из таблицы данных C#, необходимо использовать API-интерфейс ADO.NET для операций массового копирования **SqlBulkCopy**.  
   
 > [!NOTE]  
 >  Массовый импорт данных в удаленную таблицу не поддерживается.  
@@ -43,7 +47,7 @@ caps.handback.revision: 34
   
 -   Используйте модель восстановления с неполным протоколированием.  
   
-     Данное правило относится к базам данных, использующим модель полного восстановления. Эта модель восстановления полезна при выполнении массовых операций в неиндексированной таблице (*куче*). Восстановление с неполным протоколированием позволяет избежать переполнения журнала транзакций, поскольку при этом не выполняется операция записи в журнал для вставок отдельных строк. Дополнительные сведения о модели восстановления с неполным протоколированием см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+     Данное правило относится к базам данных, использующим модель полного восстановления. Эта модель восстановления полезна при выполнении массовых операций в неиндексированной таблице ( *куче*). Восстановление с неполным протоколированием позволяет избежать переполнения журнала транзакций, поскольку при этом не выполняется операция записи в журнал для вставок отдельных строк. Дополнительные сведения о модели восстановления с неполным протоколированием см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
      Рекомендуется настроить базу данных на использование модели восстановления с неполным протоколированием до операции массового импорта. Сразу же необходимо переключить базу данных на модель полного восстановления. Дополнительные сведения см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 34
   
      Многие программы и текстовые редакторы отображают скрытые символы, находящиеся обычно в конце файла данных. Во время операции массового импорта скрытые символы в файле данных в формате ASCII могут привести к появлению сообщения об ошибке «Обнаружено непредвиденное значение NULL». Чтобы решить проблему, обычно необходимо найти и удалить все скрытые символы.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Программа bcp](../../tools/bcp-utility.md)   

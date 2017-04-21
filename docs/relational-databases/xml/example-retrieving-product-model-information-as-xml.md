@@ -1,27 +1,31 @@
 ---
-title: "Пример. Получение сведений о модели продукта в формате XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "режим RAW, пример получения XML-данных"
+title: "Пример. Получение сведений о модели продукта в формате XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31022f0351f09c226b5da65455ce5a327b955364
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пример. Получение сведений о модели продукта в формате XML
+# <a name="example-retrieving-product-model-information-as-xml"></a>Пример. Получение сведений о модели продукта в формате XML
   Приведенный ниже пример запроса выводит сведения о модели продукта. `RAW` указывается в приложении `FOR XML` .  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 USE AdventureWorks2012;  
@@ -39,7 +43,7 @@ GO
   
  `<row ProductModelID="119" Name="Bike Wash" />`  
   
- Есть возможность получить XML-документ с данными по элементам при помощи определения директивы `ELEMENTS`.  
+ Есть возможность получить XML-документ с данными по элементам при помощи определения директивы `ELEMENTS` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -64,7 +68,7 @@ GO
 </row>  
 ```  
   
- При необходимости можно задать директиву `TYPE` для получения результатов в виде **xml**. Директива `TYPE` не изменяет содержимое результата. Изменяется только тип данных результата.  
+ При необходимости можно задать директиву `TYPE` для получения результатов в виде **xml** . Директива `TYPE` не изменяет содержимое результата. Изменяется только тип данных результата.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +80,7 @@ FOR XML RAW, TYPE ;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

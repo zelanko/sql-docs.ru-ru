@@ -1,27 +1,31 @@
 ---
-title: "Избегание конфликтов в операциях баз данных в приложениях FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], конфликты Win32 и Transact-SQL"
+title: "Предотвращение конфликтов при работе с базой данных в приложениях FILESTREAM | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 663627abeb04c63073b43337bfe795ba9bc9cd4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Избегание конфликтов в операциях баз данных в приложениях FILESTREAM
-  Приложения, использующие функцию SqlOpenFilestream() для открытия дескрипторов файлов Win32 для считывания или записи данных FILESTREAM BLOB, могут столкнуться с конфликтами при работе с инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)], использованными в общей транзакции. Это также относится и к запросам [!INCLUDE[tsql](../../includes/tsql-md.md)] или MARS, выполнение которых занимает много времени. При разработке приложений надо уделить особое внимание предотвращению данных типов конфликтов.  
+# <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Избегание конфликтов в операциях баз данных в приложениях FILESTREAM
+  Приложения, использующие функцию SqlOpenFilestream() для открытия дескрипторов файлов Win32 для считывания или записи данных FILESTREAM BLOB, могут столкнуться с конфликтами при работе с инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] , использованными в общей транзакции. Это также относится и к запросам [!INCLUDE[tsql](../../includes/tsql-md.md)] или MARS, выполнение которых занимает много времени. При разработке приложений надо уделить особое внимание предотвращению данных типов конфликтов.  
   
- Если компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или приложения пытаются открыть объекты FILESTREAM BLOB, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполнит проверку контекста ассоциированной транзакции. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешит или запретит запрос в зависимости от того, работает ли операция открытия с инструкциями DDL, инструкциями DML, получает данные или управляет транзакциями. В следующей таблице показывается, как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, следует ли разрешить или запретить инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)], основываясь на типе файлов, открытых в транзакции.  
+ Если компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или приложения пытаются открыть объекты FILESTREAM BLOB, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполнит проверку контекста ассоциированной транзакции. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешит или запретит запрос в зависимости от того, работает ли операция открытия с инструкциями DDL, инструкциями DML, получает данные или управляет транзакциями. В следующей таблице показывается, как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, следует ли разрешить или запретить инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , основываясь на типе файлов, открытых в транзакции.  
   
 |Инструкции Transact-SQL|Открыты для чтения|Открыты для записи|  
 |------------------------------|---------------------|----------------------|  
@@ -34,10 +38,10 @@ caps.handback.revision: 16
   
  \* Транзакция отменяется, а открытые дескрипторы для контекста транзакции становятся недействительными. Приложение должно закрыть все открытые дескрипторы.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующих примерах показывается, как могут возникать конфликты при совместном использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и доступа к FILESTREAM с помощью функций Win32.  
   
-### A. Открытие объекта FILESTREAM BLOB с доступом на запись  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Открытие объекта FILESTREAM BLOB с доступом на запись  
  В следующем примере показывается эффект от открытия файла с доступом только на запись.  
   
 ```  
@@ -60,7 +64,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### Б. Открытие объекта FILESTREAM BLOB с доступом на считывание  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>Б. Открытие объекта FILESTREAM BLOB с доступом на считывание  
  В следующем примере показывается эффект от открытия файла с доступом только на считывание.  
   
 ```  
@@ -78,7 +82,7 @@ CloseHandle(dstHandle);
 //SELECT statements will be allowed.  
 ```  
   
-### В. Открытие и закрытие нескольких файлов FILESTREAM BLOB  
+### <a name="c-opening-and-closing-multiple-filestream-blob-files"></a>В. Открытие и закрытие нескольких файлов FILESTREAM BLOB  
  Если открыто несколько файлов, то используется правило с наибольшими ограничениями. В следующем примере открываются два файла. Первый файл открывается для чтения, а второй — для записи. Инструкции DML будут запрещены, пока не будет открыт второй файл.  
   
 ```  
@@ -109,7 +113,7 @@ CloseHandle(dstHandle1);
 //SELECT statements will be allowed.  
 ```  
   
-### Г. Сбой при закрытии курсора  
+### <a name="d-failing-to-close-a-cursor"></a>Г. Сбой при закрытии курсора  
  В следующем примере показывается, как незакрытый курсор инструкции может помешать функции `OpenSqlFilestream()` открыть объект BLOB для доступа на запись.  
   
 ```  
@@ -139,7 +143,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Доступ к данным FILESTREAM с OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Использование множественных активных результирующих наборов (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
   

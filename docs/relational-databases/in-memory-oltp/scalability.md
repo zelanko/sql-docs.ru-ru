@@ -1,33 +1,37 @@
 ---
-title: "Масштабируемость | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Масштабируемость | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ab43ba6b6a27fa46b5214a60063c5df3f5496f4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Масштабируемость
+# <a name="scalability"></a>Масштабируемость
   SQL Server 2016 содержит улучшения масштабируемости для хранения на дисках таблиц, оптимизированных для памяти.  
   
 -   **Несколько потоков для сохранения таблиц, оптимизированных для памяти.**  
   
-     В предыдущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовался один поток автономных контрольных точек, который проверял журнал транзакций на наличие изменений в таблицах, оптимизированных для памяти, и сохранял их в файлы контрольных точек (например, файлы данных и разностные файлы). При наличии большего числа ядер один поток контрольных точек может отставать от времени.  
+     В предыдущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]использовался один поток автономных контрольных точек, который проверял журнал транзакций на наличие изменений в таблицах, оптимизированных для памяти, и сохранял их в файлы контрольных точек (например, файлы данных и разностные файлы). При наличии большего числа ядер один поток контрольных точек может отставать от времени.  
   
-     В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] за сохранение изменений в таблицах, оптимизированных для памяти, отвечают несколько параллельных потоков.  
+     В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]за сохранение изменений в таблицах, оптимизированных для памяти, отвечают несколько параллельных потоков.  
   
 -   **Многопоточное восстановление.**  
   
-     В предыдущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]журнал, применяемый при операции восстановления, использовал один поток. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для применения журнала используется несколько потоков.  
+     В предыдущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]журнал, применяемый при операции восстановления, использовал один поток. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]для применения журнала используется несколько потоков.  
   
 -   **Операция MERGE**  
   
@@ -42,3 +46,4 @@ caps.handback.revision: 6
  Подсистема, выполняющаяся в памяти OLTP, продолжает использовать оптимизированную для памяти файловую группу в зависимости от FILESTREAM, но отдельные файлы в файловой группе не связаны с FILESTREAM. Эти файлы полностью управляются (создание, удаление и сборка мусора) подсистемой, выполняющейся в памяти OLTP. Представление [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) не поддерживается.  
   
   
+

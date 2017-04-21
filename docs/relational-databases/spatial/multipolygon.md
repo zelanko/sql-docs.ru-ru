@@ -1,31 +1,35 @@
 ---
-title: "MultiPolygon | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MultiPolygon, геометрический подтип [SQL Server]"
-  - "geometry, подтипы [SQL Server]"
+title: MultiPolygon | Microsoft Docs
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MultiPolygon geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 06a27579c5e54406093daf4eb318c2e004a9763b
+ms.lasthandoff: 04/11/2017
+
 ---
-# MultiPolygon
+# <a name="multipolygon"></a>MultiPolygon
   Экземпляр **MultiPolygon** представляет собой коллекцию экземпляров **Polygon** .  
   
-## Экземпляры многоугольников  
+## <a name="polygon-instances"></a>Экземпляры многоугольников  
  На рисунке ниже приведены примеры экземпляров **MultiPolygon** .  
   
- ![Примеры объектов MultiPolygon типа geometry](../../relational-databases/spatial/media/multipolygon.png "Примеры объектов MultiPolygon типа geometry")  
+ ![Примеры геометрических экземпляров MultiPolygon](../../relational-databases/spatial/media/multipolygon.gif "Примеры геометрических экземпляров MultiPolygon")  
   
  На рисунке представлены:  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 20
   
 -   2 — экземпляр типа **MultiPolygon** с двумя элементами **Polygon** . Граница определяется двумя внешними кольцами и тремя внутренними кольцами. Два элемента **Polygon** пересекаются в точке касания.  
   
-### Принимаемые экземпляры  
+### <a name="accepted-instances"></a>Принимаемые экземпляры  
  Экземпляр **MultiPolygon** является принимаемым, если истинно одно из следующих условий.  
   
 -   Это пустой экземпляр **MultiPolygon** .  
@@ -56,7 +60,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
  Второй экземпляр в MultiPolygon — это экземпляр LineString, не является принимаемым экземпляром Polygon.  
   
-### Допустимые экземпляры  
+### <a name="valid-instances"></a>Допустимые экземпляры  
  Экземпляр **MultiPolygon** является допустимым, если это пустой экземпляр **MultiPolygon** или удовлетворяет следующим требованиям.  
   
 1.  Все экземпляры, составляющие экземпляр **MultiPolygon** , являются допустимыми экземплярами **Polygon** . Сведения о допустимых экземплярах **Polygon** см. в разделе [Polygon](../../relational-databases/spatial/polygon.md).  
@@ -74,7 +78,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g2` допустим, поскольку два экземпляра **Polygon** имеют только общую точку касания. `@g3` недопустим, поскольку внутренние области экземпляров **Polygon** перекрываются.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  Следующий пример демонстрирует создание экземпляра `geometry``MultiPolygon` и возвращает второй компонент в формате Well-Known Text (WKT).  
   
 ```  
@@ -83,15 +87,15 @@ SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- В данном примере создается пустой экземпляр `MultiPolygon`.  
+ В данном примере создается пустой экземпляр `MultiPolygon` .  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## См. также:  
- [Многоугольник](../../relational-databases/spatial/polygon.md)   
+## <a name="see-also"></a>См. также:  
+ [Polygon](../../relational-databases/spatial/polygon.md)   
  [STArea (тип данных geometry)](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STCentroid (тип данных geometry)](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   
  [STPointOnSurface (тип данных geometry)](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   

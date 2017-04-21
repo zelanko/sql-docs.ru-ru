@@ -1,27 +1,31 @@
 ---
-title: "Просмотр свойств статистики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.statistics.details.f1"
-helpviewer_keywords: 
-  - "просмотр свойств статистики"
-  - "статистика [SQL Server], просмотр свойств"
+title: "Просмотр свойств статистики | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.statistics.details.f1
+helpviewer_keywords:
+- viewing statistics properties
+- statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0418da029159564c125fb89eaed39fdb1d673c65
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр свойств статистики
+# <a name="view-statistics-properties"></a>Просмотр свойств статистики
   Статистику оптимизации текущего запроса для таблицы или индексированного представления можно просмотреть в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Объекты статистики включают заголовок, содержащий метаданные о статистике, гистограмму, содержащую распределение значений в первом ключевом столбце объекта статистики, и вектор плотностей для измерения корреляции с охватом нескольких столбцов. Дополнительные сведения о гистограммах и векторах плотностей см. в статье [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
  **В этом разделе**  
@@ -41,11 +45,11 @@ caps.handback.revision: 10
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Чтобы иметь возможность просматривать объект статистики, пользователь должен быть владельцем таблицы либо членом предопределенной роли сервера **sysadmin**, предопределенной роли базы данных **db_owner** или предопределенной роли базы данных **db_ddladmin**.  
+ Чтобы иметь возможность просматривать объект статистики, пользователь должен быть владельцем таблицы либо членом предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или предопределенной роли базы данных **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Просмотр свойств статистики  
+#### <a name="to-view-statistics-properties"></a>Просмотр свойств статистики  
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть базу данных, в которой нужно создать новую статистику.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 10
   
 5.  Щелкните правой кнопкой мыши объект статистики, для которого нужно просмотреть свойства, и выберите команду **Свойства**.  
   
-6.  В диалоговом окне **Свойства статистики — ***имя_статистики* на панели **Выбор страницы** выберите **Сведения**.  
+6.  В диалоговом окне **Свойства статистики —***имя_статистики* на панели **Выбор страницы** выберите **Сведения**.  
   
      На странице **Сведения** в диалоговом окне **Свойства статистики —***имя_статистики* отображаются следующие свойства.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 10
      Среднее число байтов на значение для всех ключевых столбцов в объекте статистики.  
   
      **String Index**  
-     Значение «Да» указывает, что объект статистики содержит сводную строковую статистику, позволяющую уточнить оценку количества элементов для предикатов запроса, использующих оператор LIKE, например `WHERE ProductName LIKE '%Bike'`. Сводная строковая статистика хранится отдельно от гистограммы и создается в первом ключевом столбце объекта статистики, если он имеет тип **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** или **ntext**.  
+     Значение «Да» указывает, что объект статистики содержит сводную строковую статистику, позволяющую уточнить оценку количества элементов для предикатов запроса, использующих оператор LIKE, например `WHERE ProductName LIKE '%Bike'`. Сводная строковая статистика хранится отдельно от гистограммы и создается в первом ключевом столбце объекта статистики, если он имеет тип **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**или **ntext**.  
   
      **Критерий фильтра**  
      Предикат для подмножества строк таблицы, включенных в объект статистики. NULL — неотфильтрованная статистика.  
@@ -134,7 +138,7 @@ caps.handback.revision: 10
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Просмотр свойств статистики  
+#### <a name="to-view-statistics-properties"></a>Просмотр свойств статистики  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 10
   
  Дополнительные сведения см. в статье [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
-#### Поиск всех статистических данных по таблице или представлению  
+#### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>Поиск всех статистических данных по таблице или представлению  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

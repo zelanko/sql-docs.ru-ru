@@ -1,22 +1,26 @@
 ---
-title: "Сравнение параметров для хранения больших двоичных объектов (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сравнение вариантов хранения больших двоичных объектов (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 98538bd77f81cd6a1f16857b70a866ee3f6d171a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сравнение параметров для хранения больших двоичных объектов (SQL Server)
+# <a name="compare-options-for-storing-blobs-sql-server"></a>Сравнение параметров для хранения больших двоичных объектов (SQL Server)
   Рассматриваются и сравниваются параметры, доступные для хранения файлов и документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Expectations"></a> Хранение файлов в базе данных — преимущества и ожидания  
@@ -40,7 +44,7 @@ caps.handback.revision: 10
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже имеется функция FILESTREAM, обеспечивающая эффективное хранение, управление и потоковую передачу неструктурированных данных, хранящихся в виде файлов в файловой системе. Тем не менее для решения FILESTREAM требуется дополнительное программирование, оно не удовлетворяет требованиям полной совместимости с приложениями Windows, описанным выше.  
   
 ##  <a name="FileTables"></a> Таблицы FileTable  
- Функция FileTable строится поверх существующих возможностей FILESTREAM, позволяя корпоративным клиентам хранить неструктурированные данные файлов и иерархии папок в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и выполняет требования по доступу к данным без транзакций и совместимости приложений Windows с данными, хранящимися в файлах.  
+ Функция FileTable строится поверх существующих возможностей FILESTREAM, позволяя корпоративным клиентам хранить неструктурированные данные файлов и иерархии папок в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и выполняет требования по доступу к данным без транзакций и совместимости приложений Windows с данными, хранящимися в файлах.  
   
 ##  <a name="CompareFileTable"></a> Сравнение FILESTREAM и таблиц FileTable  
   

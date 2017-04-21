@@ -1,101 +1,105 @@
 ---
-title: "монитор репликации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.beta2.f1"
-helpviewer_keywords: 
-  - "Монитор репликации, справка"
+title: "Монитор репликации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.beta2.f1
+helpviewer_keywords:
+- Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e42bb12b2af3ec0e640314aa4f703feb12666329
+ms.lasthandoff: 04/11/2017
+
 ---
-# монитор репликации
+# <a name="replication-monitor"></a>монитор репликации
   В данном разделе документации содержатся сведения о мониторе репликации. Страницы и диалоговые окна, отображаемые в мониторе, различаются в зависимости от типа репликации и версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мониторинг которой осуществляется.  
   
--   [Монитор репликации, страница «Общие»](../../relational-databases/replication/replication-monitor-main-page.md)  
+-   [Replication Monitor, Main Page](../../relational-databases/replication/replication-monitor-main-page.md) (Монитор репликации, страница "Общие")  
   
--   [Добавление издателя](../../relational-databases/replication/add-publisher.md)  
+-   [Add Publisher](../../relational-databases/replication/add-publisher.md) (Диалоговое окно "Добавление издателя")  
   
--   [Параметры распространителя](../../relational-databases/replication/distributor-settings.md)  
+-   [Distributor Settings](../../relational-databases/replication/distributor-settings.md) (Диалоговое окно "Параметры распространителя")  
   
--   [Сведения о распространителе, публикации](../../relational-databases/replication/distributor-information-publications.md)  
+-   [Distributor Information, Publications](../../relational-databases/replication/distributor-information-publications.md) (Сведения о распространителе, вкладка"Публикации")  
   
--   [Сведения о распространителе, список наблюдения за подписками и #40; Публикация транзакций, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/distributor info, subscription watch list (transaction pub, sql 2005+).md)  
+-   [Distributor Information, Subscription Watch List (Transactional Publication, SQL Server 2005 and Later)](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md) (Сведения о распространителе, вкладка "Список наблюдения за подписками" (публикация транзакций, SQL Server 2005 и более поздние версии))  
   
--   [Сведения о распространителе, список наблюдения за подписками и #40; Слияние публикации, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/distributor info, subscription watch list (merge pub, sql 2005+).md)  
+-   [Distributor Information, Subscription Watch List (Merge Publication, SQL Server 2005 and Later)](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md) (Сведения о распространителе, вкладка "Список наблюдения за подписками" (публикация слиянием, SQL Server 2005 и более поздние версии))  
   
--   [Сведения о распространителе, список наблюдения за подписками и #40; Публикация моментальных снимков, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/distributor info, subscription watch list (snapshot pub, sql 2005+).md)  
+-   [Distributor Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md) (Сведения о распространителе, вкладка "Список наблюдения за подписками" (публикация моментальных снимков, SQL Server 2005 и более поздние версии))  
   
--   [Сведения о распространителе, агенты](../../relational-databases/replication/distributor-information-agents.md)  
+-   [Distributor Information, Agents](../../relational-databases/replication/distributor-information-agents.md) (Сведения о распространителе, вкладка "Агенты")  
   
--   [Настройки издателя](../../relational-databases/replication/publisher-settings.md)  
+-   [Publisher Settings](../../relational-databases/replication/publisher-settings.md) (Диалоговое окно"Настройки издателя")  
   
--   [Данные об издателе, вкладка «Публикации»](../../relational-databases/replication/publisher-information-publications.md)  
+-   [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md) (Данные об издателе, вкладка "Публикации")  
   
--   [Сведения об издателе, список наблюдения за подписками и #40; Публикация транзакций, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/publisher information, subscription watch list (transactional).md)  
+-   [Publisher Information, Subscription Watch List (Transactional Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md) (Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация транзакций, SQL Server 2005 и более поздние версии))  
   
--   [Сведения об издателе, список наблюдения за подписками и #40; Слияние публикации, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/publisher information, subscription watch list (merge publication).md)  
+-   [Publisher Information, Subscription Watch List (Merge Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md) (Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация слиянием, SQL Server 2005 и более поздние версии))  
   
--   [Сведения об издателе, список наблюдения за подписками и #40; Публикация моментальных снимков, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/publisher information, subscription watch list (snapshot).md)  
+-   [Publisher Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md) Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация моментальных снимков, SQL Server 2005 и более поздние версии)  
   
--   [Данные об издателе, агенты](../../relational-databases/replication/publisher-information-agents.md)  
+-   [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md) (Данные об издателе, вкладка "Агенты")  
   
--   [Сведения о публикации, все подписки и #40; Публикация транзакций & #41;](../../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md)  
+-   [Publication Information, All Subscriptions (Transactional Publication)](../../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md) (Сведения о публикации, вкладка "Все подписки" (публикация транзакций))  
   
--   [Сведения о публикации, все подписки и #40; Публикации слиянием & #41;](../../relational-databases/replication/publication-information-all-subscriptions-merge-publication.md)  
+-   [Publication Information, All Subscriptions (Merge Publication)](../../relational-databases/replication/publication-information-all-subscriptions-merge-publication.md) (Сведения о публикации, вкладка "Все подписки" (публикация слиянием))  
   
--   [Сведения о публикации, все подписки и #40; Публикации моментальных снимков & #41;](../../relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md)  
+-   [Publication Information, All Subscriptions (Snapshot Publication)](../../relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md) (Сведения о публикации, вкладка "Все подписки" (публикация моментальных снимков))  
   
--   [Сведения о публикации, предупреждения и #40; Публикация транзакций, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/publication information, warnings (transactional publication).md)  
+-   [Publication Information, Warnings (Transactional Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publication-information-warnings-transactional-publication.md) (Сведения о публикации, вкладка "Предупреждения" (публикация транзакций, SQL Server 2005 и более поздние версии))  
   
--   [Сведения о публикации, предупреждения и #40; Слияние публикации, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md)  
+-   [Publication Information, Warnings (Merge Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md) (Сведения о публикации, вкладка "Предупреждения" (публикации слиянием, SQL Server 2005 и более поздние версии))  
   
--   [Сведения о публикации, предупреждения и #40; Публикация моментальных снимков, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
+-   [Сведения о публикации, вкладка "Предупреждения" (публикация моментальных снимков, SQL Server 2005 и более поздние версии)](../../relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
   
--   [Сведения о публикации, агенты и #40; Публикация транзакций & #41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
+-   [Publication Information, Agents (Transactional Publication)](../../relational-databases/replication/publication-information-agents-transactional-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация транзакций))  
   
--   [Сведения о публикации, агенты и #40; Публикации слиянием & #41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
+-   [Publication Information, Agents (Merge Publication)](../../relational-databases/replication/publication-information-agents-merge-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация слиянием))  
   
--   [Сведения о публикации, агенты и #40; Публикации моментальных снимков & #41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
+-   [Publication Information, Agents (Snapshot Publication)](../../relational-databases/replication/publication-information-agents-snapshot-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация моментальных снимков))  
   
--   [Сведения о публикации, трассировочные токены & #40; Публикация транзакций, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/publication information, tracer tokens (sql server 2005 and later).md)  
+-   [Publication Information, Tracer Tokens (Transactional Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md) (Сведения о публикации, вкладка "Трассировочные токены" (публикация транзакций, SQL Server 2005 и более поздние версии))  
   
--   [Подписка, Нераспространенные команды & #40; Подписка на публикацию транзакций, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/subscription, undistributed commands (transactional subscription).md)  
+-   [Subscription, Undistributed Commands (Transactional Subscription, SQL Server 2005 and Later)](../../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md) (Подписка, вкладка "Нераспространенные команды" (подписка на публикацию транзакций, SQL Server 2005 и более поздние версии))  
   
--   [Подписка, журнал издателя для распространителя и #40; Подписка на публикацию транзакций & #41;](../../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md)  
+-   [Subscription, Publisher to Distributor History (Transactional Subscription)](../../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md) (Подписка, вкладка "Журнал издателя для распространителя" (подписка на публикацию транзакций))  
   
--   [Подписка, журнал распространителя для подписчика и #40; Подписка на публикацию транзакций & #41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
+-   [Subscription, Distributor to Subscriber History (Transactional Subscription)](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md) (Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на публикацию транзакций))  
   
--   [Подписка, журнал синхронизации и #40; Слияние подписки, SQL Server 2005 и более поздних версий и #41;](../../relational-databases/replication/subscription, synchronization history.md)  
+-   [Subscription, Synchronization History (Merge Subscription, SQL Server 2005 and Later)](../../relational-databases/replication/subscription-synchronization-history.md) (Подписка, вкладка "Журнал синхронизации" (подписка на публикацию слиянием, SQL Server 2005 и более поздние версии))  
   
--   [Подписка, журнал синхронизации и #40; Слияние подписки SQL Server 2000 & #41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
+-   [Subscription, Synchronization History (Merge Subscription, SQL Server 2000)](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md) (Подписка, вкладка "Журнал синхронизации" (подписка на публикацию слиянием, SQL Server 2000))  
   
--   [Подписка, журнал распространителя для подписчика и #40; Подписки моментальных снимков & #41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
+-   [Subscription, Distributor to Subscriber History (Snapshot Subscription)](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md) (Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на моментальные снимки))  
   
--   [Агент чтения журнала.](../../relational-databases/replication/log-reader-agent.md)  
+-   [Log Reader Agent](../../relational-databases/replication/log-reader-agent.md) (Диалоговое окно "Агент чтения журнала")  
   
--   [Агент чтения очереди.](../../relational-databases/replication/queue-reader-agent.md)  
+-   [Queue Reader Agent](../../relational-databases/replication/queue-reader-agent.md) (Диалоговое окно "Агент чтения очереди")  
   
--   [агент моментальных снимков](../../relational-databases/replication/snapshot-agent.md)  
+-   [Snapshot Agent](../../relational-databases/replication/snapshot-agent.md) (Диалоговое окно "Агент моментальных снимков")  
   
--   [Настройки фильтра](../../relational-databases/replication/filter-settings.md)  
+-   [Filter Settings](../../relational-databases/replication/filter-settings.md) (Диалоговое окно "Настройки фильтра")  
   
--   [Сортировка столбцов](../../relational-databases/replication/sort-columns.md)  
+-   [Sort Columns](../../relational-databases/replication/sort-columns.md) (Диалоговое окно "Сортировка столбцов")  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Справочник по свойствам & #40; Репликация & #41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Справочник по свойствам (репликация)](../../relational-databases/replication/properties-reference-replication.md)  
   
   

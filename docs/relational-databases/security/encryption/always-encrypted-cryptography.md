@@ -1,30 +1,34 @@
 ---
-title: "Системы шифрования c технологиями постоянного шифрования | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Постоянное шифрование, система шифрования"
+title: "Системы шифрования c технологиями постоянного шифрования | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee5419dc374c545daa1249f2e6f76d8d13ac4695
+ms.lasthandoff: 04/11/2017
+
 ---
-# Системы шифрования c технологиями постоянного шифрования
+# <a name="always-encrypted-cryptography"></a>Системы шифрования c технологиями постоянного шифрования
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этой статье описаны алгоритмы шифрования и механизмы извлечения шифровальных материалов, которые используются в функции [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) баз данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
-## Ключи, хранилища ключей и алгоритмы шифрования ключей  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Ключи, хранилища ключей и алгоритмы шифрования ключей  
  В технологии постоянного шифрования используются два типа ключей: главные ключи столбца и ключи шифрования столбца.  
   
  Главный ключ столбца — это ключ, который используется для шифрования других ключей. Он находится под контролем клиента и хранится во внешнем хранилище ключей. Драйвер клиента с поддержкой постоянного шифрования взаимодействует с хранилищем ключей через поставщика хранилища главного столбца ключа, который может быть либо частью библиотеки драйверов (системный поставщик или поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)]), либо частью клиентского приложения (пользовательский поставщик). На данный момент клиентские библиотеки драйверов включают поставщики хранилища ключей [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для [хранилища сертификатов Windows](https://msdn.microsoft.com/library/windows/desktop/aa388160) и аппаратные модули безопасности (HSM).  (Текущий список поставщиков см. в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Разработчик приложения может задать пользовательского поставщика для произвольного хранилища.  
@@ -33,16 +37,16 @@ caps.handback.revision: 11
   
  Все поставщики хранилища главного столбца ключа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] шифруют ключи шифрования столбца с помощью ключа RSA с оптимальным асимметричным шифрованием с дополнением (RSA-OAEP). При этом используются указанные в RFC 3447 (раздел A.2.1) параметры по умолчанию. В этих параметрах по умолчанию используется хэш-функция SHA-1 и функция генерации маски MGF1 с помощью SHA-1.  
   
-## Алгоритм шифрования данных  
- Для шифрования данных в базе данных в технологии постоянного шифрования данных используется алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256**.  
+## <a name="data-encryption-algorithm"></a>Алгоритм шифрования данных  
+ Для шифрования данных в базе данных в технологии постоянного шифрования данных используется алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** .  
   
- Алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** является производным от спецификации на сайте [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). В нем используется схема аутентифицированного шифрования с присоединенными данными, при которой сначала выполняется шифрование сообщения, а затем проверка подлинности. То есть открытый текст сначала шифруется, а затем на основе полученного зашифрованного текста создается имитовставка MAC.  
+ Алгоритм**AEAD_AES_256_CBC_HMAC_SHA_256** является производным от спецификации на сайте [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). В нем используется схема аутентифицированного шифрования с присоединенными данными, при которой сначала выполняется шифрование сообщения, а затем проверка подлинности. То есть открытый текст сначала шифруется, а затем на основе полученного зашифрованного текста создается имитовставка MAC.  
   
  Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание метода применения блочного шифра в документе [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
- Алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** вычисляет значение зашифрованного текста для заданного значения открытого текста с помощью следующих шагов.  
+ Алгоритм**AEAD_AES_256_CBC_HMAC_SHA_256** вычисляет значение зашифрованного текста для заданного значения открытого текста с помощью следующих шагов.  
   
-### Шаг 1. Создание вектора инициализации  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>Шаг 1. Создание вектора инициализации  
  Технология постоянного шифрования поддерживает два метода шифрования с помощью алгоритма **AEAD_AES_256_CBC_HMAC_SHA_256**:  
   
 -   случайное шифрование;  
@@ -72,8 +76,8 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
   
  По сравнению с другими способами шифрования (например, использования предварительно определенного значения вектора инициализации), метод детерминированного шифрования более эффективно скрывает шаблоны.  
   
-### Шаг 2. Вычисление зашифрованного текста AES_256_CBC  
- После вычисления вектора инициализации создается зашифрованный текст **AES_256_CBC**:  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>Шаг 2. Вычисление зашифрованного текста AES_256_CBC  
+ После вычисления вектора инициализации создается зашифрованный текст **AES_256_CBC** :  
   
 ```  
 aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.  
@@ -85,7 +89,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### Шаг 3. Вычисление имитовставки  
+### <a name="step-3-computing-mac"></a>Шаг 3. Вычисление имитовставки  
  Вычисление имитовставки происходит с помощью следующего алгоритма:  
   
 ```  
@@ -99,15 +103,15 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### Шаг 4. Объединение  
+### <a name="step-4-concatenation"></a>Шаг 4. Объединение  
  Зашифрованное значение создается путем простого объединения байтовой версии алгоритма, имитовставки, значения вектора инициализации и зашифрованного текста AES_256_CBC.  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
 ```  
   
-## Длина зашифрованного текста  
- Длина (в байтах) конкретных компонентов зашифрованного текста **AEAD_AES_256_CBC_HMAC_SHA_256**:  
+## <a name="ciphertext-length"></a>Длина зашифрованного текста  
+ Длина (в байтах) конкретных компонентов зашифрованного текста **AEAD_AES_256_CBC_HMAC_SHA_256** :  
   
 -   versionbyte — 1 байт;  
   
@@ -133,7 +137,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
   
 -   После шифрования 4-байтовое значение открытого текста типа **int** станет длинным двоичным значением размером 65 байт.  
   
--   После шифрования 2000-байтовое значение открытого текста типа **nchar(1000)** станет длинным двоичным значением размером 2065 байт.  
+-   После шифрования 2000-байтовое значение открытого текста типа **nchar(1000)** станет длинным двоичным значением размером 2065 байт.  
   
  Следующая таблица содержит полный список типов данных и длину зашифрованного текста для каждого типа.  
   
@@ -174,11 +178,12 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**varchar**|Возможны разные варианты. Рассчитывается по формуле выше.|  
 |**xml**|Не поддерживается.|  
   
-## Справочник по .NET  
+## <a name="net-reference"></a>Справочник по .NET  
  Дополнительные сведения об алгоритмах, описанных в этой статье, см. в файлах **SqlAeadAes256CbcHmac256Algorithm.cs** и **SqlColumnEncryptionCertificateStoreProvider.cs** в [справочнике по .NET](http://referencesource.microsoft.com/).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
+

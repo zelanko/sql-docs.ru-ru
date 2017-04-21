@@ -1,41 +1,45 @@
 ---
-title: "Включение и настройка FILESTREAM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], включение"
+title: "Включение и настройка FILESTREAM | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Включение и настройка FILESTREAM
+# <a name="enable-and-configure-filestream"></a>Включение и настройка FILESTREAM
   Перед началом использования хранилища FILESTREAM его необходимо включить в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. В этом разделе описано, как включить FILESTREAM с помощью диспетчера конфигурации SQL Server.  
   
 ##  <a name="enabling"></a> Включение FILESTREAM  
   
-#### Включение и изменение параметров FILESTREAM  
+#### <a name="to-enable-and-change-filestream-settings"></a>Включение и изменение параметров FILESTREAM  
   
 1.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
-2.  В списке служб щелкните правой кнопкой мыши **Службы SQL Server** и выберите команду **Открыть**.  
+2.  В списке служб щелкните правой кнопкой мыши **Службы SQL Server**и выберите команду **Открыть**.  
   
-3.  В оснастке **Диспетчер конфигурации SQL Server** найдите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в котором нужно включить FILESTREAM.  
+3.  В оснастке **Диспетчер конфигурации SQL Server** найдите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором нужно включить FILESTREAM.  
   
 4.  Щелкните правой кнопкой мыши экземпляр и выберите пункт **Свойства**.  
   
 5.  В диалоговом окне **Свойства SQL Server** перейдите на вкладку **FILESTREAM** .  
   
-6.  Установите флажок **Разрешить FILESTREAM при доступе через Transact-SQL**.  
+6.  Установите флажок **Разрешить FILESTREAM при доступе через Transact-SQL** .  
   
 7.  Если нужно считывать и записывать данные FILESTREAM из Windows, установите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода**. Введите имя общего ресурса Windows в поле **Имя общего ресурса Windows** .  
   
@@ -54,9 +58,8 @@ caps.handback.revision: 24
   
 12. Нажмите кнопку **Выполнить**.  
   
-13. Перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+13. Перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [В этом разделе](#TOP)  
   
 ##  <a name="best"></a> Рекомендации  
   
@@ -82,14 +85,13 @@ caps.handback.revision: 24
 |RAID 0|Высокая|Высокая|None||  
 |RAID 5 + чередование|Высокая|Высокая|Высокая|Самый дорогостоящий вариант.|  
   
- [В этом разделе](#TOP)  
   
 ###  <a name="database"></a> Физическая структура базы данных  
  При проектировании базы данных FILESTREAM следует учитывать следующие рекомендации.  
   
--   Столбцу FILESTREAM должен соответствовать столбец типа **uniqueidentifier** ROWGUID. Кроме того, типам таблиц также должен соответствовать уникальный индекс. Как правило, этот индекс не является кластеризованным. Если бизнес-логика базы данных требует использовать кластеризованный индекс, следует убедиться, что значения, которые хранятся в индексе, не являются случайными. Случайные значения приведут к переупорядочению индекса при каждом добавлении или удалении строки в таблице.  
+-   Столбцу FILESTREAM должен соответствовать столбец типа **uniqueidentifier**ROWGUID. Кроме того, типам таблиц также должен соответствовать уникальный индекс. Как правило, этот индекс не является кластеризованным. Если бизнес-логика базы данных требует использовать кластеризованный индекс, следует убедиться, что значения, которые хранятся в индексе, не являются случайными. Случайные значения приведут к переупорядочению индекса при каждом добавлении или удалении строки в таблице.  
   
--   По соображениям производительности файловые группы и контейнеры FILESTREAM находятся на томах, отличных от тех, где находится операционная система, база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], журнал [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], база данных tempdb или файл подкачки.  
+-   По соображениям производительности файловые группы и контейнеры FILESTREAM находятся на томах, отличных от тех, где находится операционная система, база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , журнал [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных tempdb или файл подкачки.  
   
 -   Управление местом на диске и соответствующие политики не поддерживаются FILESTREAM напрямую. Однако можно управлять местом и применять политики косвенно путем присвоения каждой файловой группы FILESTREAM отдельному тому с последующим применением функций управления данного тома.  
   

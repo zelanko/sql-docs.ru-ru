@@ -1,28 +1,32 @@
 ---
-title: "Перестроение системных баз данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "базы данных master [SQL Server], перестроение"
-  - "REBUILDDATABASE, параметр"
-  - "перестроение баз данных, мастер"
-  - "Системные базы данных [SQL Server], перестроение"
+title: "Перестроение системных баз данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 06/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- master database [SQL Server], rebuilding
+- REBUILDDATABASE parameter
+- rebuilding databases, master
+- system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Перестроение системных баз данных
-  Системные базы данных необходимо перестроить, чтобы устранить повреждения данных в системных базах данных [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) и [resource](../../relational-databases/databases/resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+# <a name="rebuild-system-databases"></a>Перестроение системных баз данных
+  Системные базы данных необходимо перестроить, чтобы устранить повреждения данных в системных базах данных [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)и [resource](../../relational-databases/databases/resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **В этом разделе**  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 39
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Зарегистрируйте все пакеты обновления и исправления, примененные к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и текущие параметры сортировки. Эти обновления необходимо применить после перестроения системных баз данных.  
+2.  Зарегистрируйте все пакеты обновления и исправления, примененные к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и текущие параметры сортировки. Эти обновления необходимо применить после перестроения системных баз данных.  
   
     ```  
     SELECT  
@@ -90,7 +94,7 @@ caps.handback.revision: 39
   
  Эта процедура не перестраивает базу данных resource. См. раздел «Процедура перестроения базы данных resource» ниже.  
   
-#### Перестроение системных баз данных для экземпляра SQL Server:  
+#### <a name="to-rebuild-system-databases-for-an-instance-of-sql-server"></a>Перестроение системных баз данных для экземпляра SQL Server:  
   
 1.  Вставьте в дисковод установочный носитель [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или введите в командной строке путь к файлу setup.exe на локальном сервере. По умолчанию он расположен на сервере в каталоге C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016.  
   
@@ -104,7 +108,7 @@ caps.handback.revision: 39
     |/ACTION=REBUILDDATABASE|Указывает, что программа установки создает системные базы данных заново.|  
     |/INSTANCENAME=*имя_экземпляра*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для экземпляра по умолчанию введите MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*учетные_записи*|Задает учетные записи групп Windows или индивидуальные учетные записи, которые следует добавить к предопределенной роли сервера **sysadmin** . При указании нескольких учетных записей их нужно разделять пробелами. Например, введите **BUILTIN\Administrators MyDomain\MyUser**. Если учетная запись содержит в своем имени пробелы, заключайте ее имя в двойные кавычки. Например, введите **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*надежный_пароль* ]|Задает пароль для учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** . Этот параметр обязателен, если экземпляр использует смешанный режим проверки подлинности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows).<br /><br /> **\*\* Примечание по безопасности. \*\***Учетная запись **sa** — хорошо известная учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому она часто становится мишенью злоумышленников. Для имени входа **sa** очень важно использовать надежный пароль.<br /><br /> Для режима проверки подлинности Windows этот параметр не указывается.|  
+    |[ /SAPWD=*надежный_пароль* ]|Задает пароль для учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** . Этот параметр обязателен, если экземпляр использует смешанный режим проверки подлинности (проверка подлинности[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows).<br /><br /> **\*\* Примечание по безопасности. \*\***Учетная запись **sa** — хорошо известная учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому она часто становится мишенью злоумышленников. Для имени входа **sa** очень важно использовать надежный пароль.<br /><br /> Для режима проверки подлинности Windows этот параметр не указывается.|  
     |[/SQLCOLLATION=*имя_параметров_сортировки* ]|Указывает новые параметры сортировки на уровне сервера. Этот параметр является необязательным. При его отсутствии используются текущие параметры сортировки сервера.<br /><br /> **\*\* Важно! \*\***Изменение параметров сортировки на уровне сервера не меняет параметры сортировки существующих баз данных. Вновь созданный пользователь по умолчанию будет использовать новые параметры сортировки.<br /><br /> Дополнительные сведения см. в разделе [Задание или изменение параметров сортировки сервера](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Указывает количество файлов данных в базе данных tempdb. Можно указать максимум 8 или количество ядер (большее из этих значений).<br /><br /> Значение по умолчанию: 8 или количество ядер (меньшее из этих значений) для всех остальных выпусков.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Задает первоначальный размер файла данных для каждой базы данных tempdb. Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 8|  
@@ -118,7 +122,7 @@ caps.handback.revision: 39
   
 4.  Сценарий RebuildDatabase удаляет системные базы данных и устанавливает их в исходном состоянии. Так как счетчик числа файлов tempdb не сохраняется, во время установки значение числа файлов tempdb неизвестно. Поэтому сценарий RebuildDatabase не имеет сведений о количестве файлов tempdb, которое необходимо добавить заново. Введите значение числа файлов tempdb с помощью параметра SQLTEMPDBFILECOUNT. Если этот параметр не указан, сценарий RebuildDatabase добавит число файлов tempdb по умолчанию, равное количеству ЦП или 8 (в зависимости от того, какое значение меньше).  
   
-## Задачи, выполняемые после перестроения  
+## <a name="post-rebuild-tasks"></a>Задачи, выполняемые после перестроения  
  После перестроения базы данных, возможно, придется выполнить следующие дополнительные задачи.  
   
 -   Восстановить наиболее поздние полные резервные копии баз данных master, model и msdb. Дополнительные сведения см. в разделе [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
@@ -126,12 +130,12 @@ caps.handback.revision: 39
     > [!IMPORTANT]  
     >  Если изменены параметры сортировки сервера, не следует восстанавливать системные базы данных. В противном случае новые параметры сортировки будут заменены старыми.  
   
-     Если резервная копия недоступна или не является копией текущей базы данных, повторно создайте все отсутствующие записи. Например, повторно создайте все недостающие записи для пользовательских баз данных, устройств резервного копирования, имен входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], конечных точек и так далее. Лучшим способом повторного создания записей является запуск создавшего их исходного скрипта.  
+     Если резервная копия недоступна или не является копией текущей базы данных, повторно создайте все отсутствующие записи. Например, повторно создайте все недостающие записи для пользовательских баз данных, устройств резервного копирования, имен входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , конечных точек и так далее. Лучшим способом повторного создания записей является запуск создавшего их исходного скрипта.  
   
 > [!IMPORTANT]  
 >  Рекомендуется защитить применяемые скрипты, чтобы предотвратить их изменение неавторизированными пользователями.  
   
--   Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен как распространитель репликации, необходимо восстановить базу данных distribution. Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
+-   Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен как распространитель репликации, необходимо восстановить базу данных distribution. Дополнительные сведения см. в разделе [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 -   Переместить системные базы данных в зарегистрированное ранее расположение. Дополнительные сведения см. в статье [Перемещение системных баз данных](../../relational-databases/databases/move-system-databases.md).  
   
@@ -140,7 +144,7 @@ caps.handback.revision: 39
 ##  <a name="Resource"></a> Перестроение базы данных Resource  
  Приведенная ниже процедура перестраивает системную базу данных resource. После перестроения базы данных resource все исправления и пакеты обновления теряются, поэтому их следует применить заново.  
   
-#### Перестроение базы данных resource  
+#### <a name="to-rebuild-the-resource-system-database"></a>Перестроение базы данных resource  
   
 1.  Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (setup.exe), расположенную на установочном носителе.  
   
@@ -158,23 +162,23 @@ caps.handback.revision: 39
  Если база данных **msdb** повреждена и нет резервной копии базы данных **msdb** , можно создать новую базу данных **msdb** с помощью скрипта **instmsdb** .  
   
 > [!WARNING]  
->  Когда база данных **msdb** создается заново скриптом **instmsdb**, удаляется вся информация, которая хранилась в **msdb**, то есть задания, оповещения, операторы, планы обслуживания, журналы резервных копий, параметры системы управления на основе политик, компоненты Database Mail, хранилище данных о производительности и т. д.  
+>  Когда база данных **msdb** создается заново скриптом **instmsdb** , удаляется вся информация, которая хранилась в **msdb** , то есть задания, оповещения, операторы, планы обслуживания, журналы резервных копий, параметры системы управления на основе политик, компоненты Database Mail, хранилище данных о производительности и т. д.  
   
-1.  Остановите все службы, подключающиеся к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], службы [!INCLUDE[ssRS](../../includes/ssrs-md.md)], службы [!INCLUDE[ssIS](../../includes/ssis-md.md)] и все приложения, использующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как хранилище данных.  
+1.  Остановите все службы, подключающиеся к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , службы [!INCLUDE[ssRS](../../includes/ssrs-md.md)], службы [!INCLUDE[ssIS](../../includes/ssis-md.md)]и все приложения, использующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как хранилище данных.  
   
 2.  Запустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки с помощью команды: `NET START MSSQLSERVER /T3608`  
   
-     Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+     Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  В другом окне командной строки отключите базу данных **msdb**, выполнив следующую команду, которая заменяет *\<имя_сервера>* экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  С помощью проводника Windows переименуйте файлы базы данных **msdb** . По умолчанию они находятся в папке DATA соответствующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+4.  С помощью проводника Windows переименуйте файлы базы данных **msdb** . По умолчанию они находятся в папке DATA соответствующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-5.  С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановите и перезапустите службу компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], как обычно.  
+5.  С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановите и перезапустите службу компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , как обычно.  
   
 6.  В окне командной строки подключитесь к серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните следующую команду: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Замените *\<имя_сервера>* на экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Укажите путь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файловой системе.  
+     Замените *\<имя_сервера>* экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Укажите путь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в файловой системе.  
   
 7.  Откройте в Блокноте файл **instmsdb.out** и проверьте выходные данные на наличие ошибок.  
   
@@ -197,7 +201,8 @@ caps.handback.revision: 39
   
  По завершении процедуры перестроения проверьте журналы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на наличие ошибок. По умолчанию журналы расположены в папке C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs. Чтобы найти файл журнала, который содержит результаты перестроения, в командной строке перейдите в папку журналов и запустите команду `findstr /s RebuildDatabase summary*.*`. Будут возвращены все файлы журналов, в которых содержатся результаты перестроения системных баз данных. Откройте эти файлы журналов и внимательно просмотрите, имеются ли в них соответствующие сообщения об ошибках.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Системные базы данных](../../relational-databases/databases/system-databases.md)  
   
   
+

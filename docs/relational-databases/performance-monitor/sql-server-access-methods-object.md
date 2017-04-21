@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, объект Access Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Access Methods, объект"
-  - "SQLServer:Access Methods"
+title: "SQL Server, объект Access Methods | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Access Methods object
+- SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, объект Access Methods
+# <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
   Объект **Access Methods** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, помогающие следить за доступом к логическим данным в рамках базы данных. Физический доступ к страницам базы данных на диске контролируется при помощи счетчиков **диспетчера буферов** . Наблюдение за методами доступа к данным в базе данных помогает определить, можно ли увеличить производительность запросов путем добавления или изменения индексов, добавления или перемещения секций, добавления файлов или групп файлов, дефрагментации индексов или изменения текста запросов. Кроме того, при помощи счетчиков объекта **Access Methods** можно следить за размером данных, индексов и свободного пространства в базе данных, контролируя объем и фрагментацию для каждого экземпляра сервера. Чрезмерная фрагментация индексов может значительно снизить производительность.  
   
  Дополнительные сведения об объеме, фрагментации и использовании данных можно узнать при помощи следующих динамических административных представлений:  
@@ -89,7 +93,7 @@ caps.handback.revision: 36
 |**Базовое соотношение рабочих таблиц из кэша**|Только для внутреннего применения.|  
 |**Процент рабочих таблиц из кэша**|Процент рабочих таблиц, созданных таким образом, что первоначальные две страницы не выделялись, а были сразу доступны из кэша рабочих таблиц. (Когда рабочая таблица удаляется, две страницы могут остаться выделенными и вернуться в кэш рабочих таблиц. Благодаря этому увеличивается производительность.)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

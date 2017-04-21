@@ -1,31 +1,35 @@
 ---
-title: "Управление сбором данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Сбор данных"
-helpviewer_keywords: 
-  - "сбор данных [SQL Server]"
-  - "сборщик данных [SQL Server], Transact-SQL"
-  - "сборщик данных [SQL Server], SQL Server Management Studio"
+title: "Управление сбором данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "Сбор данных"
+helpviewer_keywords:
+- data collection [SQL Server]
+- data collector [SQL Server], Transact-SQL
+- data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3501375e366cd5c84dd4544d4af0c11f00f2dbb1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Управление сбором данных
+# <a name="manage-data-collection"></a>Управление сбором данных
  Хранимые процедуры и функции среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] могут быть использованы для управления различными аспектами сбора данных (например, включать или отключать сбор данных, изменять конфигурацию набора сбора или просматривать данные в хранилище данных управления).  
   
-## Управление сбором данных с помощью SSMS  
+## <a name="manage-data-collection-using-ssms"></a>Управление сбором данных с помощью SSMS  
  Следующие задачи, связанные со сборщиком данных, выполняются с помощью обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Настройка хранилища данных управления (среда SQL Server Management Studio)](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
@@ -36,7 +40,7 @@ caps.handback.revision: 26
   
 -   [Запуск или остановка набора элементов сбора](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)](../../relational-databases/data-collection/use sql server profiler to create a sql trace collection set.md)  
+-   [Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
 -   [Просмотр журналов набора элементов сбора (среда SQL Server Management Studio)](../../relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio.md)  
   
@@ -44,8 +48,8 @@ caps.handback.revision: 26
   
 -   [Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
-## Управление сбором данных с помощью языка Transact-SQL  
- Сборщик данных располагает большим набором хранимых процедур, который помогает выполнить любую задачу сборщика данных. Например, [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выполнять следующие задачи.  
+## <a name="manage-data-collection-using-transact-sql"></a>Управление сбором данных с помощью языка Transact-SQL  
+ Сборщик данных располагает большим набором хранимых процедур, который помогает выполнить любую задачу сборщика данных. Например, [!INCLUDE[tsql](../../includes/tsql-md.md)]позволяет выполнять следующие задачи.  
   
 -   [Настройка параметров сбора данных (Transact-SQL)](../../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md)  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 26
   
 -   [Запуск или остановка набора элементов сбора](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
--   [Создание пользовательского набора элементов сбора, использующего тип сборщика "Универсальный запрос T-SQL" (Transact-SQL)](../../relational-databases/data-collection/create custom collection set - generic t-sql query collector type.md)  
+-   [Создание пользовательского набора элементов сбора, использующего тип сборщика "Универсальный запрос T-SQL" (Transact-SQL)](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
 -   [Добавление элемента сбора в набор элементов сбора (Transact-SQL)](../../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md)  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 26
   
 >**ВАЖНО!** В отличие от обычных хранимых процедур, в хранимых процедурах сборщика данных используются жестко типизированные параметры и не поддерживается автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет создавать и выполнять представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](../../ssms/object/object-explorer.md). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Выполнить запрос из командной строки Windows можно с помощью программы **sqlcmd** . Дополнительные сведения см. в статье [Программа sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет создавать и выполнять представленные образцы кода. Дополнительные сведения см. в статье [Семантический поиск](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). В качестве альтернативы можно создать запрос в любом редакторе и сохранить его в текстовом файле с расширением SQL. Выполнить запрос из командной строки Windows можно с помощью программы **sqlcmd** . Дополнительные сведения см. в статье [Программа sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
-### Хранимые процедуры и представления  
+### <a name="stored-procedures-and-views"></a>Хранимые процедуры и представления  
  **Работа со сборщиком данных**  
   
  В следующей таблице описаны хранимые процедуры, используемые при работе со сборщиком данных.  
@@ -161,7 +165,7 @@ caps.handback.revision: 26
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Удаление записей о наборах сбора из журнала выполнения.|  
   
-### Функции  
+### <a name="functions"></a>Функции  
  В следующей таблице описаны функции, используемые для получения сведений о выполнении и трассировке.  
   
 |Имя функции|Описание|  
@@ -170,9 +174,10 @@ caps.handback.revision: 26
 |[fn_syscollector_get_execution_stats (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Получение статистики выполнения для пакета или набора сбора. Эти сведения включают записанные в журнал ошибки.|  
 |[snapshots.fn_trace_getdata (Transact-SQL)](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)|Получение событий, записанных в журнал при использовании типа сборщика «Универсальная трассировка SQL».|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Выполнение хранимой процедуры](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Использование среды SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)   
+ [Использование среды SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   
   
+

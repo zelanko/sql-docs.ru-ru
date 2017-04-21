@@ -1,45 +1,49 @@
 ---
-title: "Редакторы запросов и текста (среда SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TextEditor"
-helpviewer_keywords: 
-  - "редактор запросов [среда SQL Server Management Studio]"
-  - "редактор кода [среда SQL Server Management Studio], о редакторе запросов"
-  - "редактор запросов [среда SQL Server Management Studio], полноэкранный режим"
-  - "редактор запросов [ядро СУБД], шаблоны"
-  - "полноэкранный режим [среда SQL Server Management Studio]"
-  - "среда SQL Server Management Studio [SQL Server], шаблоны"
-  - "создание скриптов"
-  - "изменение скриптов"
-  - "среда SQL Server Management Studio [SQL Server], редактор запросов"
-  - "редактор запросов [среда SQL Server Management Studio], о редакторе запросов"
-  - "создание запросов"
-  - "среда SQL Server Management Studio [SQL Server], редактор"
-  - "скрипты [SQL Server], среда SQL Server Management Studio"
-  - "запросы [SQL Server], среда SQL Server Management Studio"
+title: "Редакторы запросов и текста (среда SQL Server Management Studio) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TextEditor
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio]
+- Code Editor [SQL Server Management Studio], about Query Editor
+- Query Editor [SQL Server Management Studio], full screen mode
+- Query Editor [Database Engine], templates
+- full screen mode [SQL Server Management Studio]
+- SQL Server Management Studio [SQL Server], templates
+- writing scripts
+- modifying scripts
+- SQL Server Management Studio [SQL Server], query editor
+- Query Editor [SQL Server Management Studio], about Query Editor
+- writing queries
+- SQL Server Management Studio [SQL Server], editor
+- scripts [SQL Server], SQL Server Management Studio
+- queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ff32d77b3e1503bd23e4ac0ecf040653265f141
+ms.lasthandoff: 04/11/2017
+
 ---
-# Редакторы запросов и текста (среда SQL Server Management Studio)
-  Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)], с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
+  Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## Редакторы среды SQL Server Management Studio  
+## <a name="sql-server-management-studio-editors"></a>Редакторы среды SQL Server Management Studio  
  Четыре редактора среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] имеют общую архитектуру. Текстовый редактор реализует базовые функциональные возможности и может быть использован в качестве базового редактора для текстовых файлов. Три других редактора (редакторы запросов) расширяют эти функциональные возможности, подключая языковую службу, определяющую синтаксис одного из языков, поддерживаемых в SQL Server. В редакторах запросов также присутствуют различные уровни поддержки таких функций редактора, как IntelliSense или отладка. В набор редакторов запросов входят редактор запросов компонента Database Engine, используемый для создания скриптов, содержащих инструкции Transact-SQL и XQuery, редактор многомерных выражений для работы с языком многомерных выражений, редактор расширений интеллектуального анализа данных для работы с языком расширений интеллектуального анализа данных и редактор XML/A для работы с языком XML для аналитики.  
   
-## Общие компоненты  
+## <a name="common-components"></a>Общие компоненты  
  Все редакторы в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] совместно используют следующие компоненты.  
   
  **Панель кода**  
@@ -59,14 +63,14 @@ caps.handback.revision: 53
  **Перенос по словам**  
  Отображает длинные строки текста на нескольких строках, позволяя видеть весь текст, содержащийся в строке. Перенос по словам не влияет на внешний вид текста при выполнении или печати. Перенос по словам включается в диалоговом окне **Параметры**(меню **Сервис** ) на странице «Текстовый редактор», «Все языки», «Общие» или на конкретной странице редактора.  
   
-## Компоненты редактора кода  
+## <a name="code-editor-components"></a>Компоненты редактора кода  
  В дополнение к функциям, доступным в текстовых и XML-редакторах, в редакторах кода содержатся следующие функции.  
   
  **Результаты**  
  Это окно используется для просмотра результатов выполнения запроса. Результаты могут отображаться в окне в виде текста или табличной сетки либо могут быть отправлены в файл. Табличные сетки результатов могут отображаться в виде отдельных окон со вкладками.  
   
  **технология IntelliSense**  
- Чтобы просмотреть параметры технологии [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense, в меню **Правка** редактора выберите пункт **Технология IntelliSense**.  
+ Чтобы просмотреть параметры технологии **IntelliSense, в меню** Правка **редактора выберите пункт**Технология IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **выделение цветом;**  
  Выделение различными цветами каждого типа синтаксических элементов, облегчающее читаемость сложных инструкций.  
@@ -83,17 +87,17 @@ caps.handback.revision: 53
  **Строка состояния**  
  Отображает системные сведения, связанные с окном редактора запросов, например, к какому экземпляру подключен редактор запросов.  
   
-## Компоненты редактора запросов компонента Database Engine  
+## <a name="database-engine-query-editor-components"></a>Компоненты редактора запросов компонента Database Engine  
  Следующие компоненты доступны только в редакторе запросов компонента Database Engine.  
   
  **Отладчик**  
  Позволяет приостанавливать выполнение кода на конкретных инструкциях. После остановки можно просмотреть данные и системные сведения, что позволяет находить ошибки в коде.  
   
  **Список ошибок**  
- Отображает синтаксические и семантические ошибки, обнаруженные IntelliSense. Список ошибок меняется динамически в ходе изменения скриптов языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Отображает синтаксические и семантические ошибки, обнаруженные IntelliSense. Список ошибок меняется динамически в ходе изменения скриптов языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Графическое отображение инструкции Showplan**  
- Отображает логические шаги, составляющие план выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Отображает логические шаги, составляющие план выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **Статистика клиента**  
  Отображает сведения о выполнении запроса, сгруппированные по категориям. При выборе пункта **Включить статистику клиента** из меню **Запрос** в ходе выполнения запроса появляется окно **Статистика клиента** . Статистика успешно выполненных запросов приводится вместе со средними значениями. Чтобы сбросить средние значения, выберите пункт **Сбросить статистику клиента** в меню **Запрос** .  
@@ -102,15 +106,15 @@ caps.handback.revision: 53
  Шаблоны могут быть использованы в качестве отправной точки при создании инструкций в редакторе запросов компонента Database Engine. Можно вставлять стандартные фрагменты кода, входящие в комплект поставки SQL Server, или добавлять свои собственные фрагменты.  
   
  **Режим SQLCMD**  
- Выполняет скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)], включающие набор команд, поддерживаемых программой sqlcmd. Дополнительные сведения см. в [инструкциях по sqlcmd](../Topic/sqlcmd%20How-to%20Topics.md).  
+ Выполняет скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] , включающие набор команд, поддерживаемых программой sqlcmd. Дополнительные сведения см. в [инструкциях по sqlcmd](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4).  
   
-## Задачи редактора  
+## <a name="editor-tasks"></a>Задачи редактора  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает способы просмотра и использования базовых функций редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
-|Описывает способы просмотра и использования базовых функций редактора запросов многомерных выражений.|[Редактор запросов многомерных выражений (службы Analysis Services — многомерные данные)](../Topic/MDX%20Query%20Editor%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)|  
-|Описывает способы просмотра и использования базовых функций редактора DMX-запросов.|[Редактор DMX-запросов (службы Analysis Services — интеллектуальный анализ данных)](../Topic/DMX%20Query%20Editor%20\(Analysis%20Services%20-%20Data%20Mining\).md)|  
+|Описывает способы просмотра и использования базовых функций редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
+|Описывает способы просмотра и использования базовых функций редактора запросов многомерных выражений.|[Редактор запросов многомерных выражений (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
+|Описывает способы просмотра и использования базовых функций редактора DMX-запросов.|[Редактор DMX-запросов (службы Analysis Services — интеллектуальный анализ данных)](http://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
 |Описывает способы просмотра и использования базовых функций редактора запросов XML/A.|[Редактор XML (среда SQL Server Management Studio)](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |Описывает настройку параметров для различных редакторов, например нумерацию линий или параметры IntelliSense.|[Настройка редакторов (среда SQL Server Management Studio)](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |Описывает различные способы открытия редакторов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Открытие редактора (среда SQL Server Management Studio)](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
@@ -123,13 +127,13 @@ caps.handback.revision: 53
 |Описывает выполнение глобального поиска и замены, например при изменении имен столбцов.|[Поиск и замена](../../relational-databases/scripting/search-and-replace.md)|  
 |Описывает установку закладок для более легкого поиска важных элементов кода.|[Управление закладками](../../relational-databases/scripting/manage-bookmarks.md)|  
 |Описывает вывод скриптов или результатов в окно или сетку.|[Печать кода и результаты](../../relational-databases/scripting/print-code-and-results.md)|  
-|Описывает использование функций sqlcmd в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Изменение скриптов SQLCMD при помощи редактора запросов](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
+|Описывает использование функций sqlcmd в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Изменение скриптов SQLCMD при помощи редактора запросов](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |Описывает использование функций IntelliSense, например автоподстановки имен объектов при их вводе пользователем или обеспечение установки точек останова в допустимых местах.|[IntelliSense (среда SQL Server Management Studio)](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
-|Описывает использование фрагментов кода в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Фрагменты кода — это шаблоны часто используемых инструкций или блоков. Их можно настроить или расширить, включив в них фрагменты, специфичные для сайта.|[Фрагменты кода [Transact-SQL]](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
+|Описывает использование фрагментов кода в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Фрагменты кода — это шаблоны часто используемых инструкций или блоков. Их можно настроить или расширить, включив в них фрагменты, специфичные для сайта.|[Фрагменты кода [Transact-SQL]](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |Описывает использование отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового просмотра кода и просмотра отладочных данных, например значений переменных и параметров.|[Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
-|Описывает настройку пользовательских цветов для различных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и задание этих цветов в качестве фонового цвета для строки состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Строка состояния (редактор запросов к ядру СУБД)](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
+|Описывает настройку пользовательских цветов для различных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]и задание этих цветов в качестве фонового цвета для строки состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Строка состояния (редактор запросов к ядру СУБД)](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

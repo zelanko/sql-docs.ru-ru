@@ -1,24 +1,28 @@
 ---
-title: "Создание нового условия управления на основе политик | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Управление на основе политик, создание условий"
+title: "Создание условия управления на основе политик | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, creating policy conditions
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 656163a8971e279893bd2e7fa9ec382d4c0c95c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание нового условия управления на основе политик
+# <a name="create-a-new-policy-based-management-condition"></a>Создание нового условия управления на основе политик
   В этом разделе описывается создание условия управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **В этом разделе**  
@@ -40,9 +44,9 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Создание условия  
+#### <a name="to-create-a-condition"></a>Создание условия  
   
-1.  В **обозревателе объектов** щелкните знак "плюс", чтобы развернуть сервер, на котором необходимо создать условие управления на основе политик.  
+1.  В **обозревателе объектов**щелкните знак "плюс", чтобы развернуть сервер, на котором необходимо создать условие управления на основе политик.  
   
 2.  Щелкните знак «плюс», чтобы развернуть папку **Управление** .  
   
@@ -61,3 +65,4 @@ caps.handback.revision: 11
 9. После завершения нажмите кнопку **ОК**.  
   
   
+

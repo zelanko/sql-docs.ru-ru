@@ -1,29 +1,33 @@
 ---
-title: "Общие действия, для которых необходима обновленная резервная копия | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление [репликация SQL Server], действия, требующие резервного копирования"
-  - "восстановление [репликация SQL Server], действия, требующие резервного копирования"
-  - "резервные копии [репликация SQL Server], действия, требующие резервного копирования"
+title: "Общие действия, для которых необходима обновленная резервная копия | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server replication], actions requiring a backup
+- restoring [SQL Server replication], actions requiring a backup
+- backups [SQL Server replication], actions requiring a backup
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8784d006b175b3b6471464f401ad460080a273a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Общие действия, для которых необходима обновленная резервная копия
+# <a name="common-actions-requiring-an-updated-backup"></a>Общие действия, для которых необходима обновленная резервная копия
   Если резервное копирование журналов выполняется регулярно, любые изменения, касающиеся репликации, будут заноситься в резервные копии журнала. Если резервные копии журналов не создаются, выполняйте резервное копирование базы данных публикации, базы данных распространителя, базы данных подписки, баз данных **msdb**и **master** после внесения изменений в схему или топологию репликации.  
   
-## База данных публикации  
+## <a name="publication-database"></a>База данных публикации  
  Рекомендуется создавать резервную копию базы данных публикации после:  
   
 -   Создания новых публикаций.  
@@ -36,7 +40,7 @@ caps.handback.revision: 32
   
 -   Внесения изменений схемы в опубликованную таблицу.  
   
--   Выполнение скрипта по требованию с [sp_addscriptexec & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
+-   Выполнение скрипта по требованию с помощью процедуры [sp_addscriptexec (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md).  
   
 -   Изменения любого свойства статьи.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 32
   
 -   Отключения репликации.  
   
-## База данных распространителя  
+## <a name="distribution-database"></a>База данных распространителя  
  Рекомендуется создавать резервную копию базы данных распространителя после:  
   
 -   Создания или изменения профилей агентов репликации.  
@@ -57,7 +61,7 @@ caps.handback.revision: 32
   
 -   Назначения нового диапазона идентификаторов автоматической функцией управления диапазонами идентификаторов.  
   
-## База данных подписки  
+## <a name="subscription-database"></a>База данных подписки  
  Рекомендуется создавать резервную копию базы данных подписок после:  
   
 -   Изменения любого свойства подписки.  
@@ -68,7 +72,7 @@ caps.handback.revision: 32
   
 -   Отключения репликации.  
   
-## База данных msdb  
+## <a name="msdb-database"></a>База данных msdb  
  Рекомендуется создавать резервную копию системной базы данных **msdb** на соответствующем узле после:  
   
 -   Включения или отключения репликации.  
@@ -89,7 +93,7 @@ caps.handback.revision: 32
   
 -   Добавления или удаления трансформируемой подписки (на распространителе и на подписчике).  
   
-## База данных master  
+## <a name="master-database"></a>База данных master  
  Рекомендуется создавать резервную копию системной базы данных **master** на соответствующем узле после:  
   
 -   Включения или отключения репликации.  
@@ -104,8 +108,8 @@ caps.handback.revision: 32
   
 -   Включения или отключения режима издателя на распространяющем издателе (на издателе и на распространителе).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
+ [Создание резервных копий реплицируемых баз данных и восстановление из них](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   

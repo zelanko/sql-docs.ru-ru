@@ -1,22 +1,26 @@
 ---
-title: "Демонстрация. Улучшение производительности выполняющейся в памяти OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Демонстрация повышения производительности для выполняющейся в памяти OLTP | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Пример кода в этом разделе демонстрирует повышение производительности оптимизированных для памяти таблиц. Повышение производительности наблюдается, когда доступ к данным в оптимизированных для памяти таблицах осуществляется из традиционного интерпретированного [!INCLUDE[tsql](../../includes/tsql-md.md)]. Улучшение производительности будет даже заметнее, если доступ к данным в оптимизированной для памяти таблице выполняется из хранимой процедуры, скомпилированной в собственном коде (NCSProc).  
@@ -27,13 +31,13 @@ caps.handback.revision: 16
   
  Улучшение производительности, обеспечиваемое оптимизированными для памяти таблицами, полностью реализуется, когда доступ к данным в этих таблицах осуществляется из NCSProc.  
   
-## Пример кода  
+## <a name="code-example"></a>Пример кода  
  В следующих подразделах описывается каждый шаг.  
   
-### Шаг 1a. Предварительные требования при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Шаг 1a. Предварительные требования при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Описанные здесь действия применяются, только если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они не применяются, если используется [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Выполните следующие действия.  
   
-1.  Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды SQL Server Management Studio, используя SSMS.exe. Можно также использовать любое другое аналогичное средство.  
+1.  Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с помощью среды SQL Server Management Studio, используя SSMS.exe. Можно также использовать любое другое аналогичное средство.  
   
 2.  Вручную создайте каталог с именем **C:\data\\\**. Пример кода Transact SQL предполагает, что каталог уже существует.  
   
@@ -56,7 +60,7 @@ USE imoltp;
 go  
 ```  
   
-### Шаг 1b. Предварительные требования при использовании [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Шаг 1b. Предварительные требования при использовании [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Описанные здесь действия применяются только в случае использования [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Выполните следующие действия.  
   
 1.  Выберите существующую тестовую базу данных, которая будет использоваться для примера кода.  
@@ -65,7 +69,7 @@ go
   
  Инструкции по созданию базы данных на портале Azure см. в [руководстве по началу работы с базами данных SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### Шаг 2. Создание оптимизированных для памяти таблиц и NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Шаг 2. Создание оптимизированных для памяти таблиц и NCSProc  
  На этом шаге создаются оптимизированные для памяти таблицы и хранимая процедура, скомпилированная в собственном коде (NCSProc). Выполните следующие действия.  
   
 1.  Подключитесь к новой базе данных с помощью SSMS.exe.  
@@ -115,7 +119,7 @@ END;
 go  
 ```  
   
-### Шаг 3. Запуск кода  
+### <a name="step-3-run-the-code"></a>Шаг 3. Запуск кода  
  Затем можно выполнить запросы, которые продемонстрируют производительность оптимизированных для памяти таблиц. Выполните следующие действия.  
   
 1.  Запустите приведенный ниже код T-SQL в базе данных с помощью SSMS.exe.  
@@ -193,7 +197,8 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## См. также:  
- [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+## <a name="see-also"></a>См. также:  
+ [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

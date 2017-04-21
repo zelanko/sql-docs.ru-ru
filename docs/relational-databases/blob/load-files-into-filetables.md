@@ -1,26 +1,30 @@
 ---
-title: "выполнить загрузку файлов в таблицу FileTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы FileTable [SQL Server], перенос файлов"
-  - "таблицы FileTable [SQL Server], массовая загрузка"
-  - "таблицы FileTable [SQL Server], загрузка файлов"
+title: "выполнить загрузку файлов в таблицу FileTables | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# выполнить загрузку файлов в таблицу FileTables
+# <a name="load-files-into-filetables"></a>выполнить загрузку файлов в таблицу FileTables
   Описывает процедуру загрузки или переноса файлов в таблицы FileTable.  
   
 ##  <a name="BasicsLoadNew"></a> загрузить или перенести файлы в таблицу FileTable  
@@ -38,7 +42,7 @@ caps.handback.revision: 23
   
 -   Применение программ командной строки, таких как MOVE, COPY, XCOPY или ROBOCOPY из командной строки или пакетного файла или скрипта.  
   
--   Написание на C# или Visual Basic.NET пользовательского приложения для перемещения или копирования файлов с применением методов из пространства имен **System.IO**.  
+-   Написание на C# или Visual Basic.NET пользовательского приложения для перемещения или копирования файлов с применением методов из пространства имен **System.IO** .  
   
 ###  <a name="HowToMigrateFiles"></a> Пример. Перенос файлов из файловой системы в таблицу FileTable  
  В этом сценарии файлы хранятся в файловой системе, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется таблица метаданных, содержащая указатели на эти файлы. Необходимо переместить файлы в таблицу FileTable, затем заменить исходный путь UNC для каждого файла в метаданных на путь UNC таблицы FileTable. Функция [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) помогает добиться этой цели.  
@@ -101,28 +105,28 @@ UPDATE PhotoMetadata
   
 -   **bcp**  
   
-    -   Вызвать с предложением **CHECK_CONSTRAINTS**.  
+    -   Вызвать с предложением **CHECK_CONSTRAINTS** .  
   
-    -   Отключить пространство имен FileTable и вызвать без предложения **CHECK_CONSTRAINTS**. Затем снова включить пространство имен FileTable.  
+    -   Отключить пространство имен FileTable и вызвать без предложения **CHECK_CONSTRAINTS** . Затем снова включить пространство имен FileTable.  
   
 -   **BULK INSERT**  
   
-    -   Вызвать с предложением **CHECK_CONSTRAINTS**.  
+    -   Вызвать с предложением **CHECK_CONSTRAINTS** .  
   
-    -   Отключить пространство имен FileTable и вызвать без предложения **CHECK_CONSTRAINTS**. Затем снова включить пространство имен FileTable.  
+    -   Отключить пространство имен FileTable и вызвать без предложения **CHECK_CONSTRAINTS** . Затем снова включить пространство имен FileTable.  
   
 -   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
   
-    -   Вызвать с предложением **IGNORE_CONSTRAINTS**.  
+    -   Вызвать с предложением **IGNORE_CONSTRAINTS** .  
   
-    -   Отключить пространство имен FileTable и выполнить вызов без предложения **IGNORE_CONSTRAINTS**. Затем снова включить пространство имен FileTable.  
+    -   Отключить пространство имен FileTable и выполнить вызов без предложения **IGNORE_CONSTRAINTS** . Затем снова включить пространство имен FileTable.  
   
  Сведения об отключении ограничений FileTable см. в разделе [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ###  <a name="disabling"></a> Практическое руководство. Отключение ограничений FileTable для массовой загрузки  
  Для массовой загрузки файлов в таблицу FileTable без издержек по применению определенных в системе ограничений, можно временно отключить ограничения. Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Доступ к таблицам FileTable с помощью Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

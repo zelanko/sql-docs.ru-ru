@@ -1,25 +1,29 @@
 ---
-title: "Свойства базы данных (страница &#171;Файловые группы&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.filegroups.f1"
+title: "Свойства базы данных (страница &quot;Файловые группы&quot;) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 977464bddc01eaa5559962808e9cee4b39651b8f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Свойства базы данных (страница &#171;Файловые группы&#187;)
-  Эта страница используется для просмотра файловых групп или добавления новой файловой группы в выбранную базу данных. Типы файловых групп разделены на файловые группы *строк*, файловые группы данных FILESTREAM и файловые группы, оптимизированные для памяти.  
+# <a name="database-properties-filegroups-page"></a>Свойства базы данных (страница «Файловые группы»)
+  Эта страница используется для просмотра файловых групп или добавления новой файловой группы в выбранную базу данных. Типы файловых групп разделены на файловые группы *строк* , файловые группы данных FILESTREAM и файловые группы, оптимизированные для памяти.  
   
  Файловые группы строк содержат обычные данные и файлы журналов. Файловые группы данных FILESTREAM содержат файлы данных FILESTREAM. В этих файлах данных содержатся сведения о способах хранения данных больших двоичных объектов (BLOB) в файловой системе при использовании хранилища Filestream. Параметры одинаковы для файловых групп обоих типов.  
   
@@ -29,7 +33,7 @@ caps.handback.revision: 31
   
  Оптимизированные для памяти файловые группы необходимы, когда база данных должна содержать одну или несколько оптимизированных для памяти таблиц.  
   
-## Параметры файловых групп для строк и данных FILESTREAM.  
+## <a name="row-and-filestream-data-filegroup-options"></a>Параметры файловых групп для строк и данных FILESTREAM.  
  **Название**  
  Введите имя файловой группы.  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 31
  **Удалить**  
  Позволяет удалить выбранную строку файловой группы из сетки.  
   
-## Параметры файловых групп для данных, оптимизированных для памяти.  
+## <a name="memory-optimized-data-filegroup-options"></a>Параметры файловых групп для данных, оптимизированных для памяти.  
  **Название**  
  Введите имя файловой группы, оптимизированной для памяти.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 31
  **Удалить**  
  Позволяет удалить выбранную строку файловой группы из сетки.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

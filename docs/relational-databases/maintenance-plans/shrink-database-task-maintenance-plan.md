@@ -1,28 +1,32 @@
 ---
-title: "Задача &#171;Сжатие базы данных&#187; (план обслуживания) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Shrink Database Task"
-  - "Shrink Database(s) Task"
-  - "sql13.swb.maint.shrink.f1"
-helpviewer_keywords: 
-  - "диалоговое окно задачи «Сжатие базы данных»"
+title: "Задача &quot;Сжатие базы данных&quot; (план обслуживания) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Shrink Database Task
+- Shrink Database(s) Task
+- sql13.swb.maint.shrink.f1
+helpviewer_keywords:
+- Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Задача &#171;Сжатие базы данных&#187; (план обслуживания)
+# <a name="shrink-database-task-maintenance-plan"></a>Задача «Сжатие базы данных» (план обслуживания)
   Диалоговое окно **Задача «Сжатие базы данных»** используется для создания задачи, которая пытается уменьшить размер выбранных баз данных. Перечисленные ниже параметры используются для определения количества неиспользуемого пространства, которое должно остаться в базе данных после сжатия (чем больше процент, тем меньше сжимается база данных). Это значение определяется долей фактических данных в базе данных. Например: 100-мегабайтная база данных, содержащая 60 МБ данных и 40 МБ свободного пространства с заданным значением свободного пространства, равным 50 процентам, будет содержать 60 МБ данных и 30 МБ свободного пространства (поскольку 50 процентов от 60 МБ равно 30 МБ). Удаляется только лишнее пространство в базе данных. Допустимые значения: от 0 до 100.  
   
  Сжатие файлов данных позволяет освободить неиспользуемое пространство путем перемещения страниц данных с конца файла в незанятое пространство ближе к началу файла. Когда в конце файла образуется достаточно свободного места, страницы данных в конце файла могут быть освобождены и возвращены в файловую систему.  
@@ -32,7 +36,7 @@ caps.handback.revision: 28
   
  Эта задача выполняет инструкцию DBCC SHRINKDATABASE.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Соединение**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 28
   
 -   **Все системные базы данных**  
   
-     Будет сформирован план обслуживания, запускающий задачи обслуживания для каждой системной базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], за исключением базы данных tempdb. Для баз данных, созданных пользователями, задачи обслуживания выполняться не будут.  
+     Будет сформирован план обслуживания, запускающий задачи обслуживания для каждой системной базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , за исключением базы данных tempdb. Для баз данных, созданных пользователями, задачи обслуживания выполняться не будут.  
   
 -   **Все пользовательские базы данных**  
   
@@ -68,12 +72,12 @@ caps.handback.revision: 28
  Прекратить сжатие по достижении заданного размера свободного пространства в базе данных.  
   
  **Просмотр T-SQL**  
- Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
+ Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
 >  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
-## Диалоговое окно «Создание соединения»  
+## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
  **Имя соединения**  
  Введите имя нового соединения.  
   
@@ -87,18 +91,18 @@ caps.handback.revision: 28
  Укажите способ проверки подлинности на сервере.  
   
  **Использовать встроенную систему безопасности Windows NT**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **Использовать указанные имя пользователя и пароль**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр недоступен.  
+ Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Имя пользователя**  
- Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр недоступен.  
+ Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   

@@ -1,24 +1,28 @@
 ---
-title: "Поддержка FOR XML для строковых типов данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "строки [SQL Server], XML"
+title: "Поддержка FOR XML для строковых типов данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strings [SQL Server], XML
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bf126b897cf4af722108607ceec7ff57184d025
+ms.lasthandoff: 04/11/2017
+
 ---
-# Поддержка FOR XML для строковых типов данных
+# <a name="for-xml-support-for-string-data-types"></a>Поддержка FOR XML для строковых типов данных
   Пробельные символы XML-кода, формируемого инструкцией FOR XML, преобразуются в сущности.  
   
  В следующем примере создается образец таблицы **T** , в который вставляются данные, содержащие символы перевода строки, возврата каретки и табуляции. Инструкция SELECT получает данные из таблицы.  
@@ -59,7 +63,7 @@ after line feed" />
   
 -   Символ перевода строки в третьей строке представлен в виде сущности &#xA.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поддержка FOR XML для различных типов данных SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

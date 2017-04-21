@@ -1,28 +1,32 @@
 ---
-title: "Поддержка FOR XML для XML-данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пользовательские функции [SQL Server], XML"
-  - "тип данных XML [SQL Server], предложение FOR XML"
+title: "Поддержка FOR XML для типа данных XML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# Поддержка FOR XML для XML-данных
+# <a name="for-xml-support-for-the-xml-data-type"></a>Поддержка FOR XML для XML-данных
   Если в предложении SELECT запроса FOR XML указан **xml** -столбец, значения столбца сопоставляются как элементы в возвращенном коде XML, независимо от того, указана ли директива ELEMENTS. XML-декларации в **xml** -столбце не сериализуются.  
   
- Например, приведенный ниже запрос извлекает контактные данные заказчика, указанные в столбцах `BusinessEntityID`, `FirstName` и `LastName`, а также телефонные номера в столбце `AdditionalContactInfo` типа **xml**.  
+ Например, приведенный ниже запрос извлекает контактные данные заказчика, указанные в столбцах `BusinessEntityID`, `FirstName`и `LastName` , а также телефонные номера в столбце `AdditionalContactInfo` типа **xml** .  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,7 +144,7 @@ for xml auto;
 </root>  
 ```  
   
-## Возвращение XML-данных из пользовательской функции  
+## <a name="returning-xml-from-a-user-defined-function"></a>Возвращение XML-данных из пользовательской функции  
  Запросы FOR XML можно использовать для возвращения XML-данных из определяемой пользователем функции, которая возвращает один из следующих объектов:  
   
 -   таблицу с одним **xml** -столбцом;  
@@ -177,7 +181,7 @@ set @x = (SELECT * FROM MyUDF(19));
 select @x;  
 ```  
   
- Вот еще один пример определяемой пользователем функции. Эта пользовательская функция возвращает экземпляр типа **xml**. В следующем примере определяемая пользователем функция возвращает типизированный экземпляр XML, поскольку здесь указано пространство имен схемы.  
+ Вот еще один пример определяемой пользователем функции. Эта пользовательская функция возвращает экземпляр типа **xml** . В следующем примере определяемая пользователем функция возвращает типизированный экземпляр XML, поскольку здесь указано пространство имен схемы.  
   
 ```  
 DROP FUNCTION dbo.MyUDF;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поддержка FOR XML для различных типов данных SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

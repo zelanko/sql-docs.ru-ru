@@ -1,27 +1,31 @@
 ---
-title: "Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1b1d4a26616fe83a241267bc87b9e799d883e26
+ms.lasthandoff: 04/11/2017
+
 ---
-# Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP
+# <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  В этом разделе описаны возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые не поддерживаются для использования с оптимизированными для памяти объектами.  
+  В этом разделе описаны возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые не поддерживаются для использования с оптимизированными для памяти объектами.  
   
-## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Возможности, которые не поддерживаются для In-Memory OLTP  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Возможности, которые не поддерживаются для In-Memory OLTP  
  Следующие возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживаются для баз данных, которые содержат оптимизированные для памяти объекты, включая файловую группу данных, оптимизированную для памяти.  
   
 |Неподдерживаемая функция|Описание функции|  
@@ -49,7 +53,7 @@ caps.handback.revision: 55
 |База данных ресурса, tempdb|Да|Ограничений на транзакции между базами данных, которые, помимо одной пользовательской базы данных, применяют только базу данных ресурсов и tempdb, нет.|  
 |master|только для чтения|Транзакциям между базами данных, которые затрагивают OLTP в памяти и базу данных master, не удается выполнить фиксацию, если они выполняют запись в базу данных master. Допустимы межбазовые транзакции, которые только читают данные из базы данных master и применяют только одну пользовательскую базу данных.|  
   
-## Неподдерживаемые сценарии  
+## <a name="scenarios-not-supported"></a>Неподдерживаемые сценарии  
   
 -   Включение базы данных ([автономные базы данных](../../relational-databases/databases/contained-databases.md)) не поддерживается при выполнении в памяти OLTP. Поддерживается проверка подлинности автономной базы данных. Однако все объекты OLTP в памяти отмечены как нарушающие вложение в DMV dm_db_uncontained_entities.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 55
   
 -   Набор ключей и динамические курсоры в запросах, обращающихся к оптимизированным для памяти таблицам. Функциональность этих курсоров понижена, теперь они статические и доступны только для чтения.  
   
--   Использование **MERGE INTO***target* с *target* — это оптимизированная для памяти таблица. **MERGE USING***source* поддерживается для таблиц, оптимизированных для памяти.  
+-   Использование **MERGE INTO***target* с *target* — это оптимизированная для памяти таблица. **MERGE USING***source* поддерживается для таблиц, оптимизированных для памяти.  
   
 -   Тип данных ROWVERSION (TIMESTAMP) не поддерживается. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
@@ -71,7 +75,8 @@ caps.handback.revision: 55
   
 -   Управление на основе политик (PBM). Режимы предотвращения и только протоколирование PBM не поддерживаются. Наличие таких политик на сервере может помешать успешному выполнению DDL-библиотеки OLTP в памяти. Режимы по запросу и по расписанию поддерживаются.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поддержка SQL Server для In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
+

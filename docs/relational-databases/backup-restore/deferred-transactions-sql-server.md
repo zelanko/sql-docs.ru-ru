@@ -1,31 +1,35 @@
 ---
-title: "Отложенные транзакции (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ввод-вывод [SQL Server], восстановление базы данных"
-  - "восстановление страниц [SQL Server]"
-  - "отложенные транзакции"
-  - "изменение отложенного состояния транзакции"
+title: "Отложенные транзакции (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Отложенные транзакции (SQL Server)
+# <a name="deferred-transactions-sql-server"></a>Отложенные транзакции (SQL Server)
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise поврежденная транзакция может быть отложена, если данные, которые требуются для отката (отмены), находятся в режиме "вне сети" во время запуска базы данных. *Отложенная транзакция* представляет собой транзакцию, которая не фиксируется по завершении стадии наката и которая вызывает ошибку, препятствующую ее откату. Поскольку нельзя выполнить откат этой транзакции, она откладывается.  
   
 > [!NOTE]  
->  Поврежденные транзакции откладываются только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В других выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поврежденная транзакция вызывает сбой запуска.  
+>  Поврежденные транзакции откладываются только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В других выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поврежденная транзакция вызывает сбой запуска.  
   
  Обычно отложенная транзакция встречается, когда во время наката в базе данных происходит ошибка ввода-вывода, которая не позволяет считать нужную для транзакции страницу. Еще одной причиной возникновения отложенных транзакций может стать ошибка на файловом уровне. Отложенная транзакция может возникнуть,если последовательность частичного восстановления останавливается из-за необходимости отката, а требуемые для этого данные находятся в режиме «вне сети».  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 45
 |Повтор при зеркальном отображении базы данных|Отложенная транзакция|  
 |Файловая группа находится в режиме «вне сети»|Отложенная транзакция|  
   
-## Вывод транзакции из состояния DEFERRED  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Вывод транзакции из состояния DEFERRED  
   
 > [!IMPORTANT]  
 >  Отложенная транзакция удерживает журнал транзакций активным. Файл виртуального журнала, содержащий все отложенные транзакции, нельзя усекать, пока эти транзакции не выйдут из отложенного состояния. Дополнительные сведения об усечении журнала см. в разделе [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
@@ -83,11 +87,11 @@ caps.handback.revision: 45
   
          Сведения об аварийном режиме см. в разделе [Database States](../../relational-databases/databases/database-states.md).  
   
-    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) или [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)или [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          При возникновении страницы с поврежденными данными DBCC освобождает эту страницу и исправляет связанные с ней ошибки. Такой подход дает возможность возвратить базу данных в режиме «в сети» в физически согласованное состояние. Но при этом могут быть также потеряны дополнительные данные, поэтому этот подход должен применяться только в исключительных случаях.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Удаление уничтоженных файловых групп (SQL Server)](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [Файлы из резервных копий (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [Восстановление страниц (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

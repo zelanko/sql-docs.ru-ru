@@ -1,47 +1,51 @@
 ---
-title: "Наблюдение и настройка производительности | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "экземпляры [SQL Server], мониторинг производительности"
-  - "наблюдение за производительностью сервера [SQL Server]"
-  - "компонент Database Engine [SQL Server], производительность"
-  - "мониторинг производительности [SQL Server], информация о производительности"
-  - "производительность сервера [SQL Server]"
-  - "наблюдение за производительностью [SQL Server]"
-  - "производительность баз данных [SQL Server], информация о производительности"
-  - "настройка баз данных [SQL Server], информация о производительности"
-  - "информация о состоянии [SQL Server], мониторинг производительности"
-  - "мониторинг баз данных [SQL Server], информация о производительности"
-  - "мониторинг [SQL Server], производительность запросов"
-  - "производительность сервера [SQL Server], информация о производительности"
-  - "настройка баз данных [SQL Server]"
-  - "производительность базы данных [SQL Server]"
-  - "мониторинг [SQL Server], производительность сервера"
-  - "наблюдение за базой данных [SQL Server]"
-  - "мониторинг производительности сервера [SQL Server], информация о мониторинге производительности сервера"
+title: "Мониторинг и настройка производительности | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of SQL Server, monitoring performance
+- monitoring server performance [SQL Server]
+- Database Engine [SQL Server], performance
+- monitoring performance [SQL Server], about performance
+- server performance [SQL Server]
+- monitoring performance [SQL Server]
+- database performance [SQL Server], about performance
+- tuning databases [SQL Server], about performance
+- status information [SQL Server], performance monitoring
+- database monitoring [SQL Server], about performance
+- monitoring [SQL Server], queries performance
+- server performance [SQL Server], about performance
+- tuning databases [SQL Server]
+- database performance [SQL Server]
+- monitoring [SQL Server], server performance
+- database monitoring [SQL Server]
+- monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c60b3ef8e0eb43ea64e898d8198c0a9fd725acc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Наблюдение и настройка производительности
+# <a name="monitor-and-tune-for-performance"></a>Наблюдение и настройка производительности
   Наблюдение за базами данных выполняется с целью оценки производительности сервера. Эффективное наблюдение подразумевает регулярное создание моментальных снимков текущей производительности для обнаружения процессов, вызывающих неполадки, и постоянный сбор данных для отслеживания тенденций роста или изменения производительности.  
   
  Постоянная оценка производительности базы данных помогает добиться оптимальной производительности путем минимизации времени ответа и максимального увеличения пропускной способности. Приблизительный сетевой трафик, дисковый ввод-вывод и загрузка ЦП — ключевые факторы, влияющие на производительность. Следует тщательно проанализировать требования приложения, понять логическую и физическую структуру данных, оценить использование базы данных и добиться компромисса между такими конфликтующими нагрузками, как оперативная обработка транзакций (OLTP) и поддержка решений.  
   
-## Мониторинг и настройка производительности баз данных  
- В состав Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы Microsoft Windows входят служебные программы, позволяющие следить за текущим состоянием базы данных и измерять производительность, если это состояние меняется. Для наблюдения за [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать целый ряд средств и методик. Наблюдение за [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет решать следующие задачи:  
+## <a name="monitoring-and-tuning-databases-for-performance"></a>Мониторинг и настройка производительности баз данных  
+ В состав Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы Microsoft Windows входят служебные программы, позволяющие следить за текущим состоянием базы данных и измерять производительность, если это состояние меняется. Для наблюдения за [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно использовать целый ряд средств и методик. Наблюдение за [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет решать следующие задачи:  
   
 -   Определять возможности увеличения производительности. Например, выполняя мониторинг времени ответа для часто используемых запросов, можно определить, требуется ли изменить текст запроса или индексы таблицы.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 35
   
 -   Устранять проблемы или отлаживать компоненты приложений, например хранимые процедуры.  
   
-## Мониторинг в динамической среде  
+## <a name="monitoring-in-a-dynamic-environment"></a>Мониторинг в динамической среде  
 Изменение этих условий приведет к изменению производительности. По результатам оценки можно заметить изменения производительности при увеличении числа пользователей, изменении методов доступа пользователей и методов соединения, при увеличении объема содержимого базы данных, изменении клиентского приложения и данных в приложении, а также при усложнении запросов и увеличении объема сетевого трафика. С помощью средств контроля производительности можно связывать изменения отдельных показателей производительности с изменениями условий и сложных запросов. **Примеры**  
   
 -   Отслеживая время отклика на часто используемые запросы, можно определить, нужно ли изменять запросы или индексы опрашиваемых таблиц.  
@@ -62,7 +66,7 @@ caps.handback.revision: 35
   
  С увеличением числа пользователей растет соперничество за ресурсы сервера, что в свою очередь увеличивает время ответа и уменьшает общую пропускную способность.  
   
-## Задачи наблюдения и настройки производительности  
+## <a name="monitoring-and-performance-tuning-tasks"></a>Задачи наблюдения и настройки производительности  
   
 |Раздел| Задача|  
 |-----------|----------------------|  
@@ -78,10 +82,11 @@ caps.handback.revision: 35
 |[Использование хранилища запросов с выполняющейся в памяти OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|Соображения касательно оптимизированных для памяти таблиц.|  
 |[Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)|Рекомендации по использованию хранилища запросов.|  
   
-## См. также:  
- [Автоматизация администрирования в масштабах предприятия](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+## <a name="see-also"></a>См. также:  
+ [Автоматизация администрирования в масштабах предприятия](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
  [помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
+

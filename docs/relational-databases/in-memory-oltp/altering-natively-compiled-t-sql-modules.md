@@ -1,23 +1,27 @@
 ---
-title: "Изменение скомпилированных в собственном коде модулей T-SQL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение скомпилированных в собственном коде модулей T-SQL | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4696039c56ebf5f1fd6ea440cd27da84721f35b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение скомпилированных в собственном коде модулей T-SQL
+# <a name="altering-natively-compiled-t-sql-modules"></a>Изменение скомпилированных в собственном коде модулей T-SQL
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (и более поздних версиях) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] можно выполнять операции ALTER применительно к скомпилированным в собственном коде хранимым процедурам и другим скомпилированным в собственном коде модулям T-SQL, например определяемым пользователем скалярным функциям и триггерам, с помощью инструкции ALTER.  
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
  Вы можете выполнить sp_recompile для скомпилированного в собственном коде модуля T-SQL, что приведет к повторной компиляции при следующем выполнении.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере создается оптимизированная для памяти таблица (T1) и скомпилированная в собственном коде хранимая процедура (SP1), которая выбирает все столбцы таблицы T1. Затем процедура SP1 изменяется: из нее удаляется предложение EXECUTE AS, в ней меняется параметр LANGUAGE, а из таблицы T1 выбирается только один столбец (C1).  
   
 ```  

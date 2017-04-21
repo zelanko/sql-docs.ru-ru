@@ -1,29 +1,33 @@
 ---
-title: "Строка состояния (редактор запросов к ядру СУБД) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Строка состояния (редактор запросов к ядру СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34d7a9bfaf04f1ea7d201083201aa3c8a3895061
+ms.lasthandoff: 04/11/2017
+
 ---
-# Строка состояния (редактор запросов к ядру СУБД)
+# <a name="status-bar-database-engine-query-editor"></a>Строка состояния (редактор запросов к ядру СУБД)
   В строках состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] могут быть цветовые обозначения, указывающие, к какому экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)] подключено данное окно.  
   
-1.  **Перед началом работы выполните следующие действия.**  [Цвета строки состояния](#StatusBarColors)  
+1.  **Before you begin:**  [Status Bar Colors](#StatusBarColors)  
   
-2.  **Задание цвета состояния сервера в:**  [обозревателе объектов](#SetOEServerColor), [зарегистрированном сервере](#SetRegServerColor)  
+2.  **To set a server status color in:**  [Object Explorer](#SetOEServerColor), [Registered Server](#SetRegServerColor)  
   
-3.  **Использование цвета состояния:**  [открытие редактора запросов с помощью цвета сервера](#OpenServerColor), [открытие редактора запросов с помощью цвета состояния](#OpenSpecColor)  
+3.  **To use a status color:**  [Open Query Editor Using a Server Color](#OpenServerColor), [Open a Query Editor Specifying a Status Color](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Цвета строки состояния  
  Можно привязать цвет строки состояния к определенному узлу с помощью **обозревателя объектов** или в окне **Зарегистрированные серверы**. Цвета можно указать только для узлов сервера, подключенных к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], но не для узлов для других технологических решений SQL Server. Также можно указывать пользовательский цвет строки состояния при каждом подключении нового окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Затем можно открывать окно редактора запросов с помощью цвета состояния, определенного для узла сервера, или указать уникальный цвет для этого окна редактора.  
@@ -63,7 +67,7 @@ caps.handback.revision: 7
 ##  <a name="OpenServerColor"></a> Открытие редактора с помощью цвета сервера  
  **Открытие окна редактора с помощью цвета сервера**  
   
--   Щелкните правой кнопкой мыши узел сервера в **обозревателе объектов** или в окне **Зарегистрированные серверы** и нажмите кнопку **Создать запрос**.  
+-   Щелкните правой кнопкой мыши узел сервера в **обозревателе объектов** или в окне **Зарегистрированные серверы**и нажмите кнопку **Создать запрос**.  
   
 -   Также можно выделить узел сервера, затем нажать кнопку **Создать запрос** на панели инструментов.  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 7
   
 -   Укажите остальные сведения о подключении, а затем нажмите кнопку **Соединение** .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Редакторы запросов и текста (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -1,28 +1,32 @@
 ---
-title: "Удаление проверочного ограничения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "удаление ограничения"
-  - "ограничения CHECK, удаление"
-  - "ограничения [SQL Server], удаление"
-  - "ограничения [SQL Server], проверка"
-  - "удаление ограничений"
+title: "Удаление проверочного ограничения | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing constraints
+- CHECK constraints, deleting
+- constraints [SQL Server], deleting
+- constraints [SQL Server], check
+- deleting constraints
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2447173bd6b35b977fe69aa8f811d3d0198123f9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление проверочного ограничения
+# <a name="delete-check-constraints"></a>Удаление проверочного ограничения
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Удалить проверочное ограничение в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Удаление проверочного ограничения снимает ограничения на значения данных, допустимые для столбца или столбцов, включенных в выражение ограничения.  
@@ -48,7 +52,7 @@ caps.handback.revision: 14
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Удаление проверочного ограничения  
+#### <a name="to-delete-a-check-constraint"></a>Удаление проверочного ограничения  
   
 1.  В **Обозревателе объектов**разверните таблицу с проверочным ограничением.  
   
@@ -60,7 +64,7 @@ caps.handback.revision: 14
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Удаление проверочного ограничения  
+#### <a name="to-delete-a-check-constraint"></a>Удаление проверочного ограничения  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

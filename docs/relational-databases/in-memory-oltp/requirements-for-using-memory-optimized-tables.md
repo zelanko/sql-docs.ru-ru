@@ -1,28 +1,32 @@
 ---
-title: "Требования для использования таблиц, оптимизированных для памяти | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Требования для использования таблиц, оптимизированных для памяти | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 65
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Требования для использования таблиц, оптимизированных для памяти
+# <a name="requirements-for-using-memory-optimized-tables"></a>Требования для использования таблиц, оптимизированных для памяти
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Использование выполняющихся в памяти OLTP в базе данных Azure описано в статье [In-Memory OLTP (оптимизация в памяти)](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
- Помимо [требований к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)для использования OLTP в памяти необходимо следующее:  
+ Помимо [требований к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)для использования OLTP в памяти необходимо следующее:  
   
 -   Любой выпуск SQL Server 2016 с пакетом обновления 1 (SP1) или более поздней версии. Для SQL Server 2014 и SQL Server 2016 RTM (с предварительным пакетом SP1) необходим выпуск Enterprise, Developer или Evaluation.
     - Примечание. Для выполняющейся в памяти OLTP требуется 64-разрядная версия SQL Server.  
@@ -41,7 +45,7 @@ caps.handback.revision: 65
   
      Для установки создания отчетов ([определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (для управления In-Memory OLTP с помощью обозревателя объектов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ) [загрузите среду SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
   
-## <a name="important-notes-on-using-includehek2tokenhek2mdmd"></a>Важные примечания относительно использования [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Важные примечания относительно использования [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
 -   Начиная с SQL Server 2016, ограничения на размер оптимизированных для памяти таблиц (кроме доступной памяти) не действуют. В SQL Server 2014 общий объем памяти всех устойчивых таблиц в базе данных не должен превышать 250 ГБ. Дополнительные сведения см. в статье [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
     - Примечание. Начиная с SQL Server 2016 с пакетом обновления 1 (SP1), выпуски Standard и Express поддерживают выполняющуюся в памяти OLTP, однако налагают квоты на объем памяти, который можно использовать для оптимизированных для памяти таблиц в заданной базе данных. В выпуске Standard это ограничение равно 32 ГБ на базу данных; в выпуске Express — 352 МБ на базу данных. 
@@ -49,6 +53,7 @@ caps.handback.revision: 65
 -   Если создается одна или несколько баз данных с таблицами, оптимизированными для памяти, необходимо включить быструю инициализацию файлов (предоставьте стартовой учетной записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] право SE_MANAGE_VOLUME_NAME) для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Без быстрой инициализации файлов оптимизированные для памяти файлы хранилища (файлы данных и разностные файлы) будут инициализироваться при создании и могут отрицательно повлиять на производительность рабочей нагрузки. Дополнительные сведения о быстрой инициализации файлов см. в разделе [Инициализация файлов базы данных](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Сведения о включении быстрой инициализации файлов см. в разделе [Как и зачем необходимо включать быструю инициализацию файлов](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="see-also"></a>См. также  
- [Выполняющаяся в памяти OLTP &#40;оптимизация в памяти&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

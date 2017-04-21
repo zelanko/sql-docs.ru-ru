@@ -1,29 +1,33 @@
 ---
-title: "Класс событий Lock:Deadlock Chain | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Deadlock Chain, класс событий"
+title: "Класс событий Lock:Deadlock Chain | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ffd8a4a79300ac64dd3a3e443f5c8a11b3d2f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Lock:Deadlock Chain
+# <a name="lockdeadlock-chain-event-class"></a>Класс событий Lock:Deadlock Chain
   Класс событий Lock:Deadlock Chain создается для каждого элемента взаимоблокировки.  
   
  Используйте класс событий Lock:Deadlock Chain для регистрации условий возникновения взаимоблокировок. Эти сведения помогают определить, насколько сильно взаимоблокировки влияют на производительность приложения и какие объекты при этом задействованы. Чтобы определить, можно ли свести к минимуму вероятность взаимоблокировок, проанализируйте в своем приложении код, изменяющий эти объекты.  
   
-## Столбцы класса событий Lock:Deadlock Chain  
+## <a name="lockdeadlock-chain-event-class-data-columns"></a>Столбцы класса событий Lock:Deadlock Chain  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -32,7 +36,7 @@ caps.handback.revision: 35
 |DatabaseName|**nvarchar**|Имя базы данных, к которой относится ресурс.|35|Да|  
 |EventClass|**int**|Тип события = 59.|27|Нет|  
 |EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
-|EventSubClass|**int**|Тип подкласса события. <br /><br /> 101 = блокировка типа ресурса<br /><br /> 102 = обмен типа ресурса|21|Да|  
+|EventSubClass|**int**|Тип подкласса события.<br /><br /> 101 = блокировка типа ресурса<br /><br /> 102 = обмен типа ресурса|21|Да|  
 |IntegerData|**int**|Номер взаимоблокировки. Отсчет номеров, назначаемых взаимоблокировкам, начинается с нуля при запуске сервера; каждая новая взаимоблокировка получает больший на единицу номер.|25|Да|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -43,14 +47,14 @@ caps.handback.revision: 35
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и имена входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Да|  
+|SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
 |TextData|**ntext**|Текстовое значение, зависящее от типа ресурса.|1|Да|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |Тип|**int**|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

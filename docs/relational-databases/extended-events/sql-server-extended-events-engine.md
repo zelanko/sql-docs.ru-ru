@@ -1,25 +1,29 @@
 ---
-title: "Подсистема расширенных событий SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "расширенные события [SQL Server], подсистема"
+title: "Подсистема расширенных событий SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
+ms.lasthandoff: 04/11/2017
+
 ---
-# Подсистема расширенных событий SQL Server
+# <a name="sql-server-extended-events-engine"></a>Подсистема расширенных событий SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Подсистема расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой набор служб и объектов, которые выполняют следующие действия.  
@@ -36,13 +40,13 @@ caps.handback.revision: 14
   
  На следующем рисунке показан упрощенный вид сеанса расширенных событий. Дополнительные сведения см. в разделе [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
- ![Подробная архитектура расширенных событий](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Подробная архитектура расширенных событий")  
+ ![Архитектура подсистемы расширенных событий](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Архитектура подсистемы расширенных событий")  
   
  Следует отметить следующее.  
   
 -   Каждому процессу Windows соответствует один или несколько модулей (**процесс Win32**, **модуль Win32**). Они называются *двоичными* или *исполняемыми модулями*.  
   
--   Каждый модуль процесса Windows содержит один или несколько пакетов расширенных событий (**пакет**), который содержит один или несколько объектов расширенных событий (**тип**, **цель**, **действие**, **сопоставление**, **предикат** и **событие**).  
+-   Каждый модуль процесса Windows содержит один или несколько пакетов расширенных событий (**пакет**), который содержит один или несколько объектов расширенных событий (**тип**, **цель**, **действие**, **сопоставление**, **предикат**и **событие**).  
   
 -   Процесс может содержать только один экземпляр подсистемы расширенных событий (**подсистема расширенных событий**), который выполняет указанные ниже действия.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 14
   
     -   Когда буферы заполняются, они отправляются целям.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

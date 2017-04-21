@@ -1,27 +1,31 @@
 ---
-title: "Цель &#171;Средство трассировки событий для Windows&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Цель «Средство трассировки событий для Windows»"
-  - "цель ETW"
-  - "цели [расширенные события SQL Server], цель трассировки событий для Windows"
+title: "Цель &quot;Средство трассировки событий для Windows&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Цель &#171;Средство трассировки событий для Windows&#187;
+# <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  
@@ -55,7 +59,7 @@ caps.handback.revision: 13
 |default_xe_session_name|Любая строка длиной до 256 символов. Это значение является необязательным.|Имя сеанса расширенных событий. По умолчанию это XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Любая строка длиной до 256 символов. Это значение является необязательным.|Путь к файлу журнала сеанса расширенных событий. По умолчанию %TEMP%\ XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Любое целое число без знака. Это значение является необязательным.|Размер файла журнала для сеанса расширенных событий (в мегабайтах, МБ). По умолчанию установлено значение 20 МБ.|  
-|default_etw_session_buffer_size_kb|Любое целое число без знака. Это значение является необязательным.|Размер буфера в памяти (в килобайтах) для сеанса расширенных событий. Значение по умолчанию — 128 КБ.|  
+|default_etw_session_buffer_size_kb|Любое целое число без знака. Это значение является необязательным.|Размер буфера в памяти (в килобайтах) для сеанса расширенных событий. Значение по умолчанию — 128 КБ.|  
 |retries|Любое целое число без знака.|Число попыток публикации события в подсистеме ETW до удаления события. Значение по умолчанию равно 0.|  
   
  Конфигурация указанных параметров не обязательна. Цель ETW использует для них параметры по умолчанию.  
@@ -77,9 +81,9 @@ caps.handback.revision: 13
     > [!IMPORTANT]  
     >  После начала первого сеанса путь к файлу изменить нельзя.  
   
--   MOF-файлы находятся в папке: *\<ваш путь установки>\>*\Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](http://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
+-   MOF-файлы находятся в папке: *\<ваш путь установки>*\Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](http://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
   
-## Добавление цели к сеансу  
+## <a name="adding-the-target-to-a-session"></a>Добавление цели к сеансу  
  Для добавления назначения счетчика событий в сеанс расширенных событий следует использовать одну из следующих инструкций при создании или изменении сеанса события:  
   
 ```  
@@ -88,8 +92,8 @@ ADD TARGET package0.etw_classic_sync_target
   
  Дополнительные сведения о полном примере, который показывает, как использовать назначение трассировки событий, включая просмотр данных, см. в разделе [отслеживать активность системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## См. также:  
- [Цели расширенных событий SQL Server](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>См. также:  
+ [Цели расширенных событий SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)  

@@ -1,22 +1,26 @@
 ---
-title: "Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
   В этом разделе приведены рекомендации по вызову хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным.  
   
  Невозможна итерация курсора по хранимым процедурам, скомпилированным в собственном коде.  
@@ -35,7 +39,7 @@ caps.handback.revision: 10
   
  Следующие рекомендации применимы к вызовам хранимой процедуры, скомпилированным в собственном коде, с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Наиболее эффективный способ однократного вызова хранимой процедуры — выполнить прямой вызов RPC с помощью предложений **SQLExecDirect** и ODBC CALL. Не используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.  
+ Наиболее эффективный способ однократного вызова хранимой процедуры — выполнить прямой вызов RPC с помощью предложений **SQLExecDirect** и ODBC CALL. Не используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE** . Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.  
   
  Наиболее эффективный способ неоднократного вызова хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — через подготовленные вызовы процедур RPC. Подготовленные вызовы RPC выполняются следующим образом с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -79,8 +83,8 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## Использование ODBC для выполнения хранимых процедур, скомпилированных в собственном коде  
- В этом образце показано, как привязать параметры и выполнить хранимые процедуры с помощью драйвера Native Client ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Следующий пример компилируется в консольное приложение, которое вставляет один заказ, используя прямое выполнение, а также вставляет сведения о заказе, используя подготовленное выполнение.  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>Использование ODBC для выполнения хранимых процедур, скомпилированных в собственном коде  
+ В этом образце показано, как привязать параметры и выполнить хранимые процедуры с помощью драйвера Native Client ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Следующий пример компилируется в консольное приложение, которое вставляет один заказ, используя прямое выполнение, а также вставляет сведения о заказе, используя подготовленное выполнение.  
   
  Запуск примера:  
   
@@ -102,7 +106,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
     SELECT * FROM dbo.Item  
     ```  
   
- Далее приведен листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)], который создает оптимизированные для памяти объекты базы данных.  
+ Далее приведен листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)] , который создает оптимизированные для памяти объекты базы данных.  
   
 ```  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))  
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

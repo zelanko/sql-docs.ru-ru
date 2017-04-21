@@ -1,22 +1,26 @@
 ---
-title: "Поддерживаемые типы данных для выполняющейся в памяти OLTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Поддерживаемые типы данных для выполняющейся в памяти OLTP | Документация Майкрософт"
+ms.custom: 
+ms.date: 05/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a928c1f77586198fd0d33cafa445ea406a437c6b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Поддерживаемые типы данных для выполняющейся в памяти OLTP
+# <a name="supported-data-types-for-in-memory-oltp"></a>Поддерживаемые типы данных для выполняющейся в памяти OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этой статье перечислены типы данных, которые не поддерживаются для компонентов выполняющейся в памяти OLTP:  
@@ -25,16 +29,16 @@ caps.handback.revision: 26
   
 -   Скомпилированные в собственном коде хранимые процедуры  
   
-## Неподдерживаемые типы данных  
+## <a name="unsupported-data-types"></a>Неподдерживаемые типы данных  
  Следующие типы данных не поддерживаются:  
   
 ||||  
 |-|-|-|  
-|[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography (Transact-SQL)](../Topic/geography%20\(Transact-SQL\).md)|[geometry (Transact-SQL)](../Topic/geometry%20\(Transact-SQL\).md)|  
-|[hierarchyid (Transact-SQL)](../Topic/hierarchyid%20\(Transact-SQL\).md)|[rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)|[xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)|  
+|[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography (Transact-SQL)](../../t-sql/spatial-geography/spatial-types-geography.md)|[geometry (Transact-SQL)](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)|  
+|[hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)|[xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)|  
 |[sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)|Определяемые пользователем типы|.|  
   
-## Важные поддерживаемые типы данных  
+## <a name="notable-supported-data-types"></a>Важные поддерживаемые типы данных  
  Большинство типов данных поддерживаются компонентами выполняющейся в памяти OLTP. Обратите внимание на следующие компоненты:  
   
 |Строковые и двоичные типы|Дополнительные сведения|  
@@ -50,7 +54,7 @@ caps.handback.revision: 26
 - Оптимизированная для памяти таблица может содержать строковые и двоичные столбцы с максимальной длиной таких типов данных, например `varchar(max)`.  
 
 
-### Определение LOB-столбцов и других столбцов вне строки
+### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Определение LOB-столбцов и других столбцов вне строки
 
 Следующая инструкция Transact-SQL SELECT возвращает все столбцы вне строки для таблиц, оптимизированных для памяти. Обратите внимание на следующее.
 
@@ -76,7 +80,7 @@ SELECT
 ```
 
 
-#### Поддержка скомпилированных в собственном коде модулей для LOB
+#### <a name="natively-compiled-modules-support-for-lobs"></a>Поддержка скомпилированных в собственном коде модулей для LOB
 
 
 Встроенная строковая функция, используемая в скомпилированных в собственном коде модулях, например в процедуре, скомпилированной в собственном коде, может принимать строковый тип LOB. Например в процедуре, скомпилированной в собственном коде, функция LTrim может ввести параметр типа nvarchar(max) или varbinary(max).
@@ -84,16 +88,17 @@ SELECT
 Эти типы LOB могут быть возвращаемым типом определяемой пользователем скалярной функции (UDF).
 
 
-### Прочие типы данных
+### <a name="other-data-types"></a>Прочие типы данных
 
 
 |Другие типы|Дополнительные сведения|  
 |-----------------|--------------------------|  
-|табличные типы|[Переменные оптимизированной для памяти таблицы](../Topic/Memory-Optimized%20Table%20Variables.md)|  
+|табличные типы|[Переменные оптимизированной для памяти таблицы](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поддержка Transact-SQL для In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [Реализация LOB Columns в таблице, оптимизированной для памяти](http://msdn.microsoft.com/ru-ru/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
+ [Реализация LOB Columns в таблице, оптимизированной для памяти](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [Реализация SQL_VARIANT в таблице, оптимизированной для памяти](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   
+

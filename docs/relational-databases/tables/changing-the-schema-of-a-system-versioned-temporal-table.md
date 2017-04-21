@@ -1,28 +1,32 @@
 ---
-title: "Изменение схемы темпоральной таблицы с системным управлением версиями | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение схемы темпоральной таблицы с системным управлением версиями | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение схемы темпоральной таблицы с системным управлением версиями
+# <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Изменение схемы темпоральной таблицы с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается использование инструкции **ALTER TABLE** , чтобы добавить, изменить или удалить столбец.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  Ниже приведены примеры изменения схемы темпоральной таблицы.  
   
 ```  
@@ -52,7 +56,7 @@ ALTER TABLE dbo.Department
   
 ```  
   
-### Важные замечания  
+### <a name="important-remarks"></a>Важные замечания  
   
 -   Чтобы изменить схему темпоральной таблицы, требуется разрешение**CONTROL** на текущую и прежнюю таблицы.  
   
@@ -60,9 +64,9 @@ ALTER TABLE dbo.Department
   
 -   Указанные изменения схемы распространяются на прежнюю таблицу соответствующим образом (в зависимости от типа изменений).  
   
--   Чтобы добавить столбец, который не допускает значений NULL, или изменить существующий столбец, который допускает значения NULL, необходимо указать значение по умолчанию для существующих строк. Система создаст дополнительное значение по умолчанию с таким же значением и применит его к прежним таблицам. Добавление **DEFAULT** в непустую таблицу — это операция, связанная с размером данных. Она предоставляется во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме Enterprise Edition (в этом выпуске это операция с метаданными).  
+-   Чтобы добавить столбец, который не допускает значений NULL, или изменить существующий столбец, который допускает значения NULL, необходимо указать значение по умолчанию для существующих строк. Система создаст дополнительное значение по умолчанию с таким же значением и применит его к прежним таблицам. Добавление **DEFAULT** в непустую таблицу — это операция, связанная с размером данных. Она предоставляется во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , кроме Enterprise Edition (в этом выпуске это операция с метаданными).  
   
--   Добавление столбцов varchar(max), nvarchar(max), varbinary(max) или XML со значениями по умолчанию — это операция обновления данных, которая будет доступна во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Добавление столбцов varchar(max), nvarchar(max), varbinary(max) или XML со значениями по умолчанию — это операция обновления данных, которая будет доступна во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Новый столбец нельзя добавить в сети, если после добавления будет превышено ограничение размера строки.  
   
@@ -84,7 +88,7 @@ ALTER TABLE dbo.Department
   
     -   добавление столбца **ROWGUIDCOL** или изменение существующего столбца на **ROWGUIDCOL**.  
   
-         В примере ниже показано изменение схемы, для которой требуется параметр **SYSTEM_VERSIONING = OFF** (добавление столбца **IDENTITY**).   
+         В примере ниже показано изменение схемы, для которой требуется параметр **SYSTEM_VERSIONING = OFF** (добавление столбца **IDENTITY** ).   
         Обратите внимание, что в этом примере отключена проверка согласованности данных. Эта проверка не требуется, если изменения схемы выполнены в рамках транзакции, так как в течение этого периода не могут произойти другие изменения данных.  
   
         ```  
@@ -101,10 +105,10 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## Эта статья помогла вам? Мы слушаем  
- Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
+ Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md)   
  [Приступая к работе c темпоральными таблицами с системным управлением версиями](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -116,3 +120,4 @@ ALTER TABLE dbo.Department
  [Остановка системного управления версиями в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

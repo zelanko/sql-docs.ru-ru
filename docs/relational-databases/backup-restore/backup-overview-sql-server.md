@@ -1,44 +1,48 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы [SQL Server], резервное копирование данных"
-  - "резервные копии [SQL Server]"
-  - "резервные копии баз данных [SQL Server]"
-  - "типы резервного копирования [SQL Server]"
-  - "резервные копии данных [SQL Server]"
-  - "создание резервных копий таблиц [SQL Server]"
-  - "восстановление баз данных [SQL Server], резервные копии"
-  - "резервное копирование [SQL Server], о резервном копировании"
-  - "восстановление [SQL Server], типы резервного копирования"
-  - "резервные копии [SQL Server], сведения"
-  - "backups [SQL Server], table-level backups unsupported"
+title: "Общие сведения о резервном копировании (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server], backing up data
+- backups [SQL Server]
+- database backups [SQL Server]
+- backup types [SQL Server]
+- data backups [SQL Server]
+- backing up tables [SQL Server]
+- database restores [SQL Server], backups
+- backing up [SQL Server], about backing up
+- restoring [SQL Server], backup types
+- backups [SQL Server], about
+- backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup Overview (SQL Server)
-  В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
+  В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-## Термины
+## <a name="terms"></a>Термины
  
  **создание резервных копий**  
  Копирование данных или записей журнала из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или журнала ее транзакций на устройство для резервного копирования, например на диск, на котором создается резервная копия данных или журнала.  
   
 **резервная копия**  
- Копия данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используемая для восстановления данных после возникновения ошибки. Резервная копия данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается на уровне базы данных для одного или нескольких файлов или групп файлов. Нельзя создать резервные копии на уровне таблиц. Кроме резервной копии данных модель полного восстановления требует создания резервной копии журнала транзакций.  
+ Копия данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемая для восстановления данных после возникновения ошибки. Резервная копия данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается на уровне базы данных для одного или нескольких файлов или групп файлов. Нельзя создать резервные копии на уровне таблиц. Кроме резервной копии данных модель полного восстановления требует создания резервной копии журнала транзакций.  
   
 **[модель восстановления](../../relational-databases/backup-restore/recovery-models-sql-server.md)**  
  Свойство базы данных, с помощью которого выполняется управление обслуживанием журналов транзакций в базе данных. Существует три модели восстановления: простая модель восстановления, модель полного восстановления и модель восстановления с неполным протоколированием. Модель восстановления базы данных определяет требования к резервному копированию и восстановлению.  
@@ -46,10 +50,10 @@ caps.handback.revision: 84
  **[восстановление](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
  Многоэтапный процесс, в ходе которого все данные и страницы журнала копируются из указанной резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в определенную базу данных, а затем выполняется накат всех фиксированных транзакций, записанных в резервной копии журнала, путем внесения новых данных на основе зарегистрированных изменений.  
   
- ## Типы резервного копирования  
+ ## <a name="types-of-backups"></a>Типы резервного копирования  
   
  **[резервная копия, предназначенная только для копирования](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
- Специальная резервная копия, независимая от обычной последовательности резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Специальная резервная копия, независимая от обычной последовательности резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **резервное копирование данных**   
  Резервная копия данных всей базы данных (резервная копия базы данных), части базы данных (частичная резервная копия) или набора файлов данных или файловых групп (резервная копия файлов).  
@@ -58,7 +62,7 @@ caps.handback.revision: 84
  Резервная копия базы данных. Полные резервные копии базы данных отображают состояние всей базы данных на момент завершения резервного копирования. Разностные резервные копии базы данных содержат только изменения базы данных с момента последнего полного резервного копирования.  
   
  **[разностная резервная копия](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- Резервная копия, основанная на последнем полном резервировании частичной базы данных или набора файлов данных или групп файлов (*базовая копия для разностного копирования*), которая содержит только добавочные данные, измененные по сравнению с базовой копией для разностного копирования.  
+ Резервная копия, основанная на последнем полном резервировании частичной базы данных или набора файлов данных или групп файлов ( *базовая копия для разностного копирования*), которая содержит только добавочные данные, измененные по сравнению с базовой копией для разностного копирования.  
   
  Частичная разностная резервная копия, включающая только те экстенты данных, которые изменились в файловых группах с момента создания предыдущей частичной резервной копии, называется основой для разностной резервной копии.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 84
  **[частичная резервная копия](../../relational-databases/backup-restore/partial-backups-sql-server.md)**  
  Содержит данные только из некоторых файловых групп базы данных, включая данные в первичной файловой группе, все файловые группы, доступные для чтения-записи, а также любые дополнительно указанные файлы, доступные только для чтения.  
   
-## Носители резервных копий: термины и определения  
+## <a name="backup-media-terms-and-definitions"></a>Носители резервных копий: термины и определения  
   
  **[устройство резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
  Диск или ленточное устройство, на которые записываются резервные копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для последующего восстановления. Резервные копии SQL Server можно также записать в службу хранилища больших двоичных объектов Windows Azure, а формат **URL** используется, чтобы указать назначение и имя файла резервной копии. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -100,7 +104,7 @@ caps.handback.revision: 84
 ##  <a name="Restrictions"></a>  Ограничения на операции резервного копирования 
  Резервное копирование может выполняться, если база данных находится в режиме «в сети» и используется. Однако действуют следующие ограничения.  
   
-### Нельзя создать резервную копию данных, находящихся в режиме "вне сети"  
+### <a name="cannot-back-up-offline-data"></a>Нельзя создать резервную копию данных, находящихся в режиме "вне сети"  
  Любая операция резервного копирования, которая явно или неявно ссылается на данные, находящиеся в режиме «вне сети», завершается неудачей. Ниже следуют некоторые наиболее распространенные примеры этого.  
   
 -   Запрашивается создание полной резервной копии, но одна файловая группа в базе данных находится в режиме «вне сети». Операция завершается неудачно, так как в полное резервное копирование неявно включены все файловые группы.  
@@ -113,7 +117,7 @@ caps.handback.revision: 84
   
  Обычно резервное копирование журнала проходит успешно, даже если один или несколько файлов данных недоступны. Однако если какой-нибудь файл содержит массовые изменения, сделанные в модели восстановления с неполным протоколированием, то для успешного резервного копирования необходимо, чтобы все файлы находились в режиме «в сети».  
   
-### Ограничения параллелизма   
+### <a name="concurrency-restrictions"></a>Ограничения параллелизма   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует процесс резервного копирования в сети, что позволяет создавать резервную копию базы данных во время ее использования. Во время резервного копирования можно производить большинство операций. Например, во время создания резервной копии разрешены инструкции INSERT, UPDATE и DELETE. При попытке приступить к выполнению операции резервного копирования во время создания или удаления файла базы данных выполнение операции резервного копирования будет отложено до завершения создания или удаления либо до истечения времени ожидания.  
   
  Следующие операции запрещены во время создания резервной копии базы данных или журнала транзакций.  
@@ -147,7 +151,7 @@ caps.handback.revision: 84
   
 -   [Восстановление резервной копии с устройства (SQL Server)](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Создание резервной копии**  
   
@@ -166,13 +170,13 @@ caps.handback.revision: 84
   
 -   [Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки (SQL Server)](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки (SQL Server)](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
 -   [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## См. также 
+## <a name="and-more"></a>См. также 
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
@@ -180,3 +184,4 @@ caps.handback.revision: 84
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

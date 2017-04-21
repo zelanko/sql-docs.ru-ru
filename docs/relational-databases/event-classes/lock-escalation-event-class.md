@@ -1,28 +1,32 @@
 ---
-title: "Класс событий Lock:Escalation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Escalation, класс событий"
-  - "укрупнение блокировки [SQL Server], класс событий"
+title: "Класс событий Lock:Escalation | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Escalation event class
+- lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3210940a28a25e89e4e69dbcb044503be2ae20d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Lock:Escalation
+# <a name="lockescalation-event-class"></a>Класс событий Lock:Escalation
   Класс событий **Lock:Escalation** возникает при укрупнении уровня блокировки, например при преобразовании блокировки строки в блокировку объекта. Класс событий Escalation имеет идентификатор события 60.  
   
-## Столбцы данных класса событий Lock:Escalation  
+## <a name="lockescalation-event-class-data-columns"></a>Столбцы данных класса событий Lock:Escalation  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,26 +42,26 @@ caps.handback.revision: 47
 |**IntegerData**|**int**|Число блокировок HoBT. Число блокировок для HoBT в момент укрупнения блокировки.|25|Да|  
 |**IntegerData2**|**int**|Число укрупненных блокировок. Общее число преобразованных блокировок. Эти структуры блокировок освобождаются, поскольку они уже охватываются укрупненной блокировкой.|55|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LineNumber**|**int**|Номер строки инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].|5|Да|  
-|**LoginName**|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LineNumber**|**int**|Номер строки инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|5|Да|  
+|**LoginName**|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**Режим**|**int**|Режим блокировки после укрупнения:<br /><br /> 0=NULL — совместим с любыми другими режимами блокировки (LCK_M_NL)<br /><br /> 1 = блокировка стабильности схемы (LCK_M_SCH_S)<br /><br /> 2 = блокировка изменения схемы (LCK_M_SCH_S)<br /><br /> 3 = совмещаемая блокировка (LCK_M_S)<br /><br /> 4 = блокировка обновления (LCK_M_U)<br /><br /> 5 = монопольная блокировка (LCK_M_X)<br /><br /> 6 = коллективная блокировка намерения (LCK_M_IS)<br /><br /> 7 = блокировка намерения обновления (LCK_M_IU)<br /><br /> 8 = монопольная блокировка намерения (LCK_M_IX)<br /><br /> 9 = совмещаемая блокировка с намерением обновления (LCK_M_SIU)<br /><br /> 10 = совмещаемая блокировка с намерением монопольного доступа (LCK_M_SIX)<br /><br /> 11 = блокировка обновления с намерением монопольного доступа (LCK_M_UIX)<br /><br /> 12 = блокировка массового обновления (LCK_M_BU)<br /><br /> 13 = совмещаемая блокировка диапазона ключей — совмещаемая блокировка (LCK_M_RS_S)<br /><br /> 14 = совмещаемая блокировка диапазона ключей — блокировка обновления (LCK_M_RS_U)<br /><br /> 15 = блокировка вставки в диапазон ключей — блокировка NULL (LCK_M_RI_NL)<br /><br /> 16 = блокировка вставки в диапазон ключей — совмещаемая блокировка (LCK_M_RI_S)<br /><br /> 17 = блокировка вставки в диапазон ключей — блокировка обновления (LCK_M_RI_U)<br /><br /> 18 = блокировка вставки в диапазон ключей — монопольная блокировка (LCK_M_RI_X)<br /><br /> 19 = монопольная блокировка диапазона ключей — совмещаемая блокировка (LCK_M_RX_S)<br /><br /> 20 = монопольная блокировка диапазона ключей — блокировка обновления (LCK_M_RX_U)<br /><br /> 21 = монопольная блокировка диапазона ключей — монопольная блокировка (LCK_M_RX_X)|32|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**ObjectID**|**int**|Присваиваемый системой идентификатор таблицы, для которой сработало укрупнение блокировки.|22|Да|  
 |**ObjectID2**|**bigint**|Идентификатор связанного объекта или сущности. (Идентификатор HoBT, для которого сработало укрупнение блокировки).|56|Да|  
-|**Offset**|**int**|Начальное смещение инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].|61|Да|  
+|**Offset**|**int**|Начальное смещение инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Да|  
 |**OwnerID**|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6 = WAITFOR_QUERY|58|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
-|**TextData**|**ntext**|Текст инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], которая вызвала укрупнение блокировки.|1|Да|  
+|**TextData**|**ntext**|Текст инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которая вызвала укрупнение блокировки.|1|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |**Тип**|**int**|Гранулярность укрупнения блокировки:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (уровень таблицы)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Да|  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В приведенном ниже примере используется процедура `sp_trace_create` для создания трассировки, процедура `sp_trace_setevent` для добавления столбцов укрупнения блокировки в трассировку, затем процедура `sp_trace_setstatus` для запуска трассировки. В таких инструкциях, как `EXEC sp_trace_setevent @TraceID, 60, 22, 1`, число `60` показывает класс события укрупнения блокировки, `22` показывает столбец **ObjectID** , а `1` присваивает событию трассировки значение ON.  
   
 ```  
@@ -77,7 +81,7 @@ EXEC sp_trace_setstatus @TraceID, 1;
 GO  
 ```  
   
- Теперь трассировка работает, можно выполнять необходимые инструкции для трассировки. Когда они завершатся, выполните приведенный ниже код, чтобы остановить и закрыть трассировку. В этом примере значение `fn_trace_getinfo`, используемое в инструкциях `traceid`, получается с помощью функции `sp_trace_setstatus`.  
+ Теперь трассировка работает, можно выполнять необходимые инструкции для трассировки. Когда они завершатся, выполните приведенный ниже код, чтобы остановить и закрыть трассировку. В этом примере значение `fn_trace_getinfo` , используемое в инструкциях `traceid` , получается с помощью функции `sp_trace_setstatus` .  
   
 ```  
 -- After the trace is complete.  
@@ -95,7 +99,7 @@ EXEC sp_trace_setstatus @TraceID, 2;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

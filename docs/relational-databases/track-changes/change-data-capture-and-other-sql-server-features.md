@@ -1,24 +1,28 @@
 ---
-title: "Система отслеживания измененных данных и другие функции SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "система отслеживания измененных данных [SQL Server], другие функции SQL Server и"
+title: "Отслеживание измененных данных и другие функции SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69a41e2138b3b2cc0768dacd0fca4e6363ee18e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Система отслеживания измененных данных и другие функции SQL Server
+# <a name="change-data-capture-and-other-sql-server-features"></a>Система отслеживания измененных данных и другие функции SQL Server
   В данном разделе описывается взаимодействие следующих функций и системы отслеживания измененных данных.  
   
 -   [Отслеживание изменений](#ChangeTracking)  
@@ -29,7 +33,7 @@ caps.handback.revision: 14
   
 -   [Восстановление или прикрепление базы данных, активированной для системы отслеживания измененных данных](#RestoreOrAttach)  
   
-##  <a name="ChangeTracking"></a> Отслеживание изменений  
+##  <a name="ChangeTracking"></a> Change Tracking  
  Отслеживание измененных данных и [отслеживание изменений](../../relational-databases/track-changes/about-change-tracking-sql-server.md) можно активировать на одной и той же базе данных. Никаких особых предосторожностей не требуется. Дополнительные сведения см. в разделе [Работа с отслеживанием изменений (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
 ##  <a name="DatabaseMirroring"></a> Зеркальное отображение базы данных  
@@ -37,16 +41,16 @@ caps.handback.revision: 14
   
 1.  Убедитесь, что запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на новом экземпляре основного сервера.  
   
-2.  Создайте задание отслеживания и задание очистки в новой основной базе данных (ранее зеркальной базе данных). Создание заданий выполняйте с помощью хранимой процедуры [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+2.  Создайте задание отслеживания и задание очистки в новой основной базе данных (ранее зеркальной базе данных). Создание заданий выполняйте с помощью хранимой процедуры [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) .  
   
- Для просмотра текущей конфигурации задания очистки или отслеживания пользуйтесь хранимой процедурой [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) в новом экземпляре основного сервера. Для конкретной базы данных задание отслеживания называется cdc.*имя_базы_данных*_capture, а задание очистки — cdc.*имя_базы_данных*_cleanup, где *имя_базы_данных* — имя базы данных.  
+ Для просмотра текущей конфигурации задания очистки или отслеживания пользуйтесь хранимой процедурой [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) в новом экземпляре основного сервера. Для конкретной базы данных задание отслеживания называется cdc.*имя_базы_данных*_capture, а задание очистки — cdc.*имя_базы_данных*_cleanup, где *имя_базы_данных* — имя базы данных.  
   
  Для изменения конфигурации задания пользуйтесь хранимой процедурой [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
  Сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-##  <a name="TransReplication"></a> Репликация транзакций  
- Система отслеживания измененных данных и репликация транзакций могут сосуществовать в одной базе данных, но если обе эти функции были включены, то заполнение таблиц изменений будет выполняться другим способом. Для считывания изменений из журнала транзакций система отслеживания измененных данных и репликация транзакций всегда используют одну и ту же процедуру [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md). Если система отслеживания измененных данных включена отдельно, то процедуру **sp_replcmds** вызывает задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если в базе данных включены обе эти функции, процедуру **sp_replcmds** вызывает агент чтения журнала. Агент заполняет как таблицы изменений, так и таблицы базы данных распространителя. Дополнительные сведения см. в статье [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md).  
+##  <a name="TransReplication"></a> Transactional Replication  
+ Система отслеживания измененных данных и репликация транзакций могут сосуществовать в одной базе данных, но если обе эти функции были включены, то заполнение таблиц изменений будет выполняться другим способом. Для считывания изменений из журнала транзакций система отслеживания измененных данных и репликация транзакций всегда используют одну и ту же процедуру [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md). Если система отслеживания измененных данных включена отдельно, то процедуру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_replcmds **вызывает задание агента**. Если в базе данных включены обе эти функции, процедуру **sp_replcmds**вызывает агент чтения журнала. Агент заполняет как таблицы изменений, так и таблицы базы данных распространителя. Дополнительные сведения см. в статье [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
  Рассмотрим случай, когда для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] была включена система отслеживания измененных данных и две таблицы были включены для отслеживания. Для заполнения таблиц изменений задание отслеживания вызывает процедуру **sp_replcmds**. База данных активируется для репликации транзакций, после этого создается публикация. Для базы данных создается агент чтения журнала, задание отслеживания удаляется. Агент чтения журнала продолжает просматривать журнал, начиная с последнего регистрационного номера транзакции, зафиксированного в таблице изменений. Это обеспечивает согласованность данных в таблицах изменений. Если в данной базе данных будет отключена репликация транзакций, то агент чтения журнала будет удален, а задание отслеживания будет создано повторно.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 14
   
 -   Если база данных восстанавливается на другом сервере, то по умолчанию система отслеживания измененных данных будет отключена, а все связанные метаданные будут удалены.  
   
-     Для сохранения системы отслеживания измененных данных в активированном состоянии при восстановлении базы данных следует использовать параметр **KEEP_CDC**. Дополнительные сведения об этом параметре см. в разделе [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md).  
+     Для сохранения системы отслеживания измененных данных в активированном состоянии при восстановлении базы данных следует использовать параметр **KEEP_CDC** . Дополнительные сведения об этом параметре см. в разделе [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 -   Если база данных отсоединяется и присоединяется к тому же или другому серверу, то система отслеживания измененных данных остается активированной.  
   
@@ -72,10 +76,11 @@ caps.handback.revision: 14
   
  Процедуру [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) можно использовать для отключения отслеживания измененных данных в восстановленной или присоединенной базе данных.  
   
-## Система отслеживания измененных данных и AlwaysOn  
+## <a name="change-data-capture-and-always-on"></a>Система отслеживания измененных данных и AlwaysOn  
  При использовании AlwaysOn перечисление изменений необходимо выполнять во вторичной реплике для уменьшения загрузки диска в первичной.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
+

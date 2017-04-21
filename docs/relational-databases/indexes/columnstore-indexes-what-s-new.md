@@ -1,26 +1,30 @@
 ---
-title: "Сводка функций индексов columnstore по версиям | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Новые возможности индексов columnstore | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сводка функций индексов columnstore по версиям
+# <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Сводка функций columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и последних выпусков Premium для базы данных SQL Microsoft Azure, хранилища данных SQL Azure и хранилища данных Parallel Data Warehouse.  
+  Сводка функций columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и последних выпусков Premium для базы данных SQL Microsoft Azure, хранилища данных SQL Azure и хранилища данных Parallel Data Warehouse.  
 
  >[!NOTE]
  > Для базы данных SQL Azure индексы columnstore доступны только в выпуске Premium.
@@ -51,7 +55,7 @@ caps.handback.revision: 27
  * Чтобы создать некластеризованный индекс columnstore для чтения, сохраните индекс в файловой группе только для чтения.  
   
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Они расширяют возможности хранения данных и обеспечивают поддержку оперативной аналитики в реальном времени.  
+ В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Они расширяют возможности хранения данных и обеспечивают поддержку оперативной аналитики в реальном времени.  
   
 ### <a name="functional"></a>Функции  
   
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   Пакетная обработка обеспечивает двукратное (и более) повышение производительности, но она доступна только для параллельного выполнения запросов.  
   
 ## <a name="see-also"></a>См. также:  
- [Руководство по индексам columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Загрузка данных индексов columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ Руководство по индексам Columnstore   
+ Загрузка данных индексов columnstore   
  [Производительность запросов индексов columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Индексы сolumnstore для хранилищ данных](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ Индексы сolumnstore для хранилищ данных   
  [Дефрагментация индексов columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

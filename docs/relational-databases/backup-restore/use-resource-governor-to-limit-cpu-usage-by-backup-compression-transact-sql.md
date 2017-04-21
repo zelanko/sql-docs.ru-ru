@@ -1,31 +1,35 @@
 ---
-title: "Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сжатие резервных копий [SQL Server], регулятор ресурсов"
-  - "сжатие резервных копий [SQL Server], загрузка ЦП"
-  - "сжатие [SQL Server], сжатие резервных копий"
-  - "резервные копии, сжатие"
-  - "регулятор ресурсов, сжатие резервных копий"
+title: "Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup compression [SQL Server], Resource Governor
+- backup compression [SQL Server], CPU usage
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
+# <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  По умолчанию резервное копирование с использованием сжатия существенно увеличивает загрузку ЦП, а дополнительная загрузка ЦП процессом сжатия может неблагоприятно повлиять на параллельные операции. Поэтому может понадобиться создать низкоприоритетную сжатую резервную копию в сеансе, загрузка ЦП в котором ограничивается [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) в случае конфликта ЦП. В этом разделе представлен сценарий, классифицирующий сеансы отдельного пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем сопоставления их с той или иной группой рабочей нагрузки регулятора ресурсов, которая в таких случаях ограничивает загрузку ЦП.  
+  По умолчанию резервное копирование с использованием сжатия существенно увеличивает загрузку ЦП, а дополнительная загрузка ЦП процессом сжатия может неблагоприятно повлиять на параллельные операции. Поэтому может понадобиться создать низкоприоритетную сжатую резервную копию в сеансе, загрузка ЦП в котором ограничивается[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) в случае конфликта ЦП. В этом разделе представлен сценарий, классифицирующий сеансы отдельного пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем сопоставления их с той или иной группой рабочей нагрузки регулятора ресурсов, которая в таких случаях ограничивает загрузку ЦП.  
   
 > [!IMPORTANT]  
 >  В данном сценарии регулятора ресурсов классификация сеансов может основываться на имени пользователя, названии приложения или каком-либо другом критерии различения соединения. Дополнительные сведения см. в разделах [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md) и [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
@@ -43,9 +47,9 @@ caps.handback.revision: 25
 ##  <a name="setup_login_and_user"></a> Создание учетной записи и пользователя для операций с низким приоритетом  
  Для сценария в этом разделе требуется низкоприоритетное имя входа в систему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователь. Имя пользователя будет использоваться для классификации сеансов, запущенных в процессе входа, и для направления их в группу рабочей нагрузки регулятора ресурсов, которая ограничивает загрузку ЦП.  
   
- Ниже описываются этапы настройки имени для входа и пользователя для этой цели, за которыми следует пример на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] — "Пример А. Настройка имени входа и пользователя (Transact-SQL)".  
+ Ниже описываются этапы настройки имени для входа и пользователя для этой цели, за которыми следует пример на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] — "Пример А. Настройка имени входа и пользователя (Transact-SQL)".  
   
-### Настройка имени входа и пользователя базы данных для классификации сеансов  
+### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Настройка имени входа и пользователя базы данных для классификации сеансов  
   
 1.  Создайте имя входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания низкоприоритетных сжатых резервных копий.  
   
@@ -77,13 +81,13 @@ caps.handback.revision: 25
   
      Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
-### Пример А. Настройка имени входа и пользователя (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Пример А. Настройка имени входа и пользователя (Transact-SQL)  
  Следующий пример касается только случая, когда выбрано создание нового имени входа и пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для низкоприоритетных резервных копий. В качестве альтернативы можно использовать существующие имя входа и пользователя, если таковой существует.  
   
 > [!IMPORTANT]  
->  В приведенном ниже примере используется образец имени для входа и пользователя — *имя_домена*`\MAX_CPU`. Замените их именами входа и пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые планируется использовать при создании низкоприоритетных сжатых резервных копий.  
+>  В приведенном ниже примере используется образец имени для входа и пользователя — *имя_домена*`\MAX_CPU`. Замените их именами входа и пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые планируется использовать при создании низкоприоритетных сжатых резервных копий.  
   
- В этом примере создается имя для входа для учетной записи Windows *имя_домена*`\MAX_CPU`, а затем этому имени для входа предоставляется разрешение VIEW SERVER STATE. Это разрешение позволяет проверить классификацию сеансов имени входа в регуляторе ресурсов. Затем для имени *имя_домена*`\MAX_CPU` создается пользователь и добавляется к предопределенной роли db_backupoperator для образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Это имя пользователя будет использоваться функцией-классификатором в регуляторе ресурсов.  
+ В этом примере создается имя для входа для учетной записи Windows *имя_домена*`\MAX_CPU` , а затем этому имени для входа предоставляется разрешение VIEW SERVER STATE. Это разрешение позволяет проверить классификацию сеансов имени входа в регуляторе ресурсов. Затем для имени *имя_домена*`\MAX_CPU` создается пользователь и добавляется к предопределенной роли db_backupoperator для образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Это имя пользователя будет использоваться функцией-классификатором в регуляторе ресурсов.  
   
 ```tsql  
 -- Create a SQL Server login for low-priority operations  
@@ -112,7 +116,7 @@ GO
   
 2.  Создайте и настройте группу рабочей нагрузки регулятора ресурсов, которая будет использовать этот пул.  
   
-3.  Создайте *функцию-классификатор* — определяемую пользователем функцию, возвращаемые значения которой используются регулятором Resource Governor для классификации сеансов с целью направления в соответствующую группу рабочей нагрузки.  
+3.  Создайте *функцию-классификатор*— определяемую пользователем функцию, возвращаемые значения которой используются регулятором Resource Governor для классификации сеансов с целью направления в соответствующую группу рабочей нагрузки.  
   
 4.  Зарегистрируйте эту функцию-классификатор в регуляторе ресурсов.  
   
@@ -131,7 +135,7 @@ GO
   
 -   [Создание группы рабочей нагрузки](../../relational-databases/resource-governor/create-a-workload-group.md)  
   
-### Настройка регулятора ресурсов для ограничения загрузки ЦП (Transact-SQL)  
+### <a name="to-configure-resource-governor-for-limiting-cpu-usage-transact-sql"></a>Настройка регулятора ресурсов для ограничения загрузки ЦП (Transact-SQL)  
   
 1.  Выполните инструкцию [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) , чтобы создать пул ресурсов. В примере этой процедуры используется следующий синтаксис:  
   
@@ -139,11 +143,11 @@ GO
   
      *Value* — целое число от 1 до 100, которое указывает максимальную среднюю пропускную способность ЦП в процентах. Рекомендуемое значение зависит от конкретной среды. Для иллюстрации в примере из этого разделе используется значение 20% (MAX_CPU_PERCENT = 20).  
   
-2.  Выполните инструкцию [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md), чтобы создать группу рабочей нагрузки для низкоприоритетных операций, загрузку ЦП которыми следует регулировать. В примере этой процедуры используется следующий синтаксис:  
+2.  Выполните инструкцию [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) , чтобы создать группу рабочей нагрузки для низкоприоритетных операций, загрузку ЦП которыми следует регулировать. В примере этой процедуры используется следующий синтаксис:  
   
      CREATE WORKLOAD GROUP *имя_группы* USING *имя_пула*;  
   
-3.  Выполните инструкцию [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md), чтобы создать функцию-классификатор, сопоставляющую созданную на предыдущем этапе группу рабочей нагрузки с пользователем с низкоприоритетным именем входа. В примере этой процедуры используется следующий синтаксис:  
+3.  Выполните инструкцию [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) , чтобы создать функцию-классификатор, сопоставляющую созданную на предыдущем этапе группу рабочей нагрузки с пользователем с низкоприоритетным именем входа. В примере этой процедуры используется следующий синтаксис:  
   
      CREATE FUNCTION [*имя_схемы*.]*имя_функции*() RETURNS sysname  
   
@@ -157,7 +161,7 @@ GO
   
      IF (SUSER_NAME() = '*пользователь_с_низкоприоритетным_именем_входа*')  
   
-     SET @workload_group_name = '*имя_группы_рабочей_нагрузки*'  
+     SET @workload_group_name = '*workload_group_name*'  
   
      RETURN @workload_group_name  
   
@@ -165,14 +169,14 @@ GO
   
      Дополнительные сведения о компонентах этой инструкции CREATE FUNCTION см. в разделах:  
   
-    -   [DECLARE @локальная_переменная (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+    -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
     -   [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)  
   
         > [!IMPORTANT]  
         >  SUSER_NAME — лишь одна из нескольких системных функций, которые можно использовать в функции-классификаторе. Дополнительные сведения см. в разделе [Создание и проверка определяемой пользователем функции-классификатора](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md).  
   
-    -   [SET @локальная_переменная (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+    -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 4.  Выполните инструкцию [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) , чтобы зарегистрировать функцию-классификатор в регуляторе ресурсов. В примере этой процедуры используется следующий синтаксис:  
   
@@ -184,7 +188,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### Пример Б. Настройка регулятора ресурсов (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Пример Б. Настройка регулятора ресурсов (Transact-SQL)  
  В нижеприведенном примере в одной транзакции выполняются следующие шаги.  
   
 1.  Создание пула ресурсов `pMAX_CPU_PERCENT_20` .  
@@ -198,7 +202,7 @@ GO
  После того как транзакция зафиксирована, применяются изменения в конфигурации, запрошенные в инструкциях ALTER WORKLOAD GROUP или ALTER RESOURCE POOL.  
   
 > [!IMPORTANT]  
->  В приведенном ниже примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданный в разделе "Пример А. Настройка имени входа и пользователя (Transact-SQL)", *имя_домена*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
+>  В приведенном ниже примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , созданный в разделе "Пример А. Настройка имени входа и пользователя (Transact-SQL)", *имя_домена*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
   
 ```tsql  
 -- Configure Resource Governor.  
@@ -262,7 +266,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Сжатие резервных копий в сеансе с ограничением доступа к ЦП  
  Чтобы создать сжатую резервную копию в сеансе с ограниченной максимальной загрузкой ЦП, войдите в систему как пользователь, указанный в функции-классификаторе. В команде резервного копирования укажите предложение WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) или выберите вариант **Сжимать резервные копии** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Сведения о создании сжатой резервной копии базы данных см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
-### Пример В. Создание сжатой резервной копии (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Пример В. Создание сжатой резервной копии (Transact-SQL)  
  В следующем примере [BACKUP](../../t-sql/statements/backup-transact-sql.md) создается сжатая полная резервная копия базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] в чистом форматированном файле резервной копии `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```tsql  
@@ -278,8 +282,8 @@ GO
   
  [&#91;В начало&#93;](#Top)  
   
-## См. также:  
- [Создать и проверить определяемую пользователем функцию-классификатор](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание и проверка определяемой пользователем функции-классификатора](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

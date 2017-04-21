@@ -1,28 +1,32 @@
 ---
-title: "Окно &#171;Пространственные результаты&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Окно &quot;Пространственные результаты&quot; | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e1a9e14b4a786e6ca45a9ab0e761975563c415
+ms.lasthandoff: 04/11/2017
+
 ---
-# Окно &#171;Пространственные результаты&#187;
+# <a name="spatial-results-window"></a>Окно «Пространственные результаты»
   Окно **Пространственные результаты** содержит визуальные средства сопоставления для просмотра пространственных данных. Чтобы использовать окно «Пространственные результаты», результаты запроса должны содержать по крайней мере один пространственный столбец с данными геометрического или географического типа.  
   
 > [!NOTE]  
 >  Окно **Пространственные результаты** доступно только в случае, если результаты возвращаются в сетку в окне **Результаты** . Если для результатов задано возвращение в виде текста, это окно будет недоступно.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Выберите пространственный столбец**  
  Укажите пространственный столбец для просмотра из числа пространственных столбцов в результатах запроса. В один момент времени можно выбрать только один столбец.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  Для экземпляров Point нельзя задавать метки.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Просмотр пространственных данных в обозревателе объектов](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)   
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   

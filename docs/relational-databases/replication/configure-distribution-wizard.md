@@ -1,24 +1,28 @@
 ---
-title: "мастер настройки распространителя  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "мастер настройки распространителя "
+title: "Мастер настройки распространителя | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Configure Distribution Wizard
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 347583585b1de80271ad9e75f72c9c3d62efbce2
+ms.lasthandoff: 04/11/2017
+
 ---
-# мастер настройки распространителя 
+# <a name="configure-distribution-wizard"></a>мастер настройки распространителя
   Этот раздел содержит сведения, доступные на следующих страницах мастера настройки распространителя.  
   
 -   [Распространитель](../../relational-databases/replication/distributor.md)  
@@ -31,9 +35,9 @@ caps.handback.revision: 22
   
 -   [Пароль распространителя](../../relational-databases/replication/distributor-password.md)  
   
-## См. также:  
- [Настройка распространителя](../../relational-databases/replication/configure-distribution.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка распространения](../../relational-databases/replication/configure-distribution.md)   
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Справочник по свойствам & #40; Репликация & #41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [Справочник по свойствам (репликация)](../../relational-databases/replication/properties-reference-replication.md)  
   
   

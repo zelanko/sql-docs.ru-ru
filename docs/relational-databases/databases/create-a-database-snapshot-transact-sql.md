@@ -1,24 +1,28 @@
 ---
-title: "создать моментальный снимок базы данных (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "моментальные снимки базы данных [SQL Server], создание"
+title: "Создание моментального снимка базы данных (Transact-SQL) | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
+ms.lasthandoff: 04/11/2017
+
 ---
-# создать моментальный снимок базы данных (Transact-SQL)
+# <a name="create-a-database-snapshot-transact-sql"></a>создать моментальный снимок базы данных (Transact-SQL)
   Единственный способ создания моментального снимка базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит в использовании [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает создание моментальных снимков базы данных.  
   
   
@@ -27,7 +31,7 @@ caps.handback.revision: 56
 ###  <a name="Prerequisites"></a> Предварительные требования  
  База данных-источник, в которой может применяться любая модель восстановления, должна соответствовать следующим предварительным требованиям.  
   
--   На экземпляре сервера должен быть запущен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который поддерживает моментальные снимки баз данных. Сведения о поддержке снимков баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   На экземпляре сервера должен быть запущен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который поддерживает моментальные снимки баз данных. Сведения о поддержке снимков баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в разделе [Функции, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   База данных-источник должна быть в режиме в сети, если база данных не является зеркальной в сеансе зеркального отображения базы данных.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 56
 - База данных-источник не должна содержать файловую группу MEMORY_OPTIMIZED_DATA. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
 
 >  [!IMPORTANT]
-> Сведения о других существенных соображениях см. в разделе [Снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md).  
+> Сведения о других существенных соображениях см. в разделе [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ##  <a name="Recommendations"></a> Рекомендации  
  В этом разделе обсуждаются следующие рекомендации:  
@@ -58,7 +62,7 @@ caps.handback.revision: 56
   
 -   дату и время создания моментального снимка, порядковый номер или другие сведения, например время в течение дня, которые позволяют отличить моментальные снимки этой базы данных друг от друга.  
   
- Допустим, требуется создать последовательность моментальных снимков базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Три ежесуточных моментальных снимка были созданы через шестичасовые интервалы между 6:00. и 18:00 на основе 24-часового отсчета времени. Каждый моментальный снимок хранится 24 часа, после этого он удаляется и заменяется одноименным снимком. Обратите внимание, что имя моментального снимка обозначает час, но не дату создания:  
+ Допустим, требуется создать последовательность моментальных снимков базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Три ежесуточных моментальных снимка были созданы через шестичасовые интервалы между 6:00. и 18:00 на основе 24-часового отсчета времени. Каждый моментальный снимок хранится 24 часа, после этого он удаляется и заменяется одноименным снимком. Обратите внимание, что имя моментального снимка обозначает час, но не дату создания:  
   
 ```  
 AdventureWorks_snapshot_0600  
@@ -91,7 +95,7 @@ AdventureWorks_snapshot_evening
 ##  <a name="TsqlProcedure"></a> Как создать моментальный снимок базы данных (с использованием языка Transact-SQL)  
  **Создание моментального снимка базы данных**  
   
->  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample) далее в этом разделе.  
+>  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample)далее в этом разделе.  
   
 1.  На основании текущего размера базы данных-источника убедитесь, что на диске достаточно места для хранения моментального снимка базы данных. При создании моментального снимка максимальный размер моментального снимка базы данных равен размеру базы данных-источника. Дополнительные сведения см. в разделе [Просмотр размера разреженного файла снимка базы данных (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
@@ -113,7 +117,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     где *имя_**исходной_базы_данных* — это исходная база данных, *логическое_имя_файла* — это логическое имя, используемое в SQL Server при ссылке на файл, *имя_файла_ОС* — это путь и имя файла, используемые операционной системой при создании файла, а *имя_снимка_базы данных* — это имя снимка, на основе которого требуется восстановить базу данных. Полное описание этого синтаксиса см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     где *имя_**исходной_базы_данных* — это исходная база данных, *логическое_имя_файла*— это логическое имя, используемое в SQL Server при ссылке на файл, *имя_файла_ОС* — это путь и имя файла, используемые операционной системой при создании файла, а *имя_снимка_базы данных* — это имя снимка, на основе которого требуется восстановить базу данных. Полное описание этого синтаксиса см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
     >  При создании моментального снимка базы данных файлы журнала файлы в режиме вне сети, восстанавливаемые из копии файлы и нефункционирующие файлы являются недопустимыми в инструкции CREATE DATABASE.  
@@ -121,7 +125,7 @@ AdventureWorks_snapshot_evening
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 > [!NOTE]  
->  Расширение `.ss`, используемое в примерах, выбрано произвольно.  
+>  Расширение `.ss` , используемое в примерах, выбрано произвольно.  
   
  Этот раздел содержит следующие примеры.  
   
@@ -130,7 +134,7 @@ AdventureWorks_snapshot_evening
 -   Б. [Создание моментального снимка по базе данных Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Создание моментального снимка по базе данных AdventureWorks  
- В этом примере создается моментальный снимок базы данных по базе данных `AdventureWorks`. Имя моментального снимка `AdventureWorks_dbss_1800` и имя файла его разреженного файла `AdventureWorks_data_1800.ss` указывают на время создания — 18:00.  
+ В этом примере создается моментальный снимок базы данных по базе данных `AdventureWorks` . Имя моментального снимка `AdventureWorks_dbss_1800`и имя файла его разреженного файла `AdventureWorks_data_1800.ss`указывают на время создания — 18:00.  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
@@ -141,7 +145,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> Б. Создание моментального снимка по базе данных Sales  
- Этот пример создает моментальный снимок `sales_snapshot1200` базы данных `Sales`. Эта база данных была создана в примере "Создание базы данных, которая содержит файловые группы" раздела [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Этот пример создает моментальный снимок `sales_snapshot1200`базы данных `Sales` . Эта база данных была создана в примере "Создание базы данных, которая содержит файловые группы" раздела [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -171,8 +175,10 @@ GO
   
 -   [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+
+

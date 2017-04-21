@@ -1,25 +1,29 @@
 ---
-title: "Таблицы, оптимизированные для памяти | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Оптимизированные для памяти таблицы | Документация Майкрософт"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 caps.latest.revision: 66
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 66
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eae5ffaa89b83055f56bdf192ec07268a5783a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Таблицы, оптимизированные для памяти
+# <a name="memory-optimized-tables"></a>Таблицы, оптимизированные для памяти
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Операции OLTP в памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повышают производительность OLTP-приложений благодаря эффективному, оптимизированному для памяти доступу к данным, собственной компиляции бизнес-логики и алгоритмам без кратковременной блокировки. Функциональность OLTP-операций в памяти обеспечивается оптимизированными для памяти таблицами и табличными типами, а также собственной компиляцией хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] для эффективного доступа к этим таблицам.  
+  Операции OLTP в памяти[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повышают производительность OLTP-приложений благодаря эффективному, оптимизированному для памяти доступу к данным, собственной компиляции бизнес-логики и алгоритмам без кратковременной блокировки. Функциональность OLTP-операций в памяти обеспечивается оптимизированными для памяти таблицами и табличными типами, а также собственной компиляцией хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] для эффективного доступа к этим таблицам.  
   
  Дополнительные сведения об оптимизированных для памяти таблицах см. в разделах:  
   
@@ -40,6 +44,7 @@ caps.handback.revision: 66
 -   [Руководство по обработке запросов для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="see-also"></a>См. также  
- [Выполняющаяся в памяти OLTP &#40;оптимизация в памяти&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

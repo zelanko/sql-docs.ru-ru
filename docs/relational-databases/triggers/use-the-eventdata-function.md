@@ -1,25 +1,29 @@
 ---
-title: "Использование функции EVENTDATA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EVENTDATA, функция"
-  - "Триггеры DDL, функция EVENTDATA"
+title: "Использование функции EVENTDATA | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EVENTDATA function
+- DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование функции EVENTDATA
+# <a name="use-the-eventdata-function"></a>Использование функции EVENTDATA
   Функция EVENTDATA позволяет получить сведения о событии, которое привело к срабатыванию триггера DDL. Эта функция возвращает значение типа **xml** . XML-схема содержит следующие сведения:  
   
 -   время формирования события;  
@@ -59,7 +63,7 @@ AS
 >   
 >  Если приложение использует данные `TSQLCommand` о событии CREATE_TABLE, следует учитывать, что эти данные могут появиться дважды: при возникновении события CREATE_SCHEMA и при возникновении события CREATE_TABLE. Следует избегать создания триггеров DDL одновременно для событий CREATE_SCHEMA и текста <schema_element> для любых соответствующих определений CREATE SCHEMA, или же в приложение необходимо добавить элемент логики, чтобы одно и тоже событие не обрабатывалось дважды.  
   
-## События ALTER TABLE и ALTER DATABASE  
+## <a name="alter-table-and-alter-database-events"></a>События ALTER TABLE и ALTER DATABASE  
  Данные о событиях  для событий ALTER_TABLE и ALTER_DATABASE также включают имена и типы других объектов, затронутых DDL-инструкцией и действием, выполняемым над этими объектами. Данные события ALTER_TABLE включают имена столбцов, ограничений или триггеров, затронутых инструкцией ALTER TABLE и действием (создание, изменение, удаление, включение или отключение), выполняемым над затронутыми объектами. Данные события ALTER_DATABASE включают имена любых файлов или файловых групп, затронутых инструкцией ALTER DATABASE и действием (создание, изменение, удаление), выполняемым над затронутыми объектами.  
   
  Предположим, что в образце базы данных AdventureWorks создан следующий триггер DDL:  
@@ -81,9 +85,9 @@ ROLLBACK;
 ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;   
 ```  
   
- Инструкция EVENTDATA() в триггере DDL захватывает текст инструкции `ALTER TABLE`, что является недопустимым.  
+ Инструкция EVENTDATA() в триггере DDL захватывает текст инструкции `ALTER TABLE` , что является недопустимым.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Функция EVENTDATA может применяться для создания журнала событий. В следующем примере создается таблица для хранения информации о событиях. После этого для текущей базы данных создается триггер DDL, который при любом событии DDL уровня базы данных заполняет эту таблицу следующими данными:  
   
 -   время формирования события (функция GETDATE);  
@@ -124,11 +128,11 @@ GO
 ```  
   
 > [!NOTE]  
->  Для возврата данных о событии рекомендуется использовать метод XQuery **value()**, а не **query()**. Метод **query()** возвращает XML-данные, содержащие символы возврата каретки и переноса строки (CR/LF), отделенные амперсандом, а метод **value()** не отображает эти символы.  
+>  Для возврата данных о событии рекомендуется использовать метод XQuery **value()** , а не **query()** . Метод **query()** возвращает XML-данные, содержащие символы возврата каретки и переноса строки (CR/LF), отделенные амперсандом, а метод **value()** не отображает эти символы.  
   
- Аналогичный пример триггера DDL предоставляется вместе с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Для его получения перейдите в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в папку с триггерами базы данных, Эта папка находится в папке **Programmability** базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Щелкните правой кнопкой мыши элемент **ddlDatabseTriggerLog** и выберите команду **Создать скрипт для триггера базы данных**. По умолчанию DDL-триггер **ddlDatabseTriggerLog** заблокирован.  
+ Аналогичный пример триггера DDL предоставляется вместе с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Для его получения перейдите в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в папку с триггерами базы данных, Эта папка находится в папке **Programmability** базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Щелкните правой кнопкой мыши элемент **ddlDatabseTriggerLog** и выберите команду **Создать скрипт для триггера базы данных**. По умолчанию DDL-триггер **ddlDatabseTriggerLog** заблокирован.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [DDL-события](../../relational-databases/triggers/ddl-events.md)   
  [Группы DDL-событий](../../relational-databases/triggers/ddl-event-groups.md)  
   

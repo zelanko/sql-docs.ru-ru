@@ -1,27 +1,31 @@
 ---
-title: "Управление проверкой подлинности в компонент Database Engine PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Управление аутентификацией в PowerShell (ядро СУБД) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 135580dd67315ad9eb07361dcff7b1334398a0aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# Управление проверкой подлинности в компонент Database Engine PowerShell
-  По умолчанию компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell используют при установлении соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверку подлинности Windows. Для использования проверки подлинности SQL Server необходимо либо определить виртуальный диск PowerShell, либо указать параметры **–Username** и **–Password** для **Invoke-Sqlcmd**.  
+# <a name="manage-authentication-in-database-engine-powershell"></a>Управление проверкой подлинности в компонент Database Engine PowerShell
+  По умолчанию компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell используют при установлении соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]проверку подлинности Windows. Для использования проверки подлинности SQL Server необходимо либо определить виртуальный диск PowerShell, либо указать параметры **–Username** и **–Password** для **Invoke-Sqlcmd**.  
   
-1.  **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
+1.  **Before you begin:**  [Permissions](#Permissions)  
   
-2.  **Настройка проверки подлинности с помощью следующих средств**: [виртуальный диск](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **To set authentication, using:**  [A Virtual Drive](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Разрешения  
  Все действия, которые могут быть выполнены на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , определяются разрешениями, предоставляемыми учетным данным, которые использовались при подключении к экземпляру. По умолчанию для подключения к компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с проверкой подлинности Windows поставщик [!INCLUDE[ssDE](../../includes/ssde-md.md)]и командлеты используют учетную запись Windows, под которой они работают.  
@@ -43,10 +47,10 @@ caps.handback.revision: 9
   
 2.  Вызовите функцию, чтобы создать виртуальный диск с указанными учетными данными.  
   
-### Пример (виртуальный диск)  
+### <a name="example-virtual-drive"></a>Пример (виртуальный диск)  
  В этом примере показано создание функции **sqldrive** для создания виртуального диска, который затем будет связан с указанным именем входа для проверки подлинности и экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Функция **sqldrive** запрашивает ввод пароля для имени входа, скрывая символы пароля при их вводе. При каждом последующем использовании команды перехода в другой каталог (**cd**) для подключения к пути с помощью имени виртуального диска все операции выполняются с использованием учетных данных для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые были указаны при создании этого диска.  
+ Функция **sqldrive** запрашивает ввод пароля для имени входа, скрывая символы пароля при их вводе. При каждом последующем использовании команды перехода в другой каталог (**cd**) для подключения к пути с помощью имени виртуального диска все операции выполняются с использованием учетных данных для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были указаны при создании этого диска.  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  
@@ -71,7 +75,7 @@ cd SQLAuth
   
 1.  Укажите идентификатор имени входа с помощью параметра **–Username** , а связанный с ним пароль — с помощью параметра **–Password** .  
   
-### Пример (Invoke-Sqlcmd)  
+### <a name="example-invoke-sqlcmd"></a>Пример (Invoke-Sqlcmd)  
  В этом примере командлет read-host используется для запроса ввода пароля с последующим подключением с проверкой подлинности SQL Server.  
   
 ```  
@@ -81,7 +85,7 @@ $pwd = read-host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Invoke-Sqlcmd, командлет](../../powershell/invoke-sqlcmd-cmdlet.md)  

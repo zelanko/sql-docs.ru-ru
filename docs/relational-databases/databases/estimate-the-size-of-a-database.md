@@ -1,31 +1,35 @@
 ---
-title: "Оценка размера базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "выделение дискового пространства [SQL Server], размер базы данных"
-  - "подсчет размера базы данных"
-  - "увеличение размера базы данных"
-  - "размер базы данных [SQL Server], оценка"
-  - "прогнозирование размера базы данных"
-  - "размер [SQL Server], базы данных"
-  - "предполагаемый размер базы данных"
-  - "проектирование баз данных [SQL Server], предполагаемый размер"
+title: "Оценка размера базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], database size
+- calculating database size
+- increasing database size
+- database size [SQL Server], estimating
+- predicting database size
+- size [SQL Server], databases
+- estimating database size
+- designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2d986d7e899e630429f431f040addb9076f081a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Оценка размера базы данных
+# <a name="estimate-the-size-of-a-database"></a>Оценка размера базы данных
   При проектировании базы данных иногда требуется оценить, каким будет размер базы данных после заполнения ее данными. Оценка размера базы данных помогает определить конфигурацию аппаратного обеспечения, необходимую для достижения следующих целей:  
   
 -   Получения производительности, необходимой для работы приложений.  
@@ -36,7 +40,7 @@ caps.handback.revision: 20
   
  При оценке размера базы данных производится оценка размера каждой из таблиц и сложение полученных значений. Размер таблицы зависит от наличия у этой таблицы индексов и, если они есть, от их типов.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  

@@ -1,53 +1,57 @@
 ---
-title: "Публикация данных и объектов базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "определяемые пользователем типы [репликация SQL Server]"
-  - "статьи [репликация SQL Server], удаление"
-  - "объекты [репликация SQL Server]"
-  - "публикации [репликация SQL Server], создание"
-  - "репликация слиянием [репликация SQL Server], публикации"
-  - "статьи «только схема» [репликация SQL Server]"
-  - "публикация [репликация SQL Server], объекты базы данных"
-  - "статьи [репликация SQL Server], определение"
-  - "публикация [репликация SQL Server], функции"
-  - "репликация [SQL Server], публикации"
-  - "публикация [репликация SQL Server], представления"
-  - "таблицы [репликация SQL Server]"
-  - "схемы [репликация SQL Server]"
-  - "публикация [репликация SQL Server], данные"
-  - "схемы [репликация SQL Server], публикация"
-  - "статьи [репликация SQL Server], хранимые процедуры и"
-  - "публикация [репликация SQL Server], таблицы"
-  - "псевдонимы типов данных [репликация SQL Server]"
-  - "публикации [репликация SQL Server], удаление"
-  - "репликация моментального снимка [SQL Server], публикации"
-  - "статьи [репликация SQL Server], изменение"
-  - "репликация транзакций, публикации"
-  - "публикация [репликация SQL Server], хранимые процедуры"
-  - "публикация [репликация SQL Server]"
-  - "представления [репликация SQL Server]"
-  - "хранимые процедуры [репликация SQL Server], публикация"
-  - "публикации [репликация SQL Server], параметры схемы"
-  - "статьи [репликация SQL Server], добавление"
-  - "публикации [репликация SQL Server], изменение"
-  - "пользовательские функции [репликация SQL Server]"
+title: "Публикация данных и объектов базы данных | Документация Mайкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined types [SQL Server replication]
+- articles [SQL Server replication], dropping
+- objects [SQL Server replication]
+- publications [SQL Server replication], creating
+- merge replication [SQL Server replication], publications
+- schema-only articles [SQL Server replication]
+- publishing [SQL Server replication], database objects
+- articles [SQL Server replication], defining
+- publishing [SQL Server replication], functions
+- replication [SQL Server], publications
+- publishing [SQL Server replication], views
+- tables [SQL Server replication]
+- schemas [SQL Server replication]
+- publishing [SQL Server replication], data
+- schemas [SQL Server replication], publishing
+- articles [SQL Server replication], stored procedures and
+- publishing [SQL Server replication], tables
+- alias data types [SQL Server replication]
+- publications [SQL Server replication], deleting
+- snapshot replication [SQL Server], publications
+- articles [SQL Server replication], modifying
+- transactional replication, publications
+- publishing [SQL Server replication], stored procedures
+- publishing [SQL Server replication]
+- views [SQL Server replication]
+- stored procedures [SQL Server replication], publishing
+- publications [SQL Server replication], schema options
+- articles [SQL Server replication], adding
+- publications [SQL Server replication], modifying
+- user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 83
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Публикация данных и объектов базы данных
+# <a name="publish-data-and-database-objects"></a>Публикация данных и объектов базы данных
   При создании публикации можно выбрать таблицы и другие объекты базы данных, которые необходимо опубликовать. Используя репликацию, можно опубликовать следующие объекты базы данных.  
   
 |Объект базы данных|Репликация моментальных снимков и репликация транзакций|Репликация слиянием|  
@@ -65,7 +69,7 @@ caps.handback.revision: 83
 |Полнотекстовые индексы|X|X|  
 |Объекты схемы (ограничения, индексы, пользовательские триггеры DML, расширенные свойства и параметры сортировки)|X|X|  
   
-## Создание публикаций  
+## <a name="creating-publications"></a>Создание публикаций  
  Для создания публикации необходимо предоставить следующую информацию.  
   
 -   Распространитель.  
@@ -88,62 +92,62 @@ caps.handback.revision: 83
   
  Сведения о работе с публикациями см. в следующих разделах.  
   
--   [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md)  
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
 -   [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
--   [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
+-   [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md) (Просмотр и изменение свойств статьи)  
   
--   [Удаление публикации](../../../relational-databases/replication/publish/delete-a-publication.md)  
+-   [Delete a Publication](../../../relational-databases/replication/publish/delete-a-publication.md) (Удаление публикации)  
   
--   [Удаление статьи](../../../relational-databases/replication/publish/delete-an-article.md)  
+-   [Delete an Article](../../../relational-databases/replication/publish/delete-an-article.md) (Удаление статьи)  
   
 > [!NOTE]  
 >  Удаление статьи или публикации не приводит к удалению объектов с подписчика.  
   
-## Публикация таблиц  
+## <a name="publishing-tables"></a>Публикация таблиц  
  Наиболее часто публикуемым объектом является таблица. Следующие ссылки предоставляют дополнительные сведения по темам, связанным с публикацией таблиц.  
   
 -   [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md)  
   
--   [Параметры статьи для репликации транзакций](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
--   [Параметры статьи для репликации слиянием](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
--   [Репликация столбцов идентификаторов](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
+-   [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов)  
   
  При публикации таблицы для репликации можно указать, какие объекты схемы должны копироваться на подписчик, например: объявленная ссылочная целостность (ограничения на первичный ключ, ссылочные ограничения, ограничения уникальности), индексы, пользовательские триггеры DML (триггеры DDL не могут быть реплицированы), расширенные свойства и параметры сортировки. Расширенные свойства реплицируются только во время начальной синхронизации между издателем и подписчиком. При добавлении или изменении расширенного свойства после начальной синхронизации эти изменения не реплицируются.  
   
- Указание параметров схемы в разделе [Указание параметров схемы](../../../relational-databases/replication/publish/specify-schema-options.md) или <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
+ Указание параметров схемы см. в статье [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md) (Указание параметров схемы) или <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### Секционированные таблицы и индексы  
- Репликация поддерживает публикацию секционированных таблиц и индексов. Уровень поддержки зависит от типа репликации, которая была использована, и параметров, заданных для публикации и статей, связанных с секционированными таблицами. Дополнительные сведения см. в разделе [репликация секционированных таблиц и индексов](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
+### <a name="partitioned-tables-and-indexes"></a>Секционированные таблицы и индексы  
+ Репликация поддерживает публикацию секционированных таблиц и индексов. Уровень поддержки зависит от типа репликации, которая была использована, и параметров, заданных для публикации и статей, связанных с секционированными таблицами. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).  
   
-## Публикация хранимых процедур  
+## <a name="publishing-stored-procedures"></a>Публикация хранимых процедур  
  Все типы репликации позволяют реплицировать определения хранимых процедур: инструкция CREATE PROCEDURE копируется на каждый подписчик. В случае с хранимыми процедурами общеязыковой среды исполнения (CLR) также копируется связанная сборка. Изменения процедур реплицируются на подписчики; изменения связанных сборок не реплицируются.  
   
  Помимо репликации определения хранимой процедуры репликация транзакций позволяет реплицировать выполнение хранимых процедур. Это полезно при репликации результатов хранимых процедур, связанных с обслуживанием и работающих с большими объемами данных. Дополнительные сведения см. в статье [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
-## Публикация представлений  
+## <a name="publishing-views"></a>Публикация представлений  
  Все типы репликации позволяют реплицировать представления. Представление (и сопутствующий индекс, если это индексированное представление) можно скопировать в подписчик, однако базовую таблицу также необходимо реплицировать.  
   
- Для индексированных представлений репликация транзакций также позволяет реплицировать индексированное представление в виде таблицы, а не как представление, исключая необходимость реплицировать и базовую таблицу. Для этого укажите один из параметров «indexed view logbased» для *@type* параметра [процедуры sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Дополнительные сведения об использовании **sp_addarticle**, в разделе [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
+ Для индексированных представлений репликация транзакций также позволяет реплицировать индексированное представление в виде таблицы, а не как представление, исключая необходимость реплицировать и базовую таблицу. Для этого укажите один из вариантов на основе журнала индексированного представления для параметра *@type* хранимой процедуры [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Дополнительные сведения об использовании **sp_addarticle** см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md) (Определение статьи).  
   
-## Публикация пользовательских функций  
+## <a name="publishing-user-defined-functions"></a>Публикация пользовательских функций  
  Инструкции CREATE FUNCTION для функций CLR и [!INCLUDE[tsql](../../../includes/tsql-md.md)] копируются на каждый подписчик. В случае с функциями CLR также копируется и связанная сборка. Изменения функций реплицируются на подписчики; изменения связанных сборок не реплицируются.  
   
-## Публикация определяемых пользовательских типов и псевдонимов типов данных  
- Столбцы, использующие определяемые пользователем типы, и псевдонимы типов данных реплицируются на подписчики подобно другим столбцам. TYPEstatement создать для каждого реплицированного типа выполняется на подписчике до создания таблицы. В случае с определяемыми пользователем типами в каждый подписчик также копируется и связанная сборка. Изменения определяемых пользователем типов и псевдонимов типов данных не реплицируются на подписчики.  
+## <a name="publishing-user-defined-types-and-alias-data-types"></a>Публикация определяемых пользовательских типов и псевдонимов типов данных  
+ Столбцы, использующие определяемые пользователем типы, и псевдонимы типов данных реплицируются на подписчики подобно другим столбцам. Перед созданием таблицы на подписчике выполняется инструкция CREATE TYPE для каждого реплицированного типа. В случае с определяемыми пользователем типами в каждый подписчик также копируется и связанная сборка. Изменения определяемых пользователем типов и псевдонимов типов данных не реплицируются на подписчики.  
   
  Если тип определен в базе данных, но на него нет ссылок ни в одном столбце, то при создании публикации этот тип не копируется в подписчики. Если впоследствии в базе данных создается столбец этого типа и его необходимо реплицировать, то вначале этот тип (вместе со связанной сборкой для определяемого пользователем типа) необходимо скопировать вручную на каждый подписчик.  
   
-## Публикация полнотекстовых индексов  
+## <a name="publishing-full-text-indexes"></a>Публикация полнотекстовых индексов  
  Инструкция CREATE FULLTEXT INDEX копируется на каждый подписчик, и на подписчике создается полнотекстовый индекс. Изменения, внесенные в полнотекстовые индексы с помощью инструкции ALTER FULLTEXT INDEX, не реплицируются.  
   
-## Внесение изменений схемы в опубликованные объекты  
- Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. При внесении любого из следующих изменений схемы в соответствующий опубликованный объект на издателе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это изменение распространяется по умолчанию на все подписчики [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+## <a name="making-schema-changes-to-published-objects"></a>Внесение изменений схемы в опубликованные объекты  
+ Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. При внесении любого из следующих изменений схемы в соответствующий опубликованный объект на издателе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это изменение распространяется по умолчанию на все подписчики [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   
@@ -155,9 +159,9 @@ caps.handback.revision: 83
   
 -   ALTER TRIGGER  
   
- Дополнительные сведения см. в разделе [внесение изменений схемы в базах данных публикаций](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-## Некоторые аспекты процесса публикации  
+## <a name="considerations-for-publishing"></a>Некоторые аспекты процесса публикации  
  При публикации объектов базы данных необходимо принимать во внимание следующие соображения.  
   
 -   Во время создания публикации и исходного моментального снимка база данных может быть доступна для пользователей, однако рекомендуется создавать публикации в периоды пониженной активности на издателе.  
@@ -167,25 +171,25 @@ caps.handback.revision: 83
 -   При публикации объекта базы данных, зависящего от одного или нескольких других объектов базы данных, необходимо опубликовать и все связанные с ним объекты. Например, при публикации представления, зависящего от таблицы, необходимо также опубликовать и таблицу.  
   
     > [!NOTE]  
-    >  Если существующая статья зависит от новой статьи при добавлении статьи в публикацию слиянием, необходимо указать порядок обработки для обеих статей с помощью **@processing_order** параметр [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для **@processing_order** параметр **sp_addmergearticle**; и укажите значение **2** для **@processing_order** параметр **sp_changemergearticle**, указав имя таблицы для параметра **@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
+    >  Если при добавлении статьи в публикацию слиянием, существующая статья зависит от новой статьи, то необходимо задать порядок обработки для обеих статей с помощью параметра **@processing_order** хранимой процедуры [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для параметра **@processing_order** хранимой процедуры **sp_addmergearticle**и значение **2** для параметра **@processing_order** хранимой процедуры **sp_changemergearticle**, указав имя таблицы в параметре **@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
   
--   Имена публикаций не могут содержать следующие символы: % * [ ] | : " ? \ / \< >.  
+-   Имена публикаций не могут содержать следующие символы: % * [ ] | : " ? \ / < >.  
   
-### Ограничения на публикацию объектов  
+### <a name="limitations-on-publishing-objects"></a>Ограничения на публикацию объектов  
   
--   Максимальное количество публикуемых статей и столбцов зависит от типа публикации. Для получения дополнительной информации ознакомьтесь с разделом «Объекты репликации» [спецификации максимальной емкости для SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+-   Максимальное количество публикуемых статей и столбцов зависит от типа публикации. Дополнительные сведения см. в разделе "Объекты репликации" статьи [Maximum Capacity Specifications for SQL Server](../../../sql-server/maximum-capacity-specifications-for-sql-server.md) (Спецификации максимально допустимых параметров SQL Server).  
   
--   Хранимые процедуры, представления, триггеры и определяемые пользователем функции, которые определяются как WITH ENCRYPTION, невозможно опубликовать как часть репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Хранимые процедуры, представления, триггеры и определяемые пользователем функции, которые определяются как WITH ENCRYPTION, невозможно опубликовать как часть репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Коллекции схем XML могут быть реплицированы, но изменения, внесенные после создания исходного моментального снимка, не реплицируются.  
   
 -   Таблицы, опубликованные для репликации транзакций, должны содержать первичный ключ. Если таблица входит в публикацию репликации транзакций, то нельзя отключить никакие индексы, связанные с первичными ключевыми столбцами. Эти индексы необходимы для репликации. Чтобы отключить индексы, сначала необходимо удалить таблицу из публикации.  
   
--   Связанные значения по умолчанию, созданные с [sp_bindefault & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) не реплицируются (значения по умолчанию рекомендуется использовать значения по умолчанию, созданные с помощью ключевого слова DEFAULT инструкции ALTER TABLE или CREATE TABLE).  
+-   Связанные значения по умолчанию, созданные с помощью [sp_bindefault (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md), не реплицируются (вместо связанных значений по умолчанию мы рекомендуем использовать значения по умолчанию, созданные с помощью ключевого слова DEFAULT инструкции ALTER TABLE или CREATE TABLE).  
   
--   Функции, содержащие **NOEXPAND** Указание на индексированных представлениях не будут публиковаться в той же публикации, как и ссылочные таблицы и индексированные представления из-за заказ, в котором агент распространителя доставляет их. Чтобы обойти эту проблему, поместите в первую публикацию таблицы и создания индексированного представления и добавьте функции с **NOEXPAND** Указание на индексированных представлениях во вторую публикацию, которую следует опубликовать после первой публикации завершения. Создавать сценарии для этих функций или доставки с помощью сценария *@post_snapshot_script* параметр **sp_addpublication**.  
+-   Функции, содержащие указание **NOEXPAND** на индексированных представлениях, невозможно опубликовать в той же публикации, что и ссылочные таблицы и индексированные представления. Это обусловлено порядком их доставки агентом распространения. Чтобы обойти эту проблему, поместите создание таблицы и индексированного представления в первую публикацию, добавьте функции с указанием **NOEXPAND** в на индексированных представлениях во вторую публикацию, которую следует опубликовать после завершения первой публикации. Также вы можете создать сценарии для этих функций и передать скрипт с помощью параметра *@post_snapshot_script* хранимой процедуры **sp_addpublication**.  
   
-### Схемы и принадлежность объектов  
+### <a name="schemas-and-object-ownership"></a>Схемы и принадлежность объектов  
  Репликации свойственно следующее поведение по умолчанию в мастере создания публикаций, касающееся схем и принадлежности объектов:  
   
 -   Для статей в публикациях слиянием с уровнем совместимости 90 или выше, публикациях моментальных снимков и публикациях транзакций: по умолчанию владелец объекта на подписчике идентичен владельцу соответствующего объекта на издателе. Если на подписчике не существует схем, владеющих объектами, они создаются автоматически.  
@@ -194,22 +198,22 @@ caps.handback.revision: 83
   
 -   Для статей в публикациях Oracle: по умолчанию владельцем назначается **dbo**.  
   
--   Для статей в публикациях, использовать моментальные снимки в символьном режиме (которые используются для отличных[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчиков и [!INCLUDE[ssEW](../../../includes/ssew-md.md)] подписчиков): по умолчанию владелец не указывается. Владельцем по умолчанию является владелец, указанный в учетной записи, используемой агентом распространителя или агентом слияния для соединения с подписчиком.  
+-   Для статей в публикациях, в которых используются моментальные снимки в текстовом режиме (используются для подписчиков, отличных от подписчиков[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , и подписчиков [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): по умолчанию владелец не указывается. Владельцем по умолчанию является владелец, указанный в учетной записи, используемой агентом распространителя или агентом слияния для соединения с подписчиком.  
   
- Владелец объекта может быть изменено с помощью **Свойства статьи — \<***статьи***>** диалоговое окно и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, и **sp_changemergearticle**. Дополнительные сведения см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [определить статью](../../../relational-databases/replication/publish/define-an-article.md), и [просмотреть и изменить свойства статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<***cтатья***>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-### Публикация данных на подписчики, использующие предыдущие версии SQL Server  
+### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Публикация данных на подписчики, использующие предыдущие версии SQL Server  
   
 -   При публикации данных на подписчик, использующий предыдущую версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], предлагаются только те функции, которые имеются в этой версии. Ограничения накладываются как на функции репликации, так и на функции продукта в целом.  
   
 -   Публикации слиянием используют уровень совместимости, который определяет, какие функции могут использоваться в публикации, а также обеспечивает поддержку подписчиков, на которых выполняются предыдущие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-### Публикация таблиц в нескольких публикациях  
+### <a name="publishing-tables-in-more-than-one-publication"></a>Публикация таблиц в нескольких публикациях  
  Репликация поддерживает публикацию статей в нескольких публикациях (включая переиздание данных) со следующими ограничениями.  
   
--   Если статья опубликована в публикации транзакций и публикации слиянием, убедитесь, что *@published_in_tran_pub* задано значение TRUE для статьи публикации слиянием. Дополнительные сведения о настройке свойств см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) и [просмотреть и изменить свойства статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+-   Если статья опубликована в публикации транзакций и публикации слиянием, убедитесь, что свойство *@published_in_tran_pub* имеет значение true для статьи публикации слиянием. Дополнительные сведения об изменении свойств см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-     Также следует задать *@published_in_tran_pub* Свойства, если статья является частью подписки на публикацию транзакций и включена в публикацию слиянием. В этом случае нужно иметь в виду, что по умолчанию репликация транзакций ожидает, что таблицы на подписчике будут иметь атрибут «только для чтения». Если репликация слиянием производит изменения данных в таблице подписки на публикацию транзакций, то может возникнуть потеря конвергенции данных. Чтобы избежать этой ситуации, рекомендуется, чтобы любые подобные таблицы задавались в публикации слиянием с атрибутом «только для загрузки». Это защищает подписчика на публикацию слиянием от передачи измененных данных в таблицу. Дополнительные сведения см. в разделе [оптимизировать слияния производительности репликации со статьями, доступными только для загрузки](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     Также нужно установить свойство *@published_in_tran_pub* , если статья является частью подписки на публикацию транзакций и включена в публикацию слиянием. В этом случае нужно иметь в виду, что по умолчанию репликация транзакций ожидает, что таблицы на подписчике будут иметь атрибут «только для чтения». Если репликация слиянием производит изменения данных в таблице подписки на публикацию транзакций, то может возникнуть потеря конвергенции данных. Чтобы избежать этой ситуации, рекомендуется, чтобы любые подобные таблицы задавались в публикации слиянием с атрибутом «только для загрузки». Это защищает подписчика на публикацию слиянием от передачи измененных данных в таблицу. Дополнительные сведения см. в статье [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки).  
   
 -   Статья не может быть опубликована и в публикации слиянием и в публикации транзакций с подписками, обновляемыми посредством очередей.  
   
@@ -219,12 +223,12 @@ caps.handback.revision: 83
   
     |Свойство|Параметр в sp_addarticle|  
     |--------------|---------------------------------|  
-    |Управление диапазонами идентификаторов|**@auto_identity_range** (устарело) и **@identityrangemangementoption**|  
+    |Управление диапазонами идентификаторов|**@auto_identity_range** (является устаревшим) и **@identityrangemangementoption**|  
     |Диапазон идентификаторов издателя|**@pub_identity_range**|  
     |Диапазон идентификаторов|**@identity_range**|  
     |Порог диапазона идентификаторов|**@threshold**|  
   
-     Дополнительные сведения об этих параметрах см. в разделе [sp_addarticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+     Дополнительные сведения о параметрах схемы см. в статье об [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Если статья опубликована в нескольких публикациях слиянием, то во всех публикациях следующим свойствам этой статьи должны присваиваться одинаковые значения.  
   
@@ -236,24 +240,25 @@ caps.handback.revision: 83
     |Параметры выгрузки данных подписчика|**@subscriber_upload_options**|  
     |Условное отслеживание удалений|**@delete_tracking**|  
     |Компенсация ошибок|**@compensate_for_errors**|  
-    |Управление диапазонами идентификаторов|**@auto_identity_range** (устарело) и **@identityrangemangementoption**|  
+    |Управление диапазонами идентификаторов|**@auto_identity_range** (является устаревшим) и **@identityrangemangementoption**|  
     |Диапазон идентификаторов издателя|**@pub_identity_range**|  
     |Диапазон идентификаторов|**@identity_range**|  
     |Порог диапазона идентификаторов|**@threshold**|  
     |Параметры секции|**@partition_options**|  
     |Направление потока данных столбцов большого двоичного объекта|**@stream_blob_columns**|  
-    |Тип фильтра|**@filter_type** (параметр в **sp_addmergefilter**)|  
+    |Тип фильтра|**@filter_type** (параметр хранимой процедуры **sp_addmergefilter**)|  
   
-     Дополнительные сведения об этих параметрах см. в разделе [sp_addmergearticle & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_addmergefilter & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
+     Дополнительные сведения об этих параметрах см. в статье об [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   Репликация транзакций и нефильтрованная репликация слиянием поддерживают публикацию таблицы в нескольких публикациях с последующей подпиской в пределах одной таблицы в базе данных подписки (такой сценарий, как правило, называется сценарием сведения). Сведение часто используется для объединения подмножеств данных из нескольких мест в одной таблице на центральном подписчике. Фильтрованные публикации слиянием не поддерживают сценарий центрального подписчика. Для репликации слиянием сведение обычно реализуется в одной публикации с помощью параметризованных фильтров строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md).  
+-   Репликация транзакций и нефильтрованная репликация слиянием поддерживают публикацию таблицы в нескольких публикациях с последующей подпиской в пределах одной таблицы в базе данных подписки (такой сценарий, как правило, называется сценарием сведения). Сведение часто используется для объединения подмножеств данных из нескольких мест в одной таблице на центральном подписчике. Фильтрованные публикации слиянием не поддерживают сценарий центрального подписчика. Для репликации слиянием сведение обычно реализуется в одной публикации с помощью параметризованных фильтров строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Настройка распространителя](../../../relational-databases/replication/configure-distribution.md)   
+ [Настройка распространения](../../../relational-databases/replication/configure-distribution.md)   
  [Инициализация подписки](../../../relational-databases/replication/initialize-a-subscription.md)   
- [Создание сценариев репликации](../../../relational-databases/replication/scripting-replication.md)   
+ [Scripting Replication (Скрипты репликации)](../../../relational-databases/replication/scripting-replication.md)   
  [Организация безопасности издателя](../../../relational-databases/replication/security/secure-the-publisher.md)   
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

@@ -1,24 +1,28 @@
 ---
-title: "Записи подсистемы аудита SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "записи аудита [SQL Server]"
+title: "Записи подсистемы аудита SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.lasthandoff: 04/11/2017
+
 ---
-# Записи подсистемы аудита SQL Server
+# <a name="sql-server-audit-records"></a>Записи подсистемы аудита SQL Server
   Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет выполнять аудит событий и групп событий на уровне сервера и уровне базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Аудит содержит ноль или более элементов действия аудита, записываемых в *цель*аудита. Цель аудита может быть двоичным файлом, журналом событий приложений Windows или журналом событий безопасности Windows. Записи, переданные в цель, могут содержать элементы, описанные в следующей таблице.  
@@ -52,10 +56,10 @@ caps.handback.revision: 19
 |**инструкция**|инструкция TSQL (если имеется)|**nvarchar(4000)**|Нет|  
 |**additional_information**|Любые дополнительные сведения о событии хранятся в виде XML.|**nvarchar(4000)**|Нет|  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Некоторые действия имеют незаполненное значение в столбце, так как оно может быть неприменимо к действию.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] хранит 4 000 символов данных для символьных полей в записи аудита. Если значения **additional_information** и **statement**, возвращенные из действия, доступного для аудита, возвращают более 4000 символов, то столбец **sequence_no** используется для записи нескольких записей в отчет аудита для одного действия аудита, чтобы зарегистрировать эти данные. Применяется следующая обработка.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] хранит 4 000 символов данных для символьных полей в записи аудита. Если значения **additional_information** и **statement** , возвращенные из действия, доступного для аудита, возвращают более 4000 символов, то столбец **sequence_no** используется для записи нескольких записей в отчет аудита для одного действия аудита, чтобы зарегистрировать эти данные. Применяется следующая обработка.  
   
 -   Столбец **statement** делится на фрагменты по 4 000 символов.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 19
   
  Можно подключиться к данным, последовательно считывая строки с помощью значения **sequence_no** и столбцов **event_Time**, **action_id** и **session_id** для идентификации действия.  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [CREATE SERVER AUDIT (Transact-SQL)](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   
  [ALTER SERVER AUDIT (Transact-SQL)](../../../t-sql/statements/alter-server-audit-transact-sql.md)  

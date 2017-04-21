@@ -1,29 +1,33 @@
 ---
-title: "Измерение задержки и проверка правильности соединений для репликации транзакций | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "монитор репликации, производительность"
-  - "трассировочные токены [репликация SQL Server]"
-  - "задержка [репликация SQL Server]"
-  - "репликация транзакций, трассировочные маркеры"
-  - "мониторинг производительности [репликация SQL Server], трассировочные маркеры"
+title: "Измерение задержки и проверка правильности соединений для репликации транзакций | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Replication Monitor, performance
+- tracer tokens [SQL Server replication]
+- latency [SQL Server replication]
+- transactional replication, tracer tokens
+- monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Измерение задержки и проверка правильности соединений для репликации транзакций
-  В данном разделе описывается измерение задержки и проверка соединений для репликации транзакций в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью монитора репликации, [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Репликация транзакций предоставляет функцию трассировочных токенов, которая обеспечивает удобный способ измерения длительности задержки в топологиях репликации транзакций и помогает проверять соединения между издателем, распространителем и подписчиками. Токен (небольшой объем данных) записывается в журнал транзакций базы данных публикации и помечается так, как если бы он был обычной реплицируемой транзакцией, а затем проходит по системе, позволяя вычислить следующие характеристики:  
+# <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Измерение задержки и проверка правильности соединений для репликации транзакций
+  В данном разделе описывается измерение задержки и проверка соединений для репликации транзакций в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью монитора репликации, [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Репликация транзакций предоставляет функцию трассировочных токенов, которая обеспечивает удобный способ измерения длительности задержки в топологиях репликации транзакций и помогает проверять соединения между издателем, распространителем и подписчиками. Токен (небольшой объем данных) записывается в журнал транзакций базы данных публикации и помечается так, как если бы он был обычной реплицируемой транзакцией, а затем проходит по системе, позволяя вычислить следующие характеристики:  
   
 -   Время, прошедшее между фиксацией транзакции на издателе и вставкой соответствующей команды в базу данных распространителя на распространителе.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 36
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Restrictions"></a> Ограничения  
- Трассировочные токены также могут быть полезны при «замораживании» системы, когда останавливаются все действия и проверяется получение всеми узлами всех необработанных изменений. Дополнительные сведения см. в разделе [замораживание топологии репликации & #40; Программирование репликации Transact-SQL & #41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+ Трассировочные токены также могут быть полезны при «замораживании» системы, когда останавливаются все действия и проверяется получение всеми узлами всех необработанных изменений. Дополнительные сведения см. в разделе [Замораживание топологии репликации (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
  Для применения трассировочных токенов необходимо пользоваться определенными версиями [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 36
 -   После отработки отказа на вторичной реплике монитор репликации не сможет изменить имя экземпляра публикации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и будет продолжать отображать сведения о репликации по имени исходного первичного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. После отработки отказа нельзя ввести трассировочный токен с помощью монитора репликации, но трассировочный токен, введенный в новый издатель с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)], отображается в мониторе репликации.  
   
 ##  <a name="SSMSProcedure"></a> При помощи монитора репликации SQL Server  
- Сведения о запуске монитора репликации см. в разделе [запустить монитор репликации](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
-#### Вставка трассировочного токена и просмотр сведений о токене  
+#### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Вставка трассировочного токена и просмотр сведений о токене  
   
 1.  Раскройте на левой панели группу издателей, раскройте издатель и выберите нужную публикацию.  
   
@@ -89,42 +93,42 @@ caps.handback.revision: 36
   
 4.  Просмотрите затраченное время для трассировочного маркера в следующих столбцах: **От издателя к распространителю**, **От распространителя к подписчику**, **Общая задержка**. Значение **Ожидание** указывает на то, что токен еще не достиг указанной точки.  
   
-#### Просмотр сведений о трассировочном токене, вставленном ранее  
+#### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Просмотр сведений о трассировочном токене, вставленном ранее  
   
 1.  Раскройте на левой панели группу издателей, раскройте издатель и выберите нужную публикацию.  
   
 2.  Щелкните вкладку **Трассировочные токены** .  
   
-3.  Выберите время **время вставки** раскрывающегося списка.  
+3.  Выберите время в раскрывающемся списке **Время вставки** .  
   
 4.  Просмотрите затраченное время для трассировочного маркера в следующих столбцах: **От издателя к распространителю**, **От распространителя к подписчику**, **Общая задержка**. Значение **Ожидание** указывает на то, что токен еще не достиг указанной точки.  
   
     > [!NOTE]  
-    >  Данные трассировочных токенов хранятся в течение того же периода времени, что и другие данные предыстории; этот период определяется сроком хранения журнала в базе данных распространителя. Сведения об изменении свойства базы данных распространителя см. в разделе [представления и свойств издателя и распространителя изменить](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+    >  Данные трассировочных токенов хранятся в течение того же периода времени, что и другие данные предыстории; этот период определяется сроком хранения журнала в базе данных распространителя. Дополнительные сведения о доступе к этим диалоговым окнам см. в статье [Просмотр и изменение свойств издателя и распространителя](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Отправка трассировочного токена в публикацию транзакций  
+#### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Отправка трассировочного токена в публикацию транзакций  
   
-1.  (Необязательно) На издателе в базе данных публикации выполните хранимую процедуру [sp_helppublication & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). Удостоверьтесь в том, что публикация существует и находится в активном состоянии.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helppublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) (необязательно). Удостоверьтесь в том, что публикация существует и находится в активном состоянии.  
   
-2.  (Необязательно) На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Удостоверьтесь в том, что подписка существует и находится в активном состоянии.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) (необязательно). Удостоверьтесь в том, что подписка существует и находится в активном состоянии.  
   
-3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_posttracertoken & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), указав **@publication**. Обратите внимание на значение **@tracer_token_id** выходной параметр.  
+3.  На издателе в базе данных издателя выполните процедуру [sp_posttracertoken (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), указав параметр **@publication**. Запомните значение выходного параметра **@tracer_token_id** .  
   
-#### Измерение задержки и проверка соединений для публикации транзакций  
+#### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Измерение задержки и проверка соединений для публикации транзакций  
   
 1.  Передайте трассировочный токен в публикацию при помощи описанной выше процедуры.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helptracertokens & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав **@publication**. Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное **tracer_id** в результирующем наборе.  
+2.  На издателе в базе данных издателя выполните процедуру [sp_helptracertokens (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав параметр **@publication**. Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное значение **tracer_id** в результирующем наборе.  
   
-3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helptracertokenhistory & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), указав **@publication** и идентификатор трассировочного токена из шага 2 для **@tracer_id**. В результате этого будут возвращены сведения о задержке для выделенного трассировочного токена.  
+3.  На издателе в базе данных издателя выполните процедуру [sp_helptracertokenhistory (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), указав параметр **@publication** и идентификатор трассировочного маркера, полученного на шаге 2, в параметре **@tracer_id**. В результате этого будут возвращены сведения о задержке для выделенного трассировочного токена.  
   
-#### Удаление трассировочных токенов  
+#### <a name="to-remove-tracer-tokens"></a>Удаление трассировочных токенов  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helptracertokens & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав **@publication**. Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Примечание **tracer_id** трассировочный маркер для удаления в результате значение.  
+1.  На издателе в базе данных издателя выполните процедуру [sp_helptracertokens (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав параметр **@publication**. Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное значение **tracer_id** в результирующем наборе для удаляемого трассировочного токена.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_deletetracertokenhistory & #40; Transact-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), указав **@publication** и идентификатор трассировочного маркера, полученного на шаге 2 для **@tracer_id**.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_deletetracertokenhistory (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), указав параметр **@publication**, а также идентификатор удаляемого трассировочного маркера, полученного на шаге 2, в параметре **@tracer_id**.  
   
 ###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
  В этом примере продемонстрирована отправка трассировочного токена, и просмотр сведений о задержке по возвращенному идентификатору отправленного трассировочного токена.  
@@ -133,48 +137,48 @@ caps.handback.revision: 36
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
   
-#### Отправка трассировочного токена в публикацию транзакций  
+#### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Отправка трассировочного токена в публикацию транзакций  
   
-1.  Создайте соединение с издателем с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.TransPublication> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> Свойства для публикации, а также набор <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> Свойства подключения, созданной на шаге 1.  
+3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также укажите созданное на шаге 1 соединение в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-4.  Вызов <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> метод, чтобы получить свойства объекта. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
   
-5.  Вызов <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> метод. Этот метод обеспечивает вставку трассировочного токена в журнал транзакций публикации.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Этот метод обеспечивает вставку трассировочного токена в журнал транзакций публикации.  
   
-#### Измерение задержки и проверка соединений для публикации транзакций  
+#### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Измерение задержки и проверка соединений для публикации транзакций  
   
-1.  Создайте соединение с распространителем с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.PublicationMonitor> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> а в качестве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> Свойства подключения, созданной на шаге 1.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> и xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, а в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> установите созданное на шаге 1 соединение.  
   
-4.  Вызов <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> метод, чтобы получить свойства объекта. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
   
-5.  Вызов <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> метод. Приведите возвращенный <xref:System.Collections.ArrayList> объект в массив <xref:Microsoft.SqlServer.Replication.TracerToken> объектов.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Приведите возвращенный объект <xref:System.Collections.ArrayList> к типу массива объектов <xref:Microsoft.SqlServer.Replication.TracerToken>.  
   
-6.  Вызов <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> метод. Передайте значение <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного токена на шаге 5. Возвращает сведения о задержке для выделенного трассировочного токена в виде <xref:System.Data.DataSet> объекта. Если возвращены все сведения о трассировочном токене, то существует соединение между издателем и распространителем, а также соединение между распространителем и подписчиком, и топология репликации работоспособна.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>. Передайте значение <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного маркера, полученного на шаге 5. В результате будут возвращены сведения о задержке для выделенного трассировочного маркера в виде объекта <xref:System.Data.DataSet>. Если возвращены все сведения о трассировочном токене, то существует соединение между издателем и распространителем, а также соединение между распространителем и подписчиком, и топология репликации работоспособна.  
   
-#### Удаление трассировочных токенов  
+#### <a name="to-remove-tracer-tokens"></a>Удаление трассировочных токенов  
   
-1.  Создайте соединение с распространителем с помощью <xref:Microsoft.SqlServer.Management.Common.ServerConnection> класса.  
+1.  Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Создайте экземпляр <xref:Microsoft.SqlServer.Replication.PublicationMonitor> класса.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
-3.  Задайте <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> а в качестве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> Свойства подключения, созданной на шаге 1.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> и xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, а в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> установите созданное на шаге 1 соединение.  
   
-4.  Вызов <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> метод, чтобы получить свойства объекта. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
   
-5.  Вызов <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> метод. Приведите возвращенный <xref:System.Collections.ArrayList> объект в массив <xref:Microsoft.SqlServer.Replication.TracerToken> объектов.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Приведите возвращенный объект <xref:System.Collections.ArrayList> к типу массива объектов <xref:Microsoft.SqlServer.Replication.TracerToken>.  
   
-6.  Вызов <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> метод. Передайте одно из следующих значений.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A>. Передайте одно из следующих значений.  
   
-    -    <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного токена на шаге 5. В результате этого сведения для выделенного токена будут удалены.  
+    -   Значение <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного маркера, полученного на шаге 5. В результате этого сведения для выделенного токена будут удалены.  
   
-    -   A <xref:System.DateTime> объекта. В результате этого будут удалены сведения обо всех токенах, созданных до наступления указанного момента времени.  
+    -   Объект <xref:System.DateTime>. В результате этого будут удалены сведения обо всех токенах, созданных до наступления указанного момента времени.  
   
   

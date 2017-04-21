@@ -1,22 +1,26 @@
 ---
-title: "Изменение определяемых пользователем функций | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение определяемых пользователем функций | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение определяемых пользователем функций
+# <a name="modify-user-defined-functions"></a>Изменение определяемых пользователем функций
   Определяемые пользователем функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно изменять с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При изменении определяемых пользователем функций описанными ниже методами, разрешения этих функций не будут изменены, также не будут затронуты любые другие зависимые функции, хранимые процедуры или триггеры.  
   
  **В этом разделе**  
@@ -51,7 +55,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Изменение определяемой пользователем функции  
+#### <a name="to-modify-a-user-defined-function"></a>Изменение определяемой пользователем функции  
   
 1.  Щелкните значок плюса рядом с базой данных, содержащей функцию, которую надо изменить.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Изменение определяемой пользователем функции  
+#### <a name="to-modify-a-user-defined-function"></a>Изменение определяемой пользователем функции  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

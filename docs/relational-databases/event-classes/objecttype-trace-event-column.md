@@ -1,30 +1,34 @@
 ---
-title: "Столбец события ObjectType Trace | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы событий SQL Server, значения столбца Object Type"
-  - "события [SQL Server], значения столбца Object Type"
-  - "классы событий [SQL Server], значения столбца Object Type"
-  - "Object Type, значения столбца [SQL Server]"
+title: "Столбец события ObjectType Trace | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Object Type column values
+- events [SQL Server], Object Type column values
+- event classes [SQL Server], Object Type column values
+- Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
+ms.lasthandoff: 04/11/2017
+
 ---
-# Столбец события ObjectType Trace
+# <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
   Столбец события трассировки Object Type используется в различных событиях трассировки. В этом подразделе приведены возможные значения этого столбца и связанные с ними определения.  
   
-## Значения столбца Object Type  
+## <a name="object-type-column-values"></a>Значения столбца Object Type  
   
 |Значение|Определение|  
 |-----------|----------------|  
@@ -100,7 +104,7 @@ caps.handback.revision: 17
 |22611|XML-схема|  
 |22868|Тип|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

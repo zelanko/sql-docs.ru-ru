@@ -1,29 +1,33 @@
 ---
-title: "Группа рабочей нагрузки регулятора ресурсов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Регулятор ресурсов, группа рабочей нагрузки"
-  - "группы рабочей нагрузки [SQL Server]"
-  - "группы рабочей нагрузки [SQL Server], обзор"
+title: "Группа рабочей нагрузки регулятора ресурсов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group
+- workload groups [SQL Server]
+- workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f67e0fd5de601ceb4d808f42fa710c02fa23d3d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Группа рабочей нагрузки регулятора ресурсов
+# <a name="resource-governor-workload-group"></a>Группа рабочей нагрузки регулятора ресурсов
   В регуляторе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] группа рабочей нагрузки выступает в качестве контейнера для запросов сеансов, имеющих подобные критерии классификации. Рабочая нагрузка обеспечивает статистический мониторинг сеансов и определяет политики для сеансов. Каждая группа рабочей нагрузки находится в пуле ресурсов, который представляет подмножество физических ресурсов экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. После запуска сеанса классификатор регулятора ресурсов назначает этот сеанс конкретной группе рабочей нагрузки, и этот сеанс должен функционировать с использованием политик, назначенных этой группе рабочей нагрузки, и ресурсов, определенных для пула ресурсов.  
   
-## Основные понятия группы рабочей нагрузки  
+## <a name="workload-group-concepts"></a>Основные понятия группы рабочей нагрузки  
  Группа рабочей нагрузки выступает в качестве контейнера для запросов сеансов, которые являются подобными в соответствии с критериями классификации, применяемыми к каждому из запросов. Группа рабочей нагрузки позволяет вести статистический контроль потребления ресурсов и приложения в рамках единообразной политики для всех запросов в группе. Группа определяет политики для ее членов.  
   
 > [!NOTE]  
@@ -39,7 +43,7 @@ caps.handback.revision: 6
   
  В регуляторе ресурсов предусмотрены инструкции DDL для создания, изменения и удаления групп рабочей нагрузки.  
   
-## Задачи группы рабочей нагрузки  
+## <a name="workload-group-tasks"></a>Задачи группы рабочей нагрузки  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -47,8 +51,8 @@ caps.handback.revision: 6
 |Описывает, как изменить параметры группы рабочей нагрузки.|[Изменение параметров группы рабочей нагрузки](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |Описывает, как удалить группу рабочей нагрузки.|[Удаление группы рабочей нагрузки](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
-## См. также:  
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="see-also"></a>См. также:  
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Функция-классификатор регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   

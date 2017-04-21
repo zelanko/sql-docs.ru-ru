@@ -1,33 +1,37 @@
 ---
-title: "Пошаговая отладка кода Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "отладчик Transact-SQL, отладка кода"
-  - "отладчик Transact-SQL, шаг с обходом"
-  - "отладчик Transact-SQL, шаг с выходом"
-  - "отладчик Transact-SQL, шаг с заходом"
+title: "Пошаговая отладка кода Transact-SQL | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, debugging code
+- Transact-SQL debugger, step over
+- Transact-SQL debugger, step out
+- Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.lasthandoff: 04/11/2017
+
 ---
-# Пошаговая отладка кода Transact-SQL
+# <a name="step-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL
   Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выбирать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые будут выполняться в окне редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Отладчик можно останавливать на отдельных инструкциях, а затем просматривать состояние элементов кода в этой точке.  
   
-## Точки останова  
- Точка останова указывает отладчику приостановку выполнения на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения о точках останова см. в разделе «Использование точек останова Transact-SQL».  
+## <a name="breakpoints"></a>Точки останова  
+ Точка останова указывает отладчику приостановку выполнения на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о точках останова см. в статье [Точки останова Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
   
-## Управление выполнением инструкций  
+## <a name="controlling-statement-execution"></a>Управление выполнением инструкций  
  В отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] можно указать следующие параметры для выполнения из текущей инструкции в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   Выполнить код до следующей точки останова.  
@@ -56,7 +60,7 @@ caps.handback.revision: 18
 |Выйти из модуля|Выберите команду **Шаг с выходом** в меню **Отладка** .<br /><br /> Нажмите кнопку **Шаг с выходом** на панели инструментов **Отладка** .<br /><br /> Нажмите сочетание клавиш SHIFT+F11.|  
 |Выполнить до текущего положения курсора|Щелкните правой кнопкой мыши в окне редактора запросов и выберите команду **Выполнить до курсора**.<br /><br /> Нажмите сочетание клавиш CTRL+F10.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

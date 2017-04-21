@@ -1,31 +1,35 @@
 ---
-title: "Сжатие файла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "сжатие файлов"
-  - "уменьшение размера файла"
-  - "базы данных [SQL Server], сжатие"
-  - "уменьшение размера файла"
-  - "размер [SQL Server], файлы"
-  - "размер файла [SQL Server]"
+title: "Сжатие файла | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# Сжатие файла
+# <a name="shrink-a-file"></a>Сжатие файла
   В этом подразделе описывается сжатие данных или файла журнала в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Сжатие файлов данных позволяет освободить неиспользуемое пространство путем перемещения страниц данных с конца файла в незанятое пространство ближе к началу файла. Когда в конце файла образуется достаточно свободного места, страницы данных в конце файла могут быть освобождены и возвращены в файловую систему.  
@@ -59,11 +63,11 @@ caps.handback.revision: 25
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner**.  
+ Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Сжатие файла данных или журнала  
+#### <a name="to-shrink-a-data-or-log-file"></a>Сжатие файла данных или журнала  
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 25
      Выберите тип файла. Доступны следующие возможности: **Данные** и **Журнал** . Значение по умолчанию: **Данные**. Выбор другого типа файловой группы соответственным образом изменяет выбор в других полях.  
   
      **Файловая группа**  
-     Выберите файловую группу из списка файловых групп, связанных с выбранным ранее **типом файлов**. Выбор другой файловой группы соответственным образом изменяет выбор в других полях.  
+     Выберите файловую группу из списка файловых групп, связанных с выбранным ранее **типом файлов** . Выбор другой файловой группы соответственным образом изменяет выбор в других полях.  
   
      **Имя файла**  
      Выберите файл из списка имеющихся файлов выбранной файловой группы и типа.  
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Сжатие файла данных или журнала  
+#### <a name="to-shrink-a-data-or-log-file"></a>Сжатие файла данных или журнала  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [Сжатие базы данных](../../relational-databases/databases/shrink-a-database.md)   
  [Удаление файлов данных или журнала из базы данных](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

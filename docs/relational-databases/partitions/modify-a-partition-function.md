@@ -1,22 +1,26 @@
 ---
-title: "Изменение функции секционирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение функции секционирования | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b55aa8c92aaf469aa2ef7945a84068301124641
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение функции секционирования
+# <a name="modify-a-partition-function"></a>Изменение функции секционирования
   Вы можете изменить способ секционирования таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем увеличения или уменьшения указанного числа секций с шагом 1 в функции секционирования секционированной таблицы или индекса при помощи [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление секции осуществляется путем разбиения существующей секции на две и переопределением границ новых секций. Удаление секции происходит путем слияния двух секций в одну на границе. Это действие повторно заполняет одну секцию и оставляет другую незаполненной.  
   
 > [!CAUTION]  
@@ -62,7 +66,7 @@ caps.handback.revision: 11
 ####  <a name="Permissions"></a> Разрешения  
  Для выполнения инструкции ALTER PARTITION FUNCTION может использоваться одно из перечисленных ниже разрешений.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
   
 -   Разрешение CONTROL или ALTER в базе данных, в которой была создана функция секционирования.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 11
   
  Это действие не может быть выполнено при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы изменить функцию секционирования, необходимо сначала удалить функцию, после чего создать новую с нужными свойствами при помощи мастера создания секций. Дополнительные сведения см. в разделе  
   
-#### Удаление функции секционирования  
+#### <a name="to-delete-a-partition-function"></a>Удаление функции секционирования  
   
 1.  Разверните базу данных, на которой требуется удалить функцию секционирования, а затем разверните папку **Хранение** .  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Разбиение одной секции на две  
+#### <a name="to-split-a-single-partition-into-two-partitions"></a>Разбиение одной секции на две  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 11
     SPLIT RANGE (500);  
     ```  
   
-#### Слияние двух секций в одну  
+#### <a name="to-merge-two-partitions-into-one-partition"></a>Слияние двух секций в одну  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

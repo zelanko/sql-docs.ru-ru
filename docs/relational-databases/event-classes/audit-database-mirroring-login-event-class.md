@@ -1,29 +1,33 @@
 ---
-title: "Класс событий Audit Database Mirroring Login | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "уведомления о событиях [SQL Server], зеркальное отображение базы данных"
-  - "Audit Database Mirroring Login, класс событий"
-  - "зеркальное отображение базы данных [SQL Server], уведомления о событиях"
+title: "Класс событий Audit Database Mirroring Login | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- Audit Database Mirroring Login event class
+- database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d56190a6435a36e8ca96e0228aae7f19f133d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Audit Database Mirroring Login
+# <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие класса **Audit Database Mirroring Login** для составления отчета о сообщениях аудита, связанных с безопасностью транспорта при зеркальном отображении базы данных.  
   
-## Столбцы данных класса событий Audit Database Mirroring Login  
+## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Столбцы данных класса событий Audit Database Mirroring Login  
   
 |Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -59,9 +63,9 @@ caps.handback.revision: 16
 |3|Ошибка формата сообщения|Событие «Ошибка формата сообщения» сообщает, что имя входа для зеркального отображения базы данных получило сообщение, не соответствующее ожидаемому формату. Сообщение может быть повреждено, либо на порт, предназначенный для зеркального отображения базы данных, отправляет сообщения программа, отличная от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |4|Ошибка согласования|Событие «Ошибка согласования» указывает, что локальная конечная точка зеркального отображения базы данных и удаленная конечная точка зеркального отображения базы данных поддерживают взаимоисключающие уровни проверки подлинности.|  
 |5|Ошибка проверки подлинности|Событие «Ошибка проверки подлинности» указывает, что конечная точка зеркального отображения базы данных не может выполнить проверку подлинности соединения из-за ошибки. Для проверки подлинности Windows это событие сообщает, что конечной точке зеркального отображения базы данных не удалось применить эту проверку. Для проверки подлинности на основе сертификата это событие сообщает, что конечной точке зеркального отображения базы данных не удалось получить сертификат.|  
-|6|Ошибка авторизации|Событие «Ошибка авторизации» указывает, что конечная точка зеркального отображения базы данных отклонила авторизацию соединения. Для проверки подлинности Windows это событие сообщает, что идентификатор защиты соединения не совпадает с пользователем базы данных. Для проверки подлинности на базе сертификата это событие сообщает, что открытый ключ, доставленный в сообщении, не соответствует сертификату в базе данных **master**.|  
+|6|Ошибка авторизации|Событие «Ошибка авторизации» указывает, что конечная точка зеркального отображения базы данных отклонила авторизацию соединения. Для проверки подлинности Windows это событие сообщает, что идентификатор защиты соединения не совпадает с пользователем базы данных. Для проверки подлинности на базе сертификата это событие сообщает, что открытый ключ, доставленный в сообщении, не соответствует сертификату в базе данных **master** .|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

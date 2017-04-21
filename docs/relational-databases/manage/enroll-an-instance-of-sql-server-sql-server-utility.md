@@ -1,32 +1,36 @@
 ---
-title: "Регистрация экземпляра SQL Server (служебная программа SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.SWB.makemanaged.agentaccount.F1"
-  - "sql13.SWB.makemanaged.welcome.F1"
-  - "sql13.SWB.makemanaged.enrolling.F1"
-  - "sql13.SWB.makemanaged.instancename.F1"
-  - "sql13.SWB.makemanaged.Summary.F1"
-  - "sql13.SWB.makemanaged.progress.F1"
-  - "sql13.SWB.makemanaged.validation.F1"
-helpviewer_keywords: 
-  - "регистрация экземпляра"
+title: "Регистрация экземпляра SQL Server (служебная программа SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.SWB.makemanaged.agentaccount.F1
+- sql13.SWB.makemanaged.welcome.F1
+- sql13.SWB.makemanaged.enrolling.F1
+- sql13.SWB.makemanaged.instancename.F1
+- sql13.SWB.makemanaged.Summary.F1
+- sql13.SWB.makemanaged.progress.F1
+- sql13.SWB.makemanaged.validation.F1
+helpviewer_keywords:
+- Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: c5bb6279f7fd96f30aa3f19628e2edc5edb5cc53
+ms.lasthandoff: 04/11/2017
+
 ---
-# Регистрация экземпляра SQL Server (служебная программа SQL Server)
+# <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
   Зарегистрируйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для наблюдения за его производительностью и конфигурацией как управляемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точка управления служебной программой (UCP) выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
   
  В этом выпуске точка управления служебной программой и все управляемые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны удовлетворять следующим требованиям.  
@@ -43,7 +47,7 @@ caps.handback.revision: 13
   
  В этом выпуске точка управления служебной программой должна удовлетворять следующим требованиям.  
   
--   Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь поддерживаемый выпуск. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь поддерживаемый выпуск. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   Рекомендуется размещать точку управления служебной программой на экземпляре SQL Server, учитывающего регистр.  
   
@@ -57,18 +61,18 @@ caps.handback.revision: 13
   
  В этой версии все управляемые экземпляры SQL Server должны удовлетворять приведенным ниже требованиям.  
   
--   Если пункт управления программой расположен на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с учетом регистра, рекомендуется, чтобы на управляемых экземплярах SQL Server также учитывался регистр.  
+-   Если пункт управления программой расположен на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с учетом регистра, рекомендуется, чтобы на управляемых экземплярах SQL Server также учитывался регистр.  
   
 -   Данные FILESTREAM не поддерживаются при наблюдении с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
- Дополнительные сведения см. в статьях [Задание максимальной вместимости SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Дополнительные сведения см. в статьях [Задание максимальной вместимости SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Дополнительные сведения об основных понятиях служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 > [!IMPORTANT]  
->  Набор элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается параллельно с наборами элементов сбора, не касающимися служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом, управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно наблюдать по другим наборам элементов сбора, поскольку он является элементом служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует, однако, отметить, что все наборы элементов сбора, находящиеся в управляемом экземпляре, передают свои данные в хранилище данных управления программы. Дополнительные сведения см. в разделах [Замечания по выполнению программы, не относящиеся к прочим наборам элементов сбора на том же экземпляре SQL Server](../../relational-databases/manage/run utility and non-utility collection sets on same sql instance.md) и [Настройка хранилища данных для точки управления служебной программой (служебная программа SQL Server)](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
+>  Набор элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается параллельно с наборами элементов сбора, не касающимися служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Таким образом, управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно наблюдать по другим наборам элементов сбора, поскольку он является элементом служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Следует, однако, отметить, что все наборы элементов сбора, находящиеся в управляемом экземпляре, передают свои данные в хранилище данных управления программы. Дополнительные сведения см. в разделах [Замечания по выполнению программы, не относящиеся к прочим наборам элементов сбора на том же экземпляре SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) и [Настройка хранилища данных для точки управления служебной программой (служебная программа SQL Server)](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
-## Шаги мастера  
+## <a name="wizard-steps"></a>Шаги мастера  
  В следующих разделах содержатся подробные сведения о каждой странице потока операций мастера. Щелкните ссылку, чтобы перейти в мастере к подробностям, относящимся к этой странице. Дополнительные сведения о скрипте PowerShell этой операции см. в [примере](#PowerShell_enroll).  
   
 -   [Введение в мастер регистрации экземпляров](#Welcome)  
@@ -86,17 +90,17 @@ caps.handback.revision: 13
 -   [Регистрация экземпляра SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Введение в мастер регистрации экземпляров  
- Чтобы запустить мастер, раскройте дерево обозревателя программ в пункте управления программой, щелкните правой кнопкой мыши узел **Управляемые экземпляры** и выберите команду **Добавить экземпляр…**  
+ Чтобы запустить мастер, раскройте дерево обозревателя программ в пункте управления программой, щелкните правой кнопкой мыши узел **Управляемые экземпляры**и выберите команду **Добавить экземпляр…**  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="Instance_name"></a> Укажите экземпляр SQL Server  
- Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, нажмите кнопку **Подключить…**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, нажмите кнопку **Подключить…**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="Connection_dialog"></a> Диалоговое окно соединения  
- Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Если соединение зашифровано, используется зашифрованное соединение. Если соединение не зашифровано, то программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит соединение повторно с использованием зашифрованного соединения.  
@@ -106,7 +110,7 @@ caps.handback.revision: 13
 ##  <a name="Proxy_configuration"></a> Учетная запись набора элементов сбора служебной программы  
  Укажите учетную запись домена Windows для выполнения набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта учетная запись используется как учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно также использовать имеющуюся служебную учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы требования проверки были удовлетворены, следуйте приведенным ниже рекомендациям по настройке учетной записи.  
   
- Если выбран вариант со служебной учетной записью службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Если выбран вариант со служебной учетной записью службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Служебная учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должна быть встроенной учетной записью домена Windows (например, LocalSystem, NetworkService или LocalService).  
   
@@ -118,15 +122,15 @@ caps.handback.revision: 13
 |Условие|Действие по исправлению|  
 |---------------|-----------------------|  
 |Необходимо обладать правами администратора для указанного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и точки управления служебной программой.|Войдите в систему от учетной записи, имеющей права администратора на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и точке управления служебной программой.|  
-|Выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен поддерживать регистрацию экземпляров.|Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).|  
-|В точке управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть включена поддержка TCP/IP.|Включите TCP/IP в точке управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|Выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен поддерживать регистрацию экземпляров.|Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|В точке управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть включена поддержка TCP/IP.|Включите TCP/IP в точке управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должен быть зарегистрирован в какой-либо другой точка управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже управляется как часть существующей программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то его нельзя будет зарегистрировать в другой точке управления служебной программой.|  
 |Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должен уже являться точкой управления служебной программой.|Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже является точкой управления служебной программой, отличающейся от той, с которой установлено соединение, то выполнить регистрацию в этой точке управления служебной программой будет нельзя.|  
 |На экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть установлены наборы элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Переустановите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Наборы элементов сбора на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть остановлены.|Наборы элементов сбора должны быть остановлены на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если сборщик данных отключен, включите его, остановите все работающие наборы элементов сбора, а затем снова запустите правила проверки для операции создания точки управления служебной программой.<br /><br /> Включение сборщика данных:<br /><br /> В обозревателе объектов раскройте узел **Управление** .<br /><br /> Щелкните правой кнопкой мыши **Сбор данных**, затем выберите **Включить сбор данных**.<br /><br /> Остановка набора элементов сбора:<br /><br /> В обозревателе объектов разверните узел **Управление**, затем узел **Сбор данных**и узел &amp;lt;ui&amp;gt;Наборы элементов сбора системных данных&amp;lt;/ui&amp;gt;.<br /><br /> Щелкните правой кнопкой мыши набор элементов сбора, который необходимо остановить, и выберите команду **Остановить набор сбора данных**.<br /><br /> Результат этого действия будет отображен в окне сообщения, а красный круг на значке набора элементов сбора означает его остановку.|  
 |Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть запущена на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Запустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |В точке управления служебной программой должна быть запущена служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Запустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в точке управления служебной программой. Если точка управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|WMI должна быть правильно настроена.|Сведения об устранении неполадок настройки WMI см. в статье [Устранение неполадок служебной программы SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md).|  
+|WMI должна быть правильно настроена.|Сведения об устранении неполадок настройки WMI см. в статье [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
 |Учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть учетной записью действующего домена Windows в точке управления служебной программой.|Укажите допустимую учетную запись домена Windows. Чтобы проверить допустимость учетной записи, войдите в точку управления служебной программой с помощью этой учетной записи домена Windows.|  
 |Если выбран параметр учетной записи-посредника, то учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть допустимой учетной записью домена Windows на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Укажите допустимую учетную запись домена Windows. Чтобы проверить допустимость учетной записи, войдите на указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью этой учетной записи домена Windows.|  
 |Учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть встроенной учетной записью, как, например, «Сетевая служба».|Переназначьте учетную запись на учетную запись домена Windows. Чтобы проверить допустимость учетной записи, войдите на указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью этой учетной записи домена Windows.|  
@@ -170,7 +174,7 @@ caps.handback.revision: 13
 >   
 >  Дополнительные сведения. Не удалось получить сведения о пользователе или группе Windows NT "\<имя_домена\имя_учетной_записи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
->  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md).  
+>  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
 >  Не меняйте свойства набора элементов сбора «Сведения о программе» на управляемом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не включайте и не выключайте сбор данных вручную, так как сбор данных происходит под управлением задания агента программы.  
@@ -179,7 +183,7 @@ caps.handback.revision: 13
   
  Процесс сбора данных начнется сразу, однако до появления первых сведений на панели и в точках обзора на панели мониторинга содержимого проводника служебной программы может пройти до 30 минут. Сбор данных выполняется каждые 15 минут. Чтобы обновить данные, щелкните правой кнопкой мыши узел **Управляемые экземпляры** на панели **Навигация обозревателя программ** и выберите команду **Обновить**, либо щелкните правой кнопкой мыши имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в представлении списка и выберите **Обновить**.  
   
- Чтобы удалить управляемые экземпляры из служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на панели **Навигация обозревателя программ** выберите **Управляемые экземпляры**, чтобы заполнить представление списка управляемых экземпляров, в представлении списка на панели **Содержимое обозревателя программ** щелкните правой кнопкой мыши имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выберите команду **Удалить экземпляр из списка управляемых**.  
+ Чтобы удалить управляемые экземпляры из служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на панели **Навигация обозревателя программ** выберите **Управляемые экземпляры** , чтобы заполнить представление списка управляемых экземпляров, в представлении списка на панели [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Содержимое обозревателя программ **щелкните правой кнопкой мыши имя экземпляра** и выберите команду **Удалить экземпляр из списка управляемых**.  
   
 ##  <a name="PowerShell_enroll"></a> Регистрация экземпляра SQL Server с помощью PowerShell  
  В следующем примере показана регистрация экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -193,9 +197,10 @@ caps.handback.revision: 13
 > $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Устранение неполадок служебной программы SQL Server](../Topic/Troubleshoot%20the%20SQL%20Server%20Utility.md)  
+ [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
+

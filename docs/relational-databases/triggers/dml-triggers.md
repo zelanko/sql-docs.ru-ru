@@ -1,29 +1,33 @@
 ---
-title: "Триггеры DML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "триггеры [SQL Server], о триггерах"
-  - "триггеры DML, о триггерах DML"
-  - "триггеры [SQL Server]"
+title: "Триггеры DML | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [SQL Server], about triggers
+- DML triggers, about DML triggers
+- triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Триггеры DML
+# <a name="dml-triggers"></a>Триггеры DML
   Триггеры DML — это хранимые процедуры особого типа, автоматически вступающие в силу, если происходит событие языка обработки данных DML, которое затрагивает таблицу или представление, определенное в триггере. События DML включают инструкции INSERT, UPDATE или DELETE. Триггеры DML могут использоваться для предписания бизнес-правил и правил целостности данных, выполнения запросов к другим таблицам и включения сложных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Триггер и инструкция, при выполнении которой он срабатывает, считаются одной транзакцией, которую можно откатить назад внутри триггера. При обнаружении серьезной ошибки (например, нехватки места на диске) вся транзакция автоматически откатывается назад.  
   
-## Преимущества триггеров DML  
+## <a name="dml-trigger-benefits"></a>Преимущества триггеров DML  
  Триггеры DML аналогичны ограничениям в том, что могут предписывать целостность сущностей или целостность домена. Вообще говоря, целостность сущностей должна всегда предписываться на самом нижнем уровне с помощью индексов, являющихся частью ограничений PRIMARY KEY и UNIQUE или создаваемых независимо от ограничений. Целостность домена должна быть предписана через ограничения CHECK, а ссылочная целостность — через ограничения FOREIGN KEY. Триггеры DML наиболее полезны в тех случаях, когда функции ограничений не удовлетворяют функциональным потребностям приложения.  
   
  В следующем списке приведено сравнение триггеров DML с ограничениями и указано, в чем триггеры DML имеют преимущества.  
@@ -44,7 +48,7 @@ caps.handback.revision: 27
   
 -   Если в таблице триггеров существуют ограничения, то их проверка осуществляется между выполнением триггеров INSTEAD OF и AFTER. В случае нарушения ограничений выполняется откат действий триггеров INSTEAD OF, а триггер AFTER не срабатывает.  
   
-## Типы триггеров DML  
+## <a name="types-of-dml-triggers"></a>Типы триггеров DML  
  Триггер AFTER  
  Триггеры AFTER выполняются после выполнения действий инструкции INSERT, UPDATE, MERGE или DELETE. Триггеры AFTER никогда не выполняются, если происходит нарушение ограничения, поэтому эти триггеры нельзя использовать для какой-либо обработки, которая могла бы предотвратить нарушение ограничения. Для каждой из операций INSERT, UPDATE или DELETE в указанной инструкции MERGE соответствующий триггер вызывается для каждой операции DML.  
   
@@ -60,13 +64,13 @@ caps.handback.revision: 27
 |Каскадные ссылки|Нет ограничений.|Триггеры INSTEAD OF UPDATE и DELETE нельзя определять для таблиц, на которые распространяются каскадные ограничения ссылочной целостности.|  
 |Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br /><br /> Декларативные ссылочные действия.<br /><br /> Создание таблиц**inserted** и **deleted** .<br /><br /> Действие, запускающее триггер.|До: обработка ограничений<br /><br /> Вместо: действие, запускающее триггер<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
 |Порядок выполнения|Можно задать выполнение в первую и в последнюю очередь.|Неприменимо|  
-|Ссылки на столбцы **varchar(max)**, **nvarchar(max)** и **varbinary(max)** в таблицах **inserted** и **deleted**|Разрешено|Разрешено|  
+|Ссылки на столбцы**varchar(max)**, **nvarchar(max)**и **varbinary(max)** в таблицах **inserted** и **deleted** |Разрешено|Разрешено|  
 |Ссылки на столбцы**text**, **ntext**и **image** в таблицах **inserted** и **deleted** |Не допускается|Разрешено|  
   
  Триггеры CLR  
  Триггер CLR может быть либо триггером AFTER, либо триггером INSTEAD OF. Триггер CLR может также являться триггером DDL. Вместо вызова хранимой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер CLR вызывает один или несколько методов управляемого кода, являющихся членами сборки, созданной с помощью среды .NET Framework и загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Задача|Раздел|  
 |----------|-----------|  
@@ -81,7 +85,7 @@ caps.handback.revision: 27
 |Описывает, как удалять или отключать триггеры DML.|[Удаление или отключение триггеров DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Описывает, как управлять безопасностью триггеров.|[Управление безопасностью триггеров](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)   

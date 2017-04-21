@@ -1,24 +1,28 @@
 ---
-title: "Включение необходимых компонентов для таблицы FileTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Таблицы FileTable (SQL Server), предварительные сведения"
+title: "Включение необходимых компонентов для таблицы FileTable | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# Включение необходимых компонентов для таблицы FileTable
+# <a name="enable-the-prerequisites-for-filetable"></a>Включение необходимых компонентов для таблицы FileTable
   Описывает способ включения компонентов, обязательных для создания и использования таблиц FileTable.  
   
 ##  <a name="EnablePrereq"></a> Включение необходимых компонентов для FileTable  
@@ -37,7 +41,7 @@ caps.handback.revision: 25
     -   [Указание каталога для таблиц FileTable на уровне базы данных](#BasicsDirectory)  
   
 ##  <a name="BasicsFilestream"></a> Включение FILESTREAM на уровне экземпляра  
- Таблицы FileTable расширяют возможности функции FILESTREAM в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поэтому, прежде чем будет возможно создавать и использовать таблицы FileTable, необходимо включить функцию FILESTREAM для доступа к операциям файлового ввода-вывода на уровне Windows и в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Таблицы FileTable расширяют возможности функции FILESTREAM в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поэтому, прежде чем будет возможно создавать и использовать таблицы FileTable, необходимо включить функцию FILESTREAM для доступа к операциям файлового ввода-вывода на уровне Windows и в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ###  <a name="HowToFilestream"></a> Инструкции. Включение функции FILESTREAM на уровне экземпляра  
  Сведения о включении FILESTREAM см. в разделе [Включение и настройка FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md).  
@@ -81,10 +85,10 @@ GO
     ```  
   
  **Задание уровня нетранзакционного доступа в среде SQL Server Management Studio**  
- Можно задать уровень нетранзакционного доступа в поле **Нетранзакционный доступ к файловому потоку** на странице **Параметры** диалогового окна **Свойства базы данных**. Дополнительные сведения об этом диалоговом окне см. в статье [Свойства базы данных (страница "Параметры")](../../relational-databases/databases/database-properties-options-page.md).  
+ Можно задать уровень нетранзакционного доступа в поле **Нетранзакционный доступ к файловому потоку** на странице **Параметры** диалогового окна **Свойства базы данных** . Дополнительные сведения об этом диалоговом окне см. в статье [Свойства базы данных (страница "Параметры")](../../relational-databases/databases/database-properties-options-page.md).  
   
 ##  <a name="BasicsDirectory"></a> Указание каталога для таблиц FileTable на уровне базы данных  
- При включении нетранзакционного доступа к файлам на уровне базы данных можно при необходимости в то же время указать имя каталога с помощью параметра **DIRECTORY_NAME**. Если при включении нетранзакционного доступа не указано имя каталога, то необходимо ввести его позже, прежде чем будет возможно создать таблицу FileTable в базе данных.  
+ При включении нетранзакционного доступа к файлам на уровне базы данных можно при необходимости в то же время указать имя каталога с помощью параметра **DIRECTORY_NAME** . Если при включении нетранзакционного доступа не указано имя каталога, то необходимо ввести его позже, прежде чем будет возможно создать таблицу FileTable в базе данных.  
   
  В иерархии папок FileTable этот каталог на уровне базы данных является дочерним по отношению к общему ресурсу для FILESTREAM на уровне экземпляра и родительским по отношению к таблицам FileTable, созданным в базе данных. Дополнительные сведения см. в статье [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   При **восстановлении базы данных** вызовите инструкцию [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) с параметром **DIRECTORY_NAME** FILESTREAM.  
+-   При **восстановлении базы данных** вызовите инструкцию [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM.  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -125,7 +129,7 @@ GO
     ```  
   
  **Задание каталога для таблиц FileTable в среде SQL Server Management Studio**  
- Можно указать имя каталога в поле **Имя каталога FILESTREAM** на странице **Параметры** диалогового окна **Свойства базы данных**. Дополнительные сведения об этом диалоговом окне см. в статье [Свойства базы данных (страница "Параметры")](../../relational-databases/databases/database-properties-options-page.md).  
+ Можно указать имя каталога в поле **Имя каталога FILESTREAM** на странице **Параметры** диалогового окна **Свойства базы данных** . Дополнительные сведения об этом диалоговом окне см. в статье [Свойства базы данных (страница "Параметры")](../../relational-databases/databases/database-properties-options-page.md).  
   
 ###  <a name="viewnames"></a> Инструкции. Просмотр существующих имен каталогов для экземпляра  
  Чтобы просмотреть список существующих имен каталогов для экземпляра, выполните запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) и проверьте столбец **filestream_database_directory_name**.  
@@ -138,15 +142,15 @@ GO
   
 ###  <a name="ReqDirectory"></a> Требования и ограничения для уровня базы данных каталога  
   
--   При вызове метода **CREATE DATABASE** или **ALTER DATABASE** параметр **DIRECTORY_NAME** является необязательным. Если значение **DIRECTORY_NAME** не указано, имя каталога имеет значение NULL. Тем не менее невозможно создать таблицу FileTable в базе данных, пока не указано значение для параметра **DIRECTORY_NAME** на уровне базы данных.  
+-   При вызове метода **CREATE DATABASE** или **ALTER DATABASE** параметр **DIRECTORY_NAME**является необязательным. Если значение **DIRECTORY_NAME**не указано, имя каталога имеет значение NULL. Тем не менее невозможно создать таблицу FileTable в базе данных, пока не указано значение для параметра **DIRECTORY_NAME** на уровне базы данных.  
   
 -   Указываемое имя каталога должно соответствовать требованиям файловой системы для допустимых имен каталогов.  
   
 -   Если база данных содержит таблицы FileTable, нельзя вернуть параметр **DIRECTORY_NAME** в значение NULL.  
   
--   Операция присоединения или восстановления базы данных завершится ошибкой, если новая база данных имеет такое же значение параметра **DIRECTORY_NAME**, так как уже существует в целевом экземпляре. Укажите уникальное значение для параметра **DIRECTORY_NAME** при вызове инструкции **CREATE DATABASE FOR ATTACH** или **RESTORE DATABASE**.  
+-   Операция присоединения или восстановления базы данных завершится ошибкой, если новая база данных имеет такое же значение параметра **DIRECTORY_NAME** , так как уже существует в целевом экземпляре. Укажите уникальное значение для параметра **DIRECTORY_NAME** при вызове инструкции **CREATE DATABASE FOR ATTACH** или **RESTORE DATABASE**.  
   
--   При обновлении существующей базы данных до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] значение **DIRECTORY_NAME** равно NULL.  
+-   При обновлении существующей базы данных до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]значение **DIRECTORY_NAME** равно NULL.  
   
 -   При включении или отключении нетранзакционного доступа на уровне базы данных операция не проверяет, было ли указано имя каталога и является ли оно уникальным.  
   

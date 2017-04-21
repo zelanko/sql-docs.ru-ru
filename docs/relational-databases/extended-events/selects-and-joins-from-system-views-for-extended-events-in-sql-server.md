@@ -1,23 +1,27 @@
 ---
-title: "Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
+# <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -32,15 +36,15 @@ caps.handback.revision: 6
 
 
 
-## A. Основные сведения
+## <a name="a-foundational-information"></a>A. Основные сведения
 
 
 Существует два набора системных представлений для расширенных событий.
 
 
-#### Представления каталога
+#### <a name="catalog-views"></a>Представления каталога
 
-- В этих представлениях хранятся сведения об *определении* каждого сеанса событий, созданного с помощью [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md) или эквивалента в пользовательском интерфейсе среды SSMS. Однако в этих представлениях нет никаких данных о том, запускались ли вообще эти сеансы.
+- В этих представлениях хранятся сведения об *определении* каждого сеанса событий, созданного с помощью [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md)или эквивалента в пользовательском интерфейсе среды SSMS. Однако в этих представлениях нет никаких данных о том, запускались ли вообще эти сеансы.
     - Например, если в **обозревателе объектов** SSMS показано, что не определено ни одного сеанса событий, то при использовании инструкции SELECT в представлении *sys.server_event_session_targets* не будет возвращено ни одной строки.
 
 
@@ -49,7 +53,7 @@ caps.handback.revision: 6
     - *sys.database\_event\_session\** — префикс имени в базе данных SQL Server.
 
 
-#### Динамические административные представления (DMV)
+#### <a name="dynamic-management-views-dmvs"></a>Динамические административные представления (DMV)
 
 - Хранение сведений о *текущей активности* запущенных сеансов событий. Однако динамические административные представления содержат минимум сведений об определении сеансов.
     - Даже если в настоящее время остановлены все сеансы событий, инструкция SELECT в представлении *sys.dm_xe_packages* будет по-прежнему возвращать строки, так как при запуске сервера в активную память загружаются разные пакеты.
@@ -61,7 +65,7 @@ caps.handback.revision: 6
     - *sys.dm\_xe\_database\_\** — префикс имени в базе данных SQL.
 
 
-#### Разрешения:
+#### <a name="permissions"></a>Разрешения:
 
 
 Для выполнения SELECT в представлениях системы необходимо следующее разрешение:
@@ -72,7 +76,7 @@ caps.handback.revision: 6
 
 <a name="section_B_catalog_views"></a>
 
-## Б. представлений каталога;
+## <a name="b-catalog-views"></a>Б. представлений каталога;
 
 
 В этом разделе сопоставляются три разных технологических подхода для одного и того же определенного сеанса событий. Сеанс был определен и отображается в **обозревателе объектов** среды SQL Server Management Studio (SSMS.exe), но сеанс в данный момент не запущен.
@@ -87,7 +91,7 @@ caps.handback.revision: 6
 
 
 
-#### Содержание раздела Б
+#### <a name="the-sequence-in-this-section-b"></a>Содержание раздела Б
 
 
 - [Б.1. Обзор с использованием пользовательского интерфейса среды SSMS](#section_B_1_SSMS_UI_perspective)
@@ -95,11 +99,11 @@ caps.handback.revision: 6
 
 
 - [Б.2. Обзор с использованием Transact-SQL](#section_B_2_TSQL_perspective)
-    - Использование контекстного меню среды SSMS для реконструирования определенного сеанса событий в эквивалентную инструкцию Transact-SQL **CREATE EVENT SESSION**. T-SQL демонстрирует точное совпадение с данными на снимках экрана SSMS.
+    - Использование контекстного меню среды SSMS для реконструирования определенного сеанса событий в эквивалентную инструкцию Transact-SQL **CREATE EVENT SESSION** . T-SQL демонстрирует точное совпадение с данными на снимках экрана SSMS.
 
 
 - [Б.3. Обзор с использованием конструкции SELECT JOIN UNION представления каталога](#section_B_3_Catalog_view_S_J_UNION)
-    - Выполнение инструкции T-SQL SELECT в представлениях системного каталога для сеанса событий. Результаты совпадают со спецификациями инструкции **CREATE EVENT SESSION**.
+    - Выполнение инструкции T-SQL SELECT в представлениях системного каталога для сеанса событий. Результаты совпадают со спецификациями инструкции **CREATE EVENT SESSION** .
 
 
 &nbsp;
@@ -108,17 +112,17 @@ caps.handback.revision: 6
 
 <a name="section_B_1_SSMS_UI_perspective"></a>
 
-### Б.1. Обзор с использованием пользовательского интерфейса среды SSMS
+### <a name="b1-ssms-ui-perspective"></a>Б.1. Обзор с использованием пользовательского интерфейса среды SSMS
 
 
-В среде SSMS в **обозревателе объектов** откройте диалоговое окно **Новый сеанс**, развернув узлы **Управление** > **Расширенные события** и щелкнув правой кнопкой мыши **Сеансы** > **Создать сеанс**.
+В среде SSMS в **обозревателе объектов**откройте диалоговое окно **Новый сеанс** , развернув узлы **Управление** > **Расширенные события**и щелкнув правой кнопкой мыши **Сеансы** > **Создать сеанс**.
 
 В большом диалоговом окне **Новый сеанс** в его первом разделе **Общие** был выбран параметр **Запускать сеанс событий при запуске сервера**.
 
 ![Новый сеанс > Общие, Запускать сеанс событий при запуске сервера.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Далее в разделе **События** видно, что было выбрано событие **lock_deadlock**. Для этого события были выбраны три **действия**. Это означает, что была нажата кнопка **Настроить**, которая становится серой после нажатия.
+Далее в разделе **События** видно, что было выбрано событие **lock_deadlock**. Для этого события были выбраны три **действия** . Это означает, что была нажата кнопка **Настроить**, которая становится серой после нажатия.
 
 ![Новый сеанс > События, Глобальные поля (действия)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
@@ -147,10 +151,10 @@ caps.handback.revision: 6
 
 <a name="section_B_2_TSQL_perspective"></a>
 
-### Б.2. Обзор с использованием Transact-SQL
+### <a name="b2-transact-sql-perspective"></a>Б.2. Обзор с использованием Transact-SQL
 
 
-Независимо от способа создания определения сеанса событий сеанс из пользовательского интерфейса среды SSMS можно реконструировать в точно совпадающий скрипт Transact-SQL. Можно просмотреть предыдущие снимки экрана нового сеанса и сравнить отображаемые данные с предложениями в следующем созданном скрипте T-SQL **CREATE EVENT SESSION**.
+Независимо от способа создания определения сеанса событий сеанс из пользовательского интерфейса среды SSMS можно реконструировать в точно совпадающий скрипт Transact-SQL. Можно просмотреть предыдущие снимки экрана нового сеанса и сравнить отображаемые данные с предложениями в следующем созданном скрипте T-SQL **CREATE EVENT SESSION** .
 
 Чтобы реконструировать сеанс событий, в **обозревателе объектов** щелкните правой кнопкой мыши узел сеанса и затем выберите **Создать скрипт сеанса как** > **Создать в** > **Буфер обмена**.
 
@@ -205,7 +209,7 @@ CREATE EVENT SESSION [event_session_test3]
 
 <a name="section_B_3_Catalog_view_S_J_UNION"></a>
 
-### Б.3. Обзор с использованием конструкции SELECT JOIN UNION представления каталога
+### <a name="b3-catalog-view-select-join-union-perspective"></a>Б.3. Обзор с использованием конструкции SELECT JOIN UNION представления каталога
 
 
 Не пугайтесь! Следующая инструкция T-SQL SELECT слишком длинна только потому, что она объединяет (UNION) несколько небольших инструкций SELECT. Любая из этих небольших инструкций SELECT может выполняться самостоятельно. Небольшие инструкции SELECT демонстрируют варианты присоединения (JOIN) различных системных представлений каталогизации.
@@ -343,7 +347,7 @@ ORDER BY
 ```
 
 
-#### Вывод
+#### <a name="output"></a>Вывод
 
 
 Ниже приведены фактические выходные данные выполнения предыдущей конструкции SELECT JOIN UNION. Имена и значения выходных параметров соответствуют результату предыдущей инструкции CREATE EVENT SESSION.
@@ -373,7 +377,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_DMVs"></a>
 
-## В. Динамические административные представления (DMV)
+## <a name="c-dynamic-management-views-dmvs"></a>В. Динамические административные представления (DMV)
 
 
 Перейдем к динамическим административным представлениям. Этот раздел содержит несколько инструкций Transact-SQL SELECT, каждая из которых служит конкретной цели. Кроме того, инструкции SELECT демонстрируют, как можно применять JOIN, чтобы объединить представления DMV для использования в новых целях.
@@ -400,7 +404,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_1_list_packages"></a>
 
-### В.1. Список всех пакетов
+### <a name="c1-list-of-all-packages"></a>В.1. Список всех пакетов
 
 
 Все объекты, которые можно использовать в области расширенных событий, взяты из пакетов, которые загружены в систему. В этом разделе перечислены все пакеты и даны их описания.
@@ -417,7 +421,7 @@ SELECT  --C.1
 ```
 
 
-#### Вывод
+#### <a name="output"></a>Вывод
 
 Ниже приведен список пакетов.
 
@@ -456,7 +460,7 @@ XtpRuntime     Extended events for the XTP Runtime
 
 <a name="section_C_2_count_object_type"></a>
 
-### В.2. Количество каждого типа объекта
+### <a name="c2-count-of-every-object-type"></a>В.2. Количество каждого типа объекта
 
 
 Здесь содержатся сведения о типах объектов, содержащихся в пакетах событий. Отображается полный список всех типов объектов, которые находятся в *sys.dm\_xe\_objects*, а также количество по каждому типу.
@@ -475,7 +479,7 @@ SELECT  --C.2
 ```
 
 
-#### Вывод
+#### <a name="output"></a>Вывод
 
 Ниже приведено количество объектов по типу объекта. Здесь около 1915 объектов.
 
@@ -499,7 +503,7 @@ Count-of-Type   object_type
 
 <a name="section_C_3_select_all_available_objects"></a>
 
-### В.3. SELECT для всех доступных элементов, отсортированных по типу
+### <a name="c3-select-all-available-items-sorted-by-type"></a>В.3. SELECT для всех доступных элементов, отсортированных по типу
 
 
 Следующая инструкция SELECT возвращает около 1915 строк, по одной для каждого объекта.
@@ -530,7 +534,7 @@ SELECT  --C.3
 ```
 
 
-#### Вывод
+#### <a name="output"></a>Вывод
 
 Чтобы удовлетворить ваш интерес, далее приводится произвольная выборка объектов, возвращенных предыдущей инструкцией SELECT.
 
@@ -566,7 +570,7 @@ type           package0       xml                           Well formed XML frag
 
 <a name="section_C_4_data_fields"></a>
 
-### В.4. Поля данных, доступные для события
+### <a name="c4-data-fields-available-for-your-event"></a>В.4. Поля данных, доступные для события
 
 
 Следующая инструкция SELECT возвращает все поля данных, относящиеся к вашему событию.
@@ -595,7 +599,7 @@ SELECT  -- C.4
         AND
         o.object_type = 'event'
         AND
-        o.name        = '<EVENT-NAME-HERE!>'  --'lock_deadlock'
+        o.name        = '\<EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Event],
@@ -603,12 +607,12 @@ SELECT  -- C.4
 ```
 
 
-#### Вывод
+#### <a name="output"></a>Вывод
 
-Предыдущая инструкция SELECT, WHERE `o.name = 'lock_deadlock'` возвратила следующие строки параметров:
+Предыдущая инструкция SELECT, WHERE `o.name = 'lock_deadlock'`возвратила следующие строки параметров:
 
-- Каждая строка представляет дополнительный фильтр для события *sqlserver.lock_deadlock*.
-- В следующем фрагменте отсутствует столбец *\[Column-Description\]*. Он часто имеет значение NULL.
+- Каждая строка представляет дополнительный фильтр для события *sqlserver.lock_deadlock* .
+- В следующем фрагменте отсутствует столбец *\[Column-Description\]* . Он часто имеет значение NULL.
 
 
 ```
@@ -642,7 +646,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### В.5. *sys.dm_xe_map_values* и поля событий
+### <a name="c5-sysdmxemapvalues-and-event-fields"></a>В.5. *sys.dm_xe_map_values* и поля событий
 
 
 Следующая инструкция SELECT содержит оператор JOIN для сложного представления с именем *sys.dm_xe_map_values*.
@@ -682,7 +686,7 @@ SELECT  --C.5
     WHERE
         do.object_type = 'event'
         AND
-        do.name        = '<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
+        do.name        = '\<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Object],
@@ -691,7 +695,7 @@ SELECT  --C.5
 ```
 
 
-#### Вывод
+#### <a name="output"></a>Вывод
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -719,7 +723,7 @@ you could put:
 
 <a name="section_C_6_parameters_targets"></a>
 
-### В.6. Параметры для целевых объектов
+### <a name="c6-parameters-for-targets"></a>В.6. Параметры для целевых объектов
 
 
 Следующая инструкция SELECT возвращает каждый параметр для целевого объекта. Каждый параметр помечается, поэтому можно определить, является он обязательным или нет. Значения, назначаемые параметрам, влияют на поведение целевого объекта.
@@ -754,7 +758,7 @@ SELECT  --C.6
     WHERE
         o.object_type = 'target'
         AND
-        o.name     LIKE '%'    -- Or '<YOUR-TARGET-NAME-HERE!>'.
+        o.name     LIKE '%'    -- Or '\<YOUR-TARGET-NAME-HERE!>'.
     ORDER BY
         [Package],
         [Target],
@@ -763,7 +767,7 @@ SELECT  --C.6
 ```
 
 
-#### Вывод
+#### <a name="output"></a>Вывод
 
 Приведенные ниже строки параметров являются подмножеством данных, возвращенных предыдущей инструкцией SELECT в SQL Server 2016.
 
@@ -784,7 +788,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### В.7. Инструкция SELECT DMV, приводящая столбец target_data к формату XML
+### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>В.7. Инструкция SELECT DMV, приводящая столбец target_data к формату XML
 
 
 Эта инструкция DMV SELECT возвращает строки данных из целевого объекта открытого сеанса событий. Данные приведены к формату XML, поэтому возвращенную ячейку можно активировать щелчком мыши для простоты отображения в среде.
@@ -804,18 +808,18 @@ SELECT  --C.7
 
             ON s.address = t.event_session_address
     WHERE
-        s.name = '<Your-Session-Name-Here!>';
+        s.name = '\<Your-Session-Name-Here!>';
 ```
 
 
-#### Выходные данные в виде единственной строки, включая ячейку XML
+#### <a name="output-the-only-row-including-its-xml-cell"></a>Выходные данные в виде единственной строки, включая ячейку XML
 
 Здесь приведена единственная строка, являющаяся выходными данными выполнения предыдущей инструкции SELECT. Столбец *XML-Cast* содержит строку XML-данных, которую среда SSMS считает XML. Поэтому SSMS понимает, что ячейку XML-Cast необходимо сделать активной по щелчку.
 
 
 Для данного запуска:
 
-- *S.name =* значение, заданное для сеанса событий для события *checkpoint_begin*.
+- *S.name =* значение, заданное для сеанса событий для события *checkpoint_begin* .
 - Целевой объект — *ring_buffer*.
 
 
@@ -826,7 +830,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ```
 
 
-#### Выходные данные, XML-данные, отображаемые после щелчка ячейки
+#### <a name="output-xml-displayed-pretty-when-cell-is-clicked"></a>Выходные данные, XML-данные, отображаемые после щелчка ячейки
 
 
 После щелчка ячейки XML-Cast отображаются следующие данные.
@@ -852,7 +856,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 
 <a name="section_C_8_select_function_disk"></a>
 
-### В.8. Использование SELECT в функции для получения данных event_file с диска
+### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>В.8. Использование SELECT в функции для получения данных event_file с диска
 
 
 Предположим, что сеанс событий собрал некоторые данные и позднее был остановлен. Если сеанс был определен для использования целевого объекта event_file, вы по-прежнему можете получать данные путем вызова функции *sys.fn_xe_target_read_file*.
@@ -872,7 +876,7 @@ SELECT  --C.8
     FROM
         sys.fn_xe_file_target_read_file(
 
-            '<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
+            '\<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
             --'C:\Junk\Checkpoint_Begins_ES*.xel',  -- Example.
 
             NULL, NULL, NULL
@@ -880,7 +884,7 @@ SELECT  --C.8
 ```
 
 
-#### Выходные данные, строки, возвращенные SELECT FROM (выбор из функции)
+#### <a name="output-rows-returned-by-select-from-the-function"></a>Выходные данные, строки, возвращенные SELECT FROM (выбор из функции)
 
 
 Далее приведены строки, возвращенные предыдущим запросом SELECT FROM. Крайний правый столбец XML содержит данные, касающиеся вхождения события.
@@ -896,7 +900,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
 ```
 
 
-#### Выходные данные, одна ячейка XML
+#### <a name="output-one-xml-cell"></a>Выходные данные, одна ячейка XML
 
 
 Далее приведено содержимое первой ячейки XML из предыдущего возвращенного набора строк.
@@ -915,4 +919,6 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
+
+
 

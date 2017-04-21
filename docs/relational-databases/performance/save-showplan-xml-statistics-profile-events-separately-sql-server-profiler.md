@@ -1,29 +1,33 @@
 ---
-title: "раздельно сохранить события &#171;Профиль статистики Showplan XML&#187; (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "события Showplan XML"
-  - "сохранение событий Showplan XML"
-  - "события [SQL Server], Showplan XML"
+title: "Раздельное сохранение событий профиля статистики Showplan XML (приложение SQL Server Profiler) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Showplan XML events
+- saving Showplan XML events
+- events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1f079c68f7f54569dee1a6d9f2e9fa61f1893426
+ms.lasthandoff: 04/11/2017
+
 ---
-# раздельно сохранить события &#171;Профиль статистики Showplan XML&#187; (приложение SQL Server Profiler)
+# <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>раздельно сохранить события «Профиль статистики Showplan XML» (приложение SQL Server Profiler)
   В этом подразделе описывается сохранение событий **профиля статистики Showplan XML** , фиксируемых трассировкой, в отдельные файлы с расширением SQLPlan при помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Файлы событий **профиля статистики Showplan XML** можно открыть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], что позволит посмотреть графический план выполнения для каждого события.  
   
-### Раздельное сохранение событий статистики Showplan XML  
+### <a name="to-save-showplan-xml-statistics-events-separately"></a>Раздельное сохранение событий статистики Showplan XML  
   
 1.  В меню **Файл** выберите пункт **Создать трассировку**, а затем подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,19 +54,19 @@ caps.handback.revision: 20
   
 6.  Перейдите на вкладку **Выбор событий**.  
   
-7.  В столбце данных **События** разверните категорию событий **Производительность** и установите флажок **Showplan XML Statistics Profile** (Профиль статистики Showplan XML). Если категория событий **Производительность** недоступна, установите флажок **Показать все события** , чтобы отобразить ее.  
+7.  В столбце данных **События**разверните категорию событий **Производительность**и установите флажок **Showplan XML Statistics Profile**(Профиль статистики Showplan XML). Если категория событий **Производительность** недоступна, установите флажок **Показать все события** , чтобы отобразить ее.  
   
-     Вкладка **Настройки извлечения событий** добавлена в диалоговое окно **Свойства трассировки**.  
+     Вкладка **Настройки извлечения событий**добавлена в диалоговое окно **Свойства трассировки**.  
   
-8.  На вкладке **Настройки извлечения событий** установите флажок **Сохранить события XML Showplan отдельно**.  
+8.  На вкладке **Настройки извлечения событий**установите флажок **Сохранить события XML Showplan отдельно**.  
   
 9. В диалоговом окне **Сохранить как** введите имя файла для сохранения событий **профиля статистики Showplan XML** .  
   
-10. Щелкните **Все пакеты XML Showplan в один файл**, чтобы сохранить все события **профиля статистики Showplan XML** в одном XML-файле, или щелкните **Каждый пакет XML Showplan в отдельный файл**, чтобы создать новый XML-файл для каждого события **профиля статистики Showplan XML**.  
+10. Щелкните **Все пакеты XML Showplan в один файл** , чтобы сохранить все события **профиля статистики Showplan XML** в одном XML-файле, или щелкните **Каждый пакет XML Showplan в отдельный файл**, чтобы создать новый XML-файл для каждого события **профиля статистики Showplan XML** .  
   
 11. Чтобы просмотреть файл событий **профиля статистики Showplan XML** в среде SQL Server Management Studio, в меню **Файл** выберите **Открыть**и щелкните **Файл**. Перейдите в каталог, в котором был сохранен файл или файлы событий **профиля статистики Showplan XML** , выберите один файл и откройте его. Файлы событий**профиля статистики Showplan XML** имеют расширение «SQLPlan».  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Анализ запросов с помощью результатов инструкции SHOWPLAN в приложении SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

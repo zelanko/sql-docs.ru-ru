@@ -1,30 +1,34 @@
 ---
-title: "Создание связанных серверов (компонент SQL Server Database Engine) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/20/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.linkedserver.properties.general.f1"
-  - "sql13.swb.linkedserver.properties.security.f1"
-  - "sql13.swb.linkedserver.properties.provider.f1"
-  - "sql13.swb.linkedserver.properties.options.f1"
-helpviewer_keywords: 
-  - "связанные серверы [SQL Server], создание"
+title: "Создание связанных серверов (компонент SQL Server Database Engine) | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/20/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.linkedserver.properties.general.f1
+- sql13.swb.linkedserver.properties.security.f1
+- sql13.swb.linkedserver.properties.provider.f1
+- sql13.swb.linkedserver.properties.options.f1
+helpviewer_keywords:
+- linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 219a32bb6296fac9ec50f78899a31fe52475095c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание связанных серверов (компонент SQL Server Database Engine)
+# <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
   В этом разделе описано, как создать связанный сервер и производить доступ к данным из другого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Путем создания связанного сервера вы можете работать с данными из нескольких источников. Связанный сервер не обязательно должен быть другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хотя такой вариант часто встречается.  
   
 ##  <a name="Background"></a> Историческая справка  
@@ -34,8 +38,8 @@ caps.handback.revision: 18
   
 ##  <a name="Security"></a> Безопасность  
   
-### Разрешения  
- При использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] требуется разрешение **ALTER ANY LINKED SERVER** на сервер или членство в предопределенной роли сервера **setupadmin**. Для работы с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] требуется разрешение **CONTROL SERVER** или членство в предопределенной роли сервера **sysadmin**.  
+### <a name="permissions"></a>Разрешения  
+ При использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] требуется разрешение **ALTER ANY LINKED SERVER** на сервер или членство в предопределенной роли сервера **setupadmin** . Для работы с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] требуется разрешение **CONTROL SERVER** или членство в предопределенной роли сервера **sysadmin** .  
   
 ##  <a name="Procedures"></a> Создание связанного сервера  
  Можно использовать следующие параметры.  
@@ -46,9 +50,9 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-##### Создание связанного сервера для другого экземпляра SQL Server в среде SQL Server Management Studio  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Создание связанного сервера для другого экземпляра SQL Server в среде SQL Server Management Studio  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] откройте обозреватель объектов, разверните узел **Объекты сервера**, щелкните правой кнопкой мыши узел **Связанные серверы** и выберите команду **Создать связанный сервер**.  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов, разверните узел **Объекты сервера**, щелкните правой кнопкой мыши узел **Связанные серверы**и выберите команду **Создать связанный сервер**.  
   
 2.  На странице **Общие** в поле **Связанный сервер** введите имя экземпляра **SQL Server** , с которым связывается область.  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 18
      Введите название продукта для источника данных OLE DB, который добавляется в качестве связанного сервера.  
   
      **Источник данных**  
-     Введите имя источника данных согласно интерпретации поставщика OLE DB. При соединении с экземпляром служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указывается имя экземпляра.  
+     Введите имя источника данных согласно интерпретации поставщика OLE DB. При соединении с экземпляром служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]указывается имя экземпляра.  
   
      **Строка поставщика**  
      Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий источнику данных. Примеры допустимых строк поставщиков см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
@@ -86,7 +90,7 @@ caps.handback.revision: 18
 4.  На странице **Безопасность** укажите контекст безопасности, который будет использоваться при подключении исходного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к связанному серверу. В среде с доменами, где пользователи соединяются с именами входа домена, лучшим вариантом часто оказывается **Выполнять с использованием текущего контекста безопасности имени входа** . Если пользователи соединяются с исходным экземпляром **SQL Server** по имени входа **SQL Server** , то лучшим вариантом часто оказывается **С использованием этого контекста безопасности**с последующим указанием необходимых учетных данных для проверки подлинности на связанном сервере.  
   
      **Локальное имя входа**  
-     Указывает локальное имя входа, с помощью которого может осуществляться соединение со связанным сервером. Локальное имя входа может представлять собой либо имя входа с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо имя входа с проверкой подлинности Windows. Используйте этот список для разрешения соединений только определенным именам входа или для разрешения некоторым именам входа подключаться в качестве другого имени входа.  
+     Указывает локальное имя входа, с помощью которого может осуществляться соединение со связанным сервером. Локальное имя входа может представлять собой либо имя входа с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо имя входа с проверкой подлинности Windows. Используйте этот список для разрешения соединений только определенным именам входа или для разрешения некоторым именам входа подключаться в качестве другого имени входа.  
   
      **Impersonate**  
      Передает имя пользователя и пароль из локального имени входа на связанный сервер. Для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере должны существовать учетные данные входа с тем же самым именем и паролем. Для имен входа Windows имя входа должно быть допустимым на связанном сервере.  
@@ -115,7 +119,7 @@ caps.handback.revision: 18
      Указывает, что для имен входа, не определенных в списке, соединение будет выполняться с использованием текущего контекста безопасности имени входа. При наличии соединения с локальным сервером с использованием проверки подлинности Windows для подключения к удаленному серверу будут использоваться учетные данные Windows. При наличии соединения с локальным сервером с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подключения к удаленному серверу будут использоваться имя входа и пароль. В этом случае на удаленном сервере должны существовать учетные данные входа с теми же именем и паролем.  
   
      **Выполнять с использованием данного контекста безопасности**  
-     Указывает, что для имен входа, не определенных в списке, соединение будет выполняться при помощи имени входа и пароля, заданных в полях **Удаленный вход** и **С паролем**. Удаленное имя входа на удаленном сервере должно представлять собой имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Указывает, что для имен входа, не определенных в списке, соединение будет выполняться при помощи имени входа и пароля, заданных в полях **Удаленный вход** и **С паролем** . Удаленное имя входа на удаленном сервере должно представлять собой имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Для просмотра и установки параметров сервера можно также открыть страницу **Параметры сервера**  .  
   
@@ -141,28 +145,28 @@ caps.handback.revision: 18
      Если значение равно false, при распределенных запросах всегда будут использоваться установленные по умолчанию параметры сортировки на локальном сервере, в то время как имя параметров сортировки и параметры сортировки удаленных столбцов будут пропускаться. Значение по умолчанию — false.  
   
      **Имя параметров сортировки**  
-     Позволяет задать имя параметров сортировки, используемое удаленным источником данных, если значение параметра «Использовать параметры сортировки удаленного сервера» равно true, а источник данных не является источником данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот имя должно быть одним из параметров сортировки, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Позволяет задать имя параметров сортировки, используемое удаленным источником данных, если значение параметра «Использовать параметры сортировки удаленного сервера» равно true, а источник данных не является источником данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот имя должно быть одним из параметров сортировки, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Этот параметр используется при доступе к источнику данных OLE DB, отличному от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], параметры сортировки которого совпадают с одним из параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Связанный сервер должен поддерживать использование единых параметров сортировки для всех столбцов на этом сервере. Не задавайте этот параметр, если связанный сервер поддерживает несколько параметров сортировки для одного источника данных, или если невозможно определить, соответствуют ли параметры сортировки связанного сервера одному из параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Связанный сервер должен поддерживать использование единых параметров сортировки для всех столбцов на этом сервере. Не задавайте этот параметр, если связанный сервер поддерживает несколько параметров сортировки для одного источника данных, или если невозможно определить, соответствуют ли параметры сортировки связанного сервера одному из параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Время ожидания соединения**  
      Значение времени ожидания соединения со связанным сервером.  
   
-     Если значение равно 0, используется значение, заданное через **sp_configure** по умолчанию, — [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md).  
+     Если значение равно 0, используется значение, заданное через **sp_configure** по умолчанию, — [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
   
      **Время ожидания запроса**  
      Значение времени ожидания для запросов к связанному серверу, в секундах.  
   
-     Если значение равно 0, используется значение, заданное через **sp_configure** по умолчанию, — [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md).  
+     Если значение равно 0, используется значение, заданное через **sp_configure** по умолчанию, — [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
   
      **Разрешить продвижение распределенных транзакций**  
-     Используйте этот параметр, чтобы защитить действия процедуры между серверами посредством транзакции координатора распределенных транзакций (Майкрософт) ([!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC). Если этот параметр имеет значение TRUE, то вызов удаленной хранимой процедуры приводит к запуску распределенной транзакции и прикрепляет к выполнению транзакции MS DTC. Дополнительные сведения см. в статье [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
+     Используйте этот параметр, чтобы защитить действия процедуры между серверами посредством транзакции координатора распределенных транзакций (Майкрософт) ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC). Если этот параметр имеет значение TRUE, то вызов удаленной хранимой процедуры приводит к запуску распределенной транзакции и прикрепляет к выполнению транзакции MS DTC. Дополнительные сведения см. в статье [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  
   
 6.  Нажмите кнопку **ОК**.  
   
-##### Просмотр параметров поставщика  
+##### <a name="to-view-the-provider-options"></a>Просмотр параметров поставщика  
   
 -   Чтобы просмотреть доступные параметры поставщика, откройте страницы **Параметры поставщиков** .  
   
@@ -178,10 +182,10 @@ caps.handback.revision: 18
      Для поставщика вызываются только интерфейсы OLE DB уровня 0.  
   
      **Допускать в ходе процесса**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает создание экземпляра поставщика в виде внутрипроцессного сервера. Если этот параметр не установлен, поведением по умолчанию является создание экземпляра поставщика вне процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Создание экземпляра поставщика вне процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] защищает процесс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от ошибок в поставщике. Если экземпляр поставщика создается вне процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновления или вставки, ссылающиеся на длинные столбцы (**text**, **ntext** или **image**), не разрешаются.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает создание экземпляра поставщика в виде внутрипроцессного сервера. Если этот параметр не установлен, поведением по умолчанию является создание экземпляра поставщика вне процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Создание экземпляра поставщика вне процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] защищает процесс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от ошибок в поставщике. Если экземпляр поставщика создается вне процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , обновления или вставки, ссылающиеся на длинные столбцы (**text**, **ntext**или **image**), не разрешаются.  
   
      **Обновления без использования транзакций**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает обновления, даже если недоступен интерфейс **ITransactionLocal**. Если этот параметр включен, обновления поставщика необратимы, поскольку этот поставщик не поддерживает транзакции.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает обновления, даже если недоступен интерфейс **ITransactionLocal** . Если этот параметр включен, обновления поставщика необратимы, поскольку этот поставщик не поддерживает транзакции.  
   
      **Индекс в качестве пути доступа**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается использовать индексы поставщика для выборки данных. По умолчанию индексы используются только для метаданных и никогда не открываются.  
@@ -195,9 +199,9 @@ caps.handback.revision: 18
 ###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Чтобы создать связанный сервер с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)], используйте инструкции [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)[CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md) и [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
-##### Создание связанного сервера для другого экземпляра SQL Server с помощью Transact-SQL  
+##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Создание связанного сервера для другого экземпляра SQL Server с помощью Transact-SQL  
   
-1.  В редакторе запросов введите следующую команду [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы установить связь с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем `SRVR002\ACCTG`:  
+1.  В редакторе запросов введите следующую команду [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы установить связь с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем `SRVR002\ACCTG`:  
   
     ```tsql  
     USE [master]  
@@ -222,7 +226,7 @@ caps.handback.revision: 18
   
 ##  <a name="FollowUp"></a> Дальнейшие действия после создания связанного сервера  
   
-#### Проверка связанного сервера  
+#### <a name="to-test-the-linked-server"></a>Проверка связанного сервера  
   
 -   Выполните следующий код, чтобы проверить соединение со связанным сервером. Этот пример возвращает имена баз данных на связанном сервере.  
   
@@ -232,7 +236,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### Создание запроса, соединяющего таблицы со связанного сервера  
+#### <a name="writing-a-query-that-joins-tables-from-a-linked-server"></a>Создание запроса, соединяющего таблицы со связанного сервера  
   
 -   Для ссылки на объект, расположенный на связанном сервере, используйте четырехкомпонентные имена. Выполните следующий код, чтобы получить список всех имен входа на локальном сервере и соответствующих имен входа на связанном сервере.  
   
@@ -246,9 +250,10 @@ caps.handback.revision: 18
   
      Если для имени входа связанного сервера возвращается значение NULL, это значит, что имя входа не существует на связанном сервере. Такие имена входа не смогут использовать связанный сервер, если на нем не настроена передача другого контекста безопасности и он не принимает анонимные подключения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
+

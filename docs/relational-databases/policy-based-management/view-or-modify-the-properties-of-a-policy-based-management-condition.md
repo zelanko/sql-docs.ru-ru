@@ -1,25 +1,29 @@
 ---
-title: "Просмотр или изменение свойств условия управления на основе политик | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "управление на основе политик, просмотр условий политики"
-  - "управление на основе политик, изменение условий политики"
+title: "Просмотр или изменение свойств условия управления на основе политик | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, view policy conditions
+- Policy-Based Management, modify policy conditions
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cac543a91282a6329e44c297d56a9550b18f4681
+ms.lasthandoff: 04/11/2017
+
 ---
-# Просмотр или изменение свойств условия управления на основе политик
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Просмотр или изменение свойств условия управления на основе политик
   В этом разделе описывается просмотр и изменение свойств условия управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 
@@ -33,7 +37,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Просмотр или изменение свойств условия  
+#### <a name="to-view-or-modify-a-conditions-properties"></a>Просмотр или изменение свойств условия  
   
 1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, содержащий условие, которое нужно просмотреть или изменить.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Просмотр свойств условия  
+#### <a name="to-view-a-conditions-properties"></a>Просмотр свойств условия  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -74,3 +78,4 @@ caps.handback.revision: 11
  Дополнительные сведения см. в статье [syspolicy_conditions (Transact-SQL)](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md).  
   
   
+

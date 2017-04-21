@@ -1,28 +1,32 @@
 ---
-title: "Использование сеанса system_health | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "расширенные события [SQL Server], сеанс работоспособности системы"
-  - "расширенные события [SQL Server], сеанс system_health"
-  - "сеанс system_health [расширенные события SQL Server]"
-  - "сеанс system_health [расширенные события SQL Server]"
+title: "Использование сеанса system_health | Документация Майкрософт"
+ms.custom: 
+ms.date: 06/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], system health session
+- extended events [SQL Server], system_health session
+- system_health session [SQL Server extended events]
+- system health session [SQL Server extended events]
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c64a0a128576a4bbf38f10b70514dbc4def84d11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Использование сеанса system_health
+# <a name="use-the-systemhealth-session"></a>Использование сеанса system_health
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Сеанс system_health является сеансом расширенных событий, который по умолчанию включен в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот сеанс запускается автоматически при запуске [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и выполняется без заметного воздействия на производительность. В этом сеансе собираются системные данные, которые можно использовать для устранения неполадок, связанных с производительностью компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Поэтому этот сеанс не рекомендуется останавливать или удалять.  
@@ -57,7 +61,7 @@ caps.handback.revision: 17
   
 -   Ошибки безопасности при использовании security_error_ring_buffer_recorded.  
   
-## Просмотр данных сеанса  
+## <a name="viewing-the-session-data"></a>Просмотр данных сеанса  
  В сеансе для хранения данных используется цель «Кольцевой буфер». Для просмотра данных сеанса используйте следующий запрос.  
   
 ```  
@@ -67,16 +71,17 @@ ON (xe.address = xet.event_session_address)
 WHERE xe.name = 'system_health'  
 ```  
   
-Для просмотра данных сеанса событий из файла пользуйтесь доступным пользовательским интерфейсом расширенных событий в среде Management Studio. Дополнительные сведения см. в разделе [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md) (Расширенный просмотр целевых данных из расширенных событий в SQL Server).
+Для просмотра данных сеанса событий из файла пользуйтесь доступным пользовательским интерфейсом расширенных событий в среде Management Studio. Дополнительные сведения см. в разделе [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)(Расширенный просмотр целевых данных из расширенных событий в SQL Server).
   
-## Восстановление сеанса system_health  
- Если сеанс system_healt был удален, то вы можете его восстановить, выполнив файл **u_tables.sql** в редакторе запросов. Этот файл находится в следующей папке (где C: означает диск, на котором установлены программные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+## <a name="restoring-the-systemhealth-session"></a>Восстановление сеанса system_health  
+ Если сеанс system_healt был удален, то вы можете его восстановить, выполнив файл **u_tables.sql** в редакторе запросов. Этот файл находится в следующей папке (где C: означает диск, на котором установлены программные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
- C:\Program Files\Microsoft SQL Server\MSSQL13.\<*ИД_экземпляра*>\MSSQL\Install  
+ C:\Program Files\Microsoft SQL Server\MSSQL13.\<*идентификатор_экземпляра*>\MSSQL\Install  
   
- Имейте в виду, что после восстановления сеанса необходимо его запустить с помощью инструкции ALTER EVENT SESSION или через узел **Расширенные события** в обозревателе объектов. Если этого не сделать, сеанс запустится автоматически при следующем перезапуске службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Имейте в виду, что после восстановления сеанса необходимо его запустить с помощью инструкции ALTER EVENT SESSION или через узел **Расширенные события** в обозревателе объектов. Если этого не сделать, сеанс запустится автоматически при следующем перезапуске службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Средства расширенных событий](../../relational-databases/extended-events/extended-events-tools.md)  
   
   
+

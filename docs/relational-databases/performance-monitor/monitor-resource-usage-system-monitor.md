@@ -1,46 +1,50 @@
 ---
-title: "Наблюдение за использованием ресурсов (системный монитор) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "мониторинг производительности [SQL Server], использование ресурсов"
-  - "системный монитор [SQL Server], о системном мониторе Windows"
-  - "наблюдение за использованием ресурсов [SQL Server]"
-  - "системный монитор [SQL Server]"
-  - "счетчики [SQL Server], субъекты использования ресурсов"
-  - "счетчики производительности [SQL Server], субъекты использования ресурсов"
-  - "системный монитор Windows [SQL Server], о системном мониторе Windows"
-  - "мониторинг [SQL Server], использование ресурсов сервера"
-  - "наблюдение за использованием ресурсов [SQL Server]"
-  - "системный монитор Windows [SQL Server]"
-  - "мониторинг базы данных [SQL Server], использование ресурсов"
-  - "производительность базы данных [SQL Server], использование ресурсов"
-  - "настройка баз данных [SQL Server], использование ресурсов"
-  - "производительность сервера [SQL Server], использование ресурсов"
+title: "Наблюдение за использованием ресурсов (системный монитор) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server], resource usage
+- System Monitor [SQL Server], about Windows System Monitor
+- resource usage monitoring [SQL Server]
+- System Monitor [SQL Server]
+- counters [SQL Server], resource usage subjects
+- performance counters [SQL Server], resource usage subjects
+- Windows System Monitor [SQL Server], about Windows System Monitor
+- monitoring [SQL Server], server resource usage
+- monitoring resource usage [SQL Server]
+- Windows System Monitor [SQL Server]
+- database monitoring [SQL Server], resource usage
+- database performance [SQL Server], resource usage
+- tuning databases [SQL Server], resource usage
+- server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# Наблюдение за использованием ресурсов (системный монитор)
+# <a name="monitor-resource-usage-system-monitor"></a>Наблюдение за использованием ресурсов (системный монитор)
   В состав серверной операционной системы Microsoft Windows входит графическое средство для измерения производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— системный монитор. Он позволяет просматривать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , счетчики производительности, а также поведения других объектов, таких как процессоры, память, кэш, потоки и процессы. С каждым из этих объектов связан набор счетчиков, измеряющих степень использования устройства, длину очередей, задержки и другие показатели производительности и внутренней перегрузки.  
   
 > [!NOTE]  
 >  Этот системный монитор заменяет системный монитор Windows NT 4.0.  
   
-## Преимущества системного монитора  
+## <a name="benefits-of-system-monitor"></a>Преимущества системного монитора  
  Системный монитор может быть полезным для одновременного контроля счетчиков операционной системы Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для определения корреляции между производительностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows. Например, контроль счетчиков Windows для операций ввода-вывода на диске и одновременно счетчиков диспетчера буферов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выявить закономерности всей системы.  
   
- Системный монитор позволяет получить статистические данные о текущей активности и производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Применение системного монитора предоставляет следующие возможности.  
+ Системный монитор позволяет получить статистические данные о текущей активности и производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Применение системного монитора предоставляет следующие возможности.  
   
 -   Просматривать данные одновременно на любом числе компьютеров.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 29
     > [!NOTE]  
     >  В системах позднее Windows NT 4.0 системный монитор заменил монитор производительности. Для выполнения указанных задач можно использовать системный монитор или монитор производительности.  
   
-## Производительность системного монитора  
+## <a name="system-monitor-performance"></a>Производительность системного монитора  
  При мониторинге [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы Microsoft Windows для исследования вопросов, связанных с производительностью, первоначальные усилия должны быть сосредоточены на трех основных областях.  
   
 -   Активность работы с диском  
@@ -74,13 +78,13 @@ caps.handback.revision: 29
   
  Контроль компьютера, в котором выполняется системный монитор, может слегка влиять на производительность компьютера. Поэтому или регистрируйте данные системного монитора на другом диске (или компьютере), чтобы уменьшить воздействие процедуры контроля на контролируемый компьютер, или выполняйте системный монитор с удаленного компьютера. Контролируйте только те счетчики, которые необходимы. При мониторинге слишком большого числа счетчиков в процессе мониторинга возникают дополнительные затраты ресурсов, что влияет на производительность того компьютера, за которым производится наблюдение.  
   
-## Задачи системного монитора  
+## <a name="system-monitor-tasks"></a>Задачи системного монитора  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Описываются случаи применения системного монитора и обсуждается снижение производительности при использовании системного монитора.|[Запуск системного монитора](../../relational-databases/performance-monitor/run-system-monitor.md)|  
 |Описаны способы отслеживания счетчиков дискового пространства для определения активности диска и количества операций ввода-вывода, создаваемых компонентами SQL Server.|[Наблюдение за использованием диска](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
-|Описаны способы отслеживания экземпляра Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах.|[Мониторинг использования ЦП](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
+|Описаны способы отслеживания экземпляра Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах.|[Мониторинг использования ЦП](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
 |Описаны способы мониторинга экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подтверждения того, что память используется в допустимых пределах.|[Наблюдение за использованием памяти](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
 |Описаны способы создания предупреждения, которое будет выводиться, когда счетчик системного монитора достигает порогового значения.|[Создание предупреждения для базы данных SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)|  
 |Описаны способы создания диаграмм, предупреждений, журналов и отчетов для отслеживания экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Создание диаграмм, предупреждений, журналов и отчетов](../../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md)|  

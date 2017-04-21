@@ -1,22 +1,26 @@
 ---
-title: "Узел управления политиками (обозреватель объектов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Узел управления политиками (обозреватель объектов) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 075e44b9b50eb356a4eabdebf8524f186db3d527
+ms.lasthandoff: 04/11/2017
+
 ---
-# Узел управления политиками (обозреватель объектов)
+# <a name="policy-management-node-object-explorer"></a>Узел управления политиками (обозреватель объектов)
   Этот раздел содержит приведенные ниже разделы справки F1 для узла **PolicyManagement** обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
@@ -53,7 +57,7 @@ caps.handback.revision: 22
   
 -   [Диалоговое окно «Импорт политик»](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

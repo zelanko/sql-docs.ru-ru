@@ -1,24 +1,28 @@
 ---
-title: "Совместимость FileTable с другими компонентами SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы FileTable [SQL Server], использование с другими компонентами"
+title: "Совместимость FileTable с другими компонентами SQL Server | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f6dc92bd0a4af006b914a6f7af7e898c84c5957b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Совместимость FileTable с другими компонентами SQL Server
+# <a name="filetable-compatibility-with-other-sql-server-features"></a>Совместимость FileTable с другими компонентами SQL Server
   Описывает, как FileTable работает с другими функциями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Группы доступности AlwaysOn и таблицы FileTable  
@@ -26,7 +30,7 @@ caps.handback.revision: 19
   
 -   Функции FileTable частично поддерживаются [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. После отработки отказа данные FileTable будут доступны в первичной реплике, при этом они не будут доступны на вторичных репликах, из которых можно выполнять чтение.  
   
-    > **ПРИМЕЧАНИЕ.** Обратите внимание на то, что после отработки отказа поддерживаются все функции FILESTREAM. Данные FILESTREAM доступны как в доступных для чтения вторичных репликах, так и в новой первичной реплике.  
+    > **ПРИМЕЧАНИЕ.**  Обратите внимание на то, что после отработки отказа поддерживаются все функции FILESTREAM. Данные FILESTREAM доступны как в доступных для чтения вторичных репликах, так и в новой первичной реплике.  
   
 -   Функции FILESTREAM и FileTable принимают или возвращают имена виртуальной сети, а не имена компьютеров. Дополнительные сведения об этих функциях см. в разделе [Функции Filestream и FileTable (Transact-SQL)](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 19
   
 -   Если для базы данных установлен нетранзакционный доступ уровня FULL, то транзакция выполняется в режиме RCSI или SI. Последняя имеет следующие особенности.  
   
-    -   Все [!INCLUDE[tsql](../../includes/tsql-md.md)]-операции чтения столбца file_stream в таблице FileTable будут завершаться ошибкой. Операции INSERT и UPDATE для столбца будут успешными только в том случае, если они не выполняются со столбцом file_stream.  
+    -   Все [!INCLUDE[tsql](../../includes/tsql-md.md)] -операции чтения столбца file_stream в таблице FileTable будут завершаться ошибкой. Операции INSERT и UPDATE для столбца будут успешными только в том случае, если они не выполняются со столбцом file_stream.  
   
     -   Если в запросе [!INCLUDE[tsql](../../includes/tsql-md.md)] указаны табличные подсказки READCOMMITTEDLOCK, то операции чтения будут выполняться успешно и получать блокировки строк, а не использовать управление версиями строк.  
   
@@ -117,7 +121,8 @@ caps.handback.revision: 19
   
  Для автономности базы данных можно установить значение PARTIAL при необходимости использовать некоторые функции автономных баз данных, например такие, как функция автономных пользователей. В этом случае следует иметь в виду, что некоторые параметры базы данных не хранятся в самой базе данных и не перемещаются автоматически при перемещении базы данных.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   
+

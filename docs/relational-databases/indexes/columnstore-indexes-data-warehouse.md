@@ -1,28 +1,32 @@
 ---
-title: "Индексы сolumnstore для хранилищ данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Хранилище данных для индексов columnstore | Документация Майкрософт"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# Индексы сolumnstore для хранилищ данных
+# <a name="columnstore-indexes---data-warehouse"></a>Хранилище данных для индексов columnstore
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Индексы columnstore в сочетании с секционированием являются необходимым элементом для создания хранилища данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="whats-new"></a>Новые возможности  
- В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появились следующие функции для повышения производительности индексов columnstore:  
+ В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появились следующие функции для повышения производительности индексов columnstore:  
   
 -   AlwaysOn поддерживает запросы к индексу columnstore в доступной для чтения вторичной реплике.  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 14
 -   Изоляция моментального снимка для уровня совместимости базы данных 130.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Повышение производительности благодаря объединению некластеризованных индексов и индексов columnstore  
- Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] можно определить некластеризованные индексы в кластеризованном индексе columnstore.  
+ Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]можно определить некластеризованные индексы в кластеризованном индексе columnstore.  
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Пример. Повышение эффективности операций поиска в таблицах с помощью некластеризованного индекса  
  Для повышения эффективности операций поиска в таблицах хранилища данных можно создать некластеризованный индекс, предназначенный для запуска запросов, которые показывают максимальную производительность с операциями поиска в таблицах. Например, запросы, которые ищут совпадающие значения или возвращают небольшой диапазон значений, будут эффективнее выполняться с индексом сбалансированного дерева, а не индексом columnstore. Они не требуют сканирования всей таблицы через индекс columnstore и вернут правильный результат быстрее, выполнив двоичный поиск по индексу сбалансированного дерева.  
@@ -137,11 +141,12 @@ END TRAN
  Изоляция моментальных снимков (SI) позволяет гарантировать согласованность транзакций, а изоляция моментальных снимков с чтением фиксированных данных (RCSI) — согласованность на уровне инструкций для запросов к индексам columnstore. Это позволяет запросам выполняться без блокировки модулей записи данных. Такое неблокирующее поведение также значительно снижает вероятность взаимоблокировок в сложных транзакциях. Дополнительные сведения см. в разделе [Изоляция моментальных снимков в SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) в библиотеке MSDN.  
   
 ## <a name="see-also"></a>См. также:  
- [Руководство по индексам columnstore](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Загрузка данных индексов columnstore](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Сводка функций индексов columnstore по версиям](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ Руководство по индексам Columnstore   
+ Загрузка данных индексов ColumnStore   
+ Сводка функций индексов columnstore по версиям   
  [Производительность запросов индексов columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Дефрагментация индексов columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

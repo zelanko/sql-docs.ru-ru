@@ -1,36 +1,40 @@
 ---
-title: "Создание учетной записи компонента Database Mail | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "компонент Database Mail [SQL Server], учетные записи"
-  - "учетные записи [компонент Database Mail]"
+title: "Создание учетной записи компонента Database Mail | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], accounts
+- accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 603259e6c6d93d5fa92e2680dcc8939e51365033
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание учетной записи компонента Database Mail
+# <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
   Для создания учетной записи компонента Database Mail применяется **мастер настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   **Перед началом работы:**  [необходимые компоненты](#Prerequisites)  
+-   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
--   **Создание учетной записи компонента Database Mail с использованием следующих средств:** [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To Create a Database Mail Account, using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.** [Следующие шаги настройки компонента Database Mail](#FollowUp)  
+-   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a> необходимые компоненты  
   
 -   Определите имя сервера и номер порта для сервера протокола SMTP, который используется для отправки электронной почты. Если SMTP-сервер требует проверки подлинности, определите имя пользователя и пароль для SMTP-сервера.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 26
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Создание учетной записи компонента Database Mail с помощью инструкций Transact-SQL**  
   
- Выполните хранимую процедуру **msdb.dbo.sysmail_add_account_sp**, чтобы создать учетную запись, и задайте следующие сведения:  
+ Выполните хранимую процедуру **msdb.dbo.sysmail_add_account_sp** , чтобы создать учетную запись, и задайте следующие сведения:  
   
 -   Имя создаваемой учетной записи.  
   

@@ -1,31 +1,35 @@
 ---
-title: "Создание обновляемой подписки для публикации транзакций с использованием Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обновляемые транзакционные подписки, T-SQL"
+title: "Создание обновляемой подписки для публикаций транзакций | Документация Майкрософт"
+ms.custom: 
+ms.date: 07/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7e21ddca2057879f3f9cde2bf5decf3c97944269
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание обновляемой подписки для публикации транзакций с использованием Transact-SQL
+# <a name="create-updatable-subscription-to-transactional-publication"></a>Создание обновляемой подписки для публикации транзакций
 
 > [!NOTE]  
 >  Эта функция поддерживается в версиях [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] с 2012 по 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
 Репликация транзакций позволяет распространять изменения, выполненные на подписчике, обратно на издатель с помощью немедленно обновляемых подписок или обновляемых посредством очередей подписок. Можно создать обновляемую подписку программно с помощью хранимых процедур репликации. (См. также раздел [Создание обновляемой подписки для публикации транзакций (среда Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md).) 
 
-## Создание немедленно обновляемой подписки по запросу ##
+## <a name="to-create-an-immediate-updating-pull-subscription"></a>Создание немедленно обновляемой подписки по запросу ##
 
 1. Проверьте на издателе, что публикация поддерживает немедленное обновление подписок. Для этого выполните процедуру [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -39,7 +43,7 @@ caps.handback.revision: 6
 
     * Если `allow_pull` имеет значение `0`, выполните хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав при этом значение `allow_pull` для параметра `@property` и значение `true` для параметра `@value`. 
 
-3. Выполните процедуру [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) на подписчике. Задайте `@publisher` и `@publication`, а также установите одно из следующих значений для `@update_mode`:
+3. Выполните процедуру [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)на подписчике. Задайте `@publisher` и `@publication`, а также установите одно из следующих значений для `@update_mode`:
 
     * `sync tran` — включает подписку для немедленного обновления;
 
@@ -48,9 +52,9 @@ caps.handback.revision: 6
     > [!NOTE]  
 >  `failover` — требует, чтобы для публикации были включены обновляемые посредством очередей подписки. 
  
-4. Выполните процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) на подписчике. Укажите следующее.
+4. Выполните процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)на подписчике. Укажите следующее.
 
-    * Параметры `@publisher`, `@publisher_db` и `@publication`. 
+    * Параметры `@publisher`, `@publisher_db`и `@publication` . 
 
     * Учетные данные пользователя Microsoft Windows, от имени которого на подписчике запускается агент распространителя, в качестве значений параметров `@job_login` и `@job_password`. 
 
@@ -61,20 +65,20 @@ caps.handback.revision: 6
 
     * Расписание задания агента распространителя для этой подписки. 
 
-5. В базе данных подписки на подписчике выполните процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Укажите параметр `@publisher`, параметр `@publication`, имя базы данных публикации в параметре `@publisher_db` и одно из следующих значений параметра `@security_mode`. 
+5. В базе данных подписки на подписчике выполните процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Укажите параметр `@publisher`, параметр `@publication`, имя базы данных публикации в параметре `@publisher_db`и одно из следующих значений параметра `@security_mode`. 
 
     * `0` — Использовать проверку подлинности SQL Server при выполнении обновлений на издателе. При этом необходимо указать допустимое имя входа на издатель в параметрах `@login` и `@password`.
 
-    * `1` — При соединении с издателем использовать контекст безопасности пользователя, выполняющего изменения на подписчике. Связанные с этим режимом безопасности ограничения см. в разделе [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md).
+    * `1` — При соединении с издателем использовать контекст безопасности пользователя, выполняющего изменения на подписчике. Связанные с этим режимом безопасности ограничения см. в разделе [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) .
 
     * `2` — Использовать существующее определенное пользователем имя входа на связанный сервер, созданное с помощью процедуры [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
-6. Выполните на издателе хранимую процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md), указав параметры `@publication`, `@subscriber`, `@destination_db`, значение pull в параметре `@subscription_type` и значение, указанное в шаге 3, в параметре `@update_mode`.
+6. Выполните на издателе хранимую процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) , указав параметры `@publication`, `@subscriber`, `@destination_db`, значение pull в параметре `@subscription_type`и значение, указанное в шаге 3, в параметре `@update_mode`.
 
 Подписка по запросу на издателе будет зарегистрирована. 
 
 
-## Создание немедленно обновляемой принудительной подписки ##
+## <a name="to-create-an-immediate-updating-push-subscription"></a>Создание немедленно обновляемой принудительной подписки ##
 
 1. Проверьте на издателе, что публикация поддерживает немедленное обновление подписок. Для этого выполните процедуру [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -88,7 +92,7 @@ caps.handback.revision: 6
 
     * Если `allow_push` имеет значение `0`, выполните хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав при этом значение `allow_push` для параметра `@property` и значение `true` для параметра `@value`. 
 
-3. Выполните процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) на издателе. Задайте `@publication`, `@subscriber` и `@destination_db`, а также установите одно из следующих значений для `@update_mode`:
+3. Выполните процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)на издателе. Задайте `@publication`, `@subscriber`и `@destination_db`, а также установите одно из следующих значений для `@update_mode`:
 
     * `sync tran` — включает поддержку немедленного обновления;
 
@@ -97,9 +101,9 @@ caps.handback.revision: 6
     > [!NOTE]  
 >  `failover` — требует, чтобы для публикации были включены обновляемые посредством очередей подписки. 
  
-4. Выполните процедуру [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) на издателе. Укажите значения следующих параметров.
+4. Выполните процедуру [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)на издателе. Укажите значения следующих параметров.
 
-    * `@subscriber`, `@subscriber_db` и `@publication`. 
+    * `@subscriber`, `@subscriber_db`и `@publication`. 
 
     * Учетные данные Windows, с которыми будет запускаться агент распространителя на распространителе, в параметрах `@job_login` и `@job_password`. 
 
@@ -110,16 +114,16 @@ caps.handback.revision: 6
 
     * Расписание задания агента распространителя для этой подписки.
 
-5. В базе данных подписки на подписчике выполните процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Укажите параметр `@publisher`, параметр `@publication`, имя базы данных публикации в параметре `@publisher_db` и одно из следующих значений параметра `@security_mode`. 
+5. В базе данных подписки на подписчике выполните процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Укажите параметр `@publisher`, параметр `@publication`, имя базы данных публикации в параметре `@publisher_db`и одно из следующих значений параметра `@security_mode`. 
 
      * `0` — Использовать проверку подлинности SQL Server при выполнении обновлений на издателе. При этом необходимо указать допустимое имя входа на издатель в параметрах `@login` и `@password`.
 
-     * `1` — При соединении с издателем использовать контекст безопасности пользователя, выполняющего изменения на подписчике. Связанные с этим режимом безопасности ограничения см. в разделе [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md).
+     * `1` — При соединении с издателем использовать контекст безопасности пользователя, выполняющего изменения на подписчике. Связанные с этим режимом безопасности ограничения см. в разделе [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) .
 
      * `2` — Использовать существующее определенное пользователем имя входа на связанный сервер, созданное с помощью процедуры [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).
 
 
-## Создание обновляемой посредством очередей подписки по запросу ##
+## <a name="to-create-a-queued-updating-pull-subscription"></a>Создание обновляемой посредством очередей подписки по запросу ##
 
 1. Проверьте на издателе, что публикация поддерживает обновляемые посредством очередей подписки. Для этого выполните процедуру [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -133,7 +137,7 @@ caps.handback.revision: 6
 
     * Если `allow_pull` имеет значение `0`, выполните хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав при этом значение `allow_pull` для параметра `@property` и значение `true` для параметра `@value`. 
 
-3. Выполните процедуру [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) на подписчике. Задайте `@publisher` и `@publication`, а также установите одно из следующих значений для `@update_mode`:
+3. Выполните процедуру [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)на подписчике. Задайте `@publisher` и `@publication`, а также установите одно из следующих значений для `@update_mode`:
 
     * `queued tran` — включает возможность обновления подписок посредством очередей;
 
@@ -142,9 +146,9 @@ caps.handback.revision: 6
     > [!NOTE]  
 >  `queued failover` — требует, чтобы для публикации также были включены немедленно обновляемые подписки. Чтобы переключиться на немедленное обновление, необходимо использовать процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) для определения учетных данных, с которыми изменения на подписчике реплицируются на издатель.
  
-4. Выполните процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) на подписчике. Укажите значения следующих параметров.
+4. Выполните процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)на подписчике. Укажите значения следующих параметров.
 
-    * @publisher, `@publisher_db` и `@publication`. 
+    * @publisher, `@publisher_db`и `@publication`. 
 
     * Учетные данные Windows, с которыми будет запускаться агент распространителя на подписчике, в параметрах `@job_login` и `@job_password`. 
 
@@ -155,12 +159,12 @@ caps.handback.revision: 6
 
     * Расписание задания агента распространителя для этой подписки.
 
-5. Выполните на издателе хранимую процедуру [sp_addsubscriber](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) для регистрации подписчика на издателе, указав параметры `@publication`, `@subscriber`, `@destination_db`, значение pull в параметре `@subscription_type` и значение, указанное в шаге 3, в параметре `@update_mode`.
+5. Выполните на издателе хранимую процедуру [sp_addsubscriber](../../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md) для регистрации подписчика на издателе, указав параметры `@publication`, `@subscriber`, `@destination_db`, значение pull в параметре `@subscription_type`и значение, указанное в шаге 3, в параметре `@update_mode`.
 
 Подписка по запросу на издателе будет зарегистрирована. 
 
 
-## Создание принудительной подписки, обновляемой посредством очередей ##
+## <a name="to-create-a-queued-updating-push-subscription"></a>Создание принудительной подписки, обновляемой посредством очередей ##
 
 1. Проверьте на издателе, что публикация поддерживает обновляемые посредством очередей подписки. Для этого выполните процедуру [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
@@ -174,18 +178,18 @@ caps.handback.revision: 6
 
     * Если `allow_push` имеет значение `0`, выполните хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав при этом значение allow_push для параметра `@property` и значение `true` для параметра `@value`. 
 
-3. Выполните процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) на издателе. Задайте `@publication`, `@subscriber` и `@destination_db`, а также установите одно из следующих значений для `@update_mode`:
+3. Выполните процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)на издателе. Задайте `@publication`, `@subscriber`и `@destination_db`, а также установите одно из следующих значений для `@update_mode`:
 
     * `queued tran` — включает возможность обновления подписок посредством очередей;
 
-    * `queued failover` — включает поддержку обновления посредством очередей с немедленным обновлением в качестве варианта для отработки отказа.
+    * `queued failover` — включает поддержку обновления посредством очередей с немедленным обновлением в качестве варианта для отработки отказа;
 
     > [!NOTE]  
 >  Параметр queued failover требует, чтобы для публикации также были включены немедленно обновляемые подписки. Чтобы переключиться на немедленное обновление, необходимо использовать процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) для определения учетных данных, с которыми изменения на подписчике реплицируются на издатель.
 
-4. Выполните процедуру [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) на издателе. Укажите значения следующих параметров.
+4. Выполните процедуру [sp_addpushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)на издателе. Укажите значения следующих параметров.
 
-    * `@subscriber`, `@subscriber_db` и `@publication`. 
+    * `@subscriber`, `@subscriber_db`и `@publication`. 
 
     * Учетные данные Windows, с которыми будет запускаться агент распространителя на распространителе, в параметрах `@job_login` и `@job_password`. 
 
@@ -197,7 +201,7 @@ caps.handback.revision: 6
     * Расписание задания агента распространителя для этой подписки.
 
 
-## Пример ##
+## <a name="example"></a>Пример ##
 
 В этом примере создается немедленно обновляемая подписка по запросу на публикацию, поддерживающую немедленно обновляемые подписки. Имя входа и пароль предоставляются во время выполнения переменными сценария sqlcmd.
 
@@ -268,10 +272,12 @@ EXEC sp_addsubscription
 GO
 ```
 
-## См. также: ##
+## <a name="see-also"></a>См. также: ##
 
 [Обновляемые подписки для репликации транзакций](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
 
-[Использование программы sqlcmd с переменными скрипта](../../../relational-databases/scripting/use-sqlcmd-with-scripting-variables.md)
+[Использование программы sqlcmd с переменными скрипта](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
 
 [Создание обновляемой подписки для публикации транзакций (среда Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+
+

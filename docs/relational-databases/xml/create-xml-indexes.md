@@ -1,28 +1,32 @@
 ---
-title: "Создание XML-индексов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "индексы [XML в SQL Server]"
-  - "XML-индексы [SQL Server], создание"
+title: "Создание XML-индексов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [XML in SQL Server]
+- XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание XML-индексов
+# <a name="create-xml-indexes"></a>Создание XML-индексов
   В данном разделе описано создание первичных и вторичных XML-индексов.  
   
-## Создание первичного XML-индекса  
+## <a name="creating-a-primary-xml-index"></a>Создание первичного XML-индекса  
  Для создания первичного XML-индекса используется DDL-инструкция [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]. Для XML-индексов поддерживаются не все параметры, доступные для обычных индексов.  
   
  При создании XML-индекса следует учитывать следующее:  
@@ -54,7 +58,7 @@ caps.handback.revision: 19
   
  При создании или повторном создании первичного XML-индекса на столбце с типом данных XML, в котором содержатся схемы XML типов **xs:date** или **xs:dateTime** (либо любых подтипов данных типов) со значением года меньше 1, создание индекса завершается ошибкой в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] эти значения допускались, поэтому данная проблема может возникнуть при создании индексов в базе данных, сформированной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-### Пример Создание первичного XML-индекса  
+### <a name="example-creating-a-primary-xml-index"></a>Пример Создание первичного XML-индекса  
  В большинстве наших примеров используется таблица T (pk INT PRIMARY KEY, xCol XML) с нетипизированным XML-столбцом. Эти примеры можно легко расширить на типизированный XML. Ради простоты запросы XML-данных описываются следующим образом:  
   
 ```  
@@ -78,7 +82,7 @@ caps.handback.revision: 19
 CREATE PRIMARY XML INDEX idx_xCol on T (xCol)  
 ```  
   
-## Создание вторичного XML-индекса  
+## <a name="creating-a-secondary-xml-index"></a>Создание вторичного XML-индекса  
  DDL-инструкция [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет создавать вторичные XML-индексы и указывать их тип.  
   
  При создании вторичных XML-индексов следует учитывать следующее.  
@@ -89,7 +93,7 @@ CREATE PRIMARY XML INDEX idx_xCol on T (xCol)
   
 -   Параметр DROP_EXISTING позволяет удалить вторичный индекс для пользовательской таблицы и создать другой вторичный индекс для той же таблицы.  
   
- Для получения сведений об XML-индексе можно выполнить запрос к представлению каталога **sys.xml_indexes**. Обратите внимание, что столбец **secondary_type_desc** в представлении каталога **sys.xml_indexes** указывает тип вторичного индекса:  
+ Для получения сведений об XML-индексе можно выполнить запрос к представлению каталога **sys.xml_indexes** . Обратите внимание, что столбец **secondary_type_desc** в представлении каталога **sys.xml_indexes** указывает тип вторичного индекса:  
   
 ```  
 SELECT  *   
@@ -98,7 +102,7 @@ FROM    sys.xml_indexes;
   
  Столбец **secondary_type_desc** может возвращать значения NULL, PATH, VALUE или PROPERTY. Для первичного XML-индекса всегда возвращается значение NULL.  
   
-### Пример. Создание вторичных XML-индексов  
+### <a name="example-creating-secondary-xml-indexes"></a>Пример. Создание вторичных XML-индексов  
  В следующем примере иллюстрируется создание вторичных XML-индексов. Здесь также выводятся сведения о созданных XML-индексах.  
   
 ```  
@@ -198,7 +202,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   

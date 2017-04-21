@@ -1,27 +1,31 @@
 ---
-title: "Курсоры XTP SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Курсоры XTP (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b2442e178c91d459356330fe7342eb1319ccb270
+ms.lasthandoff: 04/11/2017
+
 ---
-# Курсоры XTP SQL Server
+# <a name="sql-server-xtp-cursors"></a>Курсоры XTP SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Объект производительности XTP Cursors в SQL Server содержит счетчики, относящиеся к внутренним курсорам механизма In-Memory OLTP. Курсоры — низкоуровневые строительные блоки, используемые механизмом In-Memory OLTP для обработки запросов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Обычно вы не имеете прямого контроля над ними как таковыми.  
+  Объект производительности XTP Cursors в SQL Server содержит счетчики, относящиеся к внутренним курсорам механизма In-Memory OLTP. Курсоры — это низкоуровневые строительные блоки, используемые механизмом In-Memory OLTP для обработки запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Обычно вы не имеете прямого контроля над ними как таковыми.  
   
- В следующей таблице описаны счетчики **XTP Cursors SQL Server**.  
+ В следующей таблице описаны счетчики **XTP Cursors SQL Server** .  
   
 |Счетчик|Описание|  
 |-------------|-----------------|  
@@ -36,9 +40,9 @@ caps.handback.revision: 6
 |**Затронутых просроченных строк/с**|Число просроченных строк, затронутых курсорами (в среднем), в секунду.|  
 |**Возвращено строк/с**|Число строк, возвращенных курсорами (в среднем), в секунду.|  
 |**Затронутых строк/с**|Число строк, затронутых курсорами (в среднем), в секунду.|  
-|**Затронутых условно удаленных строк/с**|Число строк с истекающим сроком действия, затронутых курсорами (в среднем), в секунду. Срок действия строки истекает, если удалившая ее транзакция все еще активна (т. е. пока не зафиксирована или не отменена.)|  
+|**Затронутых условно удаленных строк/с**|Число строк с истекающим сроком действия, затронутых курсорами (в среднем), в секунду. Срок действия строки истекает, если удалившая ее транзакция все еще активна (т. е. пока не зафиксирована или не отменена.)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Счетчики производительности XTP (In-Memory OLTP) для SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

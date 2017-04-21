@@ -1,25 +1,29 @@
 ---
-title: "Удаление структуры плана | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "структуры планов [SQL Server], удаление"
+title: "Удаление структуры плана | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], deleting
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b43f5dd7f042bc559cede3b6043d737fb71a11
+ms.lasthandoff: 04/11/2017
+
 ---
-# Удаление структуры плана
-  Удалить структуру плана в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. С помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] также можно удалить все структуры планов в базе данных.  
+# <a name="delete-a-plan-guide"></a>Удаление структуры плана
+  Удалить структуру плана в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. С помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]также можно удалить все структуры планов в базе данных.  
   
  **В этом разделе**  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Удаление структуры плана  
+#### <a name="to-delete-a-plan-guide"></a>Удаление структуры плана  
   
 1.  Щелкните значок «+», чтобы развернуть базу данных, в которой требуется удалить структуру плана, затем щелкните значок «+», чтобы развернуть папку **Программирование** .  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Удаление одной структуры плана  
+#### <a name="to-delete-a-single-plan-guide"></a>Удаление одной структуры плана  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 7
     GO  
     ```  
   
-#### Удаление всех структур планов в базе данных  
+#### <a name="to-delete-all-plan-guides-in-a-database"></a>Удаление всех структур планов в базе данных  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

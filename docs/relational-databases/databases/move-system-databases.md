@@ -1,39 +1,43 @@
 ---
-title: "Перемещение системных баз данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "перемещение системных баз данных"
-  - "аварийное восстановление [SQL Server], перемещение файлов баз данных"
-  - "файлы базы данных [SQL Server], перемещение"
-  - "файлы данных [SQL Server], перемещение"
-  - "база данных tempdb [SQL Server], перемещение"
-  - "системные базы данных [SQL Server], перемещение"
-  - "запланированное обслуживание диска [SQL Server]"
-  - "перемещение баз данных"
-  - "база данных msdb [SQL Server], перемещение"
-  - "перемещение файлов базы данных"
-  - "перемещение файлов базы данных"
-  - "запланированные перемещения базы данных [SQL Server]"
-  - "база данных master [SQL Server], перемещение"
-  - "шаблон базы данных [SQL Server], перемещение"
-  - "Resource, база данных [SQL Server]"
-  - "базы данных [SQL Server], перемещение"
+title: "Перемещение системных баз данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving system databases
+- disaster recovery [SQL Server], moving database files
+- database files [SQL Server], moving
+- data files [SQL Server], moving
+- tempdb database [SQL Server], moving
+- system databases [SQL Server], moving
+- scheduled disk maintenace [SQL Server]
+- moving databases
+- msdb database [SQL Server], moving
+- moving database files
+- relocating database files
+- planned database relocations [SQL Server]
+- master database [SQL Server], moving
+- model database [SQL Server], moving
+- Resource database [SQL Server]
+- databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e452cc778a0a677b9cb71e5e60605af436a31d18
+ms.lasthandoff: 04/11/2017
+
 ---
-# Перемещение системных баз данных
+# <a name="move-system-databases"></a>Перемещение системных баз данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описано, как в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перемещают системные базы данных. Эта операция может пригодиться в следующих ситуациях:  
@@ -44,9 +48,9 @@ caps.handback.revision: 62
   
 -   Перемещение для запланированного обслуживания дисков.  
   
- Следующие процедуры применяются для перемещения файлов баз данных в пределах одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перемещение базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или на другой сервер возможно через операцию [резервного копирования и восстановления](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ Следующие процедуры применяются для перемещения файлов баз данных в пределах одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перемещение базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или на другой сервер возможно через операцию [резервного копирования и восстановления](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) .  
 
- Для выполнения процедур, описанных в данном разделе, необходимо логическое имя файлов базы данных. Это имя можно получить из столбца name представления каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md).  
+ Для выполнения процедур, описанных в данном разделе, необходимо логическое имя файлов базы данных. Это имя можно получить из столбца name представления каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  При перемещении системной базы данных с последующим перестроением базы данных master необходимо заново переместить системную базу данных, поскольку операция перестроения устанавливает все системные базы данных в расположение по умолчанию.  
@@ -64,11 +68,11 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Переместите файл или файлы в новое расположение.  
 
-4.  Перезапустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сервер. Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+4.  Перезапустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сервер. Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Проверьте изменения в файле с помощью следующего запроса.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 62
   
  Если база данных msdb перемещена, а экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для компонента [Database Mail](../../relational-databases/database-mail/database-mail.md), выполните следующие дополнительные шаги.  
   
-1.  С помощью следующего запроса убедитесь, что в базе данных msdb включен компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
+1.  С помощью следующего запроса убедитесь, что в базе данных msdb включен компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
     ```  
     SELECT is_broker_enabled   
@@ -88,7 +92,7 @@ caps.handback.revision: 62
     WHERE name = N'msdb';  
     ```  
   
-     Дополнительные сведения о включении [!INCLUDE[ssSB](../../includes/sssb-md.md)] см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+     Дополнительные сведения о включении [!INCLUDE[ssSB](../../includes/sssb-md.md)]см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)перемещают системные базы данных.  
   
 2.  Отправкой тестового сообщения проверьте работоспособность компонента Database Mail.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 62
 > [!IMPORTANT]  
 >  Если базу данных запустить нельзя, она находится в подозрительном режиме или в невосстановленном состоянии, то файл может быть перемещен только членом предопределенной роли sysadmin.  
   
-1.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если он запущен.  
+1.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если он запущен.  
   
 2.  Запустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме восстановления «только master», запустив из командной строки одну из следующих команд. В задаваемых для них параметрах учитывается регистр символов. Команды завершаются ошибкой, если параметры заданы не так, как показано.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 62
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md).  
+     Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Для каждого перемещаемого файла используйте команды **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для выполнения следующей инструкции.  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     Дополнительные сведения об использовании программы **sqlcmd** см. в статье [Использование программы sqlcmd](../../relational-databases/scripting/use-the-sqlcmd-utility.md).  
+     Дополнительные сведения об использовании программы **sqlcmd** см. в статье [Использование программы sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
 4.  Завершите работу программы **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -145,9 +149,9 @@ caps.handback.revision: 62
   
 1.  В меню **Пуск** выберите **Все программы**, укажите **Microsoft SQL Server**, затем **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
-2.  Находясь в узле **Службы SQL Server**, щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например **SQL Server (MSSQLSERVER)**, и выберите пункт **Свойства**.  
+2.  Находясь в узле **Службы SQL Server** , щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например **SQL Server (MSSQLSERVER)**, и выберите пункт **Свойства**.  
   
-3.  В диалоговом окне **Свойства SQL Server (***имя_экземпляра***)** перейдите на вкладку **Параметры запуска**.  
+3.  В диалоговом окне **Свойства SQL Server (***имя_экземпляра***)** перейдите на вкладку **Параметры запуска** .  
   
 4.  В поле **Существующие параметры** выберите параметр –d, чтобы переместить файл данных master. Нажмите **Обновить** для сохранения изменений.  
   
@@ -157,19 +161,19 @@ caps.handback.revision: 62
   
      В поле **Укажите параметр запуска** задайте новый путь к базе данных master.  
   
-     Значение параметра для файла данных должно соответствовать параметру `-d`, а значение для файла журнала — параметру `-l`. В следующем примере показаны значения параметров для указания местоположения файла базы данных master по умолчанию.  
+     Значение параметра для файла данных должно соответствовать параметру `-d` , а значение для файла журнала — параметру `-l` . В следующем примере показаны значения параметров для указания местоположения файла базы данных master по умолчанию.  
   
      `-dC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\master.mdf`  
   
      `-lC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\mastlog.ldf`  
   
-     Если планируется переместить файл данных базы данных master в расположение `E:\SQLData`, значения параметра будут изменены следующим образом.  
+     Если планируется переместить файл данных базы данных master в расположение `E:\SQLData`, значения параметра будут изменены следующим образом.  
   
      `-dE:\SQLData\master.mdf`  
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкнув правой кнопкой мыши имя экземпляра и выбрав команду **Остановить**.  
+6.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкнув правой кнопкой мыши имя экземпляра и выбрав команду **Остановить**.  
   
 7.  Переместите файлы master.mdf и mastlog.ldf на новое место.  
   
@@ -188,7 +192,7 @@ caps.handback.revision: 62
 
   
 ##  <a name="Resource"></a> Перемещение базы данных Resource  
- База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия>.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
+ База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
   
 ##  <a name="Follow"></a> Продолжение: после перемещения всех системных баз данных  
  Если все системные базы данных перемещаются на новый диск или том либо на другой сервер с другой буквой диска, выполните следующие обновления.  
@@ -197,15 +201,15 @@ caps.handback.revision: 62
   
 -   Измените расположение по умолчанию для базы данных. Создание новой базы данных может завершиться ошибкой, если буква диска и путь, указанные в качестве места расположения по умолчанию, не существуют.  
   
-#### Измените путь к журналу агента SQL Server.  
+#### <a name="change-the-sql-server-agent-log-path"></a>Измените путь к журналу агента SQL Server.  
   
 1.  В среде SQL Server Management Studio в обозревателе объектов разверните узел **Агент SQL Server**.  
   
 2.  Щелкните правой кнопкой мыши **Журналы ошибок** и выберите пункт **Настроить**.  
   
-3.  В диалоговом окне **Настройка журналов ошибок агента SQL Server** задайте новое расположение для файла SQLAGENT.OUT. Расположение по умолчанию — C:\Program Files\Microsoft SQL Server\MSSQL\<версия>.\<имя_экземпляра>\MSSQL\Log\\.  
+3.  В диалоговом окне **Настройка журналов ошибок агента SQL Server** задайте новое расположение для файла SQLAGENT.OUT. Расположение по умолчанию — C:\Program Files\Microsoft SQL Server\MSSQL\<версия>.<имя_экземпляра>\MSSQL\Log\\.  
   
-#### Измените расположение по умолчанию для базы данных  
+#### <a name="change-the-database-default-location"></a>Измените расположение по умолчанию для базы данных  
   
 1.  В среде SQL Server Management Studio в обозревателе объектов щелкните правой кнопкой мыши сервер SQL Server и выберите пункт **Свойства**.  
   
@@ -217,11 +221,11 @@ caps.handback.revision: 62
   
 ##  <a name="Examples"></a> Примеры  
   
-### А. Перемещение базы данных tempdb  
+### <a name="a-moving-the-tempdb-database"></a>А. Перемещение базы данных tempdb  
  В следующем примере показано перемещение файлов базы данных `tempdb` и журнала на новое место в рамках запланированного перемещения.  
   
 > [!NOTE]  
->  Поскольку база данных tempdb создается повторно при каждом запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то нет необходимости физически переносить файлы данных и журнала. Файлы создаются в новом месте во время перезагрузки службы на шаге 3. До перезагрузки службы база данных tempdb продолжает использовать файлы данных и файл журнала, расположенные в существующем месте.  
+>  Поскольку база данных tempdb создается повторно при каждом запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то нет необходимости физически переносить файлы данных и журнала. Файлы создаются в новом месте во время перезагрузки службы на шаге 3. До перезагрузки службы база данных tempdb продолжает использовать файлы данных и файл журнала, расположенные в существующем месте.  
   
 1.  Определение логических имен файлов базы данных `tempdb` и их текущего местоположения на диске.  
   
@@ -257,7 +261,7 @@ caps.handback.revision: 62
   
 5.  Удалите файлы `tempdb.mdf` и `templog.ldf` из исходного местоположения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [База данных Resource](../../relational-databases/databases/resource-database.md)   
  [База данных tempdb](../../relational-databases/databases/tempdb-database.md)   
  [База данных master](../../relational-databases/databases/master-database.md)   
@@ -265,8 +269,9 @@ caps.handback.revision: 62
  [База данных model](../../relational-databases/databases/model-database.md)   
  [Перемещение пользовательских баз данных](../../relational-databases/databases/move-user-databases.md)   
  [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)   
- [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)   
+ [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md)  
   
   
+

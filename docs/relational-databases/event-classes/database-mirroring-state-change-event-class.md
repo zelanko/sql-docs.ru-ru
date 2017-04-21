@@ -1,31 +1,35 @@
 ---
-title: "Класс событий Database Mirroring State Change | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "уведомления о событиях [SQL Server], зеркальное отображение базы данных"
-  - "зеркальное отображение базы данных [SQL Server], уведомления о событиях"
-  - "Database Mirroring State Change, класс событий"
+title: "Класс событий Database Mirroring State Change | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- database mirroring [SQL Server], event notifications
+- Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c17b166b850dbd10020927efb4398a91d6db81df
+ms.lasthandoff: 04/11/2017
+
 ---
-# Класс событий Database Mirroring State Change
+# <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change, класс событий
   Класс событий **Database Mirroring State Change** указывает на изменение состояния зеркальной базы данных. Он включается в трассировки, выполняющие мониторинг состояния зеркальных баз данных.  
   
  Если класс событий **Database Mirroring State Change** включен в трассировку, связанные с этим издержки невелики, но они могут возрасти, если зеркальная база данных находится в состоянии повышенной нагрузки.  
   
-## Столбцы данных класса событий Database Mirroring State Change  
+## <a name="data-database-mirroring-state-change-event-class-data-columns"></a>Столбцы данных класса событий Database Mirroring State Change  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 31
 |**EventSequence**|**int**|Порядковый номер класса событий в пакете.|51|Нет|  
 |**IntegerData**|**int**|Идентификатор предыдущего состояния.|25|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals**. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого выполняется трассировка.|26|Нет|  
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
@@ -45,7 +49,7 @@ caps.handback.revision: 31
 |**TextData**|**ntext**|Описание изменения состояния.|1|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -1,26 +1,30 @@
 ---
-title: "Изменение данных через представление | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "изменения данных [SQL Server], представления"
-  - "представления [SQL Server], изменение данных с помощью"
-  - "изменение данных [SQL Server], представления"
+title: "Изменение данных через представление | Документация Майкрософт"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data modifications [SQL Server], views
+- views [SQL Server], modifying data through
+- modifying data [SQL Server], views
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Изменение данных через представление
+# <a name="modify-data-through-a-view"></a>Изменение данных через представление
   Изменить данные столбца базовой таблицы можно в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   
@@ -31,12 +35,12 @@ caps.handback.revision: 35
 -   См. раздел "Обновляемые представления" статьи [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Разрешения  
  Необходимы разрешения UPDATE, INSERT или DELETE для целевой таблицы в зависимости от выполняемого действия.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Изменение данных таблицы с помощью представления  
+#### <a name="to-modify-table-data-through-a-view"></a>Изменение данных таблицы с помощью представления  
   
 1.  В **обозревателе объектов**разверните базу данных, содержащую представление, а затем разверните **Представления**.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Обновление данных таблицы с помощью представления  
+#### <a name="to-update-table-data-through-a-view"></a>Обновление данных таблицы с помощью представления  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 35
   
  Дополнительные сведения см. в статье [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md).  
   
-#### Вставка данных таблицы с помощью представления  
+#### <a name="to-insert-table-data-through-a-view"></a>Вставка данных таблицы с помощью представления  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -92,3 +96,4 @@ caps.handback.revision: 35
  Дополнительные сведения см. в статье [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).  
   
   
+

@@ -1,39 +1,43 @@
 ---
-title: "Управление таблицей suspect_pages (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "824 (ошибка в ядре СУБД)"
-  - "восстановление страниц [SQL Server]"
-  - "страницы [SQL Server], подозрительные"
-  - "страницы [SQL Server], восстановление"
-  - "системная таблица suspect_pages"
-  - "подозрительные страницы [SQL Server]"
-  - "восстановление [SQL Server], страницы"
+title: "Управление таблицей suspect_pages (SQL Server) | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 824 (Database Engine error)
+- restoring pages [SQL Server]
+- pages [SQL Server], suspect
+- pages [SQL Server], restoring
+- suspect_pages system table
+- suspect pages [SQL Server]
+- restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06acec180d12a9cabfff5e35b4f254883111838
+ms.lasthandoff: 04/11/2017
+
 ---
-# Управление таблицей suspect_pages (SQL Server)
+# <a name="manage-the-suspectpages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
   В этом разделе описывается управление таблицей **suspect_pages** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Таблица **suspect_pages** содержит сведения о потенциально поврежденных страницах и используется при принятии решений о необходимости восстановления. Таблица [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) находится в [базе данных msdb](../../relational-databases/databases/msdb-database.md).  
   
  Страница считается «подозрительной», если при попытке ее чтения компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] обнаруживается одна из следующих ошибок.  
   
--   [Ошибка 823](../Topic/MSSQLSERVER_823.md), которая вызывается проверкой циклической контрольной суммы (CRC), запущенной операционной системой; например ошибка диска (происходит при некоторых ошибках оборудования)  
+-   Ошибка 823, возникающая при проверке циклической контрольной суммы (CRC), запущенной операционной системой, например, ошибка диска (происходит при некоторых ошибках оборудования)  
   
--   [Ошибка 824](../Topic/MSSQLSERVER_824.md), например разрыв страницы (или любая другая логическая ошибка)  
+-   Ошибка 824, например разрыв страницы (или любая другая логическая ошибка)  
   
- Идентификатор каждой "подозрительной" страницы записывается в таблицу **suspect_pages**. В эту таблицу [!INCLUDE[ssDE](../../includes/ssde-md.md)] записывает все подозрительные страницы, которые встретились при обработке, в частности:  
+ Идентификатор каждой "подозрительной" страницы записывается в таблицу **suspect_pages** . В эту таблицу [!INCLUDE[ssDE](../../includes/ssde-md.md)] записывает все подозрительные страницы, которые встретились при обработке, в частности:  
   
 -   При обработке запроса необходимо считать страницу.  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 54
   
 -   Во время операции резервного копирования.  
   
- Во время операции восстановления, исправления DBCC или удаления базы данных в случае необходимости также обновляется таблица **suspect_pages**.  
+ Во время операции восстановления, исправления DBCC или удаления базы данных в случае необходимости также обновляется таблица **suspect_pages** .  
   
  **В этом разделе**  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 54
   
 -   **Ошибки, заносящиеся в таблицу suspect_pages**  
   
-     Таблица **suspect_pages** содержит по одной строке на каждую страницу, в которой обнаружена ошибка с номером 824, но не более 1000 строк. В следующей таблице приводятся ошибки, занесенные в столбец **event_type** таблицы **suspect_pages**.  
+     Таблица **suspect_pages** содержит по одной строке на каждую страницу, в которой обнаружена ошибка с номером 824, но не более 1000 строк. В следующей таблице приводятся ошибки, занесенные в столбец **event_type** таблицы **suspect_pages** .  
   
-    |Описание ошибки|Значение **event_type**|  
+    |Описание ошибки|Значение**event_type** |  
     |-----------------------|---------------------------|  
     |Ошибка 823, вызванная ошибкой CRC операционной системы, или ошибка 824, не относящаяся к неверной контрольной сумме или обрыву страницы (например, неверный идентификатор страницы).|1|  
     |Неверная контрольная сумма|2|  
@@ -80,27 +84,27 @@ caps.handback.revision: 54
   
      Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполняет с таблицей **suspect_pages** следующие действия.  
   
-    -   Если таблица не заполнена, она обновляется для каждой ошибки с номером 824 для указания на наличие ошибки; при этом счетчик ошибок увеличивается на единицу. Если страница содержит ошибку, которая впоследствии была исправлена, ее счетчик **number_of_errors** увеличивается на единицу и изменяется значение столбца **last_update**.  
+    -   Если таблица не заполнена, она обновляется для каждой ошибки с номером 824 для указания на наличие ошибки; при этом счетчик ошибок увеличивается на единицу. Если страница содержит ошибку, которая впоследствии была исправлена, ее счетчик **number_of_errors** увеличивается на единицу и изменяется значение столбца **last_update** .  
   
-    -   После того как указанная страница исправлена операцией восстановления или исправления, в соответствующей строке обновляется столбец **suspect_pages**, указывая, что страница исправлена (**event_type** = 5) или восстановлена (**event_type** = 4).  
+    -   После того как указанная страница исправлена операцией восстановления или исправления, в соответствующей строке обновляется столбец **suspect_pages** , указывая, что страница исправлена (**event_type** = 5) или восстановлена (**event_type** = 4).  
   
     -   В ходе проверки базы данных (DBCC) все страницы, не содержащие ошибок, помечаются как исправленные (**event_type** = 5) или освобожденные (**event_type** = 7).  
   
 -   **Автоматические обновления таблицы suspect_pages**  
   
-     Участник зеркального отображения базы данных или реплика группы доступности AlwaysOn обновляет таблицу **suspect_pages**, если попытка чтения страницы из файла данных завершается одной из следующих ошибок.  
+     Участник зеркального отображения базы данных или реплика группы доступности AlwaysOn обновляет таблицу **suspect_pages** , если попытка чтения страницы из файла данных завершается одной из следующих ошибок.  
   
     -   Ошибка 823, вызываемая ошибкой CRC операционной системы.  
   
     -   Ошибка 824 (логическая ошибка, например разрыв страницы).  
   
-     Следующие действия также автоматически обновляют строки в таблице **suspect_pages**.  
+     Следующие действия также автоматически обновляют строки в таблице **suspect_pages** .  
   
-    -   Инструкция DBCC CHECKDB REPAIR_ALLOW_DATA_LOSS обновляет таблицу **suspect_pages**, отмечая освобождение или исправление каждой страницы.  
+    -   Инструкция DBCC CHECKDB REPAIR_ALLOW_DATA_LOSS обновляет таблицу **suspect_pages** , отмечая освобождение или исправление каждой страницы.  
   
     -   Операции полного восстановления, восстановления файла или страницы помечают записи для страниц как восстановленные.  
   
-     Следующие действия автоматически удаляют строки из таблицы **suspect_pages**.  
+     Следующие действия автоматически удаляют строки из таблицы **suspect_pages** .  
   
     -   ALTER DATABASE REMOVE FILE  
   
@@ -117,11 +121,11 @@ caps.handback.revision: 54
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Сведения в таблице **suspect_pages** доступны любому пользователю, имеющему доступ к базе данных **msdb**. Информация в таблице suspect_pages может обновляться любым пользователем, обладающим разрешением UPDATE. Члены предопределенной роли базы данных **db_owner** в **msdb** или предопределенной роли сервера **sysadmin** могут вставлять, обновлять и удалять записи.  
+ Сведения в таблице **suspect_pages** доступны любому пользователю, имеющему доступ к базе данных **msdb** . Информация в таблице suspect_pages может обновляться любым пользователем, обладающим разрешением UPDATE. Члены предопределенной роли базы данных **db_owner** в **msdb** или предопределенной роли сервера **sysadmin** могут вставлять, обновлять и удалять записи.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Управление таблицей suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Управление таблицей suspect_pages  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
   
@@ -133,7 +137,7 @@ caps.handback.revision: 54
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Управление таблицей suspect_pages  
+#### <a name="to-manage-the-suspectpages-table"></a>Управление таблицей suspect_pages  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -149,7 +153,7 @@ GO
   
 ```  
   
- В этом примере происходит возврат поврежденных страниц в таблице `suspect_pages`.  
+ В этом примере происходит возврат поврежденных страниц в таблице `suspect_pages` .  
   
 ```  
 -- Select nonspecific 824, bad checksum, and torn page errors.  
@@ -159,14 +163,18 @@ GO
   
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [Восстановление страниц (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [suspect_pages (Transact-SQL)](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [MSSQLSERVER_823](../Topic/MSSQLSERVER_823.md)   
- [MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
+    
+   
   
   
+
+
+
+

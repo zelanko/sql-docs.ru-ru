@@ -1,32 +1,36 @@
 ---
-title: "Смена ключей постоянного шифрования с помощью PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Смена ключей постоянного шифрования с помощью PowerShell | Документация Майкрософт"
+ms.custom: 
+ms.date: 11/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ffa9047c43a263ceae52550b65d3d147a8c9928
+ms.lasthandoff: 04/11/2017
+
 ---
-# Смена ключей постоянного шифрования с помощью PowerShell
+# <a name="rotate-always-encrypted-keys-using-powershell"></a>Смена ключей постоянного шифрования с помощью PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-В этой статье описаны действия по смене ключей постоянного шифрования с помощью модуля SqlServer PowerShell. Сведения о начале работы с модулем SqlServer PowerShell для постоянного шифрования см. в разделе [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md) (Настройка постоянного шифрования с помощью PowerShell).
+В этой статье описаны действия по смене ключей постоянного шифрования с помощью модуля SqlServer PowerShell. Сведения о начале работы с модулем SqlServer PowerShell для постоянного шифрования см. в разделе [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)(Настройка постоянного шифрования с помощью PowerShell).
 
 Смена ключей постоянного шифрования — это процесс замены существующего ключа на новый. Смена ключа может потребоваться в случае его компрометации или для обеспечения соответствия политикам или нормам организации, предусматривающим регулярную смену ключей шифрования. 
 
 Функция постоянного шифрования использует два типа ключей, поэтому существует два общих рабочих процесса по смене ключей — смена главных ключей столбцов и смена ключей шифрования столбцов.
 
-* При **смене ключей шифрования столбцов** выполняется расшифровка данных, зашифрованных с помощью текущего ключа, и повторное шифрование данных с помощью нового ключа шифрования столбца. Поскольку для смены ключа шифрования столбца требуется доступ к ключам и базе данных, смена ключей шифрования столбцов осуществляется только без разделения ролей.
-* Процедура **смены главного ключа столбца** включает в себя действия по расшифровке ключей шифрования столбцов, которые защищены с помощью текущего главного ключа столбца, их повторному шифрованию с помощью нового главного ключа столбца и обновлению метаданных для обоих типов ключей. Смену главного ключа столбца можно производить как с разделением, так и без разделения ролей (при использовании модуля SqlServer PowerShell).
+* При**смене ключей шифрования столбцов** выполняется расшифровка данных, зашифрованных с помощью текущего ключа, и повторное шифрование данных с помощью нового ключа шифрования столбца. Поскольку для смены ключа шифрования столбца требуется доступ к ключам и базе данных, смена ключей шифрования столбцов осуществляется только без разделения ролей.
+* Процедура**смены главного ключа столбца** включает в себя действия по расшифровке ключей шифрования столбцов, которые защищены с помощью текущего главного ключа столбца, их повторному шифрованию с помощью нового главного ключа столбца и обновлению метаданных для обоих типов ключей. Смену главного ключа столбца можно производить как с разделением, так и без разделения ролей (при использовании модуля SqlServer PowerShell).
 
 
 ## <a name="column-master-key-rotation-without-role-separation"></a>Смена главного ключа столбца без разделения ролей
@@ -39,7 +43,7 @@ caps.handback.revision: 19
 |Шаг 2. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Нет | Нет
 |Шаг 3. Соединение с сервером и базой данных. | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Нет | Да
 |Шаг 4. Создание объекта SqlColumnMasterKeySettings, содержащего сведения о расположении нового главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Для его создания используйте командлет, поддерживаемый хранилищем ключей. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)<br><br>[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)<br> | Нет | Нет
-|Шаг 5. Создание метаданных о новом главном ключе столбца в базе данных. | [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Примечание.** На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md). | Нет | Да
+|Шаг 5. Создание метаданных о новом главном ключе столбца в базе данных. | [New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Примечание.** На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) . | Нет | Да
 |Шаг 6. Проверка подлинности в Azure, если текущий главный ключ столбца или новый главный ключ столбца хранится в хранилище ключей Azure. | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | Да | Нет
 |Шаг 7. Запуск процесса смены путем шифрования каждого ключа шифрования столбца, который в данный момент защищен с помощью старого главного ключа столбца, с использованием нового главного ключа столбца. После выполнения этого шага каждый затронутый ключ шифрования столбца (связанный со старым сменяемым главным ключом столбца) шифруется с помощью старого и нового главных ключей и имеет два зашифрованных значения в метаданных базы данных.| [Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx) | Да | Да
 |Шаг 8. Работа с администраторами всех приложений, выполняющих запросы к зашифрованным столбцам в базе данных (и защищенных с помощью старого главного ключа столбца), по обеспечению доступа приложений к новому главному ключу столбца.| [Создание и хранение главных ключей столбцов (постоянное шифрование)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Да | Нет
@@ -93,7 +97,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 В описанном в этом разделе процессе смены главного ключа столбца существует разделение ролей между администраторами безопасности и администраторами баз данных.
 
 > [!IMPORTANT]
-> Перед выполнением действий, связанных с доступом к ключам с открытым текстом или хранилищу ключей (определены в столбце *Доступ к ключам с открытым текстом или хранилищу ключей *=**Да** в таблице ниже), убедитесь, что среда PowerShell запущена на защищенном компьютере, отличном от компьютера с базой данных. Дополнительные сведения см. в разделе [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement) (Вопросы безопасности для управления ключами).
+> Перед выполнением действий, связанных с доступом к ключам с открытым текстом или хранилищу ключей (определены в столбце *Доступ к ключам с открытым текстом или хранилищу ключей*=**Да** в таблице ниже), убедитесь, что среда PowerShell запущена на защищенном компьютере, отличном от компьютера с базой данных. Дополнительные сведения см. в разделе [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Вопросы безопасности для управления ключами).
 
 
 ### <a name="part-1-dba"></a>Часть 1. Администратор баз данных
@@ -138,7 +142,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 |Шаг 2. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Нет | Нет
 |Шаг 3. Соединение с сервером и базой данных. | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Нет | Да
 |Шаг 4. Создание объекта SqlColumnMasterKeySettings, содержащего сведения о расположении нового главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). |New-SqlColumnMasterKeySettings| Нет| Нет
-|Шаг 5. Создание метаданных о новом главном ключе столбца в базе данных.|[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Примечание.** На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md). | Нет | Да
+|Шаг 5. Создание метаданных о новом главном ключе столбца в базе данных.|[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)<br><br>**Примечание.** На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) . | Нет | Да
 |Шаг 6. Получение метаданных о ключах шифрования столбцов, защищенных старым главным ключом столбца.| [Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)| Нет | Да
 |Шаг 7. Добавление нового зашифрованного значения (созданного с помощью нового главного ключа столбца) в метаданные для каждого затронутого ключа шифрования столбца.|[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)|Нет|Да
 |Шаг 8. Работа с администраторами всех приложений, выполняющих запросы к зашифрованным столбцам в базе данных (и защищенных с помощью старого главного ключа столбца), по обеспечению доступа приложений к новому главному ключу столбца.|[Создание и хранение главных ключей столбцов (постоянное шифрование)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Нет|Нет
@@ -298,14 +302,14 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 Процедура смены ключа шифрования столбца включает в себя действия по расшифровке данных во всех столбцах, которые зашифрованы с помощью подлежащего смене ключа, и повторному шифрованию данных с помощью нового ключа шифрования столбца. Поскольку в этом процессе смены требуется доступ к ключам и базе данных, разделение ролей здесь не поддерживается. Обратите внимание, что смена ключа шифрования столбца может занимать очень много времени, если размер таблиц, содержащих столбцы, зашифрованные с помощью подлежащего смене ключа, слишком велик. Поэтому организации необходимо очень тщательно спланировать процесс смены ключа шифрования столбца.
 
-Ключ шифрования столбца можно сменить в двух режимах — вне сети или в сети. Первый способ быстрее, но приложения не смогут записывать данные в затронутые таблицы. Второй способ, вероятно, займет больше времени, но вы сможете ограничить интервал времени, в течение которого затронутые таблицы недоступны для приложений. Дополнительные сведения см. в статьях [Настройка шифрования столбцов с помощью PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) и [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx).
+Ключ шифрования столбца можно сменить в двух режимах — вне сети или в сети. Первый способ быстрее, но приложения не смогут записывать данные в затронутые таблицы. Второй способ, вероятно, займет больше времени, но вы сможете ограничить интервал времени, в течение которого затронутые таблицы недоступны для приложений. Дополнительные сведения см. в статьях [Настройка шифрования столбцов с помощью PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) и [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) .
 
 | Задача | Статья | Доступ к ключам с открытым текстом или хранилищу ключей| Доступ к базе данных
 |:---|:---|:---|:---
 |Шаг 1. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Нет | Нет
 |Шаг 2. Соединение с сервером и базой данных. | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Нет | Да
 |Шаг 3. Проверка подлинности в Azure, если главный ключ столбца (защищающий ключ шифрования, подлежащий смене) хранится в хранилище ключей Azure | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | Да | Нет
-|Шаг 4. Создание ключа шифрования столбца, его шифрование с помощью главного ключа столбца и создание метаданных ключа шифрования столбца в базе данных.  | [New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)<br><br>**Примечание.** Используйте разновидность командлета, который внутренним образом создает и шифрует ключ шифрования столбца.<br>На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md). | Да | Да
+|Шаг 4. Создание ключа шифрования столбца, его шифрование с помощью главного ключа столбца и создание метаданных ключа шифрования столбца в базе данных.  | [New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)<br><br>**Примечание.** Используйте разновидность командлета, который внутренним образом создает и шифрует ключ шифрования столбца.<br>На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) . | Да | Да
 |Шаг 5. Поиск всех столбцов, зашифрованных с помощью старого ключа шифрования столбца. | [Учебник по программированию управляющих объектов SQL Server (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Нет | Да
 |Шаг 6. Создание объекта *SqlColumnEncryptionSettings* для каждого затронутого столбца.  SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Он определяет целевую схему шифрования столбца. В этом случае объект должен указывать, что затронутый столбец следует зашифровать с помощью нового ключа шифрования столбца. | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | Нет | Нет
 |Шаг 7. Повторное шифрование столбцов, определенных на шаге 5, с помощью нового ключа шифрования столбца. | [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**Примечание.** Выполнение этого шага может занять длительное время. Приложения не будут иметь доступа к таблицам на протяжении всей операции или ее части в зависимости от выбранного вами режима (в сети или вне сети). | Да | Да
@@ -369,3 +373,5 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
 - [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Блог, посвященный Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+
+

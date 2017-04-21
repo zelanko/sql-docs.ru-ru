@@ -1,27 +1,31 @@
 ---
-title: "Шифрование SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "шифрование [SQL Server], о шифровании"
-  - "безопасность [SQL Server], шифрование"
-  - "криптография [SQL Server], о криптографии"
+title: "Шифрование в SQL Server | Документация Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], about encryption
+- security [SQL Server], encryption
+- cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.lasthandoff: 04/11/2017
+
 ---
-# Шифрование SQL Server
+# <a name="sql-server-encryption"></a>Шифрование SQL Server
   Шифрование представляет собой способ скрытия данных с помощью ключа или пароля. Это делает данные бесполезными без соответствующего ключа или пароля для дешифрования. Шифрование не решает проблемы управления доступом. Однако оно повышает защиту за счет ограничения потери данных даже при обходе системы управления доступом. Например, если компьютер, на котором установлена база данных, был настроен неправильно и злоумышленник смог получить конфиденциальные данные, то украденная информация будет бесполезна, если она была предварительно зашифрована.  
   
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно шифровать соединения, данные и хранимые процедуры. В следующей таблице содержатся дополнительные сведения о шифровании в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -32,7 +36,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Последние сведения о безопасности уровня транспорта (TSL1.2) см. по адресу [Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Иерархия средств шифрования](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Сведения об иерархии шифрования в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 21
  Общие сведения о прозрачном шифровании данных.  
   
  [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
- Используемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ключи шифрования представляют собой сочетание открытых, закрытых и симметричных ключей, которые используются для защиты конфиденциальных данных. В этом разделе рассказывается о внедрении и управлении ключами шифрования.  
+ Используемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ключи шифрования представляют собой сочетание открытых, закрытых и симметричных ключей, которые используются для защиты конфиденциальных данных. В этом разделе рассказывается о внедрении и управлении ключами шифрования.  
   
  [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
  Предотвращение доступа локальных администраторов баз данных, операторов облачных баз данных и других неавторизованных пользователей с высоким уровнем привилегий к зашифрованным данным.  
@@ -54,7 +58,7 @@ caps.handback.revision: 21
  [Сертификаты SQL Server и асимметричные ключи](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  
  Сведения об использовании шифрования с открытым ключом.  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Обеспечение безопасности SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Общие сведения о способах обеспечения безопасности платформы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и способах работы с пользователями и защищаемыми объектами.  
   
@@ -73,13 +77,14 @@ caps.handback.revision: 21
  [ENCRYPTBYCERT (Transact-SQL)](../../../t-sql/functions/encryptbycert-transact-sql.md)  
  Сведения об использовании сертификатов для шифрования данных.  
   
-## Внешние ресурсы  
- [Microsoft TechNet, технический центр SQL Server: "SQL Server 2005 — безопасность и защита"](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
- Текущие сведения о безопасности в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+## <a name="external-resources"></a>Внешние ресурсы  
+ [Microsoft TechNet, технический центр SQL Server: "SQL Server 2005 — безопасность и защита"](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ Текущие сведения о безопасности в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sys.key_encryptions (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+ [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
+

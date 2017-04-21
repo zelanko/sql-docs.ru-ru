@@ -1,24 +1,28 @@
 ---
-title: "Создание резервной копии главного ключа базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "главный ключ базы данных [SQL Server], экспорт"
+title: "Создание резервной копии главного ключа базы данных | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52f4f75fe2a48302fb7383ce445f47e23366910d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Создание резервной копии главного ключа базы данных
+# <a name="back-up-a-database-master-key"></a>Создание резервной копии главного ключа базы данных
   В этом разделе описано, как выполнить резервное копирование главного ключа [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Главный ключ базы данных используется для шифрования других ключей и сертификатов внутри базы данных. Если он удален или поврежден, то есть вероятность, что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не сможет расшифровать эти ключи, в результате чего зашифрованные с их помощью данные будут безвозвратно утеряны. По этой причине необходимо создать резервную копию главного ключа базы данных и хранить ее в надежном месте.  
   
  **В этом разделе**  
@@ -46,9 +50,9 @@ caps.handback.revision: 20
   
 ##  <a name="Procedure"></a> В среде SQL Server Management Studio с помощью Transact-SQL  
   
-#### Создание резервной копии главного ключа базы данных  
+#### <a name="to-back-up-the-database-master-key"></a>Создание резервной копии главного ключа базы данных  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] установите соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], где содержится главный ключ базы данных, резервную копию которого необходимо создать.  
+1.  В среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]установите соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , где содержится главный ключ базы данных, резервную копию которого необходимо создать.  
   
 2.  Выберите пароль, который будет использоваться для шифрования главного ключа базы данных на носителе данных резервной копии. Пароль проходит проверку сложности.  
   
@@ -80,6 +84,6 @@ caps.handback.revision: 20
   
 9. Сохраните резервную копию в надежном месте вне системы.  
   
- Дополнительные сведения см. в статьях [OPEN MASTER KEY (Transact-SQL)](../../../t-sql/statements/open-master-key-transact-sql.md) и [BACKUP MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-master-key-transact-sql.md).  
+ Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../../t-sql/statements/open-master-key-transact-sql.md) и [BACKUP MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-master-key-transact-sql.md).  
   
   

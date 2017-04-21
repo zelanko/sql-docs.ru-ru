@@ -1,34 +1,38 @@
 ---
-title: "Обзор модели публикации репликации | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "репликация SQL Server], модель публикации"
-  - "подписки [репликация SQL Server], о подписках"
-  - "статьи [репликация SQL Server]"
-  - "публикации [репликация SQL Server]"
-  - "издатели [репликация SQL Server], об издателях"
-  - "подписчики [репликация SQL Server]"
-  - "распространители [репликация SQL Server], о распространителях"
-  - "подписчик [репликация SQL Server], о подписчиках"
-  - "статьи [репликация SQL Server], о статьях"
-  - "публикации [репликация SQL Server], о публикациях"
-  - "распространители [репликация SQL Server]"
+title: "Обзор модели публикации репликации | Документация Майкрософт"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], publishing model
+- subscriptions [SQL Server replication], about subscriptions
+- articles [SQL Server replication]
+- publications [SQL Server replication]
+- Publishers [SQL Server replication], about Publishers
+- Subscribers [SQL Server replication]
+- Distributors [SQL Server replication], about Distributors
+- Subscribers [SQL Server replication], about Subscribers
+- articles [SQL Server replication], about articles
+- publications [SQL Server replication], about publications
+- Distributors [SQL Server replication]
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20a1bcbf0d5a58a3955696d73e85708f86ac551b
+ms.lasthandoff: 04/11/2017
+
 ---
-# Обзор модели публикации репликации
+# <a name="replication-publishing-model-overview"></a>Обзор модели публикации репликации
   Репликация использует метафору издательского дела, в основе топологии репликации лежат такие компоненты как издатель, распространитель, подписчики, публикации, статьи и подписки. Удобно представить репликацию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью терминологии журнала:  
   
 -   Издатель журнала производит одну или несколько публикаций  
@@ -43,30 +47,31 @@ caps.handback.revision: 38
   
  *Топология репликации* определяет отношения между серверами и копиями данных, и проясняет логику, определяющую порядок обмена данными между серверами. Существует несколько процессов репликации (называемых *агентами*), которые отвечают за копирование и перемещение данных между издателем и подписчиками. Следующая иллюстрация представляет собой обзор компонентов и процессов, входящих в репликацию.  
   
- ![Компоненты репликации и потоки данных](../../../relational-databases/replication/publish/media/replintro1.gif "Компоненты репликации и потоки данных")  
+ ![Компоненты и поток данных репликации](../../../relational-databases/replication/publish/media/replintro1.gif "Компоненты и поток данных репликации")  
   
-## Издатель  
+## <a name="publisher"></a>Издатель  
  Издатель — это экземпляр базы данных, который делает данные доступными в других местах посредством репликации. Издатель может иметь одну или более публикаций, каждая из которых определяет логически связный набор объектов и данных для репликации.  
   
-## Распространитель  
+## <a name="distributor"></a>Распространитель  
  Распространитель — это экземпляр базы данных, который действует как хранилище специальных данных репликации, связанных с одним или несколькими издателями. Каждый издатель связан с одной базой данных (называемой базой данных распространителя), располагающейся на распространителе. База данных распространителя хранит информацию о состоянии репликации, метаданные публикации, и иногда действует как очередь для перемещения данных с издателя на подписчики. Нередко единичный экземпляр сервера базы данных действует одновременно как издатель и как распространитель. Такой сервер базы известен как *локальный распространитель*. Когда издатель и распространитель настроены на разных экземплярах серверов баз данных, распространитель называют *удаленным распространителем*.  
   
-## Подписчики  
+## <a name="subscribers"></a>Подписчики  
  Подписчик — это экземпляр базы данных, который получает реплицированные данные. Подписчик может получать данные от нескольких издателей и публикаций. В зависимости от выбранного типа репликации подписчик может также передавать изменения данных издателю или переиздавать эти данные на другие подписчики.  
   
-## Статья  
+## <a name="article"></a>Статья  
  Статья определяет объект базы данных, включенный в публикацию. Публикация может содержать разные типы статей, включая таблицы, представления, хранимые процедуры и другие объекты. Если таблицы публикуются в виде статей, можно использовать фильтры для ограничения столбцов и строк данных, посылаемых подписчикам.  
   
-## Публикация  
+## <a name="publication"></a>Публикация  
  Публикация — это коллекция из одной или нескольких статей, принадлежащих одной базе данных. Группирование нескольких статей в публикацию упрощает указание логически связанного набора объектов и данных базы данных, реплицируемых в виде единого блока.  
   
-## Подписка  
+## <a name="subscription"></a>Подписка  
  Подписка — это запрос на доставку копии публикации подписчику. Подписка определяет, какая публикация будет получена, где и когда. Существует два типа подписок: по запросу и принудительные. Дополнительные сведения о подписках см. в статье [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор агентов репликации](../../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Типы репликации](../../../relational-databases/replication/types-of-replication.md)   
  [Настройка репликации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [Обслуживание базы данных публикации AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   
+

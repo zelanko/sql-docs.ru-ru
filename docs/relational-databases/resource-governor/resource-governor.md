@@ -1,28 +1,32 @@
 ---
-title: "регулятор ресурсов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Регулятор ресурсов, обзор"
-  - "регулятор ресурсов"
+title: "Регулятор ресурсов | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, overview
+- Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
+ms.lasthandoff: 04/11/2017
+
 ---
-# регулятор ресурсов
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений.  
+# <a name="resource-governor"></a>Регулятор ресурсов
+  Регулятор ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений.  
   
-## Преимущества регулятора ресурсов  
+## <a name="benefits-of-resource-governor"></a>Преимущества регулятора ресурсов  
  Регулятор ресурсов позволяет управлять рабочими нагрузками и ресурсами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем задания лимитов на потребление ресурсов входящими запросами. В контексте регулятора ресурсов рабочая нагрузка представляет собой набор запросов приблизительно одинакового размера, которые могут и должны обрабатываться как единая сущность. Это не жесткое требование, но чем однообразнее выглядит шаблон использования ресурсов рабочей нагрузки, тем больше преимуществ можно извлечь из регулятора ресурсов. Ограничения на ресурсы можно перенастроить в режиме реального времени, при этом воздействие на выполняемую рабочую нагрузку остается минимальным.  
   
  В среде, имеющей несколько различных рабочих нагрузок на одном и том же сервере, регулятор ресурсов позволяет различать эти рабочие нагрузки и распределять общие ресурсы по мере запросов в зависимости от установленных ограничений. Эти ресурсы — ЦП, память и физические операции ввода-вывода.  
@@ -37,7 +41,7 @@ caps.handback.revision: 41
   
 -   Добавить детализированное отслеживание ресурсов для возврата платежей за использование ресурсов и предоставлять прогнозируемое выставление счетов потребителям ресурсов сервера.  
   
-## Ограничения регулятора ресурсов  
+## <a name="resource-governor-constraints"></a>Ограничения регулятора ресурсов  
  В данном выпуске регулятора ресурсов имеются следующие ограничения.  
   
 -   Управление ресурсами ограничено компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Использование регулятора ресурсов для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]невозможно.  
@@ -50,10 +54,10 @@ caps.handback.revision: 41
   
 -   Нельзя задать пороговые значения ввода-вывода на внутреннем пуле ресурсов.  
   
-## Основные понятия ресурсов  
+## <a name="resource-concepts"></a>Основные понятия ресурсов  
  Приведенные ниже три понятия лежат в основе понимания работы регулятора ресурсов.  
   
--   **Пулы ресурсов.** Пул ресурсов представляет физические ресурсы сервера. Пул можно считать виртуальным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается два пула ресурсов (внутренний и по умолчанию). Кроме того, регулятор ресурсов поддерживает определяемые пользователями пулы ресурсов. Дополнительные сведения см. в разделе [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+-   **Пулы ресурсов.** Пул ресурсов представляет физические ресурсы сервера. Пул можно считать виртуальным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается два пула ресурсов (внутренний и по умолчанию). Кроме того, регулятор ресурсов поддерживает определяемые пользователями пулы ресурсов. Дополнительные сведения см. в разделе [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
   
 -   **Группы рабочей нагрузки.** Группа рабочей нагрузки выступает в качестве контейнера для запросов сеансов, имеющих подобные критерии классификации. Рабочая нагрузка обеспечивает статистический мониторинг сеансов и определяет политики для сеансов. Каждая группа рабочей нагрузки существует в пуле ресурсов. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается две группы рабочей нагрузки (внутренняя и по умолчанию), которые сопоставляются с соответствующими пулами ресурсов. Кроме того, регулятор ресурсов поддерживает определяемые пользователями группы рабочей нагрузки. Дополнительные сведения см. в разделе [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md).  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 41
   
  ![Функциональные компоненты регулятора ресурсов](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Функциональные компоненты регулятора ресурсов")  
   
-## Задачи регулятора ресурсов  
+## <a name="resource-governor-tasks"></a>Задачи регулятора ресурсов  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -88,7 +92,7 @@ caps.handback.revision: 41
 |Описывает, как настроить регулятор ресурсов с использованием шаблона.|[Настройка регулятора ресурсов с помощью шаблона](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |Описывает, как просматривать свойства регулятора ресурсов.|[Просмотр свойств регулятора ресурсов](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Экземпляры компонента Database Engine (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

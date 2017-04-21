@@ -1,36 +1,40 @@
 ---
-title: "Подписка на публикации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.conc.subtopubs.f1"
-helpviewer_keywords: 
-  - "подписки [репликация SQL Server], о подписках"
-  - "подписки по запросу [репликация SQL Server]"
-  - "подписки [репликация SQL Server]"
-  - "принудительные подписки [репликация SQL Server], о принудительных подписках"
-  - "подписка на репликацию слиянием [репликация SQL Server]"
-  - "подписка на репликацию слиянием [репликация SQL Server], о подписках"
-  - "публикации [репликация SQL Server], подписки"
-  - "принудительные подписки [репликация SQL Server]"
-  - "подписки по запросу [репликация SQL Server], о подписках по запросу"
-  - "репликация моментальных снимков [SQL Server], подписка"
-  - "репликация транзакций, подписка"
+title: "Подписка на публикации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.conc.subtopubs.f1
+helpviewer_keywords:
+- subscriptions [SQL Server replication], about subscriptions
+- pull subscriptions [SQL Server replication]
+- subscriptions [SQL Server replication]
+- push subscriptions [SQL Server replication], about push subscriptions
+- merge replication subscribing [SQL Server replication]
+- merge replication subscribing [SQL Server replication], about subscribing
+- publications [SQL Server replication], subscribing
+- push subscriptions [SQL Server replication]
+- pull subscriptions [SQL Server replication], about pull subscriptions
+- snapshot replication [SQL Server], subscribing
+- transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
+ms.lasthandoff: 04/11/2017
+
 ---
-# Подписка на публикации
+# <a name="subscribe-to-publications"></a>Подписка на публикации
   Подписка представляет собой запрос на копию данных и объектов из базы данных в публикации. Подписка определяет получаемую публикацию, а также место и время ее получения. При планировании подписок необходимо определить место обработки агентом. Выбранный тип подписки определяет место запуска агента. В случае принудительной подписки агент слияния или агент распространителя запускается у распространителя, а в случае подписки по запросу агент запускается у подписчиков. После того, как подписка создана, ее тип нельзя изменить.  
   
 |Подписка|Характеристики|Использовать|  
@@ -38,13 +42,13 @@ caps.handback.revision: 44
 |Принудительная подписка|В случае принудительной подписки издатель передает изменения подписчику без запроса со стороны последнего. Изменения могут передаваться подписчикам по запросу, непрерывно или по расписанию. Агент распространителя или агент слияния запускается у распространителя.|Синхронизация данных обычно будет осуществляться непрерывно или по повторяющемуся расписанию.<br /><br /> Для публикаций требуется перемещение данных практически в режиме реального времени.<br /><br /> Повышенная загрузка процессора у распространителя не влияет на производительность.<br /><br /> Наиболее часто используется с репликацией моментальных снимков и с репликацией транзакций.|  
 |Подписка по запросу|В случае подписки по запросу подписчик запрашивает изменения, внесенные у издателя. Подписки по запросу позволяют пользователю подписчика определить момент синхронизации изменений данных. Агент распространителя или агент слияния запускается у подписчика.|Синхронизация данных обычно будет осуществляться по запросу или по расписанию, а не непрерывно.<br /><br /> У публикации большое количество подписчиков, и/или запуск всех агентов на распространителе потребует слишком большого количества ресурсов.<br /><br /> Подписчики автономны, не подключены или мобильны. Подписчики будут определять момент подключения и синхронизации изменений.<br /><br /> Наиболее часто используется с репликацией слиянием.|  
   
-## Типы подписки на репликацию слиянием  
+## <a name="merge-replication-subscription-types"></a>Типы подписки на репликацию слиянием  
  Все типы репликации поддерживают принудительные подписки и подписки по запросу. Для репликации слиянием используются два дополнительных термина с целью различения подписок: клиентские подписки и серверные подписки. Подписки как клиентского, так и серверного типов могут использоваться для принудительных подписок и подписок по запросу. Клиентские подписки подходят для большинства подписчиков, в то время как серверные подписки обычно используются для подписчиков, которые повторно публикуют данные для других подписчиков. Выбор подписки влияет на разрешение конфликтов.  
   
-## Подписчики, отличные от подписчиков SQL Server  
- Клиенты Oracle и IBM DB2 могут подписываться на публикации моментальных снимков и публикации транзакций с использованием принудительных подписок. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+## <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server  
+ Клиенты Oracle и IBM DB2 могут подписываться на публикации моментальных снимков и публикации транзакций с использованием принудительных подписок. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-## Создание подписок  
+## <a name="creating-subscriptions"></a>Создание подписок  
  Чтобы создать подписку, нужно ввести следующую информацию:  
   
 -   Имя публикации.  
@@ -71,14 +75,14 @@ caps.handback.revision: 44
   
  **Удаление принудительной подписки**  
   
- [! ВКЛЮЧИТЬ [ssManStudioFull] (.. / Token/ssManStudioFull_md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  Удаление подписки не приводит к удалению опубликованных объектов у подписчика.  
   
  **Создание подписки по запросу**  
   
- [! ВКЛЮЧИТЬ [ssManStudioFull] (.. / Token/ssManStudioFull_md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **Просмотр или изменение свойств подписки по запросу**  
   
@@ -88,8 +92,8 @@ caps.handback.revision: 44
   
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## См. также:  
- [Организация безопасности подписчика](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Окончание срока действия и отключение подписки](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+## <a name="see-also"></a>См. также:  
+ [Защита подписчика](../../relational-databases/replication/security/secure-the-subscriber.md)   
+ [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

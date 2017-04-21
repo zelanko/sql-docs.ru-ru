@@ -1,31 +1,35 @@
 ---
-title: "Коды возврата и сведения об ошибках OLE-автоматизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "коды возврата [SQL Server]"
-  - "OLE-автоматизация [SQL Server], коды возврата"
-  - "OLE-автоматизация [SQL Server], ошибки"
+title: "Коды возврата и сведения об ошибках OLE-автоматизации | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# Коды возврата и сведения об ошибках OLE-автоматизации
+# <a name="ole-automation-return-codes-and-error-information"></a>Коды возврата и сведения об ошибках OLE-автоматизации
   Системные хранимые процедуры OLE-автоматизации возвращают код возврата типа **int** , который представляет собой значение HRESULT, возвращенное базовой операцией OLE-автоматизации. Значение HRESULT, равное 0, свидетельствует об успешном завершении операции. Ненулевое значение HRESULT является кодом ошибки OLE, представленным в шестнадцатеричной форме 0x800*nnnnn*, однако при возврате из хранимой процедуры в качестве кода возврата значения с типом **int** значение HRESULT представляется в форме 214*nnnnnnn*.  
   
- Например, если в хранимую процедуру sp_OACreate передать недопустимое имя объекта (SQLDMO.Xyzzy), она возвратит значение HRESULT типа **int**, равное 2 147 221 005, что эквивалентно шестнадцатеричному 0x800401f3.  
+ Например, если в хранимую процедуру sp_OACreate передать недопустимое имя объекта (SQLDMO.Xyzzy), она возвратит значение HRESULT типа **int** , равное 2 147 221 005, что эквивалентно шестнадцатеричному 0x800401f3.  
   
- Процедуру `CONVERT(binary(4), @hresult)` можно использовать для преобразования значения HRESULT типа **int** в значение типа **binary**. Однако в результате вызова `CONVERT(char(10), CONVERT(binary(4), @hresult))` будет получена нечитаемая строка, потому что каждый байт значения HRESULT будет преобразован в один символ ASCII. Чтобы преобразовать значение HRESULT типа **int** в значение типа **char**, представляющее читаемую шестнадцатеричную строку, можно использовать приведенный ниже образец хранимой процедуры HexToChar.  
+ Процедуру `CONVERT(binary(4), @hresult)` можно использовать для преобразования значения HRESULT типа **int** в значение типа **binary** . Однако в результате вызова `CONVERT(char(10), CONVERT(binary(4), @hresult))` будет получена нечитаемая строка, потому что каждый байт значения HRESULT будет преобразован в один символ ASCII. Чтобы преобразовать значение HRESULT типа **int** в значение типа **char** , представляющее читаемую шестнадцатеричную строку, можно использовать приведенный ниже образец хранимой процедуры HexToChar.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [sp_OAGetErrorInfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   
