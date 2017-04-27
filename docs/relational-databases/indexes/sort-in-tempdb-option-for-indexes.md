@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Параметр SORT_IN_TEMPDB для индексов
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   При создании или перестроении индекса можно установить параметр SORT_IN_TEMPDB в значение ON, чтобы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовал базу данных **tempdb** для хранения промежуточных результатов сортировки, которые применяются для построения индекса. Данный параметр увеличивает место на диске, временно занимаемое при построении индекса, но с его помощью можно сократить время, необходимое для создания или перестроения индекса, когда **tempdb** находится в наборе дисков, отличном от набора, используемого для размещения пользовательской базы данных. Дополнительные сведения о параметре **tempdb**см. в разделе [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   
