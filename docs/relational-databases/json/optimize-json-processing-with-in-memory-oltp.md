@@ -2,7 +2,7 @@
 title: "Оптимизация обработки JSON с помощью выполняющейся в памяти OLTP | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:

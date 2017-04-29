@@ -2,7 +2,7 @@
 title: "Примеры массового доступа к данным в хранилище BLOB-объектов Azure | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/04/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
