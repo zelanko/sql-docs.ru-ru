@@ -16,9 +16,10 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -267,7 +268,7 @@ GO
 |Португальский (Бразилия)|1046|  
 |Русский|1049|  
 |Шведский|1053|  
-|Английский (Великобритания)|2057|  
+|Английский (Соединенное Королевство)|2057|  
 |Португальский (Португалия)|2070|  
 |Испанский|3082|  
   
