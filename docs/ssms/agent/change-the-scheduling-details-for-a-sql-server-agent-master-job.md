@@ -46,7 +46,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="Security"></a>безопасность  
   
 #### <a name="Permissions"></a>Permissions  
-Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   

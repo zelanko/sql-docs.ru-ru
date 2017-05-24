@@ -25,9 +25,10 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 > В редакторе SQL нет подсказок с технологией IntelliSense.  
   
-При изменении инструкций SQL определенные инструкции Transact-SQL заключены в прямоугольники, состоящие из тонкой линии. Это помогает визуально выделить код SQL в командных разделах, а также определяет блоки инструкций SQL, которые могут быть графически сконструированы при помощи конструктора запросов. Дополнительные сведения об использовании конструктора запросов см. в разделе [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
+При изменении инструкций SQL определенные инструкции Transact-SQL заключены в прямоугольники, состоящие из тонкой линии. Это помогает визуально выделить код SQL в командных разделах, а также определяет блоки инструкций SQL, которые могут быть графически сконструированы при помощи конструктора запросов. Дополнительные сведения об использовании конструктора запросов см. в разделе [Разделы по конструированию запросов и представлений &#40;визуальные инструменты для баз данных&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
