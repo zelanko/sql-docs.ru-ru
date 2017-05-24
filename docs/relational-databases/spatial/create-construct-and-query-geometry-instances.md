@@ -17,9 +17,10 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 67afdd066ed1ecff52f4ce7fecb41d344fb6d20a
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -247,7 +248,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Экземпляры**Point** и **MultiPoint** не имеют границы.  
   
--   Границы**LineString** и **MultiLineString** boundaries are formed by the start points и end points, removing those that occur an even number of times.  
+-   Границы **LineString** и **MultiLineString** образуются начальными и конечными точками, за исключением тех, которые появляются четное число раз.  
   
 ```  
 DECLARE @g geometry;  

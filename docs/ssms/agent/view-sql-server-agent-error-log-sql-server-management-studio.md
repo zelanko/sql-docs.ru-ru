@@ -20,13 +20,14 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 31fbf087c088a0f83471a37b60d5151b9db315b3
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>просмотреть журнал ошибок агента SQL Server (среда SQL Server Management Studio)
 В этом разделе содержатся сведения о просмотре журнала ошибок агента  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 Средство просмотра журнала позволяет просматривать многие журналы различных компонентов. Когда средство просмотра журнала открыто, нужный журнал можно выбрать при помощи панели **Выбор журналов** . В каждом журнале отображаются столбцы, соответствующие типу журнала. Список доступных журналов зависит от того, каким способом было открыто средство просмотра журнала.  

@@ -18,9 +18,10 @@ caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
   
 ##  <a name="BestPractices"></a> Рекомендации  
   
--   Просмотрите [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [](http://go.microsoft.com/fwlink/?LinkId=296445)заметки о выпуске  
+-   Просмотрите [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [заметки о выпуске](http://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Обязательное программное обеспечение для установки. Перед запуском программы установки для установки или обновления [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]установите следующие компоненты, чтобы сократить время установки. Можно установить обязательное программное обеспечение на каждом узле отказоустойчивого кластера, а затем один раз перезапустить узлы перед началом работы программы установки.  
   
@@ -147,7 +148,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Ознакомьтесь с разделом [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   О включении проверки подлинности Kerberos для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]см. в статье базы знаний Майкрософт [ ](http://support.microsoft.com/kb/319723) Как использовать проверку подлинности Kerberos в SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
+-   О включении проверки подлинности Kerberos для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье базы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] знаний Майкрософт [ Как использовать проверку подлинности Kerberos в SQL Server](http://support.microsoft.com/kb/319723).  
   
 ##  <a name="Network"></a> Ознакомьтесь с вопросами, связанными с сетями, портами и брандмауэром  
   

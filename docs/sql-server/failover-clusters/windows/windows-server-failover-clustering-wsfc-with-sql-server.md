@@ -20,9 +20,10 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: faf617519fde35e957969a98d2564821ee01e8a2
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/11/2017
   
  Первичная реплика баз данных группы доступности одновременно может размещаться только на одном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , все связанные вторичные реплики должны находиться на отдельном экземпляре, и каждый экземпляр должен находиться на отдельном физическом узле.  
   
-> **NOTE:** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] do not require deployment of a Failover Cluster Instance or use of symmetric shared storage (SAN or SMB).  
+> **ПРИМЕЧАНИЕ.** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не требует развертывания экземпляра отказоустойчивого кластера или использования симметричного общего хранилища (SAN или SMB).  
 >   
 >  Экземпляр отказоустойчивого кластера (FCI) может использоваться совместно с группой доступности для повышения доступности реплики доступности. Однако во избежание соперничества в кластере WSFC автоматический переход на другой ресурс группы доступности не поддерживается для реплики доступности, размещенной в FCI.  
   

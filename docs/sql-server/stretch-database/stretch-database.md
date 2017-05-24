@@ -17,9 +17,10 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/11/2017
 
   База данных Stretch прозрачно и безопасно переносит холодные данные в облако Microsoft Azure.  
   
- Если к работе с базой данных Stretch нужно приступить немедленно, см. статью [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
+ Если к работе с базой данных Stretch нужно приступить немедленно, см. статью [Мастер включения растяжения для базы данных](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
   
 ## <a name="what-are-the-benefits-of-stretch-database"></a>Каковы преимущества базы данных Stretch?  
  База данных Stretch предоставляет следующие преимущества.  
