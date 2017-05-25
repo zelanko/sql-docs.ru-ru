@@ -20,9 +20,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,13 +66,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  В диалоговом окне **Обновление паролей репликации** , которое доступно из папки **Репликация** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. При изменении пароля для учетной записи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или учетной записи Windows на сервере в топологии репликации, нужно использовать это диалоговое окно, а не обновлять пароль для каждого агента, использующего эту учетную запись. Если агенты на нескольких серверах используют одну и ту же учетную запись, то нужно подключиться к каждому из этих серверов и изменить пароль. Обновление пароля осуществляется везде, где его использует репликация. В других местах, например на связанных серверах, обновление пароля не происходит.  
   
-2.  Страница **Безопасность агентов** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+2.  Страница **Безопасность агентов** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
-3.  Диалоговое окно **Свойства подписки — \<подписка>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделах [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) и [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+3.  Диалоговое окно **Свойства подписки — \<подписка>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделах [Просмотр и изменение свойств принудительной подписки](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) и [Просмотр и изменение свойств подписки по запросу](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
-4.  Диалоговые окна **Свойства распространителя — \<распространитель>** и **Свойства базы данных распространителя — \<база данных>**. Дополнительные сведения о доступе к этим диалоговым окнам см. в разделе [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+4.  Диалоговые окна **Свойства распространителя — \<распространитель>** и **Свойства базы данных распространителя — \<база данных>**. Дополнительные сведения о доступе к этим диалоговым окнам см. в разделе [Просмотр и изменение свойств издателя и распространителя](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  Диалоговое окно **Свойства издателя — \<издатель>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  Диалоговое окно **Свойства издателя — \<издатель>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств издателя и распространителя](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Изменение пароля для учетной записи, используемой одним или несколькими агентами  
   
