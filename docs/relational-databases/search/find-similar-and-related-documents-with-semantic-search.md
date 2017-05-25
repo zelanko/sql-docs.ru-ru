@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="HowToIdentifySimilar"></a> Пример: поиск наиболее важных документов, больше всего схожих с другим документом  
  В следующем примере извлекается до 10 кандидатов, подобных указанному кандидату, обозначенному *@CandidateID* из таблицы HumanResources.JobCandidate в образце базы данных AdventureWorks2012.  
   
 ```scr  
@@ -62,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="HowToSimilarPhrases"></a> Пример: поиск ключевых фраз, которые больше всего схожи в разных документах  
  В следующем примере производится извлечение 5 ключевых фраз, имеющих высший показатель подобия среди указанных кандидатов в таблице **HumanResources.JobCandidate** образца базы данных AdventureWorks2012.  
   
 ```tsql  

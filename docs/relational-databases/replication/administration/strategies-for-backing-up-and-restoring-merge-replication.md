@@ -19,9 +19,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,16 +65,16 @@ ms.lasthandoff: 04/11/2017
   
  Если выполняется синхронизация с подписчиком, на котором запущена версия [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] меньше [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская или серверная подписка (в предыдущих версиях такие подписки называются локальными и глобальными).  
   
- Чтобы синхронизировать подписку, см. разделы [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Чтобы синхронизировать подписку, см. разделы [Синхронизация принудительной подписки](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Синхронизация подписки по запросу](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Повторная инициализация всех подписок  
  Повторная инициализация всех подписок гарантирует, что все подписчики находятся в состоянии, согласованном с восстановленной базой данных публикаций. Такой подход следует применять, если требуется вернуть всю топологию в предыдущее состояние, представленное резервной копией базы данных публикаций. Например, повторная инициализация всех подписок может потребоваться, если восстановление базы данных публикаций до более ранней точки используется в качестве механизма возврата из ошибочно выполненной пакетной операции.  
   
  Если выбран данный вариант, создайте новый моментальный снимок для его доставки на повторно инициализированные подписчики сразу после восстановления базы данных публикаций.  
   
- Чтобы повторно инициализировать подписку, см. раздел [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Чтобы повторно инициализировать подписку, см. раздел [Повторная инициализация подписки](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Чтобы создать и применить моментальный снимок, см. разделы [Create и Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) и [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Чтобы создать и применить моментальный снимок, см. разделы [Create и Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) и [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Резервное копирование и восстановление базы данных распространителя  
  При репликации слиянием база данных распространителя должна регулярно подвергаться резервному копированию, и она может быть восстановлена без дополнительных условий до тех пор, пока время, истекшее с момента создания используемой резервной копии, не превышает кратчайший срок хранения всех публикаций, использующих распространитель. Например, если есть три публикации со сроками хранения 10, 20 и 30 дней соответственно, то используемая резервная копия не должна быть старше 10 дней. База данных распространителя играет ограниченную роль в репликации слиянием: она не хранит данных, используемых для отслеживания изменений, и не служит временным хранилищем изменений репликации слиянием, которые должны пересылаться в базы данных подписок (как это делается при репликации транзакций).  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/11/2017
   
  Чтобы установить срок хранения публикации, выполните действия из статьи [Установка срока действия подписок](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
- Чтобы синхронизировать подписку, см. разделы [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Чтобы синхронизировать подписку, см. разделы [Синхронизация принудительной подписки](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Синхронизация подписки по запросу](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Резервное копирование и восстановление переиздаваемой базы данных  
  Когда база данных подписывается на данные издателя и в свою очередь публикует те же самые данные для других баз данных подписок, ее называют переиздающей базой данных. При восстановлении переиздающей базы данных следуйте инструкциям, описанным в подразделах «Резервное копирование и восстановление базы данных публикаций» и «Резервное копирование и восстановление базы данных подписок» этого раздела.  
