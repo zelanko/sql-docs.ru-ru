@@ -23,9 +23,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -66,7 +67,7 @@ GO
   
 -   Встроенные функции по формированию метаданных, например OBJECTPROPERTYEX, могут вернуть значение NULL.  
   
--   Хранимые процедуры [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
+-   Хранимые процедуры [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** могут возвращать только подмножество строк или значение NULL.  
   
  SQL модули, например хранимые процедуры и триггеры, выполняются в контексте безопасности участника и поэтому имеют ограниченный доступ к метаданным. Например, в следующем коде, когда хранимая процедура пытается получить доступ к метаданным для таблицы `myTable` , на который участник не имеет прав, возвращается пустой результирующий набор. В ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]возвращается строка.  
   

@@ -21,9 +21,10 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -125,7 +126,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML-документ является деревом, поэтому один экземпляр типа данных XML может представлять всю структуру. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML вdex is created, **hierarchyid** values are used вternally to represent the position в the hierarchy.  
+ XML-документ является деревом, поэтому один экземпляр типа данных XML может представлять всю структуру. Когда в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] создается XML-индекс, значения типа **hierarchyid** предназначены для внутреннего использования и представляют место внутри иерархии.  
   
  Использование типа данных XML может быть выгодно в следующих случаях.  
   
