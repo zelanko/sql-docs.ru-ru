@@ -19,9 +19,10 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4bfd021048962cb632a2d5e553ea9d6bb35a8c20
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -158,7 +159,7 @@ LS LengthCS Length
 5.65685…6.28318…  
 ```  
   
- На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает ****`@g1`, а синяя линия — **CircularString**`@g2`).  
+ На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает **** `@g1`, а синяя линия — **CircularString**`@g2`).  
   
  ![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
   
