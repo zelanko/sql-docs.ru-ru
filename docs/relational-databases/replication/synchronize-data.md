@@ -25,9 +25,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,11 +53,11 @@ ms.lasthandoff: 04/11/2017
   
  Публикации моментальных снимков полностью обновляют схему на подписчике при каждой синхронизации, так что все изменения схемы применяются на подписчике. Репликация транзакций и репликация слиянием также поддерживают наиболее распространенные изменения схем. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Сведения о синхронизации принудительной подписки см. в разделе [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
+ Сведения о синхронизации принудительной подписки см. в разделе [синхронизации принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
- Сведения о синхронизации подписки по запросу см. в разделе [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Сведения о синхронизации подписки по запросу см. в разделе [синхронизации подписки по запросу](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
- Чтобы настроить расписания синхронизации, см. раздел [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
+ Чтобы настроить расписания синхронизации, см. раздел [укажите расписания синхронизации](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  **Просмотр и разрешение конфликтов синхронизации**  
   
