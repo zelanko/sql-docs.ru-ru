@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -92,11 +93,11 @@ ms.lasthandoff: 04/11/2017
  **Решение 1**. Используйте параметр **/qb** вместо **/qn** . При использовании параметра **/qb** на каждом шаге отображается интерфейс пользователя, в том числе сообщения об ошибках.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Проблема. SQL Server не удается подключиться к сети после его перемещения на другой узел  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **Причина 1.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не может связаться с контроллером домена.  
   
  **Решение 1**. Проверьте журналы событий на наличие записей о проблемах сети, например о сбоях адаптеров или проблемах с DNS. Проверьте контроллер домена командой ping.  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **Причина 2.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отличаются на разных узлах кластера, или узел не перезапускает службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которая была перенесена с неисправного узла.  
   
  **Решение 2** . Измените пароли учетной записи службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если это не было сделано, а пароли учетной записи службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] изменены на одном узле, необходимо также изменить их на всех остальных узлах. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет это автоматически.  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/11/2017
   
  **Решение 2.** С помощью программы NBSTAT найдите повторяющееся имя и устраните проблему.  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **Причина 3.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием именованных каналов.  
   
  **Решение 3.** Для подключения через именованные каналы создайте псевдоним с помощью диспетчера конфигурации SQL Server для подключения к нужному компьютеру. Например, при использовании кластера с двумя узлами (**Узел A** и **Узел B**) и экземпляра отказоустойчивого кластера (**Virtsql**) с экземпляром по умолчанию подключиться к серверу, ресурс сетевого имени которого находится вне сети, можно, выполнив следующие шаги.  
   
