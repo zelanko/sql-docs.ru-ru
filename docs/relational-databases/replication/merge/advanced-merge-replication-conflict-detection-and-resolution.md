@@ -23,9 +23,10 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/11/2017
   
  Дополнительные сведения см. в статье [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [указать уровень разрешения и отслеживания конфликтов для статьи слияния](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## <a name="conflict-resolution"></a>Устранение конфликтов  
  После обнаружения конфликта агент слияния запускает выбранный сопоставитель конфликтов и использует его для определения победителя в конфликте. Победившая строка применяется на издателе и подписчике, а данные из проигравшей строки записываются в таблицу конфликтов. Разрешение конфликтов осуществляется немедленно после выполнения сопоставления конфликтов, если не выбран интерактивный режим разрешения конфликтов.  
