@@ -20,9 +20,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  Рассмотрим компанию [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], которая имеет мобильных работников, доставляющих товары в отдельные магазины. Каждый продавец на основании своего учетного имени получает подписку, в которую извлекаются данные для обслуживаемых магазинов. Администратор выбирает предварительное создание моментальных снимков и их обновление каждое воскресенье. Иногда в систему добавляется новый пользователь, и ему требуются данные для секции, которая не имеет доступного моментального снимка. Администратор также решает разрешить инициирование моментальных снимков подписчиком, чтобы исключить ситуацию, когда подписчик не может подписаться на публикацию из-за того, что моментальный снимок еще не доступен. Когда новый подписчик подключается впервые, снимок создается для указанной секции и применяется у подписчика (для создания моментального снимка у издателя должен быть запущен агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ).  
   
- Чтобы создать моментальный снимок публикации с параметризованными фильтрами, см. раздел [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Чтобы создать моментальный снимок публикации с параметризованными фильтрами, см. раздел [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>Настройки безопасности для агента моментальных снимков  
  Агент моментальных снимков создает моментальные снимки для каждой секции. Для предварительно созданных моментальных снимков и моментальных снимков, запрашиваемых подписчиком, агент запускается и подключается с учетными данными, указанными при создании задания агента моментальных снимков для публикации (задание создается мастером создания публикации или хранимой процедурой **sp_addpublication_snapshot**). Для изменения учетных данных используйте хранимую процедуру **sp_changedynamicsnapshot_job**. Дополнительные сведения см. в статье [sp_changedynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  

@@ -14,9 +14,10 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] управляет резервным копированием SQL Server в хранилище BLOB-объектов Microsoft Azure и автоматизирует его. Серверу SQL Server можно разрешить определять расписание резервного копирования на основе рабочей нагрузки транзакций в базе данных. Кроме того, для настройки расписания можно воспользоваться дополнительными параметрами. Параметры хранения определяют продолжительность хранения резервных копий в хранилище BLOB-объектов Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживает восстановление на момент времени для указанного периода хранения.  
   
- Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], процедуры и принцип действия [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] изменились. Дополнительные сведения см. в статье [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], процедуры и принцип действия [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] изменились. Дополнительные сведения см. в статье [Перенос параметров управляемой архивации SQL Server 2014 в SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] рекомендуется использовать для экземпляров SQL Server, работающих на виртуальных машинах Microsoft Azure.  
