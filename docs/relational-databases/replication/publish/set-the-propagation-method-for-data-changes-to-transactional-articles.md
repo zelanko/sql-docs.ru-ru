@@ -17,9 +17,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2abba76ac65025fe1f2c2d23a9d5b094eafb8980
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -123,7 +124,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
   
-    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_*имя_статьи***, **CALL sp_MSupd_*имя_статьи***, **XCALL sp_MSupd_*имя_статьи***или **MCALL sp_MSupd_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
+    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_*имя_статьи***, **CALL sp_MSupd_*имя_статьи***, **XCALL sp_MSupd_*имя_статьи* **или **MCALL sp_MSupd_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
   
     > [!NOTE]  
     >  Для каждой из приведенных выше команд в качестве параметров можно указать собственное имя хранимых процедур, создаваемых репликацией.  

@@ -20,9 +20,10 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan** , содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
   
-5.  В диалоговом окне **Сохранить результаты** \<сетка или текст> **** найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)**.  
+5.  В диалоговом окне **Сохранить результаты**  \<сетка или текст> **** найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)**.  
   
 6.  В поле **Имя файла** укажите имя в формате \<имя**>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
   
