@@ -83,7 +83,7 @@
 # [Триггеры](triggers/index.md)
 # [Определяемые пользователем функции](user-defined-functions/index.md)
 # [Представления](views/index.md)
-# [xml](xml/index.md);
+# [xml](xml/index.md)
 
 # [Руководства](database-engine-tutorials.md)  
 

@@ -22,14 +22,14 @@
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
-# [службы Analysis Services](../analysis-services/index.md);
+# [службы Analysis Services](../analysis-services/index.md)
 # [Ядро СУБД](../database-engine/index.md)
 # [Службы Data Quality Services](../data-quality-services/index.md)
 # [Отказоустойчивые кластеры](failover-clusters/index.md)
 # [Установка](install/index.md)
 # [Службы интеграции](../integration-services/index.md)
 # [Службы Master Data Services](../master-data-services/index.md)
-# [службы Reporting Services](../reporting-services/index.md).
+# [службы Reporting Services](../reporting-services/index.md)
 # [Помощник по миграции SQL Server](../ssma/index.md)
 # [База данных Stretch](stretch-database/index.md)
 # [Учебные материалы по SQL Server 2016](tutorials-for-sql-server-2016.md)
