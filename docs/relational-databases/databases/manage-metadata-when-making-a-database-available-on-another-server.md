@@ -146,11 +146,11 @@ ms.lasthandoff: 04/11/2017
 -   [Создание идентичных симметричных ключей на двух серверах](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
+##  <a name="user_defined_error_messages"></a> Определяемые пользователем сообщения об ошибках  
  Определяемые пользователем сообщения об ошибках настраиваются в представлении каталога [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) , которое хранится в базе данных **master**. Если приложение базы данных зависит от определяемых пользователем сообщений об ошибках и если эта база данных доступна на другом экземпляре сервера, то для добавления на целевой экземпляр сервера уже имеющихся определяемых пользователем сообщений об ошибках следует пользоваться хранимой процедурой [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) .  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Уведомления о событиях и события инструментария управления Windows (WMI) на уровне сервера  
   
 ### <a name="server-level-event-notifications"></a>Уведомления о событии на уровне сервера  
  Уведомления о событиях уровня сервера хранятся в базе данных **msdb**. Поэтому, если приложение базы данных находится в зависимости от уведомления о событии уровня сервера, уведомления о событии необходимо создать и на целевом экземпляре сервера. Для просмотра уведомлений о событиях в экземпляре сервера используется представление каталога [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Дополнительные сведения см. в разделе [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  

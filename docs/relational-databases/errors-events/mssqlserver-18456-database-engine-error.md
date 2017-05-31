@@ -16,9 +16,10 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/11/2017
 |7|Имя входа отключено, и пароль неверный.|  
 |8|Пароль неверный.|  
 |9|Недопустимый пароль.|  
-|11|Допустимое имя входа, но доступ к серверу не удался. Одна из возможных причин этой ошибки: пользователь Windows имеет доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена группы локальных администраторов, но Windows не предоставляет учетные данные администратора. Чтобы установить соединение, запустите программу подключения **от имени администратора[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем добавьте в** определенное имя пользователя Windows для входа.|  
+|11|Допустимое имя входа, но доступ к серверу не удался. Одна из возможных причин этой ошибки: пользователь Windows имеет доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена группы локальных администраторов, но Windows не предоставляет учетные данные администратора. Чтобы установить соединение, запустите программу подключения **от имени администратора[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем добавьте в**  определенное имя пользователя Windows для входа.|  
 |12|Допустимое имя входа, но доступ к серверу не удался.|  
 |18|Пароль должен быть изменен.|  
   

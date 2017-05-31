@@ -27,9 +27,10 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/11/2017
   
  Укажите имя входа, выбрав флажок **Сопоставление** для имени входа.  
   
- **Членство в роли базы данных для:***\<имя_хранилища_данных>*  
+ **Членство в роли базы данных для:** *\<имя_хранилища_данных>*  
  Выберите роль хранилища управляющих данных, с которой сопоставлено имя входа, щелкнув флажок одного или нескольких из следующих параметров:  
   
 -   **mdw_admin**  

@@ -17,9 +17,10 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -127,7 +128,7 @@ GO
  INSERT ...<список_столбцов> SELECT <список_столбцов> FROM OPENROWSET(BULK...)  
   
 ### <a name="creating-a-default-xml-format-file"></a>Создание XML-файла форматирования по умолчанию  
- Следующие примеры измененных файлов форматирования базируются на образце таблицы `myTestSkipCol` и файла данных, созданных в подразделе «Образец таблицы и файла данных» ранее в этом разделе. Следующая команда **bcp`myTestSkipCol` создает XML-файл форматирования по умолчанию для таблицы**.  
+ Следующие примеры измененных файлов форматирования базируются на образце таблицы `myTestSkipCol` и файла данных, созданных в подразделе «Образец таблицы и файла данных» ранее в этом разделе. Следующая команда **bcp`myTestSkipCol` создает XML-файл форматирования по умолчанию для таблицы** .  
   
 ```  
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  

@@ -14,9 +14,10 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -146,7 +147,7 @@ ms.lasthandoff: 04/11/2017
   
 -   *Столбцы, допускающие значение NULL, в ключах индексов* . В столбце SalesPersonID исходной таблицы могут содержаться значения NULL, а в столбцах новых таблиц значения NULL недопустимы. Кроме того, они имеют ограничение по умолчанию со значением (-1). Связано это с тем, что индексы в оптимизированных для памяти таблицах не могут содержать в ключе индекса столбцы, допускающие значение NULL; в этом случае значение -1 является суррогатом значения NULL.  
   
--   *Вычисляемые столбцы[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Вычисляемые столбцы SalesOrderNumber и TotalDue пропускаются, так как* не поддерживает вычисляемые столбцы в оптимизированных для памяти таблицах. Новое представление Sales.vSalesOrderHeader_extended_inmem отражает столбцы SalesOrderNumber и TotalDue. Поэтому при необходимости в этих столбцах можно использовать это представление.  
+-   *Вычисляемые столбцы[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Вычисляемые столбцы SalesOrderNumber и TotalDue пропускаются, так как*  не поддерживает вычисляемые столбцы в оптимизированных для памяти таблицах. Новое представление Sales.vSalesOrderHeader_extended_inmem отражает столбцы SalesOrderNumber и TotalDue. Поэтому при необходимости в этих столбцах можно использовать это представление.  
 
     - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 вычисляемые столбцы поддерживаются в оптимизированных для памяти таблицах и индексах.
