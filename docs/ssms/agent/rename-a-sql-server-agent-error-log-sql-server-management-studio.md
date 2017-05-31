@@ -26,7 +26,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>переименовать журнал ошибок агента SQL Server (среда SQL Server Management Studio)
 В этом разделе описано, как переименовать файл, в котором содержится журнал ошибок агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 **В этом разделе**  
