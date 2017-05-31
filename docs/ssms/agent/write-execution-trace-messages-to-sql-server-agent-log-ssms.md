@@ -27,7 +27,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)
 В данном разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 **В этом разделе**  
