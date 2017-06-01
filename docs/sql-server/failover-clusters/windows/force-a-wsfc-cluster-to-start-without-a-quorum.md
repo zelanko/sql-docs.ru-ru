@@ -27,11 +27,11 @@ ms.lasthandoff: 04/11/2017
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера WSFC без кворума
   В этом разделе описан порядок принудительного запуска узла отказоустойчивого кластера Windows Server (WSFC) без кворума.  Это может потребоваться в случае аварийного восстановления, в сценариях с несколькими подсетями и восстановлением данных и высокой доступности экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
+-   **Перед началом работы**: [рекомендации](#Recommendations), [безопасность](#Security)  
   
--   **To force a cluster to start without a quorum using:**  [Using Failover Cluster Manager](#FailoverClusterManagerProcedure), [Using Powershell](#PowerShellProcedure), [Using Net.exe](#CommandPromptProcedure)  
+-   **Для принудительного запуска кластера без кворума с использованием:**  [с помощью диспетчера отказоустойчивости кластеров](#FailoverClusterManagerProcedure), [с помощью Powershell](#PowerShellProcedure), [использование Net.exe](#CommandPromptProcedure)  
   
--   **Follow up:**  [Follow Up: After Forcing Cluster to Start without a Quorum](#FollowUp)  
+-   **Дальнейшие действия:**  [исполнению: после перезапуска кластера для запуска без кворума](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом работы  
   
