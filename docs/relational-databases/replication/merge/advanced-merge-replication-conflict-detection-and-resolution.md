@@ -59,7 +59,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Если выбрано отслеживание на уровне логических записей, то изменение данных считается конфликтом, если оно выполнено в какой-либо строке в одной и той же логической записи в нескольких узлах репликации (изменяемые столбцы в соответствующих строках могут быть разными).  
   
- Дополнительные сведения см. в статье [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+ Дополнительные сведения см. в статье [Распознавание и разрешение конфликтов в логических записях](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
  Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [указать уровень разрешения и отслеживания конфликтов для статьи слияния](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
@@ -85,11 +85,11 @@ ms.lasthandoff: 04/11/2017
   
 -   Пользовательский сопоставитель на основе COM  
   
-     Репликация слиянием обеспечивает API-интерфейс, предназначенный для написания сопоставителей в виде COM-объектов на различных языках программирования — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]и других. Дополнительные сведения см. в статье [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     Репликация слиянием обеспечивает API-интерфейс, предназначенный для написания сопоставителей в виде COM-объектов на различных языках программирования — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]и других. Дополнительные сведения см. в статье [Пользовательские сопоставители на основе технологии COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Основанный на технологии COM сопоставитель, поддерживаемый [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a number of COM-based resolvers. Дополнительные сведения см. в статье [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит несколько сопоставителей на основе COM. Дополнительные сведения см. в статье [Сопоставители на базе технологии Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Сведения о выборе подходящего типа сопоставителя см. в статье [Выбор сопоставителя](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -100,16 +100,16 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) и [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md) и [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Интерактивный сопоставитель  
- Репликация предоставляет пользовательский интерфейс интерактивного сопоставителя, который может использоваться совместно либо с сопоставителем конфликтов на основе приоритетов (по умолчанию), либо с сопоставителем статей. При выполнении синхронизации по требованию с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows интерактивный сопоставитель отображает конфликтные данные во время выполнения, позволяя выбрать методы разрешения конфликтов. Дополнительные сведения о том, как включить интерактивное устранение конфликтов и запуск интерактивного сопоставителя, см. в разделе [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Репликация предоставляет пользовательский интерфейс интерактивного сопоставителя, который может использоваться совместно либо с сопоставителем конфликтов на основе приоритетов (по умолчанию), либо с сопоставителем статей. При выполнении синхронизации по требованию с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows интерактивный сопоставитель отображает конфликтные данные во время выполнения, позволяя выбрать методы разрешения конфликтов. Дополнительные сведения о том, как включить интерактивное устранение конфликтов и запуск интерактивного сопоставителя, см. в разделе [Интерактивное разрешение конфликтов](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="viewing-conflicts"></a>Просмотр конфликтов  
  Наиболее простым способом просмотра конфликтов является использование средства просмотра конфликтов репликации, доступного из среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также предоставляет хранимые процедуры, которые позволяют создавать запросы к таблицам конфликтов.). Средство просмотра конфликтов и интерактивный сопоставитель являются аналогичными инструментами, но интерактивный сопоставитель позволяет разрешать конфликты во время выполнения синхронизации, в то время как средство просмотра конфликтов предназначено для просмотра конфликтов после их разрешения. Если метаданные конфликта остаются доступными в системных таблицах (по умолчанию метаданные конфликтов сохраняются в течение 14 суток), то результаты устранения конфликтов можно изменить в средстве просмотра конфликтов, однако при необходимости частого прямого вмешательства стоит рассмотреть возможность использования интерактивного сопоставителя.  
   
 > [!NOTE]  
->  Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
  Средство просмотра конфликтов отображает информацию из трех системных таблиц:  
   
