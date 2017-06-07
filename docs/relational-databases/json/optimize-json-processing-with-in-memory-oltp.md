@@ -29,7 +29,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="store-json-in-memory-optimized-tables"></a>Хранение документов JSON в таблицах, оптимизированных для памяти
 В примере ниже показана таблица `Product`, оптимизированная для памяти, с двумя столбцами JSON — `Tags` и `Data`.
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ CREATE TABLE xtp.Product(
 ## <a name="validate-json-columns"></a>Проверка столбцов JSON
 База данных SQL Azure и SQL Server позволяют добавлять скомпилированные в собственном коде ограничения CHECK, проверяющие содержимое документов JSON, которые хранятся в строковом столбце, как показано в примере ниже.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 Скомпилированное в собственном коде ограничение CHECK можно добавить в существующие таблицы, содержащие столбцы JSON.
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ ALTER TABLE xtp.Product
 -   страну, в которой был изготовлен товар;
 -   себестоимость производства товара.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ CREATE TABLE xtp.Product(
 ## <a name="index-values-in-json-columns"></a>Индексирование значений в столбцах JSON
 База данных SQL Azure и SQL Server позволяют индексировать значения в столбцах JSON с помощью оптимизированных для памяти индексов. Индексированные значения JSON должны быть строго типизированными и предоставленными с помощью вычисляемых столбцов, как показано в примере ниже.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ ALTER TABLE Product
 ## <a name="native-compilation-of-json-queries"></a>Компиляция запросов JSON в собственном коде
 Наконец, компиляция в собственном коде процедур функций и триггеров Transact-SQL, которые содержат запросы с функциями JSON, повышает производительность запросов и понижает циклы ЦП, необходимые для выполнения процедур. В примере ниже показана скомпилированная в собственном коде процедура, использующая несколько функций JSON — JSON_VALUE, OPENJSON и JSON_MODIFY.
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

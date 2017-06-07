@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---use-the-with-clause-to-format-the-output"></a>Пример использования предложения WITH для форматирования выходных данных  
  Следующий запрос возвращает результаты, показанные в таблице ниже. Обратите внимание, что при использовании предложения AS JSON значения возвращаются в виде объектов JSON, а не скалярных значений в col5 и array_element.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -70,7 +70,7 @@ WITH ( k1 int,
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>Пример загрузки объекта JSON в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  В следующем примере весь объект JSON загружается в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  

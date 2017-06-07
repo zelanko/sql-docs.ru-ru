@@ -63,7 +63,7 @@ SET @jsonInfo=N'{
   
  Следующий пример возвращает текст JSON, если столбец содержит допустимые данные JSON.  
   
-```tsql  
+```sql  
 SELECT id,json_col
 FROM tab1
 WHERE ISJSON(json_col)>0 
@@ -76,7 +76,7 @@ WHERE ISJSON(json_col)>0
   
  Следующий пример извлекает значение свойства JSON в локальную переменную.  
   
-```tsql  
+```sql  
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
 ```  
   
@@ -87,7 +87,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
  
  В следующем примере показано, как можно вернуть фрагмент JSON в результатах запроса.  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
@@ -126,7 +126,7 @@ ORDER BY LastName
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>Пример 1. Возвращение стандартных столбцов и данных JSON  
  Следующий запрос возвращает стандартные реляционные столбцы и значения из столбца JSON.  
   
-```tsql  
+```sql  
 SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
@@ -141,7 +141,7 @@ WHERE ISJSON(Info)>0
 ### <a name="example-2--aggregate-and-filter-json-values"></a>Пример 2. Агрегирование и фильтрация значений JSON  
  Следующий запрос рассчитывает промежуточные итоги по имени клиента (хранятся в формате JSON) и состояние (хранится в обычном столбце). Затем результаты фильтруются по городу (в формате JSON) и OrderDate (в обычном столбце).  
   
-```tsql  
+```sql  
 DECLARE @territoryid INT;
 DECLARE @city NVARCHAR(32);
 
@@ -163,7 +163,7 @@ HAVING SUM(SubTotal)>1000
   
  В следующем примере показано, как изменить значение свойства в переменной, которая содержит данные в формате JSON.  
   
-```tsql  
+```sql  
 SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
 ```  
   

@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 Ниже приведен краткий пример, который использует **OPENJSON** со схемой по умолчанию и возвращает одну строку для каждого свойства объекта JSON.  
  
 **Пример**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ FROM OPENJSON(@json);
   
 **Пример**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  
