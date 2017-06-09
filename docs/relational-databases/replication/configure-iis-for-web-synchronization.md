@@ -19,16 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
   Описанные в данном разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](../../relational-databases/replication/configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Как настроить подписку для использования веб-синхронизации \(среда SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
 -   Программирование репликации [!INCLUDE[tsql](../../includes/tsql-md.md)] : [How to: Configure a Subscription to Use Web Synchronization (Программирование репликации Transact-SQL Programming)](http://msdn.microsoft.com/library/ms345206.aspx).  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  Заданный веб-сайт обеспечивает доступ к компонентам, которые используются при веб-синхронизации. Веб-сайт не предоставляет доступ к другим данным или веб-страницами, если его не настроить соответствующим образом.  
   
--   Создает виртуальный каталог и связанный с ним псевдоним. Этот псевдоним используется при доступе к компонентам веб-синхронизации. Например, если адрес сервера IIS — https://*server.domain.com* и задается псевдоним «websync1», то адресом доступа к компоненту replisapi.dll будет https://*server.domain.com*/websync1/replisapi.dll.  
+-   Создает виртуальный каталог и связанный с ним псевдоним. Этот псевдоним используется при доступе к компонентам веб-синхронизации. Например, если адрес сервера IIS — `https://server.domain.com` и указан псевдоним "websync1", то для доступа к компоненту replisapi.dll будет использоваться адрес `https://server.domain.com/websync1/replisapi.dll`.  
   
 -   Использует обычную проверку подлинности. Рекомендуется использовать процедуру обычной проверки подлинности, поскольку она позволяет запускать сервер IIS и издатель/распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на отдельных компьютерах (рекомендованная конфигурация) без делегирования Kerberos. Использование протокола SSL в сочетании с обычной проверкой подлинности обеспечивает шифрование имен входа, паролей и всех данных в процессе передачи. (SSL требуется, независимо от типа используемой проверки подлинности.) Дополнительные сведения о рекомендациях по веб-синхронизации см. в разделе "Рекомендации по безопасности для веб-синхронизации" статьи [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md).  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 04/11/2017
   
     5.  Нажмите кнопку **ОК**.  
   
-2.  В обозревателе Internet Explorer на подписчике подключитесь к серверу в диагностическом режиме, добавив параметр `?diag` к адресу replisapi.dll. Пример: https://server.domain.com/directory/replisapi.dll?diag.  
+2.  В обозревателе Internet Explorer на подписчике подключитесь к серверу в диагностическом режиме, добавив параметр `?diag` к адресу replisapi.dll. Например: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  Если сертификат, заданный для сервера IIS, не распознается операционной системой Windows, отображается диалоговое окно **Предупреждение безопасности** . Это предупреждение может возникать из-за того, что это проверочный сертификат или сертификат, выданный центром сертификации, который не распознается Windows.  
   

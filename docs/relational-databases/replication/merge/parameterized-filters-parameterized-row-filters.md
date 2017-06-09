@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Параметризованные фильтры. Параметризованные фильтры строк
@@ -104,7 +104,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Используйте один из следующих методов, чтобы переопределить значение HOST_NAME().  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: укажите значение на странице **Значения HOST\_NAME\(\)** мастера создания подписки. Дополнительные сведения о создании подписок см. в статье [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 -   Программирование репликации для [!INCLUDE[tsql](../../../includes/tsql-md.md)]: укажите значение параметра **@hostname** в процедуре [sp_addmergesubscription (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (для принудительных подписок) или [sp_addmergepullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (для подписок по запросу).  
   

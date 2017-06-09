@@ -1,7 +1,7 @@
 ---
 title: "Реорганизация и перестроение индексов | Документация Майкрософт"
 ms.custom: 
-ms.date: 04/29/2016
+ms.date: 05/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -35,40 +35,21 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 8f0efc0281809b6547a86d708e4596666f10e0c0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Реорганизация и перестроение индексов](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
+
   В этом разделе описывается реорганизация или перестроение фрагментированного индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически поддерживает состояние индексов при выполнении операций вставки, обновления или удаления в отношении базовых данных. Со временем эти изменения могут привести к тому, что данные в индексе окажутся разбросанными по базе данных (фрагментированными). Фрагментация имеет место в тех случаях, когда в индексах содержатся страницы, для которых логический порядок, основанный на значении ключа, не совпадает с физическим порядком в файле данных. Значительно фрагментированные индексы могут серьезно снижать производительность запросов и служить причиной замедления откликов приложения.  
   
  Можно устранить фрагментацию путем реорганизации или перестроения индекса. Для секционированных индексов, построенных на основе схемы секционирования, можно использовать любой из этих методов для всего индекса или отдельной его секции. При перестроении старый индекс удаляется, и создается новый. Таким образом, устраняется фрагментация, восстанавливается место на диске путем сжатия страниц с учетом указанного или существующего коэффициента заполнения, переупорядочиваются индексные строки в последовательных страницах. Если указывается ключевое слово ALL, то все индексы для таблицы удаляются и перестраиваются в одной транзакции. Для реорганизации индекса требуется минимальный объем системных ресурсов. При реорганизации концевой уровень кластеризованных и некластеризованных индексов на таблицах и представлениях дефрагментируется путем физической реорганизации страниц конечного уровня, в результате чего они выстраиваются в соответствии с логическим порядком конечных узлов (слева направо). Кроме того, реорганизация сжимает страницы индекса. Их сжатие производится в соответствии с текущим значением коэффициента заполнения.  
   
- **В этом разделе**  
-  
--   **Перед началом работы выполните следующие действия.**  
-  
-     [Выявление фрагментации](#Fragmentation)  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Безопасность](#Security)  
-  
--   **Для проверки фрагментации индекса используется:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedureFrag)  
-  
-     [Transact-SQL](#TsqlProcedureFrag)  
-  
--   **Для реорганизации или перестроения индекса используется:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedureReorg)  
-  
-     [Transact-SQL](#TsqlProcedureReorg)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -188,8 +169,10 @@ ms.lasthandoff: 04/11/2017
     -- Find the average fragmentation percentage of all indexes  
     -- in the HumanResources.Employee table.   
     SELECT a.index_id, name, avg_fragmentation_in_percent  
-    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
-        JOIN sys.indexes AS b ON a.object_id = b.object_id AND a.index_id = b.index_id;   
+    FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2012'), 
+          OBJECT_ID(N'HumanResources.Employee'), NULL, NULL, NULL) AS a  
+        JOIN sys.indexes AS b 
+          ON a.object_id = b.object_id AND a.index_id = b.index_id;   
     GO  
     ```  
   
@@ -256,7 +239,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  Разверните папку **Индексы** .  
   
-5.  Щелкните правой кнопкой мыши индекс, который требуется реорганизовать, и выберите пункт **Реорганизовать**.  
+5.  Щелкните правой кнопкой мыши индекс, который требуется реорганизовать, и выберите команду **Перестроить**.  
   
 6.  В диалоговом окне **Перестроение индексов** убедитесь, что нужный индекс приведен в сетке **Индексы для перестроения** , и нажмите кнопку **ОК**.  
   
@@ -277,9 +260,11 @@ ms.lasthandoff: 04/11/2017
     ```  
     USE AdventureWorks2012;   
     GO  
-    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode index on the HumanResources.Employee table.   
+    -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
+    -- index on the HumanResources.Employee table.   
   
-    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode ON HumanResources.Employee  
+    ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode 
+      ON HumanResources.Employee  
     REORGANIZE ;   
     GO  
     ```  
@@ -324,7 +309,6 @@ ms.lasthandoff: 04/11/2017
  Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Рекомендации по дефрагментации индексов Microsoft SQL Server 2000](http://technet.microsoft.com/library/cc966523.aspx)  
-  
+  [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
   
 

@@ -1,7 +1,7 @@
 ---
 title: "Функции базы данных | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/15/2017
+ms.date: 05/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,49 +15,23 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: ece9880006acba925cd10acf8d17e96be8607d84
+ms.sourcegitcommit: 137216ed7cf120a8a53fe00b5f1111c9b013c2c9
+ms.openlocfilehash: 54aaac5cb67f00547ea785df9371fb2395f297e7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="database-features"></a>Функции базы данных
-  Этот раздел содержит функции и задачи, связанные с базами данных, объектами баз данных, типами данных и механизмами для работы с данными и управления ими.  
+# <a name="database-features"></a>Функции базы данных  
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+
+  Этот раздел содержит функции и задачи, связанные с базами данных, объектами баз данных, типами данных и механизмами для работы с данными и управления ими. Эти сведения являются общими для большинства версий [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. В некоторых разделах может быть указано, что некоторые функции поддерживаются не всеми платформами. Сведения о конкретных платформах см. в следующих разделах. 
   
-## <a name="in-this-section"></a>В этом разделе  
-  
-[Резервное копирование и восстановление баз данных SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
-[Данные большого двоичного объекта](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-[Массовый импорт и экспорт данных](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
-[Курсоры](../relational-databases/cursors.md)    
-[Базы данных](../relational-databases/databases/databases.md)  
-[Контрольные точки базы данных](../relational-databases/logs/database-checkpoints-sql-server.md)  
-[Сжатие данных](../relational-databases/data-compression/data-compression.md)    
-[Приложения уровня данных](../relational-databases/data-tier-applications/data-tier-applications.md)  
-[Триггеры DDL](../relational-databases/triggers/ddl-triggers.md)  
-[Триггеры DML](../relational-databases/triggers/dml-triggers.md)  
-[Уведомления о событиях](../relational-databases/service-broker/event-notifications.md)  
-[Полнотекстовый поиск](../relational-databases/search/full-text-search.md)  
-[In-Memory OLTP (оптимизация в памяти)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-[Индексы](../relational-databases/indexes/indexes.md)  
-[Данные JSON](../relational-databases/json/json-data-sql-server.md)    
-[Наблюдение и настройка производительности](../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[Объекты OLE-автоматизации в Transact-SQL](../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
-[Секционированные таблицы и индексы](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-[Руководства планов](../relational-databases/performance/plan-guides.md)  
-[PolyBase](../relational-databases/polybase/polybase-guide.md)  
-[Семантический поиск](../relational-databases/search/semantic-search-sql-server.md)  
-[Порядковые номера](../relational-databases/sequence-numbers/sequence-numbers.md)  
-[Пространственные данные](../relational-databases/spatial/spatial-data-sql-server.md)  
-[Statistics](../relational-databases/statistics/statistics.md)  
-[Хранимые процедуры (компонент Database Engine)](../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
-[База данных Stretch](../sql-server/stretch-database/stretch-database.md)  
-[Синонимы (компонент Database Engine)](../relational-databases/synonyms/synonyms-database-engine.md)  
-[Таблицы](../relational-databases/tables/tables.md)  
-[Темпоральные таблицы](../relational-databases/tables/temporal-tables.md)  
-[Журнал транзакций](../relational-databases/logs/the-transaction-log-sql-server.md)  
-[Определяемые пользователем функции](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Представления](../relational-databases/views/views.md)  
-[XML-данные](../relational-databases/xml/xml-data-sql-server.md)  
+- [Локальный SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) и [Настройка SQL Server](../database-engine/configure-windows/sql-server-database-engine.md)  
+- [Документация по SQL Server на платформе Linux](../linux/sql-server-linux-overview.md)  
+- [База данных SQL Azure](https://docs.microsoft.com/azure/sql-database/)  
+- [Хранилище данных SQL Azure](https://docs.microsoft.com/azure/sql-data-warehouse/)  
+- [Параллельное хранилище данных](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
+
   
   
+

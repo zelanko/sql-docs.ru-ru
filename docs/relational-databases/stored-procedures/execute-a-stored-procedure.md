@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
+
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Выполнение хранимой процедуры](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
+
   В этом разделе описывается, как выполнить хранимую процедуру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Существует два способа выполнения хранимой процедуры. Первым и наиболее распространенным подходом является вызов процедуры приложением или пользователем. Второй подход — настройка автоматического выполнения процедуры при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если процедура вызывается приложением или пользователем, то в вызове явно указывается ключевое слово [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE или EXEC. Процедуру также можно вызывать и выполнять без ключевого слова, если она является первой инструкцией в пакете [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
