@@ -1,48 +1,53 @@
 ---
-title: "Примеры выражений (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "разрывы страницы [службы Reporting Services], выражения"
-  - "отчеты с выделением четных и нечетных строк [службы Reporting Services]"
-  - "Visual Basic [службы Reporting Services]"
-  - "функции [службы Reporting Services], примеры"
-  - "пользовательский код [службы Reporting Services]"
-  - "внешний вид отчетов"
-  - "форматирование отчетов [службы Reporting Services], выражения"
-  - "показать или скрыть [службы Reporting Services]"
-  - "параметры [службы Reporting Services], выражения"
-  - "видимость [службы Reporting Services], выражения"
-  - "верхние колонтитулы страниц [службы Reporting Services]"
-  - "нижние колонтитулы страниц [службы Reporting Services]"
-  - "даты [службы Reporting Services], выражения"
-  - "выражения [службы Reporting Services], примеры"
+title: "Примеры выражений (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 04/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- page breaks [Reporting Services], expressions
+- green-bar reports [Reporting Services]
+- Visual Basic [Reporting Services]
+- functions [Reporting Services], examples
+- custom code [Reporting Services]
+- appearance of reports
+- formatting reports [Reporting Services], expressions
+- show/hide [Reporting Services]
+- parameters [Reporting Services], expressions
+- visibility [Reporting Services], expressions
+- page headers [Reporting Services]
+- page footers [Reporting Services]
+- dates [Reporting Services], expressions
+- expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 101
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 101
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Примеры выражений (построитель отчетов и службы SSRS)
-Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типы ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+# <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
+Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типы ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  При включении функции «песочницы» для языка определения отчетов только определенные типы и элементы смогут использовать в тексте выражения во время публикации отчета. Дополнительные сведения см. в статье [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
   
- В данном разделе приведены примеры выражений, которые можно использовать для решения типичных задач в отчете.  
+В данном разделе приведены примеры выражений, которые можно использовать для решения типичных задач в отчете.  
   
 -   [Функции языка Visual Basic](#VisualBasicFunctions) . Примеры функций дат, строковых функций, функций преобразования и условных функций [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
--   [Функции отчета](#ReportFunctions) Примеры статистических функций и других встроенных функций отчета.  
+-   [Функции отчета](#ReportFunctions) Примеры статистических функций и других встроенных функций отчета.  
   
 -   [Внешний вид данных отчета](#AppearanceofReportData) Примеры изменения внешнего вида отчета.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 101
   
 -   [Пользовательский код](#CustomCode) Примеры внедренного пользовательского кода.  
   
- Примеры выражений для специальных задач см. в следующих разделах.  
+Примеры выражений для специальных задач см. в следующих разделах.  
   
 -   [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
@@ -60,26 +65,22 @@ caps.handback.revision: 101
   
 -   [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)  
+-   [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- Дополнительные сведения о простых и сложных выражениях, о местах, где можно использовать выражения, и о типах ссылок, которые можно включать в выражения, см. в подразделах в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Дополнительные сведения о контексте, в котором выражения оцениваются для вычисления статистических функций, см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+Дополнительные сведения о простых и сложных выражениях, о местах, где можно использовать выражения, и о типах ссылок, которые можно включать в выражения, см. в подразделах в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Дополнительные сведения о контексте, в котором выражения оцениваются для вычисления статистических функций, см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- О написании выражений, в которых используются многие из функций и операторов, также используемых в примерах выражений в этом разделе, но в контексте создания отчета, см. в разделе [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+О написании выражений, в которых используются многие из функций и операторов, также используемых в примерах выражений в этом разделе, но в контексте создания отчета, см. в разделе [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+
   
- При использовании конструктора запросов моделей отчетов для создания запроса, чтобы получить набор данных, в котором в качестве источника данных используется модель отчета, можно использовать формулы вместо выражений. Эти формулы помогут уточнить данные отчета, если использовать встроенные в запрос пользовательские вычисления, которые уточняют данные, возвращаемые источником данных модели отчета. Дополнительные сведения см. в разделе [Формулы в запросах модели отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
+## <a name="functions"></a>Функции  
+ Многие выражения в отчете содержат вызовы функций. Они позволяют форматировать данные, применять логические операции и производить доступ к метаданным отчета. Можно написать выражения, использующие функции из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] библиотеки времени выполнения и из <xref:System.Convert> и <xref:System.Math> пространства имен. Можно добавить ссылки на функции из других сборок или пользовательский код. Можно также использовать классы из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в том числе <xref:System.Text.RegularExpressions>.  
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-## Функции  
- Многие выражения в отчете содержат вызовы функций. Они позволяют форматировать данные, применять логические операции и производить доступ к метаданным отчета. В выражениях можно использовать функции из библиотеки времени выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], а также из пространств имен <xref:System.Convert> и <xref:System.Math> Можно добавить ссылки на функции из других сборок или пользовательский код. Можно также использовать классы из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в том числе <xref:System.Text.RegularExpressions>.  
-  
-###  <a name="VisualBasicFunctions"></a> Функции языка Visual Basic  
+##  <a name="VisualBasicFunctions"></a> Функции языка Visual Basic  
  Функции языка [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] позволяют управлять данными, отображаемыми в текстовых полях, или используются в параметрах, свойствах и других областях отчета. В этом разделе приведены примеры, демонстрирующие применение некоторых из этих функций. Дополнительные сведения см. в разделе [Компоненты библиотеки времени выполнения Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) в MSDN.  
   
  Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет множество параметров пользовательских форматов, например для конкретных форматов даты. Дополнительные сведения см. в статье [Типы форматирования](http://go.microsoft.com/fwlink/?LinkId=112024) на веб-сайте MSDN.  
   
-#### Математические функции  
+### <a name="math-functions"></a>Математические функции  
   
 -   Функция **Round** полезна при округлении чисел до ближайшего целого числа. В следующем выражении значение 1.3 округляется до 1:  
   
@@ -93,12 +94,31 @@ caps.handback.revision: 101
     = Round(1.3*5)/5  
     ```  
   
-####  <a name="DateFunctions"></a> Функции для работы с датой  
+###  <a name="DateFunctions"></a> Функции для работы с датой  
   
 -   Функция **Today** возвращает текущую дату. Следующее выражение можно указать в текстовом поле для вывода даты формирования отчета или в качестве параметра фильтрации данных на основе текущей даты.  
   
     ```  
     =Today()  
+    ```  
+  
+-   Используйте **DateInterval** функции, чтобы выдвинуть определенной части даты. Ниже приведены некоторые допустимые **DateInterval** параметры:
+
+    -   DateInterval.Second
+    -   DateInterval.Minute
+    -   DateInterval.Hour
+    -   DateInterval.Weekday
+    -   DateInterval.Day
+    -   DateInterval.DayOfYear
+    -   DateInterval.WeekOfYear
+    -   DateInterval.Month
+    -   DateInterval.Quarter
+    -   DateInterval.Year
+
+    Например это выражение отобразится номер недели в текущем году для текущей даты:
+  
+    ```  
+    =DatePart(DateInterval.WeekOfYear, today()) 
     ```  
   
 -   Функция **DateAdd** может оказаться полезной для вычисления диапазона дат на основе одного параметра. Следующее выражение вычисляет дату, которая отстоит на 6 месяцев позже даты, указанной в параметре *StartDate*.  
@@ -149,7 +169,7 @@ caps.handback.revision: 101
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](../../reporting-services/report-design/first-function-report-builder-and-ssrs.md), агрегатная функция, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
+-   Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md), агрегатная функция, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -179,7 +199,7 @@ caps.handback.revision: 101
 |Год назад|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Два года назад|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-####  <a name="StringFunctions"></a> Строковые функции  
+###  <a name="StringFunctions"></a> Строковые функции  
   
 -   Объединяют несколько полей с помощью операторов объединения и констант [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Следующее выражение возвращает два поля, каждое на отдельной строке в одном текстовом поле.  
   
@@ -195,13 +215,13 @@ caps.handback.revision: 101
   
      Если текстовое поле содержит только дату или число, чтобы применить форматирование, лучше использовать свойство текстового поля Format, а не вызывать функцию **Format** в текстовом поле.  
   
--   Функции **Right**, **Len** и **InStr** полезны для извлечения подстроки, например имени пользователя из строк вида *ДОМЕН*\\*имя пользователя*. Следующее выражение возвращает часть строки параметра *User*, расположенную справа от символа обратной косой черты (\\).  
+-   Функции **Right**, **Len**и **InStr** полезны для извлечения подстроки, например имени пользователя из строк вида *ДОМЕН*\\*имя пользователя* . Следующее выражение возвращает часть строки параметра\\User *, расположенную справа от символа обратной косой черты (*).  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     Следующее выражение возвращает то же значение, что и предыдущее, только вместо функций [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] используются элементы класса <xref:System.String> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+     Следующее выражение вызовет то же значение, что и предыдущий, используя члены [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> вместо класса [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] функции:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -220,7 +240,7 @@ caps.handback.revision: 101
   
     ```  
   
--   Функции **Regex** класса [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> полезны при изменении формата существующих строк, например при форматировании телефонного номера. Следующее выражение использует функцию **Replace** для изменения формата десятизначного номера телефона в поле с "*nnn*-*nnn*-*nnnn*" на "(*nnn*) *nnn*-*nnnn*":  
+-   **Regex** функции [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> полезны при изменении формата существующих строк, например, форматировании телефонного номера. The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -229,7 +249,7 @@ caps.handback.revision: 101
     > [!NOTE]  
     >  Убедитесь, что значение Fields!Phone.Value не содержит лишних пробелов и имеет тип <xref:System.String>.  
   
-#### Уточняющий запрос  
+### <a name="lookup"></a>Уточняющий запрос  
   
 -   При указании ключевого поля можно использовать функцию **Lookup** для извлечения значения из набора данных со связью "один к одному", например для пары "ключ-значение". Следующее выражение отображает из набора данных («Product») название продукта по его идентификатору.  
   
@@ -237,7 +257,7 @@ caps.handback.revision: 101
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
     ```  
   
-#### LookupSet  
+### <a name="lookupset"></a>LookupSet  
   
 -   Задавая ключевое поле, можно использовать функцию **LookupSet** для извлечения набора значений из набора данных со связью "один ко многим". Например, у одного человека может быть несколько телефонных номеров. В следующем примере предположим, что набор данных PhoneList содержит в каждой строке идентификатор пользователя и телефонный номер. Функция**LookupSet** возвращает массив значений. В следующем выражении возвращаемые значения объединяются в одну строку. Для пользователя отображается список телефонных номеров по его ContactID:  
   
@@ -245,7 +265,7 @@ caps.handback.revision: 101
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-####  <a name="ConversionFunctions"></a> Функции преобразования  
+###  <a name="ConversionFunctions"></a> Функции преобразования  
  Функции [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] можно использовать для преобразования поля из одного типа данных в другой тип данных. Функции преобразования могут использоваться, чтобы преобразовать тип данных по умолчанию для поля в тип данных, необходимый для вычислений или для объединения текста.  
   
 -   Следующее выражение преобразует константу 500 в тип Decimal для сравнения с денежным типом данных [!INCLUDE[tsql](../../includes/tsql-md.md)] в поле Value для выражения фильтра.  
@@ -260,9 +280,9 @@ caps.handback.revision: 101
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-####  <a name="DecisionFunctions"></a> Функции выбора  
+###  <a name="DecisionFunctions"></a> Функции выбора  
   
--   Функция **Iif** возвращает одно из двух значений в зависимости от того, истинно ли указанное выражение. В следующем выражении используется функция **Iif**, которая возвращает логическое значение **True**, если значение `LineTotal` превышает 100. В противном случае возвращается значение **False**:  
+-   Функция **Iif** возвращает одно из двух значений в зависимости от того, истинно ли указанное выражение. В следующем выражении используется функция **Iif** , которая возвращает логическое значение **True** , если значение `LineTotal` превышает 100. В противном случае возвращается значение **False**:  
   
     ```  
     =IIF(Fields!LineTotal.Value > 100, True, False)  
@@ -279,7 +299,7 @@ caps.handback.revision: 101
 -   Такого же эффекта можно добиться с помощью функции **Switch** . Функция **Switch** полезна при наличии трех и более проверяемых условий. Функция **Switch** возвращает значение, связанное с первым выражением ряда, которое оценивается как true:  
   
     ```  
-    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
+    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red")  
     ```  
   
      Значения, больше или равные 10, отображаются с зеленым фоном, от 1 до 9 — с синим фоном, равные 1 — с желтым фоном и меньшие или равные 0 — с красным фоном.  
@@ -315,10 +335,10 @@ caps.handback.revision: 101
   
     ```  
   
-###  <a name="ReportFunctions"></a> Функции отчета  
- В выражение можно добавить ссылку на дополнительные функции, которые позволяют управлять данными в отчете. В этом разделе приведены примеры использования двух из этих функций. Дополнительные сведения о функциях отчета и примеры см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md).  
+##  <a name="ReportFunctions"></a> Функции отчета  
+ В выражение можно добавить ссылку на дополнительные функции, которые позволяют управлять данными в отчете. В этом разделе приведены примеры использования двух из этих функций. Дополнительные сведения о функциях отчета и примеры см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-#####  <a name="Sum"></a> Sum  
+###  <a name="Sum"></a> Sum  
   
 -   Функция **Sum** суммирует значения в группе или области данных. Она может быть полезна в колонтитулах группы. Следующее выражение отображает сумму данных в группе или области данных Order.  
   
@@ -332,7 +352,7 @@ caps.handback.revision: 101
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-#####  <a name="RowNumber"></a> RowNumber  
+###  <a name="RowNumber"></a> RowNumber  
   
 -   Если функция **RowNumber** используется в текстовом поле в области данных, то она отображает номер строки для каждого экземпляра текстового поля, в котором содержится это выражение. Эта функция может оказаться полезной для нумерации строк в таблице. Также она может быть полезна для более сложных задач, например для разбивки на страницы по определенному числу строк. Дополнительные сведения см. в подразделе [Разрывы страниц](#PageBreaks) далее в этом разделе.  
   
@@ -407,7 +427,7 @@ caps.handback.revision: 101
   
 ###  <a name="Formatting"></a> Форматирование  
   
--   Следующее выражение при использовании в свойстве Color текстового поля изменяет цвет текста в зависимости от значения поля `Profit`:  
+-   Следующее выражение при использовании в свойстве Color текстового поля изменяет цвет текста в зависимости от значения поля `Profit` :  
   
     ```  
     =Iif(Fields!Profit.Value < 0, "Red", "Black")  
@@ -430,9 +450,9 @@ caps.handback.revision: 101
     ```  
   
 > [!NOTE]  
->  Доступные цвета выбираются из перечисления KnownColor [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+>  Доступные цвета выбираются из перечисления KnownColor [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-### Цвета диаграммы  
+### <a name="chart-colors"></a>Цвета диаграммы  
  Чтобы задать цвета в фигурной диаграмме, нужно с помощью пользовательского кода изменить порядок сопоставления цветов со значениями точек данных. Это дает возможность использовать согласованные цвета в нескольких диаграммах, использующих одни и те же группы категорий. Дополнительные сведения см. в разделе [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
 ###  <a name="Visibility"></a> Видимость  
@@ -500,12 +520,12 @@ caps.handback.revision: 101
 ##  <a name="CustomCode"></a> Пользовательский код  
  В отчете можно использовать пользовательский код. Он либо внедряется в отчет, либо хранится в используемой отчетом пользовательской сборке. Дополнительные сведения о пользовательском коде см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
-### Использование групповых переменных для нестандартного статистического выражения  
+### <a name="using-group-variables-for-custom-aggregation"></a>Использование групповых переменных для нестандартного статистического выражения  
  Можно инициализировать значение групповой переменной, которая является локальной в области определенной группы, а затем включать в выражения ссылку на эту переменную. Одним из способов использования групповой переменной в пользовательском коде является реализация нестандартного статистического выражения. Дополнительные сведения см. в разделе [Использование групповых переменных в службах Reporting Services 2008 для нестандартного статистического выражения](http://go.microsoft.com/fwlink/?LinkId=128714).  
   
- Дополнительные сведения о переменных см. в разделе [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md).  
+ Дополнительные сведения о переменных см. в разделе [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
-## Подавление значения NULL или нулевых значений во время выполнения  
+## <a name="suppressing-null-or-zero-values-at-run-time"></a>Подавление значения NULL или нулевых значений во время выполнения  
  Во время обработки отчета результатом вычисления некоторых значений в выражении может быть NULL или значения могут быть неопределенными. Это может вызывать ошибки времени выполнения, которые приводят к отображению в текстовом поле значения **#Error** вместо вычисленного выражения. Функция **IIF** особенно чувствительна к такому поведению, так как, в отличие от инструкции If-Then-Else, каждая часть инструкции **IIF** оценивается (включая вызовы функций) перед передачей в подпрограмму, которая проверяет значения на равенство **true** или **false**. Инструкция `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` формирует значение **#Error** в отчете, готовом для просмотра, если поле `Fields!Sales.Value` имеет значение NOTHING.  
   
  Чтобы избежать этого состояния, используйте одну из следующих стратегий.  
@@ -536,9 +556,9 @@ caps.handback.revision: 101
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  
     ```  
   
-     Это помогает избежать исключения во время выполнения. Для отображения в зависимости от определенных условий текста, основанного на значениях меньше или больше 0, можно использовать выражение, подобное `=IIF(Me.Value < 0, "red", "black")`, в свойстве **Color** текстового поля.  
+     Это помогает избежать исключения во время выполнения. Для отображения в зависимости от определенных условий текста, основанного на значениях меньше или больше 0, можно использовать выражение, подобное `=IIF(Me.Value < 0, "red", "black")` , в свойстве **Color** текстового поля.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
@@ -546,3 +566,4 @@ caps.handback.revision: 101
  [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
+

@@ -1,39 +1,44 @@
 ---
-title: "Добавление в отчет границы (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавить границу к отчету (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 824ca565b87a77add1c547aafb264345a9a63dab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление в отчет границы (построитель отчетов и службы SSRS)
+# <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Добавление в отчет границы (построитель отчетов и службы SSRS)
   К отчету [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы можно добавить границу, добавив границу к верхним или нижним колонтитулам либо к тексту отчета и не добавляя линии или прямоугольники.    
     
  При добавлении границы отчета, которая появляется на колонтитулах страницы, не нужно отключать колонтитулы на первой и последней страницах отчета. Если это сделать, граница может выглядеть обрезанной в верхней или нижней части первой и последней страниц отчета. Дополнительные сведения см. в разделе [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md).    
     
-## Добавление границы в отчет    
+## <a name="to-add-a-border-to-a-report"></a>Добавление границы в отчет    
     
 1.  Щелкните правой кнопкой мыши верхний колонтитул за пределами его элементов и выберите пункт **Свойства верхнего колонтитула**. На вкладке **Граница** добавьте левую, верхнюю и правую границу с нужным стилем.    
     
     > [!NOTE]    
-    >  Если в отчете нет верхних колонтитулов, можно вставить границы вокруг текста отчета или добавить верхние колонтитулы на вкладке **Вставка**.    
+    >  Если в отчете нет верхних колонтитулов, можно вставить границы вокруг текста отчета или добавить верхние колонтитулы на вкладке **Вставка** .    
     
 2.  Щелкните правой кнопкой мыши текст отчета за пределами элементов области конструктора и выберите пункт **Свойства текста**. На вкладке **Граница** добавьте левую и правую границу с нужным стилем.    
     
 3.  Щелкните правой кнопкой мыши нижний колонтитул за пределами его элементов и выберите пункт **Свойства нижнего колонтитула**. На вкладке **Граница** добавьте левую, нижнюю и правую границу с нужным стилем.    
     
-## См. также    
+## <a name="see-also"></a>См. также    
  [Прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   

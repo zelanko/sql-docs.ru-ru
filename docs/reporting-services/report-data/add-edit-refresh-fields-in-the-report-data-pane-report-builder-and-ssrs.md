@@ -1,23 +1,28 @@
 ---
-title: "Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0085b620ed18da8020b4a3960fe6d27eb6ffce7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)
+# <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)
   Поля набора данных являются встроенной коллекцией имен полей, представляющей данные, возвращаемые при выполнении запроса к внешнему источнику данных.  
   
  Для внедренного набора данных полями набора данных являются поля, созданные после завершения построения запроса и закрытия панели «Конструктор запросов», а также создаваемые вычисляемые поля.  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Добавление поля запроса  
+### <a name="to-add-a-query-field"></a>Добавление поля запроса  
   
 1.  В области данных отчета щелкните правой кнопкой мыши набор данных и выберите команду **Добавить поле запроса**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Добавление вычисляемого поля  
+### <a name="to-add-a-calculated-field"></a>Добавление вычисляемого поля  
   
 1.  В области данных отчета щелкните правой кнопкой мыши набор данных и выберите команду **Добавить вычисляемое поле**.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Изменение поля запроса или поля набора данных  
+### <a name="to-edit-a-query-field-or-a-dataset-field"></a>Изменение поля запроса или поля набора данных  
   
 1.  В области данных отчета щелкните правой кнопкой мыши поле и выберите пункт **Свойства поля**.  
   
@@ -75,13 +80,13 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Удаление поля запроса или вычисляемого поля  
+### <a name="to-delete-a-query-field-or-a-calculated-field"></a>Удаление поля запроса или вычисляемого поля  
   
 1.  В области данных отчета разверните набор данных, чтобы отобразить коллекцию полей.  
   
 2.  Щелкните правой кнопкой мыши поле, которое хотите удалить, и выберите пункт **Удалить**.  
   
-### Обновление коллекции полей в области данных отчета для общего набора данных  
+### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>Обновление коллекции полей в области данных отчета для общего набора данных  
   
 1.  В области данных отчета щелкните правой кнопкой мыши набор данных и выберите пункт **Запрос**.  
   
@@ -89,11 +94,11 @@ caps.handback.revision: 7
   
      На сервере отчетов выполняется запрос общего набора данных, который возвращает коллекцию текущих полей.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Конструкторы запросов служб Reporting Services](../Topic/Reporting%20Services%20Query%20Designers.md)   
- [Конструкторы запросов (построитель отчетов)](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Конструкторы запросов служб Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

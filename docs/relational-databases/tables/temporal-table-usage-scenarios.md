@@ -2,7 +2,7 @@
 title: "Сценарии использования темпоральных таблиц | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>Сценарии использования темпоральных таблиц
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Темпоральные таблицы обычно используются в сценариях, в которых требуется отслеживание журнала изменений данных.    
-Мы рекомендуем использовать темпоральные таблицы в следующих случаях, поскольку они дают очень большой выигрыш в производительности:  
-  
--   [аудит данных;](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [анализ на определенный момент времени (переход во времени);](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [обнаружение аномалий;](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [медленно изменяющиеся измерения;](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [восстановление поврежденных данных на уровне строк.](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+Мы рекомендуем использовать Темпоральные таблицы в следующих случаях для основных преимуществ высокой производительности.  
   
 ## <a name="data-audit"></a>аудит данных;  
  Используйте темпоральное системное управление версиями в таблицах, хранящих важные сведения, для которых необходимо отслеживать, что и когда было изменено, а также выполнять экспертизу данных на какой-либо момент времени.    

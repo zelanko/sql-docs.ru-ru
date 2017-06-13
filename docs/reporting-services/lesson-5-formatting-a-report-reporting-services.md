@@ -1,34 +1,39 @@
 ---
-title: "Lesson 5: Formatting a Report (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Занятие 5: Форматирование отчета (службы Reporting Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e168601f761a966d494168cd79d3724fc4342b63
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 После добавления области данных и нескольких полей к отчету «Заказы на продажу» можно отформатировать поля дат и валют, а затем и заголовки столбцов.  
   
 ## <a name="bkmk_format_date"></a>Форматирование дат  
 В поле Date по умолчанию отображаются сведения о дате и времени. Можно отформатировать его таким образом, чтобы отображалась только дата.  
   
-#### Указание форматирования для поля даты  
+#### <a name="to-format-a-date-field"></a>Указание форматирования для поля даты  
   
 1.  Перейдите на вкладку **Макет** .  
   
-2.  Щелкните правой кнопкой мыши ячейку с выражением для поля `[Date]`, а затем выберите пункт **Свойства текстового поля**.  
+2.  Щелкните правой кнопкой мыши ячейку с выражением для поля `[Date]` , а затем выберите пункт **Свойства текстового поля**.  
   
 3.  Щелкните **Число**, а затем в поле **Категория** выберите **Дата**.  
   
@@ -41,9 +46,9 @@ caps.handback.revision: 20
 ## <a name="bkmk_format_currency"></a>Указание формата валюты  
 В поле **LineTotal** отображается число с общим форматом. Отформатируйте его для представления валюты.  
   
-#### Форматирование поля валюты  
+#### <a name="to-format-a-currency-field"></a>Форматирование поля валюты  
   
-1.  Щелкните правой кнопкой мыши ячейку с выражением для поля `[LineTotal]`, а затем выберите пункт **Свойства текстового поля**.  
+1.  Щелкните правой кнопкой мыши ячейку с выражением для поля `[LineTotal]` , а затем выберите пункт **Свойства текстового поля**.  
   
 2.  Щелкните **Число**, а затем в поле **Категория** выберите пункт **Валюта**.  
   
@@ -66,28 +71,30 @@ caps.handback.revision: 20
 ## <a name="bkmk_change_textstyle"></a>Изменение стиля текста и ширины столбцов  
 Можно также изменить форматирование заголовка строки, чтобы он отличался от строк данных в отчете. Наконец, можно отрегулировать ширину столбцов.  
   
-#### Форматирование заголовков строк и столбцов таблицы  
+#### <a name="to-format-header-rows-and-table-columns"></a>Форматирование заголовков строк и столбцов таблицы  
   
 1.  Щелкните таблицу, чтобы сбоку и сверху от нее появились маркеры строк и столбцов. Серые линии, расположенные вдоль верха и стороны таблицы, — это маркеры столбцов и строк.  
        
   
 2.  Установите указатель на линии раздела между маркерами столбцов, чтобы курсор принял вид двойной стрелки. Перетаскиванием установите нужный размер столбцов.
- ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.gif)   
+ ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)   
   
 3.  Выделите строку, содержащую метки заголовков столбцов, и в меню **Форматирование** выберите пункты **Шрифт** и **Полужирный**.  
   
 4.  Для предварительного просмотра отчета перейдите на вкладку **Предварительный просмотр** . Он должен выглядеть примерно так:  
   
-    ![Просмотр таблицы с заголовками столбцов, выделенными полужирным](../reporting-services/media/rs-basictabledetailsformattedpreview.gif "Просмотр таблицы с заголовками столбцов, выделенными полужирным")  
+    ![Таблица с заголовками столбцов, выделенными полужирным предварительного просмотра](../reporting-services/media/rs-basictabledetailsformattedpreview.png "таблица с заголовками столбцов, выделенными полужирным предварительного просмотра")  
   
 5.  Чтобы сохранить отчет, в меню **Файл** выберите команду **Сохранить все** .  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
 Заголовки столбцов, а также значения дат и денежные значения успешно отформатированы. Далее предстоит добавить в этот отчет группирование и итоги. См. [Занятие 6. Добавление группирования и итогов (службы Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
 [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
   
+
+

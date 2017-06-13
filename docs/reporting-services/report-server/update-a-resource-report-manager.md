@@ -1,31 +1,36 @@
 ---
-title: "обновить ресурс (диспетчер отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обновление ресурсов"
-  - "ресурсы [службы Reporting Services], обновление"
+title: "Обновить ресурс (диспетчер отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updating resources
+- resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# обновить ресурс (диспетчер отчетов)
+# <a name="update-a-resource-report-manager"></a>обновить ресурс (диспетчер отчетов)
   Ресурс можно обновить, заменив его более новой версией. Ресурсы представляют собой хранящиеся на сервере отчетов элементы, по содержимому аналогичные переданным файлам. Можно заменить существующий ресурс, импортировав в существующий ресурс обновленное или совершенно другое содержимое файла. Обновление ресурса позволяет заменить только содержимое ресурса, сохраняя его существующие свойства и настройки безопасности.  
   
-### Обновление ресурса  
+### <a name="to-update-a-resource"></a>Обновление ресурса  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите к ресурсу, который нужно обновить, или найдите его.  
   
@@ -43,10 +48,10 @@ caps.handback.revision: 17
   
  Если обновляемый ресурс содержит изображение, используемое в отчете, необходимо обновить отчет, чтобы изображение в нем обновилось.  
   
-## См. также  
- [Страница "Содержимое" (диспетчер отчетов)](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
- [Страница "Передача файла" (диспетчер отчетов)](../Topic/Upload%20File%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>См. также  
+ [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Страница "Передача файла" (диспетчер отчетов)](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Передача файлов в папку](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Справка F1 диспетчера отчетов](../Topic/Report%20Manager%20F1%20Help.md)  
+ [Справка F1 диспетчера отчетов](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

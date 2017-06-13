@@ -1,36 +1,41 @@
 ---
-title: "кэшировать отчет (диспетчер отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "свойства выполнения отчета [службы Reporting Services]"
-  - "кэш [службы Reporting Services]"
-  - "кэшированные отчеты [службы Reporting Services]"
-  - "расписания [службы Reporting Services], срок действия отчета"
-  - "истечение срока [службы Reporting Services]"
+title: "Кэшировать отчет (диспетчер отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report execution properties [Reporting Services]
+- cache [Reporting Services]
+- cached reports [Reporting Services]
+- schedules [Reporting Services], report expiration
+- expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# кэшировать отчет (диспетчер отчетов)
+# <a name="cache-a-report-report-manager"></a>кэшировать отчет (диспетчер отчетов)
   Один из способов повышения производительности состоит в настройке свойств кэширования для отчета. При кэшировании отчета копия отчета, подготовленного для хранения, сохраняется на короткий промежуток времени. Первый пользователь, запросивший этот отчет, должен ожидать, пока не закончится вся обработка, прежде чем сможет просмотреть отчет. Последующие пользователи, запрашивающие тот же отчет в пределах времени кэширования, могут сразу же просмотреть его, поскольку обработка уже выполнена.  
   
- Существуют ограничения на типы отчетов, которые можно кэшировать. Например, отчет не может быть кэширован, если выходные данные отчета зависят от идентификатора пользователя или если данные получаются с помощью токена безопасности пользователя, запросившего отчет. Дополнительные сведения см. в разделе [Кэширование отчетов (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md).  
+ Существуют ограничения на типы отчетов, которые можно кэшировать. Например, отчет не может быть кэширован, если выходные данные отчета зависят от идентификатора пользователя или если данные получаются с помощью токена безопасности пользователя, запросившего отчет. Дополнительные сведения см. в разделе [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
-### Назначение момента для истечения срока действия кэшированного отчета  
+### <a name="to-schedule-the-expiration-of-a-cached-report"></a>Назначение момента для истечения срока действия кэшированного отчета  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к отчету, для которого необходимо задать свойства кэширования, подведите к нему курсор и щелкните стрелку раскрывающегося списка.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 42
   
 7.  Нажмите кнопку **Применить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
   

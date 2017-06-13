@@ -1,33 +1,38 @@
 ---
-title: "Диаграммы диапазонов (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Диапазон диаграммы (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 5
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdcf1877134ea93ec52b3c7fb70dbfeda536a93
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Диаграммы диапазонов (построитель отчетов и службы SSRS)
+# <a name="range-charts-report-builder-and-ssrs"></a>Диаграммы диапазонов (построитель отчетов и службы SSRS)
   Тип диаграммы диапазонов предназначен для отображения набора точек данных, каждая из которых определена несколькими значениями, относящимися к одной и той же категории. Значения представлены высотой маркера на оси значений. Метки категорий отображаются на оси категорий. В простой диаграмме диапазонов заполняется область между верхним и нижним значениями для каждой точки данных.  
   
  На следующей иллюстрации показана простая диаграмма диапазонов с тремя рядами.  
   
- ![Диаграмма диапазонов](../../reporting-services/report-design/media/rs-rangechart.gif "Диаграмма диапазонов")  
+ ![Диаграммы диапазонов](../../reporting-services/report-design/media/rs-rangechart.gif "диаграмма диапазонов")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Разновидности  
+## <a name="variations"></a>Разновидности  
   
 -   **Гладкая диаграмма диапазонов**. На гладкой диаграмме диапазонов отображаются кривые, а не прямые линии.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 5
   
 -   **Линейчатая диаграмма диапазонов**. На линейчатой диаграмме диапазонов для отображения диапазонов вместо областей используются линейки.  
   
-## Данные для диаграмм диапазонов  
+## <a name="data-considerations-for-range-charts"></a>Данные для диаграмм диапазонов  
   
 -   Для диаграмм диапазонов требуется по два значения на каждую точку данных. Эти значения соответствуют высокому и низкому значениям, определяющим диапазон для каждой точки данных.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 5
   
 -   Диаграммы Ганта могут быть созданы с помощью линейчатой диаграммы диапазонов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  

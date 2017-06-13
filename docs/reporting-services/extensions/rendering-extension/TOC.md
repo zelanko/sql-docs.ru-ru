@@ -1,0 +1,5 @@
+# [Развертывание модуля подготовки отчетов](deploying-a-rendering-extension.md)
+# [Реализация модуля подготовки отчетов](implementing-a-rendering-extension.md)
+# [Реализация интерфейса IRenderingExtension](implementing-the-irenderingextension-interface.md)
+# [Удаление модуля подготовки отчетов](removing-a-rendering-extension.md)
+# [Общие сведения о модулях подготовки отчетов](rendering-extensions-overview.md)

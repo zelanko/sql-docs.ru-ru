@@ -1,31 +1,36 @@
 ---
-title: "Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "контроль учетных записей"
-  - "установка служб Reporting Services"
-  - "Windows Vista"
-  - "Localhost"
-  - "Windows Server 2008"
-  - "Vista"
+title: "Настройка сервера отчетов в собственном режиме для локального администрирования (SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UAC
+- installing Reporting Services
+- Windows Vista
+- Localhost
+- windows server 2008
+- Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
-  Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или не настроили сервер отчетов, см. разделы [Установка SQL Server 2016 из мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md) и [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+# <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
+  Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или не настроили сервер отчетов, см. разделы [Установка SQL Server 2016 из мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -73,11 +78,11 @@ caps.handback.revision: 20
   
 ###  <a name="bkmk_site_settings"></a> Параметры надежных сайтов в браузере  
   
-1.  Откройте окно браузера с разрешением «Запуск от имени администратора». В меню **Пуск** укажите **Все программы**, щелкните правой кнопкой мыши пункт **Internet Explorer** и выберите **Запуск от имени администратора**.  
+1.  Откройте окно браузера с разрешением «Запуск от имени администратора». В меню **Пуск** укажите **Все программы**, щелкните правой кнопкой мыши пункт **Internet Explorer**и выберите **Запуск от имени администратора**.  
   
 2.  Чтобы продолжить, нажмите кнопку **Разрешить** .  
   
-3.  В качестве URL-адреса укажите URL-адрес диспетчера отчетов. Инструкции см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  В качестве URL-адреса укажите URL-адрес диспетчера отчетов. Инструкции см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Выберите меню **Сервис**.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 20
   
 9. Добавьте `http://<your-server-name>`.  
   
-10. Снимите флажок **Требуется сертификация сервера (https:) для всех сайтов в этой зоне**, если вы не используете HTTPS для сайта по умолчанию.  
+10. Снимите флажок **Требуется сертификация сервера (https:) для всех сайтов в этой зоне** , если вы не используете HTTPS для сайта по умолчанию.  
   
 11. Нажмите кнопку **Добавить**.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 20
   
  **Настройка назначений ролей [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** и назначений ролей необходимо каждый раз запускать [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с повышенным уровнем разрешений.  
   
--   Нажмите кнопку **Пуск**, укажите **Все программы**, **SQL Server 2014**, щелкните правой кнопкой мыши **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, а затем выберите команду **Запуск от имени администратора**.  
+-   Нажмите кнопку **Пуск** , укажите **Все программы**, **SQL Server 2014**, щелкните правой кнопкой мыши **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, а затем выберите команду **Запуск от имени администратора**.  
   
 -   Подключение к локальному серверу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -166,7 +171,7 @@ caps.handback.revision: 20
   
  **Запуск SSDT с повышенным уровнем разрешений**  
   
-1.  На начальном экране введите **sql server**, а затем выберите пункт **SQL Server Data Tools**. Нажмите **Запуск от имени администратора**  
+1.  На начальном экране введите **sql server** , а затем выберите пункт **SQL Server Data Tools**. Нажмите **Запуск от имени администратора**  
   
 2.  Нажмите кнопку **Продолжить**.  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 20
 ##  <a name="bkmk_addiitonal_informaiton"></a> Дополнительные сведения  
  Еще одно распространенное действие по настройке администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — открытие порта номер 80 в брандмауэре Windows для разрешения доступа к компьютеру с сервером отчетов. Инструкции см. в разделе [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

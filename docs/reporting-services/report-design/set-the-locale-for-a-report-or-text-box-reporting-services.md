@@ -1,38 +1,43 @@
 ---
-title: "Задание локали для отчета или текстового поля (службы Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "локали [Reporting Services]"
+title: "Задание локали для отчета или текстового поля (службы Reporting Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 caps.latest.revision: 43
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 43
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ce894281c47d0e54837917b05e785e9d106cdfa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Задание локали для отчета или текстового поля (службы Reporting Services)
+# <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Задание локали для отчета или текстового поля (службы Reporting Services)
   Свойство **Язык** отчета или текстового поля содержит параметр локали, определяющий форматы по умолчанию для отображения данных отчета, зависящих от языка и региона, например даты, валюты или числовых значений. Свойство **Язык** текстового поля переопределяет свойство **Язык** отчета. Если для свойства **Язык**не указано значения, то службы Reporting Services используют языковой стандарт операционной системы сервера отчетов для опубликованных отчетов и локаль компьютера, на котором создается отчет, при предварительном просмотре отчета.  
   
  При работе с отчетами в формате HTML значение свойства **Язык** по умолчанию можно переопределить и использовать язык, указанный в заголовке HTTP клиентского браузера, использовав встроенное поле User!Language в выражении для свойства **Язык** отчета или текстового поля.  
   
  Также свойство **Язык** для отчета можно указать в URL-адресе. Дополнительные сведения см. в статье [Задание языка для параметров отчета в URL-адресе](../../reporting-services/set-the-language-for-report-parameters-in-a-url.md).  
   
-### Назначение локали для отчета  
+### <a name="to-set-the-locale-for-a-report"></a>Назначение локали для отчета  
   
 1.  В режиме конструктора щелкните за пределами области конструктора отчета, чтобы выбрать отчет.  
   
 2.  В панели свойств для свойства **Язык** введите или выберите язык, который нужно использовать для отчета.  
   
-### Назначение локали для текстового поля  
+### <a name="to-set-the-locale-for-a-text-box"></a>Назначение локали для текстового поля  
   
 1.  В режиме конструктора выберите текстовое поле, к которому необходимо применить локаль.  
   
@@ -50,8 +55,8 @@ caps.handback.revision: 43
   
     -   Для свойства **UnicodeBiDi** выберите уровень внедрения разнонаправленного текста в текстовом поле.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Вопросы проектирования решений для многоязычного или глобального развертывания (службы Reporting Services)](http://msdn.microsoft.com/ru-ru/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
+ [Вопросы проектирования решений для многоязычного или глобального развертывания (службы Reporting Services)](http://msdn.microsoft.com/en-us/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
   
   

@@ -1,40 +1,45 @@
 ---
-title: "Управление запущенным процессом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обработка отчетов [службы Reporting Services], сведения о состоянии"
-  - "задания [службы Reporting Services]"
-  - "просмотр заданий"
-  - "отмена заданий"
-  - "пользовательские задания [службы Reporting Services]"
-  - "системные задания [службы Reporting Services]"
-  - "обработка отчетов [службы Reporting Services], управление запущенными процессами"
-  - "процессы [службы Reporting Services]"
-  - "сканирование процессов [службы Reporting Services]"
-  - "сведения о состоянии [службы Reporting Services]"
-  - "обработка отчета [службы Reporting Services]"
-  - "отмена подписок"
-  - "серверы отчетов [службы Reporting Services], задания"
-  - "управляемая данными подписка"
-  - "отображение заданий"
-  - "подписки [службы Reporting Services], запущенные процессы"
+title: "Управление запущенным процессом | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report processing [Reporting Services], status information
+- jobs [Reporting Services]
+- viewing jobs
+- canceling jobs
+- user jobs [Reporting Services]
+- system jobs [Reporting Services]
+- report processing [Reporting Services], managing running processes
+- processes [Reporting Services]
+- scanning processes [Reporting Services]
+- status information [Reporting Services]
+- report processing [Reporting Services]
+- canceling subscriptions
+- report servers [Reporting Services], jobs
+- data-driven subscriptions
+- displaying jobs
+- subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Управление запущенным процессом
+# <a name="manage-a-running-process"></a>Управление запущенным процессом
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] наблюдают за состоянием заданий, работающих на сервере отчетов. Через регулярные интервалы времени сервер отчетов просматривает внутрипроцессные задания и записывает сведения о состоянии в базу данных сервера отчетов или в базы данных приложения служб для режима интеграции с SharePoint. Задание находится в процессе выполнения, если запущены следующие процессы: выполнение запроса на удаленном или локальном сервере базы данных, обработка отчета и подготовка отчета к просмотру.  
   
  Можно управлять как *пользовательскими заданиями* , так и *системными заданиями*.  
@@ -71,9 +76,9 @@ caps.handback.revision: 53
   
  Чтобы просмотреть или отменить задания, выполняющиеся на сервере отчетов, вы можете использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Необходимо обновить страницу, чтобы получить список заданий, работающих в настоящее время на сервере отчетов, или получить текущее состояние заданий из базы данных сервера отчетов. После подключения к серверу отчетов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно открыть папку «Задания», чтобы просмотреть список отчетов, которые в настоящее время обрабатываются на компьютере сервера отчетов. Сведения о состоянии каждого задания отображаются на странице «Свойства заданий». Сведения о состоянии всех заданий можно просмотреть, открыв диалоговое окно «Отмена заданий сервера отчетов».  
   
- Нельзя использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], чтобы отобразить список создания моделей, обработки модели или управляемых данными подписок либо отменить их. Службы Reporting Services не позволяют отменить создание или обработку модели. Однако можно отменить управляемые данными подписки с помощью инструкций, приведенных в этом разделе.  
+ Нельзя использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы отобразить список создания моделей, обработки модели или управляемых данными подписок либо отменить их. Службы Reporting Services не позволяют отменить создание или обработку модели. Однако можно отменить управляемые данными подписки с помощью инструкций, приведенных в этом разделе.  
   
-### Отмена обработки отчета или подписки  
+### <a name="how-to-cancel-report-processing-or-subscription"></a>Отмена обработки отчета или подписки  
   
 1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]установите соединение с сервером отчетов. Инструкции см. в разделе [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 53
   
 3.  Щелкните правой кнопкой мыши отчет и выберите команду **Отменить задания**.  
   
-### Отмена управляемой данными подписки  
+### <a name="how-to-cancel-a-data-driven-subscription"></a>Отмена управляемой данными подписки  
   
 1.  Откройте файл RSReportServer.config в текстовом редакторе.  
   
@@ -97,13 +102,13 @@ caps.handback.revision: 53
   
 7.  Сохраните файл.  
   
-### Настройка параметров частоты для получения состояния заданий  
+### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Настройка параметров частоты для получения состояния заданий  
  Работающая задача хранится во временной базе данных сервера отчетов. Можно изменять параметры конфигурации в файле RSReportServer.config, чтобы управлять периодичностью, с которой сервер отчетов просматривает внутрипроцессные задания, а также интервал времени, после которого состояние работающего задания меняется с нового на работающее. Параметр **RunningRequestsDbCycle** указывает периодичность, с которой сервер отчетов просматривает работающие задания. По умолчанию сведения о состоянии записываются каждые 60 секунд. Параметр **RunningRequestsAge** указывает период времени, после которого состояние выполняющегося задания меняется с «новое» на «выполняющееся».  
   
 ##  <a name="bkmk_sharepoint"></a> Просмотр и отмена заданий (режим SharePoint)  
  Управление заданиями в развертывании в режиме SharePoint осуществляется в центре администрирования SharePoint для каждого приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-#### Управление заданиями в режиме SharePoint  
+#### <a name="to-manage-jobs-in-sharepoint-mode"></a>Управление заданиями в режиме SharePoint  
   
 1.  В центре администрирования SharePoint выберите **Управление приложениями службы**.  
   
@@ -118,12 +123,12 @@ caps.handback.revision: 53
 ##  <a name="bkmk_programmatically"></a> Программное управление заданиями  
  Заданиями можно управлять программно или с помощью скриптов. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Отмена заданий сервера отчетов (среда Management Studio)](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
  [Свойства задания (среда Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

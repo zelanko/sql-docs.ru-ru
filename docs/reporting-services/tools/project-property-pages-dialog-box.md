@@ -1,34 +1,41 @@
 ---
-title: "Диалоговое окно страниц свойств проекта | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rpt.rptdesigner.projectpropertypages.general.f1"
-helpviewer_keywords: 
-  - "Диалоговое окно страниц свойств проекта"
+title: "Диалоговое окно страниц свойств проекта | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords:
+- Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Диалоговое окно страниц свойств проекта
-  Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в меню **Проект** щелкните *\<Имя проекта отчета>***Свойства**.  
+
+# <a name="project-property-pages-dialog-box"></a>Диалоговое окно страниц свойств проекта
+
+  Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в **проекта** меню, нажмите кнопку  *\<имя проекта отчета >***свойства**.  
   
  После определения свойств настройки можно выбрать конфигурацию из раскрывающегося списка **Конфигурации решений** на панели инструментов.  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Конфигурация**  
  Выберите конфигурацию для изменения. Первоначально доступны следующие конфигурации: **Debug**, **DebugLocal**и **Release**. Активная конфигурация отображается первой, например **Активная (Debug)**.  
   
@@ -36,7 +43,7 @@ caps.handback.revision: 35
   
  Чтобы создать новую конфигурацию, щелкните на панели инструментов **Диспетчер конфигурации** .  
   
- **диспетчер конфигураций**  
+ **Диспетчер конфигурации**  
  Служит для управления конфигурациями всего решения или добавления новых конфигураций. Дополнительные сведения см. в документации по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  **OutputPath**  
@@ -55,7 +62,7 @@ caps.handback.revision: 35
  Выберите значение **True** для перезаписи источника данных на сервере источника данных в проекте при публикации отчетов. Выберите **False** , чтобы сохранить существующий источник данных на сервере.  
   
  **TargetServerVersion**  
- Выберите версию служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или команду **Определить версию**, чтобы автоматически определить версию, установленную на сервере и указанную свойством **TargetServer URL**. Значение по умолчанию — **[!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)]**.  
+ Выберите версию служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или команду **Определить версию** , чтобы автоматически определить версию, установленную на сервере и указанную свойством **TargetServer URL** . Значение по умолчанию — **SQL Server 2016**.  
   
  **Папка назначения для источника данных**  
  Имя папки, в которой будут храниться опубликованные общие источники данных. Если эта папка не задана, источник данных публикуется в той же папке, что и отчет. Если на сервере отчетов папка не существует, то конструктор отчетов создаст ее при публикации отчетов.  
@@ -80,11 +87,12 @@ caps.handback.revision: 35
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`.  
-  
-## См. также  
- [Публикация отчетов](../Topic/Publish%20Reports.md)   
- [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
- [Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)  
-  
-  
+
+## <a name="next-steps"></a>Следующие шаги
+
+[Публикация отчетов](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+[Задание свойств развертывания &#40; Службы Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

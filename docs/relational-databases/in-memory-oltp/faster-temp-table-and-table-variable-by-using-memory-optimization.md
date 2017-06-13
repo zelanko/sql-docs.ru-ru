@@ -1,7 +1,7 @@
 ---
 title: "Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти | Документация Майкрософт"
 ms.custom: 
-ms.date: 01/17/2017
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
@@ -430,40 +430,4 @@ ms.lasthandoff: 04/11/2017
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Определение устойчивости для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-  
-  
-  
-\<!--  
-Заголовок: "Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти"  
-  
-https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
-  
-  
-[Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
-  
-[Оптимизированная для памяти файловая группа](http://msdn.microsoft.com/library/dn639109.aspx)  
-  
-[Пул ресурсов регулятора ресурсов](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Помощник по оптимизации памяти](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Оценка требований к объему памяти для таблиц, оптимизированных для памяти](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Размер строк и таблицы для таблиц, оптимизированных для памяти: пример вычисления](http://msdn.microsoft.com/library/dn205318.aspx)  
-  
-  
-[Устойчивость таблиц, оптимизированных для памяти](http://msdn.microsoft.com/library/dn553125.aspx)  
-  
-[Определение устойчивости для оптимизированных для памяти объектов](http://msdn.microsoft.com/library/dn553122.aspx)  
-  
-[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
-  
-  
-GeneMi 02.05.2016, понедельник, 18:40:00  
--->  
-  
-  
-  
-
 

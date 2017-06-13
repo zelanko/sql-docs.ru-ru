@@ -1,26 +1,31 @@
 ---
-title: "Сочетания клавиш (построитель отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сочетания клавиш"
-  - "сочетания клавиш"
+title: "Сочетания клавиш (построитель отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Сочетания клавиш (построитель отчетов)
+# <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
   При создании и редактировании отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в построителе отчетов имеется доступ ко всем сочетаниям клавиш для перемещения по документам, имеющимся в среде Windows. На выбор доступны несколько стандартных схем раскладки клавиатуры.  
   
  Перемещение по окну построителя отчетов, а также выбор и изменение параметров в диалоговых окнах возможны без использования мыши.  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  В сочетания клавиш могут входить клавиши SHIFT, ALT и CTRL вместе с буквенно-цифровыми символами или функциональными клавишами. Например, клавиша F1 открывает файл справки построителя отчетов.  
   
-## Сочетания клавиш в построителе отчетов  
+## <a name="keyboard-shortcuts-in-report-builder"></a>Сочетания клавиш в построителе отчетов  
   
 |Description|Сочетание клавиш|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |Уменьшение масштаба области просмотра карты при выбранном окне просмотра карты|CTRL+знак минуса (-)|  
 |Режим ускорения для сдвига и масштабирования области просмотра карты при выбранном окне просмотра карты|CTRL +левая кнопка мыши|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Глоссарий (построитель отчетов)](../../reporting-services/report-builder/glossary-report-builder.md)  

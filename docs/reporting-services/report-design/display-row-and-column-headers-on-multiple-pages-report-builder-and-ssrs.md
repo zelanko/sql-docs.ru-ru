@@ -1,34 +1,39 @@
 ---
-title: "Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97fe2b81898c3172db4d387afbac3be4086fac11
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
+# <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
   Пользователь может указать, следует ли повторять заголовки строк и столбцов на каждой странице отчета [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы для области данных табликса (таблица, матрица или список), которая занимает несколько страниц.
   
  Управление строками и столбцами зависит от того, имеет ли область данных табликса заголовки групп. Если щелкнуть область данных табликса, имеющую заголовки групп, пунктирная линия отобразит области табликса, как показано на следующем рисунке.  
   
- ![Области данных табликса](../../reporting-services/report-design/media/rs-tablixareas.gif "Области данных табликса")  
+ ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
  Заголовки групп строк и столбцов создаются автоматически во время добавления групп с помощью мастера создания таблицы или матрицы, мастера создания диаграммы, путем добавления полей на панель группирования или с помощью контекстных меню. Если область данных табликса содержит только область текста табликса и не содержит заголовков групп, строки и столбцы являются элементами табликса.  
   
  Для статических элементов можно отобразить строки, прилегающие к верхней части или столбцы, прилегающие к боковой части, на нескольких страниц.  
   
-## Отображение заголовков строк на нескольких страницах  
+## <a name="to-display-row-headers-on-multiple-pages"></a>Отображение заголовков строк на нескольких страницах  
   
 1.  Щелкните правой кнопкой мыши маркер строки или столбца либо угловой маркер области данных табликса, а затем выберите пункт **Свойства табликса**.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Отображение заголовков столбцов на нескольких страницах  
+## <a name="to-display-column-headers-on-multiple-pages"></a>Отображение заголовков столбцов на нескольких страницах  
   
 1.  Щелкните правой кнопкой мыши маркер строки или столбца либо угловой маркер области данных табликса, а затем выберите пункт **Свойства табликса**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 8
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Отображение статической строки или статического столбца на множестве страниц  
+## <a name="to-display-a-static-row-or-column-on-multiple-pages"></a>Отображение статической строки или статического столбца на множестве страниц  
   
 1.  В области конструктора щелкните маркер строки или столбца области данных табликса, чтобы выделить этот дескриптор. На панели группирования будут отображены группы столбцов и строк.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 8
   
  При просмотре страницы отчета, которую занимает область данных табликса, статические элементы табликса повторяются на каждой странице.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов и службы SSRS)](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   

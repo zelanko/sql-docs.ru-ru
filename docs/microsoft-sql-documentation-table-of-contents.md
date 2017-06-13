@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7fbfb58c3cadb58914371a4947426dad5756be9c
+ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
+ms.openlocfilehash: 36e98253c0445c07280734c18262cf4a0908736e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="microsoft-sql-documentation"></a>Документация по Microsoft SQL
@@ -25,5 +25,6 @@ ms.lasthandoff: 04/11/2017
 
 - Оглавление в левой части окна включает SQL Server и несколько смежных технологий.
 - Оглавление для более широкого набора технологий SQL, включая Azure SQL, вы найдете на [странице узла SQL](sql-hub-menu.md).
+-  Содержимое, связанное с предыдущих версий SQL Server, в разделе [документации по продукту SQL Server 2014](http://msdn.microsoft.com/library/ms130214(v=sql.120).aspx). 
 
 **См. также**: дополнительные технологии Azure для баз данных, например [DocumentDB и фабрика данных](/azure/#pivot=services&panel=databases).  

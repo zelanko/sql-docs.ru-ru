@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_18456 | Документация Майкрософт"
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ ms.lasthandoff: 04/11/2017
 |11|Допустимое имя входа, но доступ к серверу не удался. Одна из возможных причин этой ошибки: пользователь Windows имеет доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена группы локальных администраторов, но Windows не предоставляет учетные данные администратора. Чтобы установить соединение, запустите программу подключения **от имени администратора[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем добавьте в**  определенное имя пользователя Windows для входа.|  
 |12|Допустимое имя входа, но доступ к серверу не удался.|  
 |18|Пароль должен быть изменен.|  
+|38, 46|Не удалось найти базу данных по требованию пользователя.|
+|102 - 111|Ошибка AAD.|
+|122 - 124|Сбой из-за пустое имя пользователя или пароль.|
+|126|По требованию пользователя базы данных не существует.|
+|132 - 133|Ошибка AAD.|
   
 Есть другие коды ошибок, которые означают непредвиденные внутренние ошибки обработки.  
   

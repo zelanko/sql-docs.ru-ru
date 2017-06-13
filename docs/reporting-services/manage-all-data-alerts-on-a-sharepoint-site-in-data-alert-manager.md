@@ -1,31 +1,42 @@
 ---
-title: "Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "управление, предупреждения"
-  - "управление, предупреждения данных"
+title: "Управление всеми предупреждениями на сайте SharePoint в диспетчере предупреждений данных | Документы Microsoft"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- managing, alerts
+- managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: abb122ab9eec2ac66895e0b2bc7d1e2dc8490abf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных
-  Администраторы предупреждений SharePoint могут просматривать списки предупреждений об изменении данных, созданных любыми пользователями сайта, и сведения об этих предупреждениях. Администраторы системы предупреждений могут также удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений в диспетчере предупреждений об изменении данных.  
-  
- ![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Диспетчер предупреждений для администраторов сайта SharePoint")  
-  
-### Просмотр списка предупреждений, созданных пользователем сайта  
+# <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+Администраторы предупреждений SharePoint могут просматривать списки предупреждений об изменении данных, созданных любыми пользователями сайта, и сведения об этих предупреждениях. Администраторы системы предупреждений могут также удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений в диспетчере предупреждений об изменении данных.
+
+ ![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "диспетчер предупреждений для администраторов сайта SharePoint")
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+
+## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>Просмотр списка предупреждений, созданных пользователем сайта  
   
 1.  Перейдите на сайт SharePoint, на котором сохранены определения предупреждений об изменении данных.  
   
@@ -41,15 +52,16 @@ caps.handback.revision: 13
   
      В таблице перечисляются имя предупреждения, имя отчета, имя пользователя, создавшего предупреждение об изменении данных, сколько раз предупреждение об изменении данных было отправлено, время, когда в последний раз было изменено определение предупреждения об изменении данных, а также состояние предупреждения об изменении данных. Если предупреждение об изменении данных не удалось создать или отправить, в столбце состояния содержатся сведения об ошибке, которые помогают устранить проблему.  
   
-### Удаление определения предупреждения  
+## <a name="delete-an-alert-definition"></a>Удаление определения предупреждения  
   
 -   Щелкните правой кнопкой мыши предупреждение об изменении данных, которое необходимо удалить, и выберите пункт **Удалить**.  
   
     > [!NOTE]  
     >  После того как предупреждение будет удалено, дальнейшая отправка предупреждающих сообщений прекращается. Тем не менее при запросе к базе данных предупреждений может оказаться, что определение предупреждения все еще существует. Служба предупреждений выполняет очистку по расписанию и окончательно удаляет определение предупреждения при следующей очистке. Значение интервала очистки по умолчанию составляет 20 минут. Этот и другие интервалы выполнения очистки являются настраиваемыми. Дополнительные сведения см. в статье [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
-  
-## См. также  
- [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>См. также
+
+[Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

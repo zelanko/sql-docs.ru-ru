@@ -1,25 +1,30 @@
 ---
-title: "Свойства сервера (страница &#171;Журнал&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.history.f1"
+title: "Свойства сервера (страница «журнал») | Документы Microsoft"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 30
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66744654fac383f2390109a01f8d4cb7b502bf7a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Свойства сервера (страница &#171;Журнал&#187;)
+# <a name="server-properties-history-page"></a>Свойства сервера (страница «Журнал»)
   Используйте эту страницу [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] для задания значения по умолчанию для количества сохраняемых копий журнала отчета. Значение по умолчанию предоставляет начальный параметр, который задает пределы объема журнала отчета для всех отчетов. Эти настройки можно изменить для отдельных отчетов.  
   
  Журнал отчета представляет собой коллекцию моментальных снимков отчета, включающих данные отчета и макет на момент создания моментального снимка. Журнал отчета можно использовать для сохранения копии отчета в том виде, какой он имел на конкретную дату и время. Можно создавать и управлять журналом отчета для отдельных отчетов, выполняемых на сервере отчетов, работающем в собственном режиме, или на сервере отчетов, работающем в режиме интеграции с SharePoint.  
@@ -32,7 +37,7 @@ caps.handback.revision: 30
  3) Щелкните правой кнопкой мыши имя сервера отчетов и выберите пункт **Свойства**.
  4) Нажмите кнопку **Журнал** , чтобы открыть эту страницу.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Хранить в журнале отчета неограниченное количество моментальных снимков**  
  Сохранение всех моментальных снимков журнала отчета. Для уменьшения размера журнала отчетов моментальные снимки нужно удалять вручную.  
   
@@ -41,9 +46,10 @@ caps.handback.revision: 30
   
  Если объем журнала отчета будет ограничен позже, при превышении указанного предела объема существующего журнала отчета сервер отчетов сокращает объем журнала до нового предела. Первыми удаляются наиболее старые моментальные снимки отчетов. Если журнал отчетов отсутствует или его объем меньше заданного предела, добавляются новые моментальные снимки отчетов. По достижении предела при добавлении новых моментальных снимков отчетов удаляются наиболее старые моментальные снимки.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
+

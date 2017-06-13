@@ -1,28 +1,33 @@
 ---
-title: "Защищаемые элементы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "защищаемые элементы [службы Reporting Services]"
-  - "роли [службы Reporting Services], защищаемые элементы"
-  - "безопасность [службы Reporting Services], список защищаемых элементов"
-  - "безопасность на основе ролей [службы Reporting Services], защищаемые элементы"
+title: "Защищаемые элементы | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- securable items [Reporting Services]
+- roles [Reporting Services], securable items
+- security [Reporting Services], securable items listed
+- role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Защищаемые элементы
+# <a name="securable-items"></a>Защищаемые элементы
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют безопасность на основе ролей для управления доступом к элементам, которые хранятся на сервере отчетов. Предоставление пользователю доступа к серверу отчетов обычно выполняется созданием пары назначений ролей:  
   
 -   на уровне сайта;  
@@ -47,7 +52,7 @@ caps.handback.revision: 45
   
  Другие элементы, например расписания и подписки, не являются защищаемыми явно. Расписания и подписки работают в контексте безопасности отчета.  
   
-## Описание элементов  
+## <a name="item-descriptions"></a>Описание элементов  
  В следующей таблице приведены защищаемые элементы и описание их характеристик.  
   
 |Элемент|Характеристики|  
@@ -59,10 +64,10 @@ caps.handback.revision: 45
 |Общие источники данных|Защита общих источников данных позволяет ограничить доступ к элементу и страницам его свойств. Дополнительные сведения см. в разделе [Защита совместно используемых элементов источника данных](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Общие наборы данных|Общие наборы данных могут быть защищены, чтобы управлять диапазоном действий, которые могут выполнять пользователи, таких как просмотр или смена определения или же изменение свойств данного общего набора данных.<br /><br /> Дополнительные сведения см. в разделе [Защита элементов общего набора данных](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/create-delete-or-modify-a-role-management-studio.md)   
+ [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/modify-or-delete-a-role-assignment-report-manager.md)  
+ [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

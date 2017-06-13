@@ -1,29 +1,34 @@
 ---
-title: "Добавление внешнего изображения (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление внешнего изображения (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291a906484a6f7d812d091252802b706d207a69e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление внешнего изображения (построитель отчетов и службы SSRS)
+# <a name="add-an-external-image-report-builder-and-ssrs"></a>Добавление внешнего изображения (построитель отчетов и службы SSRS)
   Внешние изображения могут находиться на сервере отчетов в собственном режиме или в режиме интеграции с SharePoint либо находиться на любом другом веб-сайте. При включении внешних изображений в отчет необходимо проверить, что изображение существует и читатель отчета имеет разрешения на доступ к изображению. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Добавление внешнего изображения  
+### <a name="to-add-an-external-image"></a>Добавление внешнего изображения  
   
 1.  В режиме конструктора отчетов нажмите на вкладке **Вставка** кнопку **Изображение**.  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 9
   
 5.  В списке **Выберите источник изображения**выберите **Внешний**.  
   
-     Для изображения, расположенного на сервере отчетов в собственном режиме, введите относительный путь к изображению в поле **Использовать это изображение**, например ../images/image1.jpg.  
+     Для изображения, расположенного на сервере отчетов в собственном режиме, введите относительный путь к изображению в поле **Использовать это изображение** , например ../images/image1.jpg.  
   
-     Для изображения на сервере отчетов в режиме интеграции с SharePoint или на любом другом веб-сайте укажите полный URL-адрес изображения в окне **Использовать это изображение**, например http://\<SharePointservername>/\<site>/Documents/images/image1.jpg.  
+     Для изображения на сервере отчетов в режиме интеграции с SharePoint или веб-сайт, введите полный URL-адрес изображения в **использовать это изображение** поле — например, http://\<SharePointservername > /\<узел > / Documents/images/image1.jpg.  
   
      Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 9
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Добавление фонового изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и SSRS)](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и SSRS)](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

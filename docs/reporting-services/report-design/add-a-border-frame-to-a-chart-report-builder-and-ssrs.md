@@ -1,34 +1,39 @@
 ---
-title: "Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7a14ce29863b00c01cb77f837c369256a1096f65
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
+# <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
   Чтобы улучшить визуальное восприятие диаграммы, можно использовать границы рамки. Границу рамки можно выбрать в диалоговом окне **Свойства диаграммы** или в панели свойств. Границы рамки диаграммы нельзя применить ни к какой другой области данных.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Выбор границы рамки для диаграммы  
+### <a name="to-apply-a-border-to-a-chart"></a>Выбор границы рамки для диаграммы  
   
 1.  Щелкните правой кнопкой мыши любое место диаграммы и выберите пункт **Свойства диаграммы**.  
   
     > [!NOTE]  
-    >  Если диалоговое окно **Свойства диаграммы** не появилось, в контекстном меню наведите указатель на элемент **Диаграмма** и выберите пункт **Свойства диаграммы**.  
+    >  Если диалоговое окно **Свойства диаграммы**не появилось, в контекстном меню наведите указатель на элемент **Диаграмма** и выберите пункт **Свойства диаграммы**.  
   
 2.  Выберите **Границы**и щелкните нужный тип границы диаграммы.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 6
 4.  Укажите цвет линии, которая будет нарисована вокруг диаграммы в качестве границы (необязательно).  
   
     > [!NOTE]  
-    >  Список **Цвет линии** содержит распространенные цвета. Чтобы выбрать цвет из более обширного списка, выберите пункт списка **Дополнительные цвета** или нажмите кнопку выражений (**fx**) рядом со списком, чтобы вывести редактор **выражений**.  
+    >  Список **Цвет линии** содержит распространенные цвета. Чтобы выбрать цвет из более обширного списка, выберите пункт списка **Дополнительные цвета** или нажмите кнопку выражений (**fx**) рядом со списком, чтобы вывести редактор **выражений** .  
   
 5.  Укажите ширину границы (необязательно). Допустимыми являются значения от 0,25 пункта до 20 пунктов. Для наилучшего эффекта рекомендуется использовать границы шириной от 1 до 3 пунктов.  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 6
   
 7.  Если выбран тип «Рамка», укажите стиль и цвет рамки (необязательно). Список **Цвет заливки рамки** содержит распространенные цвета.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)  
+ [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Maps in Reporting Services mobile reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Карты в мобильные отчеты служб Reporting Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Maps in Reporting Services mobile reports
+# <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Карты — это отличный способ визуализировать географические данные. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] есть три разных типа визуализации карт, а также доступны встроенные карты континентов и некоторых отдельных странах. Вы также можете [передавать и использовать пользовательские карты](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
   
-## Типы карт  
+## <a name="types-of-maps"></a>Типы карт  
   
 В мобильных отчетах SQL Server есть три разных типа карт, которые подходят для разных целей.  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 10
   
 На**тепловых картах с диапазонами** значение показывается относительно целевого значения. Свойство **Целевые значения** определяет разницу между полями сравнения и значений. Полученная разница определяет цвет заливки для соответствующей области карты — зеленый, желтый или красный. Большие или меньшие значения могут представляться зеленым цветом. Эту зависимость можно определить в поле **Направление значений** .  
   
-## Выбор региона и типа карты  
+## <a name="select-the-map-type-and-region"></a>Выбор региона и типа карты  
   
 1. На вкладке **Макет** выберите тип карты, перетащите ее в область конструктора и придайте карте нужный размер.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 10
   
 7. Если выбрана пузырьковая карта, на панели **Визуальные свойства** установите переключатель **Использовать разные цвета** в положение **Вкл.** или **Выкл.** (пузырьки будут одинаковыми или разными по цвету соответственно).  
   
-## Выбор данных карты  
+## <a name="select-the-map-data"></a>Выбор данных карты  
 Когда карта добавляется в отчет впервые, [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] добавляет в нее имитированные географические данные.  
   
 ![Данные карт SSMRP](../../reporting-services/mobile-reports/media/ssmrp-mapsdata.png)  
@@ -53,11 +58,11 @@ caps.handback.revision: 10
 * Свойство **Значения** — это числовое поле в той же таблице, что и выбранное поле ключей. В разных картах эти значения представлены по-разному. В **градиентной карте** эти значения используются для закрашивания каждой области различными оттенками в зависимости от диапазона значений. В **пузырьковых картах** размер пузырька над каждой областью определяется свойством значений.   
 * Для тепловых карт с диапазонами необходимо также задать свойство **Целевые значения** .  
   
-### Определение свойств данных карты  
+### <a name="set-map-data-properties"></a>Определение свойств данных карты  
   
 1. В левом верхнем углу выберите вкладку **Данные** .  
   
-2. Выберите **Добавить данные**, а затем — **Локальный файл Excel** или **Сервер SSRS**.  
+2. Выберите **добавлять данные**, затем либо **локальный файл Excel** или **сервера SSRS**.  
   
    > **Совет**. Убедитесь, что данные имеют [подходящий для мобильных отчетов формат](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
@@ -78,8 +83,9 @@ caps.handback.revision: 10
      
 8. В верхнем левом углу щелкните значок **Сохранить** , а затем выберите вариант **Сохранить локально** или **Сохранить на сервере**.  
   
-### См. также:  
+### <a name="see-also"></a>См. также:  
 -  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+

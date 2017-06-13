@@ -1,24 +1,29 @@
 ---
-title: "Установка минимума и максимума на датчике (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Установка минимума и максимума на датчике (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)
-  В отличие от диаграммы в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], где определяется несколько групп, датчики выводят только одно значение. Поскольку построитель отчетов и конструктор отчетов определяют контекст или относительную значимость значения, отображаемого на датчике, необходимо определить минимум и максимум шкалы.   
+# <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)
+  В отличие от диаграммы в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , где определяется несколько групп, датчики выводят только одно значение. Поскольку построитель отчетов и конструктор отчетов определяют контекст или относительную значимость значения, отображаемого на датчике, необходимо определить минимум и максимум шкалы.   
     
   Например, если значения данных располагаются в диапазоне от 0 до 10, в качестве минимума нужно установить 0, а в качестве максимума — 10. Значения интервала вычисляются автоматически на основе минимального и максимального значений. По умолчанию значением минимума является 0, а значением максимума — 100, но это произвольное значение, которое нужно изменить. Приложение не вычисляет значения в виде процентов.  
   
@@ -26,7 +31,7 @@ caps.handback.revision: 8
   
  Можно использовать выражения для задания значений параметров **Минимальное** и **Максимальное** . Дополнительные сведения см. в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
-## Установка минимума и максимума на датчике  
+## <a name="to-set-the-minimum-and-maximum-on-the-gauge"></a>Установка минимума и максимума на датчике  
   
 1.  Щелкните правой кнопкой мыши шкалу и выберите **Свойства шкалы**. Откроется диалоговое окно **Свойства шкалы** .  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 4.  Если значения минимума и максимума очень большие, укажите значение для параметра **Умножить значения меток шкалы на** (необязательно). Чтобы задать множитель, сокращающий шкалу, используйте десятичное число. Например, если имеется шкала от 0 до 1000, можно задать значение множителя 0,01, чтобы уменьшить значения шкалы от 0 до 10.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование указателей на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

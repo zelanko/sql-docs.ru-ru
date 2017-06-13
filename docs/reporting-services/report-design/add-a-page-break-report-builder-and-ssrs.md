@@ -1,29 +1,34 @@
 ---
-title: "Добавление разрыва страницы (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление разрыва страницы (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81f305fdb34231a14c53d376ed9c4535ce6b9f53
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление разрыва страницы (построитель отчетов и службы SSRS)
+# <a name="add-a-page-break-report-builder-and-ssrs"></a>Добавление разрыва страницы (построитель отчетов и службы SSRS)
   Разрыв страницы можно добавить в прямоугольники, области данных или в группы в областях данных, чтобы управлять количеством информации на каждой странице. Добавление разрывов страницы может повысить производительность опубликованных отчетов, т. к. при просмотре отчета будут обрабатываться только элементы на каждой странице. Если отчет содержит одну страницу, все элементы должны быть обработаны перед просмотром отчета.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Добавление разрыва страницы к области данных  
+### <a name="to-add-a-page-break-to-a-data-region"></a>Добавление разрыва страницы к области данных  
   
 1.  В области конструктора щелкните правой кнопкой мыши угловой маркер области данных и выберите пункт **Свойства табликса**.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
     -   **По возможности поместить таблицу на одной странице**. Выберите этот параметр, если нужно, чтобы данные оставались на одной странице.  
   
-### Добавление разрыва страницы в прямоугольник  
+### <a name="to-add-a-page-break-to-a-rectangle"></a>Добавление разрыва страницы в прямоугольник  
   
 1.  В области конструктора щелкните правой кнопкой мыши прямоугольник, куда нужно добавить разрыв страницы, затем выберите пункт **Свойства прямоугольника**.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
     -   **По возможности сохранять содержимое на одной странице**. Выберите этот параметр, если нужно, чтобы содержимое внутри прямоугольника оставалось на одной странице.  
   
-### Добавление разрыва страницы к группе строк в таблице, матрице или списке  
+### <a name="to-add-a-page-break-to-a-row-group-in-a-table-matrix-or-list"></a>Добавление разрыва страницы к группе строк в таблице, матрице или списке  
   
 1.  В панели группирования щелкните правой кнопкой мыши группу строк и выберите команду **Свойства группы**.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 3.  Кроме того, можно выбрать параметр **Также в начале группы** или **Также в конце группы** , чтобы указать, что разрыв страницы должен добавляться, когда группа в таблице начинается или заканчивается.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

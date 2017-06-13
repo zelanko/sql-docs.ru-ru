@@ -1,28 +1,33 @@
 ---
-title: "Предоставление разрешений для элементов сервера отчетов на сайте SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разрешения [Reporting Services], режим интеграции с SharePoint "
-  - "интеграция с SharePoint [Reporting Services], разрешения"
-  - "разрешения [службы Reporting Services], собственный режим"
-  - "безопасность [Reporting Services], режим интеграции с SharePoint"
+title: "Предоставление разрешений для элементов сервера отчетов на сайте SharePoint | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- permissions [Reporting Services], native mode
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
+# <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют встроенные средства безопасности, которые можно использовать для предоставления права доступа к элементам сервера отчетов, к которым предоставляется доступ с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения, они получат и доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] и сервера отчетов. Можно использовать имеющиеся разрешения для передачи определений отчетов и других документов, просмотра отчетов, создания подписок и управления элементами.  
   
  Если вы не назначили разрешения или не знакомы со средствами безопасности служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], следуйте следующим рекомендациям.  
@@ -37,7 +42,7 @@ caps.handback.revision: 13
   
  Для использования средств безопасности [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] с элементами сервера отчетов необходимо запустить сервер отчетов в режиме интеграции с SharePoint.  
   
-## Разрешения, уровни разрешений и группы SharePoint  
+## <a name="about-permissions-permission-levels-and-sharepoint-groups"></a>Разрешения, уровни разрешений и группы SharePoint  
  В следующем списке представлено краткое введение в средства безопасности [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]. Дополнительные сведения см. в документе «Справка и пошаговые руководства Windows SharePoint» на веб-сайте SharePoint.  
   
 -   В числе защищаемых объектов сайты, списки, библиотеки, папки и документы.  
@@ -50,15 +55,15 @@ caps.handback.revision: 13
   
 -   Наследование разрешений позволяет вложенным сайтам, спискам и библиотекам, а также элементам наследовать настройки безопасности родительского сайта. Унаследованные разрешения можно использовать для доступа к элементам сервера отчетов, хранящихся в библиотеке SharePoint. Использование наследования разрешений и стандартных групп SharePoint позволяет упростить развертывание и обеспечить немедленный доступ к большинству операций сервера отчетов.  
   
-## Кто устанавливает разрешения  
+## <a name="who-sets-permissions"></a>Кто устанавливает разрешения  
  Администратор, который устанавливает службы [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], запускает мастер настройки SharePoint и создает портал, становится владельцем сайта портала по умолчанию. Владелец сайта может устанавливать разрешения для фермы или изолированного веб-приложения SharePoint в центре администрирования. Кроме того, владелец сайта может задавать разрешения на сайте верхнего уровня для каждого веб-приложения SharePoint. Это лицо может также назначить дополнительных владельцев сайта.  
   
  На сайте верхнего уровня веб-приложения SharePoint администраторы коллекции веб-сайтов могут задавать разрешения для нескольких сайтов в иерархии. Индивидуальные владельцы сайтов могут выполнять те же задачи применительно к вложенным сайтам.  
   
  Администратор сервера или администратор коллекции веб-сайтов может задавать параметры, определяющие, могут ли другие владельцы сайтов устанавливать разрешения. В зависимости от имеющегося уровня разрешений пользователь может не иметь возможности создавать или настраивать группы или уровни разрешений SharePoint.  
   
-## Использование стандартных групп и уровней разрешений SharePoint  
- Рекомендации в документации по продукту [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] приведены в предположении, что пользователь использует стандартные группы SharePoint (то есть **Владельцы** *имя_сайта*, **Члены** *имя_сайта* и **Посетители** *имя_сайта*) и назначает разрешения на уровне сайта. Большинство пользователей, которым назначаются разрешения, должны быть членами групп *Посетители* **имя_сайта** или *Посетители* **имя_сайта** . Разрешения на родительский сайт наследуются всей иерархией сайта. Для определенных элементов, которым требуются дополнительные ограничения, наследование разрешений можно нарушить.  
+## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Использование стандартных групп и уровней разрешений SharePoint  
+ Рекомендации в документации по продукту [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] приведены в предположении, что пользователь использует стандартные группы SharePoint (то есть *Владельцы* **имя_сайта**, *Владельцы* **имя_сайта**и *Владельцы* **имя_сайта**) и назначает разрешения на уровне сайта. Большинство пользователей, которым назначаются разрешения, должны быть членами групп *Посетители* **имя_сайта** или *Посетители* **имя_сайта** . Разрешения на родительский сайт наследуются всей иерархией сайта. Для определенных элементов, которым требуются дополнительные ограничения, наследование разрешений можно нарушить.  
   
  Следующие группы SharePoint имеют следующие стандартные уровни разрешений:  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 13
   
  Для использования встроенных средств безопасности необходимо назначить учетным записям пользователей или групп Windows группы SharePoint. За исключением администратора сервера и владельца сайта портала, которые имеют автоматический доступ к службам [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] после установки ПО, остальным пользователям должны быть предоставлены разрешения для доступа к серверу.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Объясняется, как использовать стандартные группы и уровни разрешений SharePoint для доступа к элементам сервера отчетов.  
   
@@ -84,13 +89,13 @@ caps.handback.revision: 13
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Описываются требования к разрешениям для создания автоматизированных отчетов и рекомендованные подходы по обеспечению доступности функций.  
   
- [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Сравнение ролей и задач в службах Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Содержит краткое сравнение групп SharePoint со стандартными определениями ролей служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)  
+ [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Содержит инструкции по созданию новых групп SharePoint, имеющих разрешение на запуск построителя отчетов и установки параметров безопасности элементов модели. Этот раздел содержит также общее руководство по настройке пользовательских разрешений на любые элементы и операции сервера отчетов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   

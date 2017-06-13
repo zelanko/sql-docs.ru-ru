@@ -1,37 +1,44 @@
 ---
-title: "Службы Reporting Services в SQL Server Data Tools (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio, службы Reporting Services в этой среде"
+title: "Службы Reporting Services в SQL Server Data Tools (SSDT) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 75
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Службы Reporting Services в SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] это среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для создания решений бизнес-аналитики. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в состав [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Скачать [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]не включена в SQL Server. Скачать [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
  В этом разделе описываются решения, проекты, шаблоны проектов и конфигурации служб [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а также представления, меню, панели инструментов и сочетания клавиш, которые можно использовать в конструкторе отчетов.  
   
- Чтобы приступить к разработке отчетов, см. раздел [Разработка отчетов с использованием конструктора отчетов (SSRS)](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md).  
+ Чтобы приступить к разработке отчетов, см. раздел [Разработка отчетов с использованием конструктора отчетов (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Решения и проекты  
  Проект отчета выступает в качестве контейнера для определений отчета и ресурсов. Когда проект развернут, каждый файл проекта отчета публикуется на сервере отчетов. При первом создании проекта также создается решение в качестве контейнера для проекта. К одному решению можно добавить несколько проектов.  
   
   
 ##  <a name="bkmk_Configurations"></a> Конфигурации  
- Чтобы создать несколько наборов свойств проекта для различных вариантов развертывания, например для тестового и рабочего серверов отчетов предприятия, следует использовать диспетчер конфигурации. Дополнительные сведения см. в разделе [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Чтобы создать несколько наборов свойств проекта для различных вариантов развертывания, например для тестового и рабочего серверов отчетов предприятия, следует использовать диспетчер конфигурации. Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ##  <a name="bkmk_ReportServerProjects"></a> Проекты «Сервер отчетов»  
  После установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]становятся доступны следующие шаблоны проектов.  
@@ -40,7 +47,7 @@ caps.handback.revision: 75
   
 -   **Мастер проекта сервера отчетов.** При выборе проекта мастера сервера отчетов автоматически создается проект сервера отчетов и открывается мастер отчетов. Отчеты можно создавать с помощью мастера. Для этого необходимо выполнять инструкции на каждой странице: создается строка подключения с источником данных, указываются учетные данные для соединения с ним, создается запрос, добавляются области данных таблицы или матрицы, задаются данные отчета и групп, выбирается цвет шрифта и стиля, отчет публикуется на сервере отчетов и просматривается в локальном режиме. После создания отчета с помощью мастера можно изменить данные и структуру отчета с помощью конструктора отчетов в проекте сервера отчетов.  
   
- ![Новые шаблоны проекта в SSDT](../../analysis-services/media/ssdt-biprojects.png "Новые шаблоны проекта в SSDT")  
+ ![Новые шаблоны проектов, в SSDT](../../analysis-services/media/ssdt-biprojects.png "шаблоны нового проекта в SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Окна и панели конструктора отчетов  
@@ -57,7 +64,7 @@ caps.handback.revision: 75
   
 -   **Наборы данных** . Каждый набор данных включает запрос, указывающий, какие данные нужно получить из источника данных. Раскройте набор данных, чтобы просмотреть коллекции полей, определенные запросом к набору данных.  
   
-     В некоторых конструкторах запросов для многомерных наборов данных на панели «Фильтры» можно задать фильтры и указать, следует ли создавать параметры отчета. Если указать параметр отчета, автоматически создается специальный набор данных для заполнения списка допустимых значений параметра.  По умолчанию этот набор данных не отображается в области данных отчета. Дополнительные сведения см. в разделе [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md).  
+     В некоторых конструкторах запросов для многомерных наборов данных на панели «Фильтры» можно задать фильтры и указать, следует ли создавать параметры отчета. Если указать параметр отчета, автоматически создается специальный набор данных для заполнения списка допустимых значений параметра.  По умолчанию этот набор данных не отображается в области данных отчета. Дополнительные сведения см. в разделе [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Параметры отчета** . Список параметров отчета. Параметры могут быть созданы вручную или автоматически, если запрос к набору данных включает параметры запроса.  
   
@@ -94,7 +101,7 @@ caps.handback.revision: 75
   
  Панель свойств используется для следующих действий.  
   
--   Задание свойств для текущего выбранного элемента в области конструктора. Некоторые свойства имеют раскрывающийся список значений. Кроме того, можно ввести значение непосредственно в ячейку. Некоторые свойства содержат коллекцию значений, что обозначается как **(Коллекция)**. Большинство свойств принимает в качестве значения выражение. Сложные выражения обозначаются как **\<Выражение>**. Чтобы открыть диалоговое окно **Выражение**, нажмите кнопку **\<Выражение>**. Дополнительные сведения см. в разделе [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md).  
+-   Задание свойств для текущего выбранного элемента в области конструктора. Некоторые свойства имеют раскрывающийся список значений. Кроме того, можно ввести значение непосредственно в ячейку. Некоторые свойства содержат коллекцию значений, что обозначается как **(Коллекция)**. Большинство свойств принимает выражение; сложные выражения обозначаются значение  **\<выражение >**. Нажмите кнопку  **\<выражение >** Открытие **выражение** диалоговое окно. Дополнительные сведения см. в разделе [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   С помощью кнопок панели инструментов на панели свойств можно переключать сетку с вида по категориям на вид в алфавитном порядке. В представлении по категориям можно развернуть ту или иную категорию, чтобы увидеть все принадлежащие к ней свойства. Чтобы открыть диалоговое окно свойств элемента, нажмите кнопку **Страницы свойств** на панели инструментов или щелкните элемент правой кнопкой мыши и выберите **Свойства**.  
   
@@ -247,7 +254,7 @@ caps.handback.revision: 75
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Поддержка командной строки для SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] построена на основе [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и базового приложения devenv.exe. Прежде чем использовать эти параметры, необходимо задать верное значение для следующих двух элементов.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]на основе [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и базового приложения devenv.exe. Прежде чем использовать эти параметры, необходимо задать верное значение для следующих двух элементов.  
   
 -   Свойства проекта для OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder и TargetServerURL.  
   
@@ -304,11 +311,12 @@ caps.handback.revision: 75
     |В текстовом поле выбрать текст от текущей позиции курсора до конца выражения|CTRL + SHIFT + END|  
     |Открыть контекстное меню для выбранного элемента отчета|SHIFT + F10 + клавиша свойств на новых клавиатурах|
   
-## См. также:  
+## <a name="next-steps"></a>Следующие шаги
+
 [Скачать SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
- [Обозреватель решений](../../ssms/solution/solution-explorer.md)   
- [Отчеты служб Reporting Services (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [Язык определения отчетов (службы SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+[обозревателе решений](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Отчеты служб Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[Язык определения отчетов](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Развертывание и поддержка версий в SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

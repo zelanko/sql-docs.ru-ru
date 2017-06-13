@@ -1,27 +1,32 @@
 ---
-title: "Подготовка данных в Excel для мобильных отчетов службы отчетов | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Подготовка данных в Excel для мобильных отчетов Reporting Services | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Подготовка данных в Excel для мобильных отчетов службы отчетов
+# <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Подготовка данных в Excel для мобильных отчетов службы отчетов
   
 Здесь перечислены некоторые аспекты, которые следует учитывать при подготовке файла с листами Excel для мобильных отчетов.  
   
-## Как нужно  
+## <a name="do"></a>Как нужно  
   
 - Один лист на каждый набор данных.  
 - Заголовки столбцов в первой строке.  
@@ -32,7 +37,7 @@ caps.handback.revision: 14
 - Excel 2007 или более поздней версии.  
 - Файлы Excel сохраняются с расширением XLSX.  
           
-## Как не нужно  
+## <a name="dont"></a>Как не нужно  
   
 - Изображения, диаграммы, сводные таблицы или другие внедренные объекты в листах с наборами данных.  
 - Строки с итоговыми или рассчитанными значениями.  
@@ -40,19 +45,19 @@ caps.handback.revision: 14
 - Числа отформатированы вручную с добавлением обозначений валюты или других символов.  
 - Данные в книге хранятся в модели данных.  
   
-## Листы  
+## <a name="worksheets"></a>Листы  
           
 При подготовке файла Excel с набором данных для мобильного отчета всегда размещайте на одном листе только один набор данных. Импортируйте каждый лист в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] как отдельную таблицу. При импорте листы с одинаковыми именами из различных файлов Microsoft Excel получают новые имена с добавлением чисел в возрастающем порядке. Например, если в книге есть три листа с названием MyWorksheet, второй и третий листы будут названы MyWorksheet0 и MyWorksheet1 соответственно. На следующем снимке экрана показано несколько первых строк листа Excel, надлежащим образом подготовленного к импорту.  
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
-## Заголовки столбцов  
+## <a name="column-headers"></a>Заголовки столбцов  
   
 Как можно заметить в приведенном выше примере, первая строка содержит имя параметра, представленного в этом столбце. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] сохраняет эти заголовки, чтобы их можно было посмотреть в настройках элемента коллекции. Но заголовки столбцов не являются обязательными. Если они отсутствуют, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] создает заголовки в стандартном для Excel формате A, B, C, ..., АА, BB, ... и т. д.  
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]автоматически определяет наличие заголовков в первой строке, сравнивая типы данных в двух первых ячейках каждого столбца. Если типы данных в двух первых ячейках не совпадают ни в одном столбце, считается, что заголовки столбцов содержит первая строка. Поэтому если заголовки таблицы имеют числовой формат, добавьте строку в качестве префикса в имя заголовка, чтобы при импорте они опознавались как заголовки.  
   
-## Ячейки  
+## <a name="cells"></a>Ячейки  
   
 Ячейки с данными должны быть однотипными в пределах каждого столбца листа с набором данных. Каждому столбцу при импорте назначается определенный тип данных. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] автоматически определяет следующие типы данных: string (строка), double (число), boolean (true или false) и datetime (дата и время). Если в одном столбце содержатся разные типы данных, автоматическое определение может оказаться неточным или невозможным. При определении типов учитывается, что заголовки столбцов могут иметь строковый тип. Ячейки должны быть правильно отформатированы в соответствии с типами данных Excel. Так [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] сможет правильно определить нужные типы. В примере выше шесть столбцов будут типированы так:  
 *  один столбец даты (datetime);  
@@ -61,13 +66,13 @@ caps.handback.revision: 14
   
 Если в листе с данными есть ячейки с расчетами или формулами, в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]импортируются только результирующие значения.  
   
-## Расположение файла и обновление данных Excel  
+## <a name="file-location-and-refreshing-excel-data"></a>Расположение файла и обновление данных Excel  
   
 Нет никаких ограничений для расположения файлов Excel, импортируемых в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]. Но если после импорта вы переместите или переименуете файл, вы не сможете обновлять эти данные с помощью команды **Обновить все данные** в представлении данных.   
   
 >**Примечание**. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] не обновляет данные Excel автоматически. Вы можете обновить данные с помощью команды [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Обновить** , но для этого исходный файл не должен перемещаться.  
   
-## даты.  
+## <a name="dates"></a>даты.  
   
 Так как поля с датами используются во многих мобильных отчетах, убедитесь, что ячейки в Excel правильно отформатированы как даты. В некоторых случаях для этого нужно выполнить преобразование. Ниже приведены примеры формул Excel для преобразования ячеек с текстом в ячейки с датами.  
   
@@ -79,16 +84,16 @@ caps.handback.revision: 14
   
 После преобразования ячейки нужно отформатировать как даты. Для этого выделите все ячейки или весь столбец, а затем откройте **контекстное меню** > **Формат ячеек** > **Дата** в списке **Категория**. Также можно использовать мастер преобразования текста Excel, который преобразует ячейки с текстом в правильно отформатированные даты.  
   
-## Не поддерживается  
+## <a name="unsupported"></a>Не поддерживается  
   
 Импорт может завершиться непредсказуемым образом, если на листе есть данные в форматах, которые отличаются от описанных выше. В файле Excel для мобильных отчетов рекомендуется использовать только листы с данными в правильных форматах.  
   
 Пользовательские объекты, в том числе сводные таблицы, представления и изображения, не импортируются из листов Excel в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
   
-### См. также:  
+### <a name="see-also"></a>См. также:  
 - [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports) (Power BI для iOS).  
+-  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI для iOS).  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI для iOS).  
   
   
@@ -97,3 +102,5 @@ caps.handback.revision: 14
   
   
   
+
+

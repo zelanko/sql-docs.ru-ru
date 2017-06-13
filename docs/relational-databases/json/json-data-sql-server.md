@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3daaaa3dc2fb53344b009a5b3ab3d1cfbdd19350
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-data-sql-server"></a>Данные JSON (SQL Server)
@@ -70,15 +70,15 @@ JSON — это популярный формат текстовых данны�
 
 **Пример**
   
- В следующем примере представлен запрос, в котором используются реляционные данные и данные JSON (хранятся в столбце jsonCol) из таблицы:  
+ В следующем примере запрос использует реляционные данные и данные JSON (хранятся в столбце с именем `jsonCol`) из таблицы:  
   
-```tsql  
+```sql  
 SELECT Name,Surname,
  JSON_VALUE(jsonCol,'$.info.address.PostCode') AS PostCode,
  JSON_VALUE(jsonCol,'$.info.address."Address Line 1"')+' '
   +JSON_VALUE(jsonCol,'$.info.address."Address Line 2"') AS Address,
  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
-FROM PeopleCollection
+FROM People
 WHERE ISJSON(jsonCol)>0
  AND JSON_VALUE(jsonCol,'$.info.address.Town')='Belgrade'
  AND Status='Active'
@@ -92,7 +92,7 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 ### <a name="change-json-values"></a>Изменение значений JSON
 Если вам нужно изменить части текста JSON, используйте функцию **JSON_MODIFY**, чтобы обновить значение свойства в строке JSON и получить обновленную строку JSON. В следующем примере показано, как изменить значение свойства в переменной, которая содержит данные в формате JSON.  
   
-```tsql  
+```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
@@ -103,7 +103,7 @@ SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London')
   
  В следующем примере вызывается функция **OPENJSON** и массив объектов, хранящийся в переменной `@json`, преобразуется в набор строк, который можно запросить с помощью стандартной инструкции SQL **SELECT**:  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =  
 N'[  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json)
   
  В следующем примере используется режим PATH с предложением FOR JSON.  
   
-```tsql  
+```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
 FROM People  
 FOR JSON PATH  
@@ -190,7 +190,7 @@ FOR JSON PATH
   
  URL-адрес OData представляет запрос столбцов ProductID и ProductName для продукта с идентификатором 1. **FOR JSON** можно использовать для форматирования выходных данных для SQL Server.  
   
-```tsql  
+```sql  
 SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
@@ -204,7 +204,7 @@ FOR JSON AUTO
 ## <a name="analyze-json-data-with-sql-queries"></a>Анализ данных JSON с помощью запросов SQL  
  Если вам нужно отфильтровать или вычислить данные JSON для целей отчетности, JSON можно преобразовать в реляционный формат с помощью **OPENJSON**. Затем подготовьте отчеты, используя стандартный [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-```tsql  
+```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
 FROM   SalesOrderRecord AS Tab  
           CROSS APPLY  
@@ -225,7 +225,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 ## <a name="import-json-data-into-sql-server-tables"></a>Импорт данных JSON в таблицы SQL Server  
  Если требуется загрузка данных JSON из внешней службы в SQL Server, можно импортировать данные в SQL Server с помощью **OPENJSON** вместо того, чтобы использовать синтаксический анализ данных на уровне приложения.  
   
-```tsql  
+```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)
 
 SET @jsonVariable = N'[  
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
   
--   [Публикации блога Йована Поповича (Jovan Popovic), руководителя программы Microsoft](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+-   Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).  
   
 ### <a name="reference-topics"></a>Справочные разделы  
   

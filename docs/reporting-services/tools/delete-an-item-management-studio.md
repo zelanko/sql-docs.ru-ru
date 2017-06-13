@@ -1,30 +1,35 @@
 ---
-title: "удалить элемент (среда Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы [службы Reporting Services], удаление"
-  - "удаление элементов отчета"
-  - "элементы отчета [службы Reporting Services], удаление"
+title: "Удаление элемента (среда Management Studio) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- items [Reporting Services], deleting
+- deleting report items
+- report items [Reporting Services], deleting
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 30
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# удалить элемент (среда Management Studio)
+# <a name="delete-an-item-management-studio"></a>удалить элемент (среда Management Studio)
   При подключении к экземпляру сервера отчетов в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно удалять определения ролей и общие расписания. Нельзя удалять отчеты, модели и другие элементы на сервере отчетов. Для удаления содержимого сервера отчетов используется диспетчер отчетов. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, используйте функции управления в библиотеке SharePoint, в которой хранится нужное содержимое.  
   
-### Удаление элемента в пространстве имен папок сервера отчетов  
+### <a name="to-delete-an-item-in-the-report-server-folder-namespace"></a>Удаление элемента в пространстве имен папок сервера отчетов  
   
 1.  В обозревателе объектов разверните узел сервера отчетов. Найдите папку, содержащую элемент, который необходимо удалить.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 4.  Появится запрос подтверждения. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Удаление объектов из каталога (среда Management Studio)](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
  [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  

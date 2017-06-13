@@ -1,24 +1,29 @@
 ---
-title: "Добавление или удаление индикатора (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление или удаление индикатора (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление или удаление индикатора (построитель отчетов и службы SSRS)
-  В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+# <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Добавление или удаление индикатора (построитель отчетов и службы SSRS)
+  В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Индикаторы обычно размещаются в ячейках таблицы или матрицы, но можно использовать сами индикаторы, параллельно с датчиками или внедренные в датчиках.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  В зависимости от ширины столбца и длины значений данных, текст в ячейках таблицы или матрицы может переноситься по словам на несколько строк. В этом случае значок индикатора может растянуться и изменить форму. В результате значок индикатора воспринимается хуже. Во избежание растяжений значка разместите индикатор внутри прямоугольника.  
   
-## Добавление индикатора в таблицу или матрицу  
+## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>Добавление индикатора в таблицу или матрицу  
   
 1.  Откройте существующий отчет или создайте новый отчет, содержащий таблицу и матрицу с данными, которые необходимо отобразить. Дополнительные сведения см. в разделах [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) или [Матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 8
   
      Индикатор настроен для использования значений по умолчанию. По умолчанию индикаторы настроены для использования в качестве единиц измерения процентных соотношений, диапазоны процентного соотношения равномерно распределяются между элементами индикатора, а для значений, указываемых индикатором, используется область ближайшей группы.  
   
-## Удаление индикатора из таблицы или матрицы  
+## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>Удаление индикатора из таблицы или матрицы  
   
 1.  Щелкните индикатор правой кнопкой мыши и выберите **Удалить**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 8
   
 2.  Щелкните **Удалить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

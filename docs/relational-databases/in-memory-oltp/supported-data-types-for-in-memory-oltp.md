@@ -1,7 +1,7 @@
 ---
 title: "Поддерживаемые типы данных для выполняющейся в памяти OLTP | Документация Майкрософт"
 ms.custom: 
-ms.date: 05/27/2016
+ms.date: 06/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a928c1f77586198fd0d33cafa445ea406a437c6b
+ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
+ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Поддерживаемые типы данных для выполняющейся в памяти OLTP
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 -   Таблицы, оптимизированные для памяти  
   
--   Скомпилированные в собственном коде хранимые процедуры  
+-   Модули, скомпилированные в собственном коде T-SQL  
   
 ## <a name="unsupported-data-types"></a>Неподдерживаемые типы данных  
  Следующие типы данных не поддерживаются:  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Определение LOB-столбцов и других столбцов вне строки
 
-Следующая инструкция Transact-SQL SELECT возвращает все столбцы вне строки для таблиц, оптимизированных для памяти. Обратите внимание на следующее.
+Начиная с SQL Server 2016, оптимизированных для памяти таблицы поддерживают вне строки столбцов, которые позволяют строки одной таблицы может превысить 8060 байт. Следующая инструкция Transact-SQL SELECT возвращает все столбцы вне строки для таблиц, оптимизированных для памяти. Обратите внимание на следующее.
 
 - Все ключевые столбцы индекса сохранены в строке.
   - Теперь ключи неуникальных индексов могут включать столбцы со значениями NULL в таблицах, оптимизированных для памяти.
@@ -81,24 +81,15 @@ SELECT
 ```
 
 
-#### <a name="natively-compiled-modules-support-for-lobs"></a>Поддержка скомпилированных в собственном коде модулей для LOB
-
-
-Встроенная строковая функция, используемая в скомпилированных в собственном коде модулях, например в процедуре, скомпилированной в собственном коде, может принимать строковый тип LOB. Например в процедуре, скомпилированной в собственном коде, функция LTrim может ввести параметр типа nvarchar(max) или varbinary(max).
-
-Эти типы LOB могут быть возвращаемым типом определяемой пользователем скалярной функции (UDF).
-
-
 ### <a name="other-data-types"></a>Прочие типы данных
 
 
 |Другие типы|Дополнительные сведения|  
 |-----------------|--------------------------|  
-|табличные типы|[Переменные оптимизированной для памяти таблицы](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
+|табличные типы|[Переменные оптимизированной для памяти таблицы](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [Поддержка Transact-SQL для In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [Реализация LOB Columns в таблице, оптимизированной для памяти](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [Реализация SQL_VARIANT в таблице, оптимизированной для памяти](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

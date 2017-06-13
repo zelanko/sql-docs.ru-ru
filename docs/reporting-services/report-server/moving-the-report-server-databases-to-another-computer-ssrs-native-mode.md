@@ -1,26 +1,33 @@
 ---
-title: "Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Перемещение базы данных сервера отчетов на другой компьютер (собственный режим SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
+
+# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
+
   Базы данных сервера отчетов, используемые в установке, можно переместить на экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , находящийся на другом компьютере. Базы данных reportserver и reportservertempdb должны перемещаться или копироваться вместе. Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует наличия обеих баз данных. База данных reportservertempdb должна быть связана по имени с перемещаемой базой данных reportserver.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  Перемещение базы данных не влияет на запланированные операции, определенные в данный момент для элементов сервера отчетов.  
   
@@ -28,7 +35,7 @@ caps.handback.revision: 10
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующиеся для запуска расписания, будут созданы повторно в новом экземпляре базы данных. Необязательно перемещать эти задания на новый компьютер, однако следует удалить задания на компьютере, на котором они больше не будут использоваться.  
   
--   Подписки, кэшированные отчеты и моментальные снимки сохраняются в перемещенной базе данных. Если моментальный снимок не получает обновленные данные после перемещения базы данных, отмените параметры моментального снимка в диспетчере отчетов, нажмите кнопку **Применить**, чтобы сохранить изменения, повторно создайте расписание и еще раз нажмите кнопку **Применить**, сохранив изменения.  
+-   Подписки, кэшированные отчеты и моментальные снимки сохраняются в перемещенной базе данных. Если моментальный снимок не получает обновленные данные после перемещения базы данных, отмените параметры моментального снимка в диспетчере отчетов, нажмите кнопку **Применить** , чтобы сохранить изменения, повторно создайте расписание и еще раз нажмите кнопку **Применить** , сохранив изменения.  
   
 -   Временные данные отчета и пользовательского сеанса, хранящиеся в базе данных reportservertempdb, при перемещении этой базы данных сохраняются.  
   
@@ -37,8 +44,8 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  Шаги, описанные в этом подразделе, следует выполнять только в том случае, если перемещение базы данных сервера отчетов является единственным изменением, которое вносится в текущую установку. При миграции всей установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (то есть для перемещения базы данных и изменения удостоверения службы Windows сервера отчетов, которая использует эту базу данных) необходима повторная настройка соединения и сброс ключа шифрования.  
   
-## Отсоединение и присоединение баз данных сервера отчетов  
- Если сервер отчетов может быть переведен в режим «вне сети», можно отсоединить базы данных, чтобы переместить их на тот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который требуется использовать. При таком подходе разрешения в базах данных сохраняются. Если используется база данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , необходимо переместить ее на другой экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . После перемещения баз данных следует заново настроить соединение сервера отчетов с базой данных сервера отчетов. Если при масштабном развертывании запущено несколько серверов отчетов, необходимо заново настроить подключение к базе данных сервера отчетов для каждого сервера отчетов, входящего в конфигурацию.  
+## <a name="detaching-and-attaching-the-report-server-databases"></a>Отсоединение и присоединение баз данных сервера отчетов  
+ Если сервер отчетов может быть переведен в режим «вне сети», можно отсоединить базы данных, чтобы переместить их на тот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который требуется использовать. При таком подходе разрешения в базах данных сохраняются. При использовании базы данных SQL Server, необходимо переместить его на другой экземпляр SQL Server. После перемещения баз данных следует заново настроить соединение сервера отчетов с базой данных сервера отчетов. Если при масштабном развертывании запущено несколько серверов отчетов, необходимо заново настроить подключение к базе данных сервера отчетов для каждого сервера отчетов, входящего в конфигурацию.  
   
  Для перемещения баз данных выполните следующие шаги:  
   
@@ -70,10 +77,10 @@ caps.handback.revision: 10
   
 14. Перезапустите службу сервера отчетов.  
   
-## Резервное копирование и восстановление из копии баз данных сервера отчетов  
+## <a name="backing-up-and-restoring-the-report-server-databases"></a>Резервное копирование и восстановление из копии баз данных сервера отчетов  
  Если сервер отчетов нельзя перевести в режим «вне сети», для перемещения его баз данных можно использовать резервное копирование и восстановление. Чтобы выполнить резервное копирование и восстановление, необходимо использовать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . После восстановления баз данных следует настроить сервер отчетов, чтобы он использовал базу данных на новом экземпляре сервера. Дополнительные сведения см. в инструкциях, приведенных в конце этого подраздела.  
   
-### Использование для резервного копирования баз данных сервера отчетов инструкций BACKUP и COPY_ONLY  
+### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Использование для резервного копирования баз данных сервера отчетов инструкций BACKUP и COPY_ONLY  
  При резервном копировании баз данных установите аргумент COPY_ONLY. Убедитесь, что создаются резервные копии как баз данных, так и файлов журналов.  
   
 ```  
@@ -136,7 +143,7 @@ BACKUP LOG ReportServerTempDB
    WITH COPY_ONLY  
 ```  
   
-### Использование для перемещения баз данных сервера отчетов инструкций RESTORE и MOVE  
+### <a name="using-restore-and-move-to-relocate-the-report-server-databases"></a>Использование для перемещения баз данных сервера отчетов инструкций RESTORE и MOVE  
  При восстановлении баз данных из копии обязательно включите аргумент MOVE, чтобы можно было указать путь. Для первоначального восстановления используйте аргумент NORECOVERY, это позволяет сохранить базу данных в состоянии RESTORING и даст время для просмотра резервных копий журналов, чтобы определить, какой из них следует восстанавливать. В качестве последнего шага следует повторить операцию RESTORE с аргументом RECOVERY.  
   
  В аргументе MOVE используется логическое имя файла данных. Чтобы определить логическое имя, выполните следующую инструкцию: `RESTORE FILELISTONLY FROM DISK='C:\ReportServerData.bak';`  
@@ -197,7 +204,7 @@ RESTORE DATABASE ReportServerTempDB
 GO  
 ```  
   
-### Настройка подключения к базе данных сервера отчетов  
+### <a name="how-to-configure-the-report-server-database-connection"></a>Настройка подключения к базе данных сервера отчетов  
   
 1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к серверу отчетов.  
   
@@ -214,16 +221,17 @@ GO
 7.  Нажмите кнопку **Далее** , затем — кнопку **Готово**.  
   
 > [!NOTE]  
->  Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует, чтобы экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включал роль **RSExecRole**. Создание роли, регистрация имени входа и назначения ролей происходят, когда с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается подключение к базе данных сервера отчетов. При иных подходах к настройке соединения (особенно если используется программа командной строки rsconfig.exe) сервер отчетов окажется в неработоспособном состоянии. Чтобы сервер отчетов стал доступным, возможно, придется записать код инструментария WMI. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
-  
-## См. также  
- [Создание роли RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
- [Запуск и остановка службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Программа rsconfig (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+>  Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует, чтобы экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включал роль **RSExecRole** . Создание роли, регистрация имени входа и назначения ролей происходят, когда с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается подключение к базе данных сервера отчетов. При иных подходах к настройке соединения (особенно если используется программа командной строки rsconfig.exe) сервер отчетов окажется в неработоспособном состоянии. Чтобы сервер отчетов стал доступным, возможно, придется записать код инструментария WMI. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+
+## <a name="next-steps"></a>Следующие шаги
+
+[Создание RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
+[Запуск и остановка службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Настройка учетной записи автоматического выполнения](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Программа rsconfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[Настройка и управление ключами шифрования](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[База данных сервера отчетов](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

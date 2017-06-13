@@ -1,7 +1,7 @@
 ---
 title: "Удаление столбцов из таблицы | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>Удаление столбцов из таблицы
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  В **обозревателе объектов**щелкните правой кнопкой мыши таблицу, из которой необходимо удалить столбцы, и выберите пункт **Удалить**.  
+2.  В **обозревателя объектов**, найдите таблицу, из которой необходимо удалить столбцы и разверните предоставлять имена столбцов. 
+
+3.  Щелкните правой кнопкой мыши столбец, который требуется удалить и выберите пункт **удалить**.  
   
 3.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  Дополнительные примеры см. в статье [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ##  <a name="FollowUp"></a>  
+

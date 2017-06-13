@@ -1,35 +1,40 @@
 ---
-title: "Форматирование чисел и дат (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: "Форматирование чисел и дат (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Форматирование чисел и дат (построитель отчетов и службы SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Форматирование чисел и дат (построитель отчетов и службы SSRS)
   Формат чисел и дат в областях данных можно задать, выбрав формат на странице **Число** в диалоговом окне **Свойства** соответствующей области данных.  
   
- Чтобы задать строки форматирования внутри текстового поля в отчете, выберите форматируемый элемент отчета, щелкните правой кнопкой мыши, выберите **Свойства текстового поля** и щелкните **Число**. Отдельные ячейки в таблице или матричные области данных можно отформатировать аналогичным способом, поскольку ячейки таблицы или матрицы представляют собой отдельные текстовые поля.  
+ Чтобы задать строки форматирования внутри текстового поля в отчете, выберите форматируемый элемент отчета, щелкните правой кнопкой мыши, выберите **Свойства текстового поля**и щелкните **Число**. Отдельные ячейки в таблице или матричные области данных можно отформатировать аналогичным способом, поскольку ячейки таблицы или матрицы представляют собой отдельные текстовые поля.  
   
  Диаграммная область данных обычно используется для отображения дат на оси категорий (x) и значений на оси значений (y). Чтобы задать формат для диаграммы, щелкните правой кнопкой мыши ось и выберите **Свойства оси**. На оси значений можно задать формат только для чисел. Дополнительные сведения см. в разделе [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Замечания по форматированию чисел и дат  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>Замечания по форматированию чисел и дат  
  Перед форматированием чисел и дат в отчете необходимо учесть следующее.  
   
 -   По умолчанию числа форматируются на основании региональных настроек клиентского компьютера. Используйте строки форматирования для указания способа отображения чисел, чтобы формат соответствовал региональным настройкам пользователя, просматривающего отчет.  
@@ -56,7 +61,7 @@ caps.handback.revision: 6
   
 -   Если выбрать в группе **Категория** значения **Валюта** и установить флажок **Показывать значения в**, то для отображения чисел в финансовых форматов можно выбрать значение **Тысячи**, **Миллионы**или **Миллиарды** . Например, если значение поля равно 1 789 905 394, выбрано значение **Миллиарды** и указаны 2 десятичных разряда, то в отчете отображается значение 1,78.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

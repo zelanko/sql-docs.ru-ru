@@ -1,47 +1,52 @@
 ---
-title: "Публикация отчетов на сервере отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "рабочие среды [службы Reporting Services]"
-  - "проекты отчетов [службы Reporting Services]"
-  - "конфигурация отладки [службы Reporting Services]"
-  - "публикация отчета [службы Reporting Services]"
-  - "публикация отчетов [службы Reporting Services]"
-  - "свойства отчета [службы Reporting Services]"
-  - "конструктор отчетов [службы Reporting Services], развертывание отчетов"
-  - "рабочая конфигурация [службы Reporting Services]"
-  - "публикация отчетов [службы Reporting Services], рабочие среды"
-  - "конфигурация DebugLocal [службы Reporting Services]"
-  - "развертывание [службы Reporting Services], отчеты"
-  - "конструктор отчетов [службы Reporting Services], публикация отчетов"
+title: "Публикация отчетов на сервере отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 06/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- production environments [Reporting Services]
+- report projects [Reporting Services]
+- Debug configuration [Reporting Services]
+- report publishing [Reporting Services]
+- publishing reports [Reporting Services]
+- report properties [Reporting Services]
+- Report Designer [Reporting Services], deploying reports
+- Production configuration [Reporting Services]
+- publishing reports [Reporting Services], production environments
+- DebugLocal configuration [Reporting Services]
+- deploying [Reporting Services], reports
+- Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 47
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 47
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Публикация отчетов на сервере отчетов
-  После создания и проверки отчета или набора отчетов можно воспользоваться функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект "Сервер отчетов", включающий несколько отчетов и источников данных. Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует термин *развернуть* вместо термина *опубликовать*. Два этих термина взаимозаменяемы.  
+# <a name="publishing-reports-to-a-report-server"></a>Публикация отчетов на сервере отчетов
+  После создания и проверки отчета или набора отчетов можно воспользоваться функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект "Сервер отчетов", включающий несколько отчетов и источников данных. Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует термин *развернуть*вместо термина *опубликовать*. Два этих термина взаимозаменяемы.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] предусматривает конфигурации проекта для управления публикацией отчета. Конфигурация определяет местоположение сервера отчетов, версию служб SQL Server Reporting Services, установленных на сервере отчетов, перезапись источников данных, опубликованных на сервере отчетов, и т. д. Например, конфигурацию "Отладка" можно опубликовать на сервере, отличном от сервера, на котором находится конфигурация "Выпуск". Помимо использования конфигураций, имеющихся в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , можно создавать дополнительные конфигурации.  
  
-## Требования для публикации
+## <a name="requirements-to-publish"></a>Требования для публикации
 Разрешение определяется параметрами безопасности на основе ролей, заданными администратором сервера отчетов. Разрешения на операции публикации обычно предоставляются через роль **Издатель**.  
   
-## Конфигурации проекта  
+## <a name="project-configurations"></a>Конфигурации проекта  
  Среда создания отчетов может иметь несколько серверов отчетов и разные установленные версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно создать несколько конфигураций и использовать одну из них в зависимости от сценария развертывания. Конфигурации проекта включают свойства для построения отчетов, например папку, в которой временно сохраняются отчеты о сборке и способах решения проблем сборки. Конфигурации также имеют свойства, используемые для обозначения местоположения и версии сервера отчетов, папок на сервере отчетов.  
   
- По умолчанию среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] предоставляет три конфигурации проекта: **DebugLocal**, **Debug** и **Release**. Конфигурация по умолчанию — DebugLocal. Как правило, конфигурация DebugLocal служит для просмотра отчетов в локальном окне просмотра, конфигурация Debug — для публикации отчетов на тестовом сервере, а конфигурация Release — для публикации отчетов на рабочем сервере. Раскрывающийся список конфигураций решения на стандартной панели инструментов отображает активную конфигурацию. Для использования другой конфигурации выберите ее из списка.  
+ По умолчанию среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] предоставляет три конфигурации проекта: **DebugLocal**, **Debug**и **Release**. Конфигурация по умолчанию — DebugLocal. Как правило, конфигурация DebugLocal служит для просмотра отчетов в локальном окне просмотра, конфигурация Debug — для публикации отчетов на тестовом сервере, а конфигурация Release — для публикации отчетов на рабочем сервере. Раскрывающийся список конфигураций решения на стандартной панели инструментов отображает активную конфигурацию. Для использования другой конфигурации выберите ее из списка.  
   
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   
@@ -50,13 +55,13 @@ caps.handback.revision: 47
  + [Развертывание и поддержка версий в SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)
  + [Задание свойств развертывания для проектов Reporting Services в SSDT](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
   
-## Публикация всех отчетов в проекте  
+## <a name="to-publish-all-reports-in-a-project"></a>Публикация всех отчетов в проекте  
   
-В меню **Сборка** выберите пункт **Развернуть \<имя проекта отчета>**. Или в обозревателе решений щелкните правой кнопкой мыши проект отчета и выберите команду **Развернуть**. Можно просмотреть состояние процесса публикации в окне вывода.  
+На **построения** меню, нажмите кнопку **развернуть \<имя проекта отчета >**. Или в обозревателе решений щелкните правой кнопкой мыши проект отчета и выберите команду **Развернуть**. Можно просмотреть состояние процесса публикации в окне вывода.  
   
 При развертывании проекта «Сервер отчетов» будут развернуты и общие источники данных проекта отчета. Все отчеты разворачиваются с использованием одной конфигурации проекта: на одном сервере отчетов, в одной папке сервера и т. д. Публикацию отчетов на разных серверах необходимо либо выполнять последовательно, либо включить в проект «Сервер отчетов» только необходимые отчеты. Решение может включать несколько проектов сервера отчетов, а использование нескольких проектов поможет облегчить процесс управления развертыванием отчетов, так как дает возможность использовать разные конфигурации для развертывания разных проектов. 
   
-## Публикация одного отчета  
+## <a name="to-publish-a-single-report"></a>Публикация одного отчета  
   
 В обозревателе решений щелкните правой кнопкой мыши отчет, а затем выберите пункт **Развернуть**. Можно просмотреть состояние процесса публикации в окне вывода.  
   
@@ -68,9 +73,10 @@ caps.handback.revision: 47
  Необходимо указать URL-адрес целевого сервера на сервере отчетов и, возможно, изменить папки по умолчанию, в которых буду разворачиваться отчеты и общие источники данных.  
 
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
+

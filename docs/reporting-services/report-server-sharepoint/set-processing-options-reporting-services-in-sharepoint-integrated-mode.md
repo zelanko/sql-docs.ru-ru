@@ -1,26 +1,31 @@
 ---
-title: "установить параметры обработки (службы Reporting Services в режиме интеграции с SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "интеграция с SharePoint [службы Reporting Services], управление содержимым"
-  - "моментальные снимки [службы Reporting Services], создание"
+title: "Задание параметров обработки (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], content management
+- snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# установить параметры обработки (службы Reporting Services в режиме интеграции с SharePoint)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>установить параметры обработки (службы Reporting Services в режиме интеграции с SharePoint)
   Можно установить параметры обработки для отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , определяющие время обработки данных. Также при обработке отчета можно определить интервал ожидания и задать параметры, определяющие порядок создания журнала отчета для текущего отчета.  
   
 -   Отчет можно выполнять как моментальный снимок отчета, чтобы предотвратить его выполнение в произвольные моменты времени (например, во время резервного копирования по расписанию). Обычно моментальный снимок отчета создается и в дальнейшем обновляется по расписанию, что позволяет точно планировать время, когда будет выполняться обработка отчета и данных. Если отчет основан на запросах, требующих длительного выполнения, или на запросах, использующих данные из источника данных, доступ к которому в определенные часы желательно запретить, отчет следует выполнять как моментальный снимок.  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **В этом разделе:**  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 15
   
 2.  Нажмите стрелку вниз и выберите **Управление параметрами обработки**.  
   
-3.  Чтобы использовать значение, указанное на уровне сервера отчетов, необходимо в списке **Время ожидания обработки** выбрать **Использовать параметры по умолчанию для сайта**. В противном случае, если необходимо указать отсутствие истечения времени ожидания или указать другое значение времени ожидания, выберите **Не ограничивать время обработки отчета** или **Максимальное время обработки отчета (в секундах)**.  
+3.  Чтобы использовать значение, указанное на уровне сервера отчетов, необходимо в списке **Время ожидания обработки**выбрать **Использовать параметры по умолчанию для сайта** . В противном случае, если необходимо указать отсутствие истечения времени ожидания или указать другое значение времени ожидания, выберите **Не ограничивать время обработки отчета** или **Максимальное время обработки отчета (в секундах)** .  
   
 ##  <a name="bkmk_set_report_history"></a> Настройка параметров и ограничений журнала отчета  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 15
   
 1.  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в подразделе "Свойства get и set базы данных приложения службы отчетов" раздела [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

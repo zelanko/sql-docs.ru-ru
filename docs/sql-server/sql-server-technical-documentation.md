@@ -1,5 +1,5 @@
 ---
-title: "Техническая документация по SQL Server 2016 | Документация Майкрософт"
+title: "Техническая документация по SQL Server | Документы Microsoft"
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -20,43 +20,38 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 caps.latest.revision: 106
-author: BYHAM
-ms.author: rickbyh
+author: craigg-msft
+ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 034e10f491c3c327d6a7b2a044f57121636c3c06
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 6ba40fbd036ee6476d7eb3439a5d9e816e79651d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Техническая документация по SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+ > Содержимое, связанное с предыдущих версий SQL Server, в разделе [установки для SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Документация по установке, настройке и использованию SQL Server. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Раздел о языке [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] см. в [справочнике по языку](../t-sql/language-reference.md).
 
-**SQL Server vNext**
+**SQL Server 2017 г.**
 
-Заметки о последнем выпуске см. в разделе [Заметки о выпуске SQL Server vNext](../sql-server/sql-server-vnext-release-notes.md).
-
-Актуальные сведения о новых возможностях см. в разделе [Что нового в SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md).
+- [Заметки о выпуске SQL Server 2017 г.](../sql-server/sql-server-2017-release-notes.md)
+- [Новые возможности SQL Server 2017 г.](../sql-server/what-s-new-in-sql-server-2017.md)
  
 **SQL Server 2016:**
  
- [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
-
-[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
+- [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
  **Оцените SQL Server!**    
-    
- - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)    
-    
-- **[Запустите виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**.    
-    
--  **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
-    
-  
-    
+ - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+ - **[Запустите виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**.    
+ - **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
+      
 ## <a name="sql-server-technologies"></a>Технологии SQL Server    
     
 |||    
@@ -69,7 +64,20 @@ ms.lasthandoff: 04/11/2017
 |![Службы Analysis Services](../sql-server/media/analysis-services.png "Службы Analysis Services")|**[Службы Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> Службы[!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] — это платформа аналитических данных и набор средств для бизнес-аналитики на личном уровне, уровне рабочей группы и организации. Серверы и клиентские конструкторы поддерживают стандартные решения OLAP, новые решения для создания табличных моделей, а также самостоятельную аналитику и совместную работу с помощью [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel и среды SharePoint Server. Службы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также включают интеллектуальный анализ данных, который позволяет выявлять закономерности и связи на основе больших объемов данных.|    
 |![Службы репликации](../sql-server/media/replication-services.png "Службы репликации")|**[Репликация](../relational-databases/replication/sql-server-replication.md)**<br /><br /> Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности. Благодаря репликации данные можно размещать в различных местах, обеспечивая возможность доступа к ним удаленных и мобильных пользователей по локальным или глобальным сетям, посредством коммутируемых и беспроводных соединений, а также через Интернет.|    
 |![Службы Reporting Services](../sql-server/media/reporting-services.png "Службы Reporting Services")|**[Службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Службы Reporting Services предлагают средства создания корпоративных отчетов с поддержкой веб-интерфейса, которые позволяют включать в отчеты данные из различных источников, публиковать отчеты в разнообразных форматах, а также централизованно управлять безопасностью и подписками.|    
-     
+
+    
+## <a name="earlier-sql-server-versions"></a>Предыдущие версии SQL Server
+- [Электронная документация по электронной документации по SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [Установка SQL Server 2014 Express и других, более ранних версий SQL Server](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Выражаем благодарность [Скотту Хэнсельману](http://www.hanselman.com/) (Scott Hanselman) за сбор всех ссылок на пакеты установщика**.)  
+- [Техническая документация по SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [Документация по SQL Server 2008 R2](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [Техническая документация по SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [Архивная документация по SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+
+**Образцы баз данных**  
+- [Образец базы данных Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [Образцы баз данных AdventureWorks и скрипты для SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [Образцы SQL Server на GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>Дополнительные сведения   
 + [Диспетчер конфигурации SQL Server](../relational-databases/sql-server-configuration-manager.md)
@@ -78,8 +86,6 @@ ms.lasthandoff: 04/11/2017
 + [Установка средств управления SQL Server со средой SSMS](https://msdn.microsoft.com/library/bb500441.aspx) 
 + [SQL Server Data Tools в Visual Studio 2015](https://msdn.microsoft.com/mt186501.aspx)
 + [Видеоролики, примеры и ресурсы сообщества](https://msdn.microsoft.com/library/dn237258.aspx)
-+ [Знакомство с SQL Server 2016](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx?WT.srch=1&WT.mc_id=SEM_%5B_uniqid%5D&utm_source=Bing&utm_medium=CPC&utm_term=SQL%20Server%202016&utm_campaign=Data_Management)  
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

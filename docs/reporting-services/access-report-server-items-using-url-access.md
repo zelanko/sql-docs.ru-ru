@@ -1,32 +1,37 @@
 ---
-title: "Доступ к элементам сервера отчетов с использованием URL-адреса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ссылки элементов URL для доступа к серверу отчетов"
-  - "доступ по URL-адресу [службы Reporting Services], серверы отчетов"
+title: "Доступ к элементам сервера отчетов с использованием URL-адрес | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- referencing URL items for report server access
+- URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 caps.latest.revision: 40
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 40
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b05886a719709061a7d2e5d98b1d5560d24dc839
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Доступ к элементам сервера отчетов с использованием URL-адреса
-  В этом разделе описываются методы доступа к элементам каталога различных типов в базе данных сервера отчетов или на сайте SharePoint с использованием строки параметра *rs:Command*=*Value*. Указывать эту строку параметра не обязательно. Если она не указана, сервер отчетов оценивает тип элемента и выбирает подходящее значение параметра автоматически. Однако использование строки *rs:Command*=*Value* в URL-адресе улучшает производительность сервера отчетов.  
+# <a name="access-report-server-items-using-url-access"></a>Доступ к элементам сервера отчетов с использованием URL-адреса
+  В этом разделе описываются методы доступа к элементам каталога различных типов в базе данных сервера отчетов или на сайте SharePoint с использованием строки параметра*rs:Command*=*Value*. Указывать эту строку параметра не обязательно. Если она не указана, сервер отчетов оценивает тип элемента и выбирает подходящее значение параметра автоматически. Однако использование строки *rs:Command*=*Value* в URL-адресе улучшает производительность сервера отчетов.  
   
  Обратите внимание на синтаксис прокси `_vti_bin` в приведенных далее примерах. Дополнительные сведения об использовании этого синтаксиса см. в разделе [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md).  
   
-## Доступ к отчету  
- Чтобы открыть отчет в браузере, следует использовать параметр *rs:Command*=*Render*. Например:  
+## <a name="access-a-report"></a>Доступ к отчету  
+ Чтобы открыть отчет в браузере, следует использовать параметр *rs:Command*=*Render* . Например:  
   
  **Собственный** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
@@ -35,15 +40,15 @@ caps.handback.revision: 40
 > [!TIP]  
 >  Важно, чтобы URL-адрес содержал синтаксис прокси `_vti_bin` для отправки запроса с помощью центра администрирования SharePoint и прокси-сервера HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Прокси-сервер добавляет в HTTP-запрос контекст, необходимый для обеспечения правильного выполнения отчета для серверов отчетов в режиме интеграции с SharePoint.  
   
-## Доступ к ресурсу  
- Для доступа к ресурсу следует использовать параметр *rs:Command*=*GetResourceContents*. Если ресурс совместим с браузером (например, если это изображение), то он открывается в браузере. В противном случае будет предложено открыть или сохранить файл или ресурс на диск.  
+## <a name="access-a-resource"></a>Доступ к ресурсу  
+ Для доступа к ресурсу следует использовать параметр *rs:Command*=*GetResourceContents* . Если ресурс совместим с браузером (например, если это изображение), то он открывается в браузере. В противном случае будет предложено открыть или сохранить файл или ресурс на диск.  
   
  **Собственный** `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
  **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
-## Доступ к источнику данных  
- Для доступа к источнику данных следует использовать параметр *rs:Command*=*GetDataSourceContents*. Если браузер поддерживает XML, то определение источника данных отображается при условии, что текущий пользователь прошел проверку подлинности и обладает разрешением **Read Contents** для источника данных. Например:  
+## <a name="access-a-data-source"></a>Доступ к источнику данных  
+ Для доступа к источнику данных следует использовать параметр *rs:Command*=*GetDataSourceContents* . Если браузер поддерживает XML, то определение источника данных отображается при условии, что текущий пользователь прошел проверку подлинности и обладает разрешением **Read Contents** для источника данных. Например:  
   
  **Собственный** `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
@@ -65,8 +70,8 @@ caps.handback.revision: 40
   
  Строка соединения возвращается в зависимости от параметра **SecureConnectionLevel** для сервера отчетов. Дополнительные сведения о параметре **SecureConnectionLevel** см. в разделе [Using Secure Web Service Methods](../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
-## Доступ к содержимому папки  
- Для доступа к содержимому папки следует использовать параметр *rs:Command*=*GetChildren*. Будет возвращена универсальная страница для переходов по папкам, содержащая вложенные папки, отчеты, источники данных и ресурсы запрошенной папки. Например:  
+## <a name="access-the-contents-of-a-folder"></a>Доступ к содержимому папки  
+ Для доступа к содержимому папки следует использовать параметр *rs:Command*=*GetChildren* . Будет возвращена универсальная страница для переходов по папкам, содержащая вложенные папки, отчеты, источники данных и ресурсы запрошенной папки. Например:  
   
  **Собственный** `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 40
   
  Отображаемый пользовательский интерфейс аналогичен режиму просмотра каталогов, используемому на сервере [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS. Номер версии сервера отчетов, включая номер построения, также выводится под списком папок.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
  [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
   

@@ -1,30 +1,41 @@
 ---
-title: "Диспетчер предупреждений данных для оповещения администраторов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "управление, предупреждения"
-  - "управление, предупреждения данных"
+title: "Диспетчер предупреждений данных для администраторов предупреждений | Документы Microsoft"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- managing, alerts
+- managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 caps.latest.revision: 22
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 21
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c9d88d14b1f67a6d8da584349062de51e75ebf02
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Диспетчер предупреждений данных для оповещения администраторов
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет диспетчер предупреждений об изменении данных, позволяющий администраторам предупреждений SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.  
-  
- ![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Диспетчер предупреждений для администраторов сайта SharePoint")  
-  
+# <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет диспетчер предупреждений об изменении данных, позволяющий администраторам предупреждений SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.
+
+![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "диспетчер предупреждений для администраторов сайта SharePoint")
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+
  Если на веб-сайте включены предупреждения об изменении данных, то создаются две страницы SharePoint, MyDataAlerts.aspx и SiteDataAlerts.aspx и добавляются к сайту SharePoint. Страница SiteDataAlerts.aspx представляет собой диспетчер предупреждений об изменении данных для администраторов предупреждений. Администраторы предупреждений могут открывать диспетчер предупреждений об изменении данных со страницы «Настройки сайта» SharePoint. Администраторы предупреждений должны иметь разрешение на управление предупреждениями SharePoint для запуска диспетчера предупреждений об изменении данных.  
   
  Диспетчер предупреждений об изменении данных можно также открыть непосредственно с помощью URL-адреса. Синтаксис этого URL-адреса является следующим:  
@@ -37,7 +48,7 @@ caps.handback.revision: 21
 ##  <a name="ViewingAlerts"></a> Просмотр сведений о предупреждениях об изменении данных  
  Если службы Reporting Services установлены и настроены в SharePoint, то на странице «Настройка сайта SharePoint» будут параметры **Службы Reporting Services** . Чтобы открыть диспетчер предупреждений об изменении данных, администратор предупреждений должен нажать кнопку **Управление предупреждениями об изменении данных** в службе Reporting Service. На следующем рисунке показано, как открыть диспетчер предупреждений об изменении данных со страницы «Настройки сайта».  
   
- ![Reporting Services section of Site Settings page](../reporting-services/media/rs-sitesettings.gif "Reporting Services section of Site Settings page")  
+ ![Раздел «настройки сайта» служб Reporting](../reporting-services/media/rs-sitesettings.gif "раздел «настройки сайта» служб Reporting Services")  
   
  Диспетчер предупреждений об изменении данных содержит таблицу, в которой перечисляются имя предупреждения, имя отчета, имя владельца отчета, сколько раз предупреждающее сообщение было отправлено, время последнего запуска предупреждения, время последнего изменения определения предупреждения, а также состояние сообщения с предупреждением. Если предупреждение не удалось создать или отправить, в столбце «Состояние» содержатся сведения об ошибке, которые помогают устранить проблему. Дополнительные сведения см. в статье [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
@@ -47,14 +58,13 @@ caps.handback.revision: 21
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Лорен Джонсон|4|6/12/2011|6/1/2011|Последнее предупреждение выполнено успешно; предупреждение было отправлено.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|Последнее предупреждение выполнено успешно, но данные остались без изменения и предупреждение не было отправлено.|  
-|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<сообщение об ошибке>Файл журнала содержит подробные сведения об ошибке. Ссылается на запись журнала с идентификатором \<GUID>.|  
+|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<сообщение об ошибке > файл журнала содержит подробные сведения об ошибке. Ссылается запись журнала с идентификатором: \<GUID >.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Предупреждение создано.|  
   
  Дополнительные сведения см. в статье [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  Можно просмотреть все предупреждения, созданные пользователями сайта. Выберите пользователя, затем выберите для него режим просмотра: либо всех его предупреждений, либо только предупреждений, относящихся к конкретному отчету.  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="DeleteAlerts"></a> Удаление предупреждений об изменении данных  
  Удалить определения предупреждений можно из диспетчера предупреждений об изменении данных. Каждое определение предупреждения об изменении данных имеет владельца, которым является создавший его пользователь SharePoint. Владельцы могут удалять только собственные определения предупреждений. Дополнительные сведения см. в разделе [Управление предупреждениями данных в диспетчере предупреждений данных](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
@@ -63,16 +73,14 @@ caps.handback.revision: 21
   
  После того как определение предупреждения будет удалено, дальнейшая отправка предупреждений прекращается. Тем не менее при запросе к базе данных предупреждений может оказаться, что определение предупреждения все еще существует. Служба предупреждений выполняет очистку по расписанию и окончательно удаляет определение предупреждения при следующей очистке. Значение интервала очистки по умолчанию составляет 20 минут. Этот и другие интервалы выполнения очистки являются настраиваемыми. Дополнительные сведения см. в разделе [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="HowTo"></a> Связанные задачи  
  В этом разделе перечислены процедуры, которые показывают, как управлять предупреждениями.  
   
--   [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
-  
- ![Значок стрелки, используемый со ссылкой «В начало»](../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
-  
-## См. также  
- [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+-   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+
+## <a name="see-also"></a>См. также
+
+[Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

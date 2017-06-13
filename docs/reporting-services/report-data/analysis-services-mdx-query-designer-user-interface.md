@@ -1,30 +1,35 @@
 ---
-title: "Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10012"
-  - "sql13.rtp.rptdesigner.dataview.asquerydesigner.f1"
-helpviewer_keywords: 
-  - "MDX [службы Reporting Services], создание наборов данных"
-  - "конструкторы запросов [службы Reporting Services]"
+title: "Службы Analysis Services MDX пользовательский интерфейс конструктора запросов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10012"
+- sql13.rtp.rptdesigner.dataview.asquerydesigner.f1
+helpviewer_keywords:
+- MDX [Reporting Services], creating datasets
+- query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 caps.latest.revision: 38
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 38
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f8838c9793cfc4a8e38bea3f0f27e702dd27e4d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения запросов многомерных выражений и запросов расширений интеллектуального анализа данных для источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Данный раздел посвящен конструктору запросов многомерных выражений. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).  
+# <a name="analysis-services-mdx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения запросов многомерных выражений и запросов расширений интеллектуального анализа данных для источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Данный раздел посвящен конструктору запросов многомерных выражений. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).  
   
  Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель метаданных, из которой можно перетаскивать элементы с выбранного куба для построения запроса многомерных выражений, который извлекает данные в ходе обработки отчета.  
   
@@ -34,12 +39,12 @@ caps.handback.revision: 38
 > [!NOTE]  
 >  Импорт запроса многомерных выражений из файла не поддерживается.  
   
-## Графический конструктор запросов многомерных выражений: режим конструктора  
+## <a name="graphical-mdx-query-designer-in-design-mode"></a>Графический конструктор запросов многомерных выражений: режим конструктора  
  При изменении запроса многомерных выражений для набора данных отчета графический конструктор запросов многомерных выражений откроется в режиме конструктора.  
   
  На следующем рисунке отмечены панели в режиме конструктора.  
   
- ![Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора")  
+ ![Конструктор запросов многомерных Выражений служб Analysis, конструкторе](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "конструктор запросов многомерных Выражений служб Analysis Services, режим конструктора")  
   
  В следующей таблице перечисляются панели, доступные в этом режиме.  
   
@@ -51,43 +56,43 @@ caps.handback.revision: 38
 |Панель «Фильтр»|Используется для выбора измерений и относящихся к ним иерархий для фильтрации данных источника и ограничения данных, возвращенных отчету.|  
 |Панель «Данные»|Отображает заголовки столбцов для результирующего набора в ходе перетаскивания элементов с панели «Метаданные» и панели «Вычисляемые элементы». Автоматически обновляет результирующий набор, если выбрана кнопка **Автовыполнение** . .|  
   
- Можно перетаскивать измерения, меры и ключевые показатели эффективности с панели «Метаданные», а вычисляемые элементы с панели «Вычисляемые элементы» на панель «Данные». На панели «Фильтр» можно выбрать измерения и относящиеся к ним иерархии, а также задать критерии фильтра для ограничения данных, доступных запросу. При выборе переключателя **Автовыполнение** (![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "Автоматическое выполнение запроса")) на панели инструментов конструктор запросов выполняет запрос каждый раз при помещении объекта метаданных на панель "Данные". Запрос можно выполнить вручную, нажав кнопку **Запуск** (![Выполнение запроса](../../reporting-services/report-data/media/rsqdicon-run.png "Выполнение запроса")) на панели инструментов.  
+ Можно перетаскивать измерения, меры и ключевые показатели эффективности с панели «Метаданные», а вычисляемые элементы с панели «Вычисляемые элементы» на панель «Данные». На панели «Фильтр» можно выбрать измерения и относящиеся к ним иерархии, а также задать критерии фильтра для ограничения данных, доступных запросу. Если **Автовыполнение** (![автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса")) был выбран переключатель на панели инструментов, конструктор запросов выполняет запрос каждый раз при помещении объекта метаданных на панель «данные». Вы можете вручную запустить запрос с использованием **запуска** (![выполните запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "выполните запрос")) на панели инструментов.  
   
  При создании запроса многомерных выражений в данном режиме следующие дополнительные свойства автоматически включаются в запрос:  
   
- **Свойства элемента** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
+ **Свойства элемента** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
   
- **Свойства ячейки** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
+ **Свойства ячейки** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
   
  Чтобы включить собственные дополнительные свойства, необходимо вручную изменить запрос многомерных выражений в режиме запроса.  
   
-### Панель инструментов графического конструктора запросов многомерных выражений в режиме конструктора  
+### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Панель инструментов графического конструктора запросов многомерных выражений в режиме конструктора  
  Панель инструментов конструктора запросов содержит кнопки, которые помогают создавать запросы многомерных выражений с помощью графического интерфейса. В следующей таблице перечислены кнопки и их функции.  
   
 |Кнопка|Description|  
 |------------|-----------------|  
 |**Редактировать как текст**|Не включено для данного типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Change to MDX query view](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Перейти к многомерному выражению командного типа.|  
-|![Переключение в режим DMX-запросов](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.png "Переключение в режим DMX-запросов")|Перейти к расширению интеллектуального анализа данных командного типа.|  
-|![Refresh result data](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Refresh result data")|Обновление метаданных из источника данных.|  
-|![Добавление вычисляемого элемента](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "Добавление вычисляемого элемента")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
-|![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "Переключатель для просмотра пустых ячеек")|Переключение между отображением и скрытием пустых ячеек на панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
-|![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "Автоматическое выполнение запроса")|Автоматически выполнять запрос и отображать результат при каждом изменении. Результаты отображаются в панели «Данные».|  
-|![Кнопка «Показать агрегаты»](../../reporting-services/report-data/media/rsqdicon-showaggregations.png "Кнопка «Показать агрегаты»")|Показать статистические выражения на панели «Данные».|  
-|![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.png "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
-|![Значок диалогового окна «Параметры запроса»](../../reporting-services/report-data/media/iconqueryparameter.png "Значок диалогового окна «Параметры запроса»")|Отображает диалоговое окно **Параметры запроса** . При указании значений для параметра запроса автоматически создается аналогичный параметр отчета с тем же именем. В качестве значения для параметра запроса устанавливается выражение, ссылающееся на параметр отчета.|  
-|![Prepare Query button](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "Prepare Query button")|Подготовить запрос.|  
-|![Выполнение запроса](../../reporting-services/report-data/media/rsqdicon-run.png "Выполнение запроса")|Выполнить запрос и показать результаты на панели «Данные».|  
-|![Cancel the query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancel the query")|Отмена запроса.|  
-|![Переключение в режим конструктора](../../reporting-services/media/rsqdicon-designmode.png "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запроса.|  
+|![Переключитесь в режим запроса многомерных Выражений](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "переключитесь в режим запроса многомерных Выражений")|Перейти к многомерному выражению командного типа.|  
+|![Переключитесь в режим DMX-запросов](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "переключитесь в режим DMX-запросов")|Перейти к расширению интеллектуального анализа данных командного типа.|  
+|![Обновление результирующих данных](../../reporting-services/report-data/media/rsqdicon-refresh.gif "обновление результирующих данных")|Обновление метаданных из источника данных.|  
+|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
+|![Переключение для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "переключателя для отображения пустых ячеек")|Переключение между отображением и скрытием пустых ячеек на панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
+|![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса")|Автоматически выполнять запрос и отображать результат при каждом изменении. Результаты отображаются в панели «Данные».|  
+|![«Показать агрегаты»](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "кнопку Показать агрегаты")|Показать статистические выражения на панели «Данные».|  
+|![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
+|![Значок диалогового окна параметров запроса](../../reporting-services/report-data/media/iconqueryparameter.gif "значок диалоговое окно «Параметры запроса»")|Отображает диалоговое окно **Параметры запроса** . При указании значений для параметра запроса автоматически создается аналогичный параметр отчета с тем же именем. В качестве значения для параметра запроса устанавливается выражение, ссылающееся на параметр отчета.|  
+|![Подготовка запроса кнопка](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "кнопку подготовить запрос")|Подготовить запрос.|  
+|![Выполните запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "выполнения запроса")|Выполнить запрос и показать результаты на панели «Данные».|  
+|![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "отменить запрос")|Отмена запроса.|  
+|![Переключиться в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора")|Переключение между режимом конструктора и режимом запроса.|  
   
-## Графический конструктор запросов многомерных выражений: режим запроса  
+## <a name="graphical-mdx-query-designer-in-query-mode"></a>Графический конструктор запросов многомерных выражений: режим запроса  
  Для переключения графического конструктора запросов в режим **запроса** нажмите кнопку **Режим конструктора** на панели инструментов.  
   
  На следующем рисунке показаны метки панелей режима запроса.  
   
- ![Конструктор запросов многомерных выражений служб Analysis Services, режим запроса](../../reporting-services/report-data/media/rsqd-dsawas-mdx-querymode.gif "Конструктор запросов многомерных выражений служб Analysis Services, режим запроса")  
+ ![Analysis Services MDX конструктор запросов, режим запроса](../../reporting-services/report-data/media/rsqd-dsawas-mdx-querymode.gif "многомерных Выражений служб Analysis Services конструктор запросов, режим запроса")  
   
  В следующей таблице перечисляются панели, доступные в этом режиме.  
   
@@ -102,23 +107,23 @@ caps.handback.revision: 38
   
  Запрос многомерных выражений по умолчанию, сформированный в режиме конструктора, можно расширить, включив дополнительные свойства элементов и ячеек. После выполнения запроса следующие значения не будут отражены в результирующем наборе. Однако данные значения передаются службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и могут быть использованы в отчете. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
-### Панель инструментов графического конструктора запросов многомерных выражений в режиме запроса  
+### <a name="graphical-query-designer-toolbar-in-query-mode"></a>Панель инструментов графического конструктора запросов многомерных выражений в режиме запроса  
  Панель инструментов конструктора запросов содержит кнопки, которые помогают создавать запросы многомерных выражений с помощью графического интерфейса.  
   
  Кнопки на панели инструментов в режиме конструктора ничем не отличаются от кнопок в режиме запроса, однако в режиме запроса недоступны следующие кнопки.  
   
 -   **Редактировать как текст**  
   
--   **Добавить вычисляемый элемент** (![Добавление вычисляемого элемента](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "Добавление вычисляемого элемента"))  
+-   **Добавить вычисляемый элемент** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "Переключатель для просмотра пустых ячеек"))  
+-   **Показывать пустые ячейки** (![переключателя для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "переключателя для отображения пустых ячеек"))  
   
--   **Автовыполнение** (![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "Автоматическое выполнение запроса"))  
+-   **Автоматическое выполнение** (![автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса"))  
   
--   **Показать агрегаты** (![Кнопка «Показать агрегаты»](../../reporting-services/report-data/media/rsqdicon-showaggregations.png "Кнопка «Показать агрегаты»"))  
+-   **Показать агрегаты** (![кнопку Показать агрегаты](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "кнопку Показать агрегаты"))  
   
-## См. также  
- [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](../../reporting-services/report-data/define parameters in the mdx query designer for analysis services.md)   
+## <a name="see-also"></a>См. также:  
+ [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   

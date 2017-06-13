@@ -1,23 +1,28 @@
 ---
-title: "Добавление фильтра (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление фильтра (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление фильтра (построитель отчетов и службы SSRS)
+# <a name="add-a-filter-report-builder-and-ssrs"></a>Добавление фильтра (построитель отчетов и службы SSRS)
   Добавьте фильтр к набору данных, области данных или группе, если нужно включить или исключить определенные значения из вычислений или отображения. Фильтры применяются во время выполнения вначале для набора данных, затем для области данных и группы в нисходящем порядке для иерархий групп. В таблице, матрице и списке фильтры для групп строк, групп столбцов и смежных групп применяются независимо друг от друга. В диаграмме фильтры для групп категорий и групп рядов применяются независимо друг от друга.  
   
  Чтобы добавить фильтр, необходимо указать одно или несколько уравнений фильтра. Уравнение фильтра состоит из выражения, определяющего фильтруемые данные, оператор и значения сравнения. Тип данных фильтруемых данных и тип данных значения должны совпадать. Фильтрация статистических значений набора данных или области данных не поддерживается.  
@@ -29,11 +34,11 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Установка фильтра для области данных  
+### <a name="to-set-a-filter-on-a-data-region"></a>Установка фильтра для области данных  
   
 1.  Откройте отчет в режиме **конструктора** .  
   
-2.  Выделите область данных в рабочей области конструирования и щелкните правой кнопкой мыши пункт *Свойства \<область данных>*****. Для датчика выберите пункт **Свойства панели датчиков**. Откроется диалоговое окно *Свойства \<область данных>*****.  
+2.  Выберите область данных в область конструктора и щелкните правой кнопкой мыши  *\<область данных >***свойства**. Для датчика выберите пункт **Свойства панели датчиков**. *\<Область данных >***свойства** откроется диалоговое окно.  
   
     > [!NOTE]  
     >  В области данных табликса щелкните угловую ячейку, строку или дескриптор столбца правой кнопкой мыши, а затем выберите команду **Свойства табликса**.  
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Установка фильтра для группы строк или столбцов табликса  
+### <a name="to-set-a-filter-on-a-tablix-row-or-column-group"></a>Установка фильтра для группы строк или столбцов табликса  
   
 1.  Откройте отчет в режиме **конструктора** .  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Установка фильтра для группы категорий диаграммы  
+### <a name="to-set-a-filter-on-a-chart-category-group"></a>Установка фильтра для группы категорий диаграммы  
   
 1.  Откройте отчет в режиме **конструктора** .  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Установка фильтра для группы рядов диаграммы  
+### <a name="to-set-a-filter-on-a-chart-series-group"></a>Установка фильтра для группы рядов диаграммы  
   
 1.  Откройте отчет в режиме **конструктора** .  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## См. также  
- [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>См. также:  
+ [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

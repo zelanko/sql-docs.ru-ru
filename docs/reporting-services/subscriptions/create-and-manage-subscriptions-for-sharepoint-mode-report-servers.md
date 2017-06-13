@@ -1,27 +1,32 @@
 ---
-title: "Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "подписки [службы Reporting Services], создание"
-  - "подписки [службы Reporting Services], удаление"
-  - "подписки [службы Reporting Services], управление"
+title: "Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], creating
+- subscriptions [Reporting Services], deleting
+- subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
+# <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
   Вы можете создать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на доставку отчетов из веб-приложения SharePoint, работающим в режиме интеграции с SharePoint. Подписки могут доставлять отчеты в библиотеку документов, папку с файлами или по электронной почте. В этой статье приведена сводка по требованиям и шагам для создания подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
@@ -88,7 +93,7 @@ caps.handback.revision: 19
   
 9. В поле **Событие доставки**укажите расписание или событие, инициализирующее подписку. Можно создать пользовательское расписание, выбрать общее расписание при наличии такового или инициализировать подписку всякий раз при обновлении данных отчета, выполняемого с использованием данных моментального снимка. Дополнительные сведения о расписаниях и обработке данных см. в разделе [Задание параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-10. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Раздел параметров на этой странице не отображается, если выбранный отчет не содержит параметров. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md).  
+10. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Раздел параметров на этой странице не отображается, если выбранный отчет не содержит параметров. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="bkmk_subscription_for_sharedfolder"></a> Создание подписки для доставки в общую папку  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 19
   
 5.  В поле **Имя файла**введите имя файла, который будет создан в общей папке.  
   
-6.  В поле **Путь** введите путь к папке в формате UNC, включающем сетевое имя компьютера. В путь к папке не следует включать заключительную обратную косую черту. Путь может выглядеть следующим образом: `\\ComputerName01\Public\MyReports`, где Public и MyReports — общие папки.  
+6.  В поле **Путь**введите путь к папке в формате UNC, включающем сетевое имя компьютера. В путь к папке не следует включать заключительную обратную косую черту. Путь может выглядеть следующим образом: `\\ComputerName01\Public\MyReports`, где Public и MyReports — общие папки.  
   
 7.  В поле **Формат отображения**выберите формат приложения для отчета.  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 19
   
 11. В поле **Событие доставки**укажите расписание или событие, инициализирующее подписку. Можно создать пользовательское расписание, выбрать общее расписание при наличии такового или инициализировать подписку всякий раз при обновлении данных отчета, выполняемого с использованием данных моментального снимка. Дополнительные сведения о расписаниях и обработке данных см. в разделе [Задание параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-12. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md).  
+12. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="bkmk_subscription_for_email"></a> Создание подписки на доставку на сервер отчетов по электронной почте  
   
@@ -124,9 +129,9 @@ caps.handback.revision: 19
   
 3.  Нажмите кнопку **Добавить подписку**.  
   
-4.  В списке **Модуль доставки** выберите пункт **Электронная почта**.  
+4.  В списке **Модуль доставки**выберите пункт **Электронная почта**.  
   
-5.  В поле **Параметры доставки** укажите адрес электронной почты, по которому следует направлять отчет.  
+5.  В поле **Параметры доставки**укажите адрес электронной почты, по которому следует направлять отчет.  
   
 6.  При необходимости можно изменить строку «Тема». Строка «Тема» использует встроенные параметры, отображающие имя отчета и время его обработки. Это единственные встроенные параметры, которые могут быть использованы. Эти параметры представляют собой заполнители, обеспечивающие возможность изменения текста, отображаемого в строке «Тема», но их можно заменить статическим текстом.  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 19
   
 9. В поле **Событие доставки**укажите расписание или событие, инициализирующее подписку. Можно создать пользовательское расписание, выбрать общее расписание при наличии такового или инициализировать подписку всякий раз при обновлении данных отчета, выполняемого с использованием данных моментального снимка. Дополнительные сведения о расписаниях и обработке данных см. в разделе [Задание параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
-10. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set parameters on a published report - sharepoint integrated mode.md).  
+10. При создании подписки на параметризованный отчет в поле **Параметры**укажите значения, которые нужно использовать в отчете при обработке подписки. Дополнительные сведения о параметрах см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ###  <a name="bkmk_to_modify_subscription"></a> Просмотр или изменение подписки  
   
@@ -156,11 +161,11 @@ caps.handback.revision: 19
   
 3.  Установите флажок рядом с подпиской и нажмите кнопку **Удалить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Доставка электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Доставка отчетов в общие папки с помощью служб Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Доставка библиотек SharePoint в службах Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/ru-ru/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

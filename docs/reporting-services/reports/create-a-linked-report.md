@@ -1,25 +1,30 @@
 ---
-title: "Создание связанного отчета | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "связанные отчеты [службы Reporting Services], создание"
+title: "Создание связанного отчета | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 44
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 232e24ef08c24d5c6a2c9799094fc492305eea46
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Создание связанного отчета
+# <a name="create-a-linked-report"></a>Создание связанного отчета
   Связанный отчет является элементом сервера отчетов, обеспечивающим точку доступа к существующему отчету. Концептуально связанный отчет можно сравнить с ярлыком, который используется для запуска программы или открытия файла.  
   
  Связанный отчет создается из существующего отчета и сохраняет определение оригинального отчета. Связанный отчет всегда наследует макет отчета и свойства источника данных у оригинального отчета. Все остальные свойства и настройки могут отличаться от свойств и настроек оригинального отчета, включая настройки безопасности, параметры, месторасположение, подписки и расписания.  
@@ -28,7 +33,7 @@ caps.handback.revision: 44
   
  Хотя связанные отчеты обычно основаны на параметризованных отчетах, параметризованный отчет не является обязательным. Можно создавать связанные отчеты, когда необходимо развернуть существующий отчет с различными параметрами.  
   
-### Создание связанного отчета  
+### <a name="to-create-a-linked-report"></a>Создание связанного отчета  
   
 1.  В диспетчере отчетов перейдите к папке с отчетом, с которым требуется установить связь, откройте меню параметров и выберите **Создать связанный отчет**.  
   
@@ -40,14 +45,14 @@ caps.handback.revision: 44
   
      Значок связанного отчета отличается от других элементов, управляемых сервером отчетов. Следующий значок указывает на связанный отчет:  
   
-     ![Значок связанного отчета](../../reporting-services/report-server/media/hlp-16linked.png "Значок связанного отчета")  
+     ![Значок отчета связанной](../../reporting-services/report-server/media/hlp-16linked.gif "значок связанный отчет")  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Страница "Создание связанного отчета" (диспетчер отчетов)](../Topic/New%20Linked%20Report%20Page%20\(Report%20Manager\).md)   
- [Страница "Выбор расположения элементов" (диспетчер отчетов)](../Topic/Choose%20Item%20Location%20Page%20\(Report%20Manager\).md)   
- [Страница "Общие свойства", отчеты (диспетчер отчетов)](../Topic/General%20Properties%20Page,%20Reports%20\(Report%20Manager\).md)   
+ [Страница "Создание связанного отчета" (диспетчер отчетов)](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Страница "Выбор расположения элементов" (диспетчер отчетов)](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Страница "Общие свойства", отчеты (диспетчер отчетов)](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
  [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)  
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: "Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)
   После добавления в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карты или слоя карты с помощью мастера может потребоваться изменить способ отображения карты в отчете. При внесении изменений следует учитывать следующие соображения.  
   
 -   Чтобы пользователю было проще интерпретировать данные, отображаемые на карте, можно добавить условные обозначения, цветовую шкалу, метки и подсказки.  
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 -   Создать иллюзию глубины, определяя тень.  
   
- Чтобы изменить эти параметры, щелкните правой кнопкой мыши карту, выберите пункт **Карта** и измените параметры.  
+ Чтобы изменить эти параметры, щелкните правой кнопкой мыши карту, выберите пункт **Карта**и измените параметры.  
   
 ##  <a name="Viewport"></a> Изменение параметров окна просмотра  
  Параметры окна просмотра позволяют изменить представление карты в отчете.  
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   Разрешение и упрощение. Найдите компромисс между временем отрисовки и детализацией линий и многоугольников.  
   
- Чтобы изменить эти параметры, щелкните правой кнопкой мыши окно просмотра карты и воспользуйтесь страницей [Диалоговое окно "Свойства окна просмотра карты", вкладка "Общие"](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) и связанными с ней страницами.  
+ Чтобы изменить эти параметры, щелкните правой кнопкой мыши окно просмотра карты и воспользуйтесь страницей [Диалоговое окно "Свойства окна просмотра карты", вкладка "Общие"](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) и связанными с ней страницами.  
   
 ##  <a name="Legends"></a> Изменение параметров условных обозначений  
  Условные обозначения помогают пользователям в интерпретации данных на карте.  
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   Переопределение параметров для отдельных внедренных точек, линий и многоугольников на слое. Сделанные изменения являются постоянными. Чтобы отменить их, необходимо перезагрузить данные для слоя.  
   
- Дополнительные сведения см. в разделе [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Дополнительные сведения см. в разделе [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

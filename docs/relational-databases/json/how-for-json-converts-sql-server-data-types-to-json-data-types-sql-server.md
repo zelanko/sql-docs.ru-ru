@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c256bc9ecc0e518bb54d206a04f36d2b736500d8
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 527cb99c5caf0bb805e17f3b77b7d5e017e28ace
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON (SQL Server)
@@ -31,13 +31,16 @@ ms.lasthandoff: 04/11/2017
   
 |Категория|Тип данных SQL Server|Тип данных JSON|  
 |--------------|--------------|---------------|  
-|Знаковые и строковые типы|(n)(var)(char)|строка|  
+|Знаковые и строковые типы|char, nchar, varchar, nvarchar|строка|  
 |Числовые типы|int, bigint, float, decimal, numeric|number|  
 |Битовый тип|bit|Логическое значение (true или false)|  
 |Типы даты и времени|date, datetime, datetime2, time, datetimeoffset|строка|  
 |Двоичные типы|varbinary, binary, image, timestamp, rowversion|Строка в кодировке Base64|  
-|Типы CLR|CLR, geometry, geography|Не поддерживается. При их использовании возвращается ошибка.<br /><br /> В инструкции SELECT для преобразования данных в тип данных, который можно конвертировать в тип JSON, используйте CAST или CONVERT либо свойство или метод CLR. Например, для любого типа CLR используйте **ToString()** , а для типа geometry — **STAsText()** . Тип выходного значения JSON определяется по типу данных, полученному после конвертации, которая была указана в инструкции SELECT.|  
+|Типы CLR|Geometry, geography, других типов среды CLR|Не поддерживается. При их использовании возвращается ошибка.<br /><br /> В инструкции SELECT, функция CAST или CONVERT либо свойство или метод CLR, для преобразования исходных данных в тип данных SQL Server, который может быть преобразован в тип JSON. Например, использовать **STAsText()** для типа geometry, или используйте **ToString()** для любого типа CLR. Тип выходного значения JSON затем является производным от возвращаемого типа преобразования, применяемая в инструкции SELECT.|  
 |Другие типы|uniqueidentifier, money|строка|  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
+Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
   
 ## <a name="see-also"></a>См. также:  
  [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

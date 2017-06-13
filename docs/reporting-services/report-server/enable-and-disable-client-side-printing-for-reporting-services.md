@@ -1,45 +1,44 @@
 ---
-title: "Включение и отключение печати на стороне клиента для служб Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pdf"
-  - "средство просмотра"
-  - "ReportViewer"
-  - "панель инструментов"
+title: "Включение и отключение печати на стороне клиента для служб Reporting Services | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pdf
+- viewer
+- reportviewer
+- toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Включение и отключение печати на стороне клиента для служб Reporting Services
-  Кнопка печати на панели инструментов средства просмотра отчетов позволяет использовать формат PDF для печати отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], просматриваемых в браузере, на стороне клиента. В новой функции удаленной печати для преобразования отчета в формат PDF используется модуль подготовки отчетов, который входит в состав [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вы можете скачать отчет в формате PDF. А если у вас есть установленное приложение для просмотра PDF-файлов, с помощью кнопки печати можно отобразить диалоговое окно со стандартными средствами для настройки параметров страницы, включая ее размер и ориентацию, а также возможность предварительного просмотра PDF-файла. Хотя по умолчанию клиентская печать допускается, эту функцию можно отключить.  
+
+# <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
+
+  Кнопка печати на панели инструментов средства просмотра отчетов позволяет использовать формат PDF для печати отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , просматриваемых в браузере, на стороне клиента. В новой функции удаленной печати для преобразования отчета в формат PDF используется модуль подготовки отчетов, который входит в состав [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вы можете скачать отчет в формате PDF. А если у вас есть установленное приложение для просмотра PDF-файлов, с помощью кнопки печати можно отобразить диалоговое окно со стандартными средствами для настройки параметров страницы, включая ее размер и ориентацию, а также возможность предварительного просмотра PDF-файла. Хотя по умолчанию клиентская печать допускается, эту функцию можно отключить.  
   
- В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использовался элемент управления ActiveX, который приходилось скачивать с сервера отчетов на клиентский компьютер. Если вы обновите сервер отчетов до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], элемент управления печатью не будет автоматически удален с сервера отчетов или клиентских компьютеров.  
-  
-##  <a name="bkmk_top"></a> В этом разделе  
-  
--   [Процесс печати](#bkmk_clientside_printexpereince)  
-  
--   [Устранение неполадок печати на стороне клиента](#bkmk_troubleshoot_clientsideprinting)  
-  
--   [Включение и отключение печати на стороне клиента](#bkmk_enable)  
-  
+ В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использовался элемент управления ActiveX, который приходилось скачивать с сервера отчетов на клиентский компьютер. При обновлении сервера отчетов до SQL Server 2016 элемента управления печатью не удаляется с сервера отчетов или клиентских компьютеров.  
+
 ##  <a name="bkmk_clientside_printexpereince"></a> Процесс печати  
- Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, запускаются разные процессы. Эти процессы зависят от используемого браузера и установленных на клиентском компьютере приложений для просмотра PDF-файлов.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
+ Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, процесс варьируется в зависимости от того, что. Для просмотра PDF приложения устанавливаются на клиентском компьютере и что вы используете браузер.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
   
- ![Панель инструментов «Отчеты»](../../reporting-services/media/ssrs-htmlviewer-toolbar.gif "Панель инструментов «Отчеты»")  
+ ![Панель инструментов отчета](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "панель инструментов отчета")  
   
 |||  
 |-|-|  
@@ -51,7 +50,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Устранение неполадок печати на стороне клиента  
  Если кнопка печати на панели инструментов средства просмотра отчетов отключена, проверьте следующее.  
   
--   Функция печати на стороне клиента для сервера отчетов отключена в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. См. подраздел [Включение и отключение печати на стороне клиента](#bkmk_enable) в этом разделе.  
+-   Функция печати на стороне клиента для сервера отчетов отключена в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. См. подраздел  [Включение и отключение печати на стороне клиента](#bkmk_enable) в этом разделе.  
   
 -   Отключен модуль подготовки отчетов в формате PDF в [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Изучите раздел `<Extension Name="PDF"` в файле **rsreportserver.config** .  
   
@@ -96,7 +95,7 @@ caps.handback.revision: 14
   
  Следующий образец скрипта иллюстрирует один из способов отключения клиентской печати. Скомпилируйте и запустите следующий код [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] для присвоения свойству **EnableClientPrinting** значения **False**. После выполнения кода перезапустите IIS.  
   
-### Образец скрипта  
+### <a name="sample-script"></a>Образец скрипта  
   
 ```  
 Imports System  
@@ -119,6 +118,7 @@ Dim rs As New ReportingService()
         End Try  
     End Sub 'Main  
 End Class 'Sample  
-```  
-  
-  
+```
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -1,28 +1,33 @@
 ---
-title: "Настройка Reporting Services для использования альтернативного имени субъекта | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка служб Reporting Services для использования альтернативного имени субъекта | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4d975e93e77f43c481b44644faaa310963527b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Настройка Reporting Services для использования альтернативного имени субъекта
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка Reporting Services для использования альтернативного имени субъекта
   В этом разделе объясняется, как настроить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS), чтобы использовать альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
  Инструкции применяются к URL-адресу службы отчетов, а также URL-адресу веб-службы.  
   
@@ -30,17 +35,17 @@ caps.handback.revision: 6
   
  URL-адреса в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно настроить для использования SSL-сертификата. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать и быть допустимой для многих URL-адресов, а также совместно использовать порт SSL с другими приложениями. SAN выглядит следующим образом: www.s2.com.  
   
- Дополнительные сведения о параметрах SSL см. в статье [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Настройка соединений SSL для сервера отчетов, работающего в собственном режиме[](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md "Configure SSL Connections on a Native Mode Report Server").  
+ Дополнительные сведения о параметрах SSL см. в статье [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Настройка соединений SSL для сервера отчетов, работающего в собственном режиме [](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-### Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы  
+### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы  
   
 1.  Запустите диспетчер конфигурации служб Reporting Services.  
   
-     Дополнительные сведения см. в разделе [Диспетчер конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+     Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Выберите на странице **URL-адрес веб-службы** порт SSL и SSL-сертификат.  
   
-     ![Диспетчер конфигурации служб Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Диспетчер конфигурации служб Reporting Services")  
+     ![Диспетчер конфигурации служб Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "диспетчер конфигурации служб Reporting Services")  
   
      Диспетчер конфигурации зарегистрирует SSL-сертификат для порта.  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 6
   
 10. Щелкните на странице **Состояние сервера отчетов** диспетчера конфигурации Reporting Services кнопку **Остановить** , а затем нажмите **Запустить** , чтобы перезапустить сервер отчетов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   

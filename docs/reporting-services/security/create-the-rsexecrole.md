@@ -1,26 +1,33 @@
 ---
-title: "Создание роли RSExecRole | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RSExecRole"
+title: "Создание роли RSExecRole | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Создание роли RSExecRole
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют стандартную роль базы данных с именем **RSExecRole** , чтобы предоставить серверу отчетов разрешения в базе данных сервера отчетов. Роль **RSExecRole** создается автоматически с базой данных сервера отчетов. Как правило, никогда не следует изменять ее или назначать другим пользователям. Однако при перемещении базы данных сервера отчетов на новый или иной компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо создать повторно эту роль в системных базах данных master и msdb.  
+
+# <a name="create-the-rsexecrole"></a>Создание роли RSExecRole
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют стандартную роль базы данных с именем **RSExecRole** , чтобы предоставить серверу отчетов разрешения в базе данных сервера отчетов. Роль **RSExecRole** создается автоматически с базой данных сервера отчетов. Как правило, никогда не следует изменять ее или назначать другим пользователям. Однако при перемещении базы данных сервера отчетов на новый или иной компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]необходимо создать повторно эту роль в системных базах данных master и msdb.  
   
  С помощью следующих инструкций выполняются следующие шаги.  
   
@@ -31,11 +38,11 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Инструкции в этом разделе предназначены для пользователей, которые не хотят запускать скрипт или писать код инструментария WMI для предоставления базы данных сервера отчетов. Если предстоит управлять большим развертыванием и регулярно перемещать базы данных, необходимо подготовить скрипт для автоматизации этих шагов. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-## Перед началом  
+## <a name="before-you-start"></a>Перед началом  
   
--   Создайте резервную копию ключей шифрования, чтобы их можно было восстановить после перемещения базы данных. Этот шаг не влияет напрямую на возможность создавать и предоставлять роль **RSExecRole**, но резервная копия ключей необходима, чтобы проверить работу. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md).  
+-   Создайте резервную копию ключей шифрования, чтобы их можно было восстановить после перемещения базы данных. Этот шаг не влияет напрямую на возможность создавать и предоставлять роль **RSExecRole**, но резервная копия ключей необходима, чтобы проверить работу. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
--   Проверьте, что выполнен вход в систему под учетной записью пользователя, у которой есть разрешения **sysadmin** на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Проверьте, что выполнен вход в систему под учетной записью пользователя, у которой есть разрешения **sysadmin** на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Проверьте, что служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлена и работает на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который планируется использовать.  
   
@@ -43,10 +50,10 @@ caps.handback.revision: 23
   
  Инструкции для создания роли **RSExecRole** вручную предназначены для использования в контексте миграции установки сервера отчетов. Важные задачи, такие как резервное копирование и перемещение базы данных сервера отчетов, не рассматриваются в данном разделе, но описаны в документации по компоненту Database Engine.  
   
-## Создание роли RSExecRole в базе данных master  
+## <a name="create-rsexecrole-in-master"></a>Создание роли RSExecRole в базе данных master  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют расширенные хранимые процедуры для службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Следующие шаги поясняют, как предоставить разрешения EXECUTE для процедур роли **RSExecRole** .  
   
-#### Создание роли RSExecRole в системной базе данных master с помощью среды Management Studio  
+#### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Создание роли RSExecRole в системной базе данных master с помощью среды Management Studio  
   
 1.  Запустите среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещается база данных сервера отчетов.  
   
@@ -60,7 +67,7 @@ caps.handback.revision: 23
   
 6.  Откройте **Роли**.  
   
-7.  Щелкните правой кнопкой мыши **Роли базы данных** и выберите пункт **Создать роль базы данных**. Отображается страница «Общие».  
+7.  Щелкните правой кнопкой мыши **Роли базы данных**и выберите пункт **Создать роль базы данных**. Отображается страница «Общие».  
   
 8.  В поле **Имя роли**введите **RSExecRole**.  
   
@@ -94,12 +101,12 @@ caps.handback.revision: 23
   
 20. Повторите действия для каждой оставшейся хранимой процедуры. Роль**RSExecRole** должна иметь разрешения EXECUTE для всех трех хранимых процедур.  
   
- ![Страница свойств ролей базы данных](../../reporting-services/security/media/rsexecroledbproperties.gif "Страница свойств ролей базы данных")  
+ ![Страница свойств ролей базы данных](../../reporting-services/security/media/rsexecroledbproperties.gif "страница свойств ролей базы данных")  
   
-## Создание роли RSExecRole в базе данных msdb  
+## <a name="create-rsexecrole-in-msdb"></a>Создание роли RSExecRole в базе данных msdb  
  Службы Reporting Services используют хранимые процедуры для службы агента SQL Server и получают сведения о заданиях из системных таблиц для поддержки запланированных действий. Следующие шаги поясняют, как предоставить роли RSExecRole разрешения EXECUTE для процедур и разрешений SELECT в таблицах.  
   
-#### Создание роли RSExecRole в системной базе данных msdb  
+#### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>Создание роли RSExecRole в системной базе данных msdb  
   
 1.  Повторите аналогичные шаги, чтобы предоставить разрешения хранимым процедурам и таблицам в базе данных msdb. Чтобы упростить шаги, обрабатывайте хранимые процедуры и таблицы отдельно.  
   
@@ -109,7 +116,7 @@ caps.handback.revision: 23
   
 4.  Откройте **Роли**.  
   
-5.  Щелкните правой кнопкой мыши **Роли базы данных** и выберите пункт **Создать роль базы данных**. Отображается страница «Общие».  
+5.  Щелкните правой кнопкой мыши **Роли базы данных**и выберите пункт **Создать роль базы данных**. Отображается страница «Общие».  
   
 6.  В поле «Имя роли» введите **RSExecRole**.  
   
@@ -185,17 +192,17 @@ caps.handback.revision: 23
   
 30. Повторите для таблицы sysjobs. Роли RSExecRole должны быть предоставлены разрешения SELECT для обеих таблиц.  
   
-## Перемещение базы данных сервера отчетов  
- После создания ролей можно переместить базу данных сервера отчетов на новый экземпляр SQL Server. Дополнительные сведения см. в разделе [Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+## <a name="move-the-report-server-database"></a>Перемещение базы данных сервера отчетов  
+ После создания ролей можно переместить базу данных сервера отчетов на новый экземпляр SQL Server. Дополнительные сведения см. в разделе [перемещение базы данных сервера отчетов на другой компьютер](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] обновляется до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], можно обновить его до или после перемещения базы данных.  
+ Если вы обновляете [!INCLUDE[ssDE](../../includes/ssde-md.md)] до SQL Server 2016, вы можете обновить его до или после перемещения базы данных.  
   
- База данных сервера отчетов обновляется автоматически до уровня [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при подключении к ней сервера отчетов. Для обновления этой базы данных не требуется никаких конкретных шагов.  
+ Базы данных сервера отчетов обновляется автоматически при подключении к ней сервера отчетов. Для обновления этой базы данных не требуется никаких конкретных шагов.  
   
-## Восстановление ключей шифрования и проверка проделанной работы  
+## <a name="restore-encryption-keys-and-verify-your-work"></a>Восстановление ключей шифрования и проверка проделанной работы  
  Если имеются присоединенные базы данных сервера отчетов, можно выполнить следующие шаги для проверки работы.  
   
-#### Проверка работоспособности сервера отчетов после перемещения базы данных  
+#### <a name="to-verify-report-server-operability-after-a-database-move"></a>Проверка работоспособности сервера отчетов после перемещения базы данных  
   
 1.  Запустите программу настройки служб Reporting Services и подключитесь к серверу отчетов.  
   
@@ -205,7 +212,7 @@ caps.handback.revision: 23
   
 4.  Щелкните **Выбрать существующую базу данных сервера отчетов**.  
   
-5.  Введите имя экземпляра сервера компонента Database Engine. Если базы данных сервера отчетов подключены к именованному экземпляру, то имя экземпляра необходимо вводить в следующем формате: \<имя_сервера>\\<имя_экземпляра\>.  
+5.  Введите имя экземпляра сервера компонента Database Engine. Если базы данных сервера отчетов подключены к именованному экземпляру, необходимо ввести имя экземпляра в следующем формате: \<имя_сервера >\\< имя_экземпляра\>.  
   
 6.  Нажмите кнопку **Проверить соединение**.  
   
@@ -226,11 +233,12 @@ caps.handback.revision: 23
 14. Нажмите кнопку **URL-адрес диспетчера отчетов**.  
   
 15. Щелкните ссылку, чтобы открыть диспетчер отчетов. Будут отображены элементы сервера отчетов из базы данных сервера отчетов.  
-  
-## См. также  
- [Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
- [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
-  
-  
+
+## <a name="next-steps"></a>Следующие шаги
+
+[Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+[Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Создание базы данных сервера отчетов собственный режим &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

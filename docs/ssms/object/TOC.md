@@ -1,3 +1,4 @@
+# [Обозреватель объектов](object-explorer.md)
 # [Добавление шагов в главное задание агента SQL Server](add-steps-to-a-sql-server-agent-master-job.md)
 # [Управление объектами с помощью обозревателя объектов](manage-objects-by-using-object-explorer.md)
 # [Использование пользовательских отчетов для свойств узлов обозревателя объектов](use-custom-reports-with-object-explorer-node-properties.md)
@@ -13,7 +14,6 @@
 # [Параметры (обозреватель объектов SQL Server — страница "Скрипты")](options-sql-server-object-explorer-scripting-page.md)
 # [Настройки фильтра (обозреватель объектов и проводник служебной программы)](filter-settings-object-explorer-and-utility-explorer.md)
 # [Удаление объектов](delete-objects.md)
-# [Обозреватель объектов](object-explorer.md)
 # [Добавление пользовательского отчета в среду Management Studio](add-a-custom-report-to-management-studio.md)
 # [Пользовательские отчеты в среде Management Studio](custom-reports-in-management-studio.md)
 # [Добавление объектов](add-objects.md)

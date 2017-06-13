@@ -1,24 +1,29 @@
 ---
-title: "Сохранение отчетов (построитель отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сохранение отчетов (построитель отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5d4f5efbe000946f543fd9b22b5a45f48e06050
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Сохранение отчетов (построитель отчетов)
-  В построителе отчетов отчеты с разбивкой на страницы можно сохранить на сервере отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], в библиотеке SharePoint, в общей папке файлов, для которой имеются разрешения на запись, или на компьютере. 
+# <a name="saving-reports-report-builder"></a>Сохранение отчетов (построитель отчетов)
+  В построителе отчетов отчеты с разбивкой на страницы можно сохранить на сервере отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , в библиотеке SharePoint, в общей папке файлов, для которой имеются разрешения на запись, или на компьютере. 
   
 При сохранении отчета фактически выполняется сохранение определения отчета, в котором описывается макет отчета. Данные не сохраняются. При каждом запуске отчета данные отчета обновляются, и, вероятнее всего, они будут отличаться от данных отчета, открывавшегося ранее.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 9
   
 -   Отчеты становятся доступными для других пользователей, имеющих разрешения для доступа к папке, в которой сохранен отчет.  
   
--   Можно управлять отчетами и просматривать их на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Можно управлять отчетами и просматривать их на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   Ресурсы отчетов, такие как источники данных, изображения и вложенные отчеты, сохраняются в одном месте, что упрощает доступ к ним.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 9
 -   Запуски отчетов можно регистрировать, что позволяет получить сведения о производительности и аудите.  
   
 ##  <a name="ExportingAndSavingReports"></a> Экспорт и сохранение отчетов  
- Если нужно выполнить архивацию небольшого количества отчетов, попробуйте экспортировать отчет и сохранить его как файл. После экспорта отчета в формат какого-либо приложения (например, PDF или Excel) можно сохранить его в файле и поместить в защищенный общий каталог в сети. Кроме того, сохраненный файл в формате PDF или Excel можно передать, как ресурс (если нужно хранить все копии отчета, вне зависимости от формата, в базе данных сервера отчетов). Дополнительные сведения об экспорте отчета см. в разделах [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) и [Передача файла или отчета](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
+ Если нужно выполнить архивацию небольшого количества отчетов, попробуйте экспортировать отчет и сохранить его как файл. После экспорта отчета в формат какого-либо приложения (например, PDF или Excel) можно сохранить его в файле и поместить в защищенный общий каталог в сети. Кроме того, сохраненный файл в формате PDF или Excel можно передать, как ресурс (если нужно хранить все копии отчета, вне зависимости от формата, в базе данных сервера отчетов). Дополнительные сведения об экспорте отчета см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) и [Передача файла или отчета](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
 ##  <a name="UsingFileShareDelivery"></a> Использование доставки в общую папку  
  Если нужно архивировать большое количество отчетов, создайте подписку, доставляющую отчет прямо в файловую систему. Для этого необходимо создать подписку на каждый отчет, выбрать общую папку для их хранения и определить расписание, которое определяет, когда был создан данный файл. После определения этой подписки сервер отчетов может запустить отчет самостоятельно и добавить файлы отчета к архиву при помощи этого расписания. Можно также создавать одноразовые расписания для архивации отчетов на нерегулярной основе. Дополнительные сведения о подписках и доставке в общую папку см. в разделе [Доставка отчетов в общие папки с помощью служб Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
@@ -62,9 +67,9 @@ caps.handback.revision: 9
   
 -   [Сохранение отчета в библиотеке SharePoint (построитель отчетов)](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Установка и удаление построителя отчетов](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+ [Установка и удаление построителя отчетов](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

@@ -1,26 +1,31 @@
 ---
-title: "Диалоговое окно &#171;Разделы отчета&#187; (построитель отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "10009"
+title: "Диалоговое окно «разделы» (построитель отчетов) отчета | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77323d7f01b54345cce6354b800808b88e6ab21e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Диалоговое окно &#171;Разделы отчета&#187; (построитель отчетов)
-  При открытии отчета построитель отчетов проверяет, содержит ли отчет только один элемент **\<Section>** языка определения отчетов (RDL). Открытие отчета с несколькими элементами **\<Section>** не поддерживается.  
+# <a name="report-sections-dialog-box-report-builder"></a>Диалоговое окно «Разделы отчета» (построитель отчетов)
+  При открытии отчета построитель отчетов проверяет, что отчет содержит только один язык определения отчетов (RDL)  **\<раздел >** элемента. Открытие отчета с несколькими  **\<раздел >** элементы не поддерживаются.  
   
  Хотя определение отчета с несколькими разделами может быть создано программным путем, изменение отчета в среде подготовки отчетов не поддерживается.  
   
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  Чтобы продолжить, нажмите кнопку **ОК** .  
   
-## См. также  
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/ru-ru/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+## <a name="see-also"></a>См. также  
+ [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

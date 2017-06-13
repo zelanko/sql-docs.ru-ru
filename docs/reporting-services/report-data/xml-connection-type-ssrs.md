@@ -1,23 +1,28 @@
 ---
-title: "Тип соединения XML (службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Тип соединения XML (SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a95a6e93bb34674003530e094e9d4544a8aabfec
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Тип соединения XML (службы SSRS)
+# <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
   
  Этот модуль обработки данных поддерживает параметры и учетные данные, управляемые отдельно с помощью строки подключения.  
@@ -35,7 +40,7 @@ caps.handback.revision: 9
 |XML-документ|`http://localhost/XML/Customers.xml`|  
 |Внедренный XML-документ|*Пустой*|  
   
- Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
@@ -50,7 +55,7 @@ caps.handback.revision: 9
   
  Сохраненные и запрашиваемые учетные данные не поддерживаются. Помните, что если отключить встроенную безопасность Windows, получить данные будет невозможно. Если заданы хранимые учетные данные, или их предлагается ввести, во время выполнения возникнет ошибка.  
   
- Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="Query"></a> Запросы  
  Запрос указывает, какие данные для набора данных отчета необходимо получить. Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. Отчет обрабатывает только первый результирующий набор, полученный по запросу.  
@@ -119,12 +124,12 @@ caps.handback.revision: 9
   
  Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
   
-### Требования для получения XML-данных веб-службы  
+### <a name="requirements-for-retrieving-xml-web-service-data"></a>Требования для получения XML-данных веб-службы  
  Модуль обработки XML-данных не обнаруживает схему самостоятельно. Поэтому необходимо определить, какой метод SOAP будет получать нужные данные. Необходимо также представлять себе схему адресации или пространство имен, которые веб-служба использует для своих данных.  
   
- Для веб-службы можно задать элемент \<**запрос**>, указывающий вызываемый метод или действие SOAP. Можно оставить запрос пустым и использовать запрос по умолчанию, если источник данных XML имеет иерархическую структуру, предоставляющую нужные для отчета данные. Значения и атрибуты узлов XML-элементов, полученные при выполнении запроса, привязываются к полям набора данных в отчете.  
+ Для веб-службы, чтобы обеспечить \< **запроса**> элемент, указывающий вызываемый метод или действие SOAP. Можно оставить запрос пустым и использовать запрос по умолчанию, если источник данных XML имеет иерархическую структуру, предоставляющую нужные для отчета данные. Значения и атрибуты узлов XML-элементов, полученные при выполнении запроса, привязываются к полям набора данных в отчете.  
   
-### Требования для получения данных XML-документа  
+### <a name="requirements-for-retrieving-xml-document-data"></a>Требования для получения данных XML-документа  
  Используя протокол HTTP, сервер должен возвратить XML-данные, либо XML-данные должны быть внедрены в элемент XML **Query** . При прямой ссылке на XML-документ по протоколу HTTP этот документ должен иметь расширение XML.  
   
  Необходимо знать, как создавать XML-запрос, который будет получать нужные данные. Если путь к элементу не задан, по умолчанию при анализе XML-документа выбирается первый доступный путь к коллекции концевых узлов XML-документа. Если XML-документ включает дополнительные пути к другим коллекциям одноуровневых узлов, эти узлы будут пропускаться, если в запросе не задан путь.  
@@ -136,7 +141,7 @@ caps.handback.revision: 9
 ##  <a name="Parameters"></a> Параметры  
  Запрос не анализируется для определения параметров.  
   
- Чтобы добавить параметры необходимо создать их вручную на странице **Параметр** диалогового окна [Свойства набора данных](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) .  
+ Чтобы добавить параметры необходимо создать их вручную на странице **Параметр** диалогового окна [Свойства набора данных](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
   
 ##  <a name="Remarks"></a> Замечания  
  Модуль обработки XML-данных поддерживает создание отчетов для XML-данных, имеющих табличную, а не иерархическую структуру. Дополнительные сведения см. в разделе [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
@@ -158,7 +163,7 @@ caps.handback.revision: 9
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -170,7 +175,7 @@ caps.handback.revision: 9
  [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

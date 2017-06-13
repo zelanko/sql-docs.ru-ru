@@ -1,26 +1,31 @@
 ---
-title: "Свойства расписания (страница &#171;Общие&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/11/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.scheduleproperties.general.f1"
+title: "Планирование свойств (страница «Общие») | Документы Microsoft"
+ms.custom: 
+ms.date: 06/11/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: eac0a7b5f1a8da128fc90700be9b91e9a38ad694
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Свойства расписания (страница &#171;Общие&#187;)
-  Создать или изменить общее расписание можно с помощью страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]. Общие расписания могут использоваться вместо расписаний отчетов или подписок. Изменения, внесенные в расписания, применяются после сохранения расписания. Изменение расписания не оказывает воздействия на выполняемые задания. Если какое-то расписание изменяется во время его использования, всем выполняемым в данный момент отчетам и подпискам, запущенным на основе этого расписания, будет разрешено завершение.  
+# <a name="schedule-properties-general-page"></a>Свойства расписания (страница «Общие»)
+  Создать или изменить общее расписание можно с помощью страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] . Общие расписания могут использоваться вместо расписаний отчетов или подписок. Изменения, внесенные в расписания, применяются после сохранения расписания. Изменение расписания не оказывает воздействия на выполняемые задания. Если какое-то расписание изменяется во время его использования, всем выполняемым в данный момент отчетам и подпискам, запущенным на основе этого расписания, будет разрешено завершение.  
   
  В одном расписании могут поддерживаться не все комбинации частоты событий. Например, если требуется запускать отчет в 12:00 и в 16:00 каждую пятницу, необходимо создать два ежедневных расписания, запускаемых в пятницу, и для одного указать время запуска 12:00, а для другого — 16:00.  
   
@@ -29,13 +34,13 @@ caps.handback.revision: 36
  Чтобы открыть эту страницу:
  1) Запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  2) Подключитесь к серверу отчетов.
- 3) Разверните папку **Общие расписания**.
+ 3) Разверните папку **Общие расписания** .
  4) Щелкните расписание правой кнопкой мыши и выберите параметр **Свойства**.  
   
 > [!NOTE]  
->Эта функция доступна не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и данная страница не открывается при работе с выпуском, в котором отсутствует эта функция. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+>Эта функция доступна не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и данная страница не открывается при работе с выпуском, в котором отсутствует эта функция. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Название**  
  Указывает имя общего расписания.  
   
@@ -63,10 +68,12 @@ caps.handback.revision: 36
  **Однократно**  
  Указывает расписание, выполняемое один раз в заданные дату и время.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)  
   
   
+
+

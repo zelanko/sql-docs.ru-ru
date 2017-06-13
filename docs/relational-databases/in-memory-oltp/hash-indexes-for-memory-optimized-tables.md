@@ -3,7 +3,7 @@ title: "Хэш-индексы для оптимизированных для п�
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/29/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Хэш-индексы для оптимизированных для памяти таблиц
@@ -439,30 +439,4 @@ ms.lasthandoff: 04/11/2017
 Для хэш-индекса в предложении WHERE должен быть задан тест на равенство для каждого столбца в ключе. Без него хэш-индекс не будет полезен для оптимизатора.  
   
 Тип индекса также не будет иметь значения, если предложение WHERE определяет только второй столбец ключа индекса.  
-  
-  
-  
-\<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md, который является....  
-Идентификатор CAPS: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-Идентификатор CAPS для родительского элемента: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-  
-  
-  
-  
-| IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent | avg_chain_length | max_chain_length |  
-| :-------- | -----------------: | -----------------: | -----------------: | ---------------: | ---------------: |  
-| ix_OrderSequence | 32768 | 13 | 0 | 8 | 26 |  
-| ix_StatusCode | 8 | 4 | 50 | 65536 | 65536 |  
-| PK_SalesOrd_B14003E308C1A23C | 262144 | 96525 | 36 | 1 | 8 |  
-  
-  
-  
-  
-GeneMi, 05.05.2016, четверг, 15:01  
--->  
-  
-  
-  
-
 

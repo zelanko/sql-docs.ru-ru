@@ -1,23 +1,28 @@
 ---
-title: "Изображения (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изображения (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b50d53f5b7ba102454f53646dec8cf1897df52f9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Изображения (построитель отчетов и службы SSRS)
+# <a name="images-report-builder-and-ssrs"></a>Изображения (построитель отчетов и службы SSRS)
   Изображение — это элемент отчета, содержащий ссылку на изображение, которое внедрено в отчет или хранится в базе данных, на сервере отчетов или где-либо еще в Интернете. Изображение может быть рисунком, повторяющимся в строках данных. Изображение можно также использовать в качестве фона некоторых элементов отчета.  
   
  Хранить эмблемы на сервере удобно, поскольку один и тот же логотип может использоваться во многих отчетах.  
@@ -34,19 +39,16 @@ caps.handback.revision: 9
   
  ![rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="ImagesReportParts"></a> Изображения как элементы отчетов  
  Изображения можно сохранять отдельно от отчета как элементы отчета. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="EmbedImages"></a> Внедренные изображения  
  Изображения можно внедрять в отчет, таким образом сохраняя их в определении отчета. При внедрении изображения оно кодируется в кодировке MIME и сохраняется в определении отчета в виде текста. Использование внедренного изображения обеспечивает отчету полный доступ к изображению, но также увеличивает размер определения отчета.  
   
  Дополнительные сведения о внедрении изображений см. в разделе [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="ExternalImages"></a> Внешние изображения  
  Можно включить изображение в отчет, указав его URL-адрес. При использовании в отчете внешнего изображения его источник устанавливается как **External** , а значением является путь к изображению или его URL-адрес.  
@@ -57,7 +59,6 @@ caps.handback.revision: 9
   
  Дополнительные сведения о добавлении внешнего изображения в отчет см. в разделе [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="BackgroundImages"></a> Фоновые изображения  
  Изображение можно использовать в качестве фона в тексте отчета или прямоугольнике, текстовом поле, списке, матрице или таблице. Фоновое и обычное изображения имеют похожие свойства. Также можно указать шаблон заполнения, по которому изображение сформирует фон для элемента.  
@@ -67,12 +68,10 @@ caps.handback.revision: 9
   
  Дополнительные сведения о добавлении фонового изображения см. в разделе [Добавление фонового изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="DataboundImages"></a> Изображения, привязанные к данным  
  В отчет можно добавить изображения, хранимые в базе данных. Управление изображениями отчета не отличается от управления статическими изображениями, только имеет дополнительный набор свойств, указывающий, что изображение хранится в базе данных. Инструкции по работе с изображениями, привязанными к данным, см. в разделе [Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="HowTo"></a> Инструкции  
  [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)  
@@ -83,9 +82,8 @@ caps.handback.revision: 9
   
  [Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Экспорт в файл изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

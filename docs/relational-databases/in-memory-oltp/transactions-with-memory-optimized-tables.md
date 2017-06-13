@@ -3,7 +3,7 @@ title: "Транзакции с таблицами, оптимизированн
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/18/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -339,31 +339,4 @@ SQL Server имеет следующие режимы запуска транз�
 - [Уровни изоляции, основанные на управлении версиями строк, в ядре СУБД](http://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md)   
-  
-\<!--  
-Идентификаторы GUID для ссылок:  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
-  
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Введение в таблицы, оптимизированные для памяти"  
-  
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
-  
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
-  
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Управление устойчивостью транзакций"  
-  
-Изображение: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-См. также статьи об XMetaL: dn133169.aspx "Время существования транзакций"  
-  
-Операции с таблицами и процедурами в памяти  
-{ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Возможно, заменяет: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Основные сведения о транзакциях с таблицами, оптимизированными для памяти"  
-  
-GeneMi, 28.03.2016 11:40:00  
--->  
-  
-  
-  
-  
-
 

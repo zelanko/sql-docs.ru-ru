@@ -1,23 +1,28 @@
 ---
-title: "Выбор средства бизнес-аналитики Майкрософт для анализа и отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Выбор средства Microsoft Business Intelligence (BI) для анализа и отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 09/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Выбор средства бизнес-аналитики Майкрософт для анализа и отчетов
+# <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Выбор средства Microsoft Business Intelligence (BI) для анализа и отчетности
 Выбор подходящего средства бизнес-аналитики может оказывать огромное влияние. Вы можете ознакомиться с дополнительными сведениями о различных предложениях Майкрософт и выбрать то из них, которое наилучшим образом соответствует вашим потребностям.
 
 В следующей таблице показано сопоставление рабочих нагрузок для анализа и отчетов со средствами бизнес-аналитики Майкрософт, которые лучше всего подходят для этих рабочих нагрузок. Дополнительные сведения о продукте, щелкните приведенную в таблице ссылку на продукт.  
@@ -48,3 +53,4 @@ caps.handback.revision: 16
  *Службы Reporting Services имеют несколько функций, поддерживающих доставку современных и разбитых на страницы отчетов.  
   
   
+

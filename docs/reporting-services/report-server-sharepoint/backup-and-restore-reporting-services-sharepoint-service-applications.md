@@ -1,23 +1,28 @@
 ---
-title: "Резервное копирование и восстановление Служебного приложения SharePoint службы Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Резервное копирование и восстановление приложения службы SharePoint служб отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Резервное копирование и восстановление Служебного приложения SharePoint службы Reporting Services
+# <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Резервное копирование и восстановление Служебного приложения SharePoint службы Reporting Services
   В этом разделе описывается резервное копирование и восстановление приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с использованием центра администрирования SharePoint или PowerShell. В этом разделе содержится следующее.  
   
 -   [Ограничения](#bkmk_Restrictions)  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
 ###  <a name="bkmk_Restrictions"></a> Ограничения  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут частично резервно копироваться и восстанавливаться с использованием функциональных возможностей резервного копирования и восстановления SharePoint. **Требуются дополнительные шаги** и шаги описаны в этом разделе. В данный момент процесс резервного копирования **не создает** резервные копии ключей шифрования и учетных данных для учетных записей автоматического выполнения или проверки подлинности Windows в базе данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут частично резервно копироваться и восстанавливаться с использованием функциональных возможностей резервного копирования и восстановления SharePoint. **Требуются дополнительные шаги** и шаги описаны в этом разделе. В данный момент процесс резервного копирования **не создает** резервные копии ключей шифрования и учетных данных для учетных записей автоматического выполнения или проверки подлинности Windows в базе данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Рекомендации  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 11
   
 3.  Убедитесь, что в приложении службы используются учетные данные автоматического выполнения или проверка подлинности Windows для доступа к базе данных. Если они используются, запишите эти учетные данные, чтобы их можно было использовать при настройке восстановленного приложения службы.  
   
-### Выполните резервное копирование ключей шифрования, с помощью центра администрирования  
+### <a name="backup-the-encryption-keys-using-central-administration"></a>Выполните резервное копирование ключей шифрования, с помощью центра администрирования  
  Дополнительные сведения о резервном копировании ключей шифрования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе "Ключи шифрования" статьи [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ###  <a name="bkmk_centraladmin"></a> Создайте резервную копию приложения службы в центре администрирования SharePoint  
@@ -74,7 +79,7 @@ caps.handback.revision: 11
   
  [Создайте резервную копию приложения службы (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### Проверьте учетную запись выполнения и проверку подлинности базы данных  
+### <a name="verify-execution-account-and-database-authentication"></a>Проверьте учетную запись выполнения и проверку подлинности базы данных  
  **Учетная запись выполнения.** Чтобы проверить используется ли в приложении службы учетная запись выполнения, выполните следующее.  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями служб** .  
@@ -91,7 +96,7 @@ caps.handback.revision: 11
   
 2.  Щелкните рядом с именем приложения службы, затем нажмите кнопку **Свойства** на ленте SharePoint.  
   
-3.  Проверьте раздел **База данных службы Reporting Services (SSRS)**.  
+3.  Проверьте раздел **База данных службы Reporting Services (SSRS)** .  
   
 4.  Если была настроена проверка подлинности Windows, то для настройки приложения службы после его восстановления будет необходимо знать верные учетные данные. Не приступайте к процедуре резервного копирования и восстановления до тех пор, пока не будут известны правильные учетные данные.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 11
   
 3.  Если в приложении службы для доступа к базе данных использовалась учетная запись выполнения или проверка подлинности Windows, следует настроить учетные данные.  
   
-### Восстановите резервную копию приложения службы в центре администрирования SharePoint  
+### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>Восстановите резервную копию приложения службы в центре администрирования SharePoint  
   
 1.  В центре администрирования SharePoint нажмите кнопку **Восстановление из резервной копии** в группе **Резервное копирование и восстановление** .  
   
@@ -124,12 +129,12 @@ caps.handback.revision: 11
   
  [Восстановление приложения службы (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
   
- [Восстановление приложения службы (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
+ [Восстановление приложения службы (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
   
-### Восстановление ключей шифрования с помощью центра администрирования  
+### <a name="restore-the-encryption-keys-using-central-administration"></a>Восстановление ключей шифрования с помощью центра администрирования  
  Дополнительные сведения о восстановлении ключей шифрования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе "Ключи шифрования" статьи [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
-### Настройка учетной записи выполнения и проверки подлинности базы данных  
+### <a name="configure-the-execution-account-and-database-authentication"></a>Настройка учетной записи выполнения и проверки подлинности базы данных  
  **Учетная запись выполнения.** Если в приложении службы использовалась учетная запись выполнения, выполните следующие шаги для ее настройки.  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями служб** .  
@@ -148,7 +153,7 @@ caps.handback.revision: 11
   
 2.  Щелкните рядом с именем приложения службы, затем нажмите кнопку **Свойства** на ленте SharePoint.  
   
-3.  Проверьте раздел **База данных службы Reporting Services (SSRS)**.  
+3.  Проверьте раздел **База данных службы Reporting Services (SSRS)** .  
   
 4.  Выберите параметр **Проверка подлинности Windows**.  
   

@@ -1,33 +1,38 @@
 ---
-title: "Диаграммы с областями (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Диаграммы с областями (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbb5e600306a5d107f7cbd542fb2c66abe96b35a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Диаграммы с областями (построитель отчетов и службы SSRS)
+# <a name="area-charts-report-builder-and-ssrs"></a>Диаграммы с областями (построитель отчетов и службы SSRS)
   В диаграммах с областями данные выводятся в виде точек, соединенных линией, с закрашенными ниже этой линии областями. Дополнительные сведения о добавлении данных в диаграммы с областями см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  На следующей иллюстрации показан пример диаграммы с областями с накоплением. Рассматриваемые данные хорошо подходят для отображения на диаграмме с областями с накоплением, поскольку эта диаграмма позволяет отображать итоги для всех рядов, а также пропорциональную долю каждого ряда в общем итоге.  
   
- ![Диаграмма с областями](../../reporting-services/report-design/media/areachart.gif "Диаграмма с областями")  
+ ![Диаграмма с областями](../../reporting-services/report-design/media/areachart.gif "диаграмма с областями")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Разновидности  
+## <a name="variations"></a>Разновидности  
   
 -   **С областями с накоплением**. Диаграмма с областями, в которой несколько рядов наложены по вертикали. Если в диаграмме только один ряд, то диаграмма с областями с накоплением будет выглядеть точно так же, как обычная диаграмма с областями.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 -   **Гладкая диаграмма с областями**. Диаграмма с областями, в которой точки данных соединены сглаженной, а не ломаной линией. Гладкая диаграмма с областями используется вместо обычной диаграммы с областями, если более важно показать тренды, а не представить значения отдельных точек данных.  
   
-## Данные для диаграмм с областями  
+## <a name="data-considerations-for-area-charts"></a>Данные для диаграмм с областями  
   
 -   Не считая графика, диаграмма с областями представляет собой единственный тип диаграммы, на которой данные представлены с помощью гладкой кривой. Поэтому диаграммы с областями обычно используются для представления данных, относящихся к непрерывному промежутку времени.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 -   По своему назначению типы диаграммы с областями очень похожи на гистограммы и графики. Если сравнивается несколько рядов, рассмотрите возможность использования гистограммы вместо диаграммы с областями. Если проводится анализ трендов за какой-то промежуток времени, рассмотрите возможность использования графика.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Графики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   

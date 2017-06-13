@@ -1,35 +1,42 @@
 ---
-title: "Написание скриптов для задач развертывания и администрирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сценарии [службы Reporting Services]"
-  - "перемещение отчетов"
-  - "серверы отчетов [службы Reporting Services], дублирование параметров"
-  - "развертывание [службы Reporting Services], скрипты"
-  - "копирование настроек сервера отчетов"
-  - "задачи администрирования [службы Reporting Services]"
-  - "дублирование среды сервера отчетов"
-  - "перенос отчетов [службы Reporting Services]"
-  - "скрипты [службы Reporting Services], развертывания"
-  - "перенос отчетов"
-  - "отчеты [службы Reporting Services], перенос"
+title: "Создать скрипт развертывания и административных задач | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [Reporting Services]
+- moving reports
+- report servers [Reporting Services], duplicating settings
+- deploying [Reporting Services], scripts
+- copying report server settings
+- administrative tasks [Reporting Services]
+- duplicating report server environment
+- migrating reports [Reporting Services]
+- scripts [Reporting Services], deployments
+- transferrng reports
+- reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 62
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 62
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 707cf39041be5c96ac4898e462580b3630feaaaf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Написание скриптов для задач развертывания и администрирования
+
+# <a name="script-deployment-and-administrative-tasks"></a>Написание скриптов для задач развертывания и администрирования
+
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают использование сценариев для автоматизации стандартных задач по установке, развертыванию и администрированию. Развертывание сервера отчетов является многошаговым процессом. Чтобы настроить развертывание, необходимо использовать несколько средств и процессов. Для автоматизации всех задач не существует единой программы или единого подхода.  
   
  Не все шаги следует автоматизировать. В некоторых случаях выполнение шага вручную или с помощью графического средства является самым простым и эффективным подходом. Например, если требуется развернуть большое количество отчетов и моделей, проще скопировать базу данных сервера отчетов, чем писать программный код, который воссоздаст среду сервера отчетов.  
@@ -40,38 +47,38 @@ caps.handback.revision: 62
   
  Этот раздел описывает рекомендуемые подходы для автоматизации определенных шагов. Упомянуты несколько программ и программных интерфейсов; описания каждого предоставлены далее в разделе.  
   
-## Задачи развертывания и способы их автоматизации  
+## <a name="deployment-tasks-and-how-to-automate-them"></a>Задачи развертывания и способы их автоматизации  
  В следующей таблице обобщены задачи по установке и настройке сервера отчетов, необходимые для его развертывания. Эту таблицу можно использовать для сверки конкретной задачи с подходом, позволяющим ее автоматизировать или выполнить полностью автоматически.  
   
 |Задача|Подход|  
 |----------|--------------|  
 |Установить службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Для выполнения автоматической установки программу установки можно запустить из командной строки.<br /><br /> Программу установки можно использовать как для установки, так и для настройки сервера отчетов, но только в случае, если указаны параметры конфигурации по умолчанию и система соответствует всем требованиям для этого типа установки. Если установка конфигурации по умолчанию невозможна, необходимо установить только файлы.|  
-|Настройте учетную запись службы.|Начальная конфигурация этой учетной записи службы выполняется программой установки. Чтобы автоматизировать сделанные в учетной записи службы изменения как задачу, которая будет выполнена после установки, необходимо записать пользовательский код, выполняющий вызовы к поставщику WMI сервера отчетов. Для программной настройки учетной записи службы не существует специальных программ командной строки или шаблонов скриптов.<br /><br /> Если автоматизировать этот шаг путем создания программного кода невозможно, то учетную запись можно настроить вручную при помощи средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](../Topic/Configure%20a%20Service%20Account%20\(SSRS%20Configuration%20Manager\).md).|  
+|Настройте учетную запись службы.|Начальная конфигурация этой учетной записи службы выполняется программой установки. Чтобы автоматизировать сделанные в учетной записи службы изменения как задачу, которая будет выполнена после установки, необходимо записать пользовательский код, выполняющий вызовы к поставщику WMI сервера отчетов. Для программной настройки учетной записи службы не существует специальных программ командной строки или шаблонов скриптов.<br /><br /> Если автоматизировать этот шаг путем создания программного кода невозможно, то учетную запись можно настроить вручную при помощи средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).|  
 |Настройте URL-адреса веб-службы сервера отчетов и диспетчера отчетов.|Необходимо записать специальный программный код, обращающийся к поставщику WMI сервера отчетов. Для настройки URL-адресов не существует специальных программ командной строки или шаблонов скриптов.<br /><br /> Если вы хотите избежать написания кода, то URL-адреса можно настроить вручную при помощи средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в статье [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).|  
-|Создание базы данных сервера отчетов.|Необходимо записать специальный программный код, обращающийся к поставщику WMI сервера отчетов. Для создания баз данных сервера отчетов и роли RSExecRole не существует специальных программ командной строки или шаблонов скриптов.<br /><br /> Если вы хотите избежать написания кода, то базу данных можно создать вручную при помощи средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md).|  
+|Создание базы данных сервера отчетов.|Необходимо записать специальный программный код, обращающийся к поставщику WMI сервера отчетов. Для создания баз данных сервера отчетов и роли RSExecRole не существует специальных программ командной строки или шаблонов скриптов.<br /><br /> Если вы хотите избежать написания кода, то базу данных можно создать вручную при помощи средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).|  
 |Настройка подключения к базе данных сервера отчетов.|При изменении строки подключения, учетной записи, пароля или типа проверки подлинности следует запустить программу **rsconfig** для настройки соединения. Дополнительные сведения см. в разделе [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) и [Программа rsconfig (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md).<br /><br /> Программу rsconfig.exe нельзя использовать для создания или обновления базы данных. База данных и роль RSExecRole должны быть созданы ранее.|  
 |Настройка масштабного развертывания.|Для настройки масштабного развертывания выберите один из следующих подходов.<br /><br /> — Для соединения экземпляров сервера отчетов с существующей установкой запустите программу rskeymgmt.exe. Дополнительные сведения см. в разделе [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).<br />— Напишите специальный программный код, обращающийся к поставщику WMI сервера отчетов.|  
-|Резервное копирование ключей шифрования.|Для автоматизации резервного копирования ключей шифрования выберите один из следующих подходов.<br /><br /> — Для создания резервной копии ключей шифрования запустите программу rskeymgmt.exe. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md).<br />— Напишите специальный программный код, обращающийся к поставщику WMI сервера отчетов.|  
-|Настройка электронной почты сервера отчетов.|Напишите пользовательский программный код, обращающийся к поставщику WMI служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Поставщик поддерживает подмножество установок конфигурации электронной почты.<br /><br /> Хотя файл RSReportServer.config содержит все установки, не используйте этот файл автоматически. В особенности не используйте пакетный файл для копирования файла на другой сервер отчетов. Каждый файл конфигурации содержит значения, определенные для текущего экземпляра. Эти значения не будут допустимыми на других экземплярах сервера отчетов.<br /><br /> Дополнительные сведения о параметрах см. в статье [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/ru-ru/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|Резервное копирование ключей шифрования.|Для автоматизации резервного копирования ключей шифрования выберите один из следующих подходов.<br /><br /> — Для создания резервной копии ключей шифрования запустите программу rskeymgmt.exe. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).<br />— Напишите специальный программный код, обращающийся к поставщику WMI сервера отчетов.|  
+|Настройка электронной почты сервера отчетов.|Напишите пользовательский программный код, обращающийся к поставщику WMI служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Поставщик поддерживает подмножество установок конфигурации электронной почты.<br /><br /> Хотя файл RSReportServer.config содержит все установки, не используйте этот файл автоматически. В особенности не используйте пакетный файл для копирования файла на другой сервер отчетов. Каждый файл конфигурации содержит значения, определенные для текущего экземпляра. Эти значения не будут допустимыми на других экземплярах сервера отчетов.<br /><br /> Дополнительные сведения о параметрах см. в статье [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |Настройка учетной записи автоматического выполнения.|Для автоматизации настройки учетной записи автоматического выполнения выберите один из следующих подходов.<br /><br /> — Запустите программу rsconfig.exe для настройки учетной записи. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).<br />— Напишите специальный программный код, обращающийся к поставщику WMI сервера отчетов.|  
 |Развертывание существующего содержимого на другом сервере отчетов, включая иерархию папок, назначение ролей, отчеты, подписки, расписания, источники данных и ресурсы.|Лучший способ повторно создать существующую среду сервера отчетов — скопировать базу данных сервера отчетов в новый экземпляр сервера отчетов.<br /><br /> Альтернативный подход заключается в написании специального кода, который программным путем заново создает существующее содержимое сервера отчетов. Однако учтите, что подписки, моментальные снимки отчетов и журнал отчетов невозможно создать повторно программным способом.<br /><br /> В некоторых случаях развертывание может выиграть от применения обоих методов (то есть можно восстановить базу данных сервера отчетов, а затем записать программный код, изменяющий ее для конкретного экземпляра).<br /><br /> Подробный пример см. в разделе [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).<br /><br /> Дополнительные сведения о перемещении базы данных сервера отчетов см. в разделе [Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md). Дополнительные сведения о создании среды сервера отчетов программным способом см. в подразделе «Миграция содержимого и папок сервера отчетов с помощью скрипта» этого раздела.|  
   
-## Инструменты и технологии для автоматизации развертывания сервера  
+## <a name="tools-and-technologies-for-automating-server-deployment"></a>Инструменты и технологии для автоматизации развертывания сервера  
  В следующем списке обобщаются программы и интерфейсы, которые могут использоваться для автоматизации задач развертывания и обслуживания.  
   
 -   Программа установки может запускаться в автоматическом режиме для установки и (в некоторых случаях) настройки компонентов сервера отчетов. Чтобы программа установки настроила экземпляр сервера отчетов, следует использовать параметр установки «Только файлы».  
   
 -   Поставщик WMI служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и программы командной строки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать для локальной и удаленной настройки сервера.  
   
-     Поставщик WMI служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет классы, свойства и методы, реализующие управление всеми аспектами установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], — задание учетной записи службы, настройка URL-адресов, создание и настройка базы данных сервера отчетов или настройка сервера отчетов для доставки отчетов по электронной почте. Для использования поставщика WMI необходимо записать специальный программный код или скрипт. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+     Поставщик WMI служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет классы, свойства и методы, реализующие управление всеми аспектами установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , — задание учетной записи службы, настройка URL-адресов, создание и настройка базы данных сервера отчетов или настройка сервера отчетов для доставки отчетов по электронной почте. Для использования поставщика WMI необходимо записать специальный программный код или скрипт. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
      Альтернативой написанию программного кода является использование программ командной строки (rsconfig.exe и rskeymgmt.exe). Можно записать пакетный файл, запускающий эти программы. Программы могут использоваться для автоматизации не всех задач настройки.  
   
--   Средство сервера скриптов сервера отчетов (rs.exe) может выполнять пользовательский программный код на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], предназначенный для повторного создания или перемещения существующего содержимого с одного сервера отчетов на другой. При этом подходе скрипт записывается на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], сохраняется в виде RSS-файла и с помощью программы rs.exe запускается на сервере отчетов. Написанный скрипт может обращаться к веб-службе сервера отчетов по протоколу SOAP. При создании скриптов развертывания данный подход позволяет повторно создавать пространство имен и содержимое папок сервера отчетов, а также политики безопасности на основе ролей.  
+-   Средство сервера скриптов сервера отчетов (rs.exe) может выполнять пользовательский программный код на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , предназначенный для повторного создания или перемещения существующего содержимого с одного сервера отчетов на другой. При этом подходе скрипт записывается на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], сохраняется в виде RSS-файла и с помощью программы rs.exe запускается на сервере отчетов. Написанный скрипт может обращаться к веб-службе сервера отчетов по протоколу SOAP. При создании скриптов развертывания данный подход позволяет повторно создавать пространство имен и содержимое папок сервера отчетов, а также политики безопасности на основе ролей.  
   
--   В выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] появились командлеты PowerShell для режима интеграции с SharePoint. PowerShell можно использовать для настройки и администрирования интеграции с SharePoint.  Дополнительные сведения см. в разделе [Командлеты PowerShell для служб Reporting Services в режиме интеграции с SharePoint](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   В выпуске SQL Server 2012 появились командлеты PowerShell для режима интеграции с SharePoint. PowerShell можно использовать для настройки и администрирования интеграции с SharePoint.  Дополнительные сведения см. в разделе [Командлеты PowerShell для служб Reporting Services в режиме интеграции с SharePoint](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## Миграция содержимого и папок сервера отчетов с помощью скриптов  
+## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>Миграция содержимого и папок сервера отчетов с помощью скриптов  
  Можно записать скрипт, дублирующие среду сервера отчетов на другом экземпляре сервера отчетов. Скрипты развертывания, как правило, пишутся на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , а затем выполняются с помощью сервера скриптов сервера отчетов.  
   
  Подробный пример см. в разделе [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
@@ -82,11 +89,11 @@ caps.handback.revision: 62
   
 1.  Присвойте переменной скрипта URL-адрес исходного сервера отчетов.  
   
-2.  Воспользуйтесь методами <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A> и <xref:ReportService2010.ReportingService2010.GetProperties%2A> для получения определения и свойств отчета.  
+2.  Используйте <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A> и <xref:ReportService2010.ReportingService2010.GetProperties%2A> методы для получения определения отчета и свойства отчета.  
   
 3.  Присвойте URL-адресу значение, указывающее на целевой сервер.  
   
-4.  Воспользуйтесь методом <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>, передав ему свойства, возвращенные методом <xref:ReportService2010.ReportingService2010.GetProperties%2A>, и определение отчета, возвращенное методом <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>.  
+4.  Используйте <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> метод, передавая свойства, возвращаемые из <xref:ReportService2010.ReportingService2010.GetProperties%2A> и определение отчета, возвращаемые <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>.  
   
  Пользуясь методами get и create, можно выполнить аналогичные шаги для переноса настроек, папок, общих источников данных и ресурсов. Дополнительные сведения о доступных методах см. в разделе [Технический справочник (службы SSAS)](../../reporting-services/technical-reference-ssrs.md).  
   
@@ -95,8 +102,8 @@ caps.handback.revision: 62
   
  Дополнительные сведения о форматировании и выполнении файлов скриптов см. в разделе [Создание скриптов с помощью программы rs.exe и веб-службы](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
   
-## Настройка свойств сервера с помощью сценариев  
- Можно записать сценарии, которые зададут системные свойства на сервере отчетов. Следующий скрипт [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET иллюстрирует один из способов установки свойств. Этот сценарий отключает элемент управления RSClientPrint ActiveX, но можно заменить значения **EnableClientPrinting** и **False** любым допустимым именем свойства и значением. Полный список свойств сервера см. в разделе [Report Server System Properties](../Topic/Report%20Server%20System%20Properties.md).  
+## <a name="using-scripts-to-set-server-properties"></a>Настройка свойств сервера с помощью сценариев  
+ Можно записать сценарии, которые зададут системные свойства на сервере отчетов. Следующий скрипт [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET иллюстрирует один из способов установки свойств. Этот сценарий отключает элемент управления RSClientPrint ActiveX, но можно заменить значения **EnableClientPrinting** и **False** любым допустимым именем свойства и значением. Полный список свойств сервера см. в разделе [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Чтобы использовать скрипт, сохраните его в файл с расширением RSS, а затем воспользуйтесь программой командной строки rs.exe для запуска файла на сервере отчетов. Скрипт не компилируется, поэтому необязательно иметь установку [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. В этом примере предполагается, что пользователь имеет необходимые разрешения на локальном компьютере, на котором находится сервер отчетов. Если пользователь не вошел в систему под учетной записью, имеющей необходимые разрешения, необходимо указать сведения об учетной записи с помощью дополнительных аргументов командной строки. Дополнительные сведения см. в разделе [Программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
@@ -118,17 +125,18 @@ Public Sub Main()
             Console.Write(e.Message)  
         End Try  
 End Sub  
-```  
-  
-## См. также  
- [Метод GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/generatedatabasecreationscript-method-wmi-msreportserver-configurationsetting.md)   
- [Метод GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/generatedatabaserightsscript-method-wmi-msreportserver-configurationsetting.md)   
- [Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/generatedatabaseupgradescript-method-wmi-msreportserver-configurationsetting.md)   
- [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Установка сервера отчетов служб Reporting Services в собственном режиме](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
- [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
-  
-  
+```
+
+## <a name="next-steps"></a>Следующие шаги
+
+[Метод GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+[Метод GenerateDatabaseRightsScript &#40; WMI MSReportServer_ConfigurationSetting &#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+[Метод GenerateDatabaseUpgradeScript &#40; WMI MSReportServer_ConfigurationSetting &#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+[Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+[Установка сервера отчетов собственный режим служб Reporting Services](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
+[Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+[Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+[Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+[Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

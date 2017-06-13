@@ -1,39 +1,44 @@
 ---
-title: "Точечные диаграммы (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Точечные диаграммы (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2b035836c2357feecf8f0a3763c9a3b2ba566b6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Точечные диаграммы (построитель отчетов и службы SSRS)
-  В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+# <a name="scatter-charts-report-builder-and-ssrs"></a>Точечные диаграммы (построитель отчетов и службы SSRS)
+  В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
  На следующем рисунке показан пример точечной диаграммы.  
   
- ![Точечная диаграмма](../../reporting-services/report-design/media/rs-scatterchart.gif "Точечная диаграмма")  
+ ![Точечная диаграмма](../../reporting-services/report-design/media/rs-scatterchart.gif "точечной диаграммы")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Разновидности  
+## <a name="variations"></a>Разновидности  
   
 -   **Пузырьки.** Пузырьковые диаграммы демонстрируют разницу между двумя значениями точки данных с помощью размера пузырька. Чем больше пузырек, тем больше разница.  
   
 -   **Трехмерная пузырьковая диаграмма**. Пузырьковая диаграмма с трехмерным эффектом.  
   
-## Вопросы работы с данными для точечной диаграммы  
+## <a name="data-considerations-for-a-scatter-chart"></a>Вопросы работы с данными для точечной диаграммы  
   
 -   Точечные диаграммы часто используются для вывода и сравнения численных значений — научных, статистических, инженерных данных.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
   
 -   По умолчанию на точечных диаграммах точки данных выводятся в виде точек. Если на точечной диаграмме необходимо вывести несколько рядов, рекомендуется использовать маркеры разной формы — треугольные, квадратные, ромбические или иные.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

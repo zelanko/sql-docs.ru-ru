@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>Безопасность сборщика данных
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ### <a name="dcproxy-role"></a>Роль dc_proxy  
  Члены роли **dc_proxy** имеют доступ на чтение всех наборов элементов сбора сборщика данных и свойств уровня сборщика. Члены этой роли могут также выполнять задания, владельцами которых они являются, и создавать шаги задания, которые выполняются от имени существующей учетной записи-посредника.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>Разрешения для настройки и использования хранилища управляющих данных  
  В зависимости от задачи пользователи должны быть членами одной или нескольких предопределенных ролей базы данных, предоставленных для доступа к хранилищу данных управления. В порядке от наиболее привилегированных до наименее привилегированных список ролей выглядит следующим образом.  

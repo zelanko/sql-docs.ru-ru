@@ -1,26 +1,31 @@
 ---
-title: "Добавление датчика в отчет (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление датчика в отчет (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de434ef80732d2a845fb41c972f0118fee357d14
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление датчика в отчет (построитель отчетов и службы SSRS)
+# <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Добавление датчика в отчет (построитель отчетов и службы SSRS)
   Если в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] необходимо создать сводку данных в визуальном формате, то можно использовать область данных "Датчик". После добавления области данных датчика в область конструктора можно перетаскивать поля набора данных отчета на панель данных в датчике.  
   
-## Добавление датчика в отчет  
+## <a name="to-add-a-gauge-to-your-report"></a>Добавление датчика в отчет  
   
 1.  Создайте отчет или откройте существующий отчет.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 7
   
      Щелкните правой кнопкой мыши шкалу датчика и выберите пункт **Свойства шкалы**. Введите для шкалы значения **Минимум** и **Максимум** . Дополнительные сведения см. в разделе [Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   

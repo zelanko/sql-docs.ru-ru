@@ -1,25 +1,30 @@
 ---
-title: "Свойства задания (среда Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
+title: "Задание свойств (среда Management Studio) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Свойства задания (среда Management Studio)
+# <a name="job-properties-management-studio"></a>Свойства задания (среда Management Studio)
   На странице **Свойства задания** можно просматривать сведения о выполняющихся отчетах и подписках перед их отменой.  
   
  Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов и откройте папку **Задания** . Щелкните выполняющееся задание правой кнопкой мыши и выберите пункт **Свойства**.  
@@ -27,16 +32,16 @@ caps.handback.revision: 13
 > [!NOTE]  
 >  Эта функция не поддерживается в [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. Эта страница не отображается при запуске выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
-## Задания  
+## <a name="tasks"></a>Задания  
  Прежде чем сведения о задании можно будет просмотреть, обновите страницу, чтобы получить сведения о заданиях, выполняемых в данный момент на сервере отчетов.  
   
 1.  Откройте папку сервера отчетов.  
   
-2.  Щелкните правой кнопкой мыши **Задания** и выберите команду **Обновить**.  
+2.  Щелкните правой кнопкой мыши **Задания**и выберите команду **Обновить**.  
   
 3.  Если задание присутствует в списке, щелкните его правой кнопкой мыши и выберите пункт **Свойства**.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Идентификатор задания**  
  Идентификатор GUID, присваиваемый заданию во время его обработки. Это значение формируется случайным образом при каждом запуске отчета или подписки.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 13
  **Имя пользователя**  
  Для процессов, инициируемых пользователем, в этом столбце отображается имя пользователя. Для системных заданий отображается имя сервера отчетов.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  

@@ -1,22 +1,30 @@
 ---
-title: "Занятие&#160;1. Создание проекта сервера отчетов (службы Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Урок 1: Создание проекта сервера отчетов (службы Reporting Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 55
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Занятие&#160;1. Создание проекта сервера отчетов (службы Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)
+
+ > Содержимое, связанное с предыдущих версий SQL Server, в разделе [занятия 1: Создание проекта сервера отчетов (службы Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+
 На этом занятии вы создадите *проект сервера отчетов* и *RDL-файл определения отчета* в [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] в среде Visual Studio. 
 
 Чтобы создать отчет в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], нужно сначала создать проект сервера отчетов, в котором можно сохранить файл определения отчета (с расширением RDL) и другие файлы ресурсов, необходимые для отчета. 
@@ -33,15 +41,15 @@ caps.handback.revision: 55
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  В разделе **Установленные** > **Шаблоны** > **Business Intelligence** (Бизнес-аналитика) щелкните **Службы отчетов**.
+3.  В разделе **Установленные** > **Шаблоны** > **Business Intelligence**(Бизнес-аналитика) щелкните **Службы отчетов**.
 
     ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
 
 5. Щелкните **Проект сервера отчетов** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Примечание.** Если элемент **Business Intelligence** ("Бизнес-аналитика") или **Проект сервера отчетов** отсутствует, необходимо обновить шаблоны бизнес-аналитики SQL Server Data Tools. См. страницу [Скачать SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
+   >**Примечание**: Если вы не видите **бизнес-аналитики** или **проекта сервера отчетов** параметры, необходимо обновить SSDT с помощью шаблонов бизнес-аналитики. См. страницу [Скачать SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-5.  В поле **Имя** введите **Руководство**.  
+5.  В поле **Имя**введите **Руководство**.  
 
     По умолчанию он создается в папке Visual Studio 2015\Projects в новом каталоге.
     
@@ -55,7 +63,7 @@ caps.handback.revision: 55
   
 1.  В области **обозревателя решений** щелкните правой кнопкой мыши **Отчеты** > **Добавить** > **Новый элемент**. 
 
-    >**Совет.** Если область **обозревателя решений** не отображается, в меню **Вид** выберите пункт **Обозреватель решений**. 
+    >**Совет.**Если область **обозревателя решений** не отображается, в меню **Вид** выберите пункт **Обозреватель решений**. 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -72,8 +80,10 @@ caps.handback.revision: 55
     Данные определяются в области **Данные отчета** . Макет отчета определяется в представлении **Конструктор** . Отчет можно выполнить и посмотреть, как он выглядит, в представлении **Предварительный просмотр** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. [Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. [Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
 [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
+
+

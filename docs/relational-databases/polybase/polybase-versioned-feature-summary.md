@@ -15,70 +15,35 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2da0c759864e746414f8bf17388463c9a4bfdf88
+ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
+ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Сводка функций PolyBase по версиям
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Сводка функций PolyBase, доступных для продуктов и служб SQL Server.  
+Сводка функций PolyBase, доступных для SQL Server продуктов и услуг.  
   
 ## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
  В приведенной ниже таблице перечислены основные функции PolyBase и продукты, в которых они доступны.  
   
-### [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- Эти функции относятся к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] в локальной среде или в виртуальной машине Azure.  Технология PolyBase недоступна в SQL Server 2014 и более ранних версий.  
-  
-|||  
-|-|-|  
-|**Компонент**|**Доступность**|  
-|Запрос данных Hadoop с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|  
-|Запрос хранилища BLOB-объектов Azure с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|  
-|Импорт данных из Hadoop|да|  
-|Импорт данных из хранилища BLOB-объектов Azure|Да| 
-|Импорт данных из хранилища Azure Data Lake Store|нет|   
-|Экспорт данных в Hadoop|да|  
-|Экспорт данных в хранилище BLOB-объектов Azure|Да|  
-|Экспорт данных из хранилища Azure Data Lake Store|нет|
-|Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|да|  
-|Отправка результатов вычислений запросов в Hadoop|да|  
-  
-### [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
- Эти функции относятся к [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Компонент**|**Доступность**|  
-|Запрос данных Hadoop с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|нет|  
-|Запрос хранилища BLOB-объектов Azure с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|  
-|Импорт данных из Hadoop|нет|  
-|Импорт данных из хранилища BLOB-объектов Azure|Да|
-|Импорт данных из хранилища Azure Data Lake Store|Да|     
-|Экспорт данных в Hadoop|нет|  
-|Экспорт данных в хранилище BLOB-объектов Azure|Да|  
-|Экспорт данных в хранилище Azure Data Lake Store|Да|
-|Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|да|  
-|Отправка результатов вычислений запросов в Hadoop|нет|  
-  
-### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Эти функции относятся к [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Компонент**|**Доступность**|  
-|Запрос данных Hadoop с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|  
-|Запрос хранилища BLOB-объектов Azure с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|  
-|Импорт данных из Hadoop|да|  
-|Импорт данных из хранилища BLOB-объектов Azure|Да|  
-|Импорт данных из хранилища Azure Data Lake Store|нет|   
-|Экспорт данных в Hadoop|да|  
-|Экспорт данных в хранилище BLOB-объектов Azure|Да|  
-|Экспорт данных в хранилище Azure Data Lake Store|нет|
-|Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|да|  
-|Отправка результатов вычислений запросов в Hadoop|да|  
+||||||
+|-|-|-|-|-|   
+|**Компонент**|**SQL Server 2016**|**База данных SQL Azure**|**Хранилище данных SQL Azure**|**Параллельное хранилище данных**| 
+|Запрос данных Hadoop с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|нет|Да|
+|Импорт данных из Hadoop|Да|нет|нет|Да|
+|Экспорт данных в Hadoop  |Да|нет|нет| Да|
+|Отправка результатов вычислений запросов в Hadoop|Да|нет|нет|Да|  
+|Импорт данных из хранилища BLOB-объектов Azure|да|нет|да|Да| 
+|Экспорт данных в хранилище BLOB-объектов Azure|да|нет|да|Да|  
+|Импорт данных из хранилища Azure Data Lake Store|нет|нет|да|нет|    
+|Экспорт данных из хранилища Azure Data Lake Store|нет|нет|да|нет|
+|Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|Да|нет|да|Да|   
+
+
+
   
 ## <a name="see-also"></a>См. также:  
  [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  

@@ -1,30 +1,35 @@
 ---
-title: "создать журнал отчета (службы Reporting Services в режиме интеграции с SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "журнал отчета [службы Reporting Services], SharePoint"
+title: "Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report history [Reporting Services], SharePoint
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e1388fba5963d5571d293f2d995c73bb3d83d3b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# создать журнал отчета (службы Reporting Services в режиме интеграции с SharePoint)
+# <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>создать журнал отчета (службы Reporting Services в режиме интеграции с SharePoint)
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Каждый моментальный снимок представляет собой копию отчета в том виде, в котором он был создан. Он включает в себя макет и данные, являвшиеся текущими во время создания моментального снимка. Сведения о подготовке к просмотру не хранятся вместе с моментальным снимком. При открытии моментального снимка журнала отчета, он открывается в виде HTML-документа в веб-части «Средство просмотра отчетов». После завершения подготовки к просмотру отчет можно экспортировать в форматы других приложений.  
   
  Чтобы создать журнал отчета, отчет должен иметь возможность запуска в автоматическом режиме (сервер отчетов должен иметь возможность запустить отчет без взаимодействия с пользователем). Необходимо иметь разрешение на изменение элементов библиотеки, в которой содержится отчет. Для просмотра или удаления журнала отчета необходимо иметь разрешение на просмотр или удаление версий.  
   
-### Создание моментального снимка или журнала отчета по требованию  
+### <a name="to-create-a-snapshot-or-report-history-on-demand"></a>Создание моментального снимка или журнала отчета по требованию  
   
 1.  Укажите отчет.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 12
   
 4.  Для просмотра вновь созданного моментального снимка выберите его из списка. Каждый моментальный снимок снабжен отметкой времени, которая показывает, когда он был сделан. Переименование моментальных снимков, перемещение их в другое место или изменение не допускается.  
   
-### Планирование журнала отчета  
+### <a name="to-schedule-report-history"></a>Планирование журнала отчета  
   
 1.  Укажите отчет.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 12
   
 4.  При работе с общим расписанием, содержащим сведения о расписании, которое нужно использовать, щелкните вариант **По общему расписанию** и выберите расписание, которое будет использоваться. В противном случае щелкните вариант **По нестандартному расписанию**и нажмите кнопку **Настройка** для указания параметров создания журнала отчета на основе регулярного расписания.  
   
-### Создание журнала отчета при обновлении данных отчета  
+### <a name="to-create-report-history-when-data-is-refreshed-in-a-report"></a>Создание журнала отчета при обновлении данных отчета  
   
 1.  Укажите отчет.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 12
   
 3.  В области **Параметры моментальных снимков журнала**выберите **Хранить в журнале отчета все снимки данных отчета**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   

@@ -1,24 +1,31 @@
 ---
-title: "Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)
-  Можно формировать Atom-совместимые потоки данных из отчетов с разбиением на страницы, а затем применить эти потоки данных в приложениях, например в клиенте [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], который может использовать потоки данных.  
+
+# <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)
+
+Можно создать Atom совместимые потоки данных из отчетов с разбиением на страницы и затем использовать потоки данных в приложениях, таких как Power Pivot и Power BI, который может использовать данные веб-каналов.  
   
  Модуль Atom подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] формирует сервисный документ канала Atom, в котором перечислены потоки данных, доступные в отчете. Этот документ содержит сведения по меньшей мере об одном потоке данных для каждой области данных отчета. В зависимости от типа области данных и самих данных, которые отображает эта область, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут сформировать из нее несколько потоков данных.  
   
@@ -29,7 +36,7 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Формирование сервисного документа Atom  
+### <a name="to-generate-an-atom-service-document"></a>Формирование сервисного документа Atom  
   
 1.  на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] перейдите к отчету, для которого требуется создать веб-каналы данных.  
   
@@ -37,7 +44,7 @@ caps.handback.revision: 11
   
      Отчет выполняется.  
   
-3.  На панели инструментов нажмите кнопку **Экспорт в поток данных**.  
+3.  На панели инструментов нажмите кнопку **Экспорт в поток данных** .  
   
      Появится запрос, что нужно сделать с файлом: сохранить или открыть документ Atom, содержащий поток данных.  
   
@@ -54,7 +61,7 @@ caps.handback.revision: 11
   
 8.  При необходимости откройте файл ATOMSVC в браузере либо в текстовом или XML-редакторе.  
   
-### Просмотр Atom-совместимого потока данных  
+### <a name="to-view-an-atom-compliant-data-feed"></a>Просмотр Atom-совместимого потока данных  
   
 1.  Если сервисный документ Atom еще не открыт, найдите и откройте его в браузере, например в Internet Explorer.  
   
@@ -80,8 +87,9 @@ caps.handback.revision: 11
 7.  Убедитесь, что документ имеет тип **ATOM**, затем нажмите кнопку **Сохранить**.  
   
 8.  При необходимости откройте файл ATOM в браузере либо в текстовом или XML-редакторе.  
-  
-## См. также  
- [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Следующие шаги
+
+[Экспорт отчетов](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

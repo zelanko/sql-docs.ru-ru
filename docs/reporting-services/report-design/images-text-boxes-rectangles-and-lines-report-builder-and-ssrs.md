@@ -1,29 +1,34 @@
 ---
-title: "Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ffa83524ea9761dfa4df66b4d47fd049dd63035a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)
+# <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)
   Помимо областей данных, таких как таблицы, матрицы и диаграммы, в отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы используются другие элементы (например, изображения, текстовые поля и прямоугольники), добавляющие визуальные эффекты, выделяющие ключевые сведения и предоставляющие связанные данные. Форматирование элемента отчета можно изменить. Например, можно добавить границу или заполнение, изменить первоначальную видимость или направление, а также указать точный размер и местоположение элемента отчета.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Текстовые поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
  Текстовое поле можно поместить в любое место в отчете. Оно может содержать метки, поля или вычисляемые данные. Чтобы определить значение, которое должно отображаться в текстовом поле при просмотре отчета, используются выражения.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
  [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
  В изображениях выводятся двоичные графические данные отчета. Для изображения необходимо указать источник. Источником может служить ссылка на URL-адрес изображения, хранящегося на веб-сервере, ссылка на внедренные данные изображения или ссылка на двоичные данные изображения в базе данных. Построитель отчетов и конструктор отчетов поддерживают файлы в форматах BMP, JPEG, GIF и PNG.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

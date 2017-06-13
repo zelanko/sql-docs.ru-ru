@@ -1,25 +1,30 @@
 ---
-title: "Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
+title: "Добавление пользовательских местоположений карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c78f99c32d37e36986c4ea8bac20c12f87d4d568
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS)
+# <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS)
   После добавления карты в отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в нее можно добавлять собственные точечные местоположения.  
   
  Параметры отображения всех точек слоя управляются путем задания свойств точек слоя. Для выбранной внедренной точки можно переопределить свойства отображения.  
@@ -27,12 +32,12 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  При переопределении свойств отображения слоя для внедренной точки произведенные изменения необратимы.  
   
- Дополнительные сведения см. в разделе [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md).  
+ Дополнительные сведения см. в разделе [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Добавление слоя точек  
+## <a name="to-add-a-point-layer"></a>Добавление слоя точек  
   
 1.  Чтобы выбрать карту и отобразить панель «Карта», щелкните карту в области конструктора отчетов.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 10
   
 3.  Из раскрывающегося списка выберите **Добавить слой точек**. На карту добавляется слой точек без точек. По умолчанию слой точек готов к добавлению внедренных точек.  
   
-## Добавление пользовательской точки  
+## <a name="to-add-a-custom-point"></a>Добавление пользовательской точки  
   
 1.  Чтобы выбрать карту и отобразить панель «Карта», щелкните карту в области конструктора отчетов.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 10
   
 3.  Чтобы добавить точку, щелкните определенное положение на карте. Внедренная точка добавляется в выбранный слой в местоположении щелчка.  
   
-## Настройка отображения внедренной точки  
+## <a name="to-customize-the-display-for-an-embedded-point"></a>Настройка отображения внедренной точки  
   
 1.  Щелкните правой кнопкой мыши точку и выберите пункт **Свойства точки**. Открывается диалоговое окно **Свойства внедренных точек карты** .  
   
@@ -56,8 +61,8 @@ caps.handback.revision: 10
   
 3.  Переходите по страницам и задавайте свойства отображения, которые необходимо применить к данной точке.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+ [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
   

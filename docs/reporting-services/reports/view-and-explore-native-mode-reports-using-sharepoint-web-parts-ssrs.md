@@ -1,26 +1,32 @@
 ---
-title: "Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (службы SSRS)
-    
+
+# <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (службы SSRS)
+
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] больше не поддерживает использование веб-частей в собственном режиме (RSWebParts.cab) для доступа к содержимому сервера отчетов на сайте SharePoint с помощью сервера отчетов, работающего в собственном режиме. Вместо них следует использовать [веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md).  
+>  Службы отчетов SQL Server больше не поддерживает использование веб-частей собственного режима (RSWebParts.cab) для доступа к содержимому сервера отчетов на сайте SharePoint с сервера отчетов в собственном режиме. Вместо них следует использовать [веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) .  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включено несколько веб-частей, каждая из которых предназначена для определенной версии сервера отчетов и для определенного режима развертывания.  
   
@@ -29,9 +35,9 @@ caps.handback.revision: 9
 -   **Режим SharePoint.** Если необходимо получить доступ к серверу отчетов, который работает в режиме интеграции с SharePoint, используйте веб-части, которые устанавливаются надстройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. Дополнительные сведения о надстройке см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]  
->  Веб-часть средства просмотра отчетов для собственного режима (SPViewer.dwp) отличается от веб-части ReportViewer.dwp, устанавливаемой надстройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. Веб-части имеют различные схемы и реализации, но обе они могут быть установлены на одной ферме SharePoint. Визуально эти веб-части можно различить по следующему признаку: веб-часть средства просмотра отчетов, которая устанавливается в составе надстройки, содержит на панели инструментов меню **Действия**.  
+>  Веб-часть средства просмотра отчетов для собственного режима (SPViewer.dwp) отличается от веб-части ReportViewer.dwp, устанавливаемой надстройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. Веб-части имеют различные схемы и реализации, но обе они могут быть установлены на одной ферме SharePoint. Визуально эти веб-части можно различить по следующему признаку: веб-часть средства просмотра отчетов, которая устанавливается в составе надстройки, содержит на панели инструментов меню **Действия** .  
   
- Дополнительные сведения о режимах сервера отчетов см. в разделе [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/сервер-отчетов-служб-reporting-services.md).  
+ Дополнительные сведения о режимах сервера отчетов см. в разделе [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).  
   
  В этом разделе:  
   
@@ -61,7 +67,7 @@ caps.handback.revision: 9
   
 -   Поддерживаются следующие версии продуктов и технологий SharePoint:  
   
-    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
+    -   [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
   
     -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] и [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -76,9 +82,9 @@ caps.handback.revision: 9
 ##  <a name="bkmk_installingwebparts"></a> Установка веб-частей  
  Веб-части пересылаются на сервер SharePoint в виде CAB-файла. Чтобы установить веб-части, запустите из командной строки программу SharePoint Stsadm.exe, указав в качестве параметра CAB-файл. Дополнительные сведения об этой программе и развертывании веб-частей см. в документации по SharePoint.  
   
-#### Установка веб-частей с помощью Powershell  
+#### <a name="install-web-parts-using-powershell"></a>Установка веб-частей с помощью Powershell  
   
-1.  Скопируйте файл **RSWebParts.cab** в папку на сервере SharePoint. Его можно скопировать в любую папку на сервере SharePoint, а после установки — веб-частей удалить. По умолчанию службы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливают файл RSWebParts.cab в следующую папку:  
+1.  Скопируйте файл **RSWebParts.cab** в папку на сервере SharePoint. Его можно скопировать в любую папку на сервере SharePoint, а после установки — веб-частей удалить. По умолчанию SQL Server 2014 Reporting Services и более ранних версий устанавливают файл RSWebParts.cab в следующую папку:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -102,7 +108,7 @@ caps.handback.revision: 9
   
      Подробнее об использовании PowerShell см. в статье [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)/  
   
-#### Установка веб-частей с использованием STSADM.exe  
+#### <a name="install-web-parts-using-stsadmexe"></a>Установка веб-частей с использованием STSADM.exe  
   
 1.  Скопируйте файл **RSWebParts.cab** в ту же папку на сервере SharePoint, как описано в разделе о Powershell этого документа.  
   
@@ -125,7 +131,7 @@ caps.handback.revision: 9
   
  Следующая процедура добавляет обе веб-части на страницу, а затем устанавливает связь между обозревателем отчетов и средством просмотра отчетов, поэтому при щелчке отчета в обозревателе отчетов он открывается в средстве просмотра отчетов.  
   
-#### Добавление средства просмотра отчетов  
+#### <a name="add-report-viewer"></a>Добавление средства просмотра отчетов  
   
 1.  В меню «Действия» веб-сайта выберите **Изменить страницу**.  
   
@@ -136,19 +142,19 @@ caps.handback.revision: 9
 4.  Выберите **Средство просмотра отчетов**.  
   
     > [!WARNING]  
-    >  Не выбирайте **Средство просмотра отчетов служб SQL Server Reporting Services**. Эта веб-часть регистрируется при установке надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint и используется для запуска сервера отчетов в режиме интеграции с SharePoint. Ее нельзя использовать для просмотра отчетов на сервере отчетов, работающем в собственном режиме.  
+    >  Не выбирайте **Средство просмотра отчетов служб SQL Server Reporting Services** . Эта веб-часть регистрируется при установке надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint и используется для запуска сервера отчетов в режиме интеграции с SharePoint. Ее нельзя использовать для просмотра отчетов на сервере отчетов, работающем в собственном режиме.  
   
 5.  Нажмите кнопку **Добавить**.  
   
 6.  Пока страница находится в режиме изменения, щелкните **Изменить веб-часть** в веб-части средства просмотра отчетов.  
   
-7.  В поле **URL-адрес диспетчера отчетов**введите URL-адрес экземпляра диспетчера отчетов, связанного с сервером отчетов, работающим в собственном режиме, к которому будет производиться доступ. По умолчанию URL-адрес диспетчера отчетов имеет следующий синтаксис: **http://\<имя_сервера>/reports**.  
+7.  В поле **URL-адрес диспетчера отчетов**введите URL-адрес экземпляра диспетчера отчетов, связанного с сервером отчетов, работающим в собственном режиме, к которому будет производиться доступ. По умолчанию URL-адрес диспетчера отчетов имеет следующий синтаксис: **http://\<имя_сервера > / reports**.  
   
-8.  В поле **Путь отчета**укажите косую черту, путь до папки и имя отчета. Имя сервера и виртуальный каталог диспетчера отчетов **не указываются** . Например, чтобы открыть отчет Company Sales из папки Adventure Works, укажите путь **/Adventure Works/Company Sales**. Далее приведен еще один пример, где отчет Products находится в корневой папке сервера отчетов (**/Products**).  
+8.  В поле **Путь отчета**укажите косую черту, путь до папки и имя отчета. Имя сервера и виртуальный каталог диспетчера отчетов **не указываются** . Например, чтобы открыть отчет Company Sales из папки Adventure Works, укажите путь **/Adventure Works/Company Sales**. Далее приведен еще один пример, где отчет Products находится в корневой папке сервера отчетов ( **/Products**).  
   
 9. Нажмите кнопку **ОК**.  
   
-#### Добавление обозревателя отчетов и установка связи со средством просмотра отчетов  
+#### <a name="add-report-explorer-and-connect-to-report-viewer"></a>Добавление обозревателя отчетов и установка связи со средством просмотра отчетов  
   
 1.  В другой области страницы щелкните **Добавить веб-часть** и в папке «Разное» щелкните **Обозреватель отчетов** , а затем выберите **Добавить**.  
   
@@ -156,7 +162,7 @@ caps.handback.revision: 9
   
 3.  В поле **URL-адрес диспетчера отчетов**введите URL-адрес экземпляра диспетчера отчетов, связанного с сервером отчетов, работающим в собственном режиме, к которому будет производиться доступ.  
   
-4.  Можно также указать **Начальный путь**. Это папка в иерархии папок сервера отчетов. Ее указывают в том случае, если первая страница должна быть папкой, находящейся ниже в иерархии папок. Путь должен начинаться с косой черты. Указывается полный путь, начиная с корневого узла иерархии папок сервера отчетов, но не включая имя сервера и виртуальный каталог диспетчера отчетов. Например, чтобы открыть папку под названием Adventure Works, вложенную в корневой узел, укажите **/Adventure Works**.  
+4.  Можно также указать **Начальный путь**. Это папка в иерархии папок сервера отчетов. Ее указывают в том случае, если первая страница должна быть папкой, находящейся ниже в иерархии папок. Путь должен начинаться с косой черты. Указывается полный путь, начиная с корневого узла иерархии папок сервера отчетов, но не включая имя сервера и виртуальный каталог диспетчера отчетов. Например, чтобы открыть папку под названием Adventure Works, вложенную в корневой узел, укажите **/Adventure Works** .  
   
 5.  Нажмите кнопку **ОК**.  
   
@@ -167,10 +173,5 @@ caps.handback.revision: 9
     2.  Щелкните пункт **Способ просмотра отчета**.  
   
     3.  Выберите **Средство просмотра отчетов**.  
-  
-## См. также  
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [Сервер отчетов служб Reporting Services (режим SharePoint)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)   
- [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

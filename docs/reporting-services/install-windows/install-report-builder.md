@@ -1,42 +1,47 @@
 ---
-title: "Установка построителя отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Установка построителя отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 09/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Установка построителя отчетов
+# <a name="install-report-builder"></a>Установка построителя отчетов
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Обычно администратор устанавливает и настраивает службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], предоставляет разрешение на загрузку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] с веб-портала и управляет папками и разрешениями для отчетов, элементов отчетов и общих наборов данных, сохраняемых на сервере отчетов. Дополнительные сведения об администрировании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Сервер отчетов служб Reporting Services (собственный режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
-## Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из веб-портала или библиотеки SharePoint 
+## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из веб-портала или библиотеки SharePoint 
   
  Вы можете запустить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Сведения см. в разделе [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md).  
   
-### Сайт SharePoint, интегрированный с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
+### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>Сайт SharePoint, интегрированный с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
  На сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], если меню **Создать документ** не содержит пункты **Отчет построителя отчетов**, **Модель построителя отчетов**и **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
  
-## Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] с System Center Configuration Manager 
+## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-with-system-center-configuration-manager"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] с System Center Configuration Manager 
   
  Администратор также может принудительно отправить программу на компьютер пользователя с помощью таких программ, как System Center Configuration Manager. Сведения по использованию определенного программного обеспечения для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]можно получить в документации по этому программному обеспечению. Дополнительные сведения см. в разделе [Сайт System Center Configuration Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Для запуска операций из командной строки в Windows Vista и Windows 7 требуются повышенные разрешения безопасности; эти ОС будут запрашивать разрешения на выполнение командной строки. Эта установка выполняется не автоматически. Для проведения автоматической установки необходимо запустить командную строку от имени администратора.  
   
-## Требования к системе
+## <a name="system-requirements"></a>Требования к системе
   
  См. раздел **системные требования** на [странице загрузки построителя отчетов](http://go.microsoft.com/fwlink/?LinkID=734968) в центре загрузки Майкрософт.
   
@@ -57,7 +62,7 @@ caps.handback.revision: 20
   
 5.  Щелкните **Установить** , чтобы завершить установку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
-## Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из общей папки  
+## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-a-share"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из общей папки  
   
 1.  Свяжитесь с администратором, чтобы узнать расположение файла ReportBuilder3.msi, который нужно запустить для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] на локальном компьютере.  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 20
   
 3.  Выполните оставшиеся действия в [To install Report Builder from the download site](#download).  
   
-## Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из командной строки 
+## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из командной строки 
 
  Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI, вы можете использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] : RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] для сохранения отчетов на сервере.  
   
- Если необходимо произвести установку в полностью автоматическом режиме, без какого-либо взаимодействия с пользовательским интерфейсом, укажите параметр **/quiet**. Флаг параметра подавляет сообщения об ошибках установки. В связи с этим при использовании автоматической установки рекомендуется включить параметр **/l**, указывающий необходимость ведения журнала.   
+ Если необходимо произвести установку в полностью автоматическом режиме, без какого-либо взаимодействия с пользовательским интерфейсом, укажите параметр **/quiet** . Флаг параметра подавляет сообщения об ошибках установки. В связи с этим при использовании автоматической установки рекомендуется включить параметр **/l** , указывающий необходимость ведения журнала.   
   
 1.  На [странице построителя отчетов в центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=734968)нажмите **Скачать**.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 20
   
 3.  В меню **Пуск** выберите команду **Выполнить**.  
   
-4.  В окне **Открыть** введите **cmd.**.  
+4.  В окне **Открыть** введите **cmd**.  
   
 5.  В окне командной строки перейдите к папке, в которой был сохранен файл ReportBuilder3.msi.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
 7.  Нажмите клавишу ВВОД, чтобы выполнить команду.  
   
-## Установка значений по умолчанию для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## <a name="set-includessrbnoversionincludesssrbnoversion-mdmd-defaults"></a>Установка значений по умолчанию для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
 -   После установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]вы можете задать некоторые параметры по умолчанию. Щелкните **Файл** > **Параметры**.  
   
@@ -103,8 +108,9 @@ caps.handback.revision: 20
   
      Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета** , а затем в нижней части **нажмите кнопку** Подключиться [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , чтобы подключиться к серверу.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)   
  [Удаление построителя отчетов](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
   
+

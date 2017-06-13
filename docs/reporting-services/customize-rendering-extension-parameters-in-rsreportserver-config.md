@@ -1,30 +1,35 @@
 ---
-title: "Настройка параметров модулей подготовки отчетов в RSReportServer.Config | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "параметры конфигурации [службы Reporting Services]"
-  - "настройки DeviceInfo"
-  - "модули подготовки отчетов [службы Reporting Services], переопределение поведения"
-  - "параметры [службы Reporting Services], подготовка отчетов к просмотру"
-  - "переопределение подготовки отчетов к просмотру"
-  - "расширения [службы Reporting Services], подготовка к просмотру"
+title: "Настройка параметров модуля в файле RSReportServer.Config подготовки отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration options [Reporting Services]
+- DeviceInfo settings
+- rendering extensions [Reporting Services], overriding behaviors
+- parameters [Reporting Services], report rendering
+- overriding report rendering behavior
+- extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 31
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Настройка параметров модулей подготовки отчетов в RSReportServer.Config
+# <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Настройка параметров модулей подготовки отчетов в RSReportServer.Config
   В файле конфигурации RSReportServer можно указать параметры модулей подготовки отчетов, чтобы изменить заданный по умолчанию способ подготовки к просмотру отчетов, запускаемых на сервере отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Изменять параметры модуля подготовки отчетов можно для достижения следующих целей.  
   
 -   Изменение имени модуля подготовки отчетов в списке «Экспорт» панели инструментов отчета (например, чтобы заменить «Веб-архив» на «MHTML») или отображение этого имени на другом языке.  
@@ -37,7 +42,7 @@ caps.handback.revision: 31
   
  Указание параметров модуля подготовки отчетов в файлах конфигурации влияет на все модули подготовки к просмотру. Настройки в файлах конфигурации используются вместо значений по умолчанию всегда, когда применяется определенный модуль подготовки к просмотру. Если требуется задать параметры модуля подготовки отчетов для определенного отчета или операции подготовки к просмотру, следует указать сведения об устройстве программно с помощью метода <xref:ReportExecution2005.ReportExecutionService.Render%2A> или указав настройки сведений об устройстве в URL-адресе отчета. Дополнительные сведения об указании настроек сведений об устройстве для операции подготовки к просмотру, а также полный список этих настроек см. в разделе [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
-## Поиск и изменение файла RSReportServer.config  
+## <a name="finding-and-modifying-rsreportserverconfig"></a>Поиск и изменение файла RSReportServer.config  
  Параметры конфигурации форматов вывода для отчета указывается в виде параметров модуля подготовки отчетов в файле конфигурации RSReportServer.config. Чтобы указать в файлах конфигурации параметры модуля подготовки отчетов, необходимо знать, как определить XML-структуры, задающие параметры подготовки к просмотру. Существует две XML-структуры, которые можно изменять.  
   
 -   Элемент **OverrideNames** задает отображаемые имя и язык модуля подготовки отчетов.  
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
  Для изменения этого файла можно использовать текстовый редактор. Файл RSReportServer.config находится в папке \Reporting Services\Report Server\Bin. Дополнительные сведения об изменении файлов конфигурации см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-## Изменение отображаемого имени  
+## <a name="changing-the-display-name"></a>Изменение отображаемого имени  
  Отображаемое имя модуля подготовки отчетов указывается в списке «Экспорт» панели инструментов отчета. Среди примеров отображаемых имен по умолчанию есть веб-архив, TIFF-файл и файл Acrobat (PDF-файл). Отображаемое имя по умолчанию можно заменить произвольным значением, указав в файлах конфигурации элемент **OverrideNames** . Кроме того, если пользователь определяет два экземпляра одного модуля подготовки отчетов, элемент **OverrideNames** можно использовать, чтобы различать эти экземпляры в списке «Экспорт».  
   
  Поскольку отображаемые имена локализованы, при замене отображаемого имени по умолчанию пользовательским значением следует установить атрибут **Language** . Иначе любое указанное имя не будет обрабатываться. Указанное значение языка должно быть допустимым для компьютера, на котором выполняется сервер отчетов. Например, если сервер отчетов выполняется под управлением французской операционной системы, в качестве значения атрибута следует указать «fr-FR».  
@@ -61,7 +66,7 @@ caps.handback.revision: 31
 </Extension>  
 ```  
   
-## Изменение настроек сведений об устройстве  
+## <a name="changing-device-information-settings"></a>Изменение настроек сведений об устройстве  
  Чтобы изменить настройки сведений об устройстве, используемые по умолчанию уже развернутым на сервере отчетов модулем подготовки отчетов, следует ввести в файлы конфигурации XML-структуру **DeviceInfo** . Для каждого модуля подготовки к просмотру существуют уникальные для него настройки сведений об устройстве. Полный список настроек сведений об устройстве см. в разделе [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  В следующем примере показано, как выглядит структура и синтаксис XML-кода, изменяющего значения по умолчанию для модуля подготовки изображений:  
@@ -84,7 +89,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## Настройка нескольких записей для модуля подготовки к просмотру  
+## <a name="configuring-multiple-entries-for-a-rendering-extension"></a>Настройка нескольких записей для модуля подготовки к просмотру  
  Чтобы поддерживать возможность работы с различными представлениями отчета, можно создать несколько экземпляров одного модуля подготовки отчетов. Сочетание значений параметров может быть разным для каждого из определенных экземпляров. Определяя новые экземпляры существующего модуля подготовки отчетов, необходимо выполнить следующие действия.  
   
 -   Указать уникальное имя для модуля.  
@@ -128,7 +133,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Файл конфигурации RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Файл конфигурации RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Настройки сведений об устройстве CSV](../reporting-services/csv-device-information-settings.md)   

@@ -25,13 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 242edcd8d7caf7aed6e08a7fffdae4828237e1e4
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимально допустимых параметров SQL Server
+
+ > Содержимое, связанное с предыдущих версий SQL Server, в разделе [Maximum Capacity Specifications for SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+
   В следующих таблицах приведены максимальные размеры и количество для различных объектов, определяемых в компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
   
  [Объекты ядра СУБД SQL Server](#Engine)  

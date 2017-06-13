@@ -1,26 +1,31 @@
 ---
-title: "Настройки сведений об устройстве вывода изображений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "изображения [службы Reporting Services], подготовка к просмотру"
-  - "настройки сведений об устройстве [службы Reporting Services], подготовка к просмотру в формате изображения"
+title: "Изображение настройки сведений об устройстве | Документы Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- images [Reporting Services], rendering
+- device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 39
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 528ff1aac617e36ac8b3faeed0bad0981479f651
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Настройки сведений об устройстве вывода изображений
+# <a name="image-device-information-settings"></a>Настройки сведений об устройстве вывода изображений
   В следующей таблице перечислены настройки сведений об устройстве для подготовки к просмотру в формате изображений.  
   
 |Настройка|Значение|  
@@ -34,14 +39,14 @@ caps.handback.revision: 39
 |**MarginLeft**|Задаваемая ширина левого поля отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка "in" (например, **1in**). Это значение переопределяет исходные параметры отчета.|  
 |**MarginRight**|Задаваемая ширина правого поля отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка "in" (например, **1in**). Это значение переопределяет исходные параметры отчета.|  
 |**MarginTop**|Задаваемая ширина верхнего поля отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка "in" (например, **1in**). Это значение переопределяет исходные параметры отчета.|  
-|**OutputFormat**|Один из поддерживаемых [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) форматов вывода: **BMP**, **EMF**, **GIF**, **JPEG**, **PNG** или **TIFF**.|  
+|**OutputFormat**|Один из поддерживаемых [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) форматов вывода: **BMP**, **EMF**, **GIF**, **JPEG**, **PNG**или **TIFF**.|  
 |**PageHeight**|Задаваемая высота страницы отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка "in" (например, **11in**). Это значение переопределяет исходные параметры отчета.|  
 |**PageWidth**|Задаваемая ширина страницы отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка "in" (например, **8,5in**). Это значение переопределяет исходные параметры отчета.|  
 |**PrintDpiX**|Горизонтальное разрешение изображения вывода. Значение по умолчанию — **300**. Применяется к формату вывода расширенного метафайла (**EMF**).|  
 |**PrintDpiY**|Вертикальное разрешение изображения вывода. Значение по умолчанию — **300**. Применяется к формату вывода расширенного метафайла (**EMF**).|  
 |**StartPage**|Первая подготавливаемая к просмотру страница отчета. Значение **0** указывает, что к просмотру подготовлены все страницы. Значение по умолчанию — **1**.|  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

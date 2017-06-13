@@ -1,25 +1,30 @@
 ---
-title: "Отмена заданий сервера отчетов (среда Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.cancelreportserverjobs.f1"
+title: "Отмена заданий сервера отчетов (среда Management Studio) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Отмена заданий сервера отчетов (среда Management Studio)
+# <a name="cancel-report-server-jobs-management-studio"></a>Отмена заданий сервера отчетов (среда Management Studio)
   Диалоговое окно **Отмена заданий сервера отчетов** позволяет просмотреть или отменить выполняющиеся отчеты. В этом диалоговом окне отображаются все задания, выполняемые в данный момент на сервере отчетов. Несмотря на то, что выполняемые задания нельзя приостановить или перезапустить, задачи, завершение которых требует слишком долгого времени, можно отменить — все сразу или по отдельности.  
   
  Отменить можно как пользовательские, так и системные задания.  
@@ -28,14 +33,14 @@ caps.handback.revision: 14
   
 -   Системным заданием является задание, инициируемое сервером отчетов. К системным заданиям относится плановая обработка отчетов.  
   
- Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, щелкните **Задания** правой кнопкой мыши и выберите команду **Отменить все задания**. Можно также открыть **Задания**, щелкнуть задание, выполняемое на сервере отчетов, правой кнопкой мыши и выбрать команду **Отменить задание**.  
+ Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, щелкните **Задания**правой кнопкой мыши и выберите команду **Отменить все задания**. Можно также открыть **Задания**, щелкнуть задание, выполняемое на сервере отчетов, правой кнопкой мыши и выбрать команду **Отменить задание**.  
   
  Прежде чем отменить какое-либо задание, можно просмотреть его свойства и определить, когда оно было запущено. Дополнительные сведения см. в разделе [Свойства задания (среда Management Studio)](../../reporting-services/tools/job-properties-management-studio.md).  
   
 > [!NOTE]  
 >  Эта функция не поддерживается в [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. Эта страница не отображается при запуске выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Название**  
  Отображается имя отчета. Подписки идентифицируются описаниями.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 14
  **ОК**  
  Отменяет отдельное задание или несколько заданий. Отмена заданий осуществляется немедленно, и их возобновление невозможно. Если отмена задания была выполнена ошибочно, нужно запустить новое задание, повторно отправив запрос на выполнение отчета или подписки.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  

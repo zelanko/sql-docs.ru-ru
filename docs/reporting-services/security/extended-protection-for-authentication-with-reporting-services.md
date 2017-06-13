@@ -1,37 +1,45 @@
 ---
-title: "Расширенная защита для проверки подлинности служб Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Расширенная защита для проверки подлинности со службами Reporting Services | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Расширенная защита для проверки подлинности служб Reporting Services
+
+# <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
+
   Расширенная защита — это набор усовершенствований, внесенных в последние версии операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью расширенной защиты приложения могут лучше защищать учетные данные и проверку подлинности. Сама эта функция не обеспечивает защиту от определенных атак, например, таких как переадресация учетных данных, однако она предоставляет таким приложениям, как службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , инфраструктуру для ввода в действие расширенной защиты проверки подлинности.  
   
  Основными улучшениями процесса проверки подлинности, которые входят в расширенную защиту, являются привязка службы и привязка канала. Для привязки канала используется токен привязки канала (CBT), позволяющий удостовериться в целостности канала, установленного между двумя конечными точками. При привязке службы для проверки пункта назначения токенов проверки подлинности используются имена участников-служб (SPN). Дополнительные сведения о расширенной защите см. в разделе [Интегрированная проверка подлинности Windows с расширенной защитой](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают и поощряют использование расширенной защиты, включенной в операционной системе и настроенной в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимает запросы, в которых указана проверка подлинности Negotiate или NTLM, что позволяет ему пользоваться поддержкой расширенной защиты в операционной системе и функциями расширенной защиты в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+Службы SQL Server Reporting Services (SSRS) поддерживают и поощряют использование расширенной защиты, включенной в операционной системе и настроенной в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимает запросы, в которых указана проверка подлинности Negotiate или NTLM, что позволяет ему пользоваться поддержкой расширенной защиты в операционной системе и функциями расширенной защиты в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  По умолчанию расширенная защита в Windows отключена. Дополнительные сведения о включении расширенной защиты в Windows см. в разделе [Расширенная защита для проверки подлинности](http://go.microsoft.com/fwlink/?LinkID=178431). Для успешного прохождения проверки подлинности и операционная система, и стек проверки подлинности клиента должны поддерживать расширенную защиту. При использовании старых операционных систем для реализации на компьютере расширенной защиты может потребоваться установка нескольких обновлений. Сведения о последних изменениях, внесенных в расширенную защиту, см. в статье [Новые сведения о расширенной защите](http://go.microsoft.com/fwlink/?LinkId=183362).  
-  
-## Общие сведения о расширенной защите служб Reporting Services  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает и вводит в действие расширенную защиту, включенную в операционной системе. Если операционная система не поддерживает расширенную защиту или если эта функция в операционной системе отключена, то функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не сможет провести проверку подлинности. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также требуется сертификат SSL. Дополнительные сведения см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+
+## <a name="reporting-services-extended-protection-overview"></a>Общие сведения о расширенной защите служб Reporting Services
+
+Службы SSRS, поддерживают и поощряют использование расширенной защиты, который был включен в операционной системе. Если операционная система не поддерживает расширенную защиту или если эта функция в операционной системе отключена, то функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не сможет провести проверку подлинности. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также требуется сертификат SSL. Дополнительные сведения см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 > [!IMPORTANT]  
->  По умолчанию в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] расширенная защита отключена. Эту функцию можно включить, изменив файл конфигурации **rsreportserver.config** или обновив этот файл с помощью средств WMI API. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] нет пользовательского интерфейса для изменения или просмотра параметров расширенной защиты. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.  
+>  По умолчанию в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] расширенная защита отключена. Эту функцию можно включить, изменив файл конфигурации **rsreportserver.config** или обновив этот файл с помощью средств WMI API. Службы SSRS не предоставляет пользовательский интерфейс для изменения или просмотра параметров расширенной защиты. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.  
   
  Обычные проблемы, возникающие из-за изменений параметров расширенной защиты или неверно заданных настроек, не сопровождаются понятными сообщениями об ошибках или диалоговыми окнами. Проблемы, связанные с конфигурацией расширенной защиты и совместимостью, ведут к возникновению сбоев при проверке подлинности и ошибок в журналах трассировки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -43,9 +51,9 @@ caps.handback.revision: 15
 >   
 >  В документации по технологии доступа к данным должны быть сведения о поддержке расширенной защиты.  
   
-### Обновление  
+### <a name="upgrade"></a>Обновление  
   
--   При обновлении сервера служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в файл **rsreportserver.config** добавляются параметры конфигурации со значениями по умолчанию. Если параметры уже имелись, то при установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] они будут сохранены в файле **rsreportserver.config**.  
+-   Обновление [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server до SQL Server 2016 добавляются параметры конфигурации со значениями по умолчанию **rsreportserver.config** файла. Если настройки уже имелись, установки SQL Server 2016 они будут сохранены в **rsreportserver.config** файла.  
   
 -   По умолчанию при добавлении параметров конфигурации в файл конфигурации **rsreportserver.config** функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отключена. Ее необходимо включить, следуя описанной в этой главе процедуре. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.  
   
@@ -53,57 +61,57 @@ caps.handback.revision: 15
   
 -   Значение по умолчанию для параметра **RSWindowsExtendedProtectionScenario** равно **Proxy**.  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не проверяет, включена ли расширенная защита в операционной системе или текущей установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   не проверяет, включена ли расширенная защита в операционной системе или текущей установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-### Какие службы Reporting Services не охватываются расширенной защитой  
+### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Какие службы Reporting Services не охватываются расширенной защитой  
  Следующие области и варианты не поддерживаются функцией расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   Авторы  настраиваемых модулей безопасности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны добавлять поддержку расширенной защиты в свои модули.  
   
 -   Сторонние компоненты, добавленные в установку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или используемые ею, должны быть обновлены их поставщиками для обеспечения поддержки расширенной защиты. Обратитесь к сторонним поставщикам за дополнительными сведениями.  
   
-## Рекомендации и варианты развертывания  
+## <a name="deployment-scenarios-and-recommendations"></a>Рекомендации и варианты развертывания  
  Описанные далее варианты иллюстрируют разные развертывания и топологии, а также рекомендуемые конфигурации для их защиты с помощью расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-### Прямой доступ  
+### <a name="direct"></a>Прямой доступ  
  В этом сценарии описывается прямое соединение с сервером отчетов, например, в среде интрасети.  
   
 |Сценарий|Диаграмма сценария|Инструкции по защите|  
 |--------------|----------------------|-------------------|  
-|Прямая связь по SSL.<br /><br /> Сервер отчетов принудит клиента использовать привязку канала сервера отчетов.|![RS_ExtendedProtection_DirectSSL](../../reporting-services/security/media/rs-extendedprotection-directssl.png "RS_ExtendedProtection_DirectSSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Direct**.<br /><br /> <br /><br /> — Привязка службы не требуется, так как для привязки канала будет использоваться канал SSL.|  
-|Прямая связь по HTTP. Сервер отчетов принудит клиента использовать привязку службы сервера отчетов.|![RS_ExtendedProtection_Direct](../../reporting-services/security/media/rs-extendedprotection-direct.png "RS_ExtendedProtection_Direct")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Any**.<br /><br /> <br /><br /> — Канал SSL отсутствует, поэтому принудительно применить привязку канала невозможно.<br /><br /> Привязку службы можно проверить, однако такая защита привязки канала является неполной. Она способна защитить только от простых угроз.|  
+|Прямая связь по SSL.<br /><br /> Сервер отчетов принудит клиента использовать привязку канала сервера отчетов.|![RS_ExtendedProtection_DirectSSL](../../reporting-services/security/media/rs-extendedprotection-directssl.gif "RS_ExtendedProtection_DirectSSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Direct**.<br /><br /> <br /><br /> — Привязка службы не требуется, так как для привязки канала будет использоваться канал SSL.|  
+|Прямая связь по HTTP. Сервер отчетов принудит клиента использовать привязку службы сервера отчетов.|![RS_ExtendedProtection_Direct](../../reporting-services/security/media/rs-extendedprotection-direct.gif "RS_ExtendedProtection_Direct")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Any**.<br /><br /> <br /><br /> — Канал SSL отсутствует, поэтому принудительно применить привязку канала невозможно.<br /><br /> Привязку службы можно проверить, однако такая защита привязки канала является неполной. Она способна защитить только от простых угроз.|  
   
-### Прокси и распределение сетевой нагрузки  
+### <a name="proxy-and-network-load-balancing"></a>Прокси и распределение сетевой нагрузки  
  Клиентские приложения подключаются к устройству или программному обеспечению, которое использует SSL и передает учетные данные серверу для проверки подлинности, например, в экстрасети, Интернете или защищенной интрасети. Клиент подключается к прокси или все клиенты используют прокси.  
   
  Такая же ситуация складывается при использовании устройства распределения сетевой нагрузки (NLB).  
   
 |Сценарий|Диаграмма сценария|Инструкции по защите|  
 |--------------|----------------------|-------------------|  
-|Связь по HTTP. Сервер отчетов принудит клиента использовать привязку службы сервера отчетов.|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.png "RS_ExtendedProtection_Indirect")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Any**.<br /><br /> <br /><br /> — Канал SSL отсутствует, поэтому принудительно применить привязку канала невозможно.<br /><br /> — В настройках сервера отчетов должно быть указано имя прокси-сервера, чтобы сервер отчетов мог принудительно применять привязку службы должным образом.|  
-|Связь по HTTP.<br /><br /> Сервер отчетов принудит клиента использовать привязку канала прокси и привязку службы сервера отчетов.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.png "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси|Присвойте параметру <br />                    **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Proxy**.<br /><br /> <br /><br /> — Доступен канал SSL к прокси-серверу, поэтому можно принудительно применить привязку канала к прокси-серверу.<br /><br /> — Привязку службы также можно принудительно применить.<br /><br /> — Серверу отчетов должно быть известно имя прокси-сервера, а администратор сервера отчетов должен либо создать для него резервирование URL-адреса с заголовком узла, либо указать имя прокси-сервера в записи реестра Windows **BackConnectionHostNames**.|  
-|Непрямая связь по HTTPS с защищенным прокси. Сервер отчетов принудит клиента использовать привязку канала прокси и привязку службы сервера отчетов.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.png "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси|Присвойте параметру <br />                    **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Proxy**.<br /><br /> <br /><br /> — Доступен канал SSL к прокси-серверу, поэтому можно принудительно применить привязку канала к прокси-серверу.<br /><br /> — Привязку службы также можно принудительно применить.<br /><br /> — Серверу отчетов должно быть известно имя прокси-сервера, а администратор сервера отчетов должен либо создать для него резервирование URL-адреса с заголовком узла, либо указать имя прокси-сервера в записи реестра Windows **BackConnectionHostNames**.|  
+|Связь по HTTP. Сервер отчетов принудит клиента использовать привязку службы сервера отчетов.|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Any**.<br /><br /> <br /><br /> — Канал SSL отсутствует, поэтому принудительно применить привязку канала невозможно.<br /><br /> — В настройках сервера отчетов должно быть указано имя прокси-сервера, чтобы сервер отчетов мог принудительно применять привязку службы должным образом.|  
+|Связь по HTTP.<br /><br /> Сервер отчетов принудит клиента использовать привязку канала прокси и привязку службы сервера отчетов.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси|Присвойте параметру <br />                    **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Proxy**.<br /><br /> <br /><br /> — Доступен канал SSL к прокси-серверу, поэтому можно принудительно применить привязку канала к прокси-серверу.<br /><br /> — Привязку службы также можно принудительно применить.<br /><br /> — Серверу отчетов должно быть известно имя прокси-сервера, а администратор сервера отчетов должен либо создать для него резервирование URL-адреса с заголовком узла, либо указать имя прокси-сервера в записи реестра Windows **BackConnectionHostNames**.|  
+|Непрямая связь по HTTPS с защищенным прокси. Сервер отчетов принудит клиента использовать привязку канала прокси и привязку службы сервера отчетов.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси|Присвойте параметру <br />                    **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Proxy**.<br /><br /> <br /><br /> — Доступен канал SSL к прокси-серверу, поэтому можно принудительно применить привязку канала к прокси-серверу.<br /><br /> — Привязку службы также можно принудительно применить.<br /><br /> — Серверу отчетов должно быть известно имя прокси-сервера, а администратор сервера отчетов должен либо создать для него резервирование URL-адреса с заголовком узла, либо указать имя прокси-сервера в записи реестра Windows **BackConnectionHostNames**.|  
   
-### Шлюз  
+### <a name="gateway"></a>Шлюз  
  В этом сценарии клиентское приложение соединяется с устройством или программным обеспечением, использующим SSL и выполняющим проверку подлинности пользователя. Затем устройство или программное обеспечение олицетворяет контекст данного пользователя или контекст другого пользователя перед отправкой запроса серверу отчетов.  
   
 |Сценарий|Диаграмма сценария|Инструкции по защите|  
 |--------------|----------------------|-------------------|  
-|Непрямая связь по HTTP.<br /><br /> Шлюз принудит клиента использовать привязку канала шлюза. На пути к привязке службы сервера отчетов имеется шлюз.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.png "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Шлюзовое устройство|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Any**.<br /><br /> <br /><br /> — Привязка канала от клиента к серверу отчетов невозможна, так как шлюз олицетворяет контекст, т. е. создает новый маркер NTLM.<br /><br /> — На промежутке от шлюза до сервера отчетов нет SSL, поэтому принудительно применить привязку канала невозможно.<br /><br /> — Привязку службы можно принудительно применить.<br /><br /> — Администратор должен настроить для устройства шлюза принудительное применение привязки канала.|  
-|Непрямая связь по HTTPS с защищенным шлюзом. Шлюз принудит клиента использовать привязку канала шлюза, а сервер отчетов принудит шлюз использовать привязку канала сервера отчетов.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.png "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Шлюзовое устройство|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Direct**.<br /><br /> <br /><br /> — Привязка канала от клиента к серверу отчетов невозможна, так как шлюз олицетворяет контекст, т. е. создает новый маркер NTLM.<br /><br /> — Наличие SSL на промежутке от шлюза до сервера отчетов означает, что можно принудительно применить привязку канала.<br /><br /> — Привязка службы не требуется.<br /><br /> — Администратор должен настроить для устройства шлюза принудительное применение привязки канала.|  
+|Непрямая связь по HTTP.<br /><br /> Шлюз принудит клиента использовать привязку канала шлюза. На пути к привязке службы сервера отчетов имеется шлюз.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Шлюзовое устройство|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Any**.<br /><br /> <br /><br /> — Привязка канала от клиента к серверу отчетов невозможна, так как шлюз олицетворяет контекст, т. е. создает новый маркер NTLM.<br /><br /> — На промежутке от шлюза до сервера отчетов нет SSL, поэтому принудительно применить привязку канала невозможно.<br /><br /> — Привязку службы можно принудительно применить.<br /><br /> — Администратор должен настроить для устройства шлюза принудительное применение привязки канала.|  
+|Непрямая связь по HTTPS с защищенным шлюзом. Шлюз принудит клиента использовать привязку канала шлюза, а сервер отчетов принудит шлюз использовать привязку канала сервера отчетов.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Шлюзовое устройство|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Direct**.<br /><br /> <br /><br /> — Привязка канала от клиента к серверу отчетов невозможна, так как шлюз олицетворяет контекст, т. е. создает новый маркер NTLM.<br /><br /> — Наличие SSL на промежутке от шлюза до сервера отчетов означает, что можно принудительно применить привязку канала.<br /><br /> — Привязка службы не требуется.<br /><br /> — Администратор должен настроить для устройства шлюза принудительное применение привязки канала.|  
   
-### Сочетание  
+### <a name="combination"></a>Сочетание  
  В этом сценарии описывается экстрасеть или Интернет в ситуации, когда клиент устанавливает соединение с прокси. Происходит это в сочетании со средой интрасети, в которой клиент устанавливает соединение с сервером отчетов.  
   
 |Сценарий|Диаграмма сценария|Инструкции по защите|  
 |--------------|----------------------|-------------------|  
 |Непрямой и прямой доступ от клиента к службе сервера отчетов без SSL по каналу между клиентом и прокси или клиентом и сервером отчетов.|1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси<br /><br /> 4) Клиентское приложение|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Any**.<br /><br /> <br /><br /> — Привязку службы от клиента к серверу отчетов можно принудительно применить.<br /><br /> — Серверу отчетов должно быть известно имя прокси-сервера, а администратор сервера отчетов должен либо создать для него резервирование URL-адреса с заголовком узла, либо указать имя прокси-сервера в записи реестра Windows **BackConnectionHostNames**.|  
-|Непрямой и прямой доступ от клиента к серверу отчетов, когда клиент устанавливает соединение SSL с прокси или сервером отчетов.|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.png "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси<br /><br /> 4) Клиентское приложение|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Proxy**.<br /><br /> <br /><br /> — Можно использовать привязку канала.<br /><br /> — Серверу отчетов должно быть известно имя прокси-сервера, а администратор сервера отчетов должен либо создать для прокси-сервера резервирование URL-адреса с заголовком узла, либо указать имя прокси-сервера в записи реестра Windows **BackConnectionHostNames**.|  
+|Непрямой и прямой доступ от клиента к серверу отчетов, когда клиент устанавливает соединение SSL с прокси или сервером отчетов.|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси<br /><br /> 4) Клиентское приложение|Присвойте параметру **RSWindowsExtendedProtectionLevel** значение **Allow** или **Require**.<br /><br /> Присвойте параметру **RSWindowsExtendedProtectionScenario** значение **Proxy**.<br /><br /> <br /><br /> — Можно использовать привязку канала.<br /><br /> — Серверу отчетов должно быть известно имя прокси-сервера, а администратор сервера отчетов должен либо создать для прокси-сервера резервирование URL-адреса с заголовком узла, либо указать имя прокси-сервера в записи реестра Windows **BackConnectionHostNames**.|  
   
-## Настройка расширенной защиты служб Reporting Services  
- Файл **rsreportserver.config** содержит значения конфигурации, управляющие поведением расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+## <a name="configuring-reporting-rervices-extended-protection"></a>Настройка расширенной защиты служб Reporting Services  
+ Файл **rsreportserver.config** содержит значения конфигурации, управляющие поведением расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Дополнительные сведения об использовании и изменении файла **rsreportserver.config** см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md). Параметры расширенной защиты также можно изменить и просмотреть с помощью средств WMI API. Дополнительные сведения см. в статье [Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/setextendedprotectionsettings-method-wmi-msreportserver-configurationsetting.md).  
+ Дополнительные сведения об использовании и изменении файла **rsreportserver.config** см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md). Параметры расширенной защиты также можно изменить и просмотреть с помощью средств WMI API. Дополнительные сведения см. в разделе [Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).  
   
  Если параметры конфигурации не проходят проверку, на сервере отчетов отключаются типы проверки подлинности **RSWindowsNTLM**, **RSWindowsKerberos** и **RSWindowsNegotiate** .  
   
@@ -124,7 +132,7 @@ caps.handback.revision: 15
 </Authentication>  
 ```  
   
-## Привязка службы и включенные SPN  
+## <a name="service-binding-and-included-spns"></a>Привязка службы и включенные SPN  
  Привязка службы использует для проверки пункта назначения токенов проверки подлинности имена участников-служб (SPN). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют сведения о существующем резервировании URL-адресов для создания списка допустимых SPN. Благодаря использованию сведений резервирования URL-адреса для проверки и SPN и резервирования URL-адреса системные администраторы могут управлять обеими проверками из одного места.  
   
  Список действующих SPN обновляется при запуске сервера отчетов, при изменении параметров конфигурации расширенной защиты или при очистке домена приложений.  
@@ -139,7 +147,7 @@ caps.handback.revision: 15
   
 -   Если в резервировании URL-адреса есть символы-шаблоны («*» или «+»), то сервер отчетов добавит каждую запись из коллекции узлов.  
   
-### Источники коллекции узлов.  
+### <a name="hosts-collection-sources"></a>Источники коллекции узлов.  
  В следующей таблице перечислены потенциальные источники для коллекции узлов.  
   
 |Тип источника|Description|  
@@ -161,13 +169,14 @@ caps.handback.revision: 15
   
  Дополнительные сведения см. в статьях [Регистрация имени участника-службы для сервера отчетов](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) и [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
-## См. также  
- [Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
- [Общие сведения о расширенной защите для проверки подлинности](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Интегрированная проверка подлинности Windows с расширенной защитой](http://go.microsoft.com/fwlink/?LinkId=179922)   
- [Советы корпорации Майкрософт по безопасности: расширенная защита для проверки подлинности](http://go.microsoft.com/fwlink/?LinkId=179923)   
- [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)   
- [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/setextendedprotectionsettings-method-wmi-msreportserver-configurationsetting.md)  
-  
-  
+## <a name="next-steps"></a>Следующие шаги
+
+[Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
+[Расширенная защита для проверки подлинности Обзор](http://go.microsoft.com/fwlink/?LinkID=177943)   
+[Встроенная проверка подлинности Windows с расширенной защитой](http://go.microsoft.com/fwlink/?LinkId=179922)   
+[Рекомендации по безопасности корпорации Майкрософт: Расширенная защита для проверки подлинности](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)   
+[Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[Метод SetExtendedProtectionSettings &#40; WMI MSReportServer_ConfigurationSetting &#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

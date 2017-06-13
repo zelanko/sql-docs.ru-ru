@@ -1,31 +1,36 @@
 ---
-title: "Индикаторы (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10545"
-  - "10547"
-  - "sql13.rtp.rptdesigner.indicatorproperties.action.f1"
-  - "10546"
-  - "sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1"
-  - "sql13.rtp.rptdesigner.indicatorproperties.general.f1"
+title: "Индикаторы (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10545"
+- "10547"
+- sql13.rtp.rptdesigner.indicatorproperties.action.f1
+- "10546"
+- sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
+- sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Индикаторы (построитель отчетов и службы SSRS)
-  В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Значки, которые представляют индикаторы и их состояния, просты и визуально эффективны, даже если они имеют небольшие размеры.  
+# <a name="indicators-report-builder-and-ssrs"></a>Индикаторы (построитель отчетов и службы SSRS)
+  В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Значки, которые представляют индикаторы и их состояния, просты и визуально эффективны, даже если они имеют небольшие размеры.  
   
  Индикаторы состояния можно использовать в отчетах для отображения следующих показателей.  
   
@@ -64,10 +69,10 @@ caps.handback.revision: 11
   
 |Набор индикаторов|Тип индикатора|  
 |-------------------|--------------------|  
-|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.png "Rs_DirectionalIcons")|Направленные: показывают тренд с помощью стрелок вверх, вниз, горизонтальных стрелок (без изменения), трендовых стрелок вверх или трендовых стрелок вниз.|  
-|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.png "Rs_SymbolIcons")|Символы: показывают состояния с использованием самых узнаваемых символов — галочек и восклицательных знаков.|  
-|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.png "Rs_ShapeIcons")|Фигуры: показывают условия с использованием самых узнаваемых символов, например дорожных знаков и ромбовидных фигур.|  
-|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.png "rs_RatingIcons")|Оценки: показывают оценки с использованием самых узнаваемых фигур или символов, которые показывают ход выполнения, например количество квадрантов в квадрате.|  
+|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.gif "Rs_DirectionalIcons")|Направленные: показывают тренд с помощью стрелок вверх, вниз, горизонтальных стрелок (без изменения), трендовых стрелок вверх или трендовых стрелок вниз.|  
+|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.gif "Rs_SymbolIcons")|Символы: показывают состояния с использованием самых узнаваемых символов — галочек и восклицательных знаков.|  
+|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Фигуры: показывают условия с использованием самых узнаваемых символов, например дорожных знаков и ромбовидных фигур.|  
+|![rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|Оценки: показывают оценки с использованием самых узнаваемых фигур или символов, которые показывают ход выполнения, например количество квадрантов в квадрате.|  
   
  После выбора набора индикаторов можно настроить вид каждого индикатора в наборе, изменяя его свойства в диалоговых окнах для индикаторов или на панели «Свойства». Можно использовать встроенные цвета, значки, размеры или выражения для настройки индикаторов.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 11
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Использование индикаторов в таблицах и матрицах  
  Простота формы индикатора делает его идеальным для использования в таблицах и матрицах. Индикаторы эффективны даже с маленькими размерами. Это делает их полезными в строках подробностей или группирования.  
   
- На следующей диаграмме представлен отчет с таблицей, использующей набор направленных индикаторов **Четыре стрелки (цветные)** для отображения продаж. Значки индикатора в отчете настраиваются для использования оттенков синего цвета вместо цветов по умолчанию: красного, желтого и зеленого.  
+ На следующей диаграмме представлен отчет с таблицей, использующей набор направленных индикаторов **Четыре стрелки (цветные)**для отображения продаж. Значки индикатора в отчете настраиваются для использования оттенков синего цвета вместо цветов по умолчанию: красного, желтого и зеленого.  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 11
   
  Индикаторы показывают значения данных, выполняя синхронизацию значений данных индикаторов в пределах указанной области действия. По умолчанию областью действия родительского контейнера индикатора является объект, который содержит индикатор, такой как таблица или матрица. Можно вносить изменения в синхронизацию, выбирая другую область действия, в зависимости от макета конкретного отчета. Индикатор позволяет пропускать синхронизацию. Дополнительные сведения см. в разделе [Задание области действия синхронизации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
- Общие сведения о работе и определении областей действия в отчетах см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md).  
+ Общие сведения о работе и определении областей действия в отчетах см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Индикаторы используют только одно значение. Если необходимо показать несколько значений данных, используйте вместо индикатора спарклайн или гистограмму. Они могут представлять несколько значений данных, но также просты для понимания в маленьких размерах и хорошо работают в таблицах и матрицах. Дополнительные сведения см. в разделе [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
@@ -117,9 +122,9 @@ caps.handback.revision: 11
   
  На следующей диаграмме показан индикатор рядом с датчиком и внутри датчика.  
   
- ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.png "rs_GaugePanelWithIndicatorAndGauge")  
+ ![rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- Дополнительные сведения см.в разделе [Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS)](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS)](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
  Дополнительные сведения об использовании датчиков см. в разделе [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 11
   
  Это может происходить при использовании процентных или числовых единиц измерения состояния. Такое наиболее вероятно при использовании числовых единиц измерения, поскольку для этих единиц измерения задаются конкретные значения. Также такое поведение вероятно при округлении значений, поскольку при этом снижается уровень дискретности значений.  
   
- В следующих сценариях описано, как изменяются показатели визуализации данных при изменении последовательности трех состояний индикатора направления **Три стрелки (цветные)**. Последовательность по умолчанию такова:  
+ В следующих сценариях описано, как изменяются показатели визуализации данных при изменении последовательности трех состояний индикатора направления **Три стрелки (цветные)** . Последовательность по умолчанию такова:  
   
 1.  Красная стрелка вниз  
   
@@ -189,7 +194,7 @@ caps.handback.revision: 11
   
 -   [Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS)](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  

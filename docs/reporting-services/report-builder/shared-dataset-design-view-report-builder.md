@@ -1,41 +1,46 @@
 ---
-title: "Представление конструктора общих наборов данных (построитель отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Общее представление конструктора наборов данных (построитель отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Представление конструктора общих наборов данных (построитель отчетов)
+# <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   Набор данных в отчете представляет данные отчета, возвращаемые из запроса к внешнему источнику данных. Общие наборы данных публикуются на сервере отчетов и могут использоваться в нескольких отчетах. Можно создавать наборы данных для совместного использования с другими пользователями. В окне создания общего набора данных можно выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  
   
  ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Дополнительные сведения о работе с данными в отчете см. в разделе [Наборы данных отчета (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ Дополнительные сведения о работе с данными в отчете см. в разделе [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Лента  
  Лента предназначена для быстрого доступа к командам, необходимым для выполнения задачи. Команды организованы в следующие логические группы: подключение, набор данных и конструктор запросов.  
   
-### Соединение  
+### <a name="connection"></a>Соединение  
  Используйте кнопку **Выбрать** в группе «Соединение» для выбора общего источника данных в отчете или нахождения общего источника данных на сервере отчетов.  
   
 > [!NOTE]  
 >  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в статье [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings in Report Builder](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
-### Набор данных  
+### <a name="dataset"></a>Набор данных  
  Кнопка **Параметры набора** служит для изменения свойств общего набора данных, следующие основные параметры.  
   
 -   Поля. В коллекции полей можно добавлять или изменять поля.  
@@ -54,12 +59,11 @@ caps.handback.revision: 9
   
  Дополнительные сведения о планах обновления кэша см. в разделе [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
-### Конструктор запросов  
+### <a name="query-designer"></a>Конструктор запросов  
  С помощью панели инструментов конструктора запросов создаются запросы, указывающие, какие данные следует извлечь с помощью подключения к данным. Отображаемая панель инструментов зависит от конструктора запросов, который связан с типом источника данных из подключения к данным.  
   
  Дополнительные сведения см. в разделе, который соответствует типу источника данных, в статье [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="DesignSurface"></a> Область конструктора запросов  
  С помощью конструктора запросов создаются запросы с использованием синтаксиса, который является требованием внешнего источника данных.  
@@ -70,7 +74,6 @@ caps.handback.revision: 9
   
  Каждый тип источника данных имеет особые требования к запросу, который будет выполняться относительно внешнего источника данных. Дополнительные сведения см. в разделе, который соответствует типу источника данных, в статьях [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) и [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="Results"></a> Просмотр результатов запроса  
  В конструкторе общего набора данных пользователь создает запрос, который будет извлекать данные во время обработки отчета с помощью подключения к данным.  
@@ -81,21 +84,19 @@ caps.handback.revision: 9
   
  Учетные данные, используемые для выполнения запроса, отделены от учетных данных, используемых для просмотра отчета или выполнения отчета с сервера отчетов. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
-### Запуск отчета с параметрами  
+### <a name="running-a-report-with-parameters"></a>Запуск отчета с параметрами  
  Если запрос включает переменные запроса, параметры набора данных создаются автоматически. В свою очередь после завершения построения запроса к набору данных параметры отчета, заданные для параметров набора данных, создаются автоматически.  
   
  Если отчет содержит параметры, то все они должны иметь значения по умолчанию, чтобы была возможность запуска отчета автоматически. Если параметр не имеет значения по умолчанию, то для него необходимо выбрать значение при запуске отчета, после чего нажать кнопку **Просмотреть отчет** на вкладке **Выполнение** .  
   
- Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Дополнительные сведения см. в статье [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="Save"></a> Сохранение общего набора данных  
  Чтобы сохранить созданный запрос, на кнопке **Построитель отчетов** щелкните **Сохранить** или **Сохранить как**. Перейдите в соответствующую папку на сервере отчетов и сохраните определение общего набора данных. Общий набор данных будет доступен для других пользователей только после его сохранения на сервере отчетов.  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

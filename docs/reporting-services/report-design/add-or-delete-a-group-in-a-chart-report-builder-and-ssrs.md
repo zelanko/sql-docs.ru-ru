@@ -1,35 +1,40 @@
 ---
-title: "Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS)
-В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы щелкните любое место в диаграммной области данных, чтобы отобразить панель **Данные диаграммы**. Создайте группы, перетащив поля набора данных в области **Группы категорий** и **Группы рядов** . Чтобы добавить вложенные группы, в область добавляют несколько полей.  
+# <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS)
+В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы щелкните любое место в диаграммной области данных, чтобы отобразить панель **Данные диаграммы** . Создайте группы, перетащив поля набора данных в области **Группы категорий** и **Группы рядов** . Чтобы добавить вложенные группы, в область добавляют несколько полей.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Добавление дочерней или родительской группы к диаграмме  
+## <a name="to-add-a-parent-or-child-group-to-a-chart"></a>Добавление дочерней или родительской группы к диаграмме  
   
 1.  В области конструктора щелкните в любом месте диаграммы, чтобы ее выбрать. Отображается панель **Данные диаграммы** .  
   
 2.  Перетащите поле из окна **Данные отчета** в область **Группы категорий** или **Группы рядов** . Для добавления родительской группы поместите курсор перед существующей группой. Для добавления дочерней группы поместите курсор после существующей группы.  
   
-## Изменение группы категорий в диаграмме  
+## <a name="to-edit-a-category-group-on-a-chart"></a>Изменение группы категорий в диаграмме  
   
 1.  В области конструктора щелкните в любом месте диаграммы, чтобы ее выбрать. Отображается панель **Данные диаграммы** .  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 8
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Изменение группы рядов в диаграмме  
+## <a name="to-edit-a-series-group-on-a-chart"></a>Изменение группы рядов в диаграмме  
   
 1.  В области конструктора щелкните в любом месте диаграммы, чтобы ее выбрать. Отображается панель **Данные диаграммы** .  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 8
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## Удаление группы из диаграммы  
+## <a name="to-delete-a-group-from-a-chart"></a>Удаление группы из диаграммы  
   
 1.  В области конструктора щелкните в любом месте диаграммы, чтобы ее выбрать. Отображается панель **Данные диаграммы** .  
   
 2.  Щелкните правой кнопкой мыши группу в области **Группы категорий** или **Группы рядов** и выберите команду **Удалить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

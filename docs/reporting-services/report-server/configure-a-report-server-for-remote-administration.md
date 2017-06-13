@@ -1,29 +1,34 @@
 ---
-title: "настроить сервер отчетов для удаленного администрирования | Microsoft Docs"
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "средство настройки служб Reporting Services"
-  - "поставщик WMI [службы Reporting Services], удаленная настройка"
-  - "управление настройками [WMI]"
-  - "серверы отчетов [службы Reporting Services], настройка"
-  - "удаленное администрирование сервера [службы Reporting Services]"
+title: "Настройка сервера отчетов для удаленного администрирования | Документы Microsoft"
+ms.date: 09/14/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Configuration tool
+- WMI provider [Reporting Services], remote configuration
+- configuration management [WMI]
+- report servers [Reporting Services], configuring
+- remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# настроить сервер отчетов для удаленного администрирования
-  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  
+# <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
+  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  
   
  Перед использованием программы для настройки удаленного экземпляра сервера отчетов необходимо выполнить инструкции этого раздела и включить порты в брандмауэре Windows, удаленные соединения и удаленные запросы инструментария WMI.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 11
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы изменить настройки брандмауэра, нужно войти в систему локально и быть членом локальной группы «Администраторы». Через удаленное соединение невозможно изменить настройки брандмауэра Windows на удаленном компьютере.  
   
  Чтобы включить возможности удаленного администрирования для пользователя, не обладающего правами администратора, учетной записи необходимо предоставить права удаленной активации с помощью распределенной модели объектов (DCOM). В этом разделе предоставлены инструкции по настройке сервера для доступа пользователя, не обладающего правами администратора.  
@@ -42,7 +47,7 @@ caps.handback.revision: 11
   
  Дополнительные сведения см. в разделе [Подключение через брандмауэр Windows](http://go.microsoft.com/fwlink/?LinkId=63615) документации пакета Platform SDK в MSDN.  
   
-## Задания  
+## <a name="tasks"></a>Задания  
  Для включения возможности удаленной настройки выполняются следующие задачи.  
   
 -   Включение портов в брандмауэре Windows и разрешение запросов на портах, используемых сервером отчетов и экземпляром компонента SQL Server Database Engine.  См. в разделах [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) и [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
@@ -57,15 +62,15 @@ caps.handback.revision: 11
   
  В данном разделе приведены инструкции по выполнению этих задач.  
   
-### Настройка удаленных соединений с базой данных сервера отчетов  
+### <a name="to-configure-remote-connections-to-the-report-server-database"></a>Настройка удаленных соединений с базой данных сервера отчетов  
   
 1.  Нажмите кнопку **Пуск**, последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
 2.  В левой панели разверните раздел **Сетевая конфигурация SQL Server**, затем щелкните **Протоколы** для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  В панели сведений включите протокол TCP/IP и протокол именованных каналов, а затем перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  В панели сведений включите протокол TCP/IP и протокол именованных каналов, а затем перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Активация удаленного администрирования в брандмауэре Windows  
+### <a name="to-enable-remote-administration-in-windows-firewall"></a>Активация удаленного администрирования в брандмауэре Windows  
   
 1.  Под учетной записью локального администратора войдите в систему компьютера, на котором нужно включить удаленное администрирование.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 11
   
 5.  Перезагрузите компьютер.  
   
-### Настройка разрешений DCOM для активации удаленного доступа к инструментарию WMI для пользователей, не обладающих правами администратора  
+### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>Настройка разрешений DCOM для активации удаленного доступа к инструментарию WMI для пользователей, не обладающих правами администратора  
   
 1.  В меню «Пуск» выберите пункт **Администрирование**и затем пункт **Службы компонентов**.  
   
@@ -109,15 +114,15 @@ caps.handback.revision: 11
   
 9. Введите имя учетной записи пользователя и нажмите кнопку **ОК**.  
   
-10. В разделе **Разрешения для \<пользователь или группа>\>** в столбце **Разрешить** выберите **Удаленный запуск** и **Удаленная активация**, затем нажмите кнопку **OК**.  
+10. В **разрешения для \<пользователь или группа >**в **Разрешить** выберите **удаленный запуск** и **Удаленная активация**и нажмите кнопку **ОК**.  
   
-### Настройка разрешений пространства имен WMI сервера отчетов для пользователей, не обладающих правами администратора  
+### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Настройка разрешений пространства имен WMI сервера отчетов для пользователей, не обладающих правами администратора  
   
 1.  В меню «Пуск» выберите пункт **Администрирование**и затем пункт **Управление компьютером**.  
   
 2.  Откройте папку «Службы и приложения».  
   
-3.  Щелкните правой кнопкой мыши узел **Элемент управления WMI** и выберите пункт **Свойства**.  
+3.  Щелкните правой кнопкой мыши узел **Элемент управления WMI**и выберите пункт **Свойства**.  
   
 4.  Перейдите на вкладку **Безопасность**.  
   
@@ -139,7 +144,8 @@ caps.handback.revision: 11
   
 13. В столбце **Разрешить** установите флажки **Включить учетную запись**, **Включить удаленно**и **Прочесть безопасность**, затем нажмите кнопку **ОК**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
+

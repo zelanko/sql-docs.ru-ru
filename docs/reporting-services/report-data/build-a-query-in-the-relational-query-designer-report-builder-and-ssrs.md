@@ -1,29 +1,34 @@
 ---
-title: "Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f7c711b3cd56302b05d7dcf4f3045283c376d73
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
+# <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
   С помощью конструктора запросов можно указывать, какие данные должны быть получены для набора данных отчета из внешнего источника данных. Конструктор запросов используется при построении запроса с помощью мастера или создании запроса набора данных.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md) или [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) или [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Конструктор запросов можно использовать для выполнения следующих задач:  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 7
   
  Дополнительные сведения см. в разделе [Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
-### Построение запроса к внедренному набору данных в представлении конструктора отчетов  
+### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>Построение запроса к внедренному набору данных в представлении конструктора отчетов  
   
 1.  Откройте конструктор запросов. В области данных отчета щелкните правой кнопкой мыши набор данных и выберите пункт **Запрос**.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 7
   
      Список полей набора данных отображается в области данных отчета.  
   
-### Задание пределов для запроса  
+### <a name="to-specify-limits-for-a-query"></a>Задание пределов для запроса  
   
 1.  В конструкторе реляционных запросов убедитесь в наличии выбранных полей и проверьте, отображаются ли они на панели **Выбранные поля** .  
   
@@ -81,22 +86,22 @@ caps.handback.revision: 7
   
  Список полей набора данных отображается в области данных отчета.  
   
-### Просмотр результирующего набора запроса  
+### <a name="to-view-a-query-result-set"></a>Просмотр результирующего набора запроса  
   
 1.  На панели инструментов конструктора запросов нажмите кнопку **Выполнить запрос (!)**.  
   
     > [!NOTE]  
-    >  В конструкторе запросов для выполнения запроса и получения результирующего набора используются учетные данные времени разработки. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+    >  В конструкторе запросов для выполнения запроса и получения результирующего набора используются учетные данные времени разработки. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
  Будет выполнен запрос к источнику данных, и в панели результатов запроса будут возвращены данные примера.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Конструкторы запросов (построитель отчетов)](../Topic/Query%20Designers%20\(Report%20Builder\).md)   
+ [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Представление конструктора общих наборов данных (построитель отчетов)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Конструкторы запросов служб Reporting Services](../Topic/Reporting%20Services%20Query%20Designers.md)  
+ [Конструкторы запросов служб Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

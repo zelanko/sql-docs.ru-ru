@@ -1,23 +1,28 @@
 ---
-title: "Мобильные отчеты SQL Server: пошаговая инструкция End-to-end | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Мобильные отчеты SQL Server: руководство по применению конца в конец | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Мобильные отчеты SQL Server: пошаговая инструкция End-to-end
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по применению конца в конец
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
 
 Мобильные отчеты можно создавать в области конструктора с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов. Подключайтесь к различным локальным источникам данных или передавайте книги Excel для создания мобильных отчетов. Затем сохраняйте отчеты на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] и просматривайте их в браузере или мобильных приложениях Power BI.  
@@ -25,15 +30,15 @@ caps.handback.revision: 13
 В этой статье рассматриваются такие вопросы:   
   
 - создание общего источника данных и набора данных на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] с использованием базы данных AdventureWorks в качестве образца источника данных;  
-- создание мобильных отчетов служб Reporting Services в средстве "[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]";  
-- публикация мобильных отчетов на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)];  
+- создание мобильных отчетов служб Reporting Services в средстве " [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]";  
+- публикация мобильных отчетов на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] ;  
 - просмотр мобильных отчетов в мобильном приложении Power BI.  
   
 ## <a name="before-we-start"></a>Действия перед началом работы  
 Для начала вам потребуются такие продукты:  
   
-* Для создания источников данных и ключевых показателей эффективности, а также для публикации наборов данных и мобильных отчетов нужен доступ к серверу отчетов [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [ в собственном режиме](https://msdn.microsoft.com/library/ms143711.aspx).  
-* Для [создания общих наборов данных](#shared-dataset) нужно [установить построитель отчетов](http://www.microsoft.com/download/details.aspx?id=50016).  
+* Для создания источников данных и ключевых показателей эффективности, а также для публикации наборов данных и мобильных отчетов нужен доступ к серверу отчетов [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [в собственном режиме](https://msdn.microsoft.com/library/ms143711.aspx).  
+* Для [создания общих наборов данных](#shared-dataset)нужно [установить построитель отчетов](https://msdn.microsoft.com/library/ff519551.aspx).  
 * Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Сценарии и образцы баз данных AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
 *  ИЛИ образец базы данных World Wide Importers, доступный на странице [Microsoft SQL Server Samples](https://msdn.microsoft.com/library/mt748083.aspx) (Образцы Microsoft SQL Server).
@@ -57,17 +62,17 @@ caps.handback.revision: 13
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
-6. Теперь вы видите источник данных на портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)].  
+6. Теперь вы видите источник данных на портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
 Дополнительные сведения об [общих источниках данных в службе Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
    
-## <a name="a-nameshareddatasetcreate-a-shared-dataseta"></a>Создание общего набора данных  
+## <a name="shared-dataset">Создание общего набора данных</a>  
   
-Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)], например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](http://www.microsoft.com/download/details.aspx?id=50016) или запустите его на веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.   
+Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](https://msdn.microsoft.com/library/ff519551.aspx)или запустите его на веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.   
   
-1. Чтобы запустить [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)], на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] щелкните **Создать** > **Отчет с разбивкой на страницы**.  
+1. Чтобы запустить [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , на веб-портале **щелкните** > **Создать** Отчет с разбивкой на страницы [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
 2. Щелкните **Создать набор данных**.  
@@ -81,7 +86,7 @@ caps.handback.revision: 13
    Имя: http://*localhost*/ReportServer  
    Элементы типа: источники данных (*.rsds)  
    
-5. Нажмите кнопку **Открыть** и перейдите к источнику данных, созданному на этом сервере.  
+5. Нажмите кнопку **Открыть**и перейдите к источнику данных, созданному на этом сервере.  
    
 6. Выберите источник данных и нажмите кнопку **Открыть** еще раз.    
   
@@ -89,12 +94,12 @@ caps.handback.revision: 13
   
    ![PBI_SSMRP_RB_QueryDesignr600](../../reporting-services/mobile-reports/media/pbi-ssmrp-rb-querydesignr600.png)  
    
-8. По завершении сохраните набор данных для сервера отчетов [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)].    
+8. По завершении сохраните набор данных для сервера отчетов [!INCLUDE[PRODUCT_NAME](../../includes/ssrs.md)] .    
    
 Теперь можно использовать набор данных как основу для ключевых показателей эффективности и мобильных отчетов.  Вы можете создать несколько наборов данных в одном источнике данных. Кроме того, вы можете создать несколько ключевых показателей эффективности и мобильных отчетов на основе этих общих наборов данных.   
   
-## <a name="a-namecreatekpicreate-a-kpia"></a>Создание ключевых показателей эффективности  
-Вы можете создавать ключевые показатели эффективности непосредственно на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)].    
+## <a name="create-KPI">Создать ключевой показатель Эффективности</a>  
+Вы можете создавать ключевые показатели эффективности непосредственно на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .    
   
 1. В правом верхнем углу экрана веб-портала щелкните **Создать** > **Создать ключевой показатель эффективности**.   
   
@@ -129,19 +134,19 @@ caps.handback.revision: 13
   
 8. Присвойте имя вашему ключевому показателю эффективности и выберите тип визуализации, а затем нажмите кнопку **Создать**.   
   
-   Ключевой показатель эффективности отобразится на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)].  
+   Ключевой показатель эффективности отобразится на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="a-namecreatemobilereportcreate-a-reporting-services-mobile-reporta"></a>Создание мобильных отчетов служб Reporting Services  
+## <a name="create-mobile-report">Создание мобильных отчетов служб Reporting Services</a>  
    
-Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766) или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. 
+Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766)или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
-При первом открытии [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] отобразится пустой холст, на котором можно создать мобильный отчет. Начните с создания визуальных элементов или выполните запуск с помощью ваших данных. Если сначала создать визуальные элементы, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] автоматически создает смоделированные данные, привязанные к отчету, и динамически изменяется по мере изменения выбранных визуальных элементов. Попробуйте сделать это сами.   
+При первом открытии [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]отобразится пустой холст, на котором можно создать мобильный отчет. Начните с создания визуальных элементов или выполните запуск с помощью ваших данных. Если сначала создать визуальные элементы, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] автоматически создает смоделированные данные, привязанные к отчету, и динамически изменяется по мере изменения выбранных визуальных элементов. Попробуйте сделать это сами.   
   
 ## <a name="start-with-the-visuals"></a>Запуск при помощи визуальных элементов  
   
-1. Чтобы запустить [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] щелкните **Создать ** > **Мобильный отчет**.  
+1. Чтобы запустить [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , на веб-портале **щелкните** > **Создать** Мобильный отчет [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
@@ -159,13 +164,13 @@ caps.handback.revision: 13
   
    ![PBI_SSMRP_TreeMapVisProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapvisprops.png)  
   
-4. Выберите визуальный элемент карты дерева, а затем в левом верхнем углу откройте вкладку **Данные**.   
+4. Выберите визуальный элемент карты дерева, а затем в левом верхнем углу откройте вкладку **Данные** .   
   
-   Теперь отобразятся смоделированные поля и значения, сформированные средством "[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]", и будет видно, каким размером и цветом они представлены на карте дерева.  
+   Теперь отобразятся смоделированные поля и значения, сформированные средством " [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] ", и будет видно, каким размером и цветом они представлены на карте дерева.  
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Щелкните вкладку **Макет**.  
+6. Щелкните вкладку **Макет** .  
   
 7. Щелкните переключатель параметров ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) в правом верхнем углу карты дерева, чтобы отобразить его меню.   
   
@@ -175,18 +180,18 @@ caps.handback.revision: 13
   
 ## <a name="add-your-own-data"></a>Добавьте ваши собственные данные  
   
-1. Перейдите на вкладку **Данные**.    
+1. Перейдите на вкладку **Данные** .    
    
 2. Чтобы добавить свои данные, нажмите кнопку **Добавить данные** в правом верхнем углу, а затем перейдите к вашим данным.    
   
-3. Вы можете использовать данные из локальной книги Excel, но в этом случае используются данные из общего набора данных на вашем веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]. Отображается сообщение "Добавлен на сервере".  
+3. Вы можете использовать данные из локальной книги Excel, но в этом случае используются данные из общего набора данных на вашем веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] . Отображается сообщение "Добавлен на сервере".  
   
 4. Выберите сервер, а затем выберите созданный вами набор данных.  
    
-3. Вернитесь на вкладку **Данные**, а затем на панели **Свойства данных** измените свойства **Представления размера**, **Представления цветов** и другие свойства полей ваших данных. 
+3. Вернитесь на вкладку **Данные** , а затем на панели **Свойства данных** измените свойства **Представления размера**, **Представления цветов**и другие свойства полей ваших данных. 
    
-   *  Поля **Представления размера**, **Представления цветов** и **Пользовательское значение центра** должны содержать цифровые значения. 
-   *  В поле **Группировать по** отображается категория, поэтому это текстовое поле.
+   *  Поля**Представления размера**, **Представления цветов**и **Пользовательское значение центра** должны содержать цифровые значения. 
+   *  В поле**Группировать по** отображается категория, поэтому это текстовое поле.
    
    ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
@@ -200,7 +205,7 @@ caps.handback.revision: 13
 
 2. И снова процесс начинается с моделирования данных. 
 
-   Обратите внимание, что в разделе **Свойства визуальных элементов** по умолчанию указано свойство **Предпочтение более высоким значениям**, а для свойства **Разностная метка** задано значение **Процент целевого**. **Остановки диапазона** заданы по умолчанию: вы можете их изменить, но пока можно использовать и их.
+   Обратите внимание, что в разделе **Свойства визуальных элементов**по умолчанию указано свойство **Предпочтение более высоким значениям**, а для свойства **Разностная метка** задано значение **Процент целевого**. **Остановки диапазона** заданы по умолчанию: вы можете их изменить, но пока можно использовать и их.
 
    ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
@@ -210,7 +215,7 @@ caps.handback.revision: 13
 
    ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
-5. Выберите **Предварительный просмотр**, чтобы посмотреть, как это выглядит. 
+5. Выберите **Предварительный просмотр** , чтобы посмотреть, как это выглядит. 
 
    ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
@@ -222,7 +227,7 @@ caps.handback.revision: 13
 
    ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. На вкладке **Данные** в разделе **Свойства данных** задайте для элементов **Ключи** и **Метки** то поле в ваших данных, которое необходимо отфильтровать.
+2. На вкладке **Данные** в разделе **Свойства данных**задайте для элементов **Ключи** и **Метки** то поле в ваших данных, которое необходимо отфильтровать.
 
    ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
@@ -238,7 +243,7 @@ caps.handback.revision: 13
   
 
 ## <a name="save-your-mobile-report"></a>Сохранение мобильного отчета  
-Вы можете сохранить отчет локально или на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]. При локальном сохранении [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] сохраняет его с помощью кэшированных данных, чтобы можно было открыть его и продолжить работу. Однако вы не сможете просматривать его на мобильных устройствах.   
+Вы можете сохранить отчет локально или на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] . При локальном сохранении [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] сохраняет его с помощью кэшированных данных, чтобы можно было открыть его и продолжить работу. Однако вы не сможете просматривать его на мобильных устройствах.   
   
 1. Нажмите значок сохранения в верхнем левом углу.   
    
@@ -259,7 +264,7 @@ caps.handback.revision: 13
   
 ## <a name="view-your-report-on-a-mobile-device"></a>Просмотр отчета на мобильном устройстве   
   
-Чтобы просмотреть отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], сначала необходимо:
+Чтобы просмотреть отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , сначала необходимо:
 
 *  [зарегистрироваться в службе Power BI](http://go.microsoft.com/fwlink/?LinkID=513879), если у вас еще нет учетной записи;
 *  [скачать мобильное приложение Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) на мобильное устройство.  
@@ -287,7 +292,7 @@ caps.handback.revision: 13
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Просмотр ключевых показателей эффективности (КПЭ) и мобильных отчетов в приложении Power BI  
   
-Нажмите вкладку **Ключевые показатели эффективности** или **Мобильные отчеты**.   
+Нажмите вкладку **Ключевые показатели эффективности** или **Мобильные отчеты** .   
   
 ![PBI_iPad_SSMRP_Portal](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-portal.png)  
   
@@ -307,3 +312,5 @@ caps.handback.revision: 13
 -  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильном приложении Power BI для Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).    
   
    
+
+

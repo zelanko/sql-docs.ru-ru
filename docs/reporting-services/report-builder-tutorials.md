@@ -1,28 +1,36 @@
 ---
-title: "Учебники по построителю отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Учебники по построителю отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Учебники по построителю отчетов
+# <a name="report-builder-tutorials"></a>Учебники по построителю отчетов
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Следующие учебники по построителю отчетов помогают научиться создавать простые отчеты [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.  
   
 [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-Чтобы использовать эти учебники, необходимо иметь доступ только для чтения к базе данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и разрешения на доступ к серверу отчетов служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
+Чтобы использовать эти учебники, необходимо иметь доступ только для чтения к базе данных SQL Server и разрешения на доступ к [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] сервера отчетов.  
   
 Чтобы получить доступ к этим объектам, обратитесь к администратору сервера отчетов.  
   
@@ -67,11 +75,11 @@ caps.handback.revision: 11
   
 [Учебник. Общие сведения о выражениях](../reporting-services/tutorial-introducing-expressions.md)  
 Следуйте шагам в данном учебнике, чтобы узнать, как с помощью выражений производить сцепления и вычисления значений полей поиска и выводить их в отчете. Кроме того, вы научитесь по условию отображать различные изображения и состояния индикаторов с помощью выражений.  
-  
-## См. также:  
-[Представление конструктора отчетов (построитель отчетов)](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>Следующие шаги
+
+[Представление конструктора отчетов](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Построитель отчетов в SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[Учебник: Создание стандартного отчета с диаграммой сети](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

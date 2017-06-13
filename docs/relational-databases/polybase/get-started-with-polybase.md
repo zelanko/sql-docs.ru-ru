@@ -2,7 +2,7 @@
 title: "Приступая к работе с PolyBase | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Приступая к работе с PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Этот раздел содержит основные сведения о запуске PolyBase. Дополнительные сведения см. в [руководстве по PolyBase](../../relational-databases/polybase/polybase-guide.md).  
+  В этом разделе содержатся основные сведения о запуске PolyBase на экземпляре SQL Server.
   
  Выполнив приведенные ниже действия, вы получите такой результат:  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 -   у вас будут примеры запросов, в которых используются объекты PolyBase.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Экземпляр  [SQL Server (64-разрядный)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
+ Экземпляр [SQL Server (64-разрядная версия)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) со следующим:  
   
 -   Microsoft .NET Framework 4.5.  
   
@@ -55,23 +55,21 @@ ms.lasthandoff: 04/11/2017
   
 -   минимальный объем памяти: 4 ГБ;  
   
--   Минимальное свободное место на жестком диске: 2 ГБ.  
-  
+-   Минимальное свободное место на жестком диске: 2 ГБ.    
 -   Должно присутствовать подключение по протоколу TCP/IP. (См. раздел [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
   
+ 
  Внешним источником данных может быть один из следующих объектов:  
   
 -   Кластер Hadoop. Поддерживаемые версии см. в разделе [Настройка PolyBase](#supported).  
 
--   Хранилище больших двоичных объектов Azure. 
-
--   При использовании функции включения вычислений в Hadoop необходимо будет убедиться, что целевой кластер Hadoop содержит базовые компоненты HDFS, Yarn и MapReduce с включенным сервером JobHistory. PolyBase отправляет запрос на включение через MapReduce и запрашивает сведения о состоянии c сервера JobHistory. Если оба компонента отсутствуют, произойдет сбой запроса с сообщением об ошибке. 
+-   Хранилище больших двоичных объектов Azure
 
 > [!NOTE]
-> Кластеры HDInsight используют хранилище BLOB-объектов Azure в качестве файловой системы для своего постоянного хранилища. Вы можете использовать PolyBase для запроса файлов, управляемых кластером HDInsight. Для этого создайте внешний источник данных для ссылки на большой двоичный объект, который настроен в качестве хранилища для кластера HDInsight. 
-  
+>   При использовании функции включения вычислений в Hadoop необходимо будет убедиться, что целевой кластер Hadoop содержит базовые компоненты HDFS, Yarn и MapReduce с включенным сервером JobHistory. PolyBase отправляет запрос на включение через MapReduce и запрашивает сведения о состоянии c сервера JobHistory. Без компонента, либо запрос завершится ошибкой. 
+
 ## <a name="install-polybase"></a>Установка PolyBase  
- Если PolyBase еще не установлен, ознакомьтесь со статьей [PolyBase installation](../../relational-databases/polybase/polybase-installation.md) (Установка PolyBase).  
+ Если вы не установили PolyBase, см. раздел [установки PolyBase](../../relational-databases/polybase/polybase-installation.md).  
   
 ### <a name="how-to-confirm-installation"></a>Подтверждение установки  
  Чтобы после установки убедиться, что технология PolyBase успешно установлена, выполните приведенную ниже команду. Если служба PolyBase установлена, она возвращает значение 1, а если нет — значение 0.  
@@ -81,17 +79,17 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configure PolyBase  
- После установки необходимо настроить в сервере SQL Server использование вашей версии Hadoop или хранилища BLOB-объектов Azure. PolyBase поддерживает два поставщика Hadoop: платформу Data Platform компании Hortonwork (HDP) и платформу CDH компании Cloudera. Запустить платформу Hortonwork можно и на компьютере под управлением Windows, и на компьютере под управлением Linux, что также является частью конфигурации.  Вот некоторые из поддерживаемых внешних источников данных:  
+ После установки, необходимо настроить SQL Server для использования либо вашей версии Hadoop или хранилища больших двоичных объектов. PolyBase поддерживает два поставщика Hadoop Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH).  Вот некоторые из поддерживаемых внешних источников данных:  
   
 -   Hortonworks HDP 1.3 в ОС Linux или Windows Server;  
   
--   Hortonworks HDP 2.1–2.5 в ОС Linux;
+-   Hortonworks HDP 2.1 — 2.6 в Linux
 
 -   Hortonworks HDP 2.1–2.3 в ОС Windows Server;  
   
 -   Cloudera CDH 4.3 в Linux;  
   
--   Cloudera CDH 5.1–5.5, 5.9, 5.10 в Linux;  
+-   Cloudera CDH 5.1 – 5.5, 5.9-5.11 в Linux  
   
 -   хранилище BLOB-объектов Azure.  
   
@@ -101,8 +99,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="external-data-source-configuration"></a>Конфигурация внешнего источника данных  
   
 1.  Запустите хранимую процедуру [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' и задайте соответствующее значение. По умолчанию для подключения Hadoop установлено значение 7. Чтобы узнать значение, см. раздел [Конфигурация подключения к PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -159,7 +156,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  Подробные сведения см. в разделе [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 ## <a name="create-t-sql-objects"></a>Создание объектов T-SQL  
- Создайте объекты в зависимости от внешнего источника данных (Hadoop или хранилище Azure).  
+ Создание объектов в зависимости от внешнего источника данных, Hadoop или хранилище Azure.  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -189,8 +186,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   

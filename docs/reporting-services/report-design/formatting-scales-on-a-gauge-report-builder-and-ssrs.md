@@ -1,23 +1,28 @@
 ---
-title: "Форматирование шкал на датчике (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Форматирование шкал на датчике (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Форматирование шкал на датчике (построитель отчетов и службы SSRS)
+# <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Форматирование шкал на датчике (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы шкала датчика представляет собой отображаемый на датчике диапазон чисел, ограниченный максимальным и минимальным значениями. Обычно шкала датчика содержит метки и деления, что упрощает считывание показаний указателя датчика. Шкала датчика обычно связана с одним или несколькими указателями. На одном и том же датчике может быть несколько шкал.  
   
  ![Общие сведения об элементах на шкале датчика](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "Общие сведения об элементах на шкале датчика")  
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
  Радиус шкалы представляет собой расстояние от центра датчика до середины линейки шкалы. Значение радиуса шкалы измеряется в процентах от диаметра датчика. Рекомендуется использовать радиусы шкалы, не превышающие 35. Для больших радиусов шкала, скорее всего, будет нарисована за пределами границ датчика. На рисунке показано, как измеряется радиус шкалы относительно диаметра датчика, на линейке шкалы.  
   
- ![Радиус шкалы относительно диаметра датчика](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Радиус шкалы относительно диаметра датчика")  
+ ![Радиус шкалы относительно диаметра датчика](../../reporting-services/report-design/media/scaleradiusdiagram.gif "радиус шкалы относительно диаметра датчика")  
   
  Начальный угол — это угол поворота, в диапазоне от 0 до 360 градусов, на котором начинается шкала. Нулевая (0) позиция находится в нижней точке датчика, а начальный угол отсчитывается по часовой стрелке. Например, шкала с начальным углом, равным 90 градусов, будет начинаться там, где на циферблате часов располагается цифра 9.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 -   1% от наименьшего из значений высоты или ширины для линейного датчика.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование указателей на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   

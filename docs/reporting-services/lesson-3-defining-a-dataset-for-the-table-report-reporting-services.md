@@ -1,31 +1,36 @@
 ---
-title: "Занятие&#160;3. Определение набора данных для табличного отчета (службы Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Занятие 3: Определение набора данных для табличного отчета (службы Reporting Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 caps.latest.revision: 53
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 53
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Занятие&#160;3. Определение набора данных для табличного отчета (службы Reporting Services)
-После определения источника данных необходимо определить набор данных. В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, используемый в отчете, а также вычисляемые поля и переменные.  
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)
+После определения источника данных необходимо определить набор данных. В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, используемый в отчете, а также вычисляемые поля и переменные.  
   
 Чтобы создать набор данных, можно использовать конструктор запросов в конструкторе отчетов. В этом учебнике предстоит создать запрос, получающий из базы данных [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] сведения о заказах на продажу.  
   
-### Определение запроса Transact-SQL для данных отчета  
+### <a name="to-define-a-transact-sql-query-for-report-data"></a>Определение запроса Transact-SQL для данных отчета  
   
-1.  В области **данных отчета** нажмите кнопку **Создать** и выберите **Набор данных**. Откроется диалоговое окно **Свойства набора данных** .  
+1.  В области **данных отчета** нажмите кнопку **Создать**и выберите **Набор данных**. Откроется диалоговое окно **Свойства набора данных** .  
   
 2.  В поле **Имя** введите **AdventureWorksDataset**.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 53
 4.  Выберите источник данных, созданный на предыдущем занятии [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
 5. Выберите **Текст** в качестве **типа запроса**.  
   
-6.  Введите или скопируйте и вставьте приведенный ниже запрос Transact-SQL в поле **Запрос**.  
+6.  Введите или скопируйте и вставьте приведенный ниже запрос Transact-SQL в поле **Запрос** .  
   
     ```  
     SELECT   
@@ -59,24 +64,26 @@ caps.handback.revision: 53
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-7.  Нажмите кнопку **Конструктор запросов** (необязательно). В текстовом конструкторе запросов будет отображен запрос. Вы можете переключиться к графическому конструктору запросов, нажав кнопку **Изменить как текст**. Чтобы просмотреть результаты выполнения запроса, нажмите кнопку выполнения ![ssrs_querydesigner_run](../reporting-services/media/ssrs-querydesigner-run.png) на панели инструментов конструктора запросов.  
+7.  Нажмите кнопку **Конструктор запросов** (необязательно). В текстовом конструкторе запросов будет отображен запрос. Вы можете переключиться к графическому конструктору запросов, нажав кнопку **Изменить как текст**. Чтобы просмотреть результаты выполнения запроса, нажмите кнопку выполнения ![ssrs_querydesigner_run](../reporting-services/media/ssrs-querydesigner-run.png)  на панели инструментов конструктора запросов.  
   
-    Будут показаны данные из шести полей четырех различных таблиц из базы данных [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]. В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется *soh*.  
+    Будут показаны данные из шести полей четырех различных таблиц из базы данных [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется *soh*.  
   
 8.  Нажмите кнопку **ОК** для выхода из конструктора запросов.  
   
-9.  Нажмите кнопку **ОК** для выхода из диалогового окна **Свойства набора данных**.  
+9.  Нажмите кнопку **ОК** для выхода из диалогового окна **Свойства набора данных** .  
   
     Поля и набор данных **AdventureWorksDataset** появятся в области данных отчета.  
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
-## Следующая задача  
+## <a name="next-task"></a>Следующая задача  
 Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. См. [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [Средства проектирования запросов (службы SSRS)](../reporting-services/report-data/query-design-tools-ssrs.md)  
 [Тип соединения SQL Server (службы SSRS)](../reporting-services/report-data/sql-server-connection-type-ssrs.md)  
 [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   
   
+
+

@@ -1,28 +1,33 @@
 ---
-title: "Примеры выражений групп (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "данные [службы Reporting Services], группирование"
-  - "группирование данных"
-  - "выражения [службы Reporting Services], добавление"
-  - "группы [службы Reporting Services], выражения"
+title: "Группировать примеры выражений (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Reporting Services], grouping
+- grouping data
+- expressions [Reporting Services], adding
+- groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 caps.latest.revision: 24
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 24
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbb4f5f3af2a8986fdc7384ad4da1740f2be6638
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Примеры выражений групп (построитель отчетов и службы SSRS)
+# <a name="group-expression-examples-report-builder-and-ssrs"></a>Примеры выражений групп (построитель отчетов и службы SSRS)
   В области данных можно группировать данные по одному полю или создавать более сложные выражения, определяющие данные, по которым выполняется группирование. Сложные выражения могут включать ссылки на несколько полей или параметров, условные инструкции или пользовательский код. При определении группы для области данных эти выражения добавляются к свойству **Группировать** . Дополнительные сведения см. в разделе [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
  Чтобы выполнить слияние двух или нескольких групп, основанных на простых выражениях поля, добавьте каждое поле к списку выражений группы в определении группы.  
@@ -30,7 +35,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Примеры выражений группы  
+## <a name="examples-of-group-expressions"></a>Примеры выражений группы  
  В следующей таблице приведены примеры выражений группы, которые можно использовать для определения группы.  
   
 |Description|Выражение|  
@@ -42,7 +47,7 @@ caps.handback.revision: 24
 |Группирование по трем отдельным возрастным диапазонам:<br /><br /> до 20, между 21 и 50, старше 50.|`=IIF(First(Fields!Age.Value)<21,"Under 21",(IIF(First(Fields!Age.Value)>=21 AND First(Fields!Age.Value)<=50,"Between 21 and 50","Over 50")))`|  
 |Группирование по многим возрастным диапазонам. В этом примере показан пользовательский код, написанный на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, который возвращает строку, относящуюся к одному из следующих диапазонов:<br /><br /> от 25 и младше,<br /><br /> от 26 до 50;<br /><br /> от 51 до 75;<br /><br /> старше 75.|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> Пользовательский код:<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  

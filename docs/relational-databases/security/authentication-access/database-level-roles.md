@@ -2,7 +2,7 @@
 title: "Роли уровня базы данных | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="fixed-database-roles"></a>предопределенные роли базы данных
   
- В следующей таблице представлены предопределенные роли базы данных и их возможности. Эти роли существуют во всех базах данных. Нельзя изменить разрешения, назначенные предопределенным ролям базы данных.   
+ В следующей таблице представлены предопределенные роли базы данных и их возможности. Эти роли существуют во всех базах данных. За исключением **открытый** роли базы данных, разрешения, назначенные ролям-database не может изменяться.   
   
 |Имя предопределенной роли базы данных|Description|  
 |-------------------------------|-----------------|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/11/2017
 
 Нельзя изменить разрешения, назначенные предопределенным ролям базы данных. На следующем рисунке показаны разрешения, назначенные предопределенным ролям базы данных:
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
 |Имя роли базы данных msdb|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Члены этих ролей базы данных могут администрировать и использовать службы [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обновленные с предыдущей версии, могут содержать более старую версию роли, имя которой присвоено с помощью служб DTS, а не служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../../integration-services/service/integration-services-roles-ssis-service.md).|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Члены этих ролей базы данных могут администрировать и использовать службы [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обновленные с предыдущей версии, могут содержать более старую версию роли, имя которой присвоено с помощью служб DTS, а не служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Члены этих ролей базы данных могут администрировать и использовать сборщик данных. Дополнительные сведения см. в разделе [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Члены роли базы данных **db_ PolicyAdministratorRole** могут выполнять все действия по настройке и обслуживанию политик и условий средства "Управление на основе политики". Дополнительные сведения см. в разделах [Администрирование серверов с помощью управления на основе политик](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Члены этих ролей базы данных могут администрировать и использовать зарегистрированные группы серверов.|  

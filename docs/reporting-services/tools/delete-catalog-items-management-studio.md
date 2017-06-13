@@ -1,25 +1,30 @@
 ---
-title: "Удаление объектов из каталога (среда Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.deleteitems.f1"
+title: "Удаление объектов из каталога (среда Management Studio) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Удаление объектов из каталога (среда Management Studio)
+# <a name="delete-catalog-items-management-studio"></a>Удаление объектов из каталога (среда Management Studio)
   Используйте эту страницу для удаления общих расписаний и определений ролей.  
   
  При удалении общего расписания, используемого несколькими отчетами и подписками, сервер отчетов создаст для каждого из них отдельное расписание. В созданных расписаниях будут содержаться дата, время и шаблон повторений, которые были заданы в общем расписании. Обратите внимание, что службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не обеспечивают централизованного управления отдельными расписаниями. Удаление общего расписания влечет за собой необходимость поддерживать расписание для каждого отдельного элемента. Перед удалением общего расписания определите при помощи страницы [Отчеты](../../reporting-services/tools/schedule-properties-reports-page.md) , какие отчеты используют в настоящее время это расписание.  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  Операцию удаления нельзя отменить. При необходимости восстановления удаленного элемента необходимо или снова создать этот элемент, или восстановить резервную копию базы данных сервера отчетов.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Название**  
  Определяет имя удаляемого элемента.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 16
  **Ошибка**  
  Выводит код ошибки, произошедшей при удалении элемента.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Удаление элемента (среда Management Studio)](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  

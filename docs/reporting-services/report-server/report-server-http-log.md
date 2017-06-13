@@ -1,40 +1,45 @@
 ---
-title: "Журнал HTTP-запросов сервера отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HTTP [службы Reporting Services]"
+title: "Отчет журнала HTTP сервера | Документы Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bea168c6ad15828b44ea5f77f5c7bd3fa05cfb9d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Журнал HTTP-запросов сервера отчетов
+# <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файле журнала HTTP сервера отчетов хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  
   
  По умолчанию ведение журнала HTTP не включено. Необходимо изменить файл конфигурации ReportingServicesService.exe, чтобы использовать эту функцию в своей установке.  
   
-## Просмотр данных журнала  
+## <a name="viewing-log-information"></a>Просмотр данных журнала  
  Журнал представляет собой текстовый ASCII-файл. Просмотреть этот файл можно в любом текстовом редакторе. Файл журнала HTTP сервера отчетов эквивалентен расширенному файлу журнала W3C в службах IIS, и в нем используются аналогичные поля, что позволяет применять существующие средства просмотра журнала IIS для чтения файлов журнала HTTP сервера отчетов. В следующей таблице содержатся дополнительные сведения о файле журнала HTTP.  
   
 |||  
 |-|-|  
-|Имя файла|По умолчанию этот файл имеет имя ReportServerService_HTTP_\<отметка_времени>.log. Можно задать другой префикс имени файла, изменив атрибут HttpTraceFileName в файле конфигурации ReportingServicesService.exe.config. Отметки времени создаются на основе времени по Гринвичу (UTC).|  
-|Размещение файла|Этот файл расположен в папке \Microsoft SQL Server\\*\<экземпляр SQL Server>*\Reporting Services\LogFiles.|  
+|Имя файла|По умолчанию имя файла — ReportServerService_HTTP_\<timestamp >. журнала. Можно задать другой префикс имени файла, изменив атрибут HttpTraceFileName в файле конфигурации ReportingServicesService.exe.config. Отметки времени создаются на основе времени по Гринвичу (UTC).|  
+|Размещение файла|Этот файл расположен в \Microsoft SQL Server\\*\<экземпляр SQL Server >*\Reporting Services\LogFiles.|  
 |Формат файла|Этот файл имеет формат EN-US. Он представляет собой текстовый ASCII-файл.|  
 |Создание и хранение файла|Журнал HTTP создается после его включения в файле конфигурации, перезапуска службы и обработки сервером отчетов HTTP-запроса. Если необходимые параметры были настроены, но файл журнала отсутствует, откройте какой-либо отчет или запустите одно из приложений сервера отчетов (например, диспетчер отчетов), чтобы был сформирован HTTP-запрос для создания этого файла.<br /><br /> После каждого перезапуска службы и последующего HTTP-запроса на сервер отчетов создается новый экземпляр файла журнала.<br /><br /> По умолчанию размер журналов трассировки ограничен 32 МБ, а срок их хранения — 14 дней.|  
   
-## Параметры конфигурации для журнала HTTP сервера отчетов  
+## <a name="configuration-settings-for-report-server-http-log"></a>Параметры конфигурации для журнала HTTP сервера отчетов  
  Чтобы настроить конфигурацию журнала HTTP-сервера отчетов, измените файл ReportingServicesService.exe.config с помощью программы Блокнот. Этот файл конфигурации находится в папке \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
  Чтобы разрешить применение сервера HTTP, необходимо добавить запись **http:4** в раздел RStrace файла ReportingServicesService.exe.config. Все другие записи файла журнала HTTP являются необязательными. Следующий пример содержит все параметры, так что можно вставить целый раздел над разделом RStrace, а затем удалить ненужные параметры.  
@@ -53,13 +58,13 @@ caps.handback.revision: 15
    </RStrace>  
 ```  
   
-## Поля файла журнала  
+## <a name="log-file-fields"></a>Поля файла журнала  
  В следующей таблице описаны поля, доступные в журнале. Список полей можно изменить. С помощью параметра конфигурации **HTTPTraceSwitches** можно указать, какие поля необходимо включить. Столбец **По умолчанию** указывает, будет ли поле включено в файл журнала автоматически, если не указано значение **HTTPTraceSwitches**.  
   
 |Поле|Description|По умолчанию|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Это значение является необязательным. Значением по умолчанию является ReportServerServiceHTTP_. Можно указать другое значение, если требуется использовать другое соглашение об именах (например, чтобы включить имя сервера, если файлы журналов сохраняются в каком-то централизованном расположении).|Да|  
-|HttpTraceSwitches|Это значение является необязательным. Если указан этот параметр, можно настроить поля, используемые в файле журнала, в формате с разделителями-запятыми.|Нет|  
+|HTTPTraceSwitches|Это значение является необязательным. Если указан этот параметр, можно настроить поля, используемые в файле журнала, в формате с разделителями-запятыми.|Нет|  
 |Дата|Дата, когда произошло действие.|Нет|  
 |Time|Время, в которое произошло указанное действие.|Нет|  
 |ClientIp|IP-адрес клиента, получающего доступ к серверу отчетов.|Да|  
@@ -78,7 +83,7 @@ caps.handback.revision: 15
 |CookieSent|Содержимое куки-файла, отправленного сервером.|Нет|  
 |Referrer|Предыдущий сайт, посещенный клиентом.|Нет|  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

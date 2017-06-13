@@ -1,1 +1,1 @@
-![Да](media/yes.png)SharePoint 2013![Да](media/yes.png)SharePoint 2016
+![Да](media/yes.png)режим интеграции с SharePoint

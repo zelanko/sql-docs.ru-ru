@@ -1,25 +1,30 @@
 ---
-title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "Занятие 2: Изменение данных отчета свойства источника данных | Документы Microsoft"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 43
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 2: Modifying the Report Data Source Properties
-На этом занятии учебника по службам [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с помощью веб-портала будет выбран отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу**, созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+На этом занятии учебника по службам [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с помощью веб-портала будет выбран отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу** , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  
   
 Вы также измените набор данных и отчет, включив в них параметр для фильтрации отчета по `[Order]` , с тем чтобы подписка могла выдавать разные экземпляры отчета для определенных заказов и форматов подготовки к просмотру.  
   
@@ -30,12 +35,12 @@ caps.handback.revision: 43
 2.    Перейдите по URL-адресу веб-портала.  Например:   
     `http://<server name>/reports`.  
     `http://localhost/reports`
- **Примечание**. URL-адресом веб-*портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  
+ **Примечание** . URL-адресом веб- *портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  
 3.  Перейдите в папку с отчетом **Sales Orders** и в контекстном меню отчета щелкните пункт **Управление**.  
  
- ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.gif)
+ ![ssrs_tutorial_datadriven_manage_report](../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png)
   
-3.  В области слева щелкните **Источники данных**.  
+3.  В области слева щелкните **Источники данных** .  
   
 4.  В поле **Тип подключения** должно быть выбрано значение **Microsoft SQL Server**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 43
   
 6.  Выберите **С использованием этих учетных данных**.  
   
-7. В списке **Тип учетных данных** выберите значение **Пароль и имя пользователя Windows**
+7. В списке **Тип учетных данных**выберите значение **Пароль и имя пользователя Windows**
 8. Введите имя пользователя (в формате *домен\имя*) и пароль. Воспользуйтесь именем входа, у которого есть разрешение на доступ к базе данных AdventureWorks2014.  
     
 9. Нажмите кнопку **Проверить соединение** , чтобы проверить соединение с источником данных.  
@@ -86,8 +91,8 @@ caps.handback.revision: 43
  В последующих шагах вы добавите параметр к отчету.  Значение из параметра отчета передается в параметр набора данных. 
 ## <a name="bkmk_add_reportparameter"></a>Добавление параметра отчета и повторная публикация отчета  
   
-1.  В области **Данные отчета** разверните папку параметров и дважды щелкните параметр **Ordernumber**.  Он был создан автоматически в ходе выполнения предыдущих действий по добавлению параметра к набору данных. Нажмите кнопку **Создать** и выберите пункт **Параметр...**  
- ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.gif) 
+1.  В области **Данные отчета** разверните папку параметров и дважды щелкните параметр **Ordernumber** .  Он был создан автоматически в ходе выполнения предыдущих действий по добавлению параметра к набору данных. Нажмите кнопку **Создать** и выберите пункт **Параметр...**  
+ ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  Поле **Имя** должно содержать значение `OrderNumber`.  
   
 3.  Поле **Подсказка** должно содержать значение `OrderNumber`.  
@@ -98,12 +103,12 @@ caps.handback.revision: 43
   
 6.  Нажмите кнопку **ОК**.  
   
-7.  Чтобы выполнить отчет, перейдите на вкладку **Предварительный просмотр**. Обратите внимание на поле ввода параметров в верхней части отчета. Вы можете сделать одно из двух:  
+7.  Чтобы выполнить отчет, перейдите на вкладку **Предварительный просмотр** . Обратите внимание на поле ввода параметров в верхней части отчета. Вы можете сделать одно из двух:  
   
     -   щелкнуть «Просмотр отчета», чтобы отобразить весь отчет без использования параметра;  
   
-    -   отменить выбор параметра **NULL** и ввести номер заказа, например *so71949*, а затем щелкнуть **Просмотреть отчет**, чтобы просмотреть в отчете только один заказ.  
-    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif) 
+    -   отменить выбор параметра **NULL** и ввести номер заказа, например *so71949*, а затем щелкнуть **Просмотреть отчет** , чтобы просмотреть в отчете только один заказ.  
+    ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
 ## <a name="bkmk_redeploy"></a>Повторное развертывание отчета  
@@ -112,11 +117,11 @@ caps.handback.revision: 43
   
 2.  На панели инструментов щелкните **Построить** , а затем ― **Развернуть учебник**.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
 + Отчет успешно настроен для получения данных с применением сохраненных учетных данных. Данные можно фильтровать с помощью параметра. 
-+ На следующем занятии вы настроите подписку с помощью страниц управляемой данными подписки на веб-портале. См. [Занятие 3. Определение управляемой данными подписки](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
++ На следующем занятии вы настроите подписку с помощью страниц управляемой данными подписки на веб-портале. См. [Занятие 3. Определение управляемой данными подписки](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [Управление источниками данных отчета](../reporting-services/report-data/manage-report-data-sources.md)  
 [Задание учетных данных и сведениях о соединении для источников данных отчета](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Создание управляемой данными подписки (учебник по службам SSRS)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
@@ -124,3 +129,5 @@ caps.handback.revision: 43
   
   
   
+
+

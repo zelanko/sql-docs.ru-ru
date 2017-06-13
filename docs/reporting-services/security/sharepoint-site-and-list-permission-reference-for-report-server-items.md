@@ -1,28 +1,33 @@
 ---
-title: "Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разрешения [Reporting Services], режим интеграции с SharePoint "
-  - "интеграция с SharePoint [Reporting Services], разрешения"
-  - "безопасность [Reporting Services], режим интеграции с SharePoint"
-  - "наборы разрешений [службы Reporting Services]"
+title: "Элементами сервера отчетов SharePoint Site and List Permission Reference для | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
+- permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
+# <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
   В этом разделе содержится список разрешений в SharePoint, которые могут быть использованы для предоставления доступа к операциям сервера отчетов, работающего в режиме интеграции с SharePoint. Данный раздел может использоваться в качестве справки при создании пользовательских уровней разрешений.  
   
  SharePoint содержат тридцать три разрешения, которые могут быть использованы для управления доступом к содержимому и операциям. Некоторые из указанных разрешений, но не все могут применяться к документам и операциям, в которых действует сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Ссылочные таблицы, содержащиеся в данной статье, могут быть использованы в качестве справочного материала при сопоставлении разрешений с конкретными задачами отчетности.  
@@ -41,7 +46,7 @@ caps.handback.revision: 14
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint &#124; SharePoint 2010 и SharePoint 2013.|  
   
-## Разрешения списка  
+## <a name="list-permissions"></a>Разрешения списка  
  Разрешения, присваиваемые на доступ к библиотеке, содержащей элементы сервера отчетов, определяют порядок доступа пользователей к указанным элементам.  
   
 |Разрешение|Description|Ж|C|V|Операция сервера отчетов|  
@@ -58,7 +63,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  К прочим спискам разрешений относятся «Переопределение извлечений», «Подтверждение элементов» и «Просмотр страниц приложений». Эти разрешения сервером отчетов не обрабатываются. Сервер отчетов не управляет этими операциями.  
   
-## Разрешения сайта  
+## <a name="site-permissions"></a>Разрешения сайта  
  Разрешения сайта определяют порядок доступа к операциям сервера отчетов, которые не имеют прямого отношения к элементам, хранящимся в указанной библиотеке. Примеры включают создание и управление общими расписаниями, которые могут использоваться элементами нескольких библиотек, и настройку веб-части «Средство просмотра отчетов», используемой на всем сайте.  
   
 |Разрешение|Description|Ж|C|V|Операция сервера отчетов|  
@@ -72,7 +77,7 @@ caps.handback.revision: 14
 |Использование удаленных интерфейсов|Использование интерфейсов Use SOAP, Web DAV или приложения SharePoint Designer для доступа к веб-сайту.|X|X|X|Используется для вызова URL-адреса конечной точки учетной записи-посредника при соединении с сервером отчетов.|  
 |Открытие|Открывает веб-сайт, список либо папку для доступа к элементам внутри контейнера.|X|X|X|Чтение расписаний и свойств элементов.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

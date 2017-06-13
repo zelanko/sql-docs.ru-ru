@@ -1,42 +1,47 @@
 ---
-title: "Диалоговое окно &#171;Свойства набора данных&#187; — &#171;Запрос&#187; (построитель отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "10024"
-  - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
-  - "10160"
+title: "Набор данных диалогового окна свойств запроса (построитель отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- "10024"
+- sql13.rtp.rptdesigner.datasetproperties.query.f1
+- "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Диалоговое окно &#171;Свойства набора данных&#187; — &#171;Запрос&#187; (построитель отчетов)
+# <a name="dataset-properties-dialog-box-query-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Запрос» (построитель отчетов)
   Выберите **Запрос** в диалоговом окне **Свойства набора данных** , чтобы выбрать общий набор данных на сервере отчетов или создать внедренный набор данных. Для внедренного набора данных необходимо выбрать источник данных и создать запрос.  
   
  Диалоговое окно **Свойства набора данных** содержит следующие элементы.  
   
--   [Диалоговое окно "Свойства набора данных" — "Параметры" (построитель отчетов)](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md)  
+-   [Диалоговое окно "Свойства набора данных" — "Параметры" (построитель отчетов)](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [Диалоговое окно "Свойства набора данных" — "Поля" (построитель отчетов)](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md)  
+-   [Диалоговое окно "Свойства набора данных" — "Поля" (построитель отчетов)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
--   [Диалоговое окно "Свойства набора данных" — "Настройки" (построитель отчетов)](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
+-   [Диалоговое окно "Свойства набора данных" — "Настройки" (построитель отчетов)](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [Диалоговое окно "Свойства набора данных" — "Фильтры" (построитель отчетов)](../Topic/Dataset%20Properties%20Dialog%20Box,%20Filters%20\(Report%20Builder\).md)  
+-   [Диалоговое окно "Свойства набора данных" — "Фильтры" (построитель отчетов)](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
  Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Название**  
  Введите имя набора данных. Это имя не должно совпадать ни с одним именем области данных или группы в данном отчете.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 12
 >  Не все типы запросов поддерживаются всеми источниками данных. Например, тип **Таблица** поддерживается только источниками данных типа **OLE DB** и **ODBC**.  
   
  **Запрос**  
- Появляется при выборе параметра типа команды **Текст**. Введите запрос или импортируйте существующий запрос, нажав кнопку **Импорт**. Чтобы изменить выражение, нажмите кнопку **Выражение** (*fx*).  
+ Появляется при выборе параметра типа команды **Текст** . Введите запрос или импортируйте существующий запрос, нажав кнопку **Импорт**. Чтобы изменить выражение, нажмите кнопку **Выражение** (*fx*).  
   
 > [!NOTE]  
 >  Если запрос был построен с помощью конструктора, текст запроса появляется в этом поле.  
@@ -74,11 +79,11 @@ caps.handback.revision: 12
  Введите время ожидания запроса в секундах. Значение по умолчанию — 30 секунд. Значение параметра **Истечение времени ожидания** должно быть пустым или положительным числом. Если значение не задано, время ожидания запроса не ограничивается.  
   
  **Обновление полей**  
- Выполните команду запроса, чтобы обновить список полей в диалоговом окне [Свойства набора данных — страница "Поля"](../Topic/Dataset%20Properties%20Dialog%20Box,%20Fields%20\(Report%20Builder\).md).  
+ Выполните команду запроса, чтобы обновить список полей в диалоговом окне [Свойства набора данных — страница "Поля"](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/ru-ru/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Конструкторы запросов (построитель отчетов)](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+ [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

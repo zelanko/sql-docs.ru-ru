@@ -1,31 +1,36 @@
 ---
-title: "Расписания | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "расписания [службы Reporting Services]"
-  - "расписания [службы Reporting Services], о расписаниях"
-  - "опубликованные отчеты [службы Reporting Services], расписания"
-  - "отчеты [службы Reporting Services], планирование"
-  - "подписки [службы Reporting Services], планирование"
-  - "автоматическая обработка отчетов"
+title: "Расписания | Документы Microsoft"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schedules [Reporting Services]
+- schedules [Reporting Services], about schedules
+- published reports [Reporting Services], schedules
+- reports [Reporting Services], scheduling
+- subscriptions [Reporting Services], scheduling
+- automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 51
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Расписания
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов**, что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.
+# <a name="schedules"></a>Расписания
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов** , что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.
   
   -   Общие расписания создаются в виде отдельных элементов. После их создания можно ссылаться на них при определении подписки или какой-либо другой отложенной операции.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 51
   
   
 ##  <a name="bkmk_whatyoucando"></a> Возможные действия с расписаниями  
- С помощью веб-портала [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] в основном режиме и страниц администрирования сайта SharePoint в режиме интеграции с SharePoint можно создавать расписания и управлять ими. Возможные действия:  
+ С помощью веб-портала [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] в основном режиме и страниц администрирования сайта SharePoint в режиме интеграции с SharePoint можно создавать расписания и управлять ими. Возможные действия:  
   
 -   запланировать доставку отчета в стандартной или управляемой данными подписке;  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 51
  Подробные сведения о том, как создавать расписания и управлять ими, см. в разделе [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Операции планирования доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](Features%20Supported%20by%20Edition%20of%20SQL%20Server_deleted.md).  
+>  Операции планирования доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
   
 ##  <a name="bkmk_compare"></a> Сравнение общих расписаний и расписаний для отчетов  
  Оба типа расписаний формируют одинаковый вывод:  
@@ -90,7 +95,7 @@ caps.handback.revision: 51
 |Создать, изменить или удалить расписание отчета в пользовательской подписке|Управление отдельными подписками|браузер, построитель отчетов, «Мои отчеты», диспетчер содержимого|Посетители, участники|  
 |Создать, изменить или удалить расписание отчета для всех остальных отложенных операций|Управление журналом отчета, управление всеми подписками, управление отчетами|Диспетчер содержимого|Владельцы|  
   
- Дополнительные сведения о безопасности в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме см. в разделах [Стандартные роли](../../reporting-services/security/predefined-roles.md), [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) и [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md). Описание режима интеграции с SharePoint см. в разделе [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ Дополнительные сведения о безопасности в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]в основном режиме см. в разделах [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md), [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) и [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md). Описание режима интеграции с SharePoint см. в разделе [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Принцип работы обработчика планирования и доставки  
  Обработчик планирования и доставки выполняет следующие функции.  
@@ -132,7 +137,7 @@ caps.handback.revision: 51
 ###  <a name="bkmk_stoppingservice"></a> Последствия остановки службы сервера отчетов  
  При остановке службы сервера отчетов агент SQL Server продолжает добавлять запросы на обработку отчета в очередь. Сведения о состоянии от агента SQL Server указывают на то, что задание успешно завершилось. Однако из-за того, что служба сервера отчетов была остановлена, фактически обработка отчета не выполнялась. Запросы будут накапливаться в очереди до тех пор, пока служба сервера отчетов не будет перезапущена. Как только служба сервера отчетов будет перезапущена, все запросы на обработку отчета, находящиеся в очереди, начнут обрабатываться по очереди.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание, изменение и удаление моментальных снимков в журнале отчетов](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
@@ -141,3 +146,4 @@ caps.handback.revision: 51
  [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
+

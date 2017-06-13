@@ -1,30 +1,34 @@
 ---
-title: "Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Скрипт rs.exe для копирования содержимого между серверами отчетов служб отчетов образца | Документы Microsoft"
+ms.custom: 
+ms.date: 07/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b46f26baae77ec3c18e0a4291e5c5cbfa8e672e1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
+# <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
   Этот раздел содержит описание и сам скрипт для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS, который копирует элементы и параметры содержимого с одного сервера отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой с помощью программы **RS.exe** . Программа RS.exe установлена с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]как в собственном режиме, так и в режиме SharePoint. Скрипт копирует элементы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , например отчеты и подписки, с одного сервера на другой. Скрипт поддерживает как режим интеграции с SharePoint, так и собственный режим сервера отчетов.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим|  
   
-## В этом разделе.  
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим 
+  
+## <a name="in-this-topic"></a>В этом разделе.  
   
 -   [Загрузка скрипта ssrs_migration.rss](#bkmk_download_script)  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 15
 |сервера В.|SharePoint|  
 |сервер С|SharePoint|  
   
- Дополнительные сведения о программе RS.exe см. в разделе [Служебная программа RS.exe (службы SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
+ Дополнительные сведения о программе RS.exe см. в разделе [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
 ###  <a name="bkmk_what_is_migrated"></a> Элементы и ресурсы, которые переносит скрипт  
  Скрипт не перезаписывает существующие элементы содержимого с такими же именами.  Если скрипт выявляет на целевом сервере элементы с такими же именами, как на исходном сервере, появятся сообщения об ошибке для отдельных элементов, при этом скрипт продолжит работу. В следующей таблице перечислены типы содержимого и ресурсов, которые скрипт может перенести в целевой режим сервера отчетов.  
@@ -95,7 +99,7 @@ caps.handback.revision: 15
 |Мои отчеты|**Нет**|**Нет**|Работа функции «Мои отчеты» в собственном режиме основана на именах входа конкретных пользователей, поэтому служба скриптов не имеет доступа к содержимому папки «Мои отчеты» для пользователей, не указанных параметром **–u** , который используется для запуска скрипта RSS. Кроме того, папка «Мои отчеты» не является компонентом служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, и элементы в папках нельзя копировать в среду SharePoint. Поэтому скрипт не копирует элементы отчета из папок «Мои отчеты» на исходном сервере отчетов, работающем в собственном режиме.<br /><br /> Чтобы перенести содержимое папки «Мои отчеты» с помощью этого скрипта, выполните следующие действия.<br /><br /> 1.  Создайте новую папку в диспетчере отчетов. Также можно создать папки или вложенные папки для каждого пользователя.<br />2.  Войдите в систему в качестве одного из пользователей, у которого есть папка «Мои отчеты».<br />3.  В диспетчере отчетов выберите папку **Мои отчеты**.<br />4.  Выберите представление **Подробности** для папки.<br />5.  Выберите каждый отчет, который следует скопировать.<br />6.  Нажмите кнопку **Переместить** на панели инструментов диспетчера отчетов.<br />7.  Выберите нужную папку назначения.<br />8.  Повторите шаги 2–7 для каждого пользователя.<br />9. Выполните скрипт.|  
 |Журнал|**Нет**|**Нет**||  
 |Параметры журнала|Да|Да|Параметры журнала переносятся, в то время как данные журнала НЕТ.|  
-|Расписания|да|да|Чтобы перенести расписания, агент SQL Server должен быть запущен на целевом сервере. Если агент SQL Server не запущен на целевом объекте, появится сообщение об ошибке следующего вида:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
+|Расписания|Да|Да|Чтобы перенести расписания, агент SQL Server должен быть запущен на целевом сервере. Если агент SQL Server не запущен на целевом объекте, появится сообщение об ошибке следующего вида:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
 |Роли и системные политики|Да|Да|По умолчанию скрипт не копирует пользовательскую схему разрешений с одного сервера на другой. По умолчанию элементы копируются на целевой сервер, при этом флагу inherit parent permissions задается значение TRUE. Если нужно, чтобы скрипт скопировал разрешения для отдельных элементов, воспользуйтесь переключателем SECURITY.<br /><br /> Если исходный и целевой серверы **работают в разных режимах сервера отчетов**, например выполняется перенос из собственного режима в режим интеграции с SharePoint, и используется выключатель SECURITY, скрипт попытается сопоставить роли и группы по умолчанию на основе сравнения, приведенного в следующем разделе [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Пользовательские роли и группы не будут скопированы на целевой сервер.<br /><br /> Если скрипт копирует между серверами, **которые работают в одном режиме**, и используется переключатель SECURITY, скрипт создает на целевом сервере новые роли (собственный режим) или группы (режим интеграции с SharePoint).<br /><br /> Если роль уже существует на целевом сервере, скрипт создаст сообщение об ошибке (см. пример ниже) и продолжит перенос других элементов. После завершения работы скрипта убедитесь, что роли на целевом сервере настроены в соответствии с потребностями. Роли миграции: найдено 8 элементов.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> Дополнительные сведения см. в разделе [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).<br /><br /> **Примечание.** Если пользователь существует на исходном сервере и отсутствует на целевом сервере, скрипт не сможет применить назначение ролей на целевом сервере (даже при использовании параметра SECURITY).|  
 |Общий источник данных|Да|Да|Скрипт не перезаписывает существующие элементы на целевом сервере. Если элемент с таким же именем уже существует на целевом сервере, появится сообщение об ошибке следующего вида:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Учетные данные **НЕ** копируются как часть источника данных. После переноса элементов содержимого обновите учетные данные на целевом сервере.|  
 |Общий набор данных|Да|Да||  
@@ -228,7 +232,7 @@ caps.handback.revision: 15
   
          `Report: /Reports/TitleOnly`  
   
--   SOURCE_URL и TARGET_URL должны быть действительными URL-адресами серверов отчетов, которые указывают на исходный и целевой сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В собственном режиме URL-адрес сервера отчетов выглядит следующим образом:  
+-   SOURCE_URL и TARGET_URL должны быть действительными URL-адресами серверов отчетов, которые указывают на исходный и целевой сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В собственном режиме URL-адрес сервера отчетов выглядит следующим образом:  
   
     -   `http://servername/reportserver`  
   
@@ -236,7 +240,7 @@ caps.handback.revision: 15
   
     -   `http://servername/_vti_bin/reportserver`  
   
--   Виртуальная структура папок, представленная пользователю в режиме интеграции с SharePoint, может отличаться от базовой. Откройте в браузере `http://servername/_vti_bin/reportserver` или `http://servername/sites/site_name/_vti_bin/reportserver`, чтобы увидеть физическую структуру папок. Это позволит задать имя, отличное от «/», для исходной и целевой папок на сервере в режиме интеграции с SharePoint.  
+-   Виртуальная структура папок, представленная пользователю в режиме интеграции с SharePoint, может отличаться от базовой. Откройте в браузере `http://servername/_vti_bin/reportserver` или `http://servername/sites/site_name/_vti_bin/reportserver` , чтобы увидеть физическую структуру папок. Это позволит задать имя, отличное от «/», для исходной и целевой папок на сервере в режиме интеграции с SharePoint.  
   
 -   Пароли не переносятся, их нужно вводить повторно, например для источников данных с сохраненными учетными данными.  
   
@@ -324,10 +328,10 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_verification"></a> Проверка  
  Раздел содержит описание некоторых шагов, которые необходимо выполнить на целевом сервере, чтобы убедиться, что содержимое и политики были успешно перенесены.  
   
-### Расписания  
+### <a name="schedules"></a>Расписания  
  Проверка расписаний на целевом сервере.  
   
- **в основном режиме**  
+ **Native Mode**  
   
 1.  Перейдите в диспетчер отчетов на целевом сервере.  
   
@@ -341,8 +345,8 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 2.  В группе **Службы Reporting Services** щелкните **Управление общими расписаниями**.  
   
-### Роли и группы  
- **в основном режиме**  
+### <a name="roles-and-groups"></a>Роли и группы  
+ **Native Mode**  
   
 1.  Откройте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и установите соединение с сервером отчетов, работающим в собственном режиме.  
   
@@ -353,14 +357,15 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> Устранение неполадок  
  Используйте флаг трассировки **–t** для получения дополнительных сведений. Например, если при выполнении скрипта появляется сообщение следующего вида:  
   
--   Не удалось подключиться к серверу: http://\<servername>/ReportServer/ReportService2010.asmx  
+-   Не удалось подключиться к серверу: http://\<имя_сервера > /ReportServer/ReportService2010.asmx  
   
  Запустите скрипт еще раз с флагом **–t** , чтобы просмотреть сообщение следующего вида:  
   
--   System.Exception: не удалось подключиться к серверу: http://\<имя_сервера>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Запрос завершился ошибкой с кодом состояния HTTP 401: отсутствуют права доступа**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
+-   System.Exception: Не удалось подключиться к серверу: http://\<имя_сервера > /ReportServer/ReportService2010.asmx---> System.Net.WebException: **сбой запроса с состоянием HTTP 401: несанкционированный**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   
+

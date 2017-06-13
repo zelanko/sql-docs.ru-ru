@@ -1,36 +1,41 @@
 ---
-title: "Класс MSReportServer_ConfigurationSetting | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "MSReportServer_ConfigurationSetting Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "поставщик WMI [службы Reporting Services], класс MSReportServer_ConfigurationSetting"
-  - "MSReportServer_ConfigurationSetting, класс"
+title: "Класс MSReportServer_ConfigurationSetting | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- MSReportServer_ConfigurationSetting Class
+apilocation:
+- reportingservices.mof
+apitype: MOFDef
+helpviewer_keywords:
+- WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
+- MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 39
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Класс MSReportServer_ConfigurationSetting
+# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
   Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.  
   
  Список всех элементов этого типа см. в разделе [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```vb  
 Public Class MSReportServer_ConfigurationSetting  
@@ -40,11 +45,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## Многопоточное использование  
+## <a name="thread-safety"></a>Многопоточное использование  
  Все открытые статические (**Shared** в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) элементы этого типа можно использовать в многопотоковых операциях. Для элементов экземпляра потокобезопасность не гарантируется.  
   
-## Пример  
- Чтобы запустить следующий код, добавьте имя сервера на место каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса *MSReportServer_ConfigurationSetting* и выводит на консоль имя каждого свойства и его значение.  
+## <a name="example"></a>Пример  
+ Чтобы запустить следующий код, добавьте имя сервера на место каждого местозаполнителя \< *servername*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса *MSReportServer_ConfigurationSetting* и выводит на консоль имя каждого свойства и его значение.  
   
 ```vb  
 Imports System  
@@ -168,12 +173,12 @@ class Class1
 }  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **Платформа:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

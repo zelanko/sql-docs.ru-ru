@@ -1,53 +1,58 @@
 ---
-title: "Действие детализации (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10249"
-  - "10186"
-  - "10092"
-  - "10167"
-  - "10174"
-  - "sql13.rtp.rptdesigner.charttitleproperties.visibility.f1"
-  - "10155"
-  - "sql13.rtp.rptdesigner.chartproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.pictureproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1"
-  - "10123"
-  - "10425"
-  - "sql13.rtp.rptdesigner.axisproperties.visibility.f1"
-  - "10217"
-  - "10161"
-  - "10215"
-  - "sql13.rtp.rptdesigner.legendproperties.visibility.f1"
-  - "10258"
-  - "10144"
-  - "sql13.rtp.rptdesigner.subreportproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.textboxproperties.visibility.f1"
-  - "10062"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.rectangleproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.chartareaproperties.visibility.f1"
-  - "10053"
-  - "sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1"
-  - "sql13.rtp.rptdesigner.seriesproperties.visibility.f1"
+title: "Действие углубленной детализации (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10249"
+- "10186"
+- "10092"
+- "10167"
+- "10174"
+- sql13.rtp.rptdesigner.charttitleproperties.visibility.f1
+- "10155"
+- sql13.rtp.rptdesigner.chartproperties.visibility.f1
+- sql13.rtp.rptdesigner.pictureproperties.visibility.f1
+- sql13.rtp.rptdesigner.majorgridlineproperties.visibility.f1
+- "10123"
+- "10425"
+- sql13.rtp.rptdesigner.axisproperties.visibility.f1
+- "10217"
+- "10161"
+- "10215"
+- sql13.rtp.rptdesigner.legendproperties.visibility.f1
+- "10258"
+- "10144"
+- sql13.rtp.rptdesigner.subreportproperties.visibility.f1
+- sql13.rtp.rptdesigner.textboxproperties.visibility.f1
+- "10062"
+- sql13.rtp.rptdesigner.serieslabelproperties.visibility.f1
+- sql13.rtp.rptdesigner.rectangleproperties.visibility.f1
+- sql13.rtp.rptdesigner.calculatedseriesproperties.visibility.f1
+- sql13.rtp.rptdesigner.chartareaproperties.visibility.f1
+- "10053"
+- sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
+- sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Действие детализации (построитель отчетов и службы SSRS)
+# <a name="drilldown-action-report-builder-and-ssrs"></a>Действие детализации (построитель отчетов и службы SSRS)
   Размещение значков плюса и минуса в текстовом поле позволяет пользователям интерактивно скрывать и отображать элементы. Это действие называется *углубленной детализацией* . Для таблицы или матрицы можно показывать или скрывать статические строки и столбцы или строки и столбцы, связанные с группами.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
@@ -70,10 +75,10 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Сравнение детализированных отчетов и отчетов с углубленной детализацией  
- В отчете с углубленной детализацией пользователь раскрывает или сворачивает раздел отчета для отображения подробных данных с помощью кнопки «плюс» или «минус». В детализированном отчете пользователь переходит по ссылке к сводному значению, при этом открывается отдельный, связанный отчет для отображения подробных данных. Получение подробных данных происходит только при запуске подробного отчета. Детализированные отчеты обычно требуют меньше ресурсов, чем отчеты с углубленной детализацией. Дополнительные сведения см. в разделе [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md).  
+## <a name="comparing-drilldown-and-drillthrough-reports"></a>Сравнение детализированных отчетов и отчетов с углубленной детализацией  
+ В отчете с углубленной детализацией пользователь раскрывает или сворачивает раздел отчета для отображения подробных данных с помощью кнопки «плюс» или «минус». В детализированном отчете пользователь переходит по ссылке к сводному значению, при этом открывается отдельный, связанный отчет для отображения подробных данных. Получение подробных данных происходит только при запуске подробного отчета. Детализированные отчеты обычно требуют меньше ресурсов, чем отчеты с углубленной детализацией. Дополнительные сведения см. в разделе [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
-## Поддержка скрытых элементов отчета модулями подготовки отчетов  
+## <a name="rendering-extension-support-for-hidden-report-items"></a>Поддержка скрытых элементов отчета модулями подготовки отчетов  
  Переключение «скрыть-показать» для элементов отчета поддерживается только модулями подготовки отчетов, обеспечивающими интерактивное взаимодействие с пользователем, например модулем подготовки отчетов в формате HTML, который используется при создании отчета, например, в построителе или диспетчере отчетов. Другие модули подготовки отчетов отображают скрытые элементы. В следующем списке описана поддержка элементов отчета с условной видимостью:  
   
 -   В модуле подготовки HTML скрытые элементы не видны в источнике HTML.  
@@ -84,8 +89,8 @@ caps.handback.revision: 9
   
  Дополнительные сведения см. в разделе [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## См. также  
- [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md)   
+## <a name="see-also"></a>См. также:  
+ [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

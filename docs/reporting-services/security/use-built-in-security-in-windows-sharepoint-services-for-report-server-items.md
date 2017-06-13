@@ -1,30 +1,35 @@
 ---
-title: "Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разрешения [Reporting Services], режим интеграции с SharePoint "
-  - "интеграция с SharePoint [Reporting Services], разрешения"
-  - "безопасность [Reporting Services], режим интеграции с SharePoint"
+title: "Использование встроенных средств безопасности служб Windows SharePoint Services, для элементов сервера отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: becc8fac740023906166f8a9545139300c233a51
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов
+# <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов
   Службы SharePoint предоставляют встроенные функции безопасности, которые можно использовать для доступа к элементам сервера отчетов с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения на сайты и списки, они получат доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб SharePoint и сервера отчетов.  
   
-## Защищаемые элементы  
+## <a name="securable-items"></a>Защищаемые элементы  
  Разрешения, определенные для веб-сайта или библиотеки, могут быть использованы, чтобы предоставить доступ к элементам сервера отчетов. Однако, если требуется защитить отдельные элементы, можно назначить разрешения для следующих типов содержимого.  
   
 |Тип файла|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 14
   
  Чтобы защитить отдельные элементы, выберите элемент библиотеки, нажмите кнопку со стрелкой вниз и выберите пункт **Управление разрешениями**. В меню **Действия** выберите команду **Изменить разрешения**.  
   
-## Использование встроенных групп и уровней разрешений для доступа к элементам сервера отчетов  
+## <a name="using-built-in-groups-and-permission-levels-to-access-report-server-items"></a>Использование встроенных групп и уровней разрешений для доступа к элементам сервера отчетов  
  Используя наследование разрешений и стандартные группы SharePoint, можно получить доступ к большинству операций сервера отчетов сразу после настройки параметров интеграции на сервере отчетов и в экземплярах служб SharePoint.  
   
  Службы SharePoint предоставляют стандартные группы, соответствующие заранее установленным уровням разрешений, которые определяют способы доступа к документам и страницам на сайте SharePoint. Если используются стандартные группы и уровни разрешений по умолчанию и сайты настроены для наследования разрешений, то использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно следующими способами:  
@@ -52,7 +57,7 @@ caps.handback.revision: 14
   
  Если встроенные группы и уровни разрешений не используются, то для доступа к компонентам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо назначить специальные разрешения. Дополнительные сведения см. в статье [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   

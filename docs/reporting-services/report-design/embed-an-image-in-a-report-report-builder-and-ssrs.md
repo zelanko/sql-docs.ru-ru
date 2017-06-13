@@ -1,26 +1,31 @@
 ---
-title: "Внедрение изображения в отчет (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.embeddedimages.f1"
-  - "10060"
+title: "Внедрить изображение в отчет (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.embeddedimages.f1
+- "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1825a28cd9939228a73c1a4a6269c717b691ab2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Внедрение изображения в отчет (построитель отчетов и службы SSRS)
+# <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Внедрение изображения в отчет (построитель отчетов и службы SSRS)
   Отчет может содержать внедренное изображение. Внедрение изображения гарантирует постоянную доступность изображения для отчета, однако увеличивает размер определения отчета (файла, который определяет отчет). Изображения, внедренные в отчет, перечислены на панель данных отчета.  
   
  Может возникнуть необходимость внедрить изображение в определение отчета перед добавлением изображения в область конструктора. Дополнительные сведения см. в разделе [Добавление фонового изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md).  
@@ -28,7 +33,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Внедрение изображения в отчет  
+### <a name="to-embed-an-image-in-a-report"></a>Внедрение изображения в отчет  
   
 1.  В режиме конструктора отчетов нажмите на вкладке **Вставка** кнопку **Изображение**.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  Кроме того, при импорте изображения автоматически извлекается тип MIME (например, BMP). Чтобы изменить тип MIME, см. следующую процедуру.  
   
-### Изменение типа MIME импортированного изображения (необязательно)  
+### <a name="optional-to-change-the-mime-type-of-an-imported-image"></a>Изменение типа MIME импортированного изображения (необязательно)  
   
 1.  Откройте отчет в режиме конструктора.  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 8
   
 3.  Щелкните текстовое поле рядом со свойством **MIMEType** и выберите из раскрывающегося списка новый тип MIME.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и SSRS)](../Topic/Image%20Properties%20Dialog%20Box,%20General%20\(Report%20Builder%20and%20SSRS\).md)  
+ [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и SSRS)](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

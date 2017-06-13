@@ -1,23 +1,28 @@
 ---
-title: "Добавление фильтра к набору данных (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление фильтра к набору данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление фильтра к набору данных (построитель отчетов и службы SSRS)
+# <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Добавление фильтра к набору данных (построитель отчетов и службы SSRS)
   Добавление фильтра к набору данных ограничивает данные в отчете после извлечения данных из внешнего источника данных. При добавлении фильтра к набору данных все элементы отчета или области данных используют только данные, соответствующие условиям фильтра.  
   
  Для общих источников данных фильтр, примененный ко всем зависимым элементам, должен быть частью определения общего набора данных на сервере отчетов. Отчет или элемент отчета, содержащий экземпляр общего набора данных, допускает создание дополнительного фильтра, который применяется только к этому экземпляру.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Добавление фильтра в общий набор данных  
+### <a name="to-add-a-filter-to-a-shared-dataset"></a>Добавление фильтра в общий набор данных  
   
 1.  Откройте общий набор данных в режиме общего набора данных.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Добавление фильтра для внедренного набора данных или экземпляра общего набора данных  
+### <a name="to-add-a-filter-to-an-embedded-dataset-or-a-shared-dataset-instance"></a>Добавление фильтра для внедренного набора данных или экземпляра общего набора данных  
   
 1.  Откройте отчет в режиме конструктора отчетов.  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## См. также  
- [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>См. также:  
+ [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Добавление фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   

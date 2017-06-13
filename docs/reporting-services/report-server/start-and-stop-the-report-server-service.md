@@ -1,28 +1,33 @@
 ---
-title: "Запуск и остановка службы сервера отчетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "остановка службы сервера отчетов"
-  - "Служба Windows сервера отчетов, запуск"
-  - "служба сервера отчетов, запуск"
-  - "запуск службы сервера отчетов"
+title: "Запуск и остановка службы сервера отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stopping Report Server service
+- Report Server Windows service, starting
+- Report Server service, starting
+- starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 caps.latest.revision: 55
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 55
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90106293e319e53c8fcbfe772c119f5c6a0f20c2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Запуск и остановка службы сервера отчетов
+# <a name="start-and-stop-the-report-server-service"></a>Запуск и остановка службы сервера отчетов
   Сервер отчетов реализован в виде службы Windows, которая включает веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Чтобы использовать какие-либо функции сервера отчетов, эта служба должна работать. Остановка службы приводит к прекращению всех операций сервера отчетов.  
   
  Пока служба остановлена, запросы для запланированных отчетов и обработки подписок, которые были бы удовлетворены, если бы служба работала, добавляются в очередь. Это связано с тем, что задания, выполняемые агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , создают события. Если требуется предотвратить создание незавершенных операций во время простоя службы, рассмотрите возможность остановить работу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,26 +38,26 @@ caps.handback.revision: 55
   
  Эту службу нельзя приостанавливать и возобновлять, и параметров запуска она не имеет. Хотя явные зависимости отсутствуют, для поддержки подписок и проводимых по расписанию операций с отчетами на сервере отчетов должен работать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Запуск или остановка службы с помощью программы настройки служб Reporting Services  
+### <a name="to-start-or-stop-the-service-using-the-reporting-services-configuration-tool"></a>Запуск или остановка службы с помощью программы настройки служб Reporting Services  
   
 1.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к серверу отчетов.  
   
 2.  На странице состояния сервера отчетов нажмите **Остановить** или **Запустить**.  
   
-### Запуск или остановка службы с помощью оснастки «Службы» в разделе «Администрирование»  
+### <a name="to-start-or-stop-the-service-using-services-in-administrative-tools"></a>Запуск или остановка службы с помощью оснастки «Службы» в разделе «Администрирование»  
   
--   В окне "Администрирование" откройте оснастку "Службы", щелкните правой кнопкой мыши элемент **Службы SQL Server Reporting Services (MSSQLSERVER)** и выберите команду **Стоп** или **Перезапустить**.  
+-   В окне "Администрирование" откройте оснастку "Службы", щелкните правой кнопкой мыши элемент **Службы SQL Server Reporting Services (MSSQLSERVER)**и выберите команду **Стоп** или **Перезапустить**.  
   
  Если используется несколько экземпляров параллельно или сервер отчетов работает в качестве именованного экземпляра, убедитесь в том, что имя экземпляра в круглых скобках соответствует экземпляру сервера отчетов, который планируется остановить или перезапустить.  
   
-### Запуск или остановка службы с помощью диспетчера конфигурации SQL Server  
+### <a name="to-start-or-stop-the-service-using-sql-server-configuration-manager"></a>Запуск или остановка службы с помощью диспетчера конфигурации SQL Server  
   
 1.  Запуск диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  Выберите "Службы SQL Server", щелкните правой кнопкой мыши элемент **SQL Server Reporting Services** и выберите команду **Стоп** или **Перезапустить**.  
+2.  Выберите "Службы SQL Server", щелкните правой кнопкой мыши элемент **SQL Server Reporting Services**и выберите команду **Стоп** или **Перезапустить**.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Запуск, остановка или приостановка службы агента SQL Server](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

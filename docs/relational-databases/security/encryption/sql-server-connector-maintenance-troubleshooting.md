@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Обслуживание соединителя SQL Server и устранение неполадок
@@ -166,7 +166,7 @@ ms.lasthandoff: 04/11/2017
  Асимметричный ключ в хранилище ключей используется для защиты ключей шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Только открытая часть асимметричного ключа покидает хранилище, закрытая же часть никогда не экспортируется. Все криптографические операции, использующие асимметричный ключ, выполняются в службе хранилища ключей Azure и защищаются ее системой безопасности.  
   
  **Что такое URI ключа?**  
- Каждый ключ в хранилище ключей Azure имеет универсальный код ресурса (URI), который можно использовать для ссылки на ключ из приложения. Используйте формат **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** для получения текущей версии и формат **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** для получения конкретной версии.  
+ Каждый ключ в хранилище ключей Azure имеет универсальный код ресурса (URI), который можно использовать для ссылки на ключ из приложения. Используйте формат `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` для получения текущей версии и формат `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` для получения конкретной версии.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>При настройке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

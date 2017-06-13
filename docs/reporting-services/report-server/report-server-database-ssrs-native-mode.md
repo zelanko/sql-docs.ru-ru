@@ -1,30 +1,35 @@
 ---
-title: "База данных сервера отчетов (службы Reporting Services в собственном режиме) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "базы данных [службы Reporting Services]"
-  - "серверы отчетов [службы Reporting Services], базы данных"
-  - "временные базы данных [службы Reporting Services]"
-  - "база данных сервера отчетов"
-  - "reportservertempdb"
-  - "база данных reportserver"
+title: "База данных сервера (основной режим служб SSRS) отчетов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- databases [Reporting Services]
+- report servers [Reporting Services], databases
+- temporary databases [Reporting Services]
+- report server database
+- reportservertempdb
+- reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b580d66daa70a5c358a458a6c8f939f5bdabce48
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# База данных сервера отчетов (службы Reporting Services в собственном режиме)
+# <a name="report-server-database-ssrs-native-mode"></a>База данных сервера отчетов (службы Reporting Services в собственном режиме)
   Сервер отчетов — это сервер без сохранения состояния, который использует компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] для хранения метаданных и определений объектов. При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме используются две базы данных, чтобы реализовать различные требования к постоянному и временному хранилищу. Эти базы данных создаются одновременно и связываются по именам. По умолчанию эти базы данных имеют имена **reportserver** и **reportservertempdb**.  
   
  При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint также создается база данных для компонента предупреждения об изменении данных. Три базы данных в режиме SharePoint связаны с приложениями служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в статье [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
@@ -40,7 +45,7 @@ caps.handback.revision: 48
   
  Соединение с базой данных сервера отчетов обычно определяется через диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Однако оно может быть определено в процессе установки, если необходимо установить значения конфигурации по умолчанию. Дополнительные сведения о подключении сервера отчетов к базе данных сервера отчетов см. в разделе [Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## База данных сервера отчетов  
+## <a name="report-server-database"></a>База данных сервера отчетов  
  База данных сервера отчетов является базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в которой содержатся:  
   
 -   элементы, управляемые сервером отчетов (отчеты и связанные отчеты, общие источники данных, модели отчетов, папки, ресурсы), и все свойства и настройки безопасности, связанные с этими элементами;  
@@ -57,19 +62,19 @@ caps.handback.revision: 48
   
  Поскольку в базе данных сервера отчетов хранятся состояние приложения и хранимые данные, рекомендуется создать расписание резервного копирования для этой базы данных, чтобы предотвратить потерю данных. Дополнительные сведения и инструкции по созданию резервных копий базы данных см. в разделе [Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
-## Временная база данных сервера отчетов  
+## <a name="report-server-temporary-database"></a>Временная база данных сервера отчетов  
  Каждая база данных сервера отчетов использует связанную временную базу данных для хранения данных сеанса и выполнения, кэшируемых отчетов и рабочих таблиц, созданных сервером отчетов. Фоновые серверные процессы периодически удаляют старые и неиспользуемые элементы из таблиц временной базы данных.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не создают временную базу данных в случае ее отсутствия и не исправляют ошибки, связанные с отсутствием или изменением таблиц. Несмотря на то, что временная база данных не содержит постоянных данных, следует создать резервную копию этой базы данных, чтобы не пришлось производить операции по ее восстановлению в виде части операций восстановления при отказе сервера.  
   
  Если создается резервная копия временной базы данных, то при последующем восстановлении необходимо удалить ее содержимое. Вообще, удаление содержимого временной базы данных является безопасным в любое время. Однако после удаления содержимого временной базы данных необходимо перезапустить службу Windows сервера отчетов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/store-encrypted-report-server-data-ssrs-configuration-manager.md)   
- [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/сервер-отчетов-служб-reporting-services.md)   
+ [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

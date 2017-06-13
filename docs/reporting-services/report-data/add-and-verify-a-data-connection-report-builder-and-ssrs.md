@@ -1,35 +1,40 @@
 ---
-title: "Добавление и проверка подключения к данным (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление и проверка подключения к данным (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f50d9023da6fb4498f159c6622ed1d6648ad57a5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)
+# <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)
   В построителе отчетов можно добавить общий источник данных с сервера отчетов или создать внедренный источник данных для отчета. В конструкторе отчетов можно создавать общие или внедренные источники данных и развертывать их на сервере отчетов.  
   
  Чтобы добавить к отчету общий источник данных, перейдите к серверу отчетов и выберите общий источник данных. Общий источник данных в отчете указывает на определение общего источника данных на сервере отчетов.  
   
  Чтобы создать внедренный источник данных, необходимы сведения о соединении с внешним источником данных и сведения о разрешениях для доступа к данным. Эти сведения обычно предоставляет владелец источника данных. Можно проверить соединение, чтобы убедиться, что указаны правильные учетные данные.  
   
- Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения в построителе отчетов](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md) и [Указание учетных данных в построителе отчетов](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) и [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Создание подключения к общему источнику данных в построителе отчетов  
+### <a name="to-create-a-connection-to-a-shared-data-source-in-report-builder"></a>Создание подключения к общему источнику данных в построителе отчетов  
   
 1.  На панели инструментов в области данных отчета нажмите кнопку **Создать** и выберите **Источник данных**. Откроется диалоговое окно **Свойства источника данных** .  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 11
   
  Источник данных появится в области данных отчета.  
   
-### Проверка подключения к данным  
+### <a name="to-verify-a-data-connection"></a>Проверка подключения к данным  
   
 1.  На панели инструментов в области данных отчета дважды щелкните источник данных. Откроется диалоговое окно **Свойства источника данных** .  
   
@@ -58,14 +63,14 @@ caps.handback.revision: 11
   
 5.  Нажмите кнопку **Подробные сведения**и воспользуйтесь предоставленными сведениями, чтобы исправить проблему.  
   
-     Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+     Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
   

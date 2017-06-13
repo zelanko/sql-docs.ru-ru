@@ -1,30 +1,35 @@
 ---
-title: "Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
+# <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
 Самым простым способом создания отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы является добавление существующих элементов отчета, таких как таблицы и диаграммы, к отчету из галереи элементов отчетов. При добавлении элемента отчета к отчету добавляется также все, что необходимо для его выполнения. Например, все элементы отчета, используемые для отображения данных, зависят от набора данных, т. е. запроса и соединения с источником данных. После добавления элемента отчета к отчету ее можно изменить в соответствии с требованиями.  
   
  Можно задать папку по умолчанию для публикации элементов отчетов на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов.  
   
  Дополнительные сведения см. в разделе [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
-## Просмотр элементов отчетов  
+## <a name="to-browse-for-report-parts"></a>Просмотр элементов отчетов  
   
 1.  В меню **Вставка** выберите **Элементы отчета**.  
   
@@ -52,21 +57,21 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  При использовании значений **Создан** и **Последнее изменение выполнено** поиск имени пользователя для соответствующих лиц выполняется в том виде, в котором имя представлено на сервере отчетов.  
   
-## Определение папки по умолчанию для элементов отчетов  
+## <a name="to-set-a-default-folder-for-report-parts"></a>Определение папки по умолчанию для элементов отчетов  
   
 1.  Выберите **Построитель отчетов**, а затем выберите **Параметры**.  
   
-2.  В диалоговом окне **Параметры** на вкладке **Настройки** введите имя папки в текстовом поле **По умолчанию опубликовать элементы отчета в следующей папке**.  
+2.  В диалоговом окне **Параметры** на вкладке **Настройки** введите имя папки в текстовом поле **По умолчанию опубликовать элементы отчета в следующей папке** .  
   
  Если папка еще не существует и имеются разрешения для создания папок на сервере отчетов, то построитель отчетов создаст эту папку.  
   
  Чтобы этот параметр вступил в силу, не нужно перезапускать построитель отчетов.  
   
-## См. также  
- [Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/ru-ru/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+## <a name="see-also"></a>См. также  
+ [Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/ru-ru/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

@@ -1,3 +1,4 @@
+# [Visual Database Tools](visual-database-tools.md)
 # [Диалоговое окно "Добавить таблицу" (конструкторы запросов и представлений) (визуальные инструменты для баз данных)](add-table-dialog-box-query-and-view-designers-visual-database-tools.md)
 # [Диалоговое окно "Сохранить скрипт изменений" (визуальные инструменты для баз данных)](save-change-script-dialog-box-visual-database-tools.md)
 # [Согласование изменений, внесенных несколькими пользователями (визуальные инструменты для баз данных)](reconcile-changes-made-by-multiple-users-visual-database-tools.md)
@@ -155,7 +156,6 @@
 # [Использование предложения HAVING и WHERE в одном запросе (визуальные инструменты для баз данных)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)
 # [Перемещение по конструктору запросов и представлений (визуальные инструменты для баз данных)](navigate-in-the-query-and-view-designer-visual-database-tools.md)
 # [Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных)](work-with-columns-in-aggregate-queries-visual-database-tools.md)
-# [Визуальные инструменты для баз данных](visual-database-tools.md)
 # [Выбор строк, не соответствующих заданному значению (визуальные инструменты для баз данных)](select-rows-that-do-not-match-a-value-visual-database-tools.md)
 # [Диалоговое окно "Уведомления после сохранения" (визуальные инструменты для баз данных)](post-save-notifications-dialog-box-visual-database-tools.md)
 # [Сохранение запросов (визуальные инструменты для баз данных)](save-queries-visual-database-tools.md)

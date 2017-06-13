@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4e0331c288665fd9f69444d0d14366dfa69a668f
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Оптимизация обработки JSON с помощью выполняющейся в памяти OLTP
@@ -161,18 +161,6 @@ AS BEGIN
 END
 ```
 
-## <a name="next-steps"></a>Следующие шаги
-JSON в собственных модулях выполняющейся в памяти OLTP улучшает производительность встроенных функциональных возможностей JSON, доступных в базе данных SQL Azure и SQL Server.
-
-Чтобы получить дополнительные сведения об основных сценариях использования JSON, ознакомьтесь со следующими ресурсами:
-
--   [Блог SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/2016/01/05/json-in-sql-server-2016-part-1-of-4/)
--   [Данные JSON (SQL Server)](https://msdn.microsoft.com/library/dn921897.aspx)
--   [SQL Server 2016 и поддержка JSON](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
-Чтобы получить дополнительные сведения о различных сценариях интеграции JSON в приложение, ознакомьтесь с приведенными ниже ресурсами.
--   Просмотрите демонстрационный видеоматериал на [Channel 9](https://channel9.msdn.com/Events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds).
--   Найдите подходящий сценарий в [записях блога о JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/).
--   Ознакомьтесь с примерами в нашем [репозитории GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/json/).
-
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
+Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
 

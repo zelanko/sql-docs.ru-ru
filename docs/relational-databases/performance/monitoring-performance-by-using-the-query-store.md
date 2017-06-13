@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5785d0283be2fe40b5010f6f9373f9a2ea81554a
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 19da2d9b81da6ec2886d7da3c5189607b0a60b16
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
@@ -127,7 +127,10 @@ JOIN sys.query_store_query_text AS Txt
   
  max_plans_per_query  
  Целое число, представляющее максимальное количество поддерживаемых планов для каждого запроса. Значение по умолчанию — 200.  
-  
+ 
+ WAIT_STATS_CAPTURE_MODE  
+ Элементы управления, если хранилище запросов захватывает ожидания статистические данные. Может быть OFF = 0 или 1 (по умолчанию) =  
+ 
  Запросите представление **sys.database_query_store_options** , чтобы определить текущие параметры хранилища запросов. Дополнительные сведения о значениях см. в разделе [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
  Дополнительные сведения о настройке параметров с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Управление параметрами](#OptionMgmt).  
@@ -152,7 +155,9 @@ JOIN sys.query_store_query_text AS Txt
 -   [sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
   
 -   [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
-  
+
+-   [sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md) 
+
 -   [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
   
 ### <a name="query-store-stored-procedures"></a>Хранимые процедуры в хранилище запросов,  

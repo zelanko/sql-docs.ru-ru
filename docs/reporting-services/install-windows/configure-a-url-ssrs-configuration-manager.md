@@ -1,25 +1,30 @@
 ---
-title: "Настройка URL-адреса (диспетчер конфигурации служб SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "доступ по URL-адресу [службы Reporting Services], синтаксис"
+title: "Настройка URL-адреса (диспетчер конфигурации служб SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Настройка URL-адреса (диспетчер конфигурации служб SSRS)
-  Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер**). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  
+# <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+  Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  
   
  Используйте программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для настройки URL-адресов. Это средство позволяет определить все части URL-адреса. В отличие от более ранних версий, веб-сайты служб IIS не обеспечивают доступ к приложениям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях.  
   
@@ -33,22 +38,22 @@ caps.handback.revision: 13
   
 -   Указание дополнительных свойств URL-адреса для определения дополнительных URL-адресов.  
   
- Дополнительные сведения о том, как хранятся и обслуживаются URL-адреса, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)](../../reporting-services/install-windows/install reporting and internet information services side-by-side.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
+ Дополнительные сведения о том, как хранятся и обслуживаются URL-адреса, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Перед тем как приступать к созданию или изменению URL-адреса, нужно запомнить следующие моменты.  
   
 -   Необходимо быть членом локальной группы администраторов на компьютере сервера отчетов.  
   
 -   Если служба IIS установлена на этом же компьютере, проверьте имена виртуальных каталогов на веб-сайте, который использует порт 80. Если будут найдены виртуальные каталоги, в которых используются имена виртуальных каталогов служб Reporting Services по умолчанию (такие как Reports и ReportServer), выберите для настраиваемых URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] другие имена виртуальных каталогов.  
   
--   Для настройки этого URL-адреса используйте программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Не пользуйтесь системной программой. Никогда не изменяйте резервирование URL-адресов в разделе **URLReservations** файла RSReportServer.config напрямую. Как для обновления внутренне хранимого базового резервирования URL-адреса, так и для синхронизации настроек URL в файле RSReportServer.config необходимо использовать программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   Для настройки этого URL-адреса используйте программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Не пользуйтесь системной программой. Никогда не изменяйте резервирование URL-адресов в разделе **URLReservations** файла RSReportServer.config напрямую. Как для обновления внутренне хранимого базового резервирования URL-адреса, так и для синхронизации настроек URL в файле RSReportServer.config необходимо использовать программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   Выберите время, когда выполняется небольшой объем действий с отчетами. Каждый раз при изменении резервирования URL-адреса можно ожидать очистки доменов приложений для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  
+-   Выберите время, когда выполняется небольшой объем действий с отчетами. Каждый раз при изменении резервирования URL-адреса можно ожидать очистки доменов приложений для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] .  
   
--   Общие сведения о структуре и использовании URL-адресов в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Общие сведения о структуре и использовании URL-адресов в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
-### Настройка URL-адреса для веб-службы сервера отчетов  
+### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Настройка URL-адреса для веб-службы сервера отчетов  
   
 1.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к локальному экземпляру сервера отчетов.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 13
   
     -   **::1** — это петлевой адрес в формате IPv6.  
   
-    -   Отдельные IP-адреса представлены также в этом списке. IP-адреса могут иметь форматы IPv4 и IPv6. *Nnn.nnn.nnn.nnn* — 32-разрядный адрес IPv4 сетевого адаптера на компьютере. Адреса IPv6 имеют 128 разрядов, каждый из них состоит из шести 4-байтных полей, разделенных двоеточиями: \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Отдельные IP-адреса представлены также в этом списке. IP-адреса могут иметь форматы IPv4 и IPv6. *Nnn.nnn.nnn.nnn* — 32-разрядный адрес IPv4 сетевого адаптера на компьютере. Адреса IPv6 имеют 128 разрядов, восьми 4-байтных полей, разделенных двоеточиями: \<префикс >:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Если на вашем компьютере установлено несколько плат или ваша сеть поддерживает как адреса IPv4, так и адреса IPv6, вы увидите несколько IP-адресов. Если выбрать только один IP-адрес, доступ приложения будет ограничен этим адресом (а также именем узла, которое сервер доменных имен связывает с этим адресом). Доступ к компьютеру сервера отчетов ни по имени localhost, ни по IP-адресам других установленных на нем плат сетевых адаптеров будет невозможен. Обычно это значение выбирается потому, что пользователь выполняет настройку резервирования нескольких URL-адресов, в которых также явно указываются IP-адреса или имена узлов (например, один для сетевой платы, используемый для соединения с интрасетью сетью, а второй — используемый для соединения с экстрасетью).  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 13
   
 9. Чтобы создать URL-адрес, нажмите кнопку **Применить** .  
   
-10. Проверьте URL-адрес, щелкнув ссылку в разделе **URL-адреса** . Следует отметить, что перед началом тестирования URL-адреса необходимо создать и настроить базу данных сервера отчетов. Инструкции см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md).  
+10. Проверьте URL-адрес, щелкнув ссылку в разделе **URL-адреса** . Следует отметить, что перед началом тестирования URL-адреса необходимо создать и настроить базу данных сервера отчетов. Инструкции см. в статье [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]  
 >  Если у вас имеются существующие привязки SSL и резервирования URL-адресов и необходимо изменить привязку SSL, например для использования другого сертификата или заголовка узла, то рекомендуется выполнить следующую последовательность шагов.  
@@ -107,7 +112,7 @@ caps.handback.revision: 13
 >   
 >  Чтобы решить эту проблему, удалите все привязки и создайте новые с уникальными настройками либо настройте для служб Reporting Services регистрацию URL-адресов с шаблонами.
   
-### Создание резервирования URL-адреса для [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
+### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>Создание резервирования URL-адреса для [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
 1.  Запустите средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов.  
   
@@ -123,12 +128,12 @@ caps.handback.revision: 13
   
 6.  Проверьте URL-адрес, щелкнув ссылку в разделе **URL-адреса** .  
   
-## Установка дополнительных свойств для указания дополнительных URL-адресов  
+## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Установка дополнительных свойств для указания дополнительных URL-адресов  
  Несколько URL-адресов веб-службы сервера отчетов или [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] можно зарезервировать, указав различные порты или имена узлов (IP-адрес или имя заголовка узла, которое сервер доменных имен может преобразовать в IP-адрес, назначенный компьютеру). Создав несколько URL-адресов, можно установить различные пути доступа к одному экземпляру сервера отчетов. Так, для обеспечения доступа к серверу отчетов через локальную сеть и через экстрасеть можно использовать применяемый по умолчанию URL-адрес для доступа по локальной сети и дополнительное полное имя узла для доступа через экстрасеть.  
   
--   http://myserver01/reportserver  
+-   `http://myserver01/reportserver`  
   
--   http://www.adventure-works.com/reportserver  
+-   `http://www.adventure-works.com/reportserver`  
   
  Назначение нескольких имен виртуальных каталогов для одного экземпляра приложения не допускается. Каждый экземпляр приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сопоставляется одному имени виртуального каталога. При наличии на одном компьютере нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] имя виртуального каталога должно включать в себя имя этого экземпляра; таким образом гарантируется, что каждый запрос доставляется правильному адресату.  
  
@@ -145,15 +150,15 @@ caps.handback.revision: 13
   
  Указывает полное имя компьютера, для которого регистрируется сертификат. Указанное имя должно быть идентично имени, на которое зарегистрирован этот сертификат.  
   
- Для данного параметра необходим установленный сертификат. Можно также изменить параметры конфигурации UrlRoot в файле RSReportServer.config, чтобы они указывали полное имя компьютера, для которого регистрируется сертификат. Дополнительные сведения см. в статье [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Для данного параметра необходим установленный сертификат. Можно также изменить параметры конфигурации UrlRoot в файле RSReportServer.config, чтобы они указывали полное имя компьютера, для которого регистрируется сертификат. Дополнительные сведения см. в статье [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Назначение дополнительных свойств URL-адресу  
+### <a name="to-set-advanced-properties-on-a-url"></a>Назначение дополнительных свойств URL-адресу  
   
 1.  На странице **URL-адрес веб-службы** или на странице **URL-адрес веб-портала** нажмите кнопку **Дополнительно**.  
   
 2.  Нажмите кнопку **Добавить**.  
   
-3.  Щелкните IP-адрес или имя заголовка узла. При указании заголовка узла обязательно используйте такое имя, которое может разрешить служба DNS. При указании общедоступного имени домена включайте все элементы URL-адреса, в том числе http://www.  
+3.  Щелкните IP-адрес или имя заголовка узла. При указании заголовка узла обязательно используйте такое имя, которое может разрешить служба DNS. При указании общедоступного имени домена включают полный URL-адрес, включая `http://www`.  
   
 4.  Укажите номер порта. При указании нестандартного порта URL-адрес приложения должен всегда включать номер порта.  
   
@@ -161,38 +166,39 @@ caps.handback.revision: 13
   
 6.  Проверьте URL-адрес, открыв окно браузера и введя в него этот адрес.  
   
-## URL-адреса для нескольких экземпляров сервера отчетов на одном компьютере  
- Во избежание конфликта имен при резервировании URL-адресов для нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо соблюдать соглашения об именах. Дополнительные сведения см. в статье [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url reservations for multi-instance report server deployments.md).  
+## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URL-адреса для нескольких экземпляров сервера отчетов на одном компьютере  
+ Во избежание конфликта имен при резервировании URL-адресов для нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо соблюдать соглашения об именах. Дополнительные сведения см. в статье [Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
 ##  <a name="URLExamples"></a> Примеры конфигурации URL-адресов  
  Приведенный ниже список содержит несколько примеров того, как может выглядеть URL-адрес сервера отчетов.  
   
--   http://localhost/reportserver  
+-   `http://localhost/reportserver`  
   
--   http://localhost/reportserver_SQLEXPRESS  
+-   `http://localhost/reportserver_SQLEXPRESS`  
   
--   http://sales01/reportserver  
+-   `http://sales01/reportserver`  
   
--   http://sales01:8080/reportserver  
+-   `http://sales01:8080/reportserver`  
   
--   https://sales.adventure-works.com/reportserver  
+-   `https://sales.adventure-works.com/reportserver`  
   
--   https://www.adventure-works.com:8080/reportserver01  
+-   `https://www.adventure-works.com:8080/reportserver01`  
   
- URL-адреса, используемые для доступа к [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], имеют тот же формат и обычно создаются на том же веб-сайте, где расположен сервер отчетов. Единственным различием является имя виртуального каталога (в данном случае это **reports**, но можно использовать любое имя по своему усмотрению).  
+ URL-адреса, используемые для доступа к [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , имеют тот же формат и обычно создаются на том же веб-сайте, где расположен сервер отчетов. Единственным различием является имя виртуального каталога (в данном случае это **reports** , но можно использовать любое имя по своему усмотрению).  
   
--   http://localhost/reports  
+-   `http://localhost/reports`  
   
--   http://localhost/reports_SQLEXPRESS  
+-   `http://localhost/reports_SQLEXPRESS`  
   
--   http://sales01/reports  
+-   `http://sales01/reports`  
   
--   http://sales01:8080/reports  
+-   `http://sales01:8080/reports`  
   
--   https://sales.adventure-works.com/reports  
+-   `https://sales.adventure-works.com/reports`  
   
--   https://www.adventure-works.com:8080/reports  
+-   `https://www.adventure-works.com:8080/reports`  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+

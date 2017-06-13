@@ -1,30 +1,37 @@
 ---
-title: "Определение версии схемы определения отчета (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML-схемы [службы Reporting Services]"
-  - "язык определения отчетов, схема XML"
-  - "схемы [службы Reporting Services]"
+title: "Определение версии схемы определения отчета (SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schemas [Reporting Services]
+- Report Definition Language, XML schema
+- schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Определение версии схемы определения отчета (SSRS)
-  В файле определения отчета указывается пространство имен языка определения отчетов для версии схемы определения отчета, использованной для проверки RDL-файла. Если RDL-файл открывается в среде разработки отчетов, такой как конструктор в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , или построителе отчетов и если отчет был создан в предыдущем пространстве имен, автоматически создается файл резервной копии и отчет обновляется до текущего пространства имен. Если сохранить обновленное определение отчета, будет сохранен преобразованный RDL-файл. Это единственный способ обновления определения отчетов. Само определение отчетов не обновляется на сервере отчетов. Скомпилированный отчет обновляется на сервере отчетов. Дополнительные сведения см. в разделе [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+
+# <a name="find-the-report-definition-schema-version-ssrs"></a>Определение версии схемы определения отчета (SSRS)
+
+В файле определения отчета указывается пространство имен языка определения отчетов для версии схемы определения отчета, использованной для проверки RDL-файла. Если RDL-файл открывается в среде разработки отчетов, такой как конструктор в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , или построителе отчетов и если отчет был создан в предыдущем пространстве имен, автоматически создается файл резервной копии и отчет обновляется до текущего пространства имен. Если сохранить обновленное определение отчета, будет сохранен преобразованный RDL-файл. Это единственный способ обновления определения отчетов. Само определение отчетов не обновляется на сервере отчетов. Скомпилированный отчет обновляется на сервере отчетов. Дополнительные сведения см. в разделе [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-### Инструкции. Определение версии RDL-схемы отчета  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Инструкции. Определение версии RDL-схемы отчета  
   
 1.  Откройте файл отчета в формате RDL в приложении, таком как «Блокнот» или XML Notepad 2007, пригодном для просмотра XML-кода.  
   
@@ -37,9 +44,9 @@ caps.handback.revision: 15
   
      Пространство имен определения отчета указано следующим URL-адресом: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### Как определить версию RDL-схемы конструктора отчетов  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Как определить версию RDL-схемы конструктора отчетов  
   
-1.  Открыть новый проект. Версия выбранного проекта определяет версию схемы языка определения отчетов. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживается использование нескольких версий схемы. Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Открыть новый проект. Версия выбранного проекта определяет версию схемы языка определения отчетов. В SQL Server поддерживает более одной версии схемы. Дополнительные сведения см. в разделе [развертывание и поддержка версий в SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  В меню **Проект** выберите **Добавить новый элемент**. Откроется диалоговое окно **Добавление нового элемента** .  
   
@@ -60,7 +67,7 @@ caps.handback.revision: 15
   
      Пространство имен определения отчета указано следующим URL-адресом: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### Инструкции. Определение версии RDL-схемы отчета на сервере отчетов  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Инструкции. Определение версии RDL-схемы отчета на сервере отчетов  
   
 -   В диспетчере отчетов введите URL-адрес сервера отчетов. Например, следующий URL-адрес указывает сервер отчетов на локальном компьютере.  
   
@@ -79,9 +86,10 @@ caps.handback.revision: 15
     ```  
   
      Пространство имен определения отчета указано следующим URL-адресом: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
-  
-## См. также  
- [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md)   
- [Язык определения отчетов (службы SSRS)](../../reporting-services/reports/report-definition-language-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>Следующие шаги
+
+[Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md)   
+[Язык определения отчетов](../../reporting-services/reports/report-definition-language-ssrs.md)  
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,31 +1,36 @@
 ---
-title: "Приостановка и возобновление общих расписаний | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "приостановка выполнения расписания"
-  - "расписания отчетов [службы Reporting Services]"
-  - "общие расписания [службы Reporting Services], возобновление"
-  - "возобновление выполнения расписаний"
-  - "продолжение выполнения расписаний"
-  - "расписания [службы Reporting Services], возобновление"
-  - "расписания [службы Reporting Services], приостановка"
+title: "Приостановка и возобновление общих расписаний | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pausing schedules
+- report-specific schedules [Reporting Services]
+- shared schedules [Reporting Services], resuming
+- resuming schedules
+- continuing schedules
+- schedules [Reporting Services], resuming
+- schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Приостановка и возобновление общих расписаний
+# <a name="pause-and-resume-shared-schedules"></a>Приостановка и возобновление общих расписаний
   Можно приостановить и возобновить общее расписание, используемое в данное время. Приостановка выполнения общего расписания позволяет временно приостановить действие расписания, инициирующего обработку отчетов и подписок. Приостанавливать и возобновлять можно только общие расписания. Расписания конкретных отчетов приостанавливать нельзя.  
   
  Нельзя приостанавливать и возобновлять обработку отчетов, которая выполняется в данный момент. Приостанавливать и возобновлять можно лишь расписания, находящиеся в очереди расписаний службы агента SQL Server. Подсистема расписаний не может управлять выполняемыми заданиями. Дополнительные сведения см. в разделе [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md).  
@@ -41,7 +46,7 @@ caps.handback.revision: 36
 ##  <a name="bkmk_native"></a> Приостановка и возобновление общих расписаний (собственный режим)  
  Чтобы приостанавливать и возобновлять выполнение общих расписаний, используйте страницу «Общие расписания» диспетчера отчетов. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]это невозможно, она не предоставляет возможность приостанавливать и возобновлять выполнение расписаний. Дополнительные сведения см. в статье [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
-#### Остановка и возобновление общего расписания  
+#### <a name="to-pause-or-resume-a-shared-schedule"></a>Остановка и возобновление общего расписания  
   
 1.  В диспетчере отчетов щелкните **Параметры сайта**.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 36
 ##  <a name="bkmk_sharepoint"></a> Приостановка и возобновление общих расписаний (режим интеграции с SharePoint)  
  Для приостановки и возобновление общего расписания используется страница «Параметры сайта» или PowerShell. Управление расписаниями выполняется для каждого сайта SharePoint отдельно.  
   
-#### Остановка и возобновление общего расписания  
+#### <a name="to-pause-or-resume-a-shared-schedule"></a>Остановка и возобновление общего расписания  
   
 1.  Щелкните **Действия сайта**.  
   
@@ -62,9 +67,9 @@ caps.handback.revision: 36
   
 4.  Выберите расписание, затем нажмите кнопку **Приостановить выбранные расписания** или **Запустить выбранные расписания**. Если в настоящее время расписание приостановлено, то в столбце **Состояние** будет указано **Приостановлено**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
- [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Изменение часовых поясов и настроек часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  
   

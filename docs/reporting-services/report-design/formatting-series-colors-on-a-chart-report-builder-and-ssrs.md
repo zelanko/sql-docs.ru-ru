@@ -1,28 +1,33 @@
 ---
-title: "Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10245"
-  - "10252"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.borders.f1"
-  - "sql13.rtp.rptdesigner.seriesproperties.borders.f1"
+title: "Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10245"
+- "10252"
+- sql13.rtp.rptdesigner.serieslabelproperties.borders.f1
+- sql13.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 711b648b41294d6c32530407b31aec8401db389c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)
+# <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)
   В службах Reporting Services предоставляется несколько встроенных палитр для диаграмм, а также предусмотрена возможность определить пользовательскую палитру. По умолчанию в диаграммах используется встроенная цветовая палитра **Pacific** для заливки каждого ряда. Эти цвета появляются также в условных обозначениях. При добавлении к диаграмме нескольких рядов происходит присваивание каждому ряду на диаграмме цветов в том порядке, в каком цвета определены в палитре.  
   
  Если количество рядов больше по сравнению с количеством цветов в палитре, то цвета на диаграмме начинают использоваться повторно, поэтому два ряда могут иметь один и тот же цвет. Такая ситуация часто возникает при использовании фигурной диаграммы, на которой каждой точке данных назначается один из цветов палитры. Чтобы избежать путаницы, определите пользовательскую палитру, имеющую не меньшее количество цветов по сравнению с количеством рядов на диаграмме.  
@@ -32,32 +37,32 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Использование встроенных палитр  
+## <a name="using-built-in-palettes"></a>Использование встроенных палитр  
  В службах Reporting Services предусмотрен список стандартных, встроенных палитр, который можно использовать при определении набора цветов для ряда на диаграмме. Все встроенные палитры содержат от 10 до 16 цветовых значений. Возможность расширить встроенную палитру для включения дополнительных цветов отсутствует, поэтому, если потребуется больше 16 цветов, то необходимо определить пользовательскую палитру.  
   
  При печати отчета рассмотрите возможность использования палитры **Оттенки серого** . В этой палитре заданы оттенки серого, с помощью которых можно представить каждый ряд на диаграмме.  
   
  Палитра с именем «По умолчанию» использовалась как предусмотренная по умолчанию палитра диаграммы в более ранних версиях служб Reporting Services. Эта палитра в разных версиях сохраняла одно и то же имя для единообразия. Обновление диаграмм, для которых используется палитра «По умолчанию», всегда осуществляется успешно, но после обновления может потребоваться сменить эту палитру.  
   
-## Применение пользовательских палитр  
+## <a name="using-custom-palettes"></a>Применение пользовательских палитр  
  Если необходимо применить собственные цвета на диаграмме, то следует прибегнуть к пользовательской палитре. Пользовательская палитра позволяет добавлять собственные цвета в том порядке, в каком они должны появиться на диаграмме. Пользовательская палитра становится особенно полезной, если количество рядов на диаграмме неизвестно во время разработки. Дополнительные сведения см. в разделе [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md).  
   
-## Использование цветной заливки для каждого ряда  
+## <a name="using-a-color-fill-on-each-series"></a>Использование цветной заливки для каждого ряда  
  Можно также определить собственные цвета на диаграмме, задавая цвет для каждого ряда на диаграмме. Для этого откройте диалоговое окно **Свойства ряда** и задайте свойство **Цвет** для поля **Заполнить**. Применение этого подхода приводит к перекрытию всех определенных палитр. Как правило, для определения собственных цветов лучше применить пользовательскую палитру, поскольку количество рядов в наборе данных может оставаться неизвестным до обработки отчета.  
   
  Этот подход является в наибольшей степени применимым, если необходимо задавать по условию цвет ряда на основе выражения.  Дополнительные сведения см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
  [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS)](../../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-the-legend-on-a-chart-report-builder-and-ssrs.md)  
+ [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
   
   

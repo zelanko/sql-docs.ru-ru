@@ -1,31 +1,36 @@
 ---
-title: "Передача файлов в папку | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "публикация отчетов [службы Reporting Services], передача файлов"
-  - "отчеты [службы Reporting Services], публикация"
-  - "передача отчетов [службы Reporting Services]"
-  - "передача файлов [службы Reporting Services]"
-  - "файлы [службы Reporting Services], передача"
-  - "файлы [службы Reporting Services]"
-  - "папки [службы Reporting Services], передача файлов в"
+title: "Передача файлов в папку | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing reports [Reporting Services], uploading files
+- reports [Reporting Services], publishing
+- uploading reports [Reporting Services]
+- uploading files [Reporting Services]
+- files [Reporting Services], uploading
+- files [Reporting Services]
+- folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Передача файлов в папку
+# <a name="upload-files-to-a-folder"></a>Передача файлов в папку
   Предусмотрена возможность передавать файлы из файловой системы и сохранять их в качестве управляемых элементов в базе данных сервера отчетов. Действия системы при передаче зависят от типа файла.  
   
 -   Передача RDL-файла эквивалентна публикации отчета.  
@@ -39,13 +44,13 @@ caps.handback.revision: 42
   
  Визуально файлы, передаваемые в базу данных сервера отчетов, представляются в иерархии папок с помощью следующих значков:  
   
- ![Значок отчета](../../reporting-services/report-server/media/hlp-16doc.png "Значок отчета")  
+ ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 значок отчета  
   
- ![Значок модели](../../reporting-services/report-server/media/model-icon.png "Значок модели")  
+ ![Значок модели](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 значок модели отчета  
   
- ![универсальный значок ресурса](../../reporting-services/report-server/media/hlp-16file.png "универсальный значок ресурса")  
+ ![универсальный значок ресурса](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 универсальный значок ресурса  
   
  При передаче файл всегда помещается в текущую выбранную папку. Можно либо сразу перейти в папку, куда следует сохранить файл, либо передать файл и затем переместить его в нужное место.  
@@ -58,8 +63,8 @@ caps.handback.revision: 42
 |Передача любого файла как двоичного объекта|Управление ресурсами|  
 |Просмотр содержимого папки|Просмотр ресурсов, просмотр отчетов|  
   
-## См. также  
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+## <a name="see-also"></a>См. также  
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
  [Передача файла или отчета (диспетчер отчетов)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

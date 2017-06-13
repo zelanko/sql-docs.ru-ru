@@ -1,23 +1,28 @@
 ---
-title: "Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS)
+# <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS)
   Полосковые линии, или полосы, представляют собой горизонтальные или вертикальные области, которые оттеняют фон диаграммы через регулярные или заданные пользователем интервалы. Полосковые линии используют, чтобы:  
   
 -   Улучшить читаемость отдельных значений диаграммы. Указывайте полосковые линии через регулярные интервалы, чтобы отделить точки данных при чтении диаграммы.  
@@ -31,7 +36,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Отображение на диаграмме полосковых линий, чередующихся через равные интервалы  
+### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>Отображение на диаграмме полосковых линий, чередующихся через равные интервалы  
   
 1.  Для отображения горизонтальных полосковых линий щелкните правой кнопкой мыши вертикальную ось диаграммы и выберите пункт **Свойства вертикальной оси**.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
 3.  Укажите цвет полосковых линий с помощью расположенного рядом раскрывающегося списка **Цвет** (необязательно).  
   
-### Отображение на диаграмме полосковых линий, чередующихся через заданные пользователем интервалы  
+### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>Отображение на диаграмме полосковых линий, чередующихся через заданные пользователем интервалы  
   
 1.  Для отображения горизонтальных полосковых линий щелкните правой кнопкой мыши вертикальную ось диаграммы и выберите пункт **Свойства вертикальной оси**.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  По умолчанию свойство Interval установлено в значение Auto. Оно означает, что диаграмма не будет вычислять интервал для пользовательских полосковых линий. Диаграмма вычисляет интервалы для полосковых линий, только если задано значение интервала.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

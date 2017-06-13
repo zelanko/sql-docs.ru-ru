@@ -1,7 +1,7 @@
 ---
 title: "Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Документация Майкрософт"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 Здесь приведены поддерживаемые конструкции запросов.  
 
+Выражение CASE: случай может использоваться в любой инструкции или предложения, которые допускают допустимые выражения.
+   - **Применяется к:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    Начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], теперь поддерживаются операторы CASE для модулей, скомпилированных в собственном коде T-SQL.
+
 Предложение SELECT:  
 
 -   псевдонимы имен и столбцов (с помощью синтаксиса AS или =);  
 
--   скалярные вложенные запросы;  
+-   скалярные вложенные запросы;
+    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], скалярные вложенные запросы теперь поддерживаются в модулях, скомпилированных в собственном коде.
 
 -   предложение TOP*;  
 
 -   SELECT DISTINCT  
+    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], оператор DISTINCT поддерживается в модулях, скомпилированных в собственном коде.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION и UNION ALL
+    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], операторы UNION и UNION ALL теперь поддерживаются в модулях, скомпилированных в собственном коде.
 
 -   присвоение значений переменных.  
 
@@ -73,15 +83,22 @@ ms.lasthandoff: 04/11/2017
 
 -   FROM \<скомпилированные_в_собственном_коде_встроенные_функции_с_табличными_значениями>  
 
--   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN и INNER JOIN;  
+-   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN и INNER JOIN;
+    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], СОЕДИНЕНИЯ теперь поддерживаются в модулях, скомпилированных в собственном коде.
 
--   вложенные запросы `[AS] table_alias`. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
+-   вложенные запросы `[AS] table_alias`. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md). 
+    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], вложенные запросы теперь поддерживаются в модулях, скомпилированных в собственном коде.
 
 Предложение WHERE:  
 
 -   Предикат фильтра IS [NOT] NULL  
 
--   AND, OR, NOT, IN, EXISTS, BETWEEN;  
+-   И МЕЖДУ  
+-   OR, NOT, IN, EXISTS
+    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], операторы OR и NOT/IN/EXISTS теперь поддерживаются в модулях, скомпилированных в собственном коде.
 
 
 Предложение[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :

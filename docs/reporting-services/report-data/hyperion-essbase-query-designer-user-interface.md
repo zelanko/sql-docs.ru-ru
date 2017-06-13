@@ -1,33 +1,38 @@
 ---
-title: "Пользовательский интерфейс конструктора запросов Hyperion Essbase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10013"
-  - "sql13.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1"
-helpviewer_keywords: 
-  - "конструктор запросов Hyperion Essbase"
-  - "источники данных [службы Reporting Services], Hyperion Essbase"
-  - "многомерные данные [службы Reporting Services]"
-  - "конструкторы запросов [службы Reporting Services]"
-  - "Hyperion Essbase [службы Reporting Services], конструктор запросов"
+title: "Hyperion Essbase пользовательский интерфейс конструктора запросов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10013"
+- sql13.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1
+helpviewer_keywords:
+- Hyperion Essbase Query Designer
+- data sources [Reporting Services], Hyperion Essbase
+- multidimensional data [Reporting Services]
+- query designers [Reporting Services]
+- Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68a0a5da224c0f6f78eca8df1ae766e85d7750f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Пользовательский интерфейс конструктора запросов Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
+# <a name="hyperion-essbase-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
   
 > [!IMPORTANT]  
 >  При создании и выполнении запросов пользователи получают доступ к источникам данных. Следует предоставить минимальные разрешения на источники данных, например разрешение только на чтение.  
@@ -36,12 +41,12 @@ caps.handback.revision: 23
   
  В этом разделе описываются кнопки панели инструментов и области конструктора запросов для каждого режима работы графического конструктора запросов.  
   
-## Графический конструктор запросов в режиме конструктора  
+## <a name="graphical-query-designer-in-design-mode"></a>Графический конструктор запросов в режиме конструктора  
  При изменении запросов многомерных выражений для набора данных, использующего источник данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] , графический конструктор запросов открывается в режиме конструктора.  
   
  На следующем рисунке отмечены панели в режиме конструктора.  
   
- ![Конструктор запросов для источника данных Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Конструктор запросов для источника данных Hyperion Essbase")  
+ ![Конструктор запросов для источника данных Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "конструктор запросов для источника данных Hyperion Essbase")  
   
  В следующей таблице приводится список панелей в этом режиме.  
   
@@ -57,26 +62,26 @@ caps.handback.revision: 23
   
  В панели «Фильтр» можно выбрать значения измерений, чтобы ограничить данные, получаемые из источника данных. Значения, определенные фильтром в режиме конструктора, отображаются в предложении многомерных выражений WHERE в режиме запросов.  
   
-### Панель инструментов графического конструктора запросов в режиме конструктора  
+### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Панель инструментов графического конструктора запросов в режиме конструктора  
  Панель инструментов конструктора запросов содержит кнопки, которые помогают создавать запросы многомерных выражений с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.  
   
 |Кнопка|Description|  
 |------------|-----------------|  
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Refresh dataset fields](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Обновление метаданных из источника данных.|  
-|![Добавление вычисляемого элемента](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "Добавление вычисляемого элемента")|Отображение диалогового окна **Построитель вычисляемых элементов** . Используйте его, чтобы создать или изменить выражения для вычисляемого элемента, включая задание свойства **Порядок вычисления** .|  
-|![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
-|![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
-|![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.png "Удалить")|Удаление выбранного элемента из запроса. Используйте эту кнопку для удаления выбранных строк в панели «Фильтр».|  
-|![Выполнение запроса](../../reporting-services/report-data/media/rsqdicon-run.png "Выполнение запроса")|Выполнить запрос и показать результаты на панели «Данные».|  
-|![Cancel the query](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Cancel the query")|Отмена запроса.|  
-|![Переключение в режим конструктора](../../reporting-services/media/rsqdicon-designmode.png "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
+|![Обновление полей набора данных](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "обновление полей набора данных")|Обновление метаданных из источника данных.|  
+|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** . Используйте его, чтобы создать или изменить выражения для вычисляемого элемента, включая задание свойства **Порядок вычисления** .|  
+|![Переключение для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "переключателя для отображения пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
+|![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
+|![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удаление выбранного элемента из запроса. Используйте эту кнопку для удаления выбранных строк в панели «Фильтр».|  
+|![Выполните запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "выполнения запроса")|Выполнить запрос и показать результаты на панели «Данные».|  
+|![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "отменить запрос")|Отмена запроса.|  
+|![Переключиться в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
   
-## Графический конструктор запросов в режиме запросов  
+## <a name="graphical-query-designer-in-query-mode"></a>Графический конструктор запросов в режиме запросов  
  Для переключения графического конструктора запросов в режим запросов щелкните переключатель **Режим конструктора** на панели инструментов. На следующем рисунке показаны части конструктора запросов в режиме запросов.  
   
- ![Конструктор запросов в режиме запроса для Hyperion](../../reporting-services/report-data/media/rsqd-hyperionessbase-mdx-querymode.gif "Конструктор запросов в режиме запроса для Hyperion")  
+ ![Конструктор запросов в режиме запроса для Hyperion](../../reporting-services/report-data/media/rsqd-hyperionessbase-mdx-querymode.gif "конструктор запросов в режиме запроса для Hyperion")  
   
  В следующей таблице описываются функции каждой панели.  
   
@@ -89,18 +94,18 @@ caps.handback.revision: 23
   
  Можно перетаскивать меры и измерения с вкладки **Метаданные** панели «Метаданные» в панель «Запросы многомерных выражений». Функции можно перетаскивать в панель «Запросы многомерных выражений» с вкладки **Функции** . При выполнении запроса в панели «Результат» отображаются результаты текущего запроса многомерных выражений.  
   
-### Панель инструментов графического конструктора запросов в режиме запросов  
+### <a name="toolbar-for-the-graphical-query-designer-in-query-mode"></a>Панель инструментов графического конструктора запросов в режиме запросов  
  Панель инструментов конструктора запросов содержит кнопки, которые помогают создавать запросы многомерных выражений с помощью графического интерфейса. Кнопки на панели инструментов в режиме конструктора ничем не отличаются от кнопок в режиме запроса, однако в режиме запроса недоступны следующие кнопки.  
   
 -   **Редактировать как текст**  
   
--   **Добавить вычисляемый элемент** (![Добавление вычисляемого элемента](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.png "Добавление вычисляемого элемента"))  
+-   **Добавить вычисляемый элемент** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.png "Переключатель для просмотра пустых ячеек"))  
+-   **Показывать пустые ячейки** (![переключателя для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "переключателя для отображения пустых ячеек"))  
   
--   **Автовыполнение** (![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.png "Автоматическое выполнение запроса"))  
+-   **Автоматическое выполнение** (![автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса"))  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   

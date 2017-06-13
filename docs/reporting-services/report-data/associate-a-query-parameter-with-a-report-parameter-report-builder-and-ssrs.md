@@ -1,37 +1,42 @@
 ---
-title: "Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "запросы [Reporting Services], параметры"
-  - "параметры [службы Reporting Services], запросы"
+title: "Связать параметр запроса с параметром отчета (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [Reporting Services], parameters
+- parameters [Reporting Services], queries
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 49
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a1efe67725037c9d47f20209c2831db3faef65e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS)
+# <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS)
   При определении запроса к набору данных, содержащего переменную запроса, команда запроса анализируется. Для каждой переменной запроса создается соответствующий параметр набора данных и параметр отчета. Параметр набора данных указывает на параметр отчета. Это позволяет пользователю вводить значение, которое передается непосредственно запросу. Каждый раз при изменении команды запроса происходит тот же процесс.  
   
  При переименовании параметра отчета, привязанного к параметру запроса, нужно вручную привязать параметры запроса к переименованному параметру отчета с помощью процедуры, описанной в данном разделе.  
   
 > **Примечание.** [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Связывание параметра запроса с параметром отчета  
+### <a name="to-associate-a-query-parameter-with-a-report-parameter"></a>Связывание параметра запроса с параметром отчета  
   
-1.  В области данных отчета щелкните правой кнопкой мыши набор данных, выберите пункт **Свойства набора данных** и нажмите **Параметры**.  
+1.  В области данных отчета щелкните правой кнопкой мыши набор данных, выберите пункт **Свойства набора данных**и нажмите **Параметры**.  
   
-    > **ПРИМЕЧАНИЕ.** Если область данных отчета не отображается, в меню **Вид** выберите пункт **Данные отчета**.  
+    > **ПРИМЕЧАНИЕ.** Если область данных отчета не отображается, в меню **Вид** выберите пункт **Данные отчета** .  
   
 2.  В столбце **Имя параметра**найдите имя параметра запроса. Имена параметров заполняются автоматически на основе запроса. Каждый раз при изменении запроса он проверяется на наличие новых параметров запроса. Созданные вручную параметры запроса не меняются при изменении запроса.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 49
   
 3.  Повторите шаг 2 для остальных параметров запроса.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
 
   

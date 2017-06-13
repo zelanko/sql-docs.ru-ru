@@ -1,23 +1,28 @@
 ---
-title: "Добавление диаграммы в отчет (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление диаграммы в отчет (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление диаграммы в отчет (построитель отчетов и службы SSRS)
+# <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Добавление диаграммы в отчет (построитель отчетов и службы SSRS)
   Если в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо создать сводку данных в визуальном формате, можно использовать область данных "Диаграмма". Важно выбрать тип диаграммы, подходящий для типа представляемых данных. От этого зависит, насколько успешно можно будет интерпретировать данные, представленные в виде диаграммы. Дополнительные сведения см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Самым простым способом добавления диаграммная область данных в отчет является запуск мастера создания диаграмм. Мастер поддерживает гистограммы, графики, круговые диаграммы, линейчатые диаграммы и диаграммы с областями. Диаграммы этих и других типов также можно добавить вручную.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Добавление диаграммы в отчет с помощью мастера диаграмм  
+## <a name="to-add-a-chart-to-a-report-by-using-the-chart-wizard"></a>Добавление диаграммы в отчет с помощью мастера диаграмм  
   
 1.  > [!NOTE]  
     >  Мастер диаграмм доступен только в построителе отчетов.  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
 4.  На вкладке **Выполнение** нажмите кнопку **Конструктор** , чтобы продолжить работу с отчетом.  
   
-## Добавление диаграммы к отчету  
+## <a name="to-add-a-chart-to-a-report"></a>Добавление диаграммы к отчету  
   
 1.  Создайте отчет и определите набор данных. Дополнительные сведения см. в разделе [Наборы данных отчета](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 8
   
  На диаграммах с осями (гистограмма, линейчатая диаграмма) на оси категорий могут отображаться не все метки категорий. Дополнительные сведения об изменении меток оси см. в разделе [Задание интервала оси (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

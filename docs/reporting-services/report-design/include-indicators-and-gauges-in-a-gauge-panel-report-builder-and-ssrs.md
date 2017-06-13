@@ -1,23 +1,28 @@
 ---
-title: "Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS)
+# <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS)
   Панель датчиков — это контейнер верхнего уровня, который содержит один или несколько датчиков и индикаторов. Индикаторы могут быть встроены в датчики или помещены рядом с ними на панели датчиков.  
   
  Если индикатор и датчик являются смежными на панели датчиков и показывают данные из разных полей, то может потребоваться добавить метки, чтобы было ясно, какие данные представлены датчиком и индикатором.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Внедрение индикатора в датчик  
+### <a name="to-embed-an-indicator-in-a-gauge"></a>Внедрение индикатора в датчик  
   
 1.  Откройте существующий отчет или создайте новый отчет, содержащий таблицу и матрицу с данными, которые необходимо отобразить.   
   
@@ -57,7 +62,7 @@ caps.handback.revision: 8
   
 13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Отображение индикатора и датчика рядом друг с другом  
+### <a name="to-show-an-indicator-and-gauge-side-by-side"></a>Отображение индикатора и датчика рядом друг с другом  
   
 1.  Откройте существующий отчет или создайте новый отчет, содержащий таблицу и матрицу с данными, которые необходимо отобразить.  
   
@@ -93,13 +98,13 @@ caps.handback.revision: 8
   
 15. Перетащите каждую метку в местоположение рядом с датчиком или индикатором.  
   
-16. Щелкните правой кнопкой метку рядом с датчиком, выберите пункт **Свойства метки**и введите требуемый текст в поле **Текст**.  
+16. Щелкните правой кнопкой метку рядом с датчиком, выберите пункт **Свойства метки**и введите требуемый текст в поле **Текст** .  
   
-17. Щелкните правой кнопкой метку рядом с индикатором, выберите пункт **Свойства метки** и введите требуемый текст в поле **Текст**.  
+17. Щелкните правой кнопкой метку рядом с индикатором, выберите пункт **Свойства метки**и введите требуемый текст в поле **Текст** .  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

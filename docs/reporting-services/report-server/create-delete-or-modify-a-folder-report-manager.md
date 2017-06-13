@@ -1,41 +1,46 @@
 ---
-title: "создать, изменить или удалить папку (диспетчер отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "удаление папок"
-  - "изменение папок"
-  - "удаление папок"
-  - "папки [службы Reporting Services], создание"
-  - "папки [службы Reporting Services], удаление"
-  - "папки [службы Reporting Services], изменение"
+title: "Создать, удалить или изменить папку (диспетчер отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing folders
+- modifying folders
+- deleting folders
+- folders [Reporting Services], creating
+- folders [Reporting Services], deleting
+- folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 49
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# создать, изменить или удалить папку (диспетчер отчетов)
+# <a name="create-delete-or-modify-a-folder-report-manager"></a>создать, изменить или удалить папку (диспетчер отчетов)
   Для упорядочения элементов и управления элементами, публикуемыми на сервере отчетов, можно создать папки. Создание папок поможет пользователям находить интересующие их отчеты. Для диспетчеров содержимого папки обеспечивают инфраструктуру для применения разрешений. Можно создать назначения ролей для определенных папок, чтобы ограничить доступ к отчетам, которые находятся на стадии разработки или не подлежат широкому распространению.  
   
-### Создание папки  
+### <a name="to-create-a-folder"></a>Создание папки  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов выберите корневую папку, а затем нажмите **Создать папку**. Либо, чтобы создать папку внутри существующей папки, перейдите к этой папке на странице **Содержимое** , а затем щелкните папку, чтобы открыть ее. После этого нажмите **Создать папку**.  
   
      Откроется страница **Создание папки** .  
   
-3.  Введите имя папки. Имя папки может включать пробелы, но не может содержать зарезервированные символы, используемые для кодирования URL-адреса: ; ? : @ & = + , $ / * \< > |. Нельзя указать последовательность имен папок, чтобы одновременно создать несколько папок.  
+3.  Введите имя папки. Имя папки может включать пробелы, но не может содержать зарезервированные символы, используемые для кодирования URL-адреса: ; ? : @ & = + , $ / * < > |. Нельзя указать последовательность имен папок, чтобы одновременно создать несколько папок.  
   
 4.  При необходимости введите также описание.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 49
   
 6.  Нажмите кнопку **ОК**.  
   
-### Удаление папки  
+### <a name="to-delete-a-folder"></a>Удаление папки  
   
 1.  Перейдите в диспетчере отчетов на страницу **Содержимое** и найдите элемент, который нужно изменить.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 49
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Удаление или изменение папки  
+### <a name="to-modify-or-delete-a-folder"></a>Удаление или изменение папки  
   
 1.  Перейдите в диспетчере отчетов на страницу **Содержимое** и найдите элемент, который нужно изменить.  
   
@@ -73,9 +78,10 @@ caps.handback.revision: 49
   
 7.  Для сохранения изменений нажмите кнопку **Применить** .  
   
-## См. также  
- [Страница "Создание папки" (диспетчер отчетов)](../Topic/New%20Folder%20Page%20\(Report%20Manager\).md)   
- [Страница "Содержимое" (диспетчер отчетов)](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>См. также  
+ [Страница "Создание папки" (диспетчер отчетов)](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
+
