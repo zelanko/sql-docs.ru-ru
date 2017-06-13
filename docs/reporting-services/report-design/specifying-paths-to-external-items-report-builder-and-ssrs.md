@@ -1,23 +1,28 @@
 ---
-title: "Указание путей к внешним элементам (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Указание путей к внешним элементам (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ba2c751b7f851fa9be24ca08cb4ab95f4314258
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Указание путей к внешним элементам (построитель отчетов и службы SSRS)
+# <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
   В свойствах элемента отчета укажите пути к нужным элементам, таким как детализированные отчеты, вложенные отчеты и файлы изображений, которые являются внешними для файла определения отчета и размещены на сервере отчетов.  
   
 > [!NOTE]  
@@ -39,11 +44,11 @@ caps.handback.revision: 9
   
 -   **Полный путь к элементу.**  
   
-    -   **На сервере отчетов** путь начинается с **/** (корневой папки). например /Reports/AllSubreports/Subreport1.  
+    -   **На сервере отчетов** путь начинается с **/**(корневой папки). например /Reports/AllSubreports/Subreport1.  
   
     -   **На сайте SharePoint** необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
  [Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Добавление действия детализации в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  

@@ -1,29 +1,34 @@
 ---
-title: "Назначения ролей | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пользователи [службы Reporting Services]"
-  - "роли [службы Reporting Services]"
-  - "безопасность на основе ролей [службы Reporting Services], назначения ролей"
-  - "группы [службы Reporting Services]"
-  - "безопасность [службы Reporting Services], назначения ролей"
+title: "Назначения ролей | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- users [Reporting Services]
+- roles [Reporting Services]
+- role-based security [Reporting Services], role assignments
+- groups [Reporting Services]
+- security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 caps.latest.revision: 37
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 37
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Назначения ролей
+# <a name="role-assignments"></a>Назначения ролей
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] *назначения ролей* определяют доступ к сохраненным элементам и к самому серверу отчетов. Назначение ролей состоит из следующих частей.  
   
 -   Защищаемый элемент, доступом к которому нужно управлять. Примеры защищаемых элементов — это папки, отчеты и ресурсы.  
@@ -36,10 +41,10 @@ caps.handback.revision: 37
   
  Следующая диаграмма показывает назначение ролей, которое сопоставляет группу и отдельного пользователя с ролью **Издатель** для папки В.  
   
- ![Диаграмма назначения ролей](../../reporting-services/security/media/report-securityarch.gif "Диаграмма назначения ролей")  
+ ![Диаграмма назначения ролей](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
 Диаграмма назначения ролей  
   
-## Назначение ролей на уровне системы и на уровне элемента  
+## <a name="system-level-and-item-level-role-assignments"></a>Назначение ролей на уровне системы и на уровне элемента  
  Безопасность служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на основе ролей организована на нескольких уровнях.  
   
 -   Назначения ролей на уровне элемента управляют доступом к отчетам, папкам, моделям отчетов, общим источникам данных и ресурсам в иерархии папок сервера отчетов. Назначения ролей на уровне элемента определяются при создании назначения роли отдельному элементу или корневой папке.  
@@ -48,23 +53,23 @@ caps.handback.revision: 37
   
  Назначение системной роли не дает доступа к элементам иерархии папок. Защищенность системы и элемента взаимно исключают друг друга. Для любого данного пользователя или группы может потребоваться создать одновременно назначения роли на уровне системы и на уровне элемента, чтобы предоставить адекватный доступ к серверу отчетов.  
   
-## Пользователи и группы в назначении ролей  
+## <a name="users-and-groups-in-role-assignments"></a>Пользователи и группы в назначении ролей  
  Учетные записи пользователей и групп, указанные в назначениях ролей, — это доменные учетные записи. Сервер отчетов ссылается (но не создает и не изменяет) на пользователей и группы домена [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (или иной модели безопасности, если используется настраиваемый модуль безопасности).  
   
  Среди всех назначений ролей, применяемых к данному элементу, никакие два не могут указывать одного и того же пользователя или группу. Если учетная запись пользователя входит в учетную запись группы, и существуют назначения ролей для них обеих, пользователю будет доступен комбинированный набор задач для обоих назначений.  
   
  Когда пользователь добавляется в группу, которая уже принимает участие в назначении ролей, необходимо перезагрузить службы IIS, чтобы новые назначения ролей подействовали на этого пользователя.  
   
-## Предопределенное назначение ролей  
+## <a name="predefined-role-assignments"></a>Предопределенное назначение ролей  
  По умолчанию применяются предопределенные назначения ролей, что позволяет локальным администраторам управлять сервером отчетов. Чтобы предоставить доступ другим пользователям, нужно добавить дополнительные назначения ролей.  
   
- Дополнительные сведения о стандартных назначениях ролей, обеспечивающих безопасность по умолчанию, см. в разделе [Стандартные роли](../../reporting-services/security/predefined-roles.md).  
+ Дополнительные сведения о стандартных назначениях ролей, обеспечивающих безопасность по умолчанию, см. в разделе [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
-## См. также  
- [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/create-delete-or-modify-a-role-management-studio.md)   
+## <a name="see-also"></a>См. также  
+ [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/modify-or-delete-a-role-assignment-report-manager.md)   
- [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set permissions for report server items on a sharepoint site.md)   
+ [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "выполнить предварительную загрузку кэша (диспетчер отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кэш [службы Reporting Services]"
-  - "предварительная загрузка в кэш"
+title: "Предварительную загрузку кэша (диспетчер отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# выполнить предварительную загрузку кэша (диспетчер отчетов)
+# <a name="preload-the-cache-report-manager"></a>выполнить предварительную загрузку кэша (диспетчер отчетов)
   Можно предварительно загрузить кэш для общего набора данных путем создания плана обновления кэша для общего набора данных.  
   
  Предварительно загрузить кэш для отчета можно двумя способами.  
   
 1.  Создать плана обновления кэша для отчета. Этот метод является предпочтительным.  
   
-2.  Используйте управляемую данными подписку для предварительной загрузки в кэш экземпляров параметризованных отчетов. В версиях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , предшествующих [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], это был единственный способ предварительной загрузки кэша. Дополнительные сведения см. в разделе [Кэширование отчетов (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md).  
+2.  Используйте управляемую данными подписку для предварительной загрузки в кэш экземпляров параметризованных отчетов. В версиях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , предшествующих [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], это был единственный способ предварительной загрузки кэша. Дополнительные сведения см. в разделе [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md), это был единственный способ предварительной загрузки кэша.  
   
  Прежде чем появится возможность кэшировать отчет или общий набор данных, должны быть выполнены следующие условия.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 35
   
 -   Должна быть запущена служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Предварительная загрузка кэша путем создания плана обновления кэша  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Предварительная загрузка кэша путем создания плана обновления кэша  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** , а затем к элементу, который необходимо кэшировать.  
   
@@ -58,15 +63,15 @@ caps.handback.revision: 35
   
 7.  Для общего расписания нажмите кнопку **Общее расписание**, а затем выберите имя используемого расписания.  
   
-     Применительно к пользовательскому расписанию щелкните **Расписание по элементам**, а затем — **Настройка**.  
+     Применительно к пользовательскому расписанию щелкните **Расписание по элементам**, а затем — **Настройка**.  
   
 8.  Настройка расписания  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Предварительная загрузка в кэш отчета для конкретного пользователя с использованием управляемой данными подписки  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Предварительная загрузка в кэш отчета для конкретного пользователя с использованием управляемой данными подписки  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** , а затем перейдите к отчету, для которого необходимо создать подписку.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 35
      Или нажмите **По расписанию, созданному для этой подписки** для создания пользовательского расписания, а затем нажмите кнопку **Далее**. Настройте расписание, затем нажмите кнопку **Готово**.  
   
     > [!NOTE]  
-    >  Чтобы подписчики получили самый новый отчет, настраиваемое расписание должно быть согласовано с расписанием доставки отчета, которое определено для подписчиков. Дополнительные сведения см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md).  
+    >  Чтобы подписчики получили самый новый отчет, настраиваемое расписание должно быть согласовано с расписанием доставки отчета, которое определено для подписчиков. Дополнительные сведения см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Настройте параметры выполнения отчета следующим образом. На странице отчета перейдите на вкладку **Свойства** .  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. Нажмите кнопку **Применить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Производительность, моментальные снимки, кэширование (службы Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

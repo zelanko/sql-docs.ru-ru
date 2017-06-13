@@ -1,24 +1,29 @@
 ---
-title: "Тип соединения SQL Server (службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Тип соединения SQL Server (SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 32279a0b5ded6db08e5d3156474e0c646e15b969
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Тип соединения SQL Server (службы SSRS)
-  Чтобы включить в отчет данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте этот тип источника данных для соединения и извлечения данных из баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] текущей версии и более ранних версий.  
+# <a name="sql-server-connection-type-ssrs"></a>Тип соединения SQL Server (службы SSRS)
+  Чтобы включить в отчет данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте этот тип источника данных для соединения и извлечения данных из баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] текущей версии и более ранних версий.  
   
  Этот модуль обработки данных поддерживает многозначные параметры, серверные агрегатные вычисления и учетные данные, управляемые отдельно с помощью строки подключения.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 Data Source=<server>;Initial Catalog=AdventureWorks  
 ```  
   
- Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md).  
+ Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Учетные данные  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
@@ -50,9 +55,8 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) на сайте msdn.microsoft.com.  
   
- Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](../Topic/Specify%20Credentials%20in%20Report%20Builder.md).  
+ Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="Query"></a> Запросы  
  Запрос указывает, какие данные для набора данных отчета необходимо получить. Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. Отчет обрабатывает только первый результирующий набор, полученный запросом.  
@@ -61,7 +65,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Интерактивное построение отчета. Используйте конструктор реляционных запросов, отображающий иерархическое представление таблиц, представлений, хранимых процедур и других элементов базы данных, упорядоченных схемой базы данных. Выберите столбцы из таблиц или представлений либо укажите хранимые процедуры или возвращающие табличное значение функции. Ограничьте число получаемых строк данных при помощи условия фильтра. При запуске отчета фильтр можно настроить, указав для него параметры.  
   
--   Ввод или вставка запроса. С помощью текстового конструктора запросов можно напрямую вводить текст запроса на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], вставлять его из других источников, вводить сложные запросы, которые нельзя построить с помощью конструктора реляционных запросов, а также вводить выражения на основе запросов.  
+-   Ввод или вставка запроса. С помощью текстового конструктора запросов можно напрямую вводить текст запроса на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] , вставлять его из других источников, вводить сложные запросы, которые нельзя построить с помощью конструктора реляционных запросов, а также вводить выражения на основе запросов.  
   
 -   Импорт существующего запроса из файла или отчета. Используйте кнопку **Импорт запроса** конструктора запросов, чтобы найти файл с расширением SQL или RDL и импортировать запрос из него.  
   
@@ -74,7 +78,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
 -   [Хранимая процедура.](#QueryStoredProcedure) Выберите из списка хранимых процедур.  
   
 ###  <a name="QueryText"></a> Использование типа запроса Text  
- В текстовом конструкторе запросов можно вводить команды на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], определяющие данные в наборе данных. Например, следующий запрос на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает имена всех сотрудников отдела сбыта.  
+ В текстовом конструкторе запросов можно вводить команды на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] , определяющие данные в наборе данных. Например, следующий запрос на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает имена всех сотрудников отдела сбыта.  
   
 ```  
 SELECT  
@@ -97,7 +101,6 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
  После запуска запроса параметры отчета, соответствующие параметрам запроса, создаются автоматически. Дополнительные сведения см. в подразделе [Параметры запроса](#Parameters) далее в этом разделе.  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ###  <a name="QueryStoredProcedure"></a> Использование типа запроса StoredProcedure  
  Указать хранимую процедуру для набора данных запроса можно одним из следующих способов.  
@@ -116,7 +119,6 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
  Дополнительные сведения о хранимых процедурах см. в разделе "Хранимые процедуры (компонент Database Engine)" [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=98335) на сайте msdn.microsoft.com.  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="Parameters"></a> Параметры  
  Если в тексте запроса содержатся переменные запроса или хранимые процедуры с входными параметрами, автоматически создаются соответствующие параметры запроса для набора данных и параметры отчета. Текст запроса не должен включать инструкцию DECLARE для всех переменных запроса.  
@@ -133,19 +135,17 @@ WHERE EmployeeID = (@EmpID)
   
 -   По умолчанию все параметры отчета имеют тип данных **Текст**. Если базовые данные имеют другой тип, необходимо изменить тип данных параметра.  
   
--   При выборе настройки для многозначных параметров необходимо вручную изменить запрос для проверки того, являются ли значения частью набора, с помощью оператора **IN**, например `WHERE EmployeeID IN (@EmpID)`.  
+-   При выборе настройки для многозначных параметров необходимо вручную изменить запрос для проверки того, являются ли значения частью набора, с помощью оператора **IN** , например `WHERE EmployeeID IN (@EmpID)`.  
   
  Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="Remarks"></a> Замечания  
  Также данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно получить с помощью источника данных OLE DB или ODBC. Дополнительные сведения см. в разделе [Тип соединения OLE DB (службы SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md) или [Тип соединения ODBC (службы SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
-###### Сведения о платформе и версии  
+###### <a name="platform-and-version-information"></a>Сведения о платформе и версии  
  Дополнительные сведения о поддержке платформ и версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="HowTo"></a> Инструкции  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
@@ -156,7 +156,6 @@ WHERE EmployeeID = (@EmpID)
   
  [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
 ##  <a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
@@ -164,7 +163,7 @@ WHERE EmployeeID = (@EmpID)
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)  
+ [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -176,9 +175,8 @@ WHERE EmployeeID = (@EmpID)
  [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В начало](#BackToTop)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

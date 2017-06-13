@@ -1,37 +1,42 @@
 ---
-title: "Подготовка подписок и предупреждений для приложений служб SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "общая служба Reporting Services"
-  - "режим SharePoint [службы Reporting Services]"
-  - "Режим SharePoint"
-  - "приложение служб Reporting Services"
-  - "приложение служб SSRS"
+title: "Подготовка подписок и предупреждений для приложений служб SSRS | Документы Microsoft"
+ms.custom: 
+ms.date: 06/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services Shared Service
+- SharePoint Mode [Reporting Services]
+- SharePoint Mode
+- Reporting Services Service Application
+- SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43a5b233f39e52555696d2b6f3e08ce9077581b6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Подготовка подписок и предупреждений для приложений служб SSRS
+# <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Подготовка подписок и предупреждений для приложений служб SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и предупреждения данных требуют наличия агента SQL Server, а также настройку разрешений для агента SQL Server. Если появляются сообщения об ошибках, указывающие, что необходим агент SQL Server, хотя агент SQL Server уже запущен, необходимо обновить и проверить разрешения. Этот раздел относится к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и здесь описаны три способа обновления разрешений агента SQL Server для подписок [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Вводимые учетные данные для шагов из данного раздела должны иметь достаточные разрешения для предоставления роли RSExecRole прав на выполнение объектов из приложения службы, баз данных msdb и master.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![SQL Agent permissions to Service Application DBs](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
+ ![Разрешения агента SQL Server для баз данных приложения службы](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "разрешений агента SQL Server для баз данных приложения службы")  
   
-||Описание|  
+||Description|  
 |------|-----------------|  
 |**1**|Экземпляр компонента SQL Server Database Engine, на котором размещаются базы данных приложения службы Reporting Services.|  
 |**2**|Экземпляр агента SQL Server для экземпляра компонента SQL Server Database Engine.|  
@@ -46,7 +51,7 @@ caps.handback.revision: 20
   
 3.  Запустите командлет PowerShell, чтобы построить скрипт SQL, который можно использовать в настройке разрешений.  
   
-### Обновление разрешений с помощью страницы подготовки  
+### <a name="to-update-permissions-using-the-provision-page"></a>Обновление разрешений с помощью страницы подготовки  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями службы**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 20
   
 5.  Нажмите **Загрузить скрипт** , чтобы загрузить скрипт Transact SQL, путем запуска которого в среде SQL Server Management Studio можно предоставлять разрешения. Имя созданного файла скрипта будет содержать имя приложения служб Reporting Services, например **[имя приложения службы]-GrantRights.sql**.  
   
-### Создание инструкции Transact-SQL с помощью PowerShell  
+### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>Создание инструкции Transact-SQL с помощью PowerShell  
   
 1.  Создать скрипт Transact-SQL можно с помощью командлета Windows PowerShell в консоли управления SharePoint 2016 или консоль управления SharePoint 2013.  
   
@@ -84,10 +89,10 @@ caps.handback.revision: 20
   
      **Образец командлета:** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
-## Использование скрипта Transact-SQL  
+## <a name="using-the-transact-sql-script"></a>Использование скрипта Transact-SQL  
  Следующие процедуры можно использовать для скриптов, загруженных со страницы подготовки либо созданных с помощью PowerShell.  
   
-#### Загрузка скрипта Transact-SQL в среду SQL Server Management Studio  
+#### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>Загрузка скрипта Transact-SQL в среду SQL Server Management Studio  
   
 1.  Чтобы открыть среду SQL Server Management Studio, выберите в меню **Пуск** пункт [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , а затем среду **SQL Server Management Studio**.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 20
   
 3.  Нажмите кнопку **Соединить**.  
   
-#### Запуск инструкции Transact-SQL  
+#### <a name="to-run-the-transact-sql-statement"></a>Запуск инструкции Transact-SQL  
   
 1.  На панели инструментов среды SQL Server Management Studio выберите **Создать запрос**.  
   
@@ -118,3 +123,4 @@ caps.handback.revision: 20
 5.  Нажмите кнопку **Выполнить**.  
   
   
+

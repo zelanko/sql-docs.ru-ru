@@ -1,27 +1,32 @@
 ---
-title: "rrRenderingError - Ошибка службы Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rrRenderingError"
+title: "rrRenderingError - ошибка службы Reporting Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 26
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1acdcb76215bc8f7a3ae1017649a3e3a2cbcdc94
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# rrRenderingError - Ошибка службы Reporting Services
+# <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Ошибка службы Reporting Services
     
-## Сведения  
+## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
@@ -31,7 +36,7 @@ caps.handback.revision: 26
 |Компонент|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Текст сообщения|Во время подготовки отчета к просмотру произошла ошибка. (rrRenderingError) %1|  
   
-## Объяснение  
+## <a name="explanation"></a>Объяснение  
  Это сообщение возвращается, когда службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не удается подготовить к просмотру или экспортировать отчет.  
   
  Сообщение о неподдерживаемом размере обычно возникает, если указан недопустимый размер страницы на языке определения отчетов. Укажите допустимый в языке определения отчетов размер страницы и повторите попытку.  
@@ -56,7 +61,7 @@ caps.handback.revision: 26
   
  Сообщение о том, что количество столбцов превышает допустимое максимальное количество столбцов на страницу, обычно возникает, если превышено количество столбцов на листе Excel.  
   
-## Действие пользователя  
+## <a name="user-action"></a>Действие пользователя  
   
-## Только для внутреннего использования  
+## <a name="internal-only"></a>Только для внутреннего использования  
   

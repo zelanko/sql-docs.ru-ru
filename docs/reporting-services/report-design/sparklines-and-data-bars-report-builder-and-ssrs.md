@@ -1,33 +1,38 @@
 ---
-title: "Спарклайны и гистограммы (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.sparklines.f1"
-  - "10544"
+title: "Спарклайны и гистограммы (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.sparklines.f1
+- "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Спарклайны и гистограммы (построитель отчетов и службы SSRS)
+# <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Спарклайны и гистограммы (построитель отчетов и службы SSRS)
   Sparkline-графики и гистограммы — это небольшие простые диаграммы, которые содержат много сведений в небольшом пространстве и часто бывают встроены в текст.   
     
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] спарклайны и гистограммы часто используются в таблицах и матрицах. Их преимуществом является возможность просматривать большое их количество одновременно и быстро сравнивать их друг с другом, без необходимости просматривать каждое изображение отдельно. На них удобно смотреть выбросы, строки, отличающиеся от других. Хотя они небольшие, каждый спарклайн часто представляет множественные точки данных, часто во времени. Гистограммы могут представлять несколько точек данных, но, как правило, иллюстрируют только одну. Каждый спарклайн обычно представляет отдельный ряд. Спарклайн нельзя добавить к группе сведений в таблице. Sparkline-графики отображают статистические данные, поэтому должны входить в ячейку, которая связана с группой. Sparkline-графики и гистограммы данных имеют одни и те же основные элементы диаграммы категорий, рядов и значений, но не содержат какие-либо условные обозначения, линии осей, метки или деления.  
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Чтобы начать работу со спарклайнами, см. раздел [Учебник. Добавление спарклайна в отчет (построитель отчетов)](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) и видеоролики [Инструкции. Создание спарклайна в таблице](http://go.microsoft.com/fwlink/?LinkId=197092) и [Спарклайны, линейчатые диаграммы и индикаторы в построителе отчетов](http://technet.microsoft.com/bi/video/ff877165).  
+ Чтобы начать работу со спарклайнами, см. раздел [Учебник. Добавление спарклайна в отчет (построитель отчетов)](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) и видеоролики [Инструкции. Создание спарклайна в таблице](http://go.microsoft.com/fwlink/?LinkId=197092) и [Спарклайны, линейчатые диаграммы и индикаторы в построителе отчетов](http://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Спарклайны и гистограммы можно опубликовать вместе с родительской таблицей, матрицей или списком, а также отдельно как элемент отчета. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -59,7 +64,7 @@ caps.handback.revision: 11
 -   [Гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md). Обычные, с накоплениями и нормированные гистограммы. Гистограмма может быть и sparline-графиком и гистограммой.  
   
 ##  <a name="AlignDatainTableMatrix"></a> Выравнивание данных спарклайнов в таблице или матрице  
- При вставке спарклайна в таблицу или матрицу обычно важно выровнять каждую точку на графике с точками на других графиках в столбце. Иначе будет сложно сравнивать данные из разных строк. Например, при сравнении месячных данных о продажах для разных продавцов в компании надо будет выровнять данные по месяцу. Если работник не работал в апреле, там не будет данных для него. Чтобы показать пробел для этого месяца и просмотреть данные следующих месяцев, необходимо провести выравнивание с данными других сотрудников. Это можно сделать путем выравнивания по горизонтальной оси. Дополнительные сведения см. в подразделе о спарклайнах в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md) и в разделе [Выравнивание данных в диаграмме в таблице или матрице (построитель отчетов и службы SSRS)](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
+ При вставке спарклайна в таблицу или матрицу обычно важно выровнять каждую точку на графике с точками на других графиках в столбце. Иначе будет сложно сравнивать данные из разных строк. Например, при сравнении месячных данных о продажах для разных продавцов в компании надо будет выровнять данные по месяцу. Если работник не работал в апреле, там не будет данных для него. Чтобы показать пробел для этого месяца и просмотреть данные следующих месяцев, необходимо провести выравнивание с данными других сотрудников. Это можно сделать путем выравнивания по горизонтальной оси. Дополнительные сведения см. в подразделе о спарклайнах в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) и в разделе [Выравнивание данных в диаграмме в таблице или матрице (построитель отчетов и службы SSRS)](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Также для сравнения по строкам данные нужно выравнивать вертикально, то есть высота столбцов или линий на спарклайнах или гистограммах должна быть задана относительно высоты всех остальных столбцов или линий на других спарклайнах или гистограммах. Иначе нельзя будет сравнивать строки между собой.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 11
   
  [Выравнивание данных в диаграмме в таблице или матрице (построитель отчетов и службы SSRS)](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
-### Другие инструкции для диаграмм  
+### <a name="other-how-to-topics-for-charts"></a>Другие инструкции для диаграмм  
  Поскольку sparkline-графики или гистограммы являются разновидностью диаграмм, следующие инструкции могут оказаться полезными при работе с ними.  
   
  [Добавление диаграммы в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
@@ -102,7 +107,7 @@ caps.handback.revision: 11
   
  [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Учебник. Добавление спарклайна в отчет (построитель отчетов)](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   

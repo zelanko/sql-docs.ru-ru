@@ -1,40 +1,45 @@
 ---
-title: "Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.maplayerproperties.general.f1"
-  - "10526"
-  - "sql13.rtp.rptdesigner.mappolygonlayerproperties.general.f1"
-  - "10529"
-  - "10525"
-  - "10535"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.layerfilters.f1"
-  - "sql13.rtp.rptdesigner.maplinelayerproperties.general.f1"
-  - "10524"
-  - "sql13.rtp.rptdesigner.maptilelayerproperties.general.f1"
-  - "10532"
-  - "sql13.rtp.rptdesigner.maplayerproperties.analyticaldata.f1"
-  - "10528"
-  - "10527"
-  - "sql13.rtp.rptdesigner.shared.layervisibility.f1"
+title: "Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.maplayerproperties.general.f1
+- "10526"
+- sql13.rtp.rptdesigner.mappolygonlayerproperties.general.f1
+- "10529"
+- "10525"
+- "10535"
+- sql13.rtp.rptdesigner.mappointlayerproperties.general.f1
+- sql13.rtp.rptdesigner.shared.layerfilters.f1
+- sql13.rtp.rptdesigner.maplinelayerproperties.general.f1
+- "10524"
+- sql13.rtp.rptdesigner.maptilelayerproperties.general.f1
+- "10532"
+- sql13.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
+- "10528"
+- "10527"
+- sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 14
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
+# <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
   Карта представляет собой набор слоев. При добавлении карты в отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы необходимо определить первый ее слой. Дополнительные слои можно создать с помощью мастера «Слой карты».  
   
  Добавить или удалить слой либо изменить его параметры проще всего с помощью мастера «Слой карты». Также параметры можно изменить вручную с помощью панели «Карта». Чтобы отобразить панель **Карта** , щелкните карту в области конструктора отчетов. На следующем рисунке изображены составные части панели:  
@@ -47,12 +52,12 @@ caps.handback.revision: 14
   
 |Символ|Description|Назначение|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")|Мастер «Слой карты»|Чтобы добавить слой с помощью мастера, нажмите кнопку **Мастер создания слоя**.|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")|Добавить слой|Чтобы добавить слой вручную, нажмите кнопку **Добавить слой**и выберите тип добавляемого слоя карты.|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.png "rs_IconMapPolygonLayer")|Слой многоугольников|Добавление слоя карты, отображающего области или фигуры, заданные наборами координат вершин многоугольников.|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.png "rs_IconMapLineLayer")|Слой линий|Добавление слоя карты, отображающего пути или маршруты, заданные наборами координат точек линий.|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.png "rs_IconMapPointLayer")|Слой точек|Добавление слоя карты, отображающего местоположения, заданные наборами координат точек.|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.png "rs_IconMapTileLayer")|Мозаичный слой|Добавление слоя карты, отображающего элементы мозаики Bing Map, соответствующие области видимости текущей карты, определенной областью просмотра.|  
+|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Мастер «Слой карты»|Чтобы добавить слой с помощью мастера, нажмите кнопку **Мастер создания слоя**.|  
+|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Добавить слой|Чтобы добавить слой вручную, нажмите кнопку **Добавить слой**и выберите тип добавляемого слоя карты.|  
+|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Слой многоугольников|Добавление слоя карты, отображающего области или фигуры, заданные наборами координат вершин многоугольников.|  
+|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Слой линий|Добавление слоя карты, отображающего пути или маршруты, заданные наборами координат точек линий.|  
+|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Слой точек|Добавление слоя карты, отображающего местоположения, заданные наборами координат точек.|  
+|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Мозаичный слой|Добавление слоя карты, отображающего элементы мозаики Bing Map, соответствующие области видимости текущей карты, определенной областью просмотра.|  
   
  В нижней части панели «Карта» отображается область просмотра карты. Чтобы изменить параметры центрирования и масштабирования, заданные для карты, используйте кнопки со стрелками для настройки центра представления и ползунок для выбора масштаба.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 14
   
 ##  <a name="ChangeLayer"></a> Изменение параметров слоя с помощью мастера «Слой карты»  
   
--   Запустите мастер «Слой карты». Этот мастер используется для изменения параметров слоя, созданного с помощью мастера «Слой карты». На панели «Карта» щелкните правой кнопкой мыши слой и на панели инструментов нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")).  
+-   Запустите мастер «Слой карты». Этот мастер используется для изменения параметров слоя, созданного с помощью мастера «Слой карты». В панели «карта» щелкните правой кнопкой мыши слой и на панели инструментов нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Дополнительные сведения см. в разделе [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -77,10 +82,10 @@ caps.handback.revision: 14
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
-2.  На панели инструментов нажмите кнопку **Добавить слой** и выберите в раскрывающемся списке тип добавляемого слоя: **Точка**, **Линия** или **Многоугольник**.  
+2.  На панели инструментов нажмите кнопку **Добавить слой** и выберите в раскрывающемся списке тип добавляемого слоя: **Точка**, **Линия**или **Многоугольник**.  
   
     > [!NOTE]  
-    >  Хотя слой карты можно добавить и настроить вручную, для добавления новых слоев рекомендуется использовать мастер слоя. Чтобы запустить этот мастер с панели инструментов панели «Карта», нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")).  
+    >  Хотя слой карты можно добавить и настроить вручную, для добавления новых слоев рекомендуется использовать мастер слоя. Чтобы запустить мастер с панели инструментов карты, нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Щелкните правой кнопкой мыши слой и выберите пункт **Данные слоя**.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 14
   
 1.  Щелкните карту, чтобы отобразить панель «Карта».  
   
-2.  На панели "Карта" щелкните слой правой кнопкой мыши, а затем щелкните **Данные слоя**.  
+2.  На панели "Карта" щелкните слой правой кнопкой мыши, а затем щелкните  **Данные слоя**.  
   
 3.  Перейдите на вкладку **Фильтры**.  
   
@@ -116,9 +121,9 @@ caps.handback.revision: 14
   
 1.  Страница **Общие** диалогового окна **Свойства точки карты** позволяет изменить параметры метки, всплывающей подсказки и типа маркера для следующих элементов карты.  
   
-    -   Все динамические или внедренные точки слоя точек. Эти параметры переопределяются правилами для цветов, размеров и типов маркеров точек. Чтобы переопределить параметры отдельной внедренной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md) .  
+    -   Все динамические или внедренные точки слоя точек. Эти параметры переопределяются правилами для цветов, размеров и типов маркеров точек. Чтобы переопределить параметры отдельной внедренной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
-    -   Центральная точка всех динамических или внедренных многоугольников слоя многоугольников. Эти параметры переопределяются правилами цветов, размеров и типов маркеров для центральных точек. Чтобы переопределить параметры отдельной центральной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](../Topic/Map%20Embedded%20Point%20Properties%20Dialog%20Box,%20Marker.md).  
+    -   Центральная точка всех динамических или внедренных многоугольников слоя многоугольников. Эти параметры переопределяются правилами цветов, размеров и типов маркеров для центральных точек. Чтобы переопределить параметры отдельной центральной точки, используйте страницу [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
 ##  <a name="Embedded"></a> Указание внедренных данных в качестве источника пространственных данных  
   
@@ -133,7 +138,7 @@ caps.handback.revision: 14
 5.  Выберите в списке **Пространственное поле**имя поля, содержащего пространственные данные. Это имя нужно определить по источнику пространственных данных.  
   
     > [!NOTE]  
-    >  Если имя этого поля неизвестно, но выбран шейп-файл ESRI, используйте вместо этого параметр **Ссылка на файл фигуры ESRI**.  
+    >  Если имя этого поля неизвестно, но выбран шейп-файл ESRI, используйте вместо этого параметр **Ссылка на файл фигуры ESRI** .  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -148,7 +153,7 @@ caps.handback.revision: 14
 4.  Введите в поле **Имя файла**путь к файлу фигуры ESRI или нажмите кнопку **Обзор** и выберите файл фигуры ESRI.  
   
     > [!NOTE]  
-    >  Если файл фигуры расположен на локальном компьютере, пространственные данные внедряются в определение отчета. Чтобы динамически получать данные при обработке отчета, необходимо загрузить на сервер отчетов шейп-файл ESRI с расширением SHP и его файл поддержки с расширением DBF. Дополнительные сведения см. в статье "Инструкция. Передача файла или отчета (диспетчер отчетов)" в [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312), входящей в состав электронной документации по SQL Server.  
+    >  Если файл фигуры расположен на локальном компьютере, пространственные данные внедряются в определение отчета. Чтобы динамически получать данные при обработке отчета, необходимо загрузить на сервер отчетов шейп-файл ESRI с расширением SHP и его файл поддержки с расширением DBF. Дополнительные сведения см. в статье "Инструкция. Передача файла или отчета (диспетчер отчетов)" в [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -173,7 +178,7 @@ caps.handback.revision: 14
 2.  Нажмите на панели инструментов кнопку **Добавить слой** и выберите в раскрывающемся списке пункт **Мозаичный слой**.  
   
     > [!NOTE]  
-    >  Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](http://go.microsoft.com/fwlink/?LinkId=151371) и [Заявление о конфиденциальности](http://go.microsoft.com/fwlink/?LinkId=151372).  
+    >  Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](http://go.microsoft.com/fwlink/?LinkId=151371).  
   
 3.  Щелкните правой кнопкой мыши мозаичный слой на панели "Карта", а затем выберите **Свойства мозаичных элементов**.  
   
@@ -250,7 +255,7 @@ caps.handback.revision: 14
   
      Можно также скрывать слой по условию. Дополнительные сведения см. в разделе [Скрытие элемента (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

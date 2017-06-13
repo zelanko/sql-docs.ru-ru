@@ -1,23 +1,28 @@
 ---
-title: "Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Указание согласованных цветов в нескольких построителя отчетов диаграммы фигуры-SSRS | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)
+# <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)
   На нефигурных диаграммах в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] выбирает новый цвет из палитры, связанной с индексом рядов в диаграмме. Например, первый ряд в диаграмме сопоставлен с первым цветом палитры. Однако в фигурных диаграммах используется другой принцип. В фигурных диаграммах каждый цвет палитры сопоставлен с точкой данных в наборе данных. Так, точка данных 1 сопоставлен с первым цветом палитры, точка данных 2 — со вторым цветом палитры и т. д.  
   
  Если точка данных не имеет значения, она опускается из изображения на фигурной диаграмме. Это означает, что точка данных не включается в число окрашиваемых. Так, если точка 2 имеет значение «ноль», точка 1 будет соответствовать первому цвету палитры, а точка 3 — второму цвету палитры. Такой подход полезен, поскольку пустые точки набора данных круговой диаграммы не обязательно используют палитру цветов, когда нет необходимости рисования пустой точки.  
@@ -29,7 +34,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Указание согласованных цветов для нескольких фигурных диаграмм в виде спарклайн-графиков в таблице или матрице  
+## <a name="to-specify-consistent-colors-across-multiple-sparkline-shape-charts-in-a-table-or-matrix"></a>Указание согласованных цветов для нескольких фигурных диаграмм в виде спарклайн-графиков в таблице или матрице  
   
 1.  Щелкните диаграмму, чтобы отобразить панель «Данные диаграммы».  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
   
 3.  На вкладке «Общие» в окне **Синхронизация групп в** выберите название категории, которую вы хотите синхронизовать по цвету, и нажмите кнопку **ОК**.  
   
-## Указание согласованных цветов в нескольких фигурных диаграммах  
+## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>Указание согласованных цветов в нескольких фигурных диаграммах  
   
 1.  Щелкните правой кнопкой мыши область за пределами текста отчета и выберите пункт **Свойства отчета**.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
 4.  Щелкните правой кнопкой мыши фигурную диаграмму и выберите пункт **Свойства ряда**.  
   
-5.  В меню **Заливка** нажмите кнопку **Выражение** (*fx*) и измените выражение для свойства **Цвет**.  
+5.  В меню **Заливка**нажмите кнопку **Выражение** (*fx*) и измените выражение для свойства **Цвет** .  
   
 6.  Введите следующее выражение, где "MyCategoryField" ― это поле, отображаемое в области **Группы Категорий (Category Groups)** :  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 8
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [Фигурные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

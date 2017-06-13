@@ -1,28 +1,35 @@
 ---
-title: "Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Функции, поддерживаемые различными выпусками SQL Server 2016 служб Reporting Services | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 caps.latest.revision: 3
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 3
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016
-В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+
+# <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016
+
+В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server 2016.  
   
  Выпуск SQL Server Evaluation доступен для ознакомления в течение 180 дней.  
   
- Заметки о последнем выпуске см. в разделе [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md). Последние сведения о новых возможностях см. в разделе [Новые возможности служб Reporting Services (SSRS)](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md).
+ Заметки о последнем выпуске см. в разделе [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md). Последние сведения о новых возможностях см. в разделе [Новые возможности служб Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
     
  **Оцените SQL Server 2016!**    
     
@@ -70,11 +77,11 @@ caps.handback.revision: 3
 |Предупреждения<sup>2</sup>|Да||||||Да|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Да||||||Да|  
   
- <sup>1</sup> Дополнительные сведения о поддерживаемых источниках данных в службах Reporting Services SQL Server 2016 (SSRS) см. в разделе [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> Дополнительные сведения о поддерживаемых источниках данных в SQL Server 2016 Reporting Services (SSRS) см. в разделе [источники данных, поддерживаемые службой Reporting Services &#40; Службы SSRS &#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> требуется установка служб Reporting Services в режиме SharePoint. Дополнительные сведения см. в разделе [Установка служб Reporting Services в режиме SharePoint](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
-## Требования к выпуску серверной базы данных сервера отчетов  
+## <a name="report-server-database-server-edition-requirements"></a>Требования к выпуску серверной базы данных сервера отчетов  
  При создании базы данных сервера отчетов помните, что не все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно использовать для ее хранения. В следующей таблице перечислены выпуски компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , которые пригодны для конкретных выпусков служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 |Для данного выпуска службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Используйте данный выпуск экземпляра компонента Database Engine для хранения базы данных|  
@@ -86,7 +93,7 @@ caps.handback.revision: 3
 |Ознакомительная версия|Ознакомительная версия|  
   
 ##  <a name="BIC"></a> Клиенты бизнес-аналитики  
- Следующие клиентские приложения доступны в центре загрузки Майкрософт и предоставляются с целью упростить создание документов бизнес-аналитики, запускаемых в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При размещении этих документов в серверной среде используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], поддерживающий этот тип документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
+ Следующие клиентские приложения доступны в центре загрузки Майкрософт и предоставляются с целью упростить создание документов бизнес-аналитики, запускаемых в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . При размещении этих документов в серверной среде используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживающий этот тип документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
   
 |Имя средства|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
@@ -95,11 +102,14 @@ caps.handback.revision: 3
 |Приложения Power BI для мобильных устройств (iOS, Windows 10, Android) (.rsmobile)|Да||||||Да|  
   
 > [!NOTE]  
-> 1.  В таблице выше указаны выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], необходимые для включения этих клиентских средств, но сами инструменты могут обращаться к данным, размещенным в любом выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] является единственной точкой для создания мобильных отчетов. Подключитесь к серверу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], чтобы получить доступ к источникам данных и создать отчеты. Затем публикуйте их на сервере [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], чтобы другие пользователи организации могли работать с ними (на сервере или мобильных устройствах). Можно также использовать [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] автономно с локальными источниками данных  
-> 3.  Независимо от того, используете ли [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] локально, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в облаке или оба решения в качестве системы доставки отчетов, для доступа к панелям мониторинга и мобильным отчетам на мобильных устройствах требуется только одно мобильное приложение. Приложения [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] доступны для загрузки из магазинов приложений Windows, iOS или Android.  
+> 1.  В таблице выше указаны выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимые для включения этих клиентских средств, но сами инструменты могут обращаться к данным, размещенным в любом выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] является единственной точкой для создания мобильных отчетов. Подключитесь к серверу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы получить доступ к источникам данных и создать отчеты. Затем публикуйте их на сервере [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы другие пользователи организации могли работать с ними (на сервере или мобильных устройствах). Можно также использовать [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] автономно с локальными источниками данных  
+> 3.  Независимо от того, используете ли  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] локально, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в облаке или оба решения в качестве системы доставки отчетов, для доступа к панелям мониторинга и мобильным отчетам на мобильных устройствах требуется только одно мобильное приложение. Приложения [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] доступны для загрузки из магазинов приложений Windows, iOS или Android.  
 
-## См. также:  
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
- [Спецификации SQL Server 2016](../Topic/Product%20Specifications%20for%20SQL%20Server%202016.md)   
- [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+## <a name="next-steps"></a>Следующие шаги
+
+[Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+[Спецификации SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

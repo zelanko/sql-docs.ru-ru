@@ -1,29 +1,34 @@
 ---
-title: "Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6d349eece0774513a2552fa1f7248ca89165769
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS)
+# <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS)
   Чтобы задать текст, который будет отображаться в подготовленном к просмотру отчете в области данных, внутри которой данных нет, задайте свойство NoRowsMessage для таблицы, матрицы или области списка данных или свойство NoDataMessage для диаграммной области данных и NoDataText для цветовой шкалы для схемы. Во время выполнения обработчик запросов производит запрос к каждому из наборов данных в отчете; такие запросы могут не вернуть результирующий набор. Если область данных привязана к пустому набору данных, то можно указать текст, который будет отображаться вместо пустой области данных. Также свойство NoRowsMessage можно задать для вложенных отчетов; сообщение будет отображаться, если во время выполнения во вложенном отчете не будет заполненных наборов данных.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Задание свойства NoRowsMessage для таблицы, матрицы или списка  
+### <a name="to-set-the-norowsmessage-property-for-a-table-matrix-or-list"></a>Задание свойства NoRowsMessage для таблицы, матрицы или списка  
   
 1.  В конструкторе щелкните область данных таблицы, матрицы или списка или вложенный отчет в области конструктора, чтобы выбрать его. В панели свойств отображаются свойства выбранного элемента.  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 7
   
      Также можно выбрать пункт **Выражение** в раскрывающемся списке, чтобы открыть диалоговое окно **Выражение** и создать выражение.  
   
-### Задание свойства NoDataMessage для диаграммы  
+### <a name="to-set-the-nodatamessage-property-for-a-chart"></a>Задание свойства NoDataMessage для диаграммы  
   
 1.  В конструкторе щелкните диаграмму в области конструктора, чтобы выбрать ее. В панели свойств отображаются свойства выбранного элемента.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 7
   
      Также можно выбрать пункт **Выражение** в раскрывающемся списке, чтобы открыть диалоговое окно **Выражение** и создать выражение.  
   
-### Назначение свойства NoRowsMessage для вложенного отчета  
+### <a name="to-set-the-norowsmessage-for-a-subreport"></a>Назначение свойства NoRowsMessage для вложенного отчета  
   
 1.  В конструкторе щелкните вложенный отчет в области конструктора, чтобы выбрать его. В панели свойств отображаются свойства выбранного элемента.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
      Также можно выбрать пункт **Выражение** в раскрывающемся списке, чтобы открыть диалоговое окно **Выражение** и создать выражение.  
   
-### Назначение свойства NoDataText для цветовой шкалы для карты  
+### <a name="to-set-the-nodatatext-property-for-a-color-scale-for-a-map"></a>Назначение свойства NoDataText для цветовой шкалы для карты  
   
 1.  В конструкторе щелкните цветовую шкалу на карте, чтобы выбрать ее. В панели свойств отображаются свойства выбранного элемента.  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 7
   
      Также можно выбрать пункт **Выражение** в раскрывающемся списке, чтобы открыть диалоговое окно **Выражение** и создать выражение.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Вложенные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

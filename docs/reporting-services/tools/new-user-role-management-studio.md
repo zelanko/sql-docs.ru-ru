@@ -1,25 +1,30 @@
 ---
-title: "Создание пользовательской роли (среда Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.newrole.f1"
+title: "Новая роль пользователя (среда Management Studio) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.newrole.f1
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 26
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: d4c239e87379ead3b826e4db3c85006b364392a6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Создание пользовательской роли (среда Management Studio)
+# <a name="new-user-role-management-studio"></a>Создание пользовательской роли (среда Management Studio)
   На этой странице можно создать определение роли на уровне элемента. Определение роли на уровне элемента — это именованная коллекция задач, которые пользователь может выполнять в отношении папок, отчетов, моделей, ресурсов и общих источников данных. Примером определения роли на уровне элемента является заранее определенная роль «Браузер», определяющая типы действий, которые могут понадобиться конечным пользователям отчетов для перемещения по папкам и просмотра отчетов.  
   
  Предполагается, что определений ролей должно быть немного. В большинстве организаций необходимо задать небольшое число определений ролей. Однако если заранее заданных определений ролей недостаточно, их можно изменять или создавать новые.  
@@ -27,11 +32,11 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Определения ролей используются только на сервере отчетов, работающем в собственном режиме. Если сервер отчетов настроен для интеграции с SharePoint, эта страница недоступна.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Название**  
  Имя определения роли. Имя определения роли должно быть уникальным в пределах пространства имен сервера отчетов. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. При задании имени нельзя использовать следующие символы:  
   
- ; ? : @ & = + , $ / * \< >  
+ ; ? : @ & = + , $ / * < >  
   
  " /  
   
@@ -44,8 +49,9 @@ caps.handback.revision: 26
  **Описание задачи**  
  Описание задачи с указанием поддерживаемых ею операций и разрешений.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Определение ролей](../../reporting-services/security/role-definitions.md)  
   
   
+

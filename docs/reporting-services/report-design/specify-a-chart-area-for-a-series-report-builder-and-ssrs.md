@@ -1,29 +1,34 @@
 ---
-title: "Задание области диаграммы для ряда (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10157"
-  - "sql13.rtp.rptdesigner.chartareaproperties.alignment.f1"
+title: "Задание области диаграммы для ряда (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10157"
+- sql13.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d88358516e05214b230ec57b6243168ef9aac048
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Задание области диаграммы для ряда (построитель отчетов и службы SSRS)
+# <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Задание области диаграммы для ряда (построитель отчетов и службы SSRS)
   В отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] *диаграмма* является контейнером верхнего уровня, который включает внешнюю границу, заголовок диаграммы и условные обозначения. По умолчанию диаграмма содержит одну *область диаграммы*. Область диаграммы невидима на самой диаграмме, но ее можно считать контейнером, охватывающим только метки осей, заголовки осей и область построения одного или нескольких рядов. На следующем рисунке представлены несколько областей диаграммы на одной диаграмме.  
   
- ![Показывает схему области диаграммы](../../reporting-services/report-design/media/chartareasdiagram.gif "Показывает схему области диаграммы")  
+ ![Показывает схему области диаграммы](../../reporting-services/report-design/media/chartareasdiagram.gif "показывает схему области диаграммы")  
   
  Как правило, все ряды добавляются в область диаграммы по умолчанию. При использовании диаграмм с областями, гистограмм, линейчатых и точечных диаграмм все комбинации этих рядов можно отобразить в одной области диаграммы. Если в одной области диаграммы имеется несколько рядов, ухудшается читаемость диаграммы. В этом случае удобнее разделить типы диаграмм по нескольким областям. Использование нескольких областей диаграмм улучшает читаемость и облегчает сравнение. Например, биржевые диаграммы цены и суммы выручки часто имеют разные диапазоны значений, но сравнение цены и суммы выручки можно выполнить за тот же период времени.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## Связывание ряда с новой областью диаграммы  
+## <a name="to-associate-a-series-with-a-new-chart-area"></a>Связывание ряда с новой областью диаграммы  
   
 1.  Щелкните правой кнопкой мыши в любом месте диаграммы и выберите **Добавить новую область диаграммы**. В диаграмме появится новая пустая область.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 8
   
 4.  Выровняйте области диаграммы по вертикали (необязательно). Для этого щелкните диаграмму правой кнопкой мыши и выберите **Свойства области диаграммы**. На вкладке **Выравнивание**выберите область диаграммы, с которой нужно выровнять выбранную область.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   

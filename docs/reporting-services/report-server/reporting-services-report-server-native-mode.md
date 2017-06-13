@@ -1,30 +1,35 @@
 ---
-title: "Сервер отчетов служб Reporting Services (собственный режим) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "администрирование служб Reporting Services"
-  - "администрирование [службы Reporting Services]"
-  - "службы Reporting Services, администрирование"
+title: "Reporting Services на сервере отчетов (собственный режим) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- administering [Reporting Services]
+- Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 24
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 24
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Сервер отчетов служб Reporting Services (собственный режим)
+# <a name="reporting-services-report-server-native-mode"></a>Сервер отчетов служб Reporting Services (собственный режим)
   Сервер отчетов, настроенный для работы в основном режиме, выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно через компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Для управления отчетами служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или диспетчер отчетов. Для управления сервером отчетов в собственном режиме используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Для управления отчетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или диспетчер отчетов. Для управления сервером отчетов в собственном режиме используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то для управления отчетами, общими источниками данных и другими элементами сервера отчетов необходимо использовать страницы управления содержимым на сайте SharePoint.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 24
  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]управление содержимым подразумевает управление отчетами, моделями, папками, ресурсами и общими источниками данных. Всеми этими элементами можно управлять независимо друг от друга посредством свойств и настроек безопасности. Любой элемент можно переместить в другое место в пространстве имен папок сервера отчетов. Для эффективного управления элементами необходимо знать, какие задачи выполняет диспетчер содержимого.  
   
 > [!NOTE]  
->  Управление содержимым отличается от администрирования сервера отчетов. Дополнительные сведения об управлении средой, в которой работает сервер отчетов, см. в разделе [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md).  
+>  Управление содержимым отличается от администрирования сервера отчетов. Дополнительные сведения об управлении средой, в которой работает сервер отчетов, см. в разделе [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
  Управление содержимым включает следующие задачи.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 24
   
  Для использования в отчете ресурса-изображения, добавьте файл изображения к проекту и опубликуйте его вместе с отчетом. После публикации изображения можно обновить ссылку на изображение в отчете, чтобы она указывала на ресурс на сервере отчетов, а затем повторно опубликовать лишь отчет, сохранив изменения. Затем можно обновлять изображение независимо от отчета, повторно публикуя ресурс. В отчете будет использоваться самая последняя версия изображения, имеющаяся на сервере отчетов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Устранение неполадок при установке служб Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

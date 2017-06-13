@@ -1,23 +1,28 @@
 ---
-title: "Диаграммы &quot;дерево&quot; и &quot;солнечные лучи&quot; в Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&quot;Дерево&quot; диаграммы &quot;солнечные лучи&quot; в службах Reporting Services и | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Диаграммы &quot;дерево&quot; и &quot;солнечные лучи&quot; в Reporting Services
+# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Визуализации "дерево" и "солнечные лучи" [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] прекрасно подходят для визуального представления иерархических данных.   В этом разделе описывается добавление диаграммы "дерево" или "солнечные лучи" в отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, в раздел включен пример запроса Adventureworks, который поможет вам приступить к работе.  
@@ -31,12 +36,12 @@ caps.handback.revision: 16
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
-### Вставка диаграммы "дерево" и настройка для образца данных Adventureworks  
+### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Вставка диаграммы "дерево" и настройка для образца данных Adventureworks  
  **Примечание.** Перед добавлением диаграммы в отчет создайте источник данных и набор данных.  Образец данных и образец запроса см. в разделе [Образец данных Adventureworks](#bkmk_sample_data) этой статьи.  
   
-1.  Щелкните правой кнопкой мыши рабочую область конструирования, выберите команду **Вставить** и щелкните пункт **Диаграмма**.  
+1.  Щелкните правой кнопкой мыши рабочую область конструирования, выберите команду **Вставить**и щелкните пункт **Диаграмма** .  
   
-     Выберите диаграмму "дерево" ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
+     Выберите дерево ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -66,7 +71,6 @@ caps.handback.revision: 16
   
 7.  Количество отображаемых значений меток зависит от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников.  Чтобы видеть больше меток, измените значение свойства шрифта LineTotal на 8 pt вместо значения по умолчанию 10 pt.  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В этом разделе](#bkmk_top)  
   
 ##  <a name="bkmk_sunburst_chart"></a> Диаграмма "солнечные лучи"  
  ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
@@ -75,10 +79,10 @@ caps.handback.revision: 16
   
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
-### Вставка диаграммы "солнечные лучи" и настройка для образца данных Adventureworks  
+### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Вставка диаграммы "солнечные лучи" и настройка для образца данных Adventureworks  
  **Примечание.** Перед добавлением диаграммы в отчет создайте источник данных и набор данных.  Образец данных и образец запроса см. в разделе [Образец данных Adventureworks](#bkmk_sample_data) этой статьи.  
   
-1.  Щелкните правой кнопкой мыши рабочую область конструирования, выберите команду **Вставить** и щелкните пункт **Диаграмма**.  
+1.  Щелкните правой кнопкой мыши рабочую область конструирования, выберите команду **Вставить**и щелкните пункт **Диаграмма** .  
   
      Выберите "солнечные лучи" ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
   
@@ -98,13 +102,12 @@ caps.handback.revision: 16
   
 6.  |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Чтобы добавить значения групп категорий в диаграмму "солнечные лучи" как метки, установите свойство метки **Visible**=true и свойство метки **UseValueAsLabel**=False.<br /><br /> Отображаемые значения меток зависят от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников.  Чтобы видеть больше меток, измените значение свойства шрифта LineTotal на 8 pt вместо значения по умолчанию 10 pt.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Чтобы добавить значения групп категорий в диаграмму "солнечные лучи" как метки, установите свойство метки **Visible** =true и свойство метки **UseValueAsLabel**=False.<br /><br /> Отображаемые значения меток зависят от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников.  Чтобы видеть больше меток, измените значение свойства шрифта LineTotal на 8 pt вместо значения по умолчанию 10 pt.|  
   
 7.  Если требуется другой диапазон цветов, измените свойство диаграммы **Palette** .  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В этом разделе](#bkmk_top)  
   
 ##  <a name="bkmk_sample_data"></a> Образец данных Adventureworks  
  В этом разделе содержится образец запроса и основные шаги для создания источника данных и набора данных в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Если в вашем отчете уже имеется источник данных и набор данных, этот раздел можно пропустить.  
@@ -172,9 +175,8 @@ caps.handback.revision: 16
   
      Дополнительные сведения о создании набора данных см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В этом разделе](#bkmk_top)  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Представление конструктора общих наборов данных (построитель отчетов)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
  [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
  [Учебник. Диаграммы "дерево" в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
@@ -182,3 +184,5 @@ caps.handback.revision: 16
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

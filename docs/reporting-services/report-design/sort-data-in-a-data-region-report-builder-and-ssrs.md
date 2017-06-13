@@ -1,23 +1,28 @@
 ---
-title: "Сортировка данных в области данных (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сортировка данных в области данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Сортировка данных в области данных (построитель отчетов и службы SSRS)
+# <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Сортировка данных в области данных (построитель отчетов и службы SSRS)
   Чтобы изменить порядок сортировки данных в области данных при первом запуске отчета, необходимо создать выражение сортировки для области данных или в группы. По умолчанию выражению сортировки для группы автоматически присваивается то же значение, что и выражению группы.  
   
 -   В области данных табликса создайте выражение сортировки для области данных или каждой группы, включая группу подробностей. Если в области данных табликса имеется только одна группа подробностей, можно определить выражение сортировки в запросе, в области данных или в группе подробностей, поскольку его результат будет одинаковым.  
@@ -33,7 +38,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### Сортировка данных в области данных табликса  
+### <a name="to-sort-data-in-a-tablix-data-region"></a>Сортировка данных в области данных табликса  
   
 1.  В области конструктора щелкните правой кнопкой мыши маркер строки и выберите пункт **Свойства табликса**.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Сортировка значений в группе, в том числе группе подробностей, для табликса  
+### <a name="to-sort-values-in-a-group-including-the-details-group-for-a-tablix"></a>Сортировка значений в группе, в том числе группе подробностей, для табликса  
   
 1.  В области конструктора щелкните в любом месте области данных табликса, чтобы выделить ее. На панели группировки отобразятся группы строк и столбцов для области данных табликса.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Сортировка меток оси X в алфавитном порядке в диаграмме  
+### <a name="to-sort-x-axis-labels-in-alphabetical-order-on-a-chart"></a>Сортировка меток оси X в алфавитном порядке в диаграмме  
   
 1.  Щелкните правой кнопкой мыши поле в области добавления "Поле категории" и выберите **Свойства группы категорий**.  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Сортировка точек данных по возрастанию или по убыванию в диаграмме  
+### <a name="to-sort-the-data-points-in-ascending-or-descending-order-on-a-chart"></a>Сортировка точек данных по возрастанию или по убыванию в диаграмме  
   
 1.  Щелкните правой кнопкой мыши поле в области добавления "Поле категории" и выберите **Свойства группы категорий**.  
   
@@ -99,11 +104,11 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### Сортировка данных по возрастанию или по убыванию для отображения в датчике  
+### <a name="to-sort-data-in-ascending-or-descending-order-for-display-on-a-gauge"></a>Сортировка данных по возрастанию или по убыванию для отображения в датчике  
   
 1.  Щелкните правой кнопкой мыши датчик и выполните команду **Добавить группу данных**.  
   
-2.  При необходимости перейдите на вкладку **Общие** в диалоговом окне **Свойства группы панелей датчиков**.  
+2.  При необходимости перейдите на вкладку **Общие** в диалоговом окне **Свойства группы панелей датчиков** .  
   
 3.  Щелкните **Добавить**в области **Выражения группирования**.  
   
@@ -125,8 +130,8 @@ caps.handback.revision: 7
   
  Дополнительные сведения о группировании данных в датчике см. в разделе [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
-## См. также  
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/ru-ru/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+## <a name="see-also"></a>См. также:  
+ [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

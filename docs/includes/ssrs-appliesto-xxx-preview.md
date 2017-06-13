@@ -1,1 +1,1 @@
-**Эта статья относится к:**![нет](media/no.png)SQL Server 2016![да](media/yes.png) Техническая версия отчетов Power BI в службах SQL Server Reporting Services (январь 2017 г.)
+**ПРИМЕНЯЕТСЯ к:**![не](media/no.png)SQL Server 2016![Да](media/yes.png)сервер отчетов Power BI

@@ -1,30 +1,35 @@
 ---
-title: "Задание разрешений для работы сервера отчетов в веб-приложении SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разрешения [Reporting Services], режим интеграции с SharePoint "
-  - "интеграция с SharePoint [Reporting Services], разрешения"
-  - "интеграция с SharePoint [построитель отчетов]"
-  - "безопасность [Reporting Services], режим интеграции с SharePoint"
-  - "построитель отчетов версии 1.0, интеграция с SharePoint"
-  - "безопасность элементов модели [службы Reporting Services]"
+title: "Задание разрешений для операций сервера отчетов в веб-приложении SharePoint | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- SharePoint integration [Report Builder]
+- security [Reporting Services], SharePoint integrated mode
+- Report Builder 1.0, SharePoint integration
+- model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
+# <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, настройки безопасности, определенные на сайте SharePoint, определяют также, каким образом производится просмотр и управление отчетами, моделями отчетов и общими источниками данных. Если используются группы SharePoint, уровни разрешений и назначения разрешений по умолчанию, то работать с отчетами и другими документами можно с использованием текущих настроек безопасности.  
   
  Если же настройки безопасности по умолчанию не обеспечивают требуемого уровня доступа, то определите необходимые разрешения для конкретных операций, как описано в следующем подразделе.  
@@ -51,7 +56,7 @@ caps.handback.revision: 17
   
  При использовании стандартных уровней разрешений никаких действий не требуется, потому что указанные разрешения уже включены в разрешения «Полный доступ», «Создание», «Участие», «Чтение» и «Ограниченный доступ». Однако при создании нестандартных уровней разрешений или изменении разрешений, назначенных определенному пользователю или группе, необходимо добавить это разрешение вручную.  
   
- Разрешение «Просмотр сведений о пользователях» позволяет серверу отчетов возвращать сведения о создателе элемента, а также о последнем пользователе, изменившем элемент. Если это разрешение отсутствует, сервер отчетов возвращает следующие ошибки. Для операций просмотра ошибка является такой: "Сервер отчетов обнаружил ошибку SharePoint. ---> System.UnauthorizedAccessException: отказано в доступе". Для операций публикации ошибка является такой: "Разрешения, предоставленные пользователю "\<домен>\\<пользователь\>", недостаточны для выполнения данной операции".  
+ Разрешение «Просмотр сведений о пользователях» позволяет серверу отчетов возвращать сведения о создателе элемента, а также о последнем пользователе, изменившем элемент. Если это разрешение отсутствует, сервер отчетов возвращает следующие ошибки. Для операций просмотра ошибка является такой: "Сервер отчетов обнаружил ошибку SharePoint. ---> System.UnauthorizedAccessException: отказано в доступе". Для операций публикации, ошибка: «разрешения, предоставленные пользователю '\<домена >\\< пользователя\>"недостаточны для выполнения этой операции.»  
   
 ##  <a name="permissionReports"></a> Разрешения для просмотра и управления отчетами  
  Разрешения для определений отчетов определяются через список разрешений на библиотеку, которая содержит отчет, но можно назначить разрешения для отдельных отчетов, если требуется ограничить доступ. В следующей таблице приведен список задач и разрешения, которые поддерживают каждую из них.  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Разрешений на изменение моделей отчетов не существует. Модели отчетов могут создаваться и удаляться, но изменить их на сайте SharePoint нельзя. Для изменения модели отчета необходим конструктор моделей — клиентское средство разработки, на работу которого разрешения, предоставляемые в службах SharePoint, не влияют.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

@@ -1,31 +1,36 @@
 ---
-title: "Предварительный просмотр | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.previewview.f1"
-helpviewer_keywords: 
-  - "предварительный просмотр [службы Reporting Services]"
+title: "Предварительный просмотр | Документы Microsoft"
+ms.custom: 
+ms.date: 05/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.previewview.f1
+helpviewer_keywords:
+- Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c8e94485414df0b390cb55866448bb12863c4f7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Предварительный просмотр
+# <a name="preview-view"></a>Предварительный просмотр
 В конструкторе отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] представление **Предварительный просмотр** отображает отчет, готовый для просмотра. При предварительном просмотре отчета конструктор отчетов выполняет его локально и выводит в представлении «Предварительный просмотр». В режиме просмотра отчет обрабатывается полностью. Если отчет содержит сложный запрос или большой объем данных, при первом предварительном просмотре на его формирование может потребоваться несколько минут. При внесении последующих изменений, затрагивающих только форматирование отчета, в предварительном просмотре используются кэшированные данные.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## Параметры  
+## <a name="options"></a>Параметры  
  Панель инструментов позволяет управлять функциями просмотра.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -84,8 +89,9 @@ caps.handback.revision: 36
  **(18) Найти далее**  
  Выберите этот параметр для поиска следующего экземпляра искомого текста.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
 + [Предварительный просмотр отчетов](../../reporting-services/reports/previewing-reports.md)
 + [Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)  
   
   
+

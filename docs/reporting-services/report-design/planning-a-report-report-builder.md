@@ -1,31 +1,36 @@
 ---
-title: "Планирование отчета (построитель отчетов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "приступая к работе"
-  - "конструирование отчета"
+title: "Планирование отчета (построитель отчетов) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- getting started
+- report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 19
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 19
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Планирование отчета (построитель отчетов)
+# <a name="planning-a-report-report-builder"></a>Планирование отчета (построитель отчетов)
   Построитель отчетов позволяет создавать отчеты с разбиением на страницы нескольких видов. Например, можно создавать отчеты, которые отображают сводку подробных данных о продажах, тенденции в маркетинге и продажах, рабочие отчеты или панели мониторинга. Можно также создавать отчеты, в которых используются преимущества текста со сложным форматированием, например заказы на продажу, каталоги продукции или стандартные письма. Все эти отчеты создаются с использованием различных сочетаний одних и тех же строительных блоков в построителе отчетов. Чтобы создать полезный, легкочитаемый отчет, рекомендуется сначала составить план. Перед началом работы полезно рассмотреть следующие вопросы.  
   
 -   **В каком формате должен отображаться отчет?**  
   
-     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **Какая структура должна использоваться для представления данных в отчете?**  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 19
   
      Отчет можно сохранить на локальном компьютере и продолжить работать с ним или выполнить его локально для получения своих собственных сведений. Но для того, чтобы этот отчет могли использовать и другие пользователи, его нужно сохранить на сервере отчетов, настроенном в собственном режиме или на сервере отчетов в режиме интеграции с SharePoint. Сохранение отчета на сервере позволяет выполнять его другим пользователям. Кроме того, администратор сервера отчетов может установить подписку на отчет либо доставку отчета по электронной почте другим пользователям. При необходимости отчет может поставляться в конкретном формате экспорта. Дополнительные сведения см. в разделе [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  

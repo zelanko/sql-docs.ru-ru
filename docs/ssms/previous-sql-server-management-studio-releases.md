@@ -15,19 +15,57 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0773be32343e4707503b4acb616e5a1c807fe32f
+ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
+ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Предыдущие выпуски SQL Server Management Studio
   
 Доступны следующие предыдущие выпуски SQL Server Management Studio.
-
-
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![Скачать](../ssdt/media/download.png) [выпуск 16.5 SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkID=832812)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![Загрузить](../ssdt/media/download.png) [выпуска SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
+
+**Сведения о версии**  
+  
+*В этом выпуске SSMS используется изолированная оболочка Visual Studio 2015.*  
+Номер выпуска: 16.5.3  
+Номер сборки для этого выпуска: 13.0.16106.4
+
+## <a name="changelog"></a>Журнал изменений  
+
+16.5.3
+
+В этом выпуске были решены следующие проблемы.
+
+* Устранена проблема, появившаяся в SSMS 16.5.2. Эта проблема приводила к раскрытию узла "Таблица", если в таблице было несколько разреженных столбцов.
+
+* Пользователи могут развертывать пакеты SSIS, содержащие диспетчер подключений OData, который используется для подключения ресурса Microsoft Dynamics AX или CRM Online к каталогу SSIS. Дополнительные сведения см. в разделе [Диспетчер соединений OData](https://msdn.microsoft.com/library/dn584133.aspx).
+
+* Настройка Always Encrypted для существующей таблицы завершается с ошибками, в которых указаны посторонние объекты. [Идентификатор Connect 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+
+* Настройка Always Encrypted для существующей базы данных с несколькими схемами не работает. [Идентификатор Connect 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+
+* Мастер зашифрованного столбца в Always Encrypted завершается с ошибкой из-за того, что база данных содержит представления, ссылающиеся на системные представления. [Идентификатор Connect 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+
+* При шифровании с помощью Always Encrypted ошибки из-за обновления модулей после шифрования обрабатываются неправильно.
+
+* В меню *Открыть последние* не отображаются недавно сохраненные файлы. [Идентификатор Connect 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+
+* SSMS замедляет работу при щелчке таблицы правой кнопкой мыши (при работе через удаленное подключение в Интернете). [Идентификатор Connect 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+ 
+* Устранена проблема с полосой прокрутки конструктора SQL. [Идентификатор Connect 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+
+* Контекстное меню таблиц ненадолго зависает. 
+ 
+* SSMS иногда выдает исключения в мониторе активности и завершает работу с ошибкой. [Идентификатор Connect 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+
+* SSMS 2016 аварийно завершает работу с ошибкой "Процесс был завершен из-за внутренней ошибки в среде выполнения .NET: IP 71AF8579 (71AE0000), код выхода 80131506"
+
+
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>![Скачать](../ssdt/media/download.png) [выпуск 16.5 SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkID=832812)
 
 **Сведения о версии**  
   
@@ -67,7 +105,7 @@ ms.lasthandoff: 04/11/2017
 
 
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![скачать](../ssdt/media/download.png) [Выпуск SQL Server Management Studio 16.4.1 (сентябрь 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=828615)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>![скачать](../ssdt/media/download.png) [Выпуск SQL Server Management Studio 16.4.1 (сентябрь 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=828615)
 
 **Сведения о версии**  
   
@@ -179,7 +217,7 @@ ms.lasthandoff: 04/11/2017
 
 
 
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![скачать](../ssdt/media/download.png) [Выпуск SQL Server Management Studio 16.3 (август 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![скачать](../ssdt/media/download.png) [Выпуск SQL Server Management Studio 16.3 (август 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=824938)
  15 августа 2016 г. | Номер версии: 13.0.15700.28
 
 **Функции**  
@@ -245,7 +283,7 @@ ms.lasthandoff: 04/11/2017
 [Дополнительные сведения об исправлениях доступны в журнале изменений SSMS.](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![скачать](../ssdt/media/download.png) [Выпуск исправления для SQL Server Management Studio за июль 2016](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>![скачать](../ssdt/media/download.png) [Выпуск исправления для SQL Server Management Studio за июль 2016](http://go.microsoft.com/fwlink/?LinkID=822301)
 
 13 июля 2016 года | Номер версии: 13.0.15600.2
 
@@ -299,7 +337,7 @@ ms.lasthandoff: 04/11/2017
 [Дополнительные сведения и исправления ошибок доступны в журнале изменений SSMS.](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [Выпуск SQL Server Management Studio за июнь 2016 года](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>![скачать](../ssdt/media/download.png) [Выпуск SQL Server Management Studio за июнь 2016 года](http://go.microsoft.com/fwlink/?LinkID=799832)
 
 1 июня 2016 года | Номер версии: 13.0.15000.23
 
@@ -331,7 +369,7 @@ ms.lasthandoff: 04/11/2017
 6. Исправления ошибок, которые возникают при работе элемента Always Encrypted. Исправлена ошибка, из-за которой пункт меню Always Encrypted неправильно работал с базами данных Stretch. Исправлена также ошибка, из-за которой мастер Always Encrypted неправильно использует поставщик SafeNet (Luna SA) HSM.
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![скачать](../ssdt/media/download.png) [SQL Server Management Studio 2014 с пакетом обновления 1 (SP1)](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>![скачать](../ssdt/media/download.png) [SQL Server Management Studio 2014 с пакетом обновления 1 (SP1)](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
 
 14 мая 2015 года | Номер версии 12.0.4100.1
 
@@ -352,7 +390,7 @@ ms.lasthandoff: 04/11/2017
 7. Решение SSMS дает сбой, когда вы пытаетесь обновить значок окна SSMS на панели задач ([элемент Microsoft Connect № 799430](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect)).
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![скачать](../ssdt/media/download.png) [SQL Server Management Studio 2012 с пакетом обновления 3 (SP3)](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>![скачать](../ssdt/media/download.png) [SQL Server Management Studio 2012 с пакетом обновления 3 (SP3)](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
   
 21 ноября 2015 года | Номер версии: 11.0.6020.0
 
@@ -368,7 +406,7 @@ ms.lasthandoff: 04/11/2017
 2. Когда вы восстанавливаете разностную резервную копию в SSMS, появляется сообщение об ошибке "Не удается создать план восстановления из-за нарушения непрерывности цепочки LSN".
 
 ---
-### <a name="additional-downloads"></a>Дополнительные скачиваемые файлы  
+## <a name="additional-downloads"></a>Дополнительные скачиваемые файлы  
 Список всех загрузок для SQL Server Management Studio см. в [центре загрузки Майкрософт](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
 Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу [Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).  

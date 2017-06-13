@@ -1,24 +1,29 @@
 ---
-title: "Прямоугольники и линии (построитель отчетов и службы SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Прямоугольники и линии (построитель отчетов и службы SSRS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Прямоугольники и линии (построитель отчетов и службы SSRS)
-  Для создания визуальных эффектов в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы можно использовать прямоугольники и линии. Свойства отображения этих элементов отчета можно задать в разделе "Граница" вкладки "Главная", а другие свойства — с помощью панели "Свойства". Для прямоугольника можно добавлять такие характеристики, как цвет фона, изображение, подсказка или закладка.  
+# <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Прямоугольники и линии (построитель отчетов и службы SSRS)
+  Для создания визуальных эффектов в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы можно использовать прямоугольники и линии. Свойства отображения этих элементов отчета можно задать в разделе "Граница" вкладки "Главная", а другие свойства — с помощью панели "Свойства". Для прямоугольника можно добавлять такие характеристики, как цвет фона, изображение, подсказка или закладка.  
   
 ##  <a name="RectanglesLinesReportParts"></a> Использование прямоугольников и линий в качестве элементов отчета  
  Прямоугольники вместе с их содержимым можно опубликовать отдельно от отчета как элементы отчета. Части отчета — это самостоятельные элементы отчета, хранящиеся на сервере отчетов, которые можно включать в другие отчеты.  
@@ -43,7 +48,7 @@ caps.handback.revision: 9
   
  [Добавление и изменение линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

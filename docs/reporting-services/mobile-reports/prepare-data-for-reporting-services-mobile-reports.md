@@ -1,27 +1,32 @@
 ---
-title: "Prepare data for Reporting Services mobile reports | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Подготовка данных для мобильных отчетов служб Reporting Services | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/13/2017
+
 ---
-# Prepare data for Reporting Services mobile reports
+# <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] поддерживает ряд операций со сложными данными, включая фильтрацию, агрегирование и создание срезов по времени. В данной статье рассматриваются некоторые моменты, которые следует учитывать при подготовке данных. Предварительное агрегирование данных позволяет оптимизировать создание мобильных отчетов и работу с ними. Кроме того, для некоторых макетов мобильных отчетов предварительное агрегирование данных является обязательным условием.   
   
-## Форматы даты и времени 
+## <a name="date-and-time-formats"></a>Форматы даты и времени 
 При работе с интервалами даты и времени для использования в мобильном отчете (особенно это касается TimeNavigator) важно правильно отформатировать значения в столбцах даты и времени, чтобы издатель [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] мог определить соответствующий тип. Ниже приведены примеры допустимых форматов даты и времени.  
   
     05/01/2009    
@@ -35,9 +40,9 @@ caps.handback.revision: 15
   
 Наборы данных на основе даты и времени в большинстве случаев можно описать одним или несколькими интервалами даты и времени (например, часовой, дневной, месячный, квартальный и годовой интервалы). [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] может объединить несколько таблиц с различной степенью детализации и отобразить их в одном мобильном отчете. Тем не менее не стоит забывать о соответствующих интервалах из исходных наборов данных, так как эти интервалы могут помочь определить, какие именно способы фильтрации даты и времени можно предоставить пользователю конечного мобильного отчета.  
 
-Поля даты в многомерных и табличных моделях служб [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] могут потерять форматирование дат в общих наборах данных. Сведения о том, как сохранить это форматирование, см. в разделе [Сохранение форматирования дат для служб Analysis Services в мобильных отчетах](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md).
+Поля даты в многомерных и табличных моделях служб [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] могут потерять форматирование дат в общих наборах данных. Сведения о том, как сохранить это форматирование, см. в разделе [Сохранение форматирования дат для служб Analysis Services в мобильных отчетах](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) .
   
-## Подготовка данных для фильтрации ##  
+## <a name="preparing-filter-data"></a>Подготовка данных для фильтрации ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] может фильтровать данные по полям даты и времени, а также по ключевым полям. Хотя ключевые поля могут содержать числовое значение, в большинстве случаев они содержат идентификатор или строковое значение. Чтобы подготовить поле фильтра для использования с элементом навигатора (например, список выбора), в таблице данных нужно предусмотреть отдельный столбец с ключом фильтра. Таким образом вы сможете группировать строки таблицы по значениям в столбце фильтра. Наличие нескольких столбцов с разными ключами (условиями фильтрации) позволяет создавать мобильные отчеты с несколькими элементами навигатора. Эти элементы можно одновременно использовать как в иерархической структуре, так и по отдельности.  
   
 | Отрасль  | Страна   | Регион    |  
@@ -83,10 +88,12 @@ caps.handback.revision: 15
 | Технологическое аппаратное обеспечение и оборудование   | Информационные технологии |  
 | Телекоммуникационные услуги |Информационные технологии |  
   
-### См. также:  
+### <a name="see-also"></a>См. также:  
 - [Подготовка данных в Excel для мобильных отчетов службы отчетов](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [Сохранение форматирования дат для служб Analysis Services в мобильных отчетах](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   
   
+
+
