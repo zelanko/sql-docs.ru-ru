@@ -1,11 +1,10 @@
 ---
 title: "Техническая документация по SQL Server | Документы Microsoft"
 ms.date: 03/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
