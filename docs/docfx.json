@@ -47,7 +47,7 @@
 	  "relational-databases/native-client-odbc-extensions-bulk-copy-functions/**",
 	  "relational-databases/native-client-odbc-how-to/**",
 	  "relational-databases/native-client-odbc-queries/**",
- 	  "relational-databases/native-client-odbc-results/**",
+	  "relational-databases/native-client-odbc-results/**",
 	  "relational-databases/native-client-odbc-stored-procedures/**",
 	  "relational-databases/native-client-odbc-table-valued-parameters/**",
 	  "relational-databases/native-client-odbc-text-image-columns/**",
