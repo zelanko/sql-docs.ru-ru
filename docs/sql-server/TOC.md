@@ -21,6 +21,7 @@
 ## [Заметки о выпуске SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
 ## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
+## [Заметки о выпуске SQL Server 2012 с пакетом обновления 3](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [службы Analysis Services](../analysis-services/analysis-services.md)
@@ -37,5 +38,4 @@
 
 # О документации
 ## [Ресурсы по SQL Server](sql-server-resources.md)
-## [Автономный доступ к документации по SQL Server](sql-server-documentation-offline-access.md)
 ## [Окно справки](../release-notes/sql-server-help-installation.md)
