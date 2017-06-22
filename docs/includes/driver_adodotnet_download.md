@@ -1,1 +1,1 @@
-![Скачать](../ssdt/media/download.png)[Скачать драйвер .Net](https://msdn.microsoft.com/vstudio/aa496123.aspx)
+![Скачать](../ssdt/media/download.png)[Скачать драйвер .Net](http://www.microsoft.com/net/download/)

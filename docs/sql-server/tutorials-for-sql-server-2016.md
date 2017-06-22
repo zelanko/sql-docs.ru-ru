@@ -1,7 +1,7 @@
 ---
 title: "Учебники по SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Учебники по SQL Server
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Учебники по репликации](../relational-databases/replication/replication-tutorials.md)|Сведения об установке и запуске топологий репликации с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
-|[Учебники по службам SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|Узнайте, как работать с данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью языка R и как выполнять скрипты R из [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Учебники по службам SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Узнайте, как работать с данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью языка R и как выполнять скрипты R из [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Ранее опубликованные учебники:  
   

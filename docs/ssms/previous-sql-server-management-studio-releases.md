@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
 ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Предыдущие выпуски SQL Server Management Studio
@@ -218,7 +218,7 @@ ms.lasthandoff: 05/27/2017
 
 
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>![скачать](../ssdt/media/download.png) [Выпуск SQL Server Management Studio 16.3 (август 2016 г.)](http://go.microsoft.com/fwlink/?LinkID=824938)
- 15 августа 2016 г. | Номер версии: 13.0.15700.28
+ 15 августа 2016 г. | Номер версии: 13.0.15700.28
 
 **Функции**  
 1. Новый вариант проверки подлинности — "универсальная проверка подлинности Active Directory"

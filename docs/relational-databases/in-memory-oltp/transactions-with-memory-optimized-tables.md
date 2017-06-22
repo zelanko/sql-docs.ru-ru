@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -35,24 +35,6 @@ ms.lasthandoff: 06/13/2017
 Описание условий ошибок, относящихся к транзакциям в таблицах, оптимизированных для памяти, см. в разделе [Обнаружение конфликтов и логика повторных попыток](#confdetretry34ni).
   
 Общие сведения см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>Разделы данной статьи:  
-  
-- [Различия между пессимистичным и оптимистичным подходами](#pessvoptim22ni)  
-- [Режимы инициации транзакций](#txninitmodes24ni)  
-  - [Пример кода в режиме Explicit](#codeexamexpmode25ni)  
-- [Управление версиями строк](#rowver28ni)  
-- [Уровни изоляции транзакций](#confdegreeiso30ni)  
-- [Фазы и время существования транзакций](#txnphaslife32ni)  
-- [Обнаружение конфликтов и логика повторных попыток](#confdetretry34ni)  
-  - [Пример кода повторной попытки T-SQL](#retrytsqlcodeexam35ni)  
-- [Транзакция между контейнерами](#crossconttxn38ni)  
-- [Ограничения](#limitations40ni)  
-- [Скомпилированные в собственном коде хранимые процедуры](#natcompstorprocs42ni)  
-- [Другие ссылки по транзакциям](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  
