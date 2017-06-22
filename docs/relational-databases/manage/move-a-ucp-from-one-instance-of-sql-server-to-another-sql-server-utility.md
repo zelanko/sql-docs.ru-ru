@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5f8aaa0f8b094fe17f9cac1e88d5bffc75edb1ac
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Перенос точки управления служебной программой из одного экземпляра SQL Server на другой (служебная программа SQL Server)

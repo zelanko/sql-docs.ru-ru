@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Печать&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Печать\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: acc46cf8d6af75c2c4719dcd30e6766ab8756512
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="print-dialog-box"></a>Диалоговое окно «Печать»

@@ -1,5 +1,5 @@
 ---
-title: "Свойства базы данных (страница &quot;Хранилище запросов&quot;) | Документация Майкрософт"
+title: "Свойства базы данных (страница \"Хранилище запросов\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/09/2015
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 89d782e0fa62c2b4b4332e9818b93f87f797710f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="database-properties-query-store-page"></a>Свойства базы данных (страница хранилища запросов)

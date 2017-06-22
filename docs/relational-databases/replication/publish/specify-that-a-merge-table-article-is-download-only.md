@@ -1,5 +1,5 @@
 ---
-title: "Указание режима &quot;только для загрузки&quot; для статей таблиц публикации слиянием | Документация Майкрософт"
+title: "Указание режима \"только для загрузки\" для статей таблиц публикации слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83d7383aff0ccc5ab8f6716135d07c3642e6c9d6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-that-a-merge-table-article-is-download-only"></a>Указание того, что статья таблицы публикации слиянием предназначена только для загрузки

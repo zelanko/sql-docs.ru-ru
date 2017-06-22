@@ -1,5 +1,5 @@
 ---
-title: "Соединение с сервером, вкладка &quot;Имя входа&quot; (Oracle) | Документация Майкрософт"
+title: "Соединение с сервером, вкладка \"Имя входа\" (Oracle) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 180122568df0cdffe7e9f011194ac54d7bf01dc4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="connect-to-server-oracle-login"></a>Диалоговое окно «Соединение с сервером (Oracle)», вкладка «Имя входа»

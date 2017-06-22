@@ -1,5 +1,5 @@
 ---
-title: "Восстановление базы данных (страница &quot;Параметры&quot;) | Документация Майкрософт"
+title: "Восстановление базы данных (страница \"Параметры\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-database-options-page"></a>Восстановление базы данных (страница «Параметры»)

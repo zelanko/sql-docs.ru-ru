@@ -1,5 +1,5 @@
 ---
-title: "Настройка сервера для выполнения политики &quot;Отключено по умолчанию&quot; | Документация Майкрософт"
+title: "Настройка сервера для выполнения политики \"Отключено по умолчанию\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: efc87d23faa17dca299560764b0e26bdbb05ff9a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>Занятие 1.2. Настройка сервера для выполнения политики "Отключено по умолчанию"

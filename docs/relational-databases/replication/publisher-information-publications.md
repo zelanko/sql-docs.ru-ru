@@ -1,5 +1,5 @@
 ---
-title: "Данные об издателе, вкладка &quot;Публикации&quot; | Документация Майкрософт"
+title: "Данные об издателе, вкладка \"Публикации\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 58631a593562e6fc04ddf411128111bed5f847c7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publisher-information-publications"></a>Данные об издателе, вкладка «Публикации»

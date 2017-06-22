@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Выбор папок поиска&quot; (Visual Studio) | Документация Майкрософт"
+title: "Диалоговое окно \"Выбор папок поиска\" (Visual Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)

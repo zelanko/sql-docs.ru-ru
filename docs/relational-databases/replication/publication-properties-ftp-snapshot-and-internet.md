@@ -1,5 +1,5 @@
 ---
-title: "Свойства публикации, страница &quot;Моментальный снимок — FTP и Интернет&quot; | Документация Майкрософт"
+title: "Свойства публикации, страница \"Моментальный снимок — FTP и Интернет\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 3458af05f6289366c7a9391016327ff9d11c1434
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/15/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>Свойства публикации, страница «Моментальный снимок — FTP и Интернет»

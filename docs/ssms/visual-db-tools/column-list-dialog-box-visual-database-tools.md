@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Список столбцов&quot; (визуальные инструменты для баз данных) | Документация Майкрософт"
+title: "Диалоговое окно \"Список столбцов\" (визуальные инструменты для баз данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d776ff25e821b30f6e0e17778a7ab9f5f3ceebd3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Диалоговое окно «Список столбцов» (визуальные инструменты для баз данных)

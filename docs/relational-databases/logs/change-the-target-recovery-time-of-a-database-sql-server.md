@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6daed0f65622cd6a0533db68441021cb8c8f0a1c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Изменение целевого времени восстановления базы данных (SQL Server)

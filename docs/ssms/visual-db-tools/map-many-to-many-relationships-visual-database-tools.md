@@ -1,5 +1,5 @@
 ---
-title: "Построение связи &quot;многие ко многим&quot; (визуальные инструменты для баз данных) | Документация Майкрософт"
+title: "Построение связи \"многие ко многим\" (визуальные инструменты для баз данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 393483c566c3e4b61833972ef2b33ba2dde8404a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Построение связи «многие ко многим» (визуальные инструменты для баз данных)

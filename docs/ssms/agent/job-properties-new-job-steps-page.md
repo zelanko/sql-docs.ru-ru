@@ -1,5 +1,5 @@
 ---
-title: "Свойства задания — создание задания (страница &quot;Шаги&quot;) | Документация Майкрософт"
+title: "Свойства задания — создание задания (страница \"Шаги\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf66a1c4340e8fdce75ed20100f68af85671488
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="job-properties---new-job-steps-page"></a>Свойства задания — новое задание (страница "Шаги")

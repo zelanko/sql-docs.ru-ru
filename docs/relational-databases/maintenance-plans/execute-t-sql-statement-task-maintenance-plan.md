@@ -1,5 +1,5 @@
 ---
-title: "Задача &quot;Выполнение инструкции T-SQL&quot; (план обслуживания) | Документация Майкрософт"
+title: "Задача \"Выполнение инструкции T-SQL\" (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc4fe80e02dfde259794807f700cee0e73dcd43f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Задача «Выполнение инструкции T-SQL» (план обслуживания)

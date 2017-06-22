@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 734063422cddceb9ac5fb3b1b44b0d64d07f7d6b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Получение суммарных или статистических значений для всех строк в таблице (визуальные инструменты для баз данных)

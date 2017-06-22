@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Столбцы индексы&quot; (визуальные инструменты для баз данных) | Документация Майкрософт"
+title: "Диалоговое окно \"Столбцы индексы\" (визуальные инструменты для баз данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0f1b0c2c698e01aac8b8974591843d70488b2ce0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)

@@ -51,5 +51,5 @@
     > [!NOTE]
     > **admin_addr** — это виртуальный кластерный ресурс IP, который настраивается в процессе первоначальной установки кластера с одним узлом.
 
-7.    **Процедуры удаления.** Если необходимо удалить узел из кластера, используйте скрипт начальной загрузки **ha-cluster-remove**. Дополнительные сведения см. в разделе с [обзором скриптов начальной загрузки](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
+7.  **Процедуры удаления.** Если необходимо удалить узел из кластера, используйте скрипт начальной загрузки **ha-cluster-remove**. Дополнительные сведения см. в разделе с [обзором скриптов начальной загрузки](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
 

@@ -1,5 +1,5 @@
 ---
-title: "План обслуживания, страница &quot;Отчеты и ведение журнала&quot; | Документация Майкрософт"
+title: "План обслуживания, страница \"Отчеты и ведение журнала\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bc79574632edb6fa550c81d66c95616a452ddf38
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>План обслуживания (страница «Отчеты и ведение журнала»)

@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Создание новой политики&quot; или &quot;Открытие политики&quot;, страница &quot;Описание&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Создание новой политики\" или \"Открытие политики\", страница \"Описание\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ef76460f1f77ea9622bbc2465857946bf463b96
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Описание»

@@ -1,5 +1,5 @@
 ---
-title: "Подписка, вкладка &quot;Нераспространенные команды&quot; (транзакционная подписка) | Документация Майкрософт"
+title: "Подписка, вкладка \"Нераспространенные команды\" (транзакционная подписка) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3986838ebcbb9f5ed787c974b82e9a87f2a43a29
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription"></a>Подписка, вкладка "Нераспространенные команды" (транзакционная подписка)

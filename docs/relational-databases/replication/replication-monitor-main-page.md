@@ -1,5 +1,5 @@
 ---
-title: "Монитор репликации — страница &quot;Общие&quot; | Документация Майкрософт"
+title: "Монитор репликации — страница \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 07be2b5aea20d71430179d475d9bbc6babc7862e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="replication-monitor-main-page"></a>Монитор репликации, страница «Общие»

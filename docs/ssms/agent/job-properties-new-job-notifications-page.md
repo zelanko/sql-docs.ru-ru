@@ -1,5 +1,5 @@
 ---
-title: "Свойства задания — создание задания (страница &quot;Уведомления&quot;) | Документация Майкрософт"
+title: "Свойства задания — создание задания (страница \"Уведомления\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6508f164910c229f2acee22638dff7d661bf9d04
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="job-properties---new-job-notifications-page"></a>Свойства задания — создание задания (страница "Уведомления")

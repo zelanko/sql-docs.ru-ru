@@ -1,5 +1,5 @@
 ---
-title: "Страница &quot;Разрешения&quot; или &quot;Защищаемые объекты&quot; | Документация Майкрософт"
+title: "Страница \"Разрешения\" или \"Защищаемые объекты\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-server-2016
@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d591578ed239e7c6b0279ea923fc18b558d4f252
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»

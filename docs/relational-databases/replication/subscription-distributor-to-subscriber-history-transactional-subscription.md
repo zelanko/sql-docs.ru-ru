@@ -1,5 +1,5 @@
 ---
-title: "Подписка, вкладка &quot;Журнал операций от распространителя к подписчику&quot; (транзакционная подписка) | Документация Майкрософт"
+title: "Подписка, вкладка \"Журнал операций от распространителя к подписчику\" (транзакционная подписка) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e14832b1b0fa335eadd80b65e1d01c727132b53
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Подписка, журнал от распространителя к подписчику (подписка на публикацию транзакций)

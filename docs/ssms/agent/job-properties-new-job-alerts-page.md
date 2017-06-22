@@ -1,5 +1,5 @@
 ---
-title: "Свойства задания — создание задания (страница &quot;Предупреждения&quot;) | Документация Майкрософт"
+title: "Свойства задания — создание задания (страница \"Предупреждения\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3945ca56482d1b5d98d70abcf5915089052a0002
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="job-properties---new-job-alerts-page"></a>Свойства задания — создание задания (страница "Предупреждения")

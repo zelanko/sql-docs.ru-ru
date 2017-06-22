@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Обнаружены изменения базы данных&quot; (визуальные инструменты для баз данных) | Документация Майкрософт"
+title: "Диалоговое окно \"Обнаружены изменения базы данных\" (визуальные инструменты для баз данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d2e7bb8486f588c055cc6eee890bf533e726fb4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Диалоговое окно «Обнаружены изменения базы данных» (визуальные инструменты для баз данных)

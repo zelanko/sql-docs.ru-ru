@@ -1,5 +1,5 @@
 ---
-title: "Подписка, вкладка &quot;Журнал операций от распространителя к подписчику&quot; (подписка на моментальные снимки) | Документация Майкрософт"
+title: "Подписка, вкладка \"Журнал операций от распространителя к подписчику\" (подписка на моментальные снимки) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 409f016332f43ec339732d1613830e2e2fe2e21d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Подписка, журнал распространителя для подписчика (подписка на моментальные снимки)

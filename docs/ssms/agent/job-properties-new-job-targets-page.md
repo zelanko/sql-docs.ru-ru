@@ -1,5 +1,5 @@
 ---
-title: "Свойства задания — создание задания (страница &quot;Цели&quot;) | Документация Майкрософт"
+title: "Свойства задания — создание задания (страница \"Цели\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7daa9798a9a56093d58664f79e8d42841b62df93
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="job-properties---new-job-targets-page"></a>Свойства задания — создание задания (страница "Цели")

@@ -1,5 +1,5 @@
 ---
-title: "Устройство резервного копирования (страница &quot;Содержимое носителя&quot;) | Документация Майкрософт"
+title: "Устройство резервного копирования (страница \"Содержимое носителя\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4bfa385cab6527c16e62e2e631b9ffa1b96e0d10
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="backup-device-media-contents-page"></a>Устройство резервного копирования (страница «Содержимое носителя»)

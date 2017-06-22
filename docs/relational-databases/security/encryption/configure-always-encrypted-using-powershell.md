@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Настройка постоянного шифрования с помощью PowerShell
@@ -41,8 +41,8 @@ ms.lasthandoff: 05/18/2017
 
 Загрузка модуля SqlServer
 
-1.    Чтобы установить соответствующую политику выполнения скриптов, используйте командлет **Set-ExecutionPolicy** .
-2.    Для импорта модуля SqlServer используйте командлет **Import-Module** .
+1.  Чтобы установить соответствующую политику выполнения скриптов, используйте командлет **Set-ExecutionPolicy** .
+2.  Для импорта модуля SqlServer используйте командлет **Import-Module** .
 
 В этом примере показана загрузка модуля SqlServer.
 
@@ -126,26 +126,26 @@ $database | Get-SqlColumnMasterKey
 
 Для постоянного шифрования доступны приведенные ниже командлеты PowerShell
 
-|Командлет    |Описание
+|Командлет |Описание
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**    |Выполняет проверку подлинности в Azure и получает маркер проверки подлинности.
-|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**    |Добавляет новое зашифрованное значение для существующего объекта ключа шифрования столбца в базе данных.
-|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**    |Завершает смену главного ключа столбца.
-|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**    |Возвращает все объекты ключа шифрования столбца, определенные в базе данных, или возвращает один объект ключа шифрования столбца с указанным именем.
-|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**    |Возвращает объекты главного ключа столбца, определенные в базе данных, или возвращает один объект главного ключа столбца с указанным именем.
-|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**    |Инициирует смену главного ключа столбца.
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**    |Создает объект SqlColumnMasterKeySettings, описывающий асимметричный ключ, который хранится в хранилище ключей Azure.
-|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**    |Создает объект SqlColumnMasterKeySettings, описывающий асимметричный ключ, который хранится в хранилище ключей, поддерживающем API CNG.
-|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**    |Создает объект ключа шифрования столбца в базе данных.
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**    |Выводит зашифрованное значение ключа шифрования столбца.
-|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**    |Создает объект SqlColumnEncryptionSettings, который инкапсулирует сведения о шифровании одного столбца, включая CEK и тип шифрования.
-|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**    |Создает объект главного ключа столбца в базе данных.
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Выполняет проверку подлинности в Azure и получает маркер проверки подлинности.
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |Добавляет новое зашифрованное значение для существующего объекта ключа шифрования столбца в базе данных.
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**   |Завершает смену главного ключа столбца.
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)** |Возвращает все объекты ключа шифрования столбца, определенные в базе данных, или возвращает один объект ключа шифрования столбца с указанным именем.
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)** |Возвращает объекты главного ключа столбца, определенные в базе данных, или возвращает один объект главного ключа столбца с указанным именем.
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**   |Инициирует смену главного ключа столбца.
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**   |Создает объект SqlColumnMasterKeySettings, описывающий асимметричный ключ, который хранится в хранилище ключей Azure.
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**   |Создает объект SqlColumnMasterKeySettings, описывающий асимметричный ключ, который хранится в хранилище ключей, поддерживающем API CNG.
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)** |Создает объект ключа шифрования столбца в базе данных.
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)** |Выводит зашифрованное значение ключа шифрования столбца.
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**   |Создает объект SqlColumnEncryptionSettings, который инкапсулирует сведения о шифровании одного столбца, включая CEK и тип шифрования.
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)** |Создает объект главного ключа столбца в базе данных.
 |**[Новый SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|Создает объект SqlColumnMasterKeySettings для главного ключа столбца с указанным поставщиком и путем к ключу.
-|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**    |Создает объект SqlColumnMasterKeySettings, описывающий асимметричный ключ, который хранится в хранилище ключей с поставщиком CSP, поддерживающим CAPI.
-|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**    |Удаляет объект ключа шифрования столбца из базы данных.
-|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**    |Удаляет зашифрованное значение из существующего объекта ключа шифрования столбца в базе данных.
-|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**    |Удаляет объект главного ключа столбца из базы данных.
-|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**    |Шифрует, расшифровывает или повторно шифрует указанные столбцы в базе данных.
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**   |Создает объект SqlColumnMasterKeySettings, описывающий асимметричный ключ, который хранится в хранилище ключей с поставщиком CSP, поддерживающим CAPI.
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**   |Удаляет объект ключа шифрования столбца из базы данных.
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)** |Удаляет зашифрованное значение из существующего объекта ключа шифрования столбца в базе данных.
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**   |Удаляет объект главного ключа столбца из базы данных.
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**   |Шифрует, расшифровывает или повторно шифрует указанные столбцы в базе данных.
 
 
 

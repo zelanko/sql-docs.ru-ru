@@ -1,5 +1,5 @@
 ---
-title: "Резервное копирование базы данных (страница &quot;Общие&quot;) | Документация Майкрософт"
+title: "Резервное копирование базы данных (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="back-up-database-general-page"></a>Резервное копирование базы данных (страница «Общие»)

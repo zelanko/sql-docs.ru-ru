@@ -1,5 +1,5 @@
 ---
-title: "Свойства базы данных (страница &quot;Параметры&quot;) | Документация Майкрософт"
+title: "Свойства базы данных (страница \"Параметры\") | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/29/2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="database-properties-options-page"></a>Свойства базы данных (страница «Параметры»)

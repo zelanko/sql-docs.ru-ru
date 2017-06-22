@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 795435899de548848ca64cec26d212fd8a80f900
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)

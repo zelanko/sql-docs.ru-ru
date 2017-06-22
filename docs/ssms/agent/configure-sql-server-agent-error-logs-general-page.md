@@ -1,5 +1,5 @@
 ---
-title: "Журналы ошибок конфигурации агента SQL Server (страница &quot;Общие&quot;) | Документация Майкрософт"
+title: "Журналы ошибок конфигурации агента SQL Server (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fc4741f03b147904d1c6010bcb4d1f0621d21cf3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Журналы ошибок конфигурации агента SQL Server (страница «Общие»)

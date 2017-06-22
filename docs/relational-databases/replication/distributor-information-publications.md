@@ -1,5 +1,5 @@
 ---
-title: "Сведения о распространителе, вкладка &quot;Публикации&quot; | Документация Майкрософт"
+title: "Сведения о распространителе, вкладка \"Публикации\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 317199c97c765cd3be713d55ae5541ae44c1d32c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="distributor-information-publications"></a>Сведения о распространителе, публикации

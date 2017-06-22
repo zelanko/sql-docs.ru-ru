@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Переход к строке&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Переход к строке\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 51793a269a149be9d05ba49ffd787dee1f74a589
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="go-to-line-dialog-box"></a>Диалоговое окно «Переход к строке»

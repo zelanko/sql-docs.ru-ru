@@ -1,5 +1,5 @@
 ---
-title: "Задача &quot;Обновление статистики&quot; (план обслуживания) | Документация Майкрософт"
+title: "Задача \"Обновление статистики\" (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 774fe7654f9a67ae7e149b80b05e047ac958c10b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Задача «Обновление статистики» (план обслуживания)

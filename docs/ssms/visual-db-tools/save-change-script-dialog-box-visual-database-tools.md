@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Сохранить скрипт изменений&quot; (визуальные инструменты для баз данных) | Документация Майкрософт"
+title: "Диалоговое окно \"Сохранить скрипт изменений\" (визуальные инструменты для баз данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ad99676eff79f7cc2fbb078278d0aeb4cf253102
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>Диалоговое окно "Сохранить скрипт изменений" (визуальные инструменты для баз данных)

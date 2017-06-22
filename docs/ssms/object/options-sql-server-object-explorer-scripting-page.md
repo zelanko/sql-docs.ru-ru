@@ -1,5 +1,5 @@
 ---
-title: "Параметры (обозреватель объектов SQL Server — страница &quot;Скрипты&quot;) | Документация Майкрософт"
+title: "Параметры (обозреватель объектов SQL Server — страница \"Скрипты\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d5353c0732833516e95cc734a2d7bbe0f1258554
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Параметры (обозреватель объектов SQL Server — страница "Скрипты")

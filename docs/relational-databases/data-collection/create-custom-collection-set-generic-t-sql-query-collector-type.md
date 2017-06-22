@@ -1,5 +1,5 @@
 ---
-title: "Создание пользовательского набора элементов сбора — тип сборщика &quot;Универсальный запрос T-SQL&quot; | Документация Майкрософт"
+title: "Создание пользовательского набора элементов сбора — тип сборщика \"Универсальный запрос T-SQL\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 220a93455e473e8079e6ff90b5889dbad5025184
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Создание пользовательского набора элементов сбора — тип сборщика "Универсальный запрос T-SQL"

@@ -1,5 +1,5 @@
 ---
-title: "Данные об издателе, вкладка &quot;Агенты&quot; | Документация Майкрософт"
+title: "Данные об издателе, вкладка \"Агенты\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publisher-information-agents"></a>Данные об издателе, агенты

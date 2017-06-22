@@ -1,5 +1,5 @@
 ---
-title: "Категория событий &quot;Ошибки и предупреждения&quot; (ядро СУБД) | Документация Майкрософт"
+title: "Категория событий \"Ошибки и предупреждения\" (ядро СУБД) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b0c7673b15dec984e81cc7dd8207006a0b278fe7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Категория событий Errors and Warnings (компонент Database Engine)

@@ -1,5 +1,5 @@
 ---
-title: "Восстановление базы данных (страница &quot;Общие&quot;) | Документация Майкрософт"
+title: "Восстановление базы данных (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ac731905f16f406cafd6402ebb647cddbae83005
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-database-general-page"></a>Восстановление базы данных (страница «Общие»)

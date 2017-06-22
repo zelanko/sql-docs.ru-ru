@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Имя не найдено&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Имя не найдено\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e9dfa22d44a1aae2a3d87c85b6520ad52ab22b7f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="name-not-found-dialog-box"></a>Диалоговое окно «Имя не найдено»

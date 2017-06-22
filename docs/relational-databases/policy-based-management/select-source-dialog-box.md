@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Выбор источника&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Выбор источника\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a8ffe2ca7e33b741309b594c0a351825fee59b07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="select-source-dialog-box"></a>Диалоговое окно «Выбор источника»

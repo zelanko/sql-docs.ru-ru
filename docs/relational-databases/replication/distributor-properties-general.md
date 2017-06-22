@@ -1,5 +1,5 @@
 ---
-title: "Свойства распространителя, страница &quot;Общие&quot; | Документация Майкрософт"
+title: "Свойства распространителя, страница \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 48fcfa8c620bba8340243dca8c712102853edc7a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="distributor-properties-general"></a>Диалоговое окно «Свойства распространителя», страница «Общие»

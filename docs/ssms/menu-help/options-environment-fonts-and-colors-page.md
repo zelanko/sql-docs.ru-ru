@@ -1,5 +1,5 @@
 ---
-title: "Параметры (&quot;Среда&quot; — &quot;Шрифты и цвета&quot;) | Документация Майкрософт"
+title: "Параметры (\"Среда\" — \"Шрифты и цвета\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 864b7b243eba260b8f381bc62fc1d915e07c2db1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Параметры ("Среда" — страница "Шрифты и цвета")

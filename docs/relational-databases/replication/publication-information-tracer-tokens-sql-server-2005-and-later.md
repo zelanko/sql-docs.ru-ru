@@ -1,5 +1,5 @@
 ---
-title: "Сведения о публикации, вкладка &quot;Трассировочные токены&quot; (SQL Server 2005 и более поздние версии) | Документация Майкрософт"
+title: "Сведения о публикации, вкладка \"Трассировочные токены\" (SQL Server 2005 и более поздние версии) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9302b3bcfea0b63fe4eefdc2c7c03716eaaefa09
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>Сведения о публикации, вкладка "Трассировочные токены" (SQL Server 2005 и более поздние версии)

@@ -1,5 +1,5 @@
 ---
-title: "Параметры (&quot;Среда&quot; — &quot;Общие&quot;) | Документация Майкрософт"
+title: "Параметры (\"Среда\" — \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 18ee84388c584423bc7f5b416d1540d1a287a0ba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-environment---general-page"></a>Параметры ("Среда" — "Общие")

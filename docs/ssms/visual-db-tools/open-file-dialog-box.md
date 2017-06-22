@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Открытие файла&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Открытие файла\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aeb2660571f6eff735bf9936be3d4243fb797149
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»

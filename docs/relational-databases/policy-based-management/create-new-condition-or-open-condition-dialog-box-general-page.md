@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Создание нового условия&quot; или &quot;Открытие условия&quot;, страница &quot;Общие&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Создание нового условия\" или \"Открытие условия\", страница \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b90436634729185cf2703cc012aae3a4f0338cdb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»

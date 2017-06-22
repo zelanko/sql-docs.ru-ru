@@ -1,5 +1,5 @@
 ---
-title: "Узел &quot;Учетные записи-посредники&quot; (справка F1 агента SQL Server) | Документация Майкрософт"
+title: "Узел \"Учетные записи-посредники\" (справка F1 агента SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 45ee91b0e63843b6e6385277d067d2d9f9ea0d2b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>Узел "Учетные записи-посредники" (справка F1 агента SQL Server)

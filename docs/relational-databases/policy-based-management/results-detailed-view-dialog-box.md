@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Подробный просмотр результатов&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Подробный просмотр результатов\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7893f4dbf2a91106721e2d6c266a7f938bce3c45
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="results-detailed-view-dialog-box"></a>Диалоговое окно «Подробный просмотр результатов»

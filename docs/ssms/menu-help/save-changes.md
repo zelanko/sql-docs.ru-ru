@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Сохранить изменения&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Сохранить изменения\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f1f2f0c5925c46db4216e665abecd051e7596f2b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="save-changes"></a>Сохранить изменения

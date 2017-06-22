@@ -1,5 +1,5 @@
 ---
-title: "Команда &quot;Сохранить как&quot; | Документация Майкрософт"
+title: "Команда \"Сохранить как\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: acbf3b32cdcbe92838532d7711fb2edf0a6238b5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="save-as"></a>Сохранить как

@@ -1,5 +1,5 @@
 ---
-title: "Объект базы данных (страница &quot;Расширенные свойства&quot;) | Документация Майкрософт"
+title: "Объект базы данных (страница \"Расширенные свойства\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec5710e412a5e29399f897cf4e6e1c5ca3c88ce4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="database-object-extended-properties-page"></a>Объект базы данных (страница «Расширенные свойства»)

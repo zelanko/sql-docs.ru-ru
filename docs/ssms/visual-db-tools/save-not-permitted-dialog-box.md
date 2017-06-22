@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Сохранение (запрещено)&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Сохранение (запрещено)\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f478b87102174266ff23733b20777df253240317
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="save-not-permitted-dialog-box"></a>Диалоговое окно «Сохранение (запрещено)»

@@ -1,5 +1,5 @@
 ---
-title: "Параметры (&quot;Конструкторы&quot; — страница &quot;Планы обслуживания&quot;) | Документация Майкрософт"
+title: "Параметры (\"Конструкторы\" — страница \"Планы обслуживания\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6fb56fc5fbbc30517abf66cc8b29fea7609675ff
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Параметры ("Конструкторы" — страница "Планы обслуживания")

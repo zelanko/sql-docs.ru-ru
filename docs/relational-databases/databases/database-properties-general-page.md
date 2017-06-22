@@ -1,5 +1,5 @@
 ---
-title: "Свойства базы данных (страница &quot;Общие&quot;) | Документация Майкрософт"
+title: "Свойства базы данных (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/27/2015
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1ab703fcc2c29fae271b7484495cacf47bbcfd67
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="database-properties-general-page"></a>Свойства базы данных (страница «Общие»)

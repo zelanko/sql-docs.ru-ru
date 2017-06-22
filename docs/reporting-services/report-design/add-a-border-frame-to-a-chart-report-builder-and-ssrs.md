@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a14ce29863b00c01cb77f837c369256a1096f65
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)

@@ -1,5 +1,5 @@
 ---
-title: "Параметры (&quot;Конструкторы&quot; — &quot;Конструкторы таблиц и баз данных&quot;) | Документация Майкрософт"
+title: "Параметры (\"Конструкторы\" — \"Конструкторы таблиц и баз данных\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 79e728f7cf2c300338e202b3e9cae27226f70a50
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Параметры ("Конструкторы" — "Конструкторы таблиц и баз данных")

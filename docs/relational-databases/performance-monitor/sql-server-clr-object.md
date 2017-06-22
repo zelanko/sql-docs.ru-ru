@@ -1,5 +1,5 @@
 ---
-title: "SQL Server, объект &quot;Среда CLR&quot; | Документация Майкрософт"
+title: "SQL Server, объект \"Среда CLR\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f8fa35f928eafd2131dfa0e3bed20ed573caa8ee
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, объект «Среда CLR»

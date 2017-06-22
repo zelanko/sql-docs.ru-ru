@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;О программе&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"О программе\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 75ae5975ecd2aa61f7887921fd5942b2c6693b0e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="about-dialog-box"></a>Диалоговое окно "О программе"

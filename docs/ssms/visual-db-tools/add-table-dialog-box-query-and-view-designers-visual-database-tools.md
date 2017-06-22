@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Добавление таблицы&quot; в конструкторах запросов и представлений (визуальные инструменты для баз данных) | Документация Майкрософт"
+title: "Диалоговое окно \"Добавление таблицы\" в конструкторах запросов и представлений (визуальные инструменты для баз данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f65c7dfb218052015e9cbc818b2829faca5cf4ae
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Диалоговое окно «Добавить таблицу» (конструкторы запросов и представлений) (визуальные инструменты для баз данных)

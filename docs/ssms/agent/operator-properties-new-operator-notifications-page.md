@@ -1,5 +1,5 @@
 ---
-title: "Свойства оператора — создание оператора (страница &quot;Уведомления&quot;) | Документация Майкрософт"
+title: "Свойства оператора — создание оператора (страница \"Уведомления\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a8d182c3e434bfc05831922f0a214b58efbecd48
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Свойства оператора — создание оператора (страница "Уведомления")

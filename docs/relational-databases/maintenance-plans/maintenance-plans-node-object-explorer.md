@@ -1,5 +1,5 @@
 ---
-title: "Узел &quot;Планы обслуживания&quot; (обозреватель объектов) | Документация Майкрософт"
+title: "Узел \"Планы обслуживания\" (обозреватель объектов) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29663e914bb6b5cf9a09675a0e58f4645f57155b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>Узел «Планы обслуживания» (обозреватель объектов)

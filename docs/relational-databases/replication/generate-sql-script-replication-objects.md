@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Формирование скрипта SQL&quot; (объекты репликации) | Документация Майкрософт"
+title: "Диалоговое окно \"Формирование скрипта SQL\" (объекты репликации) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9462e6b029f56ef17f9bb4a9bdf15606180a122a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="generate-sql-script-replication-objects"></a>Диалоговое окно «Формирование скрипта SQL» (объекты репликации)

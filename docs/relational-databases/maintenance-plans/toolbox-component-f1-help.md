@@ -1,5 +1,5 @@
 ---
-title: "Справка F1 для компонента &quot;Область элементов&quot; | Документация Майкрософт"
+title: "Справка F1 для компонента \"Область элементов\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c90dcc58ef2f84d6a2611cda85ef6580df8e174
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»

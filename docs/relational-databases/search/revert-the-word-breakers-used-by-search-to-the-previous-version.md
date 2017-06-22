@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Перевод средств разбиения по словам, используемых поиском, на предыдущую версию

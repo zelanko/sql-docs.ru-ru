@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно &quot;Экспорт в виде политики&quot; | Документация Майкрософт"
+title: "Диалоговое окно \"Экспорт в виде политики\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5c62b916532b47d0ad4cd12cf3e64af3d3709510
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="export-as-policy-dialog-box"></a>Диалоговое окно «Экспортировать как политику»
