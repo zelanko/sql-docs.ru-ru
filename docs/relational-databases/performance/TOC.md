@@ -1,3 +1,4 @@
+# [Обработка адаптивной запросов](adaptive-query-processing.md)
 # [Автоматической настройки](../automatic-tuning/automatic-tuning.md)
 # [Оценка количества элементов](cardinality-estimation-sql-server.md)  
 

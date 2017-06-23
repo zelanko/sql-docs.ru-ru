@@ -7,6 +7,8 @@
 # [Обозреватель решений +](../ssms/solution/solution-explorer.md)
 # [Шаблоны +](../ssms/template/template-explorer.md)
 # [Визуальные инструменты базы данных +](../ssms/visual-db-tools/visual-database-tools.md)
+# [Регистрация серверов +](../ssms/register-servers/register-servers.md)
+# [Руководства +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
 # [Что такое SSMS?](sql-server-management-studio-ssms.md)
 # [Журнал изменений SSMS](sql-server-management-studio-changelog-ssms.md)
@@ -42,3 +44,7 @@
 # [Добавление внешнего средства в меню "Сервис" (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Настройка аудита входа в систему (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [Использование панели элементов](use-the-toolbox.md)
+
+# [Программа SSMS](ssms-utility.md)  
+# [Сочетания клавиш среды SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
+
