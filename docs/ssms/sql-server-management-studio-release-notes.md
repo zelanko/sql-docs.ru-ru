@@ -1,7 +1,7 @@
 ---
 title: "Заметки о выпуске SQL Server Management Studio | Документация Майкрософт"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>Заметки о выпуске SQL Server Management Studio
@@ -57,6 +57,9 @@ ms.lasthandoff: 06/22/2017
     
 5. **Для локализованных версий SSMS может потребоваться установка дополнительного пакета безопасности.**  
 При использовании локализованных версий SSMS [пакет обновления безопасности KB 2862966](https://support.microsoft.com/en-us/kb/2862966) требуется при установке на следующих платформах: Windows 8, Windows 7, Windows Server 2012 и Windows Server 2008 R2.
+
+5. **При нажатии кнопки "Справка" или клавиши F1 справка не открывается**  
+При нажатии кнопки "Справка" или клавиши F1 в некоторых средах отображается следующее сообщение: **Требуется новое приложение для открытия ms-xhelp**. Эта ошибка является известной проблемой и будет устранена в будущей версии.
   
 ## <a name="feedback"></a>Отзывы  
   

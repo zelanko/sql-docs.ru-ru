@@ -1,7 +1,7 @@
 ---
 title: "Создание полной резервной копии базы данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 
- > Материалы по предыдущим версиям SQL Server см. в разделе [Создание полной резервной копии базы данных (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > При использовании SQL Server 2014 перейдите к разделу [Создание полной резервной копии базы данных (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или PowerShell.  
   
->  Сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Windows Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+>  Сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом! 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Однако по мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше пространства для хранения. Для больших баз данных может потребоваться, кроме полных резервных копий, создавать также и *разностные резервные копии баз данных*. Дополнительные сведения см. в разделах [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md) и [Резервное копирование SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   По мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше дискового пространства. При работе с большими базами данных рекомендуется дополнить полную резервную копию серией [разностных резервных копий баз данных] ((../../relational-databases/backup-restore/differential-backups-sql-server.md). Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Размер полной резервной копии базы данных вы можете вычислить с помощью системной хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 06/05/2017
 
 7.  Нажмите кнопку **ОК**.
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**Г.  Резервное копирование в службу хранилища больших двоичных объектов Microsoft Azure**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**Г.  Резервное копирование в службу хранилища BLOB-объектов Azure**
 #### <a name="common-steps"></a>**Общие шаги**  
 В следующих трех примера выполняется полное резервное копирование базы данных `Sales` в службу хранилища больших двоичных объектов Microsoft Azure.  Имя учетной записи хранилища — `mystorageaccount`.  Контейнер называется `myfirstcontainer`.  Для краткости первые четыре шага перечислены здесь однократно, а все примеры начинаются с **шага 5**.
 1.  В **обозревателе объектов**подключитесь к экземпляру ядра СУБД SQL Server и разверните его.
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/05/2017
     **D1.  Чередующееся резервное копирование с использованием уже существующих URL-адреса и учетных данных SQL Server**  
 Хранимая политика доступа была создана с правами на чтение, запись и составление списков.  Учетные данные SQL Server, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, были созданы с использованием подписанного URL-адреса, который связан с хранимой политикой доступа.  
 *
-    5.    Выберите `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` из текстового поля **Контейнер хранилища Azure:**
+    5.  Выберите `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` из текстового поля **Контейнер хранилища Azure:**
 
     6.  В текстовом поле **Файл резервной копии:** введите `Sales_stripe1of2_20160601.bak`.
 
@@ -247,7 +247,7 @@ ms.lasthandoff: 06/05/2017
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-### <a name="to-create-a-full-database-backup"></a>Создание полной резервной копии базы данных  
+### <a name="create-a-full-database-backup"></a>Создание полной резервной копии базы данных  
   
 1.  Выполните инструкцию BACKUP DATABASE для создания полной резервной копии базы данных, указав следующее:  
   
@@ -299,7 +299,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**А. Резервное копирование на дисковое устройство**  
+#### <a name="a-back-up-to-a-disk-device"></a>**А. Резервное копирование на дисковое устройство**  
  В следующем примере производится резервное копирование всей базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на диск и создание нового набора носителей с помощью параметра `FORMAT` .  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**Б. Резервное копирование на ленточное устройство**  
+#### <a name="b-back-up-to-a-tape-device"></a>**Б. Резервное копирование на ленточное устройство**  
  В следующем примере создается полная резервная копия базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на ленте в дополнение к предыдущим резервными копиям.  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**В. Резервное копирование на логическое ленточное устройство**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**В. Резервное копирование на логическое ленточное устройство**  
  В следующем примере создается логическое устройство резервного копирования для ленточного накопителя. Затем показано, как производится полное резервное копирование базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на этот накопитель.  
   
 ```tsql  

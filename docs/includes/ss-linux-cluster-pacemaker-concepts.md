@@ -22,13 +22,19 @@ SQL Server 2017 г CTP-версии 1.4 добавлена `sequence_number` д�
 Чтобы задать `REQUIRED_COPIES_TO_COMMIT` для 0, выполните:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=0
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=0
+```
+
+Эквивалентная команда с использованием crm (в SLES):
+
+```bash
+sudo crm resource param <**ag_cluster**> set required_synchronized_secondaries_to_commit 0
 ```
 
 Чтобы восстановить значения по умолчанию вычисленное значение, запустите:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=
+sudo pcs resource update <**ag_cluster**> required_copies_to_commit=
 ```
 
 >[!NOTE]
