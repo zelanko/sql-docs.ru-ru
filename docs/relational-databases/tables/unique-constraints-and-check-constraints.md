@@ -1,7 +1,7 @@
 ---
 title: "Ограничения уникальности и проверочные ограничения | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Ограничения уникальности и проверочные ограничения
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ограничения UNIQUE и CHECK — это два типа ограничений, которые могут использоваться для обеспечения целостности данных в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это важные объекты базы данных.  
   
@@ -107,3 +107,4 @@ DELETE CheckTbl WHERE col1 = 10;
 |Описывает, как просматривать свойства проверочного ограничения.|[Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   
+
