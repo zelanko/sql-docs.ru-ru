@@ -1,7 +1,7 @@
 ---
 title: "Изменение проверочного ограничения | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="modify-check-constraints"></a>Изменение проверочного ограничения
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Изменение проверочных ограничений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] осуществляется в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] , если необходимо изменить выражение ограничения или параметры, включающие или отключающие ограничение для конкретных условий.  
   
@@ -83,3 +83,4 @@ ms.lasthandoff: 06/22/2017
  Чтобы изменить ограничение `CHECK` с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)], нужно удалить существующее ограничение `CHECK` и повторно создать его с новым определением. Дополнительные сведения см. в разделах [Удаление проверочного ограничения](../../relational-databases/tables/delete-check-constraints.md) и [Создание ограничений CHECK](../../relational-databases/tables/create-check-constraints.md).  
   
 ###  <a name="TsqlExample"></a>  
+
