@@ -1,6 +1,6 @@
+# [Документация для разработчиков по репликации](replication-developer-documentation.md)
 # [Руководство разработчика. Инструкции по репликации](developer-s-guide-how-to-topics-replication.md)
-# [Основные понятия исполняемых файлов агента репликации](replication-agent-executables-concepts.md)
-# [Руководство разработчика по репликации](replication-developer-documentation.md)
+# [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)
 # [Основные понятия объектов RMO](replication-management-objects-concepts.md)
 # [Основные понятия программирования репликации](replication-programming-concepts.md)
 # [Основные понятия системных хранимых процедур репликации](replication-system-stored-procedures-concepts.md)
