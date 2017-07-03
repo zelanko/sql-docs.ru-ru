@@ -1,4 +1,6 @@
-# [Обзор](create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [Что такое SQL Server Reporting Services (SSRS)?](create-deploy-and-manage-mobile-and-paginated-reports.md)
+
+# Обзор
 ## [Новые возможности служб Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Основные понятия Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Функции и задачи служб Reporting Services](reporting-services-features-and-tasks-ssrs.md)   
@@ -69,7 +71,7 @@
 
 # Разработчик
 ## [Интеграция приложений](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [Веб-службы сервера отчетов](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [Веб-службы сервера отчетов](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Расширения](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [Пользовательские элементы отчета](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [Пользовательские сборки](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
@@ -82,7 +84,7 @@
 ### [Настройки сведений об устройстве CSV](csv-device-information-settings.md)  
 ### [Настройки сведений об устройстве Excel](excel-device-information-settings.md)  
 ### [Настройки сведений об устройстве HTML](html-device-information-settings.md)  
-### [Изображение настройки сведений об устройстве](image-device-information-settings.md)  ### [настройки сведений об устройстве MHTML](mhtml-device-information-settings.md)  
+### [Настройки сведений об устройстве для формата изображений](image-device-information-settings.md)  ### [Настройки сведений об устройстве MHTML](mhtml-device-information-settings.md)  
 ### [Настройки сведений об устройстве PDF](pdf-device-information-settings.md)  
 ### [Настройки сведений об устройстве PPTX](pptx-device-information-settings.md)  
 ### [Настройки сведений об устройстве XML](xml-device-information-settings.md)  

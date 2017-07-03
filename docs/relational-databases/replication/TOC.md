@@ -3,9 +3,22 @@
 # [Обратная совместимость репликации](replication-backward-compatibility.md)  
 ## [Устаревшие функции репликации в SQL Server](deprecated-features-in-sql-server-replication.md)  
 ## [Критические изменения репликации в SQL Server](breaking-changes-in-sql-server-replication.md)  
+
+# Области репликации
+## [Администрирование репликации](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [Основные понятия разработчиков](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [Наблюдение за репликацией](./monitor/monitoring-replication.md)
+## [Разнородная репликация базы данных на подписчики, отличные от подписчика SQL Server](./non-sql/heterogeneous-database-replication.md)
+## [Публикация данных и объектов базы данных](./publish/publish-data-and-database-objects.md)
+## [Безопасность для репликации](./security/security-overview-replication.md)
+
 # [Функции и задачи репликации](replication-features-and-tasks.md)  
 ## [Типы репликации](types-of-replication.md)  
 ### [Репликация моментальных снимков](snapshot-replication.md)  
+### [Репликация слиянием](./merge/merge-replication.md)
+### [Репликация транзакций](./transactional/transactional-replication.md) 
+
 ## [Репликация в подписчики таблиц, оптимизированных для памяти](replication-to-memory-optimized-table-subscribers.md)  
 ## [Репликация в базу данных SQL](replication-to-sql-database.md)  
 ## [Повторная публикация данных](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [Проверка сведений о секции для подписчика на публикацию слиянием](validate-partition-information-for-a-merge-subscriber.md)  
 ### [Проверка данных на подписчике](validate-data-at-the-subscriber.md)  
 ## [Создание скриптов репликации](scripting-replication.md)  
-
-# [Основные понятия разработчиков](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Технический справочник](technical-reference-replication.md)  
 ## [Справочник по свойствам](properties-reference-replication.md)  
