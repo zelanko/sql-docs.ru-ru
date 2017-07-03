@@ -1,4 +1,6 @@
-# [Обзор](database-features.md)
+# [Функции базы данных](database-features.md)
+
+# Обзор
 ## [Возможности экземпляров ядра СУБД](database-engine-cross-instance-features.md)
 ## [Технический справочник](technical-reference-database-engine.md)  
 ## [Справочник по функциям](feature-reference-database-engine.md)   
@@ -31,18 +33,18 @@
 # [Базы данных](../relational-databases/databases/databases.md)
 
 # Разработка клиентов
-## [Интеграция со средой CLR](../relational-databases/clr-integration/assemblies-database-engine.md)
-## [Программирование расширенных хранимых процедур](../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)
+## [Интеграция со средой CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
+## [Программирование расширенных хранимых процедур](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
 ## [Справочник по расширенным хранимым процедурам](../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)
-## [Сообщения об ошибках Express LocalDB](../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)
-## [API-интерфейсы экземпляра Express LocalDB](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)
-## [Собственный клиент](../relational-databases/native-client/finding-more-sql-server-native-client-information.md)
-## [Управляющие объекты SQL Server (SMO)](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md)
+## [Сообщения об ошибках Express LocalDB](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
+## [API-интерфейсы экземпляра Express LocalDB](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)
+## [Собственный клиент](../relational-databases/native-client/sql-server-native-client-programming.md)
+## [Управляющие объекты SQL Server (SMO)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [SQLXML](../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)
 ## Поставщик WMI (инструментарий управления Windows)
-### [Настройка поставщика инструментария WMI](../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)
-### [Классы конфигурации поставщика инструментария WMI](../relational-databases/wmi-provider-configuration-classes/cinstance-class-instancename-property.md)
-### [События сервера поставщика инструментария WMI](../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)
+### [Настройка поставщика инструментария WMI](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)
+### [Классы конфигурации поставщика инструментария WMI](../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)
+### [События сервера поставщика инструментария WMI](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)
 
 # [Ошибки и события](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 # [Классы событий](../relational-databases/event-classes/sql-server-event-class-reference.md)

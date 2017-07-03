@@ -1,4 +1,6 @@
 # [Регистрация серверов](register-servers.md)  
+
+# Действия
 ## [Регистрация подключенного сервера (SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)  
 ## [Создание зарегистрированного сервера (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
 ## [Просмотр зарегистрированных серверов в SQL Server Management Studio](view-registered-servers-in-sql-server-management-studio.md)  

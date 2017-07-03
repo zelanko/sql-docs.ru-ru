@@ -1,4 +1,6 @@
 # [Учебники: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+
+# Занятия
 ## [Урок 1. Базовая навигация в SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [Урок 1-1. Запуск SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
 ### [Урок 1-2. Подключение к зарегистрированным серверам и обозревателю объектов](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  

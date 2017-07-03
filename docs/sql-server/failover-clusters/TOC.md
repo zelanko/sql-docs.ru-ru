@@ -1,4 +1,6 @@
 # [Установка отказоустойчивого кластера SQL Server](install/sql-server-failover-cluster-installation.md)  
+
+# Конструирование
 ## [Подготовка к установке отказоустойчивого кластера](install/before-installing-failover-clustering.md)  
 ## [Создание нового отказоустойчивого кластера SQL Server (программа установки)](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  

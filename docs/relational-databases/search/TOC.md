@@ -1,4 +1,6 @@
-# [Полнотекстовый поиск](full-text-search.md)  
+# [Обзор](full-text-search.md)
+
+# Компонент Full-text Search
 ## [Начало работы с полнотекстовым поиском](get-started-with-full-text-search.md)  
 ## [Запросы с полнотекстовым поиском](query-with-full-text-search.md)  
 ## [Поиск слов, близких к другим словам, с помощью оператора NEAR](search-for-words-close-to-another-word-with-near.md)  
@@ -27,6 +29,7 @@
 ## [Инструкции DDL, функции, хранимые процедуры и представления для полнотекстового поиска](full-text-search-ddl-functions-stored-procedures-and-views.md)  
 ## [Использование мастера полнотекстового индексирования](use-the-full-text-indexing-wizard.md)  
 ## [Нерекомендуемые функции полнотекстового поиска в SQL Server 2016](deprecated-full-text-search-features-in-sql-server-2016.md)  
+
 # [Семантический поиск](semantic-search-sql-server.md)  
 ## [Установка и настройка семантического поиска](install-and-configure-semantic-search.md)  
 ## [Включение семантического поиска по таблицам и столбцам](enable-semantic-search-on-tables-and-columns.md)  

@@ -1,5 +1,5 @@
 # [Планирование отчета](planning-a-report-report-builder.md)  
-## [Советы по конструированию отчетов](report-design-tips-report-builder-and-ssrs.md)  
+# [Советы по конструированию отчетов](report-design-tips-report-builder-and-ssrs.md)  
 # [Основные понятия разработки отчетов](report-authoring-concepts-report-builder-and-ssrs.md)  
 ## [Отчеты, элементы отчетов и определения отчетов](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
 ## [Области данных и карты](data-regions-and-maps-report-builder-and-ssrs.md)  

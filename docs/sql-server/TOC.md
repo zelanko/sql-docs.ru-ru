@@ -27,7 +27,7 @@
 # [службы Analysis Services](../analysis-services/analysis-services.md)
 # [Ядро СУБД](../database-engine/configure-windows/sql-server-database-engine.md)
 # [Службы Data Quality Services](../data-quality-services/data-quality-services.md)
-# [Отказоустойчивые кластеры](../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)
+# [Отказоустойчивые кластеры](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Установка](../sql-server/install/planning-a-sql-server-installation.md)
 # [Службы интеграции](../integration-services/sql-server-integration-services.md)
 # [Службы Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)

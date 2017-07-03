@@ -1,3 +1,5 @@
+# [Методы веб-службы для сервера отчетов](report-server-web-service-methods.md)
+
 # [Методы авторизации](authorization-methods.md)
 # [Источники данных и способы подключения](data-sources-and-connection-methods.md)
 # [Методы связанных отчетов](linked-reports-methods.md)
@@ -7,6 +9,5 @@
 # [Методы параметров отчета](report-parameters-methods.md)
 # [Методы управления пространством имен сервера отчетов](report-server-namespace-management-methods.md)
 # [Конечные точки службы Web сервера отчетов](report-server-web-service-endpoints.md)
-# [Методы веб-службы для сервера отчетов](report-server-web-service-methods.md)
 # [Методы планирования](scheduling-methods.md)
 # [Методы подписки и доставки](subscription-and-delivery-methods.md)

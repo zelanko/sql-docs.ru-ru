@@ -1,3 +1,7 @@
+
+# [Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [Обработка адаптивной запросов](adaptive-query-processing.md)
 # [Автоматической настройки](../automatic-tuning/automatic-tuning.md)
 # [Оценка количества элементов](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [Проверка структур плана после обновления](validate-plan-guides-after-upgrade.md)  
 ## [Удаление структуры плана](delete-a-plan-guide.md)  
 ## [Включение или отключение структуры плана](enable-or-disable-a-plan-guide.md)  
-
-# [Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[Наблюдение за использованием ресурсов (системный монитор)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
