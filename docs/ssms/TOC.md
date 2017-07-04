@@ -1,8 +1,12 @@
 # [Скачивание SSMS](download-sql-server-management-studio-ssms.md)
 # [Что такое SSMS?](sql-server-management-studio-ssms.md)
-# [Журнал изменений SSMS](sql-server-management-studio-changelog-ssms.md)
-# [Заметки о выпуске](sql-server-management-studio-release-notes.md)
-# [Предыдущие выпуски SSMS](previous-sql-server-management-studio-releases.md)
+
+# What's New
+## [Журнал изменений SSMS](sql-server-management-studio-changelog-ssms.md)
+## [Заметки о выпуске](sql-server-management-studio-release-notes.md)
+## [Новые и недавно обновленные статьи](new-updated-ssms.md)
+## [Предыдущие выпуски SSMS](previous-sql-server-management-studio-releases.md)
+
 # [Использование SSMS](use-sql-server-management-studio.md)
 # [Возможности SSMS](features-in-sql-server-management-studio.md)
 # [Сбор информации об использовании](sql-server-management-studio-telemetry-ssms.md)

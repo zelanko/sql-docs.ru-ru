@@ -3,12 +3,11 @@
 # Обзор
 ## [Что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md)
 ## [Новые возможности SQL Server 2017 г.](what-s-new-in-sql-server-2017.md)
+## [Новые и недавно обновленные статьи](new-updated-sql-server.md)
 ## [Выпуски и поддерживаемых функций SQL Server](editions-and-components-of-sql-server-2016.md)
 ## [Спецификации максимально допустимых параметров SQL Server](maximum-capacity-specifications-for-sql-server.md)
 ## [Ограничения по производительности вычислений для разных выпусков SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Программа улучшения качества программного обеспечения](customer-experience-improvement-program-for-sql-server-data-tools.md)
-
-# [Недавно обновлены статьи для SQL Server](sql-server-new-updated-sql-docs-pr.md)
 
 # Заметки о выпуске
 
