@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="creating-a-non-xml-format-file"></a>Создание файла форматирования в формате, отличном от XML  
  Чтобы создать файл форматирования с помощью служебной программы **bcp** , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** . Параметр **format** также требует наличия параметра **-f** , например:  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** *таблица_или_представление* **format** nul **-f***имя_файла_формата*  
   
 > [!NOTE]  
 >  Для файлов форматирования в формате, отличном от XML рекомендуется использовать расширение FMT, например MyTable.fmt.  
@@ -170,7 +170,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## <a name="creating-an-xml-format-file"></a>Создание XML-файла форматирования  
  Чтобы создать файл форматирования с помощью служебной программы **bcp** , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** . Параметр **format** всегда требует наличия параметра **-f** , а чтобы создать XML-файл форматирования, необходимо задать параметр **-x** , например:  
   
- **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
+ **bcp** *таблица_или_представление* **format nul-f** *имя_файла_формата* **-x**  
   
 > [!NOTE]  
 >  Для XML-файлов форматирования рекомендуется использовать расширение XML, например MyTable.xml.  

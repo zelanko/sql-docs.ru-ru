@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 06806d82a8075b0aa25bd66028eefee1a83ec2f9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Восстановление базы данных без восстановления данных (Transact-SQL)
@@ -67,7 +67,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Синтаксис инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) для восстановления файлов только по журналу транзакций:  
   
- RESTORE DATABASE *database_name* { FILE **=***логическое_имя_файла* | FILEGROUP **=***логическое_имя_файловой_группы* }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *имя_базы_данных* { FILE **=***логическое_имя_файла* | FILEGROUP **=***логическое_имя_файловой_группы* }[ **,**...*n* ] WITH RECOVERY  
   
  **Пример**  
   

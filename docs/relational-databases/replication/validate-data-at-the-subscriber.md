@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcd9d7f9e729a1d2ebb7cc876ce3807aa839f079
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="validate-data-at-the-subscriber"></a>Проверка данных на подписчике
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
   
  Проверка данных состоит из трех этапов:  
   
-1.  Одна или все подписки на публикацию *помечаются* для проверки. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Все подписки можно также пометить на вкладке **Все подписки** , вкладке **Список наблюдения за подписками** и в узле публикаций монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+1.  Одна или все подписки на публикацию *помечаются* для проверки. Пометьте подписки для проверки в диалоговых окнах **Проверить подписку**, **Проверить подписки**и **Проверить все подписки** , доступные из папок **Локальные публикации** и **Локальные подписки** в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Все подписки можно также пометить на вкладке **Все подписки** , вкладке **Список наблюдения за подписками** и в узле публикаций монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 2.  Подписка проверяется при следующей синхронизации, выполняемой агентом распространителя (для репликации транзакций) или агентом слияния (для репликации слиянием). Агент распространителя, как правило, работает постоянно, то есть проверка выполняется немедленно. Агент слияния запускается по запросу, в этом случае проверка выполняется после запуска агента.  
   
@@ -312,13 +312,13 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>Проверка данных для всех статей в публикации транзакций  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication>. Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>. Укажите в качестве свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> соединение, созданное на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> . Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.  
   
-3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Передайте следующие параметры:  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Передайте следующие параметры:  
   
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>  
   
@@ -332,25 +332,25 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>Проверка данных всех подписок на публикацию слиянием  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>. Укажите в качестве свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> соединение, созданное на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.  
   
-3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Передайте нужный параметр <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Передайте нужный параметр <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
 5.  Выполните агент слияния для каждой подписки, чтобы начать проверку, или подождите следующего планового запуска агента. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Результат проверки записывается в журнал агента, который можно просмотреть с помощью монитора репликации. Дополнительные сведения см. в разделе [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>Проверка данных в одной подписке на публикацию слиянием  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>. Укажите в качестве свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> соединение, созданное на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.  
   
-3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Передайте имя подписчика, проверяемую базу данных подписки и нужный параметр <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Передайте имя подписчика, проверяемую базу данных подписки и нужный параметр <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
 5.  Выполните агент слияния для каждой подписки, чтобы начать проверку, или подождите следующего планового запуска агента. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md). Результат проверки записывается в журнал агента, который можно просмотреть с помощью монитора репликации. Дополнительные сведения см. в разделе [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
   
