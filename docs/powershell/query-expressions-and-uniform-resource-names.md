@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70426dcb9e6ca23d3e8de717fe7b9430155c7243
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
@@ -166,6 +166,6 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>См. также:  
  [Invoke-PolicyEvaluation, командлет](../powershell/invoke-policyevaluation-cmdlet.md)   
- [Подсистема аудита SQL Server (ядро СУБД)](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [Подсистема аудита SQL Server (компонент Database Engine)](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

@@ -1,1 +1,1 @@
-![Скачать](../ssdt/media/download.png)[Скачать драйвер JDBC](http://go.microsoft.com/fwlink/?LinkId=245496)
+![Скачать](../ssdt/media/download.png)[Скачать драйвер JDBC](https://go.microsoft.com/fwlink/?linkid=852460)
