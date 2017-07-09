@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/11/2017
   
      [Программа bcp](../../tools/bcp-utility.md) использует для записи несимвольных данных из таблицы в файл данных внутренний двоичный формат данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Данные типа[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) или [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
+-   Данные типа[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) или [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) .  
   
      В начале каждого поля [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) или [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) программа [bcp](../../tools/bcp-utility.md) добавляет длину префикса.  
   
@@ -150,7 +150,7 @@ Notepad D:\BCP\myNative.fmt
 В приведенных ниже примерах используется база данных и файлы форматирования, созданные ранее.
 
 ### **Использование bcp и собственного формата для экспорта данных**<a name="bcp_native_export"></a>
-Параметр**-n** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
+**-n** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
 ```
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
@@ -159,7 +159,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Использование bcp и собственного формата для импорта данных без файла форматирования**<a name="bcp_native_import"></a>
-Параметр**-n** и команда **IN** .  В командной строке введите следующие команды:
+**-n** и команда **IN** .  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
@@ -172,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_native_import_fmt"></a>
-Параметры**-n** и **-f** switches и **IN** commи.  В командной строке введите следующие команды:
+**-n** и **-f** и команда **IN** .  В командной строке введите следующие команды:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
