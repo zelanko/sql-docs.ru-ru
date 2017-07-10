@@ -23,11 +23,13 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Интеграция службы Reporting Services с помощью элементов управления ReportViewer — начало работы
+<a id="integrating-reporting-services-using-reportviewer-controls---get-started" class="xliff"></a>
+# Интеграция службы Reporting Services с помощью элементов управления ReportViewer — начало работы
 
 Узнайте, как разработчики могут встроить разбиением на страницы в веб-сайтов ASP.Net и приложений Windows forms, через службы Reporting Services 2016 элемента управления ReportViewer. Можно добавить элемент управления в новый проект или обновите существующий проект.
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Добавление элемента управления ReportViewer для нового веб-проекта
+<a id="adding-the-reportviewer-control-to-a-new-web-project" class="xliff"></a>
+## Добавление элемента управления ReportViewer для нового веб-проекта
 
 1. Создайте новый **пустой веб-сайт ASP.NET** или откройте существующий проект ASP.NET.
 
@@ -36,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 2. Установка пакета nuget элемента управления ReportViewer 2016 через **консоли диспетчера пакетов Nuget**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
 3. Добавьте в проект новый ASPX-страницы и зарегистрировать сборку элемента управления ReportViewer для использования на странице.
 
@@ -80,11 +82,13 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Обновление существующего проекта, чтобы использовать элемент управления ReportViewer
+<a id="updating-an-existing-project-to-use-the-reportviewer-control" class="xliff"></a>
+## Обновление существующего проекта, чтобы использовать элемент управления ReportViewer
 
 Чтобы использовать элемент управления ReportViewer 2016 в существующий проект, добавить элемент управления с помощью Nuget и обновить ссылки на сборки до версии *14.0.0.0*. Сюда входят обновления проекта web.config и все ASPX-страницы, которые ссылаются на элемент управления ReportViewer.
 
-### <a name="sample-webconfig-changes"></a>Пример web.config изменения
+<a id="sample-webconfig-changes" class="xliff"></a>
+### Пример web.config изменения
 
 ```
 <?xml version="1.0"?>
@@ -131,7 +135,8 @@ ms.lasthandoff: 06/22/2017
 </configuration>
 ```
 
-### <a name="sample-aspx"></a>Образец .aspx
+<a id="sample-aspx" class="xliff"></a>
+### Образец .aspx
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -142,7 +147,8 @@ ms.lasthandoff: 06/22/2017
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Добавление элемента управления ReportViewer в новый проект Windows forms
+<a id="adding-the-reportviewer-control-to-a-new-windows-forms-project" class="xliff"></a>
+## Добавление элемента управления ReportViewer в новый проект Windows forms
 
 1. Создайте новый **приложение Windows Forms** или откройте существующий проект.
 
@@ -151,7 +157,7 @@ ms.lasthandoff: 06/22/2017
 2. Установка пакета nuget элемента управления ReportViewer 2016 через **консоли диспетчера пакетов Nuget**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
 3. Добавить новый элемент управления из кода или [добавьте элемент управления в область элементов](##adding-control-to-visual-studio-toolbar).
 
@@ -177,13 +183,15 @@ ms.lasthandoff: 06/22/2017
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Как задать высоту 100% для управления 2016 средства просмотра отчетов
+<a id="how-to-set-100-height-on-the-report-viewer-2016-control" class="xliff"></a>
+## Как задать высоту 100% для управления 2016 средства просмотра отчетов
 
 Новый элемент управления 2016 средства просмотра отчетов оптимизирован для ориентации страниц стандарты HTML5 и работает на всех современных браузеров. В прошлом, с помощью старого RVC элемента управления при установке свойства высоты 100%, он работал даже если ни один из родительских высоте, указанной. Это поведение изменено в HTML5. При установке этого свойства для нового элемента управления RVC, он будет работать только в том случае, если родительский элемент имеет определенный высоту, т. е. не значение auto или всех предков RVC иметь высоты 100% слишком.
 
 Ниже приведены два примера это сделать.
 
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Установив высоту всех родительских элементов до 100%
+<a id="by-setting-the-height-of-all-the-parent-elements-to-100" class="xliff"></a>
+### Установив высоту всех родительских элементов до 100%
 
 ```
 <!DOCTYPE html>
@@ -209,7 +217,8 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Установив высоту атрибута стиля для родительского элемента управления reportviewer
+<a id="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control" class="xliff"></a>
+### Установив высоту атрибута стиля для родительского элемента управления reportviewer
 
 Дополнительные сведения о процент длины окна просмотра. в разделе [просмотра процент длины](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -232,7 +241,8 @@ ms.lasthandoff: 06/22/2017
 
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Добавление элемента управления панели инструментов Visual Studio
+<a id="adding-control-to-visual-studio-toolbar" class="xliff"></a>
+## Добавление элемента управления панели инструментов Visual Studio
 
 Элемент управления средства просмотра отчетов теперь поставляется в виде пакета NuGet. По этой причине не будет отображаться в панели элементов Visual Studio по умолчанию элемент управления средства просмотра отчетов. Элемент управления можно добавить на панель элементов следующим образом.
 
@@ -259,14 +269,16 @@ ms.lasthandoff: 06/22/2017
 
     ![службы ssRS, панель элементов, rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>Необходимо иметь в виду следующее
+<a id="things-to-be-aware-of" class="xliff"></a>
+### Необходимо иметь в виду следующее
 
 - Это будет добавьте ссылку в установленном пакете NuGet текущего проекта. Элемент на панели элементов, сохранятся в другие проекты. При установке пакета NuGet в новое решение или проект, элемент панели инструментов могут ссылаться на более старую версию. 
 
 - Элемент управления остается в области элементов, даже если сборка доступна не больше. Если этот проект был удален, если вы повторите и добавьте элемент управления из области элементов Visual Studio вызовет ошибку. Чтобы исправить эту ошибку, удалите элемент управления из панели элементов и повторно добавить его, используя описанные выше шаги.
 
 
-## <a name="common-issues"></a>Распространенные проблемы
+<a id="common-issues" class="xliff"></a>
+## Распространенные проблемы
     
 - Элемент управления ReportViewer 2016 предназначен для использования с современными браузерами. Элемент управления может работать, если браузер отображает веб-страницы в режиме совместимости с IE. Узлы интрасети может потребоваться метатег для переопределения параметра которой стимулировать Подготовка к просмотру страниц интрасети в режиме совместимости.
 
@@ -274,11 +286,13 @@ ms.lasthandoff: 06/22/2017
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>Обратная связь
+<a id="providing-feedback" class="xliff"></a>
+## Обратная связь
 
 Разрешить команды знать о проблемах, которые встречаются с элементом управления [форумы Reporting Services MSDN](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) или по электронной почте [ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com).
 
-## <a name="see-also"></a>См. также:
+<a id="see-also" class="xliff"></a>
+## См. также:
 
 [Сбор данных в элементе управления ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 Дополнительные вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
