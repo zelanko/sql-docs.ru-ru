@@ -29,19 +29,25 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="enhance-transactional-replication-performance"></a>Повышение производительности репликации транзакций
+<a id="enhance-transactional-replication-performance" class="xliff"></a>
+
+# Повышение производительности репликации транзакций
   После рассмотрения общих рекомендаций в отношении производительности, описываемых в разделе [Повышение общей производительности репликации](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), необходимо проанализировать следующие дополнительные области, относящиеся к репликации транзакций.  
   
-## <a name="database-design"></a>Структура базы данных  
+<a id="database-design" class="xliff"></a>
+
+## Структура базы данных  
   
 -   Минимизируйте размер транзакций в структуре приложения.  
   
      По умолчанию репликация транзакций распространяет изменения в соответствии с границами транзакций. Если транзакции имеют небольшой размер, то маловероятно, что агенту распространителя придется повторно пересылать транзакцию вследствие перебоев в сети. Если агенту потребуется переслать транзакцию, то количество отсылаемых данных будет меньшим.  
   
-## <a name="distributor-configuration"></a>Настройка распространителя  
+<a id="distributor-configuration" class="xliff"></a>
+
+## Настройка распространителя  
   
 -   Настройте распространитель на выделенном сервере.  
   
@@ -51,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
      Проверьте репликацию с типовой нагрузкой системы, чтобы определить пространство, необходимое для хранения команд. Убедитесь в том, что база данных имеет достаточный размер для хранения команд без частого автоматического увеличения размера. Дополнительные сведения об изменении размера базы данных см. в разделе [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="publication-design"></a>Разработка публикации  
+<a id="publication-design" class="xliff"></a>
+
+## Разработка публикации  
   
 -   Реплицируйте выполнение хранимых процедур при выполнении пакетных обновлений опубликованных таблиц.  
   
@@ -61,7 +69,9 @@ ms.lasthandoff: 04/11/2017
   
      Если невозможно использовать параметр **-SubscriptionStreams** (описываемый далее в данном разделе), необходимо рассмотреть возможность создания нескольких публикаций. Распределение статей между этими публикациями позволяет репликации параллельно применять изменения на подписчиках.  
   
-## <a name="subscription-considerations"></a>Вопросы использования подписок  
+<a id="subscription-considerations" class="xliff"></a>
+
+## Вопросы использования подписок  
   
 -   Если на одном и том же издателе имеется несколько публикаций, используйте независимые агенты вместо общих агентов (эта конфигурация устанавливается по умолчанию в мастере создания публикаций).  
   
@@ -69,9 +79,11 @@ ms.lasthandoff: 04/11/2017
   
      Настройка агентов на непрерывное выполнение вместо создания часто выполняемых расписаний (например, ежеминутных) позволяет повысить производительность репликации за счет экономии времени на запусках и остановках агента. Если агент распространителя настроен на непрерывную работу, изменения пересылаются на другие серверы, соединенные в топологии, с малой задержкой. Дополнительные сведения см. в разделе:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Указание расписаний синхронизации](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Параметры агента распространителя и агента чтения журнала  
+<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>
+
+## Параметры агента распространителя и агента чтения журнала  
   
 -   Чтобы устранить случайные, возникающие нерегулярно ограничения, используйте параметр **–MaxCmdsInTran** для агента чтения журнала.  
   
@@ -102,7 +114,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [Работа с профилями агента репликации](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
 -   [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   

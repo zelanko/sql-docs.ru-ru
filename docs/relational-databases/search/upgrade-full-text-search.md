@@ -24,10 +24,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
+<a id="upgrade-full-text-search" class="xliff"></a>
+
+# Обновление полнотекстового поиска
   Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
   
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 04/11/2017
  Для обновления на месте экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливается параллельно с более старой версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], после чего выполняется перенесение данных. Если в старой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен компонент Full-Text Search, его новая версия устанавливается автоматически. Параллельная установка означает, что каждый из следующих компонентов работает на уровне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Средства разбиения по словам, парадигматические модули и фильтры  
- Теперь каждый экземпляр SQL Server использует отдельный комплект средств разбиения по словам, парадигматические модули и фильтры, а не те версии этих компонентов, которые предоставляет операционная система. Более того, это облегчает регистрацию и конфигурацию этих компонентов. Дополнительные сведения см. в разделах [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) и [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+ Теперь каждый экземпляр SQL Server использует отдельный комплект средств разбиения по словам, парадигматические модули и фильтры, а не те версии этих компонентов, которые предоставляет операционная система. Более того, это облегчает регистрацию и конфигурацию этих компонентов. Дополнительные сведения см. в разделах [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) и [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
  Узел управляющей программы фильтрации  
  Узлы управляющей программы полнотекстовой фильтрации — это процессы, которые безопасно загружают внешние расширяемые компоненты индексов и запросов (например: средства разбиения по словам, парадигматические модули и фильтры), и позволяют использовать их, не нарушая целостности средства полнотекстового поиска. Экземпляр сервера использует многопоточный процесс для всех многопоточных фильтров и однопоточный процесс для однопоточных фильтров.  
@@ -83,7 +85,9 @@ ms.lasthandoff: 04/11/2017
   
      Импорт или перестроение отнимает много ресурсов процессора, что задерживает обновление остальных частей экземпляра сервера и перевод его в режим «в сети». Если важно перевести экземпляр сервера в режим «в сети» как можно скорее, а пользователь способен выполнить после обновления заполнение вручную, то целесообразно будет использовать режим **Сброс** .  
   
-## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>Обеспечение согласованности результатов запроса после импорта полнотекстового индекса  
+<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>
+
+## Обеспечение согласованности результатов запроса после импорта полнотекстового индекса  
  Если полнотекстовый каталог был импортирован в процессе обновления базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], то возможно возникновение несоответствий между содержимым запроса и полнотекстового индекса. Это вызывается небольшой разницей в поведении между новыми и старыми средствами разбиения по словам. В данном случае для обеспечения полного соответствия между запросами и содержимым полнотекстового индекса следует выбрать один из следующих параметров:  
   
 -   Выполнить повторное создание полнотекстового каталога, содержащего полнотекстовый индекс ([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*имя_каталога* REBUILD).  
@@ -92,7 +96,9 @@ ms.lasthandoff: 04/11/2017
   
  Дополнительные сведения о средствах разбиения по словам см. в разделе [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-## <a name="upgrade-noise-word-files-to-stoplists"></a>Обновление файлов пропускаемых слов до списков стоп-слов  
+<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>
+
+## Обновление файлов пропускаемых слов до списков стоп-слов  
 После обновления базы данных до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] от версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]файлы пропускаемых слов становятся неиспользуемыми. Но старые файлы пропускаемых слов хранятся в папке FTDATA\FTNoiseThresaurusBak, и их можно использовать в дальнейшем при обновлении или построении соответствующих списков стоп-слов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  После обновления с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -112,7 +118,9 @@ ms.lasthandoff: 04/11/2017
   
      Предложение STOPLIST OFF удаляет фильтрацию по стоп-словам; таблица будет заполняться без фильтрации неучитываемых слов.  
   
-## <a name="backup-and-imported-full-text-catalogs"></a>Резервные копии полнотекстовых каталогов и импортированные полнотекстовые каталоги  
+<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>
+
+## Резервные копии полнотекстовых каталогов и импортированные полнотекстовые каталоги  
  Для полнотекстовых каталогов, которые были восстановлены или сброшены во время обновления (и для новых полнотекстовых каталогов) полнотекстовый каталог является логическим понятием. Он не располагается в файловой группе. Следовательно, чтобы создать резервную копию полнотекстового каталога в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], следует определить все файловые группы, содержащие полнотекстовый индекс каталога, а затем последовательно создать резервные копии каждой из этих групп. Дополнительные сведения см. в разделе [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
  Те полнотекстовые каталоги, которые были импортированы из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], все еще являются файлами базы данных в собственных файловых группах. Процесс резервного копирования [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] для полнотекстовых каталогов применим, за исключением того, что служба MSFTESQL не существует в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о процессе [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](http://go.microsoft.com/fwlink/?LinkId=209154) электронной документации по SQL Server 2005.  
@@ -124,7 +132,7 @@ ms.lasthandoff: 04/11/2017
   
  **Изменение поведения полнотекстового обновления на экземпляре сервера**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: используйте действие **upgrade\_option** хранимой процедуры [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** используйте параметр **Режим обновления полнотекстового каталога** в диалоговом окне **Свойства сервера** . Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -155,7 +163,9 @@ ms.lasthandoff: 04/11/2017
   
 -   [Выполнение полного восстановления базы данных (модель полного восстановления)](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>Пример  
+<a id="example" class="xliff"></a>
+
+### Пример  
  В приведенных ниже примерах в инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) используется предложение MOVE для восстановления базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с именем `ftdb1`. Файлы базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , журнала и каталогов перемещаются в новые места в экземпляре сервера [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] следующим образом.  
   
 -   Файл базы данных `ftdb1.mdf`перемещается по адресу `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  
@@ -180,9 +190,11 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Дополнительные сведения о присоединении и отсоединении базы данных см. в разделах [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) и [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+<a id="see-also" class="xliff"></a>
+
+## См. также:  
  [Приступая к работе с компонентом Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

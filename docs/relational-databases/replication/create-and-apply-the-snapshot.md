@@ -21,10 +21,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7fdc75559ffafea97e9ad3f4ef4b5e0788d7fb3d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="create-and-apply-the-snapshot"></a>Создание и применение моментального снимка
+<a id="create-and-apply-the-snapshot" class="xliff"></a>
+
+# Создание и применение моментального снимка
   Моментальные снимки создаются агентом моментальных снимков после создания публикации. Моментальные снимки могут создаваться:  
   
 -   Немедленно. По умолчанию моментальный снимок для публикации слиянием формируется немедленно после создания публикации в мастере создания публикаций.  
@@ -47,11 +49,13 @@ ms.lasthandoff: 04/11/2017
   
  Чтобы просмотреть или изменить папку по умолчанию для моментального снимка, см.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Указание расположения моментальных снимков по умолчанию (SQL Server Management Studio)](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
 -   Программирование репликации и RMO: [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
-## <a name="see-also"></a>См. также:  
+<a id="see-also" class="xliff"></a>
+
+## См. также:  
  [Инициализация подписки с помощью моментального снимка](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
  [sp_addpublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  

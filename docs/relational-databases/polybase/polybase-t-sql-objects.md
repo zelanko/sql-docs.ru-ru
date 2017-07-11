@@ -20,13 +20,15 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be34605990368fbbccdb8b81c119318c01431ced
+ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
+ms.openlocfilehash: b8b90960e312ed5e26d5379dac1312849818022d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/30/2017
 
 ---
-# <a name="polybase-t-sql-objects"></a>Объекты T-SQL PolyBase
+<a id="polybase-t-sql-objects" class="xliff"></a>
+
+# Объекты T-SQL PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Чтобы использовать PolyBase, необходимо создать внешние таблицы для ссылок на внешние данные.  
@@ -40,11 +42,18 @@ ms.lasthandoff: 06/22/2017
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)  
-  
-## <a name="prerequisites"></a>Предварительные требования  
+ 
+> [!NOTE]
+>  PolyBase в SQL Server 2016 поддерживает только пользователей Windows. Если вы попытаетесь использовать пользователя SQL для запроса внешней таблицы PolyBase, запрос завершится с ошибкой.
+
+<a id="prerequisites" class="xliff"></a>
+
+## Предварительные требования  
  Настройте PolyBase. См. раздел [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## <a name="create-external-tables-for-hadoop"></a>Создание внешних таблиц для Hadoop  
+<a id="create-external-tables-for-hadoop" class="xliff"></a>
+
+## Создание внешних таблиц для Hadoop  
  **1. Создание учетных данных области базы данных**  
   
  Этот шаг является обязательным только для кластеров Hadoop, защищенных с помощью Kerberos.  
@@ -122,7 +131,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## <a name="create-external-tables-for-azure-blob-storage"></a>Создание внешней таблицы для хранилища BLOB-объектов Azure  
+<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>
+
+## Создание внешней таблицы для хранилища BLOB-объектов Azure  
  **1. Создание учетных данных области базы данных**  
   
 ```sql  
@@ -197,7 +208,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-## <a name="create-external-tables-for-azure-data-lake-store"></a>Создание внешних таблиц для Azure Data Lake Store
+<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
+
+## Создание внешних таблиц для Azure Data Lake Store
 Хранилище Azure Data Lake Store поддерживается только PolyBase в хранилище данных SQL.
 Дополнительные сведения об использовании Azure Data Lake Store совместно с ADLS см. в статье [Загрузка данных из Azure Data Lake Store в хранилище данных SQL](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
  
@@ -289,10 +302,14 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-## <a name="next-steps"></a>Следующие шаги  
+<a id="next-steps" class="xliff"></a>
+
+## Следующие шаги  
  Примеры запросов см. в разделе [Запросы PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## <a name="see-also"></a>См. также:  
+<a id="see-also" class="xliff"></a>
+
+## См. также:  
  [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
