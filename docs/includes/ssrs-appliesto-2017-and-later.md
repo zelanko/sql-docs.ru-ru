@@ -1,0 +1,1 @@
+![да](media/yes.png)SQL Server Reporting Services (2017 и более поздних версий)

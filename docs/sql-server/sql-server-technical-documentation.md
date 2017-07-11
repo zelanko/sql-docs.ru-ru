@@ -1,6 +1,6 @@
 ---
 title: "Техническая документация по SQL Server | Документы Microsoft"
-ms.date: 03/24/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,18 +23,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 79e06fb9a4eab8cd067aaa59a448593ca25e314c
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="sql-server-technical-documentation"></a>Техническая документация по SQL Server
+<a id="sql-server-technical-documentation" class="xliff"></a>
+
+# Техническая документация по SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > Содержимое, связанное с предыдущих версий SQL Server, в разделе [установки для SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Документация по установке, настройке и использованию SQL Server. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Раздел о языке [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] см. в [справочнике по языку](../t-sql/language-reference.md).
+
+Документацию по SQL Server можно также просмотреть в автономном режиме с помощью окна справки. Дополнительные сведения см. в статье [Окно справки и автономное содержимое для SQL Server](../release-notes/sql-server-help-installation.md).
 
 **SQL Server 2017 г.**
 
@@ -47,11 +51,13 @@ ms.lasthandoff: 06/22/2017
 - [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
  **Оцените SQL Server!**    
- - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
- - **[Запустите виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**.    
- - **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
+ - [**Скачайте SQL Server 2016 в центре оценки**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+ - **[Запустите виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+ - **[Скачайте последнюю версию SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-## <a name="sql-server-technologies"></a>Технологии SQL Server    
+<a id="sql-server-technologies" class="xliff"></a>
+
+## Технологии SQL Server    
     
 |||    
 |-|-|    
@@ -65,7 +71,9 @@ ms.lasthandoff: 06/22/2017
 |![Службы Reporting Services](../sql-server/media/reporting-services.png "Службы Reporting Services")|**[Службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Службы Reporting Services предлагают средства создания корпоративных отчетов с поддержкой веб-интерфейса, которые позволяют включать в отчеты данные из различных источников, публиковать отчеты в разнообразных форматах, а также централизованно управлять безопасностью и подписками.|    
 
     
-## <a name="earlier-sql-server-versions"></a>Предыдущие версии SQL Server
+<a id="earlier-sql-server-versions" class="xliff"></a>
+
+## Предыдущие версии SQL Server
 - [Электронная документация по электронной документации по SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Установка SQL Server 2014 Express и других, более ранних версий SQL Server](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Выражаем благодарность [Скотту Хэнсельману](http://www.hanselman.com/) (Scott Hanselman) за сбор всех ссылок на пакеты установщика**.)  
 - [Техническая документация по SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
@@ -78,7 +86,9 @@ ms.lasthandoff: 06/22/2017
 - [Образцы баз данных AdventureWorks и скрипты для SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [Образцы SQL Server на GitHub](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>Дополнительные сведения   
+<a id="more-information" class="xliff"></a>
+
+ ## Дополнительные сведения   
 + [Диспетчер конфигурации SQL Server](../relational-databases/sql-server-configuration-manager.md)
 + Ссылки и сведения для всех поддерживаемых версий в[Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx)  
 + [Установка ядра СУБД SQL Server](../database-engine/install-windows/install-sql-server-database-engine.md) 

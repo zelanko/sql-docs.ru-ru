@@ -1,0 +1,1 @@
+![нет](media/no.png)Сервер отчетов Power BI

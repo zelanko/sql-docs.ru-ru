@@ -2,7 +2,7 @@
 title: "Новые возможности в SQL Server 2016 | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/15/2016
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,16 +23,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.sourcegitcommit: a59a02db0054f3fe1a7e571ad97f23c65b021a77
+ms.openlocfilehash: 331f6b68bb4cdd4803dd0fd634c3584f3b809064
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/29/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2016"></a>Новые возможности в SQL Server 2016
- [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] — самый крупный рывок вперед за всю историю развития платформы управления данными Майкрософт. Обеспечьте оперативную аналитику транзакционных и аналитических данных с помощью масштабируемой платформы баз данных, которая обладает всем необходимым: от беспрецедентной производительности при обработке в памяти, инновационных средств безопасности и высокой доступности до расширенных функций аналитики, расширяющих возможности критически важных приложений.
+<a id="whats-new-in-sql-server-2016" class="xliff"></a>
+
+# Что нового в SQL Server 2016
+ SQL Server 2016 — создавайте интеллектуальные и критически важные приложения с помощью масштабируемой, гибридной платформы баз данных, в которую уже встроено все необходимое — от эффективной обработки в памяти и повышенной безопасности до аналитики в базе данных.
  
- В этом разделе приводятся ссылки на подробные сведения о новых возможностях [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] на уровне компонентов.   
+ Эта страница содержит ссылки на подробные сведения о новых возможностях каждого компонента SQL Server 2016.   
  
   ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
  
@@ -40,17 +42,16 @@ ms.lasthandoff: 06/22/2017
  
     
  **Оцените SQL Server уже сегодня!**    
- - Get the **free** [**SQL Server 2016 Developer edition!!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
- 
- 
-[![Скачайте со страницы центра оценки](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Скачайте SQL Server 2016 со страницы **[центра оценки](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 
+ - Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition.**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
     
-[Маленький значок виртуальной машины Azure![](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)**, чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).  
+[Маленький значок виртуальной машины Azure![](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure? Запустите [виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
- [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download the latest version of SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx).   
+ [![Скачайте из центра оценки](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) Скачайте последнюю версию [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
 
     
- ## <a name="whats-new-in-sql-server"></a>Новые возможности в SQL Server
+<a id="whats-new-in-sql-server" class="xliff"></a>
+
+ ## Новые возможности в SQL Server
 Ссылки на отдельные разделы
  
  - [Установка SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
@@ -61,7 +62,7 @@ ms.lasthandoff: 06/22/2017
 
  - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
  
- - [Службы интеграции](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
+ - [Службы Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
   
  - [Службы Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx)   
   
@@ -71,12 +72,14 @@ ms.lasthandoff: 06/22/2017
       
   
     
-## <a name="see-also"></a>См. также    
+<a id="more-links" class="xliff"></a>
+
+## Дополнительные ссылки   
  +   [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md). 
 + [Таблица SQL Server 2016](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [Возможности, поддерживаемые различными выпусками SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
  + [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
- + [Установка SQL Server 2016 с помощью мастера установки](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+ + [Установка SQL Server 2016 с помощью мастера установки](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
  [Настройка и обслуживание установки](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 
 
