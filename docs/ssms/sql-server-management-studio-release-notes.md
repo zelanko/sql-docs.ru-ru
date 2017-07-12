@@ -21,7 +21,9 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="sql-server-management-studio----release-notes"></a>Заметки о выпуске SQL Server Management Studio
+<a id="sql-server-management-studio----release-notes" class="xliff"></a>
+
+# Заметки о выпуске SQL Server Management Studio
 Добро пожаловать в общедоступную версию SQL Server Management Studio!  Он представляет собой изолированную установку вне выпуска SQL Server. Мы стремимся регулярно обновлять его, добавляя новые возможности, исправления и поддержку новых функций в SQL Server и Базе данных SQL Azure.  
   
 Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  
@@ -61,11 +63,15 @@ ms.lasthandoff: 06/23/2017
 5. **При нажатии кнопки "Справка" или клавиши F1 справка не открывается**  
 При нажатии кнопки "Справка" или клавиши F1 в некоторых средах отображается следующее сообщение: **Требуется новое приложение для открытия ms-xhelp**. Эта ошибка является известной проблемой и будет устранена в будущей версии.
   
-## <a name="feedback"></a>Отзывы  
+<a id="feedback" class="xliff"></a>
+
+## Отзывы  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Опубликуйте информацию о проблеме или предложение на Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  
   
-## <a name="see-also"></a>См. также:  
+<a id="see-also" class="xliff"></a>
+
+## См. также:  
 [Учебник по среде SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Скачивание SQL Server Management Studio (службы SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
 [Предыдущие выпуски SQL Server Management Studio](../ssms/previous-sql-server-management-studio-releases.md)  
