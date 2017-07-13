@@ -1,7 +1,7 @@
 ---
 title: "Диспетчер предупреждений данных для администраторов предупреждений | Документы Microsoft"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c9d88d14b1f67a6d8da584349062de51e75ebf02
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
+# Диспетчер предупреждений данных для оповещения администраторов
+<a id="data-alert-manager-for-alerting-administrators" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет диспетчер предупреждений об изменении данных, позволяющий администраторам предупреждений SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services предоставляет диспетчер предупреждений данных для оповещения администраторов SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.
 
 ![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "диспетчер предупреждений для администраторов сайта SharePoint")
 
@@ -79,7 +82,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>См. также
+## См. также
+<a id="see-also" class="xliff"></a>
 
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 

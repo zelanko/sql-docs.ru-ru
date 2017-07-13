@@ -15,16 +15,15 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: ru-ru
 ms.lasthandoff: 07/10/2017
 
 ---
-<a id="web-portal-ssrs-native-mode" class="xliff"></a>
-
 # Веб-портал (основной режим служб SSRS)
+<a id="web-portal-ssrs-native-mode" class="xliff"></a>
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -32,9 +31,8 @@ ms.lasthandoff: 07/10/2017
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
-<a id="what-is-the-web-portal" class="xliff"></a>
-
 ## Что такое веб-портала
+<a id="what-is-the-web-portal" class="xliff"></a>
 
 На веб-портале можно использовать для выполнения следующих задач:
 
@@ -72,17 +70,15 @@ ms.lasthandoff: 07/10/2017
 > [!NOTE]
 > При просмотре веб-портала на локальном компьютере, на котором запущен сервер, может появиться сообщение о том, что просматривать эту папку не разрешено. Причина заключается в функции Universal Access Control (UAC) и в том, что браузер не запущен от имени администратора. Браузер Edge нельзя запустить от имени администратора. Необходимо использовать Internet Explorer. Можно либо удаленно подключиться к серверу из браузера, либо запустить Internet Explorer от имени администратора и перейти на веб-портал. Если вы хотите использовать веб-портал удаленно, необходимо предоставить учетной записи права диспетчера содержимого папки.  
 
-<a id="start-and-use-the-web-portal" class="xliff"></a>
-
 ## Запуск и использование веб-портала
+<a id="start-and-use-the-web-portal" class="xliff"></a>
 
 Веб-портала является веб-приложение, которое можно открыть, введя [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL-адрес в адресной строке окна браузера. Когда вы запускаете [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], отображаемые страницы, ссылки и параметры зависят от ваших разрешений на сервере отчетов. Чтобы выполнить задачу, пользователь должен быть членом роли, включающей эту задачу.  Если роли предоставлены все разрешения, пользователь имеет доступ ко всем меню и страницам, которые предназначены для управления сервером отчетов. Если роли предоставлены разрешения на просмотр и выполнение отчетов, пользователь видит только меню и страницы, которые отвечают за эти действия. Каждому пользователю могут быть назначены различные роли для разных серверов отчетов и даже для отдельных отчетов и папок, которые хранятся на одном сервере отчетов.
 
 Дополнительные сведения о ролях см. в разделе [Предоставление разрешений на сервере отчетов в основном режиме](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).
 
-<a id="start-the-web-portal" class="xliff"></a>
-
 ### Запуск веб-портале
+<a id="start-the-web-portal" class="xliff"></a>
 
 Чтобы запустить веб-портала из браузера, выполните следующее:
 
@@ -94,9 +90,8 @@ ms.lasthandoff: 07/10/2017
 
     Сервер отчетов может быть настроен для использования определенного порта. Например, *http://[ИмяКомпьютера]:80/reports* или *http://[ИмяКомпьютера]:8080/reports*;
 
-<a id="grouping-by-categories" class="xliff"></a>
-
 ## Группировка по категориям
+<a id="grouping-by-categories" class="xliff"></a>
 
 Веб-портал будет группировать элементы по различным категориям. Доступные категории перечислены ниже.
 
@@ -115,9 +110,8 @@ ms.lasthandoff: 07/10/2017
 
 ![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
 
-<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
-
 ### Отчеты Power BI Desktop и книги Excel
+<a id="power-bi-desktop-reports-and-excel-workbooks" class="xliff"></a>
 
 Вы можете передавать и упорядочивать отчеты Power BI Desktop и книги Excel, а также управлять разрешениями для них. Они будут сгруппированы вместе в пределах веб-портала.
 
@@ -125,17 +119,15 @@ ms.lasthandoff: 07/10/2017
 
 Файлы хранятся в службах Reporting Services, подобно другим файлам ресурсов. При выборе одного этих элементов они будут загружены локально на рабочий стол. Внесенные изменения можно сохранить, повторно передав их на сервер отчетов.
 
-<a id="search-for-items" class="xliff"></a>
-
 ## Поиск элементов
+<a id="search-for-items" class="xliff"></a>
 
 Вы можете ввести условие поиска и увидеть все содержимое, к которому у вас есть доступ. Результаты разбиваются по категориям: ключевые показатели эффективности, отчеты, наборы данных и другие элементы. Затем можно взаимодействовать с результатами и добавлять их в избранное.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
-<a id="web-portal-tasks" class="xliff"></a>
-
 ## Задачи веб-портала
+<a id="web-portal-tasks" class="xliff"></a>
 
 [Фирменная символика на веб-портале](../reporting-services/branding-the-web-portal.md)
 
@@ -143,9 +135,8 @@ ms.lasthandoff: 07/10/2017
 
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-<a id="see-also" class="xliff"></a>
-
 ## См. также:
+<a id="see-also" class="xliff"></a>
 
 [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

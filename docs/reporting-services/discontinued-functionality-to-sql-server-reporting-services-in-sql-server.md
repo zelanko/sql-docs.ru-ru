@@ -1,6 +1,6 @@
 ---
 title: "Неподдерживаемые функции служб SQL Server Reporting Services в SQL Server 2016 | Документы Microsoft"
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,25 +20,31 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 62fef7b5cd696802b351ebcef9c14204629c680b
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 937a22d56d2c290fb87d963ef3fd54d53c34f5fb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server"></a>Неподдерживаемые возможности в SQL Server Reporting Services в SQL Server 
+# Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016
+<a id="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
 
-  В этом разделе описывается [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] функции, которые больше не доступны в SQL Server 2016. Сюда не входят объявления о прекращении поддержки определенных версий операционных систем или служб [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS. Дополнительные сведения об этих системных требованиях см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
-  
-*Неподдерживаемой* называется функция, которая больше не поддерживается. Она может быть также физически удалена из продукта. Следующие функции больше не поддерживаются.  
-  
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+В этом разделе описаны возможности SQL Server Reporting Services, которые больше не доступны в SQL Server 2016. Он не включает объявления о прекращении поддержки для конкретных версий операционной системы или Microsoft Internet Information Services (IIS). Дополнительные сведения об этих системных требованиях см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+
+*Неподдерживаемой* называется функция, которая больше не поддерживается. Она может быть также физически удалена из продукта. Следующие функции больше не поддерживаются.
+
 |Компонент|Замена или решение|
 |-|-|
-|Отправка моделей отчетов через [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]|Это все еще можно сделать с помощью SOAP API.|  
-|Управление моделями отчетов через [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]|Это все еще можно сделать с помощью SOAP API.|  
+|Передавать модели отчетов, веб-портале|Это все еще можно сделать с помощью SOAP API.|
+|Управление моделями отчетов, веб-портале|Это все еще можно сделать с помощью SOAP API.|
 
-## <a name="next-steps"></a>Следующие шаги
+## Следующие шаги
+<a id="next-steps" class="xliff"></a>
 
 [Новые возможности служб Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
 [Изменения в SQL Server Reporting Services в SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  

@@ -2,7 +2,7 @@
 title: "Службы Reporting Services (SSRS) | Документы Microsoft"
 description: "Дополнительные сведения о средствах и службах для мобильных устройств и разбиением на страницы отчетов служб Reporting Services и отчеты Power BI на локальном компьютере."
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 07/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,22 +23,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 053323f96e489f264e50b2db4e120f19ccbd4dcd
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="what-is-sql-server-reporting-services-ssrs"></a>Что такое службы SQL Server Reporting Services (SSRS)?
+# Что такое службы SQL Server Reporting Services (SSRS)?
+<a id="what-is-sql-server-reporting-services-ssrs" class="xliff"></a>
 
-> Содержимое, связанное с предыдущих версий SQL Server, в разделе [Reporting Services (SSRS)](https://msdn.microsoft.com/en-US/library/ms159106(SQL.120).aspx).
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
 Создавать, развертывать и управлять мобильными и разбиением на страницы отчетов служб Reporting Services и отчеты Power BI на локальном компьютере спектр готовых к использованию средств и служб, предоставляющих службы SQL Server Reporting Services (SSRS) и Power BI.
 
 ![SQL Server Reporting Services все вместе](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services все вместе")
 
-## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Создавать, развертывать и управлять отчетами мобильных и разбиением на страницы
+## Создавать, развертывать и управлять отчетами мобильных и разбиением на страницы
+<a id="create-deploy-and-manage-mobile-and-paginated-reports" class="xliff"></a>
 
 Службы SQL Server Reporting Services — это решение, развертываемое клиентами в их локальной среде для создания, публикации отчетов и управления ими, а также для их доставки нужным пользователям разнообразными способами, например посредством просмотра в веб-браузере, на мобильном устройстве или в папке входящих сообщений электронной почты.
 
@@ -53,7 +57,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > Ищете сервера Power BI отчетов? В разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
-### <a name="whats-new-in-reporting-services"></a>Новые возможности служб Reporting Services
+### Новые возможности служб Reporting Services
+<a id="whats-new-in-reporting-services" class="xliff"></a>
 
 В этих источниках приводятся актуальные сведения о новых возможностях SQLServer 2016 Reporting Services.
 
@@ -61,7 +66,8 @@ ms.lasthandoff: 06/22/2017
 * [Блог команды разработки служб SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
 * [Канал Guy in a Cube на YouTube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
-## <a name="paginated-reports"></a>Отчеты с разбиением на страницы
+## Отчеты с разбиением на страницы
+<a id="paginated-reports" class="xliff"></a>
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
@@ -74,7 +80,8 @@ ms.lasthandoff: 06/22/2017
 * Вы можете выполнять экспорт в новые форматы, например PowerPoint. Визуализации Reporting Services в PowerPoint являются динамическими, а не просто снимками экрана, и доступны для изменения.
 * Можно создать гибридную среду Power BI/Reporting Services: вместо повторного создания локальных отчетов Reporting Services в Power BI вы можете закрепить визуальные элементы из этих отчетов на панелях мониторинга Power BI. Это позволит вам отслеживать все необходимое в одном месте на панели мониторинга Power BI.
 
-## <a name="mobile-reports"></a>Мобильные отчеты
+## Мобильные отчеты
+<a id="mobile-reports" class="xliff"></a>
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
@@ -84,7 +91,8 @@ ms.lasthandoff: 06/22/2017
 
 Создать эти мобильные отчеты можно в новом приложении [издателя мобильных отчетов](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . После этого в собственных [приложениях Power BI для мобильных устройств](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) на базе Windows 10, iOS, Android и HTML5 вы можете получить доступ с данными в облаке Power BI, а также к локальным данным SQL Server 2016 Reporting Services. При создании визуализаций издатель мобильных отчетов автоматически создает демонстрационные данные для каждой из них, чтобы вы могли узнать, как будет выглядеть визуализация с данными и какой тип данных подходит лучше всего.
 
-## <a name="web-portal"></a>Веб-портал
+## Веб-портал
+<a id="web-portal" class="xliff"></a>
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
@@ -100,19 +108,22 @@ ms.lasthandoff: 06/22/2017
 
 Дополнительные сведения о [веб-портал (основной режим служб SSRS)](../reporting-services/web-portal-ssrs-native-mode.md).
 
-## <a name="reporting-services-in-sharepoint-integrated-mode"></a>Службы Reporting Services в режиме интеграции с SharePoint
+## Службы Reporting Services в режиме интеграции с SharePoint
+<a id="reporting-services-in-sharepoint-integrated-mode" class="xliff"></a>
 
 Отчеты публикуются в службах Reporting Services в режиме интеграции с SharePoint. Вы можете запланировать обработку отчетов, обратиться к ним по запросу, подписаться на опубликованные отчеты и экспортировать отчеты в другие приложения (например, Microsoft Excel). С помощью служб Reporting Services также можно создавать предупреждения об изменении данных в отчетах, опубликованных на сайте SharePoint, и получать электронные сообщения при изменении данных в отчете.  
 
 Дополнительные сведения о [сервере отчетов служб Reporting Services в режиме интеграции с SharePoint](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Возможности программирования[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 
+## Возможности программирования[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 
+<a id="includessrsnoversionincludesssrsnoversion-mdmd-programming-features" class="xliff"></a>
 
 Благодаря возможностям программирования [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] можно расширить и настроить функции создания отчетов с помощью интерфейсов API, которые позволяют интегрировать или расширить возможности обработки данных и отчетов в пользовательских приложениях.
 
 Дополнительная [документация разработчика для служб Reporting Services](../reporting-services/reporting-services-developer-documentation.md). 
 
-## <a name="next-steps"></a>Следующие шаги
+## Следующие шаги
+<a id="next-steps" class="xliff"></a>
 
 * [Установка служб Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Установка построителя отчетов](../reporting-services/install-windows/install-report-builder.md)   

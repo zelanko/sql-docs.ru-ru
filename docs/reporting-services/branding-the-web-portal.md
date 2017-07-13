@@ -1,7 +1,7 @@
 ---
 title: "Фирменная символика на веб-портале | Документы Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="branding-the-web-portal"></a>Фирменная символика на веб-портале
+# Фирменная символика на веб-портале
+<a id="branding-the-web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Вы можете добавить на свой веб-портал элементы фирменного стиля организации. Для этого существуют пакеты фирменной символики. Для работы с пакетами фирменной символики углубленное знание CSS не требуется.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Создание пакета фирменной символики  
+## Создание пакета фирменной символики
+<a id="creating-the-brand-package" class="xliff"></a>  
   
 Пакет фирменной символики для служб отчетов состоит из трех элементов. Он упаковывается в ZIP-файл.   
   
@@ -40,7 +42,8 @@ ms.lasthandoff: 06/22/2017
   
 Файлы должны иметь указанные выше имена. Имя ZIP-файла может быть любым.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### metadata.xml
+<a id="metadataxml" class="xliff"></a>  
   
 Файл metadata.xml позволяет присвоить имя пакету фирменной символики, а также содержит ссылки на файлы colors.json и logo.png.  
   
@@ -63,7 +66,8 @@ ms.lasthandoff: 06/22/2017
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### Colors.json
+<a id="colorsjson" class="xliff"></a>  
   
 При загрузке пакета фирменной символики сервер извлекает пары имен и значений из файла colors.json и объединяет их с основной таблицей стилей LESS (brand.less). Затем он обрабатывает этот файл и передает клиенту полученный файл CSS. Все цвета сохраняются в таблице стилей в формате шестисимвольного шестнадцатеричного представления.  
   
@@ -114,13 +118,15 @@ ms.lasthandoff: 06/22/2017
   
 После этого вы сможете использовать тему для любого созданного вами мобильного отчета, даже если он расположен не на том сервере, где развернута тема.   
   
-### <a name="using-a-logo"></a>Использование логотипа  
+### Использование логотипа
+<a id="using-a-logo" class="xliff"></a>  
   
 Если в ваш пакет фирменной символики включено изображение логотипа, оно будет отображаться на веб-портале вместо имени веб-портала, установленного в меню "Параметры сайта".  
   
 Файл с изображением логотипа должен иметь формат PNG. Размер файла будет отмасштабирован при отправке на сервер. Полученное изображение будет иметь размер приблизительно 290 x 60 пикселей.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Применение пакета фирменной символики для веб-портала  
+## Применение пакета фирменной символики для веб-портала
+<a id="applying-the-brand-package-to-the-web-portal" class="xliff"></a>  
   
 Чтобы добавить, загрузить или удалить пакет фирменной символики:  
   
@@ -140,7 +146,8 @@ ms.lasthandoff: 06/22/2017
   
 Также здесь вы можете **загрузить** или **удалить** пакет. После удаления пакета для веб-портала немедленно восстановится оформление по умолчанию.  
   
-## <a name="metadataxml-example"></a>Пример файла metadata.xml  
+## Пример файла metadata.xml
+<a id="metadataxml-example" class="xliff"></a>  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -154,7 +161,8 @@ ms.lasthandoff: 06/22/2017
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>Пример файла colors.json  
+## Пример файла colors.json
+<a id="colorsjson-example" class="xliff"></a>  
   
     {  
         "name":"Multicolored example brand",  

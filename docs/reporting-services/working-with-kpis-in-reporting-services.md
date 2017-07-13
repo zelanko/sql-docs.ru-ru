@@ -1,6 +1,6 @@
 ---
 title: "Работа с ключевыми показателями эффективности в службах Reporting Services | Документы Microsoft"
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,15 +14,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b451b1773d97d490c0021cdf8cfcfb14c07117b4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-kpis-in-reporting-services"></a>Работа с ключевыми показателями эффективности в службах Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Работа с ключевыми показателями эффективности в службах Reporting Services
+<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Ключевой показатель эффективности (KPI) — это визуальная подсказка, которая позволяет определить степень продвижения в направлении цели.  Ключевые показатели эффективности представляют большую ценность для групп организации, менеджеров и компаний, так как позволяют быстро оценить прогресс на пути к достижению измеримых целей.   
   
@@ -34,16 +36,19 @@ ms.lasthandoff: 06/22/2017
   
 -   минимальное достижение.  
   
-## <a name="creating-a-dataset"></a>Создание набора данных  
+## Создание набора данных
+<a id="creating-a-dataset" class="xliff"></a>  
 Для ключевого показателя эффективности используется только первая строка из общего набора данных. Поэтому требуемые данные должны обязательно находиться в этой строке. Чтобы создать общий набор данных, можно воспользоваться построителем отчетов или SQL Server Data Tools.  
   
 > **Примечание**. Набор данных и ключевой показатель эффективности могут находиться в разных папках.  
   
-## <a name="placement-of-kpis"></a>Размещение ключевых показателей эффективности  
+## Размещение ключевых показателей эффективности
+<a id="placement-of-kpis" class="xliff"></a>  
   
 Ключевые показатели эффективности можно создать в любой папке на сервере отчетов.  Прежде чем создать ключевой показатель эффективности, нужно подобрать подходящее место размещения. Необходимо поместить его в папку, доступную для пользователей и в то же время относящуюся к другим отчетам и ключевым показателям эффективности.  
   
-## <a name="adding-a-kpi"></a>Добавление ключевого показателя эффективности  
+## Добавление ключевого показателя эффективности
+<a id="adding-a-kpi" class="xliff"></a>  
   
 Определив расположение ключевого показателя эффективности, перейдите к этой папке и в верхней строке меню последовательно выберите элементы **Создать** > **Ключевой показатель эффективности** .  
   
@@ -91,7 +96,8 @@ ms.lasthandoff: 06/22/2017
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## <a name="removing-a-kpi"></a>Удаление ключевого показателя эффективности  
+## Удаление ключевого показателя эффективности
+<a id="removing-a-kpi" class="xliff"></a>  
   
 Чтобы удалить ключевой показатель эффективности, сделайте следующее:  
   
@@ -103,11 +109,13 @@ ms.lasthandoff: 06/22/2017
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## <a name="refreshing-a-kpi"></a>Обновление ключевого показателя эффективности  
+## Обновление ключевого показателя эффективности
+<a id="refreshing-a-kpi" class="xliff"></a>  
   
 Чтобы обновить ключевой показатель Эффективности, необходимо будет настроить кэширование для общего набора данных. Дополнительные сведения о кэше планах обновления см. в разделе [работы с наборами данных общих](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## <a name="next-steps"></a>Следующие шаги
+## Следующие шаги
+<a id="next-steps" class="xliff"></a>
   
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)

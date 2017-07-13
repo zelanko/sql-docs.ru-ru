@@ -2,7 +2,7 @@
 title: "Установите службы Reporting Services | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f54a27cbe1553291095e8124bac55941d4eb326
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="install-reporting-services"></a>Установка служб Reporting Services
+# Установка служб Reporting Services
+<a id="install-reporting-services" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включает в себя серверные компоненты для хранения элементов отчета, подготовки отчетов к просмотру, а также для обработки подписок и других служб отчетов.  Шаги установки для сервера отчетов в основном режиме и сервера отчетов в режиме интеграции с SharePoint различаются. Этот раздел содержит подробные статьи по установке и проверке основных сценариев [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+Установка SQL Server Reporting Services включает в себя серверные компоненты для хранения элементов отчета, подготовки отчетов к просмотру и обработки подписок и других служб отчетов.  Шаги установки для сервера отчетов в основном режиме и сервера отчетов в режиме интеграции с SharePoint различаются. Этот раздел содержит подробные статьи по установке и проверке основных сценариев [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
 > [!NOTE]
 > Ищете сервера Power BI отчетов? В разделе [Установка сервера отчетов бизнес-Аналитики Power](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
@@ -47,7 +50,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > SQL Server Data Tools (SSDT) не входят в состав SQL Server 2016. [Скачайте SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
 
-## <a name="next-steps"></a>Следующие шаги
+## Следующие шаги
+<a id="next-steps" class="xliff"></a>
 
 [Поддерживаемые сочетания SharePoint и сервером служб Reporting Services и надстройки](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

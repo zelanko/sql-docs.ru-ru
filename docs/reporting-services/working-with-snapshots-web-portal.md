@@ -1,7 +1,7 @@
 ---
 title: "Работа с моментальными снимками (веб-портал) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,15 +15,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-snapshots-web-portal"></a>Работа моментальными снимками (веб-портал)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# Работа моментальными снимками (веб-портал)
+<a id="working-with-snapshots-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Можно выбрать, если моментальные снимки создаются для отчета, выбрав **кнопку с многоточием (...)**  отчета, выбрав **управление** и выбрав **кэширование** или **моментальные снимки журнала**.  
   
@@ -32,7 +34,8 @@ ms.lasthandoff: 06/22/2017
    
 Моментальный снимок кэша можно создать для ускорения загрузки определенных свойств выполнения. Кроме того, можно использовать моментальные снимки журнала для захвата точек во времени.  
   
-## <a name="creating-a-cache-snapshot"></a>Создание моментального снимка кэша  
+## Создание моментального снимка кэша
+<a id="creating-a-cache-snapshot" class="xliff"></a>  
   
 Создать моментальный снимок можно описанным ниже образом.  
   
@@ -44,7 +47,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  Выберите **Создать моментальный снимок кэша после нажатия кнопки "Применить" на этой странице** , если хотите создать моментальный снимок кэша прямо сейчас. Если выбрать только этот параметр, моментальный снимок обновляться не будет.  
   
-## <a name="create-modify-and-delete-history-snapshots"></a>Создание, изменение и удаление моментальных снимков журналов  
+## Создание, изменение и удаление моментальных снимков журналов
+<a id="create-modify-and-delete-history-snapshots" class="xliff"></a>  
   
 Для работы с моментальными снимками откройте отчет и выберите **Моментальные снимки журнала**.  
   
@@ -62,7 +66,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  Чтобы просмотреть моментальный снимок журнала, выберите его. Моментальные снимки в журнале отчета различаются только датой и временем создания. Визуально никак не отображаются данные о том, как был создан моментальный снимок — по расписанию или вручную.  
   
-### <a name="schedule-and-settings"></a>Расписание и параметры  
+### Расписание и параметры
+<a id="schedule-and-settings" class="xliff"></a>  
   
 Выбрав элемент **Расписание и параметры** , можно получить доступ к дополнительным параметрам планирования и управления хранением для созданных моментальных снимков.  
   
@@ -76,7 +81,8 @@ ms.lasthandoff: 06/22/2017
   
 При выборе этого параметра моментальный снимок отчета, сформированный на основе свойств выполнения отчетов, копируется в журнал отчета. Можно установить свойства выполнения отчетов для запуска отчета из созданного моментального снимка. Настраивая это свойство журнала отчетов, можно хранить запись всех созданных моментальных снимков отчетов, размещая их копии в журнале отчетов.
 
-## <a name="next-steps"></a>Следующие шаги
+## Следующие шаги
+<a id="next-steps" class="xliff"></a>
 
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с разбиением на страницы](working-with-paginated-reports-web-portal.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Работа с общими наборами данных (веб-портал) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных — веб-портала
+# Работа с общими наборами данных — веб-портала
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Общий набор данных позволяет управлять параметрами набора данных независимо от отчетов и других элементов каталога, использующих этот набор. Общие наборы данных можно использовать с разбитыми на страницы и мобильными отчетами, а также с ключевыми показателями эффективности.
 
 Вы можете просматривать свойства общего набора данных и управлять ими в пределах веб-портала. На веб-портале можно запускать построитель отчетов для создания или изменения общих наборов данных.
 
-## <a name="create-a-shared-dataset"></a>Создание общего набора данных
+## Создание общего набора данных
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 Чтобы создать новый общий набор данных, можно сделать следующее.  
   
@@ -47,7 +49,8 @@ ms.lasthandoff: 06/22/2017
   
 6.  Постройте набор данных, а затем выберите значок **Сохранить** в левом верхнем углу, чтобы сохранить набор данных на сервере отчетов.  
   
-## <a name="manage-an-existing-shared-dataset"></a>Управление существующим общим набором данных
+## Управление существующим общим набором данных
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 Для управления существующим общим набором данных можно сделать следующее.  
   
@@ -62,13 +65,15 @@ ms.lasthandoff: 06/22/2017
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>Свойства
+## Свойства
+<a id="properties" class="xliff"></a>
   
 На экране свойств можно изменить свойства **Имя** и **Описание** набора данных. Также доступны команды **Удалить**, **Переместить**, **Изменить в построителе отчетов**, **Загрузить** или **Заменить**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>Caching
+## Caching
+<a id="caching" class="xliff"></a>
   
 Имеются несколько вариантов кэширования данных для набора данных. Начать можно с простого выбора.  
   
@@ -82,7 +87,8 @@ ms.lasthandoff: 06/22/2017
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>Срок действия кэша  
+### Срок действия кэша
+<a id="cache-expiration" class="xliff"></a>  
   
 Вы можете выбирать, должен ли закончиться срок действия кэша для общего набора данных по истечении определенного времени или по расписанию. Возможно использование общего расписания.  
   
@@ -91,7 +97,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > Настройка срока действия не обновляет кэш. Без плана обновления кэша данные будут обновляться при следующем выполнении набора данных.  
   
-### <a name="cache-refresh-plans"></a>План обновления кэша  
+### План обновления кэша
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 Раздел "План обновления кэша" позволяет создавать расписания, предназначенные для предварительной загрузки в кэш временных копий данных для общего набора данных. План обновления включает расписание и параметр, позволяющий указать или переопределить значения для параметров. Нельзя переопределить значения для параметров, которые отмечены как доступные только для чтения. Можно создать и использовать несколько планов обновления.   
   
