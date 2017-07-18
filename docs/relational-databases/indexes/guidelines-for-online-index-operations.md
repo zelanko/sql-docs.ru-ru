@@ -1,7 +1,7 @@
 ---
 title: "Рекомендации по операциям с индексами | Документация Майкрософт"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>Руководящие принципы для операций с индексами
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   Неуникальные некластеризованные индексы могут создаваться в режиме в сети, если таблица содержит типы данных больших объектов (LOB), но при этом, ни один из этих столбцов не участвует в определении индекса, ни в качестве ключевого, ни в качестве неключевого столбца.  
   
 -   Индексы локальных временных таблиц не могут создаваться, перестраиваться и удаляться в режиме в сети. Это ограничение не относится к индексам глобальных временных таблиц.
-- Индексы можно возобновить с места остановки после непредвиденного сбоя отработка отказа базы данных, или **Пауза** команды. В разделе [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для 2017 г. SQL Server.
+- Индексы можно возобновить с места остановки после непредвиденного сбоя отработка отказа базы данных, или **Пауза** команды. В разделе [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для SQL Server 2017 и базы данных SQL Azure.
 
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в [этой статье](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="resumable-index-rebuild-considerations"></a>Вопросы перестроения индекса возобновляемые
 
 > [!NOTE]
-> В разделе [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для 2017 г. SQL Server.
+> В разделе [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для SQL Server 2017 и базы данных SQL Azure.
 >
 
 Если выполняется перестроение индекса в сети возобновляемые применяются следующие правила:

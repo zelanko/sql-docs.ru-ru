@@ -1,7 +1,7 @@
 ---
 title: "Предыдущие выпуски SQL Server Management Studio | Документация Майкрософт"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,29 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>Предыдущие выпуски SQL Server Management Studio
   
 Доступны следующие предыдущие выпуски SQL Server Management Studio.
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722"></a>![Скачать](../ssdt/media/download.png) [SQL Server Management Studio выпуска 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**Сведения о версии**  
+  
+*В этом выпуске SSMS используется изолированная оболочка Visual Studio 2015.*  
+Номер выпуска: 17.0  
+Номер сборки для этого выпуска: 14.0.17099.0
+
+## <a name="changelog"></a>Журнал изменений  
+
+См. выпуск [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release).
+
    
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![Загрузить](../ssdt/media/download.png) [выпуска SQL Server Management Studio 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 
@@ -206,8 +219,8 @@ ms.lasthandoff: 06/23/2017
     
 *  Исправлена проблема, из-за которой нажатие клавиш CTRL+Q не открывало панель инструментов быстрого запуска.
     
-*  Исправлена проблема, из-за которой изменение параметра MaxSize для базы данных в диалоговом окне "Свойства" было невозможно для баз данных размером больше 2 ТБ.  
-[Элемент Microsoft Connect № 1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
+*  Исправлена проблема, из-за которой изменение параметра MaxSize для базы данных в диалоговом окне "Свойства" было невозможно для баз данных размером больше 2 ТБ.  
+[Элемент Microsoft Connect № 1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
     
 *  Исправлена проблема, из-за которой мастер восстановления баз данных не принимал имена файлов с пробелом в начале:   
 [Элемент Microsoft Connect № 2395147](https://connect.microsoft.com/SQLServer/feedback/details/2395147)

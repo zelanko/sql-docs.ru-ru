@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="polybase-installation"></a>Установка PolyBase
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Минимальное свободное место на жестком диске: 2 ГБ.  
   
--   Должно присутствовать подключение по протоколу TCP/IP. (См. статью [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+-   Должно присутствовать подключение по протоколу TCP/IP. (См. раздел [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  Подключение по протоколу TCP/IP по умолчанию отключено в выпусках SQL Server Developer и Express. Для работы PolyBase необходимо включить вручную.
   
  **Примечания**  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
   
          Выберите этот вариант, чтобы использовать данный экземпляр SQL Server в качестве автономного головного узла.  
   
-    -   Использование экземпляра SQL Server в составе масштабируемой группы PolyBase  При выборе этого варианта брандмауэр откроет входящие подключения к ядру СУБД SQL Server, SQL Server PolyBase Engine, службе перемещения данных SQL Server PolyBase и обозревателю SQL. Брандмауэр будет открыт для входящих подключений от других узлов в масштабируемой группе PolyBase.  
+    -   Использование экземпляра SQL Server в составе масштабируемой группы PolyBase  При выборе этого варианта брандмауэр откроет входящие подключения к SQL Server Database Engine, SQL Server PolyBase Engine, службе перемещения данных SQL Server PolyBase и обозревателю SQL. Брандмауэр будет открыт для входящих подключений от других узлов в масштабируемой группе PolyBase.  
   
          При выборе этого параметра также будут включены в брандмауэре подключения для координатора распределенных транзакций (MSDTC) и изменены параметры реестра для MSDTC.  
   
@@ -129,7 +129,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   SQL Server PolyBase — обозреватель SQL — (UDP вход.).  
   
- Если во время установки вы выбрали использование экземпляра SQL Server в составе масштабируемой группы PolyBase, эти правила будут включены и брандмауэр будет открыт для входящих подключений к ядру СУБД SQL Server, SQL Server PolyBase Engine, к службе перемещения данных SQL Server PolyBase и обозревателю SQL. Но если во время установки служба брандмауэра не запущена на компьютере, программа установки SQL Server не сможет включить эти правила. В этом случае необходимо запустить службу брандмауэра и включить эти правила после установки.  
+ Если во время установки вы выбрали использование экземпляра SQL Server в составе масштабируемой группы PolyBase, эти правила будут включены и брандмауэр будет открыт для входящих подключений к SQL Server Database Engine, SQL Server PolyBase Engine, к службе перемещения данных SQL Server PolyBase и обозревателю SQL. Но если во время установки служба брандмауэра не запущена на компьютере, программа установки SQL Server не сможет включить эти правила. В этом случае необходимо запустить службу брандмауэра и включить эти правила после установки.  
   
 #### <a name="to-enable-the-firewall-rules"></a>Включение правил брандмауэра  
   

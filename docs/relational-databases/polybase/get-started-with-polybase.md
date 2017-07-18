@@ -2,7 +2,7 @@
 title: "Приступая к работе с PolyBase | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 5/30/2017
+ms.date: 7/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,11 +24,11 @@ caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Приступая к работе с PolyBase
@@ -53,10 +53,11 @@ ms.lasthandoff: 06/23/2017
   
 -   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) подойдет.) Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Программа установки завершится ошибкой, если отсутствует JRE.   
   
--   минимальный объем памяти: 4 ГБ;  
+-   Минимальный объем памяти: 4 ГБ.  
   
--   Минимальное свободное место на жестком диске: 2 ГБ.    
--   Должно присутствовать подключение по протоколу TCP/IP. (См. раздел [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+-   Минимальное свободное место на жестком диске: 2 ГБ.    
+
+-   Должно присутствовать подключение по протоколу TCP/IP. (См. раздел [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) В выпусках SQL Server Developer и Express подключение TCP/IP по умолчанию отключено. Это не мешает установить PolyBase, но это средство не будет полностью запускаться, пока вы не включите протокол TCP/IP. Для работы PolyBase необходимо вручную включить TCP/IP. 
   
  
  Внешним источником данных может быть один из следующих объектов:  
@@ -156,7 +157,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  Подробные сведения см. в разделе [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 ## <a name="create-t-sql-objects"></a>Создание объектов T-SQL  
- Создание объектов в зависимости от внешнего источника данных, Hadoop или хранилище Azure.  
+ Создайте объекты в зависимости от внешнего источника данных (Hadoop или хранилище Azure).  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -354,9 +355,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  После обновления с версии-кандидата 1 SQL Server 2016 до версии-кандидата 2 или 3 запросы могут завершаться сбоем. Подробные сведения и описание решения см. в [заметках о выпуске SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) , выполнив поиск по запросу "PolyBase".  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Чтобы получить сведения о функции масштабирования, см. раздел [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  Сведения о наблюдении за PolyBase см. в разделе [Устранение неполадок c PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md). Сведения об устранении неполадок производительности PolyBase см. в статье [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
+ Чтобы получить сведения о функции масштабирования, см. раздел [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  Сведения о наблюдении за PolyBase см. в разделе [Устранение неполадок c PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md). См. дополнительные сведения ведения об [устранении неполадок производительности PolyBase с использованием динамических административных представлений](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)   
  [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)   
  [PolyBase stored procedures](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)  (Хранимые процедуры PolyBase)  
