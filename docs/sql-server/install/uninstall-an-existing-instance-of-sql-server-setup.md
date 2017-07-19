@@ -74,7 +74,7 @@ ms.lasthandoff: 06/23/2017
   
     -   Templog.ldf  
   
-    -   ReportServer[$ИмяЭкземпляра] (база данных по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]).  
+    -   ReportServer[$ИмяЭкземпляра]\(база данных по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]).  
   
     -   ReportServer[$ИмяЭкземпляра]TempDB (временная база данных по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]).  
   
