@@ -347,7 +347,7 @@
                       href: /sql/analysis-services/xmla/xml-data-types/
                       homepage: >-
                         /sql/analysis-services/xmla/xml-data-types/xml-data-types-xmla
-            - name: Компонент Database Engine
+            - name: ядро СУБД
               href: /sql/database-engine/
               homepage: >-
                 /sql/database-engine/sql-server-database-engine-backward-compatibility
