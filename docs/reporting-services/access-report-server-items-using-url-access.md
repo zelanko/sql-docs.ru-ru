@@ -18,24 +18,23 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b05886a719709061a7d2e5d98b1d5560d24dc839
+ms.translationtype: MT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="access-report-server-items-using-url-access"></a>Доступ к элементам сервера отчетов с использованием URL-адреса
-  В этом разделе описываются методы доступа к элементам каталога различных типов в базе данных сервера отчетов или на сайте SharePoint с использованием строки параметра*rs:Command*=*Value*. Указывать эту строку параметра не обязательно. Если она не указана, сервер отчетов оценивает тип элемента и выбирает подходящее значение параметра автоматически. Однако использование строки *rs:Command*=*Value* в URL-адресе улучшает производительность сервера отчетов.  
+  Описывается способ доступа к элементам каталога различных типов в отчете server базовый или на сайте SharePoint с помощью *rs: команда*=*значение*. Указывать эту строку параметра не обязательно. Если она не указана, сервер отчетов оценивает тип элемента и выбирает подходящее значение параметра автоматически. Однако использование строки *rs:Command*=*Value* в URL-адресе улучшает производительность сервера отчетов.  
   
  Обратите внимание на синтаксис прокси `_vti_bin` в приведенных далее примерах. Дополнительные сведения об использовании этого синтаксиса см. в разделе [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Доступ к отчету  
  Чтобы открыть отчет в браузере, следует использовать параметр *rs:Command*=*Render* . Например:  
   
- **Собственный** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
-  
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **Собственный** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  Важно, чтобы URL-адрес содержал синтаксис прокси `_vti_bin` для отправки запроса с помощью центра администрирования SharePoint и прокси-сервера HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Прокси-сервер добавляет в HTTP-запрос контекст, необходимый для обеспечения правильного выполнения отчета для серверов отчетов в режиме интеграции с SharePoint.  
@@ -80,7 +79,6 @@ ms.lasthandoff: 06/22/2017
  Отображаемый пользовательский интерфейс аналогичен режиму просмотра каталогов, используемому на сервере [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS. Номер версии сервера отчетов, включая номер построения, также выводится под списком папок.  
   
 ## <a name="see-also"></a>См. также  
- [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
- [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
-  
-  
+ [Доступ к URL-адрес &#40; Службы SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Ссылка на параметр доступа URL-адрес](../reporting-services/url-access-parameter-reference.md) 
+

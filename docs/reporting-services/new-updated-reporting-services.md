@@ -12,18 +12,17 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: reporting-services
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 60041ec9af4e44fe5d078ecb65053dc16f6e809a
+ms.translationtype: MT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 15609f8770c3bc2741fe389faed794fc14082cae
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-# Новые и недавно обновленные: службы Reporting Services для SQL Server
-<a id="new-and-recently-updated-reporting-services-for-sql-server" class="xliff"></a>
+# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Новые и недавно обновленные: службы Reporting Services для SQL Server
 
 
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *Диапазон обновлений дат:* &nbsp; **2017 г-05-17** &nbsp; - в - &nbsp; **2017 г-06-30**
+- *Диапазон обновлений дат:* &nbsp; **2017 г-05-23** &nbsp; - в - &nbsp; **2017 г-07-17**
 - *Предметной области:* &nbsp; **служб Reporting Services для SQL Server**.
 
 
@@ -43,21 +42,29 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-## Недавно созданные новые статьи
-<a id="new-articles-created-recently" class="xliff"></a>
+## <a name="new-articles-created-recently"></a>Недавно созданные новые статьи
 
-Следующие ссылки на новые статьи, которые недавно были добавлены.
+Приведенные ниже ссылки указывают на новые статьи, которые были добавлены недавно.
 
 
-1. [Настройка веб-портале](report-server/configure-web-portal.md)
-2. [Предоставление пользователям доступа к серверу отчетов](security/grant-user-access-to-a-report-server.md)
+***Сейчас новые статьи отсутствуют.***
+
 
 
 
 &nbsp;
 
-## Обновлены статьи с отрывки
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
+
+## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список статей, недавно обновлены
+
+Compact представлены ссылки на обновленные статьи, перечисленные в разделе отрывки.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Обновлены статьи с отрывки
 
 В этом разделе отображается отрывки обновлений, полученные из статей, в которых были недавно крупных обновлений.
 
@@ -69,64 +76,48 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-*Ни одна из статей в этой области были обновлены в последнее время, в данный момент.*
+***Ни одна из статей в этой области были обновлены в последнее время, в данный момент.***
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Сокращенный список статей, недавно обновлены
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-Compact представлены ссылки на обновленные статьи, перечисленные в предыдущем разделе.
-
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
-## Филиалы статей
-<a id="sister-articles" class="xliff"></a>
+## <a name="similar-articles"></a>Аналогичные статей
 
 В этом разделе перечислены схожий статей для недавно обновлены статьи в других предметных областей, в одном репозитории GitHub.com: [MicrosoftDocs /**sql документы pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-#### Предметных областей, которые имеют новые или недавно обновленные статьи
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметных областей, которые имеют новые или недавно обновленные статьи
 
-- [Новый + обновленные (12 + 2): **Advanced Analystics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новый + обновленные (1 + 0): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
-- [Новый + обновленные (0 + 2): **подключение к SQL** документы](../connect/new-updated-connect.md)
-- [Новый + обновленные (3 + 0): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
-- [Новый + обновленные (1 + 2): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
-- [Новый + обновленные (2 + 8): **Linux для SQL** документы](../linux/new-updated-linux.md)
+- [Новый + обновленные (4 + 4): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новый + обновленные (2 + 0): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (1 + 2): **подключение к SQL** документы](../connect/new-updated-connect.md)
+- [Новый + обновленные (6 + 0): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
+- [Новый + обновленные (13 + 2): **Linux для SQL** документы](../linux/new-updated-linux.md)
 - [Новый + обновленные (1 + 0): **Master Data Services (MDS) для SQL** документы](../master-data-services/new-updated-master-data-services.md)
-- [Новый + обновленные (5 + 5): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
-- [Новый + обновленные (2 + 0): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
-- [Новый + обновленные (0 + 4): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
-- [Новый + обновленные (0 + 1): **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
+- [Новый + обновленные (1 + 0): **ODBC (Open Database Connectivity) для SQL** документы](../odbc/new-updated-odbc.md)
+- [Новый + обновленные (8 + 4): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
+- [Новый + обновленные (2 + 2): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
 - [Новый + обновленные (0 + 1): **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
+- [Новый + обновленные (1 + 0): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
 - [Новый + обновленные (1 + 0): **средства для SQL** документы](../tools/new-updated-tools.md)
 
 
-#### Предметных областей, в которых нет новых или недавно обновленных статей
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметных областей, в которых нет новых или недавно обновленных статей
 
 - [Новый + обновленные (0 + 0): **объектов данных ActiveX (ADO) для SQL** документы](../ado/new-updated-ado.md)
 - [Новый + обновленные (0 + 0): **Data Quality Services для SQL** документы](../data-quality-services/new-updated-data-quality-services.md)
 - [Новый + обновленные (0 + 0): **расширений интеллектуального анализа (DMX) для SQL** документы](../dmx/new-updated-dmx.md)
+- [Новый + обновленные (0 + 0): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
 - [Новый + обновленные (0 + 0): **многомерных выражений (MDX) для SQL** документы](../mdx/new-updated-mdx.md)
-- [Новый + обновленные (0 + 0): **ODBC (Open Database Connectivity) для SQL** документы](../odbc/new-updated-odbc.md)
 - [Новый + обновленные (0 + 0): **PowerShell для SQL** документы](../powershell/new-updated-powershell.md)
+- [Новый + обновленные (0 + 0): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
 - [Новый + обновленные (0 + 0): **образцы для SQL** документы](../sample/new-updated-sample.md)
+- [Новый + обновленные (0 + 0): **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
 - [Новый + обновленные (0 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
-- [Новый + обновленные (0 + 0): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
 - [Новый + обновленные (0 + 0): **XQuery для SQL** документы](../xquery/new-updated-xquery.md)
 
 
