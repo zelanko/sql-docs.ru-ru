@@ -1,5 +1,5 @@
 ---
-title: "Устранение неполадок при переполнении журнала транзакций (ошибка SLQ Server 9002) | Документация Майкрософт"
+title: "Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/05/2016
 ms.prod: sql-server-2016
@@ -22,14 +22,14 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/21/2017
 
 ---
-# <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SLQ Server 9002)
+# <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)
   В этом разделе описаны возможные действия при переполнении журнала транзакций, а также советы о том, как его избежать. 
   
   Когда журнал транзакций переполняется, в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] происходит ошибка **9002**. Журнал может заполниться, когда база данных работает в режиме "в сети" или находится в процессе восстановления. Если журнал заполняется, когда база данных находится в режиме «в сети», база данных остается в режиме «в сети», но доступной только для чтения, но не для обновления. Если журнал заполняется, когда база данных находится в процессе восстановления, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] помечает базу данных как RESOURCE PENDING. В любом случае необходимо вмешательство пользователя, чтобы сделать журнал транзакций доступным.  
@@ -114,8 +114,7 @@ ms.lasthandoff: 06/22/2017
 В некоторых случаях может потребоваться завершить процесс, для этого можно применить инструкцию [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Ее следует использовать с осторожностью, особенно если запущены критические процессы, которые нельзя завершать. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx).
 
 ## <a name="see-also"></a>См. также:  
-[Статья базы знаний — неожиданное увеличение или переполнение журнала транзакций в SQL Server](https://support.microsoft.com/en-us/kb/317375)
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Статья базы знаний — неожиданное увеличение или переполнение журнала транзакций в SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Управление размером файла журнала транзакций](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
