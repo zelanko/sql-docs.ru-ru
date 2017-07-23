@@ -4,7 +4,7 @@
 ## [Справка F1](log-file-viewer-f1-help.md)  
 # [Журнал транзакций](the-transaction-log-sql-server.md)  
 ## [Управление размером](manage-the-size-of-the-transaction-log-file.md)  
-## [Устранение неполадок при переполнении журнала (ошибка 9002 в SLQ Server)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+## [Устранение неполадок при переполнении журнала (ошибка 9002 в SQL Server)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
 ## [Управление устойчивостью транзакций](control-transaction-durability.md)  
 # [Контрольные точки базы данных](database-checkpoints-sql-server.md)  
 ## [Изменение целевого времени восстановления базы данных](change-the-target-recovery-time-of-a-database-sql-server.md)  
