@@ -3,7 +3,7 @@
 # [Управление именами для входа и заданиями после переключения ролей](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [Диагностика пользователей, утративших связь с учетной записью](troubleshoot-orphaned-users-sql-server.md)  
 
-# [Установка отказоустойчивого кластера (статьи)](install/TOC.md)  
+# [Установка отказоустойчивого кластера](install/sql-server-failover-cluster-installation.md)  
 
 # [Отказоустойчивая кластеризация Windows Server (WSFC) с использованием SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [Режим кворума и конфигурация голосования в WSFC](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
