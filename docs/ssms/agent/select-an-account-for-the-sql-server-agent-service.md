@@ -32,9 +32,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 06/23/2017
 
 ---
-<a id="select-an-account-for-the-sql-server-agent-service" class="xliff"></a>
-
-# Выбор учетной записи для службы агента SQL Server
+# <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
 Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] из следующих вариантов:  
   
 -   **Встроенная учетная запись**. Может быть выбрана из списка следующих встроенных учетных записей Windows:  
@@ -46,9 +44,7 @@ ms.lasthandoff: 06/23/2017
   
 -   **Указанная учетная запись**. Позволяет задать учетную запись домена Windows, с которой выполняется служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Рекомендуется выбирать учетную запись пользователя Windows, не входящего в группу **Администраторы** . Однако существуют ограничения при администрировании нескольких серверов, когда учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] не входит в локальную группу **Администраторы** . Дополнительные сведения см. в подразделе «Поддерживаемые типы учетных записей» далее в этом разделе.  
   
-<a id="windows-domain-account-permissions" class="xliff"></a>
-
-## Разрешения учетной записи домена Windows  
+## <a name="windows-domain-account-permissions"></a>Разрешения учетной записи домена Windows  
 В целях повышения безопасности выбирайте пункт **Указанная учетная запись**, соответствующий учетной записи домена Windows. Заданная учетная запись домена Windows должна обладать следующими разрешениями:  
   
 -   Разрешение на вход в систему в качестве службы во всех версиях Windows (SeServiceLogonRight)  
@@ -72,18 +68,14 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 > Чтобы получать уведомление о предупреждении инструментария WMI, учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] должно быть предоставлено разрешение на пространство имен, содержащее события WMI и ALTER ANY EVENT NOTIFICATION.  
   
-<a id="sql-server-role-membership" class="xliff"></a>
-
-## Членство в ролях SQL Server  
+## <a name="sql-server-role-membership"></a>Членство в ролях SQL Server  
 Учетная запись, от которой запускается служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , должна быть членом следующих ролей [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] :  
   
 -   Учетная запись должна быть членом предопределенной роли сервера **sysadmin** .  
   
 -   Чтобы использовать обработку заданий в многосерверной среде, учетная запись должна быть членом роли базы данных **msdb** **TargetServersRole** на главном сервере.  
   
-<a id="supported-service-account-types" class="xliff"></a>
-
-## Поддерживаемые типы учетных записей  
+## <a name="supported-service-account-types"></a>Поддерживаемые типы учетных записей  
 В следующей таблице перечислены типы учетных записей Windows, которые могут быть использованы для службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 |Тип учетной записи|Некластеризованный сервер|Кластеризованный сервер|Контроллер домена (некластеризованный)|  
@@ -95,39 +87,29 @@ ms.lasthandoff: 06/23/2017
 |Учетная запись Local System (NT AUTHORITY\System)|Поддерживается<br /><br />См. ограничение № 2 ниже.|Не поддерживается|Поддерживается<br /><br />См. ограничение № 2 ниже.|  
 |Учетная запись локальной службы (NT AUTHORITY\NetworkService)|Не поддерживается|Не поддерживается|Не поддерживается|  
   
-<a id="limitation-1-using-non-administrative-accounts-for-multiserver-administration" class="xliff"></a>
-
-### Ограничение 1. Использование неадминистративных учетных записей для администрирования нескольких серверов  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Ограничение 1. Использование неадминистративных учетных записей для администрирования нескольких серверов  
 Прикрепление целевого сервера к главному серверу может завершиться ошибкой, после чего появляется следующее сообщение: "Не удалось выполнить операцию прикрепления".  
   
 Чтобы устранить эту ошибку, перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL и службы браузера SQL Server](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6).  
   
-<a id="limitation-2-using-the-local-system-account-for-multiserver-administration" class="xliff"></a>
-
-### Ограничение 2. Использование учетной записи Local System для администрирования нескольких серверов  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Ограничение 2. Использование учетной записи Local System для администрирования нескольких серверов  
 Администрирование нескольких серверов поддерживается при выполнении службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] под учетной записью Local System только в том случае, если целевой и главный серверы расположены на одном и том же компьютере. При использовании этой конфигурации, при прикреплении целевого сервера к главному серверу, возвращается следующее сообщение:  
   
 "Убедитесь, что стартовая учетная запись агента для *<имя_компьютера_целевого_сервера>* имеет права для входа на сервер targetServer".  
   
 Данное сообщение можно пропустить. Операция прикрепления должна быть завершена успешно. Дополнительные сведения см. в статье [Создание многосерверной среды](../../ssms/agent/create-a-multiserver-environment.md).  
   
-<a id="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user" class="xliff"></a>
-
-### Ограничение 3. Использование учетной записи сетевой службы, которая является учетной записью SQL Server  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Ограничение 3. Использование учетной записи сетевой службы, которая является учетной записью SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] может произойти сбой, если он запускается под учетной записью сетевой службы, которая уже явным образом получила доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в качестве пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 Для решения этой проблемы перезагрузите компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Это действие необходимо выполнить однократно.  
   
-<a id="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer" class="xliff"></a>
-
-### Ограничение 4. Использование учетной записи сетевой службы при выполнении служб SQL Server Reporting Services на том же самом компьютере  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Ограничение 4. Использование учетной записи сетевой службы при выполнении служб SQL Server Reporting Services на том же самом компьютере  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент не может быть запущен, если служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняется под учетной записью сетевой службы, а службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] запущены на этом же самом компьютере.  
   
 Для решения этой проблемы перезагрузите компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , а затем перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Это действие необходимо выполнить однократно.  
   
-<a id="common-tasks" class="xliff"></a>
-
-## Общие задачи  
+## <a name="common-tasks"></a>Общие задачи  
 **Указание стартовой учетной записи службы агента SQL Server**  
   
 -   [Назначение стартовой учетной записи службы для агента SQL Server (диспетчер конфигурации SQL Server)](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
@@ -139,9 +121,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 > Запуск агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] во время старта операционной системы задается с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [Настройка учетных записей служб Windows](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
 [Управление службами с помощью SQL Computer Manager](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
