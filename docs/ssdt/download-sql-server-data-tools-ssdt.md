@@ -23,9 +23,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="download-sql-server-data-tools-ssdt" class="xliff"></a>
-
-# Скачать SQL Server Data Tools (SSDT)
+# <a name="download-sql-server-data-tools-ssdt"></a>Скачать SQL Server Data Tools (SSDT)
 
 **[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/mt186501)** — это современное средство разработки ПО, которое можно бесплатно скачать для создания реляционных баз данных SQL Server, баз данных SQL Azure, пакетов служб Integration Services, моделей данных служб Analysis Services и отчетов служб Reporting Services. С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio. Этот выпуск поддерживает версии от SQL Server 2017 до SQL Server 2005 и предоставляет среду проектирования для добавления новых компонентов SQL Server 2016.  
     
@@ -34,9 +32,7 @@ ms.lasthandoff: 06/22/2017
 
 ![скачать](../ssdt/media/download.png) [Скачать Data-Tier Application Framework (DacFx) 17.1](https://www.microsoft.com/download/details.aspx?id=55255)
 
-<a id="sql-server-data-tools" class="xliff"></a>
-
-## SQL Server Data Tools   
+## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
 **Сведения о версии**  
   
 Номер выпуска: 17.1  
@@ -88,23 +84,17 @@ ISO-образ SSDT можно использовать в качестве ал
 [Русский]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
 [Испанский]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
 
-<a id="download-visual-studio" class="xliff"></a>
-
-## Скачивание Visual Studio
+## <a name="download-visual-studio"></a>Скачивание Visual Studio
 
 * [**Скачать Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
-<a id="installing-ssdt-without-visual-studio-pre-installed" class="xliff"></a>
-
-## Установка SSDT без предварительной установки Visual Studio
+## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>Установка SSDT без предварительной установки Visual Studio
 
 Если на вашем компьютере не установлена среда Visual Studio, то при установке SSDT для Visual Studio 2015 также будет установлена минимальная версия Visual Studio 2015 с "интегрированной оболочкой". Эта версия Visual Studio бесплатна, и ее можно устанавливать и использовать на любом количестве компьютеров. В ней можно использовать все типы проектов SQL Server, а также обозреватель объектов SQL Server и другие средства SQL.
 
 Если на вашем компьютере установлена среда [Visual Studio 2015 Community Edition (или более поздняя версия)](https://www.visualstudio.com/products/visual-studio-community-vs.aspx), то при установке SSDT к установленной среде Visual Studio будет добавлен полный набор средств SQL Server. Visual Studio содержит множество функций, которые стоит использовать, например, интеграция с системами управления версиями и поддержка языков, отличных от SQL. Для получения наилучших результатов при разработке с T-SQL мы рекомендуем использовать Visual Studio 2015 Community или более позднюю версию.
 
-<a id="supported-sql-versions" class="xliff"></a>
-
-## Поддерживаемые версии SQL
+## <a name="supported-sql-versions"></a>Поддерживаемые версии SQL
   
 |Шаблоны проектов|Поддерживаемые платформы SQL|  
 |-------------------|--------------------|  
@@ -112,9 +102,7 @@ ISO-образ SSDT можно использовать в качестве ал
   |Модели служб Analysis Services<br /><br />Reporting Services, отчеты служб | SQL Server 2008 — SQL Server 2017|
   |пакеты служб Integration Services| SQL Server 2012 — SQL Server 2017    |
   
-<a id="next-steps" class="xliff"></a>
-
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
 После установки SSDT ознакомьтесь с этими руководствами, чтобы узнать, как создать базы данных, пакеты, модели данных и отчеты в SSDT:  
   
 -   [Разработка базы данных вне сети с учетом проекта](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
@@ -125,9 +113,7 @@ ISO-образ SSDT можно использовать в качестве ал
   
 -   [Создание простого табличного отчета (учебник по службам SSRS)](https://msdn.microsoft.com/library/ms167305.aspx)  
   
-<a id="use-ssdt-in-visual-studio-2017" class="xliff"></a>
-
-## Использование SSDT в Visual Studio 2017 
+## <a name="use-ssdt-in-visual-studio-2017"></a>Использование SSDT в Visual Studio 2017 
 
 * [**Скачать Visual Studio 2017**](https://www.visualstudio.com/) ([сравнение функций Visual Studio 2017 по выпускам](https://www.visualstudio.com/vs/compare/))
 
@@ -141,9 +127,7 @@ ISO-образ SSDT можно использовать в качестве ал
 * [службы Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
 [SQL Server Data Tools в Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [Форум MSDN по SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Блог группы разработчиков SSDT](http://blogs.msdn.com/b/ssdt/)  
