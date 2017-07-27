@@ -2,7 +2,7 @@
 title: "Ограничения первичных и внешних ключей | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Ограничения первичных и внешних ключей
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Первичные и внешние ключи представляют собой два типа ограничений, которые могут использоваться для обеспечения целостности данных в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это важные объекты базы данных.  
   
