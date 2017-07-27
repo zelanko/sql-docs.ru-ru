@@ -1,10 +1,5 @@
-# [Функции базы данных](database-features.md)
+# [Обзор](database-features.md)
 # [Новые и недавно обновленные статьи](new-updated-relational-databases.md)
-
-# Обзор
-## [Возможности экземпляров ядра СУБД](database-engine-cross-instance-features.md)
-## [Технический справочник](technical-reference-database-engine.md)  
-## [Справочник по функциям](feature-reference-database-engine.md)   
 
 # [Справочники по SQL Server](sql-server-guides.md)
 ## Руководство по устранению неполадок и мониторингу групп доступности Always On

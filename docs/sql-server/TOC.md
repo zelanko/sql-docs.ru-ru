@@ -27,7 +27,7 @@
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [службы Analysis Services](../analysis-services/analysis-services.md)
-# [Ядро СУБД](../database-engine/configure-windows/sql-server-database-engine.md)
+# [Ядро СУБД](../database-engine/sql-server-database-engine-backward-compatibility.md)
 # [Службы Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Отказоустойчивые кластеры](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Установка](../sql-server/install/planning-a-sql-server-installation.md)
