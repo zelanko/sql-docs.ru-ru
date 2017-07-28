@@ -14,23 +14,33 @@ caps.latest.revision: 41
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 67c1c0f3a9da6cc5d050da5db8a493f5da934c2a
-ms.openlocfilehash: fa45fea4ebb378f035b4b4af2b1fa8a20bc152a5
+ms.translationtype: HT
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: a2950b6aef0e12653efbb9eb26fd3f1ae6cb951e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017 г.
-В этом разделе описываются ограничения и проблемы, связанные с [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Связанные сведения содержатся в следующих разделах:
+В этом разделе описываются ограничения и проблемы, связанные с [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Другую информацию по этой теме можно найти в следующих разделах:
 
 - [Новые возможности SQL Server 2017 г](../sql-server/what-s-new-in-sql-server-2017.md).
 - [SQL Server в заметках о выпуске Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-- [Заметки о выпуске SQL Server Reporting Services](../reporting-services/reporting-services-release-notes.md).
+- [Заметки о выпуске служб SQL Server Reporting Services](../reporting-services/reporting-services-release-notes.md).
 
  **Попробуйте продукт:**    
    -   [![Скачать на странице центра оценки](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Скачайте [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] на странице **[центра оценки](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>Релиз-кандидат SQL Server 2017 (RC1 — июль 2017 г.)
+
+### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SQL Server Integration Services (SSIS) (RC1 — июль 2017 г.)
+- **Проблема и ее эффект для клиента**: параметр *runincluster* хранимой процедуры **[catalog].[create_execution]** переименован в *runinscaleout* для согласованности и удобства чтения.
+- **Обходной путь**: если у вас есть сценарии для запуска пакетов в Scale Out, нужно изменить имя параметра с *runincluster* на *runinscaleout*, чтобы они работали в RC1.
+
+- **Проблема и ее эффект для клиента**: SQL Server Management Studio (SSMS) 17.1 и более ранние версии не могут активировать выполнение пакета в Scale Out в RC1. Сообщение об ошибке: "*@runincluster* не является параметром процедуры **create_execution**". Эта проблема будет исправлена в следующем выпуске SSMS, в версии 17.2. Версии SSMS, начиная с 17.2, поддерживают новое имя параметра и выполнение пакетов в Scale Out. 
+- **Обходной путь**: пока не станет доступна версия SSMS 17.2, вы можете создать сценарий выполнения пакетов в имеющейся у вас версии SSMS, а затем изменить в нем имя параметра *runincluster* на *runinscaleout* и запустить сценарий.
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>2017 г. SQL Server CTP 2.1 (май 2017 г.)
 ### <a name="documentation-ctp-21"></a>Документация (CTP-версия 2.1)
 - **Проблема и последствия для клиентов.** Документация для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ограничена, и материалы включены в набор документации по [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Содержимое статей, относящееся к [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] , отмечено с помощью раздела **Область применения**. 
@@ -96,78 +106,10 @@ ms.lasthandoff: 06/23/2017
 
    Восстанавливает экземпляр SQL Server, на котором размещается вторичная реплика.
 
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-14-march--2017"></a>SQL Server CTP 2017 г. 1.4 (март 2017 г.)
-
-### <a name="documentation-ctp-14"></a>Документация (CTP 1.4)
-- **Проблема и последствия для клиентов.** Документация для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ограничена, и материалы включены в набор документации по [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Содержимое статей, относящееся к [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] , отмечено с помощью раздела **Область применения**. 
-- **Проблема и последствия для клиентов.** Локальные материалы для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]отсутствуют.
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-13-february--2017"></a>SQL Server CTP 2017 г. 1.3 (февраля 2017 г.)
-### <a name="supported-installation-scenarios-ctp-13"></a>Поддерживаемые сценарии установки (CTP 1.3)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] предназначен для использования только в качестве тестовой версии.  Развертывания в рабочей среде не поддерживаются. Рекомендуется установить и протестировать [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] на виртуальной машине.
-
-### <a name="documentation-ctp-13"></a>Документация (CTP 1.3)
-- **Проблема и последствия для клиентов.** Документация для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ограничена, и материалы включены в набор документации по [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Содержимое статей, относящееся к [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] , отмечено с помощью раздела **Область применения**. 
-- **Проблема и последствия для клиентов.** Локальные материалы для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]отсутствуют.
-
-### <a name="sql-server-integration-services-ssis-ctp-13"></a>Службы SQL Server Integration Services (SSIS) (CTP 1.3)
-#### <a name="cdc-components-not-supported-in-this-ctp-release"></a>Компоненты CDC не поддерживаются в этом выпуске CTP
--   **Проблема и последствия для клиентов.**Задача управления CDC, CDC-источник и разделитель CDC не поддерживаются в этом выпуске CTP.
--   **Обходное решение:**решение отсутствует.
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-## <a name="sql-server-2017-ctp-12-january--2017"></a>SQL Server CTP 2017 г 1.2 (января 2017 г.)
-### <a name="supported-installation-scenarios-ctp-12"></a>Поддерживаемые сценарии установки (CTP 1.2)
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] предназначен для использования только в качестве тестовой версии.  Развертывания в рабочей среде не поддерживаются. Рекомендуется установить и протестировать [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] на виртуальной машине.
-
-### <a name="sql-server-database-engine-ctp-12"></a>Ядро СУБД SQL Server (CTP 1.2)
-- **Проблема и последствия для клиентов.** В некоторых случаях служба MSSQLSERVER может переставать отвечать на запросы в состоянии запуска.
-- **Обходное решение.** Для устранения этой проблемы сделайте следующее:
-  -  Создайте зависимость между службами `mssqlserver` и `keyiso` . Один из способов сделать это — выполнить следующую команду из командной строки с повышенными привилегиями: `sc config mssqlserver depend= keyiso`
-  - Перезагрузите компьютер.
-
-### <a name="documentation-ctp-12"></a>Документация (CTP 1.2)
-- **Проблема и последствия для клиентов:** документация для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ограничена, и материалы включены в набор документации по [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] .  Содержимое статей, относящееся к [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] , отмечено с помощью раздела **Область применения**. 
-- **Проблема и последствия для клиентов.** Локальные материалы для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]отсутствуют.
- 
-### <a name="sql-server-integration-services-ssis-ctp-12"></a>Службы SQL Server Integration Services (SSIS) (CTP 1.2)
-#### <a name="deleting-the-ssis-catalog-may-fail-when-ssis-scale-out-is-installed"></a>Удаление каталога SQL Server Integration Services может завершиться ошибкой, когда установлена функция масштабного развертывания SQL Server Integration Services.
-**Проблема и последствия для клиентов**: когда на компьютере установлена функция масштабного развертывания SQL Server Integration Services, удаление базы данных каталога SSISDB может завершиться сбоем со следующей ошибкой: "Не удалось удалить имя входа *"имя_входа"* , так как пользователь в настоящий момент подключен к системе".
-   
-**Обходной путь**:
--   На компьютере с ролью мастера масштабирования выполните команду "services.msc" для открытия окна "Службы". Остановите службу "SQL Server Integration Services Cluster Master".
--   На компьютерах с рабочей ролью масштабного развертывания, которые подключаются к мастеру, выполните команду "services.msc" для открытия окна "Службы". Остановите службу "SQL Server Integration Services Cluster Worker".
-
-Теперь можно удалить базу данных каталога SSISDB.
-
-### <a name="sql-server-master-data-services-ctp-12"></a>Службы SQL Server Master Data Services (CTP 1.2)
-#### <a name="transaction-may-not-work-when-the-entity-transaction-log-type-is-set-to-attribute"></a>Транзакции могут не работать, если в качестве типа журнала транзакций сущностей задан атрибут
-**Проблема и последствия для клиентов:** если для типа журнала транзакций сущностей в **задано значение** Атрибут [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] (значение по умолчанию — **Член**), следующие сценарии завершаются с ошибкой:
-
-* Транзакции для изменений сущностей не отображаются на веб-сайте.
-* Не удается открыть страницу **Транзакции** на веб-сайте и отменить транзакцию.
-* Не удается обновить сущность с помощью заметки транзакции на веб-сайте.
-
-**Обходное решение:**решение отсутствует.
-
-#### <a name="copy-version-may-not-work-when-copy-only-committed-version-is-set-to-false"></a>Копирование версии может не работать, если для параметра **Copy only committed version** (Копировать только зафиксированную версию) задано значение false
--  **Проблема и последствия для клиентов:** если для параметра **Copy only committed version** (Копировать только зафиксированную версию) установлено значение **No** (Нет) (значение по умолчанию — **Yes**(Да)), может произойти сбой операции копирования версии. Сообщение об ошибке не выводится.
--  **Обходное решение:**решение отсутствует.
-
 ##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Общение с командой разработчиков SQL Server 
 - [Stack Overflow (тег sql сервера) — задавайте технические вопросы](http://stackoverflow.com/questions/tagged/sql-server)
 - [Форумы MSDN — задавайте технические вопросы](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect — сообщайте об ошибках и запрашивайте функции](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit — общее обсуждение по поводу R](https://www.reddit.com/r/SQLServer/)
 
-
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-
-

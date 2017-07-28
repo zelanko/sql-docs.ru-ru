@@ -41,29 +41,30 @@
    sudo vi /etc/hosts
    ```
 
-   В следующем примере показан `/etc/hosts` на **node1** дополнений для **node1** и **node2**. В этом документе **node1** относится к основной реплике SQL Server. **узел2** ссылается на вторичный сервер SQL Server.;
+   Следующий пример показывает `/etc/hosts` на **node1** с дополнениями **node1**, **node2** и **node3**. В этом документе **node1** относится к серверу, на котором размещается первичная реплика, а **node2** и **node3** относятся к серверам, на которых размещаются вторичные реплики.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>Установка SQL Server
 
 Установка SQL Server. Следующие ссылки указывают на инструкции по установке SQL Server для различных дистрибутивов. 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Включение групп доступности AlwaysOn и перезапустите sqlserver
 
-Включение групп доступности AlwaysOn на каждом узле размещения службы SQL Server, а затем перезапустите `mssql-server`.  Выполните следующий скрипт:
+Включите группы доступности AlwaysOn на каждом узле размещения экземпляра SQL Server, а затем перезапустите `mssql-server`.  Выполните следующий скрипт:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>Включить AlwaysOn_health сеанса событий 
 
-Вы можете включить optionaly групп доступности AlwaysOn определенных расширенных событий для диагностики причин при устранении неполадок группы доступности.
+При необходимости вы можете включить расширенные события групп доступности AlwaysOn, что может помочь в устранении их неполадок. Выполните на каждом экземпляре SQL Server следующую команду. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ GO
 
 ## <a name="create-db-mirroring-endpoint-user"></a>Создание пользователя конечной точки зеркального отображения базы данных
 
-Следующий сценарий Transact-SQL создает имя входа `dbm_login`и пользователя с именем `dbm_user`. Обновите сценарий с надежным паролем. Выполните следующую команду на всех серверах SQL для создания пользователя конечной точки зеркального отображения базы данных.
+Следующий сценарий Transact-SQL создает имя входа `dbm_login`и пользователя с именем `dbm_user`. Обновите сценарий с надежным паролем. Выполните следующую команду на всех экземплярах SQL Server, чтобы создать пользователя конечной точки с зеркальным отображением базы данных.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## <a name="create-a-certificate"></a>Создание сертификата
 
-Службы SQL Server в Linux использует сертификаты для проверки подлинности между конечными точками зеркального отображения. 
+Служба SQL Server на Linux использует сертификаты для проверки подлинности при обмене данными между конечными точками с зеркальным отображением. 
 
-Следующий сценарий Transact-SQL создает главный ключ и сертификат. Затем резервная копия сертификата и защищает файл с закрытым ключом. Сценарий можно обновите с помощью надежных паролей. Подключитесь к основному серверу SQL и запустите следующий код Transact-SQL для создания сертификата:
+Следующий сценарий Transact-SQL создает главный ключ и сертификат. Затем резервная копия сертификата и защищает файл с закрытым ключом. Сценарий можно обновите с помощью надежных паролей. Подключитесь к основному экземпляру SQL Server и запустите следующий код Transact-SQL, чтобы создать сертификат:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-На целевом сервере необходимо предоставьте разрешение пользователю mssql доступ к этому сертификату.
+На каждом целевом сервере предоставьте пользователю mssql разрешение на доступ к сертификату.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ CREATE CERTIFICATE dbm_certificate
 
 Следующий запрос Transact-SQL создает конечную точку прослушивания с именем `Hadr_endpoint` для группы доступности. Он запускает конечную точку, и дает разрешение connect для пользователя, который был создан. Перед выполнением скрипта замените значения между `**< ... >**`.
 
-
 >[!NOTE]
 >В этом выпуске не следует использовать другой IP-адрес для прослушивателя IP-адреса. Мы работаем над решением этой проблемы, но только допустимые значения сейчас: "0.0.0.0».
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >TCP-порт в брандмауэре должен быть открыт порт прослушивателя.
+
+>[!IMPORTANT]
+>Для выпуска SQL Server 2017 единственный поддерживаемый способ проверки подлинности для конечной точки с зеркальным отображения базы данных — `CERTIFICATE`. Параметр `WINDOWS` будет включен в будущем выпуске.
 
 Дополнительные сведения см. в разделе [базы данных конечной точки зеркального отображения (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f69a3301d46dcfffa811f11782c43791492a9c72
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-sql-server-docs" class="xliff"></a>
-
-# Обновление новых и недавно: документы по SQL Server
+# <a name="new-and-recently-updated-sql-server-docs"></a>Обновление новых и недавно: документы по SQL Server
 
 
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *Диапазон дат для обновлений:* &nbsp; **17.05.2017** &nbsp;–&nbsp; **30.06.2017**
+- *Диапазон дат для обновлений:* &nbsp; **23.05.2017** &nbsp;—&nbsp; **17.07.2017**
 - *Предметной области:* &nbsp; **SQL Server**.
 
 
@@ -44,22 +42,30 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## Недавно созданные статьи
+## <a name="new-articles-created-recently"></a>Недавно созданные статьи
 
 Приведенные ниже ссылки указывают на новые статьи, которые были добавлены недавно.
 
 
-*Сейчас новые статьи отсутствуют.*
+1. [Выпуски и поддерживаемых функций SQL Server 2017](editions-and-components-of-sql-server-2017.md)
+2. [Настройка SQL Server для отправки отзыва в Майкрософт](sql-server-customer-feedback.md)
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## Обновлены статьи с отрывки
+## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список статей, недавно обновлены
+
+В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Обновлены статьи с отрывки
 
 В этом разделе отображается отрывки обновлений, полученные из статей, в которых были недавно крупных обновлений.
 
@@ -75,9 +81,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd" class="xliff"></a>
-
-### 1. &nbsp; [Программа улучшения качества SQL Server Data Tools](customer-experience-improvement-program-for-sql-server-data-tools.md)
+### <a name="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd"></a>1. &nbsp; [Программа улучшения качества SQL Server Data Tools](customer-experience-improvement-program-for-sql-server-data-tools.md)
 
 *Обновлено: 14.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Далее](#TitleNum_2))
 
@@ -125,11 +129,9 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_2"/>
 
-<a id="2-nbsp-editions-and-supported-features-of-sql-servereditions-and-components-of-sql-server-2016md" class="xliff"></a>
+### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [Выпуски и поддерживаемые функции SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 
-### 2. &nbsp; [Выпуски и поддерживаемые функции SQL Server](editions-and-components-of-sql-server-2016.md)
-
-*Обновлено: 16.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Назад](#TitleNum_1) | [Далее](#TitleNum_3))
+*Обновлено: 16.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_1))
 
 <!-- Source markdown line 113.  ms.author= "mikeray".  -->
 
@@ -155,184 +157,50 @@ ms.lasthandoff: 07/03/2017
 |Максимальная вычислительная мощность, используемая одним экземпляром — [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] или [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
 |Максимальный объем памяти для буферного пула [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Максимум, поддерживаемый операционной системой|128 ГБ|64 ГБ|1410 МБ|1410 МБ|
 |Максимальный объем памяти для кэша сегмента columnstore на экземпляр [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
+|Максимальный объем данных, оптимизированных для памяти, на базу данных в [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
 
 
 
 
-&nbsp;
 
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-<a id="3-nbsp-sql-server-2017-release-notessql-server-2017-release-notesmd" class="xliff"></a>
-
-### 3. &nbsp;[Заметки о выпуске SQL Server 2017 г.](sql-server-2017-release-notes.md)
-
-*Обновлено: 17.05.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Назад](#TitleNum_2) | [Далее](#TitleNum_4))
-
-<!-- Source markdown line 28.  ms.author= "craigg".  -->
+<a name="similars2"/>
 
 &nbsp;
 
-
-<!-- git diff --ignore-all-space --unified=0 84e7a2a49f2893d49380db1ad75695d9a4fd59b2 27a145ad30c10fd667f926d2e092b88c0ba586c5  (PR=1737  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=67c1c0f3a9da6cc5d050da5db8a493f5da934c2a) -->
-
-
-
-**2017 г. SQL Server CTP 2.1 (май 2017 г.)**
-
-**Документация (CTP-версия 2.1)**
-
-- **Проблема и последствия для клиентов:** документации для [! ВКЛЮЧИТЬ [ssSQLv14_md--... ограничена /includes/sssqlv14-MD.md]), а содержимое входит в состав [! ВКЛЮЧИТЬ [ssSQL15_md--... набор документации /includes/sssql15-MD.md]).  Содержимого в статьях, специфичные для [! ВКЛЮЧИТЬ [ssSQLv14_md--... /includes/sssqlv14-MD.MD)] будет помещен вместе с **применяется к**. 
-- **Проблема и последствия для клиентов:** не автономного содержимого доступен для [! ВКЛЮЧИТЬ [ssSQL14_md--... набор документации /includes/sssql14-MD.md]).
-
-**SQL Server Reporting Services (CTP-версия 2.1)**
-
-
-- **Проблема и последствия для клиентов:** при наличии служб SQL Server Reporting Services и Power BI сервера отчетов на том же компьютере и удалить один из них, больше не можно соединиться с сервером отчетов в оставшихся с диспетчером конфигурации сервера отчетов.
-- **Инструкции по решению** Чтобы обойти эту проблему, необходимо выполнить следующие операции после удаления одного из серверов.
-
-    1. Откройте командную строку с правами администратора.
-    2. Перейдите в каталог, где оставшиеся сервер отчетов установлен.
-
-        *Расположение по умолчанию для сервера отчетов Power BI: C:\Program Files\Microsoft Power BI отчета сервера*
-
-        *Расположение по умолчанию для SQL Server Reporting Services: C:\Program Files\Microsoft SQL Server Reporting Services*
-
-    3. Затем перейдите к следующей папке. Это будет *SSRS* или *PBIRS* в зависимости от того, что остается.
-    4. Перейдите в папку WMI.
-    5. Выполните следующую команду:
-
-        ```
-        regsvr32 /i ReportingServicesWMIProvider.dll
-        ```
-
-        Если вы видите его следующей ошибки можно игнорировать.
-
-        ```
-        The module "ReportingServicesWMIProvider.dll" was loaded but the entry-point DLLInstall was not found. Make sure that "ReportingServicesWMIProvider.dll" is a valid DLL or OCX file and then try again.
-        ```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-<a id="4-nbsp-what39s-new-in-sql-server-2017what-s-new-in-sql-server-2017md" class="xliff"></a>
-
-### 4. &nbsp;[Что &#39; новые возможности SQL Server 2017 г.](what-s-new-in-sql-server-2017.md)
-
-*Обновлено: 19.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Назад](#TitleNum_3))
-
-<!-- Source markdown line 31.  ms.author= "craigg".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 41ed3624662404aa63ade007d1ea987fe72a3ab5 921f698ae101f7e6b53d268621b868e1a7e7ada7  (PR=2075  ,  Filename=what-s-new-in-sql-server-2017.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=aa08b5e7de9bb317fd781a98ee5d829431b92df6) -->
-
-
-
-**Новые возможности SQL Server 2017 г CTP 2.1 (май 2017 г.)**
-
-** SQL Server Database Engine **
-
-- Новый DMF [sys.dm_db_log_stats--... / relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), представленные для предоставления атрибутов на уровне сводки и сведения о файлах журнала транзакций; удобно использовать для наблюдения за работоспособностью журнала транзакций.  
-- Эта CTP-версия содержит исправления и улучшения производительности для компонента Database Engine.
-- Чтобы получить подробный список 2017 г CTP усовершенствования в предыдущих выпусках CTP-версии. в разделе [новые возможности в 2017 г. SQL Server (компонент Database Engine)--... / database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
-
-**SQL Server Reporting Services (SSRS)**
-
-- SQL Server Reporting Services больше не доступно для установки программой установки SQL Server, начиная с CTP-версии 2.1.
-- Комментарии, теперь доступны для отчетов. Комментарии позволяют добавить перспективу для возможности отчета и совместной работы с другими пользователями в вашей организации. Можно также включить вложения в комментарий.
-- Для более подробные SSRS возможности новой информации, включая сведения из предыдущих версий см. в разделе [новые возможности в Reporting Services —... / reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
-- Сведения о сервере отчетов Power BI см. в разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
-
-**Изучение служб машины SQL Server**
-
-- Нет новых компонентов службы обучения машины в этой CTP-версии.
-- Более подробные служб обучения машины возможности новой информации, включая данные из предыдущей CTP-версии см. в разделе [новые возможности в SQL Server машины обучения службы--... / advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).  
-
-**SQL Server Analysis Services (SSAS)**
-
-- В этой CTP-версии нет новых функций SSAS.  
-- Дополнительные сведения об улучшениях и исправления ошибок в этом выпуске см. в разделе [новые возможности в SQL Server 2017 г Analysis Services —... / analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Сокращенный список статей, недавно обновлены
-
-Compact представлены ссылки на обновленные статьи, перечисленные в предыдущем разделе.
-
-1. [Программа улучшения качества SQL Server Data Tools](#TitleNum_1)
-2. [Выпуски и поддерживаемых функций SQL Server](#TitleNum_2)
-3. [Заметки о выпуске SQL Server 2017 г.](#TitleNum_3)
-4. [Какой &#39; новые возможности SQL Server 2017 г.](#TitleNum_4)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-<a id="sister-articles" class="xliff"></a>
-
-## Филиалы статей
+## <a name="similar-articles"></a>Похожие статьи
 
 Этот раздел содержит похожие статьи, аналогичные недавно измененным, для других предметных областей в том же репозитории GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-#### Предметные области, содержащие новые или недавно обновленные статьи
-
-- [Новые + обновленные (12+2): **углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новые + обновленные (0+2): **подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (3+0): **СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (1+2): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (2+8): **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (1+0): **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Новые + обновленные (5+5): **реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (0+4): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (1+0): **инструменты для SQL**](../tools/new-updated-tools.md)
+- [Новые + обновленные (4+4): **Расширенная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (2+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (1+2): **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (6+0): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (13+2): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (1+0): **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Новые + обновленные (1+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
+- [Новые + обновленные (8+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (2+2): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (1+0): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (1+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### Предметные области, не содержащие новые или недавно обновленные статьи
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
+- [Новые + обновленные (0+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
-- [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новые + обновленные (0+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+0): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
 

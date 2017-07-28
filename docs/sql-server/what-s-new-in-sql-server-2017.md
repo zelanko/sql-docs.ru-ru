@@ -1,7 +1,7 @@
 ---
-title: "Новые возможности SQL Server 2017 г. | Документы Microsoft"
+title: "Новые возможности в SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/19/2017
+ms.date: 07/12/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,133 +14,105 @@ caps.latest.revision: 71
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
-ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 731d53110d9dc47de5a44dd7f65190e029e120dc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>Новые возможности SQL Server 2017 г.
-2017 г. SQL Server представляет важный шаг к созданию сервера SQL платформу, которая позволяет выбрать либо языков разработки, типы данных, в локальной среде и в облаке, так и в операционных системах путем приведения возможности SQL Server в контейнеры Docker на основе Linux, Windows и Linux.
+# <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
+SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. В этом разделе представлены новые возможности последнего релиз-кандидата SQL Server 2017 (RC1, июль 2017 г.) и выпусков Community Technical Preview (CTP) в определенных функциональных областях.
 
-В этом разделе приведена сводка новые возможности в самой последней версии Technical Preview сообщества (CTP) и ссылки на дополнительные возможности новых сведений о конкретных функциональных областях.
+**Попробуйте эти выпуски сами:** [загрузите релиз-кандидат SQL Server 2017 (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
-![info_tip](../sql-server/media/info-tip.png) Запуск SQL Server в Linux Дополнительные сведения см. в разделе:
--  [Новые возможности для 2017 г. SQL Server в Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)
--  [Документация по SQL Server на платформе Linux](https://docs.microsoft.com/sql/linux/)
+>[!TIP]
+>**Запускайте SQL Server в Linux!** Дополнительные сведения см. в [документации по SQL Server на Linux](https://docs.microsoft.com/sql/linux/) и в разделе [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new) (Новые возможности SQL Server 2017 в Linux).
 
+## <a name="latest-release-sql-server-2017-release-candidate-rc1-july-2017"></a>Последний выпуск: релиз-кандидат SQL Server 2017 (RC1, июль 2017 г.)
 
-**Попробуйте продукт:**    
-   -   [![Загрузить из центра оценки](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[загрузить SQL Server 2017 г Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
-
-## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>Новые возможности SQL Server 2017 г CTP 2.1 (май 2017 г.)
-### <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine  
-- Новый DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), введенные для предоставления сводных уровня атрибуты и сведения о файлах журнала транзакций; полезны для мониторинга работоспособности журнала транзакций.  
-- Эта CTP-версия содержит исправления и улучшения производительности для компонента Database Engine.
-- Подробный список 2017 г. усовершенствования CTP-версии в предыдущих выпусках CTP-версии, в разделе [новые возможности SQL Server 2017 г. (компонент Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
-
-### <a name="sql-server-reporting-services-ssrs"></a>Службы SQL Server Reporting Services (SSRS)
-- SQL Server Reporting Services больше не доступно для установки программой установки SQL Server, начиная с CTP-версии 2.1.
-- Комментарии, теперь доступны для отчетов. Комментарии позволяют добавить перспективу для возможности отчета и совместной работы с другими пользователями в вашей организации. Можно также включить вложения в комментарий.
-- Более подробные сведения о новых возможностях SSRS, включая сведения из предыдущих выпусков, см. в статье [Новые возможности служб Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
-- Сведения о сервере отчетов Power BI см. в разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
-
-### <a name="sql-server-machine-learning-services"></a>Изучение служб машины SQL Server
-- Нет новых компонентов службы обучения машины в этой CTP-версии.
-- Более подробные службы обучения машины новой информации, включая данные из предыдущей CTP-версии, видят [новые возможности служб SQL Server Machine Learning](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).  
-
-### <a name="sql-server-analysis-services-ssas"></a>Службы SQL Server Analysis Services (SSAS)
-- В этой CTP-версии нет новых функций SSAS.  
-- Дополнительные сведения об улучшениях и исправления ошибок в этом выпуске см. в разделе [новые возможности служб Analysis Services SQL Server 2017 г](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
+### <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine    
+- Сборки CLR теперь можно добавлять в список разрешений в качестве обходного пути для функции `clr strict security`, описанной в CTP 2.0. Для поддержки списка разрешений доверенных сборок добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).  
 
 ### <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
--   Теперь вы можете использовать **Use32BitRuntime** параметра.
--   Улучшена производительность ведения журнала.
-- Более подробные служб SSIS новые сведения, включая сведения из предыдущей CTP-версии, видят [новые возможности служб интеграции SQL Server 2017 г](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).  
+- Новый компонент **Scale Out** в SSIS включает следующие новые и измененные функции в RC1. Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017).
+    -   Мастер масштабирования Scale Out теперь поддерживает высокий уровень доступности.
+    -   Улучшена отработка отказа для журналов выполнения из рабочих ролей масштабирования Scale Out.
+    -   Параметр *runincluster* хранимой процедуры **[catalog].[create_execution]** переименован в *runinscaleout* для согласованности и удобства чтения.
+    -   Каталог SSIS содержит новое глобальное свойство, позволяющее указать режим по умолчанию для выполнения SSIS-пакетов.
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-## <a name="whats-new-in-sql-server-2017-ctp-20-april-2017"></a>Новые возможности SQL Server 2017 г CTP 2.0 (апрель 2017 г.)
-### <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
-- **Перестроение индекса в сети возобновляемые**. Перестроение индекса в сети возобновляемые позволяет возобновить операции перестроения индекса в сети с места остановки после сбоя. Например отработка отказа для реплики или ситуации недостаточно дискового пространства. Можно также приостанавливать и возобновлять операции перестроения индекса в сети. Например может потребоваться временно освободить ресурсы системы с целью выполнения задача с высоким приоритетом или выполнить перестроение индекса в другом окне miniatous обслуживания windows в случае слишком мало для большой таблицы. И, наконец перестроение индекса в сети возобновляемые значительную нагрузку на журнал пространства, что позволяет выполнять усечение журнала во время выполнения операции перестроения возобновляемые не требуется. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md).
-- **Параметр IDENTITY_CACHE для инструкции ALTER DATABASE SCOPED CONFIGURATION**. Был добавлен новый параметр IDENTITY_CACHE инструкция ALTER DATABASE области конфигурации T-SQL. Если этот параметр имеет значение OFF, пропуски можно избежать в качестве значений столбцов идентификаторов в случае сервер неожиданно перезапускается или при сбое сервера-получателя. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
-- Среда CLR использует CAS (Разграничение доступа кода) в .NET Framework, которая больше не поддерживается в качестве границы безопасности. Сборки среды CLR, созданные с `PERMISSION_SET = SAFE` можно получить доступ к внешним системным ресурсам, вызов неуправляемого кода и получения прав системного администратора. Начиная с версии [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], `sp_configure` возможность, называемую `clr strict security` впервые появился в целях повышения безопасности сборок среды CLR. `clr strict security`включено по умолчанию и рассматривает `SAFE` и `EXTERNAL_ACCESS` сборки как если бы они были помечены `UNSAFE`. `clr strict security` Параметр можно отключить для обеспечения обратной совместимости, но не рекомендуется. Корпорация Майкрософт рекомендует всем сборкам быть подписан сертификата или ассиметричного ключа, соответствующего имени входа, которому предоставлено `UNSAFE ASSEMBLY` разрешений в базе данных master. Дополнительные сведения см. в разделе [строгой безопасности CLR](../database-engine/configure-windows/clr-strict-security.md).  
-- График возможности баз данных для моделирования связей многие ко многим "". Сюда входят новые [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) синтаксис для создания узла и Краевые таблицы и ключевое слово [соответствия](../t-sql/queries/match-sql-graph.md) для запросов. Дополнительные сведения см. в разделе [Graph обработка с помощью 2017 г. SQL Server](../relational-databases/graphs/sql-graph-overview.md).   
-- Автоматической настройки является функцией базы данных, которая обеспечивает анализ запроса потенциальных проблем с производительностью, он может рекомендовать решений и автоматически исправить определенные проблемы. Автоматической настройки [!INCLUDE[ssnoversion](../includes/ssnoversion.md)], уведомляет о том, при обнаружении потенциальных проблем производительности, а также позволяет применять действия по исправлению или позволяет [!INCLUDE[ssde](../includes/ssde-md.md)] автоматически устранить проблемы с производительностью. Дополнительные сведения см. в разделе [автоматической настройки](../relational-databases/automatic-tuning/automatic-tuning.md).  
--   Пакетного режима адаптивной присоединение к повысить качество плана (под совместимости db 140).
--   Поочередное исполнение для нескольких инструкций T-SQL возвращающие для повышения качества плана (под совместимости db 140).
-- Хранилище запросов сейчас также отслеживает сводные данные статистики ожидания. Отслеживание категории статистики ожидания запроса в хранилище запросов позволяет следующий уровень производительности, устранении неполадок, предоставляя, еще более понять его узких мест, сохраняя ключевых преимуществ хранилище запросов и производительность рабочей нагрузки.
-- Поддержка DTC для группы доступности AlwaysOn все межбазовые транзакции между базами данных, которые являются частью группы доступности, в том числе для баз данных, которые являются частью того же экземпляра. Дополнительные сведения см. в разделе [транзакции - группы доступности AlwaysOn и зеркального отображения базы данных](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
-- Новый столбец **modified_extent_page_count** впервые появился в [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) для отслеживания разностных изменений в каждый файл базы данных из базы данных.
-- [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) теперь поддерживает загрузку таблицы в файловой группе, кроме файловую группу по умолчанию для пользователя с помощью **ON** ключевое слово.
-- Программа установки SQL Server поддерживает указание размер файла начальной базы данных tempdb до **256 ГБ (262 144 МБ)** каждого файла с предупреждением, если размер файла задано значение больше, чем **1 ГБ** и если IFI не включена.
-- Новый динамическое административное представление (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) появилась возможность отслеживать использование хранилища версии каждой базы данных.
-- Новое динамическое административное Представление [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) вводится для предоставления информации виртуального файла Журнала, аналогично DBCC LOGINFO.
-- Темпоральные таблицы с системным управлением версиями теперь поддерживают КАСКАДНОГО удаления и CASCADE UPDATE.
-- Эта CTP-версия содержит исправления ошибок для ядра СУБД.
-- Подробный список 2017 г. усовершенствования CTP-версии в предыдущих выпусках CTP-версии, в разделе [новые возможности SQL Server 2017 г. (компонент Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).   
+## <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine  
+SQL Server 2017 включает множество новых функций, усовершенствований и улучшений работы для ядра СУБД. 
+- **Возобновляемая перестройка индексов в подключенном режиме**: позволяет возобновить эту операцию с момента остановки после сбоя (например, при отработке отказа в реплику или нехватке места на диске) либо приостановить и возобновить ее позже. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
+- Параметр **IDENTITY_CACHE** для ALTER DATABASE SCOPED CONFIGURATION позволяет избежать пропусков в значениях столбцов удостоверений при непредвиденной перезагрузке или отработке отказа сервера на вторичный сервер. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
+- **Автоматическая настройка базы данных** предоставляет сведения о возможных проблемах с обработкой запросов и рекомендуемые решения. Она также может автоматически исправлять выявленные проблемы. См. раздел [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md) (Автоматическая настройка). (CTP 2.0)
+- Новые **возможности для баз данных графов**, предназначенные для моделирования связей "многие ко многим", включают новый синтаксис [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) для создания граничных таблиц и таблиц узлов, а также ключевое слово [MATCH](../t-sql/queries/match-sql-graph.md) для запросов. См. раздел [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017). (CTP 2.0)
+- Параметр sp_configure, который называется `clr strict security`, включен по умолчанию для повышения безопасности сборок CLR. См. раздел [CLR strict security](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)
+- Программа установки теперь позволяет задать для каждого файла tempdb начальный размер до **256 ГБ** (262 144 МБ). Если размер файла превышает 1 ГБ, а мгновенная инициализация файлов не включена, выдается соответствующее предупреждение. (CTP 2.0)
+- Столбец **modified_extent_page_count** в [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) отслеживает разностные изменения в каждом файле базы данных, что позволяет использовать интеллектуальные решения для полного или разностного резервного копирования, основываясь на проценте измененных страниц базы данных. (CTP 2.0)
+- Синтаксис T-SQL [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) теперь поддерживает загрузку таблицы в файловую группу, отличную от пользовательской группы по умолчанию, с помощью ключевого слова **ON**. (CTP 2.0)
+- Теперь поддерживаются транзакции между всеми базами данных, входящими в **группу доступности AlwaysOn**, включая базы данных, являющиеся частью одного экземпляра. См. раздел [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных) (CTP 2.0)
+- Новые функции для **Групп доступности** включают поддержку групп без кластеров, параметр минимального числа реплик для фиксации, возможности миграции между Windows и Linux и тестирование на обеих системах. (CTP 1.3)
+- Новые динамические административные представления:
+    - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) предоставляет сводку атрибутов и сведения о файлах журналов транзакций, которые помогают контролировать работоспособность в журналах транзакций. (CTP 2.1)
+    - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) отслеживает использование хранилища версий для каждой базы данных, что помогает оперативно планировать размеры tempdb. (CTP 2.0)
+    - [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) предоставляет сведения о виртуальных файлах журнала (VLF) для отслеживания возможных проблем с журналами транзакций, оповещения об этих проблемах и их предотвращения. (CTP 2.0)
+    - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) — это новое динамическое административное представление для анализа статистики. (CTP 1.3)
+    - **sys.dm_os_host_info** предоставляет сведения об операционной системе для Windows и Linux. (CTP 1.0)
+- Инструмент **Database Tuning Advisor (DTA)** получил дополнительные функции и более высокую производительность. (CTP 1.2)
+- **Усовершенствования работы в памяти** включают поддержку вычисляемых столбцов в оптимизированных для памяти таблицах, а также полную поддержку функций JSON и оператор CROSS APPLY для модулей, скомпилированных в собственном коде. (CTP 1.1)
+- Новые **строковые функции**: CONCAT_WS, TRANSLATE и TRIM, а для функции STRING_AGG теперь поддерживается WITHIN GROUP. (CTP 1.1)
+- Появились новые **параметры массового доступа** (BULK INSERT и OPENROWSET(BULK...)) для файлов CSV и BLOB-файлов Azure. (CTP 1.1)
+- **Улучшения работы с оптимизированными для памяти объектами** включают sp_spaceused и устранение ограничения в 8 индексов для оптимизированных для памяти таблиц, sp_rename для этих таблиц и для скомпилированных в собственном коде модулей T-SQL, а также CASE и TOP (N) WITH TIES для скомпилированных в собственном коде модулей. Файлы файловой группы, оптимизированные для памяти, теперь можно хранить, помещать в резервную копию и восстанавливать с помощью службы хранилища Azure. (CTP 1.0)
+- **DATABASE SCOPED CREDENTIAL** — новый класс защищаемых элементов, поддерживающих разрешения CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP и VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS теперь отображается в sys.fn_builtin_permissions. (CTP 1.0)
+- Добавлена база данных **COMPATIBILITY_LEVEL 140**. (CTP 1.0).  
 
-### <a name="sql-server-machine-learning-services"></a>Изучение служб машины SQL Server
-- SQL Server R Services имеет новое имя, чтобы отразить поддержку языка Python в CTP-версии 2.0. Теперь можно использовать обучения машины службы (в базе данных) для SQL Server для запуска сценариев R или Python в SQL Server. Или установите Microsoft машины обучения Server (изолированный) для развертывания и использования моделей R и Python, не требующих SQL Server. 
-- Обе эти платформы включают новые алгоритмы MicrosoftML для распределенных машинного обучения, а также последнюю версию Microsoft R (версия 9.1.0).
-- Дополнительные сведения см. в разделе [новые возможности для машинного обучения](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+Дополнительные сведения см. в разделе [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md) (Новые возможности ядра СУБД SQL Server 2017).
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
+## <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
+- Новый компонент **Scale Out** в SSIS содержит следующие новые и измененные функции. Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017). (RC1)
+    -   Мастер масштабирования Scale Out теперь поддерживает высокий уровень доступности.
+    -   Улучшена отработка отказа для журналов выполнения из рабочих ролей масштабирования Scale Out.
+    -   Параметр *runincluster* хранимой процедуры **[catalog].[create_execution]** переименован в *runinscaleout* для согласованности и удобства чтения.
+    -   Каталог SSIS содержит новое глобальное свойство, позволяющее указать режим по умолчанию для выполнения SSIS-пакетов.
+- В новом компоненте **Scale Out для SSIS** вы теперь можете использовать параметр **Use32BitRuntime** при активации выполнения. (CTP 2.1)
+- SQL Server 2017 Integration Services (SSIS) теперь поддерживает **SQL Server на Linux**, и новый пакет позволяет вам запускать пакеты SSIS в Linux из командной строки. Подробнее см. в [записи блога с объявлением о поддержке SSIS для Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
+- Новый компонент **Scale Out для SSIS** значительно упрощает запуск SSIS на множестве компьютеров. См. раздел [Integration Services Scale Out](~/integration-services/integration-services-ssis-scale-out.md). (CTP 1.0)
+- Источник OData и диспетчер подключений OData теперь поддерживают подключение к веб-каналам OData в Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online. (CTP 1.0)
 
-## <a name="whats-new-in-sql-server-2017-ctp-14-march-2017"></a>Новые возможности SQL Server CTP 2017 г. 1.4 (март 2017 г.)
-### <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
-- В этой CTP-версии нет новых функций ядра СУБД.
-- Эта CTP-версия содержит исправления ошибок для ядра СУБД.
-- Подробный список 2017 г. усовершенствования CTP-версии в предыдущих выпусках CTP-версии, в разделе [новые возможности SQL Server 2017 г. (компонент Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
+Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017).
 
-### <a name="sql-server-r-services"></a>Службы R SQL Server
-- В этой CTP-версии нет новых функций служб R.
-- Более подробные сведения о новых возможностях служб R, включая сведения для предыдущих CTP-версий, см. в разделе [Новые возможности служб R SQL Server](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md).  
+## <a name="sql-server-analysis-services-ssas"></a>Службы SQL Server Analysis Services (SSAS) 
+SQL Server Analysis Services 2017 включает множество улучшений для табличных моделей. К ним относятся следующие объекты.
+- Табличный режим стал параметром установки по умолчанию для Analysis Services. (CTP 2.0)
+- Безопасность на уровне объектов для защиты метаданных табличных моделей. (CTP 2.0)
+- Возможность легко создавать связи на основе полей дат. (CTP 2.0)
+- Новые источники **получения данных** (Power Query) и поддержка существующих источников данных DirectQuery для запросов на языке M. (CTP 2.0) 
+- Редактор DAX для SSDT. (CTP 2.0)
+- Подсказки по кодированию — продвинутая функция для оптимизации обновления данных больших табличных моделей в памяти. (CTP 1.3)
+- Поддержка **уровня совместимости 1400** для табличных моделей. Чтобы создать новый проект табличной модели с уровнем совместимости 1400 или перевести уже существующий проект на этот уровень, загрузите и установите [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
+- Современный интерфейс **получения данных** для табличных моделей с уровнем совместимости 1400. См. [блог команды разработчиков Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Свойство **Скрыть члены** скрывает пустые элементы в неоднородных иерархиях. (CTP 1.1)
+- Новое действие **Строки детализации** для конечного пользователя, позволяющее **Показать подробности** по статистических данным. Функции [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) и **DETAILROWS** для создания выражений со строками детализации. (CTP 1.1)
+- DAX-оператор **IN** для указания множества значений. (CTP 1.1)
 
-### <a name="sql-server-reporting-services-ssrs"></a>Службы SQL Server Reporting Services (SSRS)
-- В этой CTP-версии нет новых функций служб SSRS.
-- Более подробные сведения о новых возможностях SSRS, включая сведения из предыдущих выпусков, см. в статье [Новые возможности служб Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
+Дополнительные сведения см. в разделе [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md) (Новые возможности SQL Server Analysis Services 2017).
 
-### <a name="sql-server-analysis-services-ssas"></a>Службы SQL Server Analysis Services (SSAS)
-- В этой CTP-версии нет новых функций SSAS.  
-- Подробные сведения, включая новые возможности для служб Analysis Services в последних выпусках предварительной версии SSDT и SSMS [новые возможности 2017 г Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
+## <a name="sql-server-reporting-services-ssrs"></a>Службы SQL Server Reporting Services (SSRS)
+Что касается CTP 2.1, службы SSRS больше не доступны для установки с помощью программы установки SQL Server. Перейдите в Центр загрузки Майкрософт, чтобы [скачать предварительную версию сервера отчетов Power BI за май 2017 г. и оптимизированную для сервера отчетов версию Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=55253). Сведения о сервере отчетов Power BI см. в разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+- В отчетах теперь доступны комментарии, позволяющие сообщать свою точку зрения и взаимодействовать с другими пользователями. Для комментариев также доступны вложения. (CTP 2.1)
+- В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services, перетаскивая нужные поля в конструкторах запросов. См. [блог по Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-### <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
-- В этой CTP-версии нет новых функций служб SQL Server Integration Services.
-- Более подробные служб SSIS новые сведения, включая сведения из предыдущей CTP-версии, видят [новые возможности интеграции служб 2017 г.](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).  
+Дополнительные сведения см. в разделе [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) (Новые возможности служб SQL Server Reporting Services (SSRS)).
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
+## <a name="sql-server-machine-learning-services"></a>Изучение служб машины SQL Server
+Службы R в SQL Server теперь переименованы в **Службы машинного обучения SQL Server**, чтобы отразить появившуюся поддержку Python в дополнение к языкам R. Вы можете использовать службы машинного обучения (в базе данных) для запуска сценариев R или Python в SQL Server либо установить сервер машинного обучения Майкрософт (автономный) для развертывания и использования моделей R и Python, не требующих SQL Server. Обе эти платформы включают новые алгоритмы MicrosoftML для распределенных машинного обучения, а также последнюю версию Microsoft R (версия 9.1.0). (CTP 2.0)
+- Машинное обучение с Python включает модуль **revoscalepy**, который поддерживает подмножество распределенных алгоритмов и контекстов вычисления, представленных в RevoScaleR. 
+- Вы можете легко создавать в R множество параллельных моделей с помощью новой функции **rxExecBy**. Поддерживаемые контексты вычислений включают RxSpark и RxInSQLServer. (CTP 2.0)
 
-## <a name="whats-new-in-sql-server-2017-ctp-13-february-2017"></a>Новые возможности SQL Server CTP 2017 г. 1.3 (февраля 2017 г.)
-### <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
-- Повышена производительность косвенных контрольных точек.
-- Добавлена поддержка групп доступности без кластеризации.
-- Добавлен параметр групп доступности для фиксации минимальных реплик.
-- Теперь группы доступности могут работать как в Windows, так и в Linux, что обеспечивает возможность кроссплатформенной миграции и тестирования.
-- Добавлена поддержка темпоральных политикой сохранения таблицы. Дополнительные сведения см. в разделе [управление хранением данных журнала в Темпоральных таблицах с системным управлением версиями](../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#using-temporal-history-retention-policy-approach).
-- Реализовано новое динамическое административное представление SYS.DM_DB_STATS_HISTOGRAM.
-- Online некластеризованный columnstore построения индекса и перестройте добавлена поддержка
-- Реализованы пять новых динамических административных представлений для возврата данных о процессе Linux. Дополнительные сведения см. в статье [Динамические административные представления процессов Linux (Transact-SQL)](../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
-- Добавлено представление[sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) для проверки статистики.
+Дополнительные сведения см. в разделе [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) (Новые возможности служб машинного обучения SQL Server).
 
-### <a name="sql-server-analysis-services-ssas-ctp-13"></a>Службы SQL Server Analysis Services (SSAS) (CTP 1.3)
-- Подсказки службы кодирования — расширенная функция, использующаяся для оптимизации обработки (обновления данных) больших табличных моделей в памяти. Дополнительные сведения см. в разделе [новые возможности 2017 г Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md). 
-
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Общение с командой разработчиков SQL Server 
-- [Stack Overflow (тег sql-server)](http://stackoverflow.com/questions/tagged/sql-server)
-- [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect — сообщайте об ошибках и запрашивайте функции](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit — общее обсуждение по поводу R](https://www.reddit.com/r/SQLServer/)
-
-## <a name="see-also"></a>См. также:    
-- ![Заметки о выпуске](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) [заметки о выпуске SQL Server 2017 г](../sql-server/sql-server-2017-release-notes.md). 
-- [Возможности, поддерживаемые различными выпусками](https://msdn.microsoft.com/library/cc645993.aspx)
-- [Требования к оборудованию и программному обеспечению для установки](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-- [Мастер установки SQL Server](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Установка обновлений для обслуживания SQL Server](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
- 
- ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+## <a name="next-steps"></a>Следующие шаги
+- Ознакомьтесь с [заметками о выпуске SQL Server 2017](sql-server-2017-release-notes.md).
+- Узнайте, [что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
