@@ -7,13 +7,10 @@
 ## [Новые и недавно обновленные статьи](new-updated-ssms.md)
 ## [Предыдущие выпуски SSMS](previous-sql-server-management-studio-releases.md)
 
-# [Использование SSMS](use-sql-server-management-studio.md)
-# [Возможности SSMS](features-in-sql-server-management-studio.md)
-# [Сбор информации об использовании](sql-server-management-studio-telemetry-ssms.md)
 # [Загрузите модуль PowerShell для SQL Server](download-sql-server-ps-module.md)
 
 # [Агент SQL Server +](../ssms/agent/sql-server-agent.md)
-# [F1 Справка +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
+# [Справка F1 +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
 # [Справка меню +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
 # [Обозреватель объектов +](../ssms/object/object-explorer.md)
 # [Обозреватель решений +](../ssms/solution/solution-explorer.md)
@@ -49,4 +46,4 @@
 
 # [Программа SSMS](ssms-utility.md)  
 # [Сочетания клавиш SSMS](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [Анонимные данные об использовании](sql-server-management-studio-telemetry-ssms.md)

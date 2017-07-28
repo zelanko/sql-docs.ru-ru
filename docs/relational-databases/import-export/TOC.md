@@ -26,6 +26,7 @@
 ## [Использование файла форматирования для массового импорта данных](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [Использование файла форматирования для пропуска столбца таблицы](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [Использование файла форматирования для пропуска поля данных](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Импорт данных из Excel в SQL](import-data-from-excel-to-sql.md)  
 # [Примеры массового импорта и экспорта XML-документов](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  
