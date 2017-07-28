@@ -22,9 +22,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 06/29/2017
 
 ---
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
-
-# Новые возможности индексов columnstore
+# <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Сводка функций columnstore, доступных для каждой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и последних выпусков Premium для базы данных SQL Microsoft Azure, хранилища данных SQL Azure и хранилища данных Parallel Data Warehouse.  
@@ -32,9 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > Для базы данных SQL Azure индексы columnstore доступны только в выпуске Premium.
  
-<a id="feature-summary-for-product-releases" class="xliff"></a>
-
-## Сводка функций по выпускам  
+## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
  В следующей таблице перечислены основные функции для индексов columnstore и продукты, в которых они доступны.  
 
   
@@ -63,17 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] добавляет указанные новые возможности.
 
-<a id="functional" class="xliff"></a>
-
-### Функции
+### <a name="functional"></a>Функции
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] поддерживает нематериализованные вычисляемые столбцы в кластеризованных индексах columnstore. Материализованные столбцы не поддерживаются в кластеризованных индексах columnstore. Вы не можете создать некластеризованный индекс для индекса columnstore с вычисляемым столбцом. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Эти улучшения расширяют возможности хранения данных и обеспечивают поддержку операционной аналитики в реальном времени.  
   
-<a id="functional" class="xliff"></a>
-
-### Функции  
+### <a name="functional"></a>Функции  
   
 -   Таблица rowstore может включать один обновляемый некластеризованный индекс columnstore. Ранее некластеризованный индекс columnstore был доступен только для чтения.  
   
@@ -87,9 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Индексы columnstore включают параметр задержки сжатия, который сводит к минимуму влияние транзакционной рабочей нагрузки на операционную аналитику в реальном времени.  Этот параметр позволяет стабилизировать часто изменяющиеся строки перед их сжатием в индекс columnstore. Дополнительные сведения см. в статьях [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md) и [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>
-
-### Производительность для уровня совместимости базы данных 120 или 130  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>Производительность для уровня совместимости базы данных 120 или 130  
   
 -   Индексы columnstore поддерживают уровень изоляции моментальных снимков read committed (RCSI) и изоляцию моментальных снимков (SI). Это позволяет выполнять запросы аналитики, согласованные с транзакциями, без блокировки.  
   
@@ -101,9 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Включение предиката ускоряет запросы, которые сравнивают строки типа [v]char или n[v]char. Это относится к общим операторам сравнения, включая такие операторы, как LIKE, которые используют фильтры битовой карты. Этот способ работает для всех параметров сортировки, поддерживаемых SQL Server.  
   
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>
-
-### Производительность для уровня совместимости базы данных 130  
+### <a name="performance-for-database-compatibility-level-130"></a>Производительность для уровня совместимости базы данных 130  
   
 -   Поддержка нового пакетного режима для запросов с помощью любой из следующих операций:  
   
@@ -121,9 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Запросы к таблицам, оптимизированным для памяти, могут иметь параллельные планы в режиме взаимодействия SQL при доступе к данным как в индексе rowstore, так и в индексе columnstore.  
   
-<a id="supportability" class="xliff"></a>
-
-### Поддержка  
+### <a name="supportability"></a>Поддержка  
  Следующие системные представления являются новыми для columnstore:  
   
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -154,9 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-<a id="limitations" class="xliff"></a>
-
-### Ограничения  
+### <a name="limitations"></a>Ограничения  
   
 -   Инструкция MERGE отключена, если индекс сбалансированного дерева определен в кластеризованном индексе columnstore.  
   
@@ -164,9 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Для таблиц в памяти запросы к индексу columnstore выполняются только в режиме взаимодействия, а не в собственном режиме в памяти. Поддерживается параллельное выполнение.  
   
-<a id="sql-server-2014" class="xliff"></a>
-
-## SQL Server 2014  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  В SQL Server 2014 кластеризованный индекс columnstore был представлен в качестве основного формата хранилища. Это позволило выполнять регулярные операции загрузки, а также операции обновления, удаления и вставки.  
   
 -   Таблица может использовать кластеризованный индекс columnstore в качестве основного хранилища таблиц. Использование других индексов не допускается в таблице, однако кластеризованный индекс columnstore является обновляемым, что позволяет выполнять регулярные операции загрузки и вносить изменения в отдельные строки.  
@@ -179,9 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Следующие операторы выполняются в пакетном режиме для многопоточных запросов: SCAN, FILTER, PROJECT, JOIN, GROUP BY и UNION ALL.  
   
-<a id="sql-server-2012" class="xliff"></a>
-
-## SQL Server 2012  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  В SQL Server 2012 был представлен некластеризованный индекс columnstore как еще один тип индекса для таблиц rowstore и пакетной обработки запросов к данным columnstore.  
   
 -   Таблица rowstore может включать один некластеризованный индекс columnstore.  
@@ -192,9 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Пакетная обработка обеспечивает двукратное (и более) повышение производительности, но она доступна только для параллельного выполнения запросов.  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
  Руководство по индексам columnstore   
  Загрузка данных индексов columnstore   
  [Производительность запросов индексов columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

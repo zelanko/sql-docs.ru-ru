@@ -35,9 +35,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="populate-full-text-indexes" class="xliff"></a>
-
-# Заполнение полнотекстовых индексов
+# <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
   Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
   
 ##  <a name="types"></a> Types of population  
@@ -46,9 +44,7 @@ ms.lasthandoff: 06/22/2017
 -   заполнение на основе **отслеживания изменений** (автоматическое или вручную);
 -   добавочное заполнение с использованием **отметок времени**.
   
-<a id="full-population" class="xliff"></a>
-
-## Полное заполнение  
+## <a name="full-population"></a>Полное заполнение  
  Во время полного заполнения индексные записи строятся для всех строк таблицы или индексированного представления. Во время полного заполнения полнотекстового индекса индексные записи строятся для всех строк базовой таблицы или индексированного представления.  
   
 По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полностью заполняет новый полнотекстовый индекс сразу после его создания.
@@ -57,9 +53,7 @@ ms.lasthandoff: 06/22/2017
 
 Чтобы создать полнотекстовый индекс, но не заполнять его немедленно, укажите в инструкции `CREATE FULLTEXT INDEX` предложение `CHANGE_TRACKING OFF, NO POPULATION`. Если указать `CHANGE_TRACKING MANUAL`, то средство полнотекстового поиска не будет заполнять новый полнотекстовый индекс до выполнения инструкции `ALTER FULLTEXT INDEX` с предложением `START FULL POPULATION` или `START INCREMENTAL POPULATION`. 
 
-<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>
-
-### Пример создания полнотекстового индекса без выполнения полного заполнения  
+### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Пример создания полнотекстового индекса без выполнения полного заполнения  
  В следующем примере создается полнотекстовый индекс для таблицы `Production.Document` образца базы данных `AdventureWorks` . В этом примере используется параметр `WITH CHANGE_TRACKING OFF, NO POPULATION` для задержки первоначального полного заполнения.  
   
 ```tsql
@@ -78,9 +72,7 @@ GO
   
 ```  
   
-<a id="example---run-a-full-population-on-a-table" class="xliff"></a>
-
-### Пример выполнения полного заполнения в таблице  
+### <a name="example---run-a-full-population-on-a-table"></a>Пример выполнения полного заполнения в таблице  
  В следующем примере полное заполнение выполняется в таблице `Production.Document` образца базы данных `AdventureWorks` .  
   
 ```tsql
@@ -88,9 +80,7 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-<a id="population-based-on-change-tracking" class="xliff"></a>
-
-## Заполнение на основе отслеживания изменений
+## <a name="population-based-on-change-tracking"></a>Заполнение на основе отслеживания изменений
  Можно также использовать отслеживание изменений для обслуживания полнотекстового индекса после его первоначального полного заполнения. Это вызывает небольшую нагрузку, связанную с отслеживанием изменений, поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает таблицу, в которой выполняется отслеживание изменений в базовой таблице со времени последнего заполнения. При использовании отслеживания изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает запись строк базовой таблицы или индексированного представления, измененного операциями обновления, удаления или вставки. Изменения данных, внесенные с помощью инструкций WRITETEXT и UPDATETEXT, не отражаются в полнотекстовом индексе и не отмечаются при отслеживании изменений.  
   
 > [!NOTE]  
@@ -98,9 +88,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  При включении отслеживания изменений во время создания индекса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полностью заполняет новый полнотекстовый индекс сразу же после его создания. Таким образом, изменения отслеживаются и распространяются в полнотекстовый индекс.
 
-<a id="enable-change-tracking" class="xliff"></a>
-
-### Включить отслеживание изменений
+### <a name="enable-change-tracking"></a>Включить отслеживание изменений
 Отслеживания изменений выполняется двумя способами:
 -   Автоматически (параметр `CHANGE_TRACKING AUTO`). По умолчанию используется автоматическое отслеживание изменений.
 -   Вручную (параметр `CHANGE_TRACKING MANUAL`).   
@@ -161,18 +149,14 @@ ALTER FULLTEXT INDEX ON Production.Document
     GO  
     ```
    
-<a id="disable-change-tracking" class="xliff"></a>
-
-### Включение отслеживания изменений 
+### <a name="disable-change-tracking"></a>Включение отслеживания изменений 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>
-
-## Добавочное заполнение с использованием отметок времени  
+## <a name="incremental-population-based-on-a-timestamp"></a>Добавочное заполнение с использованием отметок времени  
  Добавочное заполнение является альтернативным механизмом по отношению к заполнению полнотекстового индекса вручную. Если выполняется большое количество операций вставки в таблицу, то использование добавочного заполнения может быть более эффективным, чем использование заполнения вручную.
  
  Можно запустить добавочное заполнение для полнотекстового индекса, у которого параметру CHANGE_TRACKING присвоено значение MANUAL или OFF. 
@@ -186,9 +170,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 -   Если первое заполнение полнотекстового индекса является добавочным, то производится индексирование всех строк, что является эквивалентом полного заполнения. 
 -   Если за время, прошедшее с момента последнего заполнения, изменились какие-либо метаданные, влияющие на полнотекстовый индекс таблицы, то запросы добавочного заполнения реализуются как полное заполнение. Сюда относятся и изменения в метаданных, вызванные изменениями в определениях любых столбцов, индексов или полнотекстовых индексов. 
 
-<a id="run-an-incremental-population" class="xliff"></a>
-
-### Запуск добавочного заполнения
+### <a name="run-an-incremental-population"></a>Запуск добавочного заполнения
   
  Для запуска добавочного заполнения выполните инструкцию `ALTER FULLTEXT INDEX` с использованием предложения `START INCREMENTAL POPULATION`.  
   
@@ -243,9 +225,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  Например, `SQLFT0000500008.2` является файлом журнала сканирования для базы данных с идентификатором базы данных 5 и идентификатором полнотекстового каталога 8. Двойка в конце имени файла показывает, что этой паре базы данных и каталога соответствуют два файла журналов сканирования.  
 
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Приступая к работе с компонентом Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Создание и управление полнотекстовыми индексами](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
