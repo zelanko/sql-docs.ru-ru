@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>Темпоральные таблицы
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] добавлена поддержка темпоральных таблиц с системным управлением версиями. Эти таблицы как компонент базы данных позволяют предоставлять данные, хранящиеся в таблице в любой момент времени, а не только в текущий момент времени. Темпоральные функции базы данных впервые появились в ANSI SQL 2011 и теперь поддерживаются в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  В SQL Server 2016 добавлена поддержка темпоральных таблиц с системным управлением версиями. Являясь встроенным компонентом базы данных, эти таблицы предоставляют сведения о хранящихся в них данных на любой, а не только на текущий момент времени. Темпоральные функции базы данных впервые появились в ANSI SQL 2011 и теперь поддерживаются в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **Быстрый старт**  
   

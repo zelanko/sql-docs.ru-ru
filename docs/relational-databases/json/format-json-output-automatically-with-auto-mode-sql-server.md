@@ -2,7 +2,7 @@
 title: "Автоматическое форматирование выходных данных JSON в режиме AUTO (SQL Server) | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,12 +16,12 @@ ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: cba250a399bb3de87c9713ac600c9807527a1cd9
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 09e81a8bbc77e9bbf9f76bb669ab53bd549bef85
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Автоматическое форматирование выходных данных JSON в режиме AUTO (SQL Server)
@@ -29,20 +29,22 @@ ms.lasthandoff: 06/23/2017
 
 Для автоматического форматирования выходных данных предложения **FOR JSON** на основе структуры инструкции **SELECT** укажите параметр **AUTO**.  
   
-Благодаря параметру **AUTO** формат выходных данных JSON определяется автоматически на основе порядка столбцов в списке SELECT и соответствующих исходных таблиц. Этот формат изменить нельзя.
+При указании параметра **AUTO** формат выходных данных JSON определяется автоматически на основе порядка столбцов в списке SELECT и соответствующих им исходных таблиц. Этот формат изменить нельзя.
  
- Кроме того, для управления выходными данными можно использовать параметр **PATH**.
- -   Дополнительные сведения о параметре **PATH** см. в статье [Format Nested JSON Output with PATH Mode (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md) (Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server)).
- -   Общие сведения об этих параметрах см. в статье [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) (Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)).
+Кроме того, для управления выходными данными можно использовать параметр **PATH**.
+-   Дополнительные сведения о параметре **PATH** см. в статье [Format Nested JSON Output with PATH Mode (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md) (Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server)).
+-   Общие сведения об этих параметрах см. в статье [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) (Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)).
+
+В запросе, где используется параметр **FOR JSON AUTO** , должно быть предложение **FROM** .  
   
- В запросе, где используется параметр **FOR JSON AUTO** , должно быть предложение **FROM** .  
+Ниже приведены некоторые примеры предложения **FOR JSON** с параметром **AUTO** .  
   
- Ниже приведены некоторые примеры предложения **FOR JSON** с параметром **AUTO** .  
+## <a name="examples"></a>Примеры
+
+### <a name="example-1"></a>Пример 1
+ **Запрос**  
   
-## <a name="examples"></a>Примеры  
- **Запрос 1**  
-  
-Если в запросе используется только одна таблица, результаты предложения FOR JSON AUTO будут аналогичны результатам предложения FOR JSON PATH. В этом случае FOR JSON AUTO не создает никакие вложенные объекты. Единственное отличие состоит в том, что FOR JSON AUTO выводит псевдонимы, разделенные точками, (например, `Info.MiddleName` в следующем примере) как ключи с точками, а не как вложенные объекты.  
+Если запрос ссылается только на одну таблицу, результаты предложения FOR JSON AUTO будут похожи на результаты предложения FOR JSON PATH. В этом случае FOR JSON AUTO не создает никакие вложенные объекты. Единственное отличие состоит в том, что FOR JSON AUTO выводит псевдонимы, разделенные точками, (например, `Info.MiddleName` в следующем примере) как ключи с точками, а не как вложенные объекты.  
   
 ```sql  
 SELECT TOP 5   
@@ -54,7 +56,7 @@ SELECT TOP 5
    FOR JSON AUTO  
 ```  
   
- **Результат 1**  
+ **Результат**  
   
 ```json  
 [{
@@ -83,10 +85,12 @@ SELECT TOP 5
     "Info.MiddleName": "A"
 }]
 ```  
+
+### <a name="example-2"></a>Пример 2
+
+**Запрос**  
   
- **Запрос 2**  
-  
- При соединении таблиц столбцы в первой таблице создаются как свойства корневого объекта. Столбцы во второй таблице создаются как свойства вложенного объекта. В качестве имени вложенного массива используется имя таблицы или псевдоним второй таблицы (например, `D` в следующем примере).  
+При соединении таблиц столбцы в первой таблице создаются как свойства корневого объекта. Столбцы во второй таблице создаются как свойства вложенного объекта. В качестве имени вложенного массива используется имя таблицы или псевдоним второй таблицы (например, `D` в следующем примере).  
   
 ```sql  
 SELECT TOP 2 SalesOrderNumber,  
@@ -99,7 +103,7 @@ FROM Sales.SalesOrderHeader H
 FOR JSON AUTO   
 ```  
   
- **Результат 2**  
+**Результат**  
   
 ```json  
 [{
@@ -119,9 +123,11 @@ FOR JSON AUTO
     }]
 }]
 ```  
+
+### <a name="example-3"></a>Пример 3
  
- **Запрос 3**  
- Вместо использования FOR JSON AUTO можно вкладывать вложенный запрос FOR JSON PATH в инструкцию SELECT, как показано в следующем примере. В этом примере выводится тот же результат, что и в предыдущем.  
+**Запрос**  
+Вместо использования FOR JSON AUTO можно вкладывать вложенный запрос FOR JSON PATH в инструкцию SELECT, как показано в следующем примере. В этом примере выводится тот же результат, что и в предыдущем.  
   
 ```sql  
 SELECT TOP 2  
@@ -135,7 +141,7 @@ FROM Sales.SalesOrderHeader AS H
 FOR JSON PATH  
 ```  
   
- **Результат 3**  
+**Результат**  
   
 ```json  
 [{

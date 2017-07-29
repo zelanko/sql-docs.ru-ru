@@ -2,7 +2,7 @@
 title: "Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server) | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,20 +14,20 @@ ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 3a11cee5097ed686d20d3bb8fcc7894138700841
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 3fc86f957f4ece3564d8f72558467cdf6c54c935
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Чтобы сохранить полный контроль над выходными данными предложения **FOR JSON**, укажите параметр **PATH**.  
+Чтобы сохранить полный контроль над выходными данными предложения **FOR JSON**, укажите параметр **PATH**.  
   
- Режим**PATH** позволяет создавать объекты-оболочки и вкладывать сложные свойства друг в друга. Результаты форматируются в виде массива объектов JSON.  
+Режим**PATH** позволяет создавать объекты-оболочки и вкладывать сложные свойства друг в друга. Результаты форматируются в виде массива объектов JSON.  
   
 Кроме того, можно использовать параметр **AUTO** для автоматического форматирования выходных данных на основе структуры инструкции **SELECT**.
  -   Дополнительные сведения о параметре **AUTO** см. в статье [Format JSON Output Automatically with AUTO Mode (SQL Server)](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md) (Автоматическое форматирование выходных данных JSON в режиме AUTO (SQL Server)).
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/23/2017
 Ниже приведены некоторые примеры предложения **FOR JSON** с параметром **PATH** . Форматируйте вложенные результаты с помощью имен столбцов, разделенных точкой, или с помощью вложенных запросов, как показано в следующих примерах. По умолчанию значения NULL не включаются в выходные данные **FOR JSON**.  
 
 ## <a name="example---dot-separated-column-names"></a>Пример. Имена столбцов, разделенные точкой  
- В приведенном ниже запросе первые пять строк из таблицы AdventureWorks Person форматируются как JSON.  
+В приведенном ниже запросе первые пять строк из таблицы AdventureWorks `Person` форматируются как JSON.  
 
-Предложение FOR JSON PATH использует псевдоним или имя столбца для определения имени ключа в выходных данных JSON. Если псевдоним содержит точки, параметр PATH создаст вложенные объекты.  
+Предложение **FOR JSON PATH** использует псевдоним или имя столбца для определения имени ключа в выходных данных JSON. Если псевдоним содержит точки, параметр PATH создаст вложенные объекты.  
 
  **Запрос**  
   
@@ -58,7 +58,7 @@ SELECT TOP 5
 [{
     "Id": 1,
     "FirstName": "Ken",
-    "LastName": "Sánchez",
+    "LastName": "Sanchez",
     "Info": {
         "MiddleName": "J"
     }
@@ -89,7 +89,7 @@ SELECT TOP 5
 ```  
    
 ## <a name="example---multiple-tables"></a>Пример: несколько таблиц  
- Если запрос ссылается на несколько таблиц, предложение FOR JSON PATH будет вкладывать каждый столбец по своему псевдониму. Следующий запрос создает один запрос JSON для каждой пары (OrderHeader, OrderDetails), объединяемой в запросе. 
+Если запрос ссылается на несколько таблиц, предложение **FOR JSON PATH** будет вкладывать каждый столбец по его псевдониму. Следующий запрос создает один запрос JSON для каждой пары (OrderHeader, OrderDetails), объединяемой в запросе. 
   
  **Запрос**  
   

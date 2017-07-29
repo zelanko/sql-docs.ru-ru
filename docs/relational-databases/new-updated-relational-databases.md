@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 19b664245f45ad45a4c7d1eba249858030fad718
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-relational-databases-docs" class="xliff"></a>
-
-# Обновление новых и недавно: docs реляционных баз данных
+# <a name="new-and-recently-updated-relational-databases-docs"></a>Обновление новых и недавно: docs реляционных баз данных
 
 
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *Диапазон дат для обновлений:* &nbsp; **17.05.2017** &nbsp;–&nbsp; **30.06.2017**
+- *Диапазон дат для обновлений:* &nbsp; **23.05.2017** &nbsp;—&nbsp; **17.07.2017**
 - *Предметной области:* &nbsp; **реляционных баз данных**.
 
 
@@ -44,9 +42,7 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## Недавно созданные статьи
+## <a name="new-articles-created-recently"></a>Недавно созданные статьи
 
 Приведенные ниже ссылки указывают на новые статьи, которые были добавлены недавно.
 
@@ -54,16 +50,28 @@ ms.lasthandoff: 07/03/2017
 1. [Внутренние компоненты выполняющейся в памяти OLTP SQL Server для SQL Server 2016](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
 2. [Адаптивная обработка запросов в базах данных SQL](performance/adaptive-query-processing.md)
 3. [Руководство по улучшению конфиденциальности и удовлетворению требований GDPR с помощью платформы Microsoft SQL](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.dm_db_log_stats (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
-5. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
+5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
+8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## Обновлены статьи с отрывки
+## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список статей, недавно обновлены
+
+В этом компактном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Обновлены статьи с отрывки
 
 В этом разделе отображается отрывки обновлений, полученные из статей, в которых были недавно крупных обновлений.
 
@@ -79,9 +87,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd" class="xliff"></a>
-
-### 1. &nbsp; [Изменение таблиц, оптимизированных для памяти](in-memory-oltp/altering-memory-optimized-tables.md)
+### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1. &nbsp; [Изменение таблиц, оптимизированных для памяти](in-memory-oltp/altering-memory-optimized-tables.md)
 
 *Обновление: 23.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Далее](#TitleNum_2))
 
@@ -126,9 +132,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_2"/>
 
-<a id="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd" class="xliff"></a>
-
-### 2. &nbsp; [Размер строк и таблицы для таблиц, оптимизированных для памяти](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2. &nbsp; [Размер строк и таблицы для таблиц, оптимизированных для памяти](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
 
 *Обновлено: 22.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Назад](#TitleNum_1) | [Далее](#TitleNum_3))
 
@@ -171,9 +175,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_3"/>
 
-<a id="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd" class="xliff"></a>
-
-### 3. &nbsp; [Руководство по оптимизации и проверке после миграции](post-migration-validation-and-optimization-guide.md)
+### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3. &nbsp; [Руководство по оптимизации и проверке после миграции](post-migration-validation-and-optimization-guide.md)
 
 *Обновлено: 21.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Назад](#TitleNum_2) | [Далее](#TitleNum_4))
 
@@ -210,11 +212,9 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_4"/>
 
-<a id="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd" class="xliff"></a>
+### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
 
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-*Обновлено: 05.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Назад](#TitleNum_3) | [Далее](#TitleNum_5))
+*Обновлено: 05.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_3))
 
 <!-- Source markdown line 58.  ms.author= "rickbyh".  -->
 
@@ -250,116 +250,45 @@ ms.lasthandoff: 07/03/2017
 
 
 
-&nbsp;
+
+<a name="similars2"/>
 
 &nbsp;
 
----
-
-<a name="TitleNum_5"/>
-
-<a id="5-nbsp-manage-retention-of-historical-data-in-system-versioned-temporal-tablestablesmanage-retention-of-historical-data-in-system-versioned-temporal-tablesmd" class="xliff"></a>
-
-### 5. &nbsp;[Управление хранением данных журнала в Темпоральных таблицах с системным управлением версиями](tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4))
-
-<!-- Source markdown line 425.  ms.author= "carlrab".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 ee69beb6a46913934d4a322f5d95343cc86f2ec4 94da98fec4ab16636a4581c16eb4456e2d1ff66b  (PR=1777  ,  Filename=manage-retention-of-historical-data-in-system-versioned-temporal-tables.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-**Используя подход политики хранения журнала**
-
-> **Примечание:** с помощью временных политики хранения журнала подход действует для [! ВКЛЮЧИТЬ [sqldbesa--... /.. /includes/sqldbesa-MD.md]) и SQL Server 2017 г., начиная с CTP-версии 1.3.  
-
-Хранение журнала может быть настроен на уровне отдельных таблиц, который дает пользователям возможность создавать гибкие время существования политики. Применение временного хранения проста: требуется только один параметр для задания во время создания или схемы изменения таблицы.
-
-После определения политики хранения, базы данных SQL Azure запускает регулярно проверку, если есть исторических строк, пригодных для Автоматическая очистка. Идентификация совпадающих строк и их удаление из таблицы журнала прозрачного, выполнения в фоновой задачей, которая является планируются и выполняются в системе. Возраст условия для строк таблицы журнала, проверяется на основе столбца, представляющее конец периода SYSTEM_TIME. Если срок хранения, например, равным шесть месяцев, строк таблицы, подходящие для очистки удовлетворять следующим условиям:
-```
-ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
-```
-В предыдущем примере предполагается, что ValidTo столбец соответствует окончания периода SYSTEM_TIME.
-**Как настроить политику хранения?**
-
-Прежде чем настраивать политику хранения для темпоральной таблицы, сначала проверьте включен ли временного хранения журнала на уровне базы данных.
-```
-SELECT is_temporal_history_retention_enabled, name
-FROM sys.databases
-```
-Базы данных флаг **is_temporal_history_retention_enabled** установлен в ON по умолчанию, но пользователи могут изменить с помощью инструкции ALTER DATABASE. Он также автоматически устанавливается в OFF после точки во время операции восстановления. Чтобы включить очистку хранения журнала для базы данных, выполните следующую инструкцию:
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Сокращенный список статей, недавно обновлены
-
-Compact представлены ссылки на обновленные статьи, перечисленные в предыдущем разделе.
-
-1. [Изменение таблиц с оптимизацией для памяти](#TitleNum_1)
-2. [Размер строк и таблицы для таблиц, оптимизированных для памяти](#TitleNum_2)
-3. [После миграции проверки и руководство по оптимизации](#TitleNum_3)
-4. [sys.query_store_plan (Transact-SQL)](#TitleNum_4)
-5. [Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями](#TitleNum_5)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-<a id="sister-articles" class="xliff"></a>
-
-## Филиалы статей
+## <a name="similar-articles"></a>Аналогичные статьи
 
 Этот раздел содержит похожие статьи, аналогичные недавно измененным, для других предметных областей в том же репозитории GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-#### Предметные области, содержащие новые или недавно обновленные статьи
-
-- [Новые + обновленные (12+2): **углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новые + обновленные (0+2): **подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (3+0): **СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (1+2): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (2+8): **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (1+0): **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Новые + обновленные (5+5): **реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (0+4): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (1+0): **инструменты для SQL**](../tools/new-updated-tools.md)
+- [Новые + обновленные (4+4): **Углубленная аналитика на SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (2+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (1+2): **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (6+0): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (13+2): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (1+0): **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Новые + обновленные (1+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
+- [Новые + обновленные (8+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (2+2): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (1+0): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (1+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### Предметные области, не содержащие новые или недавно обновленные статьи
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
+- [Новые + обновленные (0+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
-- [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новые + обновленные (0+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+0): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
 
