@@ -9,7 +9,7 @@
    ```
 
    > [!TIP]
-   > Вы можете опустить пароль в командной строке. В этом случае вы получите приглашение для его ввода.
+   > Вы можете не указывать пароль в командной строке. В этом случае вы получите запрос на его ввод.
 
    > [!TIP]
    > Если вы в будущем захотите подключиться удаленно, укажите для параметра **-S** имя компьютера или IP-адрес и откройте в брандмауэре порт 1433.
@@ -19,7 +19,7 @@
 1. Если произойдет сбой подключения, сначала попробуйте узнать проблему по сообщению об ошибке. Затем ознакомьтесь с [рекомендациями по устранению неполадок с подключением](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
 ## <a name="create-and-query-data"></a>Создание и запрос данных
-В следующих разделах приведено пошаговое руководство по созданию базы данных, добавлению данных и запуску простого запроса с использованием **sqlcmd** и Transact-SQL.
+В следующих разделах приведено пошаговое руководство по созданию базы данных, добавлению данных и запуску простого запроса с использованием **sqlcmd**.
 
 ### <a name="create-a-new-database"></a>Создание базы данных
 
@@ -97,7 +97,7 @@ QUIT
 
 ## <a name="connect-from-windows"></a>Подключение из Windows
 
-Важно учитывать, что инструменты SQL Server в Windows подключаются к экземплярам SQL Server в Linux так же, как они подключались бы к любому удаленному экземпляру SQL Server.
+Инструменты SQL Server в Windows подключаются к экземплярам SQL Server в Linux так же, как они подключались бы к любому удаленному экземпляру SQL Server.
 
 Если у вас компьютер с ОС Windows, который может подключаться к компьютеру с ОС Linux, попробуйте выполнить те же действия этого раздела в командной строке Windows, запустив **sqlcmd**. Главное при этом — использовать имя или IP-адрес целевого компьютера с ОС Linux, а не localhost, и открыть TCP-порт 1433. Если у вас возникли проблемы с подключением из Windows, см. [рекомендации по устранению неполадок с подключением](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
@@ -109,6 +109,15 @@ QUIT
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Если вы не знакомы с T-SQL, изучите разделы [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md) (Руководство: написание инструкций Transact-SQL) и [Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md) (Справочник по Transact-SQL (ядро СУБД)).
+По другим сценариям установки доступны следующие ресурсы.
+
+|||
+|---|---|
+| [Обновление](../linux/sql-server-linux-setup.md#upgrade) | Узнайте, как обновить установленную среду SQL Server на Linux |
+| [Удаление](../linux/sql-server-linux-setup.md#uninstall) | Удаление SQL Server на Linux |
+| [Автоматическая установка](../linux/sql-server-linux-setup.md#unattended) | Узнайте, как создать сценарий для установки без каких-либо запросов |
+| [Автономная установка](../linux/sql-server-linux-setup.md#offline) | Узнайте, как вручную загрузить пакеты для установки в автономном режиме |
 
 Другие способы подключения и работы в SQL Server см. в разделах по [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) и [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+
+Подробнее о написании инструкций и запросов на языке Transact-SQL см. учебник [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
