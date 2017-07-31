@@ -17,11 +17,11 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Настройка сервера IIS 7 для веб-синхронизации
@@ -286,7 +286,7 @@ ms.lasthandoff: 06/23/2017
   
     4.  Если прокси-сервер используется, выберите **Использовать прокси-сервер для подключений локальной сети** и **Не использовать прокси-сервер для локальных адресов**и нажмите кнопку **ОК**.  
   
-2.  В обозревателе Internet Explorer на подписчике подключитесь к серверу в диагностическом режиме, добавив параметр `?diag` к адресу replisapi.dll. Например: `https://server.domain.com/directory/replisapi.dll?diag`.  
+2.  В обозревателе Internet Explorer на подписчике подключитесь к серверу в диагностическом режиме, добавив параметр `?diag` к адресу replisapi.dll. Например, `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
     >  В примере выше **server.domain.com** необходимо заменить точным именем **Кому выдан** , указанным в разделе **Сертификаты сервера** в диспетчере служб IIS.  

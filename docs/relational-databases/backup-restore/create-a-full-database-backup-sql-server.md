@@ -19,18 +19,18 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
 ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 
  > При использовании SQL Server 2014 перейдите к разделу [Создание полной резервной копии базы данных (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
-  В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или PowerShell.  
+  В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
   
 >  Сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 06/23/2017
 ### <a name="examples"></a>Примеры  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**А.  Полное резервное копирование на диск в расположение по умолчанию**
 В этом примере база данных `Sales` будет заархивирована на диск в папку резервных копий по умолчанию.  Резервное копирование `Sales` никогда не выполнялось.
-1.  В **обозревателе объектов**подключитесь к экземпляру ядра СУБД SQL Server и разверните его.
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
 
 2.  Разверните узел **Базы данных**, щелкните правой кнопкой `Sales`, укажите на пункт **Задачи**и выберите **Создать резервную копию...**
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 06/23/2017
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**Б.  Полное резервное копирование на диск в нестандартное расположение**
 В этом примере база данных `Sales` будет заархивирована на диск в папку `E:\MSSQL\BAK`.  Ранее резервные копии `Sales` уже создавались.
-1.  В **обозревателе объектов**подключитесь к экземпляру ядра СУБД SQL Server и разверните его.
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
 
 2.  Разверните узел **Базы данных**, щелкните правой кнопкой `Sales`, укажите на пункт **Задачи**и выберите **Создать резервную копию...**
 
@@ -184,7 +184,7 @@ ms.lasthandoff: 06/23/2017
 
 #### <a name="c--create-an-encrypted-backup"></a>**В.  Создание зашифрованной резервной копии**
 В этом примере база данных `Sales` будет заархивирована с шифрованием в папку резервных копий по умолчанию.  [**Главный ключ базы данных**](../../relational-databases/security/encryption/create-a-database-master-key.md) уже создан.  Уже был создан  [**сертификат**](../../t-sql/statements/create-certificate-transact-sql.md) с именем `MyCertificate`. Пример создания **главного ключа базы данных** и **сертификата** на языке T-SQL можно просмотреть на разделе [Создание зашифрованной резервной копии](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
-1.  В **обозревателе объектов**подключитесь к экземпляру ядра СУБД SQL Server и разверните его.
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
 
 2.  Разверните узел **Базы данных**, щелкните правой кнопкой `Sales`, укажите на пункт **Задачи**и выберите **Создать резервную копию...**
 
@@ -201,7 +201,7 @@ ms.lasthandoff: 06/23/2017
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**Г.  Резервное копирование в службу хранилища BLOB-объектов Azure**
 #### <a name="common-steps"></a>**Общие шаги**  
 В следующих трех примера выполняется полное резервное копирование базы данных `Sales` в службу хранилища больших двоичных объектов Microsoft Azure.  Имя учетной записи хранилища — `mystorageaccount`.  Контейнер называется `myfirstcontainer`.  Для краткости первые четыре шага перечислены здесь однократно, а все примеры начинаются с **шага 5**.
-1.  В **обозревателе объектов**подключитесь к экземпляру ядра СУБД SQL Server и разверните его.
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента SQL Server Database Engine и разверните его.
 
 2.  Разверните узел **Базы данных**, щелкните правой кнопкой `Sales`, укажите на пункт **Задачи**и выберите **Создать резервную копию...**
 

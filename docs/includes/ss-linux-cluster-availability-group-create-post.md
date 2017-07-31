@@ -7,7 +7,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/db1.bak';
+   TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
 В первичной реплике SQL Server, запустите следующий скрипт Transact SQL для добавления в базу данных с именем `db1` чтобы группы доступности с именем `ag1`.
