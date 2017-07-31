@@ -16,24 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
-
-# Окно справки и автономное содержимое для SQL Server
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>Окно справки и автономное содержимое для SQL Server
   
   
   
 Эта статья описывает, как установить окно справки и просматривать документацию по SQL Server в автономном режиме. Здесь рассматривается документация для [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 и SQL Server 2017. 
 
-<a id="install-help-viewer" class="xliff"></a>
-
-## Установка окна справки
+## <a name="install-help-viewer"></a>Установка окна справки
 Ниже перечислены средства, устанавливающие окно справки, с учетом используемой версии SQL Server. Установите одно из указанных средств, чтобы установить окно справки.
 
 
@@ -56,9 +52,7 @@ ms.lasthandoff: 06/28/2017
 > Вы можете просмотреть локальную справку для [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] с помощью окна справки версии 2.x, только если используете параметр **Установить содержимое с диска**. 
 
 
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
-
-## Автономное содержимое для SQL Server 2016, SQL Server 2017  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>Автономное содержимое для SQL Server 2016, SQL Server 2017  
  
 **Установка автономного содержимого**  
 1. Откройте окно справки версии 2.2, запустив SQL Server Management Studio или Visual Studio, а затем в меню **Справка** выберите пункт **Добавление и удаление содержимого справки**.  
@@ -85,9 +79,7 @@ ms.lasthandoff: 06/28/2017
    >[!IMPORTANT]
    > Если вы получите уведомление о сбое операции перемещения, закройте окно сообщения и средство просмотра справки, а затем повторно откройте это средство. Теперь в поле **Local store path** (Путь к локальному хранилищу) вы должны увидеть новое расположение для содержимого.   
  
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
-
-## Автономное содержимое для [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>Автономное содержимое для [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 
  
   
 **Установка автономного содержимого**  
@@ -118,9 +110,7 @@ ms.lasthandoff: 06/28/2017
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
-
-## Просмотр интернет-содержимого в окне справки
+## <a name="view-online-content-in-help-viewer"></a>Просмотр интернет-содержимого в окне справки
 
 В окне справки версии 2.x вы можете просмотреть интернет-содержимое, выполнив одно из описанных ниже действий.
 
@@ -140,17 +130,13 @@ ms.lasthandoff: 06/28/2017
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-<a id="f1-help-and-other-tips" class="xliff"></a>
-
-## Справка F1 и другие советы
+## <a name="f1-help-and-other-tips"></a>Справка F1 и другие советы
 
 При нажатии клавиши F1 откроется соответствующий раздел справки в Интернете. В локальной справке таких разделов нет.
 
 Кроме того, окно справки не поддерживает параметры прокси-сервера и формат ISO. 
 
 
-<a id="additional-information" class="xliff"></a>
-
-## Дополнительные сведения
+## <a name="additional-information"></a>Дополнительные сведения
 [Средство просмотра справки (Microsoft)](https://msdn.microsoft.com/library/hh580782.aspx)
 

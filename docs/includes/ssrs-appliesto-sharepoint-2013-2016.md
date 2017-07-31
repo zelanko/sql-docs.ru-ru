@@ -1,1 +1,1 @@
-![Да](media/yes.png)режим интеграции с SharePoint
+![да](media/yes.png)режим интеграции с SharePoint
