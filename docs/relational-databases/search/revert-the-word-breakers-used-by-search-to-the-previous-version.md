@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="revert-the-word-breakers-used-by-search-to-the-previous-version" class="xliff"></a>
-
-# Перевод средств разбиения по словам, используемых поиском, на предыдущую версию
+# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Перевод средств разбиения по словам, используемых поиском, на предыдущую версию
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает и включает версию средств разбиения по словам и парадигматических модулей для всех языков, поддерживающих полнотекстовый поиск, за исключением корейского. В этом разделе описывается способ переключения из данной версии этих компонентов в предыдущую версию или обратно, из предыдущей версии в новую версию.  
   
  В этом разделе не обсуждаются следующие языки.  
@@ -382,9 +380,7 @@ ms.lasthandoff: 07/10/2017
 |Текущий идентификатор CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Текущее имя файла|MsWb70804.dll|  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   

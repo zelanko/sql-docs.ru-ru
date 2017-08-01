@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="change-the-word-breaker-used-for-us-english-and-uk-english" class="xliff"></a>
-
-# Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)
+# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
   
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовались другие средства разбиения по словам, представленные другими идентификаторами CLSID для английского языка (США) (LCID 1033) и английского языка (Великобритания) (LCID 2057). В этом выпуске оба идентификатора LCID используют одни и те же компоненты с общими идентификаторами CLSID, как показано в следующей таблице.  
@@ -37,13 +35,9 @@ ms.lasthandoff: 07/10/2017
   
  Дополнительные сведения о средствах разбиения по словам и парадигматических модулях см. в статье [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-<a id="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers" class="xliff"></a>
-
-## Переключение из текущего средства разбиения по словам для английского языка в предыдущие средства разбиения по словам для английского языка  
+## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>Переключение из текущего средства разбиения по словам для английского языка в предыдущие средства разбиения по словам для английского языка  
   
-<a id="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version" class="xliff"></a>
-
-#### Переход от текущей версии средства разбиения по словам для английского языка (США) к предыдущей версии  
+#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (США) к предыдущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -65,9 +59,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version" class="xliff"></a>
-
-#### Переход от текущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к предыдущей версии  
+#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к предыдущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -89,13 +81,9 @@ ms.lasthandoff: 07/10/2017
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker" class="xliff"></a>
-
-## Переключение обратно из предыдущего средства разбиения по словам для английского языка в текущее средство разбиения по словам для английского языка  
+## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>Переключение обратно из предыдущего средства разбиения по словам для английского языка в текущее средство разбиения по словам для английского языка  
   
-<a id="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version" class="xliff"></a>
-
-#### Переход обратно от предыдущей версии средства разбиения по словам для английского языка (США) к текущей версии  
+#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (США) к текущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -117,9 +105,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version" class="xliff"></a>
-
-#### Переход обратно от предыдущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к текущей версии  
+#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к текущей версии  
   
 1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
@@ -141,9 +127,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Перевод средств разбиения по словам, используемых поиском, на предыдущую версию](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   

@@ -22,16 +22,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
-
-# Реализация обработчика бизнес-логики для статьи публикации слиянием
+# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Реализация обработчика бизнес-логики для статьи публикации слиянием
   В данном разделе описывается процесс реализации обработчика бизнес-логики для статьи публикации слиянием в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью программирования репликации или объектов RMO.  
   
  Пространство имен <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> реализует интерфейс, позволяющий создавать сложную бизнес-логику для обработки событий, возникающих в процессе синхронизации слиянием. Методы в обработчике бизнес-логики могут вызываться процессом репликации для каждой изменившейся строки, которая проходит репликацию в ходе синхронизации.  
@@ -58,9 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="ReplProg"></a> При помощи программирования репликации  
   
-<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### Создание и развертывание обработчика бизнес-логики  
+#### <a name="to-create-and-deploy-a-business-logic-handler"></a>Создание и развертывание обработчика бизнес-логики  
   
 1.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio создайте новый проект для сборки .NET, которая содержит код, реализующий обработчик бизнес-логики.  
   
@@ -103,9 +99,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Обработчик бизнес-логики должен быть развернут на всех серверах, на которых работает агент слияния, включая север IIS, на котором во время веб-синхронизации находится файл replisapi.dll.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### Регистрация обработчика бизнес-логики  
+#### <a name="to-register-a-business-logic-handler"></a>Регистрация обработчика бизнес-логики  
   
 1.  Чтобы убедиться, что сборка не была зарегистрирована ранее как обработчик бизнес-логики, выполните на издателе процедуру [sp_enumcustomresolvers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md).  
   
@@ -114,15 +108,11 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Если сборка не найдена ни в том же каталоге, что и исполняемый файл агента слияния, ни в папке приложения, производящего синхронный запуск агента слияния, ни в глобальном кэше сборок (GAC), то в параметре **@dotnet_assembly_name**. При проведении сеанса веб-синхронизации необходимо указать местоположение сборки на веб-сервере.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### Использование обработчика бизнес-логики со статьей в новой таблице  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Использование обработчика бизнес-логики со статьей в новой таблице  
   
 1.  Чтобы определить статью, запустите хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), указав понятное имя обработчика бизнес-логики в параметре **@article_resolver**. Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### Использование обработчика бизнес-логики со статьей в существующей таблице  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Использование обработчика бизнес-логики со статьей в существующей таблице  
   
 1.  Выполните хранимую процедуру [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **@publication**, **@article**, значение **article_resolver** в параметре **@property** и понятное имя обработчика бизнес-логики в параметре **@value**.  
   
@@ -139,9 +129,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
   
-<a id="to-create-a-business-logic-handler" class="xliff"></a>
-
-#### Создание обработчика бизнес-логики  
+#### <a name="to-create-a-business-logic-handler"></a>Создание обработчика бизнес-логики  
   
 1.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio создайте новый проект для сборки .NET, которая содержит код, реализующий обработчик бизнес-логики.  
   
@@ -182,9 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Постройте проект, чтобы создать сборку обработчика бизнес-логики.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### Регистрация обработчика бизнес-логики  
+#### <a name="to-register-a-business-logic-handler"></a>Регистрация обработчика бизнес-логики  
   
 1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -202,15 +188,11 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> — значение **true**.  
   
-<a id="to-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### Развертывание обработчика бизнес-логики  
+#### <a name="to-deploy-a-business-logic-handler"></a>Развертывание обработчика бизнес-логики  
   
 1.  Произведите развертывание сборки на сервере, где запущен агент слияния, в папке, заданной при регистрации обработчика бизнес-логики на распространителе. Для подписок по запросу агент работает на подписчике, а для принудительных подписок — на распространителе. Если используется веб-синхронизация, агент работает на веб-сервере. Если в процессе регистрации обработчика бизнес-логики не был указан полный путь сборки, то ее развертывание необходимо производить в том же каталоге, что и исполняемый объект агента слияния, либо в папке приложения, осуществляющего запуск агента слияния в синхронном режиме. Если сборка используется несколькими приложениями, то ее необходимо установить в глобальный кэш сборок.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### Использование обработчика бизнес-логики со статьей в новой таблице  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Использование обработчика бизнес-логики со статьей в новой таблице  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -226,9 +208,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### Использование обработчика бизнес-логики со статьей в существующей таблице  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Использование обработчика бизнес-логики со статьей в существующей таблице  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
@@ -261,9 +241,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Реализация пользовательского арбитра конфликтов для статьи публикации слиянием](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Отладка обработчика бизнес-логики (программирование репликации)](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)   

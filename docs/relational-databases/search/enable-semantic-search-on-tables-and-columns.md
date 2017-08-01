@@ -20,12 +20,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enable-semantic-search-on-tables-and-columns" class="xliff"></a>
-
-# Включение семантического поиска на таблицы и столбцы
+# <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
   Описывает способ включения или отключения статистического семантического индексирования в выбранных столбцах, содержащих документы или текст.  
   
  При выполнении статистического семантического поиска используются индексы, полученные при полнотекстовом поиске, а также создаются дополнительные индексы. Из-за этой зависимости от полнотекстового поиска приходится создавать при определении нового или изменении существующего полнотекстового индекса новый семантический индекс. Вы можете создать новый семантический индекс с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или с помощью мастера полнотекстового индексирования и других диалоговых окон среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], как описано в данном разделе.  
@@ -59,9 +57,7 @@ ms.lasthandoff: 07/10/2017
 ##  <a name="HowToEnableCreate"></a> Создание семантического индекса, если нет полнотекстового индекса  
  При создании нового полнотекстового индекса с помощью инструкции **CREATE FULLTEXT INDEX** семантическое индексирование на уровне столбца включается путем указания в определении столбца ключевого слова **STATISTICAL_SEMANTICS** . Семантическое индексирование также можно включить при создании полнотекстового индекса с помощью мастера полнотекстового индексирования.  
   
-<a id="create-a-new-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### Создание нового семантического индекса с помощью Transact-SQL  
+ ### <a name="create-a-new-semantic-index-by-using-transact-sql"></a>Создание нового семантического индекса с помощью Transact-SQL  
  
  Вызовите инструкцию **CREATE FULLTEXT INDEX** и укажите параметр **STATISTICAL_SEMANTICS** для каждого столбца, на котором требуется создать семантический индекс. Дополнительные сведения обо всех параметрах этой инструкции см. в разделе [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
@@ -121,17 +117,13 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO
 GO  
 ```  
   
-<a id="create-a-new-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### Создание нового семантического индекса с помощью среды SQL Server Management Studio  
+### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>Создание нового семантического индекса с помощью среды SQL Server Management Studio  
  Запустите мастер полнотекстового индексирования и включите параметр **Статистическая семантика** на странице **Выбор столбцов таблицы** для каждого столбца, на котором требуется создать семантический индекс. Дополнительные сведения, в том числе о запуске мастера полнотекстового индексирования, см. в разделе [Использование мастера полнотекстового индексирования](../../relational-databases/search/use-the-full-text-indexing-wizard.md).  
   
 ##  <a name="HowToEnableAlter"></a> Создание семантического индекса, если есть полнотекстовый индекс  
  Для добавления семантического индексирования при изменении существующего полнотекстового индекса используется инструкция **ALTER FULLTEXT INDEX** . Также можно добавить семантическое индексирование с помощью различных диалоговых окон в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-<a id="add-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
-### Добавление семантического индекса с помощью Transact-SQL  
+### <a name="add-a-semantic-index-by-using-transact-sql"></a>Добавление семантического индекса с помощью Transact-SQL  
  Вызовите инструкцию **ALTER FULLTEXT INDEX** с описанными далее параметрами для каждого столбца, для которого требуется добавить семантический индекс. Дополнительные сведения обо всех параметрах этой инструкции см. в разделе [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
   
  Если не указано иное, полнотекстовый и семантический индексы после вызова инструкции **ALTER** повторно заполняются.  
@@ -154,14 +146,10 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-<a id="add-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
-### Добавить семантический индекс с помощью среды SQL Server Management Studio  
+### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>Добавить семантический индекс с помощью среды SQL Server Management Studio  
  Изменение столбцов, для которых включен семантический или полнотекстовый индекс, выполняется на странице **Столбцы полнотекстового индекса** диалогового окна **Свойства полнотекстового индекса** . Дополнительные сведения см. в разделе [Управление полнотекстовыми индексами](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
 
-<a id="alter-a-semantic-index" class="xliff"></a>
-
-## Изменение семантического индекса
+## <a name="alter-a-semantic-index"></a>Изменение семантического индекса
   
 ###  <a name="addreq"></a> Требования и ограничения для изменения существующего индекса  
   
@@ -172,9 +160,7 @@ GO
 ##  <a name="dropping"></a> Удаление семантического индекса  
 Для удаления семантического индексирования при изменении существующего полнотекстового индекса используется инструкция **ALTER FULLTEXT INDEX** . Также можно удалить семантическое индексирование с помощью различных диалоговых окон в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-<a id="drop-a-semantic-index-by-using-transact-sql" class="xliff"></a>
-
- ### Удалите семантический индекс с помощью Transact-SQL  
+ ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Удалите семантический индекс с помощью Transact-SQL  
 Для удаления семантического индексирования только из столбца или столбцов вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** . С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
   
 ```tsql  
@@ -199,9 +185,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-<a id="drop-a-semantic-index-by-using-sql-server-management-studio" class="xliff"></a>
-
- ### Удалите семантический индекс с помощью среды SQL Server Management Studio  
+ ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Удалите семантический индекс с помощью среды SQL Server Management Studio  
  Изменение столбцов, для которых включен семантический или полнотекстовый индекс, выполняется на странице **Столбцы полнотекстового индекса** диалогового окна **Свойства полнотекстового индекса** . Дополнительные сведения см. в разделе [Управление полнотекстовыми индексами](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 ###  <a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
@@ -210,12 +194,8 @@ GO
   
 -   Задать параметр **NO POPULATION** при удалении семантического индексирования из последнего столбца таблицы, для которой было включено семантическое индексирование, невозможно. Для удаления ранее индексированных результатов требуется цикл заполнения.  
   
-<a id="check-whether-semantic-search-is-enabled-on-database-objects" class="xliff"></a>
-
-## Проверка, включен ли семантический поиск по объектам базы данных  
-<a id="is-semantic-search-enabled-for-a-database" class="xliff"></a>
-
-### Включен ли семантический поиск для базы данных?
+## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>Проверка, включен ли семантический поиск по объектам базы данных  
+### <a name="is-semantic-search-enabled-for-a-database"></a>Включен ли семантический поиск для базы данных?
   
  Отправьте запрос к свойству **IsFullTextEnabled** функции метаданных [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -226,9 +206,7 @@ SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-table" class="xliff"></a>
-
-### Включен ли семантический поиск для таблицы?  
+### <a name="is-semantic-search-enabled-for-a-table"></a>Включен ли семантический поиск для таблицы?  
  
  Выполните запрос к свойству **TableFullTextSemanticExtraction** функции метаданных [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
@@ -239,9 +217,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
-<a id="is-semantic-search-enabled-for-a-column" class="xliff"></a>
-
- ### Включен ли семантический поиск для столбца?
+ ### <a name="is-semantic-search-enabled-for-a-column"></a>Включен ли семантический поиск для столбца?
    
  Чтобы определить, включен ли семантический поиск для определенного столбца, выполните следующие действия.  
   
@@ -267,9 +243,7 @@ GO
   
      Значение True указывает, что для данного столбца, кроме полнотекстового индексирования, включено и семантическое индексирование.  
   
-<a id="determine-what-can-be-indexed-for-semantic-search" class="xliff"></a>
-
-## Определение элементов, к которым можно применить индексирование для семантического поиска  
+## <a name="determine-what-can-be-indexed-for-semantic-search"></a>Определение элементов, к которым можно применить индексирование для семантического поиска  
   
 ###  <a name="HowToCheckLanguages"></a> Проверка, какие языки поддерживаются для семантического поиска  
   
