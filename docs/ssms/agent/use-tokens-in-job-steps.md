@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
@@ -70,8 +70,8 @@ ms.lasthandoff: 06/22/2017
 |**(A-ERR)**|Номер ошибки. Если задание запускается в результате предупреждения, то номер ошибки автоматически замещает в шаге задания этот токен.|  
 |**(A-SEV)**|Серьезность ошибки. Если задание запускается в результате предупреждения, то степень серьезности ошибки автоматически замещает в шаге задания этот токен.|  
 |**(A-MSG)**|Текст сообщения. Если задание запускается в результате предупреждения, то текст сообщения автоматически замещает в шаге задания этот токен.|  
-|**(AGENT_JOB_NAME)**|Имя задания.|  
-|**(AGENT_STEP_NAME)**|Имя шага этапа.|  
+|**(JOBNAME)**|Имя задания.|  
+|**(STEPNAME)**|Имя шага этапа.|  
 |**(DATE)**|Текущая дата (в формате ГГГГММДД).|  
 |**(INST)**|Имя экземпляра. Для экземпляра по умолчанию этот токен будет иметь имя экземпляра по умолчанию, а именно MSSQLSERVER.|  
 |**(JOBID)**|Идентификатор задания.|  
