@@ -26,7 +26,7 @@
 ## [Настройка функции Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)  
 ## [Настройка постоянного шифрования с помощью PowerShell](configure-always-encrypted-using-powershell.md)  
 ### [Настройка ключей Always Encrypted с помощью PowerShell](configure-always-encrypted-keys-using-powershell.md)  
-### [Смена ключей Always Encrypted с помощью PowerShell](rotate-always-encrypted-keys-using-powershell.md)  
+### [Смена ключей постоянного шифрования с помощью PowerShell](rotate-always-encrypted-keys-using-powershell.md)  
 ### [Настройка шифрования столбцов с помощью PowerShell](configure-column-encryption-using-powershell.md)  
 ## [Постоянное шифрование (разработка клиентских приложений)](always-encrypted-client-development.md)  
 ### [Разработка приложений с использованием функции Always Encrypted и поставщика данных .NET Framework для SQL Server](develop-using-always-encrypted-with-net-framework-data-provider.md)  

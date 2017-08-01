@@ -5,7 +5,7 @@
 ## [Управление именами для входа и паролями при репликации](manage-logins-and-passwords-in-replication.md)  
 ## [Безопасная разработка](secure-development-replication.md)  
 ## [Модель безопасности агента репликации](replication-agent-security-model.md)  
-## [Требования к ролям безопасности при репликации](security-role-requirements-for-replication.md)  
+## [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
 ## [Рекомендации по защите репликации](replication-security-best-practices.md)  
 # [Безопасное развертывание](secure-deployment-replication.md)  
 ## [Защита распространителя](secure-the-distributor.md)  

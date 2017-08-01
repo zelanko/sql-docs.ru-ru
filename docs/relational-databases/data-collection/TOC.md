@@ -2,7 +2,7 @@
 # [Управление сбором данных](manage-data-collection.md)  
 ## [Настройка хранилища данных управления (SQL Server Management Studio)](configure-the-management-data-warehouse-sql-server-management-studio.md)  
 ## [Настройка свойств сборщика данных](configure-properties-of-a-data-collector.md)  
-## [Включение или отключение сбора данных](enable-or-disable-data-collection.md)  
+## [Включение или отключение сбор данных](enable-or-disable-data-collection.md)  
 ## [Запуск или остановка набора элементов сбора](start-or-stop-a-collection-set.md)  
 ## [Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
 ## [Просмотр журналов набора элементов сбора (среда SQL Server Management Studio)](view-collection-set-logs-sql-server-management-studio.md)  
