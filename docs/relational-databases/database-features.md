@@ -1,7 +1,7 @@
 ---
-title: "Функции базы данных | Документация Майкрософт"
+title: "Реляционные базы данных Microsoft SQL: руководство | Документация Майкрософт"
 ms.custom: 
-ms.date: 05/02/2017
+ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 137216ed7cf120a8a53fe00b5f1111c9b013c2c9
-ms.openlocfilehash: 54aaac5cb67f00547ea785df9371fb2395f297e7
+ms.translationtype: HT
+ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
+ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
-# <a name="database-features"></a>Функции базы данных  
+# <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Руководство по использованию реляционных баз данных Microsoft SQL
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-  Этот раздел содержит функции и задачи, связанные с базами данных, объектами баз данных, типами данных и механизмами для работы с данными и управления ими. Эти сведения являются общими для большинства версий [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. В некоторых разделах может быть указано, что некоторые функции поддерживаются не всеми платформами. Сведения о конкретных платформах см. в следующих разделах. 
+  Этот раздел содержит функции и задачи, связанные с реляционными базами данных Microsoft SQL, объектами баз данных, типами данных, а также механизмами для работы с данными и управления ими. Эти сведения являются общими для большинства версий [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. В некоторых разделах может быть указано, что некоторые функции поддерживаются не всеми платформами. Сведения о конкретных платформах см. в следующих разделах. 
   
 - [Локальный SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) и [Настройка SQL Server](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [Документация по SQL Server на платформе Linux](../linux/sql-server-linux-overview.md)  
