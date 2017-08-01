@@ -3,5 +3,5 @@
 # [Заметки о выпуске SQL Server 2012](sql-server-2012-release-notes.md)
 # [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
 # [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-# [Заметки о выпуске SQL Server 2012 с пакетом обновления 3](sql-server-2012-sp3-release-notes.md)
-# [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+# [Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)](sql-server-2012-sp3-release-notes.md)
+# [Заметки о выпуске SQL Server 2008 R2 с пакетом обновления 2 (SP2)](sql-server-2008-r2-sp2-release-notes.md)

@@ -3,7 +3,7 @@
 # [Журнал ошибок агента SQL Server](sql-server-agent-error-log.md)
 ## [Просмотр журнала ошибок агента SQL Server (среда SQL Server Management Studio)](view-sql-server-agent-error-log-sql-server-management-studio.md)
 ## [Переименование журнала ошибок агента SQL Server](rename-a-sql-server-agent-error-log-sql-server-management-studio.md)
-## [Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SSMS)](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
+## [Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
 
 # [Задачи автоматизированного администрирования (агент SQL Server)](automated-administration-tasks-sql-server-agent.md)
 ## [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md)
@@ -50,7 +50,7 @@
 ## [Clear the Job History Log](clear-the-job-history-log.md)
 ## [Настройка пользователя для создания заданий агента SQL Server и управления заданиями](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)
 ## [Настройка агента SQL Server](configure-sql-server-agent.md)
-## [Create a CmdExec Job Step](create-a-cmdexec-job-step.md)
+## [Создание шага задания «CmdExec»](create-a-cmdexec-job-step.md)
 ## [Создание категории заданий](create-a-job-category.md)
 ## [Создание задания](create-a-job.md)
 ## [Создание многосерверной среды](create-a-multiserver-environment.md)
