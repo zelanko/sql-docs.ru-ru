@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
@@ -137,29 +137,29 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-information-on-existing-partitions"></a>Просмотр информации о существующих секциях  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также укажите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> и передайте его результат в массив объектов <xref:Microsoft.SqlServer.Replication.MergePartition>.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> и передайте его результат в массив объектов <xref:Microsoft.SqlServer.Replication.MergePartition> .  
   
 5.  Для каждого объекта <xref:Microsoft.SqlServer.Replication.MergePartition> в массиве доступны любые интересующие свойства.  
   
 #### <a name="to-delete-existing-partitions"></a>Удаление существующих секций  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также укажите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> и передайте его результат в массив объектов <xref:Microsoft.SqlServer.Replication.MergePartition>.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> и передайте его результат в массив объектов <xref:Microsoft.SqlServer.Replication.MergePartition> .  
   
-5.  Определите для каждого объекта <xref:Microsoft.SqlServer.Replication.MergePartition> в массиве, нужно ли удалить соответствующую секцию. Решение обычно принимается исходя из значения свойств <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> и <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
+5.  Определите для каждого объекта <xref:Microsoft.SqlServer.Replication.MergePartition> в массиве, необходимо ли удаление соответствующей секции. Решение обычно принимается исходя из значения свойств <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> и <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A> .  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication>, созданного на шаге 2. Передайте объект <xref:Microsoft.SqlServer.Replication.MergePartition>, созданный на шаге 5.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication> , созданного на шаге 2. Передайте объект <xref:Microsoft.SqlServer.Replication.MergePartition> , созданный на шаге 5.  
   
 7.  Повторите шаг 6 для каждой удаляемой секции.  
   

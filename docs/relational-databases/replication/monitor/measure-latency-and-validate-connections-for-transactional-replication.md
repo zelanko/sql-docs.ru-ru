@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Измерение задержки и проверка правильности соединений для репликации транзакций
@@ -140,46 +140,46 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Отправка трассировочного токена в публикацию транзакций  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> .  
   
-3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также укажите созданное на шаге 1 соединение в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Этот метод обеспечивает вставку трассировочного токена в журнал транзакций публикации.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> . Этот метод обеспечивает вставку трассировочного токена в журнал транзакций публикации.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Измерение задержки и проверка соединений для публикации транзакций  
   
-1.  Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
   
-3.  Установите свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> и xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, а в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> установите созданное на шаге 1 соединение.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , а в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> установите созданное на шаге 1 соединение.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Приведите возвращенный объект <xref:System.Collections.ArrayList> к типу массива объектов <xref:Microsoft.SqlServer.Replication.TracerToken>.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Приведите возвращенный объект <xref:System.Collections.ArrayList> к типу массива объектов <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>. Передайте значение <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного маркера, полученного на шаге 5. В результате будут возвращены сведения о задержке для выделенного трассировочного маркера в виде объекта <xref:System.Data.DataSet>. Если возвращены все сведения о трассировочном токене, то существует соединение между издателем и распространителем, а также соединение между распространителем и подписчиком, и топология репликации работоспособна.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> . Передайте значение <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного токена, полученного на шаге 5. В результате будут возвращены сведения о задержке для выделенного трассировочного токена в виде объекта <xref:System.Data.DataSet> . Если возвращены все сведения о трассировочном токене, то существует соединение между издателем и распространителем, а также соединение между распространителем и подписчиком, и топология репликации работоспособна.  
   
 #### <a name="to-remove-tracer-tokens"></a>Удаление трассировочных токенов  
   
-1.  Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
   
-3.  Установите свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> и xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>, а в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> установите созданное на шаге 1 соединение.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , а в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> установите созданное на шаге 1 соединение.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 3 были неверно определены свойства монитора публикации, либо публикация не существует.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Приведите возвращенный объект <xref:System.Collections.ArrayList> к типу массива объектов <xref:Microsoft.SqlServer.Replication.TracerToken>.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Приведите возвращенный объект <xref:System.Collections.ArrayList> к типу массива объектов <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A>. Передайте одно из следующих значений.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> . Передайте одно из следующих значений.  
   
-    -   Значение <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного маркера, полученного на шаге 5. В результате этого сведения для выделенного токена будут удалены.  
+    -   Значение <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> для трассировочного токена, полученного на шаге 5. В результате этого сведения для выделенного токена будут удалены.  
   
-    -   Объект <xref:System.DateTime>. В результате этого будут удалены сведения обо всех токенах, созданных до наступления указанного момента времени.  
+    -   Объект <xref:System.DateTime> . В результате этого будут удалены сведения обо всех токенах, созданных до наступления указанного момента времени.  
   
   

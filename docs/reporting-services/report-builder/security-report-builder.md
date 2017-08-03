@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-report-builder"></a>Безопасность (построитель отчетов)
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
  Чтобы предоставить возможность другим пользователям просматривать и искать элементы, опубликованные для совместного использования, необходимо договориться с администратором сервера отчетов и организовать папки таким образом, чтобы пользователи могли осуществлять к ним доступ. Для создания отчетов и запуска опубликованных отчетов необходимо иметь доступ.  
   
- Дополнительные сведения см. в следующих разделах документации по службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Дополнительные сведения см. в следующих разделах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]документации по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службам в [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   [Роли и разрешения (службы Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
   
  Во время разработки отчета учетные данные используются для выполнения запросов к набору данных и предварительного просмотра отчета. Во время выполнения учетные данные используются для выполнения отчетов и кэширования результатов запросов. Результаты запросов общего набора данных также могут кэшироваться независимо. Учетные данные времени выполнения и времени разработки могут отличаться. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
- Дополнительные сведения об обеспечении безопасности данных см. в следующих разделах документации по службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Дополнительные сведения об обеспечении безопасности данных см. в следующих разделах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]документации по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службам в [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

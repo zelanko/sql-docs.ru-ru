@@ -18,11 +18,11 @@ caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="BestPractices"></a> Рекомендации  
   
--   Просмотрите [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [заметки о выпуске](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Просмотрите [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [](http://go.microsoft.com/fwlink/?LinkId=296445)заметки о выпуске  
   
 -   Обязательное программное обеспечение для установки. Перед запуском программы установки для установки или обновления [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]установите следующие компоненты, чтобы сократить время установки. Можно установить обязательное программное обеспечение на каждом узле отказоустойчивого кластера, а затем один раз перезапустить узлы перед началом работы программы установки.  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Форматирование диска после установки дополнительных дисков не поддерживается.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает локальные диски только для установки файлов tempdb. Проверьте правильность пути, указанного для файлов tempdb и файлов журнала на всех узлах кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка. Дополнительные сведения см. в разделах [Типы хранилищ для файлов данных](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) и [Настройка ядра СУБД — каталоги данных](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает локальные диски только для установки файлов tempdb. Проверьте правильность пути, указанного для файлов tempdb и файлов журнала на всех узлах кластера. Если во время отработки отказа каталоги tempdb недоступны на целевом узле отработки отказа, то при переводе ресурсов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в режим «в сети» произойдет ошибка. Дополнительные сведения см. в разделах [Типы хранилищ для файлов данных](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) и [Настройка компонента Database Engine — каталоги данных](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
 -   При развертывании отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на компонентах технологии iSCSI рекомендуется предпринимать соответствующие меры предосторожности. Дополнительные сведения см. в статье [Support for SQL Server on iSCSI technology components](http://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Ознакомьтесь с разделом [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   О включении проверки подлинности Kerberos для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье базы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] знаний Майкрософт [ Как использовать проверку подлинности Kerberos в SQL Server](http://support.microsoft.com/kb/319723).  
+-   О включении проверки подлинности Kerberos для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]см. в статье базы знаний Майкрософт [ ](http://support.microsoft.com/kb/319723) Как использовать проверку подлинности Kerberos в SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
 ##  <a name="Network"></a> Ознакомьтесь с вопросами, связанными с сетями, портами и брандмауэром  
   

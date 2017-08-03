@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Просмотр и изменение свойств издателя и распространителя
@@ -130,66 +130,66 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Просмотр и изменение свойств распространителя  
   
-1.  Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.  
   
-3.  (Необязательно.) Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A>, чтобы убедиться, что подключенный в настоящее время сервер является распространителем.  
+3.  (Необязательно) Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> , чтобы убедиться, что подключенный в настоящее время сервер является распространителем.  
   
-4.  Чтобы получить свойства с сервера, необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A>.  
+4.  Чтобы получить свойства с сервера, необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> .  
   
-5.  (Необязательно.) Чтобы изменить свойства, укажите новое значение для одного или нескольких свойств распространителя, которые могут принимать значение <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+5.  (Необязательно) Чтобы изменить свойства, укажите новое значение для одного или нескольких свойств распространителя, которые могут принимать значение <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
-6.  (Необязательно.) Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> объекта <xref:Microsoft.SqlServer.Replication.ReplicationServer> имеет значение **true**, для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+6.  Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> объекта <xref:Microsoft.SqlServer.Replication.ReplicationServer> имеет значение **true**, для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно).  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>Просмотр и изменение свойств базы данных-распространителя  
   
-1.  Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Укажите имя и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Укажите свойство Name и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-3.  Чтобы получить свойства с сервера, необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод вернет значение **false**, значит, на сервере не существует базы данных с указанным именем.  
+3.  Чтобы получить свойства с сервера, необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод вернет значение **false**, значит, на сервере не существует базы данных с указанным именем.  
   
-4.  (Необязательно.) Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.DistributionDatabase>, которое можно установить.  
+4.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.DistributionDatabase> , которое можно установить (необязательно).  
   
-5.  (Необязательно.) Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> объекта <xref:Microsoft.SqlServer.Replication.DistributionDatabase> имеет значение **true**, для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+5.  Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> объекта <xref:Microsoft.SqlServer.Replication.DistributionDatabase> имеет значение **true**, для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно).  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>Просмотр и изменение свойств издателя  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Укажите свойство <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Укажите свойство <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-3.  (Необязательно.) Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.DistributionPublisher>, которое можно установить.  
+3.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.DistributionPublisher> , которое можно установить (необязательно).  
   
-4.  (Необязательно.) Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> объекта <xref:Microsoft.SqlServer.Replication.DistributionPublisher> имеет значение **true**, для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+4.  Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> объекта <xref:Microsoft.SqlServer.Replication.DistributionPublisher> имеет значение **true**, для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно).  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>Изменение пароля для административного соединения между издателем и распространителем  
   
-1.  Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
-3.  Укажите в качестве свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> соединение, созданное на шаге 1.  
+3.  В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A>.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> .  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Передайте новое значение пароля в параметре *password* .  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Передайте новое значение пароля в параметре *password* .  
   
     > [!IMPORTANT]  
     >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  (Необязательно) Выполните следующие шаги, чтобы изменить пароль на каждом удаленном издателе, использующем данный распространитель.  
   
-    1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+    1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
+    2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
   
-    3.  Укажите в качестве свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> соединение, созданное на шаге 6а.  
+    3.  Укажите в качестве свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> соединение, созданное в шаге 6a.  
   
-    4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A>.  
+    4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> .  
   
-    5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Передайте новое значение пароля из шага 5 в параметре *password* .  
+    5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Передайте новое значение пароля из шага 5 в параметре *password* .  
   
 ###  <a name="PShellExample"></a> Пример (объекты RMO)  
  В этом примере показано, как изменить свойства распространителя и базы данных-распространителя.  

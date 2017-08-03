@@ -23,11 +23,11 @@ caps.latest.revision: 76
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e1c8c3f3c82e39da5e5f3b1cd018af8b3b2d26d7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
@@ -44,9 +44,9 @@ ms.lasthandoff: 06/22/2017
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
-Советы по проектированию системы разрешений см. в разделе [Начало работы с разрешениями ядра СУБД](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Советы по проектированию системы разрешений см. в разделе [Приступая к работе с разрешениями Database Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Permissions Naming Conventions  
+##  <a name="_conventions"></a> Соглашения об именовании разрешений  
  Ниже описаны общие соглашения, которые соблюдаются при задании имен разрешениям.  
   
 -   CONTROL  
@@ -102,7 +102,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
  Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
   
-##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
+##  <a name="_securables"></a> Разрешения, применяемые к конкретным защищаемым объектам  
  В следующей таблице перечислены главные классы разрешений и защищаемых объектов, к которым эти разрешения могут применяться.  
   
 |Разрешение|Область применения|  
@@ -124,7 +124,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 > [!CAUTION]  
 >  Разрешения по умолчанию, которые предоставляются системным объектам во время установки, тщательно оцениваются на предмет возможных угроз, и их не нужно будет изменять для защиты установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Любые изменения разрешений в системных объектах могут ограничить или нарушить функциональность, а также перевести установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в неподдерживаемое состояние.  
   
-##  <a name="_permissions"></a> SQL Server Permissions  
+##  <a name="_permissions"></a> Разрешения SQL Server  
  В следующей таблице приведен полный список разрешений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Разрешения[!INCLUDE[ssSDS](../../includes/sssds-md.md)] доступны только для поддерживаемых базовых защищаемых объектов. В [!INCLUDE[ssSDS](../../includes/sssds-md.md)]невозможно предоставлять разрешения на уровне сервера, но в некоторых случаях вместо них доступны разрешения базы данных.  
   
 |Базовая защищаемая сущность|Гранулярные разрешения на базовую защищаемую сущность|Код типа разрешения|Защищаемая сущность, содержащая базовую сущность|Разрешение на защищаемую сущность контейнера, неявно предоставляющее гранулярное разрешение на базовую сущность|  
@@ -366,7 +366,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Summary of the Permission Check Algorithm  
+##  <a name="_algorithm"></a> Общие сведения об алгоритме проверки разрешений  
  Проверка разрешений может оказаться сложной задачей. Алгоритм проверки разрешений учитывает перекрывающееся членство в группах и цепочки владения, явные и неявные разрешения. На его работу могут влиять разрешения на защищаемые классы, содержащие защищаемые сущности. Общая процедура алгоритма состоит в сборе всех применимых разрешений. Если не обнаружена блокирующая инструкция DENY, алгоритм выполняет поиск инструкции GRANT, которая предоставляет достаточные права доступа. Алгоритм содержит три необходимых элемента: **контекст безопасности**, **область разрешения**и **требуемое разрешение**.  
   
 > [!NOTE]  
@@ -428,7 +428,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Разрешение GRANT на столбец переопределяет разрешение DENY на таблицу. При этом последующее разрешение DENY на таблицу удалит разрешение GRANT на столбец. 
   
-##  <a name="_examples"></a> Examples  
+##  <a name="_examples"></a> Примеры  
  В примерах этого раздела показано, как получить сведения о разрешениях.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>А. Получение полного списка разрешений, которые могут быть предоставлены  

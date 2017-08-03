@@ -19,11 +19,11 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>Секционированные таблицы и индексы
@@ -118,7 +118,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Partitioned Table and Index Strategies Using SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [How to Implement an Automatic Sliding Window](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [How to Implement an Automatic Sliding Window in a Partitioned Table on SQL Server 2005](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [Массовая загрузка в секционированную таблицу](http://msdn.microsoft.com/library/cc966380.aspx)  
   
