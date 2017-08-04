@@ -1,25 +1,30 @@
 ---
-title: "Устаревшие функции Master Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Устаревшие функции служб Master Data Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 18
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4d9b433e72c916ae6611520498b0eb8fa85c8f6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Устаревшие функции Master Data Services
+# <a name="deprecated-master-data-services-features"></a>Устаревшие функции Master Data Services
   В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , которые по-прежнему доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
   
-## Явные иерархии, коллекции и связанные компоненты  
+## <a name="explicit-hierarchies-collections-and-related-components"></a>Явные иерархии, коллекции и связанные компоненты  
  Явные иерархии, коллекции и связанные компоненты являются устаревшими. Элементы, которые раньше моделировались как типы консолидированных элементов (родительские элементы явной иерархии) и типы элементов коллекции, будут моделироваться в производных иерархиях как конечные элементы. Ниже приведены новые возможности, которые поддерживают использование производных иерархий вместо явных иерархий.  
   
 -   Рекурсивные производные иерархии теперь можно использовать, чтобы назначить элементу разрешения безопасности.  
@@ -42,15 +47,15 @@ caps.handback.revision: 18
   
 -   [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
-## Типа журнала транзакций сущности "Атрибут"  
+## <a name="attribute-entity-transaction-log-type"></a>Типа журнала транзакций сущности "Атрибут"  
 Тип журнала транзакций сущности "Атрибут" устарел; используйте тип "Элемент". Сведения о типах журнала транзакций сущности см. в следующем разделе:
 * [Изменение типа журнала транзакций сущности (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [Журнал изменений элемента](../master-data-services/member-revision-history-master-data-services.md)
   
-## Внешние ресурсы  
+## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Deprecated: Explicit Hierarchies and Collections](http://go.microsoft.com/fwlink/p/?LinkId=615373)(Устарелое. Явные иерархии и коллекции) на портале msdn.com.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

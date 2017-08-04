@@ -1,28 +1,33 @@
 ---
-title: "Диспетчер HTTP-соединений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "диспетчер HTTP-соединений"
-  - "соединения с веб-сайтом [службы Integration Services]"
-  - "диспетчеры подключений [службы Integration Services], HTTP"
-  - "соединения с веб-сервером [службы Integration Services]"
-  - "подключения [службы Integration Services], HTTP"
+title: "Диспетчер HTTP-соединений | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HTTP connection manager
+- Web site connections [Integration Services]
+- connection managers [Integration Services], HTTP
+- Web server connections [Integration Services]
+- connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cf63461848933530a215a75b19d40128327f356
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Диспетчер HTTP-соединений
+# <a name="http-connection-manager"></a>диспетчер HTTP-соединений
   HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. Задача «Веб-служба» из состава служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует этот диспетчер соединений.  
   
  При добавлении к пакету диспетчера HTTP-соединений [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер соединений, который будет решать задачи HTTP-соединений во время работы, устанавливает свойства диспетчера соединений и добавляет его к коллекции **Connections** пакета.  
@@ -42,7 +47,7 @@ caps.handback.revision: 44
   
 -   Используйте прокси-сервер. Прокси-сервер также может быть настроен для использования учетных данных, а также для обхода прокси-сервера и использования локальных адресов.  
   
-## Настройка диспетчера HTTP-соединений  
+## <a name="configuration-of-the-http-connection-manager"></a>Настройка диспетчера HTTP-соединений  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
@@ -53,8 +58,8 @@ caps.handback.revision: 44
   
  Дополнительные сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задача «Веб-служба»](../../integration-services/control-flow/web-service-task.md)   
- [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

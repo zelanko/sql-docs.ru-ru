@@ -1,24 +1,29 @@
 ---
-title: "Изменение свойств базы данных Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraProp"
+title: "Изменение свойств базы данных Oracle | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Изменение свойств базы данных Oracle
+# <a name="edit-the-oracle-database-properties"></a>Изменение свойств базы данных Oracle
   На вкладке Oracle в редакторе свойств можно изменить описание, которое было введено на странице создания базы данных CDC мастера создания экземпляра, а также изменить данные для подключения к базе данных интеллектуального анализа журналов Oracle.  
   
  Ниже описаны данные, отображаемые на вкладке **Oracle** .  
@@ -30,10 +35,10 @@ caps.handback.revision: 7
  Можно изменить описание нового экземпляра или добавить его, если оно не было введено при создании экземпляра CDC.  
   
  **Строка подключения Oracle**  
- Строка подключения Oracle для компьютера, на котором находится используемая база данных Oracle. Это поле доступно только для чтения, отображаемые в нем данные нельзя изменить. Причина этого заключается в том, что при внесении изменений в строку подключения экземпляр Oracle CDC может быть направлен к совершенно другой базе данных Oracle, что приведет к повреждению состояния экземпляра CDC, хранящегося в таблице **cdc.xdbcdc_config**. Если в строку подключения необходимо внести незначительные изменения, то сделать это можно непосредственно в таблице конфигурации с помощью среды SQL Server Management Studio.  
+ Строка подключения Oracle для компьютера, на котором находится используемая база данных Oracle. Это поле доступно только для чтения, отображаемые в нем данные нельзя изменить. Причина этого заключается в том, что при внесении изменений в строку подключения экземпляр Oracle CDC может быть направлен к совершенно другой базе данных Oracle, что приведет к повреждению состояния экземпляра CDC, хранящегося в таблице **cdc.xdbcdc_config** . Если в строку подключения необходимо внести незначительные изменения, то сделать это можно непосредственно в таблице конфигурации с помощью среды SQL Server Management Studio.  
   
  **Проверка подлинности интеллектуального анализа журналов Oracle**  
- Чтобы ввести учетные данные проверки подлинности для базы данных Oracle, в которой находится средство интеллектуального анализа журналов, выберите в разделе **Проверка подлинности** один из следующих вариантов.  
+ Чтобы ввести учетные данные проверки подлинности для базы данных Oracle, в которой находится средство интеллектуального анализа журналов, выберите в разделе **Проверка подлинности**один из следующих вариантов.  
   
 -   **Проверка подлинности Windows**. Выберите этот параметр, чтобы использовать текущие учетные данные домена Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
   
@@ -41,9 +46,9 @@ caps.handback.revision: 7
   
  Свойства базы данных Oracle можно просмотреть в средстве просмотра. При использовании средства просмотра отображаемые в нем данные доступны только для чтения. В средстве просмотра отображается также список отслеживаемых столбцов из таблицы. Дополнительные сведения о доступе к средству просмотра см. в разделе [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Как управлять службой CDC из консоли конструктора CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Соединение с базой данных-источником Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
- [Соединение с Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
+ [Соединиться с базой данных-источником Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
+ [Подключение к базе данных Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   

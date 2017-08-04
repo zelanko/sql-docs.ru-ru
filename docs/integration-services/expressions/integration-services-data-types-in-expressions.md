@@ -1,36 +1,41 @@
 ---
-title: "Типы данных в выражениях служб Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Выражения [службы Integration Services], типы данных"
-  - "Типы данных [службы Integration Services], выражения"
+title: "Типы данных в выражениях служб Integration Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Integration Services], data types
+- data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Типы данных в выражениях служб Integration Services
+# <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
   
-## Переменные  
+## <a name="variables"></a>Переменные  
  Выражения также могут использовать переменные. Переменные имеют тип данных Variant, и средство оценки выражений преобразует переменные этого типа в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] перед вычислением выражения. Переменные могут использовать только подмножество типов данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, переменная не может использовать тип данных BLOB.  
   
  Дополнительные сведения от типах данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и о сопоставлении типов данных Variant с типами данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Литералы  
- Дополнительно, выражения могут включать строковые, логические и числовые литералы. Дополнительные сведения о преобразовании числовых литералов в числовые типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Литералы (службы SSIS)](../../integration-services/expressions/literals-ssis.md).  
+## <a name="literals"></a>Литералы  
+ Дополнительно, выражения могут включать строковые, логические и числовые литералы. Дополнительные сведения о преобразовании числовых литералов в числовые типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Литералы (службы SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
   
-## Строки  
+## <a name="strings"></a>Строки  
  В качестве возвращаемого типа выражения можно использовать DT_STR или DT_WSTR. Однако внутри выражения поддерживается только тип DT_WSTR, а значения DT_STR преобразуются в значения DT_WSTR. Такое поведение влечет за собой несколько последствий при написании выражения.  
   
 -   Внутри выражения используйте NULL(DT_WSTR, …) вместо NULL(DT_STR, …). Дополнительные сведения об этой функции см. в статье [NULL (выражение служб SSIS)](../../integration-services/expressions/null-ssis-expression.md).  
@@ -39,7 +44,7 @@ caps.handback.revision: 57
   
  Рассмотрим выражения на снимке экрана ниже.  
   
- ![String data types in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
+ ![Строковые типы данных в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "строковые типы данных в выражениях служб SSIS")  
   
 1.  Первое выражение выполняется без ошибок, так как функция NULL(DT_STR, …) находится на корневом уровне выражения.  
   
@@ -53,20 +58,20 @@ caps.handback.revision: 57
   
  В следующих примерах демонстрируется влияние приведения.  
   
- ![Casting strings in SSIS expressions](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
+ ![Приведение строки в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "приведение строк в выражениях служб SSIS")  
   
 1.  В первом выражении приведение находится не на корневом уровне выражения. Вычислитель выражений интеллектуально обрабатывает это приведение и выполняет его применительно к типу DT_WSTR, а не DT_STR. Выражение возвращает DT_WSTR.  
   
 2.  Во втором выражении приведение находится на корневом уровне выражения. Выражение возвращает DT_STR.  
   
-## Неявные преобразования данных  
+## <a name="implicit-data-conversion"></a>Неявные преобразования данных  
  Неявное преобразование типа данных происходит, когда средство оценки выражений автоматически преобразует данные из одного типа в другой. Например, если **smallint** сравнивается с **int**, то перед сравнением **smallint** неявно преобразуется в **int** .  
   
  Средство оценки выражений не может произвести неявное преобразование данных, если аргументы и операнды имеют несовместимые типы данных. Кроме того, средство оценки выражений не может неявно преобразовывать любое значение в логическое. Вместо этого аргументы и операнды должны быть явно преобразованы с помощью оператора приведения. Дополнительные сведения см. в разделе [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
  На следующей диаграмме показан тип результата неявного преобразования операций BINARY. Пересечение столбцов и строк в этой таблице является типом результата побитовой операции с операндами левого (From) и правого (To) типов.  
   
- ![Неявное преобразование между типами данных](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Неявное преобразование между типами данных")  
+ ![Неявное преобразование между типами данных ТипДанных](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "неявное преобразование между типами данных ТипДанных")  
   
  Пересечением целых чисел со знаком и без знака является целое число со знаком, которое потенциально больше любого из этих двух аргументов.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 57
   
  Если тип данных обоих аргументов совпадает, тип данных результата будет таким же. Единственное исключение заключается в том, что двоичная операция над двумя значениями типа данных DT_DECIMAL возвращает результат типа данных DT_NUMERIC.  
   
-## Требования к данным, которые используются в выражениях  
+## <a name="requirements-for-data-used-in-expressions"></a>Требования к данным, которые используются в выражениях  
  Средство оценки выражений поддерживает все типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако в зависимости от операции или функции операнды и аргументы требуют определенных типов данных. Средство оценки выражений налагает следующие ограничения на типы данных, используемые в выражениях.  
   
 -   Операнды **логических** операций должны преобразовываться в тип Boolean. Например, СтолбецA > 1&&СтолбецB < 2.  
@@ -116,7 +121,7 @@ caps.handback.revision: 57
   
      `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30" != (DT_DBDATE)"1999-10-12"`  
   
-     Система преобразовывает выражение `(DT_DBDATE)"1999-10-12"` в тип данных DT_DBTIMESTAMPOFFSET. Этот пример возвращает значение TRUE, поскольку преобразованное выражение принимает значение «999-10-12 00:00:00.000 +00:00», которое не равно значению другого выражения — `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"`.  
+     Система преобразовывает выражение `(DT_DBDATE)"1999-10-12"`в тип данных DT_DBTIMESTAMPOFFSET. Этот пример возвращает значение TRUE, поскольку преобразованное выражение принимает значение «999-10-12 00:00:00.000 +00:00», которое не равно значению другого выражения — `(DT_DBTIMESTAMPOFFSET,3) "1999-10-11 20:34:52.123 -3:30"`.  
   
 -   Аргументы, передаваемые математическим функциям, должны преобразовываться в числовые типы данных. В зависимости от функции или операции может потребоваться определенный тип числовых данных. Например, функция HEX требует целого числа со знаком или без знака.  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 57
   
  Результаты многих операций и функций имеют предопределенные типы данных. Это может быть тип данных аргумента или тип данных, к которому средство оценки выражений приводит результат. Например, результат логического оператора ИЛИ (||) всегда имеет тип Boolean, результат функции ABS имеет численный тип данных аргумента, результат операции умножения имеет наименьший численный тип, который может представить результат без потери точности. Дополнительные сведения о типах данных результатов см. в разделе [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## Связанные задачи  
- [Использование выражения в компоненте потока данных](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>Связанные задачи  
+ [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
 -   Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
   

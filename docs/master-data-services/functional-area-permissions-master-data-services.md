@@ -1,27 +1,32 @@
 ---
-title: "Разрешения функциональной области (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разрешения для функциональной области [службы Master Data Services], о разрешениях для функциональной области"
-  - "разрешения функциональной области [службы Master Data Services]"
-  - "разрешения [службы Master Data Services], функциональные области"
+title: "Разрешения функциональной области (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- functional area permissions [Master Data Services], about functional area permissions
+- functional area permissions [Master Data Services]
+- permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e0ad6fd33d69b9b6e3b76dcf1d2c18da528083d5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Разрешения функциональной области (службы Master Data Services)
-  Разрешения можно назначать функциональным областям пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Ниже приведен список функциональных областей.  
+# <a name="functional-area-permissions-master-data-services"></a>Разрешения функциональной области (службы Master Data Services)
+  Разрешения можно назначать функциональным областям пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Ниже приведен список функциональных областей.  
   
 -   **Обозреватель**  
   
@@ -44,10 +49,10 @@ caps.handback.revision: 10
   
  Чтобы иметь доступ к **, пользователь или группа должны иметь разрешение хотя бы для одной функциональной области и одной модели на вкладке** Модели [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## См. также:  
- [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
- [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Назначение разрешений для функциональной области &#40; Службы Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
+ [Разрешения объекта модели &#40; Службы Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Разрешения для элементов иерархии &#40; Службы Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Способ определения разрешений &#40; Службы Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

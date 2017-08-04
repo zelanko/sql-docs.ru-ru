@@ -1,30 +1,35 @@
 ---
-title: "Назначение Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldest.f1"
-helpviewer_keywords: 
-  - "назначения [службы Integration Services], Excel"
-  - "Excel [службы Integration Services]"
+title: "Назначение Excel | Документы Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldest.f1
+helpviewer_keywords:
+- destinations [Integration Services], Excel
+- Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62feb48c0b05d6f7c8d6b3342b49d9b050113ac3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Назначение Excel
+# <a name="excel-destination"></a>Назначение Excel
   Назначение «Excel» загружает данные в листы или диапазоны в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
-## Режимы доступа  
+## <a name="access-modes"></a>Режимы доступа  
  Назначение «Excel» предоставляет три различных режима доступа к данным для загрузки:  
   
 -   Таблица или представление.  
@@ -36,7 +41,7 @@ caps.handback.revision: 49
 > [!IMPORTANT]  
 >  Лист или диапазон в Excel эквивалентны таблице или представлению. Списки доступных таблиц в источнике Excel и редакторах назначения отображают только существующие листы (обозначенные знаком $, добавленным к имени листа, как в имени Лист1$) и именованные диапазоны (обозначенные отсутствием знака $, как в имени Мой_диапазон).  
   
-## Особенности использования  
+## <a name="usage-considerations"></a>Особенности использования  
  Диспетчер соединений Excel использует поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Jet 4.0, который поддерживает драйвер Excel ISAM (индексированный последовательный метод доступа) для подключения, а также чтения и записи данных в источники данных Excel.  
   
  Во многих имеющихся статьях базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] описывается поведение этого поставщика и драйвера, и хотя эти статьи не относятся к [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и их предшественникам, службам преобразования данных, вам может быть интересно изучить поведение, которое может привести к неожиданным результатам. Общие сведения об использовании и поведении драйвера Excel см. в разделе [Как использовать ADO с данными Excel из Visual Basic или VBA](http://support.microsoft.com/kb/257819).  
@@ -57,9 +62,9 @@ caps.handback.revision: 49
   
     -   Логический — логический (DT_BOOL)  
   
-    -   Дата/время — **дата/время** (DT_DATE)  
+    -   Дата/время —     **дата/время** (DT_DATE)  
   
-    -   Строка — строка в Юникоде длиной 255 символов (DT_WSTR)  
+    -   Строка — строка в Юникоде длиной 255 символов (DT_WSTR)  
   
     -   Memo — текстовый поток в Юникоде (DT_NTEXT)  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 49
   
     -   Преобразование между числовыми столбцами Excel с плавающей запятой двойной точности и числовыми столбцами других типов.  
   
-## Настройка назначения Excel  
+## <a name="configuration-of-the-excel-destination"></a>Настройка назначения Excel  
  Назначение «Excel» использует диспетчер соединений Excel для подключения к источнику данных, а диспетчер соединений определяет файл книги для использования. Дополнительные сведения см. в статье [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
  Назначение «Excel» имеет один обычный вход и один вывод ошибок.  
@@ -88,13 +93,13 @@ caps.handback.revision: 49
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 49
   
 -   [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
 -   Запись в блоге [Excel в службах Integration Services, часть 1 из 3. Соединения и компоненты](http://go.microsoft.com/fwlink/?LinkId=217674)на сайте dougbert.com  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 49
   
 -   Запись в блоге [Excel в службах Integration Services, часть 3 из 3. Проблемы и альтернативы](http://go.microsoft.com/fwlink/?LinkId=217676)на сайте dougbert.com  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Источник Excel](../../integration-services/data-flow/excel-source.md)   
- [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)   
+ [Службы Integration Services &#40; Службы SSIS &#41; Переменные](../../integration-services/integration-services-ssis-variables.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)   
- [Работа с файлами Excel в задаче «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Работа с файлами Excel с помощью задачи «скрипт»](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

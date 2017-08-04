@@ -1,31 +1,36 @@
 ---
-title: "Редактор источника Excel (страница &#171;Вывод ошибок&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.excelsourceadapter.erroroutput.f1"
-helpviewer_keywords: 
-  - "редактор источника Excel"
+title: "Редактор источника «Excel» (страница «Вывод ошибок») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelsourceadapter.erroroutput.f1
+helpviewer_keywords:
+- Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eb0d52bba6b100c57906eb1ab4a0cee6161056d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор источника Excel (страница &#171;Вывод ошибок&#187;)
+# <a name="excel-source-editor-error-output-page"></a>Редактор источника Excel (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника «Excel»** используется для выбора параметров обработки ошибок, а также для установки свойств выходных столбцов ошибок.  
   
  Дополнительные сведения об источнике Excel см. в разделе [Excel Source](../../integration-services/data-flow/excel-source.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Вход или выход**  
  Просмотр имени источника данных.  
   
@@ -49,11 +54,11 @@ caps.handback.revision: 19
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника "Excel" (страница "Диспетчер соединений")](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)   
- [Редактор источника "Excel" (страница "Столбцы")](../../integration-services/data-flow/excel-source-editor-columns-page.md)   
+ [Редактор источника «Excel» &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)   
+ [Редактор источника «Excel» &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/excel-source-editor-columns-page.md)   
  [Диспетчер соединений с Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
- [просматривать файлы и таблицы Excel с помощью контейнера «цикл по каждому элементу»](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Цикл через Excel файлы и таблицы с помощью цикл](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

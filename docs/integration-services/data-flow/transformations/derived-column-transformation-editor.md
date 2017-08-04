@@ -1,31 +1,36 @@
 ---
-title: "редактор преобразования &#171;Производный столбец&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.derivedcolumntransformation.f1"
-helpviewer_keywords: 
-  - "редактор преобразования «Производный столбец»"
+title: "Производный столбец редактор преобразования | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.derivedcolumntransformation.f1
+helpviewer_keywords:
+- Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89b764a8ea3d4e60852092ef502eb82adcf77c91
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# редактор преобразования &#171;Производный столбец&#187;
+# <a name="derived-column-transformation-editor"></a>редактор преобразования «Производный столбец»
   Используйте диалоговое окно **Редактор преобразования «Производный столбец»** для создания выражений, которые заполняют новые или замещающие столбцы.  
   
  Дополнительные сведения о преобразовании «Производный столбец» см. в разделе [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Переменные и столбцы**  
  Создайте выражение, которое использует переменную или входной столбец, путем перетаскивания переменной или столбца из списка в существующую строку таблицы на панели внизу или в новую строку внизу списка.  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 33
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически задает кодовую страницу для типа данных DT_STR. Параметр **Кодовая страница**можно изменить.  
   
  **Настройка вывода ошибок**  
- Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../Topic/Configure%20Error%20Output.md).  
+ Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Получение значений столбцов с помощью преобразования «Производный столбец»](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
+ [Получение значений столбцов с помощью преобразования "Производный столбец"](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "&lt; (меньше) (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "меньше (<)"
-  - "< (оператор «меньше»)"
+title: "&lt;(Меньше) (Выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- less than (<)
+- < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb12a0ff651cf50c5208bae6ba0229d1e6be85f6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# &lt; (меньше) (выражение служб SSIS)
+# <a name="lt-less-than-ssis-expression"></a>&lt;(Меньше) (Выражение служб SSIS)
   Выполняет сравнение с целью определения, является ли первое выражение меньше второго. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  
   
 > [!NOTE]  
@@ -27,7 +32,7 @@ caps.handback.revision: 48
   
  Однако для успешного выполнения выражения некоторые типы данных требуют, чтобы выражение включало в себя явное приведение. Дополнительные сведения о допустимых приведениях типов данных см. в разделе [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,26 +40,26 @@ expression1 < expression2
   
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *expression1, expression2*  
  Любое допустимое выражение.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Если какое-нибудь выражение имеет значение NULL, то результат сравнения будет NULL. Если оба выражения имеют значение NULL, то результат будет NULL.  
   
  Наборы выражений *expression1* и *expression2*должны удовлетворять одному из следующих правил:  
   
 -   **Числовой** Как *expression1* , так и *expression2* должны иметь числовой тип данных. В соответствии с правилами неявных числовых преобразований, выполняемых средством оценки выражений, пересечением типов данных должен быть числовой тип данных. NULL не может быть значением пересечения двух числовых типов данных. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
--   **Символьный**. Значения выражений *expression1* и *expression2* должны иметь тип данных DT_STR или DT_WSTR. Вычисленные значения этих двух выражений могут иметь различные строковые типы данных.  
+-   **Символьный** . Значения выражений *expression1* и *expression2* должны иметь тип данных DT_STR или DT_WSTR. Вычисленные значения этих двух выражений могут иметь различные строковые типы данных.  
   
     > [!NOTE]  
     >  Сравнения строк производятся с учетом регистра, диакритических знаков, японской азбуки и ширины символов.  
   
--   **Дата, время или дата-время**. Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET и DT_FILETIME.  
+-   **Дата, время или дата-время** . Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET и DT_FILETIME.  
   
     > [!NOTE]  
     >  Система не поддерживает сравнения выражений, значения которых имеют тип данных даты, времени или даты-времени. Возникнет ошибка.  
@@ -79,7 +84,7 @@ expression1 < expression2
   
  Дополнительные сведения о типах данных см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  Этот пример возвращает значение TRUE, если текущая дата равна 4 июля 2003 года или позже. Дополнительные сведения см. в разделе [GETDATE (выражение служб SSIS)](../../integration-services/expressions/getdate-ssis-expression.md).  
   
 ```  
@@ -98,11 +103,11 @@ ListPrice < 500
 @LPrice < 500  
 ```  
   
-## См. также  
- [&#62; (больше чем) (выражение служб SSIS)](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#62;= (больше или равно) (выражение служб SSIS)](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60;= (меньше или равно) (выражение служб SSIS)](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [&#62; &#40; Больше &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#62; = &#40; Больше или равно &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#60; = &#40; Меньше или равно &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

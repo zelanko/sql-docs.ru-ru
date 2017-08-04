@@ -1,28 +1,33 @@
 ---
-title: "Диспетчер подключений Hadoop | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.hadoopconn.f1"
+title: "Диспетчер подключений Hadoop | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Диспетчер подключений Hadoop
+# <a name="hadoop-connection-manager"></a>Диспетчер подключений Hadoop
   Диспетчер подключений Hadoop позволяет пакету служб SSIS подключаться к кластеру с помощью значений, задаваемых для свойств.  
   
-## Настройка диспетчера подключений Hadoop  
+## <a name="configure-the-hadoop-connection-manager"></a>Настройка диспетчера подключений Hadoop  
   
 1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **Hadoop**и щелкните **Добавить**. Будет открыто диалоговое окно **Редактор диспетчера соединений Hadoop** .  
   
@@ -36,9 +41,9 @@ caps.handback.revision: 7
   
     3.  Выберите метод **аутентификации** доступа к службе WebHCat. Доступные значения: **Обычная** и **Kerberos**.  
   
-         ![Hadoop connection manager editor with basic authentication](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop connection manager editor with basic authentication")  
+         ![Редактор диспетчера соединений Hadoop с обычной проверкой подлинности](../../integration-services/connection-manager/media/hadoop-cm-basic.png "редактор диспетчера соединений Hadoop с обычной проверкой подлинности")  
   
-         ![Hadoop connection manager editor with Kerberos authentication](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop connection manager editor with Kerberos authentication")  
+         ![Редактор диспетчера соединений Hadoop с проверкой подлинности Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop редактор диспетчера соединений с проверкой подлинности Kerberos")  
   
     4.  Для параметра **WebHCat User**(Пользователь WebHCat) укажите **пользователя** с правом доступа к WebHCat.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 6.  Чтобы закрыть диалоговое окно, нажмите кнопку **ОК** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задача Hadoop Hive](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Задача Pig для Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Задача файловой системы Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  

@@ -1,26 +1,31 @@
 ---
-title: "Занятие 3. Использование программы командной строки dta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "Ядро СУБД [SQL Server], учебники"
+title: "Занятие 3: С помощью программы командной строки dta | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b33b5d2a64fc88cbd53d6c76fd73165ade697eac
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Занятие 3. Использование программы командной строки dta
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Занятие 3. Использование программы командной строки dta
 Программа командной строки **dta** расширяет функциональные возможности помощника по настройке ядра СУБД.  
   
 Применяя XML-схему помощника по настройке ядра СУБД, пользователь может создавать входные файлы данной программы с помощью удобных для себя средств XML. Эта схема устанавливается вместе со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и находится по следующему адресу: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
@@ -33,14 +38,15 @@ XML-схема помощника по настройке ядра СУБД ра
   
 Тематика применения функциональности ввода данных на языке XML с использованием помощника по настройке ядра СУБД выходит за рамки данного занятия.  
   
-Это занятие содержит введение в синтаксис программы командной строки **dta**, объясняет доступ к справке и осуществление настройки простых рабочих нагрузок.  
+Это занятие содержит введение в синтаксис программы командной строки **dta** , объясняет доступ к справке и осуществление настройки простых рабочих нагрузок.  
   
 Занятие содержит следующий раздел:  
   
 -   Начало работы с программой командной строки **dta** и настройка рабочей нагрузки  
   
-## Следующая задача занятия  
-[Начало работы с программой командной строки dta и настройка рабочей нагрузки](../../tools/dta/starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
+## <a name="next-task-in-lesson"></a>Следующая задача занятия  
+[Начало работы с программой командной строки dta и настройка рабочей нагрузки](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
   
   
+

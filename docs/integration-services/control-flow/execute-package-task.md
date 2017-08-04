@@ -1,28 +1,33 @@
 ---
-title: "Задача &#171;Выполнение пакета&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.f1"
-helpviewer_keywords: 
-  - "задача выполнения пакета [службы Integration Services]"
-  - "дочерние пакеты"
-  - "родительские пакеты [службы Integration Services]"
+title: "Задача «Выполнение пакета» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.f1
+helpviewer_keywords:
+- Execution Package task [Integration Services]
+- child packages
+- parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c78071650af34e9dc4baf5754781700921f5d293
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Задача &#171;Выполнение пакета&#187;
+# <a name="execute-package-task"></a>Задача «Выполнение пакета»
   Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
   
  Задачу выполнения пакета можно использовать в следующих целях.  
@@ -39,13 +44,13 @@ caps.handback.revision: 63
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат задачи, выполняющие операции рабочего процесса, такие как выполнение исполняемых файлов и пакетных файлов. Дополнительные сведения см. в разделе [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
-## Запуск пакетов  
+## <a name="running-packages"></a>Запуск пакетов  
  Задача «Выполнение пакета» может запускать дочерние пакеты, которые содержатся в одном проекте с родительским пакетом. Чтобы выбрать дочерний пакет из проекта, необходимо задать свойству **Тип ссылки** значение **Ссылка на проект**, а затем установить свойство **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка**. Дополнительные сведения о преобразовании см. в разделе [Развертывание проектов на сервере служб Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка** . [Развертывание служб Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
- Задача "Выполнение пакета" может также запускать пакеты, хранящиеся в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и пакеты, хранящиеся в файловой системе. Эта задача использует диспетчер соединений OLE DB для соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или диспетчер соединения файлов для доступа к файловой системе. Дополнительные сведения см. в разделах [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) и [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
+ Задача "Выполнение пакета" может также запускать пакеты, хранящиеся в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и пакеты, хранящиеся в файловой системе. Эта задача использует диспетчер соединений OLE DB для соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или диспетчер соединения файлов для доступа к файловой системе. Дополнительные сведения см. в разделах [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) и [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
  Также задача «Выполнение пакета» может выполнять план обслуживания базы данных, что позволяет управлять пакетами служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] и планами обслуживания базы данных в одном решении служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . План обслуживания базы данных аналогичен пакету служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] с той лишь разницей, что план может содержать только задачи обслуживания базы данных и всегда храниться в базе данных msdb.  
   
@@ -57,13 +62,13 @@ caps.handback.revision: 63
   
  По умолчанию свойство ExecuteOutOfProcess в задаче "Выполнение пакета" равно значению **False**, а дочерний пакет выполняется в том же процессе, что и родительский пакет. Если установить свойство в значение **True**, дочерний пакет запускается в отдельном процессе. Это может замедлить запуск дочернего пакета. Кроме того, если задано значение свойства **True**, то выполнять отладку пакета в установке только для инструментов нельзя. Необходимо установить [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Установка служб Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
-## Расширение транзакций  
- Транзакции, используемые родительским пакетом, могут быть расширены на дочерний пакет; таким образом, работа, выполняемая обоими пакетами, может фиксироваться и откатываться. Например, вставка в базу данных, производимая родительским пакетом, может фиксироваться или откатываться в зависимости от вставки в базу данных, которую производит дочерний пакет, и наоборот. Дополнительные сведения см. в разделе [Inherited Transactions](../Topic/Inherited%20Transactions.md).  
+## <a name="extending-transactions"></a>Расширение транзакций  
+ Транзакции, используемые родительским пакетом, могут быть расширены на дочерний пакет; таким образом, работа, выполняемая обоими пакетами, может фиксироваться и откатываться. Например, вставка в базу данных, производимая родительским пакетом, может фиксироваться или откатываться в зависимости от вставки в базу данных, которую производит дочерний пакет, и наоборот. Дополнительные сведения см. в разделе [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
-## Распространение подробностей журналов  
+## <a name="propagating-logging-details"></a>Распространение подробностей журналов  
  Дочерний пакет, запущенный задачей «Выполнение пакета», может быть настроен для использования журнала, а может быть и не настроен, однако он всегда отправляет родительскому пакету подробные сведения для журнала. Если задача «Выполнение пакета» настроена для использования журнала, она регистрирует подробности журнала дочернего пакета. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-## Передача значений дочерним пакетам  
+## <a name="passing-values-to-child-packages"></a>Передача значений дочерним пакетам  
  Часто дочерний пакет использует значения, переданные ему вызвавшим его пакетом, обычно его родительским пакетом. Значения, переданные родительским пакетом, удобно использовать в следующих случаях:  
   
 -   Части большого рабочего процесса присваиваются различным пакетам. Например, один пакет загружает данные, суммирует их и присваивает переменным значения суммарных данных, а затем передает значения другому процессу для дополнительной обработки данных.  
@@ -95,25 +100,25 @@ caps.handback.revision: 63
   
  Переменная родительского пакета может быть определена в области задачи «Выполнение пакета» или в самом пакете. Если доступно несколько переменных с одинаковыми именами, то используется та переменная, которая определена в области задачи выполнения пакетов, или ближайшая к задаче переменная из области видимости.  
   
- Дополнительные сведения см. в разделу [Использование значений переменных и параметров в дочернем пакете](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+ Дополнительные сведения см. в разделу [Использование значений переменных и параметров в дочернем пакете](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-### Доступ к переменным родительского пакета  
+### <a name="accessing-parent-package-variables"></a>Доступ к переменным родительского пакета  
  Дочерние пакеты могут обращаться к переменным родительского пакета с помощью задачи «Скрипт». При вводе имени переменной родительского пакета на странице **Скрипт** в **редактора задачи «Скрипт»**не указывайте **User:** в имени переменной. В противном случае дочерний пакет не сможет обнаружить переменную при выполнении родительского пакета.  
   
-## Настройка задачи «Выполнение пакета»  
+## <a name="configuring-the-execute-package-task"></a>Настройка задачи «Выполнение пакета»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [редактор задачи «Выполнение пакета»](../../integration-services/control-flow/execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)  
   
 -   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Программная настройка задачи «Выполнение пакета»  
+## <a name="configuring-the-execute-package-task-programmatically"></a>Программная настройка задачи «Выполнение пакета»  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  

@@ -1,26 +1,31 @@
 ---
-title: "Задача &#171;FTP&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftptask.f1"
-helpviewer_keywords: 
-  - "задача «FTP» [службы Integration Services]"
+title: "Задача «FTP» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftptask.f1
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Задача &#171;FTP&#187;
+# <a name="ftp-task"></a>Задача «FTP»
   Задача «FTP» производит загрузку и передачу файлов данных, а также управляет каталогами на серверах. Например, пакет может загрузить файлы данных с удаленного сервера или из Интернета в качестве части рабочего процесса пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Можно использовать задачу «FTP» для следующих целей:  
   
 -   Копирование каталогов и файлов данных из одного каталога в другой перед или после перемещения данных, а также применение преобразований данных.  
@@ -40,11 +45,11 @@ caps.handback.revision: 52
   
  Для отправки нескольких файлов и для доступа к нескольким локальным файлам или каталогам, также можно выполнить задачу «FTP» несколько раз, включив ее в контейнер «цикл по каждому элементу». Контейнер «цикл по каждому элементу» может произвести перечисление файлов каталога, используя перечислитель For Each File. Дополнительные сведения см. в статье [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
   
- Задача «FTP» поддерживает в пути символы-шаблоны *?* и *\** . Это позволяет задаче обращаться к нескольким файлам. Однако можно использовать символы-шаблоны только в той части пути, которая указывает имя файла. Например, "C:\MyDirectory\\*.txt" является допустимым путем, а "C:\\\*\MyText.txt" — нет.  
+ Задача «FTP» поддерживает в пути символы-шаблоны *?* и *\** . Это позволяет задаче обращаться к нескольким файлам. Однако можно использовать символы-шаблоны только в той части пути, которая указывает имя файла. Например, "C:\MyDirectory\\*.txt" является допустимым путем, а "C:\\\*\MyText.txt" — нет.  
   
  Операции FTP могут быть настроены для остановки задачи «Файловая система» при ошибке операции или для переноса файлов в режиме ASCII. Операции, которые отправляют и получают файлы, могут быть настроены для перезаписи целевых файлов и каталогов.  
   
-## Стандартные FTP-операции  
+## <a name="predefined-ftp-operations"></a>Стандартные FTP-операции  
  Задача «FTP» содержит стандартный набор операций. Данные операции описываются в следующей таблице.  
   
 |Операция|Description|  
@@ -58,24 +63,24 @@ caps.handback.revision: 52
 |Удалить локальные файлы|Удаляет файл на локальном компьютере.|  
 |Удалить удаленные файлы|Удаляет файл на FTP-сервере.|  
   
-## Пользовательские записи журнала, доступные в задаче «FTP»  
- В следующей таблице перечислены пользовательские записи журнала для задачи «FTP». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-log-entries-available-on-the-ftp-task"></a>Пользовательские записи журнала, доступные в задаче «FTP»  
+ В следующей таблице перечислены пользовательские записи журнала для задачи «FTP». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Запись журнала|Description|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Указывает, что задача инициализировала соединение с FTP-сервером.|  
 |**FTPOperation**|Сообщает о начале FTP-операции, выполняемой задачей, и о типе этой операции.|  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о настройке этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+ Дополнительные сведения о настройке этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Дополнительные сведения о настройке этих свойств программным путем см. в разделе <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Редактор задачи "FTP" (страница "Общие")](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [Редактор задачи "FTP" (страница "Передача файлов")](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+ [Редактор задачи «FTP» &#40; Страница «Передача файла» &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

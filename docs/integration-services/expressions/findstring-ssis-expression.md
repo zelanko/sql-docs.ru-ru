@@ -1,34 +1,39 @@
 ---
-title: "FINDSTRING (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FINDSTRING, функция"
+title: "FINDSTRING (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abadf6c9ce8d97a6aa1d1c4e649ccbdf69f4f8f4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# FINDSTRING (выражение служб SSIS)
+# <a name="findstring-ssis-expression"></a>FINDSTRING (выражение служб SSIS)
   Возвращает местоположение заданного вхождения строки в символьном выражении. Возвращаемый результат является относительным положением вхождения в выражении, нумерация символов которого начинается с единицы. Значением параметра строки должно быть символьное выражение, а значением параметра вхождения должно быть целое число. Если строка не найдена, возвращается значение 0. Если строка встречается меньшее количество раз, чем определено аргументом, то возвращается значение 0.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 FINDSTRING(character_expression, searchstring, occurrence)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *character_expression*  
  Символьная строка, в которой производится поиск.  
   
@@ -38,11 +43,11 @@ FINDSTRING(character_expression, searchstring, occurrence)
  *occurrence*  
  Целое число со знаком или без него, указывающее, какое по порядку вхождение *searchstring* следует искать.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## Замечания  
- Функция FINDSTRING работает только с типом данных DT_WSTR.  Аргументы *character_expression* и *searchstring*, которые являются строковыми литералами или столбцами данных, содержащими данные типа DT_STR, неявно приводятся к типу данных DT_WSTR до того, как функция FINDSTRING выполнит свою операцию. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
+## <a name="remarks"></a>Замечания  
+ Функция FINDSTRING работает только с типом данных DT_WSTR.  Аргументы*character_expression* и *searchstring* , которые являются строковыми литералами или столбцами данных, содержащими данные типа DT_STR, неявно приводятся к типу данных DT_WSTR до того, как функция FINDSTRING выполнит свою операцию. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
  Функция FINDSTRING возвращает NULL, если или *character_expression*, или *searchstring* равен NULL.  
   
@@ -50,7 +55,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
   
  Аргумент *occurrence* должен быть целым числом, значение которого больше 0.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В данном примере используется строковый литерал. Он возвращает значение 11.  
   
 ```  
@@ -75,8 +80,8 @@ FINDSTRING(Name,"n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## См. также  
- [REPLACE (выражение служб SSIS)](../../integration-services/expressions/replace-ssis-expression.md)   
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Заменить &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,47 +1,52 @@
 ---
-title: "LN (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "LN, функция"
-  - "натуральный логарифм выражения [службы Integration Services]"
+title: "LN (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LN function
+- natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d34eb7a3087f30709a55912f1c60b97569fb209
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# LN (выражение служб SSIS)
+# <a name="ln-ssis-expression"></a>LN (выражение служб SSIS)
   Возвращает натуральный логарифм числового выражения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 LN(numeric_expression)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
  Допустимые положительные числовые выражения.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_R8  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Перед вычислением логарифма аргумент numeric expression приводится к типу DT_R8. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Если вычисленное значение *numeric_expression* является нулем или отрицательным значением, возвращается результат NULL.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В этом примере используется числовой литерал. Функция возвращает значение 3,737766961828337.  
   
 ```  
@@ -60,8 +65,8 @@ LN(Length)
 LN(@Length)   
 ```  
   
-## См. также  
- [LOG (выражение служб SSIS)](../../integration-services/expressions/log-ssis-expression.md)   
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [ЖУРНАЛ &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/log-ssis-expression.md)   
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

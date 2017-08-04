@@ -1,40 +1,45 @@
 ---
-title: "Редактор диспетчера соединений с неструктурированными файлами (страница &#171;Столбцы&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.columns.f1"
-helpviewer_keywords: 
-  - "редактор диспетчера соединения с неструктурированными файлами "
+title: "Редактор диспетчера подключения файлов (страница «столбцы») с плоскими | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.columns.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 791bc8b3edbee92a0154dc03011666a488c19e7a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор диспетчера соединений с неструктурированными файлами (страница &#171;Столбцы&#187;)
+# <a name="flat-file-connection-manager-editor-columns-page"></a>Редактор диспетчера соединений с неструктурированными файлами (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор диспетчера соединений с неструктурированными файлами** используется для задания данных о строках и столбцах и для предварительного просмотра файла.  
   
  Дополнительные сведения о диспетчере соединений с неструктурированными файлами см. в разделе [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-## Статические параметры  
+## <a name="static-options"></a>Статические параметры  
  **Имя диспетчера соединений**  
  Укажите уникальное имя для соединения с неструктурированным файлом в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Description**  
  Опишите соединение. Рекомендуется описать цель соединения, чтобы пакеты самодокументировались и их проще было обслуживать.  
   
-## Динамические параметры формата неструктурированных файлов  
+## <a name="flat-file-format-dynamic-options"></a>Динамические параметры формата неструктурированных файлов  
   
-### Формат = Разделитель  
+### <a name="format--delimited"></a>Формат = Разделитель  
  **Разделитель строк**  
  Выберите из списка доступных разделителей строк или введите текст разделителя.  
   
@@ -70,9 +75,9 @@ caps.handback.revision: 21
  Просмотр образца данных в неструктурированном файле, разделенном на столбцы и строки с помощью выбранных параметров.  
   
  **Сбросить столбцы**  
- При нажатии кнопки **Сбросить столбцы** удаляются все столбцы, кроме исходных.  
+ При нажатии кнопки **Сбросить столбцы**удаляются все столбцы, кроме исходных.  
   
-### Формат = Фиксированная ширина  
+### <a name="format--fixed-width"></a>Формат = Фиксированная ширина  
  **Шрифт**  
  Выбор шрифта для предварительного просмотра данных.  
   
@@ -83,9 +88,9 @@ caps.handback.revision: 21
  Задайте длину строки перед добавлением разделителей для отдельных столбцов. Или переместите красный вертикальный маркер в окне предварительного просмотра, чтобы отметить конец строки. Значение ширины строки автоматически обновляется.  
   
  **Сбросить столбцы**  
- При нажатии кнопки **Сбросить столбцы** удаляются все столбцы, кроме исходных.  
+ При нажатии кнопки **Сбросить столбцы**удаляются все столбцы, кроме исходных.  
   
-### Формат = Выравнивание по левому краю  
+### <a name="format--ragged-right"></a>Формат = Выравнивание по левому краю  
   
 > [!NOTE]  
 >  В файлах с текстом без выравнивания вправо каждый столбец имеет фиксированную ширину, за исключением последнего столбца. Он отделяется разделителем строк.  
@@ -111,12 +116,12 @@ caps.handback.revision: 21
 |**Вертикальная черта {&#124;}**|Строки разделяются вертикальной чертой.|  
   
  **Сбросить столбцы**  
- При нажатии кнопки **Сбросить столбцы** удаляются все столбцы, кроме исходных.  
+ При нажатии кнопки **Сбросить столбцы**удаляются все столбцы, кроме исходных.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера подключений с неструктурированными файлами (страница "Общие")](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
- [Редактор диспетчера подключений с неструктурированными файлами (страница "Дополнительно")](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
- [Редактор диспетчера подключений с неструктурированными файлами (страница "Предварительный просмотр")](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
+ [Редактор диспетчера подключений к неструктурированным файлам (страница &#40;Общие&#41;)](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
+ [Плоские редактор диспетчера подключения файлов &#40; Страница "Дополнительно" &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
+ [Редактор диспетчера подключений к неструктурированным файлам (страница &#40;Предварительный просмотр&#41;)](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

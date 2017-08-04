@@ -1,35 +1,40 @@
 ---
-title: "Справочник по ошибкам и событиям (службы Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пакеты служб Integration Services, события"
-  - "события [службы Integration Services]"
-  - "ошибки [службы Integration Services]"
-  - "службы Integration Services, ошибки"
+title: "Ошибки и события (службы Integration Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, events
+- events [Integration Services]
+- errors [Integration Services]
+- Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Справочник по ошибкам и событиям (службы Integration Services)
+# <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
   Этот раздел документации содержит сведения о некоторых ошибках и событиях, связанных со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Сведения о причинах и способах устранения включены в сообщения об ошибках.  
   
- Дополнительные сведения о сообщениях об ошибках служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], включая список большинства ошибок [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с описаниями, см. в статье [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md). Обратите внимание, что в настоящее список время не содержит сведений об устранении ошибок.  
+ Дополнительные сведения о сообщениях об ошибках служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , включая список большинства ошибок [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с описаниями, см. в статье [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md). Обратите внимание, что в настоящее список время не содержит сведений об устранении ошибок.  
   
 > [!IMPORTANT]  
 >  Причиной многих ошибок, возникающих при работе служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , являются другие компоненты. Это могут быть поставщики OLE DB и другие компоненты баз данных, например компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] и службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а также прочие службы и компоненты: файловая система, SMTP-сервер или очередь сообщений Майкрософт. Дополнительные сведения о сообщениях об этих внешних ошибках см. в документации по соответствующему компоненту.  
   
-## сообщения об ошибках  
+## <a name="error-messages"></a>сообщения об ошибках  
   
 |Символическое имя ошибки|Description|  
 |----------------------------|-----------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 20
 |DTS_E_WRITEWHILECACHEINUSE|Указывает, что преобразование «Преобразование кэша» пытается произвести запись в кэш памяти в то время, как преобразование «Уточняющий запрос» читает данные из кэша памяти.|  
 |DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|Указывает, что метаданные столбца в источнике данных не соответствуют метаданным столбца в исходном либо целевом компоненте, подключенном к источнику данных.|  
   
-## События (SQLISPackage)  
+## <a name="events-sqlispackage"></a>События (SQLISPackage)  
  Дополнительные сведения см. в статье [Регистрация событий в пакете служб Integration Services](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
 |Событие|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 20
 |SQLISPackage_12551|Указывает, что пакет остановлен, не закончив работу.|  
 |SQLISPackage_12557|Указывает, что пакет завершил выполнение.|  
   
-## События (SQLISService)  
+## <a name="events-sqlisservice"></a>События (SQLISService)  
  Дополнительные сведения см. в статье [События, зарегистрированные службами Integration Services](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
 |Событие|Description|  
@@ -75,7 +80,7 @@ caps.handback.revision: 20
 |SQLISService_273|Указывает, что файл конфигурации не может быть прочитан или недопустим.|  
 |SQLISService_274|Указывает, что параметр реестра, указывающий местонахождение файла конфигурации, не существует или пуст.|  
   
-## См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>См. также  
+ [Об ошибках служб Integration Services и справочник по сообщениям](../integration-services/integration-services-error-and-message-reference.md)  
   
   

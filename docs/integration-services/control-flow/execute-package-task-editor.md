@@ -1,26 +1,31 @@
 ---
-title: "редактор задачи &#171;Выполнение пакета&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.package.f1"
-  - "sql13.dts.designer.executepackagetask.parameter.F1"
-  - "sql13.dts.designer.executepackagetask.general.f1"
+title: "Редактор задачи пакета выполнение | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.package.f1
+- sql13.dts.designer.executepackagetask.parameter.F1
+- sql13.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
+ms.openlocfilehash: 6f03d1bb15f1513a7683c6719c42e9cd7f440a71
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# редактор задачи &#171;Выполнение пакета&#187;
+# <a name="execute-package-task-editor"></a>редактор задачи «Выполнение пакета»
   Для настройки задачи «Выполнение пакета» используйте редактор задачи «Выполнение пакета». Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
   
  **Выбор действия**  
@@ -54,17 +59,17 @@ caps.handback.revision: 7
  Выберите пункт меню **Ссылка на проект** для дочерних пакетов, содержащихся в проекте. Выберите пункт меню **Внешняя ссылка** для дочерних пакетов, расположенных вне проекта.  
   
 > [!NOTE]  
->  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка**. Дополнительные сведения о преобразовании см. в разделе [Развертывание проектов на сервере служб Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка** . [Развертывание служб Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Пароль**  
  Если дочерний пакет защищен паролем, введите пароль для него или нажмите кнопку с многоточием (...) и создайте новый пароль для данного дочернего пакета.  
   
  **ExecuteOutOfProcess**  
- Укажите, должен дочерний пакет выполняться в процессе родительского пакета или в отдельном процессе. По умолчанию свойство ExecuteOutOfProcess в задаче "Выполнение пакета" равно значению **False**, а дочерний пакет выполняется в том же процессе, что и родительский пакет. Если установить свойство в значение **true**, дочерний пакет запускается в отдельном процессе. Это может замедлить запуск дочернего пакета. Кроме того, если свойству задано значение **true**, то выполнять отладку пакета только при установке средств нельзя. Для этого необходимо установить продукт службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в статье [Установка служб Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+ Укажите, должен дочерний пакет выполняться в процессе родительского пакета или в отдельном процессе. По умолчанию свойство ExecuteOutOfProcess в задаче "Выполнение пакета" равно значению **False**, а дочерний пакет выполняется в том же процессе, что и родительский пакет. Если установить свойство в значение **true**, дочерний пакет запускается в отдельном процессе. Это может замедлить запуск дочернего пакета. Кроме того, если свойству задано значение **true**, то выполнять отладку пакета только при установке средств нельзя. Для этого необходимо установить продукт службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в статье [Установка служб Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
-### Динамические параметры ReferenceType  
+### <a name="referencetype-dynamic-options"></a>Динамические параметры ReferenceType  
   
-#### ReferenceType = внешняя ссылка  
+#### <a name="referencetype--external-reference"></a>ReferenceType = внешняя ссылка  
  **Местоположение**  
  Выберите местоположение дочернего пакета. Это свойство имеет параметры, указанные в следующей таблице.  
   
@@ -79,24 +84,24 @@ caps.handback.revision: 7
  **PackageNameReadOnly**  
  Отображает имя пакета.  
   
-#### ReferenceType = ссылка на проект  
+#### <a name="referencetype--project-reference"></a>ReferenceType = ссылка на проект  
  **PackageNameFromProjectReference**  
  Выберите пакет, содержащийся в проекте, который станет дочерним пакетом.  
   
-### Динамические параметры местоположения  
+### <a name="location-dynamic-options"></a>Динамические параметры местоположения  
   
-#### Местонахождение = SQL Server  
+#### <a name="location--sql-server"></a>Местонахождение = SQL Server  
  **Соединение**  
- Выберите диспетчер подключений OLE DB из списка или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер соединений OLE DB из списка или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
   
- **См. также: ** [Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
+ **См. также:**  [Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Введите имя дочернего пакета или нажмите кнопку с многоточием (...) и определите местоположение пакета.  
   
-#### Местоположение = файловая система  
+#### <a name="location--file-system"></a>Местоположение = файловая система  
  **Соединение**  
- Выберите диспетчер подключений файлов из списка или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
   
  **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 7
 ##  <a name="parameter"></a> Задание параметров на странице «Привязки параметров»  
  Из родительского пакета или проекта можно передавать значения в дочерний пакет. Проект должен использовать модель развертывания проекта, а дочерний пакет должен содержаться в одном проекте с родительским пакетом.  
   
- Сведения о преобразовании проектов в модели развертывания проектов см. в разделе [Развертывание проектов на сервере служб Integration Services](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ Сведения о преобразовании проектов в модель развертывания проекта см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Параметр дочернего проекта**  
  Введите или выберите имя параметра дочернего пакета.  

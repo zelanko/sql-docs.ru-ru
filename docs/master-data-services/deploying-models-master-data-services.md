@@ -1,44 +1,49 @@
 ---
-title: "Развертывание моделей (службы Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пакеты развертывания [Master Data Services], о пакетах развертывания"
-  - "развертывание пакетов [службы Master Data Services]"
+title: "Развертывание модели (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deployment packages [Master Data Services], about deployment packages
+- deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Развертывание моделей (службы Master Data Services)
+# <a name="deploying-models-master-data-services"></a>Развертывание моделей (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] пакет представляет собой XML-файл, содержащий развертываемую структуру модели и (необязательно) данные этой модели. Пакеты модели используется для перемещения копий моделей из одной среды служб MDS в другую, либо для создания новых моделей в существующей среде MDS.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **Средство MDSModelDeploy** обратно совместимо с пакетами, созданными в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] или более поздней версии.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**Средство MDSModelDeploy** обратно совместим с пакетами, созданными в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] или более поздней версии.  
   
-## Инструменты для развертывания моделей  
+## <a name="tools-for-deploying-models"></a>Инструменты для развертывания моделей  
  Для работы с пакетами модели можно использовать одно из трех средств, в зависимости от задач, которые требуется выполнить.  
   
 -   **Средство MDSModelDeploy**. Для создания и развертывания объектов и данных модели используйте средство MDSModelDeploy.exe. Если при установке служб MDS вы выбрали путь по умолчанию, это средство находится в расположении *диск*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
--   **Мастер развертывания модели**. Чтобы создать и развернуть только пакеты структуры модели, воспользуйтесь мастером в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Этот мастер нельзя использовать для развертывания данных.  
+-   **Мастер развертывания модели**. Чтобы создать и развернуть только пакеты структуры модели, воспользуйтесь мастером в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Этот мастер нельзя использовать для развертывания данных.  
   
 -   **Редактор модели пакета**. Чтобы изменить пакет модели, используйте файл ModelPackageEditor.exe, который запускает редактор пакетов моделей. С помощью этого мастера выполняется изменения пакета, созданного средством MDSModelDeploy или мастером развертывания модели. Если при установке служб MDS вы выбрали путь по умолчанию, это средство находится в расположении *диск*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  С помощью средства MDSDeployModel можно создавать и клонировать модели. Кроме того, модели можно изменять и обновлять их данные. Если средство MDSModelDeploy используется для обновления существующей модели и ее данных и пакет не содержит сущность, атрибут или элемент, имеющиеся в целевой модели, MDSModelDeploy не удаляет из модели эту сущность, атрибут или элемент.  
   
-## Содержимое пакетов  
+## <a name="what-packages-contain"></a>Содержимое пакетов  
  Пакет модели представляет собой XML-файл, сохраняемый с расширением PKG. При создании развертываемого пакета в него по желанию можно включить данные. Если данные решено включить, то нужно выбрать для них версию.  
   
  В пакет включаются все объекты модели. Эти объекты включают в себя:  
@@ -61,10 +66,10 @@ caps.handback.revision: 24
   
  Атрибуты файлов, а также разрешения пользователей и групп не входят в пакет. При развертывании модели их нужно обновить вручную.  
   
-## Образцы пакетов  
- При установке служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] также копируются файлы образцов пакетов. Эти файлы пакетов расположены в каталоге Master Data Services\Samples\Packages, где установлена среда [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. При развертывании этих образцов пакетов с помощью средства MDSModelDeploy создаются и заполняются данными образцы моделей.  
+## <a name="sample-packages"></a>Образцы пакетов  
+ При установке служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]также копируются файлы образцов пакетов. Эти файлы пакетов расположены в каталоге Master Data Services\Samples\Packages, где установлена среда [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. При развертывании этих образцов пакетов с помощью средства MDSModelDeploy создаются и заполняются данными образцы моделей.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -74,8 +79,8 @@ caps.handback.revision: 24
 |Развернуть пакет объектов модели можно только с помощью мастера.|[Развертывание пакета развертывания модели с помощью мастера](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |Изменять пакет развертывания модели необходимо в тех случаях, когда требуется развернуть только определенные части модели, а не всю модель.|[Изменение пакета развертывания модели](../master-data-services/edit-a-model-deployment-package.md)|  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
--   [Варианты развертывания модели (службы Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [Варианты развертывания модели &#40; Службы Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

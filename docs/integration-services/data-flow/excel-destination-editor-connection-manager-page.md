@@ -1,26 +1,31 @@
 ---
-title: "Редактор назначения &#171;Excel&#187; (страница &#171;Диспетчер соединений&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldestadapter.connection.f1"
-helpviewer_keywords: 
-  - "редактор назначения «Excel»"
+title: "Редактор назначения «Excel» (страница «Диспетчер соединений») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldestadapter.connection.f1
+helpviewer_keywords:
+- Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1627a4907b35522a4c3bcbc03f366f77706ac87
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор назначения &#171;Excel&#187; (страница &#171;Диспетчер соединений&#187;)
+# <a name="excel-destination-editor-connection-manager-page"></a>Редактор назначения «Excel» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** в диалоговом окне **Редактор назначения «Excel»** , чтобы задать сведения об источнике данных и просмотреть результаты. Назначение «Excel» загружает данные в лист или именованный диапазон в книге [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] .  
   
 > [!NOTE]  
@@ -28,12 +33,12 @@ caps.handback.revision: 43
   
  Дополнительные сведения о назначении Excel см. в разделе [Excel Destination](../../integration-services/data-flow/excel-destination.md).  
   
-## Статические параметры  
+## <a name="static-options"></a>Статические параметры  
  **Диспетчер соединений с Excel**  
  Выберите из списка существующий диспетчер подключений к Excel или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
- Создайте новый диспетчер подключений с помощью диалогового окна **Диспетчер подключений Excel**.  
+ Создайте новый диспетчер подключений с помощью диалогового окна **Диспетчер подключений Excel** .  
   
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
@@ -41,36 +46,36 @@ caps.handback.revision: 43
 |Параметр|Description|  
 |------------|-----------------|  
 |Таблица или представление|Загружает данные в лист или именованный диапазон источника данных Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также**: [Использование переменных в пакетах](../Topic/Use%20Variables%20in%20Packages.md)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также**: [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Команда SQL|Загрузка данных в назначение «Excel» с помощью SQL-запроса.|  
   
  **Имя листа Excel**  
  Выберите назначение Excel из раскрывающегося списка. Если этот список пустой, выберите **Создать**.  
   
  **Создать**  
- Выберите **Создать** для открытия диалогового окна **Создание таблицы**. После нажатия кнопки **OK**создается файл Excel, на который указывает **Диспетчер соединений с Excel** .  
+ Выберите **Создать** для открытия диалогового окна **Создание таблицы** . После нажатия кнопки **OK**создается файл Excel, на который указывает **Диспетчер соединений с Excel** .  
   
  **Просмотр существующих данных**  
- Просмотрите предварительные результаты, используя диалоговое окно **Предварительный просмотр результатов запроса**. В окне «Предварительный просмотр» может отображаться до 200 строк.  
+ Просмотрите предварительные результаты, используя диалоговое окно **Предварительный просмотр результатов запроса** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
 > [!WARNING]  
 >  Если выделенный **Диспетчер соединений с Excel** указывает на несуществующий файл Excel, то при нажатии этой кнопки появится сообщение об ошибке.  
   
-## Динамические параметры режима доступа к данным  
+## <a name="data-access-mode-dynamic-options"></a>Динамические параметры режима доступа к данным  
   
-### Режим доступа к данным = Таблица или представление  
+### <a name="data-access-mode--table-or-view"></a>Режим доступа к данным = Таблица или представление  
  **Имя листа Excel**  
  Выберите имя листа или именованного диапазона из списка доступных в источнике данных.  
   
-### Режим доступа к данным — переменная, содержащая имя таблицы или представления  
+### <a name="data-access-mode--table-name-or-view-name-variable"></a>Режим доступа к данным — переменная, содержащая имя таблицы или представления  
  **Имя переменной**  
  Укажите переменную, содержащую имя листа или именованного диапазона.  
   
-### Режим доступа к данным — команда SQL  
+### <a name="data-access-mode--sql-command"></a>Режим доступа к данным — команда SQL  
  **Текст команды SQL**  
  Введите текст SQL-запроса, создайте запрос, нажав кнопку **Создать запрос**, или выберите файл, содержащий текст запроса, нажав кнопку **Обзор**.  
   
- **Построить запрос**  
+ **Создать запрос**  
  Воспользуйтесь диалоговым окном **Построитель запросов** для визуального конструирования SQL-запроса.  
   
  **Обзор**  
@@ -79,10 +84,10 @@ caps.handback.revision: 43
  **Анализ запроса**  
  Проверить синтаксис текста запроса.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Excel" (страница "Сопоставления")](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
- [Редактор назначения "Excel" (страница "Вывод ошибок")](../../integration-services/data-flow/excel-destination-editor-error-output-page.md)   
- [просматривать файлы и таблицы Excel с помощью контейнера «цикл по каждому элементу»](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ [Редактор назначения «Excel» &#40; Страница «сопоставления» &#41;](../../integration-services/data-flow/excel-destination-editor-mappings-page.md)   
+ [Редактор назначения «Excel» &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/excel-destination-editor-error-output-page.md)   
+ [Цикл через Excel файлы и таблицы с помощью цикл](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

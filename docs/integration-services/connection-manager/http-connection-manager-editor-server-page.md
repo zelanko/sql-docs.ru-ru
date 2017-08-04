@@ -1,26 +1,31 @@
 ---
-title: "Редактор диспетчера HTTP-сеансов (страница &#171;Сервер&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.httpconnection.server.f1"
-helpviewer_keywords: 
-  - "редактор диспетчера HTTP-соединений"
+title: "Редактор диспетчера HTTP-сеансов (страница «сервер») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.server.f1
+helpviewer_keywords:
+- HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b11802c5d90948df8ce7e6ef41f3a3ef3ea2fed6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор диспетчера HTTP-сеансов (страница &#171;Сервер&#187;)
+# <a name="http-connection-manager-editor-server-page"></a>Редактор диспетчера HTTP-сеансов (страница «Сервер»)
   Используйте вкладку **Сервер** диалогового окна **Редактор диспетчера HTTP-соединений** , чтобы настроить диспетчер HTTP-соединений, указав такие свойства, как URL-адрес и учетные данные безопасности. HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. После настройки диспетчера HTTP-соединений можно проверить соединение.  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 32
   
  Дополнительные сведения о диспетчере HTTP-соединений см. в разделе [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md). Дополнительные сведения о распространенном сценарии использования диспетчера HTTP-соединений см. в разделе [Web Service Task](../../integration-services/control-flow/web-service-task.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **URL-адрес сервера**  
  Введите URL-адрес для сервера.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 32
  Укажите, должен ли диспетчер HTTP-соединений использовать для проверки подлинности сертификат клиента.  
   
  **Сертификат**  
- Выберите сертификат из списка, воспользовавшись диалоговым окном **Выбор сертификата**. Текстовое поле отображает имя, связанное с этим сертификатом.  
+ Выберите сертификат из списка, воспользовавшись диалоговым окном **Выбор сертификата** . Текстовое поле отображает имя, связанное с этим сертификатом.  
   
  **Время ожидания (сек)**  
  Укажите время ожидания при установке соединения с веб-сервером. По умолчанию для этого свойства устанавливается значение 30 секунд.  
@@ -61,8 +66,8 @@ caps.handback.revision: 32
  **Проверка соединения**  
  После настройки диспетчера HTTP-подключений проверьте работоспособность соединения, нажав кнопку **Проверить соединение**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
+ [Редактор диспетчера HTTP-соединений &#40; Страница прокси &#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
   
   

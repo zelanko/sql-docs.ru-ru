@@ -1,31 +1,36 @@
 ---
-title: "Редактор источника &#171;Неструктурированный файл&#187; (страница &#171;Вывод ошибок&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.errorhandling.f1"
-helpviewer_keywords: 
-  - "редактор источника «Неструктурированный файл»"
+title: "Редактор источника «файл» (страница «Вывод ошибок») с плоскими | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.errorhandling.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34968aa784466a3a06a6ee3d1ded58fbc7d429a2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор источника &#171;Неструктурированный файл&#187; (страница &#171;Вывод ошибок&#187;)
+# <a name="flat-file-source-editor-error-output-page"></a>Редактор источника «Неструктурированный файл» (страница «Вывод ошибок»)
   На странице **Вывод ошибок** диалогового окна **Редактор источника "Неструктурированный файл"** можно задать параметры обработки ошибок и определить свойства столбцов для вывода ошибок.  
   
  Дополнительные сведения об источнике «Неструктурированный файл» см. в разделе [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 26
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника "Неструктурированный файл" (страница "Диспетчер соединений")](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
- [Редактор источника "Неструктурированный файл" (страница "Столбцы")](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
+ [Редактор источника неструктурированного файла &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
+ [Редактор источника неструктурированного файла &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
  [Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

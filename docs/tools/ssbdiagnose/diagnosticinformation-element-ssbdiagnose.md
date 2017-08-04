@@ -1,29 +1,34 @@
 ---
-title: "Элемент DiagnosticInformation (программа ssbdiagnose) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "формат выходного XML-файла [ssbdiagnose], элемент diagnosticinformation"
-  - "diagnosticinformation, элемент"
-  - "ssbdiagnose"
+title: "Элемент DiagnosticInformation (программа ssbdiagnose) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML output file format [ssbdiagnose], diagnosticinformation element
+- diagnosticinformation element
+- ssbdiagnose
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d5a21ac18d6b4982c7c93bf11e3bf16051dc0c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Элемент DiagnosticInformation (программа ssbdiagnose)
+# <a name="diagnosticinformation-element-ssbdiagnose"></a>Элемент DiagnosticInformation (программа ssbdiagnose)
   В элементе **DiagnosticInformation** содержатся все элементы, сообщающие о диагностических данных, обнаруженных программой. **DiagnosticInformation** — корневой элемент выходного XML-файла программы **ssbdiagnostic** .  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -32,13 +37,13 @@ caps.handback.revision: 14
 </DiagnosticInformation>  
 ```  
   
-## Атрибуты элемента  
+## <a name="element-attributes"></a>Атрибуты элемента  
   
 |Attribute|Описание|  
 |---------------|-----------------|  
 |**None**|Недоступно|  
   
-## Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элемента  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -46,17 +51,17 @@ caps.handback.revision: 14
 |**Значение по умолчанию**|Нет.|  
 |**Наличие**|Один раз на выходной XML-файла программы **ssbdiagnose** .|  
   
-## Связи элемента  
+## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
 |**Родительский элемент**|Нет.|  
-|**Дочерние элементы**|[Элемент Banner (программа ssbdiagnose)](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Элемент Issue (программа ssbdiagnose)](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
+|**Дочерние элементы**|[Элемент banner &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Элемент Issue &#40; ssbdiagnose &#41;](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Дополнительные сведения о пространствах имен XML см. в статье [Пространства имен в XML-документе](http://go.microsoft.com/fwlink/?LinkId=7341) в библиотеке [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
   
-## См. также:  
- [Служебная программа ssbdiagnose (компонент Service Broker)](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+## <a name="see-also"></a>См. также:  
+ [Программа ssbdiagnose &#40; Компонент Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

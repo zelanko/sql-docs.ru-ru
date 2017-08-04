@@ -1,24 +1,29 @@
 ---
-title: "Обозреватель зависимостей сущности | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "службы master data services"
+title: "Обозреватель зависимостей сущности | Документы Microsoft"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "службы master data services"
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccac7deb9d40896082cddda7c438ebe5f6e53a83
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Обозреватель зависимостей сущности
+# <a name="entity-dependencies-explorer"></a>Обозреватель зависимостей сущности
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 представлена новая страница обозревателя — "Зависимости сущностей". Здесь применяется новый подход к визуализации отношений между элементами сущности в модели в соответствии со значениями атрибута на основе домена (DBA). При этом нет необходимости предварительно определять производную иерархию.   
   
@@ -43,3 +48,5 @@ caps.handback.revision: 5
   
   
   
+
+

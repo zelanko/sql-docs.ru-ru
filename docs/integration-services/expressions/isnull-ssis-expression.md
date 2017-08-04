@@ -1,42 +1,47 @@
 ---
-title: "ISNULL (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "значения NULL [службы Integration Services]"
-  - "ISNULL, функция"
+title: "ISNULL (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- null values [Integration Services]
+- ISNULL function
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd74ffbf491733826eef4cf61530e838033d7e3d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# ISNULL (выражение служб SSIS)
+# <a name="isnull-ssis-expression"></a>ISNULL (выражение служб SSIS)
   Возвращает результат в виде логического выражения, в зависимости от того, имеет ли выражение значение NULL.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 ISNULL(expression)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *expression*  
  Допустимое выражение любого типа данных.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  Данный пример возвращает значение TRUE, если столбец **DiscontinuedDate** содержит значение NULL.  
   
 ```  
@@ -55,8 +60,8 @@ ISNULL(LastName)? "Unknown last name":LastName
 ISNULL(DaysToManufacture + @AddDays)  
 ```  
   
-## См. также  
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)   
- [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)   
+ [ОБЪЕДИНЕННЫЙ &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "Сущности (службы основных данных) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сущности [службы Master Data Services], о сущностях"
-  - "сущности [службы Master Data Services]"
+title: "Сущности (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], about entities
+- entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9d59e75dac7220c1ce03913c0c765e816623cc2a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Сущности (службы основных данных)
+# <a name="entities-master-data-services"></a>Сущности (службы основных данных)
   Сущности — это объекты, которые содержатся в моделях [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Каждая сущность содержит элементы, которые являются строками основных данных, которыми можно управлять.  
   
-## Необходимо число сущностей  
+## <a name="how-many-entities-are-appropriate"></a>Необходимо число сущностей  
  Модели могут содержать множество сущностей, которым нужно управлять. В каждой сущности должны объединяться схожие данные. Например, сущность может быть предназначена для всех корпоративных учетных записей или для главного списка сотрудников.  
   
  Как правило, существует одна или несколько центральных сущностей, важных для бизнеса, с которыми связаны другие объекты модели. Например, в модели «Продукт» можно иметь центральную сущность с названием «Продукт», с которой будут связаны другие сущности, такие как «Подкатегория» и «Категория». Однако нет необходимости в центральной сущности. В зависимости от потребностей можно иметь несколько сущностей, которые должны рассматриваться как равные по важности.  
   
-## Связь сущностей с другими объектами модели  
+## <a name="how-entities-relate-to-other-model-objects"></a>Связь сущностей с другими объектами модели  
  Сущность можно рассматривать как таблицу, содержащую основные данные, в которой строки представляют элементы, а столбцы — атрибуты.  
   
- ![Сущность служб Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность служб Master Data Services, представленная в виде таблицы")  
+ ![Службы Master Data Services сущность в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "службы Master Data Services сущность в виде таблицы")  
   
  Сущность заполняется перечнем основных данных, которыми нужно управлять.  
   
@@ -38,28 +43,28 @@ caps.handback.revision: 10
   
  Сущности также могут содержать явные иерархии (неоднородные структуры на основе одной сущности) и коллекции (одноразовые комбинации подмножеств элементов). Дополнительные сведения см. в разделах [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md) и [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md).  
   
-## Использование сущностей в качестве ограниченных списков  
+## <a name="using-entities-as-constrained-lists"></a>Использование сущностей в качестве ограниченных списков  
  Когда пользователи назначают атрибуты элементам в сущности, можно предоставить им выбор из ограниченного списка значений. Для этого используйте сущность для заполнения списка значений атрибута. Такой атрибут называется атрибутом на основе домена. Дополнительные сведения см. в разделе [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md).  
   
-## Базовые сущности  
+## <a name="base-entities"></a>Базовые сущности  
  Базовая сущность является отправной точкой для пользователей при навигации по объектам в модели. Базовая сущность определяет макет экрана, когда пользователь открывает функциональную область **Обозреватель** и щелкает пункт **Обозреватель** на панели меню. Чтобы указать сущность в качестве базовой, необходимо перейти к функциональной области **Администрирование системы** . На странице **Представление модели** перетащите сущность из дерева с правой стороны на имя модели в дереве с левой стороны.  
   
-## Безопасность сущности  
+## <a name="entity-security"></a>Безопасность сущности  
  Можно дать пользователям разрешения на сущность, которая включает связанные объекты модели. Дополнительные сведения см. в разделе [Разрешения сущности (службы Master Data Services)](../master-data-services/entity-permissions-master-data-services.md).  
   
-## Примеры сущности  
+## <a name="entity-examples"></a>Примеры сущности  
  В следующих примерах сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
- ![Таблица продукта «Велосипед»](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта «Велосипед»")  
+ ![Bike сущности таблицы Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "велосипеда таблицы сущности продукта")  
   
  В следующем примере сущность «Продукт» является центральной. Сущность «Подкатегория» является атрибутом на основе домена сущности «Продукт». Сущность «Категория» является атрибутом на основе домена сущности «Подкатегория». StandardCost и ListPrice — это атрибуты в свободной форме сущности Product, а FilePhoto — это файловый атрибут сущности Product.  
   
- ![Древовидная структура сущности «Продукт»](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности «Продукт»")  
+ ![Древовидная структура сущности продукта](../master-data-services/media/mds-conc-entity-ui.gif "древовидная структура сущности продукта")  
   
 > [!NOTE]  
->  Это пример на основе пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Иерархическая древовидная структура показывает отношения между сущностями и атрибутами на основе домена. Она предназначена для отображения отношений, а не для демонстрации уровней важности.  
+>  Это пример на основе пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Иерархическая древовидная структура показывает отношения между сущностями и атрибутами на основе домена. Она предназначена для отображения отношений, а не для демонстрации уровней важности.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -68,7 +73,7 @@ caps.handback.revision: 10
 |Удаление существующей сущности.|[Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)|  
 |Назначение разрешения сущностям.|[Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
 -   [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)  
   
@@ -77,3 +82,4 @@ caps.handback.revision: 10
 -   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   
+

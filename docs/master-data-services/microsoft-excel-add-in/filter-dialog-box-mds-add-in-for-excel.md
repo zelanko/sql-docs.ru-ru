@@ -1,27 +1,32 @@
 ---
-title: "Диалоговое окно &#171;Фильтр&#187; (надстройка MDS для Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Фильтрация диалоговое окно (надстройка MDS для Excel) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Диалоговое окно &#171;Фильтр&#187; (надстройка MDS для Excel)
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] воспользуйтесь диалоговым окном **Фильтр**, чтобы сузить список данных, управляемых MDS, прежде чем загружать их в Excel.  
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>Диалоговое окно «Фильтр» (надстройка MDS для Excel)
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]воспользуйтесь диалоговым окном **Фильтр** , чтобы сузить список данных, управляемых MDS, прежде чем загружать их в Excel.  
   
  В этом диалоговом окне имеется три раздела: **Столбцы**, **Строки**и **Сводка**.  
   
-## Столбцы  
+## <a name="columns"></a>Столбцы  
  В разделе **Столбцы** можно определить атрибуты (столбцы), которые должны отображаться в Excel.  
   
 |Имя элемента управления|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 |Очистить все|Нажмите, чтобы очистить выбранные атрибуты, показанные в списке.<br /><br /> Нельзя очистить атрибуты **Имя** и **Код**.|  
 |СТРЕЛКА ВВЕРХ или СТРЕЛКА ВНИЗ|Нажмите, чтобы переместить выбранный атрибут вверх или вниз в списке. Порядок сверху вниз соответствует порядку отображения столбцов на листе слева направо.|  
   
-## Строки  
+## <a name="rows"></a>Строки  
  В разделе **Строки** можно определить элементы (строки), которые нужно отображать в Excel. Это делается путем определения условия фильтрации строк для отображения.  
   
 |Имя элемента управления|Description|  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
 |Удалить все|Удаляет все фильтры из указанного списка.|  
 |Удалить|Удаляет выбранный фильтр из списка.|  
   
-## Сводка  
+## <a name="summary"></a>Сводка  
  В разделе **Сводка** можно просмотреть сведения об объемах данных, которые будут загружены, прежде чем выполнять загрузку.  
   
 |Имя элемента управления|Description|  
@@ -57,7 +62,7 @@ caps.handback.revision: 8
 |Строки|Число строк, которые будут загружены в Excel, исходя из фильтров, примененных в разделе **Строки** .|  
 |Столбцы|Число столбцов, которые будут загружены в Excel, исходя из атрибутов, примененных в разделе **Столбцы** .|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Фильтрация данных перед их экспортом (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

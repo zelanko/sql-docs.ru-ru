@@ -1,29 +1,34 @@
 ---
-title: "Назначение &#171;Неструктурированный файл&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfiledest.f1"
-helpviewer_keywords: 
-  - "неструктурированные файлы"
-  - "назначение «Неструктурированный файл»"
-  - "запись текстового файла [службы Integration Services]"
-  - "назначения [службы Integration Services], неструктурированный файл"
+title: "Плоский файл назначения | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfiledest.f1
+helpviewer_keywords:
+- flat files
+- Flat File destination
+- text file writing [Integration Services]
+- destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Назначение &#171;Неструктурированный файл&#187;
+# <a name="flat-file-destination"></a>назначение «Неструктурированный файл»
   Назначение «Неструктурированный файл» записывает данные в текстовый файл. Текстовый файл может быть в следующих форматах: с разделителями, фиксированной ширины, фиксированной ширины с разделителем строки и без выравнивания текста справа.  
   
  Можно настроить назначение «Неструктурированный файл» следующими способами:  
@@ -38,7 +43,7 @@ caps.handback.revision: 49
   
  Этот назначение имеет один выход. Вывод ошибок не поддерживается.  
   
-## Настройка назначения «Неструктурированный файл»  
+## <a name="configuration-of-the-flat-file-destination"></a>Настройка назначения «Неструктурированный файл»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о свойствах, которые можно задать в диалоговом окне **Редактор источника «Неструктурированный файл»** , см. в следующих разделах:  
@@ -49,14 +54,14 @@ caps.handback.revision: 49
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства неструктурированного файла](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств для компонента потока данных см. в разделе [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Источник «Неструктурированный файл»](../../integration-services/data-flow/flat-file-source.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   

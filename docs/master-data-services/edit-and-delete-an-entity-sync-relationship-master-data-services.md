@@ -1,26 +1,31 @@
 ---
-title: "Создание и удаление отношения синхронизации сущностей (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение и удаление отношения синхронизации сущностей (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25454041bec8581e814cc733ecbcfdb3a2ddaa0b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание и удаление отношения синхронизации сущностей (Master Data Services)
+# <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Создание и удаление отношения синхронизации сущностей (Master Data Services)
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей. Созданное отношение синхронизации можно изменить или удалить.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для изменения отношения синхронизации сущностей требуется следующее.  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -81,8 +86,8 @@ caps.handback.revision: 6
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание и выполнение отношений синхронизации сущностей (Master Data Services)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [Отношение синхронизации сущностей (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [Отношения синхронизации сущностей &#40; Службы Master Data Services &#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

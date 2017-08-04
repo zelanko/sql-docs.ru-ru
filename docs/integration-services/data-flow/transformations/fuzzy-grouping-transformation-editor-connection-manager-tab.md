@@ -1,26 +1,31 @@
 ---
-title: "Редактор преобразования &#171;Нечеткое группирование&#187; (вкладка &#171;Диспетчер соединений&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtransformation.connection.f1"
-helpviewer_keywords: 
-  - "редактор преобразования «Нечеткое группирование»"
+title: "Редактор преобразования Нечеткое группирование (вкладка «Диспетчер соединений») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+helpviewer_keywords:
+- Fuzzy Grouping Transformation Editor
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5bcb24248af5cc666ee45f53d60785fff679aca3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор преобразования &#171;Нечеткое группирование&#187; (вкладка &#171;Диспетчер соединений&#187;)
+# <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Редактор преобразования «Нечеткое группирование» (вкладка «Диспетчер соединений»)
   Вкладка **Диспетчер соединений** в диалоговом окне **Редактор преобразования «Нечеткое группирование»** используется для выбора существующего соединения или для создания нового.  
   
 > [!NOTE]  
@@ -28,14 +33,14 @@ caps.handback.revision: 27
   
  Дополнительные сведения о преобразовании «Нечеткое группирование» см. в разделе [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **диспетчер соединений OLE DB**  
- Выберите в списке существующий диспетчер соединения OLE DB или создайте новое соединение с помощью кнопки **Создать**.  
+ Выберите в списке существующий диспетчер соединения OLE DB или создайте новое соединение с помощью кнопки **Создать** .  
   
  **Создать**  
- Создайте новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB**.  
+ Создайте новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Определение подобных строк данных с помощью преобразования «Нечеткое группирование»](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

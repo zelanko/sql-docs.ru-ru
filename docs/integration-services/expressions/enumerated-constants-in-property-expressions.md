@@ -1,29 +1,34 @@
 ---
-title: "Констант-перечислителей в выражениях свойств | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "перечислители [службы Integration Services]"
-  - "пакеты [Integration Services], выражения"
-  - "динамические свойства"
-  - "обновление свойств пакета"
-  - "константы-перечислители [Integration Services]"
-  - "выражения свойств [службы Integration Services]"
+title: "Перечисляемые константы в выражениях свойств | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Констант-перечислителей в выражениях свойств
+# <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
   Если выражения свойств включают в себя значения из списка элементов-перечислителей, эти выражения должны использовать числовое значение элементов-перечислителей вместо понятного имени элемента. Например, если выражение устанавливает свойство **LoggingMode** , необходимо использовать числовое значение 2 вместо понятного имени «Запрещено».  
   
  Этот раздел приводит список числовых значений, эквивалентных понятным именам перечислителей, элементы которых, как правило, используются в выражениях свойств. Объектная модель служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает много дополнительных перечислителей, которые используются при программировании объектной модели для программного построения пакетов или при создании кода элементов пользовательских пакетов, таких как задачи и компоненты потоков данных.  
@@ -99,7 +104,7 @@ caps.handback.revision: 34
   
 |Понятное имя|Числовое значение|  
 |-------------------|-------------------|  
-|Успешно |0|  
+|Успешно|0|  
 |Failure|1|  
 |Completion|2|  
 |Отменено|3|  
@@ -107,7 +112,7 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Перечислители контейнера «цикл по каждому элементу»  
  Контейнер «цикл по каждому элементу» включает в себя набор перечислителей со свойствами, которые могут быть установлены с помощью выражений свойств.  
   
-### Перечислитель ADO по каждой строке  
+### <a name="foreach-ado-enumerator"></a>Перечислитель ADO по каждой строке  
  Свойство**Type** устанавливается с помощью значений перечисления **ADOEnumerationType** .  
   
 |Понятное имя в перечислении ADOEnumerationType|Числовое значение|  
@@ -116,7 +121,7 @@ caps.handback.revision: 34
 |EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
-### Перечислитель по набору узлов  
+### <a name="foreach-nodelist-enumerator"></a>Перечислитель по набору узлов  
  Свойства**SourceDocumentType**, **InnerXPathStringSourceType**и **OuterXPathStringSourceType** устанавливаются с помощью значений перечисления **SourceType** .  
   
 |Понятное имя в перечислении SourceType|Числовое значение|  
@@ -142,10 +147,10 @@ caps.handback.revision: 34
 |Узел|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Задания  
+##  <a name="Tasks"></a> Задачи  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя многочисленные задачи со свойствами, которые можно устанавливать с помощью выражений свойств.  
   
-### Задача «Выполнение инструкции DDL служб Analysis Services»  
+### <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»  
  Свойство**SourceType** устанавливается с помощью значений перечисления **DDLSourceType** .  
   
 |Понятное имя в DDLSourceType|Числовое значение|  
@@ -154,8 +159,8 @@ caps.handback.revision: 34
 |FileConnection|1|  
 |Переменная|2|  
   
-### Задача «Массовая вставка»  
- Свойство**DataFileType** устанавливается с помощью значений перечисления **DTSBulkInsert_DataFileType**.  
+### <a name="bulk-insert-task"></a>Задача «Массовая вставка»  
+ Свойство**DataFileType** устанавливается с помощью значений перечисления **DTSBulkInsert_DataFileType** .  
   
 |Понятное имя в перечислении DTSBulkInsert_DataFileType|Числовое значение|  
 |--------------------------------------------------|-------------------|  
@@ -164,7 +169,7 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### Задача «Выполнение SQL»  
+### <a name="execute-sql-task"></a>Задача «Выполнение SQL»  
  Свойство**ResultSetType** устанавливается с помощью значений перечисления **ResultSetType** .  
   
 |Понятное имя в перечислении ResultSetType|Числовое значение|  
@@ -182,7 +187,7 @@ caps.handback.revision: 34
 |FileConnection|2|  
 |Переменная|3|  
   
-### Задача "Файловая система"  
+### <a name="file-system-task"></a>Задача "Файловая система"  
  Свойство**Operation** устанавливается с помощью значений перечисления **DTSFileSystemOperation** .  
   
 |Понятное имя в перечислении DTSFileSystemOperation|Числовое значение|  
@@ -208,7 +213,7 @@ caps.handback.revision: 34
 |ReadOnly|4|  
 |System|8|  
   
-### Задача «FTP»  
+### <a name="ftp-task"></a>Задача «FTP»  
  Свойство**Operation** устанавливается с помощью значений перечисления **DTSFTPOp** .  
   
 |Понятное имя в перечислении DTSFTPOp|Числовое значение|  
@@ -222,7 +227,7 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### Задача «Очередь сообщений»  
+### <a name="message-queue-task"></a>Задача «Очередь сообщений»  
  Свойство**MessageType** устанавливается с помощью значений перечисления **MQMessageType** .  
   
 |Понятное имя в перечислении MQMessageType|Числовое значение|  
@@ -248,7 +253,7 @@ caps.handback.revision: 34
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### Задача «Отправка почты»  
+### <a name="send-mail-task"></a>Задача «Отправка почты»  
  Свойство**MessageSourceType** устанавливается с помощью значений перечисления **SendMailMessageSourceType** .  
   
 |Понятное имя в перечислении SendMailMessageSourceType|Числовое значение|  
@@ -265,7 +270,7 @@ caps.handback.revision: 34
 |Нормальный|3|  
 |Низкий|5|  
   
-### Задача «Передача базы данных»  
+### <a name="transfer-database-task"></a>Задача «Передача базы данных»  
  Свойство**Action** устанавливается с помощью значений перечисления **TransferAction** .  
   
 |Понятное имя в перечислении TransferAction|Числовое значение|  
@@ -280,7 +285,7 @@ caps.handback.revision: 34
 |DatabaseOffline|0|  
 |DatabaseOnline|1|  
   
-### Задача «Передача сообщений об ошибках»  
+### <a name="transfer-error-messages-task"></a>Задача «Передача сообщений об ошибках»  
  Свойство**IfObjectExists** устанавливается с помощью значений перечисления **IfObjectExists** .  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
@@ -289,7 +294,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Задача «Передача заданий»  
+### <a name="transfer-jobs-task"></a>Задача «Передача заданий»  
  Свойство**IfObjectExists** устанавливается с помощью значений перечисления **IfObjectExists** .  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
@@ -298,7 +303,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Задача «Передача имен входа»  
+### <a name="transfer-logins-task"></a>Задача «Передача имен входа»  
  Свойство**IfObjectExists** устанавливается с помощью значений перечисления **IfObjectExists** .  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
@@ -315,7 +320,7 @@ caps.handback.revision: 34
 |SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
-### Задача «Передача главных хранимых процедур»  
+### <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»  
  Свойство**IfObjectExists** устанавливается с помощью значений перечисления **IfObjectExists** .  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
@@ -324,7 +329,7 @@ caps.handback.revision: 34
 |Overwrite|1|  
 |Skip|2|  
   
-### Задача «Передача объектов SQL Server»  
+### <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»  
  Свойство**ExistingData** устанавливается с помощью значений перечисления **ExistingData** .  
   
 |Понятное имя в перечислении ExistingData|Числовое значение|  
@@ -332,7 +337,7 @@ caps.handback.revision: 34
 |Заменить|0|  
 |Append|1|  
   
-### Задача «Веб-служба»  
+### <a name="web-service-task"></a>Задача «Веб-служба»  
  Свойство**OutputType** устанавливается с помощью значений перечисления **DTSOutputType** .  
   
 |Понятное имя в перечислении DTSOutputType|Числовое значение|  
@@ -340,7 +345,7 @@ caps.handback.revision: 34
 |Файл|0|  
 |Переменная|1|  
   
-### Задача «Модуль чтения данных WMI»  
+### <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»  
  Свойство**OverwriteDestination** устанавливается с помощью значений перечисления **OverwriteDestination** .  
   
 |Понятное имя в перечислении OverwriteDestination|Числовое значение|  
@@ -410,7 +415,7 @@ caps.handback.revision: 34
 |DirectInput|1|  
 |Переменная|2|  
   
-### Задача «XML»  
+### <a name="xml-task"></a>Задача «XML»  
  Свойство**OperationType** устанавливается с помощью значений перечисления **DTSXMLOperation** .  
   
 |Понятное имя в перечислении DTSXMLOperation|Числовое значение|  
@@ -479,7 +484,7 @@ caps.handback.revision: 34
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживают работу с этими задачами программным путем, а документация по программированию не включает в себя API-документацию для этих задач и их перечислителей.  
   
-### Все задачи плана обслуживания  
+### <a name="all-maintenance-tasks"></a>Все задачи плана обслуживания  
  Все задачи плана обслуживания для установки указанных свойств используют следующие перечисления.  
   
  Свойство**DatabaseSelectionType** устанавливается с помощью значений перечисления **DatabaseSelection** .  
@@ -508,7 +513,7 @@ caps.handback.revision: 34
 |Просмотр|1|  
 |TableView|2|  
   
-### Задача «Создание резервной копии базы данных»  
+### <a name="back-up-database-task"></a>Задача «Создание резервной копии базы данных»  
  Свойство**DestinationCreationType** устанавливается с помощью значений перечисления **DestinationType** .  
   
 |Понятное имя в перечислении DestinationType|Числовое значение|  
@@ -531,7 +536,7 @@ caps.handback.revision: 34
 |Files|1|  
 |Журнал|2|  
   
- Свойство **BackupDevice** устанавливается с помощью значений перечисления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов управления **DeviceType** (SMO).  
+ Свойство**BackupDevice** устанавливается с помощью значений перечисления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов управления **DeviceType** (SMO).  
   
 |Понятное имя в перечислении DeviceType|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -541,7 +546,7 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### Задача «Очистка после обслуживания»  
+### <a name="maintenance-cleanup-task"></a>Задача «Очистка после обслуживания»  
  Свойство**FileTypeSelected** устанавливается с помощью значений перечисления **FileType** .  
   
 |Понятное имя в перечислении FileType|Числовое значение|  
@@ -558,8 +563,8 @@ caps.handback.revision: 34
 |Месяц|2|  
 |Год|3|  
   
-### Задача «Обновление статистики»  
- Свойство **UpdateType** устанавливается с помощью значений перечисления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов управления **StatisticsTarget** (SMO).  
+### <a name="update-statistics-task"></a>Задача «Обновление статистики»  
+ Свойство**UpdateType** устанавливается с помощью значений перечисления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов управления **StatisticsTarget** (SMO).  
   
 |Понятное имя в перечислении StatisticsTarget|Числовое значение|  
 |---------------------------------------|-------------------|  
@@ -575,7 +580,7 @@ caps.handback.revision: 34
 |Понятное имя в перечислении DTSForcedExecResult|Числовое значение|  
 |------------------------------------------|-------------------|  
 |Нет|-1|  
-|Успешно |0|  
+|Успешно|0|  
 |Failure|1|  
 |Completion|2|  
   
@@ -597,14 +602,14 @@ caps.handback.revision: 34
 |Поддерживается|1|  
 |Обязательно|2|  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  [Добавление или изменение выражение свойства](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   
+ [Службы Integration Services &#40; Службы SSIS &#41; Пакеты](../../integration-services/integration-services-ssis-packages.md)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Управление очередностью](../../integration-services/control-flow/precedence-constraints.md)  
+ [Ограничения очередностью](../../integration-services/control-flow/precedence-constraints.md)  
   
   

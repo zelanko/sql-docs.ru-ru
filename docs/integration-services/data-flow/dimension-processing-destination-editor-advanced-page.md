@@ -1,31 +1,36 @@
 ---
-title: "Редактор назначения обработки измерений (страница &#171;Дополнительно&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dimprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "редактор назначения «Обработка измерения»"
+title: "(Страница «Дополнительно») Редактор назначения обработки измерений | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81e97a5a5e653fb02f0e8a1ccc5741bb3e86acf1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор назначения обработки измерений (страница &#171;Дополнительно&#187;)
+# <a name="dimension-processing-destination-editor-advanced-page"></a>Редактор назначения обработки измерений (страница «Дополнительно»)
   Используйте страницу **Дополнительно** диалогового окна **Редактор назначения обработки измерений** для настройки обработки ошибок.  
   
  Дополнительные сведения о назначении обработки измерений см. в разделе [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Использовать конфигурацию ошибок по умолчанию**  
  Укажите, нужно ли использовать обработку ошибок в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по умолчанию. По умолчанию, присваивается значение **True**.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 27
 |**Сообщить и остановиться**|Сообщить об ошибке и остановить обработку.|  
   
  **Ключ NULL преобразован в неизвестный**  
- Выберите действие для ситуации, когда ключ NULL был преобразован в значение **UnknownMember**. По умолчанию, присваивается значение **Пропустить ошибку**.  
+ Выберите действие для ситуации, когда ключ NULL был преобразован в значение **UnknownMember** . По умолчанию, присваивается значение **Пропустить ошибку**.  
   
 |Значение|Description|  
 |-----------|-----------------|  
@@ -96,9 +101,9 @@ caps.handback.revision: 27
  **Обзор (...)**  
  Укажите путь к журналу ошибок.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Обработка измерения" (страница "Диспетчер соединений")](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
- [Редактор назначения "Обработка измерения" (страница "Сопоставления")](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
+ [Редактор назначения обработки измерений &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
+ [Редактор назначения обработки измерений &#40; Страница «сопоставления» &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
   
   

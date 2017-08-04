@@ -1,29 +1,34 @@
 ---
-title: "Диспетчер соединений с неструктурированными файлами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "диспетчеры подключений [службы Integration Services], неструктурированный файл"
-  - "подключения [службы Integration Services], неструктурированные файлы"
-  - "файлы [службы Integration Services], подключения"
-  - "диспетчер соединений с неструктурированными файлами"
-  - "неструктурированные файлы"
-  - "соединения с неструктурированными файлами [службы Integration Services]"
+title: "Flat File Connection Manager | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection managers [Integration Services], Flat File
+- connections [Integration Services], flat files
+- files [Integration Services], connections
+- Flat File connection manager
+- flat files
+- flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f3e174427f1aa92c14952571b0e81070ffe69d2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Диспетчер соединений с неструктурированными файлами
+# <a name="flat-file-connection-manager"></a>Диспетчер соединений с неструктурированными файлами
   Диспетчер соединений с неструктурированными файлами дает возможность пакету получить доступ к данным неструктурированного файла. Например, исходные и целевые неструктурированные файлы могут использоваться диспетчерами соединений с неструктурированными файлами для извлечения и загрузки данных.  
   
  Диспетчер соединений с неструктурированными файлами получает доступ только к одному файлу. Чтобы ссылаться на несколько файлов, воспользуйтесь диспетчером соединений с несколькими неструктурированными файлами вместо обычного диспетчера соединений с неструктурированными файлами. Дополнительные сведения см. в разделе [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  

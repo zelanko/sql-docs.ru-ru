@@ -1,27 +1,32 @@
 ---
-title: "Создание и изменение службы CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание и изменение службы CDC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создание и изменение службы CDC
+# <a name="how-to-create-and-edit-a-cdc-service"></a>Создание и изменение службы CDC
   В этих процедурах описываются способы создания и изменения службы Oracle CDC Service при помощи консоли конфигурации службы CDC.  
   
  Эту процедуру может выполнять пользователь Windows с правами администратора на компьютере, где настроена служба Oracle CDC.  
   
-### Создание службы CDC  
+### <a name="to-create-a-new-cdc-service"></a>Создание службы CDC  
   
 1.  В меню **Пуск** выберите **Конфигурация службы CDC для Oracle**.  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 7
   
 3.  Введите или укажите требуемые сведения в диалоговом окне «Создание службы Oracle CDC Service». Дополнительные сведения о вводе данных в диалоговое окно «Создание службы Oracle CDC Service» см. в разделе [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) .  
   
-     Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , указанное в диалоговом окне «Создание службы Oracle CDC Service», используется службой Oracle CDC Service при работе. Этому имени входа достаточно быть членом предопределенной роли сервера public, никаких других прав доступа не требуется. Когда добавляются новые экземпляры Oracle CDC, это имя входа получает доступ **db_owner** к соответствующим базам данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , указанное в диалоговом окне «Создание службы Oracle CDC Service», используется службой Oracle CDC Service при работе. Этому имени входа достаточно быть членом предопределенной роли сервера public, никаких других прав доступа не требуется. Когда добавляются новые экземпляры Oracle CDC, это имя входа получает доступ **db_owner** к соответствующим базам данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 4.  Введя необходимые данные, нажмите кнопку **OK**.  
   
@@ -41,11 +46,11 @@ caps.handback.revision: 7
   
 5.  Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно «Создание службы Oracle CDC Service».  
   
-### Изменение службы CDC  
+### <a name="to-edit-a-cdc-service"></a>Изменение службы CDC  
   
 1.  В меню **Пуск** выберите **Конфигурация службы CDC для Oracle**.  
   
-2.  На панели слева выберите **Локальные службы CDC**, щелкните правой кнопкой мыши локальную службу, которую нужно изменить, и выберите пункт **Свойства**.  
+2.  На панели слева выберите **Локальные службы CDC** , щелкните правой кнопкой мыши локальную службу, которую нужно изменить, и выберите пункт **Свойства**.  
   
      Можно также выбрать нужную службу в списке, расположенном в центре, и щелкнуть **Свойства** на панели **Действия**.  
   
@@ -53,14 +58,14 @@ caps.handback.revision: 7
   
 4.  Завершив ввод необходимых данных, нажмите кнопку **OK**. Откроется диалоговое окно «Подключение к SQL Server».  
   
-     Если пользователь с именем входа, не имеющим разрешение на запись в базе данных MSXDBDCDC, попытается создать экземпляр Oracle CDC, выводится сообщение об ошибке. Нажмите кнопку **ОК** , чтобы открыть диалоговое окно «Подключение к SQL Server». Введите учетные данные, относящиеся к имени входа, имеющему разрешение на запись в базу данных MSXDBCDC, например учетные данные роли базы данных **db_owner**.  
+     Если пользователь с именем входа, не имеющим разрешение на запись в базе данных MSXDBDCDC, попытается создать экземпляр Oracle CDC, выводится сообщение об ошибке. Нажмите кнопку **ОК** , чтобы открыть диалоговое окно «Подключение к SQL Server». Введите учетные данные, относящиеся к имени входа, имеющему разрешение на запись в базу данных MSXDBCDC, например учетные данные роли базы данных **db_owner** .  
   
      Дополнительные сведения о вводе данных в диалоговое окно «Подключение к SQL Server» см. в разделе [Connection to SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
 5.  Нажмите кнопку **ОК** в диалоговом окне «Подключение к Oracle». Оба диалоговых окна закроются. Служба будет обновлена и зарегистрирована.  
   
-## См. также  
- [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>См. также  
+ [Конструктор системы отслеживания измененных данных для Oracle компании attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Создание и изменение службы CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "Пользовательские свойства неструктурированного файла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские свойства неструктурированного файла | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097c9a07d738bb1b192095ac91448487fdfa0eb1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Пользовательские свойства неструктурированного файла
+# <a name="flat-file-custom-properties"></a>Пользовательские свойства неструктурированного файла
   **Пользовательские свойства источника**  
   
  Источник «Неструктурированный файл» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
@@ -34,7 +39,7 @@ caps.handback.revision: 7
   
 |Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|Логическое значение|Указывает, используются для столбца более быстрые, но независимые от локали процедуры синтаксического анализа, предоставляемые службами DTS, либо стандартные процедуры, зависимые от локали. Дополнительные сведения см. в разделах [Fast Parse](../Topic/Fast%20Parse.md) и [Standard Parse](../Topic/Standard%20Parse.md). Это свойство имеет значение по умолчанию **False**.<br /><br /> Примечание. Это свойство недоступно в диалоговом окне **Редактор источника "Неструктурированный файл"**, однако его можно установить с помощью окна **Расширенный редактор**.|  
+|FastParse|Логическое значение|Указывает, используются для столбца более быстрые, но независимые от локали процедуры синтаксического анализа, предоставляемые службами DTS, либо стандартные процедуры, зависимые от локали. Дополнительные сведения см. в разделах [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). Это свойство имеет значение по умолчанию **False**.<br /><br /> Примечание. Это свойство недоступно в диалоговом окне **Редактор источника "Неструктурированный файл"**, однако его можно установить с помощью окна **Расширенный редактор**.|  
   
  Дополнительные сведения см. в статье [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 7
   
  Дополнительные сведения см. в статье [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
-## См. также  
- [Общие свойства](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>См. также  
+ [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

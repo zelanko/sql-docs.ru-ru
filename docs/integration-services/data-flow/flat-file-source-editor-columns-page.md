@@ -1,26 +1,31 @@
 ---
-title: "Редактор источника &#171;Неструктурированный файл&#187; (страница &#171;Столбцы&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.columns.f1"
-helpviewer_keywords: 
-  - "редактор источника «Неструктурированный файл»"
+title: "Редактор источника «файл» (страница «столбцы») с плоскими | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a34e304d72b80412f5527dcb75f00b6dcb2fcbb2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор источника &#171;Неструктурированный файл&#187; (страница &#171;Столбцы&#187;)
+# <a name="flat-file-source-editor-columns-page"></a>Редактор источника «Неструктурированный файл» (страница «Столбцы»)
   С помощью узла **Столбцы** диалогового окна **Редактор источника "Неструктурированный файл"** можно сопоставлять выходной столбец с каждым внешним (исходным) столбцом.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  Дополнительные сведения об источнике «Неструктурированный файл» см. в разделе [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Доступные внешние столбцы**  
  Просмотр списка доступных внешних столбцов источника данных. В этой таблице нельзя добавлять или удалять столбцы.  
   
@@ -38,10 +43,10 @@ caps.handback.revision: 28
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника "Неструктурированный файл" (страница "Диспетчер соединений")](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
- [Редактор источника "Неструктурированный файл" (страница "Вывод ошибок")](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [Редактор источника неструктурированного файла &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)   
+ [Редактор источника неструктурированного файла &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
  [Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

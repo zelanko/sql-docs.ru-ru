@@ -1,29 +1,34 @@
 ---
-title: "Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.loaddimwizard.histattriboption.f1"
+title: "Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2867e5173235520c521ca70952f50d1fa7bc8487
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений)
+# <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений)
   Диалоговое окно **Параметры атрибутов с предысторией** используется для просмотра атрибутов с предысторией по дате начала и окончания, а также для записи атрибутов с предысторией в специально предназначенный для этого столбец.  
   
  Дополнительные сведения о работе этого мастера см. в разделе [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Использовать общий столбец для вывода текущих и устаревших записей**  
  Если выбрано отображение состояния атрибутов с предысторией в одном столбце, можно выбрать следующие параметры:  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 22
 |**Столбец, содержащий дату окончания события**|Выберите в таблице измерения столбец, в котором находится дата окончания.|  
 |**Переменная для установки значений даты**|Выберите переменную даты из списка.|  
   
-## См. также  
- [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>См. также  
+ [Настройка выходов при помощи мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

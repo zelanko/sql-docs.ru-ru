@@ -1,31 +1,36 @@
 ---
-title: "Редактор преобразования &#171;Нечеткое группирование&#187; (вкладка &#171;Столбцы&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtransformation.columns.f1"
-helpviewer_keywords: 
-  - "редактор преобразования «Нечеткое группирование»"
+title: "Редактор преобразования Нечеткое группирование (вкладка «столбцы») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+helpviewer_keywords:
+- Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6040dde176f4f92674fd267388ff28a08499137b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор преобразования &#171;Нечеткое группирование&#187; (вкладка &#171;Столбцы&#187;)
+# <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Редактор преобразования «Нечеткое группирование» (вкладка «Столбцы»)
   Используйте вкладку **Столбцы** диалогового окна **Редактор преобразования «Нечеткое группирование»** для задания столбцов, используемых при группировке строк с повторяющимися значениями.  
   
  Дополнительные сведения о преобразовании «Нечеткое группирование» см. в разделе [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  Выберите из списка входные столбцы, используемые для группировки строк с повторяющимися значениями.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 30
  Выберите, следует ли включить входной столбец в вывод преобразования. Все используемые для группирования столбцы автоматически копируются в выход. Дополнительные столбцы можно включать с помощью установки флажка.  
   
  **Входной столбец**  
- Выберите один из входных столбцов, указанных ранее в списке **Доступные входные столбцы**.  
+ Выберите один из входных столбцов, указанных ранее в списке **Доступные входные столбцы** .  
   
  **Псевдоним вывода**  
  Введите описательное имя соответствующего выходного столбца. По умолчанию, имя выходного столбца совпадает с именем входного столбца.  
@@ -66,7 +71,7 @@ caps.handback.revision: 30
  **Флаги сравнения**  
  Дополнительные сведения о параметрах сравнения строк см. в разделе [Сравнение строковых данных](../../../integration-services/data-flow/comparing-string-data.md).  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Определение подобных строк данных с помощью преобразования «Нечеткое группирование»](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

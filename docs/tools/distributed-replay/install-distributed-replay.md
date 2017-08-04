@@ -1,22 +1,27 @@
 ---
-title: "Установка распределенного воспроизведения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Установка распределенного воспроизведения | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Установка распределенного воспроизведения
+# <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
   Распределенное воспроизведение можно установить одним из трех способов:  
   
 -   [Установка распределенного воспроизведения из мастера установки](#bkmk_wizard)  
@@ -62,7 +67,7 @@ caps.handback.revision: 21
   
      \- OR -  
   
-     \<Общий каталог компонента>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента)  
+     \<Совместное использование папка компонента > \Tools\\(предоставленный пользователем альтернативный общий каталог компонента)  
   
 -   64-разрядные системы:  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 21
   
      \- OR -  
   
-     \<Общий каталог компонента (х86)>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента (x86))  
+     \<Совместное использование каталога компонентов (x86) > \Tools\\(предоставленный пользователем альтернативный общий (x86) каталог компонента)  
   
-#### Установка компонентов распределенного воспроизведения  
+#### <a name="to-install-distributed-replay-features"></a>Установка компонентов распределенного воспроизведения  
   
 1.  Чтобы начать установку компонентов распределенного воспроизведения, запустите мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 2.  На странице **Правила поддержки установки** указаны проблемы, которые могут возникнуть в ходе установки файлов поддержки SQL Server. Прежде чем продолжить установку, следует устранить все ошибки поддержки установки.  
   
-3.  На странице **Ключ продукта** выберите переключатель установки бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или рабочей версии продукта, которая имеет ключ PID. Дополнительные сведения см. в статье [Выпуски и компоненты SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+3.  На странице **Ключ продукта** выберите переключатель установки бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или рабочей версии продукта, которая имеет ключ PID. Дополнительные сведения см. в статье [Выпуски и компоненты SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 4.  На странице **Условия лицензии** прочтите лицензионное соглашение и установите флажок, подтверждая принятие условий соглашения. Чтобы помочь в улучшении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно также включить параметр наблюдения за использованием компонентов и отправлять отчеты в [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -110,9 +115,9 @@ caps.handback.revision: 21
   
 8.  При необходимости нажмите кнопку с многоточием (…), чтобы изменить путь к общей папке компонента.  
   
-    1.  На 32-разрядных компьютерах путь установки по умолчанию — **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    1.  На 32-разрядных компьютерах путь установки по умолчанию — **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  На 64-разрядных компьютерах путь установки по умолчанию — **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  На 64-разрядных компьютерах путь установки по умолчанию — **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. По завершении нажмите кнопку **Далее**.  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 21
     > [!IMPORTANT]  
     >  После установки компонентов распределенного воспроизведения необходимо создать правила брандмауэра на компьютерах контроллера и клиента и предоставить каждому из клиентских компьютеров разрешения на целевом сервере. Дополнительные сведения см. в статье [Выполнение действий после установки](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-### Безопасность .NET Framework  
+### <a name="net-framework-security"></a>Безопасность .NET Framework  
  Для установки компонентов распределенного воспроизведения необходимо обладать разрешениями администратора. Только имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с разрешениями sysadmin может добавлять учетные записи службы клиента в роль sysadmin тестового сервера. Дополнительные сведения о вопросах безопасности распределенного воспроизведения см. в разделе [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ##  <a name="bkmk_command_prompt"></a> Установка распределенного воспроизведения из командной строки  
@@ -138,8 +143,8 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.  
   
-### Параметры установки  
- В список компонентов верхнего уровня входят [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и средства. Компонент «Инструменты» устанавливает средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], электронную документацию по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и другие общие компоненты. Чтобы установить компоненты программы распределенного воспроизведения, укажите следующие параметры:  
+### <a name="installation-parameters"></a>Параметры установки  
+ В список компонентов верхнего уровня входят [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и средства. Компонент «Инструменты» устанавливает средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , электронную документацию по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и другие общие компоненты. Чтобы установить компоненты программы распределенного воспроизведения, укажите следующие параметры:  
   
 |Компонент|Параметр|  
 |---------------|---------------|  
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **Необязательно**|Рабочий каталог для службы клиента распределенного воспроизведения.|Верный путь|  
 |/CLTRESULTDIR<br /><br /> **Необязательно**|Каталог результатов для службы клиента распределенного воспроизведения.|Верный путь|  
   
-### Образец синтаксиса  
+### <a name="sample-syntax"></a>Образец синтаксиса  
  **Установка контроллера распределенного воспроизведения**  
   
 ```  
@@ -187,18 +192,18 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   Значения командной строки перезаписывают значения в файле конфигурации.  
   
- Дополнительные сведения см. в статье [Установка SQL Server 2016 с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+ Дополнительные сведения см. в статье [Установка SQL Server 2016 с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
 > [!IMPORTANT]  
 >  После установки компонентов распределенного воспроизведения необходимо создать правила брандмауэра на компьютерах контроллера и клиента и предоставить каждому из клиентских компьютеров разрешения на целевом сервере. Дополнительные сведения см. в статье [Выполнение действий после установки](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
   
-#### Создание файла конфигурации  
+#### <a name="to-generate-a-configuration-file"></a>Создание файла конфигурации  
   
 1.  Следуйте указаниям мастера установки до страницы **Все готово для установки** . Путь к файлу конфигурации указывается на странице **Все готово для установки** в разделе пути файла конфигурации.  
   
 2.  Отмените установку, не завершая ее, чтобы создать INI-файл.  
   
-#### Установка компонентов распределенного воспроизведения с помощью файла конфигурации  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>Установка компонентов распределенного воспроизведения с помощью файла конфигурации  
   
 -   Запустите установку из командной строки и укажите файл ConfigurationFile.ini в параметре ConfigurationFile.  
   
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Необходимо указать оба пароля в командной строке, так как их нельзя задать в файле конфигурации.  
   
-## См. также:  
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+## <a name="see-also"></a>См. также:  
+ [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

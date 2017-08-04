@@ -1,25 +1,30 @@
 ---
-title: "Как управлять локальной службой CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как управлять локальной службой CDC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40678ff92e4513354db09cca42d48ed0302369ac
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Как управлять локальной службой CDC
+# <a name="how-to-manage-a-local-cdc-service"></a>Как управлять локальной службой CDC
   В этой процедуре описывается использование консоли настройки службы CDC для управления конкретными службами CDC.  
   
-### Управление конкретной службой CDC  
+### <a name="to-manage-a-specific-cdc-service"></a>Управление конкретной службой CDC  
   
 1.  В меню **Пуск** выберите пункт **Конфигурация служб CDC для Oracle**.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 6
   
          Также можно щелкнуть правой кнопкой мыши службу CDC, свойства которой требуется изменить, и выбрать команду **Свойства**.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Управление службой CDC Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

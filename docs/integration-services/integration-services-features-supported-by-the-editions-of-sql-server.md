@@ -1,30 +1,35 @@
 ---
-title: "Функции служб Integration Services, поддерживаемые различными выпусками SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Функции, поддерживаемые различными выпусками SQL Server служб Integration Services | Документы Microsoft"
+ms.custom: 
+ms.date: 07/26/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Функции служб Integration Services, поддерживаемые различными выпусками SQL Server
+# <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Возможности интеграции служб, поддерживаемые различными выпусками SQL Server
  В этом разделе подробно описаны функции служб SQL Server Integration Services (SSIS), поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
-Компоненты, поддерживаемые выпусками Evaluation и Developer, перечислены в разделе SQL Server Enterprise Edition. 
+Возможности, поддерживаемые выпусками Evaluation и Developer см. в функции, перечисленные для выпуска Enterprise Edition в следующих таблицах.
   
-Актуальные заметки о выпуске и сведения о новых возможностях содержатся в следующих разделах:
+Последние заметки о выпуске и возможности новой информации см. следующие статьи:
 -   [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
--   [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [Новые возможности служб Integration Services в SQL Server vNext](../integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md)
+-   [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
+-   [Новые возможности служб Integration Services в SQL Server 2017 г.](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **Оцените SQL Server 2016!**    
 
@@ -32,50 +37,54 @@ caps.handback.revision: 14
     
 > [![Скачать на странице центра оценки](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Скачайте SQL Server 2016 на странице центра оценки](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Значок виртуальной машины Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Разверните виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+## <a name="ISNew"></a>Новые возможности служб Integration Services в SQL Server 2017 г.
+  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Горизонтальное масштабирование Master|Да|||||
+|Горизонтальное масштабирование работника|Да|Да <sup>1</sup>|TBD|TBD|TBD|
+|Поддержка Microsoft Dynamics AX и Microsoft Dynamics CRM в компонентах OData <sup>2</sup>|Да|Да||||
 
-##  <a name="a-nameisanew-integration-services-features-in-sql-server-vnext"></a><a name="IS"></a> Новые функции служб Integration Services в SQL Server vNext
-  
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Масштабирование|Да||||||Да|
-|Поддержка Microsoft Dynamics CRM и Microsoft Dynamics AX в компонентах OData <sup>1</sup>|Да|Да|||||Да|
+<sup>1</sup> при выполнении пакетов, которые требуется только для корпоративных возможностей в масштабное развертывание работников масштабирования, необходимо также выполнить на экземплярах SQL Server Enterprise.
 
-<sup>1</sup> Эта функция также поддерживается в SQL Server 2016 с пакетом обновления 1 (SP1).
+<sup>2</sup> эта функция также поддерживается в SQL Server 2016 с пакетом обновления 1.
 
-##  <a name="a-nameisa-integration-services"></a><a name="IS"></a> Службы Integration Services  
-  
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Встроенные соединители источника данных|Да|Да|Да|Да|Да|Да|Да|  
-|Соединители источника данных Azure и задачи|Да|Да|Да|Да|Да|Да|Да|  
-|мастер импорта и экспорта SQL Server|Да|Да|Да|Да|Да|Да|Да|  
-|Соединители и задачи Hadoop и HDFS|Да|Да|Да||||Да|  
-|Конструктор и среда выполнения служб SSIS|Да|Да|||||Да|  
-|Встроенные задачи и преобразования|Да|Да|||||Да|  
-|Средства профилирования основных данных|Да|Да|||||Да|  
-|Служба системы отслеживания измененных данных для Oracle компании Attunity|Да||||||Да|  
-|Конструктор системы отслеживания измененных данных для Oracle компании Attunity|Да||||||Да| 
+## <a name="IEWiz"></a>Мастер экспорта и импорта SQL Server
 
-##  <a name="a-nameisaaa-integration-services---advanced-adapters"></a><a name="ISAA"></a> Службы Integration Services — дополнительные адаптеры  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|мастер импорта и экспорта SQL Server|Да|Да|Да|Да|Да|  
+
+## <a name="IS"></a> Службы Integration Services  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Высокопроизводительное назначение Oracle|Да||||||Да|  
-|Высокопроизводительное назначение Teradata|Да||||||Да|  
-|Источник и назначение SAP BW|Да||||||Да|  
-|Адаптер загрузки обучающих данных модели интеллектуального анализа данных|Да||||||Да|  
-|Адаптер загрузки данных «Обработка измерения»|Да||||||Да|  
-|Адаптер загрузки данных обработки секций|Да||||||Да|  
-|Компоненты системы отслеживания измененных данных от компании Attunity|Да||||||Да|  
-|Соединитель для ODBC от компании Attunity|Да||||||Да|  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Встроенные соединители источника данных|Да|Да|||| 
+|Встроенные задачи и преобразования|Да|Да||||  
+|Источник и назначение от компании Attunity|Да|Да|||| 
+|Соединители источника данных Azure и задачи|Да|Да||||  
+|Hadoop и HDFS соединители и задачи|Да|Да||||  
+|Средства профилирования основных данных|Да|Да|||| 
+
+## <a name="ISAA"></a>Службы Integration Services — Дополнительные источники и назначения  
   
-##  <a name="a-nameisata-integration-services---advanced-transforms"></a><a name="ISAT"></a> Службы Integration Services — дополнительные преобразования  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Назначение высокой производительности Oracle от Attunity|Да|||||  
+|Назначение Teradata высокой производительности от компании Attunity|Да|||||  
+|Источник и назначение SAP BW|Да|||||  
+|Назначение «Обучение модели интеллектуального анализа данных»|Да|||||  
+|Назначение «Обработка измерений»|Да|||||  
+|Назначение обработки секции|Да|||||  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Сохраняемые (высокопроизводительные) уточняющие запросы|Да||||||Да|  
-|Преобразование «Запрос интеллектуального анализа данных»|Да||||||Да|  
-|Преобразования «Нечеткое группирование» и «Уточняющий запрос»|Да||||||Да|  
-|Извлечение терминов и преобразование «Уточняющий запрос»|Да||||||Да|  
+## <a name="ISAT"></a>Службы Integration Services — дополнительные задачи и преобразования  
   
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Постоянный (высокопроизводительные) уточняющие запросы|Да|||||  
+|Изменить компоненты отслеживания измененных данных attunity <sup>1</sup>|Да|||||  
+|Преобразование «Запрос интеллектуального анализа данных»|Да|||||  
+|«Нечеткое группирование» и «Нечеткий уточняющий запрос»|Да|||||  
+|Извлечение терминов и «Уточняющий запрос термина»|Да|||||  
+
+<sup>1</sup> компоненты измененных данных attunity требуют Enterprise edition. Change Data Capture Service и записать конструктор данных, тем не менее, не требуют Enterprise edition. Можно использовать конструктор и служба на компьютере, где не установлено служб SSIS.

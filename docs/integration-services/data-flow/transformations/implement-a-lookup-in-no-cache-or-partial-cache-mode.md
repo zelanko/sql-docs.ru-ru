@@ -1,27 +1,32 @@
 ---
-title: "Реализация уточняющего запроса в режиме &#171;Частичное кэширование&#187; или &#171;Без кэширования&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Преобразование «Уточняющий запрос»"
-  - "точно соответствовать [службы Integration Services]"
-  - "уточняющие запросы [службы Integration Services]"
-  - "точные соответствия [службы Integration Services]"
+title: "Реализация уточняющего запроса в режиме частичного кэширования или без кэширования | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Реализация уточняющего запроса в режиме &#171;Частичное кэширование&#187; или &#171;Без кэширования&#187;
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать частичный кэш или не использовать режим кэша.  
   
 -   Частичное кэширование  
@@ -34,7 +39,7 @@ caps.handback.revision: 67
   
  Независимо от того, используется ли частичное кэширование или кэш не используется, чтобы подключиться к эталонному набору данных, используется диспетчер соединений OLE DB. Создание эталонного набора данных производится по таблице, представлению или SQL-запросу во время выполнения преобразования «Уточняющий запрос».  
   
-### Реализация преобразования «Уточняющий запрос» в режиме частичного кэширования или режиме без кэширования  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>Реализация преобразования «Уточняющий запрос» в режиме частичного кэширования или режиме без кэширования  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет, и затем откройте пакет.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 67
   
 4.  Чтобы настроить компонент, дважды щелкните источник или предыдущее преобразование.  
   
-5.  Дважды щелкните преобразование "Уточняющий запрос", а затем в окне **Редактор преобразования "Уточняющий запрос"** на странице **Общие** выберите **Частичное кэширование** или **Без кэширования**.  
+5.  Дважды щелкните преобразование "Уточняющий запрос", а затем в окне **Редактор преобразования "Уточняющий запрос"**на странице **Общие** выберите **Частичное кэширование** или **Без кэширования**.  
   
 6.  В списке **Укажите метод обработки строк без совпадающих элементов** выберите параметр обработки ошибок.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 67
   
 14. Нажмите кнопку **ОК** , чтобы сохранить изменения в преобразовании «Уточняющий запрос», а затем запустите пакет.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
