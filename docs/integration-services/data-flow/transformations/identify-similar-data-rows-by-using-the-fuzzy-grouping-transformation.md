@@ -1,30 +1,35 @@
 ---
-title: "Определение подобных строк данных с помощью преобразования &#171;Нечеткое группирование&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "преобразование «Нечеткое группирование»"
-  - "сопоставление схожих данных [службы Integration Services]"
-  - "похожие строки данных [службы Integration Services]"
-  - "нечеткие соответствия"
+title: "Определение подобных строк данных с помощью преобразования «Нечеткое группирование» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Fuzzy Grouping transformation
+- match similar data [Integration Services]
+- similar data rows [Integration Services]
+- fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d6d11c2474853586930e5cd46fde8f61526cd6ed
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Определение подобных строк данных с помощью преобразования &#171;Нечеткое группирование&#187;
+# <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Определение подобных строк данных с помощью преобразования «Нечеткое группирование»
   Перед добавлением и настройкой преобразования «Нечеткое группирование» в пакете уже должен содержаться хотя бы один источник и задача потока данных.  
   
-### Включение преобразования «Нечеткое группирование» в поток данных  
+### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>Включение преобразования «Нечеткое группирование» в поток данных  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
   
 9. Существует дополнительная возможность обновления имен выходных столбцов в столбце **Псевдоним выхода** .  
   
-10. Можно также обновить имена очищенных столбцов в столбце **Псевдоним группы вывода**.  
+10. Можно также обновить имена очищенных столбцов в столбце **Псевдоним группы вывода** .  
   
     > [!NOTE]  
     >  По умолчанию столбцам присваиваются имена входных столбцов с суффиксом «_clean».  
@@ -68,7 +73,7 @@ caps.handback.revision: 23
   
 15. Чтобы указать, каким образом преобразование сравнивает символьные данные в столбце, измените установленные по умолчанию параметры сравнения в столбце **Флаги сравнения** .  
   
-16. Щелкните вкладку **Дополнительно**, чтобы изменить имена столбцов, которые преобразование добавляет к выходу для уникального идентификатора строки (_key_in), идентификатора повторяющейся строки (_key_out) и значения подобия (_score).  
+16. Щелкните вкладку **Дополнительно** , чтобы изменить имена столбцов, которые преобразование добавляет к выходу для уникального идентификатора строки (_key_in), идентификатора повторяющейся строки (_key_out) и значения подобия (_score).  
   
 17. При желании можно отрегулировать порог подобия при помощи ползунка.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 23
   
 20. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование «Нечеткое группирование»](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   

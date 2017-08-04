@@ -1,25 +1,30 @@
 ---
-title: "Разрешения объекта модели (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разрешения [службы Master Data Services], объекты модели"
-  - "модели [службы Master Data Services], разрешения объектов"
+title: "Разрешения объекта (Master Data Services) модели | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Master Data Services], model objects
+- models [Master Data Services], object permissions
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee6ede91067d2b358a403458e07af37b2f895ac3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Разрешения объекта модели (службы Master Data Services)
+# <a name="model-object-permissions-master-data-services"></a>Разрешения объекта модели (службы Master Data Services)
   Разрешения объекта модели являются обязательными. Они определяют атрибуты, к которым пользователь может получить доступ в функциональной области **Обозреватель** пользовательского интерфейса.  
   
  Например, если пользователь имеет разрешение **Обновление** в сущности «Продукт», то пользователь может обновлять все атрибуты этой сущности. Если назначено разрешение **Обновление** для одного атрибута, то пользователь может обновлять только этот атрибут.  
@@ -32,17 +37,17 @@ caps.handback.revision: 9
   
  Объектам модели можно назначить сочетание из разрешений на чтение, создание, обновление и удаление, а также запретить их. Если на вкладке **Модели** не будут назначены никакие разрешения, то пользователь не сможет просматривать модели и данные в среде [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## Рекомендации  
+## <a name="best-practice"></a>Рекомендации  
  Как правило, рекомендуется назначить разрешение **Все** объекту модели, а затем явно назначить разрешение объектам на нижнем уровне.  
   
-## Внешние ресурсы  
+## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## См. также:  
- [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Разрешения модели (службы Master Data Services)](../master-data-services/model-permissions-master-data-services.md)   
- [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   
- [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Назначение разрешений для объекта модели &#40; Службы Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Модели разрешения &#40; Службы Master Data Services &#41;](../master-data-services/model-permissions-master-data-services.md)   
+ [Разрешения функциональной области &#40; Службы Master Data Services &#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [Разрешения для элементов иерархии &#40; Службы Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Способ определения разрешений &#40; Службы Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Редактор источника &#171;Неструктурированный файл&#187; (страница &#171;Диспетчер соединений&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.connection.f1"
-helpviewer_keywords: 
-  - "редактор источника «Неструктурированный файл»"
+title: "Редактор источника «файл» (страница «Диспетчер соединений») с плоскими | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1eabce2627126b883d0d246c0306a6efdfaa3b8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор источника &#171;Неструктурированный файл&#187; (страница &#171;Диспетчер соединений&#187;)
+# <a name="flat-file-source-editor-connection-manager-page"></a>Редактор источника «Неструктурированный файл» (страница «Диспетчер соединений»)
   Для выбора диспетчера соединений, который будет использоваться источником «Неструктурированный файл», используется страница **Диспетчер соединений** диалогового окна **Редактор источника «Неструктурированный файл»** . Источник «Неструктурированный файл» считывает данные из текстового файла, который может содержать разделители, поля фиксированной ширины или иметь смешанный формат.  
   
  Источник «Неструктурированный файл» может использовать один из следующих типов диспетчера соединений.  
@@ -31,23 +36,23 @@ caps.handback.revision: 29
   
  Дополнительные сведения об источнике «Неструктурированный файл» см. в разделе [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
-## Параметры  
- **Диспетчер соединений с неструктурированными файлами**  
+## <a name="options"></a>Параметры  
+ **Flat file connection manager**  
  Выберите существующий диспетчер соединений из списка или создайте новый диспетчер соединений, нажав кнопку **Создать**.  
   
  **Создать**  
- Создайте новый диспетчер соединений с помощью диалогового окна **Редактор диспетчера соединений с неструктурированными файлами**.  
+ Создайте новый диспетчер соединений с помощью диалогового окна **Редактор диспетчера соединений с неструктурированными файлами** .  
   
  **Оставлять значения NULL из источника в потоке данных**  
  Укажите, нужно ли сохранять значения NULL при извлечении данных. Значение по умолчанию этого свойства равно **false**. Когда значение равно f**alse**, источник неструктурированных файлов заменяет значения NULL из данных источника соответствующими значениями по умолчанию для каждого столбца, например пустыми строками для строковых столбцов и нулями для числовых столбцов.  
   
  **Предварительный просмотр**  
- Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных**. В окне «Предварительный просмотр» может отображаться до 200 строк.  
+ Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника "Неструктурированный файл" (страница "Столбцы")](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
- [Редактор источника "Неструктурированный файл" (страница "Вывод ошибок")](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [Редактор источника неструктурированного файла &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
+ [Редактор источника неструктурированного файла &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
  [Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

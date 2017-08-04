@@ -1,30 +1,35 @@
 ---
-title: "Преобразование &#171;Производный столбец&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.derivedcolumntrans.f1"
-helpviewer_keywords: 
-  - "несколько производных столбцов"
-  - "выражения [службы Integration Services], производные столбцы"
-  - "производные столбцы"
-  - "столбцы [службы Integration Services], производные"
-  - "преобразование «Производный столбец»"
+title: "Производный столбец преобразования | Документы Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.derivedcolumntrans.f1
+helpviewer_keywords:
+- multiple derived columns
+- expressions [Integration Services], derived columns
+- derived columns
+- columns [Integration Services], derivations
+- Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 caps.latest.revision: 60
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51522b2df0c47048cbc62a6fb6997e40a484d7d6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование &#171;Производный столбец&#187;
+# <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
   Преобразованием «Производный столбец» создаются новые значения столбцов путем применения выражений к входным столбцам преобразования. Выражения могут содержать любые сочетания переменных, функций, операторов и столбцов из входа преобразования. Результат добавляется в новый столбец или вставляется в существующий как замещающее значение. При преобразовании «Производный столбец» может быть определено несколько производных столбцов, и любая переменная или входные столбцы могут присутствовать в нескольких выражениях.  
   
  Преобразование можно применять для выполнения следующих задач.  
@@ -61,7 +66,7 @@ caps.handback.revision: 60
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -75,3 +80,4 @@ caps.handback.revision: 60
   
 ## <a name="related-content"></a>См. также  
  Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
+

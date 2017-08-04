@@ -1,32 +1,37 @@
 ---
-title: "Варианты развертывания модели (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Модели параметры развертывания (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b32c2f58468c64d4c311b196f012b1a645bb216f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Варианты развертывания модели (службы Master Data Services)
+# <a name="model-deployment-options-master-data-services"></a>Варианты развертывания модели (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]при развертывании файла пакета модели необходимо решить, следует ли развернуть новую или клонированную модель либо обновить модель, клонированную ранее.  
   
-## Рабочие процессы  
+## <a name="workflows"></a>Рабочие процессы  
  При работе с пакетами модели имеется два основных рабочих процесса.  
   
 -   Создание пакета модели в тестовой среде и развертывание клона модели в рабочей среде. Со временем обновления из тестовой среды будут развертываться в рабочей среде.  
   
 -   Создание пакета модели и развертывание его в виде новой модели в той же среде. В этом случае необходимо указать новое имя для модели.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  В базе данных MDS каждый объект модели имеет уникальный идентификатор. Эти идентификаторы включаются в пакеты развертывания модели. При развертывании пакета необходимо решить, что делать с этими идентификаторами.  
   
  Следующая таблица поможет определить вариант действий при развертывании модели с использованием мастера развертывания моделей в области системного администрирования или средства MDSModelDeploy.  
@@ -37,9 +42,9 @@ caps.handback.revision: 6
 |Клонировать|Создание новой модели, которая является точным клоном модели в пакете. Это работает, только если модель (с таким же именем или идентификатором) в целевой среде не существует. Используйте клонирование, если нужно иметь одну модель в различных средах и периодически обновлять эту клонированную модель.|Это поведение по умолчанию мастера в веб-приложении. Если модель с таким же именем или идентификатором уже существует, появится запрос о создании новой модели.|  
 |Update|Обновление существующей модели моделью из пакета. Идентификаторы в обеих моделях должны быть одинаковыми. Этот вариант используется для обновления ранее клонированной модели.|Обновлять можно только ранее клонированные модели. (Имена и идентификаторы должны совпадать.)|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [Развертывание пакета развертывания модели с помощью мастера](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+ [Развертывание моделей &#40; Службы Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

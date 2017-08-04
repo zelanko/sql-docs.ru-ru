@@ -1,42 +1,40 @@
 ---
-title: "Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.savedtspackage.f1"
+title: "Сохранить пакет служб SSIS (мастер экспорта и импорта SQL Server) | Документы Microsoft"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 caps.latest.revision: 64
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
----
-# Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
-  Если на странице **Сохранение и запуск пакета** вы указали, что хотите сохранить созданный пакет служб SSIS, мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает окно **Сохранение пакета служб SSIS**. На этой странице можно указать дополнительные параметры для сохранения пакета.  
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 6ebbab742350e6874b86213c1fbf516e095a1e9a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
 
-Параметры, которые вы видите на странице **Сохранение пакета служб SSIS**, зависят от выбора, сделанного ранее на странице **Сохранение и запуск пакета** и касающегося сохранения пакета в SQL Server или в файловой системе. Чтобы ознакомиться с описанием страницы **Сохранение и запуск пакета**, см. раздел [Сохранение и запуск пакета](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+---
+# <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
+  Если вы указали на **сохранить и запустить пакет** страницы, который вы хотите сохранить их в виде пакета SQL Server Integration Services (SSIS), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] показан мастер импорта и экспорта **Сохранение пакета служб SSIS**. На этой странице можно указать дополнительные параметры для сохранения пакета, созданного с помощью мастера.  
+
+Параметры, которые вы видите на странице **Сохранение пакета служб SSIS** , зависят от выбора, сделанного ранее на странице **Сохранение и запуск пакета** и касающегося сохранения пакета в SQL Server или в файловой системе. Чтобы ознакомиться с описанием страницы **Сохранение и запуск пакета** , см. раздел [Сохранение и запуск пакета](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
 **Что такое пакет?** Мастер использует службы SQL Server Integration Services (SSIS) для копирования данных. В службах SSIS основной единицей является пакет. По мере перемещения по страницам и указания параметров мастер создает пакет служб SSIS в памяти.
- 
-## <a name="screen-shot---save-the-package-in-the-file-system"></a>Снимок экрана: сохранение пакета в файловой системе
- 
-На следующем снимке экрана показана страница мастера **Сохранение пакета служб SSIS**, отображаемая после выбора параметра **Файловая система** на странице **Сохранение и запуск пакета**. 
-  
-![Save SSIS Package page of the Import and Export Wizard](../../integration-services/import-export-data/media/save-package1.png "Save SSIS Package page of the Import and Export Wizard")  
 
-## <a name="screen-shot---save-the-package-in-sql-server"></a>Снимок экрана: сохранение пакета в SQL Server
+## <a name="screen-shot---common-options"></a>Снимок - экрана общих параметров
+На следующем снимке экрана показаны в первой части **Сохранение пакета служб SSIS** странице мастера. Остальная часть страницы имеет переменное число параметров, которые зависят от выбранного назначения пакетов.
 
- На следующем снимке экрана показана страница мастера **Сохранение пакета служб SSIS**, отображаемая после выбора параметра **SQL Server** на странице **Сохранение и запуск пакета**. 
-  
-![Save SSIS Package page of the Import and Export Wizard](../../integration-services/import-export-data/media/save-package2.png "Save SSIS Package page of the Import and Export Wizard")  
-  
+![Сохранение пакета - Общие параметры](../../integration-services/import-export-data/media/save-package-common-options.png)
+
 ## <a name="provide-a-name-and-description-for-the-package"></a>Укажите имя и описание пакета  
  **Название**  
  Введите уникальное имя пакета.  
@@ -45,27 +43,18 @@ caps.handback.revision: 61
  Введите описание пакета. Рекомендуется описать назначение пакета, чтобы сделать работу с пакетами проще и понятнее.  
   
  **Цель**  
- Назначение ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или файловая система), указанное ранее для пакета. Если вы хотите сохранить пакет в другом назначении, вернитесь на страницу **Сохранение и запуск пакета**.
-  
-## <a name="save-the-package-in-the-file-system"></a>Сохранение пакета в файловой системе 
-Если в качестве назначения выбрана файловая система, заполните следующие поля.
+ Назначение ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или файловая система), указанное ранее для пакета. Если вы хотите сохранить пакет в другом назначении, вернитесь на страницу **Сохранение и запуск пакета** .
 
- **Имя файла**  
- Введите путь и имя файла для целевого файла или используйте кнопку **Обзор**, чтобы выбрать расположение.  
-  
-> [!TIP] Не забудьте указать конечную папку, введя ее либо перейдя к ней. Если ввести только имя файла без пути, вы не будете знать, где мастер сохранит пакет. Кроме того, мастер может попытаться сохранить пакет в расположении, где у него нет разрешения на сохранение файлов, что приводит к ошибке.  
->   
->  Запомните, где именно сохранен пакет.  
-  
- **Обзор**  
- Можно также перейти по пути к целевому файлу в диалоговом окне **Сохранение пакета**.  
+## <a name="screen-shot---save-the-package-in-sql-server"></a>Снимок экрана: сохранение пакета в SQL Server
 
-## <a name="save-the-package-in-sql-server"></a>Сохранение пакета в SQL Server 
-Если в качестве назначения выбран [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заполните следующие поля.
+ На следующем снимке экрана показано **Сохранение пакета служб SSIS** мастера, если вы выбрали **SQL Server** параметр **сохранить и запустить пакет** страницы. 
+  
+![Сохранить пакет служб SSIS страница мастера импорта и экспорта](../../integration-services/import-export-data/media/save-package2.png "Сохранение пакета служб SSIS страница мастера импорта и экспорта")  
 
-Мастер сохраняет пакет в таблице **sysssispackages** базы денных **msdb**.
- 
- > [!NOTE] При выборе этого параметра пакет не сохраняется в базе данных каталога служб SSIS (SSISDB).  
+## <a name="options-to-specify-target--sql-server"></a>Параметры, задающие (Target = SQL Server) 
+
+ > [!NOTE]
+ > Мастер сохраняет пакет в **msdb** базы данных в **sysssispackages** таблицы. Этого параметра **не** сохранить пакет в базу данных каталога служб SSIS (SSISDB).  
  
  **Имя сервера**  
  Введите или выберите имя целевого сервера.  
@@ -77,15 +66,34 @@ caps.handback.revision: 61
 Подключитесь к серверу, используя проверку подлинности SQL Server.  
   
  **Имя пользователя**  
-Если указана проверка подлинности SQL Server, введите имя пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Если указана проверка подлинности SQL Server, введите имя пользователя.  
   
  **Пароль**  
-Если указана проверка подлинности SQL Server, введите пароль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Если указана проверка подлинности SQL Server, введите пароль.  
+    
+## <a name="screen-shot---save-the-package-in-the-file-system"></a>Снимок экрана: сохранение пакета в файловой системе
+ 
+На следующем снимке экрана показано **Сохранение пакета служб SSIS** мастера, если вы выбрали **файловая система** параметр **сохранить и запустить пакет** страницы. 
   
+![Сохранить пакет служб SSIS страница мастера импорта и экспорта](../../integration-services/import-export-data/media/save-package1.png "Сохранение пакета служб SSIS страница мастера импорта и экспорта")  
+
+## <a name="options-to-specify-target--file-system"></a>Параметры, задающие (Target = файловая система)
+
+ **Имя файла**  
+ Введите путь и имя файла для целевого файла или используйте **Обзор** кнопку, чтобы выбрать место назначения.  
+  
+> [!TIP]
+> Обязательно укажите папку назначения, введя его или просмотра. Если введено только имя файла без пути, вы не знаете, где мастер сохраняет пакет. Кроме того, мастер может попытаться сохранить пакет в расположении, где у него нет разрешения на сохранение файлов, что приводит к ошибке.  
+>   
+>  Запомните, где именно сохранен пакет.  
+  
+ **Обзор**  
+ При необходимости просмотреть и выбрать путь к файлу назначения в **Сохранение пакета** диалоговое окно.  
+
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Сведения о двух страницах с параметрами сохранения пакета  
  Страница **Сохранение пакета служб SSIS** является одной из двух страниц, на которых выбираются параметры для сохранения пакета служб SSIS.  
   
--   На предыдущей странице **Сохранение и выполнение пакета** выбирается тип сохранения пакета — в SQL Server или в виде файла. Здесь также указываются параметры безопасности для сохраняемого пакета. Чтобы ознакомиться с описанием страницы **Сохранение и запуск пакета**, см. раздел [Сохранение и запуск пакета](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+-   На предыдущей странице **Сохранение и выполнение пакета**выбирается тип сохранения пакета — в SQL Server или в виде файла. Здесь также указываются параметры безопасности для сохраняемого пакета. Чтобы ознакомиться с описанием страницы **Сохранение и запуск пакета** , см. раздел [Сохранение и запуск пакета](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
   
 -   На текущей странице указывается имя пакета и вводятся дополнительные сведения о месте его сохранения.  
  
@@ -96,9 +104,9 @@ caps.handback.revision: 61
   
 -   Чтобы запустить пакет из командной строки или из пакетного файла, см. раздел [Программа dtexec](../../integration-services/packages/dtexec-utility.md).  
   
--   Если пакет сохранен в файловой системе, см. раздел [Запуск пакета с помощью SQL Server Data Tools](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md) для запуска пакета в среде разработки. прежде чем открыть и запустить пакет, следует добавить его в проект служб Integration Services.  
- 
 -   Если пакет сохранен в базе данных **msdb** SQL Server, подключитесь к службам Integration Services. Затем обозревателе объектов в среде SQL Server Management Studio перейдите к окну **Сохраненные пакеты | MSDB**, щелкните пакет правой кнопкой мыши и выберите **Выполнить пакет**.
+
+-   Если пакет сохранен в файловой системе, см. раздел [Запуск пакетов служб Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md) для запуска пакета в среде разработки. прежде чем открыть и запустить пакет, следует добавить его в проект служб Integration Services.  
 
 ## <a name="customize-the-saved-package"></a>Настройка сохраненного пакета  
  Дополнительные сведения о настройке сохраненного пакета см. в разделе [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md).  
@@ -112,3 +120,4 @@ caps.handback.revision: 61
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)
  
  
+

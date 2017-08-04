@@ -1,36 +1,41 @@
 ---
-title: "Изменение пакета развертывания модели | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение пакета развертывания модели | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bcf1d714605d3f1df2e713e3e8d0311ca1440210
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Изменение пакета развертывания модели
+# <a name="edit-a-model-deployment-package"></a>Изменение пакета развертывания модели
   В этом разделе описывается развертывание в MDS выбранных частей модели вместо всей модели. Для этого пакет модели MDS необходимо изменить в редакторе пакетов моделей.  
   
  Мастер редактора пакетов моделей позволяет выбирать в модели отдельные сущности, производные иерархии, представления подписок и бизнес-правила, которые будут включены в пакет MDS и впоследствии развернуты. Части модели, развертывать которые не требуется, вы можете оставить невыбранными. При выборе сущности также автоматически выбираются все зависимые объекты в этой сущности.  
   
  С помощью редактора пакетов моделей можно выбирать части модели в файле пакета, созданном либо средством MDSModelDeploy (оно создает файл пакета, включающий объекты и данные), либо мастером развертывания моделей (он создает файл, включающий только структуру модели). После редактирования модели в пакете используйте средство MDSModelDeploy для развертывания объектов и данных или мастер развертывания моделей для развертывания лишь структуры модели.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
 -   Должен существовать пакет модели для изменения. Дополнительные сведения см. в разделах [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md) и [Создание пакета развертывания модели с помощью мастера](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md) или [Создание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-### Изменения пакета развертывания модели  
+### <a name="to-edit-a-model-deployment-package"></a>Изменения пакета развертывания модели  
   
 1.  В проводнике Windows на сервере MDS перейдите в папку *диск*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 7
   
 7.  Нажмите кнопку **Готово**.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   [Развертывание пакета развертывания модели с помощью мастера](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

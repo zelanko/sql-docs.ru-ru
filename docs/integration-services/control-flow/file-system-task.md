@@ -1,33 +1,38 @@
 ---
-title: "Задача &quot;Файловая система&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.f1"
-helpviewer_keywords: 
-  - "задача «Файловая система» [службы Integration Services]"
+title: "Задача «Файловая система» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.filesystemtask.f1
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 0c10a9020fe4fd03e9d71df19a9b16223e3031ea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Задача &quot;Файловая система&quot;
+# <a name="file-system-task"></a>Задача "Файловая система"
   Задача «Файловая система» выполняет операции над файлами и каталогами файловой системы. Например, при помощи задачи «Файловая система» пакет может создавать, перемещать или удалять каталоги и файлы. Можно также использовать данную задачу для установки атрибутов файлов и каталогов. Например, задача «Файловая система« может пометить файлы как скрытые или предназначенные только для чтения.  
   
  Все операции задачи «Файловая система» используют источник, который может быть файлом или каталогом. Например, файл, который копирует задача, или каталог, который она удаляет, является источником. Источник можно указать при помощи диспетчера подключения файлов, который указывает каталог или файл, или определив имя переменной, содержащей путь к источнику. Дополнительные сведения см. в разделах [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md) и [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
  Операции, копирующие и перемещающие файл и каталоги, а также переименовывающие файлы, используют целевой объект и источник. Целевой объект указывается при помощи диспетчера подключения файла или переменной. Операции задачи «Файловая система» можно настроить для возможности перезаписывать целевые файлы и каталоги. Операцию, которая создает новый каталог, можно настроить для использования существующего каталога, имеющего указанное имя. Это позволит избежать ошибки, если каталог уже существует.  
   
-## Предопределенные операции файловой системы  
+## <a name="predefined-file-system-operations"></a>Предопределенные операции файловой системы  
  Задача «Файловая система» содержит предопределенный набор операций. Данные операции описываются в следующей таблице.  
   
 |Операция|Description|  
@@ -49,14 +54,14 @@ caps.handback.revision: 58
   
 -   **Добавление и настройка задачи «Файловая система»** Добавьте задачу «Файловая система» в контейнер «цикл по каждому элементу». На странице **Общие** редактора задачи «Файловая система» установите свойство **SourceVariable** или **DestinationVariable** для переменной, определенной в контейнере «цикл по каждому элементу».  
   
-## Пользовательские записи журнала, доступные в задаче «Файловая система»  
- В следующей таблице перечислены пользовательские записи журнала для задачи «Файловая система». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-log-entries-available-on-the-file-system-task"></a>Пользовательские записи журнала, доступные в задаче «Файловая система»  
+ В следующей таблице перечислены пользовательские записи журнала для задачи «Файловая система». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Запись журнала|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Сообщает об операции, выполняемой задачей. Эта запись журнала формируется, когда операция файловой системы начинается и включает сведения об источнике и назначении.|  
   
-## Настройка задачи «Файловая система»  
+## <a name="configuring-the-file-system-task"></a>Настройка задачи «Файловая система»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
@@ -67,16 +72,16 @@ caps.handback.revision: 58
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат задачу, которая загружает и отправляет файлы данных и управляет каталогами на серверах. Дополнительные сведения см. в статье [FTP Task](../../integration-services/control-flow/ftp-task.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

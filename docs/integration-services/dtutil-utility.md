@@ -1,38 +1,43 @@
 ---
-title: "Программа dtutil | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка пакетов"
-  - "проверка пакетов"
-  - "перемещение пакетов"
-  - "пакеты [служб Integration Services], параметры командной строки"
-  - "командная строка [службы Integration Services]"
-  - "пакеты служб SQL Server Integration Services, параметры командной строки"
-  - "копирование пакетов"
-  - "проверка существования [службы Integration Services]"
-  - "пакеты служб Integration Services, параметры командной строки"
-  - "пакеты служб SSIS, параметры командной строки"
-  - "удаление пакетов"
-  - "dtutil, программа"
-  - "удаление пакетов"
-  - "перемещение пакетов"
+title: "Программа dtutil | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- verifying packages
+- checking packages
+- moving packages
+- packages [Integration Services], command line options
+- command prompt [Integration Services]
+- SQL Server Integration Services packages, command line options
+- copying packages
+- existence testing [Integration Services]
+- Integration Services packages, command line options
+- SSIS packages, command line options
+- deleting packages
+- dtutil utility
+- removing packages
+- relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 caps.latest.revision: 114
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 114
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 15315ffd796662bb814060c62bc0fb3872c9190a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Программа dtutil
-  Программа командной строки **dtutil** предназначена для управления пакетами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] , который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами **/SQL**, **/FILE**и **/DTS**.  
+# <a name="dtutil-utility"></a>dtutil, программа
+  Программа командной строки **dtutil** предназначена для управления пакетами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] , который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами **/SQL**, **/FILE**и **/DTS** .  
   
  Программа командной строки **dtutil** не поддерживает использование командных файлов или перенаправления.  
   
@@ -59,41 +64,40 @@ caps.handback.revision: 114
   
  **Вопросы установки на 64-разрядные компьютеры**  
   
- На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] устанавливают 64-разрядные версии программ **dtexec** (dtexec.exe) и **dtutil** (dtutil.exe). Чтобы установить 32-разрядные версии этих средств служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], при установке необходимо выбрать либо клиентские средства, либо среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] устанавливают 64-разрядные версии программ **dtexec** (dtexec.exe) и **dtutil** (dtutil.exe). Чтобы установить 32-разрядные версии этих средств служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , при установке необходимо выбрать либо клиентские средства, либо среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
- По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Обычно путь к каталогу 32-разрядной версии выглядит следующим образом: *\<диск>*:\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn, а путь к каталогу 64-разрядной версии — *\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn.)  
+ По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Как правило, является путь к каталогу 32-разрядных  *\<диска >*: \Program \Microsoft SQL Server\130\DTS\Binn файлы (x86), а путь к каталогу 64-разрядных  *\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn.)  
   
 > [!NOTE]  
 >  Если для запуска программы используется агент SQL Server, то он автоматически использует 64-разрядную версию программы. Чтобы определить точное расположение исполняемого файла программы, агент SQL Server использует реестр, а не переменную среды PATH.  
   
  Чтобы убедиться, что в командной строке запущена 64-разрядная версия программы, выполните одно из следующих действий.  
   
--   Откройте окно командной строки, задайте путь к каталогу, содержащему 64-разрядную версию программы (*\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn), а затем запустите программу из указанного расположения.  
+-   Откройте окно командной строки, перейдите в каталог, содержащий 64-разрядной версии программы *(\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn), а затем запустите программу из этого расположения.  
   
--   В командной строке запустите программу, введя полный путь (*\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn) к 64-разрядной версии программы.  
+-   В командной строке запустите программу, введя полный путь (*\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn) к 64-разрядной версии программы.  
   
--   Окончательно измените порядок путей в переменной среды PATH, поместив в ней путь к 64-разрядной версии (*\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn) перед путем к 32-разрядной версии (*\<диск>*:\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn).  
+-   Окончательно измените порядок путей в переменной среды PATH, поместив путь 64-разрядной версии (*\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn) перед путем к 32-разрядных (*\<диска >*: \ Программа \Microsoft SQL Server\130\DTS\Binn файлы (x86)) в переменной.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```dos
 dtutil /option [value] [/option [value]]...  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
   
 |Параметр|Description|  
 |------------|-----------------|  
 |/?|Отображает параметры командной строки.|  
-|/C[opy] *location;destinationPathandPackageName*|Указывает операцию копирования для пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Для использования этого параметра следует сначала указать расположение пакета с помощью параметра **/FI**, **/SQ** или **/DT**. Затем нужно указать место назначения и имя целевого пакета. Аргумент *destinationPathandPackageName* указывает, куда будет скопирован пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)]. Если местом назначения *location* является **SQL**, в команде должны также быть указаны аргументы *DestUser*, *DestPassword* и *DestServer* .<br /><br /> Если операция **Copy** обнаруживает существующий пакет в месте назначения, программа **dtutil** запрашивает у пользователя подтверждение удаления пакета. Ответ **Y** приводит к перезаписи пакета, а ответ **N** — к завершению программы. Если команда содержит аргумент *Quiet* , никаких запросов не появится, а любой существующий пакет будет перезаписан.|  
+|/C[opy] *location;destinationPathandPackageName*|Указывает операцию копирования для пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Для использования этого параметра следует сначала указать расположение пакета с помощью параметра **/FI**, **/SQ**или **/DT** . Затем нужно указать место назначения и имя целевого пакета. Аргумент *destinationPathandPackageName* указывает, куда будет скопирован пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Если местом назначения *location* является **SQL**, в команде должны также быть указаны аргументы *DestUser*, *DestPassword* и *DestServer* .<br /><br /> Если операция **Copy** обнаруживает существующий пакет в месте назначения, программа **dtutil** запрашивает у пользователя подтверждение удаления пакета. Ответ **Y** приводит к перезаписи пакета, а ответ **N** — к завершению программы. Если команда содержит аргумент *Quiet* , никаких запросов не появится, а любой существующий пакет будет перезаписан.|  
 |/Dec[rypt] *пароль*|(Необязательно.) Задает пароль для расшифровки, используемый при загрузке пакета с шифрованием пароля.|  
 |/Del[ete]|Удаляет пакет, указанный параметром *SQL*, *DTS* или *FILE* . Если программа **dtutil** не может удалить пакет, она завершает работу.|  
 |/DestP[assword] *пароль*|Указывает пароль, используемый с параметром SQL для подключения к целевому экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Если *DESTPASSWORD* указан в командной строке, где отсутствует параметр *DTSUSER* , возникнет ошибка.<br /><br /> Примечание. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].|  
-|/DestS[erver] *экземпляр_сервера*|Указывает имя сервера, используемое в любой операции, при выполнении которой назначение сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Этот параметр используется для определения удаленного или именованного сервера при сохранении пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)]. Указание *DESTSERVER* в командной строке, в которой отсутствует действие, связанное с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], является ошибкой. Для совместного использования с этим параметром подходят команды *SIGN SQL*, *COPY SQL*и *MOVE SQL* .<br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, добавив обратную косую черту и имя экземпляра к имени сервера.|  
-|/DestU[ser] *имя пользователя*|Указывает имя пользователя, применяемое с параметрами *SIGN SQL*, *COPY SQL* и *MOVE SQL* для подключения к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], использующему проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Указание *DESTUSER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY SQL*или *MOVE SQL* , является ошибкой.|  
-|/Dump *идентификатор процесса*|Приостанавливает указанный процесс (либо программу **dtexec**, либо процесс **dtsDebugHost.exe**) и создает отладочные файлы дампа с расширениями MDMP и TMP (необязательно).<br /><br /> Примечание. Для использования параметра **/Dump** пользователю должно быть назначено право "Отладка программ" (SeDebugPrivilege).<br /><br /> Найти значение параметра *process ID* для приостанавливаемого процесса можно с помощью диспетчера задач Windows.<br /><br /> По умолчанию службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Дополнительные сведения о программе **dtexec** и процессе **dtsDebugHost.exe** см. в разделах [dtexec Utility](../integration-services/packages/dtexec-utility.md) и [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Дополнительные сведения об отладочных файлах дампа см. в разделе [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Примечание. Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL).|  
-|/DT[S] *filespec*|Указывает, что пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , с которым предполагается работать, находится в хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Аргумент *filespec* должен включать путь к папке, начиная от корневой папки хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)]. По умолчанию в файле конфигурации существуют следующие имена корневых папок: «MSDB» и «File System». Пути, содержащие символ пробела, должны быть заключены в двойные кавычки.<br /><br /> Если параметр DT[S] указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
+|/DestS[erver] *экземпляр_сервера*|Указывает имя сервера, используемое в любой операции, при выполнении которой назначение сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Этот параметр используется для определения удаленного или именованного сервера при сохранении пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Указание *DESTSERVER* в командной строке, в которой отсутствует действие, связанное с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], является ошибкой. Для совместного использования с этим параметром подходят команды *SIGN SQL*, *COPY SQL*и *MOVE SQL* .<br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, добавив обратную косую черту и имя экземпляра к имени сервера.|  
+|/DestU[ser] *имя пользователя*|Указывает имя пользователя, применяемое с параметрами *SIGN SQL*, *COPY SQL*и *MOVE SQL* для подключения к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующему проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание *DESTUSER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY SQL*или *MOVE SQL* , является ошибкой.|  
+|/Dump *идентификатор процесса*|Приостанавливает указанный процесс (либо программу **dtexec** , либо процесс **dtsDebugHost.exe** ) и создает отладочные файлы дампа с расширениями MDMP и TMP (необязательно).<br /><br /> Примечание. Для использования параметра **/Dump**пользователю должно быть назначено право "Отладка программ" (SeDebugPrivilege).<br /><br /> Найти значение параметра *process ID* для приостанавливаемого процесса можно с помощью диспетчера задач Windows.<br /><br /> По умолчанию [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке  *\<диска >*: \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Дополнительные сведения о программе **dtexec** и процессе **dtsDebugHost.exe** см. в разделах [dtexec Utility](../integration-services/packages/dtexec-utility.md) и [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Дополнительные сведения об отладочных файлах дампа см. в разделе [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Примечание. Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL).|  
+|/DT[S] *filespec*|Указывает, что пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , с которым предполагается работать, находится в хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Аргумент *filespec* должен включать путь к папке, начиная от корневой папки хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . По умолчанию в файле конфигурации существуют следующие имена корневых папок: «MSDB» и «File System». Пути, содержащие символ пробела, должны быть заключены в двойные кавычки.<br /><br /> Если параметр DT[S] указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(Необязательно.) Шифрует загруженный пакет с указанным уровнем защиты и паролем и сохраняет его в место, указанное в параметре *Path*. Параметр *ProtectionLevel* определяет, необходим ли пароль.<br /><br /> *SQL* — параметр Path является именем целевого пакета.<br /><br /> *FILE* — параметр Path является полным именем файла для пакета.<br /><br /> *DTS* — этот параметр в данный момент не поддерживается.<br /><br /> Параметры*ProtectionLevel* :<br /><br /> Уровень 0. Удаляет конфиденциальные сведения.<br /><br /> Уровень 1. Конфиденциальные сведения шифруются с помощью учетных данных локального пользователя.<br /><br /> Уровень 2. Конфиденциальные сведения шифруются с помощью обязательного пароля.<br /><br /> Уровень 3. Пакет шифруется с помощью обязательного пароля.<br /><br /> Уровень 4. Пакет шифруется с помощью учетных данных локального пользователя.<br /><br /> Уровень 5. Пакет использует шифрование хранилища [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |/Ex[ists]|(Необязательно.) Используется для определения существования пакета. **dtutil** пытается найти пакет, указанный параметрами *SQL*, *DTS* или *FILE* . Если программа **dtutil** не может определить местонахождение указанного пакета, будет возвращена ошибка DTEXEC_DTEXECERROR.|  
 |/FC[reate] {*SQL* &#124; *DTS*};*ParentFolderPath;NewFolderName*|(Необязательно.) Создает новую папку с именем, указанным в параметре *NewFolderName*. Местоположение новой папки указывается параметром *ParentFolderPath*.|  
@@ -102,18 +106,18 @@ dtutil /option [value] [/option [value]]...
 |/FE[xists ] {*SQL* &#124; *DTS*};*FolderPath*|(Необязательно.) Проверяет, существует ли указанная папка на службах [!INCLUDE[ssIS](../includes/ssis-md.md)] или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Параметр *FolderPath* указывает путь и имя папки, которую необходимо проверить.|  
 |/Fi[le] *filespec*|Этот параметр указывает, что пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , с которым производятся действия, расположен в файловой системе. Значение *filespec* может быть предоставлено как путь в формате UNC или локальный путь.<br /><br /> Если параметр *File* указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> **DTS**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/FR[ename] {*SQL* &#124; *DTS*} [;*ParentFolderPath; OldFolderName;NewFolderName]*|(Необязательно.) Переименовывает папку на службах [!INCLUDE[ssIS](../includes/ssis-md.md)] или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. *ParentFolderPath* — местоположение папки для переименования. Параметр *OldFolderName* представляет текущее имя папки, а *NewFolderName* — новое имя, назначаемое ей.|  
-|/H[elp] *параметр*|Отображает подробную текстовую справку, которая иллюстрирует параметры **dtutil** и описывает их использование. Аргумент параметра является необязательным. Если указан этот аргумент, текст справки будет содержать подробные сведения об указанном параметре. В следующем примере отображается справка по всем параметрам:<br /><br /> `dtutil /H`<br /><br /> В следующих двух примерах показано, как использовать параметр */H* для отображения расширенной справки по указанному параметру, в данном случае — по параметру */Q [uiet]*:<br /><br /> `dtutil /Help Quiet`<br /><br /> `dtutil /H Q`|  
+|/H[elp] *параметр*|Отображает подробную текстовую справку, которая иллюстрирует параметры **dtutil** и описывает их использование. Аргумент параметра является необязательным. Если указан этот аргумент, текст справки будет содержать подробные сведения об указанном параметре. В следующем примере отображается справка по всем параметрам:<br /><br /> `dtutil /H`<br /><br /> В следующих двух примерах показано, как использовать параметр */H* для отображения расширенной справки по указанному параметру, в данном случае — по параметру */Q [uiet]* :<br /><br /> `dtutil /Help Quiet`<br /><br /> `dtutil /H Q`|  
 |/I[DRegenerate]|Создает новый идентификатор GUID для пакета и обновляет свойство идентификатора пакета. Когда пакет копируется, идентификатор пакета остается прежним. Поэтому файлы журналов содержат одинаковый идентификатор GUID для обоих пакетов. В этой операции создается новый идентификатор GUID для недавно скопированного пакета, чтобы отличить его от оригинала.|  
-|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|Указывает операцию перемещения для пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Для использования этого параметра следует сначала указать расположение пакета с помощью параметра **/FI**, **/SQ** или **/DT**. Затем укажите действие **Move** (переместить). В этой операции используются два аргумента, разделенные точкой с запятой:<br /><br /> Аргумент назначения может задавать *SQL*, *FILE*или *DTS*. Назначение *SQL* может включать параметры *DESTUSER*, *DESTPASSWORD*и *DESTSERVER* .<br /><br /> Аргумент *pathandname* задает расположение пакета: *SQL* использует путь пакета и имя пакета, *FILE* — путь в формате UNC или локальный путь, *DTS* — расположение относительно корневой папки хранилища пакетов для служб [!INCLUDE[ssIS](../includes/ssis-md.md)]. Если назначением является *FILE* или *DTS*, аргумент path не включает имя файла. В качестве имени файла используется имя пакета, расположенного в указанном местоположении.<br /><br /> <br /><br /> Если операция **MOVE** обнаруживает существующий пакет в месте назначения, программа **dtutil** запрашивает у пользователя подтверждение перезаписи пакета. Ответ **Y** приводит к перезаписи пакета, а ответ **N** — к завершению программы. Если команда содержит параметр *QUIET* , никаких запросов не появится, а любой существующий пакет будет перезаписан.|  
+|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|Указывает операцию перемещения для пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Для использования этого параметра следует сначала указать расположение пакета с помощью параметра **/FI**, **/SQ**или **/DT** . Затем укажите действие **Move** (переместить). В этой операции используются два аргумента, разделенные точкой с запятой:<br /><br /> Аргумент назначения может задавать *SQL*, *FILE*или *DTS*. Назначение *SQL* может включать параметры *DESTUSER*, *DESTPASSWORD*и *DESTSERVER* .<br /><br /> Аргумент *pathandname* задает расположение пакета: *SQL* использует путь пакета и имя пакета, *FILE* — путь в формате UNC или локальный путь, *DTS* — расположение относительно корневой папки хранилища пакетов для служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Если назначением является *FILE* или *DTS*, аргумент path не включает имя файла. В качестве имени файла используется имя пакета, расположенного в указанном местоположении.<br /><br /> <br /><br /> Если операция **MOVE** обнаруживает существующий пакет в месте назначения, программа **dtutil** запрашивает у пользователя подтверждение перезаписи пакета. Ответ **Y** приводит к перезаписи пакета, а ответ **N** — к завершению программы. Если команда содержит параметр *QUIET* , никаких запросов не появится, а любой существующий пакет будет перезаписан.|  
 |/Q[uiet]|Останавливает запросы подтверждения, которые могут появиться при выполнении команды, содержащей параметры **COPY**, **MOVE**или **SIGN** . Эти запросы появляются, если пакет с именем, совпадающим с именем указанного пакета, уже существует на компьютере адресата или если указанный пакет уже подписан.|  
 |/R[emark] *text*|Добавляет примечания к командной строке. Аргумент примечания является необязательным. Если текст примечания содержит символы пробела, он должен быть заключен в кавычки. В командную строку можно включить несколько параметров REM.|  
-|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|Подписывает пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . В этой операции используются три обязательных аргумента, разделенные точками с запятой: destination (место назначения), path (путь) и hash (хэш).<br /><br /> Аргумент назначения может задавать *SQL*, *FILE*или *DTS*. Назначение SQL может включать параметры *DESTUSER*, *DESTPASSWORD* и *DESTSERVER* .<br /><br /> Аргумент path указывает местоположение пакета, над которым будет произведена операция.<br /><br /> Аргумент hash указывает идентификатор сертификата в виде шестнадцатеричной строки переменной длины.<br /><br /> Дополнительные сведения см. в разделе [Определение источника пакетов с помощью цифровых подписей](../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).<br /><br /> <br /><br /> **\*\* Важно! \*\*** Если конфигурация предусматривает проверку подписи пакета, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проверяют только наличие цифровой подписи, ее правильность и надежность источника. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] *не* проверяют, был ли изменен пакет.|  
-|/SourceP[assword] *пароль*|Указывает пароль, который используется вместе с параметрами *SQL* и *SOURCEUSER* , чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраненного в базе данных экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующему проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание параметра *SOURCEPASSWORD* в командной строке, в которой отсутствует параметр **SOURCEUSER** , является ошибкой.<br /><br /> Примечание  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
+|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|Подписывает пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . В этой операции используются три обязательных аргумента, разделенные точками с запятой: destination (место назначения), path (путь) и hash (хэш).<br /><br /> Аргумент назначения может задавать *SQL*, *FILE*или *DTS*. Назначение SQL может включать параметры *DESTUSER*, *DESTPASSWORD* и *DESTSERVER* .<br /><br /> Аргумент path указывает местоположение пакета, над которым будет произведена операция.<br /><br /> Аргумент hash указывает идентификатор сертификата в виде шестнадцатеричной строки переменной длины.<br /><br /> Дополнительные сведения см. в разделе [Определение источника пакетов с помощью цифровых подписей](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).<br /><br /> <br /><br /> **\*\* Важно! \*\*** Если конфигурация предусматривает проверку подписи пакета, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проверяют только наличие цифровой подписи, ее правильность и надежность источника. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]*не* проверяют, был ли изменен пакет.|  
+|/SourceP[assword] *пароль*|Указывает пароль, который используется вместе с параметрами *SQL* и *SOURCEUSER* , чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраненного в базе данных экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующему проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание параметра *SOURCEPASSWORD* в командной строке, в которой отсутствует параметр **SOURCEUSER** , является ошибкой.<br /><br /> Примечание. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *экземпляр_сервера*|Указывает имя сервера, которое используется с параметром **SQL** , чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраненного в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ввод *SOURCESERVER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY* *SQL*или *MOVE* *SQL* , является ошибкой.<br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, добавив обратную косую черту и имя экземпляра к имени сервера.|  
-|/SourceU[ser] *имя пользователя*|Указывает имя пользователя, используемое с параметрами *SOURCESERVER* , чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраненного в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , где используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание *SOURCEUSER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY SQL*или *MOVE SQL* , является ошибкой.<br /><br /> Примечание  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SQ[L] *путь_к_пакету*|Указывает местоположение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Этот параметр указывает, что пакет сохранен в базе данных **msdb** . Аргумент *путь_к_пакету* указывает путь и имя пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)]. Название каждой папки заканчивается обратной косой чертой.<br /><br /> Если параметр *SQL* указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> Параметр *SQL* может сопровождаться следующими параметрами, каждый из которых указывается один раз или не указывается:<br /><br /> *SOURCEUSER*<br /><br /> *SOURCEPASSWORD*<br /><br /> *SOURCESERVER*<br /><br /> <br /><br /> В случае отсутствия параметра *SOURCEUSERNAME* для доступа к пакету используется проверка подлинности Windows. *SOURCEPASSWORD* можно использовать только при наличии *SOURCEUSER* . Если параметр *SOURCEPASSWORD* не указан, используется пустой пароль.<br /><br /> **\*\* Важно \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
+|/SourceU[ser] *имя пользователя*|Указывает имя пользователя, используемое с параметрами *SOURCESERVER* , чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраненного в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , где используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание *SOURCEUSER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY SQL*или *MOVE SQL* , является ошибкой.<br /><br /> Примечание. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
+|/SQ[L] *путь_к_пакету*|Указывает местоположение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Этот параметр указывает, что пакет сохранен в базе данных **msdb** . Аргумент *путь_к_пакету* указывает путь и имя пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Название каждой папки заканчивается обратной косой чертой.<br /><br /> Если параметр *SQL* указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> Параметр *SQL* может сопровождаться следующими параметрами, каждый из которых указывается один раз или не указывается:<br /><br /> *SOURCEUSER*<br /><br /> *SOURCEPASSWORD*<br /><br /> *SOURCESERVER*<br /><br /> <br /><br /> В случае отсутствия параметра *SOURCEUSERNAME* для доступа к пакету используется проверка подлинности Windows. *SOURCEPASSWORD* можно использовать только при наличии *SOURCEUSER* . Если параметр *SOURCEPASSWORD* не указан, используется пустой пароль.<br /><br /> **\*\* Важно! \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
-## Коды завершения программы dtutil  
+## <a name="dtutil-exit-codes"></a>Коды завершения программы dtutil  
  Если обнаружены синтаксические ошибки, указаны неправильные аргументы или недопустимые сочетания параметров, программа**dtutil** возвращает код завершения, который создает соответствующие предупреждения. В противном случае программа выдает сообщение "Операция успешно завершена". В следующей таблице перечислены значения, которые программа **dtutil** может возвращать при завершении.  
   
 |Value|Описание|  
@@ -124,30 +128,30 @@ dtutil /option [value] [/option [value]]...
 |5|Программе не удалось загрузить запрошенный пакет|  
 |6|Программе не удалось разрешить командную строку, потому что та содержит синтаксические или семантические ошибки.|  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Вместе с программой **dtutil**нельзя использовать командные файлы или перенаправление.  
   
  Порядок параметров в пределах командной строки не имеет значения.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующих примерах приведены типичные сценарии использования командной строки.  
   
-### Примеры копирования  
+### <a name="copy-examples"></a>Примеры копирования  
  Чтобы скопировать пакет, хранящийся в базе данных **msdb** в локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в хранилище пакетов служб SSIS с помощью проверки подлинности Windows, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /SQL srcPackage /COPY DTS;destFolder\destPackage   
 ```  
   
  Чтобы скопировать пакет, находящийся в файловой системе, в другое местоположение и назначить копии другое имя, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /FILE c:\myPackages\mypackage.dtsx /COPY FILE;c:\myTestPackages\mynewpackage.dtsx  
 ```  
   
  Чтобы скопировать пакет из локальной файловой системы в экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , размещенный на другом компьютере, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /FILE c:\sourcepkg.dtsx /DestServer <servername> /COPY SQL;destpkgname  
 ```  
   
@@ -155,28 +159,28 @@ dtutil /FILE c:\sourcepkg.dtsx /DestServer <servername> /COPY SQL;destpkgname
   
  Чтобы создать новый идентификатор для пакета после того, как он скопирован, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /I /FILE copiedpkg.dtsx   
 ```  
   
  Чтобы создать новые идентификаторы для всех пакетов в указанной папке, используйте следующий синтаксис:  
   
-```  
+```dos
 for %%f in (C:\test\SSISPackages\*.dtsx) do dtutil.exe /I /FILE %%f  
 ```  
   
  При вводе команды в командной строке используйте одинарный знак процента (%). Если команда используется в пакетном файле, используйте двойной знак процента (%%).  
   
-### Примеры удаления  
+### <a name="delete-examples"></a>Примеры удаления  
  Чтобы удалить пакет, хранящийся в базе данных **msdb** в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности Windows, примените следующий синтаксис:  
   
-```  
+```dos
 dtutil /SQL delPackage /DELETE  
 ```  
   
  Чтобы удалить пакет, хранящийся в базе данных **msdb** в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , примените следующий синтаксис:  
   
-```  
+```dos
 dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE  
 ```  
   
@@ -185,26 +189,26 @@ dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE
   
  Чтобы удалить пакет из хранилища пакетов служб SSIS, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /DTS delPackage.dtsx /DELETE  
 ```  
   
  Чтобы удалить пакет, хранящийся в файловой системе, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /FILE c:\delPackage.dtsx /DELETE  
 ```  
   
-### Примеры определения существования  
+### <a name="exists-examples"></a>Примеры определения существования  
  Чтобы определить, существует ли пакет в базе данных **msdb** в локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности Windows, примените следующий синтаксис:  
   
-```  
+```dos
 dtutil /SQL srcPackage /EXISTS  
 ```  
   
  Чтобы определить, существует ли пакет в базе данных **msdb** в локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , примените следующий синтаксис:  
   
-```  
+```dos
 dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
@@ -213,26 +217,26 @@ dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS
   
  Чтобы определить, существует ли пакет в локальном хранилище пакетов, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /EXISTS  
 ```  
   
  Чтобы определить, существует ли пакет в локальной файловой системе, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /FILE c:\srcPackage.dtsx /EXISTS  
 ```  
   
-### Примеры перемещения  
+### <a name="move-examples"></a>Примеры перемещения  
  Чтобы переместить пакет из хранилища пакетов служб SSIS в базу данных **msdb** в локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности Windows, примените следующий синтаксис:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /MOVE SQL;destPackage  
 ```  
   
  Чтобы переместить пакет из базы данных **msdb** в локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в базу данных **msdb** в другом локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , примените следующий синтаксис:  
   
-```  
+```dos
 dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD $Hj45jhd@X /MOVE SQL;destPackage /DESTUSER destUserName /DESTPASSWORD !38dsFH@v  
 ```  
   
@@ -241,20 +245,20 @@ dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD $Hj45jhd@X /MOVE 
   
  Чтобы переместить пакет из хранилища пакетов служб SSIS, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /MOVE DTS;destPackage.dtsx  
 ```  
   
  Чтобы переместить пакет, хранящийся в файловой системе, используйте следующий синтаксис:  
   
-```  
+```dos
 dtutil /FILE c:\srcPackage.dtsx /MOVE FILE;c:\destPackage.dtsx  
 ```  
   
-### Примеры подписи  
+### <a name="sign-examples"></a>Примеры подписи  
  Чтобы подписать пакет, хранящийся в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] локального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующего проверку подлинности Windows, примените следующий синтаксис:  
   
-```  
+```dos
 dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819873a91f919  
 ```  
   
@@ -265,14 +269,14 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
   
  Дополнительные сведения см. в разделе CertMgr в [Подпись и проверка кода при помощи кода подлинности](http://go.microsoft.com/fwlink/?LinkId=78100).  
   
-### Примеры шифрования  
+### <a name="encrypt-examples"></a>Примеры шифрования  
  В следующем образце файл PackageToEncrypt.dtsx шифруется в файл EncryptedPackage.dts с помощью полного шифрования пакета с паролем. Пароль, применяемый для шифрования — *EncPswd*.  
   
-```  
+```dos
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   
-## См. также раздел  
- [Запуск пакета с помощью SQL Server Data Tools](../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
+## <a name="see-also"></a>См. также:  
+[Запуск пакетов служб Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   

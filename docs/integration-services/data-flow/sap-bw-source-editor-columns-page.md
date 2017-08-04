@@ -1,27 +1,32 @@
 ---
-title: "Редактор источников SAP BW (страница &#171;Столбцы&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.columns.f1"
+title: "Редактор источников SAP BW (страница «столбцы») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2047fddb6986bd3014015d742053bfb0dda42019
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор источников SAP BW (страница &#171;Столбцы&#187;)
+# <a name="sap-bw-source-editor-columns-page"></a>Редактор источников SAP BW (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источников SAP BW** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  
   
- Для получения дополнительных сведений о компоненте источника SAP BW для [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW см. раздел [Источник SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
+ Для получения дополнительных сведений о компоненте источника SAP BW для [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW см. раздел [Источник SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 3.  В **Редакторе источников SAP BW**щелкните **Столбцы** , чтобы открыть страницу редактора **Столбцы** .  
   
-## Параметры  
+## <a name="options"></a>Параметры  
   
 > [!NOTE]  
 >  Если вы не знаете все значения, необходимые для настройки источника, может потребоваться связаться с администратором SAP.  
@@ -53,12 +58,12 @@ caps.handback.revision: 10
  Для изменения порядка столбцов в списке **Доступные внешние столбцы** снимите флажки для всех столбцов. После этого выберите столбцы в том порядке, в котором они должны отображаться.  
   
  **Выходной столбец**  
- Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца. Однако можно ввести любое уникальное описательное имя. [!INCLUDE[ssIS](../../includes/ssis-md.md)] отобразятся имена **Выходной столбец** при настройке компонентов нисходящего потока, использующих данные из этого источника.  
+ Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца. Однако можно ввести любое уникальное описательное имя. [!INCLUDE[ssIS](../../includes/ssis-md.md)]Конструктор отображает **выходного столбца** имена для столбцов, при настройке компонентов нисходящего потока, использующих данные из этого источника.  
   
-## См. также  
- [Редактор источника SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Редактор источника SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Редактор источника SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
- [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>См. также  
+ [Редактор источников SAP BW &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [Редактор источников SAP BW &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Редактор источников SAP BW &#40; Страница "Дополнительно" &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

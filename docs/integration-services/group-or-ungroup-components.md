@@ -1,27 +1,32 @@
 ---
-title: "Группирование и разгруппирование компонентов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группирование контейнеров"
-  - "задачи [службы Integration Services], группировка"
-  - "задачи [службы Integration Services], группирование"
-  - "группирование задач"
+title: "Группировка и разгруппировка компонентов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- grouping containers
+- tasks [Integration Services], grouping
+- containers [Integration Services], grouping
+- grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Группирование и разгруппирование компонентов
+# <a name="group-or-ungroup-components"></a>Группирование и разгруппирование компонентов
   Вкладки **Поток управления**, **Поток данных**и **Обработчики событий** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] поддерживают сворачиваемое группирование. Если пакет содержит много компонентов, то вкладки могут оказаться перегруженными информацией и будет сложно сразу просматривать все компоненты и находить элемент, необходимый для работы. Функция сворачиваемого группирования экономит рабочее пространство и упрощает работу с большими пакетами.  
   
  Нужно выбрать компоненты, сгруппировать их, а затем сворачивать или разворачивать группы по мере необходимости. Разворачивание группы предоставляет доступ к свойствам ее компонентов. Элементы управления очередностью, которые соединяют задачи и контейнеры, автоматически включаются в группу.  
@@ -34,7 +39,7 @@ caps.handback.revision: 46
   
 -   При сохранении пакета конструктор служб [!INCLUDE[ssIS](../includes/ssis-md.md)] сохраняет группирование, но оно не влияет на выполнение пакета. Возможность группирования компонентов действует во время разработки и не влияет на работу пакета во время выполнения.  
   
-### Группирование компонентов  
+### <a name="to-group-components"></a>Группирование компонентов  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 46
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-### Разгруппирование компонентов  
+### <a name="to-ungroup-components"></a>Разгруппирование компонентов  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -58,8 +63,8 @@ caps.handback.revision: 46
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также  
- [Добавление задачи или контейнера в поток управления или удалить их из него](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)  
+## <a name="see-also"></a>См. также  
+ [Добавление или удаление задачи или контейнера в потоке управления](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Соедините задачи и контейнеры с помощью ограничения очередностью по умолчанию](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   
