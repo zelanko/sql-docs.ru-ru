@@ -1,4 +1,4 @@
-# [Предотвращение угроз и уязвимости для безопасности](threat-and-vulnerability-mitigation-integration-services.md)
-# [Доступ к файлам, используемым пакетами](access-to-files-used-by-packages.md)
-# [Доступ к службам Integration Services](access-to-the-integration-services-service.md)
-# [безопасность](security-overview-integration-services.md)
+# [Обзор](security-overview-integration-services.md)  
+# [Контроль доступа для конфиденциальных данных в пакетах](access-control-for-sensitive-data-in-packages.md)  
+# [Определение источника пакетов с помощью цифровых подписей](identify-the-source-of-packages-with-digital-signatures.md)  
+# [Роли служб Integration Services (службы SSIS)](integration-services-roles-ssis-service.md)
