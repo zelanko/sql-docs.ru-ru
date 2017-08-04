@@ -1,30 +1,35 @@
 ---
-title: "Создание атрибута на основе домена (надстройка MDS для Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание атрибута на основе домена (надстройка MDS для Excel) | Документы Microsoft"
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f67b43f772e9693f5abbb396b6987527a5220a1d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание атрибута на основе домена (надстройка MDS для Excel)
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] администраторы могут создать атрибут на основе домена, чтобы ограничить значения в столбце определенным набором значений.  
+# <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Создание атрибута на основе домена (надстройка MDS для Excel)
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут создать атрибут на основе домена, чтобы ограничить значения в столбце определенным набором значений.  
   
  Значения могут уже находиться на листе или могут браться из имеющейся сущности.  
   
 > [!NOTE]  
 >  Если пользователь вводит значение в столбце с ограничением, а не выбирает его из списка, при публикации в столбце **$InputStatus$** отображаются ошибки.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Обозреватель** ;  
@@ -33,7 +38,7 @@ caps.handback.revision: 6
   
 -   Модель и сущность должны быть созданы ранее.  
   
-### Чтобы выполнить эту процедуру:  
+### <a name="to-perform-this-procedure"></a>Чтобы выполнить эту процедуру:  
   
 1.  В Excel загрузите сущность, содержащую столбец (атрибут), для которого нужно установить ограничение. Дополнительные сведения см. в разделе [Экспорт данных в Excel из служб Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md).  
   
@@ -47,19 +52,21 @@ caps.handback.revision: 6
   
     -   Чтобы использовать значения из листа, выберите **выбранный столбец**. Будут созданы новая сущность и новая промежуточная таблица со значениями из выбранного столбца.  
   
-    -   Чтобы использовать значения из имеющейся сущности, выберите имя сущности.  
+    -   Чтобы использовать значения из имеющейся сущности, выберите имя сущности.
+    
+    Если существует более пятидесяти сущностей, можно фильтровать и поиска для сущности. В противном случае выберите сущность из раскрывающегося списка.  
   
 6.  Если на предыдущем шаге был указан **выбранный столбец** , в поле **Новое имя сущности** введите имя новой сущности. Оно может совпадать с именем столбца (атрибута).  
   
 7.  Нажмите кнопку **ОК**. Теперь каждая ячейка в столбце имеет список значений, из которых могут выбирать пользователи.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   Чтобы удалить или добавить значения в списке с ограничениям, загрузите сущность, на которой основан атрибут. Дополнительные сведения о загрузке сущностей см. в разделе [Экспорт данных в Excel из служб Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Атрибуты на основе домена (службы Master Data Services)](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [Создание сущности (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
+ [Создать сущность &#40; Надстройка MDS для Excel &#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [Построение модели (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "Создание индекса (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание индекса (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание индекса (Master Data Services)
+# <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
   Создайте пользовательский индекс списка часто запрашиваемых атрибутов, чтобы повысить производительность запросов.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 |Имя столбца|Description|  
 |-----------------|-----------------|  
-|Состояние|Состояние индекса.<br /><br /> Когда вы нажимаете кнопку **Сохранить**, появляется изображение ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), указывающее на то, что индекс обновляется.<br /><br /> При наличии ошибок во время создания или изменения индекса появляется изображение ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> В противном случае отображается статус "ОК" и появляется изображение ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Состояние|Состояние индекса.<br /><br /> При нажатии кнопки **Сохранить**, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") изображение, указывающее, что индекс обновляется.<br /><br /> При наличии ошибок при создании или изменении индекса, ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
 |Название|Имя индекса.|  
 |Уникальный|Указывает, является ли индекс уникальным.|  
 |On Attributes|Показывает отображаемые имена атрибутов, для которых определен индекс.|  
@@ -64,10 +69,10 @@ caps.handback.revision: 6
   
 -   **Когда обновлено**— дата и время последнего обновления индекса.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  [Изменение и удаление индекса (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   

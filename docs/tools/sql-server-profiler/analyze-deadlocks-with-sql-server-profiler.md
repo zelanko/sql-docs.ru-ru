@@ -1,31 +1,36 @@
 ---
-title: "Анализ взаимоблокировок в приложении SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "узлы процессов [приложение SQL Server Profiler]"
-  - "Profiler [SQL Server Profiler], взаимоблокировки"
-  - "взаимоблокировки [SQL Server], определение причины"
-  - "узлы ресурсов [приложение SQL Server Profiler]"
-  - "графы [приложение SQL Server Profiler]"
-  - "SQL Server Profiler, взаимоблокировки"
-  - "события [SQL Server], взаимоблокировки"
-  - "ребра [приложение SQL Server Profiler]"
+title: "Анализ взаимоблокировок в приложении SQL Server Profiler | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process nodes [SQL Server Profiler]
+- Profiler [SQL Server Profiler], deadlocks
+- deadlocks [SQL Server], identifying cause
+- resource nodes [SQL Server Profiler]
+- graphs [SQL Server Profiler]
+- SQL Server Profiler, deadlocks
+- events [SQL Server], deadlocks
+- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 929b037e2d3bc844e284adb51e96f0e4c5b4e1f7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Анализ взаимоблокировок в приложении SQL Server Profiler
+# <a name="analyze-deadlocks-with-sql-server-profiler"></a>Анализ взаимоблокировок в приложении SQL Server Profiler
   Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для определения причины взаимоблокировки. Взаимоблокировка возникает, когда имеется циклическая зависимость между несколькими потоками или процессами для некоторого набора ресурсов в сервере SQL Server. При помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно создавать трассировку, которая записывает, воспроизводит и отображает для анализа события взаимоблокировки.  
   
  Для трассировки событий взаимоблокировки добавьте в трассировку класс событий **Deadlock graph** . Этот класс событий заполняет столбец данных **TextData** в трассировке с данными XML о процессе и объектах, которые участвуют во взаимоблокировке. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может извлечь XML-документ в XML-файл взаимоблокировки (с расширением XDL), который в дальнейшем становится доступным для просмотра в среде SQL Server Management Studio. Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно настроить на извлечение событий **Deadlock graph** в единый файл, содержащий все события класса **Deadlock graph** , или в отдельные файлы. Это извлечение можно выполнить одним из следующих способов.  
@@ -36,7 +41,7 @@ caps.handback.revision: 13
   
 -   Отдельные события можно также извлекать и сохранять, щелкнув правой кнопкой конкретное событие и выбрав **Извлечь данные события**.  
   
-## Графы взаимоблокировок  
+## <a name="deadlock-graphs"></a>Графы взаимоблокировок  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] и среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для описания взаимоблокировки используют граф ожидания взаимоблокировки. Граф ожидания взаимоблокировки содержит узлы процессов, узлы ресурсов и ребра, представляющие связи между процессами и ресурсами. Компоненты графов ожидания взаимоблокировки определяются в следующей таблице:  
   
  Узел процесса  
@@ -48,7 +53,7 @@ caps.handback.revision: 13
  Ребро  
  Связь между процессом и ресурсом. Связь **request** возникает, когда процесс ожидает ресурса. Связь **owner** возникает, когда ресурс ожидает процесс. В описание ребра включен режим блокировки. Например, **Режим: X**.  
   
-## Взаимоблокировка узла процесса  
+## <a name="deadlock-process-node"></a>Взаимоблокировка узла процесса  
  В графе ожидания узел ожидания содержит информацию о процессе. В следующей таблице поясняются компоненты процесса.  
   
 |Компонент|Определение|  
@@ -63,7 +68,7 @@ caps.handback.revision: 13
 |Входной буфер|Входной буфер текущего процесса определяет тип события и выполняемую инструкцию. Возможные значения.<br /><br /> **Язык**<br /><br /> **RPC**<br /><br /> **None**|  
 |Инструкция|Тип инструкции. Возможны следующие значения:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Неизвестно**|  
   
-## Взаимоблокировка узла ресурса  
+## <a name="deadlock-resource-node"></a>Взаимоблокировка узла ресурса  
  Во взаимоблокировке участвуют два процесса, каждый их которых ожидает освобождения ресурса, удерживаемого другим процессом. В графе взаимоблокировки ресурсы отображаются как узлы ресурсов.  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Редактор преобразования &#171;Кэш&#187; (страница &#171;Сопоставления&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.cachetransmap.f1"
+title: "Редактор преобразования «кэш» (страница «сопоставления») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778b7cbcc861b9bdee2c027e5d7d85220b913072
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор преобразования &#171;Кэш&#187; (страница &#171;Сопоставления&#187;)
+# <a name="cache-transformation-editor-mappings-page"></a>Редактор преобразования «Кэш» (страница «Сопоставления»)
   Используйте страницу **Сопоставления** **Редактора преобразования «Кэш»** , чтобы сопоставить входные столбцы в преобразовании «Преобразование кэша» с целевыми столбцами в диспетчере соединений с кэшем.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  Просмотрите список доступных входных столбцов. Чтобы сопоставить доступные входные столбцы с целевыми столбцами, воспользуйтесь операцией перетаскивания.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 16
  **Целевой столбец**  
  Просмотр каждого доступного целевого столбца.  
   
-## См. также  
- [Редактор преобразования "Кэш" (страница "Диспетчер соединений")](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>См. также  
+ [Редактор преобразования «кэш» &#40; Страницы диспетчера соединений &#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
   
   

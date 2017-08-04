@@ -1,33 +1,36 @@
 ---
-title: "Задача передачи больших двоичных объектов Azure | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpblobuptask.f1"
-  - "sql14.dts.designer.afpblobuptask.f1"
+title: "Задача передачи BLOB-объектов Azure | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpblobuptask.f1
+- sql14.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cec51398ac521abc0345e90b3c6ed156b542b5f1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Задача передачи больших двоичных объектов Azure
-  **Задача передачи BLOB-объектов Azure** позволяет пакету служб SSIS передавать файлы в хранилище BLOB-объектов Azure.
-  
->   [!NOTE] Чтобы диспетчер подключений службы хранилища Azure и компоненты, которые его используют (то есть источник BLOB-объектов, назначение BLOB-объектов, задача отправки BLOB-объектов и задача скачивания BLOB-объектов), могли подключаться к учетным записям хранения общего назначения и учетным записям хранения BLOB-объектов, убедитесь, что вы скачали последнюю версию пакета дополнительных компонентов Azure [здесь](https://www.microsoft.com/download/details.aspx?id=49492). Дополнительные сведения об этих двух типах учетных записей хранения см. на странице [Вводная информация о службе хранилища Microsoft Azure](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts). 
+# <a name="azure-blob-upload-task"></a>Задача передачи больших двоичных объектов Azure
+**Задача передачи BLOB-объектов Azure** позволяет пакету служб SSIS передавать файлы в хранилище BLOB-объектов Azure.
     
-Чтобы добавить **задачу передачи BLOB-объектов Azure**, перетащите ее в конструктор служб SSIS и дважды щелкните или щелкните правой кнопкой мыши, а затем выберите **Изменить**, чтобы открыть диалоговое окно **Редактор задач передачи BLOB-объектов Azure**.  
+Чтобы добавить **задачу передачи BLOB-объектов Azure**, перетащите ее в конструктор служб SSIS и дважды щелкните или щелкните правой кнопкой мыши, а затем выберите **Изменить** , чтобы открыть диалоговое окно **Редактор задач передачи BLOB-объектов Azure** .  
   
- **Задача передачи BLOB-объектов Azure** входит в состав пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure для SQL Server 2016. Пакет дополнительных компонентов можно скачать [отсюда](http://go.microsoft.com/fwlink/?LinkID=626967).  
+ **Задача передачи BLOB-объектов Azure** — это компонент [пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
  Следующая таблица содержит описания полей этого диалогового окна.  
   
@@ -35,10 +38,11 @@ caps.handback.revision: 12
 |-|-|  
 |**Поле**|**Description**|  
 |AzureStorageConnection|Создайте новый или укажите существующий диспетчер подключений службы хранилища Azure, который ссылается на учетную запись хранения Azure, указывающую на место размещения файлов BLOB-объектов.|  
-|BlobContainer|Задает имя контейнера BLOB-объектов, который будет содержать переданные файлы в виде больших двоичных объектов.|  
-|BlobDirectory|Указывает каталог больших двоичных объектов, где загруженный файл будет храниться в виде блочного BLOB-объекта. Каталог больших двоичных объектов — это виртуальная иерархическая структура. Если большой двоичный объект уже существует, он будет заменен.|  
+|BlobContainer|Задает имя контейнера BLOB-объект, который содержит переданные файлы в виде больших двоичных объектов.|  
+|BlobDirectory|Указывает каталог больших двоичных объектов, где загруженный файл хранится как большой двоичный объект блока. Каталог больших двоичных объектов — это виртуальная иерархическая структура. Если большой двоичный объект уже существует, он заменяется.|  
 |LocalDirectory|Укажите локальный каталог, который содержит файлы для отправки.|  
-|FileName|Указывает фильтр имен для выбора файлов с указанным шаблоном имен. Пример: MySheet*.xls\* включает такие файлы, как MySheet001.xls и MySheetABC.xlsx.|  
-|TimeRangeFrom/TimeRangeTo|Указывает фильтр по диапазону времени. Будут включены файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo**.|  
+|FileName|Указывает фильтр имен для выбора файлов с указанным шаблоном имен. Например `MySheet*.xls\*` содержит файлы, такие как `MySheet001.xls` и `MySheetABC.xlsx`.|  
+|TimeRangeFrom/TimeRangeTo|Указывает фильтр по диапазону времени. Файлы, измененные после **TimeRangeFrom** и перед **TimeRangeTo** включены.|  
   
   
+

@@ -1,35 +1,40 @@
 ---
-title: "Предоставление доступа к данным для операций со службами DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Доступ к данным для операций DQS | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a03861b1706667657461ecf95196fc6cb3501d2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Предоставление доступа к данным для операций со службами DQS
+# <a name="access-data-for-the-dqs-operations"></a>Предоставление доступа к данным для операций со службами DQS
   Чтобы использовать исходные данные для операций служб [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) и экспортировать обработанные данные, выполните одно из следующих действий.  
   
 -   Скопируйте исходные данные в таблицу или представление в базе данных DQS_STAGING_DATA, а затем передайте данную таблицу или представление на обработку операции DQS. Можно также выполнить экспорт обработанных данных в новую таблицу в базе данных DQS_STAGING_DATA. Для этого учетной записи пользователя Windows должен быть предоставлен доступ на чтение и запись к базе данных DQS_STAGING_DATA.  
   
 -   Собственная база данных может использоваться как в качестве исходных данных для операций служб DQS, так и для экспорта обработанных данных. Для этого убедитесь, что она размещена на том же экземпляре SQL Server, что и базы данных сервера служб Data Quality. В противном случае база данных не будет доступна в клиенте служб Data Quality для операций DQS. Также для учетной записи пользователя Windows должен быть предоставлен доступ к базе данных DQS_STAGING_DATA для экспорта соответствующих результатов, так как они экспортируются в два этапа: сначала экспортируются во временные таблицы в базе данных DQS_STAGING_DATA, а затем перемещаются в таблицу целевой базы данных.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
--   Необходимо, чтобы установка сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], запускаемая с помощью файла DQSInstaller.exe, была завершена. Дополнительные сведения см. в статье [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
+-   Необходимо, чтобы установка сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , запускаемая с помощью файла DQSInstaller.exe, была завершена. Дополнительные сведения см. в статье [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
 -   Учетная запись пользователя Windows должна входить в соответствующую предопределенную роль сервера (например, securityadmin, serveradmin или sysadmin) на экземпляре компонента Database Engine для предоставления и изменения доступа имени входа SQL Server к базам данных.  
   
-### Предоставление доступа на чтение и запись пользователям базы данных DQS_STAGING_DATA  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>Предоставление доступа на чтение и запись пользователям базы данных DQS_STAGING_DATA  
   
 1.  Запустите среду Microsoft SQL Server Management Studio.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 15
   
 4.  В диалоговом окне **Свойства имени входа** щелкните страницу **Сопоставление пользователей** в левой части.  
   
-5.  На правой панели установите флажок в столбце **Сопоставление** для базы данных **DQS_STAGING_DATA**, а затем выберите следующие роли в панели **Членство в роли базы данных для DQS_STAGING_DATA**:  
+5.  На правой панели установите флажок в столбце **Сопоставление** для базы данных **DQS_STAGING_DATA** , а затем выберите следующие роли в панели **Членство в роли базы данных для DQS_STAGING_DATA** :  
   
     -   **db_datareader**: чтение данных из таблиц и представлений.  
   
@@ -49,10 +54,10 @@ caps.handback.revision: 15
   
 6.  В диалоговом окне **Свойства имени входа** нажмите кнопку **ОК** , чтобы применить изменения.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  Проверьте работоспособность операций служб DQS, использующих эту базу данных в качестве источника данных, а затем экспортирующих в нее обработанные данные.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

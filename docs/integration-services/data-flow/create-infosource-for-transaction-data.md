@@ -1,22 +1,27 @@
 ---
-title: "Создание InfoSource для данных транзакции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание InfoSource для данных транзакции | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aae1b77456b66a00a547fa35f9a253f0199963cc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создание InfoSource для данных транзакции
+# <a name="create-infosource-for-transaction-data"></a>Создание InfoSource для данных транзакции
   Используйте диалоговое окно **Создание InfoSource для данных транзакции** , чтобы создать новый InfoSource для данных транзакции в системе SAP Netweaver BW.  
   
  Можно открыть диалоговое окно **Создание InfoSource для данных транзакции** на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
 5.  В диалоговом окне **Создание InfoSource** выберите **Данные транзакции**и нажмите кнопку **ОК**.  
   
-## Общие параметры  
+## <a name="general-options"></a>Общие параметры  
  **Имя InfoSource**  
  Введите имя нового InfoSource.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 10
  **Сохранить и активировать**  
  Сохраните и активируйте новый InfoSource.  
   
-## Параметры переноса структуры InfoSource  
+## <a name="infosource-transfer-structure-options"></a>Параметры переноса структуры InfoSource  
  Средство переноса InfoSource позволяет сопоставить столбцы потока данных и источники InfoSource.  
   
  **PipelineElement**  
@@ -90,8 +95,8 @@ caps.handback.revision: 10
  **Поле единицы**  
  Укажите единицы, которые будут использоваться в InfoObject.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

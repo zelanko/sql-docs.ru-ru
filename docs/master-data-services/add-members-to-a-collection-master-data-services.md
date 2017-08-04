@@ -1,27 +1,32 @@
 ---
-title: "Добавление элементов в коллекцию (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "коллекции [службы Master Data Services], добавление элементов"
+title: "Добавление членов в коллекции (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56799f639b1ea5833926ee8965c60ba936c90f98
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Добавление элементов в коллекцию (службы Master Data Services)
+# <a name="add-members-to-a-collection-master-data-services"></a>Добавление элементов в коллекцию (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]в коллекцию можно добавлять конечные и консолидированные элементы.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -30,7 +35,7 @@ caps.handback.revision: 7
   
 -   коллекция должна существовать. Дополнительные сведения см. в разделе [Создание коллекции (службы Master Data Services)](../master-data-services/create-a-collection-master-data-services.md).  
   
-### Добавление элементов в коллекцию  
+### <a name="to-add-members-to-a-collection"></a>Добавление элементов в коллекцию  
   
 1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] выберите модель в списке **Модель** .  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 7
   
 11. При необходимости установите взвешенные значения, щелкнув значение в столбце **Вес** .  
   
-## См. также:  
- [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Коллекции &#40; Службы Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
   
   

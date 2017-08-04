@@ -1,28 +1,33 @@
 ---
-title: "настроить преобразование &#171;Команда OLE DB&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "параметры [службы Integration Services]"
-  - "преобразование «Команда OLE DB»"
+title: "Настройка преобразования «Команда OLE DB» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parameters [Integration Services]
+- OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a93d0ab78a39f8e87fbd9863822a06522d542db0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# настроить преобразование &#171;Команда OLE DB&#187;
+# <a name="configure-the-ole-db-command-transformation"></a>настроить преобразование «Команда OLE DB»
   Для добавления и настройки преобразования «Команда OLE DB» пакет должен уже содержать по меньшей мере одну задачу потока данных и такой источник, как источник неструктурированного файла или источник OLE DB. Преобразование обычно используется для выполнения параметризованных запросов.  
   
-### Настройка преобразования «Команда OLE DB»  
+### <a name="to-configure-the-ole-db-command-transformation"></a>Настройка преобразования «Команда OLE DB»  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -36,17 +41,17 @@ caps.handback.revision: 24
   
 6.  На вкладке **Диспетчеры соединений** выберите диспетчер соединений OLE DB в списке **Диспетчер соединений** . Дополнительные сведения см. в статье [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-7.  Перейдите на вкладку **Свойства компонентов** и нажмите кнопку с многоточием **(…)** в окне **SqlCommand**.  
+7.  Перейдите на вкладку **Свойства компонентов** и нажмите кнопку с многоточием **(…)** в окне **SqlCommand** .  
   
-8.  В **редакторе строковых значений** введите параметризованную инструкцию SQL, используя знак вопроса (?) в качестве маркера параметра для каждого параметра.  
+8.  В **редакторе строковых значений**введите параметризованную инструкцию SQL, используя знак вопроса (?) в качестве маркера параметра для каждого параметра.  
   
-9. Нажмите кнопку **Обновить**. При нажатии кнопки **Обновить** преобразование создает столбец для каждого параметра в коллекции "Внешние столбцы" и устанавливает свойство DBParamInfoFlags.  
+9. Нажмите кнопку **Обновить**. При нажатии кнопки **Обновить**преобразование создает столбец для каждого параметра в коллекции "Внешние столбцы" и устанавливает свойство DBParamInfoFlags.  
   
 10. Щелкните вкладку **Свойства входов и выходов** .  
   
 11. Раскройте **Вход команды OLE DB**, затем раскройте коллекцию **Внешние столбцы**.  
   
-12. Проверьте, что в коллекции **Внешние столбцы** перечисляются столбцы для всех параметров инструкции SQL. Столбцы имеют имена **Param_0**, **Param_1** и т. д.  
+12. Проверьте, что в коллекции **Внешние столбцы** перечисляются столбцы для всех параметров инструкции SQL. Столбцы имеют имена **Param_0**, **Param_1**и т. д.  
   
      Не изменяйте имена столбцов. Если изменить имена столбцов, службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] сформирует ошибку проверки правильности для трансформации команды OLE DB.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 24
   
     -   Щелкните **Добавить столбец** один раз для каждого параметра в инструкции SQL.  
   
-    -   Переименуйте столбцы в **Param_0**, **Param_1** и т. д.  
+    -   Переименуйте столбцы в **Param_0**, **Param_1**и т. д.  
   
     -   Укажите значение в свойстве DBParamInfoFlags. Значение должно соответствовать значению перечисления OLE DB DBPARAMFLAGSENUM. Дополнительные сведения см. в справочной документации по OLE DB.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 24
   
 15. Чтобы сохранить обновленный пакет, щелкните **Сохранить** в меню **Файл** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование «Команда OLE DB»](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   

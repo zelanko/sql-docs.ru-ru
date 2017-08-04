@@ -1,24 +1,29 @@
 ---
-title: "Доступ к консоли конструктора CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "accMsDes"
+title: "Доступ к консоли конструктора CDC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1266809582119e6316b821c54f93f4217c21316
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Доступ к консоли конструктора CDC
+# <a name="access-the-cdc-designer-console"></a>Доступ к консоли конструктора CDC
   Доступ к консоли конструктора CDC осуществляется с компьютера, где установлена консоль. Дополнительные сведения об установке см. в разделе «Установка».  
   
  При запуске консоли конструктора CDC открывается диалоговое окно «Подключение к SQL Server».  
@@ -27,10 +32,10 @@ caps.handback.revision: 9
   
  В диалоговом окне «Подключение к SQL Server» введите следующие данные.  
   
-### Имя сервера  
+### <a name="server-name"></a>Имя сервера  
  Введите имя сервера, на котором находится экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Проверка подлинности  
+### <a name="authentication"></a>Проверка подлинности  
  Выберите один из следующих вариантов:  
   
 -   **Проверка подлинности Windows.**  
@@ -39,24 +44,24 @@ caps.handback.revision: 9
   
  Имя входа должно иметь роль базы данных, которая обеспечивает доступ к базе данных MSXCDCDB. Рекомендуется, чтобы имя входа также имело доступ ко всем другим используемым базам данных. В противном случае пользователь не сможет просматривать данные из этих баз данных.  
   
-### Параметры  
+### <a name="options"></a>Параметры  
  Чтобы просмотреть доступные для настройки параметры, щелкните стрелку. Для них можно оставить значения по умолчанию. Доступные параметры:  
   
  **Время ожидания соединения**  
- Введите время (в секундах), в течение которого служба CDC для Oracle ожидает установления соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию ― **15**.  
+ Введите время (в секундах), в течение которого служба CDC для Oracle ожидает установления соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значение по умолчанию ― **15**.  
   
  **Время ожидания выполнения**  
  Введите время (в секундах), в течение которого служба Windows CDC Oracle ожидает выполнения команды. Значение по умолчанию — **30**.  
   
  **Шифровать соединение**  
- Выберите **Шифровать соединение** для взаимодействия между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по зашифрованному соединению. **Дополнительно**. Щелкните **Дополнительно** и при необходимости введите любые свойства дополнительного соединения в диалоговом окне "Дополнительные свойства соединения".  
+ Выберите **Шифровать соединение** для взаимодействия между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по зашифрованному соединению.**Дополнительно**. Щелкните **Дополнительно** и при необходимости введите любые свойства дополнительного соединения в диалоговом окне "Дополнительные свойства соединения".  
   
  **Дополнительно**  
  Нажмите кнопку **Дополнительно** и при необходимости введите любые дополнительные свойства подключения в диалоговом окне "Дополнительные свойства подключения".  
   
  Дополнительные сведения о диалоговом окне «Дополнительные свойства подключения» см. в разделе [Advanced Connection Properties](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## См. также  
- [Разрешения, необходимые конструктору CDC для соединения с SQL Server](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+## <a name="see-also"></a>См. также  
+ [Соединение с SQL Server разрешения, необходимые конструктору CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

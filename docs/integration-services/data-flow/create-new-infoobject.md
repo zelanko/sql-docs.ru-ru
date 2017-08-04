@@ -1,22 +1,27 @@
 ---
-title: "Создание InfoObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание нового InfoObject | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создание InfoObject
+# <a name="create-new-infoobject"></a>Создание InfoObject
   Используйте диалоговое окно **Создание нового InfoObject** для создания нового InfoObject в системе SAP Netweaver BW.  
   
  Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -50,7 +55,7 @@ caps.handback.revision: 10
   
  Также можно открыть диалоговое окно **Создание нового InfoObject** путем щелчка **Создать** в разделе **Атрибуты** диалогового окна **Создание нового InfoObject** .  
   
-## Общие параметры  
+## <a name="general-options"></a>Общие параметры  
  **Характеристика**  
  Создайте InfoObject, представляющий данные измерения.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 10
  Указывает, что InfoObject содержит основные данные в форме атрибутов, текстов или иерархий.  
   
 > [!NOTE]  
->  Выберите этот параметр, если InfoObject представляет данные измерений и выбран параметр **Характеристика**.  
+>  Выберите этот параметр, если InfoObject представляет данные измерений и выбран параметр **Характеристика** .  
   
  **Разрешить символы в нижнем регистре**  
  Разрешить символы в нижнем регистре для данных InfoObject.  
@@ -78,7 +83,7 @@ caps.handback.revision: 10
  **Сохранить и активировать**  
  Сохранить и активировать новый InfoObject.  
   
-## Параметры типа данных  
+## <a name="data-type-options"></a>Параметры типа данных  
  **CHAR — символьная строка**  
  Указывает, что InfoObject содержит символьные данные.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
  **Длина**  
  Введите длину данных.  
   
-## Параметры текста  
+## <a name="text-options"></a>Параметры текста  
  **С текстами**  
  Указывает, что InfoObject содержит тексты.  
   
@@ -113,10 +118,10 @@ caps.handback.revision: 10
  **Зависит от времени текста**  
  Указывает, что тексты зависят от времени.  
   
-## Раздел атрибутов  
+## <a name="attributes-section"></a>Раздел атрибутов  
  Раздел **Атрибуты** содержит список атрибутов для InfoObject и параметры, позволяющие добавлять и удалять атрибуты из списка.  
   
-### Список «Атрибуты»  
+### <a name="attributes-list"></a>Список «Атрибуты»  
  В списке **Атрибуты** отображаются атрибуты создаваемого InfoObject. Список **Атрибуты** содержит следующие заголовки столбцов.  
   
  **InfoObject**  
@@ -135,7 +140,7 @@ caps.handback.revision: 10
 |UNI|Единицы измерения|  
 |TIM|Характеристики времени|  
   
-### Параметры атрибутов  
+### <a name="attributes-options"></a>Параметры атрибутов  
  Можно использовать следующие параметры для добавления и удаления атрибутов для создаваемого InfoObject.  
   
  **Добавить**  
@@ -149,13 +154,13 @@ caps.handback.revision: 10
  Для создания и добавления нового InfoObject выберите «Создать», а затем используйте новый экземпляр диалогового окна **Создание InfoObject** , чтобы создать новый InfoObject.  
   
  **Удалить**  
- Удаляет выбранный InfoObject из списка **Атрибуты**.  
+ Удаляет выбранный InfoObject из списка **Атрибуты** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание InfoCube для данных транзакции](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Создание InfoSource для данных транзакции](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Создание InfoSource для основных данных](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

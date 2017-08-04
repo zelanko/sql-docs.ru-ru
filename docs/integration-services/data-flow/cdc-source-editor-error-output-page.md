@@ -1,29 +1,34 @@
 ---
-title: "Редактор источника &#171;CDC&#187; (страница &#171;Вывод ошибок&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsource.errorhandling.f1"
+title: "Редактор источника «CDC» (страница «Вывод ошибок») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15818f42922d7fe21bdba64d0bf4c5e4a593eada
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор источника &#171;CDC&#187; (страница &#171;Вывод ошибок&#187;)
+# <a name="cdc-source-editor-error-output-page"></a>Редактор источника «CDC» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника CDC** используется для выбора параметров обработки ошибок.  
   
  Дополнительные сведения об источнике CDC см. в разделе [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
-## Список задач  
+## <a name="task-list"></a>Список задач  
  **Открытие страницы «Вывод ошибок» редактора источника CDC**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] , содержащий источник CDC.  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 3.  В окне **Редактор источника CDC**нажмите кнопку **Вывод ошибок**.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
  **Столбец**  
- Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника CDC**.  
+ Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника CDC** .  
   
  **Ошибка**  
  Выберите порядок обработки ошибок в потоке источником CDC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
@@ -54,7 +59,7 @@ caps.handback.revision: 8
  **Применить**  
  Примените параметры обработки ошибок к выбранным ячейкам.  
   
-## Параметры обработки ошибок  
+## <a name="error-handling-options"></a>Параметры обработки ошибок  
  Следующие параметры позволяют настроить обработку ошибок и усечений источником CDC.  
   
  **Компонент, завершившийся сбоем**  
@@ -66,8 +71,8 @@ caps.handback.revision: 8
  **Перенаправление потока**  
  Ошибка или строка данных усечения направляется на выход ошибок источника CDC. В этом случае используется обработка ошибок источника CDC. Дополнительные сведения см. в статье [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
-## См. также  
- [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Редактор источника "CDC" (страница "Столбцы")](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+## <a name="see-also"></a>См. также  
+ [Редактор источника CDC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [Редактор источника CDC &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
   

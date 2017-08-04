@@ -1,26 +1,31 @@
 ---
-title: "Диалоговое окно &#171;Настройка&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.configure.f1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
-  - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
+title: "Настройка диалоговое окно | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.configure.f1
+- sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
+- sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9587abfb97ec048985ac28de0e7dc585e2bea61
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Диалоговое окно &#171;Настройка&#187;
+# <a name="configure-dialog-box"></a>Диалоговое окно «Настройка»
   Диалоговое окно **Настройка** используется для настройки параметров, диспетчеров соединений и ссылок на среды для пакетов и проектов.  
   
  **Выбор действия**  
@@ -48,7 +53,7 @@ caps.handback.revision: 11
 ##  <a name="parameter"></a> Задание параметров на странице «Параметры»  
  Использование страницы **Параметры** для просмотра имен и значений параметров и для изменения значений.  
   
- Выберите область параметров, отображаемых на вкладках **Параметры** и **Диспетчеры соединений** в раскрывающемся списке **Область**.  
+ Выберите область параметров, отображаемых на вкладках **Параметры** и **Диспетчеры соединений** в раскрывающемся списке **Область** .  
   
  Ниже приведен список параметров на вкладке **Параметры** .  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 11
  Выводит имя папки, которая содержит среду.  
   
  **Открытие**  
- Нажмите, чтобы открыть диалоговое окно **Свойства среды**.  
+ Нажмите, чтобы открыть диалоговое окно **Свойства среды** .  
   
  **Добавить**  
  Нажмите, чтобы добавить ссылку к среде. В диалоговом окне **Выбор среды** выберите среду и нажмите кнопку **ОК**.  
@@ -95,6 +100,6 @@ caps.handback.revision: 11
  Вы можете выбрать среду, содержащуюся в любой папке проекта, под узлом **SSISDB** .  
   
  **Удалить**  
- Выберите среду, перечисленную в области **Ссылки**, а затем нажмите кнопку **Удалить**.  
+ Выберите среду, перечисленную в области **Ссылки** , а затем нажмите кнопку **Удалить**.  
   
   

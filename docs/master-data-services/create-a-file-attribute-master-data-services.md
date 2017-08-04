@@ -1,29 +1,34 @@
 ---
-title: "Создание файлового атрибута (службы Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание файловых атрибутов [службы Master Data Services]"
-  - "атрибуты [Master Data Services], создание атрибутов файлов"
+title: "Создание файлового атрибута (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating file attributes [Master Data Services]
+- attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: edacb4f71f1cb154ebdf2c01fb614e69f0a64713
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание файлового атрибута (службы Master Data Services)
-  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] файловый атрибут создается для заполнения значений атрибута файлами.  
+# <a name="create-a-file-attribute-master-data-services"></a>Создание файлового атрибута (службы Master Data Services)
+  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]файловый атрибут создается для заполнения значений атрибута файлами.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -32,12 +37,12 @@ caps.handback.revision: 8
   
 -   должна существовать сущность, для которой создается атрибут. Дополнительные сведения см. в разделе [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Сведения об атрибутах  
+## <a name="attribute-information"></a>Сведения об атрибутах  
  Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
   
 |Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете кнопку "Сохранить", появляется изображение ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), указывающее на то, что выполняется обновление атрибута.<br /><br /> При наличии ошибок во время создания или изменения атрибута появляется изображение ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> В противном случае отображается статус "ОК" и появляется изображение ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки Save, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") , указывающее, выполняется обновление атрибута.<br /><br /> При наличии ошибок во время создания или изменения атрибута появляется ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
 |Название|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Description|Описание атрибута.|  
@@ -55,7 +60,7 @@ caps.handback.revision: 8
   
 -   **Когда обновлено**: дата и время последнего обновления атрибута.  
   
-### Создание файлового атрибута  
+### <a name="to-create-a-file-attribute"></a>Создание файлового атрибута  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
@@ -87,10 +92,10 @@ caps.handback.revision: 8
   
 12. Нажмите кнопку **Сохранить**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [Изменение имени атрибута и типа данных &#40; Службы Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Создать атрибут на основе домена &#40; Службы Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Создание текстового атрибута &#40; Службы Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

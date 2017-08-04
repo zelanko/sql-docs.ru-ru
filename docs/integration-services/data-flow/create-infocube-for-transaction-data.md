@@ -1,22 +1,27 @@
 ---
-title: "Создание InfoCube для данных транзакции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание InfoCube для данных транзакции | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создание InfoCube для данных транзакции
+# <a name="create-infocube-for-transaction-data"></a>Создание InfoCube для данных транзакции
   Используйте диалоговое окно **Создание InfoCube для данных транзакции** , чтобы создать новый InfoCube для данных транзакции в системе SAP Netweaver BW.  
   
  Можно открыть диалоговое окно **Создание InfoCube для данных транзакции** на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  На вкладке **Диспетчер соединений** в поле группы **Создание объектов SAP BW** выберите **InfoCube**и щелкните **Создать**.  
   
-## Общие параметры  
+## <a name="general-options"></a>Общие параметры  
  **Имя InfoCube**  
  Введите имя для нового InfoCube.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
  **Сохранить и активировать**  
  Сохраните и активируйте новый InfoCube.  
   
-## Параметры переноса структуры InfoCube  
+## <a name="infocube-transfer-structure-options"></a>Параметры переноса структуры InfoCube  
  Раздел переноса структуры InfoCube позволяет привязать столбцы потока данных в InfoObjects.  
   
  **PipelineElement**  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **Iobject — удаление**  
  Удаляет взаимосвязь между InfoObject и столбцом потока данных для текущей строки. Чтобы удалить эту связь, нажмите кнопку **Удалить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
