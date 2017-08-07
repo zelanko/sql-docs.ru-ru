@@ -1,5 +1,5 @@
 ---
-title: "Задание свойства развертывания (службы Reporting Services) | Документы Microsoft"
+title: "Задание свойства развертывания (службы Reporting Services) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Задание свойства развертывания (службы Reporting Services)
@@ -33,10 +33,10 @@ ms.lasthandoff: 06/22/2017
  Создание наборов свойств проекта в конфигурациях проектов и управление ими производится с помощью диспетчера конфигурации. Диспетчер конфигурации представляет собой компонент, поддерживаемый средой [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], на котором основана среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
 > [!NOTE]  
->  Не следует путать этот компонент с диспетчером конфигураций служб Reporting Services, который применяется для настройки служб Reporting Services после установки. Дополнительные сведения см. в разделе [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+>  Не следует путать этот компонент с диспетчером конфигураций служб Reporting Services, который применяется для настройки служб Reporting Services после установки. Дополнительные сведения см. в разделе [Настройка и администрирование сервера отчетов &#40;службы Reporting Services в собственном режиме&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
   
 > [!NOTE]  
->  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] действие публикации отчетов из проекта сервера отчетов или решения принято называть *развертыванием отчетов*.  
+>  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]действие публикации отчетов из проекта сервера отчетов или решения принято называть *развертыванием отчетов*.  
   
 ### <a name="to-set-deployment-properties"></a>Установка свойств развертывания  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  В диалоговом окне **Страницы свойств** проекта выберите **Диспетчер конфигурации**.  
   
-3.  В диалоговом окне **Диспетчер конфигурации** выберите изменяемую конфигурацию. В настоящее время активной конфигурации отображается в виде **Active (***\<конфигурации >***)**.  
+3.  В диалоговом окне **Диспетчер конфигурации** выберите изменяемую конфигурацию. Конфигурация, которая сейчас активна, отображается как **Активная(***\<конфигурация>***)**.  
   
 4.  В разделе **Контексты проекта**для каждого проекта в решении установите либо снимите флажки **Создать** или **Развернуть**.  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 06/22/2017
  [Публикация источников данных и отчетов](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Предварительный просмотр отчетов](../../reporting-services/reports/previewing-reports.md)   
  [Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)   
- [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (службы SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint &#40;службы SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Публикация отчетов на сервере отчетов](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   

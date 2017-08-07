@@ -1,5 +1,5 @@
 ---
-title: "Выбор и настройка единиц измерения (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Задание и настройка единиц измерения (построитель отчетов и службы SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 46d639df93661b5cd27810c72a44f698539aac2f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Задание и настройка единиц измерения (построитель отчетов и службы SSRS)

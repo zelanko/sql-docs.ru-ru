@@ -1,5 +1,5 @@
 ---
-title: "Подписки и доставка (службы Reporting Services) | Документы Microsoft"
+title: "Подписки и доставка (Reporting Services) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Чтобы применить различные варианты подписки, для одного отчета можно создать несколько подписок. Например, можно указать различные значения параметров, чтобы сформировать три версии отчета, а именно: отчет о продажах в западном регионе, отчет о продажах в восточном регионе и отчет об общих продажах.  
   
- ![Пример потока подписки ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "пример потока подписки ssrs")  
+ ![Пример потока подписки SSRS](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "Пример потока подписки SSRS")  
   
  Подписки доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 06/22/2017
  [Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Отслеживание подписок служб Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
+ [Отслеживание подписок Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   
 

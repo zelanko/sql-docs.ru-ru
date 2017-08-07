@@ -1,5 +1,5 @@
 ---
-title: "Задание свойств (среда Management Studio) | Документы Microsoft"
+title: "Свойства заданий (Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="job-properties-management-studio"></a>Свойства задания (среда Management Studio)
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
  Для отчетов в этом столбце показываются процессы выполнения, которые в настоящее время работают. Всегда принимает значение **Подготовка отчетов**.  
   
  **Описание задания**  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не обеспечивает описание заданий по умолчанию.  
+ Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по умолчанию не обеспечивает описание заданий.  
   
  **Имя сервера**  
  Показывает имя сервера отчетов, на котором выполняется обработка задания. Если было настроено масштабное развертывание, это значение показывает, какой из серверов обрабатывает задание.  

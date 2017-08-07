@@ -1,5 +1,5 @@
 ---
-title: "Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f7c711b3cd56302b05d7dcf4f3045283c376d73
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) или [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) или [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Конструктор запросов можно использовать для выполнения следующих задач:  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
  После открытия конструктора запросов построение запроса выполняется аналогично построению внедренного или общего набора данных. Приведенные ниже процедуры используют запрос к внедренному набору данных.  
   
- Дополнительные сведения см. в разделе [Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
+ Дополнительные сведения см. в разделе [Пользовательский интерфейс конструктора реляционных запросов &#40;построитель отчетов&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>Построение запроса к внедренному набору данных в представлении конструктора отчетов  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
+ [Добавление данных из внешних источников данных &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
  [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   

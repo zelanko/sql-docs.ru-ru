@@ -1,5 +1,5 @@
 ---
-title: "Свойства сервера (страница «Дополнительно») — службы Reporting Services | Документы Microsoft"
+title: "Свойства сервера (страница \"Дополнительно\") — службы Reporting Services | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Свойства сервера (страница «Дополнительно») — службы Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  Количество суток, в течение которых необходимо хранить сведения о выполнении отчетов в журнале выполнения. Для этого свойства допустимы значения от **-1** до **2**,**147**,**483**,**647**. При значении **-1** записи из таблицы журнала выполнения не удаляются. Значение по умолчанию — **60**.  
  
 > [!NOTE] 
-> При установке значения **0** будет *удалить* все записи из журнала выполнения. Значение **-1** будет хранить записи журнала выполнения и не будут удалены.
+> При задании значения **0** будут *удалены* все записи из журнала выполнений. При задании значения **-1** записи журнала выполнений будут сохранены.
   
  **SessionTimeout**  
  Продолжительность времени в секундах, в течение которого сеанс остается активным. Значение по умолчанию — **600**.  
@@ -116,11 +116,11 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также  
  [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Свойства служб Reporting Services](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
+ [Свойства Reporting Services](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Системные свойства сервера отчетов](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
+ [Свойства системы сервера отчетов](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Включение и отключение папки «Мои отчеты»](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
+ [Включение и отключение рабочего пространства "Мои отчеты"](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
   
   
 

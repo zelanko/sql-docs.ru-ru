@@ -1,5 +1,5 @@
 ---
-title: "Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
  
  *  Вы также можете **добавить закладку в определенное место** того же отчета. 
   
-Попробуйте добавить гиперссылки с примером данных в разделе [Учебник. Форматирование текста &#40;построитель отчетов&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Попробуйте добавить гиперссылки с образцами данных в разделе [Учебник. Форматирование текста &#40;построитель отчетов&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md).  

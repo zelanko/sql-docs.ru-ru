@@ -1,5 +1,5 @@
 ---
-title: "Отмена заданий сервера отчетов (среда Management Studio) | Документы Microsoft"
+title: "Отмена заданий сервера отчетов (Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Отмена заданий сервера отчетов (среда Management Studio)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, щелкните **Задания**правой кнопкой мыши и выберите команду **Отменить все задания**. Можно также открыть **Задания**, щелкнуть задание, выполняемое на сервере отчетов, правой кнопкой мыши и выбрать команду **Отменить задание**.  
   
- Прежде чем отменить какое-либо задание, можно просмотреть его свойства и определить, когда оно было запущено. Дополнительные сведения см. в разделе [Свойства задания (среда Management Studio)](../../reporting-services/tools/job-properties-management-studio.md).  
+ Прежде чем отменить какое-либо задание, можно просмотреть его свойства и определить, когда оно было запущено. Дополнительные сведения см. в разделе [Свойства задания &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md).  
   
 > [!NOTE]  
 >  Эта функция не поддерживается в [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. Эта страница не отображается при запуске выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  

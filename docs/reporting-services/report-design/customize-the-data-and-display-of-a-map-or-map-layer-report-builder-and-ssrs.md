@@ -1,5 +1,5 @@
 ---
-title: "Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -28,11 +28,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Чтобы обеспечить большую детализацию, на любом из слоев можно добавить ссылку на элементы карты, щелкнув которую, пользователь открывает связанный отчет.  
   
- Дополнительные соображения относительно улучшения отчета см. в разделе [Планирование отчета (построитель отчетов)](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Дополнительные соображения относительно улучшения отчета см. в разделе [Планирование отчета &#40;построитель отчетов&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
   
  Параметры отображения влияют на способ показа карты или ее частей при просмотре отчета. Одни параметры управляют внешним видом карты, например рамками и шрифтами области, представленной на карте. Другие параметры управляют содержимым каждого слоя, например размером пузырьков, типом маркеров, метками или подсказками.  
   

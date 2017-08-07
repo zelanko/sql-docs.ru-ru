@@ -43,6 +43,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также:  
  [Инициализация подписки с помощью моментального снимка](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
+ [Параметры моментального снимка](../../relational-databases/replication/snapshot-options.md)  
   
   
