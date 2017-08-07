@@ -1,28 +1,33 @@
 ---
-title: "Задача &#171;Очистка после обслуживания&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.maintenancecleanuptask.f1"
-helpviewer_keywords: 
-  - "удаление файлов"
-  - "удаление файлов"
-  - "задача «Очистка после обслуживания»"
+title: "Задача обслуживания очистки | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.maintenancecleanuptask.f1
+helpviewer_keywords:
+- deleting files
+- removing files
+- Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19ea8533605a0507db4ba6ac566c585d3746cc37
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Задача &#171;Очистка после обслуживания&#187;
+# <a name="maintenance-cleanup-task"></a>Задача «Очистка после обслуживания»
   Задача «Очистка после обслуживания» удаляет файлы, относящиеся к планам обслуживания, включая файлы резервных копий баз данных и отчеты, созданные планами обслуживания. Дополнительные сведения см. в разделах [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md) и [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  С помощью задачи «Очистка после обслуживания» пакет может удалять файлы резервных копий или отчеты планов обслуживания на указанном сервере. Задача «Очистка после обслуживания» имеет параметр удаления специфических файлов или удаления группы файлов в папке. При необходимости можно указать расширение удаляемых файлов.  
@@ -31,19 +36,19 @@ caps.handback.revision: 25
   
  Если необходимо удалить старые ненужные файлы, задача «Очистка после обслуживания» может быть настроена для удаления файлов, существующих определенный период времени. Например, задача может быть настроена на файлы, существующие дольше двух недель. Можно указать давность удаляемых файлов, используя дни, недели, месяцы и годы. Если минимальный срок для удаления файлов не устанавливается, удаляются все файлы указанного типа.  
   
- В отличие от ранних версий задачи «Очистка после обслуживания» версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этой задачи не удаляет автоматически файлы во вложенных каталогах указанной папки. Это ограничение сокращает контактную зону любой атаки, использующей функции задачи «Очистка после обслуживания» для умышленного удаления файлов. Для удаления вложенных папок первого уровня необходимо выбрать это действие, установив флажок **Включить вложенные папки первого уровня** в диалоговом окне **Задача "Очистка после обслуживания"**.  
+ В отличие от ранних версий задачи «Очистка после обслуживания» версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этой задачи не удаляет автоматически файлы во вложенных каталогах указанной папки. Это ограничение сокращает контактную зону любой атаки, использующей функции задачи «Очистка после обслуживания» для умышленного удаления файлов. Для удаления вложенных папок первого уровня необходимо выбрать это действие, установив флажок **Включить вложенные папки первого уровня** в диалоговом окне **Задача "Очистка после обслуживания"** .  
   
-## Настройка задачи «Очистка после обслуживания»  
+## <a name="configuration-of-the-maintenance-cleanup-task"></a>Настройка задачи «Очистка после обслуживания»  
  Свойства задаются с помощью конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Эта задача находится в разделе **Задачи плана обслуживания** **области элементов** в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
 -   [Задача "Очистка после обслуживания" (план обслуживания)](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
-## Связанные задачи  
- Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+## <a name="related-tasks"></a>Связанные задачи  
+ Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

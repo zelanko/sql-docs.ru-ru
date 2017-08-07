@@ -1,31 +1,36 @@
 ---
-title: "Редактор назначения &#171;ODBC&#187; (страница &#171;Диспетчер соединений&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcdest.connection.f1"
+title: "Редактор назначения ODBC (страница «Диспетчер соединений») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2e090b24ea11734f758033f7137523c9f2036b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Редактор назначения &#171;ODBC&#187; (страница &#171;Диспетчер соединений&#187;)
+# <a name="odbc-destination-editor-connection-manager-page"></a>Редактор назначения «ODBC» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения ODBC** используется для выбора диспетчера соединений ODBC для назначения. На этой странице также можно выбрать таблицу или представление базы данных  
   
  Дополнительные сведения о назначении ODBC см. в разделе [ODBC Destination](../../integration-services/data-flow/odbc-destination.md).  
   
  **Открытие страницы диспетчера соединений в редакторе назначения ODBC**  
   
-## Список задач  
+## <a name="task-list"></a>Список задач  
   
 -   В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] , содержащий назначение ODBC.  
   
@@ -33,15 +38,15 @@ caps.handback.revision: 8
   
 -   В окне **Редактор назначения ODBC**нажмите кнопку **Диспетчер соединений**.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
   
-### Диспетчер соединений  
+### <a name="connection-manager"></a>Диспетчер соединений  
  Выберите из списка существующий диспетчер соединений ODBC или нажмите кнопку «Создать», чтобы создать новое соединение. Соединение может устанавливаться с любой базой данных, поддерживающей ODBC.  
   
-### Создать  
+### <a name="new"></a>Создать  
  Нажмите кнопку **Создать**. Откроется диалоговое окно **Настройка редактора диспетчера соединений ODBC** , где можно создать новый диспетчер соединений.  
   
-### Режим доступа к данным  
+### <a name="data-access-mode"></a>Режим доступа к данным  
  Выберите метод загрузки данных в назначение. Доступные параметры показаны в следующей таблице.  
   
 |Параметр|Description|  
@@ -51,12 +56,12 @@ caps.handback.revision: 8
 |Имя таблицы — построчно|Выберите этот параметр, чтобы настроить назначение ODBC для вставки каждой строки в целевую таблицу по отдельности. Если выбран этот параметр, становится доступен следующий параметр.|  
 ||**Имя таблицы или представления**: выберите доступную таблицу или представление базы данных из списка.<br /><br /> Этот список содержит только первые 1000 таблиц. Если база данных содержит больше 1000 таблиц, можно ввести начальную часть имени таблицы или воспользоваться символом-шаблоном (*), чтобы ввести любую часть имени для вывода нужных таблиц.|  
   
-### Предварительный просмотр  
+### <a name="preview"></a>Предварительный просмотр  
  Нажмите кнопку **Просмотр** , чтобы просмотреть первые строки (до 200) данных для выбранной таблицы.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пользовательские свойства назначений ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)   
- [Редактор назначения ODBC (страница "Сопоставления")](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [Редактор назначения ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+ [Редактор назначения ODBC &#40; Страница «сопоставления» &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [Редактор назначения ODBC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
   

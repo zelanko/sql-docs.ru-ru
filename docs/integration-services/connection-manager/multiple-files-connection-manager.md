@@ -1,35 +1,40 @@
 ---
-title: "Диспетчер соединений с несколькими файлами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "папки [службы Integration Services], подключения"
-  - "файлы [службы Integration Services], подключения"
-  - "диспетчер соединений с несколькими файлами"
-  - "диспетчеры подключений [службы Integration Services], несколько файлов"
-  - "подключения [службы Integration Services], файлы"
-  - "соединения с несколькими файлами"
+title: "Диспетчер соединений с несколькими файлами | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- folders [Integration Services], connections
+- files [Integration Services], connections
+- Multiple Files connection manager
+- connection managers [Integration Services], Multiple Files
+- connections [Integration Services], files
+- multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 23dc2338948dc97d68436b23995a1817a0b3bb66
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Диспетчер соединений с несколькими файлами
+# <a name="multiple-files-connection-manager"></a>диспетчер соединений с несколькими файлами
   Диспетчер соединений с несколькими файлами позволяет пакету обращаться к существующим файлам и папкам или создавать файлы и папки во время выполнения.  
   
 > [!NOTE]  
 >  Встроенные задачи и компоненты потока данных в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не используют диспетчер соединений с несколькими файлами. Однако можно использовать этот диспетчер соединений в задаче «Скрипт» и компоненте скрипта. Дополнительные сведения об использовании диспетчеров соединений в задаче «Скрипт» см. в разделе [Connecting to Data Sources in the Script Task](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Сведения об использовании диспетчеров соединений в компоненте скрипта см. в разделе [Connecting to Data Sources in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
-## Использование диспетчера соединений с несколькими файлами  
+## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Использование диспетчера соединений с несколькими файлами  
  Свойство **FileUsageType** диспетчера соединений с несколькими файлами определяет, как используется соединение. Диспетчер соединений с несколькими файлами может создавать файлы и папки, а также использовать существующие файлы и папки.  
   
  В следующей таблице приводятся значения **FileUsageType**.  
@@ -41,8 +46,8 @@ caps.handback.revision: 36
 |**2**|Диспетчер соединений с несколькими файлами использует существующую папку.|  
 |**3**|Диспетчер соединений с несколькими файлами создает папку.|  
   
-## Конфигурация диспетчера соединений с несколькими файлами  
- Когда к пакету добавляется диспетчер соединений с несколькими файлами, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений, который разрешает подключение нескольких файлов во время выполнения, устанавливает свойства подключения нескольких файлов и добавляет соединения с несколькими файлами к коллекции пакета **Connections**.  
+## <a name="configuration-of-the-multiple-files-connection-manager"></a>Конфигурация диспетчера соединений с несколькими файлами  
+ Когда к пакету добавляется диспетчер соединений с несколькими файлами, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений, который разрешает подключение нескольких файлов во время выполнения, устанавливает свойства подключения нескольких файлов и добавляет соединения с несколькими файлами к коллекции пакета **Connections** .  
   
  Свойству **ConnectionManagerType** диспетчера соединений присваивается значение **MULTIFILE**.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 36
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], см. в разделе [Добавление диспетчера соединения файлов диалогового окна пользовательского Интерфейса в справочник](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md).  
+ Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в разделе [Добавление диспетчера соединения файлов диалогового окна пользовательского Интерфейса в справочник](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md).  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
