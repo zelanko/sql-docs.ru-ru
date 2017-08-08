@@ -1,5 +1,5 @@
 ---
-title: "Руководства разработчиков по SQL Server | Microsoft Docs"
+title: "Руководства разработчиков по SQL Server | Документация Майкрософт"
 ms.date: 10/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>Руководства разработчиков по SQL Server
@@ -35,17 +35,17 @@ ms.lasthandoff: 07/20/2017
 
   
 ### <a name="programmable-features-and-services"></a>Программируемые функции и службы: 
- - [Database Engine Developer Documentation](../relational-databases/database-engine-developer-documentation.md) (Документация для разработчиков ядра СУБД)  
+ - [Документация для разработчиков ядра СУБД](../relational-databases/database-engine-developer-documentation.md)  
   
- - [Analysis Services Developer Documentation](../analysis-services/analysis-services-developer-documentation.md) (Документация для разработчиков служб Analysis Services)  
+ - [Документация для разработчиков служб Analysis Services](../analysis-services/analysis-services-developer-documentation.md)  
   
- - [Reporting Services Developer Documentation](../reporting-services/reporting-services-developer-documentation.md) (Документация для разработчиков служб Reporting Services)  
+ - [Документация для разработчика служб Reporting Services](../reporting-services/reporting-services-developer-documentation.md)  
   
- - [Integration Services Developer Documentation](../integration-services/integration-services-developer-documentation.md) (Документация для разработчиков служб Integration Services)  
+ - [Документация для разработчиков служб Integration Services](../integration-services/integration-services-developer-documentation.md)  
   
  - [Документация для разработчика служб Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)  
   
- - [Replication Developer Documentation](../relational-databases/replication/concepts/replication-developer-documentation.md) (Документация для разработчиков по репликации)  
+ - [Руководство разработчика по репликации](../relational-databases/replication/concepts/replication-developer-documentation.md)  
   
 ## <a name="more-resources"></a>Дополнительные ресурсы 
 

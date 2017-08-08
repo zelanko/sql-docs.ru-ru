@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-installation"></a>Установка PolyBase
@@ -31,13 +31,13 @@ ms.lasthandoff: 07/17/2017
   
 ## <a name="prerequisites"></a>Предварительные требования  
   
--   64-разрядный выпуск ознакомительной версии SQL Server.  
+-   64-разрядный выпуск ознакомительной версии SQL Server;  
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) (подойдет [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) ). Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Программа установки завершится ошибкой, если отсутствует JRE.  
+-   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) (подойдет [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) ). Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). — программа установки столкнется с ошибкой, если JRE будет отсутствовать;  
   
--   минимальный объем памяти: 4 ГБ;  
+-   минимальный объем памяти: 4 ГБ;  
   
 -   Минимальное свободное место на жестком диске: 2 ГБ.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/17/2017
 ## <a name="single-node-or-polybase-scaleout-group"></a>Один узел или масштабируемая группа PolyBase
 Прежде чем начать установку PolyBase на экземплярах SQL Server, вам следует выбрать режим этой установки: на одном узле или в масштабируемой группе PolyBase. Для создания масштабируемой группы PolyBase должны соблюдаться следующие условия. 
 - Все компьютеры находятся в одном домене.
-- На всех компьютерах используется одинаковые имена и пароли учетной записи службы.
+- На всех компьютерах используются одинаковые имена и пароли учетной записи службы.
 - Экземпляры SQL Server могут взаимодействовать друг с другом по сети.
 
 После установки PolyBase режим установки (автономная или в масштабируемой группе) изменить нельзя. Чтобы перейти от одного режима к другому, следует удалить весь компонент и переустановить его заново.
@@ -83,15 +83,15 @@ ms.lasthandoff: 07/17/2017
 ##  <a name="installing"></a> Установка с помощью командной строки  
  Используйте значения из этой таблицы для создания сценариев установки. Две службы ( **SQL ServerPolyBase Engine** и **служба перемещения данных SQL Server PolyBase** ) должны запускаться под одной и той же учетной записью. В масштабируемой группе PolyBase обе службы PolyBase должны выполняться на всех узлах под одной доменной учетной записью.  
   
-|Компонент SQL Server|Параметр и значения|Описание|  
+|Компонент SQL Server|Параметр и значения|Description|  
 |--------------------------|--------------------------|-----------------|  
 |Управление программой установки SQL Server|**Обязательное**<br /><br /> /FEATURES=PolyBase|Выбирает компонент PolyBase.|  
-|SQL ServerPolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCACCOUNT|Задает учетную запись для службы ядра. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
-|SQL ServerPolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCPASSWORD|Задает пароль для учетной записи службы ядра.|  
-|SQL ServerPolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для службы PolyBase Engine: Automatic (автоматически, используется по умолчанию), Disabled (отключена) или Manual (вручную).|  
-|служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCACCOUNT|Задает учетную запись для службы перемещения данных. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
-|служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCPASSWORD|Задает пароль для учетной записи службы перемещения данных.|  
-|служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCSTARTUPTYPE|Задает режим запуска для службы перемещения данных: Automatic (автоматически, используется по умолчанию), Disabled (отключена) или Manual (вручную).|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCACCOUNT|Задает учетную запись для службы ядра. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCPASSWORD|Задает пароль для учетной записи службы ядра.|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для службы PolyBase Engine: Automatic (автоматически, используется по умолчанию), Disabled (отключена) или Manual (вручную).|  
+|Служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCACCOUNT|Задает учетную запись для службы перемещения данных. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
+|Служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCPASSWORD|Задает пароль для учетной записи службы перемещения данных.|  
+|Служба перемещения данных SQL Server PolyBase|**Необязательно**<br /><br /> /PBDMSSVCSTARTUPTYPE|Задает режим запуска для службы перемещения данных: Automatic (автоматически, используется по умолчанию), Disabled (отключена) или Manual (вручную).|  
 |PolyBase|**Необязательно**<br /><br /> /PBSCALEOUT|Указывает, будет ли этот экземпляр SQL Server использоваться в составе вычислительной масштабируемой группы PolyBase. <br />Поддерживаемые значения: **True**, **False**|  
 |PolyBase|**Необязательно**<br /><br /> /PBPORTRANGE|Указывает диапазон портов для служб PolyBase, включающий не менее 6 портов. Пример<br /><br /> `/PBPORTRANGE=16450-16460`|  
   
@@ -123,9 +123,9 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="firewall-rules"></a>Правила брандмауэра  
  Программа установки SQL Server PolyBase создает на компьютере следующие правила брандмауэра:  
   
--   SQL Server PolyBase — ядро СУБД — \<имя_экземпляра_SQL_Server> (входящие TCP-соединения);  
+-   SQL Server PolyBase — ядро СУБД — \<имя_экземпляра_SQL_Server> (входящие TCP-соединения);  
   
--   SQL Server PolyBase — службы PolyBase — \<имя_экземпляра_SQL_Server> (входящие TCP-соединения);  
+-   SQL Server PolyBase — службы PolyBase — \<имя_экземпляра_SQL_Server> (входящие TCP-соединения);  
   
 -   SQL Server PolyBase — обозреватель SQL — (UDP вход.).  
   

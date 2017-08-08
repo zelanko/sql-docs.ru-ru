@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/23/2017
   
 -   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Управление резервными копиями  
  В следующем списке перечислены общие рекомендации по управлению резервным копированием.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/23/2017
 -   При восстановлении из сжатой резервной копии может появиться следующее сообщение об ошибке:  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **Метка файла сообщения на устройстве `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` не выровнен. Перезапустите инструкцию Restore с тем же размером блока, который использовался при создании резервного набора данных. Возможно, следует указать 65536.**  
+        **Метка файла сообщения на устройстве `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` не согласована. Перезапустите инструкцию Restore с тем же размером блока, который использовался при создании резервного набора данных. Возможно, следует указать 65536.**  
   
          Чтобы устранить эту ошибку, издайте инструкцию **BACKUP** повторно и укажите для нее значение **BLOCKSIZE = 65536** .  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/23/2017
   
 -   Сбой записи в "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak". При архивации на URL-адрес получено исключение из удаленной конечной точки. Сообщение об исключении: не удалось прочитать данные из транспортного соединения. Соединение было закрыто.  
   
--   Произошла неустранимая ошибка ввода-вывода в файле "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" не удалось получить данные ошибки из удаленной конечной точки.  
+-   В файле "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" произошла неустранимая ошибка ввода-вывода "Не удалось получить ошибку из удаленной конечной точки".  
   
      Сообщение 3013, уровень 16, состояние 1, строка 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/23/2017
   
  **Параметры прокси-сервера по умолчанию не используются.**  
   
- Иногда ошибки проверки подлинности, как показано ниже приводит к прокси-сервера не выбраны параметры по умолчанию:*произошла неустранимая ошибка ввода-вывода в файле "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" резервное копирование на URL-адрес получил исключение от удаленной конечной точки. Сообщение об исключении: удаленный сервер вернул ошибку: (407)* **требуется аутентификация на прокси-сервере**.  
+ Иногда, если не выбраны параметры по умолчанию, это приводит к ошибкам аутентификации на прокси-сервере наподобие следующей: *Произошла неустранимая ошибка ввода-вывода в файле "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`". При архивации на URL-адрес получено исключение из удаленной конечной точки. Сообщение об исключении: удаленный сервер вернул ошибку: (407)* **требуется аутентификация на прокси-сервере**.  
   
  Чтобы устранить эту проблему, создайте файл конфигурации, позволяющий процессу резервного копирования по URL-адресу использовать параметры прокси-сервера по умолчанию. Для этого выполните следующие действия.  
   

@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Рекомендации и ограничения для темпоральной таблицы
@@ -53,13 +53,13 @@ ms.lasthandoff: 06/23/2017
   
 -   Инструкции**INSERT** и **UPDATE** не могут ссылаться на столбцы периода SYSTEM_TIME. Попытки вставить значения непосредственно в эти столбцы будут блокироваться.  
   
--   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
+-   **TRUNCATE TABLE** не поддерживается, если **SYSTEM_VERSIONING** имеет значение **ON**  
   
 -   Запрещено изменять данные в таблице журнала напрямую.  
   
 -   В текущей таблице запрещено использовать**ON DELETE CASCADE** и **ON UPDATE CASCADE** . Иными словами, если темпоральная таблица содержит ссылку на таблицы в связи по внешнему ключу (которая соответствует *parent_object_id* в sys.foreign_keys), запрещено использовать параметры CASCADE. Чтобы обойти это ограничение, воспользуйтесь логикой приложения или триггерами AFTER, которые позволяют обеспечить согласованность при удалении в таблице первичного ключа (соответствующую  *referenced_object_id* в sys.foreign_keys). Если таблица первичного ключа является темпоральной, а ссылочная таблица — нет, это ограничение отсутствует. 
 
-    **Примечание:** это ограничение применяется только к SQL Server 2016. Параметры CASCADE, поддерживаются в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и SQL Server 2017 г., начиная с CTP-версии 2.0.  
+    **ПРИМЕЧАНИЕ.** Это ограничение применяется только к SQL Server 2016. Параметры CASCADE поддерживаются в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и SQL Server 2017, начиная с CTP версии 2.0.  
   
 -   Триггеры**INSTEAD OF** запрещено использовать в текущей таблице или в таблице журнала, так как они могут сделать логику DML недопустимой. Триггеры**AFTER** разрешено использовать только в текущей таблице. Они блокируются в таблице журнала, чтобы не сделать логику DML недопустимой.  
   

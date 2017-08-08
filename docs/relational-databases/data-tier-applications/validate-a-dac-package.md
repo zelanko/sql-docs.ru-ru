@@ -21,19 +21,19 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="validate-a-dac-package"></a>Проверка пакета приложения уровня данных
   Перед развертыванием пакета приложения уровня данных рекомендуется просмотреть его содержимое и проверить действия по обновлению перед обновлением существующего пакета приложения уровня данных. Тем более это истина для развертывания пакетов, которые ранее в организации не развертывались.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **Перед началом работы выполните следующие действия.**  [Предварительные требования](#Prerequisites)  
   
-2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Обновление приложения уровня данных с использованием следующих средств:**  [просмотр содержимого приложения уровня данных](#ViewDACContents), [просмотр изменений базы данных](#ViewDBChanges), [просмотр действий по обновлению](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
  Рекомендуется не выполнять развертывание пакетов DAC, полученных из неизвестных или ненадежных источников. В этих пакетах может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы. Прежде чем использовать приложение уровня данных, полученное из ненадежного источника, разверните его на изолированном тестовом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], выполните для базы данных инструкцию [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), а также изучите исходный код в базе данных, например хранимые процедуры и другой определенный пользователем код.  
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>Просмотр примера действий по обновлению (PowerShell)  
  **Просмотр примера действий по обновлению (PowerShell)**  
   
- В следующем примере сообщается инструкции Transact-SQL, которые будут выполняться для обновления приложения уровня данных с именем MyApplicaiton с схемой, определенной в файле MyApplication2017.dacpac.  
+ Следующий пример предоставляет сведения об инструкциях Transact-SQL, которые будут выполняться для обновления приложения уровня данных с именем MyApplicaiton с переходом на схему, указанную в файле MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

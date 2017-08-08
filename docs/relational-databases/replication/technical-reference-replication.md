@@ -16,20 +16,20 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="technical-reference-replication"></a>Техническая справка (репликация)
   Этот раздел содержит ссылки на технический справочник по репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Ошибки и события**  
+ ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Маленький значок папки") **Ошибки и события**  
  [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
- ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Справочник по функциям**  
+ ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Маленький значок папки") **Справочник по функциям**  
  [Configure Distribution Wizard](../../relational-databases/replication/configure-distribution-wizard.md)  
   
  [Мастер создания подписки (справочник пользовательского интерфейса)](../../relational-databases/replication/new-subscription-wizard-ui-reference.md)  
@@ -38,14 +38,14 @@ ms.lasthandoff: 06/22/2017
   
  [Подробнее...](../../relational-databases/replication/properties-reference-replication.md)  
   
- ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Агенты репликации**  
+ ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Маленький значок папки") **Агенты репликации**  
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
  [Подробнее...](../../relational-databases/replication/agents/replication-agents.md)  
   
- ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Хранимые процедуры репликации**  
+ ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Маленький значок папки") **Хранимые процедуры репликации**  
  [sp_addarticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
   
  [sp_adddistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  [Подробнее...](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
- ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Таблицы репликации**  
+ ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Маленький значок папки") **Таблицы репликации**  
  [MSmerge_conflicts_info (Transact-SQL)](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
   
  [MSpeer_response (Transact-SQL)](../../relational-databases/system-tables/mspeer-response-transact-sql.md)  
@@ -67,14 +67,14 @@ ms.lasthandoff: 06/22/2017
   
  [Подробнее...](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
- ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Представления репликации**  
+ ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Маленький значок папки") **Представления репликации**  
  [Системное представление syspublications (Transact-SQL)](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
  [Системное представление syssubscriptions (Transact-SQL)](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
  [Подробнее...](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
- ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Библиотека классов репликации**  
+ ![Маленький значок папки](../../analysis-services/media/filefolder-small.png "Маленький значок папки") **Библиотека классов репликации**  
  <xref:Microsoft.SqlServer.Replication>  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

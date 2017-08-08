@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
@@ -51,29 +51,29 @@ ms.lasthandoff: 06/23/2017
 
 Здесь приведены поддерживаемые конструкции запросов.  
 
-Выражение CASE: случай может использоваться в любой инструкции или предложения, которые допускают допустимые выражения.
-   - **Применяется к:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    Начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], теперь поддерживаются операторы CASE для модулей, скомпилированных в собственном коде T-SQL.
+Выражение CASE: выражение CASE можно включать в любую инструкцию или предложение, которые позволяют использовать допустимые выражения.
+   - **Область применения:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    Начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются выражения CASE.
 
 Предложение SELECT:  
 
 -   псевдонимы имен и столбцов (с помощью синтаксиса AS или =);  
 
 -   скалярные вложенные запросы;
-    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], скалярные вложенные запросы теперь поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются скалярные подзапросы.
 
 -   предложение TOP*;  
 
 -   SELECT DISTINCT  
-    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], оператор DISTINCT поддерживается в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживается оператор DISTINCT.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION и UNION ALL
-    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], операторы UNION и UNION ALL теперь поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются операторы UNION и UNION ALL.
 
 -   присвоение значений переменных.  
 
@@ -84,21 +84,21 @@ ms.lasthandoff: 06/23/2017
 -   FROM \<скомпилированные_в_собственном_коде_встроенные_функции_с_табличными_значениями>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN и INNER JOIN;
-    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], СОЕДИНЕНИЯ теперь поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживается оператор JOINS.
 
 -   вложенные запросы `[AS] table_alias`. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md). 
-    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], вложенные запросы теперь поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются подзапросы.
 
 Предложение WHERE:  
 
 -   Предикат фильтра IS [NOT] NULL  
 
--   И МЕЖДУ  
+-   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Применяется к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], операторы OR и NOT/IN/EXISTS теперь поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются операторы OR/NOT/IN/EXISTS.
 
 
 Предложение[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :
@@ -194,7 +194,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 оператор APPLY поддерживается в модулях, скомпилированных в собственном коде.
 
 ##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
@@ -205,7 +205,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
 -   Функции идентификации: SCOPE_IDENTITY.  
@@ -215,7 +215,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 функции JSON поддерживаются в модулях, скомпилированных в собственном коде.
 
 -   Функции обработки ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE.  
@@ -279,7 +279,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Ограничение в 8192 строки применяется только к `TOP N`, где `N` является константой, как показано в предыдущих примерах.  Если нужно, чтобы `N` было больше 8192, можно присвоить это значение переменной и использовать ее с оператором `TOP`.  
+ Ограничение в 8192 строки применяется только к `TOP N` , где `N` является константой, как показано в предыдущих примерах.  Если нужно, чтобы `N` было больше 8192, можно присвоить это значение переменной и использовать ее с оператором `TOP`.  
 
  Пример использования переменной: компиляция  
 

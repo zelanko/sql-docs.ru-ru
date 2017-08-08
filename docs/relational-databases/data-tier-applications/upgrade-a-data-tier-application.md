@@ -28,19 +28,19 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>Обновление приложения уровня данных
   Используйте мастер обновления приложений уровня данных или скрипт Windows PowerShell, чтобы изменить схему и свойства приложения уровня данных (DAC), развернутого на данный момент, для соответствия схеме и свойствам, заданным в новой версии приложений уровня данных.  
   
--   **Before you begin:**  [Choosing DAC Upgrade Options](#ChoseDACUpgOptions), [Limitations and Restrictions](#LimitationsRestrictions), [Prerequisites](#Prerequisites), [Security](#Security), [Permissions](#Permissions)  
+-   **Перед началом работы:**  [выбор параметров обновления DAC](#ChoseDACUpgOptions), [ограничения](#LimitationsRestrictions), [предварительные требования](#Prerequisites), [безопасность](#Security), [разрешения](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Upgrade Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Обновление приложения уровня данных с использованием следующих средств**  [мастер обновления приложения уровня данных](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Обновление приложения уровня данных — это процесс, который выполняется на месте и изменяет схему существующей базы для соответствия схеме, заданной в новой версии приложения уровня данных. Новая версия приложения уровня данных содержится в файле пакета приложения уровня данных. Дополнительные сведения о создании пакета DAC см. в разделе [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -251,7 +251,7 @@ ms.lasthandoff: 06/23/2017
 7.  Закройте файловый поток, используемый для чтения файла пакета приложения уровня данных.  
   
 ### <a name="example-powershell"></a>Пример (PowerShell)  
- В следующем примере обновляется приложения уровня данных MyApplication развертывается на экземпляр по умолчанию [!INCLUDE[ssDE](../../includes/ssde-md.md)], с использованием новой версии в пакете MyApplication2017.dacpac.  
+ В следующем примере приложение уровня данных MyApplication обновляется в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию с использованием новой версии в пакете MyApplication2017.dacpac.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

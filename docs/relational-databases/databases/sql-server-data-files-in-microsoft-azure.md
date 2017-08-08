@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
@@ -126,7 +126,7 @@ ON
  В этом разделе описаны средства и библиотеки справочных материалов по программированию, которые можно использовать при хранении файлов данных SQL Server в службе хранилища Azure.  
   
 ### <a name="powershell-support"></a>Поддержка PowerShell  
- Используйте командлеты PowerShell для хранения файлов данных SQL Server в службе хранилища больших двоичных объектов Azure, указывая URL-адрес хранилища вместо пути к файлу. Доступ к большим двоичным объектам, используя следующий формат URL-адреса: `http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
+ Используйте командлеты PowerShell для хранения файлов данных SQL Server в службе хранилища больших двоичных объектов Azure, указывая URL-адрес хранилища вместо пути к файлу. Обращайтесь к большим двоичным объектам по URL-адресам в следующем формате: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Объект SQL Server и поддержка счетчиков производительности  
  Начиная с SQL Server 2014, добавлен новый объект SQL Server для использования с компонентом SQL Server Data Files в службе хранилища Azure. Новый объект SQL Server вызывается как [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) и может использоваться системным монитором для отслеживания действий, выполняемых при работе SQL Server со службой хранилища Microsoft Azure.  
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>Поддержка среды SQL Server Management Studio  
  Среда SQL Server Management Studio позволяет использовать этот компонент с помощью нескольких диалоговых окон. Например, можно ввести URL-адрес контейнера хранилища, например > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :
  
- в поле **Путь** в нескольких разных диалоговых окнах (**Создание базы данных**, **Присоединение базы данных** и **Восстановление базы данных**). Дополнительные сведения см. в разделе [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx).  
+ в поле **Путь** в нескольких разных диалоговых окнах ( **Создание базы данных**, **Присоединение базы данных**и **Восстановление базы данных**). Дополнительные сведения см. в разделе [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx).  
   
 ### <a name="sql-server-management-objects-support"></a>Поддержка управляющих объектов SQL Server  
  При использовании компонента SQL Server Data Files в Azure поддерживаются все управляющие объекты SQL Server (SMO). Если объект SMO требует пути к файлам, вместо локального пути используйте формат URL-адреса большого двоичного объекта, например `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Дополнительные сведения об управляющих объектах SQL Server (SMO) см. в разделе [Учебник по программированию управляющих объектов SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) электронной документации по SQL Server.  

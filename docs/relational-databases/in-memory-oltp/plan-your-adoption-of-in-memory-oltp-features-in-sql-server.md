@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
 ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/23/2017
 
 Для базы данных, размещенной в облачной службе базы данных SQL Azure, выбранный уровень службы повлияет на объем активной памяти, которую разрешено потреблять вашей базе данных. Необходимо спланировать мониторинг использования памяти вашей базой данных при помощи предупреждений. Подробная информация доступна в следующих статьях:
 
-- Проверьте ограничения In-Memory OLTP хранения для вашей [ценовую категорию.](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Проверьте ограничения хранилища In-Memory OLTP для вашей [ценовой категории](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels).
 - [Мониторинг хранилища OLTP в памяти](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Оптимизированные для памяти табличные переменные
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/23/2017
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4. Руководство по определению того, подходит ли выполняющаяся в памяти OLTP вашему приложению
 
-Рекомендации по ли функции выполнения OLTP в памяти может повысить производительность конкретного приложения см. в разделе:
+Руководство по определению того, могут ли возможности технологии обработки в памяти OLTP повысить производительность конкретного приложения, см. в следующей статье:
 
 - [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -122,7 +122,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="b-unsupported-features"></a>Б. Неподдерживаемые функции
 
-В описаны компоненты, которые не поддерживаются в некоторых сценариях OLTP в памяти:
+Возможности, которые не поддерживаются в определенных сценариях использования технологии обработки в памяти OLTP, описаны в следующей статье:
 
 - [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -159,7 +159,7 @@ ms.lasthandoff: 06/23/2017
 - Не существует столбца, который можно пометить как [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) в оптимизированной для обработки в памяти таблице.
 
 
-- Объект [ПОСЛЕДОВАТЕЛЬНОСТИ](../../t-sql/statements/create-sequence-transact-sql.md) не может использоваться с ограничением в таблице, оптимизированной для памяти. Например с предложением NEXT VALUE FOR не может создать ограничение по умолчанию. Последовательности может использоваться с инструкциями INSERT и UPDATE.
+- Объект [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) невозможно использовать в оптимизированной для обработки в памяти таблице с ограничением. Например, нельзя создать ограничение DEFAULT с предложением NEXT VALUE FOR. SEQUENCE можно использовать с операторами INSERT и UPDATE.
 
 
 ## <a name="c-administrative-maintenance"></a>В. Обслуживание в рамках администрирования
@@ -170,7 +170,7 @@ ms.lasthandoff: 06/23/2017
 
 ### <a name="c1-identity-seed-reset-increment--1"></a>В.1. Сброс начального значения идентификаторов, приращение >1
 
-Инструкция [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) не может использоваться для повторного заполнения столбца IDENTITY начальными значениями в оптимизированной для обработки в памяти таблице.
+Инструкция[DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)не может использоваться для повторного заполнения столбца IDENTITY начальными значениями в оптимизированной для обработки в памяти таблице.
 
 Значение приращения столбца IDENTITY ограничено единицей (1) в таблице, оптимизированной для обработки в памяти.
 

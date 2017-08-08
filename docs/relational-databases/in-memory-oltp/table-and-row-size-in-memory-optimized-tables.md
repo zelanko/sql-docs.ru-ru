@@ -14,16 +14,14 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
-# Размер строк и таблицы для таблиц, оптимизированных для памяти
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   До выхода [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] размер данных "в строке" для таблицы, оптимизированной для памяти, не мог превышать [8060 байт](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Но в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях, а также в базе данных SQL Azure появилась возможность создать таблицу, оптимизированную для памяти, с несколькими большими столбцами (например, несколькими столбцами varbinary(8000)) и столбцами LOB (т. е. varbinary(max), varchar(max) и nvarchar(max)), и выполнять с ними операции, используя типы таблиц и модули T-SQL, скомпилированные в собственном коде. 
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/10/2017
 
   Таблица, оптимизированная для памяти, представляет собой набор строк, а также индексов, которые содержат указатели на строки. На следующей схеме показана таблица с индексами и строками, которые в свою очередь содержат заголовки и текст:  
   
- ![Оптимизированная для памяти таблица.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![Таблица, оптимизированная для памяти.] (../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Таблица, оптимизированная для памяти.")  
 Таблица, оптимизированная для памяти, состоящая из индексов и строк.  
 
 ##  <a name="bkmk_TableSize"></a> Вычисление размера таблицы
@@ -248,9 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 Некоторые из этих особенностей подробно рассмотрены в записи блога о [новых возможностях выполняющейся в памяти OLTP в SQL Server 2016, появившихся после выпуска CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
  
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

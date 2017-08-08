@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Обслуживание соединителя SQL Server и устранение неполадок
@@ -170,8 +170,7 @@ ms.lasthandoff: 06/23/2017
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>При настройке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**К каким конечным точкам нужен доступ соединителю SQL Server?** 
- Соединитель взаимодействует с двумя конечными точками, которые необходимо внести в список разрешений. Для исходящей связи с этими службами нужен только один порт: 443 (HTTPS).
+**К каким конечным точкам нужен доступ соединителю SQL Server?** Соединитель взаимодействует с двумя конечными точками, которые необходимо внести в список разрешений. Для исходящей связи с этими службами нужен только один порт: 443 (HTTPS).
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -188,7 +187,7 @@ ms.lasthandoff: 06/23/2017
   
 -   Для создания асимметричного ключа требуется разрешение `CREATE ASYMMETRIC KEY` .  
 
-**Как изменить Active Directory по умолчанию, чтобы хранилище ключей было создано для той же подписки и того же Active Directory, что и субъект-служба, созданный для [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]соединителя?**
+**Как изменить Active Directory по умолчанию, чтобы хранилище ключей было создано для той же подписки и того же Active Directory, что и субъект-служба, созданный для соединителя [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
@@ -299,7 +298,7 @@ ms.lasthandoff: 06/23/2017
 -   Справочник по [командлетам PowerShell для работы с хранилищем ключей Azure](https://msdn.microsoft.com/library/dn868052.aspx)  
   
 ## <a name="see-also"></a>См. также:  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Расширенное управление ключами с помощью хранилища ключей Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Использование Соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Включенный параметр конфигурации сервера поставщика расширенного управления ключами](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
