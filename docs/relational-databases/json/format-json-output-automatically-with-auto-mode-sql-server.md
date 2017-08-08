@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 09e81a8bbc77e9bbf9f76bb669ab53bd549bef85
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 0a1219eb4dac8621ef678cf309ef36b4b039536b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Автоматическое форматирование выходных данных JSON в режиме AUTO (SQL Server)
@@ -32,8 +32,8 @@ ms.lasthandoff: 07/18/2017
 При указании параметра **AUTO** формат выходных данных JSON определяется автоматически на основе порядка столбцов в списке SELECT и соответствующих им исходных таблиц. Этот формат изменить нельзя.
  
 Кроме того, для управления выходными данными можно использовать параметр **PATH**.
--   Дополнительные сведения о параметре **PATH** см. в статье [Format Nested JSON Output with PATH Mode (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md) (Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server)).
--   Общие сведения об этих параметрах см. в статье [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) (Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)).
+-   Дополнительные сведения о параметре **PATH** см. в статье [Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+-   Общие сведения об этих параметрах см. в статье [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
 
 В запросе, где используется параметр **FOR JSON AUTO** , должно быть предложение **FROM** .  
   
@@ -160,7 +160,7 @@ FOR JSON PATH
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
+Большое количество определенных решений, варианты использования и рекомендации см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
 
 ## <a name="see-also"></a>См. также:  
  [Предложение FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)  

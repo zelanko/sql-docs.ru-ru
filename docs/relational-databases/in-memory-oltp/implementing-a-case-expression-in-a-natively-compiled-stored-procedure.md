@@ -15,17 +15,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Реализация выражения CASE в скомпилированной в собственном коде хранимой процедуре
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-  Выражения CASE поддерживаются в хранимых процедурах, скомпилированных в собственном коде. В следующем примере показан способ использование выражения CASE в запросе. Для выражения CASE в модулях, скомпилированных в собственном коде описанный обходной путь больше не потребуется.
+  Выражения CASE не поддерживаются в скомпилированных хранимых процедурах. В следующем примере показан вариант использования выражения CASE в запросе. Для выражения CASE в модулях, скомпилированных в собственном коде, описанный обходной путь больше не потребуется.
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.

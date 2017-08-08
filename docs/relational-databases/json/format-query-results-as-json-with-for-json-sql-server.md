@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: e59b0e12e0ee47a5ac8a68e539144401d80fb649
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/20/2017
  ![Диаграмма передачи выходных данных FOR JSON](../../relational-databases/json/media/forjson-example1.png "Диаграмма передачи выходных данных FOR JSON")  
 
 ### <a name="more-info-about-for-json-path"></a>Дополнительные сведения о FOR JSON PATH
-Более подробные сведения и примеры см. в разделе [форматирование вложенных выходных данных JSON с помощью режима PATH &#40; SQL Server &#41; ](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+Более подробные сведения и примеры см. в разделе [Форматирование вложенных выходных данных JSON с помощью режима PATH &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
 
 Сведения о синтаксисе и использовании см. в разделе [Предложение FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
 
@@ -80,18 +80,18 @@ FOR JSON AUTO
 ```
  
 ### <a name="more-info-about-for-json-auto"></a>Дополнительные сведения о FOR JSON AUTO
-Более подробные сведения и примеры см. в разделе [формат JSON выходные данные автоматически с помощью режима AUTO &#40; SQL Server &#41; ](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
+Более подробные сведения и примеры см. в разделе [Автоматическое форматирование выходных данных JSON с помощью режима AUTO &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
 
 Сведения о синтаксисе и использовании см. в разделе [Предложение FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
   
 ## <a name="control-other-json-output-options"></a>Управление другими параметрами выходных данных JSON  
 Управление выходными данными из **FOR JSON** предложения, используя следующие дополнительные параметры.  
   
--   **КОРНЕВОЙ**. Чтобы добавить один элемент верхнего уровня в выходные данные JSON, укажите параметр **ROOT** . Если не указать этот параметр, выходные данные JSON не поддерживает корневой элемент. Дополнительные сведения см. в разделе [Добавление корневого узла в выходные данные JSON с параметром ROOT (SQL Server)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
+-   **ROOT**. Чтобы добавить один элемент верхнего уровня в выходные данные JSON, укажите параметр **ROOT** . Если не указать этот параметр, выходные данные JSON не будут поддерживать корневой элемент. Дополнительные сведения см. в разделе [Добавление корневого узла в выходные данные JSON с параметром ROOT (SQL Server)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
--   **INCLUDE_NULL_VALUES**. Чтобы включить значения NULL в выходные данные JSON, укажите параметр **INCLUDE_NULL_VALUES** . Если не указать этот параметр, выходные данные не будут включены свойства JSON для значений NULL в результатах запроса. Дополнительные сведения см. в разделе [включать значения Null в выходные данные JSON использование параметра INCLUDE_NULL_VALUES &#40; SQL Server &#41; ](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
+-   **INCLUDE_NULL_VALUES**. Чтобы включить значения NULL в выходные данные JSON, укажите параметр **INCLUDE_NULL_VALUES** . Если не указать этот параметр, выходные данные не будут включать свойства JSON для значений NULL в результатах запроса. Дополнительные сведения см. в статье [Использование параметра INCLUDE_NULL_VALUES для включения значений Null в выходные данные JSON &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
 
--   **WITHOUT_ARRAY_WRAPPER**. Чтобы удалить квадратные скобки, в которые выходные данные JSON предложения **FOR JSON** заключаются по умолчанию, укажите параметр **WITHOUT_ARRAY_WRAPPER** . Используйте этот параметр, чтобы создать единый объект JSON в качестве выходных данных из одной строки результата. Если не указать этот параметр, выходные данные JSON форматируются как массив — то есть, заключены в квадратные скобки. Дополнительные сведения см. в разделе [Удаление квадратных скобок из выходных данных JSON с помощью параметра WITHOUT_ARRAY_WRAPPER (SQL Server)](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
+-   **WITHOUT_ARRAY_WRAPPER**. Чтобы удалить квадратные скобки, в которые выходные данные JSON предложения **FOR JSON** заключаются по умолчанию, укажите параметр **WITHOUT_ARRAY_WRAPPER** . Используйте этот параметр, чтобы создать единый объект JSON в качестве выходных данных из одной строки результата. Если этот параметр не указан, выходные данные JSON форматируются как массив — то есть заключены в квадратные скобки. Дополнительные сведения см. в разделе [Удаление квадратных скобок из выходных данных JSON с помощью параметра WITHOUT_ARRAY_WRAPPER (SQL Server)](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
    
 ## <a name="output-of-the-for-json-clause"></a>Выходные данные предложения FOR JSON  
 Выходные данные предложения **FOR JSON** имеют следующие характеристики:  
@@ -99,8 +99,8 @@ FOR JSON AUTO
 1.  Результирующий набор содержит один столбец.
     -   Небольшой результирующий набор может содержать одну строку.
     -   Большой результирующий набор разбивает длинную строку JSON по нескольким строкам.
-        -   По умолчанию SQL Server Management Studio (SSMS) объединяет результаты в одну строку, если выходной параметр не **результаты в таблицу**. В строке состояния SSMS отображается действительного числа строк.
-        -   В других клиентских приложениях может потребоваться внести код, который будет перераспределять большой объем результатов в одну общую допустимую строку JSON, объединяя содержимое множества записей. Пример этого кода в приложении C# см. в разделе [использование для выходных данных JSON в клиентском приложении C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   По умолчанию SQL Server Management Studio (SSMS) объединяет результаты в одну строку, если выходной параметр не **результаты в таблицу**. В строке состояния SSMS отображается действительное число строк.
+        -   В других клиентских приложениях может потребоваться внести код, который будет перераспределять большой объем результатов в одну общую допустимую строку JSON, объединяя содержимое множества записей. Пример этого кода в приложении C# см. в разделе [Использование для выходных данных JSON в клиентском приложении C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
   
      ![Пример выходных данных FOR JSON](../../relational-databases/json/media/forjson-example2.png "Пример выходных данных FOR JSON")  
   
@@ -115,7 +115,7 @@ FOR JSON AUTO
 3.  Как имена столбцов, так и их значения экранируются согласно синтаксису JSON. Дополнительные сведения см. в разделе [Как FOR JSON экранирует специальные и управляющие символы (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
   
 ### <a name="example"></a>Пример
-Ниже приведен пример, демонстрирующий использование **FOR JSON** предложение форматы выходных данных JSON.  
+Приведенный ниже пример показывает, каким образом предложение **FOR JSON** форматирует выходные данные JSON.  
   
 **Результаты запроса**  
   
@@ -155,11 +155,11 @@ FOR JSON AUTO
  Предложение **FOR JSON** экранирует специальные символы и представляет управляющие символы в выходных данных JSON, как описано в этом разделе.  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
+Большое количество определенных решений, варианты использования и рекомендации см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
   
 ## <a name="see-also"></a>См. также:  
  [Предложение FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)   
- [Использование выходных данных FOR JSON в SQL Server и клиентских приложениях (SQL Server)](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)  
+ [Использование выходных данных FOR JSON в SQL Server и клиентских приложениях &#40;SQL Server&#41;](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)  
   
   
 

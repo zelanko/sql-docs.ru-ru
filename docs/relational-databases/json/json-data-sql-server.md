@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-data-sql-server"></a>Данные JSON (SQL Server)
@@ -70,7 +70,7 @@ JSON — это популярный формат текстовых данны�
 
 **Пример**
   
- В следующем примере запрос использует реляционные данные и данные JSON (хранятся в столбце с именем `jsonCol`) из таблицы:  
+ В следующем примере представлен запрос, в котором используются реляционные данные и данные JSON (хранятся в столбце `jsonCol`) из таблицы:  
   
 ```sql  
 SELECT Name,Surname,
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
   
--   Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).  
+-   Большое количество определенных решений, варианты использования и рекомендации см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).  
   
 ### <a name="reference-topics"></a>Справочные разделы  
   

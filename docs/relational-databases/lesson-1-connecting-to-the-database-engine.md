@@ -14,18 +14,17 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# Урок 1. Соединение с компонентом Database Engine
-<a id="lesson-1-connecting-to-the-database-engine" class="xliff"></a>
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
- > Содержимое, связанное с предыдущих версий SQL Server, в разделе [занятия 1: подключение к компоненту Database Engine](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в разделе [Урок 1. Соединение с компонентом Database Engine](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
   
@@ -40,27 +39,23 @@ ms.lasthandoff: 06/23/2017
 ## <a name="tools"></a>Средства для начала работы  
 Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
   
-### Основные средства
-<a id="basic-tools" class="xliff"></a>  
+### <a name="basic-tools"></a>Основные средства  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)] . Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS предоставляется для бесплатного скачивания из [Центра загрузки Майкрософт](https://msdn.microsoft.com/library/mt238290.aspx). Последнюю версию можно использовать с более старыми версиями [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации устанавливается с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и с клиентскими средствами. Он позволяет включать серверные протоколы, настраивать параметры протокола, например порты TCP, настраивать автоматический запуск служб сервера и настраивать соединение клиентских компьютеров. Это средство может настроить дополнительные параметры соединения, но не активирует возможности.  
   
-### Образец базы данных
-<a id="sample-database" class="xliff"></a>  
+### <a name="sample-database"></a>Образец базы данных  
 Образцы баз данных и примеры с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]не поставляются. Большинство примеров, описанных в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используют образец базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
-##### Начало работы в среде SQL Server Management Studio
-<a id="to-start-sql-server-management-studio" class="xliff"></a>  
+##### <a name="to-start-sql-server-management-studio"></a>Начало работы в среде SQL Server Management Studio  
   
 - В текущих версиях Windows на **начальной** странице введите "SSMS", а затем выберите **Microsoft SQL Server Management Studio**.  
 -   В более старых версиях Windows в меню **Пуск** наведите указатель на пункт **Все программы**, затем на пункт [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]и выберите пункт **SQL Server Management Studio**.  
   
-##### Запуск диспетчера конфигурации SQL Server
-<a id="to-start-sql-server-configuration-manager" class="xliff"></a>  
+##### <a name="to-start-sql-server-configuration-manager"></a>Запуск диспетчера конфигурации SQL Server  
   
-- В текущих версиях Windows на **начальной** странице введите **диспетчер конфигурации**, а затем выберите пункт **Диспетчер конфигурации SQL Server *версия*** .   
+- В текущих версиях Windows на **Пуск** странице введите **диспетчер конфигурации**и выберите пункт **Диспетчер конфигурации SQL Server *версия* диспетчер конфигурации**.   
 -   В более старых версиях Windows в меню **Пуск** последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**, а затем выберите пункт **Диспетчер конфигурации SQL Server**.  
   
 ## <a name="connect"></a>Соединение с помощью среды Management Studio  
@@ -69,8 +64,7 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 > В этом разделе рассматривается подключение к локальному экземпляру SQL Server. Инструкции по подключению к базе данных SQL Azure см. в разделе [Подключение к базе данных SQL с помощью SQL Server Management Studio и выполнение пробного запроса T-SQL](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
   
-##### Определение имени экземпляра компонента Database Engine
-<a id="to-determine-the-name-of-the-instance-of-the-database-engine" class="xliff"></a>  
+##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Определение имени экземпляра компонента Database Engine  
   
 1.  Войдите в Windows как член группы «Администраторы» и откройте среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -80,15 +74,13 @@ ms.lasthandoff: 06/23/2017
   
 4.  Выбрав компонент **Ядро СУБД** на панели инструментов "Зарегистрированные серверы", разверните компонент **Ядро СУБД**, щелкните правой кнопкой мыши пункт **Группы локальных серверов**, наведите указатель на пункт **Задачи**и выберите пункт **Зарегистрировать локальные серверы**. Отобразятся все экземпляры компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , установленные на компьютере. Экземпляр по умолчанию безымянный и отображается как имя компьютера. Именованный экземпляр отображается как имя компьютера, за которым следует обратная косая черта (\\), а затем имя экземпляра. Для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] имя экземпляра — *<имя_компьютера>*\sqlexpress, если имя не было изменено в процессе установки.  
   
-##### Подтверждение того, что компонент ядра СУБД запущен
-<a id="to-verify-that-the-database-engine-is-running" class="xliff"></a>  
+##### <a name="to-verify-that-the-database-engine-is-running"></a>Подтверждение того, что компонент ядра СУБД запущен  
   
 1.  В компоненте «Зарегистрированные серверы», если имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит зеленую точку с белой стрелкой рядом с именем, компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] выполняется и никаких дальнейших действий не требуется.  
   
 2.  Если имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит красную точку с белым квадратом рядом с именем, то компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] остановлен. Щелкните имя компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]правой кнопкой мыши, выберите **Управление службой**, а затем щелкните **Пуск**. После диалогового окна подтверждения компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] должен запуститься и круг должен стать зеленым с белой стрелкой.  
   
-##### Подключение к компоненту ядра СУБД
-<a id="to-connect-to-the-database-engine" class="xliff"></a>  
+##### <a name="to-connect-to-the-database-engine"></a>Подключение к компоненту ядра СУБД  
 
 При установке [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] была выбрана по крайней мере одна учетная запись администратора. Выполнив вход в Windows с правами администратора, выполните указанные ниже действия.
   
@@ -115,8 +107,7 @@ ms.lasthandoff: 06/23/2017
 > [!TIP]
 > В большинстве организаций пользователи входят в домены, и используется проверка подлинности Windows. Вы можете поэкспериментировать самостоятельно, создав дополнительных локальных пользователей на своем компьютере. Локальные пользователи будут проходить проверку подлинности на вашем компьютере, поэтому доменом является его имя. Например, если ваш компьютер имеет имя `MyComputer` и вы создали пользователя с именем `Test`, то в Windows этот пользователь указывается как `Mycomputer\Test`.  
   
-##### Создание имени входа для проверки подлинности Windows
-<a id="create-a-windows-authentication-login" class="xliff"></a>  
+##### <a name="create-a-windows-authentication-login"></a>Создание имени входа для проверки подлинности Windows  
   
 1.  В предыдущей задаче было установлено соединение с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. В обозревателе объектов разверните экземпляр своего сервера, затем узел **Безопасность**, щелкните правой кнопкой мыши **Имена входа**и выберите пункт **Создать имя входа**.  
   
@@ -139,8 +130,7 @@ ms.lasthandoff: 06/23/2017
 > [!IMPORTANT]  
 > Это базовые сведения, позволяющие начать работу. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет безопасную среду; безопасность безусловно важна при выполнении операций с базой данных.  
   
-## Следующее занятие
-<a id="next-lesson" class="xliff"></a>  
+## <a name="next-lesson"></a>Следующее занятие  
 [Занятие 2. Соединение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)  
   
   

@@ -28,7 +28,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>Приступая к работе с PolyBase
@@ -51,7 +51,7 @@ ms.lasthandoff: 07/14/2017
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) подойдет.) Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Программа установки завершится ошибкой, если отсутствует JRE.   
+-   Oracle Java SE RunTime Environment (JRE) 7.51 или более поздняя версия (64-разрядный выпуск) ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) или [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) подойдет.) Откройте страницу [Загрузка Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). — программа установки столкнется с ошибкой, если JRE будет отсутствовать;   
   
 -   Минимальный объем памяти: 4 ГБ.  
   
@@ -64,10 +64,10 @@ ms.lasthandoff: 07/14/2017
   
 -   Кластер Hadoop. Поддерживаемые версии см. в разделе [Настройка PolyBase](#supported).  
 
--   Хранилище больших двоичных объектов Azure
+-   хранилище BLOB-объектов Azure.
 
 > [!NOTE]
->   При использовании функции включения вычислений в Hadoop необходимо будет убедиться, что целевой кластер Hadoop содержит базовые компоненты HDFS, Yarn и MapReduce с включенным сервером JobHistory. PolyBase отправляет запрос на включение через MapReduce и запрашивает сведения о состоянии c сервера JobHistory. Без компонента, либо запрос завершится ошибкой. 
+>   При использовании функции включения вычислений в Hadoop необходимо будет убедиться, что целевой кластер Hadoop содержит базовые компоненты HDFS, Yarn и MapReduce с включенным сервером JobHistory. PolyBase отправляет запрос на включение через MapReduce и запрашивает сведения о состоянии c сервера JobHistory. Без любого из этих компонентов запрос завершится ошибкой. 
 
 ## <a name="install-polybase"></a>Установка PolyBase  
  Если вы не установили PolyBase, см. раздел [установки PolyBase](../../relational-databases/polybase/polybase-installation.md).  
@@ -79,18 +79,18 @@ ms.lasthandoff: 07/14/2017
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="supported"></a> Configure PolyBase  
- После установки, необходимо настроить SQL Server для использования либо вашей версии Hadoop или хранилища больших двоичных объектов. PolyBase поддерживает два поставщика Hadoop Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH).  Вот некоторые из поддерживаемых внешних источников данных:  
+##  <a name="supported"></a> Настройка PolyBase  
+ После установки необходимо настроить SQL Server для использования либо вашей версии Hadoop, либо хранилища больших двоичных объектов. PolyBase поддерживает два поставщика Hadoop — Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH).  Вот некоторые из поддерживаемых внешних источников данных:  
   
 -   Hortonworks HDP 1.3 в ОС Linux или Windows Server;  
   
--   Hortonworks HDP 2.1 — 2.6 в Linux
+-   Hortonworks HDP 2.1–2.6 в Linux
 
 -   Hortonworks HDP 2.1–2.3 в ОС Windows Server;  
   
 -   Cloudera CDH 4.3 в Linux;  
   
--   Cloudera CDH 5.1 – 5.5, 5.9-5.11 в Linux  
+-   Cloudera CDH 5.1–5.5, 5.9–5.11 в Linux  
   
 -   хранилище BLOB-объектов Azure.  
   

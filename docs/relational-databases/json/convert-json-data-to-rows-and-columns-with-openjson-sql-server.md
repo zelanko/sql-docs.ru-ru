@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: a7229bfe9c6924d2d7a79c861fe10c48db4b0c15
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 6e4a7b49bb01bd4254fad855daedd3981b2fa6a8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server)
@@ -59,7 +59,7 @@ FROM OPENJSON(@json);
   
 **Результаты**  
   
-|Key|value|type|  
+|ключ|value|type|  
 |---------|-----------|----------|  
 |имя|Джон|1|  
 |surname|Doe|1|  
@@ -120,7 +120,7 @@ WITH (
   
 **Результаты**  
   
-|Количество|Дата|Customer|Количество|  
+|Количество|Дата|Customer|количество|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
@@ -136,7 +136,7 @@ WITH (
 
 Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).
 
-## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON необходим уровень совместимости 130
+## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON необходим уровень совместимости 130.
 Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости вашей базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON** . Другие встроенные функции JSON доступны на всех уровнях совместимости.
 
 Проверить уровень совместимости можно в представлении `sys.databases` или в свойствах базы данных.
@@ -145,7 +145,7 @@ WITH (
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
+Большое количество определенных решений, варианты использования и рекомендации см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
   
 ## <a name="see-also"></a>См. также:  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

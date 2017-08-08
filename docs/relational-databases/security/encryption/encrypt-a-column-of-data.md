@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>Шифрование столбца данных
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
 
-Чтобы использовать следующие примеры, необходимо иметь главный ключ базы данных. Если базы данных не имеет главного ключа базы данных, создайте его, выполнив следующую инструкцию, указав пароль:   
+Для применения приведенных ниже примеров требуется главный ключ базы данных. Если в вашей базе данных главного ключа еще нет, создайте его, выполнив указанный ниже оператор и указав пароль:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-Всегда создавайте резервную копию главного ключа базы данных. Дополнительные сведения о главных ключей базы данных см. в разделе [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+Всегда создавайте резервную копию главного ключа базы данных. Дополнительные сведения о создании главных ключей баз данных см. в статье [CREATE MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-master-key-transact-sql.md).
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Шифрование столбца данных с помощью простого симметричного шифрования  
   

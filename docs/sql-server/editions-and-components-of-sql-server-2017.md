@@ -43,7 +43,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Выпуски и поддерживаемые функции SQL Server 2017
@@ -65,10 +65,10 @@ ms.lasthandoff: 07/17/2017
 Выпуск SQL Server Evaluation доступен для ознакомления в течение 180 дней.  
   
 Актуальные заметки о выпуске и сведения о новых возможностях содержатся в следующих разделах:
-- [Заметки о выпуске SQL Server 2017 г.](../sql-server/sql-server-2017-release-notes.md)
-- [Новые возможности SQL Server 2017 г.](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
+- [Новые возможности SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
-### <a name="try-sql-server"></a>Попробуйте SQL Server!    
+### <a name="try-sql-server"></a>Оцените SQL Server!    
     
 > [![Загрузить в центре оценки](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Загрузить SQL Server 2017 CTP в центре оценки](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
@@ -131,18 +131,18 @@ ms.lasthandoff: 07/17/2017
 **Выпуски Evaluation и Developer**  
 Поддерживаемые компоненты для выпусков Developer и Evaluation указаны в списке возможностей SQL Server Enterprise в приведенных ниже таблицах.
 
-Выпуск Developer edition по-прежнему поддерживает только 1 клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
+Выпуск Developer edition по-прежнему поддерживает только 1 клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Ограничения масштабирования  
   
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Максимальная вычислительная мощность, используемая одним экземпляром, — [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Максимум, поддерживаемый операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер| 
-|Максимальная вычислительная мощность, используемая одним экземпляром, — [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
-|Максимальный объем памяти для буферного пула на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Максимум, поддерживаемый операционной системой|128 ГБ|64 ГБ|1410 МБ|1410 МБ|
+|Максимальная вычислительная мощность, используемая одним экземпляром, — [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Максимум, поддерживаемый операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер| 
+|Максимальная вычислительная мощность, используемая одним экземпляром, — [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
+|Максимальный объем памяти для буферного пула на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Максимум, поддерживаемый операционной системой|128 ГБ|64 ГБ|1410 МБ|1410 МБ|
 |Максимальный объем памяти для кэша сегмента Columnstore на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ| 16 ГБ| 352 МБ| 352 МБ|  
 |Максимальный размер данных, оптимизированных для памяти, на базу данных в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ| 16 ГБ| 352 МБ| 352 МБ|  
-|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Табличный: 16 ГБ<br /><br /> MOLAP: 64 ГБ|Недоступно|Недоступно|Недоступно|  
+|Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Табличный: 16 ГБ<br /><br /> MOLAP: 64 ГБ|Недоступно|Недоступно|Недоступно|  
 |Максимальный объем используемой памяти на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|64 ГБ|64 ГБ|4 ГБ|Недоступно|
 |Максимальный размер реляционной базы данных|524 ПБ|524 ПБ|524 ПБ|10 ГБ|10 ГБ|  
   
@@ -182,9 +182,9 @@ ms.lasthandoff: 07/17/2017
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Columnstore <sup>1</sup>|Да|Да|Да|Да|Да|  
-|Большие двоичные объекты в кластеризованных индексах columnstore|Да|Да|Да|Да|Да|  
+|Большие двоичные объекты в кластеризованных индексах columnstore|Да|Да|Да|Да|Да|  
 |Перестройка некластеризованных индексов columnstore в подключенном режиме|Да|Нет|Нет|Нет|Нет|
-|Выполняющаяся в памяти OLTP <sup>1</sup>|Да|Да|Да|Да<sup>2</sup>|Да|
+|Выполняющаяся в памяти OLTP <sup>1</sup>|Да|Да|Да|Да, <sup>2</sup>|Да|
 |База данных Stretch|Да|Да|Да|Да|Да|
 |Постоянная основная память|Да|Да|Да|Да|Да|
 |Поддержка нескольких экземпляров|50|50|50|50|50|
@@ -243,9 +243,9 @@ ms.lasthandoff: 07/17/2017
 |Объекты SMO|Да|Да|Да|Да|Да|  
 |Диспетчер конфигурации SQL Server|Да|Да|Да|Да|Да|   
 |SQL CMD (программа командной строки)|Да|Да|Да|Да|Да|      
-|Распределенное воспроизведение — средство администрирования|Да|Да|Да|Да|Нет|  
-|Распределенное воспроизведение — клиент|Да|Да|Да|Нет|Нет|  
-|Распределенное воспроизведение — контроллер|Да (до 16 клиентов)|Да (1 клиент)|Да (1 клиент)|Нет|Нет|   
+|Распределенное воспроизведение — средство администрирования|Да|Да|Да|Да|Нет|  
+|Распределенное воспроизведение — клиент|Да|Да|Да|Нет|Нет|  
+|Распределенное воспроизведение — контроллер|Да (до 16 клиентов)|Да (1 клиент)|Да (1 клиент)|Нет|Нет|   
 |SQL Profiler|Да|Да|Нет <sup>1</sup>|Нет <sup>1</sup>|Нет <sup>1</sup>|  
 |SQL Server, агент|Да|Да|Да|Нет|Нет| 
 |Пакет управления Microsoft System Center Operations Manager|Да|Да|Да|Нет|Нет|  
@@ -264,7 +264,7 @@ ms.lasthandoff: 07/17/2017
 |Выделенное административное соединение|Да|Да|Да|Да, с помощью флага трассировки|Да, с помощью флага трассировки|   
 |Поддержка скриптов PowerShell|Да|Да|Да|Да|Да| 
 |Поддержка SysPrep <sup>1</sup>|Да|Да|Да|Да|Да| 
-|Поддержка операций с компонентами приложения уровня данных — извлечение, развертывание, обновление, удаление|Да|Да|Да|Да|Да| 
+|Поддержка операций с компонентами приложения уровня данных — извлечение, развертывание, обновление, удаление|Да|Да|Да|Да|Да| 
 |Автоматизация политики (проверка по расписанию и изменение)|Да|Да|Да|Нет|Нет|   
 |Сборщик данных производительности|Да|Да|Да|Нет|Нет| 
 |Возможность регистрации в качестве управляемого экземпляра в среде управления несколькими экземплярами|Да|Да|Да|Нет|Нет|   
@@ -299,7 +299,7 @@ ms.lasthandoff: 07/17/2017
 |Базовая интеграция Python|Да|Да|Да|Да|Нет|
 |Расширенная интеграция Python|Да|Нет|Нет|Нет|Нет| 
 |Сервер машинного обучения (автономный)|Да|Нет|Нет|Нет|Нет|   
-|Вычислительный узел PolyBase|Да|Да <sup>1</sup>|Да <sup>1</sup>, <sup>2</sup>|Да<sup>1</sup>|Да<sup>1</sup> | 
+|Вычислительный узел PolyBase|Да|Да <sup>1</sup>|Да <sup>1</sup>, <sup>2</sup>|Да <sup>1</sup>|Да <sup>1</sup> | 
 |Головной узел PolyBase|Да|Нет|Нет|Нет|Нет| 
 |JSON|Да|Да|Да|Да|Да|   
 |Хранилище запросов|Да|Да|Да|Да|Да|   
@@ -343,31 +343,31 @@ ms.lasthandoff: 07/17/2017
 
 ##  <a name="SSAS"></a> Analysis Services  
   
-Дополнительные сведения о функциях служб Analysis Services, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
+Сведения о функциях служб Analysis Services, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], см. в разделе [Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
   
 ##  <a name="BIMD"></a> Семантическая модель бизнес-аналитики (многомерная)  
   
-Дополнительные сведения о функциях служб Analysis Services, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Сведения о функциях служб Analysis Services, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], см. в разделе [Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
    
 ##  <a name="BIT"></a> Семантическая модель бизнес-аналитики (табличная)  
   
-Дополнительные сведения о функциях служб Analysis Services, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Сведения о функциях служб Analysis Services, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], см. в разделе [Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-Сведения о PowerPivot для SharePoint возможности, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Сведения о функциях Power Pivot для SharePoint, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], см. в разделе [Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="DM"></a> Интеллектуальный анализ данных  
   
-Сведения о функции интеллектуального анализа данных, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Сведения о функциях интеллектуального анализа данных, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], см. в разделе [Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SSRS"></a> Службы Reporting Services  
   
-Дополнительные сведения о функциях служб Reporting Services, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], в разделе [Reporting Services функции, поддерживаемые различными выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Сведения о функциях служб Reporting Services, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], см. в разделе [Функции служб Reporting Services, поддерживаемые различными выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 ##  <a name="BIC"></a> Клиенты бизнес-аналитики  
 
-Дополнительные сведения о функциях клиента Intelligence бизнеса, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) или [Reporting Services функции, поддерживаемые различными выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Сведения о функциях клиента бизнес-аналитики, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], см. в разделе [Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) или [Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SLS"></a> Пространственные службы и службы расположения  
   
@@ -392,11 +392,11 @@ ms.lasthandoff: 07/17/2017
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|Нет|Нет| 
 |StreamInsight HA|StreamInsight Premium Edition|Нет|Нет|Нет|Нет|   
   
-> [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![Скачать SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Скачайте последнюю версию SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
 ## <a name="next-steps"></a>Следующие шаги 
  [Спецификации SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Установка SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   
   

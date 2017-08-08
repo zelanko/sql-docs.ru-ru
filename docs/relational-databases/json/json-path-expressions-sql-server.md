@@ -17,18 +17,18 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 07c873941669f7a36ff9b93651a938ecae2662b7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>Выражения пути JSON (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- Используйте выражения пути JSON для ссылки на свойства объектов JSON.  
+ Используйте выражения пути JSON для создания ссылок на свойства объектов JSON.  
   
  Выражение пути нужно указывать при вызове следующих функций.  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 06/23/2017
 ## <a name="parts-of-a-path-expression"></a>Элементы выражения пути
  Выражение пути состоит из двух компонентов.  
   
-1.  Необязательный [режим path](#PATHMODE), со значением **нестрогой** или **strict**.  
+1.  Необязательный компонент [path mode](#PATHMODE) со значением **lax** или **strict**.  
   
 2.  Сам [путь](#PATH) .  
 
 ##  <a name="PATHMODE"></a> Path mode  
  В начале выражения пути можно при необходимости объявить режим пути, указав ключевое слово **lax** или **strict**. По умолчанию **lax**.  
   
--   В **нестрогой** режиме, функция возвращает пустое значение, если выражение пути содержит ошибку. Например, если вы запрашиваете значение **$.name**, а текст JSON не содержит **имя** ключа, функция возвращает значение null, но не вызывает ошибку.  
+-   В режиме **lax** функция возвращает пустые значения, если выражение пути содержит ошибку. Например, если вы запрашиваете значение **$.name**, а текст JSON не содержит ключ **name**, функция вернет значение NULL, но ошибку это не вызовет.  
   
--   В **strict** режиме, функция вызывает ошибку, если выражение пути содержит ошибку.  
+-   В режиме **strict** функция возвращает ошибку, если выражение пути содержит ошибку.  
 
-В следующем запросе задана явно `lax` режим в выражении пути.
+В следующем запросе в выражении пути явно задан режим `lax`.
 
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -74,7 +74,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   Элементы массива. Например, `$.product[3]`. Массивы отсчитываются от нуля.  
   
-    -   Оператор "точка" (`.`) указывает на элемент объекта. Например, в `$.people[1].surname`, `surname` является дочерним элементом `people`.
+    -   Оператор "точка" (`.`) указывает на элемент объекта. Например, в `$.people[1].surname` `surname` является дочерним элементом `people`.
   
 ## <a name="examples"></a>Примеры  
  В примерах этого раздела используется следующий текст JSON.  
@@ -102,7 +102,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Как встроенные функции обрабатывают повторяющиеся пути  
- Если текст JSON содержит повторяющиеся свойства — например, два ключей с тем же именем на том же уровне - **JSON_VALUE** и **JSON_QUERY** функции возвращают только первое значение, которое соответствует пути. Чтобы проанализировать объект JSON, который содержит повторяющиеся ключи и возврат всех значений, используйте **OPENJSON**, как показано в следующем примере.  
+ Если текст JSON содержит повторяющиеся свойства (например, два ключа с одним и тем же именем на одном уровне), функции **JSON_VALUE** и **JSON_QUERY** возвращают первое значение, которое соответствует пути. Чтобы проанализировать объект JSON, который содержит повторяющиеся ключи, и получить все значения, используйте функцию **OPENJSON**, как показано в следующем примере.  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -113,7 +113,7 @@ FROM OPENJSON(@json,'$.person.info')
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
+Большое количество определенных решений, варианты использования и рекомендации см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
   
 ## <a name="see-also"></a>См. также:  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)   

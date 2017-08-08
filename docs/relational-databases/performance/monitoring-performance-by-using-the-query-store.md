@@ -18,16 +18,14 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
-
-# Мониторинг производительности с использованием хранилища запросов
+# <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Хранилище запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет подробные сведения о выборе и производительности плана запроса. Оно упрощает устранение неполадок с производительностью, помогая быстро находить разницу в производительности, вызванную изменением плана запроса. Хранилище запросов автоматически собирает журнал запросов, планов и статистики выполнения, сохраняя эти данные для просмотра. Данные разделяются по временным диапазонам, благодаря чему вы можете просматривать закономерности использования и узнавать об изменениях плана запроса на сервере. Хранилище запросов можно настроить с помощью инструкции [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
@@ -37,9 +35,7 @@ ms.lasthandoff: 06/28/2017
 ##  <a name="Enabling"></a> Включение хранилища запросов  
  Хранилище запросов неактивно для новых баз данных по умолчанию.  
   
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
-
-#### Использование страницы "Хранилище запросов" в Management Studio  
+#### <a name="use-the-query-store-page-in-management-studio"></a>Использование страницы "Хранилище запросов" в Management Studio  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши базу данных и выберите пункт **Свойства**.  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  В поле **Режим работы (запрошенный)** выберите значение **Вкл**.  
   
-<a id="use-transact-sql-statements" class="xliff"></a>
-
-#### Использование инструкций Transact-SQL  
+#### <a name="use-transact-sql-statements"></a>Использование инструкций Transact-SQL  
   
 1.  Используйте инструкцию **ALTER DATABASE** , чтобы включить хранилище запросов. Например:  
   
@@ -158,7 +152,7 @@ JOIN sys.query_store_query_text AS Txt
  Целое число, представляющее максимальное количество поддерживаемых планов для каждого запроса. Значение по умолчанию — 200.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- Элементы управления, если хранилище запросов захватывает ожидания статистические данные. Может быть OFF = 0 или 1 (по умолчанию) =  
+ Определяет, будет ли хранилище запросов перехватывать данные статистики ожидания. Возможные значения: OFF = 0 или ON = 1 (по умолчанию).  
  
  Запросите представление **sys.database_query_store_options** , чтобы определить текущие параметры хранилища запросов. В представлении [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) можно посмотреть о значениях дополнительные сведения.  
   
@@ -171,9 +165,7 @@ JOIN sys.query_store_query_text AS Txt
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-<a id="query-store-catalog-views" class="xliff"></a>
-
-### Представления каталога хранилища запросов  
+### <a name="query-store-catalog-views"></a>Представления каталога хранилища запросов  
  В представлениях каталога отображаются сведения о хранилище запросов.  
 
 ||| 
@@ -181,16 +173,14 @@ JOIN sys.query_store_query_text AS Txt
 |[sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[sys.query_store_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-<a id="query-store-stored-procedures" class="xliff"></a>
-
-### Хранимые процедуры в хранилище запросов,  
+### <a name="query-store-stored-procedures"></a>Хранимые процедуры в хранилище запросов,  
  Хранимые процедуры служат для настройки хранилища запросов.  
 
 ||| 
 |-|-|  
-|[sp_query_store_flush_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)|[sp_query_store_reset_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)|  
+|[sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)|[sp_query_store_reset_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)|  
 |[sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)|[sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)|  
 |[sp_query_store_remove_plan (Transct-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|  
  
@@ -460,7 +450,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  Если вы хотите просмотреть производительность всех регрессий (а не только тех, которые связаны с изменением выбранного плана), удалите условие `AND p1.plan_id <> p2.plan_id` из предыдущего запроса.  
 
  **Какие запросы ожидают больше всего?**
- Этот запрос возвращает 10 ведущих запросов, ожидающих больше всего. 
+Этот запрос возвращает 10 ведущих запросов, ожидающих больше всего. 
  
  ```tsql 
   SELECT TOP 10
@@ -579,9 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Использование хранилища запросов с выполняющейся в памяти OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md)   
