@@ -2,10 +2,9 @@
 # [Что такое SSMS?](sql-server-management-studio-ssms.md)
 
 # What's New
-## [Журнал изменений SSMS](sql-server-management-studio-changelog-ssms.md)
-## [Заметки о выпуске](sql-server-management-studio-release-notes.md)
+## [Журнал изменений и предыдущие выпуски SSMS](sql-server-management-studio-changelog-ssms.md)
+## [Заметки о выпуске](download-sql-server-management-studio-ssms.md#release-notes)
 ## [Новые и недавно обновленные статьи](new-updated-ssms.md)
-## [Предыдущие выпуски SSMS](previous-sql-server-management-studio-releases.md)
 
 # [Загрузите модуль PowerShell для SQL Server](download-sql-server-ps-module.md)
 
