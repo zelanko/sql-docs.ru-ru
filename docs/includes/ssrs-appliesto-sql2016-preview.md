@@ -1,1 +1,1 @@
-**ПРИМЕНЯЕТСЯ к:**![Да](media/yes.png)SQL Server 2016![Да](media/yes.png)сервер отчетов Power BI
+**ОБЛАСТЬ ПРИМЕНЕНИЯ ЭТОЙ СТАТЬИ:**![да](media/yes.png)SQL Server 2016![да](media/yes.png)Сервер отчетов Power BI

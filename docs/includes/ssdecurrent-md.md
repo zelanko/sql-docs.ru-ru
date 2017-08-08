@@ -1,1 +1,1 @@
- СУБД SQL Server 2017 г. 
+ Ядро СУБД SQL Server 2017 

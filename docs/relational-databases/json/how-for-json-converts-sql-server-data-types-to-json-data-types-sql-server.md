@@ -17,11 +17,11 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 527cb99c5caf0bb805e17f3b77b7d5e017e28ace
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: d866cc385b2c44d4594f4d4f8249df6f84ac48f2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON (SQL Server)
@@ -36,11 +36,11 @@ ms.lasthandoff: 06/23/2017
 |Битовый тип|bit|Логическое значение (true или false)|  
 |Типы даты и времени|date, datetime, datetime2, time, datetimeoffset|строка|  
 |Двоичные типы|varbinary, binary, image, timestamp, rowversion|Строка в кодировке Base64|  
-|Типы CLR|Geometry, geography, других типов среды CLR|Не поддерживается. При их использовании возвращается ошибка.<br /><br /> В инструкции SELECT, функция CAST или CONVERT либо свойство или метод CLR, для преобразования исходных данных в тип данных SQL Server, который может быть преобразован в тип JSON. Например, использовать **STAsText()** для типа geometry, или используйте **ToString()** для любого типа CLR. Тип выходного значения JSON затем является производным от возвращаемого типа преобразования, применяемая в инструкции SELECT.|  
+|Типы CLR|geometry, geography, другие типы CLR|Не поддерживается. При их использовании возвращается ошибка.<br /><br /> В инструкции SELECT для преобразования исходных данных в тип данных SQL Server, который можно конвертировать в тип JSON, используйте CAST или CONVERT либо свойство или метод CLR. Например, для любого типа CLR используйте **ToString()**, а для типа geometry — **STAsText()**. Тип выходного значения JSON определяется типом данных, полученным после конвертации, которая была выполнена согласно инструкции SELECT.|  
 |Другие типы|uniqueidentifier, money|строка|  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Большое количество определенных решений варианты использования и рекомендации, см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базы данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
+Большое количество решений, варианты использования и рекомендации см. в [записях Йована Поповича (Jovan Popovic), руководителя программы Майкрософт, в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure.
   
 ## <a name="see-also"></a>См. также:  
  [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

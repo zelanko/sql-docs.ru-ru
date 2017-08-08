@@ -1,1 +1,1 @@
- SQL Server 2017 г Integration Services (SSIS) 
+ Службы SQL Server 2017 Integration Services (SSIS) 
