@@ -4,10 +4,10 @@ hide_bc: true
 title: "Документация по Microsoft SQL | Документация Майкрософт"
 description: "Сведения об SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: 733d1495b9dbe1ad5c7028df3b8d28884d6cebf3
-ms.openlocfilehash: 160ac8567e3a74738da5083d67f8c8015cf19c16
+ms.sourcegitcommit: d37309cb29d315e2382213ee762ce1cc83e19e77
+ms.openlocfilehash: 1d61c44b74a4987b32b87bab9d061926aa177052
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -196,7 +196,7 @@ ms.lasthandoff: 08/01/2017
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Конструирование</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-drivers">Подключение к клиентским приложениям</a></li>
+                                                    <li><a href="/sql/connect/sql-connection-libraries">Подключение к клиентским приложениям</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Основные понятия реляционной базы данных</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Инструменты</h4>
