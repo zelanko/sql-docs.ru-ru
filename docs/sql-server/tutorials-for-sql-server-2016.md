@@ -1,5 +1,5 @@
 ---
-title: "Учебники по SQL Server | Документы Microsoft"
+title: "Руководства по SQL Server 2016 | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,24 +14,24 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="tutorials-for-sql-server"></a>Учебники по SQL Server
+# <a name="tutorials-for-sql-server"></a>Руководства по SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]предоставляет учебники помогут изучить новых технологий и возможностей. Учебники для более ранних версий, обычно может использоваться с более поздними версиями. Учебники по адресации новой функциональной возможностью, они сообщит, минимальный номер версии для прохождения этого учебника.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] предоставляет руководства, которые помогут вам изучить новые технологии и возможности. Руководства по более ранним версиям обычно подходят и к более поздним. При упоминании новой функции в руководстве также указывается минимальная необходимая версия.  
      
--   Если учебник использует одну из [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] баз данных, необходимо загрузить и использовать самую последнюю версию на сайте CodePlex. Дополнительные сведения см. в разделе [базы данных AdventureWorks и скрипты для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
+-   Если в руководстве используется одна из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], необходимо загрузить и использовать последнюю версию из CodePlex. Дополнительные сведения см. в статье [Примеры баз данных и сценариев AdventureWorks для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для учебников [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Образцы Power View для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
 - Ознакомьтесь с новым образцом [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) , доступным в репозитории GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 
  
-## <a name="current-tutorials"></a>Текущий учебники  
+## <a name="current-tutorials"></a>Действующие руководства  
   
 |Технология|Description|  
 |--------------|---------------|  

@@ -24,20 +24,20 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимально допустимых параметров SQL Server
+# <a name="maximum-capacity-specifications-for-sql-server"></a>Задание максимальной вместимости SQL Server
 
- > Содержимое, связанное с предыдущих версий SQL Server, в разделе [Maximum Capacity Specifications for SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+ > Материалы по предыдущим версиям SQL Server см. в статье [Спецификации максимально допустимых параметров SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
 
   В следующих таблицах приведены максимальные размеры и количество для различных объектов, определяемых в компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
   
- [Объекты ядра СУБД SQL Server](#Engine)  
+ [Объекты компонента SQL Server Database Engine](#Engine)  
   
  [Объекты программы SQL Server](#Utility)  
   
