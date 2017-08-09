@@ -17,12 +17,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Работа с ключевыми показателями эффективности в службах Reporting Services
-<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+# <a name="working-with-kpis-in-reporting-services"></a>Работа с ключевыми показателями эффективности в службах Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -36,19 +35,16 @@ ms.lasthandoff: 07/03/2017
   
 -   минимальное достижение.  
   
-## Создание набора данных
-<a id="creating-a-dataset" class="xliff"></a>  
+## <a name="creating-a-dataset"></a>Создание набора данных  
 Для ключевого показателя эффективности используется только первая строка из общего набора данных. Поэтому требуемые данные должны обязательно находиться в этой строке. Чтобы создать общий набор данных, можно воспользоваться построителем отчетов или SQL Server Data Tools.  
   
 > **Примечание**. Набор данных и ключевой показатель эффективности могут находиться в разных папках.  
   
-## Размещение ключевых показателей эффективности
-<a id="placement-of-kpis" class="xliff"></a>  
+## <a name="placement-of-kpis"></a>Размещение ключевых показателей эффективности  
   
 Ключевые показатели эффективности можно создать в любой папке на сервере отчетов.  Прежде чем создать ключевой показатель эффективности, нужно подобрать подходящее место размещения. Необходимо поместить его в папку, доступную для пользователей и в то же время относящуюся к другим отчетам и ключевым показателям эффективности.  
   
-## Добавление ключевого показателя эффективности
-<a id="adding-a-kpi" class="xliff"></a>  
+## <a name="adding-a-kpi"></a>Добавление ключевого показателя эффективности  
   
 Определив расположение ключевого показателя эффективности, перейдите к этой папке и в верхней строке меню последовательно выберите элементы **Создать** > **Ключевой показатель эффективности** .  
   
@@ -96,8 +92,7 @@ ms.lasthandoff: 07/03/2017
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## Удаление ключевого показателя эффективности
-<a id="removing-a-kpi" class="xliff"></a>  
+## <a name="removing-a-kpi"></a>Удаление ключевого показателя эффективности  
   
 Чтобы удалить ключевой показатель эффективности, сделайте следующее:  
   
@@ -109,13 +104,11 @@ ms.lasthandoff: 07/03/2017
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## Обновление ключевого показателя эффективности
-<a id="refreshing-a-kpi" class="xliff"></a>  
+## <a name="refreshing-a-kpi"></a>Обновление ключевого показателя эффективности  
   
 Чтобы обновить ключевой показатель Эффективности, необходимо будет настроить кэширование для общего набора данных. Дополнительные сведения о кэше планах обновления см. в разделе [работы с наборами данных общих](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## Следующие шаги
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Следующие шаги
   
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)

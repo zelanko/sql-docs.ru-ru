@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Новые возможности служб SQL Server Reporting Services (SSRS)
-<a id="whats-new-in-sql-server-reporting-services-ssrs" class="xliff"></a>
+# <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -48,8 +47,7 @@ ms.lasthandoff: 07/03/2017
 
 Сведения о сервере отчетов Power BI см. в разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
-## Поддержка DAX теперь в построитель отчетов и SQL Server Data Tools в конструкторе запросов
-<a id="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools" class="xliff"></a>
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Поддержка DAX теперь в построитель отчетов и SQL Server Data Tools в конструкторе запросов
 
 В последних версиях построителя отчетов и SQL Server Data Tools — версия-кандидат, теперь можно создать собственные запросы DAX к поддерживаемые модели табличных данных SQL Server Analysis Services. Перетаскивание полей и имеется запрос DAX, созданный для вас, вместо написания собственного можно использовать конструктор запросов в обеих средах.  
  
@@ -60,11 +58,9 @@ ms.lasthandoff: 07/03/2017
 
 > **Примечание**: можно использовать только в конструкторе запросов для DAX с источников табличных данных SSAS, встроенные в SQL Server 2016 +.
  
-## Что нового в SQL Server 2016
-<a id="whats-new-in-sql-server-2016" class="xliff"></a>
+## <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
   
-### Службы Reporting Services: [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
-<a id="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a>  
+### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Службы Reporting Services: [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  Доступен новый [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] . Это обновленный, современный портал, который содержит отчеты о ключевых показателях эффективности, мобильные отчеты, отчеты с разбиением на страницы, а также файлы Excel и Power BI Desktop. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] заменяет диспетчер отчетов, который использовался в предыдущих версиях. Кроме того, [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] позволяет загрузить издатель мобильных отчетов и построитель отчетов, не прибегая к технологии ClickOnce.
  
  Для создания мобильных отчетов будет нужен [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)].  
@@ -73,14 +69,12 @@ ms.lasthandoff: 07/03/2017
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### Пользовательская фирменная символика на веб-портале [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
-<a id="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Пользовательская фирменная символика на веб-портале [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   С помощью пакета настройки фирменной символики можно настроить [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , задав логотип и цвета организации.  
   
   Дополнительные сведения об индивидуальной фирменной символике см. в разделе [Фирменная символика на веб-портале](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
  
- #### Ключевые показатели эффективности (KPI) на веб-портале [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
-<a id="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Ключевые показатели эффективности (KPI) на веб-портале [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 В [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] можно создавать ключевые показатели эффективности (KPI), соответствующие папке, в которой вы находитесь. При создании KPI можно выбрать поля набора данных и суммировать эти значения. Кроме того, можно выбрать данные для дополнительной детализации.
   
@@ -89,29 +83,25 @@ ms.lasthandoff: 07/03/2017
  Дополнительные сведения см. в разделе [Работа с ключевыми показателями эффективности на веб-портале](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb).
   
  
- ### Мобильные отчеты
-<a id="mobile-reports" class="xliff"></a>
+ ### <a name="mobile-reports"></a>Мобильные отчеты
  
 Мобильные отчеты в службах Reporting Services представляют собой специализированные отчеты, оптимизированные для широкого ряда форм-факторов и обеспечивающие оптимальную работу с данными на мобильных устройствах. Мобильные отчеты содержат различные визуализации, от диаграмм времени, категорий и сравнения до древовидных и пользовательских карт. Подключите мобильные отчеты к различным источникам данных, включая локальные многомерные и табличные данные служб SQL Server Analysis Services. Мобильные отчеты можно составлять в области конструктора, настраивая строки и столбцы сетки и используя гибкие элементы мобильных отчетов, которые масштабируются в соответствии с любым размером экрана. Мобильные отчеты можно сохранять на сервере служб Reporting Services, а затем просматривать в браузере или мобильном приложении Power BI на устройствах iPad, iPhone, Android и Windows 10.
   
-#### Издатель мобильных отчетов
-<a id="mobile-report-publisher" class="xliff"></a>  
+#### <a name="mobile-report-publisher"></a>Издатель мобильных отчетов  
  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] позволяет создавать и публиковать мобильные отчеты SQL Server на [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
  Дополнительные сведения см. в разделе [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
   
-#### Мобильные отчеты SQL Server, размещаемые в службах Reporting Services, доступны в приложении Power BI Mobile
-<a id="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app" class="xliff"></a>  
+#### <a name="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app"></a>Мобильные отчеты SQL Server, размещаемые в службах Reporting Services, доступны в приложении Power BI Mobile  
  Приложение Power BI Mobile для iOS на iPad и iPhone сейчас может отображать мобильные отчеты SQL Server, которые находятся на вашем локальном сервере отчетов.  
   
  ![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
   
  По умолчанию без внесения изменений в конфигурацию установить соединение будет невозможно. Дополнительные сведения о том, как разрешить приложению Power BI Mobile устанавливать соединение с сервером отчетов, см. в разделе [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
   
-### Поддержка режима SharePoint и SharePoint 2016
-<a id="support-of-sharepoint-mode-and-sharepoint-2016" class="xliff"></a>  
+### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>Поддержка режима SharePoint и SharePoint 2016  
  Службы[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают интеграцию с SharePoint 2013 и SharePoint 2016.
  
 Дополнительные сведения см. в разделе:  
@@ -122,12 +112,10 @@ ms.lasthandoff: 07/03/2017
   
 -   [Установка режима интеграции с SharePoint для служб Reporting Services](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
-### Поддержка платформы Microsoft .NET Framework 4
-<a id="microsoft-net-framework-4-support" class="xliff"></a>  
+### <a name="microsoft-net-framework-4-support"></a>Поддержка платформы Microsoft .NET Framework 4  
  Службы[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] поддерживают текущие версии Microsoft .NET Framework 4. Сюда входят версии 4.0 и 4.5.1. Если никакая из версий .Net Framework 4.x не установлена, программа установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] установит платформу .NET 4.0 на этапе установки компонентов.  
 
-### Усовершенствования в отчетах
-<a id="report-improvements" class="xliff"></a>
+### <a name="report-improvements"></a>Усовершенствования в отчетах
 
 **Механизм визуализации HTML 5** : новый механизм визуализации HTML5, ориентированный на современные "полнофункциональные" веб-стандарты и современные браузеры.  Новый механизм визуализации больше не зависит от режима Quirks, используемого в некоторых старых браузерах.
   
@@ -161,8 +149,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
-### Усовершенствования подписки
-<a id="subscription-improvements" class="xliff"></a>  
+### <a name="subscription-improvements"></a>Усовершенствования подписки  
  
 |Компонент|Поддерживаемый режим сервера|  
 |-------------|---------------------------|  
@@ -171,12 +158,10 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**Изменение владельца подписки**. Улучшенный пользовательский интерфейс для быстрого изменения владельца подписки. Предыдущие версии [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] позволяют администраторам изменять владельцев подписки с помощью скрипта. Начиная с версии [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , владельца подписки можно изменять с помощью пользовательского интерфейса или скрипта. Изменение владельца подписки — это стандартная задача администрирования, выполняемая в случае увольнения пользователей или изменения их роли в организации.|SharePoint и собственный режим|  
 |**Общие учетные данные для подписок на общую папку**. Благодаря подпискам на общую папку [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сейчас существует два рабочих процесса.<br /><br /> Новая возможность в этой версии: администратор вашей [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] может настроить одну учетную запись для общей папки, которая будет использоваться для одной или нескольких подписок. Настройка учетной записи общей папки выполняется в диспетчере конфигурации собственного режима. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Укажите учетную запись общей папки**, а затем на странице конфигурации подписки установите флажок **Используется учетная запись общей папки**.<br /><br /> Настройка отдельных подписок с разными учетными данными для целевой общей папки.<br /><br /> Кроме того, два этих подхода можно использовать совместно. Например, когда какие-то подписки на общую папку используют централизованную учетную запись общей папки, а другие подписки используют разные учетные данные.|Основной режим|  
 
-### SQL Server Data Tools (SSDT)
-<a id="sql-server-data-tools-ssdt" class="xliff"></a>  
+### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
  Новая версия SSDT включает в себя шаблоны проектов для [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: мастер проектов сервера отчетов и проект сервера отчетов. Сведения о загрузке SSDT см. в разделе [SQL Server Data Tools для Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
 
-### Усовершенствования построителя отчетов
-<a id="report-builder-improvements" class="xliff"></a>
+### <a name="report-builder-improvements"></a>Усовершенствования построителя отчетов
 
 **Новый пользовательский интерфейс построителя отчетов** : пользовательский интерфейс в [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] теперь имеет современный вид и содержит упрощенные элементы интерфейса.  
   
@@ -196,8 +181,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Высокое разрешение и Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
 
-## Следующие шаги
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Следующие шаги
 
 [Новые возможности в службах Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Техническая версия отчетов Power BI в SSRS — заметки о выпуске](../reporting-services/reporting-services-release-notes.md)  

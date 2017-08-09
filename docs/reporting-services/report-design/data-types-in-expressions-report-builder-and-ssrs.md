@@ -1,5 +1,5 @@
 ---
-title: "Типы данных в выражениях (построитель отчетов и службы SSRS) | Документация Майкрософт"
+title: "Типы данных в выражениях (построитель отчетов и службы SSRS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Создание вычисляемого поля на основе существующего поля набора данных отчета с помощью выражения, преобразующего все данные одного столбца результирующего набора в данные нового столбца с другим типом данных. Например, следующее выражение преобразует поле Year из целочисленного значения в строковое: `=CStr(Fields!Year.Value)`. Дополнительные сведения см. в разделе [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Проверка наличия метаданных в используемом модуле обработки данных с целью получения предварительно отформатированных данных. Например, запрос многомерных выражений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает расширенное свойство FORMATTED_VALUE для значений куба, отформатированных при обработке куба. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Проверка наличия метаданных в используемом модуле обработки данных с целью получения предварительно отформатированных данных. Например, запрос многомерных выражений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает расширенное свойство FORMATTED_VALUE для значений куба, отформатированных при обработке куба. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Основные сведения о типах данных параметров  
  Параметры отчета должны иметь один из пяти типов данных: Boolean, DateTime, Integer, Float или Text (также известный как String). Если запрос набора данных включает параметры запроса, автоматически создаются параметры отчета, которые связываются с параметрами запроса. Типом данных по умолчанию для параметра отчета является String. Чтобы изменить тип данных по умолчанию параметра отчета, выберите нужное значение в раскрывающемся списке **Тип данных** на странице **Общие** в диалоговом окне **Свойства параметров отчета** .  
@@ -100,9 +100,9 @@ ms.lasthandoff: 08/03/2017
  При соединении с источником данных поставщика данных, не поддерживающим преобразование всех типов данных, типом данных по умолчанию для неподдерживаемых типов является String. В следующих примерах приводятся решения для конкретных типов данных, которые возвращаются как String.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>Объединение типов данных String и DateTimeOffset среды CLR  
- Для большинства типов данных среда CLR обеспечивает преобразования по умолчанию для объединения значений, имеющих разный тип данных, в одну строку с помощью оператора &. Например, следующее выражение объединяет текст "The date and time are: " с полем набора данных StartDate, которое является значением <xref:System.DateTime> : `="The date and time are: " & Fields!StartDate.Value`.  
+ Для большинства типов данных среда CLR обеспечивает преобразования по умолчанию для объединения значений, имеющих разный тип данных, в одну строку с помощью оператора &. Например, следующее выражение объединяет текст «Дата и время: "с набором данных полем StartDate, который является <xref:System.DateTime> значение: `="The date and time are: " & Fields!StartDate.Value`.  
   
- Для некоторых типов данных может понадобиться включение функции ToString. Например, в следующем выражении показан тот же пример с использованием типа данных CLR <xref:System.DateTimeOffset>, который включает дату, время и смещение часового пояса относительно часового пояса времени в формате UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
+ Для некоторых типов данных может понадобиться включение функции ToString. Например, следующее выражение показывает тот же пример с использованием типа данных CLR <xref:System.DateTimeOffset>, включая дату, время и смещение часового пояса относительно часового пояса UTC: `="The time is: " & Fields!StartDate.Value.ToString()`.  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>Преобразование строкового типа данных в тип данных DateTime среды CLR  
  Если модуль обработки данных не поддерживает все определенные в источнике данных типы данных, данные могут быть получены в виде текста. Например, значение с типом данных **datetimeoffset(7)** можно получить как значение String. В Перте, Австралия, строковое значение для 1 июля 2008 6:05:07.9999999 утра будет напоминать следующий текст:  
@@ -143,9 +143,9 @@ ms.lasthandoff: 08/03/2017
   
      `2008-07-01 06:05:07             2008                   480`  
   
- Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) и [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md) и [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) [SQL Server Books Onle](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>См. также  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

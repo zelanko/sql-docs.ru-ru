@@ -20,11 +20,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Установка служб Reporting Services
-<a id="install-reporting-services" class="xliff"></a>
+# <a name="install-reporting-services"></a>Установка служб Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -50,8 +49,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > SQL Server Data Tools (SSDT) не входят в состав SQL Server 2016. [Скачайте SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
 
-## Следующие шаги
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Следующие шаги
 
 [Поддерживаемые сочетания SharePoint и сервером служб Reporting Services и надстройки](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

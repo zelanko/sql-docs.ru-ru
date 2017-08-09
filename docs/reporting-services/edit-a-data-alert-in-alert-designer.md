@@ -24,11 +24,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f2e052aec58464a761713a1a2fd2341415955786
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# изменить предупреждение в конструкторе предупреждений
-<a id="edit-a-data-alert-in-alert-designer" class="xliff"></a>
+# <a name="edit-a-data-alert-in-alert-designer"></a>изменить предупреждение в конструкторе предупреждений
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -45,8 +44,7 @@ ms.lasthandoff: 07/03/2017
   
  Следующая процедура включает в себя шаги по открытию определения предупреждения для изменения в конструкторе предупреждений об изменении данных из диспетчера предупреждений об изменении данных.  
   
-### Редактирование определения предупреждения об изменении данных в конструкторе предупреждений об изменении данных.
-<a id="to-edit-a-data-alert-definition-in-data-alert-designer" class="xliff"></a>  
+### <a name="to-edit-a-data-alert-definition-in-data-alert-designer"></a>Редактирование определения предупреждения об изменении данных в конструкторе предупреждений об изменении данных.  
   
 1.  Щелкните правой кнопкой мыши определение предупреждения об изменении данных, которое требуется изменить в диспетчере предупреждений об изменении данных, и выберите команду **Изменить**.  
   
@@ -62,8 +60,7 @@ ms.lasthandoff: 07/03/2017
     > [!NOTE]  
     >  Если отчет был изменен и изменились веб-каналы данных, созданные на основе отчета, то определение предупреждения может стать недопустимым. Это происходит, когда столбец, на который ссылается определение предупреждения в своих правилах, удаляется из отчета или меняет тип данных, или если отчет удаляется или перемещается. Недопустимое определение предупреждения можно открыть, но нельзя повторно сохранить до тех пор, пока оно не станет допустимым для текущей версии веб-канала данных отчета, на котором оно основано. Дополнительные сведения о создании веб-каналов данных на основе отчетов см. в разделе [Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
 
-## См. также:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>См. также:
 
 [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  

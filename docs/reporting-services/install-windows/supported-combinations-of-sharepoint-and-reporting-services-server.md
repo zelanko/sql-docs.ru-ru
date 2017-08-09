@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Поддерживаемые сочетания SharePoint и сервером служб Reporting Services
-<a id="supported-combinations-of-sharepoint-and-reporting-services-server" class="xliff"></a>
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Поддерживаемые сочетания SharePoint и сервером служб Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -39,13 +38,11 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
 
-## Поддерживаемые сочетания SharePoint и компонентов служб Reporting Services
-<a id="supported-combinations-of-sharepoint-and-reporting-services-components" class="xliff"></a>
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Поддерживаемые сочетания SharePoint и компонентов служб Reporting Services
 
  В следующей таблице представлены поддерживаемые сочетания сервера отчетов, надстройки служб Reporting Services для продуктов SharePoint и продуктов SharePoint. Сочетания, отсутствующие в следующей таблице, не поддерживаются
 
-### Поддерживаемые сочетания
-<a id="supported-combinations" class="xliff"></a>
+### <a name="supported-combinations"></a>Поддерживаемые сочетания
 
 ||Сервер отчетов|Надстройка|Версия SharePoint|
 |-|-------------------|-------------|------------------------|
@@ -83,8 +80,7 @@ ms.lasthandoff: 07/03/2017
 
 - **Обновление.** SharePoint 2010 с установленной надстройкой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] нельзя обновить на месте до SharePoint 2013. SharePoint 2013 требуется SQL Server 2012 SP1 или более поздней [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки и сервера отчетов. Дополнительные сведения по обновлению см. в разделе [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
-## Следующие шаги
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Следующие шаги
 
  [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   

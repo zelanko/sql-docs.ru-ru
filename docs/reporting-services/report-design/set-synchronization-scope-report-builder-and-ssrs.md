@@ -1,5 +1,5 @@
 ---
-title: "Задание области действия синхронизации (построитель отчетов и службы SSRS) | Документация Майкрософт"
+title: "Задание области действия синхронизации (построитель отчетов и службы SSRS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 302cc9fbe2c49f2d28786b6a1addcecdcafd3ee7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>Задание области действия синхронизации (построитель отчетов и службы SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
   
  Такие параметры, как единицы измерения, можно задать с помощью выражений. Дополнительные сведения см. в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
- Общие сведения о работе и определении областей действия в отчетах см. в разделе [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Общие сведения о работе и определении областей действия в отчетах см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="to-change-the-synchronization-scope-of-an-indicator"></a>Изменение области действия синхронизации индикатора  
   

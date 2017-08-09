@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Работа с общими наборами данных — веб-портала
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных — веб-портала
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ ms.lasthandoff: 07/03/2017
 
 Вы можете просматривать свойства общего набора данных и управлять ими в пределах веб-портала. На веб-портале можно запускать построитель отчетов для создания или изменения общих наборов данных.
 
-## Создание общего набора данных
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>Создание общего набора данных
   
 Чтобы создать новый общий набор данных, можно сделать следующее.  
   
@@ -49,8 +47,7 @@ ms.lasthandoff: 07/03/2017
   
 6.  Постройте набор данных, а затем выберите значок **Сохранить** в левом верхнем углу, чтобы сохранить набор данных на сервере отчетов.  
   
-## Управление существующим общим набором данных
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>Управление существующим общим набором данных
   
 Для управления существующим общим набором данных можно сделать следующее.  
   
@@ -65,15 +62,13 @@ ms.lasthandoff: 07/03/2017
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## Свойства
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>Свойства
   
 На экране свойств можно изменить свойства **Имя** и **Описание** набора данных. Также доступны команды **Удалить**, **Переместить**, **Изменить в построителе отчетов**, **Загрузить** или **Заменить**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## Caching
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>Caching
   
 Имеются несколько вариантов кэширования данных для набора данных. Начать можно с простого выбора.  
   
@@ -87,8 +82,7 @@ ms.lasthandoff: 07/03/2017
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### Срок действия кэша
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>Срок действия кэша  
   
 Вы можете выбирать, должен ли закончиться срок действия кэша для общего набора данных по истечении определенного времени или по расписанию. Возможно использование общего расписания.  
   
@@ -97,8 +91,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > Настройка срока действия не обновляет кэш. Без плана обновления кэша данные будут обновляться при следующем выполнении набора данных.  
   
-### План обновления кэша
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>План обновления кэша  
   
 Раздел "План обновления кэша" позволяет создавать расписания, предназначенные для предварительной загрузки в кэш временных копий данных для общего набора данных. План обновления включает расписание и параметр, позволяющий указать или переопределить значения для параметров. Нельзя переопределить значения для параметров, которые отмечены как доступные только для чтения. Можно создать и использовать несколько планов обновления.   
   

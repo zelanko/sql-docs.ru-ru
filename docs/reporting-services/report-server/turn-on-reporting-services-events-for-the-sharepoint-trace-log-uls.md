@@ -1,5 +1,5 @@
 ---
-title: "Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS) | Документация Майкрософт"
+title: "Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |Подготовка локального режима||  
 |Прокси-сервер клиента SOAP||  
 |Страницы пользовательского интерфейса||  
-|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Эти записи берутся из клиентских приложений, включая Power View, компонент надстройки SQL Server Reporting Services.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** «Службы SQL Server Reporting Services» и в **область** «Power View».<br /><br /> Содержание записей, занесенных в область «Power View», определяется клиентским приложением.|  
+|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Источником этих записей являются клиентские приложения, в том числе Power View, компонент надстройки служб SQL Server Reporting Services.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** «Службы SQL Server Reporting Services» и в **область** «Power View».<br /><br /> Содержание записей, занесенных в область «Power View», определяется клиентским приложением.|  
 |Среда выполнения системы предупреждений сервера отчетов||  
 |Диспетчер домена приложений сервера отчетов||  
 |Буферизованный ответ сервера отчетов||  
@@ -116,7 +116,7 @@ Get-SPDiagnosticConfig
 |Каталог сервера отчетов||  
 |Фрагмент данных сервера отчетов||  
 |Очистка данных сервера отчетов||  
-|Диспетчер конфигурации сервера отчетов|Образцы записей:<br /><br /> Внутренний URL-адрес сервера отчетов MediumUsing `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing или недопустимый параметр ExtendedProtectionLevel|  
+|Диспетчер конфигурации сервера отчетов|Образцы записей:<br /><br /> Внутренний URL-адрес сервера отчетов mediumusing ― `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing или недопустимый параметр ExtendedProtectionLevel|  
 |Шифрование сервера отчетов||  
 |Модуль обработки данных сервера отчетов||  
 |Опрос базы данных сервера отчетов||  
@@ -146,7 +146,7 @@ Get-SPDiagnosticConfig
 |Общая служба|Образцы записей:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Доступ MediumGranting к базам данных содержимого.<br /><br /> Экземпляры MediumProvisioning для ReportingWebServiceApplication<br /><br /> Изменение учетной записи службы MediumProcessing для ReportingWebServiceApplication<br /><br /> Разрешения базы данных MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Просмотр файла журнала с помощью PowerShell  
- ![Связанное содержимое PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Связанное содержимое PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS "UESQL11SPOINT-20110606-1530.log" отфильтрованный список строк, содержащих подстроку "**sql server reporting services**":  
+ ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell")PowerShell можно использовать для возвращения списка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] связанных событий из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS "UESQL11SPOINT-20110606-1530.log" отфильтрованный список строк, содержащих подстроку "**sql server reporting services**":  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
@@ -161,4 +161,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Дополнительные сведения и шаги настройки диагностической регистрации на сервере SharePoint в центре администрирования SharePoint 2010 см. в разделе [Настройка диагностической регистрации (службы Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
