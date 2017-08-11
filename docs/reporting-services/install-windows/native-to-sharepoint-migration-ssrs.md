@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c7fa3b57de4a8b5854951c266168e22ae57ab928
 ms.contentlocale: ru-ru
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 |Наборы данных|Да||  
 |Элементы отчетов||После миграции проверьте или обновите путь к элементам отчета.|  
 |Расписания|Да|См. метод ListSchedules в разделе [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Подписки|Да|См. метод List Subscriptions [методы подписки и доставки](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) и <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> метод.|  
+|Подписки|Да|См. метод List Subscriptions [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) и метод <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Моментальные снимки|||
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

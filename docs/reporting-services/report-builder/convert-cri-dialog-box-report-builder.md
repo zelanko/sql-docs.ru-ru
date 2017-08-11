@@ -20,7 +20,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 37ba742708ded98cd5728a3051a2e7a76b9fa99f
 ms.contentlocale: ru-ru
@@ -48,6 +48,6 @@ ms.lasthandoff: 08/09/2017
  Инструкции по определению текущей версии формата определения отчета для сервера отчетов или средства разработки отчетов см. в разделе [Определение версии схемы определения отчета (службы SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [Справка построителя отчетов по диалоговым окнам, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

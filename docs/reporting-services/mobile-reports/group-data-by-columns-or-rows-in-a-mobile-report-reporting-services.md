@@ -14,7 +14,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
 ms.contentlocale: ru-ru
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/09/2017
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   Для поля **Ряд сравнения** выбраны параметры **Сравнение1**  --  **Сравнение5**.
+   Аналогичным образом для **ряд для сравнения** -- **Comparison1** через **Comparison5** выбраны.
    
 4. Выберите **Предварительный просмотр**.
 

@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
 ms.contentlocale: ru-ru
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  Указать эту учетную запись можно в средстве настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или с помощью программы **rsconfig** . Самый простой способ настроить учетную запись автоматического выполнения — запустить программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и указать учетные данные на странице «Учетная запись выполнения».  
   
-1.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов, который необходимо настроить. Дополнительные сведения см. в разделе [Диспетчер конфигурации служб Reporting Services (Собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов, который необходимо настроить. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  На странице "Учетная запись выполнения" выберите **Указать учетную запись выполнения**.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
      **rsconfig -e -u\<домен/имя_пользователя > -p\<пароль >**  
   
- Команда**rsconfig -e** поддерживает дополнительные аргументы. Дополнительные сведения о синтаксисе и примеры команд см. в статье [Программа rsconfig (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md) электронной документации по SQL Server.  
+ Команда**rsconfig -e** поддерживает дополнительные аргументы. Дополнительные сведения о синтаксисе и примеры команд см. в разделе [rsconfig программа &#40; Службы SSRS &#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) в электронной документации по SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Хранение данных учетной записи  
  При настройке учетной записи следующие параметры в файле RSreportserver.config на локальном или удаленном экземпляре сервера отчетов сохраняются в виде зашифрованных значений:  

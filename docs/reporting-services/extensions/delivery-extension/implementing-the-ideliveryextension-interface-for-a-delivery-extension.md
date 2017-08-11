@@ -18,20 +18,20 @@ helpviewer_keywords:
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Реализация интерфейса IDeliveryExtension для модуля доставки
   Класс модуля доставки используется для доставки пользователям уведомлений об отчетах на основании содержимого уведомлений. Класс модуля доставки также образует инфраструктуру для проверки пользовательских параметров, передаваемых в модуль доставки. Кроме того, класс модуля доставки должен содержать специальные свойства, с помощью которых клиенты могут получать сведения об имени модуля, параметрах, поддерживаемых модулем и форматах подготовки к просмотру, доступных для модуля доставки.  
   
- ![Процесс интерфейса IDeliveryExtension](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension interface process")  
+ ![Процесс интерфейса IDeliveryExtension](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "процесс интерфейса IDeliveryExtension")  
 Интерфейс IDeliveryExtension позволяет проверять пользовательские данные, а также сообщать клиентам о необходимых параметрах доставки.  
   
  Чтобы создать класс модуля доставки, реализуйте интерфейсы <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> и <xref:Microsoft.ReportingServices.Interfaces.IExtension>. **IDeliveryExtension** интерфейс позволяет модулю доставки для доставки уведомлений об отчетах с помощью <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> метод и проверять входящие параметры модуля с помощью <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> метод. **IExtension** интерфейс позволяет модулю доставки для реализации локализованное имя модуля и обрабатывать сведения конфигурации для модуля, хранящиеся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] файла конфигурации. Путем реализации **IExtension**, содержащий модуль доставки <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> свойство. Настоятельно рекомендуется, [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] поддержки модули доставки **LocalizedName** свойства, чтобы пользователи работали с привычным именем модуля в пользовательском интерфейсе, таком как диспетчер отчетов.  

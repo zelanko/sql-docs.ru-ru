@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: ru-ru
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
 1. На веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] щелкните **Создать** > **Источник данных**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Введите сведения об источнике данных и нажмите кнопку **OК**.  
+3. Введите данные для источника данных > **ОК**.  
   
     По умолчанию источники данных не отображаются на портале.    
    
@@ -138,7 +138,7 @@ ms.lasthandoff: 08/09/2017
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Создание мобильных отчетов служб Reporting Services</a>  
+## <a name="create-mobile-report">Создание мобильных отчетов Reporting Services</a>  
    
 Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766)или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
@@ -235,9 +235,9 @@ ms.lasthandoff: 08/09/2017
   
 Создав визуальные элементы в разметке образца, вы можете теперь создать мобильный отчет с использованием макета, оптимизированного непосредственно для ваших пользователей телефона.    
   
-1. В правом верхнем углу щелкните значок полотна, а затем элемент **Телефон**.  
+1. В правом верхнем углу, щелкните значок Холст > **Phone**.  
   
-2. На вкладке "Макет" в разделе **Control Instances** (Управление экземплярами) отображаются две созданные вами диаграммы.   
+2. На вкладке "Макет" в разделе **Control Instances**(Управление экземплярами) отображаются две созданные вами диаграммы.   
   
 3. Перетащите карту дерева на полотно телефона и разверните его на четыре столбца в ширину и три строки в высоту.  
   

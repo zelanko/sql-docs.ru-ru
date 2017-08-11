@@ -18,7 +18,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
 ms.contentlocale: ru-ru
@@ -32,13 +32,13 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Отчеты, элементы отчетов и определения отчетов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Описывает различные термины, используемые для описания отчетов в разных состояниях, в том числе для отчета во время начального определения, для опубликованного отчета и для отчета, просматриваемого пользователем.  
   
  [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Описывает различия в создании, хранении и управлении встроенными и общими источниками данных.  
   
- [Области данных и карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [Области данных и карты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Описывает типы областей данных, которые можно добавить в макет отчета. Области данных определяют внешний вид отчета: таблица, матрица, список или диаграмма.  
   
  [Концепция параметров отчета (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  

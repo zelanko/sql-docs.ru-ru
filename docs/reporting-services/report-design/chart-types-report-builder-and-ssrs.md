@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: ru-ru
@@ -35,9 +35,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="choosing-a-chart-type"></a>Выбор типа диаграммы  
  Диаграмма каждого типа обладает уникальными характеристиками, позволяющими наилучшим образом представить визуально конкретный набор данных. Для отображения данных можно использовать диаграммы любого типа, но удобство чтения данных повышается, если применяется тип диаграммы, подходящий для конкретных данных, учитывая то, что должно быть показано в отчете. В следующей таблице собраны характеристики диаграммы, от которых зависит применимость диаграммы для конкретного набора данных.  
   
- Тип диаграммы можно изменить после ее создания. Дополнительные сведения см. в статье [Изменение типа диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
+ Тип диаграммы можно изменить после ее создания. Дополнительные сведения см. в разделе [изменить тип диаграммы &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Примеры многих из этих типов диаграмм доступны в качестве образцов отчетов. Дополнительные сведения о загрузке образцов отчетов см. в разделе [примеры отчетов построителя отчетов и конструктора отчетов](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Примеры многих из этих типов диаграмм доступны в качестве образцов отчетов. Дополнительные сведения о скачивании образцов отчетов см. в статье [(Примеры отчетов построителя отчетов и конструктора отчетов)](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Тип диаграммы|Отображение данных отношений|Отображение данных об акциях|Отображение линейных данных|Отображение многозначных данных|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -45,8 +45,8 @@ ms.lasthandoff: 08/09/2017
 |[Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||  
 |[Гистограммы](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||  
 |[Гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||  
-|[Графики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||  
-|[Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||||  
+|[Графики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||  
+|[Круговые диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||||  
 |[Полярные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||||  
 |[Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")|  
 |[Точечные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||  

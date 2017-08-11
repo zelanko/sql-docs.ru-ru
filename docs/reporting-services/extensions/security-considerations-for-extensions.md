@@ -18,14 +18,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c7e953f9beea75f08e6c87a210975172e5768d68
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-considerations-for-extensions"></a>Вопросы безопасности для модулей
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  Модули, развернутые на сервере отчетов необходимо запустить как полностью доверенные это означает, что модуль должен быть частью группы кода, который предоставляется **FullTrust** набор разрешений. Это также означает, что модуль может иметь доступ к определенным ресурсам и операциям сервера, предоставляемым средой CLR, в зависимости от того, какой пользователь прошел проверку подлинности для работы с конкретным отчетом. Дополнительные сведения о группах и пользователях см. в разделе [управления доступом для кода в службах Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 > [!IMPORTANT]  
-> В службе  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принудительно применяется режим безопасности [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для всех собственных модулей.  
+>  В службе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принудительно применяется режим безопасности [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для всех собственных модулей.  
   
  При развертывании модулей обработки данных, доставки, подготовки к отображению и безопасности службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны соблюдаться следующие условия:  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  При первоначальной загрузке сервером отчетов модулей в память в них используются учетные данные этой службы, поскольку некоторым сборкам модулей требуются специальные разрешения для доступа к системным ресурсам, чтения файлов конфигурации и загрузки других, зависимых сборок. Но после загрузки и инициализации сборки все последующие вызовы сборок модуля осуществляются с использованием учетных данных пользователя, который в данный момент зарегистрирован в системе.  
   
 ## <a name="see-also"></a>См. также:  
- [модули служб Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Модули служб Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
  [Библиотека служб Reporting Services расширения](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

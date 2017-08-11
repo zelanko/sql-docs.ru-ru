@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
 ms.contentlocale: ru-ru
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
 
   Модуль подготовки отчетов Word подготавливает отчеты с разбиением на страницы в формате  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (DOCX). Используется формат Office Open XML.  
   
- Содержимое файлов, создаваемых этим модулем подготовки, имеет тип **application/vnd.openxmlformats-officedocument.wordprocessingml.document**, а файлы имеют расширение DOCX.  
+ Содержимое файлов, создаваемых этим модулем подготовки, имеет тип **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , а файлы имеют расширение DOCX.  
   
- Дополнительные сведения об экспорте в Word см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ В разделе [экспортировать отчеты &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) подробные сведения о том, как экспортировать в Word.  
   
  После экспорта отчета в документ Word можно изменить содержимое отчета и спроектировать отчеты в стиле документа, такие как наклейки для почтовой рассылки, заказы на покупку или стандартные письма.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Построитель отчетов работает в отключенном режиме и используется для предварительного просмотра отчетов.  
   
--   Веб-часть средства просмотра отчетов работает в локальном режиме, а ферма SharePoint не интегрирована с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+-   Веб-часть средства просмотра отчетов работает в локальном режиме, а ферма SharePoint не интегрирована с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [сравнение локального режима. Отчеты, созданные в подключенном режиме, в средстве просмотра отчетов &#40;службы Reporting Services в режиме интеграции с SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Если пункт меню модуля подготовки отчетов **Word 2003** видим, то в следующих сценариях будут доступны параметры **Word** и **Word 2003** :  
   

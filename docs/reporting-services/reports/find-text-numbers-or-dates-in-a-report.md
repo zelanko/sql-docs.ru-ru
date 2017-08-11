@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
 ms.contentlocale: ru-ru
@@ -48,6 +48,6 @@ ms.lasthandoff: 08/09/2017
 4.  Для поиска следующих вхождений того же значения нажмите кнопку **Далее**.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление веб-части средства просмотра отчетов на веб-страницу (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [Добавить веб-части средства просмотра отчетов в веб-страницу &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

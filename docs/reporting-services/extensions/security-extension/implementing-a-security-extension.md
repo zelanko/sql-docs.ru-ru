@@ -19,14 +19,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5ff92e6f2198d95d57ceabddea1954456c46ebda
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 51bcbe7ead960439caa55785f50075f8dfdcf3f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-a-security-extension"></a>Реализация модуля безопасности
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  <xref:Microsoft.ReportingServices.Interfaces>   
- [модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

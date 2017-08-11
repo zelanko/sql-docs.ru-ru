@@ -23,14 +23,14 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: ru-ru
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="rsexe-utility-ssrs"></a>Служебная программа RS.exe (SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   Скрипт, предоставленный во входном файле, обрабатывается служебной программой rs.exe. Используйте эту программу для автоматизации развертывания сервера отчетов и административных задач.  
   
 > [!NOTE]  
@@ -62,13 +62,13 @@ rs {-?}
  **-i** *input_file*  
  (обязательный) Определяет файл rss, подлежащий выполнению. Это значение может быть как относительным, так и полным путем к файлу rss.  
   
- **-s** *serverURL*  
+ **-s** *URL-адрес_сервера*  
  (обязательный) Определяет имя веб-сервера и имя виртуального каталога сервера отчетов, к которым будет применен выполняемый файл. Пример URL-адреса сервера отчетов: `http://examplewebserver/reportserver`. Префикс http:// или https: // в начале имени сервера необязателен. Если префикс не указан, то сервер, на котором находится скрипт сервера отчетов, сначала пытается использовать протокол HTTPS, а в случае неудачи — протокол HTTP.  
   
  **-u** [*домен*\\]*имя_пользователя*  
  (Необязательный) Определяет учетную запись пользователя, используемую для подключения к серверу отчетов. В случае отсутствия **-u** и **-p** используется текущая учетная запись пользователя Windows.  
   
- **-p** *password*  
+ **-p** *пароль*  
  (Обязательный, если задан **-u** .) Определяет пароль для использования с аргументом **-u** . Это значение учитывает регистр.  
   
  **-e**  
@@ -84,7 +84,7 @@ rs {-?}
   
  Если значение не указано, то используется конечная точка Mgmt2005. Дополнительные сведения о конечных точках SOAP см. в разделе [Report Server Web Service Endpoints](../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
- **-l** *time_out*  
+ **-l** *время_ожидания*  
  (Необязательный) Определяет количество секунд, которые должны пройти до истечения времени ожидания соединения с сервером. Значение по умолчанию — 60 секунд. Если значение времени ожидания не определено, то используется значение по умолчанию. Значение **0** определяет бесконечное время ожидания соединения.  
   
  **-b**  
@@ -126,10 +126,10 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  Подробный пример см. в разделе [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## <a name="see-also"></a>См. также:  
-- [Запустите файл скрипта служб Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
-- [Скрипт развертывания и административных задач](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Сценарий с служебную программу rs.exe и веб-службы](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [Программы командной строки сервера отчетов &#40; Службы SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+## <a name="see-also"></a>См. также  
+- [Запуск файла скрипта для служб Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Создание скриптов с помощью программы rs.exe и веб-службы](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

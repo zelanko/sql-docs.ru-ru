@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
 ms.contentlocale: ru-ru
@@ -39,9 +39,9 @@ ms.lasthandoff: 08/09/2017
 |Визуализация и анализ данных||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Трехмерные карты](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
 |Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (поддерживает просмотр файлов размером до 1 ГБ)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [Приложения Power BI для мобильных устройств](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Службы Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(с использованием Power BI для мобильных устройств)|  
-|Совместная работа и общий доступ|||[Веб-сайты SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Сайтов групп SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
+|Совместная работа и общий доступ|||[Сайты SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Сайтов групп SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Корпоративная бизнес-аналитика**|IT Pro||||||  
-|Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx)|  
+|Создавайте многомерные или табличные корпоративные модели||||||[службы Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx);|  
 |Создавайте специальные визуализации данных|||[Power View для SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Создавайте панели мониторинга|||[Панели мониторинга SharePoint](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [Службы PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Создавайте рабочие отчеты||||||*[Службы Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)|  

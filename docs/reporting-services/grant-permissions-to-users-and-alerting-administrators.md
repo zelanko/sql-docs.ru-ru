@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: ru-ru
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 
 Дополнительные сведения о разрешениях SharePoint см. в разделе [Пользовательские разрешения и уровни разрешений (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx).
 
-## <a name="grant-permissions"></a>Предоставление разрешений
+## <a name="grant-permissions"></a>Предоставить разрешения
   
 1.  Перейдите на сайт SharePoint, для которого необходимо предоставить разрешения.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="see-also"></a>См. также
 
-[Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[Задание разрешений для элементов сервера отчетов на сайте SharePoint &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

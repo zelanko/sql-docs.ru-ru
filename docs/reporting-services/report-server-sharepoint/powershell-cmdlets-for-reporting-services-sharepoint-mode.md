@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: ru-ru
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 -   Управление функциями служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , например расширениями и ключами шифрования.  
 
 ##  <a name="bkmk_cmdlet_sum"></a> Обзор командлетов  
- Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [запуск Windows PowerShell в Windows Server](http://technet.microsoft.com/library/hh847814.aspx). В следующих сводках о командлетах ссылки на «базы данных» служебного приложения указывают на все базы данных, созданные и используемые приложением службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+ Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](http://technet.microsoft.com/library/hh847814.aspx). В следующих сводках о командлетах ссылки на «базы данных» служебного приложения указывают на все базы данных, созданные и используемые приложением службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Это включает базы данных конфигурации, предупреждений и временные базы данных.  
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Дополнительные сведения см. [с помощью Windows PowerShell для администрирования SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Дополнительные сведения см. в разделе [Использование Windows PowerShell для управления SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>Открытие оболочки управления SharePoint и выполнение командлетов  
   
@@ -280,7 +280,7 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ## <a name="next-steps"></a>Следующие шаги
 
 [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Контрольный список: Использование PowerShell для проверки PowerPivot для SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Получение справок по SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 [Скрипты PowerShell для управления SharePoint CodePlex](http://sharepointpsscripts.codeplex.com/)   
 

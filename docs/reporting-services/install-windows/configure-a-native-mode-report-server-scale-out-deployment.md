@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
 ms.contentlocale: ru-ru
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Установите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютер, на котором будут расположены базы данных сервера отчетов. Как минимум, следует установить компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-2.  При необходимости активируйте сервер отчетов для удаленных соединений. В некоторых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаленные соединения TCP/IP и именованные каналы по умолчанию не разрешены. Чтобы проверить, разрешены ли удаленные соединения, запустите средство диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выясните значение параметров конфигурации сети для целевого экземпляра. Если удаленный экземпляр является именованным, убедитесь в том, что на целевом сервере включена и запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает номер порта, используемый для подключения к именованному экземпляру. 
+2.  При необходимости активируйте сервер отчетов для удаленных соединений. В некоторых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаленные соединения TCP/IP и именованные каналы по умолчанию не разрешены. Чтобы проверить, разрешены ли удаленные соединения, запустите средство диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выясните значение параметров конфигурации сети для целевого экземпляра. Если удаленный экземпляр является именованным, убедитесь в том, что на целевом сервере включена и запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает номер порта, используемый для подключения к именованному экземпляру. 
 
 ## <a name="service-accounts"></a>Учетные записи службы
 
@@ -153,6 +153,6 @@ An error occurred within the report server database.  This may be due to a conne
 [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Добавление и удаление ключей шифрования для масштабного развертывания](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[Управление сервером отчетов служб Reporting собственный режим служб](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

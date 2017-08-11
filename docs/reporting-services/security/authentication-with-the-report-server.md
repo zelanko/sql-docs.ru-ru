@@ -21,7 +21,7 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
 ms.contentlocale: ru-ru
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 |Метод проверки подлинности|Объяснение|  
 |---------------------------|-----------------|  
 |Анонимная проверка подлинности|Сервер отчетов не принимает запросы без проверки подлинности от анонимного пользователя, за исключением конфигураций развертывания, которые включают нестандартные модули проверки подлинности.<br /><br /> Построитель отчетов принимает запросы без проверки подлинности в том случае, если разрешен доступ к построителю отчетов на сервере отчетов, настроенном для обычной проверки подлинности.<br /><br /> Для всех остальных случаев анонимные запросы будут отвергнуты с ошибкой «HTTP 401: Отказано в доступе» еще до того, как запрос дойдет до [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Получив ошибку «HTTP 401: Отказано в доступе«, клиент должен переформулировать запрос, указав допустимый тип проверки подлинности.|  
-|Технологии единого входа (SSO)|Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не обеспечивают собственную поддержку для технологий единого входа. Для использования этих технологий необходимо создание нестандартного модуля проверки подлинности.<br /><br /> Среда размещения сервера отчетов не поддерживает ISAPI-фильтры. Если используемая технология SSO реализована в виде фильтра ISAPI, попробуйте воспользоваться встроенной поддержкой сервера ISA для протокола RSASecueID или RADIUS. В противном случае можно создать сервер ISAPI ISA или HTTPModule для RS, однако рекомендуется использовать сервер ISA напрямую.|  
+|Технологии единого входа (SSO)|Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не обеспечивают собственную поддержку для технологий единого входа. Для использования этих технологий необходимо создание нестандартного модуля проверки подлинности.<br /><br /> Среда размещения сервера отчетов не поддерживает ISAPI-фильтры. Если используемая технология SSO реализована в виде фильтра ISAPI, попробуйте воспользоваться встроенной поддержкой сервера ISA для протокола RSASecueID или RADIUS. В противном случае можно создать сервер ISAPI ISA или HTTPModule для RS, однако рекомендуется использовать сервер ISA напрямую.|  
 |Паспорт|Не поддерживается в SQL Server Reporting Services.|  
 |Дайджест|Не поддерживается в SQL Server Reporting Services.|  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
--   [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Настройка нестандартной проверки подлинности или проверки подлинности форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -81,17 +81,17 @@ ms.lasthandoff: 08/09/2017
 |Задайте встроенную проверку подлинности Windows.|[Настройка проверки подлинности Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Задайте обычную проверку подлинности.|[Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Задайте проверку подлинности с помощью форм или другой нестандартный тип проверки.|[Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Включите [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для обработки сценария пользовательской проверки подлинности.|[Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
+|Включите [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для обработки сценария пользовательской проверки подлинности.|[Настройка передачи файлов cookie для пользовательской аутентификации на веб-портале](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
-[Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[Укажите учетные данные и сведения о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[Реализация модуля безопасности](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Настройка соединений SSL для сервера отчетов в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
+[Настройка доступа к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Общие сведения о модулях безопасности](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Проверка подлинности в службах Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Авторизация в службах Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

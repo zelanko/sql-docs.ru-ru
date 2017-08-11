@@ -19,14 +19,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], data processing
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 caps.latest.revision: 35
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 372d21a412efec6306912950e7f9f5a6f577ee3f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1497690ebccc010601542308747240d0e91d89db
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-a-data-processing-extension"></a>Реализация модуля обработки данных
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
  Образец полностью реализованного модуля обработки данных см. в разделе [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>См. также:  
- [модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

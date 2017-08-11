@@ -19,7 +19,7 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
 ms.contentlocale: ru-ru
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
   Одним из важных аспектов конфигурирования сервера отчетов является создание резервной копии симметричного ключа, используемого для шифрования конфиденциальных данных. Резервная копия ключа требуется для выполнения многих распространенных операций и позволяет повторно использовать базу данных существующего сервера отчетов в новом сервере.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint  
   
  Восстанавливать резервную копию ключа шифрования нужно в ответ на любое из следующих событий:  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Введите надежный пароль.  
   
-4.  Укажите файл, предназначенный для сохранения ключа. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] к имени файла будет добавлено расширение SNK. Возможно, лучше будет записать файл на диск, чтобы не хранить его на компьютере, где запускается сервер отчетов.  
+4.  Укажите файл, предназначенный для сохранения ключа. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Добавляет файл к имени файла расширение SNK. Возможно, лучше будет записать файл на диск, чтобы не хранить его на компьютере, где запускается сервер отчетов.  
   
 5.  Нажмите кнопку **ОК**.  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Настройка и управление ключами &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

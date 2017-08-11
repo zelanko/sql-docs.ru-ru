@@ -14,7 +14,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
 ms.contentlocale: ru-ru
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 1. В левом верхнем углу выберите вкладку **Данные** .  
   
-2. Выберите **добавлять данные**, затем либо **локальный файл Excel** или **сервера SSRS**.  
+2. Выберите **Добавить данные**, а затем — **Локальный файл Excel** или **Сервер SSRS**.  
   
    > **Совет**. Убедитесь, что данные имеют [подходящий для мобильных отчетов формат](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   

@@ -20,7 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
 ms.contentlocale: ru-ru
@@ -64,6 +64,6 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Учебники по службам отчетов](../reporting-services/reporting-services-tutorials-ssrs.md)  
+[Учебники по службам Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

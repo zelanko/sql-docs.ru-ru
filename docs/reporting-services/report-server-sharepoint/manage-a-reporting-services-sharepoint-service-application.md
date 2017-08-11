@@ -15,7 +15,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
 ms.contentlocale: ru-ru
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |Включение ведения журнала выполнения|Значение по умолчанию — TRUE.<br /><br /> задать, должны ли сервером отчетов создаваться журналы трассировки, а также задать число дней для хранения журнала. . Журналы сохраняются на компьютере сервера отчетов в папке \Microsoft SQL Server\MSSQL.n\ReportServer\Log. При каждом перезапуске службы начинается запись нового файла журнала. Дополнительные сведения о файлах журналов см. в разделе [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |Дни хранения журнала выполнения|Значение по умолчанию — 60 суток.|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают ведение журнала SharePoint ULS.  Дополнительные сведения см. в разделе [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают ведение журнала SharePoint ULS.  Дополнительные сведения см. в разделе [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  
   
 ###  <a name="bkmk_security_settings_section"></a> Параметры безопасности  
   

@@ -20,7 +20,7 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f216228c01e835e88cd9d4c7d7d4190648a386db
 ms.contentlocale: ru-ru
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|**Название**|Имя пользовательского элемента отчета.|  
+|**Имя**|Имя пользовательского элемента отчета.|  
 |**Тип**|Тип пользовательского элемента отчета.|  
 |**CustomData**|Объект <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>, инкапсулирующий свойства данных пользовательского элемента отчета, заданные во время разработки.|  
 |**Настраиваемые свойства**|Коллекция пользовательских свойств пользовательского элемента отчета.|  

@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: ru-ru
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  При поиске в базе данных сервера отчетов содержимое папки «Мои отчеты» текущего пользователя включается в поиск, тогда как содержимое таких папок других пользователей — нет. В результаты поиска включаются только те отчеты, к которым у пользователя есть доступ.  
   
 ## <a name="see-also"></a>См. также  
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

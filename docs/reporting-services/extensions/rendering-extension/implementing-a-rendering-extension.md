@@ -20,14 +20,14 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 caps.latest.revision: 34
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 68e74b4a67a1edc6517c9e6b2b0160ce2db258b9
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: c6be8db763c82a47d0635169f33a0f0543910abe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-a-rendering-extension"></a>Реализация модуля подготовки отчетов
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
  Описывает способ удаления модуля подготовки отчетов с сервера отчетов.  
   
 ## <a name="see-also"></a>См. также:  
- [модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

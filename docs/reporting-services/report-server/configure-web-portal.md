@@ -16,7 +16,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: ru-ru
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 
 #### <a name="to-configure-the-default-the-web-portal-url-and-virtual-directory"></a>Для настройки по умолчанию веб-портале URL-адрес и виртуальный каталог
 
-1. Запустите средства настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов.
+1. Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов.
 
 2. В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] средство настройки, выберите **URL-адрес портала** чтобы открыть страницу для настройки URL-адрес.
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 
 4. Нажмите кнопку **Применить**.
 
-5. Если вы используете [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] или Windows Server 2008, дополнительные действия могут быть необходимы, прежде чем использовать веб-портале. Дополнительные сведения см. в разделе [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования (службы SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+5. Если вы используете [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] или Windows Server 2008, дополнительные действия могут быть необходимы, прежде чем использовать веб-портале. Дополнительные сведения см. в статье [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 ## <a name="configure-the-web-portal-to-use-a-specific-report-server-url"></a>Настройка веб-портал для использования URL-адрес определенного отчета сервера
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
 [Поддержка браузеров для служб Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 [настроить URL-адрес](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Включение функции служб Reporting Services и отключение](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
+[Включение и отключение компонентов служб Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
 [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Настройка сервера отчетов в собственном режиме для локального администрирования](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)

@@ -24,7 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
 ms.contentlocale: ru-ru
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  Если RDL-файл открывается в конструкторе отчетов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и отчет был создан в предыдущем пространстве имен, конструктор отчетов автоматически создает файл резервной копии и обновляет отчет до текущего пространства имен. Это единственный способ обновления файла определения отчетов.  
   
- Устанавливаемые свойства развертывания могут влиять на то, в какой схеме сохраняется файл определения отчета. Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Устанавливаемые свойства развертывания могут влиять на то, в какой схеме сохраняется файл определения отчета. Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
  Можно передать RDL-файл создан в более ранней версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для новой версии и он автоматически обновляется при первом использовании. На сервере отчетов файлы определения отчетов хранятся в собственном формате. Отчет обновляется автоматически при первом просмотре, однако сохраненный файл определения отчетов остается без изменений.  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
      Дополнительные сведения см. в подразделе [Открытие отчета в конструкторе отчетов](#OpeningaReport) далее в этом разделе.  
   
- Сведения об определении текущего пространства имен языка определения отчетов для сервера отчетов, среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или отчета см. в разделе [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Сведения об определении текущего пространства имен языка определения Отчетов для сервера отчетов [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], или отчета см. в разделе [найти версию схемы определения отчета &#40; Службы SSRS &#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Обновление отчетов на сервере отчетов  
  При первом запуске отчета [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов, обновленном до версии [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , отчет автоматически обновляется до текущего пространства имен определения отчета, поддерживаемого сервером отчетов. Отчет мог существовать на сервере отчетов до обновления, либо его могли передать туда с помощью диспетчера отчетов или опубликовать на сервере отчетов из конструктора отчетов в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
 |Сторонние пользовательские элементы отчета|Обновление не выполняется.<br /><br /> Обрабатывается обработчиком отчетов [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
 ###  <a name="OpeningaReport"></a> Открытие отчета с пользовательскими элементами отчета в конструкторе отчетов  
- При открытии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчета с пользовательскими элементами отчета в конструкторе отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], отчет обновляется до новой схемы определения отчета. В зависимости от того, какие пользовательские элементы отчета содержит отчет, выполняется одно из следующих действий.  
+ При открытии отчета [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с пользовательскими элементами отчетов в конструкторе отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]этот отчет обновится до новой схемы определения отчета. В зависимости от того, какие пользовательские элементы отчета содержит отчет, выполняется одно из следующих действий.  
   
 -   Обнаружены сторонние пользовательские элементы отчета. Если версия пользовательского элемента отчета, установленного на компьютере разработчика отчетов, несовместима с новой RDL-схемой, то в области конструктора отображается текстовое поле с красной буковой «X». Чтобы установить новые версии пользовательских элементов отчета сторонних поставщиков, совместимых с новой RDL-схемой, необходимо обратиться к системному администратору.  
   
@@ -147,9 +147,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Критические изменения в SQL Server Reporting Services в SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Изменения в SQL Server Reporting Services в SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Неподдерживаемые возможности в SQL Server Reporting Services в SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Пользовательские элементы отчета](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Обновление базы данных сервера отчетов](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 

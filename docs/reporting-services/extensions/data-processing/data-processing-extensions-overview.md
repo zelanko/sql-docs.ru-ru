@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 caps.latest.revision: 39
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c30ea734a30e00fdefeb9b30a1ced9c3f60d5fca
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-processing-extensions-overview"></a>Общие сведения о модулях обработки данных
@@ -41,13 +41,13 @@ ms.lasthandoff: 06/22/2017
  Можно использовать API-интерфейс обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] для добавления на сервер отчетов пользовательской обработки данных.  
   
 > [!NOTE]  
-> Службы  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] имеют встроенную поддержку для поставщиков данных на платформе [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Если уже реализован полный поставщик данных, нет необходимости реализовывать модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Однако следует подумать о расширении поставщика данных, включив в него функции служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, в том числе учетные данные безопасного соединения и агрегаты на сервере.  
+>  Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] имеют встроенную поддержку для поставщиков данных на платформе [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Если уже реализован полный поставщик данных, нет необходимости реализовывать модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Однако следует подумать о расширении поставщика данных, включив в него функции служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, в том числе учетные данные безопасного соединения и агрегаты на сервере.  
   
  Каждый из модулей обработки данных, включаемых в службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], использует общий набор интерфейсов. Это обеспечивает реализацию каждым модулем совместимых функций.  
   
  Можно разработать модули обработки данных для собственных источников данных, или можно использовать интерфейсы для добавления дополнительного уровня обработки данных в общие инфраструктуры баз данных. Можно выполнить развертывание пользовательских модулей обработки данных для гладкой интеграции данных в существующие серверы отчетов в организации. Их также можно использовать как часть пользовательского пакета составления отчетов, предоставляемого клиентам.  
   
- ![Архитектура модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![Архитектура модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "архитектура модуля обработки данных")  
 Архитектура модуля обработки данных служб Reporting Service  
   
  Преимущества реализации пользовательского модуля обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключаются в следующем.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="data-extension-process-flow"></a>Поток процесса модуля обработки данных  
  Перед разработкой пользовательского модуля обработки данных необходимо понять, как сервер отчетов использует модули данных для обработки данных. Необходимо также понимать конструкторы и методы, которые вызываются сервером отчетов.  
   
- ![Поток процесса для модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![Поток для модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "поток для модуля обработки данных")  
 Пошаговый поток процесса модуля обработки данных, вызываемого сервером отчетов  
   
  На рисунке показана следующая последовательность событий.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
 -   Процесс разработки в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] язык, такой как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>См. также:  
- [модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

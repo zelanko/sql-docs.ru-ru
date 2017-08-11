@@ -21,7 +21,7 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
 ms.contentlocale: ru-ru
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 
 Перед добавлением пользователя к серверу отчетов, работающему в собственном режиме, ознакомьтесь со следующим списком.
 
-- Необходимо быть членом локальной группы администраторов на компьютере сервера отчетов. Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] разворачиваются в [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] или Windows Server 2008, требуется дополнительная настройка перед тем, как можно будет локально администрировать сервер отчетов. Дополнительные сведения см. в разделе [настроить сервер отчетов в собственном режиме для локального администрирования](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
+- Необходимо быть членом локальной группы администраторов на компьютере сервера отчетов. Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] разворачиваются в [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] или Windows Server 2008, требуется дополнительная настройка перед тем, как можно будет локально администрировать сервер отчетов. Дополнительные сведения см. в разделе [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
 - Чтобы делегировать эту задачу другим пользователям, создайте назначения ролей, сопоставляющие учетные записи пользователей с ролями «Диспетчер содержимого» и «Системный администратор». Пользователи, имеющие разрешения диспетчера содержимого и системного администратора, могут добавлять пользователей к серверу отчетов.
 
@@ -102,10 +102,10 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
+[Создание и изменение назначений ролей](../../reporting-services/security/create-and-manage-role-assignments.md)   
 [Создание назначения ролей: Изменение страницы назначения роли &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
 [Страница свойств безопасности, элементы &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Назначения ролей](../../reporting-services/security/role-assignments.md)   
-[Определение ролей](../../reporting-services/security/role-definitions.md)  
+[Определения ролей](../../reporting-services/security/role-definitions.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

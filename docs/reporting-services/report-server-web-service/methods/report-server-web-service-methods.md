@@ -21,14 +21,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 caps.latest.revision: 49
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec79e5169ff32294cc68f5bee24c3df677d8b38b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-web-service-methods"></a>Методы веб-службы сервера отчетов
@@ -39,13 +39,13 @@ ms.lasthandoff: 06/13/2017
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[Конечные точки службы Web сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Содержит описание конечных точек для управления и выполнения, используемых веб-службой сервера отчетов.|  
+|[Конечные точки веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Содержит описание конечных точек для управления и выполнения, используемых веб-службой сервера отчетов.|  
 |[Методы управления пространством имен сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Описывает методы управления базой данных сервера отчетов. В частности, эти методы позволяют управлять папками и ресурсами, а также настраивать свойства элемента.|  
-|[Методы авторизации](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|Описывает методы управления задачами, ролями и политиками.|  
+|[Способы авторизации](../../../reporting-services/report-server-web-service/methods/authorization-methods.md)|Описывает методы управления задачами, ролями и политиками.|  
 |[Источники данных и способы подключения](../../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)|Описывает методы настройки и управления соединениями с источниками данных и учетными данными для отчетов.|  
 |[Методы параметров отчета](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|Описывает методы задания и получения параметров отчетов.|  
-|[Методы модели - веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Описывает методы, которые можно использовать для управления моделями.|  
-|[Визуализация и методов выполнения](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Описывает методы управления выполнением, подготовкой к просмотру и кэшированием отчетов.|  
+|[Методы моделей — веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|Описывает методы, которые можно использовать для управления моделями.|  
+|[Визуализация и методы выполнения](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|Описывает методы управления выполнением, подготовкой к просмотру и кэшированием отчетов.|  
 |[Методы журнала отчета](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|Описывает методы создания моментальных снимков журнала отчета и управления ими.|  
 |[Методы планирования](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|Описывает методы создания общих расписаний и планов обновления кэша, используемых сервером отчетов, и управления ими.|  
 |[Методы подписки и доставки](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Описывает методы создания и управления подписками и доставки отчетов.|  

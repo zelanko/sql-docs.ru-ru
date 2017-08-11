@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: fd0b6d58eb740f9398bd358429f91071b38eefaf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: d91c1bb43978ab08857c09ffc235da78f5f0ffea
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Свойства отчетов служб - системных свойств сервера отчетов
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство|Description|  
+|property|Description|  
 |--------------|-----------------|  
 |SiteName|Имя сайта сервера отчетов, отображаемое в пользовательском интерфейсе. Значение по умолчанию — **сервера отчетов Microsoft**. Значением этого свойства может быть пустая строка. Максимальная длина составляет 8000 символов.|  
 |SystemSnapshotLimit|Максимальное количество моментальных снимков, которые хранятся для отчета. Допустимые значения: от **-1** до **2** **147** **483** **647**. Значение **-1**указывает на то, что число моментальных снимков не ограничено.|  

@@ -16,7 +16,7 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
 ms.contentlocale: ru-ru
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/09/2017
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>Следующая задача  
-Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. См. [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. В разделе [занятие 4: Добавление таблицы в отчет &#40; Службы Reporting Services &#41; ](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Средства проектирования запросов (службы SSRS)](../reporting-services/report-data/query-design-tools-ssrs.md)  

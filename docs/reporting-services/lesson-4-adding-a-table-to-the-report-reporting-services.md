@@ -16,7 +16,7 @@ caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
 ms.contentlocale: ru-ru
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 > Чтобы сохранить отчет, в меню **Файл** выберите команду **Сохранить все** .  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Табличная область данных успешно добавлена в отчет, поля добавлены в область данных и отчет просмотрен. Далее форматируются заголовки столбцов и значения даты и валюты. См. [Занятие 5. Форматирование отчета (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Табличная область данных успешно добавлена в отчет, поля добавлены в область данных и отчет просмотрен. Далее форматируются заголовки столбцов и значения даты и валюты. В разделе [занятие 5: форматирование отчета &#40; Службы Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Таблицы (построитель отчетов и службы SSRS)](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

@@ -16,7 +16,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8ce79884745b9e2fc9fbddfd7d312e982b2dd61c
 ms.contentlocale: ru-ru
@@ -35,13 +35,13 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="tasks"></a>Задания  
 [Урок 1. Создание нового веб-сайта](../reporting-services/lesson-1-create-a-new-web-site.md)  
-[Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-[Занятие 3. Проектирование родительского отчета с использованием мастера отчетов](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-[Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-[Занятие 5. Проектирование родительского отчета с использованием мастера отчетов](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
+[Урок 2. Определение подключения к данным и таблицы данных для родительского отчета](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+[Урок 3. Проектирование родительского отчета с использованием мастера отчетов](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+[Урок 4. Определение подключения к данным и таблицы данных для родительского отчета](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+[Урок 5. Проектирование родительского отчета с использованием мастера отчетов](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
 [Урок 6. Добавление в приложение элемента управления ReportViewer](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
-[Занятие 7. Добавление операции детализации к родительскому отчету](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
-[Занятие 8. Создание фильтра данных](../reporting-services/lesson-8-create-a-data-filter.md)  
+[Урок 7. Добавление операции детализации к родительскому отчету](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
+[Урок 8. Создание фильтра данных](../reporting-services/lesson-8-create-a-data-filter.md)  
 [Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>См. также:  

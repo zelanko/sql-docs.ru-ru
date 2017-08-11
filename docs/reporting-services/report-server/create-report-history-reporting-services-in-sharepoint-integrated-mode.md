@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1388fba5963d5571d293f2d995c73bb3d83d3b
 ms.contentlocale: ru-ru
@@ -58,6 +58,6 @@ ms.lasthandoff: 08/09/2017
 3.  В области **Параметры моментальных снимков журнала**выберите **Хранить в журнале отчета все снимки данных отчета**.  
   
 ## <a name="see-also"></a>См. также  
- [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+ [Задание параметров обработки &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   

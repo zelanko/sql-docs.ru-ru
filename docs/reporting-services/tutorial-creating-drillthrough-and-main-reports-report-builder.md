@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: ru-ru
@@ -50,16 +50,16 @@ ms.lasthandoff: 08/09/2017
   
 1.  [Запустите построитель отчетов](../reporting-services/report-builder/start-report-builder.md) с компьютера, веб-портала [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] или сервера в режиме интеграции с SharePoint.  
   
-    Откроется диалоговое окно **Создать отчет или набор данных**.  
+    Откроется диалоговое окно **Создать отчет или набор данных** .  
   
-    Если диалоговое окно **Создать отчет или набор данных** не появилось, в меню **Файл** выберите пункт **Создать**.  
+    Если диалоговое окно **Новый отчет или набор данных** не появилось, в меню **Файл** выберите команду **Создать**.  
   
 2.  Убедитесь, что на левой панели выбран **Новый отчет** .  
   
 3.  Убедитесь в том, что на панели справа выбран **Мастер таблицы или матрицы** .  
   
 ## <a name="DConnection"></a>1a. Задание подключения к данным  
-Подключение к данным содержит сведения, необходимые для подключения к внешнему источнику данных, например к кубу служб Analysis Services или базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы указать подключение к данным, можно воспользоваться общим источником данных с сервера отчетов или создать внедренный источник данных, используемый только в этом отчете. В этом учебнике используется внедренный источник данных. Дополнительные сведения об использовании общих источников данных см. в разделе [Альтернативные способы создания подключения к данным (построитель отчетов)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Подключение к данным содержит сведения, необходимые для подключения к внешнему источнику данных, например к кубу служб Analysis Services или базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы указать подключение к данным, можно воспользоваться общим источником данных с сервера отчетов или создать внедренный источник данных, используемый только в этом отчете. В этом учебнике используется внедренный источник данных. Дополнительные сведения об использовании общего источника данных см. в разделе [альтернативой способы подключения к данным &#40; Построитель отчетов &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Создание внедренного источника данных  
   
@@ -90,11 +90,11 @@ ms.lasthandoff: 08/09/2017
 10. Выберите **Тип учетных данных**.  
   
     > [!NOTE]  
-    > В зависимости от настройки разрешений для источника данных может потребоваться изменить параметры проверки подлинности по умолчанию. Дополнительные сведения см. в разделе [Безопасность (построитель отчетов)](../reporting-services/report-builder/security-report-builder.md).  
+    > В зависимости от настройки разрешений для источника данных может потребоваться изменить параметры проверки подлинности по умолчанию. Дополнительные сведения см. в разделах [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Откроется страница **Выбор соединения с источником данных**.  
+    Откроется страница **Выбор соединения с источником данных** .  
   
 12. Нажмите кнопку **Проверить соединение**, чтобы проверить соединение с источником данных.  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
 2.  В диалоговом окне **Выбор куба** выберите Sales и нажмите кнопку **ОК**.  
   
     > [!TIP]  
-    > Если вы не хотите строить запрос многомерных Выражений вручную, нажмите кнопку ![переключиться в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") значок, переключите конструктор запросов в режим запроса, вставьте законченное многомерное Выражение в конструктор запросов и перейдите к шагу 6 в [Создание набора данных](#DSkip).  
+    > Если вы не хотите строить запрос многомерных Выражений вручную, нажмите кнопку ![переключиться в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора") значок, переключите конструктор запросов в режим запроса, вставьте законченное многомерное Выражение в конструктор запросов и перейдите к шагу 6 в [Создание набора данных](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -350,9 +350,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  [Запустите построитель отчетов](../reporting-services/report-builder/start-report-builder.md) с компьютера, веб-портала [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] или сервера в режиме интеграции с SharePoint.  
   
-    Откроется диалоговое окно **Создать отчет или набор данных**.  
+    Откроется диалоговое окно **Создать отчет или набор данных** .  
   
-    Если диалоговое окно **Создать отчет или набор данных** не появилось, в меню **Файл** выберите пункт **Создать**.  
+    Если диалоговое окно **Новый отчет или набор данных** не появилось, в меню **Файл** выберите команду **Создать**.  
  
 2.  Убедитесь в том, что в диалоговом окне **Приступая к работе** выбран пункт **Новый отчет** , после чего щелкните **Мастер таблиц или матриц**.  
   
@@ -405,7 +405,7 @@ ms.lasthandoff: 08/09/2017
 2.  В диалоговом окне **Выбор куба** выберите Sales и нажмите кнопку **ОК**.  
   
     > [!TIP]  
-    > Если вы не хотите строить запрос многомерных Выражений вручную, нажмите кнопку ![переключиться в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") значок, переключите конструктор запросов в режим запроса, вставьте законченное многомерное Выражение в конструктор запросов и перейдите к шагу 5 в [Создание набора данных](#MSkip).  
+    > Если вы не хотите строить запрос многомерных Выражений вручную, нажмите кнопку ![переключиться в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора") значок, переключите конструктор запросов в режим запроса, вставьте законченное многомерное Выражение в конструктор запросов и перейдите к шагу 5 в [Создание набора данных](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

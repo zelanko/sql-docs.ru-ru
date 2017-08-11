@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cb8a4502531dbe3ee23434ea126457196b56c701
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 335ffb51ba87298181e2907be36694c53c6eb701
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="secure-development-reporting-services"></a>Разработка безопасных приложений (службы Reporting Services)
@@ -37,10 +37,10 @@ ms.lasthandoff: 06/22/2017
  [Управление доступом для кода в службах Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
  Основы защиты доступа к коду и настройка политики для пользовательских сборок и модулей в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Общие сведения о политиках безопасности](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
+ [Основные сведения о политиках безопасности](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
  Описание различных типов сборок в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и влияние защиты доступа к коду на разрешения кода.  
   
- [Использование файлов политики безопасности Reporting Services](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
+ [Использование файлов политики безопасности служб Reporting Services](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
  Описание различных компонент служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и соответствующих файлов конфигурации политик.  
   
   

@@ -25,20 +25,20 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 47
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da897abf38fb1c6e89178a9314189890b88eab87
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: dfbc65590c676278c89ca2646dae0d347abcd3ee
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]настройки сведений об устройстве используются для передачи параметров подготовки к просмотру модуля подготовки отчетов. Настройки веб-службы сервера отчетов передаются как XML-элемент **DeviceInfo** и обрабатываются сервером отчетов. Поскольку у настроек сведений об устройстве есть значения по умолчанию, в процессе подготовки к просмотру эти аргументы являются необязательными. Однако настройки сведений об устройстве можно использовать для настройки процесса подготовки к просмотру и переопределения значений по умолчанию, передаваемых сервером.  
   
- Настройки сведений об устройстве можно задавать различными способами. Для задания программным путем можно использовать метод Render. Если доступ к отчету осуществляется по URL-адресу, сведения об устройстве можно задать как параметры URL-адреса. Можно также редактировать настройки сведений об устройстве в файлах конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], чтобы задать глобальные значения параметров подготовки к просмотру. Дополнительные сведения об указании параметров подготовки к просмотру глобально см. в разделе [настройки параметров модуля подготовки отчетов в файле RSReportServer.Config](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
+ Настройки сведений об устройстве можно задавать различными способами. Для задания программным путем можно использовать метод Render. Если доступ к отчету осуществляется по URL-адресу, сведения об устройстве можно задать как параметры URL-адреса. Можно также редактировать настройки сведений об устройстве в файлах конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , чтобы задать глобальные значения параметров подготовки к просмотру. Дополнительные сведения об указании параметров подготовки к просмотру глобально см. в разделе [настройки параметров модуля подготовки отчетов в файле RSReportServer.Config](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Передача сведений об устройстве с помощью метода Render  
  To pass device information settings to a rendering extension, use the **M:Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@,Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.Warning[]@,System.String[]@)** method. Например, следующую строку XML могут передаваться <xref:ReportExecution2005.ReportExecutionService.Render%2A> метод для создания HTML-фрагмент при подготовке к просмотру в формате HTML.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/13/2017
 </DeviceInfo>  
 ```  
   
- При подготовке отчета в виде фрагмента HTML содержимое отчета находится в элементе TABLE, а элементы HTML и BODY не используются. Фрагмент HTML можно использовать для внедрения отчета в существующий HTML-документ. Дополнительные сведения о настройки сведений об устройстве для вывода в формате HTML см. в разделе [настройки сведений об устройстве HTML](../../../reporting-services/html-device-information-settings.md).  
+ При подготовке отчета в виде фрагмента HTML содержимое отчета находится в элементе TABLE, а элементы HTML и BODY не используются. Фрагмент HTML можно использовать для внедрения отчета в существующий HTML-документ. Дополнительные сведения о настройках сведений об устройстве для вывода в формате HTML см. в разделе [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Передача сведений об устройстве с помощью доступа через URL-адрес  
  Настройки сведений об устройстве можно также передать с помощью доступа по URL-адресу. Настройки сведений об устройстве передаются как параметры URL-адреса. Чтобы создать готовый для просмотра отчет без панели инструментов средства просмотра HTML-страниц, можно передать серверу отчетов следующую строку доступа к URL-адресу:  

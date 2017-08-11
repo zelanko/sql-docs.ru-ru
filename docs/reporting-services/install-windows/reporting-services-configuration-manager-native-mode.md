@@ -19,7 +19,7 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ab787456bd3fdbc727ac1727188edd8ab5db0caa
 ms.contentlocale: ru-ru
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Веб-портал](../../reporting-services/web-portal-ssrs-native-mode.md)   
-[Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
+[Средства служб отчетов](../../reporting-services/tools/reporting-services-tools.md)   
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
 [Настройка и администрирование сервера отчетов](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  

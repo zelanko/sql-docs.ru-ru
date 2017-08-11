@@ -18,7 +18,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: ru-ru
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Щелкните правой кнопкой мыши узел сервера отчетов и выберите пункт **Свойства**.  
   
-3.  Нажмите кнопку **Дополнительно** , чтобы открыть страницу свойств. Дополнительные сведения см. в разделе [Свойства сервера (страница "Дополнительно") — службы Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Нажмите кнопку **Дополнительно** , чтобы открыть страницу свойств. Дополнительные сведения см. в разделе [свойства сервера &#40; Страница "Дополнительно" &#41; — Службы reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
   
 4.  В поле **EnableRemoteErrors**выберите значение **True**.  
   

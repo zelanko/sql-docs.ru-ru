@@ -18,14 +18,14 @@ helpviewer_keywords:
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 caps.latest.revision: 35
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b2f9d6372b72cdd6207799f2a40529fc4f90837d
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f7dc9b4a2dcda53da58431ccf9746b4986b61738
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-history-methods"></a>Методы журнала отчета
@@ -45,6 +45,6 @@ ms.lasthandoff: 06/13/2017
  [Создание приложений с помощью веб-службы и .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Методы веб-службы для сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [Технический справочник (службы SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
+ [Технический справочник по &#40; Службы SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

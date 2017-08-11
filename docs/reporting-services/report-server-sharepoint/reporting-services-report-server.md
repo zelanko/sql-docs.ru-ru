@@ -29,7 +29,7 @@ caps.latest.revision: 93
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ef2c94d2ee518262825d3e34bfb181ddb921690d
 ms.contentlocale: ru-ru
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
  В SQL Server Reporting Services нельзя переключать сервер отчетов из одного режима в другой. Если требуется изменить тип сервера отчетов, который используется в среде, необходимо установить сервер отчетов в нужном режиме, а затем скопировать или переместить элементы отчетов или серверную базу данных отчетов с сервера отчетов старой версии на новый сервер отчетов. Этот процесс обычно называется миграцией. Действия, которые необходимо выполнить для миграции, зависят от режима, в котором осуществляется миграция, и версии сервера, с которого производится миграция. Дополнительные сведения см. в разделе [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
-##  <a name="bkmk_featuresupport"></a>Сравнение функций SharePoint и собственного режима  
+##  <a name="bkmk_featuresupport"></a> Feature comparison of SharePoint and native mode  
   
 |Компонент или функция|Собственный режим|Режим интеграции с SharePoint|  
 |--------------------------|-----------------|---------------------|  
@@ -165,12 +165,12 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[модули служб Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
+[Модули служб Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
 [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
 [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
 [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
-[Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[Реализация модуля безопасности](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+[Источники данных, поддерживаемые службами Reporting Services &#40; Службы SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

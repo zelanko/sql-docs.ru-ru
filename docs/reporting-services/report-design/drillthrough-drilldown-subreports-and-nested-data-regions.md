@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: ru-ru
@@ -85,22 +85,22 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="InThisSection"></a> В этом разделе  
- [Детализированные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
+ [Детализированные отчеты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Объясняет отчеты, которые открываются при нажатии пользователем ссылки в основном отчете.  
   
- [Вложенные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [Вложенные отчеты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
  Объясняет отчеты, отображаемые в тексте основного отчета.  
   
- [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
+ [Вложенные области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)  
  Объясняет вложение областей данных друг в друга, например вложение диаграммы в матрицу.  
   
- [Действие детализации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
+ [Действие углубленной детализации &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)  
  Объясняет использование действия углубленной детализации для скрытия и отображения элементов отчета.  
   
- [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [Указание путей к внешним элементам &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  Объясняет создание ссылок на элементы, которые являются внешними по отношению к файлу определения отчета.  
   
 ## <a name="see-also"></a>См. также  
- [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

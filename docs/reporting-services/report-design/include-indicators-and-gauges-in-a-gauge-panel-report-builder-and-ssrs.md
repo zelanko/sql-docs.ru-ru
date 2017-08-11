@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
 ms.contentlocale: ru-ru
@@ -98,13 +98,13 @@ ms.lasthandoff: 08/09/2017
   
 15. Перетащите каждую метку в местоположение рядом с датчиком или индикатором.  
   
-16. Щелкните правой кнопкой метку рядом с датчиком, выберите пункт **Свойства метки**и введите требуемый текст в поле **Текст** .  
+16. Щелкните правой кнопкой метку рядом с датчиком, выберите пункт **Свойства метки**и введите требуемый текст в поле **Текст**.  
   
-17. Щелкните правой кнопкой метку рядом с индикатором, выберите пункт **Свойства метки**и введите требуемый текст в поле **Текст** .  
+17. Щелкните правой кнопкой метку рядом с индикатором, выберите пункт **Свойства метки** и введите требуемый текст в поле **Текст**.  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Индикаторы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

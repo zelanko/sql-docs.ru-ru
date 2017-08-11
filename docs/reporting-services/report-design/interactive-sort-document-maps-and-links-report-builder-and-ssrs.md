@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: ru-ru
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Интерактивная сортировка (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [Интерактивная сортировка &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  Содержит описание способов добавления кнопки интерактивной сортировки к заголовкам столбцов.  
   
- [Создание схемы документа (построитель отчетов и службы SSRS)](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Создать схему документа &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  Объясняет, как добавить оглавление для перемещения по большим отчетам.  
   
- [Добавление в отчет закладки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Добавить закладку в отчете &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Объясняет, как добавить закладки, чтобы создать ссылки внутри отчета.  
   
- [Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Добавление гиперссылки в URL-адрес &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Объясняет, как добавить в отчет ссылки на URL-адрес.  
   
 ## <a name="see-also"></a>См. также  
- [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

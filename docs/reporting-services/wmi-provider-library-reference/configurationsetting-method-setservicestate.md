@@ -22,7 +22,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: ru-ru
@@ -56,7 +56,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  **Логическое** значение, которое показывает требуемое состояние диспетчера отчетов.
  
  > [!NOTE] 
- > Этот параметр рекомендуется к использованию на момент служб SQL Server 2016 Reporting накопительное обновление 2. Всегда будет включено на веб-портале. Значение будет игнорироваться.
+ > Этот параметр считается устаревшим, начиная с SQL Server 2016 Reporting Services с накопительным пакетом обновления 2. Веб-портал всегда будет включен. Значение будет игнорироваться.
   
  *HRESULT*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
@@ -67,7 +67,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>Замечания  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

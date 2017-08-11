@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: ru-ru
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   В папке System32 должна присутствовать библиотека Authz.dll.  
   
- Программа установки больше не проверяет наличие служб IIS или [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]требуются компоненты MDAC 2.0 и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 2.0; Программа установки установит их, если они еще не установлены.  
+ Программа установки больше не проверяет наличие служб IIS или [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требуются компоненты MDAC 2.0 и платформа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 2.0. Если эти компоненты не установлены, то будет произведена их установка.  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> Устранение неполадок установки в режиме интеграции с SharePoint  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Значок стрелки, используемый с обратно к верхней](../../analysis-services/instances/media/uparrow16x16.gif "значок стрелки, используемый с обратно к верхней") [Устранение неполадок установки в режиме интеграции с SharePoint с](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>Вы не видите службы SQL Server Reporting Services в центре администрирования SharePoint после установки SQL Server 2016 SSRS в режиме интеграции с SharePoint  
+###  <a name="bkmk_no_ssrs_service"></a> После установки служб SQL Server Reporting Services в режиме интеграции с SharePoint службы SQL Server Reporting Services 2016 не отображаются в центре администрирования SharePoint.  
  **Описание:** Если после успешной установки SQL Server 2016 Reporting Services в режиме интеграции с SharePoint и SQL Server 2016 Reporting Services надстройки для SharePoint 2013/2016, вы не видите «SQL Server Reporting Services» в двух следующих меню, а затем [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] служба не зарегистрирована:  
   
 -   Центр администрирования SharePoint 2013/2016 -> Управление приложениями -> Страница "Управление службами на сервере"  
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Откройте окно командной строки и введите следующую команду:  
   
-    -   **Запустите \< ** *каталога .NET 4.0 Framework* **> \InstallUtil.exe \< ** *каталог Bin сервера отчетов* **> \ReportingServicesLibrary.dll**  
+    -   **Запустите \<**  *каталога .NET 4.0 Framework* **> \InstallUtil.exe \<**  *каталог Bin сервера отчетов* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Замените \< *каталога .NET 4.0 Framework*> обозначением физического пути к .NET Framework 4.0 файлам и замените \< *каталог Bin сервера отчетов*> физическим путем к двоичным файлам сервера отчетов.  
@@ -248,10 +248,10 @@ ms.lasthandoff: 08/09/2017
  После исправления 64-разрядного экземпляра или повторного добавления разделов реестра вручную можно использовать системный монитор для настройки объектов производительности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые необходимо мониторить.  
   
 ###  <a name="ConfigPropsMissing"></a> Свойства настройки ReportServerExternalURL и PassThroughCookies не настраиваются после обновления с переходом от версии SQL Server 2005  
- При обновлении с переходом от [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] к службам [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]свойства конфигурации **ReportServerExternalURL** и **PassThroughCookies** не настраиваются процессом обновления. **ReportServerExternalURL** — это необязательное свойство, и его следует задавать, только если вы используете веб-части SharePoint 2.0, а пользователи должны иметь возможность получить отчет и открыть его в новом окне браузера. Дополнительные сведения о **ReportServerExternalURL** см. в статье [URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Свойство**PassThroughCookies** необходимо только при использовании нестандартного метода проверки подлинности. Дополнительные сведения о **PassThroughCookies**, в разделе [настроить веб-портал для передачи файлов cookie проверки подлинности пользовательского](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+ При обновлении с переходом от [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] к службам [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]свойства конфигурации **ReportServerExternalURL** и **PassThroughCookies** не настраиваются процессом обновления. **ReportServerExternalURL** — это необязательное свойство, и его следует задавать, только если вы используете веб-части SharePoint 2.0, а пользователи должны иметь возможность получить отчет и открыть его в новом окне браузера. Дополнительные сведения о **ReportServerExternalURL**, в разделе [URL-адреса в файлах конфигурации &#40; Диспетчер конфигурации служб SSRS &#41; ](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Свойство**PassThroughCookies** необходимо только при использовании нестандартного метода проверки подлинности. Дополнительные сведения о **PassThroughCookies**, в разделе [настроить веб-портал для передачи файлов cookie проверки подлинности пользовательского](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 > [!NOTE]  
->  При использовании нестандартной проверки подлинности рекомендуется произвести миграцию установки, а не выполнять обновление. Дополнительные сведения о переносе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+>  При использовании нестандартной проверки подлинности рекомендуется произвести миграцию установки, а не выполнять обновление. Дополнительные сведения о миграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], в разделе [миграцию установки служб Reporting Services &#40; Основной режим &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  По умолчанию эти свойства в конфигурации служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] не существуют. Если эти свойства настроены в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и остается необходимость в предоставляемых ими функциях, необходимо вручную добавить их в файл **RSReportServer.config** после завершения процесса обновления. Дополнительные сведения см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
 

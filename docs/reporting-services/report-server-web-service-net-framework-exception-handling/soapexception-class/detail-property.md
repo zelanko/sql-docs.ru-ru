@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f2359ac68758ba2846c4a9065f6cb1c9c96a7e01
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="detail-property"></a>Свойство Detail
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  Имя продукта. Значение по умолчанию — **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Версия [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Максимальная длина составляет 15 символов. Формат номера версии должен быть следующим: 8.00.0xxx.00.  
+ Версия служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Максимальная длина составляет 15 символов. Формат номера версии должен быть следующим: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  Идентификатор локали или идентификатор языка библиотеки INTL приложения (например, 0x41A).  

@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
 ms.contentlocale: ru-ru
@@ -134,9 +134,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="configuration-options-for-remote-smtp-service"></a>Параметры конфигурации для удаленной службы SMTP
 Соединение между сервером отчетов и локальным SMTP-сервером или перенаправителем определяется следующими параметрами конфигурации:
 
-- `<SendUsing>` указывает метод отправки сообщений. Возможен выбор между сетевой службой SMTP или локальным каталогом сбора службы SMTP. Чтобы использовать удаленную SMTP-службу, этому параметру в файле конфигурации RSReportServer.config должно быть присвоено значение **2** .
-- `<SMTPServer>` указывает удаленный сервер или перенаправитель SMTP. Это значение обязательное, если нужно использовать удаленный сервер или перенаправитель SMTP.
-- `<From>` задает значение, которое появляется на строке **От:** сообщения электронной почты. Это значение обязательное, если нужно использовать удаленный сервер или перенаправитель SMTP.
+- `<SendUsing>`Указывает метод отправки сообщений. Возможен выбор между сетевой службой SMTP или локальным каталогом сбора службы SMTP. Чтобы использовать удаленную SMTP-службу, этому параметру в файле конфигурации RSReportServer.config должно быть присвоено значение **2** .
+- `<SMTPServer>`Указывает удаленный сервер или перенаправитель SMTP. Это значение обязательное, если нужно использовать удаленный сервер или перенаправитель SMTP.
+- `<From>`Задает значение, которое появляется в **из:** сообщения электронной почты. Это значение обязательное, если нужно использовать удаленный сервер или перенаправитель SMTP.
 
 Другие значения, которые используются для удаленной службы SMTP, включают следующее (обратите внимание, что указывать их необязательно, если не нужно заменять ими значения по умолчанию).
 
@@ -228,7 +228,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также:  
 [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-[Изменение файла конфигурации Reporting Services (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+[Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Файл конфигурации rsreportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   

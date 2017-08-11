@@ -16,7 +16,7 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
 ms.contentlocale: ru-ru
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 На этом занятии учебника по [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] будут использоваться страницы управляемой данными подписки на веб-порталах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для подключения к источнику данных подписки, построен запрос, получающий данные для этой подписки, а также сопоставлен результирующий набор с отчетом и параметрами доставки.  
   
 > [!NOTE]  
-> Перед началом работы убедитесь в том, что служба **агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** запущена. Если она не запущена, подписку сохранить не удастся.  Одним из методов проверки является открытие [диспетчера конфигурации SQL Server](../relational-databases/sql-server-configuration-manager.md).
+> Прежде чем начать, убедитесь, что  **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] агента** служба запущена. Если она не запущена, подписку сохранить не удастся.  Одним из методов проверки является открытие [диспетчера конфигурации SQL Server](../relational-databases/sql-server-configuration-manager.md).
 В этом занятии предполагается, что занятия 1 и 2 пройдены и источник данных отчета использует сохраненные учетные данные.  Дополнительные сведения см. в разделе [Занятие 2. Изменение свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="bkmk_startwizard"></a>Запуск мастера управляемой данными подписки  

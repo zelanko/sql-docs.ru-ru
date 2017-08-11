@@ -22,7 +22,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c41f22af9e492ed8bf1be8ba159ce84e8cfbc7db
 ms.contentlocale: ru-ru
@@ -36,9 +36,9 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[Свойство EditionID (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Возвращает выпуск сервера отчетов.|  
-|[Свойство EditionName (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Возвращает имя выпуска сервера отчетов в немашинном (предназначенном для человека) формате.|  
-|[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Этот объект поддерживает инфраструктуру служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и не предназначен для использования непосредственно из программного кода.|  
+|[Свойство EditionID &#40; WMI MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Возвращает выпуск сервера отчетов.|  
+|[Свойство EditionName &#40; WMI MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Возвращает имя выпуска сервера отчетов в немашинном (предназначенном для человека) формате.|  
+|[Идентификатор экземпляра](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Этот объект поддерживает инфраструктуру служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и не предназначен для использования непосредственно из программного кода.|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Возвращает имя экземпляра сервера отчетов на заданном компьютере. Только для чтения.|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|Показывает, настроен ли сервер отчетов в режиме интеграции с SharePoint.|  
 |[Версия](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Возвращает версию сервера отчетов.|  

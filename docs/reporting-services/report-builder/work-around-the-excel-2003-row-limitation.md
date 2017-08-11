@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
 ms.contentlocale: ru-ru
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Откройте отчет в [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] или на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-2.  Щелкните правой кнопкой мыши строку данных в таблице, а затем выберите **Добавить группу** > **Родительская группа** , чтобы добавить внешнюю группу таблицы.  
+2.  Щелкните правой кнопкой мыши строку данных в таблице, а затем выберите **Добавить группу** > **Родительская группа**, чтобы добавить внешнюю группу таблицы.  
   
      ![Выберите родительскую группу](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "выберите родительскую группу")  
   

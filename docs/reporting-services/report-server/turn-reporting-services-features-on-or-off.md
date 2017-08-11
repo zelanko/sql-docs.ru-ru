@@ -18,7 +18,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
 ms.contentlocale: ru-ru
@@ -124,7 +124,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="WebPortal"></a>Веб-портал
   
-В предыдущих версиях диспетчер отчетов может отключить, задав **IsReportManagerEnabled** значение false. **IsReportManagerEnabled** рекомендуется к использованию на момент служб SQL Server 2016 Reporting накопительное обновление 2. Всегда будет включено на веб-портале.
+В предыдущих версиях диспетчер отчетов может отключить, задав **IsReportManagerEnabled** значение false. **IsReportManagerEnabled** рекомендуется к использованию на момент служб SQL Server 2016 Reporting накопительное обновление 2. Веб-портал всегда будет включен.
   
 ##  <a name="ReportBuilder"></a> построитель отчетов  
   
