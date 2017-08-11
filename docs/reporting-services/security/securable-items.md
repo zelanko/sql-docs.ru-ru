@@ -20,15 +20,15 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="securable-items"></a>Защищаемые элементы
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют безопасность на основе ролей для управления доступом к элементам, которые хранятся на сервере отчетов. Предоставление пользователю доступа к серверу отчетов обычно выполняется созданием пары назначений ролей:  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]использует безопасность на основе ролей для управления доступом к элементам, хранящимся на сервере отчетов. Предоставление пользователю доступа к серверу отчетов обычно выполняется созданием пары назначений ролей:  
   
 -   на уровне сайта;  
   
@@ -66,8 +66,8 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+ [Создать, удалить или изменить роль &#40; Среда Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Предоставление пользователям доступа к серверу отчетов &#40; Диспетчер отчетов &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Изменить или удалить назначение ролей &#40; Диспетчер отчетов &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

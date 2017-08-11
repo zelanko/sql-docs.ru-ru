@@ -1,27 +1,34 @@
 ---
-title: "Диспетчер соединений ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "соединения [службы Integration Services], ODBC"
-  - "диспетчер соединений ODBC"
-  - "источники данных [службы Integration Services], подключения"
-  - "диспетчеры подключений [службы Integration Services], ODBC"
+title: "Диспетчер соединений ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odbcconnection.f1
+helpviewer_keywords:
+- connections [Integration Services], ODBC
+- ODBC connection manager
+- data sources [Integration Services], connections
+- connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: f3e331efe9c6a297ef8d9dc342fb07c83ddafc03
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/09/2017
+
 ---
-# Диспетчер соединений ODBC
+# <a name="odbc-connection-manager"></a>диспетчер соединений ODBC
   Диспетчер соединений ODBC позволяет пакету подключаться к разнообразным системам управления базами данных, используя открытый интерфейс взаимодействия с базами данных (ODBC).  
   
  При добавлении соединения ODBC к пакету и задании свойств диспетчера соединений службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений и добавляют его к коллекции **Connections** пакета. Во время выполнения диспетчер соединений рассматривается как физическое соединение с ODBC.  
@@ -36,7 +43,7 @@ caps.handback.revision: 41
   
 -   Указать, сохранять ли соединение во время выполнения.  
   
-## Настройка диспетчера соединений ODBC  
+## <a name="configuration-of-the-odbc-connection-manager"></a>Настройка диспетчера соединений ODBC  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из последующих разделов.  
@@ -45,7 +52,24 @@ caps.handback.revision: 41
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
-## См. также  
+## <a name="odbc-connection-manager-ui-reference"></a>Справочник по пользовательскому интерфейсу диспетчера соединений ODBC
+  Диалоговое окно **Настройка диспетчера соединений ODBC** используется для добавления соединения с источником данных ODBC.  
+  
+ Дополнительные сведения о диспетчере соединений ODBC см. в разделе [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md).  
+  
+### <a name="options"></a>Параметры  
+ **Подключения к данным**  
+ Выберите из списка существующий диспетчер соединений ODBC.  
+  
+ **Свойства подключения к данным**  
+ Просмотрите свойства и значения выбранного диспетчера соединений ODBC.  
+  
+ **Создать**  
+ Создайте новый диспетчер соединений ODBC с помощью диалогового окна **Диспетчер соединений** . При необходимости это диалоговое окно также позволяет создать новый источник данных ODBC.  
+  
+ **Delete**  
+ Выберите соединение и затем удалите его, используя кнопку **Удалить** .  
+## <a name="see-also"></a>См. также:  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

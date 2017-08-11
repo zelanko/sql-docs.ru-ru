@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 51cf021c47749367bba6fcc08081dfeed688298f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)
@@ -53,8 +53,8 @@ ms.lasthandoff: 06/22/2017
  Отчет может содержать параметры, поэтому пользователи могут фильтровать данные. Можно настроить параметры на использование конкретных значений или изменить способ их представления для пользователя. Дополнительные сведения см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>См. также:  
- [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [опубликовать общий источник данных в библиотеке SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Публикация отчета в библиотеку SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Опубликовать общий источник данных в библиотеке SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

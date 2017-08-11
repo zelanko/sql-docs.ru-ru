@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d88358516e05214b230ec57b6243168ef9aac048
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Задание области диаграммы для ряда (построитель отчетов и службы SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
 4.  Выровняйте области диаграммы по вертикали (необязательно). Для этого щелкните диаграмму правой кнопкой мыши и выберите **Свойства области диаграммы**. На вкладке **Выравнивание**выберите область диаграммы, с которой нужно выровнять выбранную область.  
   
 ## <a name="see-also"></a>См. также  
- [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Полярные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
- [Фигурные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
- [Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [Несколько рядов на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Задание цветов диаграммы с помощью палитры &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Полярная диаграмма &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
+ [Фигурные диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
+ [Круговые диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

@@ -25,11 +25,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Диаграммы (построитель отчетов и службы SSRS)
@@ -144,10 +144,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Учебник. Добавление гистограммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Интерактивная сортировка, схемы документов и ссылки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Вложенные области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Учебник: Добавление гистограммы к отчету &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Учебник. Добавление круговой диаграммы к отчету &#40;построитель отчетов&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Учебник: Добавление линейчатую диаграмму к отчету &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

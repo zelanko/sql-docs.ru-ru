@@ -27,11 +27,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="caching-reports-ssrs"></a>Кэширование отчетов (службы SSRS)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Кэширование — технология улучшения производительности. Содержимое кэша энергозависимо и может измениться при добавлении, замене или удалении отчетов. Если требуется более прогнозируемая стратегия кэширования, то необходимо создать моментальный снимок отчета. Дополнительные сведения см. в разделе [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят временные файлы в базе данных, что обеспечивает поддержку пользовательских сеансов и обработку отчетов. Эти файлы кэшируются для внутреннего использования и поддерживают целостность обозреваемых объектов в течение одного сеанса браузера. Дополнительные сведения о кэшировании временных файлов для внутреннего использования см. в разделе [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]хранят временные файлы в базе данных для поддержки пользовательских сеансов и обработку отчетов. Эти файлы кэшируются для внутреннего использования и поддерживают целостность обозреваемых объектов в течение одного сеанса браузера. Дополнительные сведения о кэшировании временных файлов для внутреннего использования см. в разделе [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Кэшированные экземпляры  
  Кэшируемый экземпляр отчета основан на промежуточном формате отчета. Сервер отчетов в целом кэширует только один экземпляр отчета на основе его имени. Однако если отчет может содержать данные, зависящие от параметров запроса, то могут кэшироваться несколько версий отчета в любое данное время. Например, предположим, что имеется параметризованный отчет, который рассматривает код области в качестве значения параметра. Если у четырех различных пользователей имеются четыре уникальных кода области, то создаются четыре кэшированных копии.  
@@ -75,12 +75,12 @@ ms.lasthandoff: 06/22/2017
  Если отчет не может быть по какой-то причине передан для обработки из экземпляра, хранящегося в кэше (например, если значения параметра отличаются от используемых для создания кэшированного отчета), то сервер отчетов повторно запускает отчет.  
   
 ## <a name="see-also"></a>См. также  
- [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Задание параметров обработки &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Предварительная загрузка кэша (диспетчер отчетов)](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Службы Reporting Services Concepts &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Предварительная загрузка кэша &#40; Диспетчер отчетов &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
- [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Параметры обновления кэша (диспетчер отчетов)](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Кэширование общих наборов данных &#40; Службы SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [Параметры &#40; обновления кэша Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

@@ -26,11 +26,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-view-report-builder"></a>Представление конструктора отчетов (построитель отчетов)
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   свойства элементов отчета, щелкнув их правой кнопкой мыши и выбрав пункт **Свойства**.  
   
- Дополнительные сведения об использовании клавиатуры для работы с элементами в области конструктора см. в разделе [Сочетания клавиш (построитель отчетов)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md).  
+ Сведения об использовании клавиатуры для работы с элементами в рабочей области конструктора см. в разделе [сочетания клавиш &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>Размер области конструктора и область печати  
  Размер области конструктора может отличаться от области печати страницы, указанной для печати отчета. Изменение размера области конструктора не ведет к изменению области печати отчета. Вне зависимости от размера, заданного для области печати отчета, полный размер области конструирования не изменится. Дополнительные сведения см. в разделе [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Форматирование шкал на датчике (построитель отчетов и службы SSRS)
@@ -84,10 +84,10 @@ ms.lasthandoff: 06/22/2017
 -   1% от наименьшего из значений высоты или ширины для линейного датчика.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Форматирование указателей на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Форматирование диапазонов на датчике &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Форматирование указателей на датчике &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Форматирование меток оси в виде даты или валюты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Форматирование меток оси на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

@@ -23,11 +23,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Приостановка и возобновление общих расписаний
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Изменение часовых поясов и настроек часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  
   

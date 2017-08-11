@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 369ab4b047ef4f9b9f73265f974a52c2c0197a79
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>Полярные диаграммы (построитель отчетов и службы SSRS)
@@ -58,10 +58,10 @@ ms.lasthandoff: 06/22/2017
  ![Лепестковая диаграмма](../../reporting-services/report-design/media/rs-radarchart.gif "Лепестковая диаграмма")  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Графики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Типы диаграмм &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Графики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

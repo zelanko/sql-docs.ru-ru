@@ -21,14 +21,14 @@ caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
+# <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services 
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  
   
 ||  
@@ -126,6 +126,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [old_Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

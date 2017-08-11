@@ -19,11 +19,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---predefined-roles"></a>Определения ролей - предопределенные роли
@@ -215,9 +215,9 @@ ms.lasthandoff: 06/22/2017
  Роль **System User** можно использовать в качестве дополнения к мерам безопасности по умолчанию. Можно включать эту роль в новые назначения ролей, позволяющие пользователям отчетов получить доступ к серверу отчетов. Дополнительные сведения см. в статье [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Создать, удалить или изменить роль &#40; Среда Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Предоставление пользователям доступа к серверу отчетов &#40; Диспетчер отчетов &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Изменить или удалить назначение ролей &#40; Диспетчер отчетов &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)  
   

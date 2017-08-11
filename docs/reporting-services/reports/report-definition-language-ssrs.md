@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет несколько средств для создания RDL-файлов. Дополнительные сведения см. в разделе [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
- Один из самых простых способов создания RDL в приложении является использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] классы <xref:System.Xml> пространства имен и <xref:System.Linq> пространства имен. Особо следует отметить один из этих классов, **XmlTextWriter** , который может использоваться для написания кода на языке определения отчетов. Класс **XmlTextWriter**позволяет создать полное определение отчета от начала до конца в любом приложении [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Разработчикам предоставляется также возможность расширять язык определения отчетов, добавляя пользовательские элементы отчета с пользовательскими свойствами. Дополнительные сведения о **XmlTextWriter** класса и <xref:System.Xml> пространства имен, в разделе [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] руководства разработчика. Дополнительные сведения о запросах LINQ можно получить, выполнив поиск строки «LINQ to XML» на узле MSDN.  
+ Один из простейших способов создания кода на языке определения отчетов в приложении состоит в использовании классов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] из пространств имен <xref:System.Xml> и <xref:System.Linq> . Особо следует отметить один из этих классов, **XmlTextWriter** , который может использоваться для написания кода на языке определения отчетов. Класс **XmlTextWriter**позволяет создать полное определение отчета от начала до конца в любом приложении [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Разработчикам предоставляется также возможность расширять язык определения отчетов, добавляя пользовательские элементы отчета с пользовательскими свойствами. Дополнительные сведения о классе **XmlTextWriter** и пространстве имен <xref:System.Xml> см. в руководстве разработчика [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Дополнительные сведения о запросах LINQ можно получить, выполнив поиск строки «LINQ to XML» на узле MSDN.  
   
  Для файлов определения отчета стандартным расширением файла является RDL. Предусмотрена также возможность разрабатывать файлы определения клиентских отчетов, которые имеют расширения RDLC. Типом MIME для обоих расширений является text/xml. Дополнительные сведения об отчетах см. в разделе [Reporting Services (SSRS), отчеты служб](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   

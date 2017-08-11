@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Синтаксис пути к элементу для XML-данных отчета (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/03/2017
 |&#124; (вертикальная черта)|Разделяет элементы синтаксиса. Можно выбрать только один из элементов.|  
 |`[ ]` (квадратные скобки)|Необязательные элементы синтаксиса. Скобки не вводятся.|  
 |**{ }** (фигурные скобки)|Разделяют параметры элементов синтаксиса.|  
-|[**,**...*n*]|Указывает на то, что предшествующий элемент можно повторить *n* раз. Вхождения элемента разделяются запятыми.|  
+|[**,**...*n*]|Указывает, что предыдущий элемент может повторяться  *n*  число раз. Вхождения элемента разделяются запятыми.|  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -209,9 +209,9 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Учебники по службам Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [Тип соединения XML &#40; Службы SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Службы Reporting Services Tutorials &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Добавление, изменение и обновление полей в области данных отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
 

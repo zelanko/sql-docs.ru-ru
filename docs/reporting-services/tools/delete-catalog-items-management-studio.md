@@ -17,11 +17,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-catalog-items-management-studio"></a>Удаление объектов из каталога (среда Management Studio)
@@ -50,8 +50,8 @@ ms.lasthandoff: 06/22/2017
  Выводит код ошибки, произошедшей при удалении элемента.  
   
 ## <a name="see-also"></a>См. также  
- [Удаление элемента (среда Management Studio)](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Удалить элемент &#40; Среда Management Studio &#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

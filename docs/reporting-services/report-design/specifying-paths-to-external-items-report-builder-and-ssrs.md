@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ba2c751b7f851fa9be24ca08cb4ab95f4314258
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
@@ -49,8 +49,8 @@ ms.lasthandoff: 06/22/2017
     -   **На сайте SharePoint** необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Добавление действия детализации в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+ [Добавление внешнего изображения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
+ [Добавить вложенный отчет и параметры &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Добавление действия детализации в отчет &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

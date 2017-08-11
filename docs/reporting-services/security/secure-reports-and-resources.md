@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-reports-and-resources"></a>Защищенные отчеты и ресурсы
@@ -79,10 +79,10 @@ ms.lasthandoff: 06/22/2017
  Отчеты, содержащие конфиденциальные данные, следует защищать на уровне доступа к данным, требуя от пользователей, чтобы они предоставили учетные данные, дающие право на доступ к этим данным. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Кроме того, можно защитить папку, сделав ее недоступной для неавторизованных пользователей. Дополнительные сведения см. в подразделе [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Создание и изменение назначений ролей](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Настройка доступа к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Защита совместно используемых элементов источника данных](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Хранить учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

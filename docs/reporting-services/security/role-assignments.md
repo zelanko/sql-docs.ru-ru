@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments"></a>Назначения ролей
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  Следующая диаграмма показывает назначение ролей, которое сопоставляет группу и отдельного пользователя с ролью **Издатель** для папки В.  
   
- ![Диаграмма назначения ролей](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
+ ![Диаграмма назначения ролей](../../reporting-services/security/media/report-securityarch.gif "диаграмма назначения ролей")  
 Диаграмма назначения ролей  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Назначение ролей на уровне системы и на уровне элемента  
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения о стандартных назначениях ролей, обеспечивающих безопасность по умолчанию, см. в разделе [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Создать, удалить или изменить роль &#40; Среда Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Предоставление пользователям доступа к серверу отчетов &#40; Диспетчер отчетов &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Изменить или удалить назначение ролей &#40; Диспетчер отчетов &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Задание разрешений для элементов сервера отчетов на сайте SharePoint &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

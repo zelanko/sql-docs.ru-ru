@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Коллекция полей набора данных (построитель отчетов и службы SSRS)
@@ -115,6 +115,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
  [Диалоговое окно "Свойства набора данных" — "Поля" (построитель отчетов)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

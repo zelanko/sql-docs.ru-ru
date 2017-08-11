@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Эффекты для диаграммы - объемные эффекты рельефа, объемные и другие (построитель отчетов)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Трехмерные эффекты можно применить к отдельным диаграммам с возможностью отображения как двухмерных, так и трехмерных диаграмм в одном отчете.  
   
- Можно добавлять трехмерные эффекты в область диаграммы в диалоговом окне **Свойства области диаграммы** с помощью пункта **Разрешить объемные эффекты**для всех типов диаграмм. Дополнительные сведения см. в разделе [Добавление в диаграмму объемных эффектов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)для всех типов диаграмм.  
+ Можно добавлять трехмерные эффекты в область диаграммы в диалоговом окне **Свойства области диаграммы** с помощью пункта **Разрешить объемные эффекты**для всех типов диаграмм. Дополнительные сведения смдля всех типов диаграмм. в разделе [Add 3D Effects to a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)для всех типов диаграмм.  
   
  Другим способом добавления визуального воздействия диаграммам является добавление стилей рисования с применением скошенных, выдавленных участков и стилей текстур в линейчатых, круговых, кольцевых диаграммах, а также гистограммах. Дополнительные сведения см. в разделе [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
  Можно добавить стили выделения в объемную диаграмму через свойство **Заливка** , которое отображается под Area3DStyle на панели «Свойства» при выборе области диаграмм. Простой стиль освещения применяет тот же оттенок к элементам области диаграммы. Реалистичный стиль изменяет оттенки элементов области диаграммы в зависимости от определенного угла освещения.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление в диаграмму объемных эффектов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [Форматирование меток оси на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Добавление объемных эффектов к диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

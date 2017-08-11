@@ -26,11 +26,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Отключение или приостановка обработки отчетов и подписок
@@ -171,11 +171,11 @@ ForEach ($subscription in $subscriptions)
   
 ## <a name="see-also"></a>См. также  
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Настройка диспетчера отчетов (собственный режим)](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
- [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Страница "Свойства безопасности", элементы (диспетчер отчетов)](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Настройка диспетчера отчетов &#40; Основной режим &#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
+ [Отчеты служб отчетов сервера &#40; Основной режим &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Страница свойств безопасности, элементы &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   
 

@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>установить параметры обработки (службы Reporting Services в режиме интеграции с SharePoint)
@@ -35,13 +35,13 @@ ms.lasthandoff: 06/22/2017
 -   Журнал отчета — это коллекция ранее созданных копий отчета. Журнал отчетов можно использовать для отслеживания отчета во времени. Журнал отчета не используется для отчетов, содержащих конфиденциальные или личные данные. По этой причине журнал отчета может охватывать только те отчеты, которые обращаются к источнику данных с помощью только одного набора учетных данных (сохраненных учетных данных или учетных данных, используемых для автоматического выполнения отчета), доступного для всех пользователей, выполняющих отчет.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint используют функции управления содержимым SharePoint (извлечение и возврат) для сохранения обновлений в типы содержимого служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Это включает создание моментальных снимков отчетов. Поэтому, если включено управление версиями в библиотеке документов, то при создании нового моментального снимка журнала отчета версия отчета будет обновлена. Это является побочным результатом обновления моментальных снимков. Обновление моментального снимка приводит к изменению свойства LastExecution, что вызывает изменение версии отчета.  
+    >  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint используют функции управления содержимым SharePoint (извлечение и возврат) для сохранения обновлений в типы содержимого служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Это включает создание моментальных снимков отчетов. Поэтому, если включено управление версиями в библиотеке документов, то при создании нового моментального снимка журнала отчета версия отчета будет обновлена. Это является побочным результатом обновления моментальных снимков. Обновление моментального снимка приводит к изменению свойства LastExecution, что вызывает изменение версии отчета.  
   
 -   Можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint|  
   
  **В этом разделе:**  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Кэширование отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Задание значений времени ожидания для отчетов и обработки общего набора данных &#40; Службы SSRS &#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

@@ -19,11 +19,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-parameter-reference"></a>Ссылка на параметр доступа по URL-адресу
@@ -125,7 +125,7 @@ ms.lasthandoff: 06/22/2017
   
 -   *Stylesheet*— указывает таблицу стилей, применяемую к средству просмотра HTML-страниц.  
   
--   Параметр сведений об устройстве позволяет задать параметр сведений об устройстве в формате `rc:tag=value`, где *tag* — это имя параметра сведений об устройстве, относящееся к используемому в настоящий момент модулю подготовки отчетов (см. описание параметра *Format* ). Например, можно использовать параметр сведений об устройстве *OutputFormat*, чтобы модуль подготовки отчетов IMAGE выводил отчет в формате JPEG-изображения с помощью следующих параметров в строке доступа по URL-адресу: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Дополнительные сведения обо всех параметрах сведений об устройстве для различных модулей см. в разделе [Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Параметр сведений об устройстве позволяет задать параметр сведений об устройстве в формате `rc:tag=value`, где *tag* — это имя параметра сведений об устройстве, относящееся к используемому в настоящий момент модулю подготовки отчетов (см. описание параметра *Format* ). Например, можно использовать параметр сведений об устройстве *OutputFormat* , чтобы модуль подготовки отчетов IMAGE выводил отчет в формате JPEG-изображения с помощью следующих параметров в строке доступа по URL-адресу: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Дополнительные сведения обо всех параметрах сведений об устройстве для различных модулей см. в разделе [Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Команды для сервера отчетов (rs:)  
  Команды сервера отчетов начинаются с префикса *rs:* и используются для доступа к серверу отчетов:  

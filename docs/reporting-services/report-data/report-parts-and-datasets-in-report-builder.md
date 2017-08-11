@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Элементы отчета и наборы данных в построителе отчетов
@@ -59,10 +59,10 @@ ms.lasthandoff: 06/22/2017
 >  Чтобы гарантировать успешную работу с данными из общего набора данных, необходимо владеть основными принципами обеспечения безопасности элементов отчетов. Дополнительные сведения см. в разделе [Защита элементов общего набора данных](../../reporting-services/security/secure-shared-dataset-items.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Безопасность (построитель отчетов)](../../reporting-services/report-builder/security-report-builder.md)   
- [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Представление конструктора отчетов &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Безопасность &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/security-report-builder.md)   
+ [Элементы отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
 

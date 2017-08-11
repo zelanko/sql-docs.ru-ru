@@ -18,11 +18,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Скрытие элемента (построитель отчетов и службы SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
         > [!NOTE]  
         >  Когда вы определяете выражения для видимости, вы настраиваете свойство Hidden элемента отчета, как показано на следующем изображении. Данное вычисляемое выражение отображает элемент отчета, если значение равно False и скрывает его, если значение равно True.   
-        > ![Свойства_диалоговое окно видимости и скрытые свойства](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
+        > ![Свойства_диалоговое окно видимости и скрытые свойства](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "свойства_диалоговое окно видимости и скрытые свойства")  
   
 4.  Дважды нажмите кнопку **ОК** .  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Действие детализации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Добавление действия свернуть или развернуть элемент &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

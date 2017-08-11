@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="planning-a-report-report-builder"></a>Планирование отчета (построитель отчетов)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **В каком формате должен отображаться отчет?**  
   
-     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделе [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **Какая структура должна использоваться для представления данных в отчете?**  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Отчет разработки концепции &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  
   
   

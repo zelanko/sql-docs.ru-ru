@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Автоматически обновляет разрешения на вход в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещена база данных сервера отчетов. Новая учетная запись будет добавлена к роли **RSExecRole**.  
   
-     Старое имя входа в базе данных автоматически не удаляется. Не забывайте удалять учетные записи, которые больше не используются. Дополнительные сведения см. в статье [Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) в электронной документации по SQL Server.  
+     Старое имя входа в базе данных автоматически не удаляется. Не забывайте удалять учетные записи, которые больше не используются. Дополнительные сведения см. в разделе [Администрирование базы данных сервера отчетов &#40; Собственный режим служб SSRS &#41; ](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) в электронной документации по SQL Server.  
   
      Предоставление новой учетной записи службы разрешений производится только в момент первой настройки подключения к базе данных сервера отчетов. Если подключение к базе данных сервера отчетов настроено на использование учетной записи пользователя домена или учетной записи базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то на эти настройки обновление учетной записи службы не влияет.  
   
@@ -113,5 +113,5 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Службы Reporting Services Configuration Manager &#40; Основной режим &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 

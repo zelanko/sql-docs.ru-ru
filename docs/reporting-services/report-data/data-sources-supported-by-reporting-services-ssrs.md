@@ -25,11 +25,11 @@ caps.latest.revision: 96
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d3fc9080d28a3b187478fc02f64bd7b38a99b178
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], and tabular models  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для многомерных выражений, расширений интеллектуального анализа данных, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]и табличных моделей;  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Стандартные поставщики данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] необязательно поддерживают все функции, предоставляемые модулями обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, некоторые поставщики данных OLE DB и драйверы ODBC могут быть использованы для создания и предварительного просмотра отчетов, но не поддерживают отчеты, опубликованные на сервере отчетов. Например, поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Jet не поддерживается на сервере отчетов. Дополнительные сведения см. в разделе [Модули обработки данных и поставщики данных .NET Framework (службы SSRS)](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
   
- Дополнительные сведения о развертывании специализированных модулей обработки данных см. в разделе [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Дополнительные сведения о стандартных поставщиках данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе по пространству имен <xref:System.Data>.   
+ Дополнительные сведения о развертывании специализированных модулей обработки данных см. в разделе [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Дополнительные сведения о стандартных поставщиках данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе по пространству имен <xref:System.Data> .   
   
 ## <a name="platform-support-for-report-data-sources"></a>Поддержка платформ источников данных отчета  
  Источники данных, которые вы можете использовать в развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , различаются в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и платформы. Дополнительные сведения о функциях см. в разделе [Reporting Services функции, поддерживаемые различными выпусками SQL Server 2016](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Приведенная далее в разделе таблица содержит сведения о поддерживаемых источниках данных в зависимости от версии и платформы.  
@@ -173,13 +173,13 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="AnalysisServices"></a> Модуль обработки данных служб Microsoft SQL Server Analysis Services  
  При выборе типа источника данных **Microsoft SQL Server Analysis Services**выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот модуль обработки данных скомпилирован в собственном коде для платформ на базе x86 и x64.  
   
- Поставщик данных использует объектную модель ADOMD.NET для создания запросов с помощью XML для аналитики (XMLA) версии 1.1. Результаты возвращаются в виде плоского набора строк. Дополнительные сведения см. в разделах [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) и [Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ Поставщик данных использует объектную модель ADOMD.NET для создания запросов с помощью XML для аналитики (XMLA) версии 1.1. Результаты возвращаются в виде плоского набора строк. Дополнительные сведения см. в разделе [тип соединения служб Analysis Services для многомерных Выражений &#40; Службы SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Служб analysis Services тип подключения для расширений интеллектуального анализа данных &#40; Службы SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Пользовательский интерфейс конструктора запросов служб analysis Services MDX](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md), и [пользовательский интерфейс конструктора запросов служб Analysis Services DMX](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
  При соединении с источником данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] модуль обработки данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает параметры с несколькими значениями и сопоставляет свойства ячеек и элементов с расширенными свойствами, поддерживаемыми службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
  Вы можете также создавать модели на основе источников данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-###  <a name="OLEDBAll"></a>Модуль обработки данных OLE DB  
+###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  Модуль обработки данных OLE DB требует выбора дополнительного уровня поставщика данных в зависимости от версии источника данных, который необходимо использовать в отчете. Если конкретный поставщик данных не выбран, предоставляется поставщик по умолчанию. Выберите конкретный поставщик данных через **свойства соединения** диалоговом через **изменить** кнопки в диалоговых окнах источника данных или общий источник данных.  
   
  Дополнительные сведения о соответствующем конструкторе запросов OLE DB см. в разделах [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Дополнительные сведения об определенной поддержке поставщиков OLE DB см. в статье [Конструктор Visual Studio .NET поддерживает отдельных поставщиков данных OLE DB](http://support.microsoft.com/default.aspx/kb/811241) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -275,14 +275,14 @@ ms.lasthandoff: 06/22/2017
   
  Этот модуль поддерживает многозначные параметры. Макросы могут быть указаны в запросе с использованием команды EXECUTE в режиме запроса TEXT.  
   
- Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
+ Дополнительные сведения см. в разделе [тип соединения Teradata &#40; Службы SSRS &#41; ](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
  Также можно создавать модели на основе базы данных Teradata. Дополнительные сведения см. в следующем техническом документе на веб-сайте Teradata: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Службы Microsoft SQL Server 2012 Reporting Services и корпорация Teradata).  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> Модуль обработки списка данных SharePoint  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]включает в себя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] модуль обработки данных списка SharePoint, чтобы списки SharePoint можно использовать как источник данных в отчете. Данные списка можно получить из следующих источников:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки списка данных SharePoint служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , поэтому списки SharePoint могут быть использованы в качестве источника данных в отчете. Данные списка можно получить из следующих источников:  
   
 -   SharePoint Server 2016  
 
@@ -299,7 +299,7 @@ ms.lasthandoff: 06/22/2017
  Указываемые учетные данные зависят от реализации, которую использует клиентское приложение. Дополнительные сведения см. в разделе [Тип подключения к списку SharePoint](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Модуль обработки XML-данных  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки данных XML, что позволяет использовать их в отчете. Данные могут быть получены из XML-документа, веб-службы или из веб-приложения, доступ к которым осуществляется с помощью URL-адреса. Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделе о текстовом конструкторе запросов статьи [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки данных XML, что позволяет использовать их в отчете. Данные могут быть получены из XML-документа, веб-службы или из веб-приложения, доступ к которым осуществляется с помощью URL-адреса. Дополнительные сведения см. в разделе [тип соединения XML &#40; Службы SSRS &#41; ](../../reporting-services/report-data/xml-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделе о текстовом конструкторе запросов статьи [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   

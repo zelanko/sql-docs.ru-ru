@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3b5e30cca2aa3c75ca4d13e89e7af7b181a18916
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Устранение неполадок со службами Reporting Services
@@ -29,24 +29,24 @@ ms.lasthandoff: 06/22/2017
 + [Устранение неполадок при подготовке отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
-+  [Устранение проблем проектирования отчетов с помощью служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md)  
++  [Устранение проблем с проектированием отчетов в Reporting Services](../../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md)  
 
-+  [Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
++  [Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 
-+  [Устранение неполадок при обработке отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md)  
++  [Устранение неполадок с обработкой отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md)  
 
-+  [Устранение неполадок при подготовке отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
++  [Устранение неполадок с подготовкой отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
 
 +  [Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
 +  [Устранение неполадок при подключении к серверу и базе данных (службы Reporting Serivces).](https://msdn.microsoft.com/library/mt650905.aspx)  
 
  ![Маленький значок папки](../../reporting-services/troubleshooting/media/filefolder-small.png)**ошибки и ссылок на события**   
- + [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ + [Ошибки и ссылок на события &#40; Службы Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Причины ошибок служб Reporting Services и способы их устранения](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>См. также раздел  
  [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [Включение событий служб Reporting Services для журнала трассировки SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
 

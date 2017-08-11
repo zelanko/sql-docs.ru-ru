@@ -19,11 +19,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8e1716d9e81043992e5c92f260835cda7742972
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="windows-application-log"></a>Журнал приложений Windows
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 |Аудит ошибок|Событие, регистрируемое при неудачной попытке входа в систему.|  
   
 ## <a name="see-also"></a>См. также  
- [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Службы Reporting Services файлы и источники журналов](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Ошибки и ссылок на события &#40; Службы Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

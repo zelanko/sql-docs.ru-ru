@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  Некоторые параметры по умолчанию для этого модуля подготовки отчетов можно изменить через настройку сведений об устройстве. Дополнительные сведения см. в статье [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
- Дополнительные сведения об экспорте в Excel см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ В разделе [экспортировать отчеты &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) подробные сведения о том, как экспортировать в Excel.  
   
 > [!IMPORTANT]  
 >  При определении параметра типа **String**пользователю предоставляется текстовое поле, в которое можно ввести любое значение. Если параметр отчета не привязан к параметру запроса, но значения этого параметра включены в отчет, пользователь может ввести в качестве значения этого параметра синтаксическое выражение, скрипт или URL-адрес и подготовить отчет к просмотру в приложении Excel. Если затем другой пользователь при просмотре отчета щелкнет содержимое параметра, он может неумышленно выполнить вредоносный скрипт или перейти по ссылке.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Построитель отчетов работает в отключенном режиме и используется для предварительного просмотра отчетов. Поскольку файл конфигурации RSReportServer хранится на сервере отчетов, для обеспечения возможности чтения файла конфигурации средства и продукты, хранящиеся в целевом местоположении экспорта отчетов, должны быть подключены к серверу отчетов.  
   
--   Веб-часть средства просмотра отчетов работает в локальном режиме, а ферма SharePoint не интегрирована с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+-   Веб-часть средства просмотра отчетов работает в локальном режиме, а ферма SharePoint не интегрирована с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [сравнение локального режима. Отчеты, созданные в подключенном режиме, в средстве просмотра отчетов &#40;службы Reporting Services в режиме интеграции с SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Если пункт меню модуля подготовки отчетов **Excel 2003** видим, то в следующих сценариях будут доступны параметры Excel 2003 и Excel:  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  Диаграммы, инфокривые, гистограммы, карты, датчики и индикаторы экспортируются как изображения. Отображаемые ими данные, такие как метки значений и элементов на диаграмме, не экспортируются вместе с ними и не приводятся в книге Excel, кроме случаев, когда такие данные включены в столбец или строку в области данных внутри отчета.  
   
- Если требуется работать с данными диаграмм, спарклайнов, гистограмм, карт, датчиков и индикаторов, экспортируйте отчет в файл CSV или сформируйте Atom-совместимые потоки данных из отчета. Дополнительные сведения см. в разделах [Экспорт в CSV-файл (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) и [Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Если требуется работать с данными диаграмм, спарклайнов, гистограмм, карт, датчиков и индикаторов, экспортируйте отчет в файл CSV или сформируйте Atom-совместимые потоки данных из отчета. Дополнительные сведения см. в разделе [Экспорт в CSV-файл &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) и [Создание веб-каналов данных из отчетов &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Изменение размера страницы  
  Модуль подготовки отчетов в формате Excel использует настройки высоты и ширины страницы для определения того, какую настройку бумаги следует задать в листе Excel. Excel пытается подогнать параметры PageHeight и PageWidth под наиболее распространенные размеры бумаги.  
@@ -273,11 +273,11 @@ ms.lasthandoff: 06/22/2017
  Если отчет должен обрабатываться в нескольких форматах, а создать макет отчета, отображаемый требуемым образом во всех необходимых форматах, невозможно, рассмотрите возможность использования значения во встроенном глобальном выражении RenderFormat для условного изменения вида отчета во время выполнения. Это позволит скрывать или отображать элементы отчета в зависимости от используемого модуля подготовки и, таким образом, достичь наилучших результатов при подготовке в каждом из форматов. Дополнительные сведения см. в разделе [Встроенные глобальные значения и ссылки на пользовательские поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведение отрисовки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные возможности различных подготовки отчетов к просмотру расширения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка к просмотру элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
 

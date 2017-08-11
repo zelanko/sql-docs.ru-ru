@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Встроенные коллекции - ссылки на коллекцию ReportItems (построитель отчетов)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
      `=ReportItems!Textbox1.Value`  
   
--   Это выражение, помещенное в текстовое поле **ReportItem** свойства Color, отображает текст черным цветом, если значение > 0, в ином случае — красным:  
+-   Это выражение, помещенное в **ReportItem** текстовое поле свойства Color, отображает текст черным цветом, если значение > 0; в противном случае — значение отображается красным цветом:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 06/22/2017
  Например, текстовое поле в строке, находящейся в родительской группе, не должно содержать выражение, ссылающееся на имя текстового поля в строке дочерней группы. Результат вычисления такого выражения отличается от значения в отчете, т. к. текстовое поле дочерней строки расположено вне этой области. Дополнительные сведения см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Встроенные коллекции в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

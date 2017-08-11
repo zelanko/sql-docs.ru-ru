@@ -23,11 +23,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Отчеты служб роли vs. Группы разрешений SharePoint
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_compare_tools_terms"></a> Сравнение средств и терминологии, связанных с разрешениями  
  **Основной режим.** Объекты разрешений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме (роли и задачи) создаются в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и настраиваются для отдельных пользователей в диспетчере отчетов.  
   
- **SharePoint mode:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode utilizes the SharePoint permission features. Управление группами и разрешениями SharePoint осуществляется из следующей страницы **Параметры сайта** .  
+ **Режим интеграции с SharePoint.** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используются функции разрешений SharePoint. Управление группами и разрешениями SharePoint осуществляется из следующей страницы **Параметры сайта** .  
   
  В следующей таблице сравниваются объекты и основные понятия, связанные с разрешением, между службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме и в режиме интеграции с SharePoint.  
   
@@ -109,9 +109,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Задание разрешений для операций сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Определение ролей](../../reporting-services/security/role-definitions.md)   
- [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [Определения ролей](../../reporting-services/security/role-definitions.md)   
+ [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

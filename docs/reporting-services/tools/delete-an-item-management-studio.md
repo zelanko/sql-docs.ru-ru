@@ -19,11 +19,11 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-an-item-management-studio"></a>удалить элемент (среда Management Studio)
@@ -37,11 +37,11 @@ ms.lasthandoff: 06/22/2017
   
 3.  Щелкните элемент правой кнопкой мыши и выберите **Удалить**.  
   
-4.  Появится запрос подтверждения. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  При появлении запроса[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Удаление объектов из каталога (среда Management Studio)](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
- [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Удаление объектов из каталога &#40; Среда Management Studio &#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
+ [Службы Reporting Services в SQL Server Management Studio &#40; Службы SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

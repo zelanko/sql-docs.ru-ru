@@ -18,11 +18,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
@@ -186,10 +186,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Использование страницы "Мои подписки" (сервер отчетов в основном режиме)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Использовать Мои подписки &#40; Сервер отчетов в собственном режиме &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

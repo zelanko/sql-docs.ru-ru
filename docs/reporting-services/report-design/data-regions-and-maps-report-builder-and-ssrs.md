@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Области данных и карты (построитель отчетов и службы SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="table"></a>Таблица  
- Таблица — это область данных, в которой данные представлены построчно. Столбцы таблицы являются статическими: количество столбцов определяется во время проектирования отчета. Строки таблицы являются динамическими: при заполнении данными они расширяются вниз. К таблицам могут быть добавлены группы, которые упорядочивают данные в соответствии с указанными полями или выражениями. Дополнительные сведения о добавлении таблицы в отчет см. в разделе [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ Таблица — это область данных, в которой данные представлены построчно. Столбцы таблицы являются статическими: количество столбцов определяется во время проектирования отчета. Строки таблицы являются динамическими: при заполнении данными они расширяются вниз. К таблицам могут быть добавлены группы, которые упорядочивают данные в соответствии с указанными полями или выражениями. Сведения о добавлении таблицы в отчет см. в разделе [Tables &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>Матрица  
  Матрица также называется перекрестной таблицей. Матричная область данных содержит динамические столбцы и строки, расширяющиеся при поступлении данных. Матрица может иметь как динамические, так и статические столбцы и строки. В столбцах и строках могут содержаться другие столбцы или строки, а также они могут использоваться для группирования данных. Вы можете ознакомиться со сведениями о [добавлении матрицы в отчет](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Макет страницы и визуализации &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   

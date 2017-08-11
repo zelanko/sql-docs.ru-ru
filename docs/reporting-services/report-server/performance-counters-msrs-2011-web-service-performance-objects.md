@@ -22,11 +22,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fe39a19aafd5b11060ba717e338cc4ce818d0bd7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Счетчики производительности веб-службы MSRS 2011 объектов производительности
@@ -131,7 +131,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Счетчики производительности для MSRS 2011 Web Service SharePoint Mode и режим объектов производительности Windows службы MSRS 2011 SharePoint &#40; Режиме интеграции с SharePoint &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

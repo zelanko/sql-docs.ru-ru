@@ -25,11 +25,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 00778c0861d701aee22b366e202c25f8be60871e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных
@@ -135,7 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
- [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Мастер карт и мастер слоев карт &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

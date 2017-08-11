@@ -20,11 +20,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5745964338889cd378a109636b2f6ebbdc32db26
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-filter-or-documents-web-part---sharepoint-integrated-mode"></a>Подключите фильтра или документов веб-часть - в режиме интеграции с SharePoint
@@ -81,8 +81,8 @@ ms.lasthandoff: 06/22/2017
 11. Проверьте изменения и сохраните страницу.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление веб-части средства просмотра отчетов на веб-страницу (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
- [Веб-часть средства просмотра отчетов на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Добавить веб-части средства просмотра отчетов в веб-страницу &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
+ [Веб-части средства просмотра отчетов на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Настройка веб-части средства просмотра отчетов](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
   
   

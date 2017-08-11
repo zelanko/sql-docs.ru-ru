@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  
+  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  
   
  Некоторые параметры конфигурации можно задать только с помощью средств. Параметры, которые содержат зашифрованные значения, должны изменяться с помощью программы настройки служб Reporting Services, программы установки или программы командной строки **rsconfig** . Чтобы иметь возможность запускать эти средства, необходимо членство в локальной группе «Администраторы».  
   
@@ -98,9 +98,9 @@ ms.lasthandoff: 06/22/2017
   
     -   [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+    -   [Настройка передачи файлов cookie для пользовательской аутентификации на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [Настройка параметров модуля подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  Сохраните файл.  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 06/22/2017
  [Развертывание модуля обработки данных](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Развертывание модуля доставки](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Развертывание модуля подготовки отчетов](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+ [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
 

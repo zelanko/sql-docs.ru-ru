@@ -23,11 +23,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Определения ролей - создать, изменить или удалить
@@ -82,8 +82,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Создание и изменение назначений ролей](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Службы Reporting Services в SQL Server Management Studio &#40; Службы SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
 

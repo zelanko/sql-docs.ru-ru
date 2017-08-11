@@ -163,11 +163,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Датчики (построитель отчетов и службы SSRS)
@@ -197,7 +197,7 @@ ms.lasthandoff: 06/22/2017
   
  Линейный датчик может быть прямоугольником, расположенным горизонтально или вертикально, и своей формой напоминает линейку. Чаще всего указатель датчика является термометром, но может быть также маркером или полосой. В силу своей формы линейные датчики полезны при внедрении в таблицу или матричные области данных для отображения данных по ходу выполнения.  
   
- Помимо вышеперечисленных отличий, эти два типа датчиков взаимозаменяемы. Однако если необходимо использовать в отчете простой датчик, то стоит подумать об использовании индикатора. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Помимо вышеперечисленных отличий, эти два типа датчиков взаимозаменяемы. Однако если необходимо использовать в отчете простой датчик, то стоит подумать об использовании индикатора. Дополнительные сведения см. в разделе [индикаторы &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  На следующих иллюстрациях представлены радиальный и линейный датчики. Радиальный датчик имеет круглую форму и указатель-стрелку. Линейный датчик расположен горизонтально и имеет указатель термометра.  
   
@@ -305,9 +305,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

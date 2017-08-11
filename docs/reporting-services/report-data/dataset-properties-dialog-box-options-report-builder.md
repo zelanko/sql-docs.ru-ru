@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8eea917788cfd0811750a1ffb59888fa7e2a156a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
@@ -56,9 +56,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Агрегатная функция (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства набора данных" — "Запрос" (построитель отчетов)](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
+ [Агрегатная функция &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
+ [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Набор данных диалогового окна свойств запроса &#40; Построитель отчетов &#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
   
   

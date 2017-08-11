@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tasks-and-permissions"></a>Задачи и разрешения
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Задача может быть выполнена только в том случае, если она является частью роли, а эта роль включена в назначение ролей. Таким образом, если задача «Просмотр моделей» не включена в роль либо если эта роль не включена в назначение ролей, пользователи не могут просматривать модели отчетов. Следующая диаграмма показывает, каким образом разрешения объединяются в задачи, а задачи — в роли, которые могут быть использованы для конкретных назначений ролей.  
   
- ![Диаграмма разрешений и задач](../../reporting-services/security/media/report-securityobjects.gif "Permissions and task diagram")  
+ ![Диаграмма разрешений и задач](../../reporting-services/security/media/report-securityobjects.gif "диаграмма разрешений и задач")  
 Диаграмма разрешений и задач  
   
 ## <a name="system-and-item-level-tasks"></a>Задачи системного уровня и задачи уровня элемента  
@@ -49,8 +49,8 @@ ms.lasthandoff: 06/22/2017
 |[Задачи системного уровня](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Действия, выполняемые на уровне системы (например, управление заданиями или общими расписаниями), которые могут использоваться со многими элементами. Задачи системного уровня выполняются вне пространства имен папок сервера отчетов.|  
   
 ## <a name="see-also"></a>См. также  
- [Определение ролей](../../reporting-services/security/role-definitions.md)   
- [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Определения ролей](../../reporting-services/security/role-definitions.md)   
+ [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

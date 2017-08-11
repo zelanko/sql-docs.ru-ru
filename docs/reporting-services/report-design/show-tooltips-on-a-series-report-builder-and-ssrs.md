@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e963b234c5c3babb4dd2302afca2ca06ac249b1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)
@@ -38,8 +38,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Добавление действия детализации в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+ [Изменение текста элемента условных обозначений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Форматирование цветов для рядов на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Добавление действия детализации в отчет &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

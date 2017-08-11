@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Добавление диаграммы в отчет (построитель отчетов и службы SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>Добавление диаграммы к отчету  
   
-1.  Создайте отчет и определите набор данных. Дополнительные сведения см. в разделе [Наборы данных отчета](../../reporting-services/report-data/report-datasets-ssrs.md).  
+1.  Создайте отчет и определите набор данных. Дополнительные сведения см. в разделе [наборов данных отчета &#40; Службы SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 2.  На вкладке **Вставка** выберите **Диаграмма**, затем **Вставить диаграмму**.  
   
@@ -69,15 +69,15 @@ ms.lasthandoff: 06/22/2017
   
 10. На вкладке **Выполнение** нажмите кнопку **Конструктор** , чтобы продолжить работу с отчетом.  
   
- На диаграммах с осями (гистограмма, линейчатая диаграмма) на оси категорий могут отображаться не все метки категорий. Дополнительные сведения об изменении меток оси см. в разделе [Задание интервала оси (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
+ На диаграммах с осями (гистограмма, линейчатая диаграмма) на оси категорий могут отображаться не все метки категорий. Дополнительные сведения об изменении меток оси см. в разделе [указать интервал оси &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Учебник. Добавление в отчет линейчатой диаграммы (конструктор отчетов)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Учебник. Добавление в отчет круговой диаграммы (построитель отчетов)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Учебник. Добавление в отчет круговой диаграммы (конструктор отчетов)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Типы диаграмм &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [NULL и пустые точки данных в диаграммах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Учебник: Добавление линейчатой диаграммы к отчету (построитель отчетов)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Учебник: Добавление линейчатой диаграммы в отчет (конструктор отчетов)](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Учебник: Добавление круговой диаграммы к отчету (построитель отчетов)](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Учебник: Добавление круговой диаграммы в отчет (конструктор отчетов)](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

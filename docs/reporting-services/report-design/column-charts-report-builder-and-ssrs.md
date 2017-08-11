@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d21586d80d590da2fa227897d7b83215857140b0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Гистограммы (построитель отчетов и службы SSRS)
@@ -55,11 +55,11 @@ ms.lasthandoff: 06/22/2017
 -   Гистограмма имеет уникальное свойство — возможность отображения в виде гистограммы или диаграммы Парето. Чтобы воспользоваться этой возможностью, нужно в окне свойств выбрать для параметра свойства ShowColumnAs **Гистограмма** или **Парето** значение **true**.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Типы диаграмм &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Линейчатые диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
+ [Диаграммы диапазонов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [Учебник: Добавление линейчатую диаграмму к отчету &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

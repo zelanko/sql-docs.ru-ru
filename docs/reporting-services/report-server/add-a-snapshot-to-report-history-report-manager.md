@@ -21,11 +21,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d340621db8dc12cd981d75939babeff40e590f2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>добавить моментальный снимок к журналу отчета (диспетчер отчетов)
@@ -78,9 +78,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Настройка свойств выполнения для отчета (диспетчер отчетов)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Ограничение размеров журнала отчета (диспетчер отчетов)](../../reporting-services/reports/limit-report-history-report-manager.md)   
+ [Откройте и закройте отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [Ограничение размеров журнала отчета &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

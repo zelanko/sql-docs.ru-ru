@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  Можно задать папку по умолчанию для публикации элементов отчетов на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов.  
   
- Дополнительные сведения см. в разделе [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ## <a name="to-browse-for-report-parts"></a>Просмотр элементов отчетов  
   
@@ -69,9 +69,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
- [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Публикация и повторная публикация элементов отчетов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

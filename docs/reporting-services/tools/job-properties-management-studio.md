@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="job-properties-management-studio"></a>Свойства задания (среда Management Studio)
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/03/2017
  Для процессов, инициируемых пользователем, в этом столбце отображается имя пользователя. Для системных заданий отображается имя сервера отчетов.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  
   

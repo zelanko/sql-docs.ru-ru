@@ -27,11 +27,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-schedules"></a>Создание, изменение и удаление расписаний
@@ -146,8 +146,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Приостановка и возобновление общих расписаний](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Кэширование отчета (диспетчер отчетов)](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Кэшировать отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Добавить моментальный снимок для отчета, истории &#40; Диспетчер отчетов &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
 

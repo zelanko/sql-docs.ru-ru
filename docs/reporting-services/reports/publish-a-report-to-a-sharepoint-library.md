@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 88caf60aea658972b79c49948d882ce5f96e1d07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>опубликовать отчет в библиотеке SharePoint
@@ -35,19 +35,19 @@ ms.lasthandoff: 06/22/2017
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте существующий или новый проект сервера отчетов.  
   
-2.  В меню **Проект** выберите пункт **Свойства**. * \<Проекта >***страницы свойств** откроется диалоговое окно.  
+2.  В меню **Проект** выберите пункт **Свойства**.  *\<Проекта >***страницы свойств** откроется диалоговое окно.  
   
 3.  В списке **Конфигурация** выберите имя конфигурации сборки решения, предназначенной для формирования и публикации отчета. Текущая конфигурация указана как **Active**(*\<конфигурации >*).  
   
 4.  Если в проекте публикуются общие источники данных и перезаписываются ранее опубликованные общие источники данных, присвойте свойству **OverwriteDataSources** значение **True**.  
   
-5.  (Необязательно) Для **TargetDataSourceFolder**, введите URL-адрес библиотеки SharePoint или папки библиотеки (например, `http://TestServer/TestSite/Documents/DataSources`).  
+5.  В качестве значения свойства **TargetDataSourceFolder**введите URL-адрес библиотеки SharePoint или папки библиотеки (например, `http://TestServer/TestSite/Documents/DataSources`).  
   
      Если значение не указано, то будет использовано значение свойства **TargetReportFolder** .  
   
-6.  Для **TargetReportFolder**, введите URL-адрес библиотеки или папки библиотеки (например, `http://TestServer/TestSite/Documents/Reports`).  
+6.  В качестве значения свойства **TargetReportFolder**введите URL-адрес библиотеки или папки библиотеки (например, `http://TestServer/TestSite/Documents/Reports`).  
   
-7.  В поле **TargetServerURL**введите URL-адрес сайта SharePoint верхнего уровня или дочернего сайта. Если не указан сайт, то по умолчанию используется сайт верхнего уровня (например, `http://servername`, `http://servername/site` или `http://servername/site/subsite`).  
+7.  В поле **TargetServerURL**введите URL-адрес сайта SharePoint верхнего уровня или дочернего сайта. Если сайт не указан, используется сайт верхнего уровня по умолчанию (например, `http://servername`, `http://servername/site`или `http://servername/site/subsite`).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
  [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [Публикация отчетов на сервере отчетов](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (службы SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Использование ODC-файла подключения к данным Office в отчетах (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint &#40;службы SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Используйте подключения к данным Office &#40;. ODC &#41; с отчеты &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

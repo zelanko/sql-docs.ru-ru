@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Область данных табликса (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Ячейки области данных Табликса, строк и столбцов (построитель отчетов) и службы SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
  [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Матрицы (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
  [Списки (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   

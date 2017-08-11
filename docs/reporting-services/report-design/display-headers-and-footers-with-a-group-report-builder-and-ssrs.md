@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
  Можно выбрать элемент табликса на панели группирования и задать свойства **KeepWithGroup**, **KeepTogether**и **RepeatOnNewPage** на панели свойств. Свойство **KeepWithGroup** обеспечивает отображение верхних и нижних колонтитулов группы на той же странице, где расположена сама группа. Свойство **KeepTogether** обеспечивает отображение статических элементов вместе со строками или столбцами группы. Свойство **RepeatOnNewPage** обеспечивает повторение верхнего или нижнего колонтитула группы на каждой странице, на которой отображается как минимум один полный экземпляр элемента группы строк, отмеченный значением **KeepWithGroup** . Свойство**RepeatOnNewPage** для элементов группы столбцов не поддерживается.  
   
 > [!NOTE]  
-> Свойства **KeepWithGroup**, **KeepTogether**и **RepeatOnNewPage** элементов группы можно установить с помощью кнопки **Расширенный режим** панели группирования. Дополнительные сведения см. в разделе [Панель группировки (построитель отчетов)](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  Свойства**KeepWithGroup**, **KeepTogether**и **RepeatOnNewPage** элементов группы можно установить с помощью кнопки **Расширенный режим** панели группирования. Дополнительные сведения см. в разделе [Панель группировки (построитель отчетов)](../../reporting-services/report-design/grouping-pane-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

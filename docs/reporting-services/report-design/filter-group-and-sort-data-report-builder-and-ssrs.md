@@ -24,11 +24,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  Чтобы обеспечить группирование по нескольким полям набора данных, необходимо добавить каждое поле к набору выражений группы. Можно также написать собственные выражения группы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Например, можно провести группирование по диапазону значений или применить параметр отчета, чтобы дать возможность пользователю выбрать способ группирования данных в области данных. Дополнительные сведения см. в разделе [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- Для представления отчета можно добавлять разрывы страниц до и после каждой группы или каждого экземпляра группы, чтобы уменьшить объем данных на странице и облегчить управление производительностью при подготовке к просмотру отчета. Дополнительные сведения см. в разделе [Добавление разрыва страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ Для представления отчета можно добавлять разрывы страниц до и после каждой группы или каждого экземпляра группы, чтобы уменьшить объем данных на странице и облегчить управление производительностью при подготовке к просмотру отчета. Дополнительные сведения см. в разделе [добавить разрыв страницы &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  Создание групп областей данных — это один из способов организации данных в отчете. Существует несколько других способов организации данных, у каждого из которых есть свои преимущества. Дополнительные сведения см. в разделе [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
@@ -213,11 +213,11 @@ FROM Production.Product
   
 ## <a name="see-also"></a>См. также  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Спарклайны и гистограммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Индикаторы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

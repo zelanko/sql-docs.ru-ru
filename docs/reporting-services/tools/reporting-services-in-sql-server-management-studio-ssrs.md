@@ -17,11 +17,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b5c82bbd8c2ed4b53bba8afca05d0c439b3ff6be
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Службы Reporting Services в среде SQL Server Management Studio (SSRS)
@@ -41,14 +41,14 @@ ms.lasthandoff: 06/22/2017
   
 -   [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
--   [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
+-   [Настройка свойств сервера отчетов &#40; Среда Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
 -   [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
   
 -   [Отмена заданий сервера отчетов (среда Management Studio)](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>См. также  
- [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Общие сведения о среде SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Знакомство с приложением SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

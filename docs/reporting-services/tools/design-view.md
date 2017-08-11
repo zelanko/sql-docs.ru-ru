@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="design-view"></a>Конструктор
@@ -61,8 +61,8 @@ ms.lasthandoff: 06/22/2017
  Панель «Свойства» предназначена для просмотра свойств текущего выбранного в области конструктора элемента отчета или текущей выбранной группы в панели «Группирование». Можно также щелкнуть выбранный элемент отчета правой кнопкой мыши, а затем выбрать пункт **Свойства** , открыв соответствующее диалоговое окно **Свойства** для элемента или группы отчета.  
   
 ## <a name="see-also"></a>См. также  
- [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Советы по конструированию отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Верхние и нижние колонтитулы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Советы по конструированию отчетов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66744654fac383f2390109a01f8d4cb7b502bf7a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="server-properties-history-page"></a>Свойства сервера (страница «Журнал»)
@@ -47,9 +47,9 @@ ms.lasthandoff: 08/03/2017
  Если объем журнала отчета будет ограничен позже, при превышении указанного предела объема существующего журнала отчета сервер отчетов сокращает объем журнала до нового предела. Первыми удаляются наиболее старые моментальные снимки отчетов. Если журнал отчетов отсутствует или его объем меньше заданного предела, добавляются новые моментальные снимки отчетов. По достижении предела при добавлении новых моментальных снимков отчетов удаляются наиболее старые моментальные снимки.  
   
 ## <a name="see-also"></a>См. также  
- [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Настройка свойств сервера отчетов &#40; Среда Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
 

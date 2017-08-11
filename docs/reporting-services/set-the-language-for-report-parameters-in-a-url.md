@@ -22,11 +22,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 815af671e5bd26445153b96f68ebcbaf0e972cf7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Задать язык для параметров отчета в URL-адресе
@@ -47,7 +47,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  Дополнительно к значениям **true** и **false** для параметра доступа по URL-адресу *rc:Parameters*теперь можно передавать значение **Collapsed**. Если в URL-адресе используется значение *rc:Parameters*=**Collapsed** , область параметров в средстве просмотра HTML-страниц сворачивается, но пользователь может ее включить. Значение **false** полностью удаляет область параметров с панели инструментов средства просмотра HTML-страниц и делает ее недоступной для пользователя.  
   
 ## <a name="see-also"></a>См. также  
- [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
- [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
+ [Доступ к URL-адрес &#40; Службы SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Ссылка на параметр доступа URL-адрес](../reporting-services/url-access-parameter-reference.md)  
   
   

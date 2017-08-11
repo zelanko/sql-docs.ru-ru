@@ -22,11 +22,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-and-snapshot-size-limits"></a>Максимальные размеры отчетов и моментальных снимков
@@ -86,7 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
- [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [База данных сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Обработка больших отчетов](../../reporting-services/report-server/process-large-reports.md)  
   
   

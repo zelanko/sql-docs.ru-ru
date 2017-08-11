@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Доставка электронной почтой в службах Reporting Services
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
--   [Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 ||  
 |-|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
- [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)  
   

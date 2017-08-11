@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner, файл конфигурации
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  Для настройки параметров модуля подготовки отчетов доступны специальные инструкции по изменению файлов конфигурации. Дополнительные сведения см. в разделе [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
- Общие инструкции по изменению файлов конфигурации см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Общие инструкции по изменению файлов конфигурации см. в разделе [изменения файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>Пример файла конфигурации  
  Следующий пример иллюстрирует формат файла RSReportDesigner.config.  
@@ -74,6 +74,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Средства проектирования запросов (службы SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)  
+ [Средства проектирования запросов (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 40bb8a57ac6f8204c6aeb81b6ab82cc2d8e4ab1b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)
@@ -78,7 +78,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="Parameters"></a> Параметры  
- Чтобы включить параметры запроса, необходимо создать фильтр в области фильтра конструктора запросов и пометить фильтр как параметр. Для каждого фильтра будет автоматически создан набор данных, предоставляющий доступные значения. По умолчанию эти наборы данных не отображаются в области данных отчета. Дополнительные сведения см. в разделе [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов)](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) и [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+ Чтобы включить параметры запроса, необходимо создать фильтр в области фильтра конструктора запросов и пометить фильтр как параметр. Для каждого фильтра будет автоматически создан набор данных, предоставляющий доступные значения. По умолчанию эти наборы данных не отображаются в области данных отчета. Дополнительные сведения см. в разделе [определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) и [отображение скрытых наборов данных для многомерных данных &#40; значения параметров Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
  По умолчанию каждый параметр отчета имеет тип данных **Текст**. После создания параметров отчета можно изменить значения по умолчанию. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -100,10 +100,10 @@ data source=<server name>;initial catalog=<database name>
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Предоставляет сведения об общих и внедренных наборах данных.  
   
- [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
  [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)  
@@ -114,8 +114,8 @@ data source=<server name>;initial catalog=<database name>
   
   
 ## <a name="see-also"></a>См. также  
- [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

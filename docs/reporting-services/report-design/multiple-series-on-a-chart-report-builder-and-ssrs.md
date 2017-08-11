@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Несколько рядов на диаграмме (построитель отчетов и службы SSRS)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
  В диаграммах диапазонов имеется по два значения на каждую точку данных. Если в диаграмме есть два ряда на одной оси категорий (x), то чтобы показать различие двух рядов, можно использовать диаграмму диапазонов. Диаграммы диапазонов больше всего подходят для отображения нижних и верхних значений. Например, если в первом ряду содержатся данные по самым крупным продажам по всем дням января, а во втором ряду содержатся самые мелкие продажи по всем дням января, то чтобы показать различие между самыми крупными и самыми мелкими продажами за каждый день, можно использовать диаграмму диапазонов. Дополнительные сведения см. в разделе [Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Отображение ряда с несколькими диапазонами данных на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Типы диаграмм &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   

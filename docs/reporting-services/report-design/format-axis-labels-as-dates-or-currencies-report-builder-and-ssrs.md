@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b8f82c7824a44d46a282eca8d617fb12ac9ade5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  В гистограммах и точечных диаграммах осью категорий является горизонтальная ось (или ось X). Однако для линейчатых диаграмм осью категорий является вертикальная (ось Y).  
   
- Чтобы правильно отформатировать интервалы времени, необходимо обеспечить приведение значений, отображаемых на оси X, к типу данных <xref:System.DateTime>. Если поле содержит тип данных <xref:System.String>, диаграмме не вычисляются интервалы как значения даты или времени. Дополнительные сведения см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+ Чтобы правильно отформатировать интервалы времени, необходимо обеспечить приведение значений, отображаемых на оси X, к типу данных <xref:System.DateTime> . Если поле содержит данные типа <xref:System.String>, то на диаграмме не вычисляются интервалы как значения даты или времени. Дополнительные сведения см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Если к оси Y добавляется числовое значение, то, по умолчанию, на диаграмме это число не форматируется перед его отображением. Если числовое поле содержит данные о продаже, можно отформатировать эти числа как значения валюты, чтобы повысить удобство чтения диаграммы.  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Задание логарифмической шкалы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Задание интервала оси (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Форматирование меток оси на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Задать логарифмическую шкалу &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Укажите интервал оси &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

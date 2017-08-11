@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3824222b71269de1bf500926b44ca55dd438a010
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Вставка или удаление строки (построитель отчетов и службы SSRS)
@@ -64,10 +64,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Основные сведения о группах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
- [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Матрицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)     
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Общие сведения о группах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Матрицы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)     
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

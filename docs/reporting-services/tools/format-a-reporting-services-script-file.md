@@ -18,11 +18,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de06ca0018df176e84db7e16e38c3c2021811fda
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-a-reporting-services-script-file"></a>Форматирование файла скрипта служб Reporting Services
@@ -59,7 +59,7 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  [веб-служба сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Технический справочник (службы SSRS)](../../reporting-services/technical-reference-ssrs.md)   
- [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Технический справочник по &#40; Службы SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Служебная программа RS.exe &#40; Службы SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

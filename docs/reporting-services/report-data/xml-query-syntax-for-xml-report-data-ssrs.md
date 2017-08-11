@@ -20,11 +20,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
@@ -61,14 +61,14 @@ ms.lasthandoff: 06/22/2017
   
 |Источник данных XML|Пример запроса|  
 |---------------------|-------------------|  
-|Веб-службы XML-данных из <xref:ReportService2010.ReportingService2010.ListChildren%2A> метод.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|XML-данные веб-службы с помощью метода <xref:ReportService2010.ReportingService2010.ListChildren%2A> .|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |XML-данные веб-службы при помощи действия SoapAction.|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |XML-документ или внедренные XML-данные, использующие пространства имен.<br /><br /> Элемент запроса, задающий пространства имен для пути к элементу.|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |Встроенный XML-документ.|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |XML-документ, использующий значения по умолчанию.|*No query*.<br /><br /> Путь к элементу определяется на основе самого XML-документа и не зависит от пространства имен.|  
   
 > [!NOTE]  
->  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A>. Для выполнения этого запроса, необходимо создать новый источник данных и задайте строку подключения `http://localhost/reportserver/reportservice2006.asmx`. <xref:ReportService2006.ReportingService2006.ListChildren%2A> Метод принимает два параметра: **элемент** и **рекурсивные**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
+>  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Для выполнения этого запроса, необходимо создать новый источник данных и задайте строку подключения `http://localhost/reportserver/reportservice2006.asmx`. Метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> имеет два параметра: **Item** и **Recursive**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
   
 ## <a name="specifying-namespaces"></a>Указание пространств имен  
  Для указания пространств имен, используемых XML-данными из источника данных, используется элемент XML **Query** . Следующий XML-запрос использует пространство имен **sales**. Узлы XML **ElementPath** для элементов `sales:LineItems` и `sales:LineItem` используют пространство имен **sales**.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Тип соединения XML &#40; Службы SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   

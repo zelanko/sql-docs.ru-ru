@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      Чтобы просмотреть набор данных, который включает доступные значения для параметра отчета, щелкните правой кнопкой мыши в любом пустом месте на панели данных отчета и выберите пункт **Показывать скрытые наборы данных**. В области данных отчета отображаются все наборы данных отчета.  
   
 ## <a name="see-also"></a>См. также:  
- [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Тип соединения служб Analysis Services для многомерных Выражений &#40; Службы SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Analysis Services MDX пользовательский интерфейс конструктора запросов](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b9200dd4152625e0dce4c0c77b10fa2f3ad196ef
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>настроить сервер отчетов в кластере с балансированием сетевой нагрузки
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 |Шаг|Description|Дополнительные сведения|  
 |----------|-----------------|----------------------|  
-|1|Прежде чем установить службы Reporting Services на серверных узлах в NLB-кластере, проверьте требования к масштабному развертыванию.|[Масштабное развертывание — основной режим служб Reporting Services (диспетчер конфигурации)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|1|Прежде чем установить службы Reporting Services на серверных узлах в NLB-кластере, проверьте требования к масштабному развертыванию.|[Масштабное развертывание — службы Reporting Services основной режим &#40; Configuration Manager &#41; ](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации|  
 |2|Настройте NLB-кластер и убедитесь в его правильной работе.<br /><br /> Не забудьте сопоставить имя заголовка узла IP-адресу виртуального сервера NLB-кластера. Имя заголовка узла используется в URL-адресе сервера отчетов; его проще запомнить и ввести, чем IP-адрес.|Дополнительные сведения см. в документации по продукту Windows Server для соответствующей версии операционной системы Windows.|  
 |3|Добавьте NetBIOS и полное доменное имя заголовка узла в список **BackConnectionHostNames** , который находится в реестре Windows. Выполните шаги, указанные в разделе **Метод 2. Задание имен узлов** в [статье 896861 базы знаний](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861) с последующей корректировкой. В**Шаге 7** статьи базы знаний содержится следующее указание: «Закройте редактор реестра и перезапустите службу IISAdmin». Вместо этого перезагрузите компьютер, чтобы изменения вступили в силу.<br /><br /> Например если имя заголовка узла \<MyServer > — это виртуальное имя для имени компьютера Windows «Contoso», вероятно, можно сослаться форму полного доменного ИМЕНИ как «contoso.domain.com». Необходимо добавить имя заголовка узла (MyServer) и полное доменное имя (contoso.domain.com) в список **BackConnectionHostNames**.|Это следует сделать, если среда сервера использует проверку подлинности NTLM на локальном компьютере, создавая подключение с замыканием на себя.<br /><br /> В этом случае запросы между диспетчером отчетов и сервером отчетов завершаться с ошибкой 401 (Отсутствуют необходимые права доступа).|  
 |4|Установите службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме «только файлы» на узлах, которые уже входят в NLB-кластер, затем подготовьте экземпляры сервера отчетов к масштабному развертыванию.<br /><br /> Настроенное масштабное развертывание может не отвечать на запросы, направленные по IP-адресу виртуального сервера. Настройка масштабного развертывания на использование IP-адреса виртуального сервера выполняется на более позднем шаге, после настройки проверки состояния представления.|[Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  При объединении служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] со службами [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 или [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 либо при размещении отчетов в пользовательском веб-приложении может потребоваться настройка только свойства **UrlRoot** . В данном случае в качестве значения свойства **UrlRoot** следует указать URL-адрес сайта SharePoint или веб-приложения. При этом сетевой трафик среды отчетов будет направлен на приложение, обрабатывающее отчеты, а не на сервер отчетов или NLB-кластер.  
   
- Не изменяйте параметр **ReportServerUrl**. При изменении этого URL-адреса вводится дополнительное обращение к виртуальному серверу при обработке каждого внутреннего запроса. Дополнительные сведения см. в статье [URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Дополнительные сведения об изменении файла конфигурации см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Не изменяйте параметр **ReportServerUrl**. При изменении этого URL-адреса вводится дополнительное обращение к виртуальному серверу при обработке каждого внутреннего запроса. Дополнительные сведения см. в разделе [URL-адреса в файлах конфигурации &#40; Диспетчер конфигурации служб SSRS &#41; ](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Дополнительные сведения о редактировании файла конфигурации см. в разделе [изменения файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
   
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.  
   
@@ -118,8 +118,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Настройка URL-адрес &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Настройка масштабного развертывания сервера отчетов собственный режим &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Управление сервером отчетов служб Reporting собственный режим служб](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

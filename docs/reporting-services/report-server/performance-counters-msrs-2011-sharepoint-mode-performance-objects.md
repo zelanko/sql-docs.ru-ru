@@ -22,11 +22,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 78bd4357f5e6de5706a536c44bddac7f3e33ade6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Счетчики производительности MSRS 2011 SharePoint режим производительности объектов
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование времени выполнения](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Сведения о счетчиках производительности и серверах отчетов в собственном режиме см. в разделах [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) и [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ Сведения о счетчиках производительности и серверов отчетов в собственном режиме см. в разделе [счетчики производительности для веб-службы MSRS 2011 г. и объектов к производительности службы Windows MSRS 2011 г. &#40; Основной режим &#41; ](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [Счетчики производительности для MSRS 2011 Windows Service SharePoint режим объектов производительности (режим SharePoint) и MSRS 2011 Web Service SharePoint Mode](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
  В этом разделе:  
   
@@ -142,7 +142,7 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Счетчики производительности для веб-службы MSRS 2011 г. и объектов к производительности службы Windows MSRS 2011 г. &#40; Основной режим &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

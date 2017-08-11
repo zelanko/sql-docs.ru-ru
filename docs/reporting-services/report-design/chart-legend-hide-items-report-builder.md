@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 06f1cf8cde2eb9a9c9aa261188e64aa2fc7afe4b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>Условные обозначения диаграммы - скрытие элементов (построитель отчетов)
@@ -40,10 +40,10 @@ ms.lasthandoff: 06/22/2017
     >  Нельзя спрятать ряд только для одной группы. Если поле добавлено в область **Группа рядов** , будут скрыты все ряды, принадлежащие этой группе.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства условных обозначений"  — "Общие" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
+ [Форматирование условных обозначений на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Форматирование точек данных на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Изменение текста элемента условных обозначений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Добавление скользящего среднего в диаграмму &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
+ [Диалоговое окно «Свойства условных обозначений», общие &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
   
   

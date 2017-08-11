@@ -19,11 +19,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-report-builder-access"></a>настроить доступ к построителю отчетов
@@ -53,14 +53,14 @@ ms.lasthandoff: 06/22/2017
   
  Системные свойства сервера отчетов можно задать с помощью среды Management Studio или скрипта.  
   
--   Чтобы использовать среду Management Studio, подключитесь к серверу отчетов и используйте страницу «Дополнительные свойства сервера», чтобы назначить параметру **EnableReportDesignClientDownload** значение **false**. Дополнительные сведения об открытии этой страницы см. в разделе [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Чтобы использовать среду Management Studio, подключитесь к серверу отчетов и используйте страницу «Дополнительные свойства сервера», чтобы назначить параметру **EnableReportDesignClientDownload** значение **false**. Дополнительные сведения о том, как открыть эту страницу в разделе [задать свойства сервера отчетов &#40; Среда Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Пример сценария, который задает свойство сервера отчетов, см. в разделе [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Назначения ролей предоставляют построителю отчетов доступ к серверу отчетов, работающему в собственном режиме  
  В собственном режиме работы сервера отчетов создайте назначения ролей, включающие задачи для использования построителя отчетов. Необходимо быть диспетчером содержимого или системным администратором, чтобы создать или изменить определения ролей или назначения ролей на уровне элемента или уровне сайта.  
   
- Следующие инструкции предполагают, что используются стандартные роли. Если изменяются определения ролей или если выполнено обновление с SQL Server 2000, проверьте роли, чтобы убедиться, что они содержат необходимые задачи. Дополнительные сведения о создании назначений ролей см. в разделе [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ Следующие инструкции предполагают, что используются стандартные роли. Если изменяются определения ролей или если выполнено обновление с SQL Server 2000, проверьте роли, чтобы убедиться, что они содержат необходимые задачи. Дополнительные сведения о создании назначений ролей см. в разделе [предоставить пользователю доступ к серверу отчетов &#40; Диспетчер отчетов &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  После создания назначений ролей пользователи будут иметь разрешения для следующих действий.  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 06/22/2017
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Системные свойства сервера отчетов](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

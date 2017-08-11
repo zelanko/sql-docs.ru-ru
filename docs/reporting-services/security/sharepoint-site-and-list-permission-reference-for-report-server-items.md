@@ -20,11 +20,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint &#124; SharePoint 2010 и SharePoint 2013.|  
+|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Режиме интеграции с SharePoint &#124; SharePoint 2010 и SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>Разрешения списка  
  Разрешения, присваиваемые на доступ к библиотеке, содержащей элементы сервера отчетов, определяют порядок доступа пользователей к указанным элементам.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 |Открытие|Открывает веб-сайт, список либо папку для доступа к элементам внутри контейнера.|X|X|X|Чтение расписаний и свойств элементов.|  
   
 ## <a name="see-also"></a>См. также  
- [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Сравнение ролей и задач в службах Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

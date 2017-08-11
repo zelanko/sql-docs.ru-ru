@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Средство просмотра HTML-страниц и панель инструментов отчета
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-toolbar"></a>Панель инструментов отчета  
  Панель инструментов отчета обеспечивает следующие возможности при работе со страницами: навигации, масштабирования, обновления, поиска, экспорта, печати и работы с каналами данных для отчетов, подготовленных к просмотру в модуле подготовки HTML-отчетов.  
   
- Возможность печати является дополнительной. Когда она доступна, на панели инструментов отчета появляется значок принтера. При первом использовании щелчок значка принтера загружает элемент управления ActiveX, который необходимо установить. После установки этого элемента управления при щелчке значка принтера открывается диалоговое окно «Печать», в котором можно выбрать принтер из списка принтеров, настроенных для данного компьютера. Доступность печати определяется настройками сервера и браузера. Дополнительные сведения см. в разделе [Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) и [Включение и отключение печати на стороне клиента](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Возможность печати является дополнительной. Когда она доступна, на панели инструментов отчета появляется значок принтера. При первом использовании щелчок значка принтера загружает элемент управления ActiveX, который необходимо установить. После установки этого элемента управления при щелчке значка принтера открывается диалоговое окно «Печать», в котором можно выбрать принтер из списка принтеров, настроенных для данного компьютера. Доступность печати определяется настройками сервера и браузера. Дополнительные сведения см. в разделе [Печать отчетов из браузера с помощью элемента управления печатью &#40; Построитель отчетов и службы SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) и [Включение и отключение печати на стороне клиента для служб Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  Панель инструментов отчета подобна той, что показана на иллюстрации ниже. В некоторых конкретных случаях панель инструментов отчета может отличаться от изображенной на иллюстрации, в зависимости от функций отчета или доступных параметров подготовки к просмотру.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

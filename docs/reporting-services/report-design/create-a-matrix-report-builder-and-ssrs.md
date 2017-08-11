@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Создание матрицы (построитель отчетов 3.0 и службы SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
   
  Добавьте группу, перетащив поля набора данных в панель групп строк и групп столбцов в панель «Группирование». Первое поле, которое перетаскивается на панель группы строк или столбцов, замещает первоначальную пустую группу по умолчанию. Затем для каждой ячейки можно применить форматирование, в зависимости от содержащихся в ней данных.  
   
- ![Матрица, строка Category и группа столбцов Geography](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "матрица, строка Category и группа столбцов Geography")  
+ ![Матрица, строка категорий и группа столбцов географических объектов](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Матрица, строка категорий и группа столбцов географических объектов")  
   
  В режиме просмотра матрица расширяется для отображения значений группы строк и группы столбцов. В ячейках выводятся сводные значения, как показано на следующем рисунке.  
   
- ![Просмотр подготовленной матрицы с развернутыми группами](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Просмотр подготовленной матрицы с развернутыми группами")  
+ ![Предварительный просмотр обработанной матрицы с расширенными группами](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Предварительный просмотр обработанной матрицы с расширенными группами")  
   
  Первоначальная матрица является шаблоном на основе области данных табликса. Можно продолжить разработку матрицы, добавив вложенные или смежные группы строк либо столбцов или даже строки подробностей. Дополнительные сведения см. в разделе [Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Справочник по агрегатным функциям &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 35b41f21f12487ef0ff32daa999ce4e4075c4180
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Добавление фонового изображения (построитель отчетов и службы SSRS)
@@ -72,8 +72,8 @@ ms.lasthandoff: 06/22/2017
   
          Для фоновых изображений в диаграмме свойству **BackgroundRepeat** можно присвоить значение **Default**, **Repeat**, **Fit**и **Clip**, но не **RepeatX** или **RepeatY**.  
   
-## <a name="see-also"></a>См. также  
- [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и SSRS)](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+## <a name="see-also"></a>См. также:  
+ [Образы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [Диалоговое окно «Свойства изображения», общие &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

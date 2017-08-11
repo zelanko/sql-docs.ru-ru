@@ -24,15 +24,15 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68a0a5da224c0f6f78eca8df1ae766e85d7750f2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
+  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
   
 > [!IMPORTANT]  
 >  При создании и выполнении запросов пользователи получают доступ к источникам данных. Следует предоставить минимальные разрешения на источники данных, например разрешение только на чтение.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 06/22/2017
 |![Переключение для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "переключателя для отображения пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
 |![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
 |![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удаление выбранного элемента из запроса. Используйте эту кнопку для удаления выбранных строк в панели «Фильтр».|  
-|![Выполните запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "выполнения запроса")|Выполнить запрос и показать результаты на панели «Данные».|  
+|![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
 |![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "отменить запрос")|Отмена запроса.|  
 |![Переключиться в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
 -   **Автоматическое выполнение** (![автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса"))  
   
 ## <a name="see-also"></a>См. также:  
- [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Создание общего набора данных или внедренный набор данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

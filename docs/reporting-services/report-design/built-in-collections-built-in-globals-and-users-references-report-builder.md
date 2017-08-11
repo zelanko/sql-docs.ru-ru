@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции - встроенные глобальные значения и ссылки на (построитель отчетов)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Использование коллекции Globals  
- Коллекция **Globals** содержит глобальные переменные отчета. В области конструктора эти переменные появляются с указанным перед ними & (амперсандом), например `[&ReportName]`. Следующая таблица описывает элементы коллекции **Globals** .  
+ Коллекция **Globals** содержит глобальные переменные отчета. В области конструктора эти переменные появляются с префиксом с & (амперсанд), например, `[&ReportName]`. Следующая таблица описывает элементы коллекции **Globals** .  
   
 |**Член**|**Тип**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Использование коллекции User  
- Коллекция **User** содержит данные о пользователе, выполняющем отчет. Эту коллекцию можно использовать для фильтрации данных, появляющихся в отчете; например, можно отобразить только данные текущего пользователя или отобразить идентификатор пользователя, к примеру, в заголовке отчета. В области конструктора эти переменные появляются с указанным перед ними & (амперсандом), например `[&UserID]`.  
+ Коллекция **User** содержит данные о пользователе, выполняющем отчет. Эту коллекцию можно использовать для фильтрации данных, появляющихся в отчете; например, можно отобразить только данные текущего пользователя или отобразить идентификатор пользователя, к примеру, в заголовке отчета. В области конструктора эти переменные появляются с префиксом с & (амперсанд), например, `[&UserID]`.  
   
  Следующая таблица описывает элементы коллекции **User** .  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Диалоговое окно "Выражение" (построитель отчетов)](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Диалоговое окно «Выражение» &#40; Построитель отчетов &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Типы данных в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

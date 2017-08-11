@@ -21,11 +21,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f8838c9793cfc4a8e38bea3f0f27e702dd27e4d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
@@ -83,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 |![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
 |![Значок диалогового окна параметров запроса](../../reporting-services/report-data/media/iconqueryparameter.gif "значок диалоговое окно «Параметры запроса»")|Отображает диалоговое окно **Параметры запроса** . При указании значений для параметра запроса автоматически создается аналогичный параметр отчета с тем же именем. В качестве значения для параметра запроса устанавливается выражение, ссылающееся на параметр отчета.|  
 |![Подготовка запроса кнопка](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "кнопку подготовить запрос")|Подготовить запрос.|  
-|![Выполните запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "выполнения запроса")|Выполнить запрос и показать результаты на панели «Данные».|  
+|![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
 |![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "отменить запрос")|Отмена запроса.|  
 |![Переключиться в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора")|Переключение между режимом конструктора и режимом запроса.|  
   
@@ -123,10 +123,10 @@ ms.lasthandoff: 06/22/2017
 -   **Показать агрегаты** (![кнопку Показать агрегаты](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "кнопку Показать агрегаты"))  
   
 ## <a name="see-also"></a>См. также:  
- [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
- [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Создание общего набора данных или внедренный набор данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных &#40; Службы SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Тип соединения служб Analysis Services для многомерных Выражений &#40; Службы SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Ключи шифрования служб SSRS — удаление и повторное создание ключей шифрования
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
 4.  Для подписок, которые используют зашифрованные данные (это включает модуль доставки в общую папку и любые сторонние расширения доставки, использующие шифрование), откройте каждую подписку и повторно введите учетные данные. Подписки, которые используют доставку по электронной почте сервера отчетов, не используют зашифрованные данные и не затрагиваются изменением ключа.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Настройка и управление ключами &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Хранение зашифрованных данных сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
 

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Добавление фильтра (построитель отчетов и службы SSRS)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Откройте отчет в режиме **конструктора** .  
   
-2.  Выберите область данных в область конструктора и щелкните правой кнопкой мыши  *\<область данных >***свойства**. Для датчика выберите пункт **Свойства панели датчиков**. *\<Область данных >***свойства** откроется диалоговое окно.  
+2.  Выберите область данных в область конструктора и щелкните правой кнопкой мыши  *\<область данных >***свойства**. Для датчика выберите пункт **Свойства панели датчиков**.  *\<Область данных >***свойства** откроется диалоговое окно.  
   
     > [!NOTE]  
     >  В области данных табликса щелкните угловую ячейку, строку или дескриптор столбца правой кнопкой мыши, а затем выберите команду **Свойства табликса**.  
@@ -132,10 +132,10 @@ ms.lasthandoff: 06/22/2017
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
- [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Добавление фильтров набора данных, фильтров области данных и фильтры групп &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

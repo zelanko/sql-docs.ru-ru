@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ffa83524ea9761dfa4df66b4d47fd049dd63035a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)
@@ -29,20 +29,20 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Текстовые поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Текстовые поля &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
  Текстовое поле можно поместить в любое место в отчете. Оно может содержать метки, поля или вычисляемые данные. Чтобы определить значение, которое должно отображаться в текстовом поле при просмотре отчета, используются выражения.  
   
  Каждая ячейка в таблице или матрице также представляет собой текстовое поле, которое можно форматировать аналогично изолированным текстовым полям в отчете.  
   
- [Прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Прямоугольники и линии &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
  **Линии** отображаются вертикально, горизонтально или по диагонали. Линия определяется начальной и конечной точками и может быть выполнена в различных стилях (например, иметь разные толщину и цвет). С линиями не связаны никакие данные.  
   
  **Прямоугольники** можно использовать как графические элементы или как контейнеры для других элементов отчета. Как графический элемент прямоугольник имеет такие же свойства, как и линия. Прямоугольник-контейнер выступает в роли родительского контейнера для всех элементов отчета, находящихся внутри него. Элементы отчета располагают в родительском контейнере, чтобы было легче управлять их появлением на страницах отчета.  
   
- [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
+ [Образы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
  В изображениях выводятся двоичные графические данные отчета. Для изображения необходимо указать источник. Источником может служить ссылка на URL-адрес изображения, хранящегося на веб-сервере, ссылка на внедренные данные изображения или ссылка на двоичные данные изображения в базе данных. Построитель отчетов и конструктор отчетов поддерживают файлы в форматах BMP, JPEG, GIF и PNG.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+ [Форматирование элементов отчета и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

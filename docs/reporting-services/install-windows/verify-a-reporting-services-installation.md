@@ -22,11 +22,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5849b6240557cd1682d08210f256e0edabfa70b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verify-a-reporting-services-installation"></a>Проверка установки служб Reporting Services
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="reporting-services-samples"></a>Образцы служб Reporting Services  
   
-1.  Выполните один из учебников по службам Reporting Services Дополнительные сведения см. в статье [Средство миграции служб Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md).  
+1.  Выполните один из учебников по службам Reporting Services Дополнительные сведения см. в разделе [миграции служб Reporting Services &#40; Службы SSRS &#41; ](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  Загрузите образец базы данных Adventure Works и образцы отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из CodePlex. Дополнительные сведения см. в разделе [Образцы отчетов AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
@@ -89,9 +89,9 @@ ms.lasthandoff: 06/22/2017
   
 2.  Откройте приложения командной строки служб и убедитесь в том, что служба сервера отчетов запущена. Для просмотра состояния службы сервера отчетов нажмите кнопку **Пуск**, выберите **Панель управления**, дважды щелкните **Администрирование**и откройте оснастку **Службы**. Когда появится список служб, найдите службу **Сервер отчетов (MSSQLSERVER)**. Состояние службы должно быть **Работает**.  
   
-3.  Откройте браузер и в строке адреса введите URL-адрес сервера отчетов. Адрес должен состоять из имени сервера и имени виртуального каталога, которое было определено во время установки сервера отчетов. По умолчанию имя виртуального каталога сервера отчетов — **ReportServer**. Можно использовать следующий URL-адрес для проверки установки сервера отчетов: http://*\<имя компьютера >*/сервер_отчетов*\<_имя >*. URL-адрес будет другим, если сервер отчетов установлен как именованный экземпляр. Дополнительные сведения о формате URL-адресов см. в статье [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Если вы являетесь локальным администратором систем Windows Vista или Windows Server 2008, ознакомьтесь со статьей [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Откройте браузер и в строке адреса введите URL-адрес сервера отчетов. Адрес должен состоять из имени сервера и имени виртуального каталога, которое было определено во время установки сервера отчетов. По умолчанию имя виртуального каталога сервера отчетов — **ReportServer**. Можно использовать следующий URL-адрес для проверки установки сервера отчетов: http://*\<имя компьютера >*/сервер_отчетов*\<_имя >*. URL-адрес будет другим, если сервер отчетов установлен как именованный экземпляр. Дополнительные сведения о формате URL-адреса см. в разделе [настройки сервера URL-адреса отчетов &#40; Диспетчер конфигурации служб SSRS &#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Если вы являетесь локальным администратором на Windows Vista или Windows Server 2008, см. раздел [Настройка сервера отчетов в собственном режиме для локального администрирования &#40; Службы SSRS &#41; ](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  Запустите отчет, чтобы проверить работу сервера отчетов. Для выполнения этого шага можно создать образец отчета из учебника. Дополнительные сведения см. в статье [Создание простого табличного отчета (учебник по службам SSRS)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  Запустите отчет, чтобы проверить работу сервера отчетов. Для выполнения этого шага можно создать образец отчета из учебника. Дополнительные сведения см. в разделе [создание простого табличного отчета &#40; Учебник по службам SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>Проверка успешной установки и запуска [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  
   
@@ -101,17 +101,17 @@ ms.lasthandoff: 06/22/2017
   
 2.  Используйте [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для создания новой папки или передачи файла с целью проверки, возвращаются ли определения обратно в базу данных сервера отчетов. Если эти операции успешно завершаются, то соединение функционирует.  
   
-     Дополнительные сведения см. в статье [Веб-портал (основной режим служб SSRS)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Дополнительные сведения см. в разделе [веб-портале &#40; Собственный режим служб SSRS &#41; ](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Проверка успешной установки и запуска конструктора отчетов  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и создайте новый проект, основанный на типе проекта сервера отчетов. Дополнительные сведения об использовании мастера проектов сервера отчетов см. в статье [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) в электронной документации по SQL Server.  
+1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и создайте новый проект, основанный на типе проекта сервера отчетов. Дополнительные сведения об использовании мастера проектов сервера отчетов см. в разделе [служб Reporting Services в SQL Server Data Tools &#40; SSDT &#41; ](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) в электронной документации по SQL Server.  
   
 2.  Если установлены образцы отчетов, откройте файлы образцов проектов отчетов и опубликуйте отчеты на сервере отчетов.  
   
 ## <a name="see-also"></a>См. также:  
  [Устранение неполадок при установке служб Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Причины ошибок служб Reporting Services и способы их устранения](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ [Причины и способы устранения ошибок служб Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   
 

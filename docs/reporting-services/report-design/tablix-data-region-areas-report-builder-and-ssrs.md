@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Области данных табликса (построитель отчетов и службы SSRS)
@@ -56,9 +56,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также  
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
- [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Создание матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Создание счета-фактуры и формы со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Создание счета и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

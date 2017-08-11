@@ -18,11 +18,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2dda922c5ec2cd937960e20535096a186af56a6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="excel-device-information-settings"></a>Настройки сведений об устройстве Excel
@@ -34,10 +34,10 @@ ms.lasthandoff: 06/22/2017
 |**OmitFormulas**|Показывает, нужно ли исключать формулы из отчета, готового для просмотра. Значение по умолчанию — **false**.|  
 |**SimplePageHeade**rs|Показывает, преобразуется ли верхний колонтитул страницы отчетов в верхний колонтитул Excel при подготовке к просмотру. Значение **false** показывает, что верхний колонтитул страницы при подготовке к просмотру преобразуется в первую строку листа. Значение по умолчанию — **false**.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Технический справочник (службы SSRS)](../reporting-services/technical-reference-ssrs.md)  
+ [Передача настроек сведений об устройстве для модулей подготовки отчетов](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Настройка параметров модуля подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Технический справочник по &#40; Службы SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

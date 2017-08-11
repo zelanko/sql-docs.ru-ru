@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="managing-report-parts"></a>Управление элементами отчета
@@ -95,8 +95,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Элементы отчетов в конструкторе отчетов (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Элементы отчета в конструкторе отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

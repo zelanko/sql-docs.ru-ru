@@ -19,11 +19,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e056f5577c2c569e333f2341060862c06d803f6b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-shared-data-source-items"></a>Защита совместно используемых элементов источника данных
@@ -49,6 +49,6 @@ ms.lasthandoff: 06/22/2017
  [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md)   
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Хранить учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

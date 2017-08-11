@@ -4,16 +4,16 @@ description: "В этом разделе содержатся заметки о 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
@@ -152,6 +152,8 @@ ms.lasthandoff: 08/04/2017
       sudo systemctl restart mssql-server
       ```
 
+- Нельзя восстановить базы данных SQL Server 2014 на Windows, который In-memory OLTP 2017 г. SQL Server в Linux. Чтобы восстановить базу данных SQL Server 2014, которая в памяти OLTP, сначала обновите базы данных в SQL Server 2016 или 2017 г. SQL Server в Windows до перемещения их в SQL Server в Linux через резервного копирования и восстановления или отсоединения и присоединения.
+
 #### <a name="remote-database-files"></a>Файлы удаленной базы данных
 
 - Размещение файлов базы данных на NFS-сервера в этом выпуске не поддерживается. Сюда относится использование NFS для общего диска отказоустойчивой кластеризации, а также баз данных на некластеризованные экземпляры. Мы работаем над включением поддержки сервера NFS в будущих выпусках.
@@ -267,6 +269,7 @@ ms.lasthandoff: 08/04/2017
 | &nbsp; | Растяжение базы данных |
 | &nbsp; | Polybase |
 | &nbsp; | Распределенный запрос |
+| &nbsp; | Машинного обучения служб |
 | &nbsp; | Системные расширенные хранимые процедуры (XP_CMDSHELL, и т. д.) |
 | &nbsp; | Таблицы filetable |
 | &nbsp; | Задать сборки среды CLR с EXTERNAL_ACCESS или UNSAFE разрешение |
@@ -807,7 +810,7 @@ ms.lasthandoff: 08/04/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Не удается переместить системные базы данных с помощью служебной программы mssql conf.
@@ -856,7 +859,7 @@ ms.lasthandoff: 08/04/2017
     - Система отслеживания измененных данных
 
 #### <a name="in-memory-oltp"></a>In-Memory OLTP
-- Базы данных OLTP в памяти могут создаваться только в каталоге /var/opt/mssql. Дополнительные сведения см. на сайте [разделе OLTP в памяти](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- Базы данных OLTP в памяти могут создаваться только в каталоге /var/opt/mssql. Дополнительные сведения см. на сайте [разделе OLTP в памяти](sql-server-linux-performance-get-started.md#use-in-memory-oltp).
 
 #### <a name="sqlpackage"></a>SqlPackage
 - Используя программу SqlPackage необходимо указать абсолютный путь к файлам. Относительные пути будут сопоставления файлов «/ tmp/sqlpackage. \<кода \> /system/system32» папки. 
@@ -984,7 +987,7 @@ ms.lasthandoff: 08/04/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.
@@ -1144,7 +1147,7 @@ ms.lasthandoff: 08/04/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.
@@ -1289,7 +1292,7 @@ ms.lasthandoff: 08/04/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.
@@ -1421,7 +1424,7 @@ v
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас.
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас.
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.

@@ -21,11 +21,11 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3aa67165e961e76569daadff1fc610c4d16a1e63
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pptx-device-information-settings"></a>Настройки сведений об устройстве PPTX
@@ -47,11 +47,11 @@ ms.lasthandoff: 06/22/2017
 |**StartPage**|Первая подготавливаемая к просмотру страница отчета. Значение **0** указывает, что к просмотру подготовлены все страницы. Значение по умолчанию — **1**.|  
 |**UseReportPageSize**|Если UseReportPageSize =**false** , то размер слайда по умолчанию соответствует стандартному значению PowerPoint — 13,333 x 7,5 дюйма (пропорции 16:9). Если UseReportPageSize = true, то размер слайда по умолчанию соответствует заданному размеру страницы отчета.<br /><br /> Значение по умолчанию равно **false**.<br /><br /> Обратите внимание, что параметры PageWidth и PageHeight переопределяют стандартную ширину и высоту.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Технический справочник (службы SSRS)](../reporting-services/technical-reference-ssrs.md)  
+ [Передача настроек сведений об устройстве для модулей подготовки отчетов](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Настройка параметров модуля подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Технический справочник по &#40; Службы SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
 

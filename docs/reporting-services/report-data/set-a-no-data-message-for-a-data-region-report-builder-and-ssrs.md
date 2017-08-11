@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d349eece0774513a2552fa1f7248ca89165769
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS)
@@ -63,10 +63,10 @@ ms.lasthandoff: 06/22/2017
      Также можно выбрать пункт **Выражение** в раскрывающемся списке, чтобы открыть диалоговое окно **Выражение** и создать выражение.  
   
 ## <a name="see-also"></a>См. также  
- [Вложенные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Вложенные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
+ [Вложенные отчеты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Вложенные отчеты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)  
   
   

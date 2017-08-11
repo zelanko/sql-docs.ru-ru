@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)
@@ -61,19 +61,19 @@ ms.lasthandoff: 06/22/2017
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Всех свойств необходимо указать строку в формате *nnyy*, где  *nn*  — это число и *гг* — единица измерения. Приведенное выражение создает строку, в которой используется функция **Level** для увеличения отступа в зависимости от уровня рекурсии. Например, строка с уровнем 1 будет иметь отступ в 12 пунктов (2 + (1\*10)), а строка с уровнем 3 — отступ в 32 пункта (2 + (3\*10)). Дополнительные сведения о функции **Level** см. в разделе [Level](../../reporting-services/report-design/report-builder-functions-level-function.md).  
+     Для свойств заполнения необходимо указать строку в формате *nnyy*, где *nn* — число, а *yy* — единица измерения. Приведенное выражение создает строку, в которой используется функция **Level** для увеличения отступа в зависимости от уровня рекурсии. Например, строка с уровнем 1 будет иметь отступ в 12 пунктов (2 + (1\*10)), а строка с уровнем 3 — отступ в 32 пункта (2 + (3\*10)). Дополнительные сведения о функции **Level** см. в разделе [Level](../../reporting-services/report-design/report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Запустите отчет. Отчет выведет группированные данные в иерархическом представлении.  
   
 ## <a name="see-also"></a>См. также  
- [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Матрицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Создание групп рекурсивной иерархии &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Справочник по агрегатным функциям &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Матрицы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

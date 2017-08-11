@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных (построитель отчетов и службы SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  В построителе отчетов можно сделать следующее.  
   
-1.  Чтобы создать общий набор данных, используйте конструктор общих наборов данных. Для последующего использования в других отчетах его нужно сохранить на сервере отчетов или на сайте SharePoint. Также можно изменить существующие общие наборы данных на сервере отчетов. В этом представлении можно создать запрос и задать все параметры набора данных. Дополнительные сведения см. в разделе [Представление конструктора общих наборов данных (построитель отчетов)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+1.  Чтобы создать общий набор данных, используйте конструктор общих наборов данных. Для последующего использования в других отчетах его нужно сохранить на сервере отчетов или на сайте SharePoint. Также можно изменить существующие общие наборы данных на сервере отчетов. В этом представлении можно создать запрос и задать все параметры набора данных. Дополнительные сведения см. в разделе [общий конструктор наборов данных &#40; Построитель отчетов &#41; ](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 2.  Чтобы добавить к отчету общий набор данных, откройте построитель отчетов в представлении конструктора отчетов. В мастере или в области данных отчета перейдите на сервер отчетов и выберите общий набор данных для добавления к отчету. В этом представлении нельзя изменять запрос (разрешается только добавление полей). Можно переопределять другие параметры данных, а также добавлять фильтры. Удалять фильтры нельзя.  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Создание общего набора данных или внедренный набор данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   

@@ -20,11 +20,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 37d44eeb29ad4e2acfd4f9618c755f2c5d8b9b28
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-service-trace-log"></a>Журнал трассировки службы сервера отчетов
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
  Ознакомьтесь с коротким видео, демонстрирующим использование Microsoft Power Query для просмотра файлов журнала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-[![Просмотрите видеоролик, демонстрирующий использование Power Query и файлов журнала служб SSRS](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx) [Использование Microsoft Power Query для просмотра файлов журнала служб Reporting Services](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
+[![Просмотрите видеоролик, демонстрирующий использование Power Query и файлов журнала служб SSRS](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)  [Использование Microsoft Power Query для просмотра файлов журнала служб Reporting Services](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
   
 ##  <a name="bkmk_trace_configuration_settings"></a> Параметры конфигурации трассировки  
  Поведение журнала трассировки управляется в файле конфигурации **ReportingServicesService.exe.config**. Файл конфигурации расположен в следующей папке:  
@@ -115,8 +115,8 @@ ms.lasthandoff: 06/22/2017
 + ReportServerService_main_*\<timestamp >*.log
   
 ## <a name="see-also"></a>См. также:  
- [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Службы Reporting Services файлы и источники журналов](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Ошибки и ссылок на события &#40; Службы Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
  Дополнительные вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
 

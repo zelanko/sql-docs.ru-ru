@@ -21,11 +21,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-role-assignments"></a>Создание назначений ролей и управление ими
@@ -69,10 +69,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Изменить или удалить назначение ролей &#40; Диспетчер отчетов &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)   
- [Определение ролей](../../reporting-services/security/role-definitions.md)   
- [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Определения ролей](../../reporting-services/security/role-definitions.md)   
+ [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

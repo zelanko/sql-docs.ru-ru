@@ -17,11 +17,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 232e24ef08c24d5c6a2c9799094fc492305eea46
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-linked-report"></a>Создание связанного отчета
@@ -39,20 +39,20 @@ ms.lasthandoff: 06/22/2017
   
 2.  Введите имя нового связанного отчета. При необходимости введите также описание.  
   
-3.  Чтобы выбрать иную папку для отчета, щелкните **Изменить местоположение**. Щелкните папку, которую нужно использовать, или введите имя папки в поле **Местоположение** . [!INCLUDE[clickOK](../../includes/clickok-md.md)] Если не выбрана иная папка, то связанный отчет создается в текущей папке (где хранится отчет, на основе которого создается связанный отчет).  
+3.  Чтобы выбрать иную папку для отчета, щелкните **Изменить местоположение**. Щелкните папку, которую нужно использовать, или введите имя папки в поле **Местоположение** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]Если не выбрать другую папку, связанный отчет создается в текущей папке (где хранится отчет, который основан на).  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Откроется связанный отчет.  
+4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]Откроется связанный отчет.  
   
      Значок связанного отчета отличается от других элементов, управляемых сервером отчетов. Следующий значок указывает на связанный отчет:  
   
-     ![Значок отчета связанной](../../reporting-services/report-server/media/hlp-16linked.gif "значок связанный отчет")  
+     ![Значок "Связанный отчет"](../../reporting-services/report-server/media/hlp-16linked.gif "Значок "Связанный отчет"")  
   
 ## <a name="see-also"></a>См. также:  
- [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Страница "Создание связанного отчета" (диспетчер отчетов)](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Страница "Выбор расположения элементов" (диспетчер отчетов)](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Страница "Общие свойства", отчеты (диспетчер отчетов)](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Откройте и закройте отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [Новая страница связанный отчет &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Выберите элемент «расположение» &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Страница «Общие свойства», отчеты &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [Службы Reporting Services Concepts &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

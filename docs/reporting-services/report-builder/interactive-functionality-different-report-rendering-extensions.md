@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Интерактивные возможности - различных модулей подготовки отчетов
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------------|  
 |Просмотр/средство просмотра отчетов, HTML|Пользователи щелкают значки «Развернуть» или «Свернуть» для отображения или сворачивания разделов отчета.|  
 |PDF|Сервер отчетов экспортирует в формат PDF текущее состояние видимости отчета. Интерактивное переключение не поддерживается|  
-|Excel|Ссылки и элементы углубленной детализации, которые могут быть переключены, представляются в Excel как свертываемые структуры. В отчете, экспортированном в формате Excel, разделы можно разворачивать и сворачивать. Дополнительные сведения о налагаемых Excel ограничениях см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Ссылки и элементы углубленной детализации, которые могут быть переключены, представляются в Excel как свертываемые структуры. В отчете, экспортированном в формате Excel, разделы можно разворачивать и сворачивать. Дополнительные сведения об ограничениях, налагаемых в Excel см. в разделе [Экспорт в Microsoft Excel &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|Сервер отчетов экспортирует в формат PDF текущее состояние видимости отчета. Интерактивное переключение не поддерживается|  
 |Другое|Недоступно в форматах MHTML, XML или CSV. При экспорте в формат изображения сервер отчетов учитывает параметры отображения или скрытия, относящиеся к экспорту отчета в формат PDF. Интерактивное переключение не поддерживается.|  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Интерактивная сортировка, схемы документов и ссылки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
 

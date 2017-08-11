@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-model-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов моделей отчетов
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Отмена действия](../../reporting-services/report-data/media/rsqdicon-undo.gif "отменить действие")|Отменить последнее действие.|  
 |![Повтор действия](../../reporting-services/report-data/media/rsqdicon-redo.gif "повтор действия")|Повторить последнее действие.|  
-|![Выполните запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "выполнения запроса")|Выполнить запрос и показать итоговые строки на панели результатов.|  
+|![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать итоговые строки на панели результатов.|  
 |![Значок фильтра рядом с выбранным столбцом для фильтрации](../../reporting-services/report-data/media/rsqdicon-filter.gif "значок фильтра рядом с выбранным столбцом для фильтрации")|Открыть диалоговое окно **Фильтрация данных** , которое позволяет указать данные, которые необходимо фильтровать. Можно указать фильтры независимо от текущих данных, указанных в области конструирования.|  
   
 ## <a name="text-based-query-designer"></a>Текстовый конструктор запросов  
@@ -89,12 +89,12 @@ ms.lasthandoff: 06/22/2017
 |------------|-----------------|  
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно.|  
 |**Импорт**|Импортировать запрос из существующего запроса.|  
-|![Выполните запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "выполнения запроса")|Выполнить текст запроса и отобразить результирующий набор строк на панели результатов.|  
+|![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить текст запроса и отобразить результирующий набор строк на панели результатов.|  
   
 ## <a name="see-also"></a>См. также  
  [Средства проектирования запросов (службы SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Соединение с моделью отчета (службы SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Добавление данных из внешних источников данных &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
+ [Соединение с моделью отчета &#40; Службы SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

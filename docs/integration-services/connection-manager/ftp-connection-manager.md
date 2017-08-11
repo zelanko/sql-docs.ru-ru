@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04cc47e64fbbaec3f1e1df9216ead850efa75b90
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ftp-connection-manager"></a>диспетчер FTP-соединений
@@ -61,7 +63,43 @@ ms.lasthandoff: 08/03/2017
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="ftp-connection-manager-editor"></a>редактор диспетчера FTP-сеансов
+  Диалоговое окно **Редактор диспетчера FTP-соединений** используется для задания свойств подключения к серверу FTP.  
+  
+> [!IMPORTANT]  
+>  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
+  
+ Дополнительные сведения о диспетчере FTP-сеансов см. в разделе [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md).  
+  
+### <a name="options"></a>Параметры  
+ **Имя сервера**  
+ Позволяет задать имя сервера FTP.  
+  
+ **Порт сервера**  
+ Позволяет задать номер порта, используемый для соединения с FTP-сервером. Значение по умолчанию этого свойства равно **21**.  
+  
+ **Имя пользователя**  
+ Позволяет задать имя пользователя для доступа к FTP-серверу. Значение этого свойства по умолчанию равно **anonymous**.  
+  
+ **Пароль**  
+ Позволяет задать пароль для доступа к серверу FTP.  
+  
+ **Время ожидания (сек)**  
+ Позволяет указать число секунд, в течение которых задача будет ожидать подключения. Значение **0** указывает на бесконечное время ожидания. Значение по умолчанию этого свойства равно **60**.  
+  
+ **Использовать пассивный режим**  
+ Позволяет указать сторону, инициирующую соединение, — сервер или клиент. В активном режиме соединение инициируется сервером, а в пассивном режиме — клиентом. По умолчанию, установлен **активный режим**.  
+  
+ **Число повторов**  
+ Позволяет задать число попыток соединения, осуществляемых задачей. Значение **0** указывает на отсутствие ограничений на число попыток.  
+  
+ **Размер фрагмента данных (КБ)**  
+ Позволяет задать размер фрагмента передаваемых данных в килобайтах.  
+  
+ **Проверка соединения**  
+ После настройки диспетчера FTP-соединений следует проверить доступность подключения, нажав кнопку **Проверить соединение**.  
+  
+## <a name="see-also"></a>См. также:  
  [Задача «FTP»](../../integration-services/control-flow/ftp-task.md)   
  [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Резервное копирование и восстановление Служебного приложения SharePoint службы Reporting Services
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="bkmk_Restrictions"></a> Ограничения  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут частично резервно копироваться и восстанавливаться с использованием функциональных возможностей резервного копирования и восстановления SharePoint. **Требуются дополнительные шаги** и шаги описаны в этом разделе. В данный момент процесс резервного копирования **не создает** резервные копии ключей шифрования и учетных данных для учетных записей автоматического выполнения или проверки подлинности Windows в базе данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]служебные приложения могут частично резервного копирования и восстановления SharePoint с помощью резервного копирования и восстановления. **Требуются дополнительные шаги** и шаги описаны в этом разделе. В данный момент процесс резервного копирования **не создает** резервные копии ключей шифрования и учетных данных для учетных записей автоматического выполнения или проверки подлинности Windows в базе данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> Рекомендации  
   

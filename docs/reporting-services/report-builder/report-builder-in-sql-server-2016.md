@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Построитель отчетов в SQL Server 2016
@@ -73,14 +73,14 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Опубликованные отчеты управляются на сервере отчетов или сервере отчетов в режиме интеграции с SharePoint администратором сервера отчетов. Администраторы сервера отчетов могут определить безопасность, задать свойства и задать расписание операций, таких как журнал отчета и доставка отчета по электронной почте. Они могут создать общие расписания и источники данных, и сделать их доступными для общего использования. Администраторы также управляют всеми каталогами сервера отчетов. Возможности управления зависят от назначенных пользователю разрешений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md)
 
   [Новые возможности служб Reporting Services и построителя отчетов для SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Описываются новые функции этой версии [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
-  [Учебник: Создание стандартного отчета с диаграммой сети](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети»](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Содержатся общие сведения о [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] и мастерах, которые могут помочь в создании отчетов. Учебник содержит набор данных для работы, поэтому соединяться с источником данных не нужно.  
   
  [Планирование отчета (построитель отчетов)](../../reporting-services/report-design/planning-a-report-report-builder.md)  

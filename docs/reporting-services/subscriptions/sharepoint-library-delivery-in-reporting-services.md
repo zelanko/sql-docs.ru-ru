@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Доставка библиотек SharePoint в службах Reporting Services
@@ -90,9 +90,9 @@ ms.lasthandoff: 06/22/2017
  Эта функция позволяет автоматически копировать последнюю версию файла в несколько мест. Файл копируется в том случае, если включен режим **Заменить** . В режимах **Автоувеличение** и **Нет**доставка завершается ошибкой **rsDeliveryError** .  
   
 ## <a name="see-also"></a>См. также  
- [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Укажите учетные данные и сведения о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
 

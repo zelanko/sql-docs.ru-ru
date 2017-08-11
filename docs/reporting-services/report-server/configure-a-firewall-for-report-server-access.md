@@ -19,11 +19,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4ea69363565456fda2c1adc7d48d60c6a0bef8f7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>настроить брандмауэр для доступа к серверу отчетов
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Выберите **Правила для входящих подключений.**  
   
-4.  Выберите **Создать правило** в окне **Действия****.**  
+4.  Нажмите кнопку **новое правило** в **действия** окна**.**  
   
 5.  Выберите **Тип правила** в разделе **Порт**.  
   
@@ -77,16 +77,16 @@ ms.lasthandoff: 06/22/2017
 16. Перезагрузите компьютер.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- После открытия порта, прежде чем удаленные пользователи смогут производить доступ к серверу отчетов, им необходимо предоставить доступ к корневой папке и на уровне сайта. Даже если порт правильно открыт, пользователи не смогут соединяться с сервером отчетов, если им не предоставлены необходимые разрешения. Дополнительные сведения см. в разделе [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ После открытия порта, прежде чем удаленные пользователи смогут производить доступ к серверу отчетов, им необходимо предоставить доступ к корневой папке и на уровне сайта. Даже если порт правильно открыт, пользователи не смогут соединяться с сервером отчетов, если им не предоставлены необходимые разрешения. Дополнительные сведения см. в разделе [предоставить пользователю доступ к серверу отчетов &#40; Диспетчер отчетов &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
   
- Правильность открытия порта можно также проверить, открыв диспетчер отчетов с другого компьютера. Дополнительные сведения см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Правильность открытия порта можно также проверить, открыв диспетчер отчетов с другого компьютера. Дополнительные сведения см. в разделе [диспетчера отчетов &#40; Собственный режим служб SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
- [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Настройка URL-адреса сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Создание базы данных сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Настройка учетной записи службы сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Управление сервером отчетов служб Reporting собственный режим служб](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
 

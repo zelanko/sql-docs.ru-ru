@@ -17,11 +17,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 289bf07fd3d920d218cf79f2a725a4e33c9572a7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Справка F1 по использованию сервера отчетов среде Management Studio
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Создание общего расписания](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
   
--   [Создать системную роль](../../reporting-services/tools/new-system-role-management-studio.md)  
+-   [Создание системной роли](../../reporting-services/tools/new-system-role-management-studio.md)  
   
 -   [Создание пользовательской роли](../../reporting-services/tools/new-user-role-management-studio.md)  
   
@@ -47,13 +47,13 @@ ms.lasthandoff: 06/22/2017
   
 -   [Свойства сервера (страница «Общие»)](../../reporting-services/tools/report-server-properties-general-page.md)  
   
--   [Свойства сервера (страница «Выполнение»)](../../reporting-services/tools/server-properties-execution-page.md)  
+-   [Свойства сервера (страница «выполнение»)](../../reporting-services/tools/server-properties-execution-page.md)  
   
--   [Свойства сервера (страница «Журнал»)](../../reporting-services/tools/server-properties-history-page.md)  
+-   [Свойства сервера (страница «журнал»)](../../reporting-services/tools/server-properties-history-page.md)  
   
 -   [Свойства сервера (страница «Регистрация»)](../../reporting-services/tools/server-properties-logging-page.md)  
   
--   [Свойства сервера (страница «Безопасность»)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
+-   [Свойства сервера (страница «безопасность»)](../../reporting-services/tools/server-properties-security-page-reporting-services.md)  
   
 -   [Свойства сервера (страница «Дополнительно»)](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)  
   

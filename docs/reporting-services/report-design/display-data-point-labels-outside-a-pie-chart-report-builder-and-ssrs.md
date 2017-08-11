@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2faa5b4e48f86c331ee45913844dc50c54c89e63
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
 4.  Если необходимо предоставить большее пространство для меток в диаграмме, при этом оставив ее двухмерной, то в поле **Вращение** и **Наклон** установите свойства на значение **0**.  
   
 ## <a name="see-also"></a>См. также  
- [Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Круговые диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Сбор мелких срезов на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Отображение процентных значений на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

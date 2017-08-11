@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Указание соединений для пользовательских модулей обработки данных
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 >  Узнайте у стороннего поставщика сведения о том, как реализован пользовательский модуль обработки данных.  
   
 ## <a name="impersonation-and-custom-data-processing-extensions"></a>Олицетворение и пользовательские модули обработки данных  
- Если ваш пользовательский модуль обработки данных подключается к источникам данных олицетворение, необходимо использовать либо метод Open <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> или <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> интерфейсы для выполнения запроса. Кроме того, можно сохранить объект удостоверения пользователя (System.Security.Principal.WindowsIdentity), а затем использовать его в API-интерфейсах других модулей обработки данных.  
+ Если пользовательский модуль обработки данных использует для подключения к источникам данных олицетворение, то для выполнения запроса следует применить метод интерфейса <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> или <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> . Кроме того, можно сохранить объект удостоверения пользователя (System.Security.Principal.WindowsIdentity), а затем использовать его в API-интерфейсах других модулей обработки данных.  
   
  В предыдущих версиях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]все вызовы пользовательских модулей обработки данных производились через олицетворение пользователя. В этой версии при олицетворении пользователя будет происходить только вызов метода Open. Если используется существующий модуль обработки данных, требующий встроенной безопасности Windows, следует изменить код так, чтобы применялся метод Open или сохранялся объект удостоверения пользователя.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 |Без учетных данных|С пользовательскими поставщиками данных на основе платформы .NET можно устанавливать соединение без учетных данных. Если указана автоматическая учетная запись выполнения, строка соединения использует ее учетные данные. Для соединения сервер отчетов олицетворяет автоматическую учетную запись выполнения.<br /><br /> Если автоматическая учетная запись выполнения не определена, серверу отчетов не удастся установить соединение. Дополнительные сведения об определении учетной записи см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
   
 ## <a name="connections-for-idbconnection"></a>Соединения для интерфейса IDbConnection  
- Если используется пользовательский модуль обработки данных, поддерживающий только <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, соединение следует указать следующим образом:  
+ Если используется пользовательский модуль обработки данных, поддерживающий только интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, соединение следует указать следующим образом.  
   
 1.  Настройка учетной записи автоматического выполнения. Для соединений, использующих интерфейс **IDbConnection**, настройка этой учетной записи необходима. При соединении сервер отчетов олицетворяет эту учетную запись, если она создана.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
  При использовании интерфейса **IDbConnection**не поддерживаются следующие типы учетных данных: встроенная безопасность, учетные записи пользователей Windows и учетные данные базы данных. Если при соединении с источником данных используются эти параметры, осуществить подключение на сервере отчетов не удастся.  
   
 ## <a name="connections-for-idbconnectionextension"></a>Соединения для интерфейса IDbConnectionExtension  
- Если используется пользовательский модуль обработки данных, поддерживающий <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, соединение можно задать следующими способами:  
+ Если используется пользовательский модуль обработки данных, поддерживающий только интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>, соединение следует указать следующим образом.  
   
 |Учетные данные|Соединения|  
 |-----------------|-----------------|  
@@ -83,11 +83,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Укажите учетные данные и сведения о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Настройка свойств источника данных для отчета (диспетчер отчетов)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Создать, удалить или изменить общий источник данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Настройка свойств источника данных для отчета &#40; Диспетчер отчетов &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

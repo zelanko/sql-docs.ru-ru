@@ -25,11 +25,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53ebe2ae1938dc656af351cf922f5d5d85d664b8
+ms.translationtype: MT
+ms.sourcegitcommit: 0bc7925f72d59170a24f4a82d1c1a73e618a97a0
+ms.openlocfilehash: f59854e37e292d03cf7d57443e3aa4b899a21a11
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Подключение к серверу отчетов в среде Management Studio
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  Нажмите кнопку **Соединить**. Сервер отчетов отображается в обозревателе объектов.  
   
-6.  Чтобы установить системные свойства и значения по умолчанию для сервера, щелкните узел сервера правой кнопкой мыши. Дополнительные сведения см. в разделе [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Чтобы установить системные свойства и значения по умолчанию для сервера, щелкните узел сервера правой кнопкой мыши. Дополнительные сведения см. в разделе [задать свойства сервера отчетов &#40; Среда Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>Соединение с сервером отчетов, работающим в режиме интеграции с SharePoint  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  Нажмите кнопку **Соединить**. Сервер отчетов отображается в обозревателе объектов.  
   
-6.  Чтобы установить системные свойства и значения по умолчанию для сервера, щелкните узел сервера правой кнопкой мыши. Дополнительные сведения см. в разделе [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+6.  Чтобы установить системные свойства и значения по умолчанию для сервера, щелкните узел сервера правой кнопкой мыши. Дополнительные сведения см. в разделе [задать свойства сервера отчетов &#40; Среда Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-register-a-report-server"></a>Регистрация сервера отчетов  
   
@@ -119,6 +119,6 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>См. также  
  [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Службы Reporting Services в SQL Server Management Studio &#40; Службы SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

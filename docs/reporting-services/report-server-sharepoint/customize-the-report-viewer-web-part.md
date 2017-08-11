@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Настройка веб-части средства просмотра отчетов
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
  Область «Параметры» предоставляет поля для ввода значений перед выполнением отчета. Она используется только в том случае, если определение отчета содержит параметры. Если отображается любая из областей «Параметры» или «Учетные данные», то представление отчета занимает оставшуюся ширину веб-части. Можно установить свойства веб-части, чтобы настроить ширину области «Параметры». Можно также определить метки, которые появляются рядом с конкретными параметрами страницы. Дополнительные сведения об изменении меток параметров см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Веб-часть средства просмотра отчетов на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Добавление веб-части средства просмотра отчетов на веб-страницу (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [Веб-части средства просмотра отчетов на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Добавить веб-части средства просмотра отчетов в веб-страницу &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  В списке **Использовать этот отчет в качестве вложенного отчета** нажмите кнопку **Обзор**или введите имя отчета. Рекомендуется нажать кнопку **Обзор** , поскольку путь к вложенному отчету будет указан автоматически. Указать отчет можно несколькими способами. Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
-6.  Щелкните **Да** в области **Пропустить границу на разрыве страницы**, чтобы предотвратить вывод границы в середине вложенного отчета, если он занимает более одной страницы (необязательно).  
+6.  Щелкните **Да** в области **Пропустить границу на разрыве страницы** , чтобы предотвратить вывод границы в середине вложенного отчета, если он занимает более одной страницы (необязательно).  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,6 +78,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Вложенные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Поведение отрисовки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

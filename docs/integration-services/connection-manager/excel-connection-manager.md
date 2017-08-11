@@ -8,6 +8,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - files [Integration Services], connections
 - connections [Integration Services], Excel
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c817f552e527f0d01ec7638eb5f605da572cf9c0
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 15de3ffdf6b4580918edf3a29d40e856614367fb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="excel-connection-manager"></a>Диспетчер соединений с Excel
@@ -55,6 +57,42 @@ ms.lasthandoff: 08/03/2017
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
  Дополнительные сведения о переходе между файлами в группе файлов Excel см. в разделе [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
+  
+## <a name="excel-connection-manager-editor"></a>редактор диспетчера соединений с Excel
+  Диалоговое окно **Редактор диспетчера соединений с Excel** используется для добавления подключения к существующему или новому файлу книги [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] .  
+  
+ Дополнительные сведения о диспетчере соединений с Excel см. в разделе [Диспетчер соединений с Excel](../../integration-services/connection-manager/excel-connection-manager.md).  
+  
+### <a name="options"></a>Параметры  
+ **Путь к файлу Excel**  
+ Введите путь и имя существующего или нового файла книги Excel с расширением XLS.  
+  
+> [!NOTE]  
+>  Подключить защищенный паролем файл Excel нельзя.  
+  
+> [!WARNING]  
+>  **Редактор назначения Excel** автоматически создаст файл Excel при выборе **подключения Excel** , указывающего на новый или несуществующий файл. Затем выберите **Создать** для **имени листа Excel**.  
+  
+ **Обзор**  
+ Для перехода в папку, в которой существует файл Excel или в которой будет создан новый файл, используйте диалоговое окно **Открыть** .  
+  
+ **Версия Excel**  
+ Позволяет указать версию Microsoft Excel, в которой был создан файл.  
+  
+ **Первая строка содержит имена столбцов**  
+ Позволяет указать, содержит ли первая строка данных выбранного листа имена столбцов. По умолчанию значение этого параметра равно **True**.  
+  
+### <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Поставщики и драйверы для файлов Microsoft Excel и Access  
+ Если поставщики OLE DB и драйверы для файлов Microsoft Office еще не установлены, может потребоваться скачать их. Более поздние версии поставщика могут открывать файлы, созданные в более ранних версиях Excel.  
+  
+ Если на компьютере установлена 32-разрядная версия Office, необходимо установить драйверы для этой версии, а также убедиться, что вы запускаете мастер или создаваемый им пакет служб Integration Services в 32-разрядном режиме.  
+  
+|Версия Microsoft Office|Загрузить|  
+|------------------------------|--------------|  
+|2007 г.|[Системный драйвер Office 2007: компоненты подключения к данным](https://www.microsoft.com/download/details.aspx?id=23734)|  
+|2010|[Среда выполнения Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=10910)|  
+|2013|[Среды выполнения Microsoft Access 2013](http://www.microsoft.com/download/details.aspx?id=39358)|  
+|2016|[Среда выполнения Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=50040)|
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

@@ -18,11 +18,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 50893ee7140f33086d432fdc00f660f6371fe282
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Привязка отчета или модели к общему источнику данных (SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 06/22/2017
 10. Щелкните **Закрыть**.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Передача файла или отчета (диспетчер отчетов)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)   
- [Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Передать файл или отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)   
+ [Передать документы в библиотеку SharePoint &#40; Службы Reporting Services в режиме интеграции с SharePoint &#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
+ [Создание и управление общими источниками данных &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [Создать, удалить или изменить общий источник данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Источники данных, поддерживаемые службами Reporting Services &#40; Службы SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

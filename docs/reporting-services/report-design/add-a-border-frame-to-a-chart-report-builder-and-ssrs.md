@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a14ce29863b00c01cb77f837c369256a1096f65
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
@@ -51,8 +51,8 @@ ms.lasthandoff: 06/22/2017
 7.  Если выбран тип «Рамка», укажите стиль и цвет рамки (необязательно). Список **Цвет заливки рамки** содержит распространенные цвета.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Добавление стилей рельефа, приподнятости и текстуры стили диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

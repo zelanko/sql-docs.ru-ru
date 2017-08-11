@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Задание интервала оси (построитель отчетов и службы SSRS)
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  В диалоговом окне **Свойства горизонтальной оси** откройте вкладку **Параметры оси** и задайте для параметра **Интервал** значение **1**, чтобы отобразить каждую метку группы категорий. Чтобы отобразить каждую метку группы другой категории на оси X, введите значение **2**. 
+2.  В **свойства горизонтальной оси** диалоговое > **параметры оси** установите **интервал** для **1** для отображения каждая метка группы категории. Чтобы отобразить каждую метку группы другой категории на оси X, введите значение **2**. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -85,17 +85,17 @@ ms.lasthandoff: 06/22/2017
   
 1.  Щелкните правой кнопкой мыши по оси диаграммы, которую необходимо изменить, и выберите пункт **Свойства оси**. 
   
-2.  В диалоговом окне **Свойства горизонтальной оси** откройте вкладку **Параметры оси** и задайте для параметра **Интервал** значение **Авто**. В диаграмме отобразится оптимальное количество меток категории, умещающееся на оси.  
+2.  В **свойства горизонтальной оси** диалоговое > **параметры оси** установите **интервал** для **автоматически**. В диаграмме отобразится оптимальное количество меток категории, умещающееся на оси.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Сортировка данных в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Задание логарифмической шкалы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Построение данных на вспомогательной оси (построитель отчетов и службы SSRS)](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Диалоговое окно «Свойства оси», параметры оси &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Задать логарифмическую шкалу &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Построение данных на вспомогательной оси &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d4edfc347b8ad4bb90d807f4f0c9ecc602ca3f2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Настройка свойств источника данных для отчета (диспетчер отчетов)
@@ -64,11 +64,11 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения о настройке учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Дополнительные сведения об учетной записи автоматического выполнения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Страница "Создание источника данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Страница «содержимое» &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Новая страница источника данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
+ [Создание, изменение и удаление общих источников данных &#40; Службы SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Страница "Свойства источников данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
+ [Создать, удалить или изменить общий источник данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Страницы свойств источников данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
   
   

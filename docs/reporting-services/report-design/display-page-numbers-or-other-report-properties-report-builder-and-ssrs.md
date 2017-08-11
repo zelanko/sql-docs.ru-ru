@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Отображение номеров страниц или других свойств отчета (построитель отчетов и службы SSRS)
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
      Текстовое поле **Задать выражение для: значение** содержит выражение =Globals!PageNumber.  
   
-2.  Установите курсор после знака = и введите текст **"Page " &**.  
+2.  Установите курсор после знака = и введите **«Страница» &**.  
   
      Теперь выражение будет иметь вид ="Стр. "&Globals!PageNumber  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 06/22/2017
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
- [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Верхние и нижние колонтитулы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Форматирование текста в текстовом поле &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

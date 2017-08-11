@@ -45,11 +45,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Действие детализации (построитель отчетов и службы SSRS)
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 >   
 >  Например, чтобы скрыть строку, связанную с вложенной группой, текстовое поле должно находиться в строке, связанной с родительской группой или группой, находящейся выше в иерархии контейнеров.  
 >   
->  Сведения об установке сведений о видимости параметров для группы, столбца или строки см. в разделе [Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
+>  Сведения об установке сведений о видимости для группы, столбца или строки см. в разделе [Добавление действия свернуть или развернуть элемент &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)  
   
- Дополнительные сведения о скрытии элементов отчета см. в разделе [Скрытие элемента (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
+ Дополнительные сведения о скрытии элементов отчета см. в разделе [скрыть элемент &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
- [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Интерактивная сортировка, схемы документов и ссылки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

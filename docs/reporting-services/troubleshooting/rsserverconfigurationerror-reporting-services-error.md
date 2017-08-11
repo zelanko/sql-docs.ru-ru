@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78d4fd567ce57dba6d78c45a543a68725742d686
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Ошибка службы Reporting Services
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="internal-only"></a>Только для внутреннего использования  
   
 ## <a name="see-also"></a>См. также  
- [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Изменение файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

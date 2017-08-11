@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов — в режиме интеграции с SharePoint
@@ -140,8 +140,8 @@ ms.lasthandoff: 06/22/2017
  Когда сервер отчетов работает в режиме интеграции с SharePoint, для ресурса используется более узкое определение. Сервер отчетов поддерживает ресурсы для хранимых отчетов, ссылающихся на внешние изображения. Это относится к отчетам, которые являются моментальными снимками или копиями, сохраняемыми для внутреннего использования.  
   
 ## <a name="see-also"></a>См. также  
- [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [опубликовать общий источник данных в библиотеке SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Публикация отчета в библиотеку SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Опубликовать общий источник данных в библиотеке SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   

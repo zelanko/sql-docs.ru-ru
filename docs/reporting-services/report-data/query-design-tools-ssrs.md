@@ -25,11 +25,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb010d0c545e0ff6031a07ff0d4439f5d9dc8116
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="query-design-tools-ssrs"></a>Средства проектирования запросов (SSRS)
@@ -70,14 +70,14 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="Textbased"></a> Текстовый конструктор запросов  
  Текстовый конструктор запросов — это используемое по умолчанию средство построения запросов для большинства поддерживаемых реляционных источников данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML и ODBC. В отличие от графического конструктора запросов это средство не осуществляет проверку синтаксиса запросов в процессе проектирования. Ниже приведена иллюстрация текстового конструктора запросов.  
   
- ![Обычный конструктор запросов для запросов к реляционным данным](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "обычный конструктор запросов для запросов к реляционным данным")  
+ ![Конструктор универсальных запросов с запросом реляционных данных](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "Конструктор универсальных запросов с запросом реляционных данных")  
   
  Текстовый конструктор запросов рекомендуется использовать для создания сложных запросов, применения хранимых процедур, запросов XML-данных, а также для написания динамических запросов. В зависимости от источника данных можно переключаться между графическим конструктором запросов и текстовым конструктором запросов с помощью кнопки **Изменить как текст** на панели инструментов. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c).  
   
 ##  <a name="Graphical"></a> Графический конструктор запросов  
  Графический конструктор запросов используется для создания или изменения запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] для реляционной базы данных. Это средство проектирования запросов используется в некоторых продуктах [!INCLUDE[msCoName](../../includes/msconame-md.md)] и в других компонентах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В зависимости от типа источника данных оно поддерживает режимы «Текст», «Хранимая процедура» и «Таблица». Ниже приведена иллюстрация графического конструктора запросов.  
   
- ![Графический конструктор запросов для sql-запроса](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "графический конструктор запросов для sql-запроса")  
+ ![Графический конструктор запросов SQL](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "Графический конструктор запросов SQL")  
   
  Можно переключаться между графическим конструктором запросов и текстовым конструктором запросов с помощью кнопки **Изменить как текст** на панели инструментов. Дополнительные сведения см. в статье [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -119,9 +119,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также  
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Создание внедренного или общего источника данных (службы SSRS)](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
+ [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Службы Reporting Services Tutorials &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Источники данных, поддерживаемые службами Reporting Services &#40; Службы SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Создать внедренный или общий источник данных &#40; Службы SSRS &#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

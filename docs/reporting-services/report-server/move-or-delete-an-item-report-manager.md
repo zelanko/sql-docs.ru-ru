@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Перемещение или удаление элемента (диспетчер отчетов)
@@ -35,11 +35,11 @@ ms.lasthandoff: 06/22/2017
   
 |Значок|Перемещаемый элемент|  
 |----------|-------------------|  
-|![Значок отчета](../../reporting-services/report-server/media/hlp-16doc.gif "значок отчета")|Отчет|  
-|![Значок отчета связанной](../../reporting-services/report-server/media/hlp-16linked.gif "значок связанный отчет")|Связанный отчет|  
-|![Значок папки](../../reporting-services/report-server/media/hlp-16folder.gif "значок папки")|Папка|  
-|![универсальный значок ресурса](../../reporting-services/report-server/media/hlp-16file.gif "универсальный значок ресурса")|Ресурс|  
-|![Значок источника данных Shared](../../reporting-services/report-data/media/hlp-16datasource.png "общий значок источника данных")|Общий источник данных|  
+|![Значок "Отчет"](../../reporting-services/report-server/media/hlp-16doc.gif "Значок "Отчет"")|Отчет|  
+|![Значок "Связанный отчет"](../../reporting-services/report-server/media/hlp-16linked.gif "Значок "Связанный отчет"")|Связанный отчет|  
+|![Значок "Папка"](../../reporting-services/report-server/media/hlp-16folder.gif "Значок "Папка"")|Папка|  
+|![Значок "Универсальный ресурс"](../../reporting-services/report-server/media/hlp-16file.gif "Значок "Универсальный ресурс"")|Ресурс|  
+|![Значок "Общий источник данных"](../../reporting-services/report-data/media/hlp-16datasource.png "Значок "Общий источник данных"")|Общий источник данных|  
 ||Общий набор данных|  
   
  Могут быть перемещены не все элементы. Например, нельзя переместить элемент, связанный с отчетом: подписку или журнал отчета. Такие элементы перемещаются вместе с отчетами, к которым они относятся. Также нельзя перемещать элементы, которые существуют вне иерархии папок (например, общие расписания). Перемещение элементов невозможно, если на это недостаточно разрешений. Разрешение на перемещение элемента имеется, если для соответствующего элемента в назначении ролей выбраны следующие задачи: «Управление отчетами», «Управление моделями», «Управление папками» и «Управление источниками данных».  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Страница «содержимое» &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

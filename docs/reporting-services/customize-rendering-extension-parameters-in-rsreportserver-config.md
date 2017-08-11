@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Настройка параметров модулей подготовки отчетов в RSReportServer.Config
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 -   XML-структура **DeviceInfo** определяет настройки сведений об устройстве, используемых модулем подготовки отчетов. Большинство параметров модуля подготовки отчетов определены как настройки сведений об устройстве.  
   
- Для изменения этого файла можно использовать текстовый редактор. Файл RSReportServer.config находится в папке \Reporting Services\Report Server\Bin. Дополнительные сведения об изменении файлов конфигурации см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Для изменения этого файла можно использовать текстовый редактор. Файл RSReportServer.config находится в папке \Reporting Services\Report Server\Bin. Дополнительные сведения об изменении файлов конфигурации см. в разделе [изменения файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Изменение отображаемого имени  
  Отображаемое имя модуля подготовки отчетов указывается в списке «Экспорт» панели инструментов отчета. Среди примеров отображаемых имен по умолчанию есть веб-архив, TIFF-файл и файл Acrobat (PDF-файл). Отображаемое имя по умолчанию можно заменить произвольным значением, указав в файлах конфигурации элемент **OverrideNames** . Кроме того, если пользователь определяет два экземпляра одного модуля подготовки отчетов, элемент **OverrideNames** можно использовать, чтобы различать эти экземпляры в списке «Экспорт».  
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/22/2017
  [Настройки сведений об устройстве CSV](../reporting-services/csv-device-information-settings.md)   
  [Настройки сведений об устройстве Excel](../reporting-services/excel-device-information-settings.md)   
  [Настройки сведений об устройстве HTML](../reporting-services/html-device-information-settings.md)   
- [Настройки сведений об устройстве вывода изображений](../reporting-services/image-device-information-settings.md)   
+ [Изображение настройки сведений об устройстве](../reporting-services/image-device-information-settings.md)   
  [Настройки сведений об устройстве MHTML](../reporting-services/mhtml-device-information-settings.md)   
  [Настройки сведений об устройстве PDF](../reporting-services/pdf-device-information-settings.md)   
  [Настройки сведений об устройстве XML](../reporting-services/xml-device-information-settings.md)  

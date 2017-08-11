@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Печать отчета (построитель отчетов и службы SSRS)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Поля печати не отображаются в режимах конструктора или выполнения. Не существует связи между областью конструктора и областью печати отчета. Чтобы просмотреть поля печати в режиме выполнения, нажмите кнопку «Макет страницы» на вкладке **Выполнение** ленты.  
   
- Дополнительные сведения о разбиении отчета на страницы см. в разделе [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Дополнительные сведения о разбиении отчета на страницы см. в разделе [разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -101,7 +101,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также  
  [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства отчета" — "Параметры страницы" (построитель отчетов)](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [Диалоговое окно «Свойства отчета», параметры страницы &#40; Построитель отчетов &#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Область данных табликса (построитель отчетов и службы SSRS)
@@ -83,9 +83,9 @@ ms.lasthandoff: 06/22/2017
  Функция «Добавить итог» автоматически создает строку за пределами текущей группы, в которой отображаются значения, относящиеся к группе. Можно также вручную добавлять статические и динамические строки. Визуальные индикаторы помогают определить, какие строки являются статическими, а какие — динамическими. Дополнительные сведения см. в разделе [Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Связывание нескольких областей данных к тому же набору данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Управление отображением области данных Табликса на странице отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Изучение возможностей области данных Табликса &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

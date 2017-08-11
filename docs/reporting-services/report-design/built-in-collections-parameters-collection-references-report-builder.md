@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 17698a3c268e824d2f638042b71b3ec21f994e86
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Встроенные коллекции - ссылки на коллекцию параметров (построитель отчетов)
@@ -54,18 +54,18 @@ ms.lasthandoff: 06/22/2017
 |`=Parameters!` *\<MultivalueParameterName >*`.IsMultiValue`|Возвращает значение **True** или **False**.<br /><br /> Проверяет, является ли параметр многозначным. Если возвращено значение **True**, то параметр является многозначным и представляет собой коллекцию объектов. Если возвращено значение **False**, значит, параметр является однозначным и представляет собой один объект.|  
 |`=Parameters!` *\<MultivalueParameterName >*`.Count`|Возвращает целочисленное значение.<br /><br /> Относится к количеству значений. Для однозначного параметра счетчик всегда равен 1. Для многозначного параметра счетчик имеет значение 0 или больше.|  
 |`=Parameters!` *\<MultivalueParameterName >*`.Value(0)`|Возвращает первое значение многозначного параметра.|  
-|`=Parameters!` *\<MultivalueParameterName >* `.Value(Parameters!` * \<MultivalueParameterName >*`.Count-1)`|Возвращает последнее значение многозначного параметра.|  
+|`=Parameters!` *\<MultivalueParameterName >* `.Value(Parameters!`  *\<MultivalueParameterName >*`.Count-1)`|Возвращает последнее значение многозначного параметра.|  
 |`=Split("Value1,Value2,Value3",",")`|Возвращает массив значений.<br /><br /> Создает массив значений для многозначного параметра типа **String** . Во втором параметре можно использовать любой разделитель для разбиения. Это выражение можно использовать для задания значений по умолчанию для многозначного параметра или для создания такого многозначного параметра, который надо отослать во вложенный или детализированный отчет.|  
 |`=Join(Parameters!` *\<MultivalueParameterName >*`.Value,", ")`|Возвращает значение типа **Строка** , содержащее значения многозначного параметра, разделенные точкой с запятой. Во втором параметре можно использовать любой разделитель для соединения.|  
   
- Дополнительные сведения об использовании параметров см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Дополнительные сведения об использовании параметров в фильтре см. в разделе [параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Часто используемые фильтры &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Добавить, изменить или удалить параметр отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Учебник: Добавление параметра к отчету &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
- [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
+ [Встроенные коллекции в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
   

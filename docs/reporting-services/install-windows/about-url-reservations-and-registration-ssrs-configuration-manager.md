@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 |SQL Server Express|Веб-портал|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Проверка подлинности и удостоверение службы для URL-адресов служб Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] указывается учетная запись службы для службы сервера отчетов. Учетная запись, под которой запускается служба, используется для всех URL-адресов, созданных для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , запускаемых в одном экземпляре. Удостоверение службы экземпляра сервера отчетов сохраняется в файле конфигурации RSReportServer.config.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Резервирование URL-адресов укажите учетную запись службы сервера отчетов. Учетная запись, под которой запускается служба, используется для всех URL-адресов, созданных для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , запускаемых в одном экземпляре. Удостоверение службы экземпляра сервера отчетов сохраняется в файле конфигурации RSReportServer.config.  
   
  Учетная запись службы не имеет значения по умолчанию. Однако ее указание во время установки обязательно и сохраняется в параметре **URLReservation** файла RSReportServer.config даже в том случае, если установка производится в режиме "только файлы". В качестве учетной записи службы можно указать учетную запись пользователя домена, **LocalSystem**или **NetworkService**.  
   
@@ -111,8 +111,8 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] и более поздних версий имеют новые средства безопасности, позволяющие свести к минимуму риск случайного запуска программ с повышенными правами доступа. Для этих операционных систем придется выполнить ряд дополнительных шагов для разрешения локального администрирования. Дополнительные сведения см. в статье [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Настройка URL-адрес &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Синтаксис резервирования URL-адрес &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 

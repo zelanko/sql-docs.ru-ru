@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="enable-and-disable-my-reports"></a>Включение и отключение папки «Мои отчеты»
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
  Имейте в виду: если папка «Мои отчеты» действительно активизируется, то сервер отчетов создает папку «Мои отчеты» для каждого пользователя с учетной записью домена, который щелкает ссылку на папку «Мои отчеты», даже если пользователь не хочет или не нуждается этой папке. Систематического способа определить, какие папки используются, не существует. Необходимо делать обзор папок вручную, чтобы просмотреть, содержат они что-нибудь или нет.  
   
 ## <a name="see-also"></a>См. также  
- [Обеспечение безопасности "Моих отчетов"](../../reporting-services/security/secure-my-reports.md)   
- [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Защита «Мои отчеты»](../../reporting-services/security/secure-my-reports.md)   
+ [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

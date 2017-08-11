@@ -21,11 +21,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Создание скриптов с помощью программы rs.exe и веб-службы
@@ -41,8 +41,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [веб-служба сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Технический справочник (службы SSRS)](../../reporting-services/technical-reference-ssrs.md)   
- [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Веб-службы сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Технический справочник по &#40; Службы SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Служебная программа RS.exe &#40; Службы SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

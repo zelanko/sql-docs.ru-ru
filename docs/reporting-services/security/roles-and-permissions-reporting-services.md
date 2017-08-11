@@ -23,11 +23,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ea2b4cba953b6622811b80c7f6c60838ce0a6f91
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Роли и разрешения (службы Reporting Services)
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  Объясняет, как использовать для управления доступом к серверу отчетов группы SharePoint, уровни разрешений и разрешения.  
   
 ## <a name="see-also"></a>См. также  
- [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
+ [Проверка подлинности на сервере отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

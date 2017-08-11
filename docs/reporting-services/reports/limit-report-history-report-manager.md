@@ -21,11 +21,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e1925f7527202ea251a6949a18e2f03af4f5952
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="limit-report-history-report-manager"></a>Ограничение размеров журнала отчета (диспетчер отчетов)
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 4.  Выберите параметры отчета и нажмите кнопку **Применить**. Дополнительные сведения о каждом параметре см. в разделе [Страница "Свойства параметров моментального снимка" (диспетчер отчетов)](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
   
 ## <a name="see-also"></a>См. также:  
- [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Добавить моментальный снимок для отчета, истории &#40; Диспетчер отчетов &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

@@ -17,11 +17,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Ошибка службы Reporting Services
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Не удается сравнить типы данных в фильтре  
  В уравнении фильтра выражение, определяющее, что именно фильтруется, и значение фильтра должны относиться к одному и тому же типу данных, чтобы их можно было сравнивать. При появлении одной из следующих ошибок измените выражение поля или значение фильтра, чтобы типы данных соответствовали друг другу.  
   
--   Обработка  *\<тип отчета >* для * \<имя элемента отчета >* не может быть выполнена. Невозможно сравнить данные типов  *\<типа >* и * \<типа >*. Проверьте тип данных, возвращаемый  *\<имя элемента отчета >*.  
+-   Обработка  *\<тип отчета >* для  *\<имя элемента отчета >* не может быть выполнена. Невозможно сравнить данные типов  *\<типа >* и  *\<типа >*. Проверьте тип данных, возвращаемый  *\<имя элемента отчета >*.  
   
 -   Не удалось вычислить  *\<имя свойства >*.  
   
@@ -116,13 +116,13 @@ ms.lasthandoff: 06/22/2017
   
  Можно также передать агрегатной функции имя конкретной области. Область может быть именем набора данных, областью данных или именем области более высокого порядка в иерархии данных. Это относится к следующим сообщениям:  
   
--   *\<Тип отчета >* "*\<имя элемента отчета >*" имеет недопустимую область «*\<имя области >*». Область должна совпадать с текущей или содержаться в ней.  
+-    *\<Тип отчета >* "*\<имя элемента отчета >*" имеет недопустимую область «*\<имя области >*». Область должна совпадать с текущей или содержаться в ней.  
   
--   *\<Имя свойства >* выражение для * \<тип отчета >* "*\<имя элемента отчета >*" содержит параметр области, недопустимый для агрегатной функции. Параметр области должен быть задан строковой константой, совпадающей с именем объемлющей группы, объемлющей области данных или имени набора данных.  
+-    *\<Имя свойства >* выражение для  *\<тип отчета >* "*\<имя элемента отчета >*" содержит параметр области, недопустимый для агрегатной функции. Параметр области должен быть задан строковой константой, совпадающей с именем объемлющей группы, объемлющей области данных или имени набора данных.  
   
  Для агрегатных функций, вычисляющих промежуточные итоги (**Previous**, **RunningValue**или **RowNumber**), можно задать параметр области, представляющий собой либо имя группы строк, либо имя группы столбцов, но не то и другое сразу. Это относится к следующим сообщениям:  
   
--   **Предыдущие**, **RunningValue** или **RowNumber** агрегатные функции, используемые в ячейках данных  *\<тип отчета >* "*\<имя элемента отчета >*" ссылаются на области в столбцах и строках группирования * \<тип отчета >*. Параметры области для всех **Назад**, **RunningValue** и **RowNumber** агрегатные функции в  *\<тип отчета >* могут ссылаться на группирования строк или столбца группирования данных, но не оба.  
+-   **Предыдущие**, **RunningValue** или **RowNumber** агрегатные функции, используемые в ячейках данных  *\<тип отчета >* "*\<имя элемента отчета >*" ссылаются на области в столбцах и строках группирования  *\<тип отчета >*. Параметры области для всех **Назад**, **RunningValue** и **RowNumber** агрегатные функции в  *\<тип отчета >* могут ссылаться на группирования строк или столбца группирования данных, но не оба.  
   
  Дополнительные сведения см. в разделах [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) и [Встроенные коллекции (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,13 +130,13 @@ ms.lasthandoff: 06/22/2017
  Не рекомендуется использовать область по умолчанию для текстового поля, добавленного в область конструктора отчетов, если у отчета есть несколько наборов данных. Используйте выражение, включающее как агрегатную функцию, так и имя набора данных для задания области. Например, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>См. также  
- [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Справочник по агрегатным функциям &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Часто используемые фильтры &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Ссылки на коллекцию параметров &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

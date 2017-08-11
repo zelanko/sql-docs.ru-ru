@@ -32,11 +32,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
@@ -256,7 +256,7 @@ ms.lasthandoff: 06/22/2017
      Можно также скрывать слой по условию. Дополнительные сведения см. в разделе [Скрытие элемента (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Устранение неполадок в отчетах: Сопоставление отчеты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

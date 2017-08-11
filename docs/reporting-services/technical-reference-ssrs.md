@@ -20,11 +20,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d0e65c6d190976934fa9c5177585cc88a34df8fa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -32,30 +32,30 @@ ms.lasthandoff: 06/22/2017
 
   Найдите средства и справочную документацию по PowerShell для использования или администрирования служб отчетов SQL Server.  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Ошибки и события**  
- [Причины ошибок служб Reporting Services и способы их устранения](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Ошибки и события**  
+ [Причины и способы устранения ошибок служб Reporting Services](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Справочник по функциям**  
+ ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Справочник по функциям**  
  [Справка F1 конструктора отчетов](../reporting-services/tools/report-designer-f1-help.md)  
   
  [Справка F1 диспетчера отчетов](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Службы Reporting Services Configuration Manager &#40; Основной режим &#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
  [Справка мастера отчетов](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
- [Средство просмотра HTML-страниц и панель инструментов отчета](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+ [Просмотра HTML-страниц и панель инструментов отчета](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
- [Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
+ [Настройки сведений об устройстве для подготовки к просмотру расширения &#40; Службы Reporting Services &#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **программы командной строки сервера отчетов**  
- [Служебная программа RS.exe (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ ![Маленький значок папки](../analysis-services/media/filefolder-small.png "маленький значок папки") **программы командной строки сервера отчетов**  
+ [Служебная программа RS.exe &#40; Службы SSRS &#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
- [Программа rsconfig (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)  
+ [Программа rsconfig &#40; Службы SSRS &#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [Программа rskeymgmt (SSRS)](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **библиотека классов поставщика WMI служб Reporting**  
- [Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
+ ![Маленький значок папки](../analysis-services/media/filefolder-small.png "маленький значок папки") **библиотека классов поставщика WMI служб Reporting**  
+ [Службы Reporting Services Справочник по библиотеке поставщика WMI &#40; Службы SSRS &#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

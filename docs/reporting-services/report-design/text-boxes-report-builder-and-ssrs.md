@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Текстовые поля (построитель отчетов и службы SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  Чтобы отобразить повторяющийся текст в макете свободной формы, создайте область данных списка и поместите в нее текстовое поле. Используйте список, если нужно повторить форму для нескольких значений, например счет-фактуру, которая повторяется один раз для каждого заказчика. Узнайте больше о [создании счетов-фактур и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Используйте прямоугольный контейнер, если нужно управлять макетом текстового поля и пробельным пространством ниже последнего текстового поля. Дополнительные сведения см. в разделе [Прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ Используйте прямоугольный контейнер, если нужно управлять макетом текстового поля и пробельным пространством ниже последнего текстового поля. Дополнительные сведения см. в разделе [прямоугольники и линии &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  Выражение в текстовом поле может содержать литеральный текст, указывать на поле базы данных или вычислять данные. Все выражения отображаются в виде текста заполнителя, что позволяет форматировать числа, цвета и другие свойства отображения. Кроме того, можно совмещать заполнители с литеральным текстом в одном текстовом поле.  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Форматирование чисел и дат &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

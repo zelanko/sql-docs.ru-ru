@@ -16,11 +16,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e046d1afc8cc2f774e56f70ac9448e9ba9660cbb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
  Повторяющиеся URL-адреса определяются на этапе их регистрации при запуске службы. При создании одинаковых резервирований URL-адресов, конфликт может быть незамечен до запуска службы. Поэтому при добавлении адресов необходимо придерживаться соглашений об именах или правил, обеспечивающих их уникальность.  
   
 ## <a name="default-naming-conventions"></a>Соглашения об именах по умолчанию  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут быть установлены в рамках именованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При установке и настройке сервера отчетов в рамках именованного экземпляра, имя экземпляра автоматически включается в виртуальный каталог в резервировании URL-адреса, предоставляемого службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В следующей таблице приведены резервирования URL-адресов для экземпляра по умолчанию и именованного экземпляра.  
+ Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут быть установлены в рамках именованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При установке и настройке сервера отчетов в рамках именованного экземпляра, имя экземпляра автоматически включается в виртуальный каталог в резервировании URL-адреса, предоставляемого службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В следующей таблице приведены резервирования URL-адресов для экземпляра по умолчанию и именованного экземпляра.  
   
 |Экземпляр SQL Server|Резервирование URL-адресов по умолчанию|  
 |-------------------------|-----------------------------|  
@@ -49,11 +49,11 @@ ms.lasthandoff: 06/22/2017
 |`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Каждый экземпляр отвечает различным именам сервера (полному имени домена и имени компьютера).|  
   
 ## <a name="uniqueness-requirements"></a>Требования к уникальности  
- Используемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] технологии накладывают требования к уникальным именам. Для HTTP.SYS необходима уникальность всех URL-адресов в пределах его репозитория. Чтобы создать уникальный URL-адрес, можно изменять порт, имя узла или виртуального каталога. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] необходима уникальность идентификаторов приложений в пределах одного процесса. Это требование влияет на имена виртуальных каталогов. Оно запрещает повторение имен виртуальных каталогов в пределах одного экземпляра сервера отчетов.  
+ Используемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] технологии накладывают требования к уникальным именам. Для HTTP.SYS необходима уникальность всех URL-адресов в пределах его репозитория. Чтобы создать уникальный URL-адрес, можно изменять порт, имя узла или виртуального каталога. Для [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] необходима уникальность идентификаторов приложений в пределах одного процесса. Это требование влияет на имена виртуальных каталогов. Оно запрещает повторение имен виртуальных каталогов в пределах одного экземпляра сервера отчетов.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Настройка URL-адреса сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Настройка URL-адрес &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   
 

@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d105eb2a7bacb70f93b3237c9a9134695cd13b59
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Тип соединения с SQL Azure (SSRS)
@@ -82,7 +82,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  Дополнительные сведения см. в разделах [Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) и [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
- В графическом конструкторе запросов, используемом [!INCLUDE[ssSDS](../../includes/sssds-md.md)], предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводку данных. Далее приведены функции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[tsql](../../includes/tsql-md.md)], в том числе группирование и агрегаты. Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md) [электронной документации](http://go.microsoft.com/fwlink/?LinkId=141687) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ В графическом конструкторе запросов, используемом [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводку данных. Далее приведены функции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , в том числе группирование и агрегаты. Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md) [электронной документации](http://go.microsoft.com/fwlink/?LinkId=141687) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Использование типа запроса Text  
  В текстовом конструкторе запросов вводятся команды на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] , определяющие данные в наборе данных. Например, следующий запрос на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] выбирает имена всех сотрудников отдела сбыта.  
@@ -148,7 +148,7 @@ WHERE EmployeeID = (@EmpID)
 ###### <a name="alternate-data-extensions"></a>Альтернативные модули обработки данных  
  Данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также можно получить с помощью источника данных ODBC. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается.  
   
- Дополнительные сведения см. в разделе [Тип соединения ODBC (службы SSRS)](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
+ Дополнительные сведения см. в разделе [тип соединения ODBC &#40; Службы SSRS &#41; ](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Сведения о платформе и версии  
  Дополнительные сведения о поддержке платформ и версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -161,7 +161,7 @@ WHERE EmployeeID = (@EmpID)
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Добавление фильтра для набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> См. также  
@@ -173,10 +173,10 @@ WHERE EmployeeID = (@EmpID)
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
- [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Предоставляет сведения об общих и внедренных наборах данных.  
   
- [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
  [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -185,9 +185,9 @@ WHERE EmployeeID = (@EmpID)
   
 ## <a name="see-also"></a>См. также:  
 [База данных SQL Microsoft Azure на сайте docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/)  
- [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
  Дополнительные вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   

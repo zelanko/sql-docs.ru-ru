@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Линейчатые диаграммы (построитель отчетов и службы SSRS)
@@ -63,16 +63,16 @@ ms.lasthandoff: 06/22/2017
 -   Если в наборе данных имеется большое (относительно размеров самой диаграммы) число точек данных, то размеры столбцов или линий, а также расстояния между ними сокращаются. Чтобы вручную установить ширину столбцов диаграммы, нужно изменить их ширину в пикселях, указанную в свойстве **PointWidth** . По умолчанию это свойство имеет значение 0,8. С увеличением ширины столбцов или линий в диаграмме расстояние между отдельными столбцами или линиями уменьшается.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Учебник. Добавление в отчет линейчатой диаграммы](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Типы диаграмм &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [NULL и пустые точки данных в диаграммах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Гистограмма с накоплением &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Диаграммы диапазонов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [Форматирование цветов для рядов на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование меток оси на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование условных обозначений на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Добавление в диаграмму стилей рамки, рельефа и текстуры &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [Учебник: Добавление линейчатой диаграммы в отчет (построитель отчетов)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Учебник: Добавление в отчет линейчатой диаграммы](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

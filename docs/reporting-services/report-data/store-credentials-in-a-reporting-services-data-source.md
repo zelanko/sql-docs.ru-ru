@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
@@ -110,13 +110,13 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Настройка сохраненных учетных данных для общедоступного источника данных (собственный режим)  
   
-1.  Откройте в диспетчере отчетов в собственном режиме элемент общедоступного источника данных. ![Значок источника данных Shared](../../reporting-services/report-data/media/hlp-16datasource.png "общий значок источника данных")  
+1.  Откройте в диспетчере отчетов в собственном режиме элемент общедоступного источника данных. ![Значок "Общий источник данных"](../../reporting-services/report-data/media/hlp-16datasource.png "Значок "Общий источник данных"")  
   
 2.  Щелкните контекстное меню ![контекстное меню в диспетчере отчетов для элементов ssrs](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "контекстное меню в диспетчере отчетов для элементов ssrs") и нажмите кнопку **управление**.  
   
 3.  В списке **Тип источника данных** задайте модуль обработки данных, который будет использоваться для обработки данных, получаемых из источника данных.  
   
-4.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует не указывать учетные данные в строке подключения.  
+4.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. [!INCLUDE[msCoName](../../includes/msconame-md.md)]рекомендует не указывать учетные данные в строке подключения.  
   
      В следующем примере показана строка соединения, используемая для подключения к локальной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  В списке **Тип источника данных** задайте модуль обработки данных, который будет использоваться для обработки данных, получаемых из источника данных.  
   
-5.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует не указывать учетные данные в строке подключения.  
+5.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. [!INCLUDE[msCoName](../../includes/msconame-md.md)]рекомендует не указывать учетные данные в строке подключения.  
   
      В следующем примере показана строка соединения, используемая для подключения к локальной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] :  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
      ![Значок стрелки, используемый с обратно к верхней](../../analysis-services/instances/media/uparrow16x16.gif "значок стрелки, используемый с обратно к верхней") [требования политики безопасности для сохраненных учетных данных](#bkmk_top)  
   
 ## <a name="see-also"></a>См. также:  
- [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Настройка свойств источника данных для отчета (диспетчер отчетов)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Страница "Свойства источников данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Страница "Создание источника данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
+ [Укажите учетные данные и сведения о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Настройка свойств источника данных для отчета &#40; Диспетчер отчетов &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [Создать, удалить или изменить общий источник данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Страницы свойств источников данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Новая страница источника данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   
 

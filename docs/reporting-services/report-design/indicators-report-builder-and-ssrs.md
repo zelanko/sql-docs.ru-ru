@@ -22,11 +22,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Индикаторы (построитель отчетов и службы SSRS)
@@ -106,14 +106,14 @@ ms.lasthandoff: 06/22/2017
   
  Индикаторы показывают значения данных, выполняя синхронизацию значений данных индикаторов в пределах указанной области действия. По умолчанию областью действия родительского контейнера индикатора является объект, который содержит индикатор, такой как таблица или матрица. Можно вносить изменения в синхронизацию, выбирая другую область действия, в зависимости от макета конкретного отчета. Индикатор позволяет пропускать синхронизацию. Дополнительные сведения см. в разделе [Задание области действия синхронизации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
- Общие сведения о работе и определении областей действия в отчетах см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Общие сведения о работе и определении областей действия в отчетах см. в разделе [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Индикаторы используют только одно значение. Если необходимо показать несколько значений данных, используйте вместо индикатора спарклайн или гистограмму. Они могут представлять несколько значений данных, но также просты для понимания в маленьких размерах и хорошо работают в таблицах и матрицах. Дополнительные сведения см. в разделе [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ##  <a name="SizingIndicatators"></a> Изменение размера индикаторов для улучшения визуального восприятия  
  Помимо цвета, направления и формы, для изменения визуального представления индикатора можно использовать его размер. Например, представим отчет, в котором индикаторы используются для отображения уровня удовлетворенности потребителей различными типами велосипедов. Значок, используемый индикатором, может иметь разные размеры в зависимости от степени удовлетворенности потребителей. Чем больше удовлетворенность, тем больше значок в отчете. На следующем изображении показан отчет о продажах велосипедов, при этом размеры значков отображают объем продаж.  
   
- Можно использовать выражения для динамического изменения размера звездочек на основе значений поля, используемого индикатором. Дополнительные сведения см.в разделе [Указание размера индикатора с помощью выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
+ Можно использовать выражения для динамического изменения размера звездочек на основе значений поля, используемого индикатором. Дополнительные сведения см. в разделе [Указание размера индикатора с помощью выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).  
   
  Дополнительные сведения о написании и использовании выражений см. в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Изменение значков индикаторов и наборов индикаторов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Задание и настройка единиц измерения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Выбор и настройка единиц измерения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
 -   [Задание области действия синхронизации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Спарклайны и гистограммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Графики и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

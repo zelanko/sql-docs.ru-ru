@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Советы по конструированию отчетов (построитель отчетов и службы SSRS)
@@ -160,11 +160,11 @@ ms.lasthandoff: 06/22/2017
   
     4.  Измените в заголовках столбцов свойство текстового поля WritingMode, чтобы использовать вертикальный текст.  
   
- В совокупности это поведение, свойства ширины и высоты элементов отчета, размер текста отчета, определения высоты и ширины страницы, параметры размера полей родительского отчета и метод разбиения на страницы, связанный с модулем подготовки отчетов, определяют то, какие элементы отчета поместятся на страницу, готовую к просмотру. Дополнительные сведения см. в разделе [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ В совокупности это поведение, свойства ширины и высоты элементов отчета, размер текста отчета, определения высоты и ширины страницы, параметры размера полей родительского отчета и метод разбиения на страницы, связанный с модулем подготовки отчетов, определяют то, какие элементы отчета поместятся на страницу, готовую к просмотру. Дополнительные сведения см. в статье [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Службы Reporting Services Tutorials &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  
   
   

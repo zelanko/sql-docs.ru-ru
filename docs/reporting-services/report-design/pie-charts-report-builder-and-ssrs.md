@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Круговые диаграммы (построитель отчетов и службы SSRS)
-  Круговые и кольцевые диаграммы отображают данные в виде пропорциональных долей целого. Круговые диаграммы обычно используются для сравнения групп. Круговые и кольцевые диаграммы, наряду с пирамидальными и воронкообразными диаграммами, относятся к группе так называемых фигурных диаграмм. Фигурные диаграммы не имеют осей. После перетаскивания числового поля на фигурную диаграмму в этой диаграмме вычисляется процентная доля каждого значения в общей сумме. Дополнительные сведения о фигурных диаграммах см. в разделе [Фигурные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  Круговые и кольцевые диаграммы отображают данные в виде пропорциональных долей целого. Круговые диаграммы обычно используются для сравнения групп. Круговые и кольцевые диаграммы, наряду с пирамидальными и воронкообразными диаграммами, относятся к группе так называемых фигурных диаграмм. Фигурные диаграммы не имеют осей. После перетаскивания числового поля на фигурную диаграмму в этой диаграмме вычисляется процентная доля каждого значения в общей сумме. Дополнительные сведения о фигурных диаграммах см. в разделе [фигурные диаграммы &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
   
  На следующей иллюстрации показана трехмерная круговая диаграмма с метками данных, отформатированными как процентные доли.  Условные обозначения размещены справа, по центру.  
   
@@ -92,11 +92,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Сбор мелких срезов на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Отображение процентных значений на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Учебник. Добавление круговой диаграммы к отчету &#40;построитель отчетов&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Форматирование условных обозначений на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [NULL и пустые точки данных в диаграммах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   

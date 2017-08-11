@@ -19,11 +19,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 39ec7f9885cff6bcfcbf65e0448f3e8e837bc8a6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="search-a-report-using-url-access"></a>Поиск отчета с использованием URL-адресов
@@ -37,7 +37,7 @@ http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:S
 ```  
   
 ## <a name="see-also"></a>См. также раздел  
- [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
- [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
+ [Доступ к URL-адрес &#40; Службы SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Ссылка на параметр доступа URL-адрес](../reporting-services/url-access-parameter-reference.md)  
   
   

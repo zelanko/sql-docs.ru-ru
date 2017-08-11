@@ -28,15 +28,15 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8ba2dbc33b0d61b35fc7bee87b6171016af73279
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] позволяют форматировать линии, цвета, области данных, изображения и другие элементы отчета.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]дает возможность форматировать линии, цвета, области данных, изображения и другие элементы отчета.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.lasthandoff: 06/22/2017
  Можно также добавлять изображения, например логотипы, к фону отчета или в прямоугольник, текстовое поле, таблицу, матрицу или другие части диаграммы либо к тексту и страницам отчета. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Диалоговое окно "Заливка" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
+ [Форматирование текста и заполнителей &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Форматирование текста в текстовом поле &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [Диалоговое окно «Заливка» &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   

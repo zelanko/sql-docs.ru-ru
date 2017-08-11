@@ -27,11 +27,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 58588838e0e74b545290df5ff0e77dc68ad5e918
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: e228d60a4ae01aa345f007be91109b7bccb76f5a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
@@ -58,16 +58,16 @@ ms.lasthandoff: 06/13/2017
 |Раздел|Description|  
 |-----------|-----------------|  
 |[Создание прокси веб-службы](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Описание способов добавления класса-посредника в проект, использующий [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
-|[Веб-служба проверки подлинности](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Описывает процесс проверки подлинности вызовов к веб-службе сервера отчетов.|  
+|[Аутентификация веб-службы](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Описывает процесс проверки подлинности вызовов к веб-службе сервера отчетов.|  
 |[Вызов методов веб-службы](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Описывает, как использовать API-Интерфейс SOAP для вызова методов веб-службы в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Задание свойства URL-адрес веб-службы](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Описывает процесс программного перенаправления учетной записи-посредника веб-службы на URL-адрес нового сервера после создания веб-ссылки.|  
-|[Аргументов метода Web Service](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Описывает процесс вызова метода веб-службы и предоставления аргументов метода.|  
-|[Пропуск значений для объектов необязательно веб-службы](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Описывает процесс пропуска значений для необязательных объектов веб-службы.|  
-|[С помощью методов безопасных веб-службы](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Описывает **SecureConnectionLevel** и то, как он влияет использование API SOAP служб Reporting Services.|  
-|[Передача настроек сведений об устройстве для модулей подготовки отчетов](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Описываются настройки сведений об устройстве, используемые для подготовки отчетов в различных форматах.|  
-|[Настройки модуля доставки Reporting Services](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|Описываются параметры, используемые для доставки отчетов с использованием электронной почты сервера отчетов.|  
+|[Определение свойства URL-адреса веб-службы](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Описывает процесс программного перенаправления учетной записи-посредника веб-службы на URL-адрес нового сервера после создания веб-ссылки.|  
+|[Передача аргументов метода веб-службы](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Описывает процесс вызова метода веб-службы и предоставления аргументов метода.|  
+|[Пропуск значений для необязательных объектов веб-службы](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Описывает процесс пропуска значений для необязательных объектов веб-службы.|  
+|[Использование защищенных методов веб-службы](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Описывает **SecureConnectionLevel** и то, как он влияет использование API SOAP служб Reporting Services.|  
+|[Передача параметров сведений об устройстве для модулей подготовки отчетов](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|Описываются настройки сведений об устройстве, используемые для подготовки отчетов в различных форматах.|  
+|[Параметры модуля доставки Reporting Services](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|Описываются параметры, используемые для доставки отчетов с использованием электронной почты сервера отчетов.|  
 |[Использование службы Reporting Services заголовки SOAP](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Описывает использование заголовков SOAP в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Введение в обработку исключений в службах Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Предоставляет сведения о процессе обработки ошибок в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Общие сведения об обработке исключений в службах Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Предоставляет сведения о процессе обработки ошибок в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>См. также:  
  [Веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

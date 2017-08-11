@@ -17,11 +17,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f4917fea7fbaa0f652287a08e0a3a5727feaad9e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="new-system-role-management-studio"></a>Создание системной роли (среда Management Studio)
@@ -48,8 +48,8 @@ ms.lasthandoff: 08/03/2017
  Описание задачи с указанием поддерживаемых ею операций и разрешений.  
   
 ## <a name="see-also"></a>См. также  
- [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Определение ролей](../../reporting-services/security/role-definitions.md)  
+ [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Определения ролей](../../reporting-services/security/role-definitions.md)  
   
   
 

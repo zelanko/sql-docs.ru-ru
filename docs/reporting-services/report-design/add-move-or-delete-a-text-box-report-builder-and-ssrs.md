@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)
@@ -76,8 +76,8 @@ ms.lasthandoff: 06/22/2017
     >  Если щелкнуть текстовое поле в режиме редактирования, то для выбора этого текстового поля необходимо нажать клавишу ESC.  
   
 ## <a name="see-also"></a>См. также  
- [Текстовые поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Сочетания клавиш (построитель отчетов)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [Текстовые поля &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Сочетания клавиш &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

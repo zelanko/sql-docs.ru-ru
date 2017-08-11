@@ -17,11 +17,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ee4dd3c00d9e250fd3c773a917ad3cf90f84c4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="export-a-report-using-url-access"></a>Экспорт отчета с применением доступа по URL-адресу
@@ -50,7 +50,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  Если в URL-адрес не включен параметр *Format* , то сервер отчетов определяет браузер и подготавливает для него отчет в соответствующем HTML-формате.  
   
 ## <a name="see-also"></a>См. также  
- [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
- [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
+ [Доступ к URL-адрес &#40; Службы SSRS &#41;](../reporting-services/url-access-ssrs.md)   
+ [Ссылка на параметр доступа URL-адрес](../reporting-services/url-access-parameter-reference.md)  
   
   

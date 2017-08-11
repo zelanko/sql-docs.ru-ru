@@ -15,11 +15,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  Используйте кнопку **Выбрать** в группе «Соединение» для выбора общего источника данных в отчете или нахождения общего источника данных на сервере отчетов.  
   
 > [!NOTE]  
->  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в статье [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+>  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в разделе [создание, изменение и удаление общих источников данных &#40; Службы SSRS &#41; ](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
   
  Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Дополнительные сведения о планах обновления кэша см. в разделе [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+ Дополнительные сведения о планах обновления кэша см. в разделе [кэша общие наборы данных &#40; Службы SSRS &#41; ](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 ### <a name="query-designer"></a>Конструктор запросов  
  С помощью панели инструментов конструктора запросов создаются запросы, указывающие, какие данные следует извлечь с помощью подключения к данным. Отображаемая панель инструментов зависит от конструктора запросов, который связан с типом источника данных из подключения к данным.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

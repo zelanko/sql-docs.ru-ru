@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
  При использовании модуля подготовки отчетов к **просмотру** , например модуля подготовки отчетов в формате HTML, может потребоваться узнать, как будет выглядеть отчет при печати, а также насколько хорошо он будет подготовлен к просмотру при использовании модуля подготовки отчета к печати, например PDF. Во время создания или обновления отчета в построителе или конструкторе отчетов можно осуществить его предварительный просмотр и экспорт.  
   
- Модули подготовки отчетов к **печати** наиболее сильно влияют на макет отчета и физический размер страницы. Дополнительные сведения см. в разделе [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Модули подготовки отчетов к**печати** наиболее сильно влияют на макет отчета и физический размер страницы. Дополнительные сведения см. в разделе [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
    
 ##  <a name="HowTo"></a> Инструкции  
  В данном разделе содержатся пошаговые инструкции о разбиении отчетов на страницы.  

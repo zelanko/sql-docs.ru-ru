@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="update-a-resource-report-manager"></a>обновить ресурс (диспетчер отчетов)
@@ -49,8 +49,8 @@ ms.lasthandoff: 06/22/2017
  Если обновляемый ресурс содержит изображение, используемое в отчете, необходимо обновить отчет, чтобы изображение в нем обновилось.  
   
 ## <a name="see-also"></a>См. также  
- [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Страница "Передача файла" (диспетчер отчетов)](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Страница «содержимое» &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Страница отправки файла &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Передача файлов в папку](../../reporting-services/report-server/upload-files-to-a-folder.md)   
  [Справка F1 диспетчера отчетов](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   

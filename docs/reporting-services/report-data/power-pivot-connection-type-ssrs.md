@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Тип соединения PowerPivot (SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  Данные в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] имеют высокую степень сжатия. Данные, извлекаемые из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для отчета, не сжимаются. Используйте конструктор запросов, чтобы указать фильтры и параметры, ограничивающие объем данных в отчете.  
   
- В отличие от куба служб Analysis Services, модель [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не имеет иерархий. Чтобы предоставить схожую функциональность связанным срезам в книге, необходимо создать каскадные параметры в отчете. Дополнительные сведения см. в разделе [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ В отличие от куба служб Analysis Services, модель [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не имеет иерархий. Чтобы предоставить схожую функциональность связанным срезам в книге, необходимо создать каскадные параметры в отчете. Дополнительные сведения см. в разделах [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  В некоторых случаях может потребоваться изменить выражения, чтобы привести их в соответствие со значениями базовых данных из модели [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Может потребоваться изменить выражения, чтобы преобразовать данные в нужный тип данных или чтобы добавить или удалить агрегатную функцию. Например, чтобы преобразовать тип данных из String в Integer, можно использовать функцию `=CInt`. Перед публикацией отчета всегда проверяйте, отображаются ли в отчете ожидаемые значения данных из модели [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

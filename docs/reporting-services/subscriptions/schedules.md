@@ -22,11 +22,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedules"></a>Расписания
@@ -129,7 +129,7 @@ ms.lasthandoff: 06/22/2017
 >  Для временной или полной остановки формирования запланированных действий можно использовать аспект **Настройка контактной зоны для служб Reporting Services** . Можно создать и развернуть пользовательские модули доставки, но сам обработчик планирования и доставки не является расширяемым. Нельзя изменить его способ управления событиями и уведомлениями. Дополнительные сведения об отключении функций см. в подразделе **Запланированные события и доставка** раздела [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ###  <a name="bkmk_stoppingagent"></a> Последствия остановки работы агента SQL Server  
- Агент SQL Server используется по умолчанию для обработки запланированного отчета. При остановке службы никакие новые запросы обработки в очередь не добавятся, если только они не будут добавляться программно вызовом метода <xref:ReportService2010.ReportingService2010.FireEvent%2A>. При перезагрузке службы возобновляются задания, создающие требования на обработку отчета. Сервер отчетов не пытается воссоздать задания обработки отчета, которые могли возникнуть, когда агент SQL Server находился в режиме «вне сети». Если агент SQL Server не будет работать неделю, то все запланированные на эту неделю действия будут утеряны.  
+ Агент SQL Server используется по умолчанию для обработки запланированного отчета. При остановке службы никакие новые запросы обработки в очередь не добавятся, если только они не будут добавляться программно вызовом метода <xref:ReportService2010.ReportingService2010.FireEvent%2A> . При перезагрузке службы возобновляются задания, создающие требования на обработку отчета. Сервер отчетов не пытается воссоздать задания обработки отчета, которые могли возникнуть, когда агент SQL Server находился в режиме «вне сети». Если агент SQL Server не будет работать неделю, то все запланированные на эту неделю действия будут утеряны.  
   
 > [!NOTE]  
 >  Функции, которые выполняет агент SQL Server для служб Reporting Services, могут быть заменены на пользовательский код, который вызывает метод <xref:ReportService2010.ReportingService2010.FireEvent%2A> для добавления событий в очередь.  
@@ -139,10 +139,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Создание, изменение и удаление моментальных снимков в журнале отчетов](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Кэширование отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   

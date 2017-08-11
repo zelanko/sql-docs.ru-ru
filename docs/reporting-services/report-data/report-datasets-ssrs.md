@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-datasets-ssrs"></a>Наборы данных отчетов (SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  Также можно добавить наборы данных в отчет, добавив элементы отчета, включающие наборы данных, от которых они зависят. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Дополнительные сведения о создании отчета с данными из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Учебник. Создание простого табличного отчета (построитель отчетов)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). О построении отчета, включающего собственные данные, см. в разделе [Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Чтобы узнать, как создать отчет, отображающий данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных см. в разделе [учебник: создание простого табличного отчета &#40; Построитель отчетов &#41; ](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). О построении отчета, включающего собственные данные, см. в разделе [Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,15 +64,15 @@ ms.lasthandoff: 06/22/2017
 -   Добавить внедренные наборы данных, основанные на встроенных источниках данных.  
   
 > [!NOTE]  
->  На сервере отчетов безопасность общих элементов отчетов обеспечивается отдельно или с помощью наследования разрешений от папок, в которых они были опубликованы. Чтобы разрешить другим пользователям доступ к общим наборам данных, сохраненным определенным пользователем, необходимо понимать, каким образом предоставляются эти права. Дополнительные сведения см. в разделе [Безопасность (построитель отчетов)](../../reporting-services/report-builder/security-report-builder.md) или [Защита элементов общего набора данных](../../reporting-services/security/secure-shared-dataset-items.md).  
+>  На сервере отчетов безопасность общих элементов отчетов обеспечивается отдельно или с помощью наследования разрешений от папок, в которых они были опубликованы. Чтобы разрешить другим пользователям доступ к общим наборам данных, сохраненным определенным пользователем, необходимо понимать, каким образом предоставляются эти права. Дополнительные сведения см. в разделе [безопасности &#40; Построитель отчетов &#41; ](../../reporting-services/report-builder/security-report-builder.md) или [безопасных элементов общего набора данных](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  После добавления данных в отчет можно организовать данные на странице отчета с помощью частей данных, изменить элементы отчета, опубликовать изменения для совместного использования и дать возможность пользователям ограничить или сортировать данные в отчете. Дополнительные сведения см. в соответствующих разделах:  
   
 -   [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
--   [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+-   [Графики и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
--   [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+-   [Спарклайны и гистограммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
 -   [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
  В конструкторе запросов можно выполнить запрос, чтобы посмотреть пример данных и проверить синтаксис команды запроса. Имена столбцов в результирующем наборе становятся именами полей, отображаемых в области данных отчета. Результирующий набор должен быть простым набором строк и столбцов с одинаковым количеством значений для каждой строки данных. Получение нескольких результирующих наборов из одного запроса не поддерживается. Неоднородная иерархия без постоянного количества столбцов, из которой может быть получено разное количество значений данных для каждой строки, не поддерживается.  
   
- Для выполнения запроса необходимо иметь учетные данные времени разработки. Дополнительные сведения см. в разделах [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) и [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Для выполнения запроса необходимо иметь учетные данные времени разработки. Дополнительные сведения см. в разделе [укажите учетные данные в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) и [подключения к данным, источники данных и строк соединения &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
  Взаимодействие между модулем обработки данных и внешним источником данных обрабатывается поставщиками данных. Поддержка синтаксиса команд запроса, параметров запроса, типов данных для значений в результирующем наборе определяется для каждого поставщика данных. Дополнительные сведения см. в разделе для конкретных модулей обработки данных и в разделе [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
@@ -138,6 +138,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Отчет разработки концепции &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
