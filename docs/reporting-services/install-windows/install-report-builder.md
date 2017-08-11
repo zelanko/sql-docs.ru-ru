@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-report-builder"></a>Установка построителя отчетов
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Обычно администратор устанавливает и настраивает службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], предоставляет разрешение на загрузку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] с веб-портала и управляет папками и разрешениями для отчетов, элементов отчетов и общих наборов данных, сохраняемых на сервере отчетов. Дополнительные сведения об администрировании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Сервер отчетов служб Reporting Services (собственный режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Обычно администратор устанавливает и настраивает службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], предоставляет разрешение на загрузку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] с веб-портала и управляет папками и разрешениями для отчетов, элементов отчетов и общих наборов данных, сохраняемых на сервере отчетов. Дополнительные сведения о [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] администрирования в разделе [сервера отчетов служб Reporting Services &#40; Основной режим &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] из веб-портала или библиотеки SharePoint 
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  В меню **Пуск** выберите команду **Выполнить**.  
   
-4.  В окне **Открыть** введите **cmd**.  
+4.  В окне **Открыть** введите **cmd.**.  
   
 5.  В окне командной строки перейдите к папке, в которой был сохранен файл ReportBuilder3.msi.  
   

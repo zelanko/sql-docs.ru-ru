@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dcd1af4aee2c0267f1443d87d80be1e3cc2ad8b3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Добавление действия развертывания и свертывания к элементу отчета  
   
-1.  В представлении конструктора отчетов, щелкните правой кнопкой мыши элемент отчета, чтобы показать или скрыть и нажмите кнопку  *\<элемент отчета >* **свойства**. *\<Элемент отчета >* **свойства** откроется диалоговое окно для элемента отчета.  
+1.  В представлении конструктора отчетов, щелкните правой кнопкой мыши элемент отчета, чтобы показать или скрыть и нажмите кнопку  *\<элемент отчета >* **свойства**.  *\<Элемент отчета >* **свойства** откроется диалоговое окно для элемента отчета.  
   
 2.  Щелкните **Видимость**.  
   
@@ -102,6 +102,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Действие детализации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Скрытие элемента (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Скрыть элемент &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
