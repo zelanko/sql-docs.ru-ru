@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 441dabbd57cb05db349265b2eaf338bed64bd20b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Новые и недавно обновленные: службы Reporting Services для SQL Server
