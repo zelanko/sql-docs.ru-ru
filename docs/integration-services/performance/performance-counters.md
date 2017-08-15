@@ -1,31 +1,36 @@
 ---
-title: "Счетчики производительности | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "журналы [службы Integration Services], счетчики производительности"
-  - "счетчики производительности [службы Integration Services]"
-  - "поток данных [службы Integration Services], производительность"
-  - "счетчики [службы Integration Services]"
-  - "подсистема обработки потока данных [службы Integration Services]"
+title: "Счетчики производительности | Документы Microsoft"
+ms.custom: 
+ms.date: 08/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Integration Services], performance counters
+- performance counters [Integration Services]
+- data flow [Integration Services], performance
+- counters [Integration Services]
+- data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Счетчики производительности
+# <a name="performance-counters"></a>Счетчики производительности
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
   
-> **ПРИМЕЧАНИЕ.** Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, где запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
+> **ПРИМЕЧАНИЕ.** Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, где запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
   
  В следующей таблице приводятся описания счетчиков производительности.  
   
@@ -48,8 +53,8 @@ caps.handback.revision: 63
   
  Сведения об улучшении производительности см. в разделе [Возможности для повышения производительности потока данных](../../integration-services/data-flow/data-flow-performance-features.md).  
   
-## Получение статистики счетчика производительности  
- Для проектов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], которые развертываются на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], статистику счетчика производительности вы можете получить с помощью функции [dm_execution_performance_counters (база данных SSISDB)](../Topic/dm_execution_performance_counters%20\(SSISDB%20Database\).md).  
+## <a name="obtain-performance-counter-statistics"></a>Получение статистики счетчика производительности  
+ Для проектов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], которые развертываются на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], статистику счетчика производительности вы можете получить с помощью функции [dm_execution_performance_counters (база данных SSISDB)](../../integration-services/functions-dm-execution-performance-counters.md).  
   
  В следующем примере функция возвращает статистику для запущенного выполнения с идентификатором 34.  
   
@@ -64,17 +69,57 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-> **ВАЖНО!** Для члена роли базы данных **ssis_admin** возвращается статистика производительности всех активных выполнений.  Если пользователь не является членом роли базы данных **ssis_admin**, возвращается статистика производительности активных выполнений, для которых имеются разрешения на чтение.  
+> **ВАЖНО!** Для члена роли базы данных **ssis_admin** возвращается статистика производительности всех активных выполнений.  Если пользователь не является членом роли базы данных **ssis_admin** , возвращается статистика производительности активных выполнений, для которых имеются разрешения на чтение.  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
--   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146626) на узле codeplex.com.  
+-   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146626)на узле codeplex.com.  
   
--   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](http://go.microsoft.com/fwlink/?LinkId=150497) на сайте msdn.microsoft.com.  
+-   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](http://go.microsoft.com/fwlink/?LinkId=150497)на сайте msdn.microsoft.com.  
   
 -   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
+
+## <a name="add-a-log-for-data-flow-performance-counters"></a>Добавление журнала для счетчиков производительности потока данных
+  В этой процедуре описывается добавление журнала для счетчиков производительности, поставляемых подсистемой обработки потока данных.  
   
-## См. также  
- [Запуск проектов и пакетов](https://msdn.microsoft.com/library/ms141708.aspx)  
+> [!NOTE]  
+>  Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, на котором запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
   
+### <a name="to-add-logging-of-performance-counters"></a>Добавление ведения журнала счетчиков производительности  
   
+1.  Если используется классический вид **панели управления**, выберите **Администрирование**. Если используется вид по категориям, выберите вначале **Производительность и обслуживание** , затем **Администрирование**.  
+  
+2.  Выберите **Производительность**.  
+  
+3.  В диалоговом окне **Производительность** разверните **Оповещения и журналы производительности**, щелкните правой кнопкой мыши **Журналы счетчиков**и выберите **Новые параметры журнала**. Введите имя журнала. Например, введите **Мой_журнал**.  
+  
+4.  Нажмите кнопку **ОК**.  
+  
+5.  В диалоговом окне **Мой_журнал** нажмите кнопку **Добавить счетчики**.  
+  
+6.  Щелкните **Использовать локальные счетчики** , чтобы вести журнал счетчиков производительности на локальном компьютере, или **Выбрать счетчики с компьютера** и выберите из списка компьютер, на котором требуется вести журнал счетчиков производительности.  
+  
+7.  В диалоговом окне **Добавить счетчики** из списка **Объект:** выберите **SQL Server:SSIS Pipeline** .  
+  
+8.  Чтобы выбрать счетчики производительности, выполните одно из следующих действий:  
+  
+    -   Выберите **Все счетчики** , чтобы вести журналы всех счетчиков производительности.  
+  
+    -   Выберите **Выбрать счетчики из списка** , чтобы выбрать нужные счетчики производительности.  
+  
+9. Нажмите кнопку **Добавить**.  
+  
+10. Щелкните **Закрыть**.  
+  
+11. В диалоговом окне **Мой_журнал** проверьте список счетчиков производительности в списке **Счетчики** .  
+  
+12. Чтобы ввести дополнительные счетчики, повторите шаги с 5 по 10.  
+  
+13. Нажмите кнопку **ОК**.  
+  
+    > [!NOTE]  
+    >  Необходимо запустить службу «Журналы и оповещения производительности» с помощью локальной учетной записи или учетной записи домена, входящей в группу «Администраторы».  
+
+## <a name="see-also"></a>См. также:  
+ [Запуск проектов и пакетов](https://msdn.microsoft.com/library/ms141708.aspx) [событий, регистрируемых в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+
