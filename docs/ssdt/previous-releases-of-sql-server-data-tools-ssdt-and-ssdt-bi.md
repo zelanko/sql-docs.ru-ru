@@ -1,7 +1,7 @@
 ---
 title: "Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI) | Документация Майкрософт"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,16 @@ ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 1fcc7de6bca7ac383f46aa7a76ca4382e706080d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI)
+
 SQL Server Data Tools (SSDT) предоставляет шаблоны проектов и рабочих областей конструирования для создания различных типов содержимого SQL Server: реляционных баз данных, моделей Analysis Services, отчетов Reporting Services и пакетов Integration Services.  
   
 Продукт основан на оболочке Visual Studio и выпускается совместно с SQL Server. Новые версии SSDT включают в себя новейшие функции SQL Server. В более поздние версии входят шаблоны и среда разработки, актуальные на момент выхода конкретного выпуска.  
@@ -33,18 +34,18 @@ SSDT обладает обратной совместимостью. Это оз
 
 ## <a name="recent-downloads"></a>Последние загрузки
 
-Доступ к трем последним загруженным файлам предоставляется на случай маловероятных проблем с [последним выпуском](https://msdn.microsoft.com/library/mt204009.aspx). 
+Доступ к трем последним загруженным файлам предоставляется на случай маловероятных проблем с [последним выпуском](download-sql-server-data-tools-ssdt.md). 
 
 |Выпуск| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.1|[SSDT для VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* Недоступно|
 |17.0|[SSDT для VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* Недоступно|
 |16.5|[SSDT для VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT для VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
-|16.4.1|[SSDT для VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT для VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
 
 \* SSDT поддерживает две последние версии Visual Studio. После выхода Visual Studio 2017 решение SSDT для VS2013 больше не обновляется. Дополнительные сведения см. в разделе *Часто задаваемые вопросы* в [этой записи блога группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
-## <a name="links-to-download-pages"></a>Ссылки на страницы скачивания  
+## <a name="links-to-download-pages"></a>Ссылки на страницы скачивания 
 **Реляционная база данных SQL: ядро СУБД**  
   
 Предоставляет шаблоны для создания реляционных баз данных для реляционной СУБД и базы данных SQL Azure. SSDT не зависит от версии в рамках структуры реляционной базы данных. Вы можете использовать Visual Studio 2012 или 2013 с любой версией ядра СУБД SQL Server или базы данных SQL Azure.  
@@ -76,5 +77,5 @@ Business Intelligence Development Studio (BIDS) устанавливается �
 ## <a name="see-also"></a>См. также:  
 [Скачать SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Скачивание SQL Server Management Studio (службы SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
-  
+[Средства и программы SQL](../tools/overview-sql-tools.md)
 
