@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.translationtype: HT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Руководство по архитектуре журнала транзакций SQL Server и управлению им
@@ -217,7 +217,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="additional-reading"></a>Дополнительные материалы  
  Мы рекомендуем следующие статьи и книги, из которых можно почерпнуть дополнительные сведения о журнале транзакций.  
   
- [Основные сведения о ведении журнала и восстановлении из резервных копий в SQL Server. Автор: Пол Ренделл (Paul Randall)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
+ [Основные сведения о ведении журнала и восстановлении из резервных копий в SQL Server. Автор: Пол Рендел (Paul Randal)](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
   
  [Управление журналом транзакций SQL Server. Авторы: Тони Дэвис (Tony Davis) и Гейл Шоу (Gail Shaw)](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
