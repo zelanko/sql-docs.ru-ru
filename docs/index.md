@@ -4,10 +4,10 @@ hide_bc: true
 title: "Документация по Microsoft SQL | Документация Майкрософт"
 description: "Сведения об SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: d37309cb29d315e2382213ee762ce1cc83e19e77
-ms.openlocfilehash: 1d61c44b74a4987b32b87bab9d061926aa177052
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: ec933d582956a21fee23173f5c08bec3d1fa807e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
@@ -239,8 +239,13 @@ ms.lasthandoff: 08/09/2017
                                                 <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Переместить базу данных</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Скачать инструменты миграции</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Обновите свою базу данных SDL Server</h4>
                                                 <ul>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54090">Database Experimentation Assistant</a></li> 
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Средства и службы миграции</h4>
+                                                <ul>
+                                                    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Служба миграции базы данных Azure (закрытая предварительная версия)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Помощник по миграции данных</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA для Access</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA для DB2</a></li>
@@ -248,10 +253,10 @@ ms.lasthandoff: 08/09/2017
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA для Oracle</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA для SAP ASE</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Переместить базу данных SQL Server</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Перенесите свою базу данных в Azure</h4>
                                                 <ul>
-                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">В базу данных SQL Azure</a></li>
-                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">В хранилище данных SQL Azure</a></li>
+                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">Перенос данных в базу данных SQL Azure</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">Перенос данных в хранилище данных SQL Azure</a></li>
                                                 </ul>
                                             </div>
                                         </div>
