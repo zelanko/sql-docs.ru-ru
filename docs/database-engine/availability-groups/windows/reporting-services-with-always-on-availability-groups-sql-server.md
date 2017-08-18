@@ -1,34 +1,39 @@
 ---
-title: "Службы Reporting Services с группами доступности AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы Reporting Services, группы доступности AlwaysOn"
-  - "Группы доступности [SQL Server], взаимодействие"
+title: "Службы Reporting Services с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 34063117645178c5e8326c3245d6368baa8480e5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
+# <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе содержатся сведения о настройке компонента [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для работы с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (группами доступности) в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Существует три варианта использования служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: базы данных для источников данных отчетов, базы данных сервера отчетов и конструирование отчетов. Поддерживаемые функции и необходимая конфигурация для разных вариантов использования будут различными.  
+  В этом разделе содержатся сведения о настройке компонента [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для работы с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (группами доступности) в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Существует три варианта использования служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : базы данных для источников данных отчетов, базы данных сервера отчетов и конструирование отчетов. Поддерживаемые функции и необходимая конфигурация для разных вариантов использования будут различными.  
   
  Основное преимущество применения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с источниками данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключается в возможности использования доступных для чтения вторичных реплик в качестве источников данных для отчетов, при этом вторичные реплики продолжают обеспечивать отработку отказа для базы данных-источника.  
   
- Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Часто задаваемые вопросы по AlwaysOn для SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в статье [Часто задаваемые вопросы по AlwaysOn для SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
   
  **В этом разделе:**  
   
@@ -51,18 +56,18 @@ caps.handback.revision: 22
 ##  <a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] использует .Net framework 4.0 и поддерживает свойства строки соединения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
   
- Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
+ Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
   
 > **Сообщение об ошибке.** «Ключевое слово "applicationintent" не поддерживается»  
   
- Это сообщение выдается в том случае, когда в строке подключения служб [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] указано одно из свойств [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , которое сервер не распознает. Указанное сообщение об ошибке отображается при нажатии кнопки «Проверка подключения» в пользовательском интерфейсе служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], а также при просмотре отчета, если на сервере отчета включено отслеживание удаленных ошибок.  
+ Это сообщение выдается в том случае, когда в строке подключения служб [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] указано одно из свойств [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , которое сервер не распознает. Указанное сообщение об ошибке отображается при нажатии кнопки «Проверка подключения» в пользовательском интерфейсе служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , а также при просмотре отчета, если на сервере отчета включено отслеживание удаленных ошибок.  
   
  Дополнительные сведения о необходимом исправлении см. в разделе [Исправление КБ 2654347A добавляет поддержку функций AlwaysOn из SQL Server 2012 в платформу .NET Framework 3.5 с пакетом обновления 1 (SP1)](http://go.microsoft.com/fwlink/?LinkId=242896).  
   
- Дополнительные сведения о требованиях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Дополнительные сведения о требованиях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , например **RSreportserver.config** , не поддерживаются как часть функциональности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Если изменения в файл конфигурации на одном из серверов отчетов вносятся вручную, то необходимо будет вручную обновить реплики.  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] файлы конфигурации, например **RSreportserver.config**, не поддерживаются как часть функциональности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Если изменения в файл конфигурации на одном из серверов отчетов вносятся вручную, то необходимо будет вручную обновить реплики.  
   
 ##  <a name="bkmk_reportdatasources"></a> Источники данных отчетов и группы доступности  
  Источники данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] будут работать по-разному в зависимости от того, каким образом администратор настроил среду групп доступности.  
@@ -75,9 +80,9 @@ caps.handback.revision: 22
   
  Строка соединения также может содержать новые свойства соединения AlwaysOn, которые настраивают запросы отчетов на использование вторичной реплики для доступных только для чтения отчетов. Использование вторичной реплики для запросов отчетов позволяет снизить нагрузку на доступную для чтения и записи первичную реплику. На следующем рисунке приведен пример конфигурации группы доступности из трех реплик, где строки подключения источников данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] имеют параметр ApplicationIntent=ReadOnly. В этом примере запросы отчетов отправляются вторичной, а не первичной реплике.  
   
- ![](../Image/rs_Always On_Basic.gif)  
+ 
   
- Ниже приведен пример строки подключения, где [AvailabilityGroupListenerName] ― это **DNS-имя прослушивателя**, заданное при создании реплик.  
+ Ниже приведен пример строки подключения, где [AvailabilityGroupListenerName] ― это **DNS-имя прослушивателя** , заданное при создании реплик.  
   
  `Data Source=[AvailabilityGroupListenerName];Initial Catalog = AdventureWorks2016; ApplicationIntent=ReadOnly`  
   
@@ -85,11 +90,11 @@ caps.handback.revision: 22
   
  Место изменения строки подключения будет зависеть от способа создания и публикации отчетов.  
   
--   **Собственный режим.** Для общих источников данных и отчетов, которые уже опубликованы на сервере отчетов, работающем в собственном режиме, используйте [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)].  
+-   **Собственный режим.** Для общих источников данных и отчетов, которые уже опубликованы на сервере отчетов, работающем в собственном режиме, используйте [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] .  
   
 -   **Режим SharePoint.** Для отчетов, которые уже опубликованы на сервере SharePoint, пользуйтесь страницами конфигурации SharePoint в библиотеках документов.  
   
--   **Конструирование отчетов:** при создании отчетов пользуйтесь [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения приведены в разделе «Конструирование отчетов» этой главы.  
+-   **Конструирование отчетов:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения приведены в разделе «Конструирование отчетов» этой главы.  
   
  **Дополнительные ресурсы**  
   
@@ -110,18 +115,18 @@ caps.handback.revision: 22
  При использовании доступной только для чтения вторичной реплики в качестве источника данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] важно обеспечить соответствие задержки обновления данных потребностям пользователей отчетов.  
   
 ##  <a name="bkmk_reportdesign"></a> Конструирование отчетов и группы доступности  
- При конструировании отчетов в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] или проекта отчета в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] пользователь может настроить строку подключения к источнику данных отчета с помощью новых свойств соединения, предусмотренных в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Поддержка новых свойств соединения зависит от того, где пользователь просматривает отчеты.  
+ При конструировании отчетов в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] или проекта отчета в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]пользователь может настроить строку подключения к источнику данных отчета с помощью новых свойств соединения, предусмотренных в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Поддержка новых свойств соединения зависит от того, где пользователь просматривает отчеты.  
   
--   **Локальный предварительный просмотр:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] и среда [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] используют .Net Framework 4.0 и поддерживают свойства строки подключения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Локальный предварительный просмотр:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] используют .Net Framework 4.0 и поддерживают свойства строки подключения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Удаленный или серверный режим просмотра.** После публикации отчета на сервере отчетов или при просмотре в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] вы можете увидеть приведенное ниже сообщение об ошибке. Это означает, что вы просматриваете отчет на сервере отчетов, и на этом сервере не установлено исправление платформы .Net Framework 3.5 с пакетом обновления 1 (SP1) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Удаленный или серверный режим просмотра.** После публикации отчета на сервере отчетов или при просмотре в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]вы можете увидеть приведенное ниже сообщение об ошибке. Это означает, что вы просматриваете отчет на сервере отчетов, и на этом сервере не установлено исправление платформы .Net Framework 3.5 с пакетом обновления 1 (SP1) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 > **Сообщение об ошибке.** «Ключевое слово "applicationintent" не поддерживается»  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Базы данных сервера отчетов и группы доступности  
  Службы Reporting Services имеют ограниченную поддержку использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с базами данных сервера отчетов. В группе доступности базы данных сервера отчетов можно настроить так, чтобы они были частью реплики. Однако при отработке отказа службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не будут автоматически использовать другую реплику баз данных сервера отчетов. Использование MultiSubnetFailover не поддерживается для баз данных сервера отчетов.  
   
- Чтобы выполнить отработку отказа или восстановление, необходимо произвести определенные действия вручную или воспользоваться пользовательскими скриптами автоматизации. ПЕРЕД выполнением этих действий некоторые функции сервера отчетов могут работать неправильно после отработки отказа [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+ Чтобы выполнить отработку отказа или восстановление, необходимо произвести определенные действия вручную или воспользоваться пользовательскими скриптами автоматизации. ПЕРЕД выполнением этих действий некоторые функции сервера отчетов могут работать неправильно после отработки отказа [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 > [!NOTE]  
 >  При планировании отработки отказа и аварийного восстановления для баз данных сервера отчетов рекомендуется всегда создавать резервную копию ключа шифрования сервера отчетов.  
@@ -143,7 +148,7 @@ caps.handback.revision: 22
   
 -   ReportServerTempDB  
   
- В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
   
 > [!NOTE]  
 >  Серверы отчетов, работающие в режиме интеграции с SharePoint, используют процесс синхронизации между базами данных приложения служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и базами данных содержимого SharePoint. Важно поддерживать работу баз данных сервера отчетов и баз данных содержимого вместе. Следует рассмотреть возможность включения этих баз данных в одну группу доступности, чтобы отработка отказа и восстановление для них выполнялось одновременно. Рассмотрим следующий сценарий.  
@@ -163,7 +168,7 @@ caps.handback.revision: 22
   
 -   **Учетные данные сервера отчетов.** Во вторичных репликах, созданных из первичной, необходимо создать соответствующие учетные данные сервера отчетов. Действия, которые для этого нужно предпринять, зависят от типа проверки подлинности, используемой в среде служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: учетная запись службы Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], учетная запись пользователя Windows или проверка подлинности SQL Server. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации SSRS)](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Обновите подключение к базе данных, указав в нем DNS-имя прослушивателя. В отношении серверов отчетов, работающих в собственном режиме, измените параметр **Имя базы данных сервера отчетов** в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В режиме интеграции с SharePoint измените **Имя сервера базы данных** для приложений служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Обновите подключение к базе данных, указав в нем DNS-имя прослушивателя. В отношении серверов отчетов, работающих в собственном режиме, измените параметр **Имя базы данных сервера отчетов** в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint измените **Имя сервера базы данных** для приложений служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> Действия по выполнению аварийного восстановления баз данных сервера отчетов  
  После отработки отказа на вторичную реплику, выполненной [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , необходимо выполнить следующие действия.  
@@ -189,9 +194,9 @@ caps.handback.revision: 22
   
 -   Фоновая обработка, которая обычно запускается во время отработки отказа, не запускается, поскольку агент SQL Server не способен записывать данные в базе данных сервера отчетов, и эти данные не будут синхронизированы с новой первичной репликой.  
   
--   После завершения отработки отказа базы данных и перезапуска службы сервера отчетов задания агента SQL Server будут автоматически созданы повторно. Пока задания агента SQL не будут воссозданы, любая фоновая обработка, связанная с заданиями агента SQL Server, выполняться не будет. Сюда входят подписки расписания и моментальные снимки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   После завершения отработки отказа базы данных и перезапуска службы сервера отчетов задания агента SQL Server будут автоматически созданы повторно. Пока задания агента SQL не будут воссозданы, любая фоновая обработка, связанная с заданиями агента SQL Server, выполняться не будет. Сюда входят подписки расписания и моментальные снимки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Начало работы с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
@@ -200,3 +205,5 @@ caps.handback.revision: 22
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+
+

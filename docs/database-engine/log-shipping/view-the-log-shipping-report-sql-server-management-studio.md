@@ -1,27 +1,32 @@
 ---
-title: "просмотреть отчет доставки журналов (среда SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "просмотр отчетов доставки журналов"
-  - "отображение отчета доставки журналов"
-  - "доставка журналов [SQL Server], мониторинг"
-  - "доставка журналов [SQL Server], просмотр отчетов"
+title: "Просмотр отчета доставки журналов (среда SQL Server Management Studio) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing log shipping reports
+- displaying log shipping reports
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae6798ce7212ece23767ab31884c1ccabb568fd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# просмотреть отчет доставки журналов (среда SQL Server Management Studio)
+# <a name="view-the-log-shipping-report-sql-server-management-studio"></a>просмотреть отчет доставки журналов (среда SQL Server Management Studio)
   В этом подразделе описывается, как в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]просмотреть отчет «Состояние доставки журналов транзакций», Отчет состояния может быть запущен на сервере-источнике, сервере-получателе или сервере мониторинга. Для получения наиболее полных сведений о конфигурации доставки журналов просматривайте отчет на экземпляре сервера мониторинга.  
   
  Он отражает состояние всех действий по доставке журналов, доступных на сервере, к которому выполнено подключение. Если этот экземпляр сервера участвует в нескольких конфигурациях с разными ролями (например в роли монитора для одной базы данных и в роли сервера-получателя для другой), отображаемые результаты будут содержать сведения о каждой из конфигураций в соответствии с выполняемыми ролями. Если хранимая процедура в состоянии подключиться к экземпляру сервера мониторинга, определенного для данной конфигурации доставки журналов, в отчет выводятся дополнительные сведения, относящиеся к этой конфигурации.  
@@ -38,7 +43,7 @@ caps.handback.revision: 18
   
  Для получения данных отчет вызывает хранимую процедуру **sp_help_log_shipping_monitor**. Дополнительные сведения о требуемых разрешениях см. в статье [sp_help_log_shipping_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md).  
   
-### Вывод отчета состояния доставки журналов транзакций на экземпляре сервера  
+### <a name="to-display-the-transaction-log-shipping-status-report-on-a-server-instance"></a>Вывод отчета состояния доставки журналов транзакций на экземпляре сервера  
   
 1.  Подключитесь к серверу мониторинга, серверу-источнику или серверу-получателю.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 18
   
 3.  Выберите **Состояние доставки журналов транзакций**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за доставкой журналов (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
   

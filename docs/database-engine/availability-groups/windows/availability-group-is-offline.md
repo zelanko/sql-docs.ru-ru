@@ -1,28 +1,33 @@
 ---
-title: "Группа доступности в режиме вне сети | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp2online.issues.f1"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], политики"
+title: "Группа доступности в режиме вне сети | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.agp2online.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c64ddb1c8c152594a359c1b10e0cb621e25bc11e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Группа доступности в режиме вне сети
+# <a name="availability-group-is-offline"></a>Группа доступности в режиме вне сети
     
-## Введение  
+## <a name="introduction"></a>Введение  
   
 |||  
 |-|-|  
@@ -31,15 +36,15 @@ caps.handback.revision: 14
 |**Категория**|**Критическая**|  
 |**Аспект**|Группа доступности|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Эта политика проверяет состояние группы доступности (режим «в сети» или режим «вне сети»). Политика находится в нерабочем состоянии и при переходе кластерного ресурса группы доступности в режим «вне сети» и отсутствии у группы доступности первичной реплики формируется предупреждение.  
   
  Политика находится в рабочем состоянии, если кластерный ресурс группы доступности находится в режиме «в сети», а у группы доступности имеется первичная реплика.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности в режиме "вне сети"](http://go.microsoft.com/fwlink/p/?LinkId=220850) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности в режиме "вне сети"](http://go.microsoft.com/fwlink/p/?LinkId=220850) в TechNet Wiki.  
   
-## Возможные причины  
+## <a name="possible-causes"></a>Возможные причины  
  Эта проблема могла быть вызвана сбоем в работе экземпляра сервера, на котором размещается первичная реплика, или переходом в режим «вне сети» ресурса группы доступности отказоустойчивого кластера Windows Server. Ниже перечислены возможные причины работы группы доступности в режиме «вне сети»:  
   
 -   Для группы доступности не настроен режим автоматического перехода на другой ресурс. Первичная реплика становится недоступной и у всех реплик в группе доступности появляется роль RESOLVING.  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 -   Для группы доступности выполняется автоматический, выполняемый вручную или принудительный переход на другой ресурс.  
   
-## Возможные решения  
+## <a name="possible-solutions"></a>Возможные решения  
  Ниже перечислены возможные решения этой проблемы:  
   
 -   При переходе экземпляра SQL Server первичной реплики в нерабочее состояние перезапустите сервер и убедитесь в восстановлении рабочего состояния группы доступности.  
@@ -71,8 +76,9 @@ caps.handback.revision: 14
   
 -   Если выполняется отработка отказа, дождитесь его завершения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

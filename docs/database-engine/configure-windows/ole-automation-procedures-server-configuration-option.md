@@ -1,27 +1,32 @@
 ---
-title: "Параметр конфигурации сервера &#171;Ole Automation Procedures&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ole Automation Procedures, параметр"
+title: "Параметр конфигурации сервера \"Ole Automation Procedures\" | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Ole Automation Procedures option
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7fc4822969e705f82cf6caa75b893f33e923395
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Параметр конфигурации сервера &#171;Ole Automation Procedures&#187;
+# <a name="ole-automation-procedures-server-configuration-option"></a>Параметр конфигурации сервера «Ole Automation Procedures»
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  C помощью параметра **Ole Automation Procedures** можно указать возможность создания экземпляров объектов OLE-автоматизации в пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)]. Этот параметр также можно настроить с помощью управления на основе политики или с помощью хранимой процедуры **sp_configure**. Дополнительные сведения см. в разделе [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
+  C помощью параметра **Ole Automation Procedures** можно указать возможность создания экземпляров объектов OLE-автоматизации в пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)] . Этот параметр также можно настроить с помощью управления на основе политики или с помощью хранимой процедуры **sp_configure** . Дополнительные сведения см. в разделе [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
  Параметр **Ole Automation Procedures** может принимать следующие значения:  
   
@@ -33,9 +38,9 @@ caps.handback.revision: 20
   
  После включения процедур OLE-автоматизации процедура **sp_OACreate** запустит общую среду выполнения OLE.  
   
- Текущее значение параметра **Ole Automation Procedures** можно просмотреть и изменить с помощью системной хранимой процедуры **sp_configure**.  
+ Текущее значение параметра **Ole Automation Procedures** можно просмотреть и изменить с помощью системной хранимой процедуры **sp_configure** .  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующем примере показан просмотр текущего значения параметра OLE Automation procedures.  
   
 ```  
@@ -56,10 +61,11 @@ RECONFIGURE;
 GO  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Настройка контактной зоны](../../relational-databases/security/surface-area-configuration.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
+

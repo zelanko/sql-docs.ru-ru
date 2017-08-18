@@ -1,54 +1,47 @@
 ---
-title: "Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "зеркальное отображение базы данных [SQL Server], развертывание"
-  - "участники [SQL Server]"
-  - "зеркальное отображение [SQL Server], предварительные условия"
-  - "зеркальное отображение базы данных [SQL Server], рекомендации"
-  - "зеркальное отображение базы данных [SQL Server], ограничения"
-  - "зеркальное отображение базы данных [SQL Server], планирование"
-  - "зеркальное отображение базы данных [SQL Server], о зеркальном отображении базы данных"
+title: "Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- partners [SQL Server]
+- database mirroring [SQL Server], prerequisites
+- database mirroring [SQL Server], recommendations
+- database mirroring [SQL Server], restrictions
+- database mirroring [SQL Server], planning
+- database mirroring [SQL Server], about database mirroring
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d07bee6a462ed184e7bceabb4edcf7903110fd26
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных
+# <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  В этом разделе описываются предварительные условия и рекомендации по настройке зеркального отображения базы данных. Базовые сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- **В этом разделе:**  
-  
--   [Поддержка зеркального отображения базы данных](#DbmSupport)  
-  
--   [Предварительные требования](#Prerequisites)  
-  
--   [Ограничения](#Restrictions)  
-  
--   [Рекомендации по настройке серверов-участников](#RecommendationsForPartners)  
-  
--   [Рекомендации по развертыванию зеркального отображения базы данных](#RecommendationsForDeploying)  
   
 ##  <a name="DbmSupport"></a> Поддержка зеркального отображения базы данных  
- Дополнительные сведения о поддерживаемых выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ Дополнительные сведения о поддержке зеркального отображения базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
- Имейте в виду, что зеркальное отображение базы данных работает при любом поддерживаемом уровне совместимости базы данных. Сведения о поддерживаемых уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).  
+ Имейте в виду, что зеркальное отображение базы данных работает при любом поддерживаемом уровне совместимости базы данных. Сведения о поддерживаемых уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
   
@@ -71,7 +64,6 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  Если зеркальное отображение базы данных было остановлено, то перед тем как заново запустить его, необходимо применить к зеркальной базе данных все последующие резервные копии журналов основной базы данных.  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="Restrictions"></a> Ограничения  
   
@@ -81,9 +73,8 @@ caps.handback.revision: 54
   
 -   Зеркальное отображение базы данных не поддерживает FILESTREAM. Создание файловой группы FILESTREAM на основном сервере невозможно. Настройка зеркального отображения для базы данных, содержащей файловые группы FILESTREAM, невозможна.  
   
--   Зеркальное отображение базы данных не поддерживается с межбазовыми или с распределенными транзакциями. Дополнительные сведения см. в статье [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md).  
+-   Зеркальное отображение базы данных не поддерживается с межбазовыми или с распределенными транзакциями. Дополнительные сведения см. в статье [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="RecommendationsForPartners"></a> Рекомендации по настройке серверов-участников  
   
@@ -105,7 +96,6 @@ caps.handback.revision: 54
   
 -   Мы не даем никаких рекомендаций по поводу того, достаточно ли надежна глобальная сеть (WAN) для зеркального отображения базы данных в режиме высокой безопасности. Если режим высокой безопасности используется в глобальной сети, добавлять следящий сервер в сеанс следует осторожно, чтобы не произошла ненужная автоматическая отработка отказа. Дополнительные сведения см. в подразделе [Рекомендации по развертыванию зеркального отображения базы данных](#RecommendationsForDeploying)далее в этом разделе.  
   
- [&#91;В начало&#93;](#Top)  
   
 ##  <a name="RecommendationsForDeploying"></a> Рекомендации по развертыванию зеркального отображения базы данных  
  Оптимальная производительность зеркального отображения базы данных достигается при помощи асинхронного режима. В сеансе зеркального отображения, который работает в синхронном режиме, наблюдается меньшая производительность, если рабочая нагрузка формирует большое количество данных журнала транзакций.  
@@ -125,12 +115,12 @@ caps.handback.revision: 54
   
 3.  Не торопитесь включать автоматическую отработку отказа до тех пор, пока не убедитесь, что режим высокого уровня безопасности без автоматической отработки отказа удовлетворяет требованиям вашего предприятия и сетевые ошибки не вызывают сбои. Дополнительные сведения см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
- [&#91;В начало&#93;](#Top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
+

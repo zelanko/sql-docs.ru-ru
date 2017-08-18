@@ -1,31 +1,38 @@
 ---
-title: "Нерекомендуемые функции ядра СУБД в SQL Server 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "устаревшие функции [SQL Server]"
-  - "Database Engine [SQL Server], обратная совместимость"
-  - "устаревание [SQL Server], список функций"
+title: "Нерекомендуемые функции ядра СУБД в SQL Server 2016 | Документы Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/12/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [SQL Server]
+- Database Engine [SQL Server], backward compatibility
+- deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 215
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 215
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Нерекомендуемые функции ядра СУБД в SQL Server 2016
+# <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
-  
+  В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
+
+Сведения о [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] см. в разделе [Нерекомендуемые функции ядра СУБД в SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
+
  Наблюдать за использованием устаревших функций можно с помощью объекта производительности и событий трассировки Deprecated Features, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Использование объектов SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
  Значение этих счетчиков также можно получить, выполнив следующую инструкцию:  
@@ -41,7 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Резервное копирование и восстановление|Инструкция RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD остается устаревшей. Поддержка инструкций BACKUP { DATABASE &#124; LOG } WITH PASSWORD и BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD прекращена.|Нет.|BACKUP DATABASE или LOG WITH PASSWORD<br /><br /> BACKUP DATABASE или LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Уровни совместимости|Обновление с версии 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Уровни совместимости доступны только в двух последних версиях. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).|Уровень совместимости базы данных 100|108|  
+|Уровни совместимости|Обновление с версии 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Уровни совместимости доступны только в двух последних версиях. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 100|108|  
 |Объекты базы данных|Возможность возвращать результирующие наборы из триггеров.|None|Возврат результатов из триггера|12|  
 |Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|  
 |Удаленные серверы|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local.|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -56,7 +63,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Уровни совместимости|sp_dbcmptlevel|ALTER DATABASE… SET COMPATIBILITY_LEVEL. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md).|sp_dbcmptlevel|80|  
+|Уровни совместимости|sp_dbcmptlevel|ALTER DATABASE… SET COMPATIBILITY_LEVEL. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Уровни совместимости|Уровень совместимости базы данных 110 и 120|Запланируйте обновление базы данных и приложения для следующего выпуска.|Уровень совместимости базы данных 110<br /><br /> Уровень совместимости базы данных 120||  
 |XML|Создание встроенных схем XDR|Директива XMLDATA для параметра XML FOR является устаревшей. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICT для директивы XMLDATA замены нет.|XMLDATA|181|  
 |Резервное копирование и восстановление|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE или LOG TO TAPE|235|  
@@ -124,22 +131,22 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Задание параметров|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) и [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
 |Параметры конфигурации сервера|Параметр c2 audit<br /><br /> default trace enabled, параметр|[Параметр конфигурации сервера common criteria compliance enabled](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Расширенные события](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Классы модели объектов SMO|**Microsoft.SQLServer. Класс Management.Smo.Information**<br /><br /> **Microsoft.SQLServer. Класс Management.Smo.Settings**<br /><br /> **Microsoft.SQLServer.Management. Класс Smo.DatabaseOptions**<br /><br /> **Microsoft.SqlServer.Management.Smo. Свойство DatabaseDdlTrigger.NotForReplication**|**Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer. Класс Management.Smo.Database**<br /><br /> Нет|None|None|  
-|SQL Server, агент|уведомление**net send** .<br /><br /> Уведомление по пейджеру|Уведомление по электронной почте.<br /><br /> Уведомление по электронной почте. |Нет|None|  
+|SQL Server, агент|уведомление**net send** .<br /><br /> Уведомление по пейджеру|Уведомление по электронной почте.<br /><br /> Уведомление по электронной почте. |None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Интеграция обозревателя решений в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
 |Системные хранимые процедуры|sp_db_increased_partitions|Нет. Поддержка увеличенных секций в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]доступна по умолчанию|sp_db_increased_partitions|253|  
-|Системные таблицы|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Представления совместимости. Дополнительные сведения см. в разделе [Представления совместимости (Transact-SQL)](../Topic/Compatibility%20Views%20\(Transact-SQL\).md).<br /><br /> **\*\* Важно! \*\*** Представления совместимости не предоставляют доступ к метаданным для функций, которые использовались в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Рекомендуется обновить приложения, чтобы они использовали представления каталога. Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|Системные таблицы|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Представления совместимости. Дополнительные сведения см. в разделе [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md).<br /><br /> **\*\* Важно! \*\*** Представления совместимости не предоставляют доступ к метаданным для функций, которые использовались в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Рекомендуется обновить приложения, чтобы они использовали представления каталога. Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |Системные таблицы|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |Системные функции|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |Системные представления|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|Сжатие таблицы|Использование формата хранения vardecimal.|Формат хранения Vardecimal устарел. Средства сжатия данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|Формат хранения vardecimal|200|  
-|Сжатие таблицы|Используйте процедуру the sp_db_vardecimal_storage_format.|Формат хранения Vardecimal устарел. Средства сжатия данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|sp_db_vardecimal_storage_format|201|  
+|Сжатие таблицы|Использование формата хранения vardecimal.|Формат хранения Vardecimal устарел. Средства сжатия данных[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|Формат хранения vardecimal|200|  
+|Сжатие таблицы|Используйте процедуру the sp_db_vardecimal_storage_format.|Формат хранения Vardecimal устарел. Средства сжатия данных[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|sp_db_vardecimal_storage_format|201|  
 |Сжатие таблицы|Используйте процедуру sp_estimated_rowsize_reduction_for_vardecimal.|Вместо этого следует использовать сжатие данных и процедуру sp_estimate_data_compression_savings.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
 |Табличные указания|Указание параметра NOLOCK или READUNCOMMITTED в предложении FROM инструкции UPDATE или DELETE.|Удалите табличные указания NOLOCK и READUNCOMMITTED из предложения FROM.|NOLOCK или READUNCOMMITTED в инструкции UPDATE или DELETE|1|  
 |Табличные указания|Указание табличных подсказок без ключевого слова WITH.|Использование ключевого слова WITH.|Табличное указание без ключевого слова WITH|8|  
 |Табличные указания|INSERT_HINTS||INSERT_HINTS|34|  
 |Текстовые указатели|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT или WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Текстовые указатели|TEXTPTR()<br /><br /> TEXTVALID()|None|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: последовательность вызова функций|Заменено на SELECT *column_list* FROM sys.\<*function_name*>().<br /><br /> Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|синтаксис вызова функции «::»|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: последовательность вызова функций|Заменено на SELECT *column_list* FROM sys.\<*имя_функции*>().<br /><br /> Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)`на `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|синтаксис вызова функции «::»|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Ссылки на столбцы с трех- и четырехкомпонентными именами.|Использование двухкомпонентных имен совместимо со стандартом.|Имя столбца, состоящее более чем из двух компонентов|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Строка, заключенная в кавычки, использовалась как псевдоним столбца для выражения в списке SELECT:<br /><br /> '*string_alias*' = *выражение*|*expression* [AS] *псевдоним_столбца*<br /><br /> *expression* [AS] [*псевдоним_столбца*]<br /><br /> *expression* [AS] "*псевдоним_столбца*"<br /><br /> *expression* [AS] '*псевдоним_столбца*'<br /><br /> *column_alias* = *выражение*|Строковые литералы в качестве псевдонимов столбцов|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Нумерованные процедуры|Нет. Не используйте.|ProcNums|160|  
@@ -149,7 +156,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL в качестве имени столбца в инструкциях DML.|Используйте $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL в качестве имени столбца в инструкциях DML.|Используйте $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование # и ## в качестве имен временной таблицы и временной хранимой процедуры.|Используйте по крайней мере один дополнительный символ.|Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте @, @@, или @@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)].|Не используйте в качестве идентификаторов @ и @@ или имена, начинающиеся с @@.|'@' и имена, начинающиеся с '@@' в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)].|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте @, @@ или @@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@.|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте ключевое слово DEFAULT в качестве значения по умолчанию.|Не используйте слово DEFAULT в качестве значения по умолчанию.|Ключевое слово DEFAULT в качестве значения по умолчанию.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование пробела в качестве разделителя табличных подсказок.|В качестве разделителя отдельных табличных подсказок используйте запятую.|Несколько табличных указаний без запятых|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (*) в режиме совместимости 90.|Вместо этого следует использовать функцию COUNT_BIG.|Список выбора индексированного представления без COUNT_BIG(*)|2|  
@@ -168,3 +175,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
+

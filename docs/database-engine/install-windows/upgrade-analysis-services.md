@@ -1,57 +1,64 @@
 ---
-title: "Обновление служб Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обновление баз данных"
-  - "базы данных [службы Analysis Services], обновление"
-  - "службы Analysis Services, параллельные установки"
-  - "обновления служб Analysis Services"
-  - "обновления служб Analysis Services, об обновлении служб Analysis Services"
-  - "службы SSAS, миграция базы данных"
-  - "обновление служб Analysis Services"
-  - "установка служб Analysis Services, обновление"
-  - "службы SSAS, обновление"
+title: "Обновление служб Analysis Services | Документы Майкрософт"
+ms.custom: 
+ms.date: 07/17/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading databases
+- databases [Analysis Services], upgrading
+- installing Analysis Services, side-by-side installations
+- Analysis Services upgrades
+- Analysis Services upgrades, about upgrading Analysis Services
+- SSAS, database migration
+- upgrading Analysis Services
+- installing Analysis Services, upgrading
+- SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 79
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 79
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3b3ad4ecf62f3a30882720140f2f362007f8428b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Обновление служб Analysis Services
-  Чтобы воспользоваться преимуществами функций, появившихся в текущем выпуске, можно обновить экземпляры служб Analysis Services до версии SQL Server 2016 в том же режиме сервера, как описано в [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+# <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
+  Чтобы воспользоваться преимуществами функций, появившихся в текущем выпуске, можно обновить экземпляры служб Analysis Services до версии SQL Server в том же режиме сервера, как описано в разделе [Новые возможности служб Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Вы можете обновить каждый экземпляр на месте независимо от других экземпляров, выполняемых на том же оборудовании. Однако большинство администраторов устанавливают экземпляр новой версии для тестирования, прежде чем переносить рабочие нагрузки на новый сервер. Однако для серверов разработки или тестирования обновление на месте может быть более удобным.  
   
  Перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]просмотрите следующие источники:  
+
+- В статье[Заметки о выпуске SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) описаны известные проблемы и способы их устранения.  
+- В статье[Заметки о выпуске SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) описаны известные проблемы и способы их устранения.  
+- В[Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md) описаны неподдерживаемые, устаревшие и измененные функции. Следует периодически изучать эти списки, чтобы оценить влияние изменений продукта на ваши модели, сценарии или пользовательский код. Как правило, изменения функций анонсируются во время предварительного выпуска следующей основной версии.  
   
--   В статье[Заметки о выпуске SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124) описаны известные проблемы и способы их устранения.  
-  
--   В[Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md) описаны неподдерживаемые, устаревшие и измененные функции. Следует периодически изучать эти списки, чтобы оценить влияние изменений продукта на ваши модели, сценарии или пользовательский код. Как правило, изменения функций анонсируются во время предварительного выпуска следующей основной версии.  
-  
-## Обновление сервера  
+## <a name="server-upgrade"></a>Обновление сервера  
  Существует два основных подхода к обновлению серверов и баз данных:  
   
--   При **обновлении на месте** существующие файлы программы заменяются файлами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Базы данных остаются в том же расположении. Программные папки обновляются с целью отражения нового имени.  
+-   При**обновлении на месте** существующие файлы программы заменяются файлами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Базы данных остаются в том же расположении. Программные папки обновляются с целью отражения нового имени.  
   
--   При **параллельном обновлении** создается новая установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], обычно на том же компьютере, если одновременно не выполняется обновление оборудования. При использовании этого подхода необходимо перенести базы данных к новому экземпляру, а затем при необходимости удалить предыдущую версию для освобождения места на диске.  
+-   При**параллельном обновлении** создается новая установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], обычно на том же компьютере, если одновременно не выполняется обновление оборудования. При использовании этого подхода необходимо перенести базы данных к новому экземпляру, а затем при необходимости удалить предыдущую версию для освобождения места на диске.  
   
  Уровни совместимости баз данных, подключенных к данному серверу, остаются прежними, если вы не изменили их вручную.  
   
-### Обновление на месте  
+### <a name="in-place-upgrade"></a>Обновление на месте  
  Можно выполнить обновление версии существующего экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auдоmatically migrate existing databases from the old instance до the new instance. Поскольку метаданные и двоичные данные между двумя версиями совместимы, после обновления данные сохраняются и их не нужно переносить вручную.  
   
  Чтобы обновить существующий экземпляр, запустите программу установки и укажите имя существующего экземпляра в качестве имени нового экземпляра.  
   
-### Параллельное обновление  
+### <a name="side-by-side-upgrade"></a>Параллельное обновление  
   
 -   Создайте резервные копии для всех баз данных и убедитесь, что каждая из них может быть восстановлена. См. раздел [Backup and Restore of Analysis Services Databases](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
@@ -63,7 +70,7 @@ caps.handback.revision: 79
   
 -   Подключите или восстановите каждую базу данных.  
   
--   Запустите DBCC для проверки целостности базы данных. Табличные модели подвергаются более тщательной проверке с поиском потерянных объектов в иерархии модели. Для многомерных моделей проверяются только индексы секций. См. статью [Средство проверки согласованности базы данных (DBCC) для табличных и многомерных баз данных Analysis Services](../../analysis-services/instances/database consistency checker (dbcc) for analysis services.md).  
+-   Запустите DBCC для проверки целостности базы данных. Табличные модели подвергаются более тщательной проверке с поиском потерянных объектов в иерархии модели. Для многомерных моделей проверяются только индексы секций. См. статью [Средство проверки согласованности базы данных (DBCC) для табличных и многомерных баз данных Analysis Services](../../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).  
   
 -   Проверьте отчеты, электронные таблицы и панели мониторинга, чтобы убедиться, что в поведении и вычислениях нет нежелательных изменений. Производительность многомерных и табличных рабочих нагрузок должна повыситься.  
   
@@ -71,7 +78,7 @@ caps.handback.revision: 79
   
 -   Протестируйте операции резервного копирования и восстановления на обновленном сервере, указав в сценариях новое имя сервера.  
   
-## Обновление базы данных  
+## <a name="database-upgrade"></a>Обновление базы данных  
  Базы данных, созданные в предыдущих версиях служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на обновленном сервере работают со старым значением уровня совместимости. Как правило, базу данных или модель можно обновить для работы на более высоком уровне совместимости, чтобы получить доступ к новым возможностям, но имейте в виду, что это привязывает вас к конкретной версии сервера.  
   
  Для обновления базы данных вы обычно обновляете модель в SQL Server Data Tools (SSDT), а затем развертываете решение в экземпляре обновленного сервера. Обратитесь к разделу [Скачивание SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) для получения последней версии.  
@@ -90,12 +97,12 @@ caps.handback.revision: 79
   
  Дополнительные сведения см. в статьях [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md) и [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
-## Обновление табличной модели до уровня совместимости 1200  
+## <a name="tabular-model-upgrade-to-1200-compatibility-level"></a>Обновление табличной модели до уровня совместимости 1200  
  Табличные модели и базы данных получают наибольшие преимущества от SQL Server 2016. В этом выпуске содержатся следующие улучшения: измененный режим DirectQuery для табличных моделей на уровне совместимости 1200, упрощенный путем удаления гибридного режима; инструкции запросов для извлечения подмножества данных во время проектирования, а также безопасность на уровне строк с помощью DAX вместо разрешений строк в серверной базе данных.  
   
  Вторая причина для обновления — новое построение табличных метаданных внутри модели. Табличная модель на новом уровне совместимости 1200 (созданная или обновленная до этого уровня) использует собственную терминологию для определения объектов, таких как модель, таблица, связи и столбцы, для описания основных элементов.  
   
- Для обновления табличной модели используйте версию [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx), созданную для этого выпуска, изменив свойство **Уровень совместимости** на **SQL Server 2016 RTM (1200)**.  
+ Для обновления табличной модели используйте версию [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) , созданную для этого выпуска, изменив свойство **Уровень совместимости** на **SQL Server 2016 RTM (1200)**.  
   
  Не используйте SSMS, код или сценарий для изменения **CompatibilityLevel**. Само по себе изменение свойства ничего не дает. Преобразование метаданных в SSDT происходит в ответ на обновление свойства, за которым следует повторное открытие проекта.  
   
@@ -107,7 +114,7 @@ caps.handback.revision: 79
   
 3.  Щелкните правой кнопкой мыши **model.bim** и вернитесь к **Конструктору представлений**.  
   
-4.  Выберите для свойства **Уровень совместимости** значение **SQL Server 2016 RTM (1200)**.  
+4.  Выберите для свойства **Уровень совместимости** значение  **SQL Server 2016 RTM (1200)**.  
   
 5.  Этот шаг нельзя отменить, поэтому вам будет предложено подтвердить действие. Щелкните **Да** для продолжения. Проект будет обновлен.  
   
@@ -124,8 +131,8 @@ caps.handback.revision: 79
 > [!NOTE]  
 >  Более старые табличные уровни совместимости 1050 и 1103 поддерживаются, но считаются устаревшими. В одном из будущих выпусков SQL Server табличные модели, рассматриваемые как многомерные объекты, перестанут поддерживаться. Объявление об этом см. в разделе [Deprecated Analysis Services Features in SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md) .  
   
-## Действия после обновления для табличных моделей на уровне совместимости 1200  
- После преобразования модели для сценариев баз данных будет использоваться [ссылка на языке скриптов табличных моделей (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) вместо XMLA. При использовании уровня совместимости 1200 для модели TMSL создается в SSMS автоматически. Пользовательский код, предназначенный для табличных баз данных с уровнем совместимости 1200, должен использовать API, определенный в пространстве имен Microsoft.AnalysisServces.Tabular. Сценарий и код необходимо создавать с нуля, механизма для встроенного преобразования не существует. Дополнительные сведения см. в [документации служб Analysis Services для разработчиков](../../analysis-services/analysis-services-developer-documentation.md).  
+## <a name="post-upgrade-for-tabular-models-at-1200-compatibilitylevel"></a>Действия после обновления для табличных моделей на уровне совместимости 1200  
+ После преобразования модели для сценариев баз данных будет использоваться [ссылка на языке скриптов табличных моделей (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) вместо XMLA. При использовании уровня совместимости 1200 для модели TMSL создается в SSMS автоматически. Пользовательский код, предназначенный для табличных баз данных с уровнем совместимости 1200, должен использовать API, определенный в пространстве имен Microsoft.AnalysisServces.Tabular. Сценарий и код необходимо создавать с нуля, механизма для встроенного преобразования не существует. Дополнительные сведения см. в [документации служб Analysis Services для разработчиков](../../analysis-services/analysis-services-developer-documentation.md) .  
   
  Кроме того, можно добавить следующие функции к табличной модели, которые поддерживаются только на уровне совместимости 1200.  
   
@@ -135,24 +142,25 @@ caps.handback.revision: 79
   
 -   Отображение папок  
   
-## Обновление табличных моделей в режиме DirectQuery  
+## <a name="upgrade-tabular-models-in-directquery-mode"></a>Обновление табличных моделей в режиме DirectQuery  
  Обновление на месте для старых табличных моделей, настроенных для DirectQuery, не поддерживается. Новая реализация DirectQuery меньше влияет на конфигурацию, и не все параметры можно перенести.  
   
-1.  В SSDT отключите режим **DirectQuery**, чтобы модель использовала хранилище в памяти. Инструкции см. в статье [Включение режима разработки DirectQuery (табличные службы SSAS)](https://msdn.microsoft.com/library/hh270245.aspx).  
+1.  В SSDT отключите режим **DirectQuery** , чтобы модель использовала хранилище в памяти. Инструкции см. в статье [Включение режима разработки DirectQuery (табличные службы SSAS)](https://msdn.microsoft.com/library/hh270245.aspx) .  
   
 2.  Выберите для свойства **Уровень совместимости** значение SQL Server 2016 (RTM) 1200.  
   
 3.  Сохраните и выполните повторное построение или развертывание модели.  
   
-4.  Снова включите **DirectQuery** . Дополнительные рекомендации см. в разделе [DirectQuery for Tabular 1200 models](../Topic/DirectQuery%20for%20Tabular%201200%20models.md) .  
+4.  Снова включите **DirectQuery** . Дополнительные рекомендации см. в разделе [DirectQuery for Tabular 1200 models](http://msdn.microsoft.com/library/4227977e-7368-4d45-b78f-24076882e7a8) .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Режим DirectQuery (табличные службы SSAS)](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Новые возможности в службах Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Обновление Power Pivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](../Topic/Install%20Analysis%20Services%20in%20Multidimensional%20and%20Data%20Mining%20Mode.md)   
- [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)  
+ [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
+ [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   
+

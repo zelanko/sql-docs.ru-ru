@@ -1,25 +1,30 @@
 ---
-title: "Настройка доставки журналов (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "доставка журналов [SQL Server], включение"
-  - "доставка журналов [SQL Server], настройка"
+title: "Настройка доставки журналов (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка доставки журналов (SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
   В данном разделе описывается настройка доставки журналов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
@@ -47,16 +52,16 @@ caps.handback.revision: 42
   
 -   База данных-источник должна использовать модель полного восстановления или восстановления с неполным протоколированием; переключение базы данных на использование модели простого восстановления приведет к прекращению доставки журналов.  
   
--   Перед настройкой доставки журналов необходимо создать общую папку, чтобы сделать резервные копии журнала транзакций доступными серверу-получателю. Именно в каталоге с открытым доступом будут формироваться резервные копии журналов транзакций. Например, если создание резервных копий журналов транзакций производится в каталог "c:\data\tlogs\\", то для открытого доступа к этому каталогу можно создать каталог "\\\\*primaryserver*\tlogs".  
+-   Перед настройкой доставки журналов необходимо создать общую папку, чтобы сделать резервные копии журнала транзакций доступными серверу-получателю. Именно в каталоге с открытым доступом будут формироваться резервные копии журналов транзакций. Например, если создание резервных копий журналов транзакций производится в каталог "c:\data\tlogs\\", то для открытого доступа к этому каталогу можно создать каталог " \\\\*primaryserver*\tlogs".  
   
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Для вызова хранимых процедур доставки журналов необходимо членство в предопределенной роли сервера **sysadmin**.  
+ Для вызова хранимых процедур доставки журналов необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Настройка доставки журналов  
+#### <a name="to-configure-log-shipping"></a>Настройка доставки журналов  
   
 1.  Щелкните правой кнопкой мыши имя базы данных, которая станет базой данных-источником в конфигурации доставки журналов, затем выберите пункт **Свойства**.  
   
@@ -125,11 +130,11 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Настройка доставки журналов  
+#### <a name="to-configure-log-shipping"></a>Настройка доставки журналов  
   
 1.  Инициализируйте базу данных-получатель путем восстановления полной резервной копии базы данных-источника на сервере-получателе.  
   
-2.  Для добавления базы данных-источника на сервер-источник выполните процедуру [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md). Хранимая процедура возвращает идентификатор задания резервирования и первичный идентификатор.  
+2.  Для добавления базы данных-источника на сервер-источник выполните процедуру [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md) . Хранимая процедура возвращает идентификатор задания резервирования и первичный идентификатор.  
   
 3.  Для установки расписания заданий копирования и восстановления выполните процедуру [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) на сервере-источнике.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 42
   
 9. На сервере-источнике выполните процедуру [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) для добавления на сервер-источник необходимых сведений о новой базе данных-получателе.  
   
-10. На сервере-получателе включите задания копирования и восстановления. Дополнительные сведения см. в статье [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+10. На сервере-получателе включите задания копирования и восстановления. Дополнительные сведения см. в статье [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 42
   
 -   [Переход на вторичный сервер доставки журналов (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Таблицы доставки журналов и хранимые процедуры](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

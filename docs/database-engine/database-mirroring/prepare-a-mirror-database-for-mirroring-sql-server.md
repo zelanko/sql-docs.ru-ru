@@ -1,26 +1,31 @@
 ---
-title: "Подготовка зеркальной базы данных к зеркальному отображению (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "зеркальное отображение базы данных [SQL Server], подготовка к зеркальному отображению"
-  - "входы в систему [SQL Server], зеркальное отображение базы данных"
-  - "зеркальная база данных [SQL Server]"
+title: "Подготовка зеркальной базы данных к зеркальному отображению (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], preparing for mirroring
+- logins [SQL Server], database mirroring
+- mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 43
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)
+# <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)
   Перед началом сеанса зеркального отображения базы данных ее владелец или системный администратор должен убедиться, что зеркальная база данных создана и готова к работе. Чтобы создать новую зеркальную базу данных, требуется как минимум наличие полной резервной копии основной базы данных и последующих резервных копий журналов. Они восстанавливаются на экземпляре зеркального сервера с параметром WITH NORECOVERY.  
   
  В этом разделе описано, как подготовить зеркальную базу данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
 -   На основном сервере и на экземплярах зеркального сервера должна работать одна и та же версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для зеркального сервера возможна более поздняя версия SQL Server, но эта конфигурация рекомендуется только во время процесса тщательно спланированного обновления. В такой конфигурации есть риск автоматического перехода на другой ресурс, в котором движение данных автоматически приостанавливается, так как данные нельзя переместить на более раннюю версию SQL Server. Дополнительные сведения см. в статье [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   На основном сервере и на экземплярах зеркального сервера должен работать один и тот же выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о поддерживаемых выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   На основном сервере и на экземплярах зеркального сервера должен работать один и тот же выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о поддерживаемых выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   База данных должна использовать модель полного восстановления.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 43
  **Подготовка зеркальной базы данных**  
   
 > [!NOTE]  
->  Пример этой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в подразделе [Пример (Transact-SQL)](#TsqlExample) ниже в этом разделе.  
+>  Пример этой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в подразделе [Пример (Transact-SQL)](#TsqlExample)ниже в этом разделе.  
   
 1.  Установите соединение с основным экземпляром на сервере.  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 43
   
     -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md) и [Аргументы RESTORE (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md).  
+    -   [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) и [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  С помощью инструкции RESTORE WITH NORECOVERY примените все необработанные резервные копии и резервные копии журналов на зеркальной базе данных.  
   
@@ -154,7 +159,7 @@ caps.handback.revision: 43
     > [!NOTE]  
     >  Для производственной базы данных необходимо всегда делать резервные копии на разные устройства.  
   
-     На экземпляре основного сервера (`PARTNERHOST1`) создайте полную резервную копию основной базы данных следующим образом.  
+     На экземпляре основного сервера ( `PARTNERHOST1`) создайте полную резервную копию основной базы данных следующим образом.  
   
     ```  
     BACKUP DATABASE AdventureWorks   
@@ -169,7 +174,7 @@ caps.handback.revision: 43
   
     -   **Если пути идентичны:**  
   
-         на экземпляре зеркального сервера (`PARTNERHOST5`) выполните восстановление из полной резервной копии следующим образом:  
+         на экземпляре зеркального сервера ( `PARTNERHOST5`) выполните восстановление из полной резервной копии следующим образом:  
   
         ```  
         RESTORE DATABASE AdventureWorks   
@@ -185,7 +190,7 @@ caps.handback.revision: 43
         > [!IMPORTANT]  
         >  Если отличаются пути основной и зеркальной баз данных, то добавлять файлы нельзя. Это происходит потому, что при появлении в журнале записи об операции добавления файла экземпляр зеркального сервера пытается поместить новый файл в местоположение, указанное для основной базы данных.  
   
-         Например, следующая команда восстанавливает резервную копию основной базы данных, которая находится в каталоге "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\", в другое расположение — "D:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Dat`a\`", где должна находиться зеркальная база данных.  
+         Например, следующая команда восстанавливает резервную копию основной базы данных, которая находится в каталоге "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\", в другое расположение — "D:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Dat`a\`", где должна находиться зеркальная база данных.  
   
         ```  
         RESTORE DATABASE AdventureWorks  
@@ -238,7 +243,7 @@ caps.handback.revision: 43
   
 1.  Если были сняты какие-либо дополнительные резервные копии журналов с момента самой последней операции RESTORE LOG, то необходимо вручную применить каждую дополнительную резервную копию с параметром RESTORE WITH NORECOVERY.  
   
-2.  Запустите сеанс зеркального отображения. Дополнительные сведения см. в статьях [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md) и [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+2.  Запустите сеанс зеркального отображения. Дополнительные сведения см. в статье [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) или [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md).  
   
 3.  Если задание резервного копирования в основной базе данных отключено, то необходимо снова включить его.  
   
@@ -250,23 +255,25 @@ caps.handback.revision: 43
   
 -   [Восстановление резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Зеркальное отображение баз данных и полнотекстовые каталоги (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
  [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)   
- [Аргументы инструкции RESTORE (Transact-SQL)](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)  
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
+
+

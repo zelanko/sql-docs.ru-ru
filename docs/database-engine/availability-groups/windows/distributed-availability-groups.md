@@ -1,0 +1,263 @@
+---
+title: "Распределенные группы доступности (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 06/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], distributed
+ms.assetid: 
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f1d8e15bcdbf3d9fa8ccb4b3fc92c309b8f11055
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="distributed-availability-groups"></a>Распределенные группы доступности
+
+Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+
+> [!NOTE]
+> Аббревиатура "DAG" не является официальным сокращением для *распределенной группы доступности*, поскольку уже используется для обозначения функции группы доступности базы данных Exchange. Эта функция Exchange никак не связана с группами доступности SQL Server или распределенными группами доступности.
+
+Сведения о настройке распределенной группы доступности см. в статье [Настройка распределенных групп доступности](configure-distributed-availability-groups.md).
+
+## <a name="understand-distributed-availability-groups"></a>Что такое распределенные группы доступности
+
+Распределенная группа доступности — это особый тип группы доступности, который охватывает сразу две отдельные группы доступности. Эти группы доступности настраиваются в двух разных кластерах отказоустойчивой кластеризации Windows Server (WSFC). Группы доступности, участвующие в распределенной группе доступности, необязательно должны находиться в одном и том же месте. Они могут быть физическими, виртуальными или локальными, размещаться в общедоступном облаке или в любом другом месте, которое поддерживает развертывание групп доступности. Если две группы доступности могут взаимодействовать, их можно включить в распределенную группу доступности.
+
+Ресурсы традиционной группы доступности настраиваются в кластере WSFC. Для распределенной группы доступности в кластере WSFC ничего настраивать не нужно. Все необходимое хранится в SQL Server. Дополнительные сведения о просмотре данных распределенной группы доступности см. в статье [Просмотр сведений о распределенной группе доступности](#viewing-distributed-availability-group-information). 
+
+Для участия в распределенной группе доступности у группы доступности должен иметься прослушиватель. Однако вместо имени базового сервера для автономного экземпляра (или, если речь идет об экземпляре отказоустойчивого кластера [FCI] SQL Server, то значения, связанного с ресурсом имени сети), необходимого для традиционной группы доступности, вы указываете прослушиватель, настроенный для распределенной группы доступности с параметром ENDPOINT_URL в процессе ее создания. Несмотря на то, что у каждой группы доступности, входящей в распределенную группу доступности, прослушиватель есть, у самой распределенной группы доступности его нет.
+
+На следующем рисунке показано высокоуровневое представление распределенной группы доступности, охватывающий две группы доступности (AG 1 и AG2), каждая из которых настроена в собственном кластере WSFC. Распределенная группа доступности имеет четыре реплики, по две в каждой группе доступности. Каждая группа доступности может поддерживать максимальное количество реплик, поэтому у распределенной группы доступности на сервере Standard Edition может быть до четырех реплик, а у группы на сервере Enterprise Edition — до 18 реплик.
+
+<a name="fig1"></a> ![Высокоуровневое представление распределенной группы доступности][1]
+
+Перемещение данных в распределенной группе доступности можно настроить как синхронное или асинхронное. При этом в распределенных группах доступности данные перемещаются не так, как в традиционных. Несмотря на то, что у каждой группы доступности есть первичная реплика, принимать вставки, обновления и удаления может только одна копия баз данных, участвующих в распределенной группе доступности. Как показано на следующем рисунке, первичной группой доступности является AG1. Ее первичная реплика отправляет транзакции в обе вторичные реплики AG1 и в первичную реплику AG2. После этого первичная реплика AG2 обновляет вторичные реплики AG2. 
+
+
+![Распределенная группа доступности и перемещение данных в этой группе][2]
+
+Единственный способ сделать так, чтобы первичная реплика AG2 принимала вставки, обновления и удаления, — это вручную выполнить отработку отказа распределенной группы доступности из AG1. Поскольку AG 1 содержит доступную для записи копию базы данных, после отработки отказа группа доступности AG2 сможет принимать вставки, обновления и удаления. Сведения о том, как выполнить отработку отказа с переходом из одной группы доступности в другую, см. в статье [Отработка отказа с переходом на вторичную группу доступности]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
+
+> [!NOTE]
+> Распределенные группы доступности в SQL Server 2016 поддерживают отработку отказа только с переходом из одной группы доступности в другую с использованием параметра FORCE_FAILOVER_ALLOW_DATA_LOSS.
+
+## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Требования версии и выпуска SQL Server к распределенным группам доступности
+
+В настоящее время распределенные группы доступности работают только с группами доступности, созданными в той же версии SQL Server. Например, все группы доступности, участвующие в распределенной группе доступности, на данный момент должны быть созданы в SQL Server 2016. Поскольку в SQL Server 2012 или 2014 функция распределенных групп доступности еще не существовала, группы доступности, созданные с помощью этих версий, не могут участвовать в распределенных группах доступности. 
+
+> [!NOTE]
+> Распределенные группы доступности можно настраивать в выпуске Standard или Enterprise, но комбинировать разные выпуски в одной и той же распределенной группе доступности нельзя.
+
+Поскольку речь идет о двух отдельных группах доступности, процесс установки пакета обновления или накопительного пакета обновления в реплике, участвующей в распределенной группе доступности, будет выполняться несколько иначе, чем в традиционной группе доступности:
+
+1. Начните с обновления реплик второй группы доступности в распределенной группе доступности.
+
+2. Установите исправления в реплики первичной группы доступности в распределенной группе доступности.
+
+3. Как и в случае со стандартной группой доступности, выполните отработку отказа с переходом из первичной группы доступности в одну из ее собственных реплик (но не в первичную реплику второй группы доступности) и установите исправления. Если нет ни одной реплики, кроме первичной, отработку отказа с переходом во вторую группу доступности необходимо будет выполнить вручную.
+
+> [!NOTE]
+> Пока неизвестно, позволят ли дальнейшие версии SQL Server использовать более ранние версии в одной и той же распределенной группе доступности. Если бы это было возможно, распределенные группы доступности могли бы участвовать в плане обновления версий SQL Server.
+
+### <a name="windows-server-versions-and-distributed-availability-groups"></a>Версии Windows Server и распределенные группы доступности
+
+Распределенная группа доступности охватывает несколько групп доступности, каждая из которых занимает собственный кластер WSFC и работает только в SQL Server.  Это означает, что кластеры WSFC, в которых размещаются отдельные группы доступности, могут иметь различные основные версии Windows Server. Как уже говорилось в предыдущем разделе, основные версии SQL Server должны совпадать. Подобно [исходному рисунку](#fig1) рисунок, представленный ниже, показывает AG1 и AG2, участвующие в распределенной группе доступности, однако в данном случае кластеры WSFC имеют различные версии Windows Server.
+
+
+![Распределенные группы доступности с кластерами WSFC, имеющими различные версии Windows Server][3]
+
+Отдельные кластеры WSFC, а также соответствующие группы доступности отвечают традиционным правилам. Это значит, что они могут быть либо присоединенными к какому-либо домену, либо не присоединенными ни к одному из них (Windows Server 2016 или более поздней версии). При объединении двух разных групп доступности в одну распределенную группу доступности возможны четыре сценария:
+
+* Оба кластера WSFC присоединяются к одному и тому же домену.
+* Каждый кластер WSFC присоединен к отдельному домену.
+* Один кластер WSFC присоединен к какому-либо домену, а другой — нет.
+* Ни один кластер WSFC не присоединен ни к одному домену.
+
+Если оба кластера WSFC присоединены к одному и тому же домену (не к доверенным доменам), при создании группы доступности никакие дополнительные действия выполнять не нужно. Для работы распределенной группы доступности, в которую входят группы доступности и кластеры WSFC, не присоединенные к одному и тому же домену, используйте сертификаты — во многом это напоминает создание группы доступности для группы доступности, не зависящей от домена. Чтобы настроить сертификаты для распределенной группы доступности, выполните шаги 3–13 в разделе [Создание группы доступности, не зависящей от домена](domain-independent-availability-groups.md#create-a-domain-independent-availability-group).
+
+При использовании распределенной группы доступности первичные реплики в каждой соответствующей группе доступности должны иметь сертификаты друг друга. Если у вас уже есть конечные точки без сертификатов, перенастройте их с помощью параметра [ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql), отобразив использование сертификатов.
+
+## <a name="distributed-availability-group-usage-scenarios"></a>Варианты применения распределенных групп доступности
+
+Ниже представлены три основных варианта применения распределенной группы доступности. 
+
+* [Аварийное восстановление и упрощенная настройка конфигураций несколькими сайтами](#disaster-recovery-and-multi-site-scenarios)
+* [Переход на новое оборудование или конфигурации, включая установку нового оборудования или смену базовой операционной системы](#migration-using-a-distributed-availability-group)
+* [Увеличение количества доступных для чтения реплик (больше восьми) в одной и той же группе доступности за счет объединения нескольких групп доступности](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+
+### <a name="disaster-recovery-and-multi-site-scenarios"></a>Сценарии аварийного восстановления и конфигураций с несколькими сайтами
+
+В традиционной группе доступности все серверы должны находиться в одном и том же кластере WSFC, из-за чего объединение нескольких центров обработки данных может быть затруднено. На следующем рисунке показана архитектура традиционной группы доступности с несколькими сайтами, включая поток данных. Здесь есть только одна первичная реплика, которая отправляет транзакции во все вторичные реплики. В некотором отношении такая настройка является менее гибкой, чем распределенная группа доступности. Например, она требует внедрения таких компонентов, как Active Directory (если применимо) и свидетель кворума в кластере WSFC. Кроме того, необходимо учитывать и другие аспекты кластера WSFC, например изменение голосов узлов.
+
+![Традиционная группа доступности с несколькими сайтами][4]
+
+Распределенные группы доступности представляют собой более гибкий вариант для развертывания групп доступности, охватывающих сразу несколько центров обработки данных. Распределенные группы доступности можно использовать даже там, где раньше применялись такие функции, как [доставка журналов]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server). Однако, в отличие от традиционных групп доступности, распределенные группы доступности не могут иметь отложенное применение транзакций. Это означает, что группы доступности или распределенные группы доступности ничем не помогут в случае ошибки, связанной с человеческим фактором и ошибочным обновлением или удалением данных.
+
+Распределенные группы доступности связаны слабо — в данном случае это означает, что для них необязательно наличие только одного кластера WSFC или обслуживания в SQL Server. Поскольку кластеры WSFC обслуживаются отдельно, а синхронизация между двумя группами доступности в основном выполняется асинхронно, настроить аварийное восстановление на другом сайте гораздо проще. Первичные реплики в каждой группе доступности синхронизируют свои собственные вторичные реплики.
+
+* Для распределенной группы доступности поддерживается только отработка отказа вручную. В случае аварийного восстановления и необходимости переключения центров обработки данных настраивать автоматическую отработку отказа не следует (за редкими исключениями). 
+* Скорее всего, вам не придется настраивать некоторые традиционные элементы или параметры для кластеров WSFC конфигураций с несколькими сайтами и подсетей, такие как CrossSubnetThreshold, но нужно будет проверить задержку сети на другом уровне транспортировки данных. Разница в том, что каждый кластер WSFC обеспечивает собственную доступность, а не является крупной сущностью, единой для четырех узлов. У вас есть два отдельных кластера WSFC, каждый из которых имеет по два узла, как показано на предыдущем рисунке.  
+* Мы рекомендуем асинхронное перемещение данных, поскольку этот вариант подходит для аварийного восстановления.
+* При настройке синхронного перемещения данных между первичной и по крайней мере одной вторичной репликой второй группы доступности и синхронного перемещения данных в распределенной группе доступности распределенная группа доступности будет ждать, пока все синхронные копии подтвердят получение данных.
+
+### <a name="migrate-by-using-a-distributed-availability-group"></a>Миграция с использованием распределенной группы доступности
+
+Поскольку распределенные группы доступности поддерживают две совершенно различные конфигурации групп доступности, они упрощают не только аварийное восстановление и сценарии с несколькими узлами, но и сценарии миграции. Происходит ли миграция на новое оборудование или на виртуальные машины (локально или с помощью IaaS в общедоступном облаке), настройка распределенной группы доступности обеспечит ее выполнение даже там, где раньше могли потребоваться копия, резервная копия и восстановление или доставка журналов. 
+
+Возможность миграции особенно полезна в случаях изменения или обновления базовой операционной системы при сохранении прежней версии SQL Server. Несмотря на то, что Windows Server 2016 допускает последовательное обновление Windows Server 2012 R2 при неизменном оборудовании, большинство пользователей предпочитает выполнять развертывание на новое оборудование или виртуальные машины. 
+
+Для завершения перехода на новую конфигурацию в конце процедуры его выполнения остановите весь трафик данных в исходную группу доступности и измените распределенную группу доступности, настроив для нее синхронное перемещение данных. Это действие гарантирует, что первичная реплика второй группы доступности будет полностью синхронизирована, а данные не пропадут. После того как синхронизация будет проверена, отработка отказа в распределенной группе доступности будет выполняться с переходом во вторую группу доступности, как указано в разделе [Отработка отказа с переходом во вторичную группу доступности](https://msdn.microsoft.com/en-US/library/mt651673.aspx).
+
+Поскольку после миграции вторая группа доступности становится новой первичной группой доступности, возможно, вам придется выполнить одно из следующих действий:
+
+* Переименовать прослушиватель во вторичной группе доступности (и, возможно, удалить или переименовать старый прослушиватель в исходной первичной группе доступности) или создать его заново, используя прослушиватель из исходной первичной группы доступности, чтобы приложения и пользователи имели доступ к новой конфигурации.
+* Если переименование или повторное создание невозможно, направьте приложения и пользователей на прослушиватель во второй группе доступности.
+
+### <a name="scale-out-readable-replicas-with-distributed-availability-groups"></a>Масштабирование доступных для чтения реплик с использованием распределенных групп доступности
+
+Одна распределенная группа доступности при необходимости может иметь до 16 вторичных реплик. В связи с этим у нее может быть до 18 доступных для чтения копий, включая две первичные реплики различных групп доступности. Это означает, что сразу несколько узлов могут обращаться к ней практически в режиме реального времени для передачи отчетов в различные приложения.
+
+Распределенные группы доступности позволяют расширить доступную для чтения ферму гораздо сильнее, чем при использовании одной-единственной группы доступности. Распределенная группа доступности может масштабировать доступные для чтения реплики двумя способами:
+
+* Используя первичную реплику второй группы доступности в распределенной группе доступности, можно создать другую распределенную группу доступности, даже если база данных не находится в режиме RECOVERY.
+* Используя первичную реплику первой группы доступности, можно создать другую распределенную группу доступности.
+
+Другими словами, первичная реплика может участвовать в двух различных распределенных группах доступности. На следующем рисунке показаны AG1 и AG2, участвующие в распределенной группе доступности AG1, и AG2 и AG3, участвующие в распределенной группе доступности AG2. Первичная реплика AG2 является одновременно вторичной репликой группы доступности AG1 и первичной репликой распределенной группы доступности AG2.
+
+![Масштабирование доступных для чтения реплик с использованием распределенных групп доступности][5]
+
+На следующем рисунке AG1 является первичной репликой двух различных распределенных групп доступности: распределенной группы доступности AG1 (состоящей из AG1 и AG2) и распределенной группы доступности AG2 (состоящей из AG1 и AG 3).
+
+
+![Еще один пример масштабирования считывает пример группы доступности с помощью][6]
+
+
+В каждом из приведенных выше примеров может быть до 27 реплик, распределенных между тремя группами доступности, и любая из них может использоваться для выполнения запросов на чтение. 
+
+[Маршрутизация только для чтения]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) пока не работает с распределенными группами доступности. Все запросы, которые используются для подключения прослушивателя, направляются в первичную реплику. Если это не так, необходимо настроить каждую реплику так, чтобы она принимала все подключения как вторичная реплика и обращалась к ним напрямую. Это поведение может измениться в обновлении для SQL Server 2016 или в будущей версии SQL Server.
+
+## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Инициализация вторичных групп доступности в распределенной группе доступности
+
+Изначально в распределенных группах доступности основным методом инициализации первичной реплики во второй группе доступности являлось [автоматическое заполнение]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group). Полное восстановление базы данных в первичной реплике второй группы доступности возможно при выполнении следующих действий:
+
+1. Восстановление резервных копий базы данных с ключевым словом WITH NORECOVERY.
+2. Восстановление резервных копий соответствующих журналов транзакций с ключевым словом WITH NORECOVERY (при необходимости).
+3. Создание второй группы доступности без указания имени базы данных и с параметром SEEDING_MODE, имеющим значение AUTOMATIC.
+4. Создание распределенной группы доступности с помощью автоматического заполнения.
+
+При добавлении первичной реплики второй группы доступности в распределенную группу доступности реплика проверяется по первичным базам данных первой группы доступности, а заполнение отслеживает базу данных до источника. При этом необходимо учитывать несколько моментов:
+
+* Результат в переменной `sys.dm_hadr_automatic_seeding`, соответствующей первичной реплике второй группы доступности, будет содержать параметр `current_state` со значением FAILED и следующей причиной "Превышено время ожидания сообщения о проверке заполнения".
+
+* В текущем журнале SQL Server в первичной реплике второй группы доступности будет указано, что заполнение произошло, а [номера LSN]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) синхронизированы.
+
+* Результат в переменной `sys.dm_hadr_automatic_seeding`, соответствующей первичной реплике первой группы доступности, будет содержать параметр current_state со значением COMPLETED. 
+
+* Заполнение может происходить в распределенных группах доступности по-разному. Чтобы заполнение начиналось во второй реплике, необходимо выполнить в реплике команду `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE`. Несмотря на то, что это условие относится к любой вторичной реплике, участвующей в базовой группе доступности, первичная реплика второй группы доступности уже имеет разрешения, необходимые для того, чтобы заполнение начиналось сразу после добавления в распределенную группу доступности. 
+
+### <a name="view-distributed-availability-group-information"></a>Просмотр сведений о распределенной группе доступности 
+    
+Как уже говорилось, распределенная группа доступности — это конструкция, которая характерна только для SQL Server и не встречается в соответствующем кластере WSFC. На следующем рисунке показаны два разных кластера WSFC (CLUSTER_A и CLUSTER_B), каждый из которых имеет собственные группы доступности. Здесь обсуждаются только группы доступности AG1 в CLUSTER_A и AG2 в CLUSTER_B. 
+
+<!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
+<a name="fig7"></a>
+```
+PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
+
+Название                            Узел владельца             Состояние
+----                            ---------             -----
+AG1                             DENNIS                Online Available Storage               GLEN                  Offline Cluster Group                   JY                    Online New_RoR                         DENNIS                Online Old_RoR                         DENNIS                Online SeedingAG                       DENNIS                Online
+
+
+PS C:\> Get-ClusterGroup -Cluster CLUSTER_B
+
+Название                            Узел владельца             Состояние
+----                            ---------             -----
+AG2                             TOMMY                 Online Available Storage               JC                    Offline Cluster Group                   JC                    Online
+```
+
+All detailed information about a distributed availability group is in SQL Server, specifically in the availability-group dynamic management views. Currently, the only information shown in SQL Server Management Studio for a distributed availability group is on the primary replica for the availability groups. As shown in the following figure, under the Availability Groups folder, SQL Server Management Studio shows that there is a distributed availability group. The figure shows AG1 as a primary replica for an individual availability group that's local to that instance, not for a distributed availability group.
+
+![View in SQL Server Management Studio of the primary replica on the first WSFC cluster of a distributed availability group][8]
+
+
+However, if you right-click the distributed availability group, no options are available (see the following figure), and the expanded Availability Databases, Availability Group Listeners, and Availability Replicas folders are all empty. SQL Server Management Studio 16 displays this result, but it might change in a future version of SQL Server Management Studio.
+
+![No options available for action][9]
+
+As shown in the following figure, secondary replicas show nothing in SQL Server Management Studio related to the distributed availability group. These availability group names map to the roles shown in the previous [CLUSTER_A WSFC cluster](#fig7) image.
+
+![View in SQL Server Management Studio of a secondary replica][10]
+
+The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
+
+```
+SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name' FROM    sys.availability_groups ag, sys.availability_replicas ar       
+WHERE   ag.group_id = ar.group_id
+```
+
+An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
+
+![Example output of the preceding query][11]
+
+In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
+
+```
+SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status' FROM    sys.availability_groups ag, sys.availability_replicas ar,       
+sys.dm_hadr_availability_replica_states ars       
+WHERE   ar.replica_id = ars.replica_id and     ag.group_id = ar.group_id and ag.is_distributed = 1
+```
+       
+       
+![Distributed availability group status][12]
+
+
+To further extend the previous query, you can also see the underlying performance via the dynamic management views by adding in `sys.dm_hadr_database_replicas_states`. The dynamic management view currently stores information about the second availability group only. The following example query, run on the primary availability group, produces the sample output shown below:
+
+```
+SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate FROM    sys.databases dbs, sys.availability_groups ag, sys.availablity_replicas ar, sys.dm_hadr_availability_replica_states ars, sys.dm_hadr_database_replica_states drs WHERE   drs.group_id = ag.group_id and ar.replica_id = ars.replica_id and ars.replica_id = drs.replica_id and dbs.database_id = drs.database_id and ag.is_distributed = 1
+```
+
+![Performance information for a distributed availability group][13]
+
+
+### Next steps 
+
+* [Use the availability group wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+
+* [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+ 
+* [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
+
+This content was written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
+
+<!--Image references-->
+[1]: ./media/dag-01-high-level-view-distributed-ag.png
+[2]: ./media/dag-02-distributed-ag-data-movement.png
+[3]: ./media/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png
+[4]: ./media/dag-04-traditional-multi-site-ag.png
+[5]: ./media/dag-05-scaling-out-reads-with-distributed-ags.png
+[6]: ./media/dag-06-another-scaling-out-reads-using-distributed-ags-example.png
+[7]: ./media/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png
+[8]: ./media/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png
+[9]: ./media/dag-09-no-options-available-action.png
+[10]: ./media/dag-10-view-ssms-secondary-replica.png
+[11]: ./media/dag-11-example-output-of-query-above.png
+[12]: ./media/dag-12-distributed-ag-status.png
+[13]: ./media/dag-13-performance-information-distributed-ag.png
+
+ 
+

@@ -1,26 +1,31 @@
 ---
-title: "FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы FileTable [SQL Server], группы доступности"
-  - "FILESTREAM [SQL Server], группы доступности"
-  - "Группы доступности [SQL Server], взаимодействие"
+title: "FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], Availability Groups
+- FILESTREAM [SQL Server], Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cdd5119460d5b982c30c3e04e924e9a6b501f559
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server)
+# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе содержатся сведения об использовании возможностей FILESTREAM и FileTable с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -44,7 +49,7 @@ caps.handback.revision: 15
 -   Перед добавлением в группу доступности базы данных, в которой используется FILESTREAM (а также возможно и FileTable), следует убедиться, что FILESTREAM поддерживается на всех экземплярах серверов, на которых размещены реплики доступности для группы доступности. Дополнительные сведения см. в статье [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
   
 ##  <a name="vnn"></a> Использование имен виртуальной сети для доступа через FILESTREAM или FileTable.  
- Во время включения поддержки FILESTREAM для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создается ресурс уровня экземпляра, обеспечивающий доступ к данным FILESTREAM. Доступ к этому ресурсу осуществляется по имени компьютера в следующем формате.  
+ Во время включения поддержки FILESTREAM для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]создается ресурс уровня экземпляра, обеспечивающий доступ к данным FILESTREAM. Доступ к этому ресурсу осуществляется по имени компьютера в следующем формате.  
   
  `\\<computer_name>\<filestream_share_name>`  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 15
   
  Ресурс в области имен виртуальной сети создается при наступлении одного из следующих событий.  
   
--   Необходимо добавить базу данных, содержащую данные FILESTREAM, в группу доступности AlwaysOn в первичной реплике. В этом случае ресурс `\\<computer_name>\<filestream_share_name>` уже существует. Создается ресурс `\\<VNN>\<filestream_share_name>`.  
+-   Необходимо добавить базу данных, содержащую данные FILESTREAM, в группу доступности AlwaysOn в первичной реплике. В этом случае ресурс `\\<computer_name>\<filestream_share_name>` уже существует. Создается ресурс `\\<VNN>\<filestream_share_name>` .  
   
 -   Поддержка FILESTREAM включается для потокового доступа ввода-вывода для первичной реплики, имеющей группы доступности. Создаются следующие ресурсы.  
   
@@ -72,20 +77,21 @@ caps.handback.revision: 15
   
 -   При осуществлении любого доступа к данным FILESTREAM или FileTable посредством API-интерфейса файловой системы будут использоваться имена виртуальной сети, а не имена компьютеров.  
   
- Если база данных входит в группу доступности, а ваше приложение пытается получить доступ к ресурсу по имени компьютера в формате `\\<computer_name>\<filestream_share_name>`, то выдается ошибка.  
+ Если база данных входит в группу доступности, а ваше приложение пытается получить доступ к ресурсу по имени компьютера в формате `\\<computer_name>\<filestream_share_name>` , то выдается ошибка.  
   
  Если приложение пытается получить доступ к ресурсу с использованием пути в области имен виртуальной сети, а база данных не входит в группу доступности, запрос может завершиться успешно. В этом случае имя виртуальной сети будет разрешено в имя компьютера. Однако так поступать не рекомендуется, поскольку путь в области имен виртуальной сети перестанет функционировать при удалении группы доступности.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Включение необходимых компонентов для таблицы FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
  Нет.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

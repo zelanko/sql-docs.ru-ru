@@ -1,31 +1,36 @@
 ---
-title: "Настройка параметра конфигурации сервера recovery interval | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "восстановление интервала восстановления [SQL Server]"
-  - "контрольные точки [SQL Server]"
-  - "recovery interval, параметр [SQL Server]"
-  - "recovery interval, значение по умолчанию параметра"
-  - "время [SQL Server], recovery interval"
-  - "интервал восстановления [SQL Server]"
-  - "максимальное число минут на восстановление базы данных"
-  - "восстановление [SQL Server], параметр recovery interval"
+title: "Настройка параметра конфигурации сервера recovery interval | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring recovery interval [SQL Server]
+- checkpoints [SQL Server]
+- recovery interval option [SQL Server]
+- default recovery interval option
+- time [SQL Server], recovery interval
+- interval for recovery [SQL Server]
+- maximum number of minutes per database recovery
+- recovery [SQL Server], recovery interval option
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b07822ce0611d8fdd7de6f1dc4fd369d0128717
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка параметра конфигурации сервера recovery interval
+# <a name="configure-the-recovery-interval-server-configuration-option"></a>Настройка параметра конфигурации сервера recovery interval
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются способы настройки параметра конфигурации сервера **recovery interval** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **recovery interval** определяет верхний предел времени восстановления базы данных. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использует значение этого параметра чтобы приблизительно определить частоту выделения [автоматических контрольных точек](../../relational-databases/logs/database-checkpoints-sql-server.md) для данной базы данных.  
@@ -62,7 +67,7 @@ caps.handback.revision: 39
   
 -   Обычно рекомендуется сохранять интервал восстановления, равный 0, если нет проблем с производительностью. Если принято решение увеличить параметр интервала восстановления, рекомендуется увеличивать его постепенно с небольшими приращениями и оценивать влияние каждого приращения на производительность восстановления.  
   
--   При использовании хранимой процедуры **sp_configure** для изменения параметра **recovery interval** до значения, превышающего 60 минут, необходимо указать параметр RECONFIGURE WITH OVERRIDE. Параметр WITH OVERRIDE отключает проверку значения конфигурации (при которой выполняется поиск недопустимых или нерекомендованных значений).  
+-   При использовании хранимой процедуры **sp_configure** для изменения параметра **recovery interval** до значения, превышающего 60 минут, необходимо указать параметр RECONFIGURE WITH OVERRIDE. Параметр WITH OVERRIDE отключает проверку значения конфигурации (при которой выполняется поиск недопустимых или нерекомендованных значений).  
   
 ###  <a name="Security"></a> Безопасность  
   
@@ -76,17 +81,17 @@ caps.handback.revision: 39
   
 2.  Щелкните узел **Параметры базы данных** .  
   
-3.  В разделе **Восстановление** в поле **Интервал восстановления (в минутах)** введите или выберите значение от 0 до 32 767 максимального интервала времени в минутах, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен при запуске выделять на восстановление каждой базы данных. Если значение по умолчанию равно 0, оно означает автоматическую настройку, которую выполняет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. На практике это означает время восстановления менее минуты и создание контрольных точек приблизительно раз в минуту для активно используемых баз данных.  
+3.  В разделе **Восстановление**в поле **Интервал восстановления (в минутах)** введите или выберите значение от 0 до 32 767 максимального интервала времени в минутах, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен при запуске выделять на восстановление каждой базы данных. Если значение по умолчанию равно 0, оно означает автоматическую настройку, которую выполняет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. На практике это означает время восстановления менее минуты и создание контрольных точек приблизительно раз в минуту для активно используемых баз данных.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Указание интервала восстановления  
+#### <a name="to-set-the-recovery-interval"></a>Указание интервала восстановления  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано использование хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) для задания значения параметра `recovery interval` равным `3` мин.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано использование хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) для задания значения параметра `recovery interval` равным `3` мин.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -102,17 +107,18 @@ GO
   
 ```  
   
- Дополнительные сведения см. в статье [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра recovery interval  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Изменение целевого времени восстановления базы данных (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [Контрольные точки базы данных (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Параметр конфигурации сервера «show advanced options»](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
+ [Параметр конфигурации сервера "show advanced options"](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "следящий сервер [SQL Server], установка"
-  - "зеркальное отображение базы данных [SQL Server], следящий сервер"
+title: "Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], establishing
+- database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 004b19ca2fe75f3a34f21eac1fa531e7f72d258b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)
-  Если конечные точки зеркального отображения базы данных используют проверку подлинности Windows, для добавления или замены следящего сервера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Добавление следящего сервера в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет текущий режим работы на режим высокого уровня безопасности с автоматической отработкой отказа.  
+# <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)
+  Если конечные точки зеркального отображения базы данных используют проверку подлинности Windows, для добавления или замены следящего сервера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Добавление следящего сервера в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет текущий режим работы на режим высокого уровня безопасности с автоматической отработкой отказа.  
   
 > [!NOTE]  
 >  Настоятельно рекомендуется размещать следящий сервер на отдельном компьютере, не используемом ни одним из участников зеркального отображения. Учетная запись службы, используемая следящим сервером, должна располагаться в том же самом домене, что и учетные записи служб, используемые экземплярами основного и зеркального серверов, либо в доверенном домене.  
   
-### Добавление или замена следящего сервера  
+### <a name="to-add-or-replace-a-witness"></a>Добавление или замена следящего сервера  
   
 1.  После подключения к экземпляру основного сервера в обозревателе объектов щелкните имя сервера, чтобы развернуть дерево сервера.  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 16
   
      Чтобы начать работу следящего сервера и изменить текущий режим работы на режим высокого уровня безопасности с автоматической отработкой отказа, нажмите кнопку **ОК**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Свойства базы данных (страница "Зеркальное отображение")](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)   
+ [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)   
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

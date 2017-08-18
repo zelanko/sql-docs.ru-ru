@@ -1,27 +1,32 @@
 ---
-title: "Свойства сервера (страница &#171;Прочие установки сервера&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+title: "Свойства сервера (страница \"Прочие параметры сервера\") | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства сервера (страница &#171;Прочие установки сервера&#187;)
+# <a name="server-properties---misc-server-settings-page"></a>Свойства сервера (страница "Прочие параметры сервера")
   Эта страница используется для просмотра или изменения установок сервера.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Язык по умолчанию для пользователей**  
  Указывает язык, используемый по умолчанию для всех созданных имен входа.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 22
  **Текущие значения**  
  Просмотр текущих значений для параметров на этой панели. Эти значения доступны только для чтения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "принудительное обслуживание [SQL Server]"
-  - "зеркальное отображение базы данных [SQL Server], принудительное обслуживание"
+title: "Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- forced service [SQL Server]
+- database mirroring [SQL Server], forcing service
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 41aad1711fe5fb6743cfc6c1527f8c175fbf1d0c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)
+# <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)
   Если в режимах с высокой производительностью и высокой безопасностью без автоматической отработки отказа на основном сервере происходит сбой, в то время как доступен зеркальный сервер, владелец базы данных может сделать базу данных доступной, принудительно переведя ее на другой ресурс (с возможной потерей данных). Этот параметр доступен только при выполнении следующих условий:  
   
 -   основной сервер недоступен;  
@@ -31,19 +36,19 @@ caps.handback.revision: 40
   
  Принудительное обслуживание приостанавливает сеанс и создает новую вилку восстановления. Оно вызывает такой же эффект, как и удаление зеркального отображения с восстановлением бывшей основной базы данных. Тем не менее, принудительное обслуживание облегчает повторную синхронизацию базы данных (с возможной потерей данных) при возобновлении зеркального отображения.  
   
-### Принудительный запуск службы в сеансе зеркального отображения базы данных  
+### <a name="to-force-service-in-a-database-mirroring-session"></a>Принудительный запуск службы в сеансе зеркального отображения базы данных  
   
 1.  Установите соединение с зеркальным сервером.  
   
 2.  Выполните следующую инструкцию:  
   
-     ALTER DATABASE *\<имя_базы_данных>* SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
+     ALTER DATABASE *<имя_базы_данных>* SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     где *\<имя_базы_данных>* — зеркально отображаемая база данных.  
+     где *<имя_базы_данных>* — зеркально отображаемая база данных.  
   
      Зеркальный сервер немедленно переходит на основной сервер, а зеркальное отображение приостанавливается.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   

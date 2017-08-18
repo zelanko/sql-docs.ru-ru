@@ -1,30 +1,35 @@
 ---
-title: "Установка SQL Server с общей папкой SMB в качестве хранилища | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Установка SQL Server с общей папкой SMB в качестве хранилища | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Установка SQL Server с общей папкой SMB в качестве хранилища
-  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] системные базы данных (Master, Model, MSDB и TempDB) и пользовательские базы данных компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно установить, используя файловый сервер SMB в качестве хранилища. Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
+  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]системные базы данных (Master, Model, MSDB и TempDB) и пользовательские базы данных компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно установить, используя файловый сервер SMB в качестве хранилища. Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Файловый поток в настоящее время не поддерживается в общей папке SMB.  
   
-## Рекомендации по установке  
+## <a name="installation-considerations"></a>Рекомендации по установке  
   
-### Форматы общей папки SMB:  
+### <a name="smb-file-share-formats"></a>Форматы общей папки SMB:  
  При указании общей папки SMB путь может быть указан в одном из следующих форматов UNC для изолированных баз данных и баз данных FCI:  
   
 -   \\\имя_сервера\имя_папки\  
@@ -33,7 +38,7 @@ caps.handback.revision: 23
   
  Дополнительные сведения об универсальных именах (UNC) см. в разделе [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
   
- Путь UNC замыкания на себя (путь UNC, где именем сервера является localhost, 127.0.0.1 или имя локального компьютера) не поддерживается. В качестве особого случая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием кластера файлового сервера, размещенного на том же узле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], также не поддерживается. Чтобы предотвратить возникновение этой ситуации, рекомендуется создавать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кластер файлового сервера на отдельных кластерах Windows.  
+ Путь UNC замыкания на себя (путь UNC, где именем сервера является localhost, 127.0.0.1 или имя локального компьютера) не поддерживается. В качестве особого случая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием кластера файлового сервера, размещенного на том же узле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , также не поддерживается. Чтобы предотвратить возникновение этой ситуации, рекомендуется создавать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кластер файлового сервера на отдельных кластерах Windows.  
   
  Указанные ниже форматы путей UNC не поддерживаются.  
   
@@ -45,14 +50,14 @@ caps.handback.revision: 23
   
 -   Подключенные сетевые диски.  
   
-### Поддерживаемые инструкции языка описания данных DDL.  
+### <a name="supported-data-definition-language-ddl-statements"></a>Поддерживаемые инструкции языка описания данных DDL.  
  Следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL и хранимые процедуры компонента ядра СУБД поддерживают общие папки SMB.  
   
 1.  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
 2.  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
   
-3.  [RESTORE (Transact-SQL)](../Topic/RESTORE%20\(Transact-SQL\).md)  
+3.  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 23
   
 6.  [sp_attach_single_file_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
-### Параметры установки  
+### <a name="installation-options"></a>Параметры установки  
   
 -   На странице "Настройка компонента ядра СУБД" пользовательского интерфейса программы настройки перейдите на вкладку "Каталоги данных" и задайте для параметра "Корневой каталог данных" значение "\\\fileserver1\share1\".  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 23
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Дополнительные сведения об использовании различных параметров командной строки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+     Дополнительные сведения об использовании различных параметров командной строки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в разделе [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## Рекомендации по операционным системам (сравнение протокола SMB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Рекомендации по операционным системам (сравнение протокола SMB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  В различных операционных системах Windows используются разные версии протокола SMB. Версия протокола SMB прозрачна для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно выяснить информацию о преимуществах разных версий SMB в отношении [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Операционная система|Версия протокола SMB2|Преимущества для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -90,27 +95,27 @@ caps.handback.revision: 23
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], включая Server Core|3.0|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов.<br /><br /> Поддержка сетевых интерфейсов с возможностями RDMA.<br /><br /> Дополнительные сведения об этих возможностях и протоколе SMB см. в разделе [Общие сведения о протоколе SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, включая Server Core|3.2|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов с помощью SMB Multichannel.<br /><br /> Поддержка сетевых интерфейсов с возможностями с помощью SMB Direct.<br /><br /> Дополнительные сведения об этих возможностях и протоколе SMB см. в разделе [Общие сведения о протоколе SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.<br /><br /> Оптимизировано для небольших произвольных операций ввода-вывода чтения и записи, обычных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Максимальный размер пакета (MTU) включен по умолчанию, что значительно повышает производительность в больших последовательных передачах, таких как хранилище данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или резервное копирование и восстановление базы данных.|  
   
-## Вопросы безопасности  
+## <a name="security-considerations"></a>Вопросы безопасности  
   
 -   Учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетная запись агента службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь разрешения «Полный доступ» и разрешения NTFS для общих папок SMB. При использовании файлового сервера SMB в качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать учетную запись домена или системы. Дополнительные сведения о разрешениях для общей папки и NTFS см. в разделе [Разрешения для общей папки и NTFS на файловом сервере](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
-    >  Полный доступ для общих папок и разрешения NTFS для общих папок SMB должны действовать только для учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователей Windows, которым назначена роль администратора сервера.  
+    >  Полный доступ для общих папок и разрешения NTFS для общих папок SMB должны действовать только для учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователей Windows, которым назначена роль администратора сервера.  
   
-     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если в качестве учетной записи службы используется учетная запись системы, предоставьте разрешения для учетной записи компьютера в формате *\<имя_домена>***\\***\<имя_компьютера>***$**.  
+     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если в качестве учетной записи службы используется учетная запись системы, предоставьте разрешения для учетной записи компьютера в формате *<имя_домена>***\\***<имя_компьютера>***$**.  
   
     > [!NOTE]  
     >  Если в качестве хранилища задана общая папка SMB, во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве учетной записи службы необходимо задать учетную запись домена. При использовании общей папки SMB учетную запись системы можно задать в качестве учетной записи службы только после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Виртуальные учетные записи не могут проходить проверку подлинности в удаленном расположении. Все виртуальные учетные записи используют разрешение локальной учетной записи. Укажите учетную запись компьютера в формате *\<имя_домена>***\\***\<имя_компьютера>***$**.  
+    >  Виртуальные учетные записи не могут проходить проверку подлинности в удаленном расположении. Все виртуальные учетные записи используют разрешение локальной учетной записи. Укажите учетную запись компьютера в формате *<имя_домена>***\\***<имя_компьютера>***$**.  
   
 -   Учетная запись, которая использовалась для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], при установке кластера должна иметь разрешение «Полный доступ» к общей папке SMB, используемой в качестве каталога данных, или к любым другим папкам данных (каталог пользовательской базы данных, каталог журналов пользовательской базы данных, папка TempDB, каталог журналов TempDB, папка резервного копирования).  
   
--   Учетная запись, используемая для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна обладать правами SeSecurityPrivilege на файловом сервере SMB. Для предоставления этого права используйте консоль локальной политики безопасности на файловом сервере, чтобы добавить учетную запись установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в политику управления журналом аудита и безопасности. Этот параметр находится в разделе «Назначение прав пользователя» в узле «Локальные политики» консоли «Локальная политика безопасности».  
+-   Учетная запись, используемая для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна обладать правами SeSecurityPrivilege на файловом сервере SMB. Для предоставления этого права используйте консоль локальной политики безопасности на файловом сервере, чтобы добавить учетную запись установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в политику управления журналом аудита и безопасности. Этот параметр находится в разделе «Назначение прав пользователя» в узле «Локальные политики» консоли «Локальная политика безопасности».  
   
-## Известные проблемы  
+## <a name="known-issues"></a>Известные проблемы  
   
--   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Данная проблема описана в [данной статье базы знаний](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
+-   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Данная проблема описана в [данной статье базы знаний](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
   
 -   Если общая папка SMB используется в качестве хранилища для кластеризованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то по умолчанию журнал диагностики отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть записан в общий файловый ресурс, так как у библиотеки ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет разрешения на чтение и запись в общий файловый ресурс. Чтобы устранить эту проблему, попробуйте один из следующих методов.  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 23
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

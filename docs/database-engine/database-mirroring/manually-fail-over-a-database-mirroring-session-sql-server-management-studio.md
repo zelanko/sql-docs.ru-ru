@@ -1,26 +1,31 @@
 ---
-title: "Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "переход на другой ресурс [SQL Server], зеркальное отображение базы данных"
-  - "ручная отработка отказа [SQL Server]"
-  - "зеркальное отображение базы данных [SQL Server], переход на другой ресурс"
+title: "Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover [SQL Server], database mirroring
+- manual failover [SQL Server]
+- database mirroring [SQL Server], failover
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 435dc6a75dc991d618d6dcec6ea072f889d0a0ce
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)
+# <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)
   Когда зеркальная база данных синхронизирована (то есть база данных находится в состоянии SYNCHRONIZED), владелец базы данных может инициировать отработку отказа на зеркальном сервере вручную.  
   
  При отработке отказа вручную основная и зеркальная роли сервера для базы данных, в которых произошла отработка отказа, меняются местами. Зеркальная база данных становится основной базой данных, а основная — зеркальной. Например в следующей таблице показано, как отработка отказа вручную меняет местами роли двух участников зеркального отображения: `SQLDBENGINE0_1` и `SQLDBENGINE0_2`.  
@@ -32,7 +37,7 @@ caps.handback.revision: 32
   
  Обратите внимание на то, что роли сервера для других сеансов зеркального отображения баз данных не подвергаются изменению. Дополнительные сведения см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-### Ручное переключение зеркального отображения базы данных  
+### <a name="to-manually-fail-over-database-mirroring"></a>Ручное переключение зеркального отображения базы данных  
   
 1.  Установите соединение с экземпляром основного сервера и на панели **Обозреватель объектов** щелкните имя сервера, чтобы развернуть этот узел.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 32
   
      Диалоговое окно закрывается автоматически.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Свойства базы данных (страница "Зеркальное отображение")](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (язык Transact-SQL)](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)   

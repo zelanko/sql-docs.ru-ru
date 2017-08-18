@@ -1,45 +1,38 @@
 ---
-title: "Группы доступности AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], о группах"
-  - "вторичные реплики, см. группы доступности [SQL Server]"
-  - "доступность [SQL Server]"
-  - "AlwaysOn [SQL Server], см. группы доступности [SQL Server]"
-  - "Группы доступности [SQL Server]"
+title: "Группы доступности AlwaysOn (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], about
+- secondary replicas, see Availability Groups [SQL Server]
+- availability [SQL Server]
+- AlwaysOn [SQL Server], see Availability Groups [SQL Server]
+- Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Группы доступности AlwaysOn (SQL Server)
+# <a name="always-on-availability-groups-sql-server"></a>Группы доступности AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это решение высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Поддержка [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], добавленная с версии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], позволяет максимально увеличить доступность набора пользовательских баз данных для предприятия. *Группа доступности* поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как *базы данных доступности*, которые совместно выполняют переход на другой ресурс. Группа доступности поддерживает набор первичных баз данных чтения и записи и от одного до четырех наборов соответствующих вторичных баз данных. Кроме того, базы данных-получатели можно сделать доступными только для чтения или для некоторых операций резервного копирования.  
+  Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это решение высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Поддержка [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], добавленная с версии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , позволяет максимально увеличить доступность набора пользовательских баз данных для предприятия. *Группа доступности* поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как *базы данных доступности*, которые совместно выполняют переход на другой ресурс. Группа доступности поддерживает набор первичных баз данных чтения и записи и от одного до четырех наборов соответствующих вторичных баз данных. Кроме того, базы данных-получатели можно сделать доступными только для чтения или для некоторых операций резервного копирования.  
   
  Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Переход на другой ресурс не вызывается проблемами баз данных, например обозначением базы данных как подозрительной в связи с потерей файла данных, удалением базы данных или повреждением журнала транзакций.  
-  
- **В этом разделе.**  
-  
--   [Преимущества](#Benefits)  
-  
--   [Термины и определения](#TermsAndDefinitions)  
-  
--   [Возможности взаимодействия и совместной работы с другими функциями компонента Database Engine](#Interoperability)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
--   [См. также](#RelatedContent)  
   
 ##  <a name="Benefits"></a> Преимущества  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предоставляет широкий набор параметров, позволяющих повысить уровень доступности баз данных и улучшить использование ресурсов. Ключевыми компонентами являются:  
@@ -47,7 +40,7 @@ caps.handback.revision: 34
 -   Поддержка до девяти реплик доступности. *Реплика доступности* является выделенным экземпляром группы доступности, который размещается на конкретном экземпляре SQL Server и поддерживает локальную копию каждой базы данных доступности, которая принадлежит группе доступности. Каждая группа доступности поддерживает одну первичную реплику и до восьми вторичных реплик. Дополнительные сведения см. в статье [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
     > [!IMPORTANT]  
-    >  Каждая реплика доступности должна размещаться на отдельном узле одного отказоустойчивого кластера Windows Server (WSFC). Дополнительные сведения о предварительных требованиях, ограничениях и рекомендациях для групп доступности см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+    >  Каждая реплика доступности должна размещаться на отдельном узле одного отказоустойчивого кластера Windows Server (WSFC). Дополнительные сведения о предварительных требованиях, ограничениях и рекомендациях для групп доступности см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Поддерживает альтернативные режимы доступности следующим образом:  
   
@@ -67,7 +60,7 @@ caps.handback.revision: 34
   
      Использование возможностей активных вторичных реплик позволяет улучшить эффективность использования информационных технологий и снизить стоимость за счет более рационального использования ресурсов вторичного аппаратного обеспечения. Кроме того, перевод приложений с намерением чтения и заданий резервного копирования на вторичные реплики позволяет повысить производительность работы основной реплики.  
   
--   Поддерживает прослушиватель группы доступности для каждой группы доступности. *Прослушиватель группы доступности* — это сервер, к которому могут подключаться клиенты, чтобы получить доступ к базе данных из первичной или вторичной реплики группы доступности AlwaysOn. Прослушиватели группы доступности направляют входящие соединения на первичную реплику или на доступную только для чтения вторичную реплику. Прослушиватель обеспечивает быструю отработку отказа приложений после отработки отказа группы доступности. Дополнительные сведения см. в статье [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md).  
+-   Поддерживает прослушиватель группы доступности для каждой группы доступности. *Прослушиватель группы доступности* — это сервер, к которому могут подключаться клиенты, чтобы получить доступ к базе данных из первичной или вторичной реплики группы доступности AlwaysOn. Прослушиватели группы доступности направляют входящие соединения на первичную реплику или на доступную только для чтения вторичную реплику. Прослушиватель обеспечивает быструю отработку отказа приложений после отработки отказа группы доступности. Дополнительные сведения см. в статье [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
 -   Поддерживает гибкую политику отработки отказа для обеспечения большего контроля над отработкой отказа группы доступности. Дополнительные сведения см. в статье [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -77,13 +70,13 @@ caps.handback.revision: 34
   
 -   Предоставляет интегрированный набор средств для упрощения развертывания и управления группами доступности, включая  
   
-    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания групп доступности и управления ими. Дополнительные сведения см. в статье [Обзор сведений об инструкциях Transact-SQL для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания групп доступности и управления ими. Дополнительные сведения см. в статье [Общие сведения об инструкциях Transact-SQL для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , как показано ниже:  
   
         -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] создает и настраивает группы доступности. В некоторых средах этот мастер также может автоматически подготавливать базы данных-получатели и запускать синхронизацию данных для каждой из них. Дополнительные сведения см. в статье [Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
-        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] добавляет одну или несколько баз данных-источников к существующей группе доступности. В некоторых средах этот мастер также может автоматически подготавливать базы данных-получатели и запускать синхронизацию данных для каждой из них. Дополнительные сведения см. в разделе [Использование мастера добавления базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/use-the-add-database-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] добавляет одну или несколько баз данных-источников к существующей группе доступности. В некоторых средах этот мастер также может автоматически подготавливать базы данных-получатели и запускать синхронизацию данных для каждой из них. Дополнительные сведения см. в разделе [Использование мастера добавления базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
   
         -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] добавляет одну или несколько баз данных-получателей к существующей группе доступности. В некоторых средах этот мастер также может автоматически подготавливать базы данных-получатели и запускать синхронизацию данных для каждой из них. Дополнительные сведения см. в разделе [Использование мастера добавления реплики в группу доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
@@ -91,24 +84,24 @@ caps.handback.revision: 34
   
     -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] отслеживает группы доступности AlwaysOn, реплики доступности и базы данных доступности и оценивает результаты политик AlwaysOn. Дополнительные сведения см. в статье [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-    -   В области сведений обозревателя объектов отображаются основные сведения о существующих группах доступности. Дополнительные сведения см. в статье [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   В области сведений обозревателя объектов отображаются основные сведения о существующих группах доступности. Дополнительные сведения см. в статье [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Командлеты PowerShell Дополнительные сведения см. в статье [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Термины и определения  
- группа доступности  
+ Группа доступности  
  Контейнер для набора баз данных, *базы данных доступности*, которые совместно отрабатывают отказ.  
   
  база данных доступности  
- База данных, принадлежащая к группе доступности. Для каждой базы данных доступности группа доступности поддерживает одну копию для чтения и записи (*первичная база данных*) и до восьми копий только для чтения (*вторичные базы данных*).  
+ База данных, принадлежащая к группе доступности. Для каждой базы данных доступности группа доступности поддерживает одну копию для чтения и записи ( *первичная база данных*) и до восьми копий только для чтения (*вторичные базы данных*).  
   
- база данных-источник  
+ первичная база данных  
  Копия базы данных доступности для чтения и записи.  
   
  база данных-получатель  
  Копия базы данных доступности только для чтения.  
   
- реплика доступности  
+ Реплика доступности  
  Экземпляр группы доступности, который размещается на определенном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и поддерживает локальную копию каждой базы данных доступности, входящей в группу доступности. Существует два типа реплик доступности: одна *первичная реплика* и до восьми *вторичных реплик*.  
   
  первичная реплика  
@@ -117,7 +110,7 @@ caps.handback.revision: 34
  вторичная реплика  
  Реплика доступности, которая поддерживает вторичную копию каждой базы данных доступности и служит потенциальным назначением отработки отказа для группы доступности. При необходимости вторичная реплика может поддерживать доступ только для чтения к базам данных-получателям и создание резервных копий баз данных-получателей.  
   
- прослушиватель группы доступности  
+ Прослушиватель группы доступности  
  Имя сервера, к которому могут подключаться клиенты, чтобы получить доступ к базе данных из первичной или вторичной реплики группы доступности AlwaysOn. Прослушиватели группы доступности направляют входящие соединения на первичную реплику или на доступную только для чтения вторичную реплику.  
   
 > [!NOTE]  
@@ -148,9 +141,9 @@ caps.handback.revision: 34
   
 -   [Компонент Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
--   [SQL Server, агент](../../../ssms/agent/sql-server-agent.md)  
+-   [SQL Server, агент](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)  
   
--   [Службы Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
+-   [службы Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
 >  Дополнительные сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
@@ -163,7 +156,7 @@ caps.handback.revision: 34
   
 -   **Блоги**  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
   
@@ -171,7 +164,7 @@ caps.handback.revision: 34
   
      [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   
@@ -181,9 +174,9 @@ caps.handback.revision: 34
   
      [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Настройка экземпляра сервера для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
  [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Администрирование группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
@@ -192,3 +185,4 @@ caps.handback.revision: 34
  [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
+

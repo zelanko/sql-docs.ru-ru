@@ -1,24 +1,29 @@
 ---
-title: "Обновление доставки журналов до SQL Server 2016 (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "доставка журналов [SQL Server], обновление"
+title: "Обновление доставки журналов до SQL Server 2016 (Transact-SQL) | Документы Майкрософт"
+ms.custom: 
+ms.date: 02/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Обновление доставки журналов до SQL Server 2016 (Transact-SQL)
+# <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Обновление доставки журналов до SQL Server 2016 (Transact-SQL)
   Если вы обновляете [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в конфигурации доставки журналов до новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо устанавливаете новый пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или накопительный пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновление серверов доставки журналов в правильном порядке позволит сохранить ваше решение для аварийного восстановления доставки журналов.  
   
 > [!NOTE]  
@@ -45,7 +50,7 @@ caps.handback.revision: 59
   
 -   [Составление и тестирование плана обновления Database Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
+-   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
   
 ##  <a name="ProtectData"></a> Защита данных перед обновлением  
  Рекомендуется защищать данные перед обновлением доставки журналов.  
@@ -85,11 +90,12 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  Доставка журналов также поддерживает возможность [перехода на вторичный сервер доставки журналов (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md), а также [обмена ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Но поскольку доставка журналов в настоящее время редко настраивается как решение высокой доступности (новые подходы являются гораздо более устойчивыми), отработка отказа не сокращает время простоя. Это связано с тем, что системные объекты базы данных не синхронизируются, а предоставление клиентам простого поиска резервного сервера-получателя и подключения к нему может стать проблемой.  
   
-## См. также:  
- [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>См. также:  
+ [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [Наблюдение за доставкой журналов (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [Таблицы доставки журналов и хранимые процедуры](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
+

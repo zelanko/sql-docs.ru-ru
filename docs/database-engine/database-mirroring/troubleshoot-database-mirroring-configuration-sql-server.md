@@ -1,27 +1,32 @@
 ---
-title: "Диагностика конфигурации зеркального отображения базы данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "зеркальное отображение базы данных [SQL Server], развертывание"
-  - "конечные точки [SQL Server], зеркальное отображение базы данных"
-  - "зеркальное отображение базы данных [SQL Server], устранение неполадок"
-  - "устранение неполадок [SQL Server], зеркальное отображение базы данных"
+title: "Диагностика конфигурации зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- endpoints [SQL Server], database mirroring
+- database mirroring [SQL Server], troubleshooting
+- troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 69
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c06d67efd16f0ceb894516bcdd3c47e1ff520284
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Диагностика конфигурации зеркального отображения базы данных (SQL Server)
+# <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Диагностика конфигурации зеркального отображения базы данных (SQL Server)
   В этом разделе приводятся сведения об устранении неполадок при установке сеанса зеркального отображения базы данных.  
   
 > [!NOTE]  
@@ -29,26 +34,26 @@ caps.handback.revision: 69
   
 |Проблема|Сводка|  
 |-----------|-------------|  
-|Сообщение об ошибке 1418|Данное сообщение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указывает на то, что сетевой адрес сервера недоступен или не существует, и предполагает выполнение проверки имени сетевого адреса и повторное выполнение команды. Дополнительные сведения см. в разделе [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md).|  
+|Сообщение об ошибке 1418|Данное сообщение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указывает на то, что сетевой адрес сервера недоступен или не существует, и предполагает выполнение проверки имени сетевого адреса и повторное выполнение команды. |  
 |[Измерение счетов](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Конечные точки](#Endpoints)|Обсуждаются требования к правильной настройке конечной точки зеркального отображения базы данных для каждого экземпляра сервера.|  
 |[SystemAddress](#SystemAddress)|Обобщаются альтернативы указанию системного имени экземпляра сервера в конфигурации зеркального отображения базы данных.|  
 |[Сетевой доступ](#NetworkAccess)|Документирует требования, согласно которым каждому экземпляру сервера разрешается доступ к портам других экземпляров сервера по протоколу TCP.|  
 |[Подготовка зеркальной базы данных](#MirrorDbPrep)|Обобщаются требования к подготовке зеркальной базы данных для включения зеркального отображения.|  
 |[Ошибка операции по созданию файла](#FailedCreateFileOp)|Описывается обработка сбоев при выполнении операции создания файла.|  
-|[Запуск зеркального отображения (язык Transact-SQL)](#StartDbm)|Описывается, в каком порядке должны выполняться инструкции ALTER DATABASE *имя_базы_данных* SET PARTNER **='***сервер_участник***'**.|  
+|[Запуск зеркального отображения (язык Transact-SQL)](#StartDbm)|Описывается, в каком порядке должны выполняться инструкции ALTER DATABASE *имя_базы_данных* SET PARTNER **='***сервер_участник***'** .|  
 |[Межбазовые транзакции](#CrossDbTxns)|Автоматический переход на другой ресурс может привести к автоматическому и, возможно, неверному разрешению проблемных транзакций. По этой причине зеркальное отображение базы данных не поддерживает транзакции между базами данных.|  
   
-##  <a name="Accounts"></a> Счета  
+##  <a name="Accounts"></a> Измерение счетов  
  Учетные записи, под которыми работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должны быть правильно настроены.  
   
 1.  Имеют ли учетные записи нужные разрешения?  
   
     1.  Если учетные записи выполняются в одном домене, шанс неправильной настройки уменьшается.  
   
-    2.  Если учетные записи работают в разных доменах или не являются учетными записями домена, то в базе данных **master** на другом компьютере необходимо создать имя входа для учетной записи и предоставить ему разрешение CONNECT на конечную точку. Дополнительные сведения см. в разделе [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage metadata when making a database available on another server.md). Эти требования распространяются на учетную запись сетевой службы.  
+    2.  Если учетные записи работают в разных доменах или не являются учетными записями домена, то в базе данных **master** на другом компьютере необходимо создать имя входа для учетной записи и предоставить ему разрешение CONNECT на конечную точку. Дополнительные сведения см. в разделе [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md). Эти требования распространяются на учетную запись сетевой службы.  
   
-2.  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как служба под локальной системной учетной записью, то для проверки подлинности необходимо использование сертификатов. Дополнительные сведения см. в разделе [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+2.  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как служба под локальной системной учетной записью, то для проверки подлинности необходимо использование сертификатов. Дополнительные сведения см. в подразделах [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 ##  <a name="Endpoints"></a> Конечные точки  
  Конечные точки должны быть правильно настроены.  
@@ -57,9 +62,9 @@ caps.handback.revision: 69
   
 2.  Убедитесь, что номера портов правильны.  
   
-     Определить порт, в настоящее время связанный с конечной точкой зеркального отображения базы данных экземпляра сервера, можно через представления каталога [sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) и [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md).  
+     Определить порт, в настоящее время связанный с конечной точкой зеркального отображения базы данных экземпляра сервера, можно через представления каталога [sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) и [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) .  
   
-3.  Если при зеркальном отображении базы данных возникают труднообъяснимые неполадки, рекомендуется на каждом экземпляре сервера проверить, правильный ли порт он прослушивает. Сведения о проверке доступности порта см. в разделе [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md).  
+3.  Если при зеркальном отображении базы данных возникают труднообъяснимые неполадки, рекомендуется на каждом экземпляре сервера проверить, правильный ли порт он прослушивает.   
   
 4.  Убедитесь, что конечные точки запущены (STATE=STARTED). На каждом экземпляре сервера выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 69
 ##  <a name="SystemAddress"></a> Системный адрес  
  В качестве системного имени экземпляра сервера в конфигурации зеркального отображения базы данных можно использовать любое имя, которое однозначно идентифицирует систему. Адрес сервера может представлять собой системное имя (если системы находятся в одном), полное доменное имя или IP-адрес (желательно статический). Полное доменное имя будет работать гарантированно. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-##  <a name="NetworkAccess"></a> Сетевой доступ  
+##  <a name="NetworkAccess"></a> Network Access  
  Каждому экземпляру сервера требуется доступ к портам других экземпляров сервера по протоколу TCP. Это особенно важно, если экземпляры сервера находятся в разных доменах, не имеющих доверительных отношений друг с другом (домены без доверия). Это во многом ограничивает связь между экземплярами сервера.  
   
-##  <a name="MirrorDbPrep"></a> Подготовка зеркальной базы данных  
+##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
  При первом запуске зеркального отображения или повторном запуске после удаления зеркального отображения убедитесь, что зеркальная база данных подготовлена.  
   
  При создании зеркальной базы данных на зеркальном сервере убедитесь, что резервная копия основной базы данных восстановлена. Для этого укажите имя базы данных в предложении WITH NORECOVERY. Кроме того, все резервные копии журналов, созданные после резервного копирования этой базы данных, также должны быть созданы с использованием предложения WITH NORECOVERY.  
@@ -125,9 +130,9 @@ caps.handback.revision: 69
   
  Если зеркальное отображение базы данных остановлено, то перед его повторным запуском к зеркальной базе данных необходимо применить все последующие резервные копии журналов, полученные с основной базы данных.  
   
- Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ Дополнительные сведения см. в статье [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-##  <a name="FailedCreateFileOp"></a> Ошибка операции по созданию файла  
+##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Чтобы добавление файла не повлияло на сеанс зеркального отображения, путь к файлам должен существовать на обоих серверах. Поэтому перемещение файлов базы данных во время создания зеркального отображения может привести к его ошибке или остановке при выполнении операции добавления файла.  
   
  Чтобы решить эту проблему, выполните следующие действия.  
@@ -138,7 +143,7 @@ caps.handback.revision: 69
   
 3.  Чтобы подготовить базу данных для нового сеанса зеркального отображения, владельцу также необходимо восстановить с параметром WITH NO RECOVERY все необработанные резервные копии журналов с основного сервера.  
   
- Дополнительные сведения см. в разделе [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md), [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) или [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+ Дополнительные сведения см. в разделе [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) или [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Запуск зеркального отображения (язык Transact-SQL)  
  Порядок выполнения инструкций ALTER DATABASE *имя_базы_данных* SET PARTNER **='***сервер_участник***'** очень важен.  
@@ -150,7 +155,7 @@ caps.handback.revision: 69
  Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
 > [!NOTE]  
->  Сведения о запуске зеркального отображения в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. в разделе [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md).  
+>  Сведения о запуске зеркального отображения в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. в разделе [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="CrossDbTxns"></a> Межбазовые транзакции  
  Если база данных зеркально отображается в режиме высокого уровня безопасности с автоматической отработкой отказа, то она может привести к неверному разрешению проблемных транзакций. Если автоматическая отработка отказа на зеркальную базу данных происходит во время фиксации межбазовой транзакции, то между этими базами данных может возникнуть логическая несогласованность.  
@@ -161,10 +166,13 @@ caps.handback.revision: 69
   
 -   Транзакции, использующие координатор распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC).  
   
- Дополнительные сведения см. в статье [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md).  
+ Дополнительные сведения см. в статье [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)  
+ [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
+
+
+

@@ -1,30 +1,35 @@
 ---
-title: "Изменение режима проверки подлинности сервера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "учетная запись sa"
-  - "проверка подлинности [SQL Server], смена режимов"
-  - "режим проверки подлинности сервера [SQL Server]"
-  - "изменение режима проверки подлинности сервера"
+title: "Изменение режима проверки подлинности сервера | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sa account
+- authentication [SQL Server], changing modes
+- server authentication mode [SQL Server]
+- modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b2ad077cbd029cf1fa4b2ff0243c078467c17a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Изменение режима проверки подлинности сервера
+# <a name="change-server-authentication-mode"></a>Изменение режима проверки подлинности сервера
   В этом разделе описывается, как изменить режим проверки подлинности сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. В процессе установки компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] настраивается на использование **режима проверки подлинности Windows** или **режима проверки подлинности SQL Server и Windows**. После установки вы можете изменить режим проверки подлинности в любое время.  
   
- Если во время установки был выбран **Режим проверки подлинности Windows**, то имя входа sa отключено, а пароль присваивается программой установки. Если впоследствии изменить режим проверки подлинности на **проверку подлинности SQL Server и Windows**, то имя входа sa останется отключенным. Чтобы можно было пользоваться именем входа sa, включите его и присвойте ему новый пароль с помощью инструкции ALTER LOGIN. Имя входа sa может подключаться к серверу только с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Если во время установки был выбран **Режим проверки подлинности Windows** , то имя входа sa отключено, а пароль присваивается программой установки. Если впоследствии изменить режим проверки подлинности на **проверку подлинности SQL Server и Windows**, то имя входа sa останется отключенным. Чтобы можно было пользоваться именем входа sa, включите его и присвойте ему новый пароль с помощью инструкции ALTER LOGIN. Имя входа sa может подключаться к серверу только с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **В этом разделе**  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Изменение режима проверки подлинности в целях безопасности  
+#### <a name="to-change-security-authentication-mode"></a>Изменение режима проверки подлинности в целях безопасности  
   
 1.  В обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
   
@@ -53,11 +58,11 @@ caps.handback.revision: 31
   
 3.  В диалоговом окне среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] нажмите кнопку **ОК** , чтобы подтвердить необходимость перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  В обозревателе объектов щелкните правой кнопкой мыши сервер и выберите пункт **Перезапустить**. Если работает агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], он тоже должен быть перезапущен.  
+4.  В обозревателе объектов щелкните правой кнопкой мыши сервер и выберите пункт **Перезапустить**. Если работает агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , он тоже должен быть перезапущен.  
   
-#### Включение имени входа sa  
+#### <a name="to-enable-the-sa-login"></a>Включение имени входа sa  
   
-1.  В обозревателе объектов разверните узел **Безопасность**, разверните "Имена входа", щелкните правой кнопкой мыши имя входа **sa** и выберите **Свойства**.  
+1.  В обозревателе объектов разверните узел **Безопасность**, разверните "Имена входа", щелкните правой кнопкой мыши имя входа **sa**и выберите **Свойства**.  
   
 2.  На странице **Общие** , возможно, придется создать и подтвердить пароль для имени входа.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 31
   
     ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Надежные пароли](../../relational-databases/security/strong-passwords.md)   
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

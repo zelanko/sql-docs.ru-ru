@@ -1,25 +1,30 @@
 ---
-title: "Параметр конфигурации сервера &#171;Agent XPs&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Agent XPs, параметр"
-  - "расширенные хранимые процедуры [SQL Server], агент SQL Server"
+title: "Параметр конфигурации сервера \"Agent XPs\" | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Agent XPs option
+- extended stored procedures [SQL Server], SQL Server Agent
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34863e78d2210b8c5860258dd5ade1f7aeb241c2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Параметр конфигурации сервера &#171;Agent XPs&#187;
+# <a name="agent-xps-server-configuration-option"></a>Параметр конфигурации сервера «Agent XPs»
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Используйте параметр **Agent XPs** , чтобы включить расширенные хранимые процедуры агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом сервере. Если этот параметр отключен, узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] недоступен в обозревателе объектов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -37,8 +42,8 @@ caps.handback.revision: 24
   
  Новые настройки вступают в силу сразу же, без остановки или перезапуска сервера.  
   
-## Пример
- В следующем примере включаются расширенные хранимые процедуры агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="example"></a>Пример
+ В следующем примере включаются расширенные хранимые процедуры агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 1. Откройте среду Microsoft SQL Server Management Studio и подключитесь к ядру СУБД.
 
@@ -57,8 +62,9 @@ RECONFIGURE
 GO  
 ```  
   
-## См. также:  
- [Задачи автоматизированного администрирования (агент SQL Server)](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)   
- [Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+## <a name="see-also"></a>См. также:  
+ [Задачи автоматизированного администрирования (агент SQL Server)](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)   
+ [Запуск, остановка или приостановка службы агента SQL Server](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   
+

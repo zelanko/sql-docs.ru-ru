@@ -1,27 +1,32 @@
 ---
-title: "Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "добавление баз данных-получателей"
-  - "базы данных-получатели [SQL Server], в доставке журналов"
-  - "вторичные файлы данных [SQL Server], добавление"
-  - "доставка журналов [SQL Server], базы данных-получатели"
+title: "Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding secondary databases
+- secondary databases [SQL Server], in log shipping
+- secondary data files [SQL Server], adding
+- log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d1f64d49c5baf05dc1c7f18c4c0c568a94e424ae
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server)
+# <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server)
   В этом разделе объясняется, как добавить базу данных-получатель в имеющуюся конфигурацию доставки журналов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -43,11 +48,11 @@ caps.handback.revision: 20
 ###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
- Для вызова хранимых процедур доставки журналов необходимо членство в предопределенной роли сервера **sysadmin**.  
+ Для вызова хранимых процедур доставки журналов необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Добавление базы данных-получателя доставки журналов  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Добавление базы данных-получателя доставки журналов  
   
 1.  Щелкните правой кнопкой мыши имя базы данных, которая станет базой данных-источником в конфигурации доставки журналов, затем выберите пункт **Свойства**.  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Добавление базы данных-получателя доставки журналов  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>Добавление базы данных-получателя доставки журналов  
   
-1.  На сервере-получателе выполните процедуру [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md), предоставив подробные сведения о сервере-источнике и базе данных. Данная хранимая процедура возвращает идентификатор получателя, а также идентификаторы заданий копирования и восстановления.  
+1.  На сервере-получателе выполните процедуру [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) , предоставив подробные сведения о сервере-источнике и базе данных. Данная хранимая процедура возвращает идентификатор получателя, а также идентификаторы заданий копирования и восстановления.  
   
 2.  На сервере-получателе выполните процедуру [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) для настройки расписания заданий копирования и восстановления.  
   
@@ -91,11 +96,11 @@ caps.handback.revision: 20
   
 4.  На сервере-источнике выполните процедуру [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) для добавления на сервер-источник необходимых сведений о новой базе данных-получателе.  
   
-5.  На сервере-получателе включите задания копирования и восстановления. Дополнительные сведения см. в статье [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
+5.  На сервере-получателе включите задания копирования и восстановления. Дополнительные сведения см. в статье [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Обновление доставки журналов до SQL Server 2016 (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Обновление доставки журналов до SQL Server 2016 (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 20
   
 -   [Переход на вторичный сервер доставки журналов (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Таблицы доставки журналов и хранимые процедуры](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

@@ -1,28 +1,33 @@
 ---
-title: "Реплика доступности отключена | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.arp2connected.issues.f1"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], политики"
+title: "Реплика доступности отключена | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.arp2connected.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cfea4350f0958b61db6f71c9cb320a1e51e8f2ad
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Реплика доступности отключена
+# <a name="availability-replica-is-disconnected"></a>Реплика доступности отключена
     
-## Введение  
+## <a name="introduction"></a>Введение  
   
 |||  
 |-|-|  
@@ -31,13 +36,13 @@ caps.handback.revision: 12
 |**Категория**|**Критическая**|  
 |**Аспект**|Реплика доступности|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Эта политика проверяет состояние соединения между репликами доступности. Эта политика находится в нерабочем состоянии, если подключение к реплике доступности имеет состояние DISCONNECTED. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] сведения о возможных причинах проблем и решениях доступны в разделе [Реплика доступности отключена](http://go.microsoft.com/fwlink/p/?LinkId=220857) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Реплика доступности отключена](http://go.microsoft.com/fwlink/p/?LinkId=220857) в TechNet Wiki.  
   
-## Возможные причины  
+## <a name="possible-causes"></a>Возможные причины  
  Вторичная реплика не подключена к первичной реплике. Состояние соединения — DISCONNECTED. Возможны следующие причины этой проблемы.  
   
 -   Порт подключения может конфликтовать с другим приложением.  
@@ -48,15 +53,16 @@ caps.handback.revision: 12
   
 -   Транспорт отключен.  
   
-## Возможные решения  
+## <a name="possible-solutions"></a>Возможные решения  
  Ниже перечислены возможные решения этой проблемы:  
   
 -   Проверьте конфигурацию конечной точки зеркального отображения базы данных для экземпляров первичной и вторичной реплики и обновите конфигурацию с несоответствием.  
   
 -   Проверьте наличие конфликта портов и при его обнаружении измените номер порта.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

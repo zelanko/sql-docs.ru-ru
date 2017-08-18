@@ -1,24 +1,29 @@
 ---
-title: "Экземпляр зеркального сервера (мастер настройки безопасности зеркального отображения баз данных) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.configdbmsecurwiz.mirrorsrvr.f1"
+title: "Экземпляр зеркального сервера (мастер настройки безопасности зеркального отображения баз данных) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.mirrorsrvr.f1
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 78dc5246eb4665e0f66af57198d5634cac502506
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Экземпляр зеркального сервера (мастер настройки безопасности зеркального отображения баз данных)
+# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Экземпляр зеркального сервера (мастер настройки безопасности зеркального отображения баз данных)
   Используйте данную страницу для задания информации об экземпляре сервера с зеркальной базой данных.  
   
 > [!IMPORTANT]  
@@ -26,13 +31,13 @@ caps.handback.revision: 42
   
  **Настройка зеркального отображения базы данных в среде SQL Server Management Studio**  
   
--   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+-   [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Экземпляр зеркального сервера**  
- Если экземпляр зеркального сервера уже задан (на странице **Зеркальное отображение** диалогового окна **Свойства базы данных**), то он отображается. Дополнительные сведения см. в разделе [Свойства базы данных (страница "Зеркальное отображение")](../../relational-databases/databases/database-properties-mirroring-page.md).  
+ Если экземпляр зеркального сервера уже задан (на странице **Зеркальное отображение** диалогового окна **Свойства базы данных** ), то он отображается. Дополнительные сведения см. в разделе [Свойства базы данных (страница "Зеркальное отображение")](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
  В противном случае введите имя экземпляра зеркального сервера. Помните, что экземпляр зеркального сервера не может быть тем же самым, что и экземпляр основного сервера.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 42
   
  Снимите этот флажок для выключения шифрования. Установите этот флажок, чтобы вновь включить шифрование.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Свойства базы данных (страница "Зеркальное отображение")](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

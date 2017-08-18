@@ -1,28 +1,33 @@
 ---
-title: "Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "возобновление зеркального отображения базы данных"
-  - "зеркальное отображение баз данных [SQL Server], сеансы"
-  - "зеркальное отображение базы данных [SQL Server], приостановка"
-  - "зеркальное отображение базы данных [SQL Server], возобновление"
-  - "приостановка зеркального отображения базы данных"
+title: "Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
   В этом разделе описано, как приостановить и возобновить зеркальное отображение базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -37,7 +42,7 @@ caps.handback.revision: 34
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.** [После приостановки или возобновления зеркального отображения базы данных](#FollowUp)  
+-   **Дальнейшие действия.**  [После приостановки или возобновления зеркального отображения базы данных](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  В любой момент сеанс зеркального отображения базы данных можно приостановить, что дает возможность повышать производительность при возникновении узких мест. Затем в любое время приостановленный сеанс можно возобновить.  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Приостановить или возобновить сеанс зеркального отображения базы данных можно на странице **Свойства базы данных — зеркальное отображение** .  
   
-#### Приостановление или возобновление зеркального отображения базы данных  
+#### <a name="to-pause-or-resume-database-mirroring"></a>Приостановление или возобновление зеркального отображения базы данных  
   
 1.  Во время сеанса зеркального отображения базы данных установите соединение с экземпляром главного сервера, в обозревателе объектов щелкните имя сервера и разверните дерево сервера.  
   
@@ -71,25 +76,25 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Приостановка зеркального отображения базы данных  
+#### <a name="to-pause-database-mirroring"></a>Приостановка зеркального отображения базы данных  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] для любого участника.  
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+3.  Выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
      ALTER DATABASE *имя_базы_данных* SET PARTNER SUSPEND  
   
-     где *имя_базы_данных* — это зеркально отображаемая база данных, сеанс которой нужно приостановить.  
+     где *имя_базы_данных* — это зеркально отображаемая база данных, сеанс которой нужно приостановить.  
   
-     В следующем примере показана приостановка образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     В следующем примере показана приостановка образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### Возобновление зеркального отображения базы данных  
+##### <a name="to-resume-database-mirroring"></a>Возобновление зеркального отображения базы данных  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] для любого участника.  
   
@@ -99,9 +104,9 @@ caps.handback.revision: 34
   
      ALTER DATABASE *имя_базы_данных* SET PARTNER RESUME  
   
-     где *database_name* — зеркально отображаемая база данных, сеанс которой нужно возобновить.  
+     где *database_name* — зеркально отображаемая база данных, сеанс которой нужно возобновить.  
   
-     В следующем примере показана приостановка образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+     В следующем примере показана приостановка образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
@@ -111,7 +116,7 @@ caps.handback.revision: 34
   
 -   **После приостановки зеркального отображения базы данных**  
   
-     В базе данных-источнике примите меры предосторожности, чтобы избежать переполнения журнала транзакций. Дополнительные сведения см. в разделе [Резервная копия журнала транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+     В базе данных-источнике примите меры предосторожности, чтобы избежать переполнения журнала транзакций. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 -   **После возобновления зеркального отображения базы данных**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

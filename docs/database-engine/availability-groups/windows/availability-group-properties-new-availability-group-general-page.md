@@ -1,24 +1,29 @@
 ---
-title: "Свойства группы доступности: создание группы доступности (страница &quot;Общие&quot;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroupproperties.general.f1"
+title: "Свойства группы доступности: создание группы доступности (страница \"Общие\") | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 751d94c5aa3e6c2f7d16b25e3e2fa3b2821cbccf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства группы доступности: создание группы доступности (страница &quot;Общие&quot;)
+# <a name="availability-group-properties-new-availability-group-general-page"></a>Свойства группы доступности: создание группы доступности (страница "Общие")
   Приведенные в этом разделе сведения относятся к вкладке **Общие** диалоговых окон **Создание группы доступности** и **Свойства группы доступности** .  Диалоговое окно **Создание группы доступности** позволяет создать новую группу доступности, не прибегая к использованию [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Диалоговое окно **Свойства группы доступности** позволяет просматривать и изменять конфигурацию существующей группы доступности.  
   
  **Просмотр свойств группы доступности**  
@@ -27,11 +32,11 @@ caps.handback.revision: 15
   
 -   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## Список элементов пользовательского интерфейса  
+## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Имя группы доступности**  
  Имя группы доступности. Определяемое пользователем имя, которое должно быть уникальным в отказоустойчивом кластере Windows Server (WSFC).  
   
-## Базы данных доступности  
+## <a name="availability-databases"></a>Базы данных доступности  
  **Имя базы данных**  
  Имя базы данных, добавленной к группе доступности.  
   
@@ -41,9 +46,9 @@ caps.handback.revision: 15
  **Удалить**  
  Нажмите, чтобы удалить выбранную базу данных из группы доступности.  
   
-## Реплики доступности  
+## <a name="availability-replicas"></a>Реплики доступности  
  **Экземпляр сервера**  
- Имя сервера экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на котором размещена данная реплика, а также имя экземпляра, если экземпляр не является используемым по умолчанию.  
+ Имя сервера экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена данная реплика, а также имя экземпляра, если экземпляр не является используемым по умолчанию.  
   
  **Роль**  
  **Первичная**  
@@ -64,7 +69,7 @@ caps.handback.revision: 15
  **Синхронная фиксация**  
  Первичная реплика ожидает возможности выполнения фиксации транзакции, пока вторичная реплика записывает транзакцию на диск.  
   
- Дополнительные сведения см. в разделе [Режимы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Дополнительные сведения см. в статье [Режимы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  **Режим отработки отказа**  
  Режим отработки отказа реплики доступности, одно из следующих значений:  
@@ -82,7 +87,7 @@ caps.handback.revision: 15
  Разрешаются все соединения с базами данных в первичной реплике. Это параметр по умолчанию.  
   
  **разрешить соединения с доступом на чтение и запись;**  
- Соединения, у которых свойство "Назначение приложения" равно **ReadOnly**, не разрешены. Если свойство «Назначение приложения» имеет значение **ReadWrite** или не задано, то соединение разрешено. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Соединения, у которых свойство "Назначение приложения" равно **ReadOnly** , не разрешены. Если свойство «Назначение приложения» имеет значение **ReadWrite** или не задано, то соединение разрешено. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  **Доступные для чтения вторичные**  
  Указывает, могут ли базы данных заданной реплики доступности, играющей роль вторичной (т. е. служащей вторичной репликой), принимать соединения от клиентов. Может принимать одно из следующих значений:  
@@ -100,7 +105,7 @@ caps.handback.revision: 15
  Количество секунд, составляющее время ожидания сеанса для этой реплики.  
   
  **URL-адрес конечной точки**  
- URL-адрес конечной точки. Сведения о формате этих URL-адресов см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md).  
+ URL-адрес конечной точки. Сведения о формате этих URL-адресов см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Добавить**  
  Выберите, чтобы добавить новую вторичную реплику в группу доступности.  
@@ -108,7 +113,8 @@ caps.handback.revision: 15
  **Удалить**  
  Нажмите, чтобы удалить вторичную реплику из группы доступности.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

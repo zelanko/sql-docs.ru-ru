@@ -1,27 +1,32 @@
 ---
-title: "Свойства сервера (страница &#171;Безопасность&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.security.f1"
+title: "Свойства сервера (страница \"Безопасность\") | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfad12622d6f86101b5a9e8d192922424e5f7171
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства сервера (страница &#171;Безопасность&#187;)
+# <a name="server-properties---security-page"></a>Свойства сервера (страница "Безопасность")
   Эта страница используется для просмотра или изменения параметров безопасности сервера.  
   
-## Проверка подлинности сервера  
+## <a name="server-authentication"></a>Проверка подлинности сервера  
  **Режим проверки подлинности Windows**  
  Используется проверка подлинности Windows для проверки допустимости попыток соединения. Если при изменении режима безопасности пароль **sa** пуст, пользователю предлагается ввести пароль **sa** .  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  При изменении конфигурации безопасности необходимо перезапустить службу. При изменении режима проверки подлинности сервера на режим проверки подлинности SQL Server и Windows учетная запись проверки подлинности сервера автоматически не включается. Для использования учетной записи SA выполните [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) с параметром ENABLE.  
   
-## Аудит входа  
+## <a name="login-auditing"></a>Аудит входа  
  **None**  
  Аудит входа не производится.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  При изменении уровня аудита необходимо перезапустить службу.  
   
-## Серверная учетная запись-посредник  
+## <a name="server-proxy-account"></a>Серверная учетная запись-посредник  
  **Включить серверную учетную запись-посредник**  
  Включается учетная запись для использования **xp_cmdshell**. Учетные записи-посредники позволяют осуществлять олицетворение имен входа, ролей сервера и ролей базы данных при выполнении команды операционной системы.  
   
@@ -63,14 +68,14 @@ caps.handback.revision: 31
  **Пароль**  
  Задайте пароль для учетной записи-посредника.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Включить трассировку аудита C2**  
- Выполняется аудит всех попыток доступа к инструкциям и объектам и их запись в файл в каталоге \MSSQL\Data для экземпляров по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в каталоге \MSSQL$*имя_экземпляра*\Data для именованных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Параметр конфигурации сервера "c2 audit mode"](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md).  
+ Выполняется аудит всех попыток доступа к инструкциям и объектам и их запись в файл в каталоге \MSSQL\Data для экземпляров по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или в каталоге \MSSQL$*имя_экземпляра*\Data для именованных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Параметр конфигурации сервера "c2 audit mode"](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md).  
   
  **Формировать межбазовую цепочку владения**  
  Выберите этот пункт, чтобы база данных могла быть источником или назначением межбазовой цепочки владения. Дополнительные сведения см. в статье [Параметр конфигурации сервера "cross db ownership chaining"](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Настройка параметра конфигурации сервера max text repl size | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "max text repl size, параметр"
+title: "Настройка параметра конфигурации сервера max text repl size | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3bb392a22a4954fd536a1f366c4b94a9d4cac1f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка параметра конфигурации сервера max text repl size
+# <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Настройка параметра конфигурации сервера max text repl size
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе описываются способы настройки параметра конфигурации сервера **max text repl size** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max text repl size** используется для указания максимального размера (в байтах) типов данных **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** и **image**, которые могут добавляться к реплицируемому или отслеживаемому столбцу в инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT. Значение по умолчанию — 65 536 байт. Значение -1 означает отсутствие ограничений размера, кроме тех, которые налагаются типом данных.  
+  В этом разделе описываются способы настройки параметра конфигурации сервера **max text repl size** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max text repl size** используется для указания максимального размера (в байтах) типов данных **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**и **image** , которые могут добавляться к реплицируемому или отслеживаемому столбцу в инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT. Значение по умолчанию — 65 536 байт. Значение -1 означает отсутствие ограничений размера, кроме тех, которые налагаются типом данных.  
   
  **В этом разделе**  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 35
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.** [После настройки параметра max text repl size](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра max text repl size](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 35
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Настройка параметра max text repl size  
+#### <a name="to-configure-the-max-text-repl-size-option"></a>Настройка параметра max text repl size  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Настройка параметра max text repl size  
+#### <a name="to-configure-the-max-text-repl-size-option"></a>Настройка параметра max text repl size  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -88,7 +93,7 @@ GO
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра max text repl size  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи репликации](../../relational-databases/replication/replication-features-and-tasks.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -99,3 +104,4 @@ GO
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   
   
+

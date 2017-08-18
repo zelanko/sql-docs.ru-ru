@@ -1,29 +1,34 @@
 ---
-title: "Возобновление базы данных доступности (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.resumedatamove.f1"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], возобновление базы данных"
-  - "базы данных-получатели [SQL Server], в группе доступности"
-  - "базы данных-источники [SQL Server], в группе доступности"
-  - "Группы доступности [SQL Server], базы данных"
+title: "Возобновление базы данных доступности (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.resumedatamove.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], resuming a database
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 6fb24ab051691dc582c3b2e454fe60478d074b9d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Возобновление базы данных доступности (SQL Server)
+# <a name="resume-an-availability-database-sql-server"></a>Возобновление базы данных доступности (SQL Server)
   В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно возобновить выполнение приостановленной базы данных доступности с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Возобновление приостановленной базы данных переводит базу данных в состояние SYNCHRONIZING. Возобновление базы данных-источника возобновляет также все ее базы данных-получатели, которые были приостановлены в результате приостановки базы данных-источника. Если какая-либо база данных-получатель была приостановлена локально на экземпляре сервера, на котором размещена вторичная реплика, эта база данных-получатель должна быть возобновлена локально. Как только определенная база данных-получатель и соответствующая база данных-источник вместе переходят в состояние SYNCHRONIZING, возобновляется синхронизация данных для базы данных-получателя.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 38
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-### Ограничения  
+### <a name="limitations-and-restrictions"></a>Ограничения  
  Команда RESUME возвращается сразу после принятия репликой, в которой размещена целевая база данных, но фактическое возобновление базы данных происходит асинхронно.  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
@@ -70,11 +75,11 @@ caps.handback.revision: 38
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена реплика доступности, для которой нужно возобновить базу данных, и разверните дерево сервера.  
   
-2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности**.  
+2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности** .  
   
 3.  Разверните группу доступности.  
   
-4.  Разверните узел **Базы данных доступности**, щелкните правой кнопкой мыши базу данных и нажмите кнопку **Возобновить перемещение данных**.  
+4.  Разверните узел **Базы данных доступности** , щелкните правой кнопкой мыши базу данных и нажмите кнопку **Возобновить перемещение данных**.  
   
 5.  В диалоговом окне **Возобновление перемещения данных** нажмите кнопку **ОК**.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 38
   
 1.  Подключитесь к экземпляру сервера, на котором размещена вторичная реплика, базу данных которой нужно возобновить.  
   
-2.  Возобновите базу данных-получатель с помощью следующей инструкции [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md):  
+2.  Возобновите базу данных-получатель с помощью следующей инструкции [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
   
      ALTER DATABASE *имя_базы_данных* SET HADR RESUME  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 38
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, на котором размещена реплика, базу данных которой нужно возобновить. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.  
   
-2.  Для возобновления группы доступности воспользуйтесь командлетом **Resume-SqlAvailabilityDatabase**.  
+2.  Для возобновления группы доступности воспользуйтесь командлетом **Resume-SqlAvailabilityDatabase** .  
   
      Например, следующая команда возобновляет синхронизацию данных для базы данных доступности `MyDb3` в группе доступности `MyAg`.  
   
@@ -113,9 +118,10 @@ caps.handback.revision: 38
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Приостановка базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
+-   [Приостановка базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "зеркальное отображение базы данных [SQL Server], развертывание"
-  - "сертификаты [SQL Server], зеркальное отображение базы данных"
-  - "проверка подлинности [SQL Server], зеркальное отображение базы данных"
-  - "зеркальное отображение базы данных [SQL Server], безопасность"
+title: "Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- certificates [SQL Server], database mirroring
+- authentication [SQL Server], database mirroring
+- database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL)
   В этом примере описаны все действия, выполняемые при создании сеанса зеркального отображения базы данных с использованием проверки подлинности на основе сертификатов. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование.  
   
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  
@@ -41,7 +46,7 @@ caps.handback.revision: 50
   
     2.  Настройка узла Host_B для исходящих соединений.  
   
-     Сведения об этом этапе настройки зеркального отображения базы данных см. в разделе [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+     Сведения об этом этапе настройки зеркального отображения базы данных см. в разделе [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 2.  [Настройка входящих соединений](#ConfigureInboundConnections)  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 50
   
     2.  Настройка узла Host_B для входящих соединений.  
   
-     Сведения об этом этапе настройки зеркального отображения базы данных см. в разделе [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+     Сведения об этом этапе настройки зеркального отображения базы данных см. в разделе [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
 3.  Создание зеркальной базы данных  
   
@@ -149,7 +154,7 @@ caps.handback.revision: 50
   
 5.  С помощью безопасного метода скопируйте файл «C:\HOST_B_cert.cer» на узел HOST_A.  
   
- Дополнительные сведения см. в разделе [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md).  
+ Дополнительные сведения см. в разделе [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
  [&#91;В начало примера&#93;](#ExampleH2)  
   
@@ -223,11 +228,11 @@ caps.handback.revision: 50
 > [!IMPORTANT]  
 >  При необходимости запуска в режиме высокого уровня защиты с автоматической отработкой отказа нужно повторить эти шаги установки, чтобы настроить следящий сервер для исходящих и входящих соединений. При настройке входящих соединений с задействованным следящим сервером необходимо настроить имена входа и пользователей для следящего сервера на обоих участниках и для обоих участников на следящем сервере.  
   
- Дополнительные сведения см. в разделе [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md).  
+ Дополнительные сведения см. в разделе [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
  [&#91;В начало примера&#93;](#ExampleH2)  
   
-### Создание зеркальной базы данных  
+### <a name="creating-the-mirror-database"></a>Создание зеркальной базы данных  
  Дополнительные сведения о создании зеркальной базы данных см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ###  <a name="ConfigureMirroringPartners"></a> Настройка участников зеркального отображения  
@@ -260,7 +265,7 @@ caps.handback.revision: 50
     ```  
   
     > [!NOTE]  
-    >  При необходимости запуска в режиме высокого уровня защиты с автоматической отработкой отказа оставьте безопасность транзакций в положении FULL (установка по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй инструкции SET PARTNER **'***сервер_партнер***'**. Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
+    >  При необходимости запуска в режиме высокого уровня защиты с автоматической отработкой отказа оставьте безопасность транзакций в положении FULL (установка по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй инструкции SET PARTNER **'***сервер_партнер***'** . Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
   
  [&#91;В начало примера&#93;](#ExampleH2)  
   
@@ -268,18 +273,18 @@ caps.handback.revision: 50
   
 -   [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+-   [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+-   [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 -   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage metadata when making a database available on another server.md) (SQL Server)  
+-   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## См. также:  
- [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+## <a name="see-also"></a>См. также:  
+ [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
@@ -287,3 +292,4 @@ caps.handback.revision: 50
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

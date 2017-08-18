@@ -1,27 +1,32 @@
 ---
-title: "Свойства сервера (страница &#171;Настройки базы данных&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.databasesettings.f1"
+title: "Свойства сервера (страница \"Параметры базы данных\") | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства сервера (страница &#171;Настройки базы данных&#187;)
+# <a name="server-properties---database-settings-page"></a>Свойства сервера (страница "Параметры базы данных")
   Эта страница позволяет просматривать и изменять параметры базы данных.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Коэффициент заполнения индекса, используемый по умолчанию**  
  Указывает, насколько [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен заполнять каждую страницу при создании нового индекса на основе существующих данных. Коэффициент заполнения влияет на производительность, так как в процессе заполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тратит значительное время на разбиение страниц по мере их заполнения.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 32
  Задает значение по умолчанию для всей системы для периода времени хранения каждого носителя данных резервных копий после того, как он был использован для резервного копирования базы данных или журнала транзакций. Этот параметр обеспечивает защиту резервных копий от перезаписи до истечения установленного числа суток.  
   
  **Сжимать резервные копии**  
- В [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или в более поздних версиях) указывает текущую настройку параметра **backup compression default**. Этот параметр определяет сжатие резервных копий по умолчанию на уровне сервера следующим образом.  
+ В [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или в более поздних версиях) указывает текущую настройку параметра **backup compression default** . Этот параметр определяет сжатие резервных копий по умолчанию на уровне сервера следующим образом.  
   
 -   Если флажок **Сжатие резервных копий** сброшен, то новые резервные копии по умолчанию не сжимаются.  
   
@@ -65,13 +70,13 @@ caps.handback.revision: 32
  Указывает расположение файлов журналов по умолчанию. Нажмите кнопку «Обзор», чтобы перейти к новому размещению по умолчанию. Вступит в действие только после перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Настроенные значения**  
- Отображает настроенные значения для параметров на этой панели. В случае изменения этих значений выберите пункт **Текущие значения** и посмотрите, вступили ли в силу внесенные изменения. В противном случае сначала должен быть перезапущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Отображает настроенные значения для параметров на этой панели. В случае изменения этих значений выберите пункт **Текущие значения** и посмотрите, вступили ли в силу внесенные изменения. В противном случае сначала должен быть перезапущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Текущие значения**  
  Просмотр текущих значений для параметров на этой панели. Эти значения доступны только для чтения.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Укажите коэффициент заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
+ [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
   

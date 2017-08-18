@@ -1,33 +1,38 @@
 ---
-title: "Регистрация имя участника-службы для соединений Kerberos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "соединения [SQL Server], имена участников-служб"
-  - "сетевые подключения [SQL Server], имена участников-служб"
-  - "регистрация SPN"
-  - "имена участников сервера"
-  - "SPNs [SQL Server]"
+title: "Регистрация имени участника-службы для соединений Kerberos | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [SQL Server], SPNs
+- network connections [SQL Server], SPNs
+- registering SPNs
+- Server Principal Names
+- SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b8ceebad6ec1dfaf4427864b97cd8c2076e1a2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Регистрация имя участника-службы для соединений Kerberos
+# <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имя участника-службы для соединений Kerberos
   Чтобы использовать проверку подлинности Kerberos с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо наличие следующих условий.  
   
 -   Компьютеры клиента и сервера должны быть частью одного домена Windows или доверенных доменов.  
   
--   Имя участника-службы (SPN) должно быть зарегистрировано в службе каталогов Active Directory, которая играет роль центра распределения ключей в домене Windows. Имя участника-службы после регистрации сопоставляется учетной записи Windows, запустившей экземпляр службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если регистрация имени участника-службы не была выполнена или завершилась неудачно, уровень безопасности Windows не может определить учетную запись, связанную с именем участника-службы, и проверка подлинности Kerberos не может быть использована.  
+-   Имя участника-службы (SPN) должно быть зарегистрировано в службе каталогов Active Directory, которая играет роль центра распределения ключей в домене Windows. Имя участника-службы после регистрации сопоставляется учетной записи Windows, запустившей экземпляр службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если регистрация имени участника-службы не была выполнена или завершилась неудачно, уровень безопасности Windows не может определить учетную запись, связанную с именем участника-службы, и проверка подлинности Kerberos не может быть использована.  
   
     > [!NOTE]  
     >  Если сервер не может автоматически зарегистрировать имя участника-службы, оно должно быть зарегистрировано вручную. См. раздел [Регистрация имени участника-службы вручную](#Manual).  
@@ -51,12 +56,12 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Имя участника-службы (service primary name, SPN) — это имя, по которому клиент единственным образом распознает экземпляр службы. Служба проверки подлинности Kerberos может использовать основное имя для проверки подлинности служб. Когда клиент хочет подключиться к службе, он определяет местонахождение экземпляра службы, составляет для него основное имя, подключается к службе и представляет ей это имя для проверки подлинности.  
   
 > [!NOTE]  
->  Сведения, приводимые в этом разделе, применимы также в конфигурациях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использующих кластеризацию.  
+>  Сведения, приводимые в этом разделе, применимы также в конфигурациях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих кластеризацию.  
   
  Для входа на SQL Server рекомендуется использовать проверку подлинности Windows. Проверка подлинности клиентов с проверкой подлинности Windows осуществляется при помощи протоколов NTLM или Kerberos. В среде Active Directory сначала всегда выполняется проверка подлинности по протоколу Kerberos. Проверка подлинности Kerberos не поддерживается клиентами [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с именованными каналами.  
   
 ##  <a name="Permissions"></a> Разрешения  
- При запуске службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] она пытается зарегистрировать имя участника-службы (SPN). Если у учетной записи, с которой запускается SQL Server, нет права регистрировать имя участника-службы в службах домена Active Directory, вызов завершится ошибкой и в журнал событий приложений, а также в журнал ошибок SQL Server будет добавлено предупреждение. Для регистрации имени участника-службы компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен выполняться от имени встроенной учетной записи, например Local System (не рекомендуется) или NETWORK SERVICE, либо от имени учетной записи, обладающей разрешением на регистрацию имен участников-служб, например учетной записи администратора домена. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в ОС [!INCLUDE[win7](../../includes/win7-md.md)] или [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], можно выполнить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью виртуальной учетной записи или управляемой учетной записи службы. Виртуальные счета и управляемые учетные записи службы могут зарегистрировать имя участника-службы. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется под другой учетной записью, то имя участника-службы не регистрируется при запуске, и администратору домена необходимо произвести его регистрацию вручную.  
+ При запуске службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] она пытается зарегистрировать имя участника-службы (SPN). Если у учетной записи, с которой запускается SQL Server, нет права регистрировать имя участника-службы в службах домена Active Directory, вызов завершится ошибкой и в журнал событий приложений, а также в журнал ошибок SQL Server будет добавлено предупреждение. Для регистрации имени участника-службы компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен выполняться от имени встроенной учетной записи, например Local System (не рекомендуется) или NETWORK SERVICE, либо от имени учетной записи, обладающей разрешением на регистрацию имен участников-служб, например учетной записи администратора домена. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в ОС  [!INCLUDE[win7](../../includes/win7-md.md)] или  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , можно выполнить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью виртуальной учетной записи или управляемой учетной записи службы. Виртуальные счета и управляемые учетные записи службы могут зарегистрировать имя участника-службы. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется под другой учетной записью, то имя участника-службы не регистрируется при запуске, и администратору домена необходимо произвести его регистрацию вручную.  
   
 > [!NOTE]  
 >  Если домен Windows настроен для выполнения в режиме работы ниже [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, то управляемая учетная запись службы не будет иметь необходимых разрешений для регистрации имен участника-службы для службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если требуется проверка подлинности по протоколу Kerberos, администратор домена должен вручную зарегистрировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена участников-службы в управляемой учетной записи службы.  
@@ -102,9 +107,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |MSSQLSvc/*fqdn/InstanceName*|Сформированное поставщиком имя участника-службы (по умолчанию) для именованного экземпляра, когда используется протокол, отличный от TCP. *InstanceName* — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Автоматическая регистрация имени участника-службы  
- Когда запускается экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается зарегистрировать имя участника-службы (SPN) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда экземпляр остановлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается отменить регистрацию имени участника-службы (SPN). Для соединений TCP/IP имя участника-службы регистрируется в формате *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Оба именованных экземпляра и экземпляр по умолчанию регистрируются как служба *MSSQLSvc*, используя значение *<tcpport>\>*, чтобы различить экземпляры.  
+ Когда запускается экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается зарегистрировать имя участника-службы (SPN) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда экземпляр остановлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается отменить регистрацию имени участника-службы (SPN). Для соединений TCP/IP имя участника-службы регистрируется в формате *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Оба именованных экземпляра и экземпляр по умолчанию регистрируются как служба *MSSQLSvc*, используя значение *\<tcpport>*, чтобы различить экземпляры.  
   
- Для других соединений, поддерживающих протокол Kerberos, имя субъекта-службы для именованного экземпляра регистрируется в формате *MSSQLSvc/<FQDN>\>*/*<instancename>\>*. Форматом регистрации экземпляра по умолчанию является *MSSQLSvc/<FQDN>\>*.  
+ Для других соединений, поддерживающих протокол Kerberos, имя субъекта-службы для именованного экземпляра регистрируется в формате *MSSQLSvc/\<FQDN>*/*\<instancename>*. Форматом регистрации экземпляра по умолчанию является *MSSQLSvc/\<FQDN>*.  
   
  Если учетная запись службы не обладает разрешениями на регистрацию и отмену регистрации имени участника-службы, возможно, эти действия придется выполнить вручную.  
   
@@ -119,7 +124,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
 ```  
   
- **Примечание.** Если имя участника-службы уже существует, то перед повторной регистрацией его необходимо удалить. Это можно сделать, используя команду `setspn` с параметром `-D`. В следующих примерах демонстрируется регистрация вручную нового имени участника-службы, основанного на экземпляре. Для экземпляра по умолчанию следует использовать:  
+ **Примечание.** Если имя участника-службы уже существует, то перед повторной регистрацией его необходимо удалить. Это можно сделать, используя команду `setspn` с параметром `-D` . В следующих примерах демонстрируется регистрация вручную нового имени участника-службы, основанного на экземпляре. Для экземпляра по умолчанию следует использовать:  
   
 ```  
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
@@ -170,13 +175,13 @@ WHERE session_id = @@SPID;
   
  Если во время запуска происходит ошибка регистрации имени участника-службы, она заносится в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , после чего установка продолжается.  
   
- Если во время выключения происходит ошибка отмены регистрации имени участника-службы, она заносится в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], после чего выключение продолжается.  
+ Если во время выключения происходит ошибка отмены регистрации имени участника-службы, она заносится в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , после чего выключение продолжается.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Поддержка имени участника-службы (SPN) в клиентских соединениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
- [Имена участника-службы (SPNs) в клиентских соединениях (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
- [Имена участника-службы (SPNs) в клиентских соединениях (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
+ [Имена участника-службы (SPN) в клиентских соединениях (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
+ [Имена участника-службы (SPN) в клиентских соединениях (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [Компоненты собственного клиента SQL Server](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Проблемы проверки подлинности по протоколу Kerberos разрешаются в среде служб Reporting Services](http://technet.microsoft.com/library/ff679930.aspx)  
+ [Управление проблемами проверки подлинности по протоколу Kerberos в средах служб Reporting Service](http://technet.microsoft.com/library/ff679930.aspx)  
   
   

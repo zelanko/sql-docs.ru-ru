@@ -1,26 +1,31 @@
 ---
-title: "Зеркальное отображение и моментальные снимки баз данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "зеркальное отображение базы данных [SQL Server], взаимодействие"
-  - "моментальные снимки [моментальные снимки базы данных SQL Server], зеркальное отображение базы данных"
-  - "моментальные снимки базы данных [SQL Server], зеркальное отображение базы данных"
+title: "Зеркальное отображение и моментальные снимки баз данных (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], interoperability
+- snapshots [SQL Server database snapshots], database mirroring
+- database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 32381132f193eae0c3ecae20247d36dcefb8f658
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Зеркальное отображение и моментальные снимки баз данных (SQL Server)
+# <a name="database-mirroring-and-database-snapshots-sql-server"></a>Зеркальное отображение и моментальные снимки баз данных (SQL Server)
   Преимущество зеркальной базы данных проявляется в возможности использовать ее для разгрузки при формировании отчетов. Чтобы использовать зеркальную базу данных для выполнения отчетов, можно создавать моментальные снимки базы данных и направлять запросы клиентских соединений к самому позднему снимку. Моментальный снимок базы данных представляет собой статичный, доступный только для чтения, согласованный по транзакциям моментальный снимок состояния базы данных-источника на момент создания снимка. Для создания моментального снимка в зеркальной базе данных, эта база данных должна быть в синхронизированном состоянии зеркального отображения.  
   
  В отличие от самой зеркальной базы данных, моментальный снимок базы данных доступен клиентам. Пока зеркальный сервер соединен с основным сервером, можно направлять запрашивающих отчеты клиентов на подключение к моментальному снимку. Имейте в виду, что так как моментальный снимок базы данных является статичным, новые данные недоступны. Чтобы относительно новые данные были доступными для пользователей, необходимо периодически создавать новый моментальный снимок базы данных, а приложения должны устанавливать входящие клиентские соединения с наиболее поздним снимком.  
@@ -35,7 +40,7 @@ caps.handback.revision: 40
 > [!NOTE]  
 >  В качестве специального решения для отчетов, обладающих достаточной масштабируемостью, можно рассмотреть репликацию. Дополнительные сведения см. в статье [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  В данном примере создаются моментальные снимки зеркальной базы данных.  
   
  Предполагается, что в сеансе зеркального отображения используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. В данном примере создаются три моментальных снимка на зеркальной копии базы данных `AdventureWorks` , которая находится на диске `F` . Моментальные снимки называются `AdventureWorks_0600`, `AdventureWorks_1200`и `AdventureWorks_1800` , имена означают приблизительное время создания снимков.  
@@ -76,9 +81,8 @@ caps.handback.revision: 40
   
 -   [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
- ![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [&#91;В начало&#93;](#Top)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

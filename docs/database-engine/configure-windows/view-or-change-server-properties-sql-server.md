@@ -1,27 +1,35 @@
 ---
-title: "Просмотр или изменение свойств сервера (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "просмотр свойств сервера"
-  - "свойства сервера [SQL Server]"
-  - "отображение свойств сервера"
-  - "серверы [SQL Server], просмотр"
+title: "Просмотр или изменение свойств сервера (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connectionproperties.f1
+helpviewer_keywords:
+- viewing server properties
+- server properties [SQL Server]
+- displaying server properties
+- servers [SQL Server], viewing
+- Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ad9ae740eaff2b6491038b4617659ef6fd32dcf8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Просмотр или изменение свойств сервера (SQL Server)
+# <a name="view-or-change-server-properties-sql-server"></a>Просмотр или изменение свойств сервера (SQL Server)
   В этом разделе описывается просмотр и изменение свойств экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или диспетчера конфигурации SQL Server.  
   
  **В этом разделе**  
@@ -40,7 +48,7 @@ caps.handback.revision: 32
   
      [Диспетчер конфигурации SQL Server](#PowerShellProcedure)  
   
--   **Дальнейшие действия**. [После изменения свойств сервера](#FollowUp)  
+-   **Дальнейшие действия**  [После изменения свойств сервера](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -62,7 +70,7 @@ caps.handback.revision: 32
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Просмотр или изменение свойств сервера  
+#### <a name="to-view-or-change-server-properties"></a>Просмотр или изменение свойств сервера  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
   
@@ -70,7 +78,7 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Просмотр свойств сервера с помощью встроенной функции SERVERPROPERTY  
+#### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Просмотр свойств сервера с помощью встроенной функции SERVERPROPERTY  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -83,7 +91,7 @@ caps.handback.revision: 32
     GO  
     ```  
   
-#### Просмотр свойств сервера с помощью представления каталога sys.servers  
+#### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Просмотр свойств сервера с помощью представления каталога sys.servers  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -100,7 +108,7 @@ caps.handback.revision: 32
   
     ```  
   
-#### Просмотр свойств сервера с помощью представления каталога sys.configurations  
+#### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Просмотр свойств сервера с помощью представления каталога sys.configurations  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -117,13 +125,13 @@ caps.handback.revision: 32
   
     ```  
   
-#### Изменение свойства сервера с помощью процедуры sp_configure  
+#### <a name="to-change-a-server-property-by-using-spconfigure"></a>Изменение свойства сервера с помощью процедуры sp_configure  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как изменить свойство сервера с помощью процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). В примере значение параметра `fill factor` меняется на `100`. Чтобы изменение вступило в силу, необходимо перезапустить сервер.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как изменить свойство сервера с помощью процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) . В примере значение параметра `fill factor` меняется на `100`. Чтобы изменение вступило в силу, необходимо перезапустить сервер.  
   
 ```tsql  
 Use AdventureWorks2012;  
@@ -138,32 +146,32 @@ RECONFIGURE;
 GO  
 ```  
   
- Дополнительные сведения см. в статье [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md), должен быть установлен инструментарий WMI.  
   
 ##  <a name="PowerShellProcedure"></a> Использование диспетчера конфигурации SQL Server  
  Некоторые свойства сервера можно просматривать и изменять с помощью диспетчера конфигурации SQL Server. Например, можно просмотреть версию и выпуск экземпляра SQL Server или изменить расположение файлов журнала ошибок. Эти свойства также можно просмотреть, запросив [динамические административные представления и функции динамического управления, относящиеся к серверу](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).  
   
-#### Просмотр или изменение свойств сервера  
+#### <a name="to-view-or-change-server-properties"></a>Просмотр или изменение свойств сервера  
   
 1.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
 2.  В **диспетчере конфигурации SQL Server**выберите **Службы SQL Server**.  
   
-3.  На панели подробных сведений щелкните **SQL Server (\<***имя_экземпляра***>)** правой кнопкой мыши и выберите пункт **Свойства**.  
+3.  На панели подробных сведений правой кнопкой мыши щелкните **SQL Server (\<***имя_экземпляра***>)** и выберите пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства SQL Server (\<***имя_экземпляра***>)** измените свойства сервера на вкладке **Служба** или **Дополнительно** и нажмите кнопку **ОК**.  
+4.  В диалоговом окне **Свойства SQL Server (\<***имя_экземпляра***>)**  измените свойства сервера на вкладке **Служба** или **Дополнительно** и нажмите кнопку **ОК**.  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После изменения свойств сервера  
  Для некоторых свойств необходимо перезапустить сервер, чтобы изменения вступили в силу.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
+ [Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)   
  [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Функции настройки (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Динамические административные представления и функции, связанные с сервером (Transact-SQL)](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)  

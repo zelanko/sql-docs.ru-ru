@@ -1,24 +1,29 @@
 ---
-title: "Регистрация зеркальной базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.registermirroreddb.f1"
+title: "Регистрация зеркальной базы данных | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: abfdb26bd9f05785b8ecffe110d0aba5188e1949
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Регистрация зеркальной базы данных
+# <a name="register-mirrored-database"></a>Регистрация зеркальной базы данных
   Используйте это диалоговое окно для регистрации одной или нескольких баз данных на данном экземпляре сервера посредством добавления базы или баз данных к монитору зеркального отображения баз данных. Когда база данных добавлена, монитор зеркального отображения баз данных локально кэширует сведения о базе данных, ее участниках и о возможностях соединения с участниками.  
   
 > [!IMPORTANT]  
@@ -28,14 +33,14 @@ caps.handback.revision: 30
   
 -   [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Экземпляр сервера**  
  Выберите экземпляр сервера из списка, в котором содержатся экземпляры сервера, сведения о соединении с которыми хранятся монитором зеркального отображения баз данных, или нажмите кнопку **Соединить**. Для определения новых учетных данных для выбранного из списка экземпляра сервера нажмите кнопку **Соединить** и подключитесь с помощью новых учетных данных.  
   
 > [!NOTE]  
->  Для регистрации баз данных на нескольких экземплярах сервера после завершения проверки необходимых баз данных для одного экземпляра нажмите кнопку **Применить** и выберите другой экземпляр сервера.  
+>  Для регистрации баз данных на нескольких экземплярах сервера после завершения проверки необходимых баз данных для одного экземпляра нажмите кнопку **Применить**и выберите другой экземпляр сервера.  
   
- **Connect**  
+ **Соединить**  
  Для определения новых учетных данных для выбранного из списка экземпляра сервера нажмите кнопку **Соединить** и подключитесь с помощью новых учетных данных. Во время подключения к экземпляру сервера монитор зеркального отображения баз данных отображает сообщение **Ожидание данных**.  
   
  **Зеркальные базы данных**  
@@ -60,9 +65,9 @@ caps.handback.revision: 30
  **Применить**  
  Нажмите эту кнопку для регистрации выбранных баз данных (и для сохранения учетных данных для экземпляров сервера-участника), при этом диалоговое окно остается открытым.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [Наблюдение за зеркальным отображением базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

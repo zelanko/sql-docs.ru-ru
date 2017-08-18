@@ -1,30 +1,35 @@
 ---
-title: "Архитектура Soft-NUMA (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NUMA"
-  - "soft-NUMA"
-helpviewer_keywords: 
-  - "NUMA"
-  - "архитектура NUMA"
-  - "архитектура soft-NUMA"
+title: "Архитектура Soft-NUMA (SQL Server) | Документы Майкрософт"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NUMA
+- soft-NUMA
+helpviewer_keywords:
+- NUMA
+- non-uniform memory access
+- soft-NUMA
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 53
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2f57a1d59210a002ebd03b04be4158e514e725cd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Архитектура Soft-NUMA (SQL Server)
+# <a name="soft-numa-sql-server"></a>Архитектура Soft-NUMA (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Современные процессоры имеют несколько или множество ядер на одном сокете. Каждый сокет обычно представлен одним узлом NUMA. Ядро базы данных SQL Server секционирует разные внутренние структуры и потоки служб в узлы NUMA.  Если используются процессоры с 10 и более ядрами на сокет, распределение нагрузки между аппаратными узлами NUMA с помощью программной архитектуры NUMA зачастую позволяет повысить масштабируемость и производительность системы. До SQL Server 2014 с пакетом обновления 2 (SP2) для использования программной архитектуры NUMA (Soft-NUMA) нужно было редактировать реестр, чтобы добавить маску сходства для настройки узла. Такая настройка выполнялась для каждого компьютера, а не для экземпляра.  SQL Server 2014 с пакетом обновления 2 (SP2) и SQL Server 2016 автоматически настраивают архитектуру Soft-NUMA на уровне экземпляра базы данных при запуске службы SQL Server.  
@@ -52,12 +57,14 @@ caps.handback.revision: 52
 ## <a name="manual-soft-numa"></a>Создание архитектуры Soft-NUMA вручную  
  Вы можете вручную настроить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для использования архитектуры Soft-NUMA. Для этого нужно отключить автоматическую настройку архитектуры Soft-NUMA и добавить в реестре маску сходства для настройки узла. Маска архитектуры Soft-NUMA в этом случае указывается как запись реестра с двоичным типом данных, типом данных DWORD (шестнадцатеричным или десятичным) или QWORD (шестнадцатеричным или десятичным). Чтобы настроить большее количество процессоров (больше чем первые 32), используйте значения реестра QWORD или BINARY. (Значения QWORD нельзя использовать до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].) Отредактировав реестр, перезапустите [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы конфигурация архитектуры Soft-NUMA вступила в силу.  
   
-> [!TIP] Нумерация процессоров начинается с 0.  
+> [!TIP]
+> Нумерация процессоров начинается с 0.  
 
-> [!WARNING] [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
+> [!WARNING]
+> [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
  Рассмотрим следующий пример. В этом примере компьютер с восемью процессорами не имеет оборудования NUMA. Настраиваются три узла программной архитектуры NUMA.   
-Экземпляр А компонента             [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивается для использования процессоров в количестве от 0 до 3. Второй экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлен и настроен для использования процессоров с 4 до 7. Визуально пример может быть представлен следующим образом.  
+            Экземпляр А компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивается для использования процессоров в количестве от 0 до 3. Второй экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлен и настроен для использования процессоров с 4 до 7. Визуально пример может быть представлен следующим образом.  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -70,7 +77,8 @@ caps.handback.revision: 52
  Поток модуля отложенной записи связан с представлением физических узлов памяти NUMA в операционной системе SQL. Поэтому любое число единиц оборудования, представленного как физические узлы NUMA, будет равным числу создаваемых потоков модуля отложенной записи. Дополнительные сведения см. в разделе   
             [Принцип работы: программная архитектура Soft NUMA, поток завершения ввода-вывода, рабочие процессы отложенной записи и узлы памяти](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
-> [!NOTE] Разделы реестра **Soft-NUMA** не копируются при обновлении экземпляра [!INCLUDE[ssNoVersion] (../Token/ssNoVersion_md.md)].  
+> [!NOTE]
+> Разделы реестра **Soft-NUMA** не копируются при обновлении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="set-the-cpu-affinity-mask"></a>Установка маски схожести ЦП  
  Выполните следующую инструкцию в экземпляре А, чтобы настроить его для использования процессоров 0, 1, 2 и 3 путем задания маски схожести ЦП.  
@@ -90,7 +98,8 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ### <a name="map-soft-numa-nodes-to-cpus"></a>Установка соответствия программной архитектуры NUMA нескольким процессорам  
  С помощью программы редактора реестра (regedit.exe) добавьте следующие разделы реестра, чтобы установить соответствие между узлом 0 программной архитектуры NUMA и процессорами ЦП0 и ЦП1, узлом 1 программной архитектуры NUMA и процессорами ЦП2 и ЦП3, а также узлом 2 и процессором ЦП4. 5, 6 и 7.  
   
-> [!TIP] Чтобы указать процессоры с 60 по 63, используйте значение QWORD F000000000000000 или значение BINARY 1111000000000000000000000000000000000000000000000000000000000000.  
+> [!TIP]
+> Чтобы указать процессоры с 60 по 63, используйте значение QWORD F000000000000000 или значение BINARY 1111000000000000000000000000000000000000000000000000000000000000.  
   
  В следующем примере предположим, что имеется сервер DL580 G9 с 18 ядрами на сокет (в 4 сокетах) и каждый сокет находится в собственной K-группе. Конфигурация программной архитектуры NUMA, которую можно создать, выглядит примерно следующим образом. (6 ядер на узел, по 3 узла в группе, 4 группы).  
   
@@ -130,7 +139,8 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): в столбцах softnuma и softnuma_desc показаны значения конфигурации.  
   
-> [!NOTE] Можно просмотреть текущее значение для автоматического создания программной архитектуры NUMA с помощью инструкции [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), но изменить это значение с помощью **sp_configure** невозможно. Необходимо использовать инструкцию [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) с аргументом SET SOFTNUMA.  
+> [!NOTE]
+> Можно просмотреть текущее значение для автоматического создания программной архитектуры NUMA с помощью инструкции [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), но изменить это значение с помощью **sp_configure** невозможно. Необходимо использовать инструкцию [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md) с аргументом SET SOFTNUMA.  
   
 ## <a name="see-also"></a>См. также  
  [Сопоставление портов TCP/IP с узлами NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
@@ -138,3 +148,5 @@ SET PROCESS AFFINITY CPU=4 TO 7;
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+
+

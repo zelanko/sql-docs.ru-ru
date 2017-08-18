@@ -1,28 +1,33 @@
 ---
-title: "Группа доступности не готова для автоматического перехода на другой ресурс | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp3autofailover.issues.f1"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], политики"
+title: "Группа доступности не готова для автоматического перехода на другой ресурс | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.agp3autofailover.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3f91d1292559d1c13469bcf6766c96bdb4f642e6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Группа доступности не готова для автоматического перехода на другой ресурс
+# <a name="availability-group-is-not-ready-for-automatic-failover"></a>Группа доступности не готова для автоматического перехода на другой ресурс
     
-## Введение  
+## <a name="introduction"></a>Введение  
   
 |||  
 |-|-|  
@@ -31,26 +36,27 @@ caps.handback.revision: 12
 |**Категория**|**Критическая**|  
 |**Аспект**|Группа доступности|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Эта политика проверяет наличие в группе доступности хотя бы одной вторичной реплики, готовой к переходу на другой ресурс. Политика находится в нерабочем состоянии и, если для первичной реплики настроен автоматический режим перехода на другой ресурс, но ни одна из вторичных реплик в группе доступности не готова к переходу на другой ресурс, формируется предупреждение.  
   
  Политика находится в рабочем состоянии, если по крайней мере одна вторичная реплика готова к автоматическому переходу на другой ресурс.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности не готова для автоматического перехода на другой ресурс](http://go.microsoft.com/fwlink/p/?LinkId=220851) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности не готова для автоматического перехода на другой ресурс](http://go.microsoft.com/fwlink/p/?LinkId=220851) в TechNet Wiki.  
   
-## Возможные причины  
+## <a name="possible-causes"></a>Возможные причины  
  Группа доступности не готова к автоматическому переходу на другой ресурс. Для первичной реплики настроен автоматический переход на другой ресурс. Однако вторичная реплика не готова к автоматическому переходу на другой ресурс. Вторичная реплика, настроенная для автоматического перехода на другой ресурс, может быть недоступна, или ее состояние синхронизации данных в настоящий момент отлично от SYNCHRONIZED.  
   
-## Возможные решения  
+## <a name="possible-solutions"></a>Возможные решения  
  Ниже перечислены возможные решения этой проблемы:  
   
 -   Убедитесь, что по крайней мере для одной вторичной реплики настроен автоматический переход на другой ресурс. При отсутствии вторичных реплик, для которых настроен автоматический переход на другой ресурс, обновите конфигурацию вторичной реплики для настройки ее в качестве целевой реплики для автоматического перехода на другой ресурс с синхронной фиксацией.  
   
 -   Используйте политику, чтобы убедиться, что данные находятся в состоянии синхронизации, и что у целевого узла автоматического перехода на другой ресурс имеется состояние SYNCHRONIZED, а затем устраните проблему в реплике доступности.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

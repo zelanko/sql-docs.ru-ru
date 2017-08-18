@@ -1,31 +1,36 @@
 ---
-title: "Добавление компонентов в экземпляр SQL Server&#160;2016 (программа установки) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "добавление компонентов [SQL Server]"
-  - "SQL Server, компоненты"
-  - "добавление компонентов в SQL Server"
+title: "Добавление компонентов в экземпляр SQL Server (программа установки) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- feature adding [SQL Server]
+- SQL Server, features
+- adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b33873fa1146f797a4eada3a3dbecd6ac20ce122
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Добавление компонентов в экземпляр SQL Server&#160;2016 (программа установки)
-  В этом разделе приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+# <a name="add-features-to-an-instance-of-sql-server-setup"></a>Добавление компонентов в экземпляр SQL Server (программа установки)
+  В этом разделе приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- Сведения о добавлении компонентов к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки см. в разделе [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ Сведения о добавлении компонентов к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки см. в разделе [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Перед продолжением изучите разделы [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
@@ -34,11 +39,11 @@ caps.handback.revision: 29
 > [!NOTE]  
 >  При добавлении компонентов к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] к ним добавляются существующие настройки отчета об использовании. Для изменения этих параметров используйте средство **Отчеты об ошибках и использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** из меню [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Средства настройки**.  
   
-## Процедуры  
+## <a name="procedures"></a>Процедуры  
   
-#### Сведения о добавлении компонентов к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>Сведения о добавлении компонентов к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В корневой папке дважды щелкните файл setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл setup.exe. Если открылось диалоговое окно «Установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] », то [!INCLUDE[clickOK](../../includes/clickok-md.md)] , чтобы установить обязательные компоненты, а затем кнопку **Отмена** , чтобы выйти из программы установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл setup.exe. Если открылось диалоговое окно «Установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] », то [!INCLUDE[clickOK](../../includes/clickok-md.md)] , чтобы установить обязательные компоненты, а затем кнопку **Отмена** , чтобы выйти из программы установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 2.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить новый компонент в существующий экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], щелкните **Установка** в области навигации слева, а затем выберите **Новая установка изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или добавление компонентов к существующей установке**.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 29
   
 7.  На странице "Тип установки" выберите параметр **Добавить компоненты в существующий экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** и выберите экземпляр, который требуется обновить.  
   
-8.  Выберите компоненты для установки на странице «Выбор компонентов». После выбора компонента описание его группы отображается в правой панели окна. Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в статье [Выпуски и компоненты SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Каждый компонент может быть установлен только один раз в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для установки нескольких компонентов необходимо установить дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  Выберите компоненты для установки на странице «Выбор компонентов». После выбора компонента описание его группы отображается в правой панели окна. Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в статье [Выпуски и компоненты SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Каждый компонент может быть установлен только один раз в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для установки нескольких компонентов необходимо установить дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 29
   
 11. На странице «Конфигурация сервера: учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке.  
   
-     Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только минимальные права, необходимые для выполнения ее задач. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](../Topic/Server%20Configuration%20-%20Service%20Accounts.md) и [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только минимальные права, необходимые для выполнения ее задач. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) и [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы.  
   
@@ -72,39 +77,39 @@ caps.handback.revision: 29
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   
-12. На вкладке **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задать параметры сортировки, отличные от параметров по умолчанию. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](../Topic/Server%20Configuration%20-%20Collation.md).  
+12. На вкладке **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]задать параметры сортировки, отличные от параметров по умолчанию. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](http://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022).  
   
-13. На странице «Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]: провизионирование учетных записей» укажите перечисленные далее сведения.  
+13. На странице «Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] : провизионирование учетных записей» укажите перечисленные далее сведения.  
   
-    -   Режим безопасности: выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] режим проверки подлинности, «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   Режим безопасности: выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности, «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](../Topic/Database%20Engine%20Configuration%20-%20Server%20Configuration.md).  
+         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](../Topic/Database%20Engine%20Configuration%20-%20Server%20Configuration.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — конфигурация сервера](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   
-14. На странице «Конфигурация служб компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]: каталоги данных» можно указать каталоги установки, отличные от заданных по умолчанию. Чтобы произвести установку в каталог по умолчанию, нажмите кнопку **Далее**.  
+14. На странице «Конфигурация служб компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] : каталоги данных» можно указать каталоги установки, отличные от заданных по умолчанию. Чтобы произвести установку в каталог по умолчанию, нажмите кнопку **Далее**.  
   
     > [!IMPORTANT]  
     >  Если при установке были указаны каталоги, отличные от каталогов по умолчанию, проверьте их уникальность для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Дополнительные сведения см. в разделе [Настройка компонента Database Engine — каталоги данных](../Topic/Database%20Engine%20Configuration%20-%20Data%20Directories.md).  
+     Дополнительные сведения см. в разделе [Настройка компонента Database Engine — каталоги данных](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
-15. Страница «Настройка [!INCLUDE[ssDE](../../includes/ssde-md.md)]: FILESTREAM» используется, чтобы включить FILESTREAM для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о FILESTREAM см. в разделе [Настройка компонента Database Engine — Filestream](../Topic/Database%20Engine%20Configuration%20-%20Filestream.md). Чтобы продолжить, нажмите кнопку Далее.  
+15. Страница «Настройка [!INCLUDE[ssDE](../../includes/ssde-md.md)] : FILESTREAM» используется, чтобы включить FILESTREAM для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о FILESTREAM см. в разделе [Настройка компонента Database Engine — Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02). Чтобы продолжить, нажмите кнопку Далее.  
   
-16. На странице «Настройка служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — провизионирование учетных записей» задайте режим сервера и пользователей или учетные записи, которые будут обладать разрешениями администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Режим сервера определяет, какие подсистемы памяти и хранения используются на сервере. Решения разных типов работают в разных режимах сервера. Если планируется размещать на сервере базы данных многомерных кубов, выберите параметр по умолчанию, режим сервера «Многомерные данные и интеллектуальный анализ данных». Что касается разрешений администратора, то необходимо указать по меньшей мере одного системного администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы добавить учетную запись, от имени которой запущена программа установки SQL Server, нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить учетные записи в список системных администраторов или удалить записи из списка, нажмите кнопку **Добавить** или **Удалить**, а затем измените список пользователей, групп или компьютеров, которые будут иметь права администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о режиме сервера и разрешениях администратора см. в разделе [Настройка служб Analysis Services — провизионирование учетных записей](../Topic/Analysis%20Services%20Configuration%20-%20Account%20Provisioning.md).  
+16. На странице «Настройка служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — провизионирование учетных записей» задайте режим сервера и пользователей или учетные записи, которые будут обладать разрешениями администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Режим сервера определяет, какие подсистемы памяти и хранения используются на сервере. Решения разных типов работают в разных режимах сервера. Если планируется размещать на сервере базы данных многомерных кубов, выберите параметр по умолчанию, режим сервера «Многомерные данные и интеллектуальный анализ данных». Что касается разрешений администратора, то необходимо указать по меньшей мере одного системного администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы добавить учетную запись, от имени которой запущена программа установки SQL Server, нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить учетные записи в список системных администраторов или удалить записи из списка, нажмите кнопку **Добавить** или **Удалить**, а затем измените список пользователей, групп или компьютеров, которые будут иметь права администратора для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о режиме сервера и разрешениях администратора см. в разделе [Настройка служб Analysis Services — провизионирование учетных записей](http://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   
-17. На странице «Конфигурация служб компонента [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]: каталоги данных» можно указать каталоги установки, отличные от заданных по умолчанию. Чтобы произвести установку в каталог по умолчанию, нажмите кнопку **Далее**.  
+17. На странице «Конфигурация служб компонента [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : каталоги данных» можно указать каталоги установки, отличные от заданных по умолчанию. Чтобы произвести установку в каталог по умолчанию, нажмите кнопку **Далее**.  
   
     > [!IMPORTANT]  
     >  Если при установке были указаны каталоги, отличные от каталогов по умолчанию, проверьте их уникальность для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Дополнительные сведения см. в разделе [Настройка служб Analysis Services — каталоги данных](../Topic/Analysis%20Services%20Configuration%20-%20Data%20Directories.md).  
+     Дополнительные сведения см. в разделе [Настройка служб Analysis Services — каталоги данных](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb).  
   
-18. На странице «Конфигурация служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]» укажите тип установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о режимах настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Параметры конфигурации служб Reporting Services (SSRS)](../Topic/Reporting%20Services%20Configuration%20Options%20\(SSRS\).md).  
+18. На странице «Конфигурация служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]» укажите тип установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о режимах настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Параметры конфигурации служб Reporting Services (SSRS)](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391).  
   
 19. Страница «Конфигурация контроллера распределенного воспроизведения» позволяет указать пользователей, которым нужно предоставить административные разрешения для службы контроллера распределенного воспроизведения. Пользователи, имеющие административные разрешения, будут иметь неограниченный доступ к службе контроллера распределенного воспроизведения.  
   
@@ -138,16 +143,17 @@ caps.handback.revision: 29
   
 26. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  Настройте установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы сократить уязвимую для атак контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выборочно устанавливает и активирует ключевые службы и функции. Дополнительные сведения см. в разделе [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Проверка установки SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
- [Исправление неудавшейся установки SQL Server 2016](../../database-engine/install-windows/repair-a-failed-sql-server-2016-installation.md)   
- [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+ [Исправление неудавшейся установки SQL Server 2016](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
+ [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

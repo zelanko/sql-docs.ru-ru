@@ -1,32 +1,37 @@
 ---
-title: "Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "доставка журналов [SQL Server], изменения ролей"
-  - "файлы вспомогательных данных [SQL Server], изменения ролей между"
-  - "базы данных-источники [SQL Server]"
-  - "изменение исходной роли [SQL Server]"
-  - "доставка журналов [SQL Server], отработка отказа"
-  - "отработка отказа [SQL Server], доставка журналов"
+title: "Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], role changes
+- secondary data files [SQL Server], roles changed between
+- primary databases [SQL Server]
+- initial role changes [SQL Server]
+- log shipping [SQL Server], failover
+- failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 47e98a220a3480a854be76dbae16e98c0c17d180
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)
+# <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)
   После перехода конфигурации доставки журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на ресурс сервера-получателя можно настроить базу данных-получатель для работы в качестве базы данных-источника. Затем базу данных-источник и базу данных-получатель можно менять местами по необходимости.  
   
-## Выполнение исходного изменения роли  
+## <a name="performing-the-initial-role-change"></a>Выполнение исходного изменения роли  
  В первый раз при переключении на базу данных-получатель и назначении ее новой базой данных-источником необходимо выполнить ряд шагов. После выполнения этих первоначальных шагов появится возможность легко менять местами базу данных-источник и базу данных-получатель.  
   
 1.  Переход с базы данных-источника на базу данных-получатель вручную. Обязательно создайте резервную копию активного журнала транзакций сервера-источника с параметром NORECOVERY. Дополнительные сведения см. в разделе [Переход на вторичный сервер доставки журналов (SQL Server)](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md).  
@@ -67,7 +72,7 @@ caps.handback.revision: 20
         GO  
         ```  
   
-## Смена ролей  
+## <a name="swapping-roles"></a>Смена ролей  
  После завершения перечисленных выше шагов для первоначальной смены ролей можно выполнить обмен ролями между базой данных-источником и базой данных-получателем, выполняя действия, приведенные в этом разделе. Выполните следующие шаги для обмена ролями:  
   
 1.  Переведите базу данных-получатель в режим «в сети», выполните резервное копирование журнала транзакций на сервере-источнике с параметром NORECOVERY.  
@@ -77,7 +82,7 @@ caps.handback.revision: 20
 3.  Включите задание резервного копирования в доставке журналов на исходном сервере-получателе (новом сервере-источнике) и задания копирования и восстановления на исходном сервере-источнике (новом сервере-получателе).  
   
 > [!IMPORTANT]  
->  Чтобы обеспечить согласованную работу пользователей и приложений при изменении базы данных-получателя на базу данных-источник, необходимо повторно создать часть или все метаданные базы данных, такие как имена входа и задания, в новом экземпляре сервера-источника. Дополнительные сведения см. в разделе [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage metadata when making a database available on another server.md).  
+>  Чтобы обеспечить согласованную работу пользователей и приложений при изменении базы данных-получателя на базу данных-источник, необходимо повторно создать часть или все метаданные базы данных, такие как имена входа и задания, в новом экземпляре сервера-источника. Дополнительные сведения см. в разделе [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 20
   
 -   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Таблицы доставки журналов и хранимые процедуры](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -1,34 +1,39 @@
 ---
-title: "Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "параметр базы данных TRUSTWORTHY"
-  - "зеркальная база данных [SQL Server]"
-  - "зеркальное отображение базы данных [SQL Server], безопасность"
+title: "Настройка зеркальной базы данных для использование свойства Trustworthy (Transact-SQL) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TRUSTWORTHY database option
+- mirror database [SQL Server]
+- database mirroring [SQL Server], security
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7b99c620aeb148558c5db6cfb15fefd2878ca180
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)
+# <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)
   При резервном копировании базы данных ее свойство TRUSTWORTHY принимает значение OFF. Поэтому в новой зеркальной базе данных оно всегда будет иметь значение OFF. Если для базы данных после отработки отказа с переходом на другой ресурс требуется доверие, это потребует дополнительных действий по настройке после начала зеркального отображения.  
   
 > [!NOTE]  
 >  Дополнительные сведения об этом свойстве базы данных см. в разделе [Свойство базы данных TRUSTWORTHY](../../relational-databases/security/trustworthy-database-property.md).  
   
-## Процедура  
+## <a name="procedure"></a>Процедура  
   
-#### Настройка зеркальной базы данных на использование свойства TRUSTWORTHY  
+#### <a name="to-setup-a-mirror-database-to-use-the-trustworthy-property"></a>Настройка зеркальной базы данных на использование свойства TRUSTWORTHY  
   
 1.  На основном экземпляре сервера необходимо убедиться, что свойство TRUSTWORTHY основной базы данных включено.  
   
@@ -74,9 +79,9 @@ caps.handback.revision: 15
   
      В среде SQL Server Management Studio:  
   
-    -   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+    -   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Свойство базы данных TRUSTWORTHY](../../relational-databases/security/trustworthy-database-property.md)   
  [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   

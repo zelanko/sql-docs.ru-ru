@@ -1,29 +1,34 @@
 ---
-title: "Приостановка базы данных доступности (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.suspenddatamove.f1"
-helpviewer_keywords: 
-  - "базы данных-получатели [SQL Server], в группе доступности"
-  - "базы данных-источники [SQL Server], в группе доступности"
-  - "группы доступности [SQL Server], приостановка базы данных"
-  - "Группы доступности [SQL Server], базы данных"
+title: "Приостановка базы данных доступности (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.suspenddatamove.f1
+helpviewer_keywords:
+- secondary databases [SQL Server], in availability group
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], suspending a database
+- Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 23d68367d77f5346dfb2873203b6c96c912fd5c5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Приостановка базы данных доступности (SQL Server)
+# <a name="suspend-an-availability-database-sql-server"></a>Приостановка базы данных доступности (SQL Server)
   В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно приостановить базу данных доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Обратите внимание, что команда приостановки должна выполняться на экземпляре сервера, содержащем базу данных, которая приостанавливается или возобновляется.  
   
  Результат выполнения команды приостановки зависит от того, над какой базой данных выполняется команда: над базой данных-получателем или источником.  
@@ -81,11 +86,11 @@ caps.handback.revision: 51
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена реплика доступности, в которой нужно приостановить базу данных, и разверните дерево сервера. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.  
   
-2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности**.  
+2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности** .  
   
 3.  Разверните группу доступности.  
   
-4.  Разверните узел **Базы данных доступности**, щелкните правой кнопкой мыши базу данных и выберите пункт **Приостановить перемещение данных**.  
+4.  Разверните узел **Базы данных доступности** , щелкните правой кнопкой мыши базу данных и выберите пункт **Приостановить перемещение данных**.  
   
 5.  В диалоговом окне **Приостановка перемещения данных** нажмите кнопку **ОК**.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 51
   
 1.  Подключитесь к экземпляру сервера, на котором размещена реплика, базу данных которой нужно приостановить. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.  
   
-2.  Приостановите базу данных с помощью следующей инструкции [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md):  
+2.  Приостановите базу данных с помощью следующей инструкции [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
   
      ALTER DATABASE *имя_базы_данных* SET HADR SUSPEND  
   
@@ -108,7 +113,7 @@ caps.handback.revision: 51
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, на котором размещена реплика, базу данных которой нужно приостановить. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.  
   
-2.  Для приостановки группы доступности воспользуйтесь командлетом **Suspend-SqlAvailabilityDatabase**.  
+2.  Для приостановки группы доступности воспользуйтесь командлетом **Suspend-SqlAvailabilityDatabase** .  
   
      Например, следующая команда приостанавливает синхронизацию данных для базы данных доступности `MyDb3` в группе доступности `MyAg` на экземпляре сервера под именем `Computer\Instance`.  
   
@@ -124,14 +129,14 @@ caps.handback.revision: 51
   
 -   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Избежание переполнения журнала транзакций  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  Обычно при обработке в базе данных автоматической контрольной точки журнал транзакций этой базы данных усекается до этой контрольной точки после следующего резервного копирования журнала. Однако, пока база данных-получатель приостановлена, все текущие записи журнала остаются активными в базе данных-источнике. Если журнал транзакций заполняется до конца (достигается максимальный размер, или на экземпляре сервера не хватает пространства), база данных не позволяет обновить данные.  
   
  Во избежание этой проблемы следует предпринять одно из приведенных ниже действий.  
   
 -   Увеличить количество места под журнал для базы данных-источника.  
   
--   Возобновите базу данных-получатель до полного заполнения журнала. Дополнительные сведения см. в статье [Возобновление базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md).  
+-   Возобновите базу данных-получатель до полного заполнения журнала. Дополнительные сведения см. ниже в разделе [Возобновление базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md).  
   
 -   Удалите базу данных-получатель. Дополнительные сведения см. в разделе [Удаление базы данных-получателя из группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
@@ -143,8 +148,9 @@ caps.handback.revision: 51
   
 -   [Возобновление базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Возобновление базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
   
+

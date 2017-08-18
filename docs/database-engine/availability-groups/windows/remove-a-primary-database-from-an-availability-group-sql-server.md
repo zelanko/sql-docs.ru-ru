@@ -1,30 +1,35 @@
 ---
-title: "Удаление базы данных-источника из группы доступности (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygroup.removeprimarydb.f1"
-helpviewer_keywords: 
-  - "базы данных-источники [SQL Server], в группе доступности"
-  - "группы доступности [SQL Server], удаление"
-  - "группы доступности [SQL Server], настройка"
-  - "Группы доступности [SQL Server], базы данных"
+title: "Удаление базы данных-источника из группы доступности (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygroup.removeprimarydb.f1
+helpviewer_keywords:
+- primary databases [SQL Server], in availability group
+- Availability Groups [SQL Server], removing
+- Availability Groups [SQL Server], configuring
+- Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 64c6b353bb46dd08f69823e85826fc93553e6e0d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Удаление базы данных-источника из группы доступности (SQL Server)
-  В этом разделе описывается удаление базы данных-источника и соответствующих баз данных-получателей из группы доступности AlwaysOn с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Удаление базы данных-источника из группы доступности (SQL Server)
+  В этом разделе описывается удаление базы данных-источника и соответствующих баз данных-получателей из группы доступности AlwaysOn с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Перед началом работы выполните следующие действия.**  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 28
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Дальнейшие действия**. [После удаления базы данных доступности из группы доступности](#FollowUp)  
+-   **Дальнейшие действия**  [После удаления базы данных доступности из группы доступности](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -58,17 +63,17 @@ caps.handback.revision: 28
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, размещающего базы данных, которые требуется удалить, и разверните дерево сервера.  
   
-2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности**.  
+2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности** .  
   
 3.  Выберите группу доступности и разверните узел **Базы данных доступности** .  
   
 4.  Этот шаг зависит от того, удаляется несколько баз данных или только одна база данных.  
   
-    -   Чтобы удалить несколько баз данных, используйте панель **Подробности обозревателя объектов** , чтобы просмотреть и выбрать базы данных, которые требуется удалить. Дополнительные сведения см. в разделе [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md).  
+    -   Чтобы удалить несколько баз данных, используйте панель **Подробности обозревателя объектов** , чтобы просмотреть и выбрать базы данных, которые требуется удалить. Дополнительные сведения см. в разделе [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Чтобы удалить одну базу данных, выберите ее в **обозревателе объектов** или на панели **Подробности обозревателя объектов** .  
   
-5.  Щелкните правой кнопкой мыши выбранную базу данных или базы данных и выберите в контекстном меню команду **Удаление базы данных из группы доступности**.  
+5.  Щелкните правой кнопкой мыши выбранную базу данных или базы данных и выберите в контекстном меню команду **Удаление базы данных из группы доступности** .  
   
 6.  В диалоговом окне **Удаление баз данных из группы доступности** нажмите кнопку **ОК**, чтобы удалить все выбранные базы данных. Если все удалять не нужно, нажмите кнопку **Отмена**.  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 28
   
      ALTER AVAILABILITY GROUP *имя_группы* REMOVE DATABASE *имя_базы_данных_доступности*  
   
-     где *имя_группы* — имя группы доступности, а *имя_базы_данных_доступности* — имя удаляемой базы данных.  
+     где *имя_группы* — имя группы доступности, а *имя_базы_данных_доступности* — имя удаляемой базы данных.  
   
-     В следующем примере удаляется база данных с именем `Db6` из группы доступности `MyAG`.  
+     В следующем примере удаляется база данных с именем `Db6` из группы доступности `MyAG` .  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
@@ -94,7 +99,7 @@ caps.handback.revision: 28
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, в котором находится первичная реплика.  
   
-2.  Используйте командлет **Remove-SqlAvailabilityDatabase**, указав имя базы данных доступности, которую требуется удалить из группы доступности. Если установлено подключение к экземпляру сервера, на котором размещается первичная реплика, из группы доступности удаляется как база данных-источник, так и все соответствующие базы данных-получатели.  
+2.  Используйте командлет **Remove-SqlAvailabilityDatabase** , указав имя базы данных доступности, которую требуется удалить из группы доступности. Если установлено подключение к экземпляру сервера, на котором размещается первичная реплика, из группы доступности удаляется как база данных-источник, так и все соответствующие базы данных-получатели.  
   
      Например, следующая команда удаляет базу данных доступности `MyDb9` из группы доступности с именем `MyAg`. Поскольку команда выполняется в экземпляре сервера, на котором размещается первичная реплика, из группы доступности удаляется как база данных-источник, так и все соответствующие базы данных-получатели. Синхронизация данных для этой базы данных во всех вторичных репликах больше происходить не будет.  
   
@@ -123,8 +128,9 @@ caps.handback.revision: 28
   
      Дополнительные сведения см. в разделе [Восстановление базы данных без восстановления данных (Transact-SQL)](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Удаление базы данных-получателя из группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
   
+

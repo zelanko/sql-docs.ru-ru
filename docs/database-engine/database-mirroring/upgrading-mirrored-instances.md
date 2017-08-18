@@ -1,32 +1,37 @@
 ---
-title: "Обновление зеркальных экземпляров | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Обновление SQL Server, последовательное обновление зеркальных баз данных"
-  - "Зеркальное отображение базы данных [SQL Server], обновление системы"
-  - "последовательные обновления [SQL Server]"
+title: "Обновление зеркальных экземпляров | Документы Майкрософт"
+ms.custom: 
+ms.date: 02/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- upgrading SQL Server, rolling upgrade of mirrored databases
+- database mirroring [SQL Server], upgrading system
+- rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: eb81c72c3640df10334bcdb108150e755e49695f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Обновление зеркальных экземпляров
-  При обновлении зеркального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установкой новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], нового пакета обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows вы можете выполнить последовательное обновление, что позволит сократить время простоя каждой зеркальной базы данных до одного цикла перехода на другой ресурс вручную (или двух циклов перехода на другой ресурс вручную, если нужно вернуться к исходной первичной реплике). Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], выступающего в роли зеркального сервера в сеансе зеркального отображения, последующем переходе на зеркальную базу данных вручную, обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], бывшего основным, и возобновлении зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+# <a name="upgrading-mirrored-instances"></a>Обновление зеркальных экземпляров
+  При обновлении зеркального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установкой новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , нового пакета обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows вы можете выполнить последовательное обновление, что позволит сократить время простоя каждой зеркальной базы данных до одного цикла перехода на другой ресурс вручную (или двух циклов перехода на другой ресурс вручную, если нужно вернуться к исходной первичной реплике). Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , выступающего в роли зеркального сервера в сеансе зеркального отображения, последующем переходе на зеркальную базу данных вручную, обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , бывшего основным, и возобновлении зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 > [!NOTE]  
 >  Для получения сведений об использовании зеркального отображения базы данных с доставкой журналов во время миграции скачайте [технический документ "Зеркальное отображение баз данных и доставка журналов"](https://t.co/RmO6ruCT4J).  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Перед установкой ознакомьтесь со следующими важными сведениями.  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь, что текущая версия операционной системы Windows позволяет обновить текущую версию SQL Server до версии SQL Server 2016. Например, вы не можете напрямую обновить экземпляр SQL Server 2005 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -35,16 +40,16 @@ caps.handback.revision: 44
   
 -   [Составление и тестирование плана обновления Database Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
+-   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
   
-## Рекомендуемые подготовительные действия (рекомендации)  
+## <a name="recommended-preparation-best-practices"></a>Рекомендуемые подготовительные действия (рекомендации)  
  Перед запуском последовательного обновления рекомендуется выполнить следующие действия.  
   
 1.  Выполните пробную отработку отказа вручную по крайней мере в одном из сеансов зеркального отображения:  
   
     -   [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (язык Transact-SQL)](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (язык Transact-SQL)](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
     > [!NOTE]  
     >  Дополнительные сведения об отработке отказа вручную см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
@@ -57,7 +62,7 @@ caps.handback.revision: 44
   
     2.  Выполните команду [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) в каждой основной базе данных.  
   
-## Этапы последовательного обновления  
+## <a name="stages-of-a-rolling-upgrade"></a>Этапы последовательного обновления  
  Конкретная последовательность действий в ходе последовательного обновления зависит от режима работы конфигурации зеркального отображения. Однако основные этапы остаются одинаковыми.  
   
 > [!NOTE]  
@@ -73,18 +78,18 @@ caps.handback.revision: 44
 > [!NOTE]  
 >  Во многих случаях после завершения последовательного обновления будет выполнено переключение на исходный основной сервер.  
   
-### Изменение режима сеанса с высокопроизводительного на режим высокой безопасности  
+### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>Изменение режима сеанса с высокопроизводительного на режим высокой безопасности  
   
 1.  Если сеанс зеркального отображения выполняется в высокопроизводительном режиме, перед выполнением последовательного обновления измените его на режим высокой безопасности без автоматической отработки отказа.  
   
     > [!IMPORTANT]  
     >  Если зеркальный сервер географически удален от основного, то последовательное обновление может оказаться неподходящим вариантом.  
   
-    -   В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая безопасность без автоматической отработки отказа (синхронный)** с помощью страницы [Зеркальное отображение](../../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**. Дополнительные сведения о доступе к этой странице см. в разделе [Запуск мастер настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md).  
+    -   В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая безопасность без автоматической отработки отказа (синхронный)** с помощью страницы [Зеркальное отображение](../../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**. Дополнительные сведения о доступе к этой странице см. в разделе [Запуск мастер настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
     -   В [!INCLUDE[tsql](../../includes/tsql-md.md)]: установите безопасность транзакций в значение FULL. Дополнительные сведения см. в разделе [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
-### Удаление следящего сервера из сеанса  
+### <a name="to-remove-a-witness-from-a-session"></a>Удаление следящего сервера из сеанса  
   
 1.  Если сеанс зеркального отображения включает следящий сервер, рекомендуется удалить его перед выполнением последовательного обновления. В противном случае при обновлении экземпляра зеркального сервера доступность базы данных будет зависеть от следящего сервера, остающегося подключенным к экземпляру основного сервера. После удаления следящего сервера его можно обновить в любой момент во время последовательного обновления, без дополнительного простоя базы данных.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 44
   
     -   [Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
-### Выполнение последовательного обновления  
+### <a name="to-perform-the-rolling-upgrade"></a>Выполнение последовательного обновления  
   
 1.  Чтобы свести к минимуму время простоя, необходимо выполнить следующие рекомендации. Начните последовательное обновление с обновления участника зеркального отображения, который в настоящий момент является зеркальным сервером во всех сеансах зеркального отображения. На этом этапе, возможно, придется обновить несколько экземпляров сервера.  
   
@@ -133,15 +138,15 @@ caps.handback.revision: 44
   
 6.  Обновите все оставшиеся экземпляры сервера, являющиеся следящими во всех сеансах зеркального отображения. После подключения обновленного следящего сервера к сеансу зеркального отображения становится возможным автоматическая отработка отказа. На этом этапе, возможно, придется обновить несколько серверов.  
   
-### Возвращение сеанса в высокопроизводительный режим  
+### <a name="to-return-a-session-to-high-performance-mode"></a>Возвращение сеанса в высокопроизводительный режим  
   
 1.  При необходимости вернитесь в высокопроизводительный режим, используя один из следующих методов.  
   
-    -   В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая производительность (асинхронный)** с помощью страницы [Зеркальное отображение](../../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**.  
+    -   В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая производительность (асинхронный)** с помощью страницы [Зеркальное отображение](../../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных** .  
   
-    -   В [!INCLUDE[tsql](../../includes/tsql-md.md)]: с помощью команды [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)установите безопасность транзакций в значение OFF.  
+    -   В [!INCLUDE[tsql](../../includes/tsql-md.md)]: с помощью команды [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)установите безопасность транзакций в значение OFF.  
   
-### Возвращение следящего сервера в сеанс зеркального отображения  
+### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Возвращение следящего сервера в сеанс зеркального отображения  
   
 1.  При необходимости в режиме высокой безопасности повторно соедините следящий сервер со всеми сеансами зеркального отображения.  
   
@@ -151,10 +156,10 @@ caps.handback.revision: 44
   
     -   [Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## См. также:  
- [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>См. также:  
+ [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+ [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Просмотр состояния зеркального отображения базы данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
@@ -164,3 +169,4 @@ caps.handback.revision: 44
  [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
+

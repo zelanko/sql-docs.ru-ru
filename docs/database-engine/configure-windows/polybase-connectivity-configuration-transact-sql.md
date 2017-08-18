@@ -1,29 +1,34 @@
 ---
-title: "PolyBase Connectivity Configuration (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PolyBase"
+title: "Конфигурация подключения к PolyBase (Transact-SQL) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b60b3ca22932fb4e48a4ae7d47240de073c5c930
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# PolyBase Connectivity Configuration (Transact-SQL)
+# <a name="polybase-connectivity-configuration-transact-sql"></a>Конфигурация подключения к PolyBase (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отображает или изменяет глобальные параметры конфигурации для подключения к PolyBase Hadoop и хранилищу BLOB-объектов Azure.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.png "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,10 +48,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@configname=** ] **'***имя_параметра***'**  
- Имя параметра конфигурации. Аргумент *option_name* имеет тип **varchar(35)**, значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
+ [ **@configname=** ] **"***имя_параметра***"**  
+ Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)**, значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
   
- [ **@configvalue=** ] **'***значение***'**  
+ [ **@configvalue=** ] **"***значение***"**  
  Новое значение параметра конфигурации. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
   
  **'hadoop connectivity'**  
@@ -70,23 +75,23 @@ RECONFIGURE
   
 -   Параметр 5. Hortonworks HDP 2.0 в Linux  
   
--   Параметр 6. Cloudera 5.1, 5.2, 5.3, 5.4, 5.5 и 5.9 в Linux  
+-   Параметр 6. Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10 и 5.11 в Linux  
   
--   Параметр 7. Hortonworks 2.1, 2.2, 2.3, 2.4 и 2.5 на Linux  
+-   Параметр 7. Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 и 2.6 в Linux  
   
 -   Параметр 7. Hortonworks 2.1, 2.2 и 2.3 в Windows Server  
   
 -   Параметр 7. Хранилище BLOB-объектов Azure (WASB[S])  
   
  **RECONFIGURE**  
- Обновляет рабочее значение (run_value) в соответствии со значением конфигурации (config_value). См. определения параметров run_value и config_value в разделе [Наборы результатов](#ResultSets). Новое значение конфигурации, которое задается параметром sp_configure, не вступит в силу до тех пор, пока инструкция RECONFIGURE не задаст рабочее значение.  
+ Обновляет рабочее значение (run_value) в соответствии со значением конфигурации (config_value). См. определения параметров run_value и config_value в разделе [Наборы результатов](#ResultSets) . Новое значение конфигурации, которое задается параметром sp_configure, не вступит в силу до тех пор, пока инструкция RECONFIGURE не задаст рабочее значение.  
   
  После выполнения инструкции RECONFIGURE необходимо остановить и перезапустить службу SQL Server. Обратите внимание, что при остановке службы SQL Server автоматически останавливаются две дополнительные службы — PolyBase Engine и служба перемещения данных. После перезапуска службы ядра SQL Server запустите эти две службы заново (они не запускаются автоматически).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-##  <a name="a-nameresultsetsa-result-sets"></a><a name="ResultSets"></a> Результирующие наборы  
+##  <a name="ResultSets"></a> Наборы результатов  
  При выполнении без параметров **sp_configure** возвращает результирующий набор с пятью столбцами.  
   
 |Имя столбца|Тип данных|Description|  
@@ -95,7 +100,7 @@ RECONFIGURE
 |**minimum**|**int**|Минимальное значение параметра конфигурации.|  
 |**maximum**|**int**|Максимальное значение параметра конфигурации.|  
 |**config_value**|**int**|Значение, которое было задано с помощью **sp_configure**.|  
-|**run_value**|**int**|Текущее значение, используемое PolyBase. Это значение можно задать, выполнив инструкцию RECONFIGURE.<br /><br /> Значения **config_value** и **run_value**, как правило, совпадают, если не находятся в процессе изменения.<br /><br /> Если выполняется перенастройка, может потребоваться перезагрузка, чтобы это рабочее значение стало точным.|  
+|**run_value**|**int**|Текущее значение, используемое PolyBase. Это значение можно задать, выполнив инструкцию RECONFIGURE.<br /><br /> Значения **config_value** и **run_value** , как правило, совпадают, если не находятся в процессе изменения.<br /><br /> Если выполняется перенастройка, может потребоваться перезагрузка, чтобы это рабочее значение стало точным.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]после выполнения инструкции RECONFIGURE для вступления в силу рабочего значения 'hadoop connectivity' необходимо перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -105,9 +110,9 @@ RECONFIGURE
  Недопустимо использование RECONFIGURE в явной или неявной транзакции.  
   
 ## <a name="permissions"></a>Permissions  
- Все пользователи могут выполнять команду **sp_configure** без параметров или с параметром @configname.  
+ Все пользователи могут выполнять команду **sp_configure** без параметров или с параметром @configname .  
   
- Для изменения значения конфигурации или выполнения инструкции RECONFIGURE требуется разрешение **ALTER SETTINGS** на уровне сервера или членство в предопределенной роли сервера **sysadmin**.  
+ Для изменения значения конфигурации или выполнения инструкции RECONFIGURE требуется разрешение **ALTER SETTINGS** на уровне сервера или членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
   
@@ -118,7 +123,7 @@ RECONFIGURE
 EXEC sp_configure;  
 ```  
   
- В результате возвращается имя параметра, за которым следуют его минимальное и максимальное значения. **config_value** — это значение, которое будет использовать SQL или PolyBase после завершения перенастройки. **run_value** — это значение, которое используется в настоящий момент. Значения **config_value** и **run_value**, как правило, совпадают, если не находятся в процессе изменения.  
+ В результате возвращается имя параметра, за которым следуют его минимальное и максимальное значения. **config_value** — это значение, которое будет использовать SQL или PolyBase после завершения перенастройки. **run_value** — это значение, которое используется в настоящий момент. Значения **config_value** и **run_value** , как правило, совпадают, если не находятся в процессе изменения.  
   
 ### <a name="b-list-the-configuration-settings-for-one-configuration-name"></a>Б. Список параметров конфигурации для одного имени конфигурации.  
   
@@ -146,3 +151,4 @@ GO
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
+

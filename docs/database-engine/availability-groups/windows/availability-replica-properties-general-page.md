@@ -1,39 +1,44 @@
 ---
-title: "Свойства реплики доступности (страница &#171;Общие&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilityreplicaproperties.general.f1"
+title: "Свойства реплики доступности (страница \"Общие\") | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3720e9230366bb59290d78212ee5ba94fe4d1c71
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства реплики доступности (страница &#171;Общие&#187;)
+# <a name="availability-replica-properties-general-page"></a>Свойства реплики доступности (страница «Общие»)
   Используйте это диалоговое окно для просмотра свойств реплики доступности.  
   
-## Список задач  
+## <a name="task-list"></a>Список задач  
  **Просмотр свойств реплики доступности**  
   
 -   [Просмотр свойств реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
 -   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## Список элементов пользовательского интерфейса  
+## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Имя группы доступности**  
  Имя группы доступности. Определяемое пользователем имя, которое должно быть уникальным в отказоустойчивом кластере Windows Server (WSFC).  
   
  **Экземпляр сервера**  
- Имя сервера экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на котором размещена данная реплика, а также имя экземпляра, если экземпляр не является используемым по умолчанию.  
+ Имя сервера экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена данная реплика, а также имя экземпляра, если экземпляр не является используемым по умолчанию.  
   
  **Роль**  
  **Первичная**  
@@ -54,9 +59,9 @@ caps.handback.revision: 14
  **Синхронная фиксация**  
  Первичная реплика ожидает возможности выполнения фиксации транзакции, пока вторичная реплика записывает транзакцию на диск.  
   
- Дополнительные сведения см. в разделе [Режимы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Дополнительные сведения см. в статье [Режимы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
- **Режим отработки отказа**  
+ **Failover mode**  
  Режим отработки отказа реплики доступности, одно из следующих значений:  
   
  **Автоматически**  
@@ -72,7 +77,7 @@ caps.handback.revision: 14
  Разрешаются все соединения с базами данных в первичной реплике. Это параметр по умолчанию.  
   
  **разрешить соединения с доступом на чтение и запись;**  
- Соединения, у которых свойство "Назначение приложения" имеет значение **ReadOnly**, не разрешены. Если свойство «Назначение приложения» имеет значение **ReadWrite** либо оно не задано, то соединение разрешено.  
+ Соединения, у которых свойство "Назначение приложения" имеет значение **ReadOnly** , не разрешены. Если свойство «Назначение приложения» имеет значение **ReadWrite** либо оно не задано, то соединение разрешено.  
   
  **Доступные для чтения вторичные**  
  Указывает, могут ли базы данных заданной реплики доступности, играющей роль вторичной (т. е. служащей вторичной репликой), принимать соединения от клиентов. Может принимать одно из следующих значений:  
@@ -86,7 +91,7 @@ caps.handback.revision: 14
  **Да**  
  Для баз данных-получателей этой реплики разрешены все соединения, но только с доступом для чтения. Для всех баз данных-получателей разрешен доступ для чтения.  
   
- Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Время ожидания сеанса (секунды)**  
  Интервал времени ожидания в секундах. Интервал времени ожидания — это максимальное время, в течение которого реплика ожидает получения сообщения от другой реплики перед тем, как соединение между первичной и вторичной репликой будет признано несостоявшимся. Время ожидания сеанса определяет, связаны ли вторичные реплики с первичной. При обнаружении ошибки соединения с вторичной репликой первичная реплика признает вторичную как NOT_SYNCHRONIZED. При обнаружении ошибки соединения с первичной репликой вторичная реплика просто пытается установить соединение повторно.  
@@ -95,9 +100,10 @@ caps.handback.revision: 14
 >  Промежутки времени ожидания сеанса не вызывают автоматический переход на другой ресурс.  
   
  **URL-адрес конечной точки**  
- Строковое представление определяемой пользователем конечной точки зеркального отображения базы данных, которое используется соединениями первичной реплики со вторичной для синхронизации данных. Сведения о синтаксисе конечной точки URL-адресов см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md).  
+ Строковое представление определяемой пользователем конечной точки зеркального отображения базы данных, которое используется соединениями первичной реплики со вторичной для синхронизации данных. Сведения о синтаксисе конечной точки URL-адресов см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

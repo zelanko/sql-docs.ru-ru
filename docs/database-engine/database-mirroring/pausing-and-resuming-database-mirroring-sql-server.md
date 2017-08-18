@@ -1,28 +1,33 @@
 ---
-title: "Приостановка и возобновление зеркального отображения базы данных (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сеансы [SQL Server], зеркальное отображение базы данных"
-  - "возобновление зеркального отображения базы данных"
-  - "зеркальное отображение базы данных [SQL Server], приостановка"
-  - "зеркальное отображение базы данных [SQL Server], возобновление"
-  - "приостановка зеркального отображения базы данных"
+title: "Приостановка и возобновление зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sessions [SQL Server], database mirroring
+- resuming database mirroring
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ce0495d6bc7b670cade489806e27aa651a89239e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Приостановка и возобновление зеркального отображения базы данных (SQL Server)
+# <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Приостановка и возобновление зеркального отображения базы данных (SQL Server)
   Владелец базы данных может приостанавливать и возобновлять сеанс зеркального отображения базы данных в любое время. Приостановление сохраняет состояние сеанса, при этом приостанавливается зеркальное отображение. Во время пиковых нагрузок приостановление может способствовать повышению производительности основного сервера.  
   
  Когда сеанс приостанавливается, основная база данных остается доступной. Приостановленный сеанс зеркального отображения переходит в состояние SUSPENDED, зеркальная база данных перестает соответствовать основной, что ставит под угрозу сохранность данных в основной базе.  
@@ -66,7 +71,7 @@ caps.handback.revision: 32
   
 -   [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  

@@ -1,28 +1,35 @@
 ---
-title: "Обновление служб Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обновление служб Data Quality Services | Документы Майкрософт"
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7761be949dc472e05d1f5c4cb7f7d9c2d16987e9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Обновление служб Data Quality Services
-  Этот раздел предоставляет сведения о том, как обновить существующую установку служб Data Quality Services (DQS) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии CTP2. В процессе обновления сервера служб DQS в службах DQS в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], необходимо обновить схему базы данных служб DQS.  
+# <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
+Этот раздел содержит сведения о том, как обновить существующую установку [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] служб Data Quality Services (DQS). В процессе обновления сервера служб DQS в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] необходимо обновить схему базы данных служб DQS.  
   
 > [!IMPORTANT]  
 >  -   Необходимо создать резервную копию баз данных DQS, прежде чем обновлять DQS, чтобы предотвратить любую случайную потерю данных при обновлении схемы. Дополнительные сведения о создании резервной копии баз данных DQS см. в разделе [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
-> -   Для выполнения задач по обеспечению качества данных вы можете подключиться к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] сервера DQS, используя текущую или более раннюю версию клиента DQS или [преобразование "Очистка DQS"](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) в службах Integration Services.  
-> -   После обновления служб Data Quality Services и Master Data Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] более ранние версии надстройки служб Master Data Services для Excel больше не будут работать. Можно скачать надстройку служб Master Data Services для Excel версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] по [этой ссылке](http://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   Для выполнения задач по обеспечению качества данных вы можете подключиться к серверу DQS [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], используя текущую или более раннюю версию клиента DQS или [преобразование "Очистка DQS"](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) в службах Integration Services.  
+> -   После обновления служб Data Quality Services и Master Data Services более ранние версии надстройки служб Master Data Services для Excel больше не будут работать. Можно скачать надстройку служб Master Data Services для Excel версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] по [этой ссылке](http://go.microsoft.com/fwlink/?LinkID=506665).  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
   
@@ -35,27 +42,32 @@ caps.handback.revision: 12
   
 1.  Создайте резервные копии баз данных DQS перед началом процесса обновления. Дополнительные сведения о создании резервной копии баз данных DQS см. в разделе [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
   
-2.  Обновите экземпляр SQL Server, на котором установлен компонент DQS для служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+2.  Обновите экземпляр SQL Server, на котором установлен компонент DQS.  
   
-    1.  Запустите мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+    1.  Запустите мастер установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
     2.  На панели слева щелкните **Установка**.  
   
-    3.  На панели справа щелкните **Обновление с SQL Server 2008, SQL Server 2008 R2, SQL Server 2012 или SQL Server 2014**.  
+    3.  В области справа щелкните **Обновление с предыдущей версии SQL Server**.  
   
     4.  Завершите работу мастера установки.  
   
         > [!NOTE]  
-        >  Это обновит экземпляр SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , а также задает последнюю Data Quality Client, если клиент DQS был ранее установлен на этом компьютере. При наличии клиента служб DQS установлены на других компьютерах, необходимо выполнить шаги по в шаге 2 на этих компьютерах, чтобы установить текущую версию клиента служб DQS. Мастер установки установит текущую версию служб Data Quality Client вместе с текущей версией клиента служб DQS. После обновления схемы баз данных DQS можно подключиться к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версию сервера служб DQS с помощью текущего или более ранней версией клиента служб DQS.  
+        >  Это обновит экземпляр SQL Server в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , а также задает последнюю Data Quality Client, если клиент DQS был ранее установлен на этом компьютере. При наличии клиента служб DQS установлены на других компьютерах, необходимо выполнить шаги по в шаге 2 на этих компьютерах, чтобы установить текущую версию клиента служб DQS. Мастер установки установит текущую версию служб Data Quality Client вместе с текущей версией клиента служб DQS. После обновления схемы баз данных DQS можно подключиться к [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] версию сервера служб DQS с помощью текущего или более ранней версией клиента служб DQS.  
   
 3.  Обновите схему баз данных DQS.  
   
     1.  Откройте командную строку от имени администратора.  
   
-    2.  В командной строке перейдите в папку, где находится файл DQSInstaller.exe. Для экземпляра SQL Server по умолчанию файл DQSInstaller.exe будет находиться в папке C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn:  
-  
+    2.  В командной строке перейдите в папку, где находится файл DQSInstaller.exe. Для экземпляра SQL Server по умолчанию файл DQSInstaller.exe будет находиться в папке C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn:  
+
+      >[!NOTE]
+      >В пути к папке замените [nn] на номер версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
+      >- Для SQL Server 2016: 13
+      >- Для SQL Server 2017: 14
+
         ```  
-        cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn  
+        cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  В командной строке введите следующую команду и нажмите клавишу ВВОД:  
@@ -87,9 +99,9 @@ caps.handback.revision: 12
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<Домен\имя_пользователя>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<Домен\имя_пользователя>|2||  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Удаление объектов служб Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Обновление до SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+ [Удаление объектов сервера служб Data Quality](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

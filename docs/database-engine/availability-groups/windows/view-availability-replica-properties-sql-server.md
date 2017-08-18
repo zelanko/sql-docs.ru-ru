@@ -1,24 +1,29 @@
 ---
-title: "Просмотр свойств реплики доступности (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ", политики"
+title: "Просмотр свойств реплики доступности (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3118b56aa9c7b88c3fe22e6a410a39c11986d073
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Просмотр свойств реплики доступности (SQL Server)
+# <a name="view-availability-replica-properties-sql-server"></a>Просмотр свойств реплики доступности (SQL Server)
   В этом разделе описывается просмотр свойств реплики доступности для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Для просмотра свойств реплики доступности используется:**  
@@ -32,13 +37,16 @@ caps.handback.revision: 12
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика, и разверните дерево сервера.  
   
-2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности**.  
+2.  Разверните узел **Высокий уровень доступности AlwaysOn** и узел **Группы доступности** .  
   
 3.  Разверните группу доступности, которой принадлежит реплика доступности, а затем разверните узел **Реплики доступности** .  
   
-4.  Щелкните правой кнопкой мыши реплику доступности, свойства которой нужно просмотреть, и выберите команду **Свойства**.  
+4.  Щелкните правой кнопкой мыши реплику доступности, свойства которой нужно просмотреть, и выберите команду **Свойства** .  
   
 5.  В диалоговом окне **Свойства реплики доступности** на странице **Общие** просмотрите свойства текущей реплики. Если установлено соединение с первичной репликой, можно изменить следующие свойства: режим доступности, режим перехода на другой ресурс, доступ соединения для первичной роли, доступ чтения для вторичной роли (доступная для чтения вторичная роль) и значение времени ожидания сеанса. Дополнительные сведения см. в статье [Свойства реплики доступности (страница "Общие")](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md).  
+
+   [!NOTE]
+   >Если тип не задан, нельзя изменить режим отработки отказа.
   
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
@@ -75,7 +83,7 @@ caps.handback.revision: 12
  Определяет, является ли текущая реплика предпочитаемой резервной репликой отработки. Возвращаемое значение равно 1, если база данных в текущем экземпляре сервера является предпочитаемой репликой. В противном случае возвращается значение 0.  
   
 > [!NOTE]  
->  Сведения о счетчиках производительности для реплик доступности (объект производительности **SQLServer:Availability Replica**) см. в статье [Счетчики производительности для реплик доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
+>  Сведения о счетчиках производительности для реплик доступности (объект производительности **SQLServer:Availability Replica**  ) см. в статье [Счетчики производительности для реплик доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
@@ -85,7 +93,7 @@ caps.handback.revision: 12
   
 -   [Просмотр свойств прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
--   [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)  
+-   [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
 -   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -109,7 +117,7 @@ caps.handback.revision: 12
   
  **Управление базой данных доступности**  
   
--   [Добавление базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/add-a-database-to-an-availability-group-sql-server.md)  
+-   [Добавление базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  
   
 -   [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -122,10 +130,11 @@ caps.handback.revision: 12
 -   [Удаление базы данных-источника из группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Отслеживание групп доступности (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)   
+ [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Администрирование группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)  
   
   
+

@@ -1,27 +1,32 @@
 ---
-title: "Диалоговое окно &#171;Добавление IP-адреса&#187; (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
+title: "Диалоговое окно \"Добавление IP-адреса\" (среда SQL Server Management Studio) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d9083c4b210b5de01a7a15b2c7f438a57199e707
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Диалоговое окно &#171;Добавление IP-адреса&#187; (SQL Server Management Studio)
+# <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Диалоговое окно «Добавление IP-адреса» (SQL Server Management Studio)
   В этом разделе справки F1 описываются параметры диалогового окна **Добавление IP-адреса** . Это диалоговое окно открывается из диалогового окна **Создание прослушивателя группы доступности** и из вкладки **Прослушиватель** на странице **Выбор реплик** в [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] или [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Прежде чем начинать добавлять подсети в прослушиватель группы доступности, убедитесь, что вы знаете IP-адрес для каждой подсети, а для IPv4-адреса — маску подсети.  
   
 ##  <a name="PageOptions"></a> Варианты добавления IP-адреса  
@@ -42,7 +47,7 @@ caps.handback.revision: 10
  **Адрес IPv6**  
  Если вы выбрали для подсети адрес IPv6, введите в этом поле допустимый статический адрес IPv6.  
   
- **ОК**  
+ **OK**  
  Щелкните, чтобы добавить подсеть с выбранным адресом, а также указанным статическим IP-адресом. Строка с этими значениями будет добавлена в сетку подсети в диалоговом окне **Создание прослушивателя группы доступности** или **Выбор реплик** .  
   
 > [!IMPORTANT]  
@@ -59,9 +64,10 @@ caps.handback.revision: 10
   
 -   [Использование мастера добавления реплики в группу доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
   
+

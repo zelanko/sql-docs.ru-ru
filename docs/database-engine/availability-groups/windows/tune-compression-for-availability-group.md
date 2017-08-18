@@ -1,22 +1,27 @@
 ---
-title: "Настройка сжатия для группы доступности | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка сжатия для группы доступности | Документы Майкрософт"
+ms.custom: 
+ms.date: 06/22/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: v-saume
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1654499b131e9f13362e94f540b6ef8e521f2ad0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка сжатия для группы доступности
+# <a name="tune-compression-for-availability-group"></a>Настройка сжатия для группы доступности
 
 По умолчанию SQL Server сжимает потоки данных для групп доступности, где это необходимо. Сжатие позволяет сократить объем сетевого трафика, увеличить загрузку ЦП и может вызывать задержки. Включить сжатие могут только члены предопределенной роли сервера sysadmin. В следующей таблице приведены ситуации, в которых SQL Server использует сжатие для потоков журнала группы доступности.
 
@@ -26,7 +31,7 @@ caps.handback.revision: 12
 | Реплики асинхронной фиксации | Compressed
 | Во время автоматического заполнения | Не сжимается
 
-## Флаги трассировки для сжатия группы доступности 
+## <a name="trace-flags-for-availability-group-compression"></a>Флаги трассировки для сжатия группы доступности 
 
 В большинстве случаев изменять эти параметры не рекомендуется. Для тестирования изменения этих параметров можно использовать глобальные флаги трассировки. SQL Server применяет глобальные флаги трассировки ко всему экземпляру. Эти параметры будут применяться ко всем группам доступности в экземпляре.  
 
@@ -39,7 +44,7 @@ caps.handback.revision: 12
 9592          | Включает сжатие потока журналов для групп доступности с синхронными репликами. На синхронных репликах эта функция отключена по умолчанию, поскольку сжатие приводит к увеличению задержки. Сжатие потока журнала включено по умолчанию для асинхронных реплик.
 
 
-## Ресурсы
+## <a name="resources"></a>Ресурсы
 
 
 [Параметры запуска компонента Database Engine](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
@@ -47,3 +52,4 @@ caps.handback.revision: 12
 [Автоматическое заполнение](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [Предварительные требования для AlwaysOn](https://msdn.microsoft.com/library/ff878487.aspx) 
+

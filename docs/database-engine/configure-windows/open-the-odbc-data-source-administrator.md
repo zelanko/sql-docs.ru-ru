@@ -1,25 +1,30 @@
 ---
-title: "Открытие администратора источника данных ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Администратор источников данных ODBC"
-  - "открытие администратора источников данных ODBC"
+title: "Открытие администратора источников данных ODBC | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ODBC Data Source Administrator
+- opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1fd0e266e1b233d23f299aa5248fc015d98efb8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Открытие администратора источника данных ODBC
+# <a name="open-the-odbc-data-source-administrator"></a>Открытие администратора источника данных ODBC
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   В этом разделе описывается открытие администратора источников данных ODBC. Администратор источника данных ODBC представляет собой компонент Windows. Используйте администратор источника данных ODBC для создания источников данных ODBC и управления ими.  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Открытие администратора источников данных ODBC в Windows 10   
 
-1.  На **начальной странице** введите **Источники данных ODBC**. Должен отобразиться вариант *ODBC Data Sources Destop App * (Классическое приложение источников данных ODBC). 
+1.  На **начальной странице** введите **Источники данных ODBC**. Должен отобразиться вариант *ODBC Data Sources Destop App* (Классическое приложение источников данных ODBC). 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Открытие администратора источников данных ODBC в Windows 7  
@@ -52,3 +57,4 @@ caps.handback.revision: 16
  [Проверка версии драйвера ODBC для SQL Server (Windows)](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   
+

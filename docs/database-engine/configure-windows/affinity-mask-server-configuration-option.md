@@ -1,37 +1,42 @@
 ---
-title: "Параметр конфигурации сервера &#171;affinity mask&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "affinity mask, параметр по умолчанию"
-  - "обновление кэша процессора"
-  - "кэш процессора [SQL Server]"
-  - "ЦП [SQL Server], лицензирование"
-  - "отложенный вызов процессов"
-  - "affinity mask, параметр"
-  - "соответствие процессоров [SQL Server]"
-  - "SMP"
-  - "DPC"
+title: "Параметр конфигурации сервера \"affinity mask\" | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Параметр конфигурации сервера &#171;affinity mask&#187;
+# <a name="affinity-mask-server-configuration-option"></a>Параметр конфигурации сервера «affinity mask»
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо него инструкцию [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо него инструкцию [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md).  
   
  Для одновременного выполнения множества задач [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows иногда распределяет потоки процессов между разными процессорами. Безусловно, такая организация работы эффективна с точки зрения операционной системы, но может привести к снижению производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при больших нагрузках системы, поскольку в кэше каждого процессора неоднократно перезагружаются данные. В этих условиях назначение процессорам определенных потоков может повысить производительность, устраняя повторную загрузку процессоров и уменьшая количество переносов потоков между процессорами (а значит, уменьшая число переключений контекста). Такая связь между потоком и процессором называется соответствием процессоров.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  Не используйте маску привязки процессоров в операционной системе Windows и маску привязки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]одновременно. Эти настройки предназначены для достижения одного результата, и если их значения будут несогласованными, результат может быть непредсказуем. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Соответствие процессоров лучше всего настраивать с помощью параметра хранимой процедуры sp_configure в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## Пример  
+## <a name="example"></a>Пример  
  Если процессоры 1, 2 и 5 выбраны как доступные путем установки битов 1, 2 и 5 равными 1, а биты 0, 3, 4, 6 и 7 установлены равными 0, то в качестве значения параметра affinity mask должно быть указано шестнадцатеричное значение 0x26 или его десятичный эквивалент `38` . Биты нумеруются справа налево. В параметре affinity mask начинается отсчет процессоров от 0 до 31, поэтому в следующем примере счетчик `1` представляет второй процессор на сервере.  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  Параметр affinity mask является дополнительным. С помощью системной хранимой процедуры sp_configure изменить значение параметра **affinity mask** можно только при условии, что параметр **show advanced options** имеет значение 1. После выполнения команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE изменения параметров вступают в силу немедленно и не требуют перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Доступ к неоднородной памяти (NUMA)  
+## <a name="non-uniform-memory-access-numa"></a>Доступ к неоднородной памяти (NUMA)  
  При использовании аппаратного доступа к неоднородной памяти (NUMA), если установлена маска сходства, каждый планировщик в узле сопоставляется своему собственному ЦП. Когда маска сходства не установлена, каждый планировщик соответствует группе процессоров в пределах узла NUMA, и планировщик, сопоставленный с узлом NUMA N1, может планировать работу на любом процессоре в узле, но не на процессорах, связанных с другим узлом.  
   
  Любая операция, выполняющаяся на одиночном узле NUMA, может использовать страницы буфера этого узла. Когда операция выполняется параллельно на процессорах из нескольких узлов, может использоваться память любого задействованного узла.  
   
-## Вопросы лицензирования  
+## <a name="licensing-issues"></a>Вопросы лицензирования  
  Динамическое изменение схожести жестко ограничивается лицензированием по процессорам. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не позволяет использовать любые конфигурации параметров affinity mask, нарушающие политику лицензирования.  
   
-### Запуск  
+### <a name="startup"></a>Запуск  
  Если применение заданного значения affinity mask приводит к нарушению политики лицензирования во время запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или во время присоединения базы данных, то уровень ядра завершает процесс запуска либо операцию присоединения или восстановления базы данных, а затем сбрасывает текущее значение sp_configure для параметра affinity mask в нуль, передавая сообщение об ошибке в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### Повторная настройка  
+### <a name="reconfigure"></a>Повторная настройка  
  Если применение указанного значения affinity mask приводит к нарушению политики лицензирования при выполнении команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, то сообщение об ошибке с требованием к администратору базы данных перенастроить значение affinity mask отправляется в сеанс клиента и в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В этом случае команда RECONFIGURE WITH OVERRIDE принята не будет.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

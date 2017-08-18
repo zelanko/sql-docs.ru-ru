@@ -1,30 +1,35 @@
 ---
-title: "Просмотр и чтение файлов журналов программы установки SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "просмотр журналов"
-  - "просмотр файлов журналов"
-  - "программа установки [SQL Server], журналы"
-  - "файлы журналов установки [SQL Server]"
-  - "установка SQL Server, журналы"
-  - "ошибки [SQL Server], программа установки"
-  - "журналы [ SQL Server], программа установки"
+title: "Просмотр и чтение файлов журналов программы установки SQL Server | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing logs
+- displaying log files
+- Setup [SQL Server], logs
+- installation log files [SQL Server]
+- installing SQL Server, logs
+- errors [SQL Server], Setup
+- logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Просмотр и чтение файлов журналов программы установки SQL Server
+# <a name="view-and-read-sql-server-setup-log-files"></a>Просмотр и чтение файлов журналов программы установки SQL Server
   При каждом выполнении программы установки создаются файлы журналов в новой папке журналов с меткой времени в %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установке в автоматическом режиме журналы создаются в % temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
   
  В процессе выполнения запрос программы установки проходит через три фазы:  
@@ -47,10 +52,10 @@ caps.handback.revision: 54
   
  В следующих разделах описываются файлы журналов установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Текстовое содержание сводки  
+## <a name="summary-text"></a>Текстовое содержание сводки  
   
-### Обзор  
- В этом файле отображаются компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обнаруженные на этапе установки, среда операционной системы, значения параметров командной строки (если указаны) и общее состояние всех выполненных MSI/MSP.  
+### <a name="overview"></a>Обзор  
+ В этом файле отображаются компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , обнаруженные на этапе установки, среда операционной системы, значения параметров командной строки (если указаны) и общее состояние всех выполненных MSI/MSP.  
   
  Журнал структурирован с использованием следующих разделов:  
   
@@ -76,98 +81,99 @@ caps.handback.revision: 54
   
 -   Местоположение файла отчета о выполнении правил  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\.  
   
  Чтобы найти ошибки в текстовом файле сводки, воспользуйтесь поиском с ключевыми словами «error» или «failed».  
   
-## Summary_engine-base_YYYYMMDD_HHMMss.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  Базовый файл summary_engine схож с файлом справки и создается при выполнении основного рабочего процесса.  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
-## Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  Базовый файл summary_engine схож с файлом справки и создается при выполнении основного рабочего процесса.  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
-## Summary_engine-base_\<номер_версии>ММДД_ЧЧММсс_GlobalRules.txt  
+## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<номер-версии>ММДД_ЧЧММссs_GlobalRules.txt  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  Файл сводного журнала глобальных правил схож с файлом справки и создается при выполнении рабочего процесса глобальных правил.  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
-## Detail.txt  
+## <a name="detailtxt"></a>Detail.txt  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  Detail.txt создается при выполнении рабочего процесса основных процедур, таких как установка или обновление, и обеспечивает сведения о выполнении. Журналы в файле создаются с учетом времени инициации всех действий, связанных с установкой, и указывают на порядок выполнения действий и их зависимости.  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup.  
   
  Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\Detail.txt.  
   
  При возникновении ошибки во время процесса установки исключение или ошибка регистрируются в конце этого файла. Чтобы найти ошибки в этом файле, сначала проверьте конец файла, а затем воспользуйтесь поиском по файлу с ключевыми словами «ошибка» и «исключение».  
   
-## Detail_ComponentUpdate.txt  
+## <a name="detailcomponentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  Файл Detail_ComponentUpdate.txt создается для рабочего процесса обновлений компонентов и похож на файл Detail.txt.  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
-## Detail_GlobalRules.txt  
+## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  Файл Detail_GlobalRules.txt создается при выполнении глобальных правил и похож на файл Detail.txt.  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
-## Файлы журнала MSI.  
+## <a name="msi-log-files"></a>Файлы журнала MSI.  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  В файлах журнала MSI указаны сведения о установке пакетов. Они создаются MSIEXEC при установке определенных пакетов.  
   
  Типы файлов журналов MSI:  
   
--   \<Компонент>_\<Архитектура>\_\<Итерация>.log  
+-   \<Компонент> _\<Архитектура>\_\<Итерация> .log  
   
 -   \<Компонент>_\<Архитектура>\_\<Язык>\_\<Итерация>.log  
   
--   \<Компонент>_\<Архитектура>\_\<Итерация>\_\<рабочий_процесс>.log  
+-   \<Компонент>_\<Архитектура>\_\<Итерация>\_\<рабочий процесс>.log  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Файлы журналов MSI расположены в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\<имя\>.log.  
   
  В конце файла приведена сводка выполнения, в которой указываются общее состояние (успешное или ошибка) и свойства. Для поиска ошибок в файле MSI воспользуйтесь поиском по ключевому выражению «value 3». Обычно ошибки можно найти рядом со строкой.  
   
-## ConfigurationFile.ini  
+## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  В файле конфигурации содержатся входные параметры, указанные при установке. Их можно использовать для повторной установки, что избавит от необходимости их ввода вручную. Однако пароли учетных записей, PID и некоторые параметры не сохраняются в файле конфигурации. Параметры могут либо быть добавлены к файлу или указаны с помощью командной строки или пользовательского интерфейса программы установки. Дополнительные сведения см. в разделе [Установка SQL Server 2016 с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
-## SystemConfigurationCheck_Report.htm  
+## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
   
-### Обзор  
+### <a name="overview"></a>Обзор  
  В отчете о проверке конфигурации системы содержится краткое описание всех выполняемых правил и состояния выполнения.  
   
-### Местоположение  
+### <a name="location"></a>Местоположение  
  Расположен в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\.  
   
-## См. также:  
- [Установка SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016.md)  
+## <a name="see-also"></a>См. также:  
+ [Установка SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
-title: "Настройка компонента Database Engine на прослушивание нескольких портов TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "порты [SQL Server], несколько"
-  - "TDS"
-  - "прослушивание нескольких портов"
-  - "конечные точки [SQL Server], TDS"
-  - "добавление портов"
-  - "поток табличных данных"
-  - "несколько портов"
+title: "Настройка компонента Database Engine на прослушивание нескольких портов TCP | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], multiple
+- TDS
+- listen on multiple ports
+- endpoints [SQL Server], TDS
+- adding ports
+- tabular data stream
+- multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ba9063f05af2d7e021244bca5e14b75a8a510b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка компонента Database Engine на прослушивание нескольких портов TCP
-  В этой теме описан процесс настройки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для прослушивания нескольких портов на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. При включении TCP/IP для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет прослушивать входящие соединения в точке соединения по IP-адресу и номеру порта TCP. В результате выполнения следующих процедур будет создана конечная точка потока табличных данных (TDS), чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог прослушивать соединения на дополнительном порту TCP.  
+# <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Настройка компонента Database Engine на прослушивание нескольких портов TCP
+  В этой теме описан процесс настройки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для прослушивания нескольких портов на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. При включении TCP/IP для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет прослушивать входящие соединения в точке соединения по IP-адресу и номеру порта TCP. В результате выполнения следующих процедур будет создана конечная точка потока табличных данных (TDS), чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог прослушивать соединения на дополнительном порту TCP.  
   
  Ниже перечислены возможные причины создания второй конечной точки TDS.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### Создание конечной точки TDS  
+#### <a name="to-create-a-tds-endpoint"></a>Создание конечной точки TDS  
   
 -   Выполните следующую инструкцию, чтобы создать конечную точку с именем **CustomConnection** для порта 1500 на всех доступных адресах TCP сервера.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 26
   
  При создании новой конечной точки [!INCLUDE[tsql](../../includes/tsql-md.md)] разрешения на соединение с конечной точкой потока табличных данных по умолчанию для группы **public** отменяются. Если группе **public** требуется доступ к конечной точке по умолчанию, то ей необходимо предоставить это разрешение, выполнив инструкцию `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` .  
   
-#### Предоставление доступа к конечной точке  
+#### <a name="to-grant-access-to-the-endpoint"></a>Предоставление доступа к конечной точке  
   
 -   Выполните следующую инструкцию, чтобы предоставить группе SQLSupport домена corp доступ к конечной точке **CustomConnection** .  
   
@@ -71,28 +76,28 @@ caps.handback.revision: 26
     GO  
     ```  
   
-#### Настройка компонента SQL Server Database Engine на прослушивание дополнительного порта TCP  
+#### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Настройка компонента SQL Server Database Engine на прослушивание дополнительного порта TCP  
   
-1.  В диспетчере конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server** и щелкните элемент **Протоколы для***\<имя_экземпляра>*.  
+1.  В диспетчере конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server** и щелкните элемент **Протоколы для***<имя_экземпляра>*.  
   
-2.  Разверните узел **Протоколы для***\<имя_экземпляра>* и щелкните **TCP/IP**.  
+2.  Разверните узел **Протоколы для***<имя_экземпляра>* и щелкните **TCP/IP**.  
   
 3.  В правой панели щелкните правой кнопкой мыши отключенный IP-адрес, который необходимо включить, и выберите **Включить**.  
   
-4.  Щелкните правой кнопкой мыши **IPAll** и выберите пункт **Свойства**.  
+4.  Щелкните правой кнопкой мыши **IPAll**и выберите пункт **Свойства**.  
   
 5.  В поле **TCP-порт** введите номера портов, которые должны прослушиваться компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , разделяя их запятыми. В нашем примере: если прослушивается порт по умолчанию 1433, введите **,1500** , чтобы поле содержало строку **1433,1500**, и нажмите кнопку **OK**.  
   
     > [!NOTE]  
-    >  Если порт включается не для всех IP-адресов, настройте дополнительный порт в окне свойств только для необходимого адреса. Затем на панели консоли щелкните правой кнопкой мыши **TCP/IP**, выберите пункт **Свойства** и в поле **Прослушивать все** выберите **Нет**.  
+    >  Если порт включается не для всех IP-адресов, настройте дополнительный порт в окне свойств только для необходимого адреса. Затем на панели консоли щелкните правой кнопкой мыши **TCP/IP**, выберите пункт **Свойства**и в поле **Прослушивать все** выберите **Нет**.  
   
 6.  На левой панели щелкните **Службы SQL Server**.  
   
-7.  На правой панели щелкните правой кнопкой мыши **SQL Server***\<имя_экземпляра>* и выберите **Перезагрузка**.  
+7.  На правой панели щелкните правой кнопкой мыши **SQL Server***<имя_экземпляра>* и выберите **Перезагрузка**.  
   
      После перезагрузки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] журнал ошибок будет содержать список портов, прослушиваемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### Подключение к новой конечной точке  
+#### <a name="to-connect-to-the-new-endpoint"></a>Подключение к новой конечной точке  
   
 -   Выполните следующую инструкцию, чтобы подключиться к конечной точке **CustomConnection** экземпляра SQL Server по умолчанию на сервере с именем ACCT, используя доверительное соединение, предполагая, что пользователь является членом группы [corp\SQLSupport].  
   
@@ -100,7 +105,7 @@ caps.handback.revision: 26
     sqlcmd -SACCT,1500  
     ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [GRANT, предоставление разрешений конечной точке (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

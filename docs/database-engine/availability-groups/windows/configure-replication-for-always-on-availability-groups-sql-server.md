@@ -1,25 +1,30 @@
 ---
-title: "Настройка репликации для групп доступности AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Группы доступности [SQL Server], взаимодействие"
-  - "репликация [SQL Server], группы доступности AlwaysOn"
+title: "Настройка репликации для групп доступности AlwaysOn (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b1c8cbe1c3b1682b6994859d134bd2a4de432fd6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка репликации для групп доступности AlwaysOn (SQL Server)
+# <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Настройка репликации для групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Настройка репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и групп доступности AlwaysOn включает в себя семь шагов. Каждый шаг более подробно описывается в следующих разделах.  
@@ -65,7 +70,7 @@ caps.handback.revision: 17
         @security_mode = 1;  
     ```  
   
-3.  Настройка удаленного издателя. Если хранимые процедуры используются для настройки распространителя, запустите **sp_adddistpublisher**. Параметр *@security_mode* используется для определения того, как хранимая процедура проверки издателя, которая запускается при помощи агентов репликации, подключается к текущей первичной реплике. Если значение равно 1, то для подключения к текущей первичной реплике будет использоваться проверка подлинности Windows. Если значение равно 0, используется проверка подлинности службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с указанными значениями *@login* и *@password*. Указанное имя входа и пароль должны быть действительными на каждой вторичной реплике для хранимой процедуры проверки в целях успешного подключения к этой реплике.  
+3.  Настройка удаленного издателя. Если хранимые процедуры используются для настройки распространителя, запустите **sp_adddistpublisher**. Параметр *@security_mode* используется для определения того, как хранимая процедура проверки издателя, которая запускается при помощи агентов репликации, подключается к текущей первичной реплике. Если значение равно 1, то для подключения к текущей первичной реплике будет использоваться проверка подлинности Windows. Если значение равно 0, используется проверка подлинности службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с указанными значениями *@login* и *@password* . Указанное имя входа и пароль должны быть действительными на каждой вторичной реплике для хранимой процедуры проверки в целях успешного подключения к этой реплике.  
   
     > [!NOTE]  
     >  Если какие-либо измененные агенты репликации будут работать на компьютере, отличном от распространителя, использование проверки подлинности Windows для подключения к первичной реплике потребует проверки подлинности Kerberos, настроенной для передачи данных между главными компьютерами реплик. Использование имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для соединения с текущей первичной репликой не потребует проверки подлинности Kerberos.  
@@ -85,7 +90,7 @@ caps.handback.revision: 17
   
  **Настройка издателя на первоначальном издателе**  
   
-1.  Настройка удаленного распространения. Если хранимые процедуры используются для настройки издателя, запустите **sp_adddistributor**. Укажите то же значение для *@password*, которое использовалось, когда процедура **sp_adddistrbutor** была запущена на распространителе для настройки распространения.  
+1.  Настройка удаленного распространения. Если хранимые процедуры используются для настройки издателя, запустите **sp_adddistributor**. Укажите то же значение для *@password* , которое использовалось, когда процедура **sp_adddistrbutor** была запущена на распространителе для настройки распространения.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -134,10 +139,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- Если значение параметра *@installed* равно 0, то необходимо добавить репликацию к установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Если значение параметра *@installed* равно 0, то необходимо добавить репликацию к установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="step4"></a> 4. Настройка узлов вторичной реплики в качестве издателей репликации  
- Вторичная реплика не может выступать в роли издателя репликации или переиздающего подписчика, однако репликацию необходимо настроить так, чтобы вторичная реплика могла взять на себя нагрузку после отработки отказа. На распространителе настройте распространение для каждого узла вторичной реплики. Укажите ту же базу данных распространителя и рабочий каталог, что и при добавлении первоначального издателя к распространителю. При использовании хранимых процедур для настройки распространения примените **sp_adddistpublisher** для связи удаленных издателей с распространителем. Если *@login* и *@password* использовались для первоначального издателя, укажите те же значения каждого из этих параметров при добавлении узлов вторичной реплики в качестве издателей.  
+ Вторичная реплика не может выступать в роли издателя репликации или переиздающего подписчика, однако репликацию необходимо настроить так, чтобы вторичная реплика могла взять на себя нагрузку после отработки отказа. На распространителе настройте распространение для каждого узла вторичной реплики. Укажите ту же базу данных распространителя и рабочий каталог, что и при добавлении первоначального издателя к распространителю. При использовании хранимых процедур для настройки распространения примените **sp_adddistpublisher** для связи удаленных издателей с распространителем. Если значение параметра *@login* и *@password* использовались для первоначального издателя, укажите те же значения каждого из этих параметров при добавлении узлов вторичной реплики в качестве издателей.  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -164,7 +169,7 @@ EXEC sys.sp_addlinkedserver
 ```  
   
 ##  <a name="step5"></a> 5. Перенаправление первоначального издателя на имя прослушивателя группы доступности  
- На распространителе в базе данных распространителя запустите хранимую процедуру **sp_redirect_publisher**, чтобы связать первоначального издателя и опубликованную базу данных с именем прослушивателя группы доступности.  
+ На распространителе в базе данных распространителя запустите хранимую процедуру **sp_redirect_publisher** , чтобы связать первоначального издателя и опубликованную базу данных с именем прослушивателя группы доступности.  
   
 ```  
 USE distribution;  
@@ -191,7 +196,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  Хранимая процедура **sp_validate_replica_hosts_as_publishers** должна быть запущена от имени входа с достаточными правами авторизации на каждом узле реплики группы доступности для выполнения запроса сведений о группе доступности. В отличие от **sp_validate_redirected_publisher**, для подключения к репликам группы доступности в ней используются учетные данные вызывающего объекта, а не имя входа, хранимое в msdb.dbo.MSdistpublishers.  
   
 > [!NOTE]  
-> Работа  **sp_validate_replica_hosts_as_publishers** завершится сбоем со следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения чтения.  
+>  Работа**sp_validate_replica_hosts_as_publishers** завершится сбоем со следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения чтения.  
 >   
 >  Сообщение 21899, уровень 11, состояние 1, процедура **sp_hadr_verify_subscribers_at_publisher**, строка 109  
 >   
@@ -209,7 +214,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Обслуживание базы данных публикации AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/replicate, track, change data capture - always on availability.md)  
+-   [Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
   
@@ -223,9 +228,9 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Создание группы доступности (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Создание конечной точки зеркального отображения базы данных для групп доступности AlwaysOn (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Создание конечной точки зеркального отображения базы данных для групп доступности AlwaysOn (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -235,10 +240,11 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## См. также:  
- [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+## <a name="see-also"></a>См. также:  
+ [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   
+

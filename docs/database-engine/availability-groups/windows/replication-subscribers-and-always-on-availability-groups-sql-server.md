@@ -1,31 +1,36 @@
 ---
-title: "Подписчики репликации и группы доступности AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "отказоустойчивые подписчики с AlwaysOn"
-  - "Группы доступности [SQL Server], взаимодействие"
-  - "репликация [SQL Server], группы доступности AlwaysOn"
+title: "Подписчики репликации и группы доступности AlwaysOn (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- failover subscribers with AlwaysOn
+- Availability Groups [SQL Server], interoperability
+- replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 777e170ba0f7b64a1522c614c52661f1a70a7bab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Подписчики репликации и группы доступности AlwaysOn (SQL Server)
+# <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Подписчики репликации и группы доступности AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Если в группе доступности AlwaysOn, содержащей базу данных, которая является подписчиком репликации, выполняется отработка отказа, то подписка на репликацию может завершиться ошибкой. Для подписчиков транзакций агент распространителя сможет продолжить репликацию автоматически, если в подписке используется имя прослушивателя группы доступности подписчика. Для подписчиков на публикацию слиянием администратор репликации должен вручную перенастроить подписчик путем повторного создания подписки.  
   
-## Что поддерживается  
+## <a name="what-is-supported"></a>Что поддерживается  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает автоматический переход издателя и подписчиков транзакции и переход подписчиков на публикацию слиянием вручную. Отработка отказа распространителя на базе данных доступности не поддерживается. AlwaysOn нельзя объединять со сценариями Websync и ssNoVersion Compact.  
   
  **Перенос подписки слиянием по запросу**  
@@ -36,7 +41,7 @@ caps.handback.revision: 19
   
  При отработке отказа группы доступности принудительная подписка возвращает ошибку, так как соответствующий агент больше не может подключиться к изначальной базе данных подписки на изначальном подписчике.  
   
-## Создание подписок транзакций в среде AlwaysOn  
+## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Создание подписок транзакций в среде AlwaysOn  
  Для настройки и отработки отказа группы доступности подписчика в отношении репликации транзакций выполните следующие действия.  
   
 1.  Прежде чем создавать подписку, добавьте базу данных подписчика в соответствующую группу доступности AlwaysOn.  
@@ -60,7 +65,7 @@ caps.handback.revision: 19
   
  Когда подписка создается с помощью этих действий, вам не придется больше ничего делать после отработки отказа.  
   
-## Создание принудительной подписки репликации транзакций  
+## <a name="creating-a-transactional-replication-push-subscription"></a>Создание Репликации Транзакции Принудительной Подписки  
   
 ```  
 -- commands to execute at the publisher, in the publisher database:  
@@ -79,10 +84,10 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
 GO  
 ```  
   
-## Возобновление работы агентов слияния после переноса группы доступности подписчика  
+## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>Возобновление работы агентов слияния после переноса группы доступности подписчика  
  Для репликации слиянием администратор репликации должен вручную перенастроить подписчик следующим образом.  
   
-1.  Выполните процедуру **sp_subscription_cleanup**, чтобы удалить старую подписку для подписчика. Запустите действие на новой первичной реплике (которая раньше была вторичной репликой).  
+1.  Выполните процедуру **sp_subscription_cleanup** , чтобы удалить старую подписку для подписчика. Запустите действие на новой первичной реплике (которая раньше была вторичной репликой).  
   
 2.  Создайте подписку заново, начиная с нового моментального снимка.  
   
@@ -90,3 +95,4 @@ GO
 >  Текущий процесс неудобен для подписчиков репликации слиянием, однако основным сценарием для репликации слиянием являются отключенные пользователи (ПК, ноутбуки, переносные устройства), которые не используют группы доступности AlwaysOn в подписчике.  
   
   
+

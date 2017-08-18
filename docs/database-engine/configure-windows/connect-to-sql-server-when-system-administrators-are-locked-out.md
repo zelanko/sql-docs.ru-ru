@@ -1,26 +1,31 @@
 ---
-title: "Подключение к SQL Server в случае, если доступ системных администраторов заблокирован | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "учетная запись sa"
-  - "соединение в случае блокировки [SQL Server]"
-  - "блокировка [SQL Server]"
+title: "Подключение к SQL Server в случае, если доступ системных администраторов заблокирован | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sa account
+- connecting when locked out [SQL Server]
+- locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f14625038501a21d4321f45471a4391d29efec9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Подключение к SQL Server в случае, если доступ системных администраторов заблокирован
+# <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Подключение к SQL Server в случае, если доступ системных администраторов заблокирован
   В этом разделе описывается, как восстановить доступ к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в качестве системного администратора. Системный администратор может утратить доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по одной из следующих причин:  
   
 -   по ошибке удалены все члены предопределенной роли сервера sysadmin;  
@@ -33,21 +38,21 @@ caps.handback.revision: 15
   
  Одним из способов восстановления доступа является повторная установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и присоединение всех баз данных к новому экземпляру. Такое решение занимает продолжительное время, а для восстановления имен входа может потребоваться восстановление базы данных master из резервной копии. Если резервная копия базы данных master создана давно, в ней могут отсутствовать некоторые сведения. В более свежей резервной копии базы данных master могут содержаться имена входа, относящиеся к предыдущему экземпляру, и поэтому администраторы по-прежнему будут заблокированы.  
   
-## Решение  
- Запустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме с использованием параметра **-m** или **-f**. Затем любой член локальной группы администраторов на компьютере может подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена предопределенной роли сервера sysadmin.  
+## <a name="resolution"></a>Решение  
+ Запустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме с использованием параметра **-m** или **-f** . Затем любой член локальной группы администраторов на компьютере может подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена предопределенной роли сервера sysadmin.  
   
 > [!NOTE]  
->  При запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме сначала нужно остановить службу «Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]». В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может установить соединение первым, что не позволит подключиться второму пользователю.  
+>  При запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме сначала нужно остановить службу «Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ». В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может установить соединение первым, что не позволит подключиться второму пользователю.  
   
- При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] вы можете ограничить подключения к определенному клиентскому приложению. Например, **-m"sqlcmd"** разрешает только одно подключение, которое должно идентифицироваться как клиентская программа **sqlcmd**. Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"**.  
+ При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]вы можете ограничить подключения к определенному клиентскому приложению. Например, **-m"sqlcmd"** разрешает только одно подключение, которое должно идентифицироваться как клиентская программа **sqlcmd** . Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  Не используйте этот параметр как средство безопасности. Клиентское приложение предоставляет имя клиентского приложения и может указать ложное имя в составе строки подключения.  
   
- Пошаговые инструкции по запуску [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме см. в разделе [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/configure-server-startup-options-sql-server-configuration-manager.md).  
+ Пошаговые инструкции по запуску [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме см. в разделе [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
-## Пошаговые инструкции  
- Следующие инструкции описывают процесс соединения с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], работающим на платформе Windows 8 или более поздней версии. Небольшие изменения для предыдущих версий SQL Server или Windows приведены. Эти инструкции должны выполняться в течение сеанса входа в Windows в качестве члена группы локальных администраторов, и предполагается, что на компьютере установлена [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+## <a name="step-by-step-instructions"></a>Пошаговые инструкции  
+ Следующие инструкции описывают процесс соединения с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , работающим на платформе Windows 8 или более поздней версии. Небольшие изменения для предыдущих версий SQL Server или Windows приведены. Эти инструкции должны выполняться в течение сеанса входа в Windows в качестве члена группы локальных администраторов, и предполагается, что на компьютере установлена [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 1.  Запустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]с начальной страницы. В меню **Вид** выберите команду **Зарегистрированные серверы**. (Если сервер еще не зарегистрирован, щелкните правой кнопкой мыши узел **Группы локальных серверов**, наведите указатель на пункт **Задачи**и выберите пункт **Зарегистрировать локальные серверы**.)  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 15
         > [!WARNING]  
         >  Замените ************ надежным паролем.  
   
-    4.  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в режиме смешанной проверки подлинности и требуется изменить пароль для учетной записи **sa**, подключитесь к окну запросов с использованием проверки подлинности Windows (которая включает учетные данные администратора). Измените пароль учетной записи **sa** с помощью следующей команды.  
+    4.  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в режиме смешанной проверки подлинности и требуется изменить пароль для учетной записи **sa** , подключитесь к окну запросов с использованием проверки подлинности Windows (которая включает учетные данные администратора). Измените пароль учетной записи **sa** с помощью следующей команды.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -103,7 +108,7 @@ caps.handback.revision: 15
   
 9. Следующие действия переведут [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обратно в многопользовательский режим. Закройте среду SSMS.  
   
-10. На левой панели диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выберите **Службы SQL Server**. На правой панели щелкните экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] правой кнопкой мыши и выберите пункт **Свойства**.  
+10. На левой панели диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выберите **Службы SQL Server**. На правой панели щелкните экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]правой кнопкой мыши и выберите пункт **Свойства**.  
   
 11. На вкладке **Параметры запуска** в поле **Существующие параметры** выберите `-m` и нажмите кнопку **Удалить**.  
   
@@ -114,8 +119,8 @@ caps.handback.revision: 15
   
  Теперь можно подключиться к одной из учетных записей, которая является членом предопределенной роли сервера **sysadmin** .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Запуск SQL Server в однопользовательском режиме](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
- [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
+ [Параметры запуска службы ядра СУБД](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

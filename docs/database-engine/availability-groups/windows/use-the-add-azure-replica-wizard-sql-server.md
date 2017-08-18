@@ -1,24 +1,29 @@
 ---
-title: "Использование мастера добавления реплики Azure (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.azurereplica.f1"
+title: "Использование мастера добавления реплики Azure (SQL Server) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Использование мастера добавления реплики Azure (SQL Server)
+# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Использование мастера добавления реплики Azure (SQL Server)
   Использование мастера добавления реплики Azure для создания новой виртуальной машины Microsoft Azure в гибридной ИТ-среде и настройки ее в качестве вторичной реплики для новой или существующей группы доступности AlwaysOn.  
   
 -   **Перед началом работы выполните следующие действия.**  
@@ -27,10 +32,10 @@ caps.handback.revision: 12
   
      [Безопасность](#Security)  
   
--   **Для добавления реплики воспользуйтесь инструкциями из раздела** [Мастер добавления реплики Azure (среда SQL Server Management Studio)](#SSMSProcedure)  
+-   **Для добавления реплики воспользуйтесь инструкциями из раздела**  [Мастер добавления реплики Azure (среда SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
- Если вам еще не приходилось добавлять реплики доступности в группу доступности, см. подразделы "Экземпляры сервера" и "Группы доступности и реплики" в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md).  
+ Если вам еще не приходилось добавлять реплики доступности в группу доступности, см. подразделы "Экземпляры сервера" и "Группы доступности и реплики" в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
@@ -42,9 +47,9 @@ caps.handback.revision: 12
   
 -   Клиенты прослушивателя группы доступности должны иметь подключение к Интернету, если им нужно поддерживать соединение с прослушивателем при переключении группы доступности на реплику Windows Azure.  
   
--   **Предварительные условия для использования полной начальной синхронизации данных** Необходимо указать сетевой ресурс, чтобы мастер мог создавать и получать доступ к резервным копиям. Для каждой первичной реплики учетная запись, используемая для запуска [!INCLUDE[ssDE](../../../includes/ssde-md.md)], должна иметь разрешения в файловой системе на чтение и запись в общей сетевой папке. Для вторичных реплик учетная запись должна иметь разрешение на чтение в сетевой папке.  
+-   **Предварительные условия для использования полной начальной синхронизации данных** Необходимо указать сетевой ресурс, чтобы мастер мог создавать и получать доступ к резервным копиям. Для каждой первичной реплики учетная запись, используемая для запуска [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , должна иметь разрешения в файловой системе на чтение и запись в общей сетевой папке. Для вторичных реплик учетная запись должна иметь разрешение на чтение в сетевой папке.  
   
-     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ###  <a name="Security"></a> Безопасность  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 12
   
  После того как был запущен мастер добавления реплики Azure, выполните следующие шаги.  
   
-1.  Сначала загрузите сертификат управления для подписки Windows Azure. Нажмите кнопку **Загрузить**, чтобы открыть страницу входа.  
+1.  Сначала загрузите сертификат управления для подписки Windows Azure. Нажмите кнопку **Загрузить** , чтобы открыть страницу входа.  
   
-2.  Войдите в Microsoft Azure, используя учетную запись Майкрософт или учетную запись вашей организации. Учетная запись Майкрософт или организации выглядит как адрес электронной почты в формате HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Дополнительные сведения об учетных данных Azure см. в разделах [Часто задаваемые вопросы об учетной записи Майкрософт для организаций](http://technet.microsoft.com/jj592903) и [Устранение проблем с входом при использовании учетной записи организации](https://support.microsoft.com/kb/2756852).  
+2.  Войдите в Microsoft Azure, используя учетную запись Майкрософт или учетную запись вашей организации. Учетная запись Майкрософт или организации имеет формат адреса электронной почты, например "mailto:patc@contoso.com" patc@contoso.com. Дополнительные сведения об учетных данных Azure см. в разделах [Часто задаваемые вопросы об учетной записи Майкрософт для организаций](http://technet.microsoft.com/jj592903) и [Устранение проблем с входом при использовании учетной записи организации](https://support.microsoft.com/kb/2756852).  
   
 3.  Затем подключитесь к подписке, нажав кнопку **Подключиться**. После подключения раскрывающиеся списки заполняются параметрами Microsoft Azure, такими как **Виртуальная сеть** и **Подсеть виртуальной сети**.  
   
@@ -108,9 +113,10 @@ caps.handback.revision: 12
   
 -   [Добавление вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Добавление вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

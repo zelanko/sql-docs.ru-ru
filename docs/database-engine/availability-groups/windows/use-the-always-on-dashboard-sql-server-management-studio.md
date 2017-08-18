@@ -1,30 +1,35 @@
 ---
-title: "Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "группы доступности [SQL Server], политики"
-  - "группы доступности [SQL Server], панель мониторинга"
+title: "Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio) | Документы Майкрософт"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Администраторы баз данных используют панель мониторинга AlwaysOn, чтобы быстро определять исправность группы доступности AlwaysOn, а также ее реплик доступности и баз данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Далее приведены некоторые стандартные варианты использования панели мониторинга AlwaysOn.  
+  Администраторы баз данных используют панель мониторинга групп доступности AlwaysOn, чтобы быстро определять исправность группы доступности, а также ее реплик доступности и баз данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Далее приведены некоторые стандартные варианты использования панели мониторинга групп доступности.  
   
 -   Выбор реплики для выполнения перехода на другой ресурс вручную.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   Оценка влияния на производительность вторичной реплики с синхронной фиксацией  
   
- Панель мониторинга AlwaysOn отображает ключевые состояния группы доступности и индикаторы производительности, что позволяет принимать решения, необходимые для обеспечения высокого уровня доступности, полагаясь на следующие сведения.  
+ Панель мониторинга отображает ключевые состояния группы доступности и индикаторы производительности, что позволяет принимать решения, необходимые для обеспечения высокого уровня доступности, полагаясь на следующие сведения.  
   
 -   Состояние свертки реплики  
   
@@ -50,38 +55,10 @@ caps.handback.revision: 30
   
 -   Время на восстановление журнала  
   
- **В этом разделе:**  
-  
--   **Перед началом работы выполните следующие действия.**  
-  
-     [Предварительные требования](#Prerequisites)  
-  
-     [Безопасность](#Security)  
-  
-     [Разрешения](#Permissions)  
-  
--   **Подготовка к выполнению следующих задач.**  
-  
-     [Панель мониторинга AlwaysOn](#SSMSProcedure)  
-  
-     [Изменение параметров панели мониторинга AlwaysOn](#DashboardOptions)  
-  
--   **Области панели мониторинга:**  
-  
-     [Сводка групп доступности](#AvGroupsView)  
-  
-     [Подробные сведения о группе доступности](#AvGroupDetails)  
-  
-     [Подробные сведения о реплике доступности](#AvReplicaDetails)  
-  
-     [Группирование сведений о группе доступности](#AvDbDetails)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
- Необходимо подключение к экземпляру сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на котором размещена первичная либо вторичная реплика группы доступности.  
+ Необходимо подключение к экземпляру сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена первичная либо вторичная реплика группы доступности.  
   
 ###  <a name="Security"></a> Безопасность  
   
@@ -90,12 +67,12 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> Запуск панели мониторинга AlwaysOn  
   
-1.  В обозревателе объектов подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на котором требуется запустить панель мониторинга AlwaysOn.  
+1.  В обозревателе объектов подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором требуется запустить панель мониторинга AlwaysOn.  
   
-2.  Разверните узел **Высокий уровень доступности AlwaysOn**, правой кнопкой мыши щелкните узел **Группы доступности**, затем пункт **Показать панель мониторинга**.  
+2.  Разверните узел **Высокий уровень доступности AlwaysOn** , правой кнопкой мыши щелкните узел **Группы доступности** , затем пункт **Показать панель мониторинга**.  
   
 ###  <a name="DashboardOptions"></a> Изменение параметров панели мониторинга AlwaysOn  
- Для настройки поведения панели мониторинга [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn для выполнения автоматического обновления и включения самостоятельно определяемой политики AlwaysOn можно использовать диалоговое окно [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Параметры**.  
+ Для настройки поведения панели мониторинга [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**AlwaysOn для выполнения автоматического обновления и включения самостоятельно определяемой политики AlwaysOn можно использовать диалоговое окно** Параметры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  В меню **Сервис** щелкните пункт **Параметры**.  
   
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **Вручную**. Указывает, что ни одна из реплик не работает в режиме автоматического перехода на другой ресурс.  
   
  **Проблемы**  
- Щелкните ссылку **Проблемы**, чтобы открыть документацию по поиску и устранению данной неисправности. Список всех возможных проблем, связанных с политикой AlwaysOn, см. в разделе [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Щелкните ссылку **Проблемы** , чтобы открыть документацию по поиску и устранению данной неисправности. Список всех возможных проблем, связанных с политикой AlwaysOn, см. в разделе [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Чтобы выполнить сортировку сведений о группе доступности по имени группы доступности, основной реплике, режиму отработки отказа или проблеме, щелкайте заголовки столбцов.  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **Состояние группы доступности**  
  Отображает состояние работоспособности этой группы доступности.  
   
- **Основной экземпляр**  
+ **Primary instance**  
  Имя экземпляра сервера, на котором размещена первичная реплика группы доступности.  
   
- **Режим отработки отказа**  
+ **Failover mode**  
  Отображает тип режима отработки отказа, который настроен для реплики. Возможные значения режима отработки отказа:  
   
 -   **Автоматически**. Указывает, что одна или несколько реплик работают в режиме автоматического перехода на другой ресурс.  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**. Неизвестное состояние. Это значение возникает, когда экземпляр локального сервера не может обмениваться данными с отказоустойчивым кластером WSFC (то есть этот локальный узел не принадлежит кворуму отказоустойчивого кластера WSFC).  
   
  **Проблемы**  
- Содержит имя проблемы. Это значение отображается по умолчанию. Список всех возможных проблем, связанных с политикой AlwaysOn, см. в разделе [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Содержит имя проблемы. Это значение отображается по умолчанию. Список всех возможных проблем, связанных с политикой AlwaysOn, см. в разделе [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Режим доступности**  
  Указывает свойство реплики, установленное пользователем отдельно для каждой реплики доступности. Это значение по умолчанию скрыто. Возможные значения:  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **Базы данных доступности**  
   
--   **Состояние синхронизации**  
+-   **Synchronization state**  
   
 -   **Готовность к отработке отказа**  
   
@@ -249,7 +226,7 @@ caps.handback.revision: 30
  Имя базы данных доступности. Это значение отображается по умолчанию.  
   
  **Реплика**  
- Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в котором размещается группа доступности. Это значение отображается по умолчанию.  
+ Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , в котором размещается группа доступности. Это значение отображается по умолчанию.  
   
  **Состояние синхронизации**  
  Указывает, синхронизирована ли база данных доступности с первичной репликой. Это значение отображается по умолчанию. Возможны следующие состояния синхронизации.  
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  Когда база данных находится в состоянии INITIALIZING, принудительная отработка отказа на вторичную реплику всегда оставляет такую базу данных в состоянии, при котором ее запуск будет невозможен.  
   
- **Готовность к отработке отказа**  
+ **Failover Readiness**  
  Указывает, какая реплика доступности готова к отработке отказа, которая потенциально может пройти без потерь данных или с потерей данных. Этот столбец отображается по умолчанию. Возможные значения:  
   
 -   **Потери данных**  
@@ -304,7 +281,7 @@ caps.handback.revision: 30
   
 -   **Критическое**. Щелкните для отображения критических проблем.  
   
- Список всех возможных проблем, связанных с политикой AlwaysOn, см. в разделе [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md).  
+ Список всех возможных проблем, связанных с политикой AlwaysOn, см. в разделе [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Приостановлена**  
  Указывает, что работа базы данных **Приостановлена** или **Возобновлена**. Это значение по умолчанию скрыто.  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [sys.dm_os_performance_counters (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

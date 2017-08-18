@@ -1,26 +1,31 @@
 ---
-title: "Настройка параметра сервера media retention | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "срок хранения резервной копии [SQL Server]"
-  - "резервные наборы данных [SQL Server], срок хранения"
-  - "media retention, параметр"
+title: "Настройка параметра конфигурации сервера \"media retention\" | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup retention duration [SQL Server]
+- backup sets [SQL Server], retention duration
+- media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b9456777c44ade52f6f9dc0121027202e7d319c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Настройка параметра сервера media retention
+# <a name="configure-the-media-retention-server-configuration-option"></a>Настройка параметра сервера media retention
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается настройка параметра конфигурации сервера **media retention** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **media retention** используется для указания времени хранения каждого резервного набора данных. Этот параметр обеспечивает защиту резервных копий от перезаписи до истечения установленного числа суток. После настройки параметра **media retention** не нужно определять длительность хранения резервных копий системы каждый раз, когда выполняется резервное копирование. Значение по умолчанию — 0 дней, максимальное — 365 дней.  
@@ -62,17 +67,17 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### Настройка параметра media retention  
+#### <a name="to-configure-the-media-retention-option"></a>Настройка параметра media retention  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
   
 2.  Щелкните узел **Параметры базы данных** .  
   
-3.  В области **Резервное копирование и восстановление** в поле **Срок хранения носителей резервных копий по умолчанию** введите или выберите значение от 0 до 365, чтобы установить время в сутках, в течение которого будут храниться носители данных резервных копий после создания резервной копии журнала транзакций или базы данных.  
+3.  В области **Резервное копирование и восстановление**в поле **Срок хранения носителей резервных копий по умолчанию** введите или выберите значение от 0 до 365, чтобы установить время в сутках, в течение которого будут храниться носители данных резервных копий после создания резервной копии журнала транзакций или базы данных.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### Настройка параметра media retention  
+#### <a name="to-configure-the-media-retention-option"></a>Настройка параметра media retention  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -99,7 +104,7 @@ GO
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра media retention  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
@@ -107,3 +112,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+
