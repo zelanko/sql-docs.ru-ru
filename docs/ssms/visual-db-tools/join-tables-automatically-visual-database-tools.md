@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0588bd78ef06aa1d24fa7a4ae008002420b9d367
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Автоматическое соединение таблиц (визуальные инструменты для баз данных)

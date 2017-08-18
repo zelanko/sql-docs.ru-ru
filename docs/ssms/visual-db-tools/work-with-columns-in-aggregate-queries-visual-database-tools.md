@@ -19,11 +19,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 64aee66141249bc2a1848f6a65ec9683c73dc429
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных)

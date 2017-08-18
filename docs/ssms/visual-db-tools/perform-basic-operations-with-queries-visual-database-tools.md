@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 91ba67fc6ea916272470b4df83e6614dd76a2a84
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Выполнение основных операций с запросами (визуальные инструменты для баз данных)

@@ -22,11 +22,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ae75460f02779117b9c6061ab676795796215c09
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Файлы для управления решениями и проектами

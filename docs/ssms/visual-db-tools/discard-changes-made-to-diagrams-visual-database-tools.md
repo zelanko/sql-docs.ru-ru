@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6bf3f6c31cb92aa86c8e2ac3d04beab51d00db13
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Отмена изменений, внесенных в диаграммы (визуальные инструменты для баз данных)

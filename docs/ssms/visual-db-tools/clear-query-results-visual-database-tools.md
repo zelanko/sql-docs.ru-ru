@@ -20,18 +20,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3da9966a033a4cf1ad697c27de5a92a33c02206b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Очистка результатов запросов (визуальные инструменты для баз данных)
 Выполнив запрос в **конструкторе запросов и представлений**, можно очистить панель результатов. Эта процедура применима к запросам, созданным с использованием параметров **Открыть представление** или **Открыть таблицу** в обозревателе объектов. В среде[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]после выполнения запроса в редакторе запросов невозможно очистить панель результатов до закрытия окна редактора запросов или выполнения другого запроса.  
   
 > [!NOTE]  
-> Это не отменит изменения, выполненные в базе данных. Дополнительные сведения о функционировании панели результатов см. в разделе [Работа с данными на панели результатов &#40;визуальные инструменты для баз данных&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
+> Это не отменит изменения, выполненные в базе данных. Дополнительные сведения о функционировании панели результатов см. в разделе [Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
   
 ### <a name="to-clear-query-results-of-a-view"></a>Очистка результатов запроса к представлению  
   
@@ -42,6 +42,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Выполнение запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Остановка запроса (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
-[Работа с данными на панели результатов &#40;визуальные инструменты для баз данных&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

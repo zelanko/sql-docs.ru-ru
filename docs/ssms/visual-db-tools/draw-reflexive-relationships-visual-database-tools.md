@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b3f92a8f199bf03ff3a9c0cff4aedfb8a138ebec
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>Извлечение рефлексивных связей (визуальные инструменты для баз данных)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Дважды нажмите кнопку **ОК** , чтобы создать связь.  
   
-При выполнении запросов в таблице для создания самосоединения можно использовать рефлексивные связи. Дополнительные сведения о запросах к таблицам с соединениями см. в разделе [Query with Joins &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md).  
+При выполнении запросов в таблице для создания самосоединения можно использовать рефлексивные связи. Дополнительные сведения о запросах к таблицам с соединениями см. в разделе [Запросы с соединениями (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Запросы с соединениями (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  

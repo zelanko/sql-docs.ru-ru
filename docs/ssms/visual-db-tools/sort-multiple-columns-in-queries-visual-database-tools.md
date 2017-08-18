@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0671c3815de4c20aca3eab4d30e038a094409f07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>Сортировка по нескольким столбцам в запросах (визуальные инструменты для баз данных)

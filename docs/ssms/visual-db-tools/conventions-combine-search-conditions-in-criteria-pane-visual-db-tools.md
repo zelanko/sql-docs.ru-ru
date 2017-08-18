@@ -23,11 +23,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Обозначения для условий комбинированного поиска на панели критериев (визуальные инструменты для баз данных)

@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0ba11f05536a52023c382e040738b8d9f9a4a215
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Добавление новых строк на панель результатов (визуальные инструменты для баз данных)

@@ -17,15 +17,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f6955727dd2fa31e76ad6cf5e0195650abdc2ded
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-queries-visual-database-tools"></a>Открытие запросов (визуальные инструменты для баз данных)
-Существующий запрос можно открыть в конструкторе запросов и представлений с помощью команды **Открыть**.  
+Существующий запрос можно открыть в конструкторе запросов и представлений с помощью команды **Открыть** .  
   
 ### <a name="to-open-a-query-in-all-panes"></a>Открытие запроса на всех панелях  
   

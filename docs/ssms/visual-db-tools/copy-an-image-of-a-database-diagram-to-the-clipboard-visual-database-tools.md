@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fa969625800cb179e37b13046e3823bf55fa7ade
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Копирование изображения диаграммы базы данных в буфер обмена (визуальные инструменты для баз данных)

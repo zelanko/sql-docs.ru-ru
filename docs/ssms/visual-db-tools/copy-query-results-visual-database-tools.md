@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43a63ea7380ce4586d8a411c085c094aa953b1b2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Копирование результатов запросов (визуальные инструменты для баз данных)
-Можно скопировать результирующий набор в виде текста с разделителями табуляции с панели **Результаты**. Можно скопировать весь результирующий набор или любое количество смежных или несмежных строк или ячеек.  
+Можно скопировать результирующий набор в виде текста с разделителями табуляции с панели **Результаты** . Можно скопировать весь результирующий набор или любое количество смежных или несмежных строк или ячеек.  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>Копирование текста результирующего набора на панели «Результаты»  
   

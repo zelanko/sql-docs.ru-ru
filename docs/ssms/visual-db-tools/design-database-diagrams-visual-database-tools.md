@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Конструирование диаграмм баз данных (визуальные инструменты для баз данных)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 **Строка заголовка** В строке заголовка отображается имя таблицы.  
   
-Если таблица была изменена, но еще не сохранена, то после имени таблицы появляется звездочка (*), показывающая наличие несохраненных изменений. Дополнительные сведения о сохранении измененных таблиц и диаграмм см. в разделе [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+Если таблица была изменена, но еще не сохранена, то после имени таблицы появляется звездочка (*), показывающая наличие несохраненных изменений. Дополнительные сведения о сохранении измененных таблиц и диаграмм см. в разделе [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 **Область выделения строки** . Чтобы выбрать столбец базы данных в таблице, щелкните область выделения строки. Если столбец является первичным ключом таблицы, то в этом списке отображается символ ключа. Дополнительные сведения о первичных ключах см. в разделе [Работа с ключами (визуальные инструменты для баз данных)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   

@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 906e92dee8d00b2c63463a5aa09234bafc92b102
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>Соединение таблиц по нескольким столбцам (визуальные инструменты для баз данных)

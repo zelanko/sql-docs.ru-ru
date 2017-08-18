@@ -20,15 +20,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 095f51e1ba4713d13133eac5bb42d8b468a4cada
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="solutions-sql-server-management-studio"></a>Решения (среда SQL Server Management Studio)
-Решение [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] — это набор из одного или нескольких взаимосвязанных проектов. Проекты — это контейнеры, используемые разработчиками для организации взаимосвязанных файлов (например, для создания наборов широко используемых скриптов администрирования).  
+Решение [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] — это набор из одного или нескольких взаимосвязанных проектов. Проекты — это контейнеры, используемые разработчиками для организации взаимосвязанных файлов (например, для создания наборов широко используемых скриптов администрирования).  
   
 ## <a name="solution-overview"></a>Общие сведения о решении  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] может использоваться как платформа для разработки скриптов для компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Используйте редакторы кода [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] для разработки скриптов и запросов для реляционных и многомерных баз данных, а также для создания наборов взаимосвязанных скриптов и запросов.  
