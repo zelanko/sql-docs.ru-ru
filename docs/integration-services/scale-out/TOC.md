@@ -4,6 +4,7 @@
 # [Пошаговое руководство. Настройка масштабного развертывания Integration Services](walkthrough-set-up-integration-services-scale-out.md)
 # [Главная роль масштабного развертывания](integration-services-ssis-scale-out-master.md)
 # [Рабочая роль масштабного развертывания](integration-services-ssis-scale-out-worker.md)
+# [Диспетчер Scale Out](integration-services-ssis-scale-out-manager.md)
 # [Выполнение пакетов в масштабном развертывании](run-packages-in-integration-services-ssis-scale-out.md)
 # [Изменение учетной записи для ведения журнала масштабного развертывания](change-logdb-account.md)
 # [Работа с сертификатами в масштабном развертывании](deal-with-certificates-in-ssis-scale-out.md)
