@@ -113,7 +113,7 @@ QUIT
 
 |||
 |---|---|
-| [Обновление](../linux/sql-server-linux-setup.md#upgrade) | Узнайте, как обновить установленную среду SQL Server на Linux |
+| [Обновление](../linux/sql-server-linux-setup.md#upgrade) | Узнайте, как обновить установленную среду SQL Server на Linux |
 | [Удаление](../linux/sql-server-linux-setup.md#uninstall) | Удаление SQL Server на Linux |
 | [Автоматическая установка](../linux/sql-server-linux-setup.md#unattended) | Узнайте, как создать сценарий для установки без каких-либо запросов |
 | [Автономная установка](../linux/sql-server-linux-setup.md#offline) | Узнайте, как вручную загрузить пакеты для установки в автономном режиме |

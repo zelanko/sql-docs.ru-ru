@@ -1,7 +1,7 @@
 ---
 title: "Новые возможности в SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,29 +15,21 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
-SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. В этом разделе представлены новые возможности последнего релиз-кандидата SQL Server 2017 (RC1, июль 2017 г.) и выпусков Community Technical Preview (CTP) в определенных функциональных областях.
+SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. В этом разделе представлены новые возможности последнего релиз-кандидата SQL Server 2017 (RC2, август 2017 г.) и выпусков Community Technical Preview (CTP) в определенных функциональных областях.
 
-**Попробуйте эти выпуски сами:** [загрузите релиз-кандидат SQL Server 2017 (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
+**Опробуйте их сами:** [скачайте последнюю версию релиз-кандидата SQL Server 2017 (RC2, август 2017 г.)](http://go.microsoft.com/fwlink/?LinkID=829477).
+В этом выпуске исправлены ошибки и повышена производительность.
 
 >**Запускайте SQL Server в Linux!** Дополнительные сведения см. в разделе [Документации по SQL Server на Linux](https://docs.microsoft.com/sql/linux/).
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>Последний выпуск: релиз-кандидат SQL Server 2017 (RC2, август 2017 г.)
-В этом выпуске исправлены ошибки и повышена производительность.
-
-### <a name="master-data-services-mds"></a>Службы Master Data Services (MDS)
-- Обновление до SQL Server 2017 Master Data Services с предыдущих выпусков SQL Server обеспечивает улучшенный интерфейс и большую эффективность работы.
-    - SQL Server 2012
-    - SQL Server 2014
-    - SQL Server 2016
-
-## <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine  
+## <a name="sql-server-2017-database-engine"></a>Ядро СУБД SQL Server 2017  
 SQL Server 2017 включает множество новых функций, усовершенствований и улучшений работы для ядра СУБД. 
 - **Сборки CLR** теперь можно добавлять в список разрешенных в качестве обходного пути для функции `clr strict security`, описанной в CTP 2.0. Для поддержки списка разрешенных доверенных сборок (RC1) добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).  
 - **Возобновляемая перестройка индексов в подключенном режиме**: позволяет возобновить эту операцию с момента остановки после сбоя (например, при отработке отказа в реплику или нехватке места на диске) либо приостановить и возобновить ее позже. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
@@ -66,7 +58,7 @@ SQL Server 2017 включает множество новых функций, 
 
 Дополнительные сведения см. в разделе [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md) (Новые возможности ядра СУБД SQL Server 2017).
 
-## <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
+## <a name="sql-server-2017-integration-services-ssis"></a>Службы SQL Server 2017 Integration Services (SSIS)
 - Новый компонент **Scale Out** в SSIS содержит следующие новые и измененные функции. Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017). (RC1)
     -   Мастер масштабирования Scale Out теперь поддерживает высокий уровень доступности.
     -   Улучшена отработка отказа для журналов выполнения из рабочих ролей масштабирования Scale Out.
@@ -79,13 +71,13 @@ SQL Server 2017 включает множество новых функций, 
 
 Дополнительные сведения см. в разделе [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md) (Новые возможности Integration Services в SQL Server 2017).
 
-## <a name="master-data-services-mds"></a>Службы Master Data Services (MDS)
-Помимо улучшения интерфейса и эффективности работы, обновление до SQL Server 2017 Master Data Services предлагает следующие усовершенствования.
+## <a name="sql-server-2017-master-data-services-mds"></a>Службы SQL Server 2017 Master Data Services (MDS)
+- Обновление с SQL Server 2012, SQL Server 2014 или SQL Server 2016 до SQL Server 2017 Master Data Services обеспечит вам улучшенную производительность и усовершенствованный интерфейс. 
 - Теперь вы можете просматривать на странице **Обозреватель** веб-приложения отсортированный список сущностей, коллекций и иерархий.
-- Улучшена скорость перемещения миллионов записей на промежуточное хранение и обработку с использованием хранимой процедуры.
-- Улучшена скорость работы при разворачивании папки **Сущности** на странице **Управление группами** для назначения разрешений моделям. Страница **Управление группами** находится в веб-приложении в разделе **Безопасность**. Дополнительные сведения об улучшении производительности: [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Дополнительные сведения о назначении разрешений: [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
+- Использование хранимой процедуры позволило значительно ускорить промежуточную обработку миллионов записей.
+- Кроме того, улучшена работа при разворачивании на странице **Управление группами** папки **Сущности** для назначения моделям разрешений. Страница **Управление группами** находится в веб-приложении в разделе **Безопасность**. Дополнительные сведения об улучшении производительности: [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Дополнительные сведения о назначении разрешений: [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
-## <a name="sql-server-analysis-services-ssas"></a>Службы SQL Server Analysis Services (SSAS) 
+## <a name="sql-server-2017-analysis-services-ssas"></a>Службы SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 включает множество улучшений для табличных моделей. К ним относятся следующие объекты.
 - Табличный режим стал параметром установки по умолчанию для Analysis Services. (CTP 2.0)
 - Безопасность на уровне объектов для защиты метаданных табличных моделей. (CTP 2.0)
@@ -101,25 +93,22 @@ SQL Server Analysis Services 2017 включает множество улуч
 
 Дополнительные сведения см. в разделе [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md) (Новые возможности SQL Server Analysis Services 2017).
 
-## <a name="sql-server-reporting-services-ssrs"></a>Службы SQL Server Reporting Services (SSRS)
+## <a name="sql-server-2017-reporting-services-ssrs"></a>Службы SQL Server 2017 Reporting Services (SSRS)
 Что касается CTP 2.1, службы SSRS больше не доступны для установки с помощью программы установки SQL Server. Перейдите в Центр загрузки Майкрософт, чтобы [загрузить релиз-кандидат Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
 - В отчетах теперь доступны комментарии, позволяющие сообщать свою точку зрения и взаимодействовать с другими пользователями. Для комментариев также доступны вложения. (CTP 2.1)
 - В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services, перетаскивая нужные поля в конструкторах запросов. См. [блог по Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 Дополнительные сведения см. в разделе [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) (Новые возможности служб SQL Server Reporting Services (SSRS)).
 
-## <a name="sql-server-machine-learning-services"></a>Изучение служб машины SQL Server
-Службы R в SQL Server были переименованы в **Службы машинного обучения SQL Server**, чтобы отразить появление поддержки Python в дополнение к языку R. Службы машинного обучения (в базе данных) можно использовать для запуска сценариев R или Python в SQL Server. Или установите **сервер машинного обучения Майкрософт (автономный)**, чтобы развернуть и использовать модели R и Python, которые не требуют наличия SQL Server. 
+## <a name="sql-server-2017-machine-learning-services"></a>Службы машинного обучения SQL Server 2017
+Службы R в SQL Server были переименованы в **Службы машинного обучения SQL Server**, чтобы отразить появление поддержки Python в дополнение к языку R. Вы можете использовать службы машинного обучения (в базе данных) для запуска сценариев R или Python в SQL Server либо установить **сервер машинного обучения Майкрософт (автономный)** для развертывания и использования моделей R и Python, не требующих SQL Server. 
 
-У разработчиков SQL Server теперь есть доступ к обширным библиотекам МО и ИИ для Python в открытом исходном коде, а также к последним инновациям Майкрософт. 
+Разработчикам в SQL Server теперь доступны обширные библиотеки машинного обучения и искусственного интеллекта для Python в экосистеме открытого кода, а также последние инновации от Майкрософт. 
 
-+ **revoscalepy** — эта версия RevoScaleR (Python) включает параллельные алгоритмы для линейных и логистических регрессий, деревьев решений, усиленных деревьев и случайных лесов, а также обширный набор API для преобразования и перемещения данных, контекстов удаленного вычисления и источников данных.
-
-+ **microsoftml** — этот современный пакет алгоритмов и преобразований машинного обучения с привязками Python включает глубокие нейронные сети, быстрые деревья и леса решений и оптимизированные алгоритмы для линейной и логистической регрессии. Вы также получите предварительно обученные модели на основе моделей ResNet, которые можно использовать для извлечения образов или анализа мнений.
-
-+ **Практическое использование Python с T-SQL** — простое развертывание кода Python с помощью хранимой процедуры `sp_execute_external_script`. Достигните отличной производительности, используя потоковую передачу данных из процессов SQL в процессы Python и параллелизацию кольца MPI.
-
-+ **Python в контекстах вычислений SQL Server** — исследователи данных и разработчики могут выполнять код Python удаленно из своей среды разработки для исследования данных и разработки моделей без перемещения данных.
+- **revoscalepy** — эта версия RevoScaleR (Python) включает параллельные алгоритмы для линейных и логистических регрессий, деревьев решений, усиленных деревьев и случайных лесов, а также обширный набор API для преобразования и перемещения данных, контекстов удаленного вычисления и источников данных.
+- **microsoftml** — этот современный пакет алгоритмов и преобразований для машинного обучения с привязками Python включает инструменты работы с глубокими нейронными сетями, быстрыми деревьями и лесами принятия решений, а также оптимизированные алгоритмы линейной и логистической регрессии. Вы также получите предварительно обученные модели на основе моделей ResNet, которые можно использовать для извлечения образов или анализа мнений.
+- **Практическое использование Python с T-SQL** — простое развертывание кода Python с помощью хранимой процедуры `sp_execute_external_script`. Достигните отличной производительности, используя потоковую передачу данных из процессов SQL в процессы Python и параллелизацию кольца MPI.
+- **Python в контекстах вычислений SQL Server** — исследователи данных и разработчики могут выполнять код Python удаленно из своей среды разработки для исследования данных и разработки моделей без перемещения данных.
 
 Дополнительные сведения см. в разделе [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) (Новые возможности служб машинного обучения SQL Server).
 
