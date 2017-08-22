@@ -10,11 +10,10 @@
 ### [Диалоговое окно](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
 ### [Transact-SQL](create-an-availability-group-transact-sql.md)  
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
-### [Виртуальные машины Azure>](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
-## [Прослушиватель](create-or-configure-an-availability-group-listener-sql-server.md)  
+### [Виртуальные машины Azure](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
+## [Средство прослушивания](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # Основные понятия
-## [Автоматическое заполнение](automatically-initialize-always-on-availability-group.md)  
 ## [Автоматическое заполнение для вторичных реплик](automatic-seeding-secondary-replicas.md)
 ## [Политики группы доступности](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [Режимы доступности](availability-modes-always-on-availability-groups.md)  
@@ -55,6 +54,7 @@
 ## Настройка группы доступности 
 ### [Изменение доступности реплики](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Изменение режима отработки отказа реплики](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [Настройка автоматического заполнения](automatically-initialize-always-on-availability-group.md)  
 ### [Настройка резервного копирования в репликах](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Настройка гибкой политики отработки отказа](configure-flexible-automatic-failover-policy.md)  
 ### [Настройка резервного копирования в репликах](configure-backup-on-availability-replicas-sql-server.md)  
