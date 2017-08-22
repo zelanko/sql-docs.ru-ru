@@ -2,7 +2,7 @@
 title: "Объекты PolyBase T-SQL | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="polybase-t-sql-objects"></a>Объекты T-SQL PolyBase
@@ -47,7 +46,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="prerequisites"></a>Предварительные требования  
  Настройте PolyBase. См. раздел [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## <a name="create-external-tables-for-hadoop"></a>Создание внешних таблиц для Hadoop  
+## <a name="create-external-tables-for-hadoop"></a>Создание внешних таблиц для Hadoop
+Область применения этой статьи: SQL Server (начиная с версии 2016), Parallel Data Warehouse
+  
  **1. Создание учетных данных области базы данных**  
   
  Этот шаг является обязательным только для кластеров Hadoop, защищенных с помощью Kerberos.  
@@ -126,6 +127,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Создание внешней таблицы для хранилища BLOB-объектов Azure  
+Область применения этой статьи: SQL Server (начиная с 2016), Хранилище данных SQL Azure, Parallel Data Warehouse
+
  **1. Создание учетных данных области базы данных**  
   
 ```sql  
@@ -201,11 +204,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Создание внешних таблиц для Azure Data Lake Store
-Хранилище Azure Data Lake Store поддерживается только PolyBase в хранилище данных SQL.
-Дополнительные сведения об использовании Azure Data Lake Store совместно с ADLS см. в статье [Загрузка данных из Azure Data Lake Store в хранилище данных SQL](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
+Область применения этой статьи: Хранилище данных SQL Azure
+
+Дополнительные сведения см. в разделе [Загрузка с помощью Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
  
- **1. Создание учетных данных области базы данных**  
-  
+ **1. Создание учетных данных области базы данных**   
 
 ```sql
 -- Create a Database Master Key.

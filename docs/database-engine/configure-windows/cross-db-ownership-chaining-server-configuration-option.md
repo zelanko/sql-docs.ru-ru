@@ -1,7 +1,7 @@
 ---
 title: "Параметр конфигурации сервера \"cross db ownership chaining\" | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>Параметр конфигурации сервера «cross db ownership chaining»
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   Межбазовые цепочки владения для отдельных баз данных можно установить с помощью предложения SET инструкции ALTER DATABASE. При создании новой базы данных параметр cross db ownership chaining можно установить с использованием инструкции CREATE DATABASE.  
   
      Не рекомендуется присваивать параметру **cross db ownership chaining** значение "1", за исключением ситуаций, когда все базы данных, размещенные на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должны участвовать в межбазовой цепочке владения и известно влияние данного значения на безопасность.  
-  
+
+Чтобы определить текущее состояние межбазовой цепочки владения, выполните следующий запрос.  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+Значение 1 указывает, что включены межбазовые цепочки владения.
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>Управление межбазовыми цепочками владения  
  Прежде чем включить или выключить межбазовые цепочки владения, следует учесть следующие факторы:  
   
