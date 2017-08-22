@@ -1,5 +1,5 @@
 # [Обзор](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-# [Технический документ требованиям по конфиденциальности и GDPR](microsoft-sql-and-the-gdpr-requirements.md) 
+# [Техническая документация по обеспечению конфиденциальности и соответствия требованиям GDPR](microsoft-sql-and-the-gdpr-requirements.md) 
 # [Аудит](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)
 # [Аутентификация и доступ](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 # [Шифрование](../../relational-databases/security/encryption/sql-server-encryption.md)

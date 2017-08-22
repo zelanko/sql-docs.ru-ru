@@ -1,17 +1,17 @@
 # [Обзор](database-features.md)
 # [Новые и недавно обновленные статьи](new-updated-relational-databases.md)
 
-# [Справочники по SQL Server](sql-server-guides.md)
-## Руководство по устранению неполадок и мониторингу групп доступности Always On
+# [Руководства по SQL Server](sql-server-guides.md)
+## Руководство по мониторингу и устранению неполадок в группах доступности AlwaysOn
 ## [Проектирование индекса](sql-server-index-design-guide.md)
 ## [Архитектура управления памятью](memory-management-architecture-guide.md)
 ### [Чтение страниц](reading-pages.md)  
 ### [Запись страниц](writing-pages.md)
 ## [Архитектура страниц и экстентов](pages-and-extents-architecture-guide.md)
-## [После миграции проверки и оптимизации](post-migration-validation-and-optimization-guide.md)
+## [Руководство по оптимизации и проверке после миграции](post-migration-validation-and-optimization-guide.md)
 ## [Архитектура обработчика запросов](query-processing-architecture-guide.md)
 ## [Архитектура задач и потоков](thread-and-task-architecture-guide.md)
-## [Архитектура журнала транзакций и управление](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Архитектура и администрирование журнала транзакций](sql-server-transaction-log-architecture-and-management-guide.md)
 ## Руководство по блокировке и управлению версиями строк транзакций
 
 # [Архивация и восстановление](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -43,7 +43,7 @@
 # [Ошибки и события](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 # [Классы событий](../relational-databases/event-classes/sql-server-event-class-reference.md)
 # [Расширенные события](../relational-databases/extended-events/extended-events.md)
-# [Графики](../relational-databases/graphs/sql-graph-overview.md)
+# [Графы](../relational-databases/graphs/sql-graph-overview.md)
 # [Иерархические данные](hierarchical-data-sql-server.md)  
 # [Импорт и экспорт данных](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
 # [OLTP в памяти](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

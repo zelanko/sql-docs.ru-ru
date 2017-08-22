@@ -7,4 +7,4 @@
 # [Объекты T-SQL](polybase-t-sql-objects.md)  
 # [Запросы](polybase-queries.md)  
 # [Устранение неполадок](polybase-troubleshooting.md) 
-## [Устранение неполадок с подключением PolyBase Kerberos](polybase-troubleshoot-connectivity.md)   
+## [Устранение неполадок с подключением PolyBase к Kerberos](polybase-troubleshoot-connectivity.md)   

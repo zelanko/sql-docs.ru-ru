@@ -3,7 +3,7 @@
 # [Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 # [Обработка адаптивной запросов](adaptive-query-processing.md)
-# [Автоматической настройки](../automatic-tuning/automatic-tuning.md)
+# [Автоматическая настройка](../automatic-tuning/automatic-tuning.md)
 # [Оценка количества элементов](cardinality-estimation-sql-server.md)  
 
 # [Наблюдение и настройка производительности](monitor-and-tune-for-performance.md)  

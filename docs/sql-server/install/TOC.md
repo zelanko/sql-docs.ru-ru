@@ -20,4 +20,4 @@
 
 # [Настройка брандмауэра Windows для разрешения доступа к SQL Server](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [Настройка многосетевого компьютера для доступа к SQL Server](configure-a-multi-homed-computer-for-sql-server-access.md)  
-# [Справка мастера установки](instance-configuration.md)
+# [Справка по использованию мастера установки](instance-configuration.md)

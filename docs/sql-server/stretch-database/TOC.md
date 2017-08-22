@@ -3,7 +3,7 @@
 # Приступая к работе
 ## [Определение баз данных и таблиц](stretch-database-databases-and-tables-stretch-database-advisor.md)  
 ## [Запуск мастера](get-started-by-running-the-enable-database-for-stretch-wizard.md)
-## [Настройка функции, совместимые с](configure-compatible-sql-server-features-with-stretch-database.md)  
+## [Настройка совместимых функций](configure-compatible-sql-server-features-with-stretch-database.md)  
 # Инструкции
 ## Включить
 ### [Включение базы данных](enable-stretch-database-for-a-database.md)  
@@ -11,9 +11,9 @@
 ### [Выбор строк для миграции](select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)  
 ## управление
 ### [Мониторинг миграции](monitor-and-troubleshoot-data-migration-stretch-database.md)
-### [Приостановка и возобновление переноса](pause-and-resume-data-migration-stretch-database.md)  
+### [Приостановка и возобновление миграции](pause-and-resume-data-migration-stretch-database.md)  
 ### [Управление и устранение неполадок](manage-and-troubleshoot-stretch-database.md)  
-### [Подавай назад](backup-stretch-enabled-databases-stretch-database.md)  
+### [Резервное копирование](backup-stretch-enabled-databases-stretch-database.md)  
 ### [Восстановить](restore-stretch-enabled-databases-stretch-database.md)  
 ### [Отключение и возврат данных](disable-stretch-database-and-bring-back-remote-data.md)
 ### [Расширенные события](extended-events-for-stretch-database.md)  
