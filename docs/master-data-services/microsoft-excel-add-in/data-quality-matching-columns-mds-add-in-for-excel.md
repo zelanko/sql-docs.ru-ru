@@ -1,23 +1,28 @@
 ---
-title: "Столбцы сопоставления качества данных (службы DQS), надстройка MDS для Excel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Качество данных соответствующих столбцов (надстройка MDS для Excel) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4ce8ddcdbf8c29663640025ad40b4e01e44d99c1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Столбцы сопоставления качества данных (службы DQS), надстройка MDS для Excel
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]после сопоставления данных в группе **Качество данных** на ленте можно нажать кнопку **Показать подробности** , чтобы вывести столбцы с дополнительными сведениями.  
+# <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>Столбцы сопоставления качества данных (службы DQS), надстройка MDS для Excel
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]после сопоставления данных в **качества данных** группу на ленте можно нажать кнопку **Показать подробности** для отображения столбцов с дополнительными сведениями.  
   
  В следующей таблице показаны столбцы, которые отображаются при сопоставлении данных.  
   
@@ -28,9 +33,9 @@ caps.handback.revision: 9
 |**PIVOT_MARK**|Произвольная запись, с которой сравниваются другие записи. У нее нет значения оценки.|  
 |**SCORE**|Отражает, насколько схожи записи в группе с эталонной записью. Эта оценка определяется службами DQS. Если оценка не отображается, это означает либо то, что запись является сводной, либо что совпадения не найдены.|  
   
-## См. также:  
- [Сопоставление качества данных в надстройке MDS для Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
- [Сопоставление схожих данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>См. также:  
+ [Сопоставление качества данных в надстройка MDS для Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [Соответствует аналогичные данных &#40; Надстройка MDS для Excel &#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)   
  [Сопоставление данных](../../data-quality-services/data-matching.md)  
   
   

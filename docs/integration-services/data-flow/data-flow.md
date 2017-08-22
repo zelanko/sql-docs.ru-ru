@@ -1,29 +1,34 @@
 ---
-title: "Поток данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "выходные данные [службы Integration Services]"
-  - "поток данных [службы Integration Services], элементы"
-  - "входные данные [службы Integration Services]"
-  - "внешние метаданные [службы Integration Services]"
-  - "поток данных [службы Integration Services]"
-  - "Ошибки [службы Integration Services], выводы потока данных"
+title: "Поток данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Поток данных
+# <a name="data-flow"></a>Поток данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет три различных типа компонентов потока данных: источники, преобразования и назначения. Источники извлекают данные из хранилищ, таких как таблицы и представления реляционных баз данных, файлы и базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Преобразования изменяют, объединяют и очищают данные. Целевые объекты загружают данные в хранилища или создают наборы данных в памяти.  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  Кроме того, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют пути, соединяющие выход одного компонента со входом другого. Пути определяют последовательность компонентов и дают возможность добавлять заметки к потоку данных или просматривать источник столбца.  
   
- Соединение компонентов потока данных осуществляется путем соединения выходов источников и преобразований с входами преобразований и целевых объектов. При создании потока данных обычно соединяются второй и последующие компоненты — так же, как их добавляли к потоку данных. После соединения компонента входные столбцы могут быть использованы при настройке компонента. Когда нет доступных входных столбцов, настройка компонента завершится после его подсоединения к потоку данных. Дополнительные сведения см. в статьях [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md) и [Соединение компонентов с путями](../Topic/Connect%20Components%20with%20Paths.md).  
+ Соединение компонентов потока данных осуществляется путем соединения выходов источников и преобразований с входами преобразований и целевых объектов. При создании потока данных обычно соединяются второй и последующие компоненты — так же, как их добавляли к потоку данных. После соединения компонента входные столбцы могут быть использованы при настройке компонента. Когда нет доступных входных столбцов, настройка компонента завершится после его подсоединения к потоку данных. Дополнительные сведения см. в статьях [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md) и [Соединение компонентов с путями](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
  На следующей диаграмме показан поток данных с источником, преобразованием с одним входом и одним выходом и целевым объектом. На диаграмме присутствуют входы, выходы, выходы ошибок, а также входные, выходные и внешние столбцы.  
   
- ![Компоненты потока данных и их вводы и выводы](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Компоненты потока данных и их вводы и выводы")  
+ ![Компоненты и их входы и выходы потока данных](../../integration-services/data-flow/media/mw-dts-dataflow.gif "компоненты и их входы и выходы потока данных")  
   
 ## <a name="data-flow-implementation"></a>Реализация потока данных  
  Добавление задачи потока данных к потоку управления пакета является первым шагом реализации потока данных в пакете. Пакет может включать несколько задач потока данных, каждая из которых имеет свой собственный поток данных. Например, если пакет требует, чтобы потоки данных были запущены в указанной последовательности или чтобы между потоками данных были выполнены другие задачи, необходимо указывать отдельную задачу потока данных для каждого потока данных.  
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  Демонстрация использования средств повышения производительности соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity приведена в видеоролике [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server).  
   
 ## <a name="connection-managers"></a>Диспетчеры соединений  
- Многие компоненты потока данных подключаются к источниками данных. Добавить диспетчеры соединений, необходимые для компонентов пакета, следует до того, как компонент будет правильно настроен. Диспетчеры соединений можно добавить при создании потока данных или до начала его создания. Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](../Topic/Create%20Connection%20Managers.md).  
+ Многие компоненты потока данных подключаются к источниками данных. Добавить диспетчеры соединений, необходимые для компонентов пакета, следует до того, как компонент будет правильно настроен. Диспетчеры соединений можно добавить при создании потока данных или до начала его создания. Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ## <a name="external-metadata"></a>Внешние метаданные  
  При создании потока данных в пакете с помощью конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , метаданные из источников и целевых объектов копируются во внешние столбцы источников и целевых объектов и играют роль моментального снимка схемы. Когда службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяют правильность пакета, конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] сравнивает этот снимок со схемой источника или назначения и в зависимости от найденных изменений выдает ошибки и предупреждения.  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>См. также  
  Видеоролик [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server) на сайте technet.microsoft.com.  
+

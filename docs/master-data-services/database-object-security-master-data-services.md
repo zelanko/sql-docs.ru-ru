@@ -1,25 +1,30 @@
 ---
-title: "Защита объектов базы данных (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "база данных [службы Master Data Services], безопасность объектов"
-  - "безопасность [службы Master Data Services], объекты базы данных"
+title: "Базы данных объект безопасности (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database [Master Data Services], object security
+- security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bfccd4e9d3df93dbc6a968a1fc5961400afe234
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Защита объектов базы данных (службы Master Data Services)
+# <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
   В базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] данные хранятся во многих таблицах базы данных, а также отображаются в представлениях. Информация, которая может быть защищена в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , видна пользователям, у которых есть доступ к базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
  В частности, в модели Employee могут содержаться сведения о заработной плате сотрудников, а в модели Account может присутствовать финансовая информация компании. В пользовательском интерфейсе [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] можно запретить пользователям доступ к этим моделям, но пользователи с доступом к базе данных все равно смогут просматривать такие данные.  
@@ -59,7 +64,7 @@ caps.handback.revision: 10
 |------------|---------------|-----------------|  
 |Проверка версии данных на соответствие бизнес-правилам|MDM.udpValidateModel|EXECUTE|  
   
- Дополнительные сведения см. в разделе [Проверка хранимых процедур (службы Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md).  
+ Дополнительные сведения см. в разделе [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
 ##  <a name="Versions"></a> Удаление версий  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 10
 ##  <a name="SysSettings"></a> Настройка параметров системы  
  Эти параметры системы можно изменять, настраивая поведение в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Их можно настроить в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или при наличии доступа на выполнение команды UPDATE изменять непосредственно в таблице базы данных mdm.tblSystemSetting. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

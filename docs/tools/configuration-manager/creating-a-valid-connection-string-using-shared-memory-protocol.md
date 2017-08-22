@@ -1,23 +1,28 @@
 ---
-title: "Создание допустимой строки соединения с использованием протокола общей памяти | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "строки подключения [ядро СУБД], общая память"
-  - "псевдонимы [SQL Server], общая память"
+title: "Создание допустимой строки соединения с использованием протокола общей памяти | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection strings [Database Engine], shared memory
+- aliases [SQL Server], shared memory
 ms.assetid: 5fff42e8-377f-4b40-b0c8-b02393f8a1af
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36a885eba54a3710e5cb4c77a13a6382c5c9559a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # Создание допустимой строки соединения с использованием протокола общей памяти
   При подключении к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с клиента, запущенного на том же компьютере, используется протокол общей памяти. У общей памяти нет настраиваемых свойств. Протокол общей памяти всегда используется первым и его нельзя переместить с верхней строчки списка **Включенные протоколы** окна **Свойства клиентских протоколов** . Протокол общей памяти может быть отключен, что бывает полезным при устранении неполадок в одном из других протоколов.  
@@ -25,7 +30,7 @@ caps.handback.revision: 25
  При помощи протокола общей памяти нельзя создать псевдоним, но если протокол общей памяти включен, то во время подключения к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] по имени создается соединение общей памяти. В строке подключения общей памяти используется формат `lpc:<servername>[\instancename]`.  
   
 ## Подключение к локальному серверу  
- При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенному на том же компьютере, что и клиент, в качестве имени сервера можно использовать **(local)**. Это действие не рекомендуется, поскольку может вызвать неоднозначность, но может быть полезным, если известно, что клиент запущен на нужном компьютере. Например, при создании приложения для мобильных отключенных пользователей, таких как торговый персонал, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет запускаться на переносных компьютерах и использоваться для хранения данных проекта, клиент, подключающийся к **(local)**, будет всегда подключаться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющемуся на переносном компьютере. Вместо **(local)** можно использовать слово **localhost** или точку (**.**).  
+ При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенному на том же компьютере, что и клиент, в качестве имени сервера можно использовать **(local)** . Это действие не рекомендуется, поскольку может вызвать неоднозначность, но может быть полезным, если известно, что клиент запущен на нужном компьютере. Например, при создании приложения для мобильных отключенных пользователей, таких как торговый персонал, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет запускаться на переносных компьютерах и использоваться для хранения данных проекта, клиент, подключающийся к **(local)** , будет всегда подключаться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющемуся на переносном компьютере. Вместо **(local)** можно использовать слово**localhost**или точку ( **.**).  
   
 ## Проверка протокола соединения  
  Следующий запрос возвратит протокол, используемый в текущем соединении.  
@@ -54,8 +59,8 @@ WHERE session_id = @@SPID;
 >  При указании IP-адреса в поле **Сервер** будет установлено соединение TCP/IP.  
   
 ## См. также  
- [Создание допустимой строки подключения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Создание допустимой строки соединения, использующей протокол именованных каналов](../Topic/Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.md)   
- [Выбор сетевого протокола](../Topic/Choosing%20a%20Network%20Protocol.md)  
+ [Создание допустимой строки соединения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Создание допустимой строки соединения с использованием именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
+ [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

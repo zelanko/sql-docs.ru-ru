@@ -1,32 +1,37 @@
 ---
-title: "Целевой объект &#171;Обучение модели интеллектуального анализа данных&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataminingmodeltrainingdest.f1"
-helpviewer_keywords: 
-  - "назначения [службы Integration Services], обучение модели интеллектуального анализа данных"
-  - "целевой объект «Обучение модели интеллектуального анализа данных»"
-  - "модели интеллектуального анализа данных [службы Analysis Services], обучение"
-  - "обучение моделей интеллектуального анализа данных"
+title: "Интеллектуальный анализ данных назначения «Обучение модели» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataminingmodeltrainingdest.f1
+helpviewer_keywords:
+- destinations [Integration Services], Data Mining Model Training
+- Data Mining Model Training destination
+- mining models [Analysis Services], training
+- training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdb0903098dee37d88e89519cf6bc375b0fb90f0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Целевой объект &#171;Обучение модели интеллектуального анализа данных&#187;
+# <a name="data-mining-model-training-destination"></a>целевой объект «Обучение модели интеллектуального анализа данных»
   Целевой объект «Обучение модели интеллектуального анализа данных» обучает модели анализа данных, пропуская данные, которые получает целевой объект, через алгоритмы модели интеллектуального анализа данных. Несколько моделей интеллектуального анализа данных могут быть обучены одним целевым объектом, если модели построены на одной и той же структуре интеллектуального анализа данных. Дополнительные сведения см. в разделах [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) и [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
   
-## Настройка назначения «Обучение модели интеллектуального анализа данных».  
+## <a name="configuration-of-the-data-mining-model-training-destination"></a>Настройка назначения «Обучение модели интеллектуального анализа данных».  
  Если столбец уровня вариантов в целевой структуре и модели построены на структуре, содержимое которой типа KEY TIME или KEY SEQUENCE, входные данные должны быть отсортированы по этой колонке. Например, модели, созданные с использованием алгоритма временных рядов (Майкрософт), используют тип содержимого KEY TIME. Если входные данные не отсортированы, то обработка модели может завершиться неудачно. Если данные требуется отсортировать, можно в потоке данных предварительно использовать преобразование «Сортировка» для их сортировки. Это требование не относится к столбцам с типом содержимого KEY. Дополнительные сведения см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md) и [Преобразование "Сортировка"](../../integration-services/data-flow/transformations/sort-transformation.md).  
   
 > [!NOTE]  
@@ -46,7 +51,7 @@ caps.handback.revision: 46
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «Обучение модели интеллектуального анализа данных»](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   

@@ -1,36 +1,41 @@
 ---
-title: "DATEDIFF (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DATEDIFF, инструкция"
-  - "даты [службы Integration Services], DATEDIFF"
+title: "DATEDIFF (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DATEDIFF statement
+- dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEDIFF (выражение служб SSIS)
+# <a name="datediff-ssis-expression"></a>DATEDIFF (выражение служб SSIS)
   Возвращает числовое значение границ дат или времени между двумя указанными датами. Параметр *datepart* указывает границы даты и времени, которые необходимо сравнить.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 DATEDIFF(datepart, startdate, endate)  
 ```  
   
-## Аргументы  
- *часть_даты*  
+## <a name="arguments"></a>Аргументы  
+ *datepart*  
  Параметр, который указывает, какую часть даты сравнивать и для какой вернуть значение.  
   
  *startdate*  
@@ -39,13 +44,13 @@ DATEDIFF(datepart, startdate, endate)
  *endate*  
  Конечная дата периода.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  В следующей таблице перечислены части дат и сокращения, распознаваемые средством оценки выражений.  
   
-|Часть даты|Сокращения|  
+|datepart|Сокращения|  
 |--------------|-------------------|  
 |Год|yy, yyyy|  
 |Квартал|qq, q|  
@@ -67,7 +72,7 @@ DATEDIFF(datepart, startdate, endate)
   
  Если конечная дата является более ранней, чем начальная, то функция возвращает отрицательное число. Если начальные и конечные даты равны друг другу или находятся в одном интервале, то функция возвращает ноль.  
   
-## Примеры выражений служб SSIS  
+## <a name="ssis-expression-examples"></a>Примеры выражений служб SSIS  
  Этот пример вычисляет количество дней между двумя литералами даты. Если дата имеет формат «мм/дд/гггг», то эта функция возвращает 7.  
   
 ```  
@@ -86,12 +91,12 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## См. также  
- [DATEADD (выражение служб SSIS)](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART (выражение служб SSIS)](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY (выражение служб SSIS)](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH (выражение служб SSIS)](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR (выражение служб SSIS)](../../integration-services/expressions/year-ssis-expression.md)   
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Функция DATEADD &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [ДЕНЬ &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [МЕСЯЦ &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [ГОД &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

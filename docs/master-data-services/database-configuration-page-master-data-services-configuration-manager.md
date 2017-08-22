@@ -1,27 +1,32 @@
 ---
-title: "Страница &#171;Конфигурация базы данных&#187; (диспетчер конфигурации служб Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.mds.configmanager.dbpg.f1"
+title: "«База данных конфигурации» (диспетчер конфигурации служб Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.mds.configmanager.dbpg.f1
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 212031f92de47da41ad2716b81740c6a42487e59
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Страница &#171;Конфигурация базы данных&#187; (диспетчер конфигурации служб Master Data Services)
+# <a name="database-configuration-page-master-data-services-configuration-manager"></a>Страница «Конфигурация базы данных» (диспетчер конфигурации служб Master Data Services)
   Страница **Настройка база данных** служит для изменения системных настроек базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Системные настройки влияют на все веб-приложения и веб-службы, связанные с выбранной базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Чтобы системные настройки стали доступными для изменения, необходимо выбрать или создать базу данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## Текущая база данных  
+## <a name="current-database"></a>Текущая база данных  
  Выберите существующую базу данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] или создайте новую, для которой будут редактироваться системные настройки. Новая база данных будет выбрана по умолчанию после ее создания.  
   
 |Имя элемента управления|Description|  
@@ -34,13 +39,12 @@ caps.handback.revision: 7
 |**Обновление базы данных**|Открывает мастер, с помощью которого можно обновить указанную базу данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Эта кнопка включена только в тех случаях, когда требуется обновление определенной базы данных.|  
 |**Исправление базы данных**|Эта кнопка позволяет убедиться в правильности установки базы данных MDS. Эта возможность может оказаться полезной при создании и восстановлении резервной копии базы данных MDS на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , где база данных MDS ранее не размещалась.|  
   
-## Системные настройки  
+## <a name="system-settings"></a>Системные настройки  
  Изменение системных параметров для всех веб-приложений и веб-служб, связанных с выбранной базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
  Эти параметры доступны в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] и хранятся в таблице системных параметров (mdm.tblSystemSetting) базы данных. Список параметров см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## См. также:  
- [Приступая к работе со службами Master Data Services (SQL Server 2016)](../Topic/Get%20Started%20with%20Master%20Data%20Services%20\(SQL%20Server%202016\).md)   
- [Требования к базе данных (службы Master Data Services)](../master-data-services/install-windows/database-requirements-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+[Установка служб Master Data Services и настройка](../master-data-services/master-data-services-installation-and-configuration.md) [баз данных требования &#40; Службы Master Data Services &#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

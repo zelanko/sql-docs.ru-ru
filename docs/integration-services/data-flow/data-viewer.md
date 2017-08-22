@@ -1,29 +1,34 @@
 ---
-title: "Средство просмотра данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataviewer.f1"
-helpviewer_keywords: 
-  - "диалоговое окно «Средство просмотра данных»"
+title: "Средство просмотра данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataviewer.f1
+helpviewer_keywords:
+- Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a04115502f54ce1731c0d8aa14b2f264bc66709f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Средство просмотра данных
+# <a name="data-viewer"></a>Средство просмотра данных
   Если настроен путь для применения средства просмотра данных, то это средство отображает данные буфер за буфером по мере перемещения данных между двумя компонентами потока данных.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Зеленая стрелка**  
  Переход к данным в следующем буфере. Если данные можно переместить в одиночный буфер, то этот параметр недоступен.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 13
  **Скопировать данные**  
  Копирование данных текущего буфера в буфер обмена.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

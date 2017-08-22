@@ -1,25 +1,30 @@
 ---
-title: "Пользовательский индекс (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательский индекс (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Пользовательский индекс (Master Data Services)
+# <a name="custom-index-master-data-services"></a>Пользовательский индекс (Master Data Services)
   Пользовательские индексы создают в сущности некластеризованный индекс из одного атрибута (одиночный индекс) или из списка атрибутов (составной индекс). Как правило, индексы улучшают производительность обработки запросов. Дополнительные сведения об индексах SQL Server см. в разделе [Индексы](../relational-databases/indexes/indexes.md).  
   
-## Типы индексов  
+## <a name="type-of-indexes"></a>Типы индексов  
  Можно создать следующие типы пользовательских индексов для каждой сущности:  
   
 -   Уникальный индекс  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  Уникальный индекс гарантирует, что индексированный столбец не содержит повторяющихся значений. Составные уникальные индексы гарантируют, что каждое сочетание значений в списке выбранных атрибутов уникальное. Уникальный индекс не может быть создан, если для выбранных атрибутов существуют повторяющиеся значения.  
   
-## Правила  
+## <a name="rules"></a>Правила  
  К уникальным и неуникальным пользовательским индексам применяются следующие правила:  
   
 -   Чтобы создать пользовательский индекс, необходимо выбрать по меньшей мере один атрибут.  
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   Изменить тип атрибута, включенного в пользовательских индекс, невозможно.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
