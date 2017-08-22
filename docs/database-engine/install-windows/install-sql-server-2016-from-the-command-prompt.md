@@ -89,10 +89,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 458c1eba94f31cc9577a82eb429749b1b22fc21f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: c30ab95ac8b543071c0136369b276442c0f81cfc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
@@ -846,6 +846,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||AdvancedAnalytics|Устанавливает службы R Services (в базе данных).|  
 |AS||Устанавливает все компоненты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Сервер отчетов||Устанавливает все компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|RS_SHP||Устанавливает компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint.|  
+|RS_SHPWFE||Устанавливает надстройку [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. |  
 |DQC||Установка среды [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Устанавливает все компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |MDS||Установка среды [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
