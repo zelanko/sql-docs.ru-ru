@@ -1,29 +1,34 @@
 ---
-title: "Статистическая обработка значений в наборе данных с помощью преобразования &#171;Агрегатная обработка&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "преобразование «Статистическая обработка» [службы Integration Services]"
-  - "статистические значения [службы Integration Services]"
-  - "наборы данных [службы Integration Services], статистические значения"
+title: "Статистических значений в наборе данных с помощью агрегатных преобразования | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Aggregate transformation [Integration Services]
+- aggregate values [Integration Services]
+- datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b4e99dd830e0722fa5717f8749ef7f4dc152be0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Статистическая обработка значений в наборе данных с помощью преобразования &#171;Агрегатная обработка&#187;
+# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Статистическая обработка значений в наборе данных с помощью преобразования «Агрегатная обработка»
   Для добавления и настройки преобразования «Агрегатная обработка» пакет должен обладать как минимум одной задачей потока данных и одним источником.  
   
-### Выполнение статистического вычисления значений в наборе данных  
+### <a name="to-aggregate-values-in-a-dataset"></a>Выполнение статистического вычисления значений в наборе данных  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 48
   
 15. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также раздел  
- [Преобразование «Статистическая обработка»](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
+## <a name="see-also"></a>См. также раздел  
+ [Преобразование Статистическая обработка](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)  

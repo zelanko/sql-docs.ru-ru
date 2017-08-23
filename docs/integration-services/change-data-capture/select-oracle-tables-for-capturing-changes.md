@@ -1,24 +1,29 @@
 ---
-title: "Выбор таблиц Oracle для отслеживания изменений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "selOraTabDia"
+title: "Выбор таблиц Oracle для отслеживания изменений | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: af36432c89c6ac031f3275eebcdf3f1a7b56e481
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Выбор таблиц Oracle для отслеживания изменений
+# <a name="select-oracle-tables-for-capturing-changes"></a>Выбор таблиц Oracle для отслеживания изменений
   В этом диалоговом окне можно выбрать таблицы, включенные в экземпляр CDC. Выбранные таблицы добавляются в список на странице **Выбор таблиц и столбцов** мастера создания экземпляра. Это диалоговое окно предназначено для следующих целей.  
   
  По умолчанию список таблиц в этом диалоговом окне пуст. Можно установить флажок в верхней части столбца с флажками, чтобы выбрать все таблицы, а также выполнить поиск определенных таблиц.  
@@ -43,7 +48,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  Если была выбрана таблица, в которой содержатся данные неподдерживаемого типа, то на экране появится сообщение об ошибке, а таблица не будет включена в экземпляр.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Выберите столбцы и таблицы Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

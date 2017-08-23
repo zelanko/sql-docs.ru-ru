@@ -1,30 +1,35 @@
 ---
-title: "Администраторы (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Администраторы [службы Master Data Services], об администраторах"
-  - "администраторы [службы Master Data Services]"
-  - "Модели [службы Master Data Services], администраторы"
+title: "Администраторы (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administrators [Master Data Services], about administrators
+- administrators [Master Data Services]
+- models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aa037c47b7ec276188e1f67d5a415bfba1da232
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Администраторы (службы Master Data Services)
+# <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
   В этой статье описываются типы администраторов в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: администраторы моделей, администраторы сущностей и суперпользователь.  
   
-## Администраторы модели  
- В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] администратор модели — это пользователь, имеющий разрешение **Администратор**, назначенное для объекта модели верхнего уровня на вкладке **Model Objects** (Объекты модели). Если у пользователя есть разрешение **Администратор** для конкретной модели, оно переопределяет все разрешения для дочерних объектов модели (разрешения для объектов и элементов модели).  
+## <a name="model-administrators"></a>Администраторы модели  
+ В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор модели — это пользователь, имеющий разрешение **Администратор** , назначенное для объекта модели верхнего уровня на вкладке **Model Objects** (Объекты модели). Если у пользователя есть разрешение **Администратор** для конкретной модели, оно переопределяет все разрешения для дочерних объектов модели (разрешения для объектов и элементов модели).  
   
 -   Если пользователь имеет доступ к функциональной области **Обозреватель** , то он может добавлять, удалять и обновлять все основные данные в этой области.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 14
   
  Сделать пользователя администратором модели можно в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] либо с помощью программных средств. Дополнительные сведения см. в разделе [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
-## Администраторы сущностей  
+## <a name="entity-administrators"></a>Администраторы сущностей  
  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор сущности — это пользователь, имеющий разрешения администратора, назначенные объекту сущности верхнего уровня на вкладке Model Objects (Объекты модели). Если у пользователя есть разрешения администратора на сущности, они превосходят и игнорируют другие разрешения на дочерние объекты сущности (разрешения на объекты и элементы модели).  
   
 -   Если пользователь имеет доступ к функциональной области **Обозреватель** , то он может добавлять, удалять и обновлять все основные данные в этой области.  
@@ -45,8 +50,8 @@ caps.handback.revision: 14
   
  Сделать пользователя администратором сущности можно с помощью [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] либо программных средств. Дополнительные сведения см. в разделе [Создание администратора сущностей (службы Master Data Services)](../master-data-services/create-an-entity-administrator-master-data-services.md).  
   
-## Суперпользователь Master Data Services  
- В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] пользователю можно назначить разрешения для функциональной области "Суперпользователь". Пользователь с разрешениями для функциональной области "Суперпользователь" получает права администратора для всех моделей, а также для всех остальных функциональных областей. Сведения о разрешениях для функциональных областей см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
+## <a name="master-data-services-super-user"></a>Суперпользователь Master Data Services  
+ В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]пользователю можно назначить разрешения для функциональной области "Суперпользователь". Пользователь с разрешениями для функциональной области "Суперпользователь" получает права администратора для всех моделей, а также для всех остальных функциональных областей. Сведения о разрешениях для функциональных областей см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
  Суперпользователь по умолчанию задается для **учетной записи администратора** при создании базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] с помощью [мастера создания базы данных (диспетчер конфигурации служб Master Data Services)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -54,11 +59,11 @@ caps.handback.revision: 14
   
 -   получать доступ ко всем функциональным областям;  
   
--   добавлять, удалять и обновлять все основные данные для всех моделей в функциональной области **Обозреватель**.  
+-   добавлять, удалять и обновлять все основные данные для всех моделей в функциональной области **Обозреватель** .  
   
  Разрешения суперпользователя можно назначить нескольким пользователям или группам пользователей.  
   
-## Сравнение типов администраторов  
+## <a name="comparing-administrator-types"></a>Сравнение типов администраторов  
   
 |Тип администратора|Description|  
 |------------------------|-----------------|  
@@ -66,12 +71,12 @@ caps.handback.revision: 14
 |Администратор модели|Может быть администратором модели на основе разрешений администратора, назначенных ему явно, либо на основе разрешений, полученных в результате членства в некоторой группе.<br /><br /> Имеет доступ только к тем функциональным областям, к которым разрешен доступ.<br /><br /> Автоматически имеет все разрешения на все объекты и элементы в конкретной модели.|  
 |Администратор сущности|Может быть администратором сущности на основе разрешений администратора, назначенных ему явно, либо на основе разрешений, полученных в результате членства в некоторой группе.<br /><br /> Имеет доступ только к тем функциональным областям, к которым разрешен доступ.<br /><br /> Автоматически имеет все разрешения на все объекты и элементы в конкретной сущности.<br /><br /> Может утвердить набор ожидающих изменений, если для изменений сущности требуется утверждение.|  
   
-## Внешние ресурсы  
+## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Создание базы данных служб Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  
+ [Создать базу данных служб Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Уведомления &#40; Службы Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
   
   

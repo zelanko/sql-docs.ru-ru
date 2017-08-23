@@ -1,51 +1,56 @@
 ---
-title: "SUBSTRING (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SUBSTRING, функция"
-  - "часть возвращенного выражения [службы Integration Services]"
+title: "SUBSTRING (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SUBSTRING function
+- part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47f7ac32826faacd2ad38c0a09750012222fde7e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# SUBSTRING (выражение служб SSIS)
+# <a name="substring-ssis-expression"></a>SUBSTRING (выражение служб SSIS)
   Возвращает часть символьного выражения, начинающегося с указанной позиции и имеющего указанную длину. Параметр *position* и параметр *length* должны иметь значение, выраженное целым числом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 SUBSTRING(character_expression, position, length)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *character_expression*  
  Символьное выражение, из которого извлекаются символы.  
   
  *position*  
  Является целым числом, указывающим, где начинается подстрока.  
   
- *длина*  
+ *length*  
  Является целым числом, указывающим длину подстроки в виде числа символов.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  SUBSTRING использует однобазовый индекс. Если параметр *position* имеет значение 1, то подстрока начинается с первого символа в значении параметра *character_expression*.  
   
- Функция SUBSTRING работает только типом данных DT_WSTR. Аргумент *character_expression*, являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции SUBSTRING. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
+ Функция SUBSTRING работает только типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции SUBSTRING. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
  Функция SUBSTRING возвращает нулевой результат при нулевом аргументе.  
   
@@ -53,7 +58,7 @@ SUBSTRING(character_expression, position, length)
   
  Аргумент *length* может превышать длину строки. В этом случае функция возвращает остаток строки.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  Этот пример возвращает из строкового литерала два символа, начинающихся с 4. Возвращаемый результат — «ph».  
   
 ```  
@@ -90,7 +95,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## См. также  
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

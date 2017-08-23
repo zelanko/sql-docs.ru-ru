@@ -1,22 +1,27 @@
 ---
-title: "Построение модели (надстройка MDS для Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Построение модели (надстройка MDS для Excel) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82a8380ac46097ac88942776b416593d0d3338c8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Построение модели (надстройка MDS для Excel)
+# <a name="building-a-model-mds-add-in-for-excel"></a>Построение модели (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут выполнять сокращенный набор административных функций, доступных в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
  Администраторы могут выполнять следующие задачи по созданию моделей в [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] :  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
   
  Администратор должен создавать модель с помощью веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или веб-службы. Затем с помощью [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] можно создавать сущности и атрибуты в модели. Дополнительные сведения об объектах модели см. в разделе [Модели (службы Master Data Services)](../../master-data-services/models-master-data-services.md).  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Однако большинство административных задач все равно необходимо выполнять в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или с помощью веб-службы. В следующей таблице показаны средства, с помощью которых администраторы могут выполнять задачи в MDS.  
   
 |Описание задачи|Инструмент|Раздел|  
@@ -43,15 +48,15 @@ caps.handback.revision: 5
 |Создание версий данных.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или веб-служба|[Блокировка версии (службы Master Data Services)](../../master-data-services/lock-a-version-master-data-services.md)|  
 |Развертывание моделей.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , веб-служба или средство MDSModelDeploy.|[Создание пакета развертывания модели при помощи MDSModelDeploy](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
 -   [Модели (службы Master Data Services)](../../master-data-services/models-master-data-services.md)  
   
 -   [Сущности (службы Master Data Services)](../../master-data-services/entities-master-data-services.md)  
   
--   [Атрибуты (службы Master Data Services)](../../master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты &#40; Службы Master Data Services &#41;](../../master-data-services/attributes-master-data-services.md)  
   
--   [Атрибуты на основе домена (службы Master Data Services)](../../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Атрибуты на основе домена &#40; Службы Master Data Services &#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Группы атрибутов (службы Master Data Services)](../../master-data-services/attribute-groups-master-data-services.md)  
   

@@ -1,25 +1,30 @@
 ---
-title: "Свойства SQL Server (вкладка &#171;Службы&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства SQL Server (вкладка «службы») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17df1facd3c4c3f9035017c0156e6e3aed910d33
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства SQL Server (вкладка &#171;Службы&#187;)
-  Используйте вкладку **Службы**в диалоговом окне **Свойства MSSQLSERVER**, чтобы просмотреть или указать следующие параметры.  
+# <a name="sql-server-properties-service-tab"></a>Свойства SQL Server (вкладка «Службы»)
+  Используйте вкладку **Службы**в диалоговом окне **Свойства MSSQLSERVER** , чтобы просмотреть или указать следующие параметры.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  
  Отображает расположение программных файлов, используемых этой службой.  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 22
  При возникновении ошибки ее номер выводится в этом окне. Этот номер обеспечивает возможность устранения ошибок, используйте его для поиска в базе знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] или сообщите его службе технической поддержки.  
   
  **Host Name**  
- Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Название**  
  Указывает отображаемое имя службы.  

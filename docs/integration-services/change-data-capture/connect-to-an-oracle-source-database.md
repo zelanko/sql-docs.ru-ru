@@ -1,24 +1,29 @@
 ---
-title: "Соединение с базой данных-источником Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraDb"
+title: "Соединиться с базой данных-источником Oracle | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Соединение с базой данных-источником Oracle
+# <a name="connect-to-an-oracle-source-database"></a>Соединение с базой данных-источником Oracle
   На странице «Источник Oracle» указываются сведения, необходимые для соединения с базой данных-источником Oracle. Экземпляр CDC считывает журналы повторов базы данных Oracle, с которой установлено соединение.  
   
  **Строка подключения Oracle**  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  Для выполнения интеллектуального анализа журналов пользователь должен иметь следующие права доступа, предоставленные в базе данных Oracle.  
 >   
->  -   SELECT на \<любая-отслеживаемая-таблица>  
+>  -   ВЫБЕРИТЕ на \<any отслеживаемая Таблица >  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE на DBMS LOGMNR  
 > -   SELECT на V$LOGMNR CONTENTS  
@@ -57,14 +62,14 @@ caps.handback.revision: 8
 >  Если какое-либо из этих прав доступа нельзя предоставить V$xxx, предоставьте его V_S$xxx.  
   
  **Проверка соединения**  
- Нажмите кнопку **Проверить соединение**, чтобы определить возможность соединения с удаленным компьютером, на котором находится база данных Oracle. Откроется диалоговое окно, в котором будет указано, удалось ли установить соединение.  
+ Нажмите кнопку **Проверить соединение** , чтобы определить возможность соединения с удаленным компьютером, на котором находится база данных Oracle. Откроется диалоговое окно, в котором будет указано, удалось ли установить соединение.  
   
 > [!IMPORTANT]  
 >  Из-за известной проблемы соединение с базой данных-источником Oracle может быть не установлено, если конструктор CDC был запущен не от имени администратора. Если установить соединение не удается, закройте и перезапустите конструктор CDC через пункт меню **Запуск от имени администратора** .  
   
  Завершив ввод данных на этой странице, нажмите кнопку **Далее** , чтобы перейти на страницу [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Изменение свойств экземпляра](../../integration-services/change-data-capture/edit-instance-properties.md)  
   

@@ -1,22 +1,27 @@
 ---
-title: "Пользовательские свойства назначения &#171;SQL Server&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские свойства назначения SQL Server | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d29337e20ed16ab60fc3ec55968a351dc527e2c6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Пользовательские свойства назначения &#171;SQL Server&#187;
+# <a name="sql-server-destination-custom-properties"></a>Пользовательские свойства назначения «SQL Server»
   Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
   
  В следующей таблице описаны пользовательские свойства назначения « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ». Все свойства доступны для чтения и записи.  
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
  Дополнительные сведения см. в статье [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md).  
   
-## См. также  
- [Общие свойства](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>См. также  
+ [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

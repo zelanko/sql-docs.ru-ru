@@ -1,29 +1,34 @@
 ---
-title: "Разбиение набора данных с помощью преобразования &#171;Условное разбиение&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "преобразование «Условное разбиение»"
-  - "разбиение наборов данных"
-  - "наборы данных [службы Integration Services], разделение"
+title: "Разбиение набора данных с помощью преобразования «Условное разбиение» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Conditional Split transformation
+- splitting dataset
+- datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Разбиение набора данных с помощью преобразования &#171;Условное разбиение&#187;
+# <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Разбиение набора данных с помощью преобразования «Условное разбиение»
   Чтобы добавить и настроить преобразование «Условное разбиение», пакет должен содержать по крайней мере одну задачу потока данных и один источник.  
   
-### Чтобы условно разбить набор данных  
+### <a name="to-conditionally-split-a-dataset"></a>Чтобы условно разбить набор данных  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -52,18 +57,18 @@ caps.handback.revision: 40
   
 9. Можно изменить имя выхода по умолчанию для строк данных, которые не подходят ни под одно из условий.  
   
-10. Для настройки вывода ошибок нажмите **Настроить вывод ошибок**. Дополнительные сведения см. в разделе [Настройка вывода ошибок в компоненте потока данных](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. Для настройки вывода ошибок нажмите **Настроить вывод ошибок**. Дополнительные сведения см. в статье [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Нажмите кнопку **ОК**.  
   
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Преобразование «Условное разбиение»](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Типы данных служб Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)   
- [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Службы Integration Services &#40; Службы SSIS &#41; Выражения](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "Создание атрибута на основе домена (службы Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание атрибутов на основе домена [службы Master Data Services]"
-  - "создание атрибутов на основе домена [службы Master Data Services]"
-  - "создание атрибутов на основе домена [службы Master Data Services]"
+title: "Создание атрибута на основе домена (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- domain-based attributes [Master Data Services], creating
+- creating domain-based attributes [Master Data Services]
+- attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание атрибута на основе домена (службы Master Data Services)
-  В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.  
+# <a name="create-a-domain-based-attribute-master-data-services"></a>Создание атрибута на основе домена (службы Master Data Services)
+  В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -35,12 +40,12 @@ caps.handback.revision: 12
   
 -   должна существовать сущность, для которой создается атрибут. Дополнительные сведения см. в разделе [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Сведения об атрибутах  
+## <a name="attribute-information"></a>Сведения об атрибутах  
  Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
   
 |Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете кнопку "Сохранить", появляется изображение ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), указывающее на то, что выполняется обновление атрибута.<br /><br /> При наличии ошибок во время создания или изменения атрибута появляется изображение ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> В противном случае отображается статус "ОК" и появляется изображение ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки Save, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") , указывающее, выполняется обновление атрибута.<br /><br /> При наличии ошибок во время создания или изменения атрибута появляется ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
 |Название|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Description|Описание атрибута.|  
@@ -58,7 +63,7 @@ caps.handback.revision: 12
   
 -   **Когда обновлено**: дата и время последнего обновления атрибута.  
   
-### Создание атрибута на основе домена  
+### <a name="to-create-a-domain-based-attribute"></a>Создание атрибута на основе домена  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 9. В списке **Тип атрибута** выберите пункт **На основе домена**.  
   
-10. В списке **Сущность домена** выберите сущность, которая будет использоваться для заполнения значений атрибута.  
+10. В списке **Сущность домена** выберите сущность, которая будет использоваться для заполнения значений атрибута. 
   
 11. **Необязательный параметр для атрибутов на основе домена для конечных элементов.** Выберите родительский атрибут фильтра, используемый для ограничения допустимых значений для атрибута на основе домена.  
   
@@ -96,10 +101,10 @@ caps.handback.revision: 12
   
 13. Нажмите кнопку **Сохранить**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Создание производной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Изменение имени атрибута и типа данных &#40; Службы Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Удаление атрибута (службы Master Data Services)](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

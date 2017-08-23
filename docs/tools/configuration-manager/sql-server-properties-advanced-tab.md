@@ -1,25 +1,30 @@
 ---
-title: "Свойства SQL Server (вкладка &#171;Дополнительно&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства SQL Server (вкладка «Дополнительно») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4023e504dfee0b0655a78e773771d3ae16b4a2fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства SQL Server (вкладка &#171;Дополнительно&#187;)
+# <a name="sql-server-properties-advanced-tab"></a>Свойства SQL Server (вкладка «Дополнительно»)
   По умолчанию на вкладке **Дополнительно** присутствуют следующие свойства. Если определены пользовательские свойства, они также отображаются на этой вкладке вместе со значениями.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Кластеризованный**  
  Указывает, установлена ли эта служба в качестве ресурса кластеризованного сервера.  
   
@@ -36,13 +41,13 @@ caps.handback.revision: 19
  Если установлено значение **Да**, то в случае возникновения серьезного сбоя программа "Доктор Ватсон» направит сведения либо в [!INCLUDE[msCoName](../../includes/msconame-md.md)], либо на сервер ошибок. Дополнительные сведения по отчетам об ошибках см. в разделе «Настройки параметров отчета об ошибках» электронной документации. Чтобы изменить это значение, в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните сервер правой кнопкой мыши, выберите пункт **Свойства** и перейдите на страницу **Прочие параметры сервера**. Параметры находятся в области **Информационный отчет** .  
   
  **Версия файла**  
- Отображает версию исполняемого объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Отображает версию исполняемого объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Путь установки**  
  Отображает путь к двоичным файлам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для установленной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Идентификатор экземпляра**  
- Указывает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использующий эту службу.  
+ Указывает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующий эту службу.  
   
  **Язык**  
  Отображает установленный по умолчанию язык для сообщений сервера.  
@@ -66,6 +71,6 @@ caps.handback.revision: 19
  Отображает номер версии этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Имя виртуального сервера**  
- **Имя виртуального сервера**, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен на кластеризованный сервер.  
+ **Имя виртуального сервера** , когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен на кластеризованный сервер.  
   
   

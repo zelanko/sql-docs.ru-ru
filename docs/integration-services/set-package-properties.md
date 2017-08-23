@@ -1,37 +1,42 @@
 ---
-title: "Установка свойств пакета | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пакеты служб Integration Services, свойства"
-  - "свойства [службы Integration Services]"
-  - "контрольные точки [службы Integration Services]"
-  - "свойства выполнения [службы Integration Services]"
-  - "пакеты [службы Integration Services], свойства"
-  - "свойства идентификации [службы Integration Services]"
-  - "пароли [службы Integration Services]"
-  - "пакеты служб SSIS, свойства"
-  - "свойства транзакции [службы Integration Services]"
-  - "обновление свойств пакета"
-  - "свойства значения принудительного выполнения [службы Integration Services]"
-  - "свойства безопасности [службы Integration Services]"
-  - "свойства версии [службы Integration Services]"
-  - "пакеты служб SQL Server Integration Services, свойства"
+title: "Установка свойств пакета | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, properties
+- properties [Integration Services]
+- checkpoints [Integration Services]
+- execution properties [Integration Services]
+- packages [Integration Services], properties
+- identification properties [Integration Services]
+- passwords [Integration Services]
+- SSIS packages, properties
+- transaction properties [Integration Services]
+- updating package properties
+- forced execution value properties [Integration Services]
+- security properties [Integration Services]
+- version properties [Integration Services]
+- SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Установка свойств пакета
+# <a name="set-package-properties"></a>Установка свойств пакета
   При создании пакета в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] с помощью графического интерфейса, который предоставляется службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , свойства объекта пакета задаются в окне «Свойства».  
   
  В окне **Свойства** список свойств может быть упорядочен по категориям или в алфавитном порядке. Чтобы упорядочить содержимое окна **Свойства** по категории, нажмите значок «По категории».  
@@ -54,13 +59,13 @@ caps.handback.revision: 39
   
 -   [Версия](#Version)  
   
- Сведения о дополнительных свойствах пакета, которые нельзя установить в окне **Свойства**, см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
+ Сведения о дополнительных свойствах пакета, которые нельзя установить в окне **Свойства** , см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
   
-### Установка свойств пакета в окне «Свойства»  
+### <a name="to-set-package-properties-in-the-properties-window"></a>Установка свойств пакета в окне «Свойства»  
   
--   [Установка свойств переменной пакета](../Topic/Set%20the%20Properties%20of%20a%20Package.md)  
+-   [Установка свойств переменной пакета](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
-## Свойства, упорядоченные по категориям  
+## <a name="properties-by-category"></a>Свойства, упорядоченные по категориям  
  В следующих таблицах перечислены свойства пакета, упорядоченные по категориям.  
   
 ###  <a name="Checkpoints"></a> Контрольные точки  
@@ -73,7 +78,7 @@ caps.handback.revision: 39
 |**SaveCheckpoints**|Определяет, записываются ли контрольные точки в файл контрольных точек при запуске пакета. Это свойство имеет значение по умолчанию **False**.|  
   
 > [!NOTE]  
->  Указание параметра **/CheckPointing on** команды dtexec эквивалентно заданию для свойства **SaveCheckpoints** пакета значения True, а для свойства **CheckpointUsage** — значения Always. Дополнительные сведения см. в статье [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
+>  Указание параметра **/CheckPointing on** команды dtexec эквивалентно заданию для свойства **SaveCheckpoints** пакета значения True, а для свойства **CheckpointUsage** — значения Always. Дополнительные сведения см. в статье [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
 ###  <a name="Execution"></a> Выполнение  
  Свойства этой категории позволяют настраивать поведение объекта пакета во время выполнения.  
@@ -107,7 +112,7 @@ caps.handback.revision: 39
 |**CreatorComputerName**|Имя компьютера, на котором был создан пакет.|  
 |**CreatorName**|Имя пользователя, создавшего пакет.|  
 |**Description**|Описание функциональных возможностей пакета.|  
-|**Идентификатор**|Идентификатор GUID пакета, назначаемый ему при создании. Это свойство предназначено только для чтения. Чтобы создать новое случайное значение свойства **ID**, выберите в раскрывающемся списке команду **\<Сформировать новый идентификатор>**.|  
+|**Идентификатор**|Идентификатор GUID пакета, назначаемый ему при создании. Это свойство предназначено только для чтения. Чтобы создать новое случайное значение для **идентификатор** выберите  **\<сформировать новый идентификатор\>**  в раскрывающемся списке.|  
 |**Название**|Имя пакета.|  
 |**PackageType**|Тип пакета. Допустимые значения — **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**и **SQLReplication**. Значение по умолчанию этого свойства равно **Default**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -117,16 +122,16 @@ caps.handback.revision: 39
 |Свойство|Description|  
 |--------------|-----------------|  
 |**Конфигурации**|Коллекция конфигураций, используемых пакетом. Нажмите кнопку обзора **(…)** для просмотра и настройки конфигурации пакета.|  
-|**Выражения**|Нажмите кнопку обзора **(…)**, чтобы создать выражения для свойств пакета.<br /><br /> Обратите внимание, что выражения свойств можно создавать для всех свойств пакета, включенных в объектную модель, а не только для перечисленных в окне "Свойства".<br /><br /> Дополнительные сведения см. в разделе [Использование выражений свойств в пакетах](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Для просмотра существующих выражений свойств раскройте список **Expressions**. Нажмите кнопку обзора **(…)** в текстовом поле выражения, чтобы изменить и вычислить это выражение.|  
+|**Выражения**|Нажмите кнопку обзора **(…)** , чтобы создать выражения для свойств пакета.<br /><br /> Обратите внимание, что выражения свойств можно создавать для всех свойств пакета, включенных в объектную модель, а не только для перечисленных в окне "Свойства".<br /><br /> Дополнительные сведения см. в разделе [Использование выражений свойств в пакетах](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Для просмотра существующих выражений свойств раскройте список **Expressions**. Нажмите кнопку обзора **(…)** в текстовом поле выражения, чтобы изменить и вычислить это выражение.|  
 |**ForceExecutionResult**|Результат выполнения пакета. Допустимые значения: **None**, **Success**, **Failure**и **Completion**. Значение по умолчанию этого свойства равно **None**. Дополнительные сведения см. в разделе T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |**LocaleId**|Локаль Microsoft Win32. Значение этого свойства по умолчанию равно локали операционной системы на локальном компьютере.|  
 |**LoggingMode**|Значение, определяющее для пакета режим записи в журнал. Допустимые значения — **Disabled**, **Enabled**и **UseParentSetting**. Значение по умолчанию этого свойства равно **UseParentSetting**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |**OfflineMode**|Указывает, работает ли пакет в режиме «вне сети». Это свойство предназначено только для чтения. Это свойство устанавливается на уровне проекта. Обычно конструктор служб [!INCLUDE[ssIS](../includes/ssis-md.md)] пытается подключиться ко всем источникам данных, которые использует пакет, чтобы проверить достоверность метаданных, связанных с источниками и назначениями. Можно установить флажок **Работать вне сети** в меню служб **SSIS** даже перед открытием пакета, чтобы избежать этих попыток подключения и возникающих по этой причине ошибок проверки, если источники данных недоступны. Флажок **Работать вне сети** можно также установить для ускорения работы конструктора и снять его только для проверки пакета.|  
 |**SuppressConfigurationWarnings**|Указывает, подавляются ли предупреждения, создаваемые конфигурациями. Это свойство имеет значение по умолчанию **False**.|  
-|**UpdateObjects**|Указывает, обновляется ли пакет для использования новых версий содержащихся в нем объектов, когда эти новые версии становятся доступны. Например, если значение этого свойства равно **True**, то пакет, включающий задачу "Массовая вставка", обновляется для использования новой версии этой задачи, доступной в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Это свойство имеет значение по умолчанию **False**.|  
+|**UpdateObjects**|Указывает, обновляется ли пакет для использования новых версий содержащихся в нем объектов, когда эти новые версии становятся доступны. Например, если значение этого свойства равно **True**, то пакет, включающий задачу "Массовая вставка", обновляется для использования новой версии этой задачи, доступной в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Это свойство имеет значение по умолчанию **False**.|  
   
 ###  <a name="Security"></a> безопасность  
- Свойства этой категории используются для установки уровня защиты пакета. Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ Свойства этой категории используются для установки уровня защиты пакета. Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Свойство|Description|  
 |--------------|-----------------|  
@@ -151,5 +156,19 @@ caps.handback.revision: 39
 |**VersionGUID**|Идентификатор GUID версии пакета. Это свойство предназначено только для чтения.|  
 |**VersionMajor**|Последняя основная версия пакета.|  
 |**VersionMinor**|Последняя вспомогательная версия пакета.|  
+
+## <a name="set-package-properties-in-the-properties-window"></a>Установка свойств пакета в окне «Свойства» 
+1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий пакет, который нужно настроить.  
   
+2.  В **обозревателе решений**дважды щелкните пакет, чтобы открыть его в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , или щелкните правой кнопкой мыши и выберите пункт **Просмотреть в конструкторе**.  
+  
+3.  Перейдите на вкладку **Поток управления** и затем выполните одно из следующих действий:  
+  
+    -   Щелкните правой кнопкой мыши в области конструктора потока управления и выберите **Свойства**.  
+  
+    -   В меню **Просмотр** выберите пункт **Окно свойств**.  
+  
+4.  Отредактируйте свойства пакета в окне **Свойства** .  
+  
+5.  В меню **Файл** выберите пункт **Сохранить выбранные элементы** для сохранения измененного пакета.  
   

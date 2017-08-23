@@ -1,31 +1,36 @@
 ---
-title: "TOKEN (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "TOKEN (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# TOKEN (выражение служб SSIS)
+# <a name="token--ssis-expression"></a>TOKEN (выражение служб SSIS)
   Возвращает токен (подстроку) из строки с учетом заданных разделителей токенов строки и номера токена, определяющего, какой токен следует возвратить.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 TOKEN(character_expression, delimiter_string, occurrence)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *character_expression*  
  Строка, содержащая токены, разделенные соответствующими символами.  
   
@@ -35,27 +40,27 @@ TOKEN(character_expression, delimiter_string, occurrence)
  *occurrence*  
  Целое число со знаком или без знака, указывающее возвращаемый токен. Например, если для параметра указать значение 3, из строки будет возвращен третий токен.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## Замечания  
- Эта функция разделяет строку <character_expression> на набор токенов, разделенных символами, которые заданы в строке <delimiter_string>, а затем возвращает токен N, где N — это порядковый номер токена, заданный параметром \<occurrence>. Примеры использования этой функции см. в разделе «Примеры».  
+## <a name="remarks"></a>Замечания  
+ Эта функция разделяет строку < character_expression > на набор токенов, разделенных разделителей, указанных в < delimiter_string >, а затем возвращает токен n, где N — число токена, заданные \<вхождения > параметра. Примеры использования этой функции см. в разделе «Примеры».  
   
  Следующие примечания относятся к функции TOKEN.  
   
 -   Строка разделения может содержать один или несколько символов разделения.  
   
--   Если значение параметра \<occurrence> больше общего числа токенов в строке, функция возвратит значение NULL.  
+-   Если значение \<вхождения > параметр больше, чем общее число токенов в строке, функция возвращает значение NULL.  
   
 -   Первые разделители пропускаются.  
   
--   Функция TOKEN работает только с типом данных DT_WSTR. Аргумент *character_expression*, являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции TOKEN. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR.  
+-   Функция TOKEN работает только с типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции TOKEN. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR.  
   
 -   Функция TOKEN возвращает значение NULL, если строка character_expression имеет значение NULL.  
   
 -   Переменные и столбцы могут использоваться в качестве значений всех аргументов в выражении.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В следующем примере функция TOKEN возвращает значение «a». Строка «a little white dog» состоит из 4 токенов «a», «little», «white» и «dog», разделенных символом « » (символ пробела). Второй аргумент — строка разделителя, задает только один разделитель, символ пробела, который используется для разбития входной строки на токены. Последний аргумент — 1, указывает, что возвращаться должен первый токен. В этом образце строки первый токен — «а».  
   
 ```  
@@ -98,7 +103,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## См. также  
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Функции & #40; Выражение служб SSIS & #41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

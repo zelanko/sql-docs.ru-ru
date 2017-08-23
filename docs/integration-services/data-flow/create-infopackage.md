@@ -1,22 +1,27 @@
 ---
-title: "Создать InfoPackage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создать InfoPackage | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fae3a5c0b43d90fcc85b48db97e23fc444aaf7f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создать InfoPackage
+# <a name="create-infopackage"></a>Создать InfoPackage
   Используйте диалоговое окно **Создать InfoPackage** для создания нового InfoPackage в системе SAP Netweaver BW.  
   
  Диалоговое окно **Создать InfoPackage** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  На вкладке **Диспетчер соединений** в поле группы **Создание объектов SAP BW** выберите **InfoPackage**и щелкните **Создать**.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **InfoSource**  
  Введите имя InfoSource, на основе которого должен быть создан новый InfoPackage.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 10
  **Сохранить и активировать**  
  Сохраните и включите новый InfoPackage.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

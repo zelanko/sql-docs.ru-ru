@@ -1,28 +1,33 @@
 ---
-title: "Условия бизнес-правил (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Условия бизнес-правил (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47b8ae7924ae590156479209b2ae0ba639d07ec
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Условия бизнес-правил (службы Master Data Services)
+# <a name="business-rule-conditions-master-data-services"></a>Условия бизнес-правил (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]условия бизнес-правил — это условия, которые должны быть соблюдены для выполнения одного или нескольких действий.  
   
 > [!NOTE]  
 >  Условия необязательны. Если условия не определены, то действия выполняются при каждой проверке данных на соответствие бизнес-правилам.  
   
-## Условия бизнес-правил  
+## <a name="business-rule-conditions"></a>Условия бизнес-правил  
   
 |Название условия|Description|  
 |--------------------|-----------------|  
@@ -50,9 +55,9 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  Если бизнес-правило содержит условие, выполняющее сравнение двух значений, и применяется к элементу, в котором оба значения содержат значение NULL, этот элемент не проходит проверку.  
   
-## См. также:  
- [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)   
- [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
- [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Действия бизнес-правил &#40; Службы Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)   
+ [Бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Создание и публикация бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

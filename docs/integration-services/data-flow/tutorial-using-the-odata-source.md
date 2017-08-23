@@ -1,25 +1,30 @@
 ---
-title: "Учебник. Использование источника OData | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Учебник: Использование источника OData | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Учебник. Использование источника OData
+# <a name="tutorial-using-the-odata-source"></a>Учебник. Использование источника OData
   Настоящий учебник расскажет о процессе извлечения коллекции **Employees** из образца **Northwind** службы OData (http://services.odata.org/V3/Northwind/Northwind.svc/) и последующей ее загрузки в неструктурированный файл.  
   
-## 1. Создание проекта служб Integration Services  
+## <a name="1-create-an-integration-services-project"></a>1. Создание проекта служб Integration Services  
   
 1.  Запустите **SQL Server Data Tools** или [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
 5.  Введите **имя** и выберите **расположение** для проекта и нажмите кнопку **ОК**.  
   
-## 2. Добавление и настройка источника OData для пакетов служб SSIS  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. Добавление и настройка источника OData для пакетов служб SSIS  
   
 1.  Перетащите **задачу потока данных** из **панели элементов служб SSIS** в область конструктора потока управления для пакетов служб SSIS.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Редактор источника OData** .  
   
-## 3. Добавление назначения неструктурированных файлов и тестирование решения  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Добавление назначения неструктурированных файлов и тестирование решения  
   
 1.  Теперь перетащите **Назначение "Неструктурированный файл"** из **панели элементов служб SSIS** в область конструктора потока данных, расположенную ниже компонента **Источник OData**.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
 5.  В диалоговом окне **Формат неструктурированного файла** выберите **С разделителями**. Отобразится диалоговое окно **Редактор диспетчера соединений с неструктурированными файлами** .  
   
-6.  В диалоговом окне **Редактор диспетчера соединений с неструктурированными файлами** в поле **Имя файла** введите путь **c:\Employees.txt**.  
+6.  В диалоговом окне **Редактор диспетчера соединений с неструктурированными файлами** в поле **Имя файла**введите путь **c:\Employees.txt**.  
   
 7.  В левой области панели навигации щелкните **Столбцы**. На этой странице для просмотра данных можно воспользоваться функцией предварительного просмотра.  
   

@@ -1,22 +1,27 @@
 ---
-title: "Создание InfoSource для основных данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание InfoSource для основных данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 35ea6e547458b142db58800a820e71767adc3442
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создание InfoSource для основных данных
+# <a name="create-infosource-for-master-data"></a>Создание InfoSource для основных данных
   Используйте диалоговое окно **Создание InfoSource для основных данных** для создания нового InfoSource для основных данных в системе SAP Netweaver BW.  
   
  Диалоговое окно **Создание InfoSource для основных данных** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -36,7 +41,7 @@ caps.handback.revision: 10
   
 5.  В диалоговом окне **Создание InfoSource** выберите **Основные данные**и нажмите кнопку **ОК**.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Имя InfoObject**  
  Введите имя InfoObject, на основе которого должен быть создан новый InfoSource.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 10
  **Сохранить и активировать**  
  Сохраните и активируйте новый InfoSource.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

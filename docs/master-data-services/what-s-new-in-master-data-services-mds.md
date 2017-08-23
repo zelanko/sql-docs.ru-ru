@@ -1,28 +1,33 @@
 ---
-title: "Новые возможности Master Data Services (MDS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Какой &#39; новые возможности Master Data Services (MDS) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Новые возможности Master Data Services (MDS)
+# <a name="what39s-new-in-master-data-services-mds"></a>Какой &#39; новые возможности Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   В этом разделе перечислены изменения и обновления в версии [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- Общие сведения об упорядочении данных в [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] см. в статье [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
+ Общие сведения об упорядочении данных в [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]см. в статье [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md). 
   
  **Инструкции по установке служб Master Data Services, настройке базы данных и веб-сайта, а также развертыванию примеров моделей см. в статье** [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -77,9 +82,9 @@ caps.handback.revision: 85
   
  Теперь пользователю можно явно назначить разрешение администратора на уровне модели. Это означает, что, если пользователю позже будут назначены разрешения в поддереве модели, например на уровне сущности, он не потеряет это разрешение администратора.  
   
- В этом выпуске [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] мы предлагаем больше уровней разрешений за счет следующих новых разрешений: чтение, создание, обновление и удаление. Например, пользователь у которого есть только разрешение на обновление, теперь сможет обновлять основные данные без создания или удаления данных. Если предоставить пользователю разрешение на создание, обновление или удаление, то ему будет автоматически назначено разрешение на чтение. Разрешения на чтение, создание, обновление и удаление, помимо прочего, можно объединять друг с другом.  
+ В этом выпуске [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]мы предлагаем больше уровней разрешений за счет следующих новых разрешений: чтение, создание, обновление и удаление. Например, пользователь у которого есть только разрешение на обновление, теперь сможет обновлять основные данные без создания или удаления данных. Если предоставить пользователю разрешение на создание, обновление или удаление, то ему будет автоматически назначено разрешение на чтение. Разрешения на чтение, создание, обновление и удаление, помимо прочего, можно объединять друг с другом.  
   
- При обновлении до [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] старые разрешения преобразуются в новые, как показано в следующей таблице.  
+ При обновлении до [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]старые разрешения преобразуются в новые, как показано в следующей таблице.  
   
 |Разрешение в предыдущем выпуске|Новое разрешение|  
 |------------------------------------|--------------------|  
@@ -227,9 +232,11 @@ caps.handback.revision: 85
  Пакеты примеров были обновлены для поддержки новых сценариев. Дополнительные сведения см. в статье [Примеры: пакеты развертывания моделей (службы Master Data Services)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master data services and data quality services features support.md)  
+ [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Устаревшие функции служб Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

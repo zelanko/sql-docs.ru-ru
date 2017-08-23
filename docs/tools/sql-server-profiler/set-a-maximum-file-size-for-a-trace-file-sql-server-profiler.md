@@ -1,28 +1,33 @@
 ---
-title: "установить максимальный размер для файла трассировки (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "максимальный размер файла трассировки"
-  - "размер [SQL Server], файлы трассировки"
+title: "Установить максимальный размер файла для файла трассировки (приложение SQL Server Profiler) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maximum file size for traces
+- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd660e6fde56cc13e709a0fea4500f84fbc087a2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# установить максимальный размер для файла трассировки (приложение SQL Server Profiler)
+# <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>установить максимальный размер для файла трассировки (приложение SQL Server Profiler)
   Для указания максимального размера файла трассировки предусмотрена следующая процедура.  
   
-### Указание максимального размера файла трассировки  
+### <a name="to-set-a-maximum-file-size-for-a-trace-file"></a>Указание максимального размера файла трассировки  
   
 1.  В меню **Файл** выберите команду **Создать трассировку**и подключитесь к экземпляру Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 24
   
 2.  В поле **Имя трассировки** введите имя трассировки.  
   
-3.  В списке **Имя шаблона** выберите шаблон трассировки.  
+3.  В списке **Имя шаблона**выберите шаблон трассировки.  
   
 4.  Выберите **Сохранить в файл**и укажите файл, в который будут сохранены данные о трассировке.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
     > [!NOTE]  
     >  В файловой системе FAT32 максимально допустимый размер файла немногим меньше 4 гигабайт (ГБ). Если файл трассировки достигает такого размера, то трассировка завершается с ошибкой «Недостаточно места на диске». Чтобы можно было создавать файлы большего размера, используйте NTFS.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

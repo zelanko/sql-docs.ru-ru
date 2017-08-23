@@ -1,31 +1,34 @@
 ---
-title: "Диспетчер подключений службы хранилища Azure | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afpstorageconn.f1"
-  - "sql14.dts.designer.afpstorageconn.f1"
+title: "Диспетчер подключений службы хранилища Azure | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afpstorageconn.f1
+- sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 848b0f0e3e639d31fa739e8d744fc4b80839a5fd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Диспетчер подключений службы хранилища Azure
+# <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
   **Диспетчер подключений службы хранилища Azure** позволяет использовать пакет SSIS для подключения к учетной записи хранения Azure с помощью указываемых значений свойств: имени учетной записи хранения и ключа учетной записи.  
-  
->   [!NOTE] Чтобы диспетчер подключений службы хранилища Azure и компоненты, которые его используют (то есть источник BLOB-объектов, назначение BLOB-объектов, задача отправки BLOB-объектов и задача скачивания BLOB-объектов), могли подключаться к учетным записям хранения общего назначения и учетным записям хранения BLOB-объектов, убедитесь, что вы скачали последнюю версию пакета дополнительных компонентов Azure [здесь](https://www.microsoft.com/download/details.aspx?id=49492). Дополнительные сведения об этих двух типах учетных записей хранения см. на странице [Вводная информация о службе хранилища Microsoft Azure](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
-  
- **Диспетчер подключений службы хранилища Azure** входит в состав пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure для SQL Server 2016. Пакет дополнительных компонентов можно скачать [отсюда](http://go.microsoft.com/fwlink/?LinkID=626967).  
+   
+ **Диспетчер подключений службы хранилища Azure** — это компонент [пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
 1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureStorage**и щелкните **Добавить**.  
   
@@ -42,3 +45,4 @@ caps.handback.revision: 11
 5.  Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .  
   
   
+

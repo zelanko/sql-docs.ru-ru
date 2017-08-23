@@ -1,45 +1,50 @@
 ---
-title: "ABS (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ABS, функция"
-  - "абсолютное положительное значение"
+title: "ABS (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ABS function
+- absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf829866d0e55798b612af57a8d8c6cef6d3fcd4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# ABS (выражение служб SSIS)
+# <a name="abs-ssis-expression"></a>ABS (выражение служб SSIS)
   Возвращает абсолютное положительное значение числового выражения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 ABS(numeric_expression)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
  Является числовым выражением со знаком или без знака.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  Тип данных числового выражения, переданного функции.  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Функция ABS возвращает NULL, если аргумент имеет значение NULL.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В этих примерах функция ABS применяется к положительному и отрицательному числам. В обоих случаях возвращается 1,23.  
   
 ```  
@@ -53,7 +58,7 @@ ABS(1.23)
 ABS(@HighTemperature - @LowTemperature)  
 ```  
   
-## См. также  
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

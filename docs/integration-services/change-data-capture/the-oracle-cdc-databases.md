@@ -1,23 +1,28 @@
 ---
-title: "Базы данных CDC Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Баз данных Oracle CDC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Базы данных CDC Oracle
-  Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта база данных называется базой данных Oracle (или базой данных CDC).  
+# <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
+  Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
   
  База данных CDC создается и настраивается с помощью консоли конструктора CDC Oracle, она содержит следующие элементы.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 17
  При создании базы данных CDC и настройке исходных таблиц CDC в Oracle владелец базы данных CDC может предоставить разрешение SELECT для зеркальных таблиц и определить шлюзовые роли CDC SQL Server, что позволяет управлять доступом к информации об изменениях.  
   
 ## <a name="mirror-tables"></a>Зеркальные таблицы  
- Для каждой отслеживаемой таблицы в базе данных-источнике Oracle создается также аналогичная пустая таблица в базе данных CDC, имеющая ту же схему и имя таблицы: \<имя-схемы>.\<имя-таблицы>. Исходные таблицы Oracle с именем схемы `cdc` (регистр не учитывается) отслеживаться не могут, поскольку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схема `cdc` зарезервирована для CDC SQL Server.  
+ Для каждой записи таблицы \<имя схемы >.\< Имя таблицы >, базы данных-источника Oracle, аналогичная пустая таблица создается в базе данных CDC, с тем же именем схемы и таблицы. Исходные таблицы Oracle с именем схемы `cdc` (регистр не учитывается) отслеживаться не могут, поскольку в `cdc` схема [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зарезервирована для CDC SQL Server.  
   
  Зеркальные таблицы пусты, в них нет никаких данных. Они служат для поддержки стандартной инфраструктуры CDC SQL Server, которая используется экземпляром CDC Oracle. Чтобы данные не вставлялись в зеркальные таблицы и не обновлялись в них, все операции UPDATE, DELETE и INSERT запрещены для PUBLIC. Это гарантирует, что они не будут изменены.  
   
@@ -72,23 +77,23 @@ caps.handback.revision: 17
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="a-namebkmkchangetablescta-change-tables-ct"></a><a name="BKMK_Change_Tables_CT"></a> Таблицы изменений (_CT)  
+###  <a name="BKMK_Change_Tables_CT"></a> Таблицы изменений (_CT)  
  Таблицы изменений создаются на основе зеркальных таблиц. Они содержат информацию об изменениях, которые отслеживаются в базе данных Oracle. Имена этих таблиц формируются в соответствии со следующим соглашением:  
   
- **[cdc].[\<экземпляр-отслеживания>_CT]**  
+ **[cdc]. [\<экземпляр отслеживания > _CT]**  
   
- При включении отслеживания для таблицы `<schema-name>.<table-name>` экземпляр отслеживания по умолчанию получит имя `<schema-name>_<table-name>`. Например, имя экземпляра отслеживания по умолчанию для таблицы Oracle HR.EMPLOYEES будет HR_EMPLOYEES, а имя связанной таблицы изменений ― [cdc]. [HR_EMPLOYEES_CT].  
+ При включении отслеживания для таблицы `<schema-name>.<table-name>`экземпляр отслеживания по умолчанию получит имя `<schema-name>_<table-name>`. Например, имя экземпляра отслеживания по умолчанию для таблицы Oracle HR.EMPLOYEES будет HR_EMPLOYEES, а имя связанной таблицы изменений ― [cdc]. [HR_EMPLOYEES_CT].  
   
  Запись в таблицы изменений выполняется экземпляром CDC Oracle. Чтение из этих таблиц выполняется специальными функциями с табличными значениями, создаваемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время создания экземпляра отслеживания. Например, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Дополнительные сведения об этих функциях CDC см. в разделе [Функции отслеживания измененных данных (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
   
-###  <a name="a-namebkmkcdclsntimemappinga-cdclsntimemapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  Таблица **[cdc].[lsn_time_mapping]** создается компонентом CDC SQL Server. Ее использование при работе с CDC Oracle отличается от обычного.  
   
  Значения LSN для CDC Oracle, хранящиеся в этой таблице, основаны на значении номера SCN Oracle, связанном с изменением. Первые 6 байтов значения LSN — это исходный номер Oracle SCN.  
   
  Кроме того, при использовании CDC Oracle столбцы времени (`tran_begin_time` и `tran_end_time`) хранят время UTC изменения, а не локальное время, которое используется при выполнении CDC SQL Server. Это гарантирует, что переход на летнее время не оказывает влияния на данные, хранящиеся в lsn_time_mapping.  
   
-###  <a name="a-namebkmkcdcxdbcdcconfiga-cdcxdbcdcconfig"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  Эта таблица содержит данные конфигурации для экземпляра CDC Oracle. Она обновляется с помощью консоли конструктора CDC. Эта таблица содержит только одну строку.  
   
  В следующей таблице приводится описание столбцов таблицы **cdc.xdbcdc_config** .  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Логическое. Значение**True** указывает, что при обнаружении изменения, нарушающего схему, будет произведен останов.<br /><br /> Значение**False** указывает, что необходимо удалить зеркальную таблицу и экземпляр отслеживания.|  
 |source_oracle_home||-|-|False|Может быть задан определенный путь Oracle Home или имя Oracle Home Name, которое экземпляр CDC будет использовать для соединения с Oracle.|  
   
-###  <a name="a-namebkmkcdcxdbcdcstatea-cdcxdbcdcstate"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  Эта таблица содержит сведения о сохраненном состоянии экземпляра CDC Oracle. Состояние отслеживания используется при восстановлении и отработке отказа для мониторинга исправности.  
   
  В следующей таблице описаны столбцы таблицы **cdc.xdbcdc_state** .  
@@ -156,7 +161,7 @@ caps.handback.revision: 17
 |read_changes|Количество записей об изменениях, считанных в исходном журнале транзакций Oracle.|  
 |staged_transactions|Число активных в данный момент транзакций, которые занесены в таблицу **cdc.xdbcdc_staged_transactions** .|  
   
-###  <a name="a-namebkmkcdcxdbcdctracea-cdcxdbcdctrace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  Эта таблица содержит сведения об операции экземпляра CDC. Сведения, хранящиеся в этой таблице, включают в себя записи об ошибках, важные изменения состояния и записи трассировки. Сведения об ошибках также записываются в журнал событий Windows для обеспечения доступа к ним в том случае, если таблица **cdc.xcbcdc_trace** будет недоступна.  
   
  В следующей таблице приводится описание столбцов таблицы cdc.xdbcdc_trace.  
@@ -171,7 +176,7 @@ caps.handback.revision: 17
 |status_message|Сообщение состояния, которое используется в таблице состояний.|  
 |.|Дополнительные данные в тех случаях, когда запись ошибки или трассировки содержит полезную информацию (например, запись о поврежденном журнале).|  
   
-###  <a name="a-namebkmkcdcxdbcdcstagedtransactionsa-cdcxdbcdcstagedtransactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  В этой таблице хранятся записи об изменениях для больших и длительных транзакциях до того момента, как будет обнаружено событие фиксации или отката транзакции. Служба CDC Oracle упорядочивает отслеживаемые записи журналов по времени фиксации транзакции, а затем в хронологическом порядке для каждой транзакции. Записи журнала для одной транзакции хранятся в памяти до завершения транзакции, а затем записываются в целевую таблицу изменений или удаляются (в случае отката). Поскольку объем памяти ограничен, большие транзакции записываются в таблицу **cdc.xdbcdc_staged_transactions** , где и хранятся до их завершения. Транзакции также записываются в промежуточную таблицу, когда они выполняются в течение длительного времени. Поэтому при перезапуске экземпляра CDC Oracle не придется повторно считывать старые изменения из журналов транзакций Oracle.  
   
  В следующей таблице приводится описание столбцов таблицы **cdc.xdbcdc_staged_transactions** .  

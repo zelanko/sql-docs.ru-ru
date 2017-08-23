@@ -1,22 +1,27 @@
 ---
-title: "Пользовательские свойства источника &#171;XML&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские свойства источника XML | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9acfe256755294f134decddc31a7cbb9c7966f78
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Пользовательские свойства источника &#171;XML&#187;
+# <a name="xml-source-custom-properties"></a>Пользовательские свойства источника «XML»
   Источник «XML» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
   
  В следующей таблице описаны пользовательские свойства источника «XML». Все свойства доступны для чтения и записи.  
@@ -38,7 +43,7 @@ caps.handback.revision: 6
   
  Дополнительные сведения см. в статье [XML Source](../../integration-services/data-flow/xml-source.md).  
   
-## См. также  
- [Общие свойства](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>См. также  
+ [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

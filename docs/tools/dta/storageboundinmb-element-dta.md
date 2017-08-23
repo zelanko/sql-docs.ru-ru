@@ -1,29 +1,34 @@
 ---
-title: "Элемент StorageBoundInMB (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "StorageBoundInMB, элемент"
+title: "Элемент StorageBoundInMB (DTA) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9be01bd27f8a3ad4a878e8b5340f2a4e0aead79e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Элемент StorageBoundInMB (DTA)
+# <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
   Определяет максимальный размер в мегабайтах, который может быть использован в рекомендациях по настройке помощника по настройке ядра СУБД (для набора индексов и секционирования).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 12
       <StorageBoundInMB>...</ StorageBoundInMB >  
 ```  
   
-## Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элемента  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -41,14 +46,14 @@ caps.handback.revision: 12
 |**Значение по умолчанию**|Нет.|  
 |**Применяемость**|Необязательно. Может быть использован только один раз для элемента **TuningOptions** .|  
   
-## Связи элемента  
+## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Родительский элемент**|[Элемент TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|None|  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  При настройке нескольких баз данных учитываются рекомендации по пространству всех баз данных. По умолчанию помощник по настройке ядра СУБД принимает минимальный из следующих размеров хранилищ:  
   
 -   в 3 раза больше текущего размера необработанных данных, включая общий размер кучи и кластеризованных индексов таблиц;  
@@ -59,12 +64,12 @@ caps.handback.revision: 12
   
  Если значение, предусмотренное для элемента **StorageBoundInMB** , превышает реальное свободное место на диске, помощник по настройке ядра СУБД возвращает ошибку, но продолжает настройку. После завершения настройки можно увеличить место на диске, чтобы реализовать рекомендацию.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-## Описание  
+## <a name="description"></a>Описание  
  В следующем примере кода показано, как установить предел в 1 500 мегабайт в качестве максимального места на диске, которое может быть занято согласно рекомендациям.  
   
-## код  
+## <a name="code"></a>код  
   
 ```  
 <DTAInput>  
@@ -76,7 +81,7 @@ caps.handback.revision: 12
 </DTAInput>  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

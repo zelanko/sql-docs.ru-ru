@@ -1,37 +1,42 @@
 ---
-title: "Преобразование &#171;Сортировка&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sorttrans.f1"
-helpviewer_keywords: 
-  - "преобразование «Сортировка»"
-  - "сортировка по убыванию"
-  - "сортировка по возрастанию"
-  - "сортировка данных [службы Integration Services]"
-  - "множественные сортировки"
-  - "повторяющиеся данные [службы Integration Services]"
+title: "Сортировать преобразования | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sorttrans.f1
+helpviewer_keywords:
+- Sort transformation
+- descending sorts
+- ascending sorts
+- sorting data [Integration Services]
+- multiple sorts
+- duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 50
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb0f93339416c071177fd532847b584ab2043e84
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование &#171;Сортировка&#187;
+# <a name="sort-transformation"></a>преобразование «Сортировка»
   Это преобразование сортирует входные данные по возрастанию или убыванию и копирует отсортированные данные на выход преобразования. К входным данным можно применять несколько сортировок, при этом каждая сортировка будет иметь свой номер, определяющий ее последовательность. Данные будут сначала упорядочены по столбцу с наименьшим номером, затем по столбцу со следующим наименьшим номером и т. д. Например, если у столбца **Страна** номер сортировки 1, а у столбца **Город** номер сортировки 2, выходные данные будут отсортированы сначала по названиям стран, а затем по названиям городов. Положительный номер сортировки означает, что данные будут упорядочены по возрастанию, а отрицательный — по убыванию. У столбцов, по которым сортировка производиться не будет, номер сортировки равен 0. Такие столбцы автоматически копируются на выход преобразования вместе с отсортированными столбцами.  
   
  Преобразование «Сортировка» включает набор параметров сравнения, согласно которым будут обрабатываться данные в столбце. Дополнительные сведения см. в разделе [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
   
 > [!NOTE]  
->  Преобразование «Сортировка» не сортирует идентификаторы GUID в том же порядке, что и предложение ORDER BY языка Transact-SQL. Преобразование «Сортировка» сортирует идентификаторы GUID, начинающиеся с символов с 0 по 9, перед идентификаторами GUID, начинающимися с символов с A по F, а предложение ORDER BY в реализации [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] выполняет сортировку наоборот. Дополнительные сведения см. в разделе [Предложение ORDER BY (Transact-SQL)](../Topic/ORDER%20BY%20Clause%20\(Transact-SQL\).md).  
+>  Преобразование «Сортировка» не сортирует идентификаторы GUID в том же порядке, что и предложение ORDER BY языка Transact-SQL. Преобразование «Сортировка» сортирует идентификаторы GUID, начинающиеся с символов с 0 по 9, перед идентификаторами GUID, начинающимися с символов с A по F, а предложение ORDER BY в реализации [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] выполняет сортировку наоборот. Дополнительные сведения см. в разделе [Предложение ORDER BY (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md).  
   
  В процессе сортировки это преобразование может удалять повторяющиеся строки. Повторяющимися являются строки с одинаковым значением ключа сортировки. Значение ключа сортировки формируется на основе использующихся параметров сравнения строк, то есть у разных строковых литералов могут быть одинаковые значения ключа сортировки. Строки во входных столбцах с разными значениями, но одинаковыми ключами сортировки определяются преобразованием как повторяющиеся.  
   
@@ -39,24 +44,24 @@ caps.handback.revision: 50
   
  Это преобразование имеет один вход и один выход. Оно не поддерживает выход ошибок.  
   
-## Настройка преобразования «Сортировка»  
+## <a name="configuration-of-the-sort-transformation"></a>Настройка преобразования «Сортировка»  
  Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств.  
   
  Сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Сортировка»** , см. в разделе [Sort Transformation Editor](../../../integration-services/data-flow/transformations/sort-transformation-editor.md).  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  Образец [Пользовательский компонент SortDeDuplicateDelimitedString служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220821)на сайте codeplex.com.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

@@ -1,22 +1,27 @@
 ---
-title: "Компоненты потока CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Компоненты потока CDC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
+ms.openlocfilehash: 403fb295b690c0aca09c597dc7d5c0469646ce29
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Компоненты потока CDC
+# <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
   
  Компоненты CDC служб SSIS предназначены для работы с функцией [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC, когда исходные таблицы находятся в одной базе данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или базе данных Oracle (если используется служба Oracle CDC для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Поддерживаются секционированные таблицы.  
@@ -27,20 +32,20 @@ caps.handback.revision: 21
   
  **Компонент потока управления CDC**.  
   
- [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  
+ [Задача «Управление CDC»](../../integration-services/control-flow/cdc-control-task.md)  
   
  **Компоненты потока данных CDC**.  
   
- [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
+ [Источник CDC](../../integration-services/data-flow/cdc-source.md)  
   
  [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
-## Установка  
+## <a name="installation"></a>Установка  
  В этом разделе описываются процедуры установки для компонентов CDC для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
  Компоненты CDC для SSIS входят в пакет с конструктором и службой системы отслеживания измененных данных Microsoft® для Oracle (от Attunity для Microsoft SQL Server® 2016). Скачиваемые компоненты входят в пакет дополнительных компонентов SQL Server 2016. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
   
-### Поддерживаемые версии  
+### <a name="version-support"></a>Поддерживаемые версии  
  Компоненты CDC для служб SSIS поддерживают следующие продукты Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -61,38 +66,38 @@ caps.handback.revision: 21
   
 -   Windows Server 2012  
   
-### Запуск программы установки  
- Перед запуском мастера установки убедитесь, что среда [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] закрыта. Затем выполните указания мастера установки.  
+### <a name="running-the-installation-program"></a>Запуск программы установки  
+ Перед запуском мастера установки, убедитесь, что [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] закрыт. Затем выполните указания мастера установки.  
   
-### Перезапуск служб SSIS  
+### <a name="restart-ssis"></a>Перезапуск служб SSIS  
  После установки компонентов CDC необходимо перезапустить службу SSIS, чтобы обеспечить правильную работу компонентов в среде SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  После установки компонентов отображается сообщение. Нажмите кнопку **Да** в открывшемся окне.  
   
-### Удаление компонентов Microsoft CDC  
+### <a name="uninstalling-the-microsoft-cdc-components"></a>Удаление компонентов Microsoft CDC  
  Источник CDC, разделитель CDC и задача «Управление CDC» удаляются с помощью мастера удаления. Перед удалением компонентов необходимо проверить следующие условия.  
   
- Если для разработки пакетов используется среда [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , убедитесь, что среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] закрыта перед запуском мастера удаления.  
+ Если вы используете [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для разработки пакетов, убедитесь, что [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] закрыта перед запуском мастера удаления.  
   
-## Преимущества  
- Компоненты CDC для компонентов служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяют разработчикам служб SSIS с легкостью создавать пакеты служб SSIS, обрабатывающие информацию об изменениях. Эти компоненты расширяют возможности разработчиков служб SSIS по работе с CDC и уменьшают сложность пакетов CDC.  
+## <a name="benefits"></a>Преимущества  
+ Компоненты CDC для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компоненты позволяют разработчикам служб SSIS легко создавать пакеты служб SSIS, обрабатывающие измененных данных. Эти компоненты расширяют возможности разработчиков служб SSIS по работе с CDC и уменьшают сложность пакетов CDC.  
   
  Компоненты CDC служб SSIS предоставляют информацию об изменениях в виде, удобном для дальнейшей обработки с целью репликации, загрузки хранилища данных, обновления медленно изменяющихся измерений для OLAP, аудита изменений и других сценариев применения. Тип дальнейшей обработки определяется разработчиком служб SSIS.  
   
  Компоненты CDC служб SSIS предназначены для работы с функцией [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC, когда таблицы изменений находятся в одной базе данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-## Приступая к работе с компонентами отслеживания измененных данных  
+## <a name="getting-started-with-the-change-data-capture-components"></a>Приступая к работе с компонентами отслеживания измененных данных  
  Типичный пакет CDC обрабатывает изменения в группе таблиц. Часть базового потока управления этого типа пакета CDC показана на рисунке ниже. Такой пакет называется пакетом обработки тонкого канала.  
   
- ![Поток управления пакета для обработки тонкого канала](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Поток управления пакета для обработки тонкого канала")  
+ ![Тонкого канала обработки потока управления пакета](../../integration-services/data-flow/media/tricklefeedprocessing.gif "тонкого канала обработки пакета потока управления")  
   
- Этот поток данных служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержит две задачи "Управление CDC" и задачу потока данных. Первая задача, которая называется **Получить диапазон обработки CDC**, устанавливает диапазон номеров LSN для изменений, которые обрабатываются в задаче потока данных, которая называется **Обработка изменений**. Этот диапазон определяется на основании данных, обработанных при последнем выполнении пакета и сохраненных в постоянном хранилище.  
+ Это [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поток управления содержит две задачи управления CDC и задачу потока данных. Первая задача, которая называется **Получить диапазон обработки CDC** , устанавливает диапазон номеров LSN для изменений, которые обрабатываются в задаче потока данных, которая называется **Обработка изменений**. Этот диапазон определяется на основании данных, обработанных при последнем выполнении пакета и сохраненных в постоянном хранилище.  
   
  Дополнительные сведения об использовании задачи «Управление CDC» см. в разделах [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) и [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
   
  На следующем рисунке показан поток данных **Обработка изменений** , задающий общий порядок обработки изменений.  
   
- ![Поток данных обработки изменений](../../integration-services/data-flow/media/processchangesdataflow.gif "Поток данных обработки изменений")  
+ ![Процесс изменения данных доставлялись](../../integration-services/data-flow/media/processchangesdataflow.gif "процессе преобразования потока данных")  
   
  На этом рисунке показаны следующие действия.  
   
@@ -104,13 +109,13 @@ caps.handback.revision: 21
   
  Дополнительные сведения об источнике CDC см. в разделе  
   
- [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
+ [Источник CDC](../../integration-services/data-flow/cdc-source.md)  
   
- [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [Редактор источника CDC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
- [Редактор источника "CDC" (страница "Столбцы")](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [Редактор источника CDC &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
- [Редактор источника "CDC" (страница "Вывод ошибок")](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Редактор источника CDC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  Дополнительные сведения о разделителе CDC см. в разделе  
   
@@ -128,11 +133,11 @@ caps.handback.revision: 21
   
  На следующем рисунке показан пакет служб SSIS, поддерживающий первые два сценария:  
   
- ![Первые два сценария обработки пакета служб SSIS](../../integration-services/data-flow/media/scenarioonetwo.gif "Первые два сценария обработки пакета служб SSIS")  
+ ![Первые два сценария обработки пакета служб SSIS](../../integration-services/data-flow/media/scenarioonetwo.gif "первые два сценария обработки пакета служб SSIS")  
   
  На следующем рисунке показан пакет служб SSIS, поддерживающий третий сценарий:  
   
- ![Третий сценарий обработки пакета служб SSIS](../../integration-services/data-flow/media/scenario3.gif "Третий сценарий обработки пакета служб SSIS")  
+ ![Третий сценарий обработки пакета служб SSIS](../../integration-services/data-flow/media/scenario3.gif "третий сценарий обработки пакета служб SSIS")  
   
  После пакета начальной загрузки несколько раз выполняется пакет обновления тонкого канала в соответствии с расписанием для обработки изменений, готовых к обработке.  
   
@@ -140,19 +145,19 @@ caps.handback.revision: 21
   
  Значение переменной состояния CDC необходимо хранить в постоянном хранилище. Оно должно считываться перед началом обработки CDC и сохраняться с учетом текущего состояния после завершения обработки. Задача загрузки и сохранения состояния CDC может выполняться разработчиком служб SSIS, но компонент управления CDC может автоматизировать эту задачу, сохраняя значение состояния CDC в таблице базы данных.  
   
-## Соображения безопасности  
+## <a name="security-considerations"></a>Соображения безопасности  
  В этом разделе перечислены некоторые соображения по безопасности, связанные с использованием компонентов CDC в службах SSIS.  
   
-### Авторизация доступа к информации об изменениях  
- Пакетам обновления тонкого канала необходим доступ к функциям [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC. Такой доступ по умолчанию предоставляется членам предопределенной роли базы данных **db_owner**. Поскольку роль **db_owner** обладает широкими возможностями, то при определении экземпляров системы отслеживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] рекомендуется связать с каждым экземпляром системы отслеживания шлюзовую роль безопасности, которая позволит пакету CDC служб SSIS использовать для обработки изменений пользователя с намного более узким диапазоном возможностей.  
+### <a name="access-authorization-to-change-data"></a>Авторизация доступа к информации об изменениях  
+ Пакетам обновления тонкого канала необходим доступ к функциям [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC. Такой доступ по умолчанию предоставляется членам предопределенной роли базы данных **db_owner** . Поскольку роль **db_owner** обладает широкими возможностями, то при определении экземпляров системы отслеживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] рекомендуется связать с каждым экземпляром системы отслеживания шлюзовую роль безопасности, которая позволит пакету CDC служб SSIS использовать для обработки изменений пользователя с намного более узким диапазоном возможностей.  
   
-### Доступ к текущему номеру LSN базы данных CDC  
+### <a name="access-to-cdc-database-current-lsn"></a>Доступ к текущему номеру LSN базы данных CDC  
  Операции задачи «Управление CDC», помечающие начальный номер LSN для обработки изменений, должны иметь возможность определить текущий номер LSN базы данных CDC. Для этого используется процедура **sp_replincrementlsn** из базы данных master. Разрешение на выполнение этой процедуры должно предоставляться имени входа, используемому для подключения к базе данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC.  
   
-### Доступ к таблице состояний CDC  
+### <a name="access-to-cdc-states-table"></a>Доступ к таблице состояний CDC  
  Таблица состояний CDC используется для автоматического сохранения состояний CDC. Имя входа, используемое для соединения с базой данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC, должно иметь возможность обновлять эту таблицу. Поскольку эта таблица создается разработчиком служб SSIS, задайте в качестве системного администратора [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] пользователя, который имеет разрешения на создание таблиц [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выполнение административных задач и задач по обслуживанию. Кроме того, системный администратор [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , работающий с базами данных с поддержкой CDC, должен располагать знаниями о технологии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC и ее реализации.  
   
-## Группирование таблиц для обработки CDC  
+## <a name="grouping-tables-for-cdc-processing"></a>Группирование таблиц для обработки CDC  
  Размер проектов баз данных меняется от нескольких таблиц до нескольких тысяч таблиц. Во время разработки пакетов начальной загрузки и пакетов CDC разумно группировать таблицы по группам меньшего размера для упрощения управления и повышения эффективности. В этом разделе перечислены различные соображения, относящиеся к сортировке таблиц по малым группам, когда таблицы в каждой группе проходят начальную загрузку и затем обновляются всей группой.  
   
  В шаблонах CDC, поддерживаемых компонентами CDC, предполагается, что такое группирование уже определено. Каждая группа определяет отдельный контекст CDC, который поддерживается отдельно от остальных групп. Для каждой группы создаются пакеты начальной загрузки и обновления тонкого канала. Обновления тонкого канала планируются для периодического выполнения в зависимости от частоты изменений, ограничений обработки (например, расхода ресурсов ЦП и ввода-вывода, влияния на другие системы) и требуемой задержки.  
@@ -173,7 +178,7 @@ caps.handback.revision: 21
   
 -   Пакет обновления тонкого канала, который считывает изменения, внесенные в исходные таблицы, и применяет изменения к целевым таблицам. Этот пакет следует регулярно выполнять по расписанию.  
   
-## CDC State  
+## <a name="cdc-state"></a>CDC State  
  С каждой группой CDC связано состояние, которое представляется строкой особого формата. Дополнительные сведения см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). В следующей таблице показаны возможные значения состояния CDC.  
   
 |Состояние|Description|  
@@ -181,7 +186,7 @@ caps.handback.revision: 21
 |0-(INITIAL)|Состояние, которое имеет место до выполнения пакетов в текущей группе CDC. Это состояние также имеет место, если состояние CDC пусто.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (начало начальной загрузки)|Это состояние, которое имеет место при запуске пакета начальной загрузки. Это происходит после вызова операции **MarkInitialLoadStart** в задаче «Управление CDC».<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |2- ILEND (завершение начальной загрузки)|Это состояние, которое имеет место при успешном завершении пакета начальной загрузки. Это происходит после вызова операции MarkInitialLoadEnd в задаче «Управление CDC».<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (обновление начальной загрузки)|Это состояние, которое имеет место после первого выполнения пакета обновления после начальной загрузки, пока продолжается обработка диапазона начальной обработки. Это происходит после вызова операции **GetProcessingRange** в задаче «Управление CDC».<br /><br /> Если используется столбец **_$reprocessing**, он получает значение 1, чтобы показать, что пакет может повторно обрабатывать строки, уже находящиеся в целевой базе данных.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (обновление начальной загрузки)|Это состояние, которое имеет место после первого выполнения пакета обновления после начальной загрузки, пока продолжается обработка диапазона начальной обработки. Это происходит после вызова операции **GetProcessingRange** в задаче «Управление CDC».<br /><br /> Если используется столбец **_$reprocessing** , он получает значение 1, чтобы показать, что пакет может повторно обрабатывать строки, уже находящиеся в целевой базе данных.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |4-TFEND (завершение обновления тонкого канала)|Это состояние, ожидаемое для регулярного выполнения CDC. Оно показывает, что предыдущее выполнение завершилось успешно и можно начинать новое выполнение с новым диапазоном обработки.|  
 |5 TFSTART (начало обновления тонкого канала)|Это состояние, которое имеет место при последующих выполнениях пакета обновления после вызова операции **GetProcessingRange** в задаче «Управление CDC».<br /><br /> Оно показывает, что регулярное выполнение CDC начато, но еще не завершено или не завершено верно (**MarkProcessedRange**).<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |6-TFREDO (повторная обработка обновлений тонкого канала)|Это состояние операции **GetProcessingRange** , наступающее после TFSTART. Оно показывает, что предыдущее выполнение не завершилось успешно.<br /><br /> Если используется столбец __$reprocessing, он получает значение 1, чтобы показать, что пакет может повторно обрабатывать строки, уже находящиеся в целевой базе данных.|  
@@ -191,25 +196,25 @@ caps.handback.revision: 21
   
  Например, в конце пакета начальной загрузки, когда состояние должно получить значение ILEND, но обнаруживается состояние TFSTART, группа CDC переходит в состояние ошибки, а пакет обновления тонкого канала не выполняется (выполняется пакет начальной загрузки).  
   
- ![Диаграмма состояния](../../integration-services/data-flow/media/statediagram.gif "Диаграмма состояния")  
+ ![Диаграмма состояния](../../integration-services/data-flow/media/statediagram.gif "состояние диаграммы")  
   
  После успешного выполнения пакета начальной загрузки пакет обновления тонкого канала многократно выполняется по заранее определенному расписанию для обработки изменений в исходных таблицах. Каждое выполнение пакета обновления тонкого канала означает выполнение CDC.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
+-   [Источник CDC](../../integration-services/data-flow/cdc-source.md)  
   
 -   [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
--   [Выбор направления потока CDC в соответствии с типом изменения](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
+-   [Направления потока CDC в соответствии с типом изменения](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
 -   [Определение переменной состояния](../../integration-services/data-flow/define-a-state-variable.md)  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
--   Запись в блоге [CDC в SSIS для SQL Server 2012](http://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/) на сайте mattmasson.com.  
+-   Запись в блоге [CDC в SSIS для SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)на сайте mattmasson.com.  
   
 -   Запись в блоге [Служба CDC для Oracle в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827), касающуюся параметра службы CDC, см. на сайте blogs.msdn.com.  
   
@@ -219,9 +224,9 @@ caps.handback.revision: 21
   
 -   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
   
--   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](http://technet.microsoft.com/sqlserver/jj218898) на сайте technet.microsoft.com.  
+-   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
   
-## См. также  
- [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  
+## <a name="see-also"></a>См. также  
+ [Задача «Управление CDC»](../../integration-services/control-flow/cdc-control-task.md)  
   
   

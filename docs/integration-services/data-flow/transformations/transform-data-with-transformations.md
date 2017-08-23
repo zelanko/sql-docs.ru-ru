@@ -1,31 +1,36 @@
 ---
-title: "Преобразование данных с помощью преобразований | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "поток данных [Integration Services], преобразования"
-  - "преобразования [Integration Services], о преобразованиях"
-  - "преобразование данных [службы Integration Services]"
+title: "Преобразование данных с помощью преобразования | Документы Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data flow [Integration Services], transformations
+- transformations [Integration Services], about transformations
+- transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d7feb12fd7b258fb876ff1ed554159e54a7ac33
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование данных с помощью преобразований
+# <a name="transform-data-with-transformations"></a>Преобразование данных с помощью преобразований
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают три различных типа компонентов потока данных: источники, преобразования и назначения.  
   
  На следующей диаграмме показан простой поток данных, который имеет источник, два преобразования и назначение.  
   
- ![Поток данных](../../../integration-services/data-flow/transformations/media/mw-dts-08.gif "Поток данных")  
+ ![Data flow](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] обеспечивают следующие функциональные возможности:  
   
@@ -43,24 +48,24 @@ caps.handback.revision: 43
   
  Также можно создавать пользовательские преобразования. Дополнительные сведения см. в разделах [Разработка пользовательского компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) и [Разработка компонентов потока данных определенных типов](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- После добавления преобразования к конструктору потока данных, но до настройки преобразования нужно подключить преобразование к потоку данных путем подключения к входу данного преобразования выхода другого преобразования или источника в потоке данных. Соединитель компонентов потока данных называется путем. Дополнительные сведения о соединении компонентов и работе с путями см. в разделе [Соединение компонентов с путями](../Topic/Connect%20Components%20with%20Paths.md).  
+ После добавления преобразования к конструктору потока данных, но до настройки преобразования нужно подключить преобразование к потоку данных путем подключения к входу данного преобразования выхода другого преобразования или источника в потоке данных. Соединитель компонентов потока данных называется путем. Дополнительные сведения о соединении компонентов и работе с путями см. в разделе [Соединение компонентов с путями](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
-### Добавление преобразования к потоку данных  
+### <a name="to-add-a-transformation-to-a-data-flow"></a>Добавление преобразования к потоку данных  
   
 -   [Добавление или удаление компонента в потоке данных](../../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
-### Подключение преобразования к потоку данных  
+### <a name="to-connect-a-transformation-to-a-data-flow"></a>Подключение преобразования к потоку данных  
   
 -   [Соединение компонентов в потоке данных](../../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
-### Установка свойства преобразования  
+### <a name="to-set-the-properties-of-a-transformation"></a>Установка свойства преобразования  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
- [Соединение компонентов с путями](../Topic/Connect%20Components%20with%20Paths.md)   
+ [Соединение компонентов с путями](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Обработка ошибок в данных](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)  
   

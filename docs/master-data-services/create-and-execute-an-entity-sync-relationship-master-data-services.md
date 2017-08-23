@@ -1,26 +1,31 @@
 ---
-title: "Создание и выполнение отношений синхронизации сущностей (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание и выполнение отношений синхронизации сущностей (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание и выполнение отношений синхронизации сущностей (Master Data Services)
+# <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Создание и выполнение отношений синхронизации сущностей (Master Data Services)
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы создать отношения синхронизации сущностей, необходимо:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -81,7 +86,7 @@ caps.handback.revision: 6
   
  **Выполнение отношения синхронизации сущностей**  
   
-1.  Щелкните **Системное администрирование**в диспетчере основных данных.  
+1.  В диспетчере основных данных щелкните **Системное администрирование**.  
   
 2.  На странице **Представление модели** в строке меню наведите курсор на **Управление** и щелкните **Синхронизация сущностей**.  
   
@@ -89,12 +94,12 @@ caps.handback.revision: 6
   
 4.  Нажмите кнопку **Выполнить**.  
   
-## Сведения об отношениях синхронизации  
+## <a name="sync-relationship-information"></a>Сведения об отношениях синхронизации  
  Для всех созданных отношений синхронизации в сетке создается строка с 10 столбцами. В следующей таблице приводятся описания этих столбцов.  
   
 |Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Статус отношений синхронизации.<br /><br /> Когда вы нажимаете **Сохранить** или выполняете отношение синхронизации, появляется изображение ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), указывающее на обновление отношения синхронизации.<br /><br /> Если при создании, редактировании или выполнении отношения синхронизации произойдет ошибка, появится изображение ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> В противном случае отображается статус "ОК" и появляется изображение ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Состояние|Статус отношений синхронизации.<br /><br /> При нажатии кнопки **Сохранить** или выполнить отношения синхронизации ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") изображение, показывающее, что выполняется обновление связи синхронизации.<br /><br /> При наличии ошибок при создании, редактировании или выполнении отношений синхронизации, ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
 |Исходная модель|Имя исходной модели.|  
 |Исходная версия|Имя исходной версии.|  
 |Исходная сущность|Имя исходной сущности.|  
@@ -117,7 +122,7 @@ caps.handback.revision: 6
   
 -   **Когда обновлено**: дата и время последнего обновления синхронизации.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  [Создание и удаление отношения синхронизации сущностей (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

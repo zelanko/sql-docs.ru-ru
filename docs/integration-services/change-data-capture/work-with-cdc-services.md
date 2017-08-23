@@ -1,27 +1,32 @@
 ---
-title: "Работа со службами CDC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cdcServ"
+title: "Работа со службами CDC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Работа со службами CDC
+# <a name="work-with-cdc-services"></a>Работа со службами CDC
   Можно использовать консоль настройки службы CDC для создания новой службы CDC и подготовки базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для CDC.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Подготовка SQL Server**  
  Выберите этот параметр на панели **Действия** в правой части консоли конфигурации службы CDC.  
   
@@ -38,8 +43,8 @@ caps.handback.revision: 6
   
  Откроется диалоговое окно создания новой службы Oracle CDC.  
   
-## См. также  
- [Как работать со службами CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
+## <a name="see-also"></a>См. также  
+ [Работа со службами CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Создание и изменение службы CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Просмотр всех участников-диалоговое окно | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.browseprincipals.f1"
+title: "Просмотр всех участников-диалоговое окно | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ebfc25e2f1eae0c926f5597b4c330d8b8b21b93e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Просмотр всех участников-диалоговое окно
+# <a name="browse-all-principals-dialog-box"></a>Просмотр всех участников-диалоговое окно
   Диалоговое окно **Просмотр всех участников** используется для выбора участника базы данных с тем, чтобы изменить его разрешения для выбранного проекта или для всех проектов, содержащихся в выбранной папке.  
   
  **Выбор действия**  
@@ -57,7 +62,7 @@ caps.handback.revision: 11
  **Название**  
  Имя участника.  
   
- **Тип**  
+ **типу**  
  Тип участника. Ниже приведены некоторые наиболее распространенные типы.  
   
 -   SQL User  

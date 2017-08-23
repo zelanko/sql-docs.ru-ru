@@ -1,40 +1,68 @@
 ---
-title: "Мастер импорта и экспорта SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.welcome.f1"
+title: "Добро пожаловать в мастер экспорта и импорта SQL Server | Документы Microsoft"
+ms.custom: 
+ms.date: 02/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 caps.latest.revision: 74
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f4d459aa5756e60ce309be21fb8641838cbafa37
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Мастер импорта и экспорта SQL Server
+# <a name="welcome-to-sql-server-import-and-export-wizard"></a>Мастер импорта и экспорта SQL Server
   При запуске мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] открывается страница **Мастер импорта и экспорта SQL Server**. На этой странице никакие действия не требуются.
 
-В этом разделе описывается только **первая страница** мастера.
--   Обзор мастера см. в статье [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
--   Если вам нужна информация о процедурах, выполняемых в мастере, выберите нужную страницу в меню навигации по контенту. Каждой странице мастера соответствует отдельная страница документации. Вы можете также нажать клавишу F1 при просмотре любой страницы или диалогового окна, чтобы открыть документацию по текущей странице мастера.
+> [!IMPORTANT]
+> В этом разделе описывается только **первая страница** мастера. Если вам нужны для других целей, см. раздел [задач и содержимого, связанные с](#related).
 
-**Запустите мастер.** Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName] (../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
+## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Необходимое условие - — это мастер, установленной на компьютере?
+Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="screen-shot-of-the-welcome-page"></a>Снимок экрана: начальная страница  
-На следующем снимке экрана показана страница мастера **Мастер импорта и экспорта SQL Server**.  
+На следующем снимке экрана показана страница мастера **Мастер импорта и экспорта SQL Server** .  
   
-![Welcome page of the Import and Export Wizard](../../integration-services/import-export-data/media/welcome.png "Welcome page of the Import and Export Wizard")  
+![Страница приветствия мастера экспорта и импорта](../../integration-services/import-export-data/media/welcome.png "начальной странице мастера импорта и экспорта")  
 
 ## <a name="dont-show-this-page-again"></a>Больше не показывать это окно  
-**Больше не показывать эту начальную страницу.**  
- Пропуск страницы приветствия при следующем открытии мастера.  
+**Больше не показывать это окно.**  
+ Пропустите страницу приветствия при очередном запуске мастера.  
   
 ## <a name="whats-next"></a>Дальнейшие действия  
- Следующая страница — **Выбор источника данных**. На этой странице введите сведения об источнике данных и о том, как к нему подключиться. Дополнительные сведения см. в разделе [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).  
+ Следующая страница — **Выбор источника данных**. На этой странице введите сведения об источнике данных и о том, как к нему подключиться. Дополнительные сведения см. в разделе [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
+
+## <a name="related"></a>Связанные задачи и содержимое  
+ Ниже приведены некоторые основные задачи.
+-   **См. краткий пример того, как работает мастер.**
+
+    -   **Если вы хотите просмотреть снимков экрана.** Рассмотрим этот простой пример начала до конца на одной странице - [Приступая к работе с простой пример мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+
+    -   **Если вы предпочитаете смотреть видео.** В этом видеоролике четыре минуты с YouTube, демонстрирует мастера и объясняет четко и просто Экспорт данных в Excel — [с помощью мастера экспорта для экспорта в Excel и импорта SQL Server](https://go.microsoft.com/fwlink/?linkid=829049).
+
+-   **Дополнительные сведения о работе мастера.**
+
+    -   **Дополнительные сведения о мастере.** Обзор мастера см. в статье [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+
+    -   **Дополнительные сведения о шагах в мастере.** Если вы ищете сведения о шагах мастера, см. раздел [шаги в мастере экспорта и импорта SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Имеется также отдельной странице документации для каждой страницы мастера.
+
+    -   **Сведения о подключении к источникам данных и назначения.** Если вы ищете сведения о подключении к данным, выберите нужную страницу из списка- [подключение к источникам данных с помощью мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Нет отдельной странице документации для каждой из нескольких источников часто используемых данных.
+
+-   **Запустите мастер.** Если вы готовы запустить мастер и хотите знать, как это сделать, см. раздел [Запуск мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
+
+-   **Запустите мастер.** Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+
+
+

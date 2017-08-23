@@ -1,26 +1,31 @@
 ---
-title: "Создание или развертывание кэша для преобразования &#171;Уточняющий запрос&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание файлов кэша для преобразования «Уточняющий запрос»"
-  - "развертывание файлов кэша для преобразования «Уточняющий запрос»"
-  - "файлы кэша для преобразования «Уточняющий запрос»"
+title: "Создание и развертывание кэша для преобразования «Уточняющий запрос» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating cache files for Lookup transformation
+- deploying cache files for Lookup transformation
+- Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создание или развертывание кэша для преобразования &#171;Уточняющий запрос&#187;
+# <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Создание или развертывание кэша для преобразования «Уточняющий запрос»
   Можно создать и развернуть файл кэша (CAW) для преобразования «Уточняющий запрос». Эталонный набор данных хранится в файле кэша.  
   
  Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных.  
@@ -29,7 +34,7 @@ caps.handback.revision: 23
   
  Дополнительные сведения о преобразовании «Уточняющий запрос» и файлах кэша см. в разделе [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
-### Создание файла кэша  
+### <a name="to-create-a-cache-file"></a>Создание файла кэша  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет, и затем откройте пакет.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 23
   
      При необходимости настройте источник данных.  
   
-4.  Дважды щелкните "Преобразование кэша", а затем в окне **Редактор преобразований кэша** на странице **Диспетчер соединений** щелкните **Создать**, чтобы создать новый диспетчер соединений с кэшем.  
+4.  Дважды щелкните "Преобразование кэша", а затем в окне **Редактор преобразований кэша**на странице **Диспетчер соединений** щелкните **Создать** , чтобы создать новый диспетчер соединений с кэшем.  
   
 5.  В окне **Редактор диспетчера соединений с кэшем**на вкладке **Общее** настройте конфигурацию диспетчера соединений с кэшем, чтобы сохранить кэш, выбрав следующие параметры.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
      Файл создается системой при выполнении пакета.  
   
     > [!NOTE]  
-    >  Уровень защиты пакета не применяется к кэшируемому файлу. Если кэшируемый файл содержит важные данные, используйте список управления доступом (ACL), чтобы запретить доступ к расположению или папке, в которой хранится файл. Доступ следует разрешать только определенным учетным записям. Дополнительные сведения см. в разделе [Доступ к файлам, используемым пакетами](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  Уровень защиты пакета не применяется к кэшируемому файлу. Если кэшируемый файл содержит важные данные, используйте список управления доступом (ACL), чтобы запретить доступ к расположению или папке, в которой хранится файл. Доступ следует разрешать только определенным учетным записям. Дополнительные сведения см. в разделе [Доступ к файлам, используемым пакетами](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Перейдите на вкладку **Столбцы** , а затем задайте, какие столбцы будут столбцами индекса, с помощью параметра **Позиция индекса** .  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 23
   
 8.  Запустите пакет.  
   
-### Развертывание файла кэша  
+### <a name="to-deploy-a-cache-file"></a>Развертывание файла кэша  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]откройте проект [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет, и затем откройте пакет.  
   
@@ -85,11 +90,11 @@ caps.handback.revision: 23
   
 4.  Настройте проект для создания программы развертывания, а затем постройте проект. Дополнительные сведения см. в статье [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Создается файл манифеста \<*имя проекта*>.SSISDeploymentManifest.xml, в котором перечисляются различные файлы в проекте, пакеты и конфигурации пакетов.  
+     Файл манифеста \< *имя проекта*>. Ssisdeploymentmanifest.XML, в котором перечисляются различные файлы в проекте, пакеты и конфигурации пакетов.  
   
 5.  Развертывание пакета в файловой системе. Дополнительные сведения см. в статье [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание программы развертывания](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

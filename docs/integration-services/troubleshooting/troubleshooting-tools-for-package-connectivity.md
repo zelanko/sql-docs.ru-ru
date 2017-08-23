@@ -1,39 +1,44 @@
 ---
-title: "Инструменты устранения неполадок с соединением пакетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пакеты служб SQL Server Integration Services, устранение неполадок"
-  - "пакеты служб SSIS, устранение неполадок"
-  - "службы Integration Services, устранение неполадок"
-  - "связь [службы Integration Services], устранение неполадок"
-  - "ошибки [службы Integration Services], устранение неполадок"
-  - "пакеты [службы Integration Services], устранение неполадок"
+title: "Средства устранения неполадок соединения пакетов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- connectivity [Integration Services], troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Инструменты устранения неполадок с соединением пакетов
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя функции и средства, которые используются для устранения неполадок соединений между пакетами и источниками данных, из которых пакеты извлекают и загружают данные.  
+# <a name="troubleshooting-tools-for-package-connectivity"></a>Инструменты устранения неполадок с соединением пакетов
+Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя функции и средства, которые используются для устранения неполадок соединений между пакетами и источниками данных, из которых пакеты извлекают и загружают данные.  
   
-## Устранение неполадок, связанных с внешними поставщиками данных  
+## <a name="troubleshooting-issues-with-external-data-providers"></a>Устранение неполадок, связанных с внешними поставщиками данных  
  Многие ошибки в работе пакетов возникают при взаимодействии с внешними поставщиками данных. Однако сообщения, которые возвращают эти поставщики в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , часто не предоставляют достаточных сведений для устранения неполадок. В ответ на требования, связанные с устранением неисправностей, в состав служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] были добавлены новые сообщения ведения журналов, которые можно использовать для устранения неполадок взаимодействия пакета с внешними источниками данных.  
   
 -   **Чтобы просматривать сообщения, связанные с устранением неисправностей, необходимо разрешить запись в журнал и выбрать событие пакета «Диагностика».** Следующие компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обеспечивают возможность записи сообщений в журнал перед каждым обращением к внешнему поставщику данных и после этого.  
   
     -   Диспетчер соединений OLE DB, источник OLE DB и назначение «OLE DB»  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] и источник ADO NET  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Диспетчер соединений и источник ADO NET  
   
     -   Задача «Выполнение SQL»  
   
@@ -67,8 +72,8 @@ caps.handback.revision: 13
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Устранение неполадок инструментов с помощью отчетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Средства устранения неполадок при выполнении пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

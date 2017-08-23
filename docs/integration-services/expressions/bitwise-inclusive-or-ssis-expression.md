@@ -1,30 +1,35 @@
 ---
-title: "| (битовое включающее ИЛИ) (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "| (битовое включающее ИЛИ)"
-  - "битовое включающее ИЛИ (|)"
+title: "| (Побитовое включающее или) (Выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- '| (bitwise inclusive OR)'
+- bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90a8167d52a50c569418af86d4f36526ad3482c0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# | (битовое включающее ИЛИ) (выражение служб SSIS)
+# <a name="-bitwise-inclusive-or-ssis-expression"></a>| (битовое включающее ИЛИ) (выражение служб SSIS)
   Выполняет побитовую операцию ИЛИ для двух целочисленных значений. Она сравнивает каждый бит первого операнда с соответствующим битом второго операнда. Если какой-либо из битов равен 1, соответствующий бит результата равен 1. В противном случае соответствующий бит результата равен нулю (0).  
   
  Оба условия должны относиться либо к целым числам со знаком, либо к беззнаковым целым числам.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -32,17 +37,17 @@ integer_expression1 | integer_expression2
   
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *integer_expression1, integer_expression2*  
  Любое допустимое выражение: либо целое число со знаком, либо беззнаковое целое число. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  Определяются типами данных обоих аргументов. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Если значение любого из условий — NULL, то результат выражения тоже будет NULL.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В данном примере выполняется операция битового ИЛИ над переменными **NumberA** и **NumberB**. **NumberA** содержит 3 (00000011) а **NumberB** содержит 9 (00001001).  
   
 ```  
@@ -91,10 +96,10 @@ ReorderPoint | SafetyStockLevel
   
  00000111  
   
-## См. также  
- [&#124;&#124; (логическое ИЛИ) (выражение служб SSIS)](../../integration-services/expressions/logical-or-ssis-expression.md)   
- [^ (битовое исключающее ИЛИ) (выражение служб SSIS)](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
- [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [&#124; &#124; &#40; Логическое или &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
+ [^ &#40; Побитовое исключающее или &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
+ [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -1,29 +1,34 @@
 ---
-title: "Преобразование &#171;Таблица символов&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactertrans.f1"
-helpviewer_keywords: 
-  - "взаимоисключающее сопоставление [службы Integration Services]"
-  - "сопоставление данных [службы Integration Services]"
-  - "строковые функции"
-  - "преобразование «Таблица символов» [службы Integration Services]"
+title: "«Таблица символов» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactertrans.f1
+helpviewer_keywords:
+- mutually exclusive mapping [Integration Services]
+- mapping data [Integration Services]
+- string functions
+- Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование &#171;Таблица символов&#187;
+# <a name="character-map-transformation"></a>Преобразование «Таблица символов»
   Преобразование «Таблица символов» применяет строковые функции, такие как преобразование из нижнего регистра в верхний, к символьным данным. Это преобразование работает только со столбцами данных строкового типа данных.  
   
  Преобразование «Таблица символов» может обновить данные столбца преобразованными значениями или поместить преобразованные данные в новый столбец выхода преобразования. Можно применять различные наборы операторов сопоставления к одному входному столбцу и помещать результаты в разные столбцы. Например, можно преобразовать данные одного и того же столбца в верхний и нижний регистр и поместить результаты в два различных столбца.  
@@ -32,7 +37,7 @@ caps.handback.revision: 42
   
  Это преобразование имеет один вход, один выход и один выход ошибок.  
   
-## Операции сопоставления  
+## <a name="mapping-operations"></a>Операции сопоставления  
  Следующая таблица описывает операции сопоставления, которые поддерживаются преобразованием «Таблица символов».  
   
 |Операция|Description|  
@@ -48,7 +53,7 @@ caps.handback.revision: 42
 |Китайский (традиционный)|Сопоставляет символы упрощенного китайского символам традиционного китайского алфавита.|  
 |Верхний регистр|Преобразует символы в верхний регистр.|  
   
-## Взаимоисключающие операции сопоставления  
+## <a name="mutually-exclusive-mapping-operations"></a>Взаимоисключающие операции сопоставления  
  В преобразовании может быть выполнено несколько операций. Однако некоторые операции сопоставления являются взаимоисключающими. Следующая таблица перечисляет ограничения, которые применяются, когда применяется множество операций над одним столбцом. Операции в столбцах Операция A и Операция B являются взаимоисключающими.  
   
 |Операция A|Операция B|  
@@ -60,7 +65,7 @@ caps.handback.revision: 42
 |Нижний регистр|Хирагана, катакана, половинная ширина, полная ширина|  
 |Верхний регистр|Хирагана, катакана, половинная ширина, полная ширина|  
   
-## Настройка преобразования «Таблица символов»  
+## <a name="configuration-of-the-character-map-transformation"></a>Настройка преобразования «Таблица символов»  
  Чтобы настроить преобразование «Таблица символов» необходимо:  
   
 -   указать столбцы для преобразования;  
@@ -73,7 +78,7 @@ caps.handback.revision: 42
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

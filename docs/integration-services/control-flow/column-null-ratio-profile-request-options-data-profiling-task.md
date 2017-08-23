@@ -1,24 +1,29 @@
 ---
-title: "Параметры запроса профиля соотношения значений NULL в столбцах (задача &#171;Профилирование данных&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Редактор задачи «Профилирование данных»"
+title: "Параметры запроса профиля соотношения значений Null столбца («профилирование данных») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0cfbec0b81d1a80a813d8fc2c7e7212b33b77a4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Параметры запроса профиля соотношения значений NULL в столбцах (задача &#171;Профилирование данных&#187;)
+# <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Параметры запроса профиля соотношения значений NULL в столбцах (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос соотношения значений NULL в столбцах** , выбранного на панели запросов. Профиль «Соотношение значений NULL в столбцах» сообщает процент значений NULL в выбранном столбце. Этот профиль поможет выявить проблемы в данных, например появление непредвиденно высокого процента значений NULL в некотором столбце. Например, с помощью профиля «Соотношение значений NULL в столбцах» можно профилировать столбец «Почтовый индекс» и обнаружить неприемлемо высокий процент отсутствующих почтовых индексов.  
   
 > [!NOTE]  
@@ -26,35 +31,35 @@ caps.handback.revision: 19
   
  Дополнительные сведения об использовании задачи "Профилирование данных" см. в разделе [Установка задачи "Профилирование данных"](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Дополнительные сведения об использовании средства просмотра профиля данных для анализа результатов задачи "Профилирование данных" см. в разделе [Средство просмотра профиля данных](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Параметры области «Свойства запроса»  
+## <a name="request-properties-options"></a>Параметры области «Свойства запроса»  
  Для варианта **Запрос соотношения значений NULL в столбцах**на панели **Свойства запроса** отображаются следующие группы параметров.  
   
 -   **Данные**, куда входят параметры **TableOrView** и **Column**  
   
 -   **Общие сведения**  
   
-### Параметры данных  
+### <a name="data-options"></a>Параметры данных  
  **ConnectionManager**  
- Выберите существующий диспетчер подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)], использующий поставщик данных .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая содержит таблицу или представление для профилирования.  
+ Выберите существующий диспетчер подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , использующий поставщик данных .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая содержит таблицу или представление для профилирования.  
   
  **TableOrView**  
  Выберите существующую таблицу или представление, содержащие столбец для профилирования.  
   
  Дополнительные сведения см. в подразделе «Параметры TableorView» данного раздела.  
   
- **Столбец**  
+ **Column**  
  Выберите существующий столбец для профилирования. Выберите **(\*)**, чтобы выполнить профилирование всех столбцов.  
   
  Дополнительные сведения см. в подразделе «Параметры столбца» данного раздела.  
   
-#### Параметры TableOrView  
+#### <a name="tableorview-options"></a>Параметры TableOrView  
  **Схема**  
  Указывает схему, которой принадлежит выбранная таблица. Этот параметр доступен только для чтения.  
   
  **Таблица**  
  Отображает имя выбранной таблицы. Этот параметр доступен только для чтения.  
   
-#### Параметры столбца  
+#### <a name="column-options"></a>Параметры столбца  
  **IsWildCard**  
  Указывает, выбран ли подстановочный знак **(\*)**. Этот параметр принимает значение **True**, если выбран подстановочный знак **(\*)**, означающий профилирование всех столбцов. Значение **False** показывает, что для профилирования выбран отдельный столбец. Этот параметр доступен только для чтения.  
   
@@ -64,12 +69,12 @@ caps.handback.revision: 19
  **StringCompareOptions**  
  Этот параметр не применяется к профилю «Соотношение значений NULL в столбцах».  
   
-### Общие параметры  
+### <a name="general-options"></a>Общие параметры  
  **RequestID**  
  Введите описательное имя для этого запроса профиля. Обычно не нужно менять автоматически сформированное значение.  
   
-## См. также  
- [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>См. также  
+ [Данные профилирования редактор задач &#40; Страница "Общие" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Форма быстрого профиля одной таблицы &#40; данные профилирования задач &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

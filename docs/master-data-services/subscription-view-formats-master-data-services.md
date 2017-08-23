@@ -1,25 +1,30 @@
 ---
-title: "Форматы представления подписки (Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Форматы представления подписки (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5cddce206adbbec42907f426fcd25d92a5e6d91b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Форматы представления подписки (Master Data Services)
+# <a name="subscription-view-formats-master-data-services"></a>Форматы представления подписки (Master Data Services)
   На основании выбранной сущности или производной иерархии для представления подписки будут доступны следующие форматы.  
   
-## Форматы представлений подписки  
+## <a name="subscription-view-formats"></a>Форматы представлений подписки  
   
 |Название|Description|  
 |----------|-----------------|  
@@ -38,7 +43,7 @@ caps.handback.revision: 9
 |**Производная связь «родители-потомки» (представление производных иерархий)**|Содержит структуру производных иерархий в формате «родители-потомки».|  
 |**Производные уровни (представление производных иерархий)**|Содержит структуру производных иерархий в уровневом формате.|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Создание представления подписки для экспорта данных (службы Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

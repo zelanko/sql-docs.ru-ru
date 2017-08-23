@@ -1,29 +1,34 @@
 ---
-title: "+ (объединение) (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "объединение [службы Integration Services]"
-  - "+ (оператор объединения)"
-  - "оператор объединения (+)"
+title: "+ (Объединение) (Выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- concatenation [Integration Services]
+- + (concatenate operator)
+- concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ba1fcd0a00289d7c2f97fa344be196885c7e7451
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# + (объединение) (выражение служб SSIS)
+# <a name="-concatenate-ssis-expression"></a>+ (объединение) (выражение служб SSIS)
   Сцепляют два выражения в одно.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -31,14 +36,14 @@ character_expression1 + character_expression2
   
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *expression1, expression2*  
  Допустимые типы данных выражения: DT_STR, DT_WSTR, DT_TEXT, DT_NTEXT, или DT_IMAGE.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Выражение может использовать любой из типов данных — DT_STR, DT_WSTR или оба сразу.  
   
  Объединение типов данных DT_STR и DT_WSTR возвращает результат в формате DT_WSTR. Длина строки — это сумма длин первоначальных строк в символах.  
@@ -53,7 +58,7 @@ character_expression1 + character_expression2
   
  Строковые литералы должны заключаться в кавычки.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  Пример объединяет значения в столбцах **FirstName** и **LastName** и вставляет символ пробела между ними.  
   
 ```  
@@ -66,8 +71,8 @@ FirstName + ' ' + LastName
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## См. также  
- [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

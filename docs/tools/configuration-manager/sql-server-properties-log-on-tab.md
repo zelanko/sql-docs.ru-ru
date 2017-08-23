@@ -1,22 +1,27 @@
 ---
-title: "Свойства SQL Server (вкладка &#171;Вход в систему&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства SQL Server (вход в систему) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства SQL Server (вкладка &#171;Вход в систему&#187;)
+# <a name="sql-server-properties-log-on-tab"></a>Свойства SQL Server (вкладка «Вход в систему»)
   Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  
   
 > [!NOTE]  
@@ -24,7 +29,7 @@ caps.handback.revision: 25
 >   
 >  Дополнительные сведения о выборе учетной записи для выполнения службы приводятся в разделе «Настройка учетных записей служб Windows» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Встроенная учетная запись**  
  **Локальная система.**  
  -   Укажите учетную запись локальной системы. Для этой учетной записи пароль не нужен. Однако локальная системная учетная запись может препятствовать взаимодействию служб с другими серверами, в зависимости от прав доступа, предоставленных этой учетной записи.  
@@ -63,6 +68,6 @@ caps.handback.revision: 25
 >  По умолчанию только участники локальной группы «Администраторы» могут запускать, останавливать, приостанавливать, возобновлять или перезапускать службу. При необходимости предоставить возможность управления службой для пользователей, не обладающих правами администратора, см. раздел [Как предоставить пользователям права для управления службами в Windows Server 2003](http://support.microsoft.com/kb/325349). (Процесс такой же, как и в других версиях Windows.)  
   
 > [!NOTE]  
->  При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибка инструментария WMI, содержащая фразу «не реализовано [0x80004001]», может указывать на то, что на целевом компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не установлен.  
+>  При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ошибка инструментария WMI, содержащая фразу «не реализовано [0x80004001]», может указывать на то, что на целевом компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не установлен.  
   
   

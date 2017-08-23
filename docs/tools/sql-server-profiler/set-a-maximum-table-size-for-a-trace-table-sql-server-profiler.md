@@ -1,28 +1,33 @@
 ---
-title: "установить максимальный размер для таблицы трассировки (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "размер [SQL Server], таблицы трассировки"
-  - "максимальный размер таблицы для трассировки"
+title: "Установить максимальный размер для таблицы трассировки (приложение SQL Server Profiler) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- size [SQL Server], trace tables
+- maximum table size for traces
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 733cbc9e74e9e9e56c7bcb918f8c695dd1304a7e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# установить максимальный размер для таблицы трассировки (приложение SQL Server Profiler)
+# <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>установить максимальный размер для таблицы трассировки (приложение SQL Server Profiler)
   В этом подразделе рассказывается о том, как задать максимальный размер таблицы трассировки при помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Установка максимального размера таблицы трассировки  
+### <a name="to-set-a-maximum-table-size-for-a-trace-table"></a>Установка максимального размера таблицы трассировки  
   
 1.  В меню **Файл** выберите пункт **Создать трассировку**, а затем подключитесь к экземпляру SQL Server.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 23
   
 2.  В поле **Имя трассировки** введите имя трассировки.  
   
-3.  В списке **Имя шаблона** выберите шаблон трассировки.  
+3.  В списке **Имя шаблона**выберите шаблон трассировки.  
   
 4.  Установите флажок **Сохранить в таблицу**.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  Когда количество строк в таблице превысит указанный максимум, регистрация событий трассировки прекратится. Однако трассировка продолжится.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

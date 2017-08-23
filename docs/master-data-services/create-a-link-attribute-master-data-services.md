@@ -1,32 +1,37 @@
 ---
-title: "Создание атрибута ссылки (службы Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "атрибуты [службы Master Data Services], создание атрибутов ссылки"
-  - "создание атрибутов ссылки [службы Master Data Services]"
+title: "Создание атрибута ссылки (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Master Data Services], creating link attributes
+- creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b5c1a0c51283b981daf0df5e65740892fb830c2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание атрибута ссылки (службы Master Data Services)
-  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] атрибут ссылки создается, если нужно, чтобы пользователи вводили в качестве значения атрибута гиперссылку, например http://www.contoso.com.  
+# <a name="create-a-link-attribute-master-data-services"></a>Создание атрибута ссылки (службы Master Data Services)
+  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут ссылки создается, если нужно, чтобы пользователи вводили в качестве значения атрибута гиперссылку, например http://www.contoso.com.  
   
 > [!NOTE]  
->  Когда пользователи вводят значение для атрибута ссылки, строка должна начинаться с **http://**. В противном случае будет выведено сообщение об ошибке.  
+>  Когда пользователи вводят значение для атрибута ссылки, строка должна начинаться с **http://** . В противном случае будет выведено сообщение об ошибке.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -35,12 +40,12 @@ caps.handback.revision: 9
   
 -   должна существовать сущность, для которой создается атрибут. Дополнительные сведения см. в разделе [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md).  
   
-## Сведения об атрибутах  
+## <a name="attribute-information"></a>Сведения об атрибутах  
  Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
   
 |Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете кнопку "Сохранить", появляется изображение ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status"), указывающее на то, что выполняется обновление атрибута.<br /><br /> При наличии ошибок во время создания или изменения атрибута появляется изображение ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status").<br /><br /> В противном случае отображается статус "ОК" и появляется изображение ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status").|  
+|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки Save, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") , указывающее, выполняется обновление атрибута.<br /><br /> При наличии ошибок во время создания или изменения атрибута появляется ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
 |Название|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Description|Описание атрибута.|  
@@ -58,7 +63,7 @@ caps.handback.revision: 9
   
 -   **Когда обновлено**: дата и время последнего обновления атрибута.  
   
-### Создание атрибута ссылки  
+### <a name="to-create-a-link-attribute"></a>Создание атрибута ссылки  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
@@ -92,10 +97,10 @@ caps.handback.revision: 9
   
 13. Нажмите кнопку **Сохранить**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Изменение имени атрибута и типа данных &#40; Службы Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Создать атрибут на основе домена &#40; Службы Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Создание файлового атрибута (службы Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

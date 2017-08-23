@@ -1,29 +1,34 @@
 ---
-title: "Создание сущности (службы Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сущности [службы Master Data Services], создание"
-  - "создание сущностей [службы Master Data Services]"
+title: "Создание сущности (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], creating
+- creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2766ad2cb250200e7fbb3f19f96eab7b5f748a9a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание сущности (службы Master Data Services)
+# <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]сущности создаются, чтобы содержать элементы и их атрибуты.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -32,7 +37,7 @@ caps.handback.revision: 9
   
 -   Модель должна существовать. Дополнительные сведения см. в разделе [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md).  
   
-### Создание сущности  
+### <a name="to-create-an-entity"></a>Создание сущности  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
@@ -61,18 +66,18 @@ caps.handback.revision: 9
   
 10. Нажмите кнопку **Сохранить**.  
   
-## Столбцы сетки  
+## <a name="grid-columns"></a>Столбцы сетки  
  Для каждой созданной сущности в сетке создается строка с тринадцатью столбцами. Ниже приведены эти столбцы.  
   
-|Название|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
-|Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
+|Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок состояния ОК](../master-data-services/media/mds-statusicon-ok.png "значок состояния ОК")|  
 |Название|Имя сущности.|  
-|Description|Описание сущности.|  
+|Описание|Описание сущности.|  
 |Промежуточная таблица|Имя префикса таблицы, которая используется для хранения данных.|  
-|Transaction Log Type|Тип журнала транзакций сущности.|  
+|Тип журнала транзакций|Тип журнала транзакций сущности.|  
 |Автоматическое создание кодов|Указывает, включено ли автоматическое создание кода.|  
-|Сжатие данных|Указывает, включено ли сжатие данных для сущности.|  
+|Data Compression|Указывает, включено ли сжатие данных для сущности.|  
 |Целевой объект синхронизации|Указывает, является ли сущность целевым объектом отношения синхронизации.|  
 |Иерархия|Указывает, включено ли для сущности использование явных иерархий. Если для сущности создана хотя бы одна явная иерархия, в столбце отображается значение "Да".|  
 |Автор|Имя пользователя, создавшего сущность.|  
@@ -80,7 +85,7 @@ caps.handback.revision: 9
 |Кем обновлена|Имя пользователя, выполнившего последнее обновление сущности.|  
 |Обновлена|Дата и время последнего обновления сущности.|  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -88,10 +93,10 @@ caps.handback.revision: 9
   
 -   [Создание файлового атрибута (службы Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)   
- [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Изменение сущности (службы Master Data Services)](../master-data-services/edit-an-entity-master-data-services.md)   
+ [Явные иерархии &#40; Службы Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Изменение сущности &#40; Службы Master Data Services &#41;](../master-data-services/edit-an-entity-master-data-services.md)   
  [Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

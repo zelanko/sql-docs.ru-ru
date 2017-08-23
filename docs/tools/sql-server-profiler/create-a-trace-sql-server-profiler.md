@@ -1,33 +1,38 @@
 ---
-title: "создать трассировку (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "трассировки [SQL Server], создание"
+title: "Создание трассировки (приложение SQL Server Profiler) | Документы Microsoft"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# создать трассировку (приложение SQL Server Profiler)
+# <a name="create-a-trace-sql-server-profiler"></a>создать трассировку (приложение SQL Server Profiler)
   В этом подразделе описывается, как создать трассировку при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
-### Создание трассировки  
+### <a name="to-create-a-trace"></a>Создание трассировки  
   
 1.  В меню **Файл** выберите пункт **Создать трассировку**, а затем подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      отображается диалоговое окно **Свойства трассировки** .  
   
-    > **ПРИМЕЧАНИЕ.** Если выбран параметр **Начать трассировку немедленно после установления соединения**, диалоговое окно **Свойства трассировки** не появляется, и начинается трассировка. Чтобы отключить этот параметр, в меню **Сервис* *выберите пункт **Параметры** и снимите флажок "Начать трассировку немедленно после установления соединения".  
+    > **ПРИМЕЧАНИЕ.** Если выбран параметр **Начать трассировку немедленно после установления соединения** , диалоговое окно **Свойства трассировки** не появляется, и начинается трассировка. Чтобы отключить этот параметр в **средства* * меню, нажмите кнопку **параметры**и снимите Начать трассировку немедленно после установления соединения флажок.  
   
 2.  В поле **Имя трассировки** введите имя трассировки.  
   
@@ -51,10 +56,11 @@ caps.handback.revision: 28
   
 7.  Чтобы запустить трассировку, нажмите кнопку **Выполнить** .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Разрешения, необходимые для запуска приложения SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Сопоставление трассировки с журналом производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

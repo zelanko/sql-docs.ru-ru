@@ -1,49 +1,54 @@
 ---
-title: "Программа SqlLocalDB | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "программа SqlLocalDB [SQL Server]"
-  - "программа времени выполнения локальной базы данных"
-  - "LocalDB, служебная программа SqlLocalDB"
+title: "Программа Sqllocaldb | Документы Microsoft"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SqlLocalDB utility [SQL Server]
+- local database runtime utility
+- LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbeaba1123e7244131cd33f4460ac4e90af7b7f9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Программа SqlLocalDB
-  Для создания экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB** нужно использовать служебную программу **SqlLocalDB**. Служебная программа **SqlLocalDB** (SqlLocalDB.exe) — это простая программа командной строки, позволяющая пользователям и разработчикам создавать экземпляры [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** и управлять ими. Сведения об использовании **LocalDB** см. в статье [Экспресс-выпуск SQL Server 2016 LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
+# <a name="sqllocaldb-utility"></a>Программа SqlLocalDB
+  Для создания экземпляра **LocalDB** нужно использовать служебную программу [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**SqlLocalDB**. Служебная программа **SqlLocalDB** (SqlLocalDB.exe) — это простая программа командной строки, позволяющая пользователям и разработчикам создавать экземпляры [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** и управлять ими. Сведения об использовании **LocalDB** см. в статье [Экспресс-выпуск SQL Server 2016 LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 SqlLocalDB.exe   
 {  
-      [ create   | c ] <instance-name>  <instance-version> [-s ]  
-    | [ delete   | d ] <instance-name>  
-    | [ start    | s ] <instance-name>  
-    | [ stop     | p ] <instance-name>  [ -i ] [ -k ]  
-    | [ share    | h ] [" <user_SID> " | " <user_account> " ] " <private-name> " " <shared-name> "  
-    | [ unshare  | u ] " <shared-name> "  
-    | [ info     | i ] <instance-name>  
+      [ create   | c ] \<instance-name>  \<instance-version> [-s ]  
+    | [ delete   | d ] \<instance-name>  
+    | [ start    | s ] \<instance-name>  
+    | [ stop     | p ] \<instance-name>  [ -i ] [ -k ]  
+    | [ share    | h ] [" <user_SID> " | " <user_account> " ] " \<private-name> " " \<shared-name> "  
+    | [ unshare  | u ] " \<shared-name> "  
+    | [ info     | i ] \<instance-name>  
     | [ versions | v ]  
     | [ trace    | t ] [ on | off ]  
     | [ help     | -? ]  
 }  
 ```  
   
-## Аргументы  
- [ **create** | **c** ] *\<имя-экземпляра>* *\<версия-экземпляра>* [**-s** ]  
- Создает новый экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. В **SqlLocalDB** используется версия двоичных файлов [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], указанная в аргументе *\<версия-экземпляра>*. Номер версии задается в числовом формате и содержит хотя бы один знак после разделителя. Дополнительные номера версии (пакеты обновления) являются необязательными. Например, следующие два номера версии будут допустимыми: 11.0 и 11.0.1186. Указываемая версия должна быть установлена на компьютере. Если номер версии не указан, то по умолчанию используется версия программы **SqlLocalDB**. В случае добавления параметра **-s** запускается новый экземпляр **LocalDB**.  
+## <a name="arguments"></a>Аргументы  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ Создает новый экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. **SqlLocalDB** использует версию [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] двоичные файлы, заданные * \<версия экземпляра >* аргумент. Номер версии задается в числовом формате и содержит хотя бы один знак после разделителя. Дополнительные номера версии (пакеты обновления) являются необязательными. Например, следующие два номера версии будут допустимыми: 11.0 и 11.0.1186. Указываемая версия должна быть установлена на компьютере. Если номер версии не указан, то по умолчанию используется версия программы **SqlLocalDB** . В случае добавления параметра **-s** запускается новый экземпляр **LocalDB**.  
   
  [ **share** | **h** ]  
  Делает указанный частный экземпляр **LocalDB** общим, используя указанное общее имя. Если идентификатор безопасности пользователя или имя учетной записи не указаны, используется значение по умолчанию — имя текущего пользователя.  
@@ -51,43 +56,43 @@ SqlLocalDB.exe
  [ **unshared** | **u** ]  
  Отменяет общий доступ к указанному экземпляру **LocalDB**.  
   
- [ **delete** | **d** ] *\<имя-экземпляра>*  
+ [ **delete** | **d** ] *\<instance-name>*  
  Удаляет указанный экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **start** | **s** ] "*\<имя-экземпляра>*"  
+ [ **start** | **s** ] "*\<instance-name>*"  
  Запускает указанный экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. В случае успешного завершения инструкция возвращает адрес именованного канала **LocalDB**.  
   
- [ **stop** | **p** ] *\<имя-экземпляра>* [**-i** ] [**-k** ]  
- Останавливает указанный экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. В случае добавления параметра **-i** запрашивается завершение работы экземпляра с параметром **NOWAIT**. В случае добавления параметра **-k** процесс экземпляра завершается без обращения к нему.  
+ [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ Останавливает указанный экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. В случае добавления параметра **-i** запрашивается завершение работы экземпляра с параметром **NOWAIT** . В случае добавления параметра **-k** процесс экземпляра завершается без обращения к нему.  
   
- [ **info** | **i** ] [ *\<имя-экземпляра>* ]  
- Перечисляет все экземпляры [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**, принадлежащие текущему пользователю.  
+ [ **info** | **i** ] [ *\<instance-name>* ]  
+ Перечисляет все экземпляры [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** , принадлежащие текущему пользователю.  
   
- Параметр *имя-экземпляра* возвращает имя, версию, состояние ("Выполняется" или "Остановлено"), время последнего запуска для указанного экземпляра [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** и имя локального канала для **LocalDB**.  
+ *\<Имя экземпляра >* возвращает имя, версию, состояние (работает или остановлена), время последнего запуска для указанного экземпляра [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**и имя локального канала для **LocalDB**.  
   
  [ **trace** | **t** ] **on** | **off**  
-Параметр  **trace on** включает трассировку вызовов API **SqlLocalDB** для текущего пользователя. Параметр **trace off** отключает трассировку.  
+ Параметр **trace on** включает трассировку вызовов API **SqlLocalDB** для текущего пользователя. Параметр**trace off** отключает трассировку.  
   
  **-?**  
- Возвращает краткое описание каждого параметра **SqlLocalDB**.  
+ Возвращает краткое описание каждого параметра **SqlLocalDB** .  
   
-## Замечания  
- В аргументе *имя-экземпляра* должны соблюдаться правила для идентификаторов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В противном случае он должен заключаться в двойные кавычки.  
+## <a name="remarks"></a>Замечания  
+ В аргументе *имя-экземпляра* должны соблюдаться правила для идентификаторов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В противном случае он должен заключаться в двойные кавычки.  
   
  При выполнении SqlLocalDB без аргументов возвращается текст справки.  
   
  Любые операции, за исключением запуска, могут выполняться только с экземпляром, принадлежащим текущему пользователю. Экземпляр SQLLOCALDB при общем использовании может запускать и останавливать только его владелец.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
   
-### A. Создание экземпляра LocalDB  
- В следующем примере экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** с именем `DEPARTMENT` создается с помощью двоичных файлов [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], а затем запускается.  
+### <a name="a-creating-an-instance-of-localdb"></a>A. Создание экземпляра LocalDB  
+ В следующем примере экземпляр [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** с именем `DEPARTMENT` создается с помощью двоичных файлов [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , а затем запускается.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
 ```  
   
-### Б. Работа с общим экземпляром LocalDB  
+### <a name="b-working-with-a-shared-instance-of-localdb"></a>Б. Работа с общим экземпляром LocalDB  
  Откройте командную строку с правами доступа администратора.  
   
 ```  
@@ -104,13 +109,14 @@ GO
 EXIT  
 ```  
   
- Выполните следующий код, чтобы подключиться к общему экземпляру **LocalDB** с использованием имени входа `NewLogin`.  
+ Выполните следующий код, чтобы подключиться к общему экземпляру **LocalDB** с использованием имени входа `NewLogin` .  
   
 ```  
 sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
-## См. также:  
- [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
-[Программа командной строки SqlLocalDB.exe](Command-Line%20Management%20Tool:%20SqlLocalDB.exe.md)  
+## <a name="see-also"></a>См. также:  
+ [Экспресс-выпуск SQL Server 2016 LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+[Программа командной строки SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
   
+

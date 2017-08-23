@@ -1,28 +1,33 @@
 ---
-title: "XML-источник | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "источники [службы Integration Services], XML"
-  - "XML-источники [службы Integration Services]"
-  - "редактор источника «XML»"
+title: "XML-источник | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML-источник
+# <a name="xml-source"></a>XML-источник
   XML-источник считывает файл XML-данных и заполняет данными столбцы в выходе источника.  
   
  Данные в XML-файлах часто содержат иерархические связи. Например, XML-файл данных может представлять собой каталоги и элементы этих каталогов. Перед включением данных в поток связь элементов в XML-файле должна быть определена и должен быть создан выход для каждого элемента файла.  
@@ -57,7 +62,7 @@ caps.handback.revision: 47
   
  XSD-файл или встроенная схема может определять тип данных элементов, но если это не так, то диалоговое окно **Редактор источника "XML"** устанавливает тип данных строки Юникода (DT_WSTR) для столбца выхода, содержащего этот элемент, и устанавливает длину столбца, содержащую 255 символов.  
   
- Если схема данных указывает максимальную длину элемента, длина выходного столбца становится равной этому значению. Если максимальная длина больше длины, поддерживаемой типом данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , к которому приведен элемент, то данные усекаются до допустимой для этого типа максимальной длины. Например, если длина строки 5000, она усекается до 4000 символов, так как максимальная длина типа данных DT_WSTR — 4000 символов; таким же образом данные типа byte урезаются до 8000 — до максимальной длины типа данных DT_BYTES. Если в схеме не указана максимальная длина, то по умолчанию длина столбцов с любым типом данных составляет 255. Усечение данных в XML-источнике происходит так же, как и в других компонентах потока данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).  
+ Если схема данных указывает максимальную длину элемента, длина выходного столбца становится равной этому значению. Если максимальная длина больше длины, поддерживаемой типом данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , к которому приведен элемент, то данные усекаются до допустимой для этого типа максимальной длины. Например, если длина строки 5000, она усекается до 4000 символов, так как максимальная длина типа данных DT_WSTR — 4000 символов; таким же образом данные типа byte урезаются до 8000 — до максимальной длины типа данных DT_BYTES. Если в схеме не указана максимальная длина, то по умолчанию длина столбцов с любым типом данных составляет 255. Усечение данных в XML-источнике происходит так же, как и в других компонентах потока данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).  
   
  Тип данных и длина столбца могут быть изменены. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
  XML-источник поддерживает несколько обычных выходов и несколько выходов ошибок.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает диалоговое окно **Редактор источника XML** для настройки этого источника. Это диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает диалоговое окно **Редактор источника XML**для настройки этого источника. Это диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 47
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства источника "XML"](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Извлечение данных с помощью XML-источника](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

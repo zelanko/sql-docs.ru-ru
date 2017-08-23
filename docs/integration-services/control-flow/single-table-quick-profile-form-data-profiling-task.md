@@ -1,33 +1,38 @@
 ---
-title: "Форма быстрого профиля одной таблицы (задача &#171;Профилирование данных&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.quickprofile.f1"
-helpviewer_keywords: 
-  - "Редактор задачи «Профилирование данных»"
+title: "Одна форма быстрого профиля таблицы («профилирование данных») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Форма быстрого профиля одной таблицы (задача &#171;Профилирование данных&#187;)
+# <a name="single-table-quick-profile-form-data-profiling-task"></a>Форма быстрого профиля одной таблицы (задача «Профилирование данных»)
   Воспользуйтесь **Формой быстрого профиля одной таблицы** , чтобы настроить задачу «Профилирование данных» для проведения быстрого профилирования одной таблицы или представления с параметрами по умолчанию.  
   
  Дополнительные сведения об использовании задачи "Профилирование данных" см. в разделе [Установка задачи "Профилирование данных"](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Дополнительные сведения об использовании средства просмотра профиля данных для анализа результатов задачи "Профилирование данных" см. в разделе [Средство просмотра профиля данных](../../integration-services/control-flow/data-profile-viewer.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Соединение**  
- Выберите существующий диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)], использующий поставщик данных .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), чтобы подключиться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая содержит таблицу или представление для профилирования.  
+ Выберите существующий диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , использующий поставщик данных .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), чтобы подключиться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая содержит таблицу или представление для профилирования.  
   
  **Таблица или представление**  
  Выберите в базе данных, с которой соединен выбранный диспетчер соединений, существующую таблицу или представление.  
@@ -50,8 +55,8 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Профиль включения значений недоступен из **Формы быстрого профиля одной таблицы**.  
   
-## См. также  
- [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Редактор задачи "Профилирование данных" (страница "Запросы профиля")](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+## <a name="see-also"></a>См. также  
+ [Данные профилирования редактор задач &#40; Страница "Общие" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Данные профилирования редактор задач &#40; Страница «запросы профиля» &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   

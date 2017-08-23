@@ -1,31 +1,36 @@
 ---
-title: "установить глобальные параметры трассировки (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "глобальные параметры трассировки [SQL Server]"
+title: "Настройка глобальных параметров трассировки (приложение SQL Server Profiler) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e243eb89d6006d82191e73577ed18dd9a5840bd9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# установить глобальные параметры трассировки (SQL Server Profiler)
+# <a name="set-global-trace-options-sql-server-profiler"></a>установить глобальные параметры трассировки (SQL Server Profiler)
   В этом разделе описывается, как настроить параметры, влияющие на все трассировки, созданные в экземпляре [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Настройка глобальных параметров трассировки  
+### <a name="to-set-global-trace-options"></a>Настройка глобальных параметров трассировки  
   
 1.  В меню **Сервис** выберите команду **Параметры**.  
   
-2.  В диалоговом окне **Общие параметры** нажмите кнопку **Выбрать шрифт**, настройте параметры отображения и нажмите кнопку **ОК**.  
+2.  В диалоговом окне **Общие параметры**нажмите кнопку **Выбрать шрифт**, настройте параметры отображения и нажмите кнопку **ОК**.  
   
 3.  При необходимости отметьте флажок **Начать трассировку немедленно после подключения**.  
   
@@ -65,8 +70,8 @@ caps.handback.revision: 24
         |**60**|Значение по умолчанию. Опрос блокирующих процессов выполняется один раз в минуту.|  
         |**86400**|Максимальное значение. Блокирующие процессы опрашиваются один раз в **86400** секунд (один день).|  
   
-## См. также:  
- [Задание значений по умолчанию для отображения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка отображения трассировки по умолчанию &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

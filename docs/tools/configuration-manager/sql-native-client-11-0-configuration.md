@@ -1,31 +1,36 @@
 ---
-title: "Конфигурация собственного клиента SQL 11.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "конфигурация клиента [SQL Server], собственный клиент SQL Server"
+title: "Конфигурация SQL Native Client 11.0 | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f77a66d5136676a3d68f1225b4eef07fd7cf10bd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Конфигурация собственного клиента SQL 11.0
+# <a name="sql-native-client-110-configuration"></a>Конфигурация собственного клиента SQL 11.0
   В этом разделе содержатся разделы справки F1 диалоговых окон модуля **Конфигурация собственного клиента SQL Server** в диспетчере конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является сетевой библиотекой, при помощи которой клиентские компьютеры подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Настройки, установленные в конфигурации собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используются на компьютере, на котором запущена программа клиента. Если настройки выполняются на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], они затрагивают только те клиентские программы, которые работают на сервере.  
   
  Эти настройки не затрагивают клиентов, подключающихся к предыдущим версиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], за исключением случая, когда клиенты используют клиентские средства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и последующих версий, такие как [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Свойства конфигурации собственного клиента SQL Server (вкладка "Флаги")](../../tools/configuration-manager/sql-server-native-client-configuration-properties-flags-tab.md)  
   
@@ -47,8 +52,8 @@ caps.handback.revision: 22
   
     -   [Создание допустимой строки соединения с использованием протокола общей памяти](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
-    -   [Создание допустимой строки подключения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+    -   [Создание допустимой строки соединения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
-    -   [Создание допустимой строки соединения, использующей протокол именованных каналов](../Topic/Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.md)  
+    -   [Создание допустимой строки соединения с использованием именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "Создание связей | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.createrelationships.f1"
+title: "Создание связей | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f511b91e0e085c07dcf4dfb7742514ddad6070
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Создание связей
+# <a name="create-relationships"></a>Создание связей
   Используйте диалоговое окно **Создание связей** , чтобы изменить сопоставления между исходными столбцами и столбцами таблицы уточняющих запросов, настроенные в редакторе преобразования «Нечеткий уточняющий запрос», в редакторах преобразования «Уточняющий запрос» и «Уточняющий запрос термина».  
   
 > [!NOTE]  
->  Диалоговое окно **Создание связей** отображает только списки **Входной столбец** и **Столбец подстановок**, если вызвано из редактора преобразования "Уточняющий запрос термина".  
+>  Диалоговое окно **Создание связей** отображает только списки **Входной столбец** и **Столбец подстановок** , если вызвано из редактора преобразования "Уточняющий запрос термина".  
   
  Дополнительные сведения о преобразованиях, использующих диалоговое окно **Создание связей** см. в разделах [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md), [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)и [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md).  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Входной столбец**  
  Выберите входной столбец из списка имеющихся входных столбцов.  
   
- **Уточняющий столбец**  
+ **Столбец подстановок**  
  Выберите из списка доступных столбцов подстановок.  
   
  **Тип сопоставления**  
@@ -47,10 +52,10 @@ caps.handback.revision: 21
  **Псевдоним выхода подобия**  
  Укажите имя для нового выходного столбца, который является подобным выбранному столбцу. Если оставить это значение пустым, то выходной столбец не будет создан.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [Редактор преобразований "Уточняющий запрос термина" (вкладка "Уточняющий запрос термина")](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Редактор преобразования Нечеткий уточняющий запрос &#40; Вкладка «столбцы» &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Редактор преобразования Уточняющий запрос &#40; Страница «столбцы» &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
+ [Редактор преобразования Уточняющий запрос термина &#40; Условие поиска вкладку &#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

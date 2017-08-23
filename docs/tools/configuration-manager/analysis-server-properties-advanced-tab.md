@@ -1,25 +1,30 @@
 ---
-title: "Свойства сервера анализа данных (вкладка &#171;Дополнительно&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства сервера анализа данных (вкладка «Дополнительно») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства сервера анализа данных (вкладка &#171;Дополнительно&#187;)
+# <a name="analysis-server-properties-advanced-tab"></a>Свойства сервера анализа данных (вкладка «Дополнительно»)
   Это служба Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Кластеризованный**  
  Указывает, установлена ли эта служба в качестве ресурса кластеризованного сервера.  
   

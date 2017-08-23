@@ -1,31 +1,36 @@
 ---
-title: "Выполнение массовой загрузки данных с помощью назначения &#171;SQL Server&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "назначение «SQL Server»"
-  - "загрузка данных"
-  - "назначения [службы Integration Services], SQL Server"
-  - "вставка данных"
-  - "массовая загрузка [службы Integration Services]"
+title: "Массовая загрузка данных с помощью назначения SQL Server | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server destination
+- loading data
+- destinations [Integration Services], SQL Server
+- inserting data
+- bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6592de5c7bd0ca674c797d2d3e28f3adbe7dd339
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Выполнение массовой загрузки данных с помощью назначения &#171;SQL Server&#187;
+# <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Выполнение массовой загрузки данных с помощью назначения «SQL Server»
   Чтобы добавить и настроить назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , пакет уже должен содержать как минимум одну задачу потока данных и один источник данных.  
   
-### Загрузка данных с помощью назначения SQL Server  
+### <a name="to-load-data-using-a-sql-server-destination"></a>Загрузка данных с помощью назначения SQL Server  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 30
     -   Нажмите кнопку **Создать**, затем в диалоговом окне **Создание таблицы** введите инструкцию SQL, которая создает таблицу или представление.  
   
         > [!NOTE]  
-        >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] формируют инструкцию по умолчанию CREATE TABLE на основании подключенных источников данных. Эта инструкция CREATE TABLE не включает атрибут FILESTREAM, даже если исходная таблица содержит столбец, для которого объявлен атрибут FILESTREAM. Чтобы запустить компонент служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с атрибутом FILESTREAM, сначала следует создать хранилище FILESTREAM в целевой базе данных. Затем добавьте атрибут FILESTREAM к инструкции CREATE TABLE в диалоговом окне **Создание таблицы** . Дополнительные сведения см. в разделе [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+        >  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] формируют инструкцию по умолчанию CREATE TABLE на основании подключенных источников данных. Эта инструкция CREATE TABLE не включает атрибут FILESTREAM, даже если исходная таблица содержит столбец, для которого объявлен атрибут FILESTREAM. Чтобы запустить компонент служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с атрибутом FILESTREAM, сначала следует создать хранилище FILESTREAM в целевой базе данных. Затем добавьте атрибут FILESTREAM к инструкции CREATE TABLE в диалоговом окне **Создание таблицы** . Дополнительные сведения см. в разделе [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
 8.  Нажмите кнопку **Сопоставления** и сопоставьте столбцы из списка **Доступные входные столбцы** со столбцами из списка **Доступные целевые столбцы** , перетащив столбцы из одного списка в другой.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 30
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Назначение SQL Server](../../integration-services/data-flow/sql-server-destination.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md)   

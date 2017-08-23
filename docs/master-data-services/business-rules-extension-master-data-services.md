@@ -1,24 +1,29 @@
 ---
-title: "Расширение бизнес-правил (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Бизнес-правил (Master Data Services) расширения | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04d846ca87f96f1b3f08a0add5115968af40a855
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Расширение бизнес-правил (Master Data Services)
-  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] вы можете применять пользовательские скрипты SQL в качестве расширения предопределенных условий и действий.  
+# <a name="business-rules-extension-master-data-services"></a>Расширение бизнес-правил (Master Data Services)
+  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]вы можете применять пользовательские скрипты SQL в качестве расширения предопределенных условий и действий.  
   
 > [!NOTE]  
 >  Все сценарии должны быть определены по схеме [usr].  
@@ -67,7 +72,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|ПОЛНОЕ|  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы".  
@@ -76,13 +81,13 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   Пользовательские сценарии были добавлены в базу данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## Создание бизнес-правила для использования пользовательского сценария как условия или действия  
+## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>Создание бизнес-правила для использования пользовательского сценария как условия или действия  
   
 1.  В диспетчере основных данных щелкните **Системное администрирование**.  
   
 2.  В строке меню выберите **Управление** и щелкните **Бизнес-правила**.  
   
-3.  На странице **Бизнес-правила** выберите модель из раскрывающегося списка **Модель**.  
+3.  На странице **Бизнес-правила** выберите модель из раскрывающегося списка **Модель** .  
   
 4.  Из раскрывающегося списка **Сущность** выберите сущность.  
   
@@ -110,9 +115,9 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  Нажмите кнопку **Сохранить**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
- [Условия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  
+ [Условия бизнес-правил & #40; Службы Master Data Services & #41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Действия бизнес-правил & #40; Службы Master Data Services & #41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

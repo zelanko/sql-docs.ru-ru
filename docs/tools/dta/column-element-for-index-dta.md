@@ -1,29 +1,34 @@
 ---
-title: "Элемент Column описания индекса (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Column, элемент"
+title: "Элемент COLUMN описания индекса (DTA) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7aaf1a73356f2e5a2732e12e49b7e618c3bf1f0e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Элемент Column описания индекса (DTA)
+# <a name="column-element-for-index-dta"></a>Элемент Column описания индекса (DTA)
   Указывает столбцы, по которым создается индекс для пользовательской конфигурации.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 14
      </Column>  
 ```  
   
-## Атрибуты элемента  
+## <a name="element-attributes"></a>Атрибуты элемента  
   
  **Type**: необязательно. Указывает тип столбца индекса. Используйте тип данных **string** для указания этого атрибута при помощи следующих допустимых значений:  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 14
 <Column SortOrder="Ascending">  
 ```  
   
-## Характеристики элемента  
+## <a name="element-characteristics"></a>Характеристики элемента  
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
@@ -73,17 +78,17 @@ caps.handback.revision: 14
 |**Значение по умолчанию**|Нет.|  
 |**Применяемость**|Для элемента **Index** можно задать не более 1024 столбцов.|  
   
-## Связи элемента  
+## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Index (DTA)](../../tools/dta/index-element-dta.md)|  
-|**Дочерние элементы**|[Элемент Name описания столбца (DTA)](../../tools/dta/name-element-for-column-dta.md)|  
+|**Родительский элемент**|[Элемент index &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
+|**Дочерние элементы**|[Элемент Name описания столбца &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
-## Пример  
+## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Образец входного XML-файла с пользовательской конфигурацией (DTA)](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

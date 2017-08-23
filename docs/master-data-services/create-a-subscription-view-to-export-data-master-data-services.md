@@ -1,36 +1,41 @@
 ---
-title: "Создание представления подписки для экспорта данных (службы Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Представления подписки [службы Master Data Services], создание"
-  - "создание представлений подписки [службы Master Data Services]"
+title: "Создание представления подписки для экспорта данных (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscription views [Master Data Services], creating
+- creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание представления подписки для экспорта данных (службы Master Data Services)
+# <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Создание представления подписки для экспорта данных (службы Master Data Services)
   Создайте представление подписки, чтобы экспортировать данные служб Master Data Services в системы-подписчики. Представление данных создается в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
--   необходимо разрешение на доступ к функциональной области **Управление интеграцией** ; Дополнительные сведения см. в разделе [разрешений для функциональной области & #40; Службы Master Data Services & #41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   необходимо разрешение на доступ к функциональной области **Управление интеграцией** ; Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в разделе [администраторами и #40; Службы Master Data Services & #41;](../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
-### Создание и изменение представления подписки  
+### <a name="to-create-and-edit-a-subscription-view"></a>Создание и изменение представления подписки  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Управление интеграцией**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
   
 5.  Выберите модель из списка **Модель** .  
   
-6.  Выберите **включает члены удаляется**, чтобы включить в представление удаляется члены.  
+6.  Выберите пункт **Include soft-deleted members**(Включить обратимо удаленные элементы), чтобы включить в представление обратимо удаленные элементы.  
   
 7.  Выберите параметр **Версия** или **Флаг версии** в области **Параметры версии**и выберите значение из соответствующего списка.  
   
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 11. Нажмите кнопку **Сохранить**.  
   
-## Сведения о представлении  
+## <a name="view-information"></a>Сведения о представлении  
  Для всех созданных представлений в сетке создается строка с 10 столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Столбец|Описание|  
+|Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние представления.<br /><br /> При нажатии кнопки **Сохранить**,  ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") изображения отображает, указывающее, что обновляет представление.<br /><br /> При наличии ошибок при создании или изменении представления, ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") изображения отображаются.<br /><br /> В противном случае — находится в работоспособном состоянии и ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") изображения отображаются.|  
+|Состояние|Состояние представления.<br /><br /> При нажатии кнопки **Сохранить**, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") изображение, показывающее, что представление обновляется.<br /><br /> При наличии ошибок во время создания или изменения представления появляется ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
 |Название|Имя представления подписки.|  
 |Модель|Имя модели.|  
 |Версия|Имя версии.|  
@@ -85,9 +90,9 @@ caps.handback.revision: 10
   
 -   **Когда обновлено**— дата и время последнего обновления представления.  
   
-## См. также:  
- [Обзор: Экспорт данных & #40; Службы Master Data Services & #41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [Удалить представление подписки & #40; Службы Master Data Services & #41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [Создание флага версии & #40; Службы Master Data Services & #41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [Удалить представление подписки &#40; Службы Master Data Services &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [Создание флага версии &#40; Службы Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

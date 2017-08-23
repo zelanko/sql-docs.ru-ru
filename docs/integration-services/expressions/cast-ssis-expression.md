@@ -1,32 +1,37 @@
 ---
-title: "Приведение (выражение служб SSIS) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CAST, функция"
-  - "оператор приведения"
-  - "преобразование типов данных [службы Integration Services]"
-  - "типы данных [службы Integration Services], выражения"
-  - "типы данных [службы Integration Services], преобразование"
+title: "Приведение (выражение служб SSIS) | Документы Microsoft"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CAST function
+- cast operator
+- converting data types [Integration Services]
+- data types [Integration Services], expressions
+- data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Приведение (выражение служб SSIS)
+# <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
   Явно приводит выражение одного типа данных к другому типу. Оператор приведения может также выполнять функцию оператора усечения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,20 +39,20 @@ caps.handback.revision: 61
   
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *type_spec*  
- Является допустимым типом данных [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+ Является допустимым типом данных [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  *expression*  
  Является допустимым выражением.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  Тип данных *type_spec*. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  На следующей диаграмме перечислены допустимые операторы приведения.  
   
- ![Допустимые и недопустимые приведения между типами данных](../../integration-services/expressions/media/data-conversion.gif "Допустимые и недопустимые приведения между типами данных")  
+ ![Допустимые и недопустимые приведения между типами данных](../../integration-services/expressions/media/data-conversion.gif "допустимые и недопустимые приведения между типами данных")  
   
  Для приведения к некоторым типам данных необходимо задавать определенные параметры. В следующей таблице приведены эти типы данных и их параметры.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 61
   
  Дополнительные сведения о структуре типов данных «date» см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Примеры выражений служб SSIS  
+## <a name="ssis-expression-examples"></a>Примеры выражений служб SSIS  
  В данном примере числовое значение приводится к целому.  
   
 ```  
@@ -142,10 +147,10 @@ caps.handback.revision: 61
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## См. также  
- [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)   
- [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>См. также  
+ [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Службы Integration Services &#40; Службы SSIS &#41; Выражения](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Типы данных в выражениях служб Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

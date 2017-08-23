@@ -1,36 +1,41 @@
 ---
-title: "Создание модели (службы Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "модели [Master Data Services], создание моделей"
-  - "создание моделей [службы Master Data Services]"
+title: "Создание модели (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], creating models
+- creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1791558cec3999d3a038bc3b651cd3c8edbd307d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание модели (службы Master Data Services)
-  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] модель создается для того, чтобы содержать объекты.  
+# <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
+  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель создается для того, чтобы содержать объекты.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
-### Создание модели  
+### <a name="to-create-a-model"></a>Создание модели  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 13
   
  Для каждой созданной модели в сетке создается строка с восемью столбцами. Ниже перечислены эти восемь столбцов.  
   
--   **Состояние**: состояние модели. При нажатии кнопки **Сохранить модель** появляется изображение ![Updating](../master-data-services/media/mds-model-status-updating.png "Updating"), которое указывает, что модель обновляется. При наличии ошибок во время создания или изменения модели появляется изображение ![Error](../master-data-services/media/mds-model-status-error.png "Error"). В противном случае отображается состояние "ОК" и появляется изображение ![OK](../master-data-services/media/mds-model-status-ok.png "OK").  
+-   **Состояние**: состояние модели. При нажатии кнопки **сохранить модель** кнопки, ![обновление](../master-data-services/media/mds-model-status-updating.png "обновление") изображение, указывает, что модель обновляется. При наличии ошибок при создании или изменении модели, ![ошибка](../master-data-services/media/mds-model-status-error.png "ошибка") изображение. В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
   
 -   **Имя**: имя модели.  
   
@@ -68,15 +73,15 @@ caps.handback.revision: 13
   
 -   **Дата и время обновления**: дата и время последнего обновления модели.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)   
- [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)   
- [Удаление модели (службы Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)   
- [Изменение модели (Master Data Services)](../master-data-services/edit-model-master-data-services.md)   
+ [Сущности &#40; Службы Master Data Services &#41;](../master-data-services/entities-master-data-services.md)   
+ [Удалить модель &#40; Службы Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Изменение модели &#40; Службы Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)   
  [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
   

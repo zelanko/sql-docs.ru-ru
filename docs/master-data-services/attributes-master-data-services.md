@@ -1,42 +1,47 @@
 ---
-title: "Атрибуты (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "атрибуты в свободной форме [службы Master Data Services]"
-  - "атрибуты [службы Master Data Services], об атрибутах"
-  - "атрибуты [службы Master Data Services], атрибуты файлов"
-  - "атрибуты файлов [службы Master Data Services]"
-  - "атрибуты [службы Master Data Services], атрибуты в свободной форме"
-  - "атрибуты [службы Master Data Services]"
+title: "Атрибуты (Master Data Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- free-form attributes [Master Data Services]
+- attributes [Master Data Services], about attributes
+- attributes [Master Data Services], file attributes
+- file attributes [Master Data Services]
+- attributes [Master Data Services], free-form attributes
+- attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Атрибуты (службы Master Data Services)
+# <a name="attributes-master-data-services"></a>Атрибуты (службы Master Data Services)
   Атрибуты — это объекты, которые содержатся в сущностях [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Значения атрибутов описывают элементы сущности. Атрибут может использоваться для описания конечного элемента, объединенного элемента или коллекции.  
   
-## Связь атрибутов с другими объектами модели  
+## <a name="how-attributes-relate-to-other-model-objects"></a>Связь атрибутов с другими объектами модели  
  Атрибут можно представить как столбец таблицы сущности. Значение атрибута — это значение, описывающее определенный элемент.  
   
- ![Сущность служб Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность служб Master Data Services, представленная в виде таблицы")  
+ ![Службы Master Data Services сущность в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "службы Master Data Services сущность в виде таблицы")  
   
  При создании сущности, содержащей множество атрибутов, можно организовать атрибуты в группы. Дополнительные сведения см. в разделе [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md).  
   
-## Обязательные атрибуты  
+## <a name="required-attributes"></a>Обязательные атрибуты  
  При создании сущности атрибуты «Имя» и «Код» создаются автоматически. Атрибут «Код» должен иметь значение, уникальное внутри сущности. Удалить атрибуты «Имя» и «Код» нельзя.  
   
-## Типы атрибутов  
+## <a name="attribute-types"></a>Типы атрибутов  
  Существует три типа атрибутов.  
   
 -   Атрибуты свободной формы, допускающие свободный ввод текста, чисел, дат или ссылок.  
@@ -45,8 +50,8 @@ caps.handback.revision: 12
   
 -   Файловые атрибуты, используемые для хранения файлов, документов или изображений. Атрибуты файлов помогают обеспечивать согласованность данных, требуя наличия у файла определенного расширения. Атрибуты файлов не могут гарантированно запретить злоумышленнику передать файл другого типа.  
   
-### Числовые атрибуты в свободной форме  
- Числовые атрибуты в свободной форме нуждаются в специальной обработке, так как они могут иметь значения только типа **SqlDouble**.  
+### <a name="numeric-free-form-attributes"></a>Числовые атрибуты в свободной форме  
+ Числовые атрибуты в свободной форме нуждаются в специальной обработке, так как они могут иметь значения только типа **SqlDouble** .  
   
  По умолчанию значение **SqlDouble** содержит 15 знаков после запятой, хотя для внутренних целей поддерживается до 17 знаков. Точность числа с плавающей запятой может иметь следующие эффекты.  
   
@@ -54,12 +59,12 @@ caps.handback.revision: 12
   
 -   Математическая операция или сравнение, в которой используется число с плавающей запятой, может выдавать разные результаты при использовании десятичного числа, поскольку число с плавающей запятой может не совсем точно соответствовать десятичному числу.  
   
--   Значение может не допускать *обратного преобразования*, если представлено числом с плавающей запятой. Значение называется обратимым, если после некоторой операции, преобразующей исходное число с плавающей запятой в другой вид, и применения обратной операции, которая возвращает полученный результат обратно к числу с плавающей запятой, получившееся число равно исходному числу с плавающей запятой. Обратимость может нарушаться, если в результате преобразования теряются или меняются одна или несколько менее значащих цифр.  
+-   Значение может не допускать *обратного преобразования* , если представлено числом с плавающей запятой. Значение называется обратимым, если после некоторой операции, преобразующей исходное число с плавающей запятой в другой вид, и применения обратной операции, которая возвращает полученный результат обратно к числу с плавающей запятой, получившееся число равно исходному числу с плавающей запятой. Обратимость может нарушаться, если в результате преобразования теряются или меняются одна или несколько менее значащих цифр.  
   
-## Примеры атрибутов  
+## <a name="attribute-examples"></a>Примеры атрибутов  
  В следующем примере сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
- ![Таблица продукта «Велосипед»](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта «Велосипед»")  
+ ![Bike сущности таблицы Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "велосипеда таблицы сущности продукта")  
   
  В следующем примере сущность Product содержит:  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 12
   
  Сущность Subcategory используется в качестве атрибута на основе домена сущности Product. Сущность Category используется в качестве атрибута на основе домена сущности Subcategory. Как и сущность Product, сущности Category и Subcategory по умолчанию содержат атрибуты Name и Code.  
   
- ![Древовидная структура сущности «Продукт»](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности «Продукт»")  
+ ![Древовидная структура сущности продукта](../master-data-services/media/mds-conc-entity-ui.gif "древовидная структура сущности продукта")  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -88,7 +93,7 @@ caps.handback.revision: 12
 |Изменение порядка атрибутов.|[Изменение порядка атрибутов](../master-data-services/change-the-order-of-attributes.md)|  
 |Создание атрибута даты|[Создание атрибута даты (службы Master Data Services)](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
 -   [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -96,8 +101,5 @@ caps.handback.revision: 12
   
 -   [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
--   [Разрешения конечного элемента (службы основных данных)](../master-data-services/leaf-permissions-master-data-services.md)  
-  
--   [Объединенные разрешения (службы основных данных)](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
-  
+-   [Разрешения конечного элемента (службы основных данных)](../master-data-services/leaf-permissions-master-data-services.md)
   

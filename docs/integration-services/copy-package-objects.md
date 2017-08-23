@@ -1,30 +1,35 @@
 ---
-title: "Копирование объектов пакета | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "поток управления [службы Integration Services], копирование объектов"
-  - "копирование объектов пакета [службы Integration Services]"
-  - "поток данных [службы Integration Services], копирование объектов"
-  - "диспетчеры подключений [службы Integration Services], копирование"
+title: "Копирование объектов пакета | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control flow [Integration Services], copying objects
+- copying package objects [Integration Services]
+- data flow [Integration Services], copying objects
+- connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Копирование объектов пакета
+# <a name="copy-package-objects"></a>Копирование объектов пакета
   В этом разделе описано, как копировать элементы потока управления, потока данных и диспетчеров соединения внутри пакета или между пакетами.  
   
-### Копирование элементов управления и потока данных  
+### <a name="to-copy-control-and-data-flow-items"></a>Копирование элементов управления и потока данных  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий нужные пакеты.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 14
   
 7.  Щелкните правой кнопкой мыши и выберите **Вставить**.  
   
-### Копирование диспетчеров соединений  
+### <a name="to-copy-connection-managers"></a>Копирование диспетчеров соединений  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий нужный пакет.  
   
@@ -60,10 +65,10 @@ caps.handback.revision: 14
   
 6.  Щелкните правой кнопкой мыши **Диспетчеры соединений** и выберите **Вставить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поток управления](../integration-services/control-flow/control-flow.md)   
  [Поток данных](../integration-services/data-flow/data-flow.md)   
- [Соединения в службах Integration Services (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Копирование элементов проекта](../Topic/Copy%20Project%20Items.md)  
+ [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Копирование элементов проекта](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

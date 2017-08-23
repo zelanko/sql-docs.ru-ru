@@ -1,26 +1,31 @@
 ---
-title: "Отображение связей &quot;многие-ко-многим&quot; в производных иерархиях (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Отображение связей \"многие ко многим\" в производных иерархиях (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Отображение связей &quot;многие-ко-многим&quot; в производных иерархиях (Master Data Services)
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
   Теперь в производных иерархиях (DH) наряду с отображением связей "один-ко-многим" могут отображаться связи "многие-ко-многим".  
   
-## Связи "многие-ко-многим"  
+## <a name="many-to-many-m2m-relationships"></a>Связи "многие-ко-многим"  
  Связь "многие-ко-многим" (M2M) между двумя сущностями можно смоделировать с помощью третьей сущности, обеспечивающей между ними сопоставление.  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -37,9 +42,9 @@ caps.handback.revision: 13
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- Обратите внимание, что на приведенном выше снимке экрана сущность **Employee** отображается в среднем разделе **Текущие уровни** как единственный уровень. В разделе **Предварительный просмотр** справа выведен список всех элементов сущности **Employee** . В разделе **Доступные уровни** слева отображаются уровни, которые можно добавить выше текущего верхнего уровня (**Сотрудник**). Большинство из них являются атрибутами на основе домена в сущности **Сотрудник**, включая атрибут на основе домена **Отдел**.  
+ Обратите внимание, что на приведенном выше снимке экрана сущность **Employee** отображается в среднем разделе **Текущие уровни** как единственный уровень. В разделе **Предварительный просмотр** справа выведен список всех элементов сущности **Employee** . В разделе **Доступные уровни** слева отображаются уровни, которые можно добавить выше текущего верхнего уровня (**Сотрудник**). Большинство из них являются атрибутами на основе домена в сущности **Сотрудник** , включая атрибут на основе домена **Отдел** .  
   
- Начиная с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] существует новый тип уровня, который моделирует связи "многие ко многим", например **Class (сопоставленный через ClassRegistration.Student)**. Имя уровня является более подробным по сравнению с другими именами. Это необходимо для предоставления дополнительных сведений для однозначного описания связи сопоставления. Перетащите этот уровень на уровень **Employee** в разделе **Текущие уровни** .  
+ Начиная с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]существует новый тип уровня, который моделирует связи "многие ко многим", например **Class (сопоставленный через ClassRegistration.Student)**. Имя уровня является более подробным по сравнению с другими именами. Это необходимо для предоставления дополнительных сведений для однозначного описания связи сопоставления. Перетащите этот уровень на уровень **Employee** в разделе **Текущие уровни** .  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 13
   
  Элементы сущности сопоставления **ClassRegistration** не отображаются ни в одном месте в производной иерархии. Они используются для определения связей между родительскими и дочерними элементами в иерархии.  
   
- Чтобы изменить связь "многие-ко-многим" путем изменения элементов сущности сопоставления, выполните одно из указанных далее действий. Связь "многие ко многим" доступна только для чтения на странице **Обозреватель производных иерархий**.  
+ Чтобы изменить связь "многие-ко-многим" путем изменения элементов сущности сопоставления, выполните одно из указанных далее действий. Связь "многие ко многим" доступна только для чтения на странице **Обозреватель производных иерархий** .  
   
--   Измените элементы сущности сопоставления на странице **Обозреватель сущностей**, используя надстройку Master Data Services для Excel или функцию промежуточного хранения данных.  
+-   Измените элементы сущности сопоставления на странице **Обозреватель сущностей** , используя надстройку Master Data Services для Excel или функцию промежуточного хранения данных.  
   
 -   Перетаскивайте дочерние узлы между родительскими на станице **Обозреватель производных иерархи**.  
   
@@ -72,13 +77,13 @@ caps.handback.revision: 13
 ### <a name="M2MSample"></a> Связь "многие ко многим" в образце модели  
 Для демонстрации связи "многие ко многим" просмотрите производную иерархию "Region Climate" в образце модели Customer, входящем в состав [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Как показано на рисунке ниже, имя уровня, моделирующего эту связь, — ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (сопоставляется через RegionClimate.Region)**. ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** показывает регионы, сгруппированные по связанному с ними типу климата. Это связь "многие ко многим", так как имеются регионы (дочерние элементы), связанные с несколькими типами климата (родительские элементы). Например, элемент ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** связан с элементами ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** и ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
+Как показано на рисунке ниже, имя уровня, моделирующего эту связь, — ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (сопоставляется через RegionClimate.Region)**. ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** показывает регионы, сгруппированные по связанному с ними типу климата. Это связь "многие ко многим", так как имеются регионы (дочерние элементы), связанные с несколькими типами климата (родительские элементы). Например, элемент ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** связан с элементами ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** и ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-Инструкции по развертыванию образца модели Customer и других образцов моделей, входящих в состав [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Развертывание образцов моделей и данных](../sql-server/media/master-data-services.png#deploySample).   
+Инструкции по развертыванию образца модели Customer и других образцов моделей, входящих в состав [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Развертывание образцов моделей и данных](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
-## Связь "один-ко-многим"  
+## <a name="one-many-relationship"></a>Связь "один-ко-многим"  
  Элемент производной иерархии может быть родителем нескольких дочерних элементов, однако обычно у него не может быть больше одного родительского элемента (исключения см. в разделе [Безопасность элементов](#bkmk_member_security)). Предположим, что имеются две сущности — Employee и Department — и каждый сотрудник принадлежит одному отделу. Эта связь моделируется путем добавления в сущность Employee атрибута DBA, который ссылается на сущность Department.  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
@@ -96,10 +101,11 @@ caps.handback.revision: 13
   
 -   Производная иерархии с уровнем "многие-ко-многим" (дочерний элемент может быть сопоставлен с несколькими родительскими элементами).  
   
-## Коллекции  
+## <a name="collections"></a>Коллекции  
  Коллекции и явные иерархии устарели. Хранимая процедура преобразования (udpConvertCollectionAndConsolidatedMembersToLeaf) преобразует элементы коллекции в конечные элементы и создает производные иерархии "многие-ко-многим" для записи сведений о принадлежности к коллекции.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

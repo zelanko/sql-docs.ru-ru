@@ -1,31 +1,36 @@
 ---
-title: "указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "добавление событий"
-  - "трассировки [SQL Server], столбцы данных"
-  - "удаление событий"
-  - "удаление событий"
-  - "трассировки [SQL Server], события"
+title: "Указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding events
+- traces [SQL Server], data columns
+- deleting events
+- removing events
+- traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 413a30657e348dba30d335a225ad243600a0ebbd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)
+# <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)
   Данный раздел содержит информацию об указании классов событий и столбцов данных для трассировок при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Указание событий и столбцов данных для трассировки  
+### <a name="to-specify-events-and-data-columns-for-a-trace"></a>Указание событий и столбцов данных для трассировки  
   
 1.  В диалоговом окне **Свойства трассировки** или **Свойства шаблона трассировки** выберите вкладку **Выбор событий** .  
   
@@ -42,11 +47,11 @@ caps.handback.revision: 24
   
  Если произведена проверка окна, соответствующего событию, то при внесении класса событий каждый связанный столбец данных также включается в трассировку. Если проверялось окно для определенного столбца, то в трассировку включается только этот столбец.  
   
-1.  Чтобы удалить столбцы данных из класса событий, снимите флажки со столбца данных в строке класса событий либо щелкните правой кнопкой мыши заголовок столбца и выберите **Снять выделение столбца**.  
+1.  Чтобы удалить столбцы данных из класса событий, снимите флажки со столбца данных в строке класса событий либо щелкните правой кнопкой мыши заголовок столбца и выберите **Снять выделение столбца** .  
   
 2.  При необходимости примените фильтры к трассировке. Дополнительные сведения см. в статье [Создание трассировки(приложение SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

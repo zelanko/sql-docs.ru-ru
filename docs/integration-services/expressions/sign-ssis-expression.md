@@ -1,46 +1,51 @@
 ---
-title: "SIGN (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "положительные значения [службы Integration Services]"
-  - "SIGN, функция"
-  - "отрицательные значения"
+title: "SIGN (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- positive values [Integration Services]
+- SIGN function
+- negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a926bddda6c86a7930a349915cc2a77602448b4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# SIGN (выражение служб SSIS)
+# <a name="sign-ssis-expression"></a>SIGN (выражение служб SSIS)
   Возвращает знак числового выражения в виде положительного (+1), нулевого (0) или отрицательного (-1) числа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 SIGN(numeric_expression)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
  Является допустимым числовым выражением со знаком. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Функция SIGN возвращает результат NULL, если аргумент имеет значение NULL.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  Этот пример возвращает знак числового литерала. Возвращается результат -1.  
   
 ```  
@@ -53,7 +58,7 @@ SIGN(-123.45)
 SIGN(DealerPrice - StandardCost)  
 ```  
   
-## См. также  
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

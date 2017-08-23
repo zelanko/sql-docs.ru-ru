@@ -1,31 +1,36 @@
 ---
-title: "Просмотр журнала приложений Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "журналы приложений [SQL Server]"
-  - "журналы приложений Windows [SQL Server]"
-  - "просмотр журналов приложений Windows"
-  - "ошибки [агент SQL Server], журналы"
-  - "системные журналы [SQL Server]"
-  - "журналы безопасности [SQL Server]"
-  - "вывод журналов приложений Windows"
-  - "журналы [SQL Server], журналы приложений Windows"
+title: "Просмотр журнала приложений Windows | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application logs [SQL Server]
+- Windows application logs [SQL Server]
+- viewing Windows application logs
+- errors [SQL Server], logs
+- system logs [SQL Server]
+- security logs [SQL Server]
+- displaying Windows application logs
+- logs [SQL Server], Windows application logs
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 833f71530a08ad5648b35719f9fd636213c61595
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Просмотр журнала приложений Windows
+# <a name="viewing-the-windows-application-log"></a>Просмотр журнала приложений Windows
   Если настройками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрено использование журнала приложений Microsoft Windows, каждый сеанс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает новые события в этот журнал. В отличие от журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , новый журнал приложений не создается заново каждый раз при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Просмотр и управление журналом приложений Windows осуществляется с помощью средства просмотра событий Windows или средства просмотра журналов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -42,6 +47,6 @@ caps.handback.revision: 20
   
  **Просмотр журнала приложений Windows**  
   
- [Просмотр журнала приложений Windows (Windows)](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+ [Просмотр журнала приложений Windows (Windows)](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
   

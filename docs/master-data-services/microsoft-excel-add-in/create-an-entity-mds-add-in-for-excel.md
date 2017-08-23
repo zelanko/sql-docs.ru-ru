@@ -1,25 +1,30 @@
 ---
-title: "Создание сущности (надстройка MDS для Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание сущности (надстройка MDS для Excel) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b77e214a86b07da01010357edeedf09e62234345
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание сущности (надстройка MDS для Excel)
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут создавать новые сущности для хранения данных. При создании сущности необходимо загрузить по крайней мере небольшую выборку данных, которые нужно сохранить.  
+# <a name="create-an-entity-mds-add-in-for-excel"></a>Создание сущности (надстройка MDS для Excel)
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], администраторы могут создавать новые сущности для хранения данных. При создании сущности необходимо загрузить по крайней мере небольшую выборку данных, которые нужно сохранить.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Обозреватель** ;  
@@ -42,7 +47,7 @@ caps.handback.revision: 8
   
     -   Убедитесь, что в ячейках нет временных значений. В MDS можно сохранять значения даты, но не значения времени.  
   
-### Создание сущности и загрузка данных  
+### <a name="to-create-an-entity-and-load-data"></a>Создание сущности и загрузка данных  
   
 1.  Откройте или создайте лист Excel, содержащий данные, которые нужно загрузить.  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 8
   
 12. Нажмите кнопку **ОК**. После успешного создания сущности отображается строка с новым заголовком, выделяются ячейки, а имя листа изменяется на имя сущности.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   Для просмотра возникших ошибок в группе **Публикация и проверка** нажмите кнопку **Показать состояние**. Отображаются столбцы ValidationStatus и InputStatus. Дополнительные сведения см. в разделе [Проверка данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 -   Убедитесь, что созданные атрибуты имеют запланированный тип данных.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание атрибута на основе домена (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   
