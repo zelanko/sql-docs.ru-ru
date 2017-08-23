@@ -1,22 +1,27 @@
 ---
-title: "Создание псевдонима (вкладка &#171;Псевдоним&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание псевдонима (вкладка «псевдоним») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 988ee74394f53d5275a8b8e1cc3772702792a4f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Создание псевдонима (вкладка &#171;Псевдоним&#187;)
+# <a name="new-alias-alias-tab"></a>Создание псевдонима (вкладка «Псевдоним»)
   Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Используйте страницу **Псевдоним** в диалоговом окне **Псевдоним — новый**, чтобы задать элементы строки подключения для псевдонима. Сведения об изменении строки подключения существующего псевдонима см. в разделе [Свойства &#60;Псевдоним&#62; (вкладка "Псевдоним")](../../tools/configuration-manager/alias-properties-alias-tab.md).  
   
  Необязательно заполнять все значения в сетке **Свойства** . Допустимые сочетания значений зависят от выбранного протокола. Примеры допустимых сочетаний см. в разделах, приведенных ниже.  
@@ -31,26 +36,26 @@ caps.handback.revision: 21
  Протокол, используемый для соединения.  
   
  **Server**  
- Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], к которому выполняется подключение.  
+ Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому выполняется подключение.  
   
-## Использование псевдонима  
+## <a name="when-to-use-an-alias"></a>Использование псевдонима  
  По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключается к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью протокола **Общая память** и к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другом компьютере с помощью протокола **TCP/IP** или **Именованные каналы**. Создайте псевдоним, если во время использования протокола TCP/IP или именованных каналов необходимо вводить пользовательскую строку подключения или если для соединения нужно использовать имя, отличное от имени сервера.  
   
-### Примеры  
+### <a name="examples"></a>Примеры  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку подключения с другим номером порта.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку соединения с другим номером порта.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает именованный канал по умолчанию, поэтому необходимо использовать строку соединения с другим именем канала.  
   
 -   Приложение ожидает подключения к базе данных на сервере с именем `ACCT`, но эта база данных прошла консолидацию в виде экземпляра с именем `ACCT` на сервере с именем `CENTRAL`. Приложение нельзя легко изменить. Создайте псевдоним с именем `ACCT`и со строкой соединения, указывающей на `CENTRAL\ACCT`.  
   
-## Создание допустимой строки соединения  
+## <a name="creating-a-valid-connection-string"></a>Создание допустимой строки соединения  
  Описание и примеры допустимых сочетаний свойств псевдонима см. в следующих разделах:  
   
 -   [Создание допустимой строки соединения с использованием протокола общей памяти](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
--   [Создание допустимой строки подключения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+-   [Создание допустимой строки соединения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [Создание допустимой строки соединения, использующей протокол именованных каналов](../Topic/Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.md)  
+-   [Создание допустимой строки соединения с использованием именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

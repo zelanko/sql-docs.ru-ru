@@ -1,34 +1,39 @@
 ---
-title: "Компоненты потока ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Компоненты потока ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Компоненты потока ODBC
+# <a name="odbc-flow-components"></a>Компоненты потока ODBC
   Этот раздел содержит описание основных понятий, необходимых для создания потока данных ODBC с использованием [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  Соединитель для ODBC компании Attunity для [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяет разработчикам служб SSIS легко создавать пакеты, которые загружают и выгружают данные из баз данных с поддержкой ODBC.  
   
  Соединитель ODBC предназначен для достижения оптимальной производительности при загрузке или выгрузке данных из базы данных с поддержкой ODBC в контексте [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
-## Преимущества  
+## <a name="benefits"></a>Преимущества  
  Источник и назначение ODBC для [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] обеспечивают конкурентное превосходство для служб SSIS в проектах, связанных с загрузкой или выгрузкой данных из баз данных с поддержкой ODBC.  
   
  Источник и назначение ODBC обеспечивают высокопроизводительную интеграцию данных с базами данных с поддержкой ODBC. Оба компонента могут быть настроены для работы с привязками массива построчных параметров для высокопроизводительных поставщиков ODBC, которые поддерживают этот режим привязки, и привязками однострочных параметров для низкопроизводительных поставщиков ODBC.  
   
-## Приступая к работе с источником и назначением ODBC  
+## <a name="getting-started-with-the-odbc-source-and-destination"></a>Приступая к работе с источником и назначением ODBC  
  Прежде чем появится возможность настройки пакетов, в которых используется [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], необходимо обеспечить соблюдение следующих требований.  
   
 -   [ODBC-источник](../../integration-services/data-flow/odbc-source.md)  
@@ -61,10 +66,10 @@ caps.handback.revision: 10
   
  Редактор назначения «ODBC» (страница «Вывод ошибок»)  
   
-## Сценарии работы  
+## <a name="operating-scenarios"></a>Сценарии работы  
  В этом разделе рассматриваются некоторые из основных способов использования компонентов источника и назначения ODBC.  
   
-### Массовое копирование данных из таблиц SQL Server в таблицу любой базы данных с поддержкой ODBC  
+### <a name="bulk-copy-data-from-sql-server-tables-to-any-odbc-supported-database-table"></a>Массовое копирование данных из таблиц SQL Server в таблицу любой базы данных с поддержкой ODBC  
  Эти компоненты можно использовать для массового копирования данных из одной или нескольких таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в одну таблицу базы данных с поддержкой ODBC.  
   
  В следующем примере показано, как создать задачу «Поток данных служб SSIS», которая извлекает данные из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и загружает их в таблицу DB2.  
@@ -79,8 +84,8 @@ caps.handback.revision: 10
   
 -   Перетащите назначение ODBC в область конструктора, подключите вывод источника к назначению ODBC, затем настройте назначение, чтобы загрузить данные в таблицу DB2 с данными, извлеченными из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте созданный перед этим диспетчер соединений ODBC.  
   
-### Массовое копирование данных из таблиц базы данных с поддержкой ODBC в любую таблицу SQL Server  
- Компоненты можно использовать для массового копирования данных из одной или нескольких таблиц базы данных с поддержкой ODBC в одну таблицу базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="bulk-copy-data-from-odbc-supported-database-tables-to-any-sql-server-table"></a>Массовое копирование данных из таблиц базы данных с поддержкой ODBC в любую таблицу SQL Server  
+ Компоненты можно использовать для массового копирования данных из одной или нескольких таблиц базы данных с поддержкой ODBC в одну таблицу базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  В следующем примере показано, как создать задачу «Поток данных SSIS», которая извлекает данные из таблицы базы данных Sybase и загружает их в таблицу базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
   
 -   Перетащите назначение «OLE DB» в область конструктора, подключите выход источника к назначению «OLE DB», затем настройте назначение для загрузки данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с данными, которые извлечены из базы данных Sybase. Используйте созданный перед этим диспетчер соединений OLE DB.  
   
-## Поддерживаемые типы данных  
+## <a name="supported-data-types"></a>Поддерживаемые типы данных  
  Компоненты массовой загрузки ODBC для служб SSIS поддерживают все встроенные типы данных ODBC, включая поддержку больших объектов (CLOB и BLOB).  
   
 Поддержка типов данных для расширяемых типов C, как описано в спецификации ODBC 3.8, отсутствует. В следующей таблице описано, какие типы данных служб SSIS используются для каждого из типов SQL ODBC. Разработчик служб SSIS может переопределить сопоставление, применяемое по умолчанию, и задать другой тип данных служб SSIS для столбцов ввода-вывода, не оказывая отрицательного воздействия на производительность требуемых преобразований данных.  
@@ -128,7 +133,7 @@ caps.handback.revision: 10
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Типы данных для конкретных поставщиков|DT_BYTES<br /><br />DT_IMAGE|Тип DT_BYTES используется, если длина столбца меньше или равна 8000.<br /><br />Тип DT_IMAGE используется, если длина столбца равна нулю или больше 8000.|  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [ODBC-источник](../../integration-services/data-flow/odbc-source.md)  
   

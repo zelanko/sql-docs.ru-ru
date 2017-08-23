@@ -1,29 +1,34 @@
 ---
-title: "Компонент скрипта | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.scriptcomponentdetails.f1"
-helpviewer_keywords: 
-  - "преобразование «Скрипт»"
-  - "скрипты [службы Integration Services], преобразования"
-  - "компонент скрипта [службы Integration Services], о компоненте скрипта"
-  - "Компонент скрипта [службы Integration Services]"
+title: "Компонент скрипта | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.scriptcomponentdetails.f1
+helpviewer_keywords:
+- Script transformation
+- scripts [Integration Services], transformations
+- Script component [Integration Services], about Script component
+- Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Компонент скрипта
+# <a name="script-component"></a>Компонент скрипта
   Компонент скрипта размещает скрипт и позволяет пакету включать и выполнять пользовательский код скрипта. Можно использовать компонент скрипта в пакетах для следующих целей.  
   
 -   Применить множественные преобразования к данным, вместо того, чтобы использовать множественные преобразования в потоке данных. Например, скрипт может добавить значения в два столбца и затем вычислить среднее значение суммы.  
@@ -51,15 +56,15 @@ caps.handback.revision: 70
   
  После того как выбран подходящий компонент скрипта для пакета, нужно настроить входы и выходы, разработать скрипт, используемый компонентом, и настроить сам компонент.  
   
-## Основные сведения о режимах компонента скрипта  
+## <a name="understanding-the-script-component-modes"></a>Основные сведения о режимах компонента скрипта  
  В конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)] у компонента скрипта есть два режима: режим конструирования метаданных и режим конструирования кода. В режиме редактирования метаданных можно добавлять и изменять входы и выходы компонента скрипта, но нельзя писать код. После того как все входы и выходы настроены, переключаетесь в режим редактирования кода, чтобы написать скрипт. Компонент скрипта автоматически создает базовый код из метаданных входов и выходов. Если пользователь изменил метаданные после того, как компонент скрипта создал базовый код, то пользовательский код больше не может быть откомпилированным, потому что измененный базовый код может быть несовместим с пользовательским кодом.  
   
-## Разработка скрипта, используемого компонентом  
+## <a name="writing-the-script-that-the-component-uses"></a>Разработка скрипта, используемого компонентом  
  Компонент скрипта использует для создания скриптов среду [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA). Доступ к VSTA осуществляется из **Редактора преобразования «Скрипт»**. Дополнительные сведения см. в разделе [Редактор преобразования "Скрипт" (страница "Скрипт")](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
  Компонент скрипта содержит проект VSTA, который включает автоматически создающийся класс, называемый ScriptMain, представляющий метаданные компонента. Например, если компонент скрипта используется как преобразование, имеющее три выхода, ScriptMain содержит метод для каждого выхода. ScriptMain — это точка входа в скрипт.  
   
- Среда VSTA располагает всеми стандартными возможностями среды [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], в том числе редактором [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] с цветовым выделением, технологией IntelliSense и браузером объектов. Скрипт, используемый компонентом скрипта, сохранен в определении пакета. При конструировании пакета код скрипта временно записывается в файл проекта.  
+ Среда VSTA располагает всеми стандартными возможностями среды [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] , в том числе редактором [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] с цветовым выделением, технологией IntelliSense и браузером объектов. Скрипт, используемый компонентом скрипта, сохранен в определении пакета. При конструировании пакета код скрипта временно записывается в файл проекта.  
   
  Среда VSTA поддерживает языки программирования [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 70
 > [!NOTE]  
 >  В отличие от предыдущих версий, где можно было указать, являются ли скрипты предварительно скомпилированными, в версии [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] и более поздних версиях все скрипты компилируются заранее. Если скрипт компилируется заранее, то во время выполнения не загружается языковая подсистема и пакет выполняется быстрее. Однако заранее скомпилированные двоичные файлы занимают значительное место на диске.  
   
-## Настройка компонента скрипта  
+## <a name="configuring-the-script-component"></a>Настройка компонента скрипта  
  Можно настроить компонент скрипта следующими способами.  
   
 -   Выберите входные столбцы, на которые необходимо ссылаться.  
@@ -86,7 +91,7 @@ caps.handback.revision: 70
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами.  
   
-### Настройка компонента скрипта в конструкторе  
+### <a name="configuring-the-script-component-in-the-designer"></a>Настройка компонента скрипта в конструкторе  
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Скрипт»** , см. в следующих разделах:  
   
 -   [Редактор преобразования "Скрипт" (страница "Входные столбцы")](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
@@ -101,10 +106,10 @@ caps.handback.revision: 70
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-### Программная настройка компонента скрипта  
+### <a name="configuring-the-script-component-programmatically"></a>Программная настройка компонента скрипта  
  Дополнительные сведения о свойствах, которые можно установить в окне **Свойства** или программно, см. в следующих разделах:  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -112,9 +117,9 @@ caps.handback.revision: 70
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## См. также  
+## <a name="related-content"></a>См. также  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
- [Расширение потока данных с помощью компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   

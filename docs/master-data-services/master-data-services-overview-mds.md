@@ -1,48 +1,55 @@
 ---
-title: "Общие сведения о службах Master Data Services (MDS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "what is master data"
-helpviewer_keywords: 
-  - "Master Data Services, обзор"
-  - "Службы Master Data Services"
+title: "Обзор служб Master Data Services (MDS) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- what is master data
+helpviewer_keywords:
+- Master Data Services, overview
+- Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Общие сведения о службах Master Data Services (MDS)
+# <a name="master-data-services-overview-mds"></a>Общие сведения о службах Master Data Services (MDS)
   В этом разделе описаны ключевые функции организации данных и управления ими с помощью [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- >  Описание архитектуры [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] см. в статье [Master Data Services — основы](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) на сайте simple-talk.com. Сведения о новых функциях [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] см. на странице [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md).  
-   **Инструкции по установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], настройке базы данных и веб-сайта и развертыванию образцов моделей см. в статье **[Установка и конфигурация служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]позволяет управлять основного набора данных в вашей организации. Можно организовать данные в модели, создавать правила для обновления данных и контролировать, кто обновляет данные. Excel возможность совместного использования основной набор данных с другими людьми в вашей организации. 
+  
+ >  Описание архитектуры [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] см. в статье [Master Data Services — основы](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) на сайте simple-talk.com. Сведения о новых функциях [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] см. на странице [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+   **Инструкции по установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], настройке базы данных и веб-сайта и развертыванию образцов моделей см. в статье** [Установка и конфигурация служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
   
  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель является наивысшим уровнем контейнера в структуре основных данных. Можно создать модель для управления группами сходных данных, например для управления данными продуктов в сети. В модели содержится одна или несколько сущностей, а сущности содержат элементы, которые являются записями данных. Сущность похожа на таблицу.  
   
  Модель продукта в сети может содержать сущности, такие как продукт, цвет и стиль. Сущность цвета может содержать элементы для красного, серебряного и черного цвета.  
   
- ![Color entity](../master-data-services/media/mds-productmodel-colorentity-composite.png "Color entity")  
+ ![Цвет сущности](../master-data-services/media/mds-productmodel-colorentity-composite.png "цвет сущности")  
   
  Модели также содержат атрибуты, определенные в сущностях. Атрибут содержит значения, которые помогают описывать элементы сущности. Существуют атрибуты в свободной форме и атрибуты на основе домена.  Атрибут на основе домена содержит значения, которые заполняются элементами из сущности и могут использоваться как значения атрибутов для других сущностей.  
   
- Например, в сущности продукта могут иметься атрибуты в свободной форме для стоимости и веса. В то же время там может быть атрибут на основе домена для цвета ![Number 1](../master-data-services/media/mds-number1.png "Number 1"), значения которого заполняются элементами сущности цвета. Этот основной список цветов используется в качестве значений атрибута для сущности продукта ![Number 2](../master-data-services/media/mds-number2.png "Number 2").  
+ Например, в сущности продукта могут иметься атрибуты в свободной форме для стоимости и веса. И отсутствует атрибут на основе домена для цвета ![номер 1](../master-data-services/media/mds-number1.png "номер 1") , содержащий значения которого заполняются элементами сущности цвета. Этот основной список цветов используется в качестве значения атрибута для сущности продукта ![номер 2](../master-data-services/media/mds-number2.png "номер 2").  
   
- ![Domain-based attribute for color](../master-data-services/media/mds-productentity-color-domainattribute.png "Domain-based attribute for color")  
+ ![Атрибут на основе домена для цвета](../master-data-services/media/mds-productentity-color-domainattribute.png "атрибут на основе домена для цвета")  
   
- Производные иерархии происходят от связей между сущностями в модели. Это связи атрибутов на основе домена. Например, в модели продукта может быть производная иерархия цвета ![Number 1](../master-data-services/media/mds-number1.png "Number 1"), происходящая от связи между сущностями цвета ![Number 2](../master-data-services/media/mds-number2.png "Number 2") и продукта ![Number 3](../master-data-services/media/mds-number3.png "Number 3").  
+ Производные иерархии происходят от связей между сущностями в модели. Это связи атрибутов на основе домена. В модели продукта, что производную иерархию цвета ![номер 1](../master-data-services/media/mds-number1.png "номер 1") , происходящую от связи между сущностями цвета ![номер 2](../master-data-services/media/mds-number2.png "номер 2") и продукта ![номер 3](../master-data-services/media/mds-number3.png "номер 3") сущностей.  
   
- ![Color derived hierarchy](../master-data-services/media/mds-derivedhierarchy.png "Color derived hierarchy")  
+ ![Цвет производной иерархии](../master-data-services/media/mds-derivedhierarchy.png "цвет производной иерархии")  
   
  После определения базовой структуры данных можно начать добавление записей данных (элементов) с помощью функции импорта. Загрузите данные в промежуточные таблицы, проверьте данные с помощью бизнес-правил и загрузите данные в таблицы MDS.  Также можно использовать бизнес-правила для задания значений атрибутов.  
   
@@ -64,7 +71,7 @@ caps.handback.revision: 27
 |Создание производных иерархий|Производные иерархии можно обновлять по мере изменения бизнес-потребностей для обеспечения учета всех элементов на соответствующем уровне.|[Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)<br /><br /> [Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Создание явных иерархий при необходимости|При необходимости использовать иерархии, отличные от многоуровневых, которые включают элементы из одной сущности, можно создавать явные иерархии.|[Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [Создание явной иерархии (службы Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Создание коллекций при необходимости|Если необходимо представить разные группы элементов для отчетов или анализа и не нужно создавать полную иерархию, используются коллекции.<br /><br /> <br /><br /> Примечание. Пользователи могут создавать элементы в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , если у них есть как минимум разрешение на **обновление** объекта модели коллекции и доступ к функциональной области **Обозреватель** .|[Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)<br /><br /> [Создание коллекции (службы Master Data Services)](../master-data-services/create-a-collection-master-data-services.md)|  
-|Создание определяемых пользователем метаданных|Для описания объектов модели в модель добавляются пользовательские метаданные. Эти метаданные могут включать владельца объекта или источник данных.|[Метаданные (службы Master Data Services)](../Topic/Metadata%20\(Master%20Data%20Services\).md)|  
+|Создание определяемых пользователем метаданных|Для описания объектов модели в модель добавляются пользовательские метаданные. Эти метаданные могут включать владельца объекта или источник данных.||  
 |Блокировка версии модели и назначение флага версии|Версия модели может блокироваться, чтобы запретить изменять элементы всем пользователям, кроме администраторов. После проверки данных версии на соответствие бизнес-правилам можно зафиксировать версию, чтобы запретить всем пользователям изменять элементы.<br /><br /> Создание и назначение флага версии модели. Флаги помогают пользователям и системам-подписчикам определять используемую версию модели.|[Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)<br /><br /> [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)<br /><br /> [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |Создание представлений подписки|Чтобы системы подписки использовали основные данные, нужно создать представления подписки, которые создают стандартные представления в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)<br /><br /> [Создание представления подписки для экспорта данных (службы Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Настройка разрешений для пользователей и групп|Разрешения для пользователей и групп нельзя копировать из тестовой в рабочую среду. Однако тестовую среду можно использовать для определения уровня безопасности, который необходимо будет использовать в производственной среде.|[Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)<br /><br /> [Добавление группы (службы Master Data Services)](../master-data-services/add-a-group-master-data-services.md)<br /><br /> [Добавление пользователя (службы Master Data Services)](../master-data-services/add-a-user-master-data-services.md)|  
@@ -72,3 +79,5 @@ caps.handback.revision: 27
  По окончании можно развернуть модель в рабочей среде с данными или без них. Дополнительные сведения см. в разделе [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md).  
   
   
+
+

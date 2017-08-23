@@ -1,32 +1,37 @@
 ---
-title: "Сопоставления параметров запросов с переменными в компонентах потока данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "запросы [службы Integration Services], сопоставление параметров"
-  - "параметры [службы Integration Services]"
-  - "сопоставление параметров запроса переменным [службы Integration Services]"
-  - "переменные [службы Integration Services], сопоставление параметров с"
+title: "Сопоставление параметров запроса с переменными в компонентах потока данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [Integration Services], parameter mapping
+- parameters [Integration Services]
+- mapping query parameters to variables [Integration Services]
+- variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Сопоставления параметров запросов с переменными в компонентах потока данных
+# <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Сопоставления параметров запросов с переменными в компонентах потока данных
   При настройке конфигурации источника OLE DB для использования параметризованных запросов можно сопоставить параметры с переменными.  
   
  В источнике OLE DB параметризованные запросы используются для фильтрации данных при подключении источника к источнику данных.  
   
-### Сопоставление параметра запроса с переменной  
+### <a name="to-map-a-query-parameter-to-a-variable"></a>Сопоставление параметра запроса с переменной  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 34
   
 7.  Нажмите **Параметры**.  
   
-8.  В диалоговом окне **Установка параметров запроса** сопоставьте каждый параметр в списке **Параметры** с переменной в списке **Переменные** или создайте переменную, щелкнув **\<Создать переменную>**. Нажмите кнопку **ОК**.  
+8.  В **Установка параметров запроса** диалоговое окно сопоставьте каждый параметр в **параметры** с переменной в **переменных** или создайте новую переменную, щелкнув  **\<создать переменную >**. Нажмите кнопку **ОК**.  
   
     > [!NOTE]  
     >  Для сопоставления доступны только системные и пользовательские переменные, находящиеся в области видимости данного пакета, родительского контейнера, такого как «цикл по каждому элементу», или задачи потока данных, содержащей компоненты потока данных, доступные для сопоставления. Переменная должна иметь тип данных, совместимый со столбцом в предложении WHERE, которому назначен параметр.  
@@ -51,7 +56,7 @@ caps.handback.revision: 34
   
 10. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Преобразование «Уточняющий запрос»](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   

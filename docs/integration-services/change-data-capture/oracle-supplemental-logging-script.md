@@ -1,29 +1,34 @@
 ---
-title: "Скрипт дополнительного журналирования Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Скрипт дополнительного журналирования Oracle | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Скрипт дополнительного журналирования Oracle
+# <a name="oracle-supplemental-logging-script"></a>Скрипт дополнительного журналирования Oracle
   В этом диалоговом окне отображается скрипт дополнительного журналирования Oracle.  
   
  При подготовке экземпляра CDC к использованию конструктор CDC создает скрипт для Oracle SQL, который настраивает дополнительное журналирование для отслеживаемых таблиц. Скрипт дополнительного журналирования настраивает Oracle таким образом, чтобы при обновлении определенной таблицы записи об изменениях, которые заносятся в журнал транзакций, содержали данные всех интересующих столбцов, а не только измененных.  
   
  В зависимости от действующих в организации политик Oracle DBA для выполнения скрипта дополнительного журналирования может потребоваться утверждение администратора базы данных Oracle.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  Ниже приведены поддерживаемые параметры выполнения скрипта.  
   
  **Выполнить скрипт**  
@@ -35,8 +40,8 @@ caps.handback.revision: 6
  **Копировать**  
  Копирует скрипт в буфер обмена. Когда все будет готово, скрипт дополнительного журналирования можно вставить в нужное место, если администратору базы данных Oracle необходимо ознакомиться с ним перед выполнением.  
   
-## См. также  
- [Как управлять экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+## <a name="see-also"></a>См. также  
+ [Управление экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Управление экземпляром CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   

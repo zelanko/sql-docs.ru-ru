@@ -1,34 +1,39 @@
 ---
-title: "Преобразование &#171;Экспорт столбца&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exportcolumntrans.f1"
-helpviewer_keywords: 
-  - "экспорт данных"
-  - "параметры дозаписи [службы Integration Services]"
-  - "преобразование «Экспорт столбца» [службы Integration Services]"
-  - "столбцы [службы Integration Services], экспорт"
-  - "вставка данных"
-  - "параметры усечения [службы Integration Services]"
+title: "Преобразование «Экспорт столбца» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exportcolumntrans.f1
+helpviewer_keywords:
+- exporting data
+- append options [Integration Services]
+- Export Column transformation [Integration Services]
+- columns [Integration Services], exporting
+- inserting data
+- truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование &#171;Экспорт столбца&#187;
+# <a name="export-column-transformation"></a>Преобразование «Экспорт столбца»
   Преобразование «Экспорт столбца» считывает данные из потока и вставляет их в файл. Например, если поток данных содержит сведения о продукте, такие как изображения каждого продукта, можно применить преобразование «Экспорт столбца» для сохранения изображений в файлы.  
   
-## Параметры присоединения и усечения  
+## <a name="append-and-truncate-options"></a>Параметры присоединения и усечения  
  Следующая таблица описывает, как изменение настроек присоединения и усечения влияет на результаты.  
   
 |Append|Усечение|Файл существует|Результаты|  
@@ -42,7 +47,7 @@ caps.handback.revision: 45
 |True|False|Да|Преобразование открывает файл и записывает данные в конец файла.|  
 |True|True|Да|Преобразованию не удается провести проверку времени разработки. Оба этих свойства не могут быть установлены для **true**.|  
   
-## Настройка преобразования «Экспорт столбца»  
+## <a name="configuration-of-the-export-column-transformation"></a>Настройка преобразования «Экспорт столбца»  
  Можно настроить преобразование «Экспорт столбца» следующим образом:  
   
 -   Обозначьте столбцы данных и столбцы, содержащие путь к файлам, в которые будут записаны данные.  
@@ -54,7 +59,7 @@ caps.handback.revision: 45
     > [!NOTE]  
     >  Отметка порядка байтов будет записана только в том случае, если данные не были добавлены в конец уже существующего файла и если эти данные типа DT_NTEXT.  
   
- Преобразование использует пару входных столбцов: первый содержит имя файла, второй — данные. Каждая строка в наборе данных может указывать отдельный файл. По мере обработки строк преобразованием данные записываются в указанный файл. Во время выполнения преобразование создает файлы, если они до этого не существовали, и записывает в них данные. Записываемые данные должны иметь тип DT_TEXT, DT_NTEXT или DT_IMAGE. Дополнительные сведения см. в статье [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Преобразование использует пару входных столбцов: первый содержит имя файла, второй — данные. Каждая строка в наборе данных может указывать отдельный файл. По мере обработки строк преобразованием данные записываются в указанный файл. Во время выполнения преобразование создает файлы, если они до этого не существовали, и записывает в них данные. Записываемые данные должны иметь тип DT_TEXT, DT_NTEXT или DT_IMAGE. Дополнительные сведения см. в статье [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Это преобразование имеет один вход, один выход и один выход ошибок.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 45
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

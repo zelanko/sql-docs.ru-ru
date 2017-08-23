@@ -1,24 +1,29 @@
 ---
-title: "ODBC-источник | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcsource.f1"
+title: "Источник ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa8fcf2545618602bcf9f574a52ba51d0074a850
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC-источник
+# <a name="odbc-source"></a>ODBC-источник
   Источник ODBC извлекает данные из базы данных с поддержкой ODBC с использованием таблицы базы данных, представления или инструкции SQL.  
   
  В источнике ODBC предусмотрены следующие режимы доступа к данным для извлечения данных.  
@@ -33,7 +38,7 @@ caps.handback.revision: 9
   
  Источник ODBC имеет один обычный вывод и один вывод ошибок.  
   
-## Обработка ошибок  
+## <a name="error-handling"></a>Обработка ошибок  
  Источник ODBC имеет вывод ошибок. Вывод ошибок компонента включает следующие выходные столбцы.  
   
 -   **Код ошибки**. Номер, который соответствует текущей ошибке. См. документацию для базы данных с поддержкой ODBC, которая используется для получения списка ошибок. Список кодов ошибок служб SSIS см. в «Справочнике по кодам ошибок и сообщениям служб SIS».  
@@ -44,36 +49,36 @@ caps.handback.revision: 9
   
  В зависимости от настройки поведения в случае ошибки, источник ODBC поддерживает возврат ошибок (преобразование данных, усечение), которые обнаруживаются в процессе извлечения в выводе ошибок. Дополнительные сведения см. в статье [Редактор назначения ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
-## Поддержка типов данных  
+## <a name="data-type-support"></a>Поддержка типов данных  
  Сведения о типах данных, поддерживаемых источником ODBC, см. в документе «Соединитель для ODBC» компании Attunity.  
   
-## Параметры извлечения  
- Источник ODBC работает в пакетном (**Batch**) или построчном (**Row-by-Row**) режиме. Используемый режим определяется свойством **FetchMethod** . Описания режимов приведены в следующем списке.  
+## <a name="extract-options"></a>Параметры извлечения  
+ Источник ODBC работает в пакетном ( **Batch** ) или построчном ( **Row-by-Row** ) режиме. Используемый режим определяется свойством **FetchMethod** . Описания режимов приведены в следующем списке.  
   
--   **Batch**: компонент предпринимает попытку использовать наиболее эффективный метод выборки на основе предполагаемых возможностей поставщика ODBC. Для наиболее современных поставщиков ODBC этим методом является SQLFetchScroll с привязкой массива (где размер массива определяется свойством **BatchSize**). Если выбран режим **Batch**, а поставщик не поддерживает этот способ выборки, назначение ODBC автоматически переключается на режим **Row-by-row**.  
+-   **Batch**: компонент предпринимает попытку использовать наиболее эффективный метод выборки на основе предполагаемых возможностей поставщика ODBC. Для наиболее современных поставщиков ODBC этим методом является SQLFetchScroll с привязкой массива (где размер массива определяется свойством **BatchSize** ). Если выбран режим **Batch** , а поставщик не поддерживает этот способ выборки, назначение ODBC автоматически переключается на режим **Row-by-row** .  
   
 -   **Row-by Row**: компонент использует метод SQLFetch для получения строк друг за другом.  
   
  Дополнительные сведения о свойстве **FetchMethod** см. в разделе [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## Параллелизм  
+## <a name="parallelism"></a>Параллелизм  
  Какие-либо ограничения на количество исходных компонентов ODBC, которые могут запускаться параллельно по отношению к одной и той же таблице или к разным таблицам, на одном и том же компьютере или на разных компьютерах (кроме обычных глобальных предельных параметров сеанса), отсутствуют.  
   
  Однако количество параллельных соединений через поставщика может быть ограничено в используемом поставщике ODBC. Эти ограничения задают количество параллельных экземпляров, которые могут поддерживаться для источника ODBC. Разработчик служб SSIS должен знать ограничения всех используемых поставщиков ODBC и учитывать их при построении пакетов служб SSIS.  
   
-## Устранение нарушений в работе источника ODBC  
+## <a name="troubleshooting-the-odbc-source"></a>Устранение нарушений в работе источника ODBC  
  Предусмотрена возможность вести журнал вызовов к внешним поставщикам данных, выполняемых источником ODBC. Эту возможность ведения журнала можно использовать для устранения нарушений, связанных с загрузкой данных из внешних источников данных, выполняемой источником ODBC. Для ведения журнала вызовов к внешним поставщикам данных, выполняемых источником ODBC, включите трассировку диспетчера драйвера ODBC. Дополнительные сведения см. в документации Майкрософт по теме *Как формировать трассировку ODBC с помощью администратора источника данных ODBC*.  
   
-## Настройка ODBC-источника  
+## <a name="configuring-the-odbc-source"></a>Настройка ODBC-источника  
  Источник ODBC вы можете настраивать программным путем или с помощью конструктора SSIS.  
   
  Дополнительные сведения см. в одном из следующих разделов:  
   
--   [Редактор источника ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+-   [Редактор источника ODBC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника ODBC (страница "Столбцы")](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
+-   [Редактор источника ODBC &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [Редактор источника ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+-   [Редактор источника ODBC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые могут быть заданы программным путем.  
   
@@ -83,16 +88,16 @@ caps.handback.revision: 9
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне «Расширенный редактор», см. в разделе [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
--   [Редактор источника ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+-   [Редактор источника ODBC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
--   [Редактор источника ODBC (страница "Столбцы")](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
+-   [Редактор источника ODBC &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [Редактор источника ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+-   [Редактор источника ODBC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
 -   [Извлечение данных с помощью источника ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [Пользовательские свойства источника «ODBC»](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [Пользовательские свойства источника ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
   

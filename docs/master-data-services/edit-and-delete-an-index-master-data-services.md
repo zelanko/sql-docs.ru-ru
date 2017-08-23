@@ -1,26 +1,31 @@
 ---
-title: "Изменение и удаление индекса (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение и удаление индекса (Master Data Services) | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a724dd8d312d75ddb3325e61c7d32c12ef78c606
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Изменение и удаление индекса (Master Data Services)
+# <a name="edit-and-delete-an-index-master-data-services"></a>Изменение и удаление индекса (Master Data Services)
   Индекс, созданный для атрибутов, можно изменить или удалить.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -39,9 +44,9 @@ caps.handback.revision: 5
   
 5.  На странице **Manage Index** (Управление индексом) выберите индекс, который нужно изменить, и щелкните **Изменить**.  
   
-6.  Введите новое имя индекса в поле **Имя**.  
+6.  Введите новое имя индекса в поле **Имя** .  
   
-7.  Установите или снимите флажок **IsUnique**.  
+7.  Установите или снимите флажок **IsUnique** .  
   
 8.  Измените список назначенных атрибутов, добавив атрибуты в список или удалив их оттуда.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 5
   
 5.  В окнах подтверждения нажимайте кнопку **ОК**.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Создание индекса (Master Data Services)](../master-data-services/create-an-index-master-data-services.md)   
  [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   

@@ -1,32 +1,37 @@
 ---
-title: "Преобразование &#171;Выборка строк&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rowsamplingtrans.f1"
-helpviewer_keywords: 
-  - "случайные начальные значения [службы Integration Services]"
-  - "начальные значения"
-  - "случайная выборка"
-  - "образцы наборов данных [службы Integration Services]"
-  - "преобразование «Выборка строк»"
-  - "пакеты [службы Integration Services], образцы"
-  - "наборы данных пакеты [службы Integration Services], образцы"
+title: "«Выборка строк» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rowsamplingtrans.f1
+helpviewer_keywords:
+- sampling seeds [Integration Services]
+- random seeds
+- random sampling
+- sample data sets [Integration Services]
+- Row Sampling transformation
+- packages [Integration Services], samples
+- datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7726faae94381cab80d6f1dc0a01a1cf56d34550
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование &#171;Выборка строк&#187;
+# <a name="row-sampling-transformation"></a>преобразование «Выборка строк»
   Преобразование «Выборка строк» используется для получения случайно выбранного подмножества входного набора данных. Можно указать точный размер получаемого образца и задать начальное значение для генератора случайных чисел.  
   
  Случайная выборка может применяться в различных ситуациях. Например, если в какой-то компании требуется случайным образом выбрать 50 сотрудников для получения призов в лотерее, можно воспользоваться преобразованием «Выборка строк» в базе данных сотрудников, чтобы сформировать точное число победителей.  
@@ -35,7 +40,7 @@ caps.handback.revision: 43
   
  Это преобразование имеет сходство с преобразованием «Процентная выборка», которое создает набор данных с помощью выбора количества строк, заданного в процентах. См. раздел [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md).  
   
-## Настройка преобразования «Выборка строк»  
+## <a name="configuring-the-row-sampling-transformation"></a>Настройка преобразования «Выборка строк»  
  Преобразование «Выборка строк» создает набор данных с помощью извлечения заданного количества строк со входа преобразования. Поскольку выбор строк со входа преобразования происходит случайным образом, результирующая выборка содержит репрезентативный набор входных данных. Можно задать начальное значение генератора случайных чисел, чтобы изменить выбор строк преобразованием.  
   
  Использование одного и того же начального значения на одном и том же входе преобразования всегда приводит к созданию одной и той же выходной выборки. Если начальное значение для создания случайного номера не указано, преобразование использует счетчик тактов операционной системы. Поэтому для проверки результатов преобразования во время разработки и тестирования пакета нужно использовать одно и то же начальное значение, которое изменяется на случайное, когда пакет выпускается в производственную среду.  
@@ -50,13 +55,13 @@ caps.handback.revision: 43
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Дополнительные сведения об установке свойств см. в разделе:  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "! (логическое НЕ) (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "логическое НЕ (!)"
-  - "! (Логическое НЕ)"
+title: "! (Логическое не) (Выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logical Not (!)
+- '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 003e0fcc98a267342aaf7c77bf344cdfdc71880b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# ! (логическое НЕ) (выражение служб SSIS)
+# <a name="-logical-not-ssis-expression"></a>! (логическое НЕ) (выражение служб SSIS)
   Инвертирует логический операнд.  
   
 > [!NOTE]  
 >  ! Оператор «!» не может использоваться вместе с другими операторами. Например, нельзя объединить оператор «!» и оператор > в один оператор «!>» .  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -33,14 +38,14 @@ caps.handback.revision: 35
   
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *boolean_expression*  
  Является любое допустимое выражение, результатом которого является логическое значение. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Следующая таблица демонстрирует результаты выполнения «!» операции.  
   
 |Исходное логическое выражение|После выполнения оператора «!» оператор|  
@@ -49,7 +54,7 @@ caps.handback.revision: 35
 |NULL|NULL|  
 |FALSE|TRUE|  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В результате выполнения данного выражения получается значение FALSE, если столбец **Color** имеет значение "red".  
   
 ```  
@@ -62,8 +67,8 @@ caps.handback.revision: 35
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## См. также  
- [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

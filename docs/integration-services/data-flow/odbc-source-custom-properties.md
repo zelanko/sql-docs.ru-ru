@@ -1,22 +1,27 @@
 ---
-title: "Пользовательские свойства источника &#171;ODBC&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские свойства источника ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Пользовательские свойства источника &#171;ODBC&#187;
+# <a name="odbc-source-custom-properties"></a>Пользовательские свойства источника «ODBC»
   В следующей таблице описаны пользовательские свойства источника «ODBC». Все свойства могут быть заданы на основе выражений свойств служб SSIS.  
   
 |Имя свойства|Тип данных|Description|  
@@ -35,8 +40,8 @@ caps.handback.revision: 7
 |LobChunckSize|Целочисленный|Распределение размера фрагментов данных для столбцов LOB.|  
 ||||  
   
-## См. также  
- [ODBC-источник](../../integration-services/data-flow/odbc-source.md)   
- [Редактор источника ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+## <a name="see-also"></a>См. также  
+ [Источник ODBC](../../integration-services/data-flow/odbc-source.md)   
+ [Редактор источника ODBC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   

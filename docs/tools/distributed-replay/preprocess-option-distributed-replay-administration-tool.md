@@ -1,29 +1,34 @@
 ---
-title: "Параметр предварительной обработки (средство администрирования распределенного воспроизведения) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Параметр предварительной обработки (средство администрирования распределенного воспроизведения) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 313a794c807faa3adaf95e902526a9ac9504be80
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
-  Средство администрирования программы распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (**DReplay.exe**) представляет собой программу командной строки, которая служит для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
+# <a name="preprocess-option-distributed-replay-administration-tool"></a>Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
+  Средство администрирования программы распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( **DReplay.exe**) представляет собой программу командной строки, которая служит для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
   
  Параметр **preprocess** запускает предварительную обработку. На этом этапе контроллер подготавливает для воспроизведения на целевом сервере входные данные трассировки.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.png "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования см. в разделе [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -31,7 +36,7 @@ dreplay preprocess [-m controller] -i input_trace_file
     -d controller_working_dir [-c config_file] [-f status_interval]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  **-m** *controller*  
  Задает имя компьютера для контроллера. Локальный компьютер можно указать как «`localhost`» или «`.`».  
   
@@ -63,15 +68,15 @@ dreplay preprocess [-m controller] -i input_trace_file
   
  Если фильтрация не требуется или не нужно изменять максимальное время простоя, то указывать параметр **-c** не обязательно.  
   
- Без параметра **-c** используется файл конфигурации предварительной обработки по умолчанию — `DReplay.exe.preprocess.config`.  
+ Без параметра **-c** используется файл конфигурации предварительной обработки по умолчанию — `DReplay.exe.preprocess.config`.  
   
  **-f** *status_interval*  
  Указывает частоту (в секундах) отображения сообщений о состоянии.  
   
  Если параметр **-f** не задан, интервал по умолчанию составляет 30 секунд.  
   
-## Примеры  
- В этом примере предварительная подготовка запускается со всеми параметрами по умолчанию. Значение `localhost` указывает, что служба контроллера запущена на том же компьютере, что и средство администрирования. Параметр *input_trace_file* задает расположение входных данных трассировки — `c:\mytrace.trc`. Так как фильтрация файлов трассировки не используется, указывать параметр **-c** не обязательно.  
+## <a name="examples"></a>Примеры  
+ В этом примере предварительная подготовка запускается со всеми параметрами по умолчанию. Значение `localhost` указывает, что служба контроллера запущена на том же компьютере, что и средство администрирования. Параметр *input_trace_file* задает расположение входных данных трассировки — `c:\mytrace.trc`. Так как фильтрация файлов трассировки не используется, указывать параметр **-c** не обязательно.  
   
 ```  
 dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
@@ -97,12 +102,12 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
 </Options>  
 ```  
   
-## Разрешения  
+## <a name="permissions"></a>Разрешения  
  Средство администрирования должно запускаться как интерактивный пользователь, с учетной записью локального пользователя или пользователя домена. Для использования учетной записи локального пользователя средство администрирования и контроллер должны быть запущены на одном компьютере.  
   
  Дополнительные сведения см. в статье [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Подготовка входных данных трассировки](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  

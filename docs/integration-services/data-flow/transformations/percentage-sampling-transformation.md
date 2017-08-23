@@ -1,32 +1,37 @@
 ---
-title: "Преобразование &#171;Процентная выборка&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.percentagesamplingtrans.f1"
-helpviewer_keywords: 
-  - "тестирование моделей интеллектуального анализа данных"
-  - "случайные начальные значения [службы Integration Services]"
-  - "интеллектуальный анализ данных [службы Analysis Services], образцы наборов данных"
-  - "преобразование «Процентная выборка»"
-  - "образцы наборов данных [службы Integration Services]"
-  - "наборы данных [службы Integration Services], образец"
-  - "обучение моделей интеллектуального анализа данных"
+title: "Преобразование «Процентная выборка» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.percentagesamplingtrans.f1
+helpviewer_keywords:
+- testing mining models
+- sampling seeds [Integration Services]
+- data mining [Analysis Services], sample data sets
+- Percentage Sampling transformation
+- sample data sets [Integration Services]
+- datasets [Integration Services], sample
+- training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b304a50eeec9908427b7fd42319b88d78b151ff0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование &#171;Процентная выборка&#187;
+# <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
   Преобразование «Процентная выборка» создает образец набора данных извлечением некоторого процента входных строк преобразования. Данные выборки извлекаются случайным образом из входа преобразования. За счет этого достигается репрезентативность выборки.  
   
 > [!NOTE]  
@@ -36,7 +41,7 @@ caps.handback.revision: 46
   
  Преобразование «Процентная выборка» также полезно для создания образца набора данных, используемого при разработке пакета. Применяя преобразование «Процентная выборка» к потоку данных, можно уменьшить размер набора данных, сохраняя его статистические характеристики. Тестовый пакет можно выполнить быстрее, потому что он содержит меньший, но репрезентативный набор данных.  
   
-## Настройка преобразования «Процентная выборка»  
+## <a name="configuration-the-percentage-sampling-transformation"></a>Настройка преобразования «Процентная выборка»  
  Можно изменить начальное значение генератора случайных чисел, используемого для выборки строк. Если всегда использовать одинаковое начальное значение для генератора, то результирующая выборка, при прочих равных условиях, будет тоже всегда одинаковая. Если начальное значение для создания случайного номера не указано, преобразование использует счетчик тактов операционной системы. Поэтому можно выбрать постоянное начальное значение для генератора во время отладки и случайное значение при передаче пакета в производственную эксплуатацию.  
   
  Это преобразование немного схоже с преобразованием «Выборка строк», которое создает выборку с заданным количеством строк. Дополнительные сведения см. в статье [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
@@ -51,7 +56,7 @@ caps.handback.revision: 46
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](../Topic/Common%20Properties.md)  
+-   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

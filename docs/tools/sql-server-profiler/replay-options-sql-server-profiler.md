@@ -1,27 +1,32 @@
 ---
-title: "Параметры воспроизведения (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "трассировки [SQL Server], воспроизведение"
-  - "воспроизведение трассировок"
-  - "монитор работоспособности [SQL Server]"
-  - "диалоговое окно «Конфигурация воспроизведения»"
+title: "Параметры (SQL Server Profiler) воспроизведения | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], replaying
+- replaying traces
+- health monitor [SQL Server]
+- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Параметры воспроизведения (приложение SQL Server Profiler)
+# <a name="replay-options-sql-server-profiler"></a>Параметры воспроизведения (приложение SQL Server Profiler)
   Перед воспроизведением захваченной трассировки с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]задайте параметры воспроизведения в диалоговом окне **Конфигурация воспроизведения** . Чтобы открыть его, откройте файл трассировки воспроизведения в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]и в меню **Воспроизведение** выберите **Запуск**. Сведения о разрешениях, необходимых для воспроизведения трассировки, см. в разделе [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  В этом разделе приводится описание параметров, которые задаются в диалоговом окне **Конфигурация воспроизведения** .  
@@ -29,9 +34,9 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Для воспроизведения ресурсоемких приложений OLTP (с множеством одновременных активных соединений или высокой пропускной способностью) рекомендуется пользоваться программой распределенного воспроизведения. Программа распределенного воспроизведения воспроизводит данные трассировки с нескольких компьютеров и лучше имитирует важную рабочую нагрузку. Дополнительные сведения см. в статье [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
-## Основные параметры воспроизведения  
+## <a name="basic-replay-options"></a>Основные параметры воспроизведения  
  **Сервер воспроизведения**  
- Сервер — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором будет воспроизведена трассировка. Сервер должен отвечать требованиям воспроизведения, описанным в разделе [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
+ Сервер — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором будет воспроизведена трассировка. Сервер должен отвечать требованиям воспроизведения, описанным в разделе [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
  **Сохранить в файл**  
  Выходной файл, куда будут записываться результаты воспроизведения трассировки для дальнейшего просмотра. По умолчанию приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает только результаты трассировки, воспроизводящейся на экране.  
@@ -54,7 +59,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  Для достижения наилучшей производительности рекомендуется воспроизводить события с помощью нескольких потоков и не отображать результаты воспроизведения.  
   
-## Дополнительные параметры воспроизведения  
+## <a name="advanced-replay-options"></a>Дополнительные параметры воспроизведения  
  **Воспроизвести системные SPID**  
  Воспроизвести все системные SPID. Это параметр по умолчанию.  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 17
  **Включить монитор заблокированных процессов SQL Server**  
  Как часто монитор заблокированных процессов будет искать заблокированные или блокирующие процессы.  
   
-## О мониторе исправности  
+## <a name="about-the-health-monitor"></a>О мониторе исправности  
  Монитор исправности — это поток приложения, который контролирует имитируемые процессы воспроизведения трассировки и завершает их, если во время воспроизведения они блокируются. На вкладке **Дополнительные параметры воспроизведения** диалогового окна **Конфигурация воспроизведения** можно указать, как долго (в секундах) монитор исправности будет ждать перед прекращением заблокированного процесса (**Интервал ожидания монитора исправности**). Если задать этому параметру значение 0, монитор исправности никогда не будет прекращать имитируемые процессы воспроизведения трассировки.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Воспроизведение трассировок](../../tools/sql-server-profiler/replay-traces.md)   
  [Требования к воспроизведению](../../tools/sql-server-profiler/replay-requirements.md)   
- [Вопросы воспроизведения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Вопросы воспроизведения трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

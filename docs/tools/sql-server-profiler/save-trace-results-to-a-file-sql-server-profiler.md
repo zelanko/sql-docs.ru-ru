@@ -1,28 +1,33 @@
 ---
-title: "сохранить результаты трассировки в файл (приложение SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сохранение трассировок"
-  - "трассировки [SQL Server], сохранение"
+title: "Сохранение результатов трассировки в файл (приложение SQL Server Profiler) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- saving traces
+- traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d246e703f40e1e617118c35a655c0b999e4ff1d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# сохранить результаты трассировки в файл (приложение SQL Server Profiler)
+# <a name="save-trace-results-to-a-file-sql-server-profiler"></a>сохранить результаты трассировки в файл (приложение SQL Server Profiler)
   В данном разделе описано сохранение результатов трассировки в файл с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
-### Сохранение результатов трассировки в файл  
+### <a name="to-save-trace-results-to-a-file"></a>Сохранение результатов трассировки в файл  
   
 1.  В меню **Файл** выберите пункт **Создать трассировку**, а затем подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 23
     > [!NOTE]  
     >  Убедитесь, что служба SQL Server обладает достаточными разрешениями для записи в файл в указанном каталоге.  
   
-5.  В диалоговом окне **Свойства трассировки** введите максимальный размер файла в поле **Максимальный размер файла (МБ)**. Значение по умолчанию — 5 мегабайт.  
+5.  В диалоговом окне **Свойства трассировки** введите максимальный размер файла в поле **Максимальный размер файла (МБ)** . Значение по умолчанию — 5 мегабайт.  
   
 6.  При необходимости укажите следующие необязательные параметры:  
   
@@ -51,9 +56,9 @@ caps.handback.revision: 23
     -   Установите флажок **Данные трассировки серверных процессов** , чтобы гарантировать, что сервер сохранит данные обо всех событиях трассировки.  
   
         > [!NOTE]  
-        >  Когда флажок **Данные трассировки серверных процессов** снят, сервер не записывает события, если запись событий привела бы к существенному понижению производительности.  
+        >  Когда флажок **Данные трассировки серверных процессов**снят, сервер не записывает события, если запись событий привела бы к существенному понижению производительности.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

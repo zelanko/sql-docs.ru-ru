@@ -1,45 +1,50 @@
 ---
-title: "GETDATE (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "текущая дата"
-  - "GETDATE, функция"
-  - "даты [службы Integration Services], GETDATE"
+title: "GETDATE (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- current date
+- GETDATE function
+- dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e792dc04b4bb115dc3e9dff840da1690395862e9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# GETDATE (выражение служб SSIS)
+# <a name="getdate-ssis-expression"></a>GETDATE (выражение служб SSIS)
   Возвращает текущее системное время в формате DT_DBTIMESTAMP. Функция GETDATE не имеет аргументов.  
   
 > [!NOTE]  
 >  Длина строки результата, возвращаемой функцией GETDATE, равна 29 символам.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 GETDATE()  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  Нет  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_DBTIMESTAMP  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  Этот пример возвращает текущий год.  
   
 ```  
@@ -58,8 +63,8 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## См. также раздел  
- [GETUTCDATE (выражение служб SSIS)](../../integration-services/expressions/getutcdate-ssis-expression.md)   
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также раздел  
+ [GETUTCDATE &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Преобразование &#171;Уточняющий запрос&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptrans.f1"
-helpviewer_keywords: 
-  - "Преобразование «Уточняющий запрос»"
-  - "соединение столбцов [службы Integration Services]"
-  - "кэш [службы Integration Services]"
-  - "точно соответствовать [службы Integration Services]"
-  - "уточняющие запросы [службы Integration Services]"
-  - "точные соответствия [службы Integration Services]"
+title: "Преобразование «Уточняющий запрос» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptrans.f1
+helpviewer_keywords:
+- Lookup transformation
+- joining columns [Integration Services]
+- cache [Integration Services]
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 106
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 106
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Преобразование &#171;Уточняющий запрос&#187;
+# <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
   
  Эталонным набором данных может быть файл кэша, существующая таблица или представление, новая таблица или результат SQL-запроса. Преобразование «Уточняющий запрос» использует для подключения к эталонному набору данных диспетчер соединений OLE DB или диспетчер соединений с кэшем. Дополнительные сведения см. в разделах [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) и [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
@@ -74,14 +79,14 @@ caps.handback.revision: 106
   
 -   Вывод ошибок на выходе.  
   
-## Кэширование эталонного набора данных  
+## <a name="caching-the-reference-dataset"></a>Кэширование эталонного набора данных  
  В кэше в памяти хранится эталонный набор данных и хэш-таблица, индексирующая данные. Кэш остается в памяти, пока не завершится выполнение пакета. Можно сохранить кэш в кэш-файле (CAW).  
   
  Если кэш был сохранен в файл, система загружает его быстрее. Это повышает производительность преобразования «Уточняющий запрос» и пакета. Помните, что при использовании кэш-файла работа идет с данными, которые менее актуальны, чем данные в базе данных.  
   
  Сохранение кэша в файл имеет следующие преимущества.  
   
--   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе *** [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md) ***.***  
+-   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе *** [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
   
 -   Развертывание кэш-файла с пакетом. ***Затем эти данные можно использовать на нескольких компьютерах.*** Дополнительные сведения см. в разделе [Создание или развертывание кэша для преобразования "Уточняющий запрос"](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -112,18 +117,18 @@ caps.handback.revision: 106
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] различается способ сравнения строк. Если преобразование «Уточняющий запрос» было настроено для загрузки эталонного набора данных в кэш до своего запуска, службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] проводят сравнение уточняющего запроса в кэше. В противном случае операция уточняющего запроса использует параметризованную инструкцию SQL, а [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] производит сравнение уточняющего запроса. Это означает, что преобразование «Уточняющий запрос» может возвращать различное количество результатов поиска из одной и той же таблицы подстановки в зависимости от типа кэша.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения см. в следующих разделах.  
   
 -   [Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)  
+-   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - ole db connection manager.md)  
+-   [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
 -   Видеоролик [Как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](http://go.microsoft.com/fwlink/?LinkId=131031)на сайте msdn.microsoft.com  
   
@@ -135,7 +140,7 @@ caps.handback.revision: 106
   
      Дополнительные сведения об установке образцов продукта и баз данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] см. в разделе [Образцы продукта служб SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Преобразование «Нечеткий уточняющий запрос»](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Преобразование «Уточняющий запрос термина»](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   

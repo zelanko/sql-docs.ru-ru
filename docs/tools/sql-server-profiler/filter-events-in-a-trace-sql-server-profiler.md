@@ -1,31 +1,36 @@
 ---
-title: "фильтровать события в трассировке (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "фильтры [SQL Server], трассировки"
-  - "трассировки [SQL Server], фильтры"
-  - "трассировки [SQL Server], события"
+title: "Фильтрация событий в трассировке (приложение SQL Server Profiler) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], traces
+- traces [SQL Server], filters
+- traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 327577ab8656b2af5894c38676c200ea4095edf4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# фильтровать события в трассировке (SQL Server Profiler)
+# <a name="filter-events-in-a-trace-sql-server-profiler"></a>фильтровать события в трассировке (SQL Server Profiler)
   Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
   
  Фильтры для определений трассировки добавляются на вкладке **Выбор событий** в диалоговом окне **Свойства трассировки** или **Свойства шаблона трассировки** .  
   
-### Фильтрация событий в трассировке  
+### <a name="to-filter-events-in-a-trace"></a>Фильтрация событий в трассировке  
   
 1.  В диалоговом окне **Свойства трассировки** или **Свойства шаблона трассировки** перейдите на вкладку **Выбор событий** .  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 26
   
 2.  Выберите пункт **Фильтры столбцов.**  
   
-     Открывается диалоговое окно **Изменение фильтра**. Окно **Изменение фильтра** содержит список операторов сравнения, которые можно использовать для фильтрации событий в трассировке.  
+     Открывается диалоговое окно **Изменение фильтра**. Окно **Изменение фильтра**содержит список операторов сравнения, которые можно использовать для фильтрации событий в трассировке.  
   
 3.  Чтобы применить фильтр, щелкните оператор сравнения и введите необходимое значение.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 26
   
 -   Если события трассируются из программы **osql** или **sqlcmd** , то всегда добавляйте **%** к фильтрам для столбца данных **TextData** .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

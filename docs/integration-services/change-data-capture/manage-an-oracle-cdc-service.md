@@ -1,24 +1,29 @@
 ---
-title: "Управление службой CDC Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+title: "Управление службой CDC Oracle | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Управление службой CDC Oracle
+# <a name="manage-an-oracle-cdc-service"></a>Управление службой CDC Oracle
   Можно использовать консоль настройки службы CDC для управления конкретной службой CDC.  
   
  **Выбор службы CDC, с которой требуется выполнить действия**  
@@ -37,10 +42,10 @@ caps.handback.revision: 8
   
      Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> Что можно сделать с помощью службы CDC Service  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  При работе со службой CDC можно выполнять следующие действия.  
   
-### Удаление службы  
+### <a name="delete-the-service"></a>Удаление службы  
  На панели **Действия** в правой стороне консоли настройки службы CDC щелкните **Удалить** , чтобы удалить службу.  
   
  Можно также щелкнуть правой кнопкой мыши службу CDC, которую необходимо удалить, и выбрать команду **Удалить**.  
@@ -51,12 +56,12 @@ caps.handback.revision: 8
   
  Дополнительные сведения о вводе данных в диалоговом окне «Подключение к SQL Server» см. в разделе [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md).  
   
-### Изменение свойств службы CDC  
+### <a name="edit-the-cdc-service-properties"></a>Изменение свойств службы CDC  
  На панели **Действия** в правой стороне консоли настройки службы CDC щелкните пункт **Свойства**.  
   
  Также можно щелкнуть правой кнопкой мыши службу CDC, свойства которой требуется изменить, и выбрать команду **Свойства**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Как управлять локальной службой CDC](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

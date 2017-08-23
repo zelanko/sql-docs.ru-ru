@@ -1,28 +1,33 @@
 ---
-title: "- (инверсия) (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "- (отрицательное значение)"
-  - "оператор «отрицательное значение» (-)"
+title: "- (Инверсия) (Выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- '- (negative)'
+- negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf561a2e4533f47e7bf6219e141c995ad4c2e60e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# - (инверсия) (выражение служб SSIS)
+# <a name="--negate-ssis-expression"></a>- (инверсия) (выражение служб SSIS)
   Инвертирует числовое выражение.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -30,22 +35,22 @@ caps.handback.revision: 33
   
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
  Любое допустимое выражение любого числового типа данных. Поддерживаются только типы данных со знаком. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  Возвращает тип данных *numeric_expression*.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В этом примере знак переменной **Counter** изменяется на противоположный, и к ней прибавляется число 50.  
   
 ```  
 -@Counter + 50  
 ```  
   
-## См. также  
- [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

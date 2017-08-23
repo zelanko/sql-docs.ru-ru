@@ -1,27 +1,32 @@
 ---
-title: "Изменение свойств таблицы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "editTabProps"
+title: "Изменение свойств таблицы | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5213e0c5757afd3a74c8b76f43bf1a2c88ced7e4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Изменение свойств таблицы
+# <a name="edit-the-table-properties"></a>Изменение свойств таблицы
   Это диалоговое окно служит для изменения столбцов из выбранной таблицы, для которой производится отслеживание изменений. Можно также изменить **Роль безопасности** и **Экземпляр отслеживания** .  
   
-### Изменение столбцов, включаемых в экземпляр CDC  
+### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>Изменение столбцов, включаемых в экземпляр CDC  
   
 1.  Выполните одно из следующих действий (или оба).  
   
@@ -29,11 +34,11 @@ caps.handback.revision: 8
   
     -   Снимите флажки для тех столбцов, которые необходимо исключить.  
   
-### Изменение роли безопасности  
+### <a name="to-edit-the-security-role"></a>Изменение роли безопасности  
   
 1.  Введите новое имя или измените имя роли безопасности в поле **Роль безопасности** .  
   
-### Создание нового экземпляра отслеживания  
+### <a name="to-create-a-new-capture-instance"></a>Создание нового экземпляра отслеживания  
   
 1.  В разделе **Роль безопасности** введите имя экземпляра отслеживания в поле **Имя** . По умолчанию в этом поле указано имя текущего экземпляра отслеживания, в конец которого добавляется суффикс **_NEW** (например, **старый_экземпляр_NEW**).  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 8
   
  После окончания ввода данных в этом диалоговом окне нажмите кнопку **ОК** , чтобы принять изменения.  
   
-## См. также  
- [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Внесение изменений в выбранные для отслеживания изменений таблицы](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+## <a name="see-also"></a>См. также  
+ [Изменение свойств экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [Внесение изменений таблицы, выбранные для отслеживания изменений](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

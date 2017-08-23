@@ -1,22 +1,27 @@
 ---
-title: "Пользовательские свойства необработанного файла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские свойства необработанного файла | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a364ae62ebc8823f9d57fb44ef99b7b14469c608
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Пользовательские свойства необработанного файла
+# <a name="raw-file-custom-properties"></a>Пользовательские свойства необработанного файла
   **Пользовательские свойства источника**  
   
  Источник «Необработанный файл» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
@@ -51,7 +56,7 @@ caps.handback.revision: 6
   
  Дополнительные сведения см. в статье [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
-## См. также  
- [Общие свойства](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>См. также  
+ [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

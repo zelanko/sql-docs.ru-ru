@@ -1,47 +1,52 @@
 ---
-title: "LOG (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "десятичные логарифмы"
-  - "LOG, функция"
+title: "LOG (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- base-10 logarithms
+- LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 855937a74d16d811a6a97694fc9d32b6beb200ea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# LOG (выражение служб SSIS)
+# <a name="log-ssis-expression"></a>LOG (выражение служб SSIS)
   Возвращает десятичный логарифм числового выражения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 LOG(numeric_expression)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
  Допустимое ненулевое и неотрицательное числовое выражение.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_R8  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Перед вычислением логарифма аргумент *numeric_expression* приводится к типу DT_R8. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Если вычисленное значение *numeric_expression* является нулем или отрицательным значением, возвращается результат NULL.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В этом примере используется числовой литерал. Функция возвращает значение 1,988291341907488.  
   
 ```  
@@ -60,9 +65,9 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## См. также  
- [EXP (выражение служб SSIS)](../../integration-services/expressions/exp-ssis-expression.md)   
- [LN (выражение служб SSIS)](../../integration-services/expressions/ln-ssis-expression.md)   
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [EXP &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/exp-ssis-expression.md)   
+ [LN &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/ln-ssis-expression.md)   
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

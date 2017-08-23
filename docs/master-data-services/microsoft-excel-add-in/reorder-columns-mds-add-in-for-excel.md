@@ -1,40 +1,45 @@
 ---
-title: "Переупорядочение порядка столбцов (надстройка MDS для Excel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение порядка столбцов (надстройка MDS для Excel) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b13f3c630f9f00910bf4b6e99d4d29fde3ab04fd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Переупорядочение порядка столбцов (надстройка MDS для Excel)
+# <a name="reorder-columns-mds-add-in-for-excel"></a>Переупорядочение порядка столбцов (надстройка MDS для Excel)
   В службах [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно переупорядочить столбцы, отфильтровав список перед загрузкой.  
   
  При переупорядочивании атрибутов в диалоговом окне **Фильтр** данные загружаются в Excel в новом порядке. Однако при следующей фильтрации данных атрибутов будет использоваться порядок, заданный первоначально. Чтобы изменить порядок окончательно, администратор должен сделать это в области **Администрирование системы** диспетчера основных данных. Дополнительные сведения см. в статье [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md).  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
-### Переупорядочение столбцов, управляемых MDS  
+### <a name="to-reorder-mds-managed-columns"></a>Переупорядочение столбцов, управляемых MDS  
   
-1.  Откройте Excel и на вкладке **Основные данные** установите соединение с репозиторием MDS. Дополнительные сведения см. в разделе [соединение с репозиторием MDS & #40; Надстройка MDS для Excel & #41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md).  
+1.  Откройте Excel и на вкладке **Основные данные** установите соединение с репозиторием MDS. Дополнительные сведения см. в разделе [Соединение с репозиторием MDS (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md).  
   
 2.  На панели **Обозреватель основных данных** выберите модель и версию. Заполняется список сущностей.  
   
     -   Если панель **Обозреватель основных данных** не видна, в группе **Соединение и загрузка** нажмите **Показать обозреватель**.  
   
-    -   Если **Обозреватель основных данных** области отключен, поскольку существующий лист уже содержит данные, управляемые MDS. Чтобы включить эту панель, откройте новый лист.  
+    -   Если панель **Обозреватель основных данных** отключена, то причина этого заключается в том, что существующий лист уже содержит данные, управляемые MDS. Чтобы включить эту панель, откройте новый лист.  
   
 3.  На панели **Обозреватель основных данных** щелкните сущность.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 7
   
 8.  Нажмите кнопку **Загрузить данные**. Лист заполняется данными, управляемыми MDS, а столбцы отображаются в указанном вами порядке.  
   
-## См. также:  
- [Обзор: Экспорт данных в Excel и #40; Надстройка MDS для Excel & #41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>См. также:  
+ [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

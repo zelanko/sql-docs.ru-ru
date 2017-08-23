@@ -1,42 +1,58 @@
 ---
-title: "Общие сведения о безопасности (службы Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пакеты служб SSIS, безопасность"
-  - "службы Integration Services, безопасность"
-  - "безопасность [службы Integration Services], о безопасности"
-  - "пароли [службы Integration Services]"
-  - "пакеты [службы Integration Services], безопасность"
-  - "службы SQL Server Integration Services, безопасность"
-  - "службы SSIS, безопасность"
-  - "пакеты служб Integration Services, безопасность"
-  - "пакеты служб SQL Server Integration Services, безопасность"
+title: "Общие сведения о безопасности (службы Integration Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SSIS packages, security
+- Integration Services, security
+- security [Integration Services], about security
+- passwords [Integration Services]
+- packages [Integration Services], security
+- SQL Server Integration Services, security
+- SSIS, security
+- Integration Services packages, security
+- SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 caps.latest.revision: 73
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: adc486a9655f8ddf394a371efa9da793e2fa4728
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Общие сведения о безопасности (службы Integration Services)
+# <a name="security-overview-integration-services"></a>Общие сведения о безопасности (службы Integration Services)
   Безопасность служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обеспечивается несколькими уровнями защиты, которые составляют насыщенную и гибкую среду безопасности. Эти уровни безопасности включают в себя использование цифровых подписей, свойств уровня пакетов, ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и разрешений операционной системы. Большинство этих функций безопасности относятся к категории управления доступом и удостоверениями.  
+
+## <a name="threat-and-vulnerability-mitigation"></a>Предотвращение угроз и уязвимости для безопасности
+  Хотя службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают разнообразные механизмы защиты, пакеты и файлы, создаваемые и используемые пакетами, имеют уязвимые места, которыми может воспользоваться злоумышленник.  
   
-## Функции управления удостоверениями  
+ В следующей таблице описаны опасности и упреждающие шаги, которые уменьшают риск.  
+  
+|Угроза или уязвимость|Определение|Меры по снижению риска|  
+|-----------------------------|----------------|----------------|  
+|Источник пакета|Источник пакета — это человек или организация, создавшие пакет. Запуск пакета, источник которого неизвестен или не является надежным, может быть опасен.|Определить источник пакета по цифровой подписи и запускать только пакеты из известных, доверенных источников. Дополнительные сведения см. в разделе [Определение источника пакетов с помощью цифровых подписей](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).|  
+|Содержимое пакета|Содержимое пакета включает элементы пакета и их свойства. Свойства могут содержать конфиденциальные данные, например пароли или строки соединения. Элементы пакета, такие как инструкции SQL, могут предоставить информацию о структуре базы данных.|Управлять доступом к пакету и его содержимому с помощью следующих шагов.<br /><br /> 1. Управление доступом к самому пакету с помощью применения средств безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к пакетам, хранящимся в базе данных **msdb** экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Применение средств безопасности файловой системы (например списков управления доступом) для пакетов, хранящихся в файловой системе.<br /><br /> 2. Управление доступом к содержимому пакета с помощью установки уровня защиты пакета.<br /><br /> Дополнительные сведения см. в разделах [Общие сведения о безопасности (службы Integration Services)](../../integration-services/security/security-overview-integration-services.md) и [Контроль доступа для конфиденциальных данных в пакетах](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).|  
+|Выходные данные пакета|Пакеты, настроенные для использования конфигураций, контрольных точек и журналов, создают данные, которые хранятся вне пакетов. Эти сведения могут содержать конфиденциальные данные.|Защита конфигураций и журналов, сохраняемых пакетами в таблицах баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью средств безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Управление доступом к файлам с помощью списков управления доступом, доступных в файловой системе.<br /><br /> Дополнительные сведения см. в разделе [Доступ к файлам, используемым пакетами](#files)|  
+  
+## <a name="identity-features"></a>Функции управления удостоверениями  
  Применение функций управления удостоверениями в пакетах позволяет достичь следующей цели.  
   
  **Обеспечение открытия и запуск только пакетов из надежных источников**  
   
- Чтобы гарантировать открытие и выполнение только пакетов из надежных источников, необходимо сначала определить источник пакетов. Определить источник можно, подписывая пакеты с использованием сертификатов. Затем при открытии или запуске пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может проверить наличие и правильность цифровой подписи. Дополнительные сведения см. в разделе [Определение источника пакетов с помощью цифровых подписей](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).  
+ Чтобы гарантировать открытие и выполнение только пакетов из надежных источников, необходимо сначала определить источник пакетов. Определить источник можно, подписывая пакеты с использованием сертификатов. Затем при открытии или запуске пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может проверить наличие и правильность цифровой подписи. Дополнительные сведения см. в разделе [Определение источника пакетов с помощью цифровых подписей](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
-## Функции управления доступом  
+## <a name="access-control-features"></a>Функции управления доступом  
  Применение функций управления удостоверениями в пакетах позволяет достичь следующей цели.  
   
  **Обеспечение открытия и запуск пакетов только зарегистрированными пользователями**  
@@ -51,59 +67,84 @@ caps.handback.revision: 73
   
 -   Управлять доступом к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и сведениям о пакетах, отображаемых службой в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-### Управление доступом к содержимому пакетов  
+### <a name="controlling-access-to-the-contents-of-packages"></a>Управление доступом к содержимому пакетов  
  Чтобы помочь ограничить доступ к содержимому пакета, можно зашифровать пакеты, устанавливая свойство ProtectionLevel пакета. Это свойство можно установить на уровень защиты, необходимый пакету. Например, в среде групповой разработки пакет может быть зашифрован при помощи пароля, который известен членам группы, принимающим участие в его разработке.  
   
  При установке свойства ProtectionLevel пакета службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] автоматически определяют конфиденциальные свойства и обрабатывают их согласно определенному уровню защиты пакетов. Например, свойство ProtectionLevel пакета установлено на уровень, на котором конфиденциальные сведения шифруются с паролем. Для этого пакета службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] автоматически шифруют значения всех конфиденциальных свойств и не отображают соответствующие данные, если не указан верный пароль.  
   
  Обычно службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] определяют свойства как конфиденциальные, если эти свойства содержат такие сведения, как пароль или строка соединения, или если эти свойства соответствуют переменным или сформированным задачей XML-узлам. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] свойство рассматривается как конфиденциальное в зависимости от того, назначил ли свойство конфиденциальным разработчик компонента [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , такого как диспетчер соединений или задача. Пользователи не могут добавлять или удалять свойства из списка свойств, считающихся конфиденциальными. Разработчики пользовательских задач, диспетчеров соединений или компонентов потоков данных могут указать свойства, которые службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] рассматривают как конфиденциальные.  
   
- Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
-### Управление доступом к пакетам  
- Пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут быть сохранены в базе данных msdb экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в файловой системе как XML-файлы с расширением DTSX. Дополнительные сведения см. в разделе [Сохранение пакетов](../../integration-services/save-packages.md).  
+### <a name="controlling-access-to-packages"></a>Управление доступом к пакетам  
+ Пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут быть сохранены в базе данных msdb экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или в файловой системе как XML-файлы с расширением DTSX. Дополнительные сведения см. в разделе [Сохранение пакетов](../../integration-services/save-packages.md).  
   
-#### Сохранение пакетов в базе данных msdb  
+#### <a name="saving-packages-to-the-msdb-database"></a>Сохранение пакетов в базе данных msdb  
  Сохранение пакетов в базе данных msdb способствует повышению безопасности на уровне сервера, базы данных и таблиц. В базе данных msdb пакеты [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в таблице sysssispackages. Поскольку пакеты хранятся в таблицах sysssispackages и sysdtspackages в базе данных msdb, резервное копирование пакетов выполняется автоматически при резервном копировании базы данных msdb.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакеты, хранящиеся в базе данных msdb, также можно защитить, применив роли уровня базы данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат три предопределенные роли базы данных, предназначенные для управления доступом к пакетам: db_ssisadmin, db_ssisltduser и db_ssisoperator. Роль с правом чтения и правом записи может быть определена для каждого пакета. Для использования в пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно также определить пользовательские роли уровня базы данных. Роли могут быть реализованы только в пакетах, которые хранятся в базе данных msdb экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакеты, хранящиеся в базе данных msdb, также можно защитить, применив роли уровня базы данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат три предопределенные роли базы данных, предназначенные для управления доступом к пакетам: db_ssisadmin, db_ssisltduser и db_ssisoperator. Роль с правом чтения и правом записи может быть определена для каждого пакета. Для использования в пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно также определить пользовательские роли уровня базы данных. Роли могут быть реализованы только в пакетах, которые хранятся в базе данных msdb экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Роли служб Integration Services (службы SSIS)](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
-#### Сохранение пакетов в файловой системе  
+#### <a name="saving-packages-to-the-file-system"></a>Сохранение пакетов в файловой системе  
  Если пакеты хранится в файловой системе вместо базы данных msdb, убедитесь в безопасности файлов пакетов и папок, содержащих файлы пакетов.  
   
-### Управление доступом к файлам, используемым пакетами  
+### <a name="controlling-access-to-files-used-by-packages"></a>Управление доступом к файлам, используемым пакетами  
  Пакеты, настроенные для использования конфигураций, контрольных точек и журналов, создают данные, которые хранятся вне пакетов. Эти данные могут быть конфиденциальными и должны быть защищены. Файлы контрольных точек могут быть сохранены только в файловой системе, а конфигурации и протоколы — либо в файловой системе, либо в таблицах базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сохраненные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] конфигурации и протоколы защищены системой безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но данные, записанные в файловую систему, требуют дополнительной защиты.  
   
- Дополнительные сведения см. в разделе [Доступ к файлам, используемым пакетами](../../integration-services/security/access-to-files-used-by-packages.md).  
+ Дополнительные сведения см. в разделе [Доступ к файлам, используемым пакетами](#files).  
   
-#### Безопасное сохранение конфигураций пакетов  
+#### <a name="storing-package-configurations-securely"></a>Безопасное сохранение конфигураций пакетов  
  Конфигурации пакетов могут быть сохранены в таблице базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в файловой системе.  
   
- Конфигурации могут быть сохранены в любой базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а не только в базе данных msdb. Таким образом, можно указать базу данных, которая используется в качестве репозитория для конфигураций пакетов. Также можно задать название таблицы, которая будет хранить конфигурацию, и службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] автоматически создадут таблицу с правильной структурой. Сохранение конфигурации в таблице позволяет обеспечить безопасность на уровне сервера, базы данных и таблиц. Кроме того, происходит автоматическое резервное копирование конфигурации, сохраненной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при создании резервной копии базы данных.  
+ Конфигурации могут быть сохранены в любой базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а не только в базе данных msdb. Таким образом, можно указать базу данных, которая используется в качестве репозитория для конфигураций пакетов. Также можно задать название таблицы, которая будет хранить конфигурацию, и службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] автоматически создадут таблицу с правильной структурой. Сохранение конфигурации в таблице позволяет обеспечить безопасность на уровне сервера, базы данных и таблиц. Кроме того, происходит автоматическое резервное копирование конфигурации, сохраненной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при создании резервной копии базы данных.  
   
  Если конфигурация хранится в файловой системе вместо базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], убедитесь в безопасности папок, содержащих файлы конфигурации пакетов.  
   
  Дополнительные сведения о конфигурациях см. в разделе [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
-### Управление доступом к службе Integration Services  
+### <a name="controlling-access-to-the-integration-services-service"></a>Управление доступом к службе Integration Services  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы запретить неавторизованным пользователям просмотр сведений о пакетах, сохраненных на локальных и удаленных компьютерах, и тем самым овладеть личными сведениями, нужно ограничить доступ к компьютерам, на которых выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Дополнительные сведения см. в разделе [Доступ к службам Integration Services](../../integration-services/security/access-to-the-integration-services-service.md).  
+ Дополнительные сведения см. в разделе [Доступ к службам Integration Services](#service).  
+
+## <a name="files"></a> Доступ к файлам, используемым пакетами
+  Уровень защиты пакета не способен защитить файлы, хранимые вне пределов пакета. Эти файлы включают в себя:  
   
-## Связанные задачи  
+-   Файлы конфигурации  
+  
+-   файлы контрольных точек  
+  
+-   Файлы журналов  
+  
+ Эти файлы должны быть защищены отдельно, особенно если они содержат конфиденциальные сведения.  
+  
+### <a name="configuration-files"></a>Файлы конфигурации  
+ Если в файле конфигурации хранятся конфиденциальные сведения, такие как данные об имени входа и пароле, то следует сохранить файл в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или использовать список управления доступом (ACL), чтобы защитить расположение или папку, где хранится этот файл, и разрешить доступ только для определенных учетных записей. Обычно предоставляется доступ для тех учетных записей, которым разрешено запускать пакеты, управлять пакетами и разрешать проблемы, связанные с пакетами, в том числе проверять содержимое файла настройки, контрольные точки и файлы журнала. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает более безопасное хранение, так как предлагает защиту на уровне сервера и базы данных. Чтобы сохранить конфигурации в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует использовать тип конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы сохранить в файловую систему, следует использовать тип конфигурации XML.  
+  
+ Дополнительные сведения см. в разделах [Конфигурации пакетов](../../integration-services/packages/package-configurations.md), [Создание конфигураций пакетов](../../integration-services/packages/create-package-configurations.md)и [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+  
+### <a name="checkpoint-files"></a>файлы контрольных точек  
+ Таким же образом, если используемый пакетом файл контрольных точек содержит конфиденциальные сведения, то следует использовать список управления доступом (ACL) для защиты расположения или папки, где хранится этот файл. Файлы контрольных точек сохраняют данные как о текущем состоянии пакета, так и о текущих значениях переменных. Например, пакет может включать в себя пользовательскую переменную, содержащую номер телефона. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+  
+### <a name="log-files"></a>Файлы журналов  
+ Записи журнала, сохраненные в файловой системе, также должны быть защищены с использованием списка управления доступом (ACL). Записи журнала также могут храниться в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и быть защищены системой безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Записи журнала могут содержать конфиденциальные сведения, например если пакет содержит задачу «Выполнение SQL», которая создает инструкцию SQL, ссылающуюся на номер телефона, то запись журнала для инструкции SQL содержит и номер телефона. Инструкция SQL также может раскрыть закрытые данные об именах таблиц и столбцов данных. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
+
+## <a name="service"></a> Доступ к службам Integration Services
+  Уровни защиты пакетов могут ограничивать круг пользователей, которым разрешается изменять и выполнять пакет. Дополнительная защита требуется для ограничения круга пользователей, которым разрешается просматривать список пакетов, выполняющихся в данный момент на сервере, и останавливать выполнение пакетов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Члены группы «Администраторы» Windows могут просматривать и останавливать все выполняемые в текущее время пакеты. Пользователи, не являющиеся членами группы «Администраторы», могут просматривать и останавливать только пакеты, запущенные ими самими.  
+  
+ Важно ограничить доступ к компьютерам, на которых запущены службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , особенно службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые могут перечислить удаленные папки. Любой пользователь, прошедший проверку подлинности, может запрашивать перечисление пакетов. Даже если служба не находит службу, она перечисляет папки. Имена папок могут оказаться полезными сведениями для злоумышленника. Если администратор настроил службу для перечисления папок на удаленном компьютере, пользователи также смогут увидеть имена, которые они в действительности не должны были видеть.  
+
+## <a name="related-tasks"></a>Связанные задачи  
  В следующем списке приведены ссылки на разделы, в которых описывается выполнение определенных задач в отношении безопасности.  
   
--   [Создание пользовательской роли](../../integration-services/service/create-a-user-defined-role.md)  
+-   [Создание пользовательской роли](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
   
--   [Назначение пакетам роли чтения и модуля записи](../../integration-services/service/assign-a-reader-and-writer-role-to-a-package.md)  
+-   [Назначение пакетам роли чтения и модуля записи](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
   
--   [Реализация политики подписывания путем задания параметра реестра](../../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)  
+-   [Реализация политики подписывания путем задания параметра реестра](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#registry)  
   
--   [Подписание пакета цифровым сертификатом](../../integration-services/packages/sign-a-package-by-using-a-digital-certificate.md)  
+-   [Подписание пакета цифровым сертификатом](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Установка и изменение уровня защиты пакетов](../../integration-services/packages/set-or-change-the-protection-level-of-packages.md)  
-  
-## См. также раздел  
- [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  
+-   [Установка и изменение уровня защиты пакетов](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+
