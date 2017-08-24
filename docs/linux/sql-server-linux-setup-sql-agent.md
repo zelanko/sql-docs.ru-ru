@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Установка агента SQL Server в Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Следующие шаги установки агента SQL Server (**mssql-server-agent**) в Linux. [Агента SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) выполняет запланированные задания SQL Server. Сведения о функции, поддерживаемые для этого выпуска агента SQL Server см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
 > [!NOTE]

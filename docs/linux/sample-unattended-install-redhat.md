@@ -17,6 +17,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Пример: Автоматической установки SQL Server сценария установки для Red Hat Enterprise Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Этот пример скрипта Bash устанавливает RC2 2017 г. SQL Server в Red Hat Enterprise Linux (RHEL) без интерактивный ввод. Он предоставляет примеры установке ядра СУБД, средства командной строки SQL Server, агент SQL Server и выполняет шаги после установки. При необходимости можно установить компонент full-text search и создать пользователя с правами администратора.
 
 > [!TIP]

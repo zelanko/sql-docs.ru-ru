@@ -18,7 +18,9 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Ограничения безопасности для SQL Server в Linux
 
-SQL Server в Linux в настоящее время имеет следующие ограничения: 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
+SQL Server в Linux в настоящее время имеет следующие ограничения:
 
 * Предоставляется стандартная пароля. Параметр MUST_CHANGE имеет единственный параметр, который можно настроить.  
 * Расширенное управление ключами не поддерживается. 

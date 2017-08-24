@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установите sqlcmd и bcp средства командной строки SQL Server в Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Следующие шаги установки программы командной строки, драйверы Microsoft ODBC и их зависимости. **Mssql средства** пакет содержит:
 
 - **sqlcmd**: программа командной строки запроса.

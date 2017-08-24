@@ -17,7 +17,8 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail и оповещения по электронной почте с агентом SQL Server в Linux
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Следующие шаги показывают, как настройка компонента DB Mail и использовать его с помощью агента SQL Server (**mssql-server-agent**) в Linux. 
 

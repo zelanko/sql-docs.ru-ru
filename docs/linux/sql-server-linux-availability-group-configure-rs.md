@@ -16,8 +16,9 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>Настройка группы доступности чтения горизонтального масштабирования для SQL Server в Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Можно настроить группу доступности чтения горизонтального масштабирования для SQL Server в Linux. Существует два архитектуры для группы доступности. Объект *высокий уровень доступности* архитектура использует диспетчер кластеров для обеспечения Улучшенная непрерывность бизнеса. Эта архитектура также может включать реплики для чтения горизонтального масштабирования. Создание архитектуры высокого уровня доступности — [Настройка группы доступности AlwaysOn для SQL Server в Linux](sql-server-linux-availability-group-configure-ha.md).
 

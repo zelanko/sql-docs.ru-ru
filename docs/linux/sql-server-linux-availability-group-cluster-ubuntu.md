@@ -16,8 +16,9 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Настройка кластера Ubuntu и ресурс группы доступности
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 В этом документе описывается создание трех узлов кластера на Ubuntu и добавьте ранее созданную группу доступности в качестве ресурса кластера. Для обеспечения высокой доступности группы доступности для Linux требует трех узлов — см. [высокий уровень доступности и защиты данных в конфигурации группы доступности](sql-server-linux-availability-group-ha.md).
 

@@ -16,8 +16,9 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности для 2017 г. SQL Server в Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 В этом разделе описаны новые для SQL Server 2017 г., выполняемым на платформе Linux.
 

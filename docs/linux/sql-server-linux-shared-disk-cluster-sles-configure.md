@@ -16,8 +16,9 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Настройка SLES общего диска кластера для SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Это руководство содержит инструкции для создания общего диска кластера 2 узла для SQL Server в SUSE Linux Enterprise Server (SLES). Кластеризации уровень основан на SUSE [высокий уровень доступности расширения (для которых Имеется)](https://www.suse.com/products/highavailability) построены на основе [Pacemaker](http://clusterlabs.org/). 
 

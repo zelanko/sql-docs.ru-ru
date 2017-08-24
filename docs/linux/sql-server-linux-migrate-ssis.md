@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 В этом разделе описывается выполнение пакетов служб SQL Server Integration Services (SSIS) для Linux. SSIS решает проблемы с интегрированием сложных данных, загрузка данных из нескольких источников и форматов, преобразования и очистки данных и обновление нескольких целевых серверов. 
 
 Пакеты служб SSIS, выполняемым на платформе Linux можно подключиться к Microsoft SQL Server запущен на Windows локально или в облаке, в Linux или в Docker. Они также могут подключаться к базе данных SQL Azure, хранилище данных SQL Azure и источники данных ODBC.
