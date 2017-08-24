@@ -45,7 +45,7 @@
 # [Пользовательские свойства неструктурированного файла](flat-file-custom-properties.md)  
 # [Источник «OData»](odata-source.md)  
 ## [Учебник. Использование источника OData](tutorial-using-the-odata-source.md)  
-## [Изменение запроса источника OData во время выполнения](modify-odata-source-query-at-runtime.md)  
+## [Указание запроса источника OData во время выполнения](modify-odata-source-query-at-runtime.md)  
 ## [Свойства источника OData](odata-source-properties.md)  
 # [Компоненты потока ODBC](odbc-flow-components.md)  
 ## [Назначение «ODBC»](odbc-destination.md)  
