@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 05cc425e6411734b0cc300a9e3587fa2196893ab
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Используйте Visual Studio для создания баз данных для SQL Server в Linux 
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Используйте Visual Studio для создания баз данных для SQL Server в Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Data Tools (SSDT) примет мощные среды разработки и база данных жизненного цикла управление Жизненным Visual Studio для SQL Server в Linux. Можно разрабатывать, создания, тестирования и публикации базы данных из проекта системы управления версиями, так же, как разрабатывать код вашего приложения.
 
@@ -37,7 +39,7 @@ SQL Server Data Tools (SSDT) примет мощные среды разрабо
 
 RC2 2017 г. SQL Server в Linux поддерживает SSDT 17.0 версии-КАНДИДАТА или более поздней версии.
 
-1. [Загрузите и установите SSDT 17.0 RC2].
+* [Загрузите и установите SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
 ## <a name="create-a-new-database-project-in-source-control"></a>Создайте новый проект базы данных в системе управления версиями
 
@@ -109,12 +111,8 @@ RC2 2017 г. SQL Server в Linux поддерживает SSDT 17.0 версии
 
 Дополнительные сведения о разработке базы данных с SQL Data Tools см. в разделе [документы MSDN по SSDT]
 
-[Загрузите и установите Visual Studio]:https://www.visualstudio.com/downloads/
-[Загрузите и установите SSDT 17.0 RC2]:https://aka.ms/ssdt-download
-[Документы MSDN по SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
-[Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[загрузки и установки Visual Studio]:https://www.visualstudio.com/downloads/
+[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[документы MSDN по SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
+[учебника: написание инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [Справочник по Transact-SQL (компонент Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
-
-
-
-

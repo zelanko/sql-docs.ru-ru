@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.percentagesamplingtrans.f1
+- sql13.dts.designer.percentagesamplingtransformation.f1
 helpviewer_keywords:
 - testing mining models
 - sampling seeds [Integration Services]
@@ -25,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b304a50eeec9908427b7fd42319b88d78b151ff0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
@@ -52,8 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Процентная выборка»** , см. в разделе [Percentage Sampling Transformation Editor](../../../integration-services/data-flow/transformations/percentage-sampling-transformation-editor.md).  
-  
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
 -   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -61,5 +60,23 @@ ms.lasthandoff: 08/03/2017
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## <a name="percentage-sampling-transformation-editor"></a>редактор преобразования «Процентная выборка»
+  Используйте диалоговое окно **Редактор преобразования «Процентная выборка»** для выборки части входных данных по заданному проценту строк. Это преобразование разделяет входные данные на два отдельных вывода.  
+  
+### <a name="options"></a>Параметры  
+ **Процент строк**  
+ Задает процент строк во входных данных для использования в качестве выборки.  
+  
+ Значение этого свойства можно задать с помощью выражения свойства.  
+  
+ **Имя выхода выборки**  
+ Задайте уникальное имя выхода, содержащего строки выборки. Это имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
+  
+ **Имя вывода невыбранных элементов**  
+ Задает уникальное имя выхода, который содержит строки, исключенные из выборки. Это имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
+  
+ **Использовать следующее начальное значение**  
+ Задайте начальное значение выборки для генератора случайных чисел, который преобразование использует для создания выборки. Рекомендуется только для разработки и тестирования. Если начальное значение выборки не задано, преобразование использует счетчик тактов Microsoft Windows.  
   
   

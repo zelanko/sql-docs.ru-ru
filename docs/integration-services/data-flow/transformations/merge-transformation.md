@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
+- sql13.dts.designer.mergetransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - merging data [Integration Services]
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e9bb9533459c720bae5b12d5f4ebdce1f85fc4d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4c3eead08bb91d43f83782682a122da278ac051f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-transformation"></a>преобразование «Слияние»
@@ -60,8 +61,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-merge-transformation"></a>Настройка преобразования «Слияние»  
  Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств.  
   
- Дополнительные сведения о параметрах, задаваемых в диалоговом окне **Редактор преобразования «Слияние»** , см. в разделе [Merge Transformation Editor](../../../integration-services/data-flow/transformations/merge-transformation-editor.md).  
-  
  Дополнительные сведения о параметрах, задаваемых программно, см. в следующих разделах:  
   
 -   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,9 +72,25 @@ ms.lasthandoff: 08/03/2017
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Сортировка данных для слияния и преобразования соединения слиянием](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="merge-transformation-editor"></a>редактор преобразования «Слияние»
+  **Редактор преобразования «Слияние»** используется для указания столбцов из двух отсортированных наборов данных для слияния.  
+  
+> [!IMPORTANT]  
+>  Преобразованию «Слияние» необходимы отсортированные входные данные. Дополнительные сведения об этом важном требовании см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### <a name="options"></a>Параметры  
+ **Имя выходного столбца**  
+ Позволяет указать имя выходного столбца.  
+  
+ **Вход слияния 1**  
+ Позволяет выбрать столбец в качестве входа слияния 1.  
+  
+ **Вход слияния 2**  
+ Позволяет выбрать столбец в качестве входа слияния 2.  
+  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Соединение слиянием»](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [UNION All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   

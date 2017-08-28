@@ -4,26 +4,29 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1b16a5e8168f18a3e687fdf0249f93cd3549f27d
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Использование среды SQL Server Management Studio в Windows для управления SQL Server в Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 В этом разделе описываются [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) и будет выполнено несколько типичных задач. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) входит в набор средств SQL, которые корпорация Microsoft предлагает бесплатно для задач разработки и управления. Среда SSMS — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов SQL Server, работающий локально или в облаке, в Linux, Windows или Docker на macOS и базы данных SQL Azure и хранилище данных SQL Azure. Среда SSMS объединяет большое число графических средств с несколькими расширенными редакторами скриптов для предоставления доступа к SQL Server для разработчиков и администраторов с любым опытом.
 
 Среда SSMS предлагает широкий спектр возможностей разработки и управления для SQL Server, включая средства:
+
 - Настройка, отслеживать и администрировать одного или нескольких экземпляров SQL Server
 - развертывание, мониторинг и обновления компонентов уровня данных, таких как базы данных и хранилищ данных
 - резервное копирование и восстановление баз данных

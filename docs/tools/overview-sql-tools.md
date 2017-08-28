@@ -1,33 +1,52 @@
 ---
-title: "Программы командной строки SQL (компонент Database Engine) | Документы Microsoft"
+title: "Средства SQL и служебные программы для SQL Server, база данных Azure SQL и хранилище данных SQL | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/25/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- command prompt utilities [SQL Server]
-- command prompt utilities [SQL Server], about command prompt utilities
-- command prompt [SQL Server]
-- utilities [SQL Server], command prompt
-- command prompt [SQL Server], utilities
-ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
-caps.latest.revision: 90
+ms.assetid: 
+caps.latest.revision: 0
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
+ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
 ms.contentlocale: ru-ru
 ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>Программы командной строки SQL (компонент Database Engine)
+# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>Средства и служебные программы для базы данных SQL Azure, SQL Server и хранилище данных SQL
+
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+
+![](../includes/media/sql-database-tools.png)В этой статье предоставляет список доступных средств для работы с SQL Server, базы данных SQL Azure, хранилище данных SQL и приложений на основе SQL Server. 
+
+Если вы хотите перейти непосредственно в и начните создавать таблицы, выполнение запросов, по сути разработки и управления базой данных, затем [ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) вероятнее всего ваш главный инструмент. Среда SSMS предоставляется бесплатно и выполняется в Windows.
+
+Если вы используете macOS или Linux, попробуйте [кода Visual Studio](https://code.visualstudio.com/) с [ **mssql для Visual Studio Code** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) расширения. Эти средства предназначены для разработки с широким набором функциональных возможностей Microsoft SQL Server, базы данных SQL Azure и хранилище данных SQL и также свободны. В разделе [кода Visual Studio используется для создания и выполнения скриптов Transact-SQL для SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
+
+
+## <a name="sql-tools"></a>Средства SQL 
+ 
+| Инструмент | Description |
+|:--|:--|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. |
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Стать мощная среда разработки Visual Studio для SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. |
+| [Код Visual Studio](https://code.visualstudio.com/)| Код Visual Studio работает на macOS, Windows и Linux. После установки Visual Studio Code, установить [mssql расширения](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) для разработки Microsoft SQL Server, базы данных SQL Azure и хранилище данных SQL. |
+| [Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Используйте диспетчер конфигурации SQL Server для настройки служб SQL Server и настройки сетевых подключений.|
+| [Помощник по миграции SQL Server](../ssma/sql-server-migration-assistant.md) | Используйте SQL Server Migration Assistant для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и Sybase.|
+| [Распределенное воспроизведение](../tools/distributed-replay/install-distributed-replay-overview.md) | Функция распределенного воспроизведения помогут оценить влияние будущих обновлений SQL Server. Также распределенного воспроизведения можно используйте для оценки влияния оборудования и обновления операционной системы и настройки SQL Server. |
+| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Программа ssbdiagnose сообщает о проблемах в диалогах компонента Service Broker или в конфигурации служб компонента Service Broker. |
+
+
+## <a name="sql-command-prompt-utilities"></a>Программы командной строки SQL
+
   Программы командной строки позволяют вносить в скрипт операции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В следующей таблице содержится список программ командной строки, поставляемых вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Служебная программа**|**Описание**|**Установлена в**|  
@@ -54,7 +73,7 @@ ms.lasthandoff: 08/28/2017
 |[Программа SSMS](../tools/sql-server-management-studio/ssms-utility.md)|Используется для запуска приложения среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[Программа tablediff](../tools/tablediff-utility.md)|Используется для сравнения данных в двух таблицах, чтобы обнаружить отсутствие конвергенции. Это полезно для устранения неполадок в топологии репликации.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
 
-## <a name="command-prompt-utilities-syntax-conventions"></a>Соглашения о синтаксисе программ командной строки  
+## <a name="sql-command-prompt-utilities-syntax-conventions"></a>Соглашения о синтаксисе программ командной строки SQL  
   
 |**Обозначение**|**Используется для**|  
 |--------------------|------------------|  
@@ -62,13 +81,6 @@ ms.lasthandoff: 08/28/2017
 |`monospace`|Образцы команд и программного кода.|  
 |*курсив*|Параметры, указываемые пользователем.|  
 |**полужирный**|Команды, параметры и другие элементы синтаксиса, которые должны в точности соответствовать примеру.|  
-  
-## <a name="see-also"></a>См. также:  
- [Агент распространения репликации](../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Агент чтения журнала репликации](../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Агент слияния репликации](../relational-databases/replication/agents/replication-merge-agent.md)   
- [Агент чтения очереди репликации](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  
+
+
 

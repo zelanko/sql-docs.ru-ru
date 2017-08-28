@@ -1,30 +1,36 @@
 ---
-title: "Преобразование &#171;Соединение слиянием&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.mergejointrans.f1"
-helpviewer_keywords: 
-  - "наборы данных [службы Integration Services]"
-  - "преобразование «Соединение слиянием»"
-  - "наборы данных [службы Integration Services], присоединение"
-  - "соединение наборов данных [службы Integration Services]"
-  - "соединения [SQL Server], службы SSIS"
+title: "«Соединение слиянием» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.mergejointrans.f1
+- sql13.dts.designer.mergejointransformation.f1
+helpviewer_keywords:
+- datasets [Integration Services]
+- Merge Join transformation
+- datasets [Integration Services], joining
+- joining datasets [Integration Services]
+- joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/19/2017
+
 ---
-# Преобразование &#171;Соединение слиянием&#187;
+# <a name="merge-join-transformation"></a>Преобразование "Соединение слиянием"
   Преобразование «Соединение слиянием» предоставляет выход, формируемый объединением двух отсортированных наборов данных при помощи соединения FULL, LEFT или INNER. Например, соединение LEFT может использоваться для объединения таблицы, содержащей данные о товарах, с таблицей, в которой перечисляются страны или регионы, в которых эти товары были произведены. Результатом является таблица, в которой перечисляются все товары и страны или регионы их происхождения.  
   
  Настройка преобразования «Соединение слиянием» может производиться следующими способами.  
@@ -40,16 +46,16 @@ caps.handback.revision: 54
   
  Это преобразование имеет два входа и один выход. Вывод ошибок не поддерживается.  
   
-## Требования к входным данным  
+## <a name="input-requirements"></a>Требования к входным данным  
  Преобразованию «Соединение слиянием» необходимы отсортированные входные данные. Дополнительные сведения об этом важном требовании см. в статье [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
-## Требования к соединению  
+## <a name="join-requirements"></a>Требования к соединению  
  Преобразование «Соединение слиянием» требует, чтобы соединяемые столбцы имели совпадающие метаданные. Например, нельзя соединить столбец, содержащий числовые данные, со столбцом с символьными данными. Если данные представляют собой тип строковых данных, длина столбца при вторичном входе должна быть меньше или равна длине столбца при первичном входе, с которым происходит слияние.  
   
-## Регулировка количества буферов  
+## <a name="buffer-throttling"></a>Регулировка количества буферов  
  Настраивать значение свойства **MaxBuffersPerInput** больше не нужно, поскольку корпорация Майкрософт внесла изменения, которые уменьшили риск потребления чрезмерных ресурсов памяти при выполнении операции «Соединение слиянием». Эта проблема иногда возникает, если несколько входов операции «Соединение слиянием» производят данные с различной скоростью.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств.  
   
  Дополнительные сведения об установке свойств этого преобразования см. в следующих разделах:  
@@ -58,12 +64,35 @@ caps.handback.revision: 54
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Сортировка данных для слияния и преобразования соединения слиянием](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## См. также  
- [редактор преобразования «Cоединение слиянием»](../../../integration-services/data-flow/transformations/merge-join-transformation-editor.md)   
+## <a name="merge-join-transformation-editor"></a>редактор преобразования «Cоединение слиянием»
+  Диалоговое окно **Редактор преобразования «Соединение слиянием»** используется для задания типа соединения, столбцов соединения и выходных столбцов для слияния двух входных наборов с помощью соединения.  
+  
+> [!IMPORTANT]  
+>  Преобразованию «Соединение слиянием» необходимы отсортированные входные данные. Дополнительные сведения об этом важном требовании см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### <a name="options"></a>Параметры  
+ **Тип соединения**  
+ Укажите, нужно ли использовать внутреннее, левое внешнее или полное соединение.  
+  
+ **Обменять выходы**  
+ Переключение порядка входов выполняется с помощью кнопки **Обменять выходы** . Этот выбор может быть полезен с параметром левого внешнего соединения.  
+  
+ **Ввод**  
+ Вначале выберите из списка имеющихся входов каждый столбец, который необходимо включить в объединенный вывод.  
+  
+ Входы отображаются в двух отдельных таблицах. Выберите столбцы для включения в вывод. Перетащите столбцы для создания соединения между таблицами. Для удаления соединения выберите его и нажмите клавишу DELETE.  
+  
+ **Входной столбец**  
+ Из списка имеющихся столбцов на выбранном входе выберите столбец для включения в объединенный вывод.  
+  
+ **Псевдоним вывода**  
+ Введите псевдоним для каждого выходного столбца. По умолчанию, используется имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
+  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Слияние»](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Преобразование «Объединить все»](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [UNION All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

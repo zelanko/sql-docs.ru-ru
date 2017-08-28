@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных ODBC (мастер экспорта и импорта SQL Server)
@@ -39,6 +39,8 @@ ms.lasthandoff: 08/03/2017
 
 > [!TIP]
 > Если вы знаете, что ваш драйвер установлен и вы не видите в 64-разрядное приложение, найдите в 32-разрядное приложение. Это также означает, нужно ли запустить 64-разрядной или 32-разрядный SQL Server мастер импорта и экспорта.
+>
+> Чтобы использовать 64-разрядной версии мастера экспорта и импорта SQL Server, необходимо установить SQL Server. SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS), 32-разрядных приложений и установить только 32-разрядных файлов, включая 32-разрядную версию мастера.
     
 ## <a name="step-1---select-the-data-source"></a>Шаг 1. Выбор источника данных
 Драйверы ODBC, установленной на компьютере не перечислены в раскрывающемся списке источников данных. Чтобы подключиться с помощью драйвера ODBC, начинают с выбора **поставщик данных .NET Framework для ODBC** как источник данных на **выберите источник данных** или **Выбор назначения** странице мастера. Этот поставщик действует как оболочка для драйвера ODBC.

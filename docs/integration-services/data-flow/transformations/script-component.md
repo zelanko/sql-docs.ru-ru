@@ -11,6 +11,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
+- sql13.dts.designer.scriptcomponent.f1
+- sql13.dts.designer.scriptcomponent.connections.f1
+- sql13.dts.designer.scriptcomponent.inputcolumn.f1
+- sql13.dts.designer.scriptcomponent.columnproperties.f1
+- sql13.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script transformation
 - scripts [Integration Services], transformations
@@ -22,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="script-component"></a>Компонент скрипта
@@ -92,16 +97,6 @@ ms.lasthandoff: 08/03/2017
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами.  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>Настройка компонента скрипта в конструкторе  
- Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Скрипт»** , см. в следующих разделах:  
-  
--   [Редактор преобразования "Скрипт" (страница "Входные столбцы")](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
-  
--   [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)  
-  
--   [Редактор преобразования "Скрипт" (страница "Скрипт")](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)  
-  
--   [Редактор преобразования "Скрипт" (страница "Диспетчеры соединений")](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)  
-  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] см. в следующем разделе:  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -116,6 +111,113 @@ ms.lasthandoff: 08/03/2017
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="select-script-component-type"></a>Выбор типа компонента скрипта
+  Используйте диалоговое окно **Выбор типа компонента скрипта** , чтобы указать, следует ли создавать преобразование «Скрипт», которое заранее настроено как источник, преобразование или назначение.  
+  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Параметры  
+ Выбор пункта **Источник**, **Назначение**или **Преобразование** влияет на конфигурацию преобразования «Скрипт» и страницы редактора преобразования «Скрипт».  
+  
+## <a name="script-transformation-editor-connection-managers-page"></a>Редактор преобразования «Скрипт» (страница «Диспетчеры соединений»)
+  Используйте страницу **Диспетчеры соединений** в **Редакторе преобразования «Скрипт»** , чтобы указать любые соединения, которые будут использоваться скриптом.  
+  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Параметры  
+ **Connection managers**  
+ Просмотрите список соединений, доступных для использования скриптом.  
+  
+ **Название**  
+ Введите уникальное и описательное имя для соединения.  
+  
+ **Диспетчер соединений**  
+ Выберите из списка доступных диспетчеров соединений или  **\<создать соединение >** Открытие **Добавление диспетчера соединений служб SSIS** диалоговое окно.  
+  
+ **Description**  
+ Введите описание для соединения.  
+  
+ **Добавить**  
+ Добавить еще одно соединение в список **Диспетчеры соединений** .  
+  
+ **Удалить**  
+ Удалить выбранное соединение из списка **Диспетчеры соединений** .  
+  
+## <a name="script-transformation-editor-input-columns-page"></a>Редактор преобразования «Скрипт» (страница «Входные столбцы»)
+  Страница **Входные столбцы** диалогового окна **Редактор преобразования «Скрипт»** используется для установки свойств входных столбцов.  
+  
+> [!NOTE]  
+>  Страница **Входные столбцы** не отображается для компонентов источника, которые имеют выводы, но не имеют входов.  
+  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Параметры  
+ **Имя входа**  
+ Выберите из списка доступных входов.  
+  
+ **Доступные входные столбцы**  
+ С помощью флажков укажите столбцы, которые будут использоваться в преобразовании «Скрипт».  
+  
+ **Входной столбец**  
+ Выберите для каждой строки столбец из списка доступных входных столбцов. Выбранные столбцы обозначаются флажками в таблице **Доступные входные столбцы**.  
+  
+ **Псевдоним вывода**  
+ Введите псевдоним для каждого выходного столбца. По умолчанию, используется имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
+  
+ **Тип применения**  
+ Указывает, будет ли преобразование "Скрипт" рассматривать каждый столбец как **ReadOnly** или **ReadWrite**.  
+  
+## <a name="script-transformation-editor-inputs-and-outputs-page"></a>Редактор преобразования «Скрипт» (страница «Входы и выходы»)
+  Используйте страницу **Входы и выходы** в диалоговом окне **Редактор преобразования «Скрипт»** , чтобы добавить, удалить или настроить входы и выходы преобразования «Скрипт».  
+  
+> [!NOTE]  
+>  У исходных компонентов есть выводы, но нет входов, тогда как у компонентов назначения есть входы, но нет выводов. У преобразований есть как входы, так и выводы.  
+  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Параметры  
+ **Inputs and outputs**  
+ Выберите вход или вывод слева, чтобы посмотреть его свойства в таблице справа. Свойства, доступные для редактирования, варьируются в зависимости от выбора. Многие отображаемые параметры доступны только для чтения. Дополнительные сведения об индивидуальных свойствах см. в следующих разделах:  
+  
+ [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+  
+ [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ **Добавление выходных данных**  
+ Добавить в список дополнительный выход.  
+  
+ **Добавить столбец**  
+ Выберите папку, в которую необходимо поместить новый выходной столбец, и добавьте его, нажав кнопку **Добавить столбец**.  
+  
+ **Удалить выход**  
+ Выберите выход и удалите его, нажав кнопку **Удалить выход**.  
+  
+ **Удалить столбец**  
+ Выберите столбец и удалите его, нажав кнопку **Удалить столбец**.  
+  
+## <a name="script-transformation-editor-script-page"></a>Редактор преобразования «Скрипт» (страница «Скрипт»)
+  Используйте вкладку **Скрипт** в диалоговом окне **Редактор преобразования «Скрипт»** для указания скрипта и связанных с ним свойств.  
+  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### <a name="options"></a>Параметры  
+ **Свойства**  
+ Просмотрите и измените свойства преобразования «Скрипт». Многие отображаемые параметры доступны только для чтения. Следующие свойства могут быть изменены.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Description**|Опишите преобразование «Скрипт», его назначение.|  
+|**LocaleID**|Укажите локаль, предоставляющую сведения о регионе, используемые для сортировки и преобразования даты и времени.|  
+|**Название**|Введите описательное имя компонента.|  
+|**ValidateExternalMetadata**|Укажите, будет ли преобразование «Скрипт» во время разработки проверять метаданные столбца относительно источников внешних данных. Значение **false** откладывает проверку до времени выполнения.|  
+|**ReadOnlyVariables**|Введите через запятую список переменных, доступ к которым в ходе преобразования «Скрипт» возможен только для чтения.<br /><br /> Примечание. В именах переменных учитывается регистр.|  
+|**ReadWriteVariables**|Введите через запятую список переменных, доступ к которым в ходе преобразования «Скрипт» возможен как для чтения, так и для записи.<br /><br /> Примечание. В именах переменных учитывается регистр.|  
+|**ScriptLanguage**|Язык скрипта, используемый компонентом скрипта.<br /><br /> Чтобы установить значение по умолчанию языка скрипта для компонентов скрипта и задач «Скрипт», воспользуйтесь параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры** .|  
+|**UserComponentTypeName**|Определяет класс <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> и сборку **Microsoft.SqlServer.TxScript** , поддерживающие инфраструктуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+  
+ **Изменение скрипта**  
+ Чтобы создать или изменить скрипт, воспользуйтесь набором средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для работы с приложениями.  
   
 ## <a name="related-content"></a>См. также  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

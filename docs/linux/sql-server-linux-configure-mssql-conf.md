@@ -4,19 +4,21 @@ description: "В этом разделе описывается использо
 author: luisbosquez
 ms.author: lbosq
 manager: jhubbard
-ms.date: 06/16/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a79e5c43dd8921ba2f30ca022d071648b26cdfb0
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql conf
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 **MSSQL conf** — это сценарий конфигурации, который устанавливается вместе с SQL Server, RC2 2017 г. для Red Hat Enterprise Linux, SUSE Linux Enterprise Server и Ubuntu. Эту программу можно использовать для настройки следующих параметров:
 
@@ -37,13 +39,16 @@ ms.lasthandoff: 08/02/2017
 | [ПРОТОКОЛ TLS](#tls) | Настройка безопасности на транспортном уровне. |
 | [Флаги трассировки](#traceflags) | Задайте флаги трассировки, которую планируется использовать службу. |
 
-В следующих разделах показаны примеры использования mssql conf для каждого из этих сценариев.
-
 > [!TIP]
-> Эти примеры, выполните mssql-conf, укажите полный путь: **/opt/mssql/bin/mssql-conf**. Если выбрать для перехода к этому пути, вместо выполнения mssql conf в контексте текущего каталога: **. / mssql conf**.
-
-> [!NOTE]
 > Некоторые из этих параметров можно настроить с переменными среды. Дополнительные сведения см. в разделе [SQL Server можно настроить параметры с переменными среды,](sql-server-linux-configure-environment-variables.md).
+
+## <a name="usage-tips"></a>Советы по использованию
+
+* Для группы доступности AlwaysOn и кластеры общих дисков всегда внесения изменений конфигурации на каждом узле.
+
+* В сценарии общий диск кластера, не пытайтесь перезапустить **mssql server** службу, чтобы применить изменения. SQL Server работает как приложение. Вместо этого переведите ресурс вне сети и затем снова подключены к сети.
+
+* Эти примеры, выполните mssql-conf, укажите полный путь: **/opt/mssql/bin/mssql-conf**. Если выбрать для перехода к этому пути, вместо выполнения mssql conf в контексте текущего каталога: **. / mssql conf**.
 
 ## <a id="collation"></a>Изменение параметров сортировки SQL Server
 
@@ -190,7 +195,7 @@ ms.lasthandoff: 08/02/2017
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    По умолчанию: **true**
+    По умолчанию: **false**
 
 1. Укажите тип файла дампа с **coredump.coredumptype** параметр.
 
@@ -314,11 +319,11 @@ sudo systemctl restart mssql-server
 
 |Параметр |Description |
 |--- |--- |
-|**Network.ForceEncryption** |Если значение равно 1, затем [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] заставляет все соединения, должны быть зашифрованы. По умолчанию этого параметра равно 0. |
-|**Network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/certs/mssql.pem` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlskey** |Абсолютный путь к закрытому ключу файла, который [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/private/mssql.key` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**Network.tlsprotocols** |Список разделенных запятыми из какой TLS протоколы допускаемым сервером SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]всегда пытается согласовать надежный протокол разрешенных. Если клиент не поддерживает любой допустимый протокол [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] отклоняет попытки подключения.  Для обеспечения совместимости по умолчанию (1.2, 1.1, 1.0) разрешены все поддерживаемые протоколы.  Если клиенты поддерживает TLS 1.2, корпорация Майкрософт рекомендует, позволяя только TLS 1.2. |
-|**Network.tlsciphers** |Указывает, какие шифры допускаемых [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] для TLS. Эта строка должен быть отформатирован в [OpenSSL в формате списка шифра](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Как правило нет необходимости менять этот параметр. <br /> По умолчанию допускаются следующие шифров: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**Network.ForceEncryption** |Если значение равно 1, затем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] заставляет все соединения, должны быть зашифрованы. По умолчанию этого параметра равно 0. |
+|**Network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/certs/mssql.pem` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlskey** |Абсолютный путь к закрытому ключу файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример: `/etc/ssl/private/mssql.key` файл сертификата должен быть доступен для учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlsprotocols** |Список разделенных запятыми из какой TLS протоколы допускаемым сервером SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]всегда пытается согласовать надежный протокол разрешенных. Если клиент не поддерживает любой допустимый протокол [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отклоняет попытки подключения.  Для обеспечения совместимости по умолчанию (1.2, 1.1, 1.0) разрешены все поддерживаемые протоколы.  Если клиенты поддерживает TLS 1.2, корпорация Майкрософт рекомендует, позволяя только TLS 1.2. |
+|**Network.tlsciphers** |Указывает, какие шифры допускаемых [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для TLS. Эта строка должен быть отформатирован в [OpenSSL в формате списка шифра](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Как правило нет необходимости менять этот параметр. <br /> По умолчанию допускаются следующие шифров: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **Network.kerberoskeytabfile** |Путь к файлу keytab Kerberos |
 
 Пример использования параметров TLS см. в разделе [шифрование соединений с SQL Server в Linux](sql-server-linux-encrypted-connections.md).
@@ -351,15 +356,83 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
+## <a name="remove-a-setting"></a>Удалите параметр
+
+Чтобы отменить любое задание осуществляется с `mssql-conf set`, вызовите **mssql conf** с `unset` и имя параметра. Это приведет к очистке параметра, фактически возвращением к значению по умолчанию.
+
+1. В следующем примере удаляется **network.tcpport** параметр.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf unset network.tcpport
+   ```
+
+1. Перезапустите службу SQL Server.
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
 ## <a name="view-current-settings"></a>Просмотр текущих параметров
 
-Чтобы просмотреть все параметры, которые явно настроен с **mssql conf**, выполните следующую команду:
+Для просмотра любого настроены параметры, выполните следующую команду, чтобы вывести содержимое **mssql.conf** файла:
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-Обратите внимание, что все параметры, не отображаются в этом файле используют значения по умолчанию.
+Обратите внимание, что все параметры, не отображаются в этом файле используют значения по умолчанию. В следующем разделе приводится образец **mssql.conf** файла.
+
+## <a name="mssqlconf-format"></a>Формат MSSQL.conf
+
+Следующие **/var/opt/mssql/mssql.conf** файл содержит пример для каждого параметра. Этот формат можно использовать для внесения изменений вручную **mssql.conf** файла при необходимости. Если вручную изменить файл, необходимо перезапустить SQL Server перед применением изменений. Для использования **mssql.conf** файла с помощью Docker, необходимо иметь Docker [сохранить данные](sql-server-linux-configure-docker.md). Сначала необходимо добавить полный **mssql.conf** файл в каталог на сервере, а затем запустите контейнер. Приводится пример приведен в [отзывы](sql-server-linux-customer-feedback.md).
+
+```ini
+[EULA]
+accepteula = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
 
 ## <a name="next-steps"></a>Следующие шаги
 

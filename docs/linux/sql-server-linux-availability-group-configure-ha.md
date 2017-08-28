@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Настройка группы доступности AlwaysOn для SQL Server в Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 В этой статье описывается создание SQL Server всегда на группу доступности для обеспечения высокой доступности в Linux. Существует два типа конфигурации для группы доступности. Объект *высокий уровень доступности* конфигурации диспетчер кластера используется для обеспечения непрерывности бизнес-процессов. Эта конфигурация может также содержать реплики для чтения горизонтального масштабирования. В этом документе описывается создание конфигурации высокого уровня доступности группы доступности.
 

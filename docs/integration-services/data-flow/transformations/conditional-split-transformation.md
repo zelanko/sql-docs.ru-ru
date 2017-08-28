@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.conditionalsplittrans.f1
+- sql13.dts.designer.conditionalsplittransformation.f1
 helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5c9ba281713154357344891987131480331f9f0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 02909ff454816119e2dfbdfeb1090d0f7e9587be
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="conditional-split-transformation"></a>преобразование «Условное разбиение»
@@ -56,8 +57,6 @@ ms.lasthandoff: 08/03/2017
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор преобразования «Условное разбиение»** , см. в разделе [Conditional Split Transformation Editor](../../../integration-services/data-flow/transformations/conditional-split-transformation-editor.md).  
-  
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
 -   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,7 +72,33 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Связанные задачи  
  [Разбиение набора данных с помощью преобразования «Условное разбиение»](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="conditional-split-transformation-editor"></a>редактор преобразования «Условное разбиение»
+  Диалоговое окно **Редактор преобразования «Условное разбиение»** используется для создания выражений, определения порядка, в котором производится вычисление выражений, а также для именования выходных данных условных разбиений. В этом диалоговом окне вызываются математические, строковые функции, функции даты и времени, а также операторы, которые можно использовать при построении выражений. Первое условие, значение которого вычисляется как TRUE, определяет вывод, на который направляется строка.  
+  
+> [!NOTE]  
+>  Преобразование «Условное разбиение» направляет каждую входную строку только на один вывод. При введении нескольких условий преобразование направляет каждую строку на первый вывод, для которого условие имеет значение TRUE, и не учитывает последующие условия для данной строки. При необходимости последовательной проверки выполнения нескольких условий может потребоваться объединить в потоке данных несколько преобразований «Условное разбиение».  
+  
+### <a name="options"></a>Параметры  
+ **Порядок**  
+ Выберите строку и с помощью расположенных справа клавиш-стрелок измените порядок, в соответствии с которым будут оцениваться выражения.  
+  
+ **Имя вывода**  
+ Укажите имя вывода. По умолчанию, используется нумерованный список вариантов, однако можно выбрать любое уникальное имя для описания.  
+  
+ **Условие**  
+ Введите выражение или постройте его, перетаскивая элементы из списка доступных столбцов, переменных, функций и операторов.  
+  
+ Значение этого свойства можно задать с помощью выражения свойства.  
+  
+ **См. также**: [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](../../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../../integration-services/expressions/functions-ssis-expression.md).  
+  
+ **Имя выхода по умолчанию**  
+ Введите имя вывода по умолчанию или используйте имя, установленное по умолчанию.  
+  
+ **Настройка вывода ошибок**  
+ Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+  
+## <a name="see-also"></a>См. также:  
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

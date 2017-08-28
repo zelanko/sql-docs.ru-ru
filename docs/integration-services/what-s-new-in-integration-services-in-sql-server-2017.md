@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56d4ea145a34048c8619ff88112021f163e26900
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Какой &#39; новые возможности служб Integration Services в SQL Server 2017 г.
@@ -26,6 +26,24 @@ ms.lasthandoff: 08/03/2017
 
 >   [!NOTE]
 > 2017 г. SQL Server также включает функции SQL Server 2016 и возможности, добавленные в SQL Server 2016 обновлений. Сведения о новых возможностях служб SQL Server Integration Services в SQL Server 2016 см. в разделе [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
+
+## <a name="highlights-of-this-release"></a>Краткое описание этой версии
+
+Ниже приведены наиболее важных новых функций в службах Integration Services для 2017 г. SQL Server.
+
+-   **Горизонтальное масштабирование**. Легко распространять выполнение пакетов служб SSIS на нескольких компьютерах рабочих и управление выполнений и работников с одного главного компьютера. Дополнительные сведения см. в разделе [масштабирования службы интеграции Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+
+-   **Службы Integration Services в Linux**. Выполнение пакетов служб SSIS на компьютерах Linux. Дополнительные сведения см. в разделе [извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+-   **Усовершенствования подключения**. Подключиться к каналам OData Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online с обновленными компонентами OData. 
+
+## <a name="new-in-the-azure-feature-pack"></a>Новые возможности в пакете дополнительных компонентов Azure
+
+Помимо улучшений подключением в SQL Server пакет дополнительных компонентов интеграции служб для Azure добавлена поддержка хранилища Озера данных Azure. Дополнительные сведения см. в разделе [пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+
+## <a name="new-in-sql-server-data-tools-ssdt"></a>Новые возможности SQL Server Data Tools (SSDT)
+
+Теперь можно разрабатывать проекты служб SSIS и пакетов, предназначенных для версий SQL Server 2012 до 2017 г. в Visual Studio 2017 г. или в Visual Studio 2015. Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>Новые возможности служб SSIS в SQL Server 2017 г., RC1
 

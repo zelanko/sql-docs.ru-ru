@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
+- sql13.dts.designer.cachetranscon.f1
+- sql13.dts.designer.cachetransmap.f1
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c03d2c178b4632b334078c72ab87a11d645fe7da
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="cache-transform"></a>преобразование кэша
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  В пределах одного пакета только одно преобразование «Преобразование кэша» может производить запись в один диспетчер соединений с кэшем. Если в пакете содержится несколько преобразований «Преобразование кэша», запись в диспетчер соединений будет производить первое преобразование, вызванное при запуске пакета. Операции записи последующих преобразований «Преобразование кэша» завершатся ошибкой.  
   
- Дополнительные сведения см. в разделах [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) и [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+ Дополнительные сведения см. в разделе [диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Настройка преобразования кэша  
  Диспетчер соединений с кэшем можно настроить на сохранение данных в файлы кэша (CAW).  
@@ -59,7 +61,22 @@ ms.lasthandoff: 08/03/2017
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="cache-transformation-editor-connection-manager-page"></a>Редактор преобразования «Кэш» (страница «Диспетчер соединений»)
+  Используйте страницу **Диспетчер соединений** диалогового окна **Редактор преобразования «Кэш»** , чтобы выбрать существующий диспетчер соединений с кэшем или создать новый.  
+  
+ Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+  
+### <a name="options"></a>Параметры  
+ **Cache connection manager**  
+ Выберите в списке существующий диспетчер соединений с кэшем или создайте новое соединение с помощью кнопки **Создать** .  
+  
+ **Создать**  
+ Создайте новое соединение с помощью диалогового окна «Редактор диспетчера соединений с кэшем».  
+  
+ **Правка**  
+ Измените существующее соединение.  
+  
+## <a name="see-also"></a>См. также:  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)  
   
