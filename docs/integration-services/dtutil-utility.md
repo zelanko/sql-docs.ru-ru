@@ -209,7 +209,7 @@ dtutil /SQL srcPackage /EXISTS
  Чтобы определить, существует ли пакет в базе данных **msdb** в локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующем проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , примените следующий синтаксис:  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -280,3 +280,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Запуск пакетов служб Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
+

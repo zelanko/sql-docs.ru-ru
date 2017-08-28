@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка RHEL кластера для группы доступности SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 В этом документе описывается создание кластера группы доступности с тремя узлами для SQL Server в Red Hat Enterprise Linux. Для обеспечения высокой доступности группы доступности для Linux требует трех узлов — см. [высокий уровень доступности и защиты данных в конфигурации группы доступности](sql-server-linux-availability-group-ha.md). Уровень кластеризации основан на Red Hat Enterprise Linux (RHEL) [высокого уровня ДОСТУПНОСТИ надстройки](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) построены на основе [Pacemaker](http://clusterlabs.org/). 
 

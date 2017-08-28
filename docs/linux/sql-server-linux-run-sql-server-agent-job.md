@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск задания агента SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Задания SQL Server используются для выполнения регулярных та же последовательность команд в базе данных SQL Server. В этом разделе приведены примеры создания задания агента SQL Server для Linux с помощью Transact-SQL и SQL Server Management Studio (SSMS).
 

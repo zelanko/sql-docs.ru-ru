@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Резервные копии баз данных может занять от RC2 2017 г. SQL Server в Linux с помощью тех же средств, как другие платформы. На сервере Linux, можно использовать `sqlcmd` для подключения к SQL Server и создания резервных копий. В операционной системе Windows можно подключиться к SQL Server в Linux и резервных копий с помощью пользовательского интерфейса. Функциональные возможности резервного копирования является одинаковым для платформы. Например, можно сделать резервную копию баз данных локально, чтобы удаленные диски, а также к [службы хранилища больших двоичных объектов Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 

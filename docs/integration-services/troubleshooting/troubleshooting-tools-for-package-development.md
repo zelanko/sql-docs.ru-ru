@@ -1,31 +1,36 @@
 ---
-title: "Инструменты устранения неполадок при разработке пакета | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пакеты служб SQL Server Integration Services, устранение неполадок"
-  - "пакеты служб SSIS, устранение неполадок"
-  - "службы Integration Services, устранение неполадок"
-  - "ошибки [службы Integration Services], устранение неполадок"
-  - "пакеты [службы Integration Services], устранение неполадок"
+title: "Средства устранения неполадок для разработки пакетов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 65
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: c4c51f83c7e691f9c77c4d035e7dd80ead4f4a94
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Инструменты устранения неполадок при разработке пакета
+# <a name="troubleshooting-tools-for-package-development"></a>Инструменты устранения неполадок при разработке пакета
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат функции и средства, которые можно использовать для устранения неполадок в пакетах при разработке в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## Устранение неполадок проверки во время разработки  
+## <a name="troubleshooting-design-time-validation-issues"></a>Устранение неполадок проверки во время разработки  
  В текущем выпуске служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]при открытии пакета система проверяет все соединения до проверки всех компонентов пакета данных, при этом все медленно работающие или недоступные соединения переводятся в режим «вне сети». Благодаря этому уменьшаются задержки при проверке потока данных пакета.  
   
  После открытия пакета можно отключить соединение, щелкнув правой кнопкой мыши диспетчер соединений в области **Диспетчеры соединений** и выбрав команду **Работать автономно**. Это может ускорить выполнение операций в конструкторе служб SSIS.  
@@ -48,7 +53,7 @@ caps.handback.revision: 65
   
  Если при проверке объекты базы данных, используемые пакетом, заблокированы, процесс проверки может перестать отвечать. В этом случае конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] также прекращает отвечать. Возобновить проверку можно с помощью среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы закрыть соответствующий сеанс в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эту проблему можно также предотвратить с помощью параметров, описываемых в этом разделе.  
   
-## Устранение неполадок в потоке управления  
+## <a name="troubleshooting-control-flow"></a>Устранение неполадок в потоке управления  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат следующие средства и функции, которые можно использовать для устранения неполадок в потоке управления пакетов во время их разработки.  
   
 -   **Установка точек останова в задачах, контейнерах и пакетах**. Можно установить точки останова, используя графические средства, предоставляемые конструктором служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Точки останова могут быть включены на уровне пакета или на уровне отдельных задач или контейнеров, содержащихся в пакете. Некоторые задачи и контейнеры имеют дополнительные условия останова для установки точек останова. Например, можно активировать условия останова в контейнере «цикл по элементам», который приостанавливает выполнение в начале каждой итерации цикла.  
@@ -59,12 +64,12 @@ caps.handback.revision: 65
   
  Дополнительные сведения об этих возможностях см. в разделе [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md).  
   
-## Устранение неполадок в потоке данных  
+## <a name="troubleshooting-data-flow"></a>Устранение неполадок в потоке данных  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат следующие средства и функции, которые можно использовать для поиска ошибок в потоке данных пакетов во время их разработки.  
   
 -   **Тестирование с помощью лишь подмножества данных**. Если необходимо найти ошибку в работе потока данных пакета, используя только образец набора данных, то можно добавить преобразование «Процентная выборка» или «Выборка строк» для создания встроенного образца данных во время выполнения. Дополнительные сведения см. в разделах [Percentage Sampling Transformation](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md) и [Row Sampling Transformation](../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
   
--   **Использование средств просмотра данных для мониторинга данных по мере выполнения потока данных**. Средства просмотра данных отображают значения данных во время их перемещения между источниками, преобразованиями и назначениями. В средстве просмотра данные могут отображаться в сетке. Можно скопировать данные из средства просмотра данных в буфер обмена, а затем вставить их в файл или рабочий лист Excel. Дополнительные сведения см. в разделе [Добавление средства просмотра данных к потоку данных](../../integration-services/troubleshooting/add-a-data-viewer-to-a-data-flow.md).  
+-   **Использование средств просмотра данных для мониторинга данных по мере выполнения потока данных**. Средства просмотра данных отображают значения данных во время их перемещения между источниками, преобразованиями и назначениями. В средстве просмотра данные могут отображаться в сетке. Можно скопировать данные из средства просмотра данных в буфер обмена, а затем вставить их в файл или рабочий лист Excel. Дополнительные сведения см. в разделах [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md) .  
   
 -   **Настройка вывода ошибок в тех компонентах потока данных, которые поддерживают эту возможность**. Многие источники потока данных, преобразования и назначения поддерживают вывод ошибок. Настроив вывод ошибок компонента потока данных, можно направить данные с ошибками в другое назначение. Например, можно сохранить ошибочные или усеченные данные в отдельный текстовый файл. Можно также присоединить средства просмотра данных к выводу ошибок и анализировать только ошибочные данные. Во время разработки выходы ошибок захватывают ошибочные значения данных, чтобы облегчить разработку пакетов, эффективно обрабатывающих реальные данные. Однако в то время как остальные средства и функции устранения неполадок полезны только во время разработки, вывод ошибок является важной функциональной возможностью в рабочей среде. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 65
   
  Дополнительные сведения об этих возможностях см. в разделе [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
-## Устранение неполадок скриптов  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Средства для приложений (VSTA) — это среда разработки, с помощью которой можно создавать скрипты для задачи "Скрипт" и компонента "Скрипт". Среда VSTA располагает следующими средствами и функциями, которые можно использовать для поиска ошибок в скриптах во время разработки пакета.  
+## <a name="troubleshooting-scripts"></a>Устранение неполадок скриптов  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Средства для приложений (VSTA) — это среда разработки, с помощью которой можно создавать скрипты для задачи "Скрипт" и компонента "Скрипт". Среда VSTA располагает следующими средствами и функциями, которые можно использовать для поиска ошибок в скриптах во время разработки пакета.  
   
 -   **Установка точек останова в задачах «Скрипт».** Среда VSTA поддерживает отладку скриптов только в задаче «Скриптй». Точки останова, которые установлены в задачах «Скрипт», объединяются с точками останова, которые установлены в пакетах, задачах и контейнерах пакетов, предоставляя возможность совместной отладки всех элементов пакета.  
   
@@ -84,14 +89,10 @@ caps.handback.revision: 65
   
  Дополнительные сведения см. в статье [Debugging Script](../../integration-services/troubleshooting/debugging-script.md). Предложения по отладке компонента скрипта см. в разделе [Кодирование и отладка компонента скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
-## Устранение неполадок при ошибках без описаний  
- Если во время разработки пакета встречается ошибка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], не имеющая описания, его можно найти в [справочнике по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md). Этот список сейчас не включает сведения об устранении неполадок.  
+## <a name="troubleshooting-errors-without-a-description"></a>Устранение неполадок при ошибках без описаний  
+ Если во время разработки пакета встречается ошибка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , не имеющая описания, его можно найти в [справочнике по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md). Этот список сейчас не включает сведения об устранении неполадок.  
   
-||  
-|-|  
-|![Значок служб Integration Services (маленький)](../../integration-services/troubleshooting/media/dts-16.png "Значок служб Integration Services (маленький)")  **Оставайтесь в курсе новейших возможностей служб Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> -   [Посетить страницу «Службы Integration Services» на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.|  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок инструментов с помощью отчетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
  [Data Flow Performance Features](../../integration-services/data-flow/data-flow-performance-features.md)  
   

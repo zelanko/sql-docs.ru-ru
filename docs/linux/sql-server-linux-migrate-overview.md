@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Перенос баз данных и структурированных данных в SQL Server в Linux 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Можно перенести базы данных и данных для SQL Server 2017 г. версия-кандидат 2 под управлением Linux. Метод, который вы решили использовать зависит от источника данных и конкретного сценария. В следующих разделах содержатся советы и рекомендации для различных сценариев миграции.
 

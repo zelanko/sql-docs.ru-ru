@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Библиотек подключений и платформы для Microsoft SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Извлечение нашей [учебными руководствами для начинающих](http://aka.ms/sqldev) быстро приступить к работе с языки программирования типа C#, Java, Node.js, PHP и Python и построение приложения с помощью SQL Server в Linux или Windows или Docker на macOS.
 

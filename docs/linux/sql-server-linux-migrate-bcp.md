@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Массовое копирование данных с помощью программы bcp для SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 В этом разделе показано, как использовать [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) служебной программы командной строки для массового копирования данных между экземпляром RC2 2017 г. SQL Server в Linux и файлом данных в указанном пользователем формате.
 

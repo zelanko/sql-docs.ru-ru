@@ -1,25 +1,30 @@
 ---
-title: "Свойства SQL Server (вкладка &#171;Параметры запуска&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства SQL Server (вкладка «Параметры запуска») | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства SQL Server (вкладка &#171;Параметры запуска&#187;)
+# <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
   Используйте это диалоговое окно для добавления и удаления параметров запуска для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Параметры запуска могут сильно влиять на производительность компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Прежде чем добавлять или изменять параметры запуска, ознакомьтесь с разделом «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Укажите параметр запуска**  
  Чтобы добавить параметр, введите его и нажмите кнопку **Добавить**.  
   
@@ -28,29 +33,29 @@ caps.handback.revision: 10
  **Существующие параметры**  
  Чтобы удалить параметр, выберите его и нажмите кнопку **Удалить**.  
   
-## Формат параметров  
- Не вводите разделитель между параметрами. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существуют следующие требования к параметрам.  
+## <a name="parameter-format"></a>Формат параметров  
+ Не вводите разделитель между параметрами. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager обеспечивает следующие требования к параметрам.  
   
 -   Начальные и конечные пробелы любого параметра запуска отсекаются.  
   
 -   Каждый параметр запуска начинается с символа «тире» (–), вторым символом является буква.  
   
-## Обязательные параметры  
+## <a name="required-parameters"></a>Обязательные параметры  
  Следующие параметры обязательны: Их можно изменять, но не удалять.  
   
 -   -d представляет путь к файлу **master.mdf** (файл данных базы данных master).  
   
 -   -l представляет путь к файлу **master.ldf** (файл журнала базы данных master).  
   
--   -e представляет путь к файлам журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   -e представляет путь к файлам журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Если параметры пути неверны, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не запуститься.  
   
  Подробнее о перемещении базы данных master см. в разделе «Перемещение системных баз данных» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Необязательные параметры  
- Все поддерживаемые параметры запуска описаны в разделе «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметр запуска -T*trace#* показывает, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться с указанным флагом трассировки (*trace#*). Флаги трассировки используются для запуска сервера в нестандартном режиме. Подробнее о флагах трассировки см. в разделе "Флаги трассировки ([!INCLUDE[tsql](../../includes/tsql-md.md)])" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="optional-parameters"></a>Необязательные параметры  
+ Все поддерживаемые параметры запуска описаны в разделе «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметр запуска -T*trace#* показывает, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться с указанным флагом трассировки (*trace#*). Флаги трассировки используются для запуска сервера в нестандартном режиме. Подробнее о флагах трассировки см. в разделе "Флаги трассировки ([!INCLUDE[tsql](../../includes/tsql-md.md)])" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Описание некоторых дополнительных недокументированных параметров запуска и флагов трассировки можно найти в Интернете. Недокументированные параметры запуска и флаги трассировки создаются для решения нетиповых задач и создания определенных условий, необходимых для тестирования. Использование недокументированных параметров запуска может привести к непредвиденным результатам. Используйте недокументированные параметры только по указанию службы поддержки пользователей Майкрософт.  
@@ -68,14 +73,14 @@ caps.handback.revision: 10
 > [!CAUTION]  
 >  Некоторые необязательные параметры могут изменить поведение сервера и повлиять на его производительность.  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  Доступ к этой странице имеют только пользователи, уполномоченные изменять соответствующие записи в реестре. Это следующие пользователи.  
   
 -   Члены локальной группы администраторов.  
   
 -   Учетная запись домена, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] настроен для работы под определенной учетной записью домена.  
   
-## Электронная документация  
- Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье "Инструкции. Настройка параметров запуска сервера (диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="books-online-references"></a>Электронная документация  
+ Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье "Инструкции. Настройка параметров запуска сервера (диспетчер конфигурации[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка SLES кластера для группы доступности SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Это руководство содержит инструкции для создания трех узлов кластера для SQL Server в SUSE Linux Enterprise Server (SLES) 12 SP2. Для обеспечения высокой доступности группы доступности для Linux требует трех узлов — см. [высокий уровень доступности и защиты данных в конфигурации группы доступности](sql-server-linux-availability-group-ha.md). Кластеризации уровень основан на SUSE [высокий уровень доступности расширения (для которых Имеется)](https://www.suse.com/products/highavailability) построены на основе [Pacemaker](http://clusterlabs.org/). 
 
