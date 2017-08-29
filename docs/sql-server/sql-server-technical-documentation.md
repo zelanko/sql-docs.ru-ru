@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 8b8796e2bda252800c836cf7f10cc20f8b7d593c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>Техническая документация по SQL Server
@@ -47,14 +47,11 @@ ms.lasthandoff: 08/08/2017
 - [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
 **Оцените SQL Server!**    
-- [![Скачайте из центра оценки](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [**Скачайте SQL Server 2017**](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Скачайте из центра оценки](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [**Скачайте SQL Server 2016**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- **[Запустите виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**   
-- [![Скачайте из центра оценки](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Скачайте SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx)   
-- [![Скачайте из центра оценки](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [**Скачайте SQL Server Data Tools (SSMS)**](../ssdt/download-sql-server-data-tools-ssdt.md)
- 
-**Вспомогательная информация**
-- [Условия лицензии и информация о Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Скачать SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+- [Запустите виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [Скачать SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>Технологии SQL Server    
     
@@ -93,8 +90,8 @@ ms.lasthandoff: 08/08/2017
 + [Ссылки и сведения для всех поддерживаемых версий в Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx)
   
 ##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) получить справку 
-- [Stack Overflow (тег sql сервера) — задавайте технические вопросы](http://stackoverflow.com/questions/tagged/sql-server)
+- [Stack Overflow (с тегом sql-server) — задавайте вопросы о разработке для SQL](http://stackoverflow.com/questions/tagged/sql-server)
 - [Форумы MSDN — задавайте технические вопросы](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect — сообщайте об ошибках и запрашивайте функции](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit — общее обсуждение по SQL Server](https://www.reddit.com/r/SQLServer/)
-
+- [Условия лицензии и информация о Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 

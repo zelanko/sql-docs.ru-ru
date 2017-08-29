@@ -1,7 +1,7 @@
 ---
 title: "Заметки о выпуске SQL Server 2017 | Документация Майкрософт"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017
 В этом разделе описываются ограничения и проблемы, связанные с [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Дополнительные сведения см. в следующих статьях:
 - [Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [Release notes for SQL Server 2017 on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) (Заметки о выпуске для SQL Server 2017 в Linux).
-  
-[![Скачивание на странице центра оценки ПО.](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Скачайте [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] на странице **[центра оценки ПО](http://go.microsoft.com/fwlink/?LinkID=829477)**.
+
+[![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте последнюю версию релиз-кандидата SQL Server 2017 (RC2, август 2017 г.)](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>Релиз-кандидат SQL Server 2017 (RC2 — август 2017 г.)
 Для этого выпуска нет заметок о выпуске SQL Server на платформе Windows. См. [заметки о выпуске SQL Server на платформе Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -109,11 +109,12 @@ ms.lasthandoff: 08/15/2017
 
    Это восстановит экземпляр SQL Server, в котором находится вторичная реплика.
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Общение с командой разработчиков SQL Server 
-- [Stack Overflow (тег sql сервера) — задавайте технические вопросы](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) получить справку 
+- [Stack Overflow (с тегом sql-server) — задавайте вопросы о разработке для SQL](http://stackoverflow.com/questions/tagged/sql-server)
 - [Форумы MSDN — задавайте технические вопросы](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect — сообщайте об ошибках и запрашивайте функции](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit — общее обсуждение по SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Условия лицензии и информация о Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>Дополнительные сведения
 - [Заметки о выпуске служб SQL Server Reporting Services](../reporting-services/reporting-services-release-notes.md).

@@ -1,7 +1,7 @@
 ---
 title: "Новые возможности в SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. В этом разделе представлены новые возможности последнего релиз-кандидата SQL Server 2017 (RC2, август 2017 г.) и выпусков Community Technical Preview (CTP) в определенных функциональных областях.
 
-**Опробуйте их сами:** [скачайте последнюю версию релиз-кандидата SQL Server 2017 (RC2, август 2017 г.)](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте последнюю версию релиз-кандидата SQL Server 2017 (RC2, август 2017 г.)](http://go.microsoft.com/fwlink/?LinkID=829477).
 В этом выпуске исправлены ошибки и повышена производительность.
 
 >**Запускайте SQL Server в Linux!** Дополнительные сведения см. в разделе [Документации по SQL Server на Linux](https://docs.microsoft.com/sql/linux/).
@@ -112,11 +112,12 @@ SQL Server Analysis Services 2017 включает множество улуч
 
 Дополнительные сведения см. в разделе [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) (Новые возможности служб машинного обучения SQL Server).
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) Общение с командой разработчиков SQL Server 
-- [Stack Overflow (тег sql сервера) — задавайте технические вопросы](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) получить справку 
+- [Stack Overflow (с тегом sql-server) — задавайте вопросы о разработке для SQL](http://stackoverflow.com/questions/tagged/sql-server)
 - [Форумы MSDN — задавайте технические вопросы](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect — сообщайте об ошибках и запрашивайте функции](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit — общее обсуждение по SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Условия лицензии и информация о Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="next-steps"></a>Следующие шаги
 - Ознакомьтесь с [заметками о выпуске SQL Server 2017](sql-server-2017-release-notes.md).

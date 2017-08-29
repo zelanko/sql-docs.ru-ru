@@ -1,7 +1,7 @@
 ---
 title: "Журнал изменений для SQL Server Data Tools (SSDT) | Документация Майкрософт"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,20 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
-Этот журнал изменений относится к службе [SQL Server Data Tools (SSDT) для Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
+Это журнал изменений для [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
 
+## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT для Visual Studio 2017 (предварительная версия 15.3.0)
+Номер сборки: 14.0.16121.0
+  
+### <a name="whats-new"></a>Новые возможности
+
+Эта предварительная версия — первая версия SSDT для Visual Studio 2017. В этом выпуске появилась поддержка автономной установки с веб-интерфейсом для проектов баз данных SQL Server, Analysis Services, Reporting Services и Integration Services в Visual Studio 2017 15.3 и более поздних версиях.
 
 
-## <a name="ssdt-172"></a>SSDT 17.2
+**Известные проблемы**
+
+- Установщик не локализован.
+- Службы SSIS не локализованы.
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр *ExecuteOutofProcess* имеет значение *True*. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+- Полный список изменений доступен в [журнале изменений](changelog-for-sql-server-data-tools-ssdt.md).
+- Сообщить о проблемах можно на сайте [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback).
+- Для пакетов SSIS, содержащих расширения сторонних разработчиков, невозможно выбирать другие целевые версии сервера.
+
+
+## <a name="ssdt-172-for-visual-studio-2015"></a>SSDT 17.2 для Visual Studio 2015
 Номер сборки: 14.0.61707.300
 
 ### <a name="whats-new"></a>Новые возможности
@@ -76,7 +92,7 @@ ms.lasthandoff: 08/08/2017
 - Последняя версия *TargetServerVersion* изменена с "SQL Server vNext" на "SQL Server 2017".
 
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171-for-visual-studio-2015"></a>SSDT 17.1 для Visual Studio 2015
 Номер сборки: 14.0.61705.170
 
 ### <a name="whats-new"></a>Новые возможности
@@ -106,7 +122,7 @@ ms.lasthandoff: 08/08/2017
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
 - Исправлена проблема с базами данных с асимметричным ключом HSM с использованием элемента [Connect](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider) от поставщика расширенного управления ключами.
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (поддерживает SQL Server вплоть до версии 2017)
+## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>SSDT 17.0 для Visual Studio 2015 (поддерживает SQL Server вплоть до версии 2017)
 Номер сборки: 14.0.61704.140
 
 ### <a name="whats-new"></a>Новые возможности
@@ -208,7 +224,7 @@ ms.lasthandoff: 08/08/2017
 - Always Encrypted: шифрование онлайн не отключает отслеживание изменений при отмене и работает некорректно, если отслеживание изменений не было очищено перед началом шифрования.
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (поддерживает SQL Server вплоть до версии 2016)
+## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>SSDT 16.5 для Visual Studio 2015 (поддерживает SQL Server вплоть до версии 2016)
 Дата выпуска: 20 октября 2016 г.
 
 Номер сборки: 14.0.61021.0
@@ -303,7 +319,7 @@ Console.WriteLine(result.DeploymentReport);
 
 
 
-## <a name="ssdt-164-for-sql-server-2016"></a>SSDT 16.4 (для SQL Server 2016)
+## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.4 для Visual Studio 2015 (поддерживает SQL Server вплоть до версии 2016)
 Дата выпуска: 20 сентября 2016 г.
 
 Номер сборки: 14.0.60918
@@ -343,7 +359,7 @@ Console.WriteLine(result.DeploymentReport);
 
 
 
-## <a name="ssdt-163-for-sql-server-2016"></a>SSDT 16.3 (для SQL Server 2016)
+## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>SSDT 16.3 для Visual Studio 2015 (поддерживает SQL Server вплоть до версии 2016)
 Дата выпуска: 15 август 2016 г.
 
 Номер сборки: 14.0.60812.0  
@@ -383,7 +399,7 @@ Console.WriteLine(result.DeploymentReport);
 
  
   
-## <a name="ssdt-july-for-sql-server-2016"></a>Июльский выпуск SSDT (для SQL Server 2016)  
+## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>Июльская версия SSDT для Visual Studio 2015 (поддерживает SQL Server вплоть до версии 2016)  
 Дата выпуска: 30 июня 2016 г.  
   
 Номер сборки: 14.0.60629.0  
@@ -426,7 +442,7 @@ Console.WriteLine(result.DeploymentReport);
     * Устранена проблема в пользовательском интерфейсе вычисляемой таблицы моделей уровня совместимости 1200 при использовании стандартного форматирования для типа столбца, чтобы позволить изменять тип форматирования в пользовательском интерфейсе. 
     
 
-## <a name="ssdt-june-for-sql-server-2016"></a>Июньский выпуск SSDT (для SQL Server 2016)  
+## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>Июньская версия SSDT для Visual Studio 2015 (поддерживает SQL Server вплоть до версии 2016)  
 Дата выпуска: 1 июня 2016 г.  
   
 Номер сборки: 14.0.60525.0 

@@ -2,8 +2,10 @@
 title: "Требования к оборудованию и программному обеспечению для установки SQL Server 2016 | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -51,17 +53,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
-ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 952d6202918895d0d6f7b6496bff1185ccc4170b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Требования к оборудованию и программному обеспечению для установки SQL Server
 
 В этом разделе перечислены минимальные требования к оборудованию и программному обеспечению, необходимые для установки и запуска [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] в ОС Windows. 
 
-В [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] введена поддержка [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] в Linux. Подробнее см. в разделе [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] в Linux](../../linux/sql-server-linux-overview.md). 
+В [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] введена поддержка [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] в Linux. Дополнительные сведения см. в разделе [Требования к оборудованию и программному обеспечению для установки [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] в Linux](../../linux/sql-server-linux-setup.md#system). 
 
 > Эта тема относится к [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздним версиям. Содержимое, связанное с предыдущих версий SQL Server, см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   
