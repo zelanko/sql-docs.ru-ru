@@ -32,8 +32,9 @@
 # [Среда SSMS](the-sql-server-management-studio-environment.md)
 # [Страницы свойств в SSMS](property-pages-in-sql-server-management-studio.md)
 # [Окно свойств в SSMS](properties-window-management-studio.md)
+# [Окно вывода в SSMS](output-window.md)
 
-# [Диалоговое окно "О программе"](about-dialog-box.md)
+# [Диалоговое окно «О продукте»](about-dialog-box.md)
 # [Веб-браузер SSMS](sql-server-management-studio-web-browser.md)
 # [Общие элементы пользовательского интерфейса](general-user-interface-elements.md)
 
