@@ -22,7 +22,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Design first or data first when creating in Reporting Services mobile reports
+# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Использование подхода "сначала конструирование" или "сначала данные" при создании мобильных отчетов SQL Server
   
 С помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]в рабочей области конструирования с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов можно быстро создать мобильные отчеты, которые масштабируются в соответствии с любым размером экрана.   
   
