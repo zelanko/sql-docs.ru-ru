@@ -62,8 +62,8 @@ ms.lasthandoff: 07/29/2017
   
 -   Таблицы, оптимизированные для памяти  
   
- ### <a name="data-types"></a>Типы данных  
- -   ntext, ntext, и image  
+### <a name="data-types"></a>Типы данных  
+-   ntext, ntext, и image  
   
 -   timestamp  
   
