@@ -1,7 +1,8 @@
 ---
 title: "Поддержка управляющих объектов SQL Server для выполняющейся в памяти OLTP | Документация Майкрософт"
+description: "В этой статье описаны элементы управляющих объектов SQL Server, которые поддерживают выполняющуюся в памяти OLTP."
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 08/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,57 +16,35 @@ author: JennieHubbard
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: f97c2335abf293f70fad454ac9f181a3cb3e439c
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
 
-В этом разделе описаны изменения управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) для OLTP в памяти.  
-  
-Следующие типы и члены поддерживают OLTP в памяти.  
-  
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (перечисление)
+В этом разделе описаны элементы управляющих объектов SQL Server, которые поддерживают выполняющуюся в памяти OLTP.  
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (свойство)
+## <a name="smo-types-and-members"></a>Типы и элементы управляющих объектов SQL Server
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (конструктор)
+Следующие типы и элементы находятся в пространстве имен **Microsoft.SqlServer.Management.Smo** и поддерживают выполняющуюся в памяти OLTP.
 
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (перечисление)
+- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (перечисление)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (свойство)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (конструктор)
+- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (перечисление)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (свойство)
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (элемент перечисления)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (свойство)
+- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (свойство)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (свойство)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (свойство)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (свойство)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (свойство)
+- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (свойство)
 
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (свойство)
-
-- Microsoft.SqlServer.Management.Smo.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (номер перечисления)
-
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (свойство)
-
-- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (свойство)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (свойство)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (свойство)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (свойство)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (свойство)
-
-- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (свойство)
-
-## <a name="code-sample"></a>Образец кода
-
-#### <a name="actions-taken-in-the-code-example"></a>Действия, выполняемые в примере кода
-  
--   Создание базы данных с оптимизированной для памяти файловой группой и оптимизированным для памяти файлом.  
-  
--   Создание оптимизированной для памяти таблицу с первичным ключом, некластеризованным индексом и некластеризованным хэш-индексом.  
-  
--   Создание столбцов и индексов.  
-  
--   Создание оптимизированного для памяти пользовательского табличного типа.  
-  
--   Создание скомпилированной в собственном коде хранимой процедуры.
+## <a name="c-code-example"></a>Пример кода на C#
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>Сборки, на которые указывают ссылки в примере скомпилированного кода
 
@@ -73,6 +52,14 @@ ms.lasthandoff: 08/17/2017
 - Microsoft.SqlServer.Management.Sdk.Sfc.dll
 - Microsoft.SqlServer.Smo.dll
 - Microsoft.SqlServer.SqlEnum.dll
+
+#### <a name="actions-taken-in-the-code-example"></a>Действия, выполняемые в примере кода
+
+1. Создание базы данных с оптимизированной для памяти файловой группой и оптимизированным для памяти файлом.  
+2. Создание оптимизированной для памяти таблицу с первичным ключом, некластеризованным индексом и некластеризованным хэш-индексом.  
+3. Создание столбцов и индексов.  
+4. Создание оптимизированного для памяти пользовательского табличного типа.  
+5. Создание скомпилированной в собственном коде хранимой процедуры.
 
 #### <a name="source-code"></a>Исходный код
   
@@ -180,5 +167,6 @@ public class A {
   
 ## <a name="see-also"></a>См. также:  
 
-[Поддержка SQL Server для In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
+- [Поддержка SQL Server для In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
+- [Общие сведения об управляющих объектах SQL Server](../server-management-objects-smo/overview-smo.md)
 

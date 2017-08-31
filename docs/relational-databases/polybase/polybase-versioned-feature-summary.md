@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Сводка функций PolyBase по версиям
@@ -35,6 +35,7 @@ ms.lasthandoff: 07/31/2017
 |Запрос данных Hadoop с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|нет|нет|да|
 |Импорт данных из Hadoop|да|нет|нет|да|
 |Экспорт данных в Hadoop  |да|нет|нет| да|
+|Запрос, импорт из HDInsights, экспорт в HDInsights |нет|нет|нет|нет
 |Отправка результатов вычислений запросов в Hadoop|да|нет|нет|да|  
 |Импорт данных из хранилища BLOB-объектов Azure|да|нет|да|да| 
 |Экспорт данных в хранилище BLOB-объектов Azure|да|нет|да|да|  

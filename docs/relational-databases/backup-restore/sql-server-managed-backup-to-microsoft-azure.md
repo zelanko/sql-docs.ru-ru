@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
@@ -26,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] управляет резервным копированием SQL Server в хранилище BLOB-объектов Microsoft Azure и автоматизирует его. Серверу SQL Server можно разрешить определять расписание резервного копирования на основе рабочей нагрузки транзакций в базе данных. Кроме того, для настройки расписания можно воспользоваться дополнительными параметрами. Параметры хранения определяют продолжительность хранения резервных копий в хранилище BLOB-объектов Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживает восстановление на момент времени для указанного периода хранения.  
   
- Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], процедуры и принцип действия [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] изменились. Дополнительные сведения см. в статье [Перенос параметров управляемой архивации SQL Server 2014 в SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], процедуры и принцип действия [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] изменились. Дополнительные сведения см. в статье [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] рекомендуется использовать для экземпляров SQL Server, работающих на виртуальных машинах Microsoft Azure.  
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  Если для базы данных выполняется текущее задание полного резервного копирования базы данных, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ожидает завершения текущего задания до перехода к следующему заданию полного резервного копирования этой же базы данных. Аналогичным образом в заданный момент времени может выполняться только одно задание резервного копирования журнала транзакций. Однако операции полного резервного копирования базы данных и резервного копирования журнала транзакций могут выполняться одновременно. Ошибки записываются в журнал как расширенные события.  
   
  Если запланировано больше 10 параллельных операций полного резервного копирования базы данных, через канал отладки расширенных событий передается предупреждение. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] хранит очередь приоритетов для оставшихся баз данных, для которых нужно создать резервные копии, пока все операции резервного копирования не будут запланированы и завершены.  
+
+> [!NOTE]
+> Управляемое резервное копирование SQL Server не поддерживается для прокси-серверов.
+>
   
 ##  <a name="support_limits"></a> Поддержка  
  Ниже приведены ограничения и рекомендации, связанные [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

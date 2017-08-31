@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 3f87dec24a195cabd75fb653fcb5bcaf51e29db9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Просмотр и чтение файлов журналов программы установки SQL Server
@@ -145,11 +145,11 @@ ms.lasthandoff: 08/02/2017
   
  Типы файлов журналов MSI:  
   
--   \<Компонент> _\<Архитектура>\_\<Итерация> .log  
+-   \<компонент>_\<архитектура>\_\<взаимодействие>.log  
   
--   \<Компонент>_\<Архитектура>\_\<Язык>\_\<Итерация>.log  
+-   \<компонент>_\<архитектура>\_\<язык>\_\<взаимодействие>.log  
   
--   \<Компонент>_\<Архитектура>\_\<Итерация>\_\<рабочий процесс>.log  
+-   \<компонент>_\<архитектура>\_\<взаимодействие>\_\<рабочий процесс>.log  
   
 ### <a name="location"></a>Местоположение  
  Файлы журналов MSI расположены в папке %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\\<имя\>.log.  
