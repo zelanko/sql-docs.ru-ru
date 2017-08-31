@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Вызов события: ManageWeb  
   
- Дополнительные сведения см. в статье [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Дополнительные сведения см. в статье [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### <a name="script-usage"></a>Использование скрипта  
  **Создание файлов скрипта (PS1)**  
