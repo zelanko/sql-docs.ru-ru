@@ -66,7 +66,7 @@ GO
 
 Перезапустите [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
