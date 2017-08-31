@@ -70,4 +70,3 @@ ms.lasthandoff: 07/31/2017
 [Подключение к зарегистрированным серверам и к обозревателю объектов](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
-
