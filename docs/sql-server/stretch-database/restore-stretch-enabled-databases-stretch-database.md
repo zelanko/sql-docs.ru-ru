@@ -1,5 +1,5 @@
 ---
-title: "Восстановление баз данных с поддержкой Stretch (база данных Stretch) | Документация Майкрософт"
+title: "Восстановление баз данных с поддержкой Stretch (Stretch Database) | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/06/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4233db126530558a3183e410e1b96b50f57d1d27
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 179935cc6a15d076737d12b4fa6fac28f354db3c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="restore-stretch-enabled-databases-stretch-database"></a>Восстановление баз данных с поддержкой Stretch (база данных Stretch)
+# <a name="restore-stretch-enabled-databases-stretch-database"></a>Восстановление баз данных с поддержкой Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Восстановление резервной копии базы данных после различных типов сбоев, ошибок и аварийных ситуаций.
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="restore-your-remote-azure-data"></a>Восстановление удаленных данных Azure
 
 ### <a name="recover-a-live-azure-database"></a>Восстановление активной базы данных Azure
-Службы базы данных SQL Server Stretch в Azure делает моментальные снимки всех активных данных не реже, чем каждые 8 часов, используя моментальные снимки хранилища Azure. Эти снимки хранятся в течение 7 дней. Это позволяет восстановить данные до одного из как минимум 21 момента времени за прошедшие 7 дней вплоть до времени последнего моментального снимка.
+Служба SQL Server Stretch Database в Azure делает моментальные снимки всех активных данных не реже, чем каждые 8 часов, используя моментальные снимки хранилища Azure. Эти снимки хранятся в течение 7 дней. Это позволяет восстановить данные до одного из как минимум 21 момента времени за прошедшие 7 дней вплоть до времени последнего моментального снимка.
 
 Для восстановления активной базы данных Azure до наиболее раннего момента времени с помощью портала Azure необходимо выполнить указанные ниже действия.
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/11/2017
 6. Начнется процесс восстановления базы данных, который можно отслеживать с помощью области **УВЕДОМЛЕНИЯ**.
 
 ### <a name="recover-a-deleted-azure-database"></a>Восстановление удаленной базы данных Azure
-Перед удалением базы данных служба базы данных SQL Server Stretch в Azure делает ее моментальный снимок и хранит его в течение 7 дней. После этого моментальные снимки активной базы данных сохраняться не будут. Это позволяет восстановить удаленную базу данных до момента ее удаления.
+Перед удалением базы данных служба SQL Server Stretch Database в Azure делает ее моментальный снимок и хранит его в течение 7 дней. После этого моментальные снимки активной базы данных сохраняться не будут. Это позволяет восстановить удаленную базу данных до момента ее удаления.
 
 Для восстановления удаленной базы данных Azure до момента ее удаления с помощью портала Azure необходимо выполнить указанные ниже действия.
 
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/11/2017
     
   ## <a name="see-also"></a>См. также:  
  [Резервное копирование баз данных с поддержкой Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
- [Управление базой данных Stretch и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
+ [Управление Stretch Database и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

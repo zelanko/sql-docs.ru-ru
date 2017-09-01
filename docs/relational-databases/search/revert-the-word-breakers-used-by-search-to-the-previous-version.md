@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Перевод средств разбиения по словам, используемых поиском, на предыдущую версию
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
   
  В этом разделе не обсуждаются следующие языки.  
   
--   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Датский, польский и турецкий**. Средства разбиения по словам сторонних поставщиков для датского, польского и турецкого языков, входившие в предыдущие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , заменены компонентами [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -381,7 +381,7 @@ ms.lasthandoff: 07/31/2017
 |Текущее имя файла|MsWb70804.dll|  
   
 ## <a name="see-also"></a>См. также:  
- [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
