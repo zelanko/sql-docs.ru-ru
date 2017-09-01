@@ -1,5 +1,5 @@
 ---
-title: "Выпуски и поддерживаемые функции SQL Server 2017 | Microsoft Docs"
+title: "Выпуски и поддерживаемые функции SQL Server 2017 | Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Выпуски и поддерживаемые функции SQL Server 2017
@@ -131,7 +131,7 @@ ms.lasthandoff: 07/31/2017
 **Выпуски Evaluation и Developer**  
 Поддерживаемые компоненты для выпусков Developer и Evaluation указаны в списке возможностей SQL Server Enterprise в приведенных ниже таблицах.
 
-Выпуск Developer edition по-прежнему поддерживает только 1 клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
+Выпуск Developer по-прежнему поддерживает только 1 клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Ограничения масштабирования  
   
@@ -199,7 +199,8 @@ ms.lasthandoff: 07/31/2017
 |Отложенная устойчивость|Да|Да|Да|Да|Да|
 |Автоматическая настройка|Да|Нет|Нет|Нет|Нет|
 |Адаптивные соединения в пакетном режиме|Да|Нет|Нет|Нет|Нет|
-|Адаптация временно предоставляемого буфера памяти в пакетном режиме|Да|Нет|Нет|Нет|Нет|
+|Обратная связь по временно предоставляемому буферу памяти в пакетном режиме|Да|Нет|Нет|Нет|Нет|
+|Выполнение с чередованием для функций с табличным значением с несколькими инструкциями|Да|Да|Да|Да|Да|
 |Улучшения массовой вставки|Да|Да|Да|Да|Да|
 
 
