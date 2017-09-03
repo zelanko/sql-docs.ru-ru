@@ -40,7 +40,6 @@
 # [Преобразование "Подсчет строк"](row-count-transformation.md)  
 # [Преобразование "Выборка строк"](row-sampling-transformation.md)  
 # [Компонент скрипта](script-component.md)  
-## [Выбор типа компонента скрипта](select-script-component-type.md)  
 # [Преобразование "Медленно изменяющееся измерение"](slowly-changing-dimension-transformation.md)  
 ## [Настройка выходов с помощью мастера медленно изменяющихся измерений](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
 ## [Справка F1 мастера медленно изменяющихся измерений](slowly-changing-dimension-wizard-f1-help.md)  
