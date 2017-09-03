@@ -1,5 +1,5 @@
 ---
-title: "Руководства по SQL Server 2016 | Документация Майкрософт"
+title: "Руководства по SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -21,7 +21,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="tutorials-for-sql-server"></a>Руководства по SQL Server 2016
+# <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] предоставляет руководства, которые помогут вам изучить новые технологии и возможности. Руководства по более ранним версиям обычно подходят и к более поздним. При упоминании новой функции в руководстве также указывается минимальная необходимая версия.  
