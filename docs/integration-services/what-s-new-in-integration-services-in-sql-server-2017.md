@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Какой &#39; новые возможности служб Integration Services в SQL Server 2017 г.
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/23/2017
 
 ## <a name="new-in-the-azure-feature-pack"></a>Новые возможности в пакете дополнительных компонентов Azure
 
-Помимо улучшений подключением в SQL Server пакет дополнительных компонентов интеграции служб для Azure добавлена поддержка хранилища Озера данных Azure. Дополнительные сведения см. в разделе [пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+Помимо улучшений подключением в SQL Server пакет дополнительных компонентов интеграции служб для Azure добавлена поддержка хранилища Озера данных Azure. Дополнительные сведения см. в записи блога [новый Azure компонент пакета выпуска усиление ADLS подключения](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/). См. также [пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>Новые возможности SQL Server Data Tools (SSDT)
 

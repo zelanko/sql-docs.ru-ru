@@ -4,17 +4,17 @@ description: "Возможность использования различны
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 66f625f1739f17f20a6b5e2a564f2d72f81d6b95
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Настройка образов контейнеров 2017 г. SQL Server на Docker
@@ -227,7 +227,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
-## <a name="upgrade-sql-server-in-containers"></a>Обновление SQL Server в контейнерах
+## <a id="upgrade"></a>Обновление SQL Server в контейнерах
 
 Чтобы обновить образ контейнера с помощью Docker, извлечь последнюю версию из реестра. Используйте `docker pull` команды:
 
@@ -237,15 +237,51 @@ docker pull microsoft/mssql-server-linux:latest
 
 Это обновляет образ SQL Server для любой новые контейнеры, создаваемые вами, но не обновляет SQL Server в все запущенные контейнеры. Для этого необходимо создать новый контейнер в образе контейнера последнюю SQL Server и перенести данные в этот новый контейнер.
 
-1. Во-первых, убедитесь, что вы используете один из [методы сохраняемости данных](#persist) для существующего контейнера SQL Server.
+1. Сначала необходимо Получите последние образ контейнера SQL Server.
 
-2. Остановка SQL Server контейнер с `docker stop` команды.
+   ```bash
+   docker pull microsoft/mssql-server-linux:latest
+   ```
 
-3. Создать новый контейнер SQL Server с `docker run` и указать каталог сопоставленных узла или контейнер томов данных. Новый контейнер теперь использует новую версию SQL Server с помощью существующих данных SQL Server.
+1. Убедитесь, что вы используете один из [методы сохраняемости данных](#persist) для существующего контейнера SQL Server. Это позволяет запустить новый контейнер с теми же данными.
 
-4. Проверка баз данных и данных в новый контейнер.
+1. Остановка SQL Server контейнер с `docker stop` команды.
 
-5. При необходимости удалите старый контейнер с `docker rm`.
+1. Создать новый контейнер SQL Server с `docker run` и указать каталог сопоставленных узла или контейнер томов данных. Новый контейнер теперь использует новую версию SQL Server с помощью существующих данных SQL Server.
+
+   > [!IMPORTANT]
+   > Обновление поддерживается только между RC1 и RC2, в данный момент.
+
+1. Проверка баз данных и данных в новый контейнер.
+
+1. При необходимости удалите старый контейнер с `docker rm`.
+
+## <a name="run-a-specific-sql-server-container-image"></a>Запустите конкретных образа контейнера SQL Server
+
+Существуют сценарии, где вы не можете использовать последний образ контейнера SQL Server. Для выполнения конкретных образа контейнера SQL Server, выполните следующие действия:
+
+1. Определить Docker **тега** для выпуска, который вы хотите использовать. Просмотреть доступные теги [страница концентратора Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+
+1. По запросу образ контейнера SQL Server с тегом. Например, для извлечения изображения RC1, замените `<image_tag>` в следующую команду с `rc1`.
+
+   ```bash
+   docker pull microsoft/mssql-server-linux:<image_tag>
+   ```
+
+1. Чтобы запустить новый контейнер с изображением, укажите имя тега в `docker run` команды. В следующей команде замените `<image_tag>` с версией, требуется запустить.
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+Эти действия также можно понизить существующий контейнер. Например вы хотите выполнить откат или понизить запущенного контейнера для устранения неполадок или тестирование. Чтобы понизить запущенного контейнера, необходимо использовать метод сохраняемости на папку данных. Выполните те же действия, описанные в [обновите раздел](#upgrade), но указать имя тега для более ранней версии, при запуске нового контейнера.
+
+> [!IMPORTANT]
+> Обновление и переход к более раннему поддерживаются только между RC1 и RC2 в данный момент.
 
 ## <a id="troubleshooting"></a>Устранение неполадок
 
