@@ -91,7 +91,7 @@ DECLARE @json NVARCHAR(MAX) = '{
 ```  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Большое количество определенных решений, варианты использования и рекомендации см. в разделе [записи в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure с руководителем программ Microsoft (Jovan Popovic).
+Много определенных решений, варианты использования и рекомендации см. в [записях блога о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) (категории SQL Server и Azure SQL Database (База данных SQL Azure), автор — руководитель программ корпорации Майкрософт Йован Попович (Jovan Popovic)).
   
 ## <a name="see-also"></a>См. также:  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  
