@@ -1,6 +1,6 @@
 ---
-title: "Обновленные — документы для SQL Server | Документация Майкрософт"
-description: "Отображение отрывков из обновленного содержимого для последних изменений в документации по SQL Server."
+title: "Обновленные документы по SQL Server | Документация Майкрософт"
+description: "Отрывки из недавно обновленного содержимого в документации по SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -22,7 +22,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="new-and-recently-updated-sql-server-docs"></a>Новые и недавно обновленные: документы для SQL Server
+# <a name="new-and-recently-updated-sql-server-docs"></a>Новые и недавно обновленные документы для SQL Server
 
 
 

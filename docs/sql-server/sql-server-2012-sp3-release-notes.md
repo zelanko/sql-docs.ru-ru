@@ -14,7 +14,7 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.sourcegitcommit: ef40e08f051397ed158d06cb4cc8de71d95f6fa2
 ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
 ms.contentlocale: ru-ru
 ms.lasthandoff: 07/31/2017
@@ -32,7 +32,7 @@ ms.lasthandoff: 07/31/2017
 - [SQL Server 2012 Express с пакетом обновления 3 (SP3)](http://go.microsoft.com/fwlink/?linkid=692144)
 - [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 3 (SP3)](http://go.microsoft.com/fwlink/?linkid=615941)
 
-Дополнительные сведения об определении местонахождения и имени файла для скачивания в зависимости от установленной у вас версии программы см. в разделе "Выбор подходящего файла для скачивания" статьи [Информация о выпуске SQL Server 2012 с пакетом обновления 3](https://support.microsoft.com/en-us/help/3072779/sql-server-2012-service-pack-3-release-information).
+Дополнительные сведения об определении расположении и имени файла для скачивания в зависимости от установленной у вас версии программы см. в разделе "Выбор подходящего файла для скачивания" статьи [Информация о выпуске SQL Server 2012 с пакетом обновления 3](https://support.microsoft.com/en-us/help/3072779/sql-server-2012-service-pack-3-release-information).
 
 ## <a name="see-also"></a>См. также:
 - [Установка обновлений для обслуживания SQL Server 2012](https://msdn.microsoft.com/en-us/library/hh479746(v=sql.110).aspx)

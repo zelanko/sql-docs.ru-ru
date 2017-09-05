@@ -1,6 +1,6 @@
 ---
-title: "Обновленные — документы по PowerShell | Документация Майкрософт"
-description: "Отображение фрагментов обновленного содержимого для последних изменений в документации по SQL Server."
+title: "Обновленные документы по PowerShell | Документация Майкрософт"
+description: "Отрывки из недавно обновленного содержимого в документации по PowerShell."
 services: na
 documentationcenter: 
 author: MightyPen

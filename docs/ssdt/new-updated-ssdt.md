@@ -1,6 +1,6 @@
 ---
-title: "Обновленные — документы о SSDT для SQL Server | Документация Майкрософт"
-description: "Отображение фрагментов обновленного содержимого для последних изменений в документации по SQL Server Data Tools (SSDT) для Microsoft SQL Server."
+title: "Обновленные документы по SSDT для SQL Server | Документация Майкрософт"
+description: "Отрывки из недавно обновленного содержимого в документации по SQL Server Data Tools (SSDT) для Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
