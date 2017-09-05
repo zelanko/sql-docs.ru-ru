@@ -188,7 +188,7 @@ ms.lasthandoff: 07/31/2017
 
 
 
-Ниже приведены некоторые распространенные сценарии, возникающие после миграции на платформу [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)], а также способы их разрешения. Сюда относятся сценарии, характерные для перехода с [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] (со старых версий на новые), а также для перехода с внешней платформы (например, Oracle, DB2, MySQL и Sybase) на [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
+Ниже приведены некоторые распространенные сценарии, возникающие после миграции на платформу [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)], а также способы их разрешения. Сюда относятся сценарии, характерные для перехода с [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]\(со старых версий на новые), а также для перехода с внешней платформы (например, Oracle, DB2, MySQL и Sybase) на [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)].
 
 **<a name="CEUpgrade"></a> Регрессии запросов из-за изменения в версии CE**
 
