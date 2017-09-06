@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scripttask.f1
+- sql13.dts.designer.scripttask.general.f1
+- sql13.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - scripts [Integration Services], tasks
 - Script task [Integration Services], about Script task
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 0ab143db0dfc6cda94bd0ba5e51fec66da7b46be
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="script-task"></a>Задача «Скрипт»
@@ -90,6 +92,57 @@ ms.lasthandoff: 08/03/2017
  Дополнительные сведения о программной установке этих свойств см. в следующем разделе:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask>  
+  
+## <a name="script-task-editor-general-page"></a>Редактор задачи «Скрипт» (страница «Общие»)
+  Страница **Общие** диалогового окна **Редактор задачи «Скрипт»** позволяет дать имя и описание задаче «Скрипт».  
+  
+ Дополнительные сведения о задаче «Скрипт» см. в разделах [задачи сценария](../../integration-services/control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе сценариев задач](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [расширение пакетов с помощью задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>Параметры  
+ **Название**  
+ Задайте уникальное имя для задачи «Скрипт». Это имя используется в качестве метки для значка задачи.  
+  
+> [!NOTE]  
+>  Имена задач в пределах пакета должны быть уникальными.  
+  
+ **Description**  
+ Введите описание задачи «Скрипт».  
+  
+## <a name="script-task-editor-script-page"></a>Редактор задачи «Скрипт» (страница «Скрипт»)
+  Используйте страницу **Скрипт** в диалоговом окне **Редактор задачи «Скрипт»** , чтобы задать свойства скрипта и указать переменные, к которым скрипт будет иметь доступ.  
+  
+> [!NOTE]  
+>  В [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] и более поздних версиях все скрипты предварительно скомпилированы. В предыдущих версиях для предварительной компиляции необходимо было установить свойство **PrecompileScriptIntoBinaryCode** .  
+  
+ Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [расширение пакетов с помощью задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+  
+### <a name="options"></a>Параметры  
+ **ScriptLanguage**  
+ Выберите используемый для задачи язык скрипта: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
+  
+ Изменить значение свойства **ScriptLanguage** для задачи после создания скрипта нельзя.  
+  
+ Чтобы установить значение по умолчанию языка скрипта для задачи «Скрипт», воспользуйтесь параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры** . Дополнительные сведения см. в разделе [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+  
+ **EntryPoint**  
+ Укажите метод, вызываемый средой выполнения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в качестве точки входа в код задачи "Скрипт". Этот метод должен быть членом класса ScriptMain проекта [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain является заданным по умолчанию классом, который создается в шаблонах скриптов.  
+  
+ Для изменения имени метода в проекте VSTA следует поменять значение свойства **EntryPoint** .  
+  
+ **ReadOnlyVariables**  
+ Введите через запятую список переменных "только для чтения", которые доступны для скрипта, или нажмите кнопку с многоточием (**…**) и выберите переменные в диалоговом окне **Выбор переменных** .  
+  
+> [!NOTE]  
+>  В именах переменных учитывается регистр.  
+  
+ **ReadWriteVariables**  
+ Введите через запятую список переменных "для чтения и записи", которые доступны для скрипта, или нажмите кнопку с многоточием (**…**) и выберите переменные в диалоговом окне **Выбор переменных** .  
+  
+> [!NOTE]  
+>  В именах переменных учитывается регистр.  
+  
+ **Изменение скрипта**  
+ Открывает среду VSTA IDE, в которой можно создать или изменить скрипт.  
   
 ## <a name="related-content"></a>См. также  
   

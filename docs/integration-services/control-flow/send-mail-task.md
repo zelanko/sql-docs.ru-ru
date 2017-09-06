@@ -1,30 +1,37 @@
 ---
-title: "Задача &#171;Отправка почты&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sendmailtask.f1"
-helpviewer_keywords: 
-  - "почта [службы Integration Services]"
-  - "Задача «Отправка почты»"
-  - "электронная почта [службы Integration Services]"
-  - "сообщения [службы Integration Services]"
-  - "отправка сообщений"
+title: "Отправить задачи почты | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sendmailtask.f1
+- sql13.dts.designer.sendmailtask.general.f1
+- sql13.dts.designer.sendmailtask.mail.f1
+helpviewer_keywords:
+- mail [Integration Services]
+- Send Mail task
+- e-mail [Integration Services]
+- messages [Integration Services]
+- sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/11/2017
+
 ---
-# Задача &#171;Отправка почты&#187;
+# <a name="send-mail-task"></a>Задача «Отправка почты»
   Задача «Отправка почты» производит отправку сообщения электронной почты. Эта задача позволяет пакету отправлять сообщения при успешном или неуспешном завершении задач в рабочем процессе пакета либо в ответ на события, инициируемые при выполнении пакета. Например, задача может уведомить администратора базы данных об успешном или неуспешном завершении задачи резервного копирования базы данных.  
   
  Задачу «Отправка почты» можно настроить следующими способами:  
@@ -54,8 +61,8 @@ caps.handback.revision: 51
   
  Задача производит подключение к почтовому серверу при помощи диспетчера соединений SMTP. Дополнительные сведения см. в статье [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
   
-## Пользовательские сообщения для ведения журнала, доступные в задаче «Отправка почты»  
- В следующей таблице перечислены пользовательские записи в журнале для задачи «Отправка почты». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Пользовательские сообщения для ведения журнала, доступные в задаче «Отправка почты»  
+ В следующей таблице перечислены пользовательские записи в журнале для задачи «Отправка почты». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Запись журнала|Description|  
 |---------------|-----------------|  
@@ -63,29 +70,100 @@ caps.handback.revision: 51
 |**SendMailTaskEnd**|Указывает, что задача завершила отправку сообщения электронной почты.|  
 |**SendMailTaskInfo**|Выводит описательные сведения об этой задаче.|  
   
-## Настройка задачи «Отправка почты»  
+## <a name="configuring-the-send-mail-task"></a>Настройка задачи «Отправка почты»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах.  
+ Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Отправка почты" (страница "Общие")](../../integration-services/control-flow/send-mail-task-editor-general-page.md)  
-  
--   [Редактор задачи "Отправка почты" (страница "Почта")](../../integration-services/control-flow/send-mail-task-editor-mail-page.md)  
-  
--   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
+-   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
   
  Сведения о задании этих свойств программными средствами см. в следующем разделе:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## Связанные задачи  
- Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md).  
+## <a name="related-tasks"></a>Связанные задачи  
+ Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
--   Техническая статья [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625) на сайте shareourideas.com  
+-   Техническая статья [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
   
-## См. также  
+## <a name="send-mail-task-editor-general-page"></a>Редактор задачи «Отправка почты» (страница «Общие»)
+  Используйте страницу **Общие** диалогового окна **Редактор задачи «Отправка почты»** , чтобы задать имя и описание для задачи «Отправка почты».  
+  
+### <a name="options"></a>Параметры  
+ **Название**  
+ Укажите уникальное имя для задачи «Отправка почты». Это имя используется в качестве метки для значка задачи.  
+  
+ **Примечание.** Имена задач должны быть уникальными в пределах пакета.  
+  
+ **Description**  
+ Введите описание задачи «Отправка почты».  
+  
+## <a name="send-mail-task-editor-mail-page"></a>Редактор задачи «Отправка почты» (страница «Почта»)
+  Страница **Почта** диалогового окна **Редактор задачи «Отправка почты»** служит для определения получателей, типа и приоритета сообщения. К сообщению можно также прикрепить файлы. Текстом сообщения может быть введенная строка, соединение с файлом, содержащим текст, или имя переменной, содержащей текст.  
+  
+### <a name="options"></a>Параметры  
+ **SMTPConnection**  
+ Выберите диспетчер подключений SMTP из списка или нажмите кнопку  **\<создать соединение... >** для создания нового соединения диспетчера.  
+  
+> [!IMPORTANT]  
+>  Диспетчер SMTP-соединений поддерживает только анонимную проверку подлинности и проверку подлинности Windows. Обычная проверка подлинности не поддерживается.  
+  
+ **См. также:** [Диспетчер соединений SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)  
+  
+ **От**  
+ Задайте адрес электронной почты отправителя.  
+  
+ **Чтобы**  
+ Укажите адреса электронной почты получателей, разделенные точкой с запятой.  
+  
+ **Копия**  
+ Задайте адреса электронной почты получателей, которые также получают копии сообщения. Разделяйте адреса точками с запятой.  
+  
+ **Скрытая копия**  
+ Задайте адреса электронной почты получателей, которые получают скрытые копии сообщения. Разделяйте адреса точками с запятой.  
+  
+ **Тема**  
+ Укажите тему электронного сообщения.  
+  
+ **MessageSourceType**  
+ Выберите тип источника сообщения. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Прямой ввод**|Задание источника текста сообщения. При выборе этого значения отображается динамический параметр **MessageSource**.|  
+|**Соединение с файлом**|Задание в качестве источника файла, содержащего текст сообщения. При выборе этого значения отображается динамический параметр **MessageSource**.|  
+|**Переменная**|В качестве источника указывается переменная, содержащая текст сообщения. При выборе этого значения отображается динамический параметр **MessageSource**.|  
+  
+ **Приоритет**  
+ Задается приоритет сообщения.  
+  
+ **Вложения**  
+ Укажите имена вложений для электронного сообщения, разделенные символом вертикальной черты (|).  
+  
+> [!NOTE]  
+>  Длина строк «Кому», «Копия» и «СК» ограничена 256 символами в соответствии со стандартами Интернета.  
+  
+### <a name="messagesourcetype-dynamic-options"></a>Динамические параметры MessageSourceType  
+  
+#### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Прямой ввод  
+ **MessageSource**  
+ Введите текст сообщения или нажмите кнопку обзора (…), а затем введите сообщение в диалоговом окне **Источник сообщения** .  
+  
+#### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Соединение с файлом  
+ **MessageSource**  
+ Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+  
+ **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="messagesourcetype--variable"></a>MessageSourceType = Переменная  
+ **MessageSource**  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

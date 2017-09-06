@@ -1,7 +1,7 @@
 ---
 title: "Установка или удаление Reporting Services для SharePoint | Документы Microsoft"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cc931cf057da3d63bd23e7c6ca68ed6d6ec31de9
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e10b1aadc6a89e0d18b55d577f075fcb04353fcb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Установка и удаление надстройки служб Reporting Services для SharePoint
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   Запустите пакет установки надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi) на серверах SharePoint, чтобы включить функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в составе развертывания SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить из мастера установки SQL Server 2016 или загрузить файл rsSharePoint.msi из пакета дополнительных компонентов SQL Server 2016. Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   

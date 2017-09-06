@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 15de3ffdf6b4580918edf3a29d40e856614367fb
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: a5ce75f3c1715870113626642150028e31a0d58b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="excel-connection-manager"></a>Диспетчер соединений с Excel
@@ -82,17 +82,17 @@ ms.lasthandoff: 08/09/2017
  **Первая строка содержит имена столбцов**  
  Позволяет указать, содержит ли первая строка данных выбранного листа имена столбцов. По умолчанию значение этого параметра равно **True**.  
   
-### <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Поставщики и драйверы для файлов Microsoft Excel и Access  
- Если поставщики OLE DB и драйверы для файлов Microsoft Office еще не установлены, может потребоваться скачать их. Более поздние версии поставщика могут открывать файлы, созданные в более ранних версиях Excel.  
+## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Компоненты связи для файлов Microsoft Excel и Access
   
- Если на компьютере установлена 32-разрядная версия Office, необходимо установить драйверы для этой версии, а также убедиться, что вы запускаете мастер или создаваемый им пакет служб Integration Services в 32-разрядном режиме.  
+Может потребоваться загрузить компоненты связи для файлов Microsoft Office, если они еще не установлены. Загрузите последнюю версию компонентов подключения здесь файлов Excel и Access: [доступа к базе данных ядро 2016 распространяемый компонент Microsoft](https://www.microsoft.com/download/details.aspx?id=54920).
   
-|Версия Microsoft Office|Загрузить|  
-|------------------------------|--------------|  
-|2007 г.|[Системный драйвер Office 2007: компоненты подключения к данным](https://www.microsoft.com/download/details.aspx?id=23734)|  
-|2010|[Среда выполнения Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2013|[Среды выполнения Microsoft Access 2013](http://www.microsoft.com/download/details.aspx?id=39358)|  
-|2016|[Среда выполнения Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=50040)|
+Последнюю версию компонентов позволяет открывать файлы, созданные в предыдущих версиях Excel.
+
+Если компьютер имеет 32-разрядной версии Office, необходимо установить 32-разрядную версию компонентов, а также необходимо гарантировать выполнение пакета в 32-разрядном режиме.
+
+Если у вас есть подписка Office 365, убедитесь, что вы загрузите 2016 распространяемый доступа базы данных ядра и не 2016 среды выполнения Microsoft Access. При запуске программы установки может появиться сообщение об ошибке, что невозможно установить загрузки side-by-side работай компоненты Microsoft Office. Чтобы обойти это сообщение об ошибке, запустите установку в автоматическом режиме, открыв окно командной строки и выполнение. EXE-файла, загруженного с `/quiet` переключения. Например:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

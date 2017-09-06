@@ -2,7 +2,7 @@
 title: "Питание интеграция сервера отчетов BI (диспетчер конфигурации) | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/25/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,17 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 Страница  **Интеграция с Power BI** в диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется для регистрации сервера отчетов в нужном управляемом клиенте Azure Active Directory (AD), чтобы предоставить пользователям сервера отчетов возможность закрепления поддерживаемых элементов отчетов на панелях мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Список поддерживаемых элементов, которые можно закреплять, см. в статье [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 
 - **Azure Active Directory.** Организация должна использовать Azure Active Directory для управления каталогами и удостоверениями служб Azure и веб-приложений. Дополнительные сведения см. в разделе [Что такое Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/).
 
-- **Управляемый клиент.** Панель мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , на которой будут закрепляться элементы отчетов, должна входить в управляемый клиент Azure AD.  Управляемый клиент создается автоматически во время оформления первой подписки на службы Azure, такие как Office 365 и Microsoft Intune.   Распространенные клиенты сейчас не поддерживаются.  Дополнительные сведения см. в подразделах "Что такое клиент Azure AD" и "Какую версию Azure AD выбрать" в разделе [Что такое Azure Active Directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
+- **Управляемый клиент.** Панель мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , на которой будут закрепляться элементы отчетов, должна входить в управляемый клиент Azure AD.  Управляемый клиент создается автоматически во время оформления первой подписки на службы Azure, такие как Office 365 и Microsoft Intune.   Распространенные клиенты сейчас не поддерживается.  Дополнительные сведения см. в подразделах "Что такое клиент Azure AD" и "Какую версию Azure AD выбрать" в разделе [Что такое Azure Active Directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
 - Пользователь, выполняющий интеграцию [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , должен быть членом клиента Azure AD, системным администратором [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и системным администратором базы данных каталога ReportServer.
 

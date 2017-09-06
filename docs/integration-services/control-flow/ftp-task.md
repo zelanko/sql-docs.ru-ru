@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
+- sql13.dts.designer.ftptask.general.f1
+- sql13.dts.designer.ftptask.filetransfer.f1
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="ftp-task"></a>Задача «FTP»
@@ -78,9 +80,99 @@ ms.lasthandoff: 08/03/2017
   
  Дополнительные сведения о настройке этих свойств программным путем см. в разделе <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
-## <a name="see-also"></a>См. также  
- [Редактор задачи "FTP" (страница "Общие")](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [Редактор задачи «FTP» &#40; Страница «Передача файла» &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+## <a name="ftp-task-editor-general-page"></a>Редактор задачи «FTP» (страница «Общие»)
+  Используйте страницу **Общие** диалогового окна **Редактор задачи «FTP»** для задания диспетчера FTP-соединений, выполняющего соединение с FTP-сервером, с которым задача обменивается данными. Также здесь можно указать имя и описание задачи «FTP».  
+  
+### <a name="options"></a>Параметры  
+ **FtpConnection**  
+ Выберите существующий диспетчер подключений FTP или щелкните \< **новое подключение...** > для создания диспетчера соединений.  
+  
+> [!IMPORTANT]  
+>  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
+  
+ **См. также**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+ **StopOnFailure**  
+ Укажите, следует ли завершить задачу «FTP» в случае ошибки операции с FTP.  
+  
+ **Название**  
+ Задайте уникальное имя задачи «FTP». Это имя используется в качестве метки для значка задачи.  
+  
+> [!NOTE]  
+>  Имена задач в пределах пакета должны быть уникальными.  
+  
+ **Description**  
+ Введите описание задачи «FTP».  
+  
+## <a name="ftp-task-editor-file-transfer-page"></a>Редактор задачи «FTP» (страница «Передача файлов»)
+  Страница **Передача файлов** диалогового окна **Редактор задачи «FTP»** используется для настройки операции FTP, выполняемой задачей.  
+  
+### <a name="options"></a>Параметры  
+ **IsRemotePathVariable**  
+ Укажите, хранится ли удаленный путь в переменной. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**True**|Целевой путь хранится в переменной. Выбор этого значения отображает динамический параметр **RemoteVariable**.|  
+|**False**|Целевой путь задается в диспетчере подключения файлов. Выбор этого значения отображает динамический параметр **RemotePath**.|  
+  
+ **OverwriteFileAtDestination**  
+ Задайте, можно ли заменять файл в месте назначения.  
+  
+ **IsLocalPathVariable**  
+ Укажите, хранится ли локальный путь в переменной. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**True**|Целевой путь хранится в переменной. Выбор этого значения отображает динамический параметр **LocalVariable**.|  
+|**False**|Целевой путь задается в диспетчере подключения файлов. Выбор этого значения отображает динамический параметр **LocalPath**.|  
+  
+ **Операция**  
+ Выберите операцию протокола FTP для выполнения. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Отправить файлы**|Отправляет файлы. При выборе этого значения выводятся динамические параметры **LocalVariable**, **LocalPathRemoteVariable** и **RemotePath**.|  
+|**Получить файлы**|Получает файлы. При выборе этого значения выводятся динамические параметры **LocalVariable**, **LocalPathRemoteVariable** и **RemotePath**.|  
+|**Создать локальный каталог**|Создает локальный каталог. При выборе этого значения выводятся динамические параметры **LocalVariable** и **LocalPath**.|  
+|**Создать удаленный каталог**|Создает удаленный каталог. При выборе этого значения выводятся динамические параметры **RemoteVariable** и **RemoteIPath**.|  
+|**Удалить локальный каталог**|Удаляет локальный каталог. При выборе этого значения выводятся динамические параметры **LocalVariable** и **LocalPath**.|  
+|**Удалить удаленный каталог**|Удаляет удаленный каталог. При выборе этого значения выводятся динамические параметры **RemoteVariable** и **RemotePath**.|  
+|**Удалить локальные файлы**|Удаляет локальные файлы. При выборе этого значения выводятся динамические параметры **LocalVariable** и **LocalPath**.|  
+|**Удалить удаленные файлы**|Удаляет удаленные файлы. При выборе этого значения выводятся динамические параметры **RemoteVariable** и **RemotePath**.|  
+  
+ **IsTransferASCII**  
+ Укажите, должны ли файлы, передаваемые на и с удаленного FTP-сервера, передаваться в режиме ASCII.  
+  
+### <a name="isremotepathvariable-dynamic-options"></a>Динамические параметры IsRemotePathVariable  
+  
+#### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
+ **RemoteVariable**  
+ Выберите существующую переменную определяемых пользователем, или нажмите кнопку \< **создать переменную...** > для создания пользовательской переменной.  
+  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), Добавление переменной  
+  
+#### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
+ **RemotePath**  
+ Выберите существующий диспетчер подключений FTP или щелкните \< **новое подключение...** > для создания диспетчера соединений.  
+  
+ **См. также:** [Диспетчер FTP-соединений](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+### <a name="islocalpathvariable-dynamic-options"></a>Динамические параметры IsLocalPathVariable  
+  
+#### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
+ **LocalVariable**  
+ Выберите существующую переменную определяемых пользователем, или нажмите кнопку \< **создать переменную...** > для создания переменной.  
+  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), Добавление переменной  
+  
+#### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
+ **LocalPath**  
+ Выберите существующий диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания диспетчера соединений.  
+  
+ **Связанные разделы**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+  
+## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

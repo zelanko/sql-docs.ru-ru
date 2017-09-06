@@ -1,26 +1,34 @@
 ---
-title: "Задача &#171;Веб-служба&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.webservicetask.f1"
-helpviewer_keywords: 
-  - "задача «Веб-служба» [службы Integration Services]"
+title: "«Веб-служба» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/11/2017
+
 ---
-# Задача &#171;Веб-служба&#187;
+# <a name="web-service-task"></a>Задача «Веб-служба»
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
   
 -   Запись в переменную значений, возвращаемых методом веб-службы. Например, можно получить самую высокую температуру дня из метода веб-службы с последующим использованием ее значения для обновления переменной, которая используется в выражении, задающем значение столбца.  
@@ -50,7 +58,7 @@ caps.handback.revision: 57
  Результаты метода веб-службы могут быть записаны в переменную или в файл. Используйте диспетчер подключений файла для указания файла или для указания имени переменной, в которую записывается результат. Дополнительные сведения см. в разделах [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md) и [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Пользовательские сообщения для ведения журнала, доступные в задаче «Веб-служба»  
- В следующей таблице перечислены пользовательские записи в журнале для задачи «Веб-служба». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../../integration-services/performance/custom-messages-for-logging.md).  
+ В следующей таблице перечислены пользовательские записи в журнале для задачи «Веб-служба». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Запись журнала|Description|  
 |---------------|-----------------|  
@@ -61,24 +69,120 @@ caps.handback.revision: 57
 ## <a name="configuration-of-the-web-service-task"></a>Настройка задачи «Веб-служба»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
-  
--   [Редактор задачи "Веб-служба" (страница "Общие")](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [Редактор задачи "Веб-служба" (страница "Ввод")](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [Редактор задачи "Веб-служба" (страница "Вывод")](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
 -   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Программная настройка задачи «Веб-служба»  
  Дополнительные сведения о программной настройке этих свойств см. в следующих разделах:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
+## <a name="web-service-task-editor-general-page"></a>Редактор задачи «Веб-служба» (страница «Общие»)
+  Страница **Общие** в диалоговом окне **Редактор задачи "Веб-служба"** применяется для указания диспетчера HTTP-соединений, расположения файла WSDL, используемого задачей веб-службы, описания задачи веб-службы и загрузки файла WSDL.  
+  
+### <a name="options"></a>Параметры  
+ **HTTPConnection**  
+ Выберите диспетчер соединений из списка или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+  
+> [!IMPORTANT]  
+>  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
+  
+ **См. также**: [Диспетчер HTTP-соединений](../../integration-services/connection-manager/http-connection-manager.md), [Редактор диспетчера HTTP-соединений](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+  
+ **WSDLFile**  
+ Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(…)** и выберите файл.  
+  
+ Если WSDL-файл был загружен на компьютер вручную, выберите этот файл. Однако, если WSDL-файл еще не был загружен, выполните следующие действия.  
+  
+-   Создайте пустой файл с расширением WSDL.  
+  
+-   Выберите этот пустой файл для параметра **WSDLFile** .  
+  
+-   Установите свойство **OverwriteWSDLFile** в значение **True** , чтобы разрешить перезапись пустого файла фактическим WSDL-файлом.  
+  
+-   Нажмите кнопку **Загрузить язык WSDL** , чтобы загрузить фактический WSDL-файл и перезаписать пустой файл.  
+  
+    > [!NOTE]  
+    >  Кнопка **Загрузить язык WSDL** недоступна, пока не указано имя существующего локального файла в поле **WSDLFile** .  
+  
+ **OverwriteWSDLFile**  
+ Укажите, можно ли перезаписать WSDL-файл для задачи веб-службы.  
+  
+ Если нужно загрузить WSDL-файл с помощью кнопки **Загрузить язык WSDL** , установите это свойство в значение **True**.  
+  
+ **Название**  
+ Введите уникальное имя задачи веб-службы. Это имя используется в качестве метки для значка задачи.  
+  
+> [!NOTE]  
+>  Имена задач в пределах пакета должны быть уникальными.  
+  
+ **Description**  
+ Введите описание задачи веб-службы.  
+  
+ **Загрузить язык WSDL**  
+ Загрузите файл WSDL.  
+  
+ Эта кнопка недоступна, пока не указано имя существующего локального файла в поле **WSDLFile** .  
+  
+## <a name="web-service-task-editor-input-page"></a>Редактор задачи «Веб-служба» (страница «Вход»)
+  Используйте страницу **Вход** в диалоговом окне **Редактор задачи «Веб-служба»** , чтобы указать веб-службу, веб-метод и значения, предоставляемые в качестве входных данных веб-метода. Значения можно предоставить, либо непосредственно введя строки в столбце «Значение», либо выбрав переменные в столбце «Значение».  
+  
+### <a name="options"></a>Параметры  
+ **Служба**  
+ Чтобы выполнить веб-метод, выберите веб-службу из списка.  
+  
+ **Метод**  
+ Чтобы выполнить задачу, выберите веб-метод из списка.  
+  
+ **WebMethodDocumentation**  
+ Введите описание веб-метода или нажмите кнопку обзора **(…)** , а затем введите описание в диалоговом окне **Документация веб-метода** .  
+  
+ **Название**  
+ Перечисляет имена входных данных веб-метода.  
+  
+ **Тип**  
+ Перечисляет тип входных данных.  
+  
+> [!NOTE]  
+>  Задача «Веб-служба» поддерживает только параметры следующих типов данных: типы-примитивы, такие как integer и string, массивы и последовательности типов-примитивов, а также перечисления.  
+  
+ **Переменная**  
+ Установите флажки, чтобы использовать переменные для входных данных.  
+  
+ **Значение**  
+ Если установлены флажки «Переменная», выберите переменные из списка для входных данных; в противном случае введите значения входных данных вручную.  
+  
+## <a name="web-service-task-editor-output-page"></a>Редактор задачи «Веб-служба» (страница «Вывод»)
+  Используйте страницу **Вывод** диалогового окна **Редактор задачи «Веб-служба»** , чтобы указать, где следует хранить результаты, возвращенные веб-методом.  
+  
+### <a name="static-options"></a>Статические параметры  
+ **OutputType**  
+ Выберите тип хранения, используемый для хранения результатов. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Соединение с файлом**|Хранить результаты в файле. При выборе этого значения отображается динамический параметр **Файл**.|  
+|**Переменная**|Хранить результаты в переменной. При выборе этого значения отображается динамический параметр **Переменная**.|  
+  
+### <a name="outputtype-dynamic-options"></a>Динамические параметры OutputType  
+  
+#### <a name="outputtype--file-connection"></a>OutputType = Соединение с файлом  
+ **Файл**  
+ Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+  
+ **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>OutputType = Переменная  
+ **Переменная**  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
 ## <a name="related-content"></a>См. также  
  Видео [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(Как вызвать веб-службы с помощью задачи "Веб-служба" — видеоматериал SQL Server) на technet.microsoft.com.  
+

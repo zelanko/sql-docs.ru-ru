@@ -2,7 +2,7 @@
 title: "Создание файлов скрипта (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-script-files-accesstosql"></a>Создание файлов скрипта (AccessToSQL)
@@ -353,7 +353,7 @@ ms.lasthandoff: 08/02/2017
   
 Например, перенос данных обычно конкретной таблицы в базе данных Microsoft Access следует иерархия: база данных -&gt; таблицы.  
   
-При выполнении всех команд в файле скрипта SSMA консольное приложение завершает работу и возвращает элемент управления для пользователя. Содержимое файла скрипта, больше или меньше статический с сведения о переменных, содержащихся в [файлы значение переменной](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08) или в отдельном разделе в файлах скриптов для значений переменных.  
+При выполнении всех команд в файле скрипта SSMA консольное приложение завершает работу и возвращает элемент управления для пользователя. Содержимое файла скрипта, больше или меньше статический с сведения о переменных, содержащихся в [файлы значение переменной](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) или в отдельном разделе в файлах скриптов для значений переменных.  
   
 **Пример:**  
   
@@ -397,7 +397,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="script-file-validation"></a>Проверка файла скрипта  
 Пользователь может легко проверить свой файл скрипта соответствие файлу определения схемы **«A2SSConsoleScriptSchema.xsd»** доступны в папке «Схемы».  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Следующий шаг
 Следующий шаг в работе консоли — [Создание переменной значение файлов &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>См. также:  

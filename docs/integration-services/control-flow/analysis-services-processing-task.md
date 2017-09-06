@@ -1,27 +1,34 @@
 ---
-title: "Задача &#171;Обработка средствами Analysis Services&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.f1"
-helpviewer_keywords: 
-  - "задача «Обработка средствами Analysis Services»"
-  - "обработка объектов [службы Integration Services]"
+title: "Задача обработки служб аналитики | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.f1
+- sql13.dts.designer.asprocessingtask.general.f1
+- sql13.dts.designer.asprocessingtask.as.f1
+helpviewer_keywords:
+- Analysis Services Processing task
+- processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/11/2017
+
 ---
-# Задача &#171;Обработка средствами Analysis Services&#187;
+# <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
   Задача «Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » обрабатывает объекты [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , такие как табличные модели, кубы, измерения и модели интеллектуального анализа данных.  
   
  При обработке табличных моделей имейте в виду следующее.  
@@ -40,7 +47,7 @@ caps.handback.revision: 52
   
 -   [Задача «Запрос интеллектуального анализа данных»](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## Обработка объектов  
+## <a name="object-processing"></a>Обработка объектов  
  В одно и то же время могут обрабатываться множество объектов. При обработке множества объектов, определенные настройки применяются для обработки всех объектов в пакете.  
   
  В пакете объекты могут обрабатываться последовательно или параллельно. Если пакет не содержит объекты, для которых важна последовательная обработка, то параллельная обработка может увеличить скорость обработки. Если объекты в пакете обрабатываются параллельно, то можно настроить задачу так, чтобы позволить ей определять, сколько объектов обрабатывать параллельно, или можно вручную указать количество объектов, обрабатываемых одновременно. Если объекты обрабатываются последовательно, можно установить атрибут транзакции пакета: прикрепить все объекты к одной транзакции или использовать отдельную транзакцию для каждого объекта в пакете.  
@@ -52,32 +59,96 @@ caps.handback.revision: 52
  Эта задача также позволяет настраивать обработку ошибок в ключах измерений. Например, задача может пропустить ошибки или остановиться, после того как произойдет определенное количество ошибок. Задача может использовать заданную по умолчанию конфигурацию ошибок или может создать пользовательскую конфигурацию ошибок. В пользовательской конфигурации ошибок можно указать, как задача обрабатывает ошибки, и условия возникновения ошибок. Например, можно указать, что задача должна прекращать выполнение, когда произошла четвертая ошибка, или указать, как задача должна обрабатывать ключевые значения **NULL** . Пользовательская конфигурация ошибок может также содержать путь к журналу ошибок.  
   
 > [!NOTE]  
->  Задача «Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]» может обрабатывать только объекты аналитики, созданные с использованием средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Задача «Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » может обрабатывать только объекты аналитики, созданные с использованием средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Задача часто применяется вместе с задачей «Массовая вставка», которая загружает данные в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или задачей потока данных, которая выполняет поток данных, загружающий данные в таблицу. Например, задача потока данных может иметь поток данных, который извлекает данные из базы данных интерактивной обработки транзакций (OLTP) и загружает их в таблицу фактов хранилища данных, затем для обработки куба, основанного на хранилище данных, вызывается задача "Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]".  
+ Задача часто применяется вместе с задачей «Массовая вставка», которая загружает данные в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или задачей потока данных, которая выполняет поток данных, загружающий данные в таблицу. Например, задача потока данных может иметь поток данных, который извлекает данные из базы данных интерактивной обработки транзакций (OLTP) и загружает их в таблицу фактов хранилища данных, затем для обработки куба, основанного на хранилище данных, вызывается задача "Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ".  
   
  Задача «Обработка средствами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » использует диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к экземпляру служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## Обработка ошибок  
+## <a name="error-handling"></a>Обработка ошибок  
   
-## Настройка задачи «Обработка средствами Analysis Services»  
+## <a name="configuration-of-the-analysis-services-processing-task"></a>Настройка задачи «Обработка средствами Analysis Services»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
+ Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Редактор задачи "Обработка средствами Analysis Services" (страница "Общие")](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)  
-  
--   [Редактор задачи "Обработка средствами Analysis Services" (страница "Службы Analysis Services")](../../integration-services/control-flow/analysis-services-processing-task-editor-analysis-services-page.md)  
-  
--   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
+-   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Настройка задачи «Обработка средствами Analysis Services» программными средствами  
- Дополнительные сведения о программной настройке этих свойств см. в следующих разделах:  
+## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Настройка задачи «Обработка средствами Analysis Services» программными средствами  
+ Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
+## <a name="analysis-services-processing-task-editor-general-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Общие»)
+  Используйте страницу **Общие** в диалоговом окне **Редактор задачи "Обработка средствами Analysis Services"** , чтобы задать имя и описание для задачи "Обработка средствами Analysis Services".  
   
+### <a name="options"></a>Параметры  
+ **Название**  
+ Укажите уникальное имя для задачи «Обработка средствами Analysis Services». Это имя используется в качестве метки для значка задачи.  
+  
+> [!NOTE]  
+>  Имена задач в пределах пакета должны быть уникальными.  
+  
+ **Description**  
+ Введите описание задачи «Обработка средствами Analysis Services».  
+  
+## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Средства Analysis Services»)
+  Используйте страницу **Службы Analysis Services** диалогового окна **Редактор задачи «Обработка средствами Analysis Services»** для задания диспетчера соединений служб Analysis Services, выбора аналитических объектов для обработки, установки параметров обработки и действий при ошибках.  
+  
+ При обработке табличных моделей имейте в виду следующее.  
+  
+1.  Невозможно выполнить анализ влияния на табличных моделях.  
+  
+2.  Не отображаются некоторые параметры обработки для табличного режима, такие как процесс дефрагментации и процесс повторного вычисления. Эти функции вы можете выполнить с помощью задачи «Выполнение инструкции DDL».  
+  
+3.  Некоторые предоставляемые параметры обработки, например индексы обработки, не подходят для табличных моделей, поэтому они не должны использоваться.  
+  
+4.  Параметры пакетов не учитываются в табличных моделях.  
+  
+### <a name="options"></a>Параметры  
+ **диспетчер соединений служб Analysis Services**  
+ Выберите из списка существующий диспетчер подключений служб Analysis Services или нажмите кнопку **Создать** для его создания.  
+  
+ **Создать**  
+ Создайте новый диспетчер соединений служб Analysis Services.  
+  
+ **См. также:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Список объектов**  
+ |Свойство|Description|  
+|--------------|-----------------|  
+|**Имя объекта**|Позволяет отобразить список имен заданных объектов.|  
+|**Тип**|Позволяет отобразить список типов заданных объектов.|  
+|**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Настройки**|Позволяет отобразить список настроек обработки для заданных объектов.|  
+  
+ **Добавить**  
+ Добавьте объект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в список.  
+  
+ **Удалить**  
+ Выделите объект, а затем нажмите кнопку **Удалить**.  
+  
+ **Анализ влияния**  
+ Выполните анализ влияния на выбранный объект.  
+  
+ **См. также:** [Диалоговое окно "Анализ влияния" (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+  
+ **Сводка о настройках пакета**  
+ |Свойство|Description|  
+|--------------|-----------------|  
+|**Порядок обработки**|Позволяет задать, будут ли объекты обрабатываться последовательно или в составе пакета. При использовании параллельной обработки задает количество объектов для одновременной обработки.|  
+|**Режим транзакции**|Позволяет задать режим транзакции для последовательной обработки.|  
+|**Ошибки измерения**|Позволяет задать реакцию задачи на возникновение ошибок.|  
+|**Путь к журналу ошибок ключа измерения**|Позволяет задать путь к файлу журнала, в который записываются ошибки.|  
+|**Обработать затронутые объекты**|Позволяет указать, необходимо ли обрабатывать зависимые или затрагиваемые объекты.|  
+  
+ **Изменить настройки**  
+ Измените параметры обработки и действия при ошибках в ключах измерения.  
+  
+ **См. также:** [Диалоговое окно "Изменение настроек" (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+  
+

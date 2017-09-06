@@ -1,27 +1,34 @@
 ---
-title: "Задача &#171;Модуль чтения данных WMI&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmidatareadertask.f1"
-helpviewer_keywords: 
-  - "WQL [службы Integration Services]"
-  - "задача «Модуль чтения данных WMI» [службы Integration Services]"
+title: "WMI Data Reader Task | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmidatareadertask.f1
+- sql13.dts.designer.wmidatareadertask.general.f1
+- sql13.dts.designer.wmidatareadertask.wmiquery.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/11/2017
+
 ---
-# Задача &#171;Модуль чтения данных WMI&#187;
+# <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»
   Задача «Модуль чтения данных WMI» использует для выполнения запросов язык WQL, который возвращает от инструментария WMI сведения о системе компьютера. Задача «Модуль чтения данных WMI» может быть использована в следующих целях.  
   
 -   Выполнение запросов к журналам событий Windows на локальном или удаленном компьютере, а также запись полученных сведений в файл или переменную.  
@@ -46,7 +53,7 @@ caps.handback.revision: 49
   
  Задача «Модуль чтения данных WMI» использует диспетчер WMI-соединений для подключения к серверу, с которого происходит считывание данных WMI. Дополнительные сведения см. в статье [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
-## Запрос WQL  
+## <a name="wql-query"></a>Запрос WQL  
  WQL — это разновидность языка SQL с выражениями, поддерживающими уведомления о событиях инструментария WMI и другие функции WMI. Дополнительные сведения о WQL см. в документации по инструментарию управления Windows в [библиотеке MSDN](http://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
@@ -70,33 +77,112 @@ SELECT FreeSpace, DeviceId, Size, SystemName, Description FROM Win32_LlogicalDis
 Select * FROM Win32_QuickFixEngineering  
 ```  
   
-## Пользовательские сообщения для ведения журнала, доступные в задаче «Модуль чтения данных WMI»  
- В следующей таблице перечислены пользовательские записи в журнале для задачи «Модуль чтения данных WMI». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Пользовательские сообщения для ведения журнала, доступные в задаче «Модуль чтения данных WMI»  
+ В следующей таблице перечислены пользовательские записи в журнале для задачи «Модуль чтения данных WMI». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Запись журнала|Description|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Указывает, что задача приступила к чтению данных инструментария WMI.|  
 |**WMIDataReaderOperation**|Сообщает о WQL-запросе, выполняемом задачей.|  
   
-## Настройка задачи «Модуль чтения данных WMI»  
+## <a name="configuration-of-the-wmi-data-reader-task"></a>Настройка задачи «Модуль чтения данных WMI»  
  Свойства задаются программно или через конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах.  
+ Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Модуль чтения данных WMI" (страница "Параметры инструментария WMI")](../../integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md)  
-  
--   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
+-   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
   
  Сведения о задании этих свойств программными средствами см. в следующем разделе:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## См. также  
+## <a name="wmi-data-reader-task-editor-general-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Общие»)
+  Страница **Общие** диалогового окна **Редактор задачи «Модуль чтения данных WMI»** позволяет дать имя и описание задаче «Модуль чтения данных WMI».  
+  
+  Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](http://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+  
+### <a name="options"></a>Параметры  
+ **Название**  
+ Задайте уникальное имя задаче «Модуль чтения данных WMI». Это имя используется в качестве метки для значка задачи.  
+  
+> [!NOTE]  
+>  Имена задач в пределах пакета должны быть уникальными.  
+  
+ **Description**  
+ Введите описание задачи «Модуль чтения данных WMI».  
+  
+## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Параметры инструментария WMI»)
+  Страница **Параметры инструментария WMI** в диалоговом окне **Редактор задачи "Модуль чтения данных WMI"** используется для указания источника запроса WQL (Windows Management Instrumentation Query Language) и назначения результатов запроса.  
+  
+ Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](http://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+  
+### <a name="static-options"></a>Статические параметры  
+ **WMIConnectionName**  
+ Выберите из списка диспетчер WMI-соединений или нажмите кнопку \< **создать WMI-соединение...** > для создания нового соединения диспетчера.  
+  
+ **См. также**: [Диспетчер WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager.md), [Редактор диспетчера WMI-сеансов](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Выберите тип источника для WQL-запроса, выполняемого данной задачей. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Прямой ввод**|Задайте источник запроса WQL. При выборе этого значения отображается динамический параметр **WQLQuerySourceType**.|  
+|**Соединение с файлом**|Выберите файл, содержащий запрос WQL. При выборе этого значения отображается динамический параметр **WQLQuerySourceType**.|  
+|**Переменная**|Задайте источник переменной, определяющей запрос WQL. При выборе этого значения отображается динамический параметр **WQLQuerySourceType**.|  
+  
+ **OutputType**  
+ Укажите тип выходных данных: таблица данных, значение свойства или имя и значение свойства.  
+  
+ **OverwriteDestination**  
+ Указывает, следует ли сохранить, перезаписать или добавить данные в целевом файле или переменной.  
+  
+ **DestinationType**  
+ Выберите тип назначения запроса WQL, выполняемого данной задачей. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Соединение с файлом**|Выберите файл, в котором будут храниться результаты запроса WQL. При выборе этого значения отображается динамический параметр **DestinationType**.|  
+|**Переменная**|Задайте переменную, в которой будут храниться результаты запроса WQL. При выборе этого значения отображается динамический параметр **DestinationType**.|  
+  
+### <a name="wqlquerysourcetype-dynamic-options"></a>Динамические параметры WQLQuerySourceType  
+  
+#### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = Прямой ввод  
+ **WQLQuerySource**  
+ Введите запрос или нажмите кнопку многоточия (…) и введите запрос, используя диалоговое окно **Запрос WQL** .  
+  
+#### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Соединение с файлом  
+ **WQLQuerySource**  
+ Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+  
+ **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Переменная  
+ **WQLQuerySource**  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+### <a name="destinationtype-dynamic-options"></a>Динамические параметры DestinationType  
+  
+#### <a name="destinationtype--file-connection"></a>DestinationType = Соединение с файлом  
+ **Назначение**  
+ Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+  
+ **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="destinationtype--variable"></a>DestinationType = Переменная  
+ **Назначение**  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

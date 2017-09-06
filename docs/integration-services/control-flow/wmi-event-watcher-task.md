@@ -1,27 +1,34 @@
 ---
-title: "Задача &#171;Отслеживание событий WMI&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.wmieventwatchertask.f1"
-helpviewer_keywords: 
-  - "WQL [службы Integration Services]"
-  - "задача «Отслеживание событий WMI» [службы Integration Services]"
+title: "Задача «отслеживание событий WMI» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmieventwatchertask.f1
+- sql13.dts.designer.wmieventwatcher.general.f1
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
+helpviewer_keywords:
+- WQL [Integration Services]
+- WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/11/2017
+
 ---
-# Задача &#171;Отслеживание событий WMI&#187;
+# <a name="wmi-event-watcher-task"></a>Задача «Отслеживание событий WMI»
   Задача «Отслеживание событий WMI» осуществляет наблюдение за событием инструментария управления Windows (WMI) при помощи запроса на языке запросов к инструментарию управления (WQL), определяющего нужные события. Задачу «Отслеживание событий WMI» можно использовать в следующих целях:  
   
 -   ожидание уведомления о добавлении файлов в папку и запуск обработки файла;  
@@ -36,7 +43,7 @@ caps.handback.revision: 53
   
 -   [Задача «Модуль чтения данных WMI»](../../integration-services/control-flow/wmi-data-reader-task.md)  
   
-## WQL-запрос  
+## <a name="wql-queries"></a>WQL-запрос  
  WQL — это разновидность языка SQL с выражениями, поддерживающими уведомления о событиях инструментария WMI и другие функции WMI. Дополнительные сведения о WQL см. в документации по инструментарию управления Windows в [библиотеке MSDN](http://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
@@ -54,8 +61,8 @@ SELECT * from __InstanceModificationEvent WITHIN 2 WHERE TargetInstance ISA 'Win
 SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_DirectoryContainsFile" and TargetInstance.GroupComponent= "Win32_Directory.Name=\"c:\\\\WMIFileWatcher\""   
 ```  
   
-## Пользовательские сообщения для ведения журнала, доступные в задаче «Отслеживание событий WMI»  
- В следующей таблице перечислены пользовательские записи в журнале для задачи «Отслеживание событий WMI». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../../integration-services/performance/custom-messages-for-logging.md).  
+## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>Пользовательские сообщения для ведения журнала, доступные в задаче «Отслеживание событий WMI»  
+ В следующей таблице перечислены пользовательские записи в журнале для задачи «Отслеживание событий WMI». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Запись журнала|Description|  
 |---------------|-----------------|  
@@ -63,7 +70,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 |**WMIEventWatcherTimedout**|Указывает, что время ожидания выполнения задачи истекло.|  
 |**WMIEventWatcherWatchingForWMIEvents**|Указывает, что задача приступила к выполнению WQL-запроса. Эта запись содержит запрос.|  
   
-## Настройка задачи «Отслеживание событий WMI»  
+## <a name="configuration-of-the-wmi-event-watcher-task"></a>Настройка задачи «Отслеживание событий WMI»  
  Настроить задачу «Модуль чтения данных WMI» можно следующими способами.  
   
 -   Указать, какой диспетчер соединений WMI необходимо использовать.  
@@ -74,7 +81,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Определите реакцию задачи на события. В зависимости от события задача может быть настроена на выполнение или сбой, либо на дальнейшее отслеживание событий.  
   
--   Укажите, какое действие должно быть предпринято задачей по истечении времени ожидания запроса WMI. Можно вести журнал истечения времени ожидания и состояния после него или инициировать пользовательское событие служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], указывающее, что время ожидания события инструментария WMI истекло, а также записывающее состояние ожидания в журнал.  
+-   Укажите, какое действие должно быть предпринято задачей по истечении времени ожидания запроса WMI. Можно вести журнал истечения времени ожидания и состояния после него или инициировать пользовательское событие служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , указывающее, что время ожидания события инструментария WMI истекло, а также записывающее состояние ожидания в журнал.  
   
 -   Определите реакцию задачи на истечение срока ожидания. Задача может быть настроена на выполнение или сбой, либо на дальнейшее отслеживание событий.  
   
@@ -88,21 +95,88 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
+ Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Редактор задачи "Отслеживание событий WMI" (страница "Общие")](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
-  
--   [Редактор задачи "Отслеживание событий WMI" (страница "Параметры WMI")](../../integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md)  
-  
--   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
+-   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Настройка задачи «Отслеживание событий WMI» с помощью программных средств  
+## <a name="programmatic-configuration-of-the-wmi-event-watcher-task"></a>Настройка задачи «Отслеживание событий WMI» с помощью программных средств  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   
+## <a name="wmi-event-watcher-task-editor-general-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Общие»)
+  Используйте страницу **Общие** диалогового окна **Редактор задачи «Отслеживание событий WMI»** для ввода имени и описания задачи «Отслеживание событий WMI».  
   
+ Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](http://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+  
+### <a name="options"></a>Параметры  
+ **Название**  
+ Введите уникальное имя для задачи «Отслеживание событий WMI». Это имя используется в качестве метки для значка задачи.  
+  
+> [!NOTE]  
+>  Имена задач в пределах пакета должны быть уникальными.  
+  
+ **Description**  
+ Введите описание для задачи «Отслеживание событий WMI».  
+  
+## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Параметры WMI»)
+  Страница **Параметры инструментария WMI** диалогового окна **Редактор задачи "Отслеживание событий WMI"** используется для указания источника запроса на языке запросов инструментария управления Windows (WQL) и вариантов реакции задачи "Отслеживание событий WMI" на события инструментария Microsoft Windows (WMI).  
+  
+ Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](http://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+  
+### <a name="static-options"></a>Статические параметры  
+ **WMIConnectionName**  
+ Выберите из списка диспетчер WMI-соединений или нажмите кнопку \< **создать WMI-соединение...** > для создания нового соединения диспетчера.  
+  
+ **См. также**: [Диспетчер WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager.md), [Редактор диспетчера WMI-сеансов](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Выберите тип источника для WQL-запроса, выполняемого данной задачей. Это свойство имеет параметры, указанные в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Прямой ввод**|Задайте источник запроса WQL. При выборе этого значения отображается динамический параметр **WQLQuerySource**.|  
+|**Соединение с файлом**|Выберите файл, содержащий запрос WQL. При выборе этого значения отображается динамический параметр **WQLQuerySource**.|  
+|**Переменная**|Задайте источник переменной, определяющей запрос WQL. При выборе этого значения отображается динамический параметр **WQLQuerySource**.|  
+  
+ **ActionAtEvent**  
+ Укажите, будет ли WMI-событие занесено в журнал, и будет ли оно инициировать действие служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] или будет только занесено в журнал.  
+  
+ **AfterEvent**  
+ Укажите, будет ли задача завершена успешно или неудачно после получения ею WMI-события или она будет продолжать ожидать повторного возникновения события.  
+  
+ **ActionAtTimeout**  
+ Укажите, запишет ли задача в журнал истечение времени ожидания WMI-запроса, и инициирует ли в ответ событие служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] или только запишет в журнал истечение времени ожидания.  
+  
+ **AfterTimeout**  
+ Укажите, будет ли задача выполнена успешно или неудачно в ответ на истечение времени ожидания или она будет продолжать ожидать возникновения повторного истечения времени ожидания.  
+  
+ **NumberOfEvents**  
+ Укажите количество событий для ожидания.  
+  
+ **Timeout**  
+ Укажите количество секунд ожидания возникновения события. Значение 0 означает отсутствие времени ожидания.  
+  
+### <a name="wqlquerysource-dynamic-options"></a>Динамические параметры WQLQuerySource  
+  
+#### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = Прямой ввод  
+ **WQLQuerySource**  
+ Введите запрос или нажмите кнопку с многоточием "(…)" и введите запрос, используя диалоговое окно **Запрос WQL** .  
+  
+#### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Соединение с файлом  
+ **WQLQuerySource**  
+ Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+  
+ **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysource--variable"></a>WQLQuerySource = Переменная  
+ **WQLQuerySource**  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+

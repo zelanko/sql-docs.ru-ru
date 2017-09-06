@@ -1,28 +1,35 @@
 ---
-title: "Задача &#171;Выполнение инструкции DDL служб Analysis Services&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asexecuteddltask.f1"
-helpviewer_keywords: 
-  - "задача «Выполнение инструкции DDL служб Analysis Services»"
-  - "DDL"
+title: "Analysis Services задача выполнения DDL | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
+helpviewer_keywords:
+- Analysis Services Execute DDL task
+- DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/11/2017
+
 ---
-# Задача &#171;Выполнение инструкции DDL служб Analysis Services&#187;
-  задача «Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]» запускает инструкции языка DDL, которые могут создавать, удалять или изменять модели интеллектуального анализа данных и многомерные объекты, такие как кубы и измерения. Например, инструкция DDL позволяет создать секцию в кубе **Adventure Works** или удалить измерение в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], образце базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , входящем в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»
+  задача «Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » запускает инструкции языка DDL, которые могут создавать, удалять или изменять модели интеллектуального анализа данных и многомерные объекты, такие как кубы и измерения. Например, инструкция DDL позволяет создать секцию в кубе **Adventure Works** или удалить измерение в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], образце базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , входящем в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Задача «Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » использует диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или к проекту [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в статье [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
@@ -34,7 +41,7 @@ caps.handback.revision: 48
   
 -   [Задача «Запрос интеллектуального анализа данных»](../../integration-services/control-flow/data-mining-query-task.md)  
   
-## Инструкции DDL  
+## <a name="ddl-statements"></a>Инструкции DDL  
  Инструкции DDL представлены как инструкции в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) и встроены в команду XML для аналитики (XMLA).  
   
 -   ASSL используется для определения и описания экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы данных и объектов базы данных, которые он содержит. Дополнительные сведения см. в разделе [Справочник по языку ASSL](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
@@ -45,7 +52,7 @@ caps.handback.revision: 48
   
  Так как инструкции DDL могут содержать пароли и другие важные сведения, пакет, содержащий одну или несколько задач "Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]", должен использовать уровень защиты пакета **EncryptAllWithUserKey** или **EncryptAllWithPassword**. Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md).  
   
-### Примеры DDL  
+### <a name="ddl-examples"></a>Примеры DDL  
  Следующие три инструкции DDL были сформированы объектами сценария в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , входящей в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Следующая инструкция DDL удаляет измерение **Promotion** .  
@@ -212,24 +219,69 @@ caps.handback.revision: 48
   
 ```  
   
-## Настройка задачи «Выполнение инструкции DDL служб Analysis Services»  
+## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Настройка задачи «Выполнение инструкции DDL служб Analysis Services»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
+ Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Редактор задачи "Выполнение инструкции DDL служб Analysis Services" (страница "Общие")](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Редактор задачи "Выполнение инструкции DDL служб Analysis Services" (страница "DDL")](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
-  
--   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
+-   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## Программная настройка задачи «Выполнение инструкции DDL служб Analysis Services»  
+## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>Программная настройка задачи «Выполнение инструкции DDL служб Analysis Services»  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Редактор задачи «Выполнение инструкции DDL служб Analysis Services» (страница «Общие»)
+  Используйте страницу **Общие** диалогового окна **Редактор задачи " Выполнение инструкции DDL служб Analysis Services"** для назначения имени и описания задания выполнения DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
+### <a name="options"></a>Параметры  
+ **Название**  
+ Задает уникальное имя задаче Execute DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Это имя используется в качестве метки для значка задачи.  
+  
+> [!NOTE]  
+>  Имена задач в пределах пакета должны быть уникальными.  
+  
+ **Description**  
+ Предоставляет описание задачи Execute DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Редактор задачи «Выполнение инструкции DDL служб Analysis Services» (страница DDL)
+  Используйте страницу **DDL** диалогового окна **Редактор задачи "Выполнение инструкции DDL служб аналитики"** , чтобы настроить соединение с проектом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базой данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а также предоставить сведения об источнике инструкций языка определения данных (DDL).  
+  
+### <a name="static-options"></a>Статические параметры  
+ **Соединение**  
+ Выберите [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] диспетчер соединений в списке, или щелкните \< **новое подключение...** > и используйте **Добавление диспетчера соединений со службами Analysis Services** диалоговое окно «», чтобы создать новое соединение.  
+  
+ **См. также:** [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Диспетчер соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **Тип источника**  
+ Указать тип источника инструкции DDL. Параметры этого свойства приведены в следующей таблице.  
+  
+|Значение|Description|  
+|-----------|-----------------|  
+|**Прямой ввод**|Установите в качестве источника инструкцию DDL, содержащуюся в текстовом поле **SourceDirect** . При выборе этого значения в следующем подразделе отображаются динамические параметры.|  
+|**Соединение с файлом**|В качестве источника указывается файл, содержащий инструкцию DDL. При выборе этого значения в следующем подразделе отображаются динамические параметры.|  
+|**Переменная**|Установите в качестве источника переменную. При выборе этого значения в следующем подразделе отображаются динамические параметры.|  
+  
+### <a name="dynamic-options"></a>Динамические параметры  
+  
+#### <a name="sourcetype--direct-input"></a>SourceType = Прямой ввод  
+ **Source**  
+ Введите инструкцию DDL или нажмите кнопку с многоточием **(…)** и после этого введите инструкции в диалоговом окне **Инструкции DDL** .  
+  
+#### <a name="sourcetype--file-connection"></a>SourceType = Подключение файла  
+ **Source**  
+ Выберите соединение с файлом из списка или нажмите кнопку \< **новое подключение...** > и используйте **диспетчер подключения файлов** диалоговое окно «», чтобы создать новое соединение.  
+  
+ **См. также:** [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>SourceType = Переменная  
+ **Source**  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > и используйте **Добавление переменной** диалоговое окно «», чтобы создать новую переменную.  
+  
+ **См. также:** [Переменные в службах Integration Services](../../integration-services/integration-services-ssis-variables.md)  
+  
+

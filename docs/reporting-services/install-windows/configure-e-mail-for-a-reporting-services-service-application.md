@@ -14,18 +14,18 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 23cf66b01385b3c0f3e9ddc6ff24ea578cf5eec3
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: d7fb8e7ae95ef5606b42db3b0622a90a4bdd7990
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Настройка электронной почты для приложения служб Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Функция предупреждения об изменении данных служб отправляет предупреждения в сообщениях электронной почты. Для отправки электронной почты могут потребоваться настройка приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и изменение модуля доставки электронной почты приложением службы. Необходимо настроить параметры электронной почты и в том случае, если планируется использование модуля доставки электронной почты функцией подписки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+Функция предупреждения об изменении данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отправляет предупреждения в сообщениях электронной почты. Для отправки электронной почты могут потребоваться настройка приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и изменение модуля доставки электронной почты приложением службы. Необходимо настроить параметры электронной почты и в том случае, если планируется использование модуля доставки электронной почты функцией подписки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.

@@ -1,6 +1,6 @@
 ---
 title: "Мои параметры для интеграции с Power BI (веб-портал) | Документы Microsoft"
-ms.date: 05/11/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,22 +17,24 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 91be669329ea6d822dcc489584d649e5a01ce018
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 8e627f20918a4d6ee5f882677ccc7b2c26616e2f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
+
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 На странице **Мои параметры** в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] отдельные пользователи могут управлять входом с использованием [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Во время закрепления элемента отчета будет автоматически предложено войти в систему.  Однако если требуется выполнить вход вручную или выйти из системы, можно использовать страницу **Мои параметры** .  Если параметр меню **Мои параметры** не отображается, сервер отчетов не интегрирован с  [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
 ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
-## <a name="why-sign-in"></a>Зачем входить в систему  
+## <a name="why-sign-in"></a>Зачем входить в систему
+
  При входе устанавливается связь между учетной записью пользователя [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и учетной записью [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Кроме того, при этом создается маркер безопасности, который действителен в течение 90 дней. Если на момент истечения срока действия маркера к Power BI будут прикреплены какие-то элементы, отобразится уведомление.  
    
  ![ssRS_WebPortal_PowerBI_Notification](../reporting-services/media/ssrs-webportal-powerbi-notification.png)    
