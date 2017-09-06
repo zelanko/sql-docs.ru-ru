@@ -15,7 +15,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c4d975e93e77f43c481b44644faaa310963527b
 ms.contentlocale: ru-ru
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  URL-адреса в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно настроить для использования SSL-сертификата. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать и быть допустимой для многих URL-адресов, а также совместно использовать порт SSL с другими приложениями. SAN выглядит следующим образом: www.s2.com.  
   
- Дополнительные сведения о параметрах SSL см. в статье [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Настройка соединений SSL для сервера отчетов, работающего в собственном режиме [](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Дополнительные сведения о параметрах SSL для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы  
   
