@@ -1,45 +1,50 @@
 ---
-title: "Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.toolboxcontrolflowtemplate.f1"
-  - "sql13.dts.designer.addcopyexistingtemplate.f1"
-  - "sql13.dts.designer.addcopyexistingpackagepart.f1"
-  - "sql13.dts.designer.packagepart.general.f1"
+title: "Повторное использование потока управления для пакетов с помощью частей пакета потока управления | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.toolboxcontrolflowtemplate.f1
+- sql13.dts.designer.addcopyexistingtemplate.f1
+- sql13.dts.designer.addcopyexistingpackagepart.f1
+- sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления
+# <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления
   Можно сохранить часто используемую задачу или контейнер потока управления в отдельный файл части (DTSXP-файл) и повторно использовать их несколько раз в одном или нескольких пакетах с помощью частей пакета потока управления. Такая возможность повторного использования упрощает разработку и обслуживание пакетов служб SSIS.  
   
-## Создание части пакета потока управления  
+## <a name="create-a-new-control-flow-package-part"></a>Создание части пакета потока управления  
  Чтобы создать новую часть пакета потока управления, в обозревателе решений разверните папку **Части пакета** . Щелкните правой кнопкой мыши **Поток управления** и выберите пункт **Создать часть пакета потока управления**.  
   
- ![Create a new control flow template](../integration-services/media/control-flow-templates-create-new.png "Create a new control flow template")  
+ ![Создание нового шаблона потока управления](../integration-services/media/control-flow-templates-create-new.png "Создание нового шаблона потока управления")  
   
  В папке **Части пакета | Поток управления** будет создан новый файл части с расширением DTSXP. В то же время в панель элементов служб SSIS будет добавлен новый элемент с тем же именем. (Элемент в панели отображается только при наличии проекта, содержащего часть, открытую в Visual Studio.)  
   
- ![Control flow templates in toolbox](../integration-services/media/control-flow-templates-in-toolbox.png "Control flow templates in toolbox")  
+ ![Поток шаблоны элементов управления](../integration-services/media/control-flow-templates-in-toolbox.png "потока шаблоны элементов управления")  
   
-## Проектирование части пакета потока управления  
+## <a name="design-a-control-flow-package-part"></a>Проектирование части пакета потока управления  
  Чтобы открыть редактор частей пакета, дважды щелкните файл части в обозревателе решений. Проектировать часть можно так же, как и пакет.  
   
- ![Step 1 of control flow template design](../integration-services/media/control-flow-template-design-step-1.png "Step 1 of control flow template design")  
+ ![Шаг 1 процедуры создания шаблона потока управления](../integration-services/media/control-flow-template-design-step-1.png "шаг 1 для создания шаблона потока управления")  
   
- ![Step 2 of control flow template design](../integration-services/media/control-flow-template-design-step-2.png "Step 2 of control flow template design")  
+ ![Шаг 2 для создания шаблона потока управления](../integration-services/media/control-flow-template-design-step-2.png "шаг 2 для создания шаблона потока управления")  
   
  Части пакета потока управления имеют следующие ограничения.  
   
@@ -47,19 +52,19 @@ caps.handback.revision: 14
   
 -   Запуск и отладка части непосредственно в конструкторе не поддерживается.  
   
-## Добавление существующей части пакета потока управления в пакет  
+## <a name="add-an-existing-control-flow-package-part-to-a-package"></a>Добавление существующей части пакета потока управления в пакет  
  Части, сохраненные в текущем проекте служб Integration Services или в другом проекте, можно использовать повторно.  
   
 -   Чтобы повторно использовать часть, которая входит в текущий проект, перетащите ее из панели элементов.  
   
 -   Чтобы повторно использовать часть, которая входит в другой проект, используйте команду **Добавить существующую часть пакета потока управления** .  
   
-### Перетаскивание части пакета потока управления  
+### <a name="drag-and-drop-a-control-flow-package-part"></a>Перетаскивание части пакета потока управления  
  Чтобы повторно использовать часть проекта, просто перетащите ее из панели элементов, как любую другую задачу или контейнер. Перетаскивать часть в пакет можно несколько раз для повторного использования логики в нескольких расположениях пакета. Этот способ используется для частей, которые входят в текущий проект.  
   
- ![Add a control flow template to a package](../integration-services/media/control-flow-templates-add-to-package.png "Add a control flow template to a package")  
+ ![Добавление шаблона потока управления пакета](../integration-services/media/control-flow-templates-add-to-package.png "Добавление шаблона потока управления в пакет")  
   
- ![Package with multiple control flow templates](../integration-services/media/control-flow-templates-in-package.png "Package with multiple control flow templates")  
+ ![Пакет с несколькими шаблонами потока управления](../integration-services/media/control-flow-templates-in-package.png "пакет с несколькими шаблонами потока управления")  
   
  При сохранении пакета конструктор служб SSIS проверяет наличие экземпляров частей в пакете.  
   
@@ -67,14 +72,14 @@ caps.handback.revision: 14
   
 -   Если в пакете не используются части, конструктор удаляет все созданные ранее DTSX.DESIGNER-файлы для пакета (то есть любые DTSX.DESIGNER-файлы, имеющие то же имя, что и пакет).  
   
- ![Solution Explorer with control flow templates](../integration-services/media/control-flow-templates-in-solution-explorer.png "Solution Explorer with control flow templates")  
+ ![Обозреватель решений с шаблоны потока управления](../integration-services/media/control-flow-templates-in-solution-explorer.png "обозреватель решений с шаблоны потока управления")  
   
-### Добавление копии существующей части пакета потока управления или ссылка на существующую часть  
+### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Добавление копии существующей части пакета потока управления или ссылка на существующую часть  
  Чтобы добавить копию существующей части в файловой системе в пакет, в обозревателе решений разверните папку **Части пакета** . Щелкните правой кнопкой мыши **Поток управления** и выберите пункт **Добавить существующую часть пакета потока управления**.  
   
- ![Add a new control flow templates from the menu](../integration-services/media/control-flow-templates-add-from-menu.png "Add a new control flow templates from the menu")  
+ ![Добавить новые шаблоны потока управления в меню](../integration-services/media/control-flow-templates-add-from-menu.png "добавить новые шаблоны потока управления в меню")  
   
- ![Add Copy of Existing Templates dialog box](../integration-services/media/control-flow-templates-add-copy-dialog.png "Add Copy of Existing Templates dialog box")  
+ ![Диалоговое окно Добавить копирования существующих шаблонов](../integration-services/media/control-flow-templates-add-copy-dialog.png "диалоговое окно добавления копии существующих шаблонов")  
   
  **Параметры**  
   
@@ -86,19 +91,19 @@ caps.handback.revision: 14
   
 -   Если этот флажок снят, копия файла части добавляется в проект.  
   
-## Настройка части пакета потока управления  
+## <a name="configure-a-control-flow-package-part"></a>Настройка части пакета потока управления  
  Чтобы настроить части пакета потока управления после добавления их в поток управления пакета, используйте диалоговое окно **Настройка частей пакета**  .  
   
-#### Открытие диалогового окна "Настройка частей пакета"  
+#### <a name="to-open-the-package-part-configuration-dialog-box"></a>Открытие диалогового окна "Настройка частей пакета"  
   
 1.  Чтобы настроить экземпляр части, дважды щелкните его в потоке управления. Кроме того, можно щелкнуть экземпляр части правой кнопкой мыши и выбрать пункт **Изменить**. Откроется диалоговое окно **Настройка частей пакета** .  
   
 2.  Настройте свойства и диспетчеры подключений для экземпляра части.  
   
-### Вкладка «Свойства»  
+### <a name="properties-tab"></a>Вкладка «Свойства»  
  Вкладка **Свойства** диалогового окна **Настройка частей пакета**  служит для задания свойств части.  
   
- ![Properties tab of the Template Configuration dialog box](../integration-services/media/template-configuration-properties-tab.png "Properties tab of the Template Configuration dialog box")  
+ ![Вкладка «Свойства» диалогового окна настройки шаблона](../integration-services/media/template-configuration-properties-tab.png "вкладка «Свойства» диалогового окна настройки шаблона")  
   
  В представлении дерева слева перечислены все настраиваемые свойства экземпляра части.  
   
@@ -114,10 +119,10 @@ caps.handback.revision: 14
   
 -   **Значение**. Настроенное или заданное значение. Это значение переопределяет значение по умолчанию.  
   
-### Вкладка "Диспетчеры подключений"  
+### <a name="connection-managers-tab"></a>Вкладка "Диспетчеры подключений"  
  Вкладка **Диспетчеры подключений** диалогового окна **Настройка частей пакета**  служит для задания свойств диспетчеров подключений для экземпляра части.  
   
- ![Connection Managers tab of the Template Configuration dialog box](../integration-services/media/template-configuration-connection-managers-tab.png "Connection Managers tab of the Template Configuration dialog box")  
+ ![Вкладка Диспетчеры соединений диалогового окна настройки шаблона](../integration-services/media/template-configuration-connection-managers-tab.png "«диспетчеры соединений» диалогового окна настройки шаблона")  
   
  В таблице слева перечислены все диспетчеры подключений, определенные в части потока управления. Выберите нужный диспетчер подключений.  
   
@@ -129,15 +134,15 @@ caps.handback.revision: 14
   
 -   **Значение**. Настроенное или заданное значение. Это значение переопределяет значение по умолчанию.  
   
-## Удаление части потока управления  
+## <a name="delete-a-control-flow-part"></a>Удаление части потока управления  
  Чтобы удалить часть, в обозревателе решений щелкните ее правой кнопкой мыши и выберите пункт **Удалить**. Нажмите кнопку **ОК** , чтобы подтвердить удаление, или кнопку **Отмена** , чтобы оставить часть в пакете.  
   
  При удалении части из проекта она безвозвратно удаляется из файловой системы и не подлежит восстановлению.  
   
 > [!NOTE]  
->  Если требуется удалить часть из проекта служб Integration Services, но оставить ее для использования в других проектах, необходимо использовать пункт **Исключить из проекта**, а не **Удалить**.  
+>  Если требуется удалить часть из проекта служб Integration Services, но оставить ее для использования в других проектах, необходимо использовать пункт **Исключить из проекта**  , а не **Удалить** .  
   
-## Части пакета можно использовать только во время проектирования  
+## <a name="package-parts-are-a-design-time-feature-only"></a>Части пакета можно использовать только во время проектирования  
  Части пакета используются исключительно во время проектирования. Конструктор служб SSIS служит для создания, сохранения и обновления частей, а также для добавления, настройки или удаления экземпляров частей в пакете. При этом среда выполнения служб SSIS не учитывает части. Такое разделение достигается следующим образом.  
   
 -   Конструктор сохраняет экземпляры частей пакета с их настроенными свойствами в DTSX.DESIGNER-файл.  
@@ -148,6 +153,6 @@ caps.handback.revision: 14
   
  На приведенной ниже схеме показано отношение между частями (DTSXP-файлами), конструктором служб SSIS и средой выполнения SSIS.  
   
- ![Control flow templates files and flow](../integration-services/media/control-flow-templates-intro.png "Control flow templates files and flow")  
+ ![Файлы шаблонов потока и потока](../integration-services/media/control-flow-templates-intro.png "управления файлов шаблонов потока и потока")  
   
   

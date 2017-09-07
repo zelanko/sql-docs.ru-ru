@@ -1,44 +1,49 @@
 ---
-title: "RIGHT (выражение служб SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RIGHT, функция"
+title: "RIGHT (выражение служб SSIS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# RIGHT (выражение служб SSIS)
+# <a name="right-ssis-expression"></a>RIGHT (выражение служб SSIS)
   Возвращает указанное количество символов из крайней правой части заданного символьного выражения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 RIGHT(character_expression,integer_expression)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *character_expression*  
  Символьное выражение, из которого извлекаются символы.  
   
  *integer_expression*  
  Является целочисленным выражением, которое указывает количество возвращаемых символов.  
   
-## Типы результата  
+## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Если *integer_expression* длиннее, чем *character_expression*, функция возвращает *character_expression*.  
   
  Если *integer_expression* равно нулю, функция возвращает строку нулевой длины.  
@@ -47,11 +52,11 @@ RIGHT(character_expression,integer_expression)
   
  Аргумент *integer_expression* может принимать переменные и столбцы.  
   
- Функция RIGHT работает только с типом данных DT_WSTR. Аргумент *character_expression*, являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции RIGHT. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
+ Функция RIGHT работает только с типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции RIGHT. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
  RIGHT возвращает результат NULL, если любой из аргументов имеет значение NULL.  
   
-## Примеры выражений  
+## <a name="expression-examples"></a>Примеры выражений  
  В следующем примере используется строковый литерал. Возвращаемым результатом является `"Bike"`.  
   
 ```  
@@ -70,8 +75,8 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## См. также  
- [LEFT (выражение SSIS)](../../integration-services/expressions/left-ssis-expression.md)   
- [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также  
+ [Левый &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/left-ssis-expression.md)   
+ [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

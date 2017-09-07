@@ -1,22 +1,27 @@
 ---
-title: "Протоколы для свойств MSSQLSERVER (вкладка &#171;Дополнительно&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Протоколы для свойств MSSQLSERVER (вкладка \"Дополнительно\") | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Протоколы для свойств MSSQLSERVER (вкладка &#171;Дополнительно&#187;)
+# Протоколы для свойств MSSQLSERVER (вкладка «Дополнительно»)
   Используйте вкладку **Дополнительно** в диалоговом окне **Протоколы для свойств MSSQLSERVER** , чтобы настроить функцию **Расширенная защита для проверки подлинности** для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Расширенная защита** представляет собой функцию сетевых компонентов, реализованную операционной системой. **Расширенная защита** доступна в Windows 7 и Windows Server 2008 R2 и включена в пакеты обновления для операционных систем предыдущих версий. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **Расширенная защита**. Для включения определенных функций **Расширенной защиты** необходимо установить на вкладке **Флаги** флажок **Принудительное шифрование** .  
   
 > [!IMPORTANT]  
@@ -37,7 +42,7 @@ caps.handback.revision: 7
 -   Если выбрано **Обязательно**, то будут приниматься только соединения от защищенных приложений на защищенных операционных системах. Этот параметр обеспечивает наиболее высокий уровень защиты из трех возможных, но при этому будет нельзя выполнить соединения из операционных систем, которые не поддерживают функцию **Операционная защита** , к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Принятые имена участников-служб NTLM**  
- Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентифицируется с помощью более одного имени участника-службы NTLM, необходимо указать список имен участников-служб в виде строк, разделенных точкой с запятой. Например, значение **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** указывает, что разрешены клиенты, пытающиеся подключиться к SPN с именами **MSSQLSvc/HOST1.Contoso.com** и **MSSQLSvc/HOST2.Contoso.com**. Максимальная длина этой переменной 2048 символов.  
+ Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентифицируется с помощью более одного имени участника-службы NTLM, необходимо указать список имен участников-служб в виде строк, разделенных точкой с запятой. Например, значение **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**указывает, что разрешены клиенты, пытающиеся подключиться к SPN с именами **MSSQLSvc/HOST1.Contoso.com** и **MSSQLSvc/HOST2.Contoso.com** . Максимальная длина этой переменной 2048 символов.  
   
 ## См. также  
  [Расширенная защита для проверки подлинности служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  

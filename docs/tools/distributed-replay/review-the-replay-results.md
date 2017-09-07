@@ -1,22 +1,27 @@
 ---
-title: "просмотреть результаты воспроизведения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Просмотреть результаты воспроизведения | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5509f22c53e1c285175969964abc4b977f8d9bc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# просмотреть результаты воспроизведения
+# <a name="review-the-replay-results"></a>просмотреть результаты воспроизведения
   Когда компонент распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершает распределенное воспроизведение, действие воспроизведения может быть записано в результирующий файл трассировки на каждом клиенте. Чтобы записать это действие, необходимо использовать параметр **-o**, когда запускается средство администрирования с параметром **replay**. Дополнительные сведения о параметре replay см. в статье [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  Расположение хранения результирующих файлов трассировки указывается XML-элементом `<ResultDirectory>` в файле конфигурации клиента `DReplayClient.xml`, находящемся на каждом клиенте. Файлы трассировки в результирующем каталоге клиента перезаписываются при каждом воспроизведении.  
@@ -25,7 +30,7 @@ caps.handback.revision: 21
   
  Дополнительные сведения об этих параметрах конфигурации см. в статье [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-## Классы событий, записываемые в результирующих файлах трассировки  
+## <a name="event-classes-captured-in-result-trace-files"></a>Классы событий, записываемые в результирующих файлах трассировки  
  В следующей таблице перечислены все классы событий, записываемые в результирующих файлах трассировки.  
   
 |Категория|Имя класса событий|Частота записи|Точка записи|  
@@ -47,12 +52,12 @@ caps.handback.revision: 21
   
 -   Причиной сбоя или отмены каждого события может быть несколько ошибок.  
   
-## Сопоставление столбцов классов событий  
+## <a name="event-class-column-mapping"></a>Сопоставление столбцов классов событий  
  На следующем рисунке показано, какие столбцы результирующей трассировки доступны для каждого класса событий, записываемого в ходе воспроизведения.  
   
- ![Сопоставление столбцов класса событий](../../tools/distributed-replay/media/eventclassmappings.gif "Сопоставление столбцов класса событий")  
+ ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
   
-## Описания столбцов для результирующей трассировки  
+## <a name="column-descriptions-for-result-trace"></a>Описания столбцов для результирующей трассировки  
  В следующей таблице описаны столбцы в результирующих данных трассировки.  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|  
@@ -64,21 +69,21 @@ caps.handback.revision: 21
 |Внимание|**bigint**|Продолжительность события Attention (в микросекундах) для события. Вычисляется из события Attention для трассировки записи. Если для события не указано время ожидания запроса, то этот столбец не заполняется (имеет значение NULL).|5|  
 |SubmitTime|**datetime**|Время отправки события в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|6|  
 |IsSuccessful|**int**|Логический флаг, показывающий, было ли успешно выполнено определенное событие и были ли результирующие наборы возвращены клиенту.<br /><br /> Событие, создающее предупреждение (например, если событие отменяется из-за события Attention или истечения указанного пользователем времени ожидания), считается успешным.<br /><br /> IsSuccessful может иметь одно из следующих значений:<br /><br /> 1 = успешно;<br /><br /> 0 = ошибка|7|  
-|Duration [microsec]|**bigint**|Продолжительность времени ответа (в микросекундах) для события. Измерение начинается, когда в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляется событие входа, событие выхода, событие RPC или событие языка.<br /><br /> Если событие выполняется успешно, то измерение завершается после обработки всего результирующего набора.<br /><br /> Если событие не выполняется, то измерение завершается во время ошибки или отмены события.|8|  
+|Duration [microsec]|**bigint**|Продолжительность времени ответа (в микросекундах) для события. Измерение начинается, когда в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]отправляется событие входа, событие выхода, событие RPC или событие языка.<br /><br /> Если событие выполняется успешно, то измерение завершается после обработки всего результирующего набора.<br /><br /> Если событие не выполняется, то измерение завершается во время ошибки или отмены события.|8|  
 |RowCount|**bigint**|Заполняется в зависимости от значения элемента `<RecordRowCount>` в файле конфигурации воспроизведения.<br /><br /> Если элемент `<RecordRowCount>` имеет значение Yes, то эта ячейка содержит число строк в результирующем наборе, возвращенном [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Если элемент `<RecordRowCount>` имеет значение No, то эта ячейка не заполняется (имеет значение NULL).|9|  
 |CaptureSPID|**int**|Идентификатор сеанса записи для события.|10|  
 |ConnectionID|**int**|Идентификатор соединения записи для события.|11|  
 |ReplaySPID|**int**|Идентификатор сеанса воспроизведения для события.|12|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется инструкция пользователя.|13|  
-|LoginName|**nvarchar**|Имя входа пользователя. Это может быть имя входа в системе безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетные данные входа Microsoft Windows в формате *имя_домена*\\*имя_пользователя*.|14|  
+|LoginName|**nvarchar**|Имя входа пользователя. Это может быть имя входа в системе безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетные данные входа Microsoft Windows в формате *имя_домена*\\*имя_пользователя*.|14|  
 |CaptureHostName|**nvarchar**|Имя компьютера, на котором служба клиента работает во время записи.|15|  
 |ReplayHostName|**nvarchar**|Имя компьютера, на котором работает клиент во время воспроизведения.|16|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, создавшего соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время записи.|17|  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

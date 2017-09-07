@@ -1,29 +1,34 @@
 ---
-title: "Извлечение данных с помощью XML-источника | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "извлечение данных [службы Integration Services]"
-  - "источники [службы Integration Services], XML"
-  - "XML-источники [службы Integration Services]"
+title: "Извлечение данных с помощью XML-источник | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], XML
+- XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: ba401b0f0a97415ecd2a24f168129d3a3c312811
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Извлечение данных с помощью XML-источника
+# <a name="extract-data-by-using-the-xml-source"></a>Извлечение данных с помощью XML-источника
   Чтобы добавить и настроить источник XML, пакет должен уже содержать не менее одной задачи потока данных.  
   
-### Извлечение данных с использованием XML-источника  
+### <a name="to-extract-data-using-an-xml-source"></a>Извлечение данных с использованием XML-источника  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 21
   
 8.  Чтобы обновить имена входных столбцов, щелкните **Столбцы** и отредактируйте значения в списке **Выходной столбец** .  
   
-9. Чтобы настроить выход ошибок, щелкните **Вывод ошибок**. Дополнительные сведения см. в разделе [Настройка вывода ошибок в компоненте потока данных](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. Чтобы настроить выход ошибок, щелкните **Вывод ошибок**. Дополнительные сведения см. в статье [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Нажмите кнопку **ОК**.  
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [XML-источник](../../integration-services/data-flow/xml-source.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md)   

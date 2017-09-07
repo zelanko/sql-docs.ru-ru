@@ -1,33 +1,38 @@
 ---
-title: "Cобытия, зарегистрированные службами Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "служба [службы Integration Services], события"
-  - "события [службы Integration Services], служба"
-  - "службы Integration Services, события"
+title: "События, регистрируемые службой Integration Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service [Integration Services], events
+- events [Integration Services], service
+- Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Cобытия, зарегистрированные службами Integration Services
+# <a name="events-logged-by-the-integration-services-service"></a>Cобытия, зарегистрированные службами Integration Services
   Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрирует различные сообщения в журнале событий приложений Windows. Служба записывает эти события в журнал при своем запуске, остановке и при возникновении некоторых проблем.  
   
  В этом разделе представлены сведения о самых распространенных сообщениях о событиях, которые регистрирует служба в журнале событий приложений. Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрирует все сообщения, описанные в этом разделе, вместе с источником событий SQLISService.  
   
  Дополнительные сведения о службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Службы Integration Services (службы SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).  
   
-## Сообщения о состоянии службы  
+## <a name="service-status-messages"></a>Сообщения о состоянии службы
  При выборе установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливается и запускается, а тип ее запуска устанавливается в автоматический.  
   
 |Идентификатор события|Символическое имя|Текст|Примечания|  
@@ -38,8 +43,8 @@ caps.handback.revision: 19
 |258|DTS_MSG_SERVER_STOPPING|Остановка службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%n%nПри выходе остановить все выполняющиеся пакеты: %1|Служба остановлена, а при соответствующей настройке она остановит все выполняющиеся пакеты. В файле конфигурации можно указать значения true или false, определяющие, будет ли служба останавливать все выполняющиеся пакеты при собственной остановке. Сообщение для этого события содержит значение соответствующего параметра.|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] остановлена.%nВерсия сервера %1|Служба остановлена.|  
   
-## Сообщения о файле конфигурации  
- Параметры службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в XML-файле, который можно изменять. Дополнительные сведения см. в разделе [Настройка служб Integration Services (SSIS)](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+## <a name="settings-file-messages"></a>Параметры файла сообщения  
+ Параметры службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в XML-файле, который можно изменять. Дополнительные сведения см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 |Идентификатор события|Символическое имя|Текст|Примечания|  
 |--------------|-------------------|----------|-----------|  
@@ -47,16 +52,53 @@ caps.handback.revision: 19
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] не существует.%nПроизводится загрузка с установками по умолчанию.|В заданном расположении отсутствует файл конфигурации.|  
 |273|DTS_MSG_SERVER_BAD_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%nОшибка чтения файла конфигурации: %1%n%nПроизводится загрузка сервера с установками по умолчанию.|Не удалось считать файл конфигурации, или он недопустим. Эта ошибка может быть результатом ошибки синтаксиса XML в файле.|  
   
-## Другие сообщения  
+## <a name="other-messages"></a>Другие сообщения  
   
 |Идентификатор события|Символическое имя|Текст|Примечания|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] : остановка выполняющегося пакета.%nИдентификатор экземпляра пакета: %1%nИдентификатор пакета: %2%nИмя пакета: %3%nОписание пакета: %4%nПакет запущен: %5.|Служба пытается остановить выполнение пакета. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно вести наблюдение и останавливать выполнение пакетов. Сведения об управлении пакетами в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] см. в разделе [Управление пакетами (службы SSIS)](../../integration-services/service/package-management-ssis-service.md).|  
+
+## <a name="view-events"></a>Просмотр событий
+  Для просмотра событий в службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предусмотрены два средства.  
   
-## Связанные задачи  
- Сведения о просмотре записей журнала см. в разделе [Просмотр записей журнала в окне "Регистрация событий"](../../integration-services/performance/view-log-entries-in-the-log-events-window.md).  
+-   Диалоговое окно **Средство просмотра журнала** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Диалоговое окно **Средство просмотра журнала** имеет возможности экспорта, фильтрации, а также поиска по журналу. Дополнительные сведения о параметрах в окне **Средство просмотра журнала**см. в разделе [Справка средства просмотра журнала F1](../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
-## См. также  
- [Регистрация событий в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+-   Средство просмотра событий Windows.  
   
+ Описание событий, записываемых в журнал службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , см. в разделе [События, зарегистрированные службами Integration Services](../../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
+### <a name="to-view-service-events-for-integration-services-in-sql-server-management-studio"></a>Просмотр событий службы, относящихся к службам Integration Services, в среде SQL Server Management Studio  
+  
+1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  
+2.  В меню **Файл** выберите пункт **Подключить к обозревателю объектов**.  
+  
+3.  В диалоговом окне **Соединение с сервером** , выберите тип сервера служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выберите или укажите нахождение сервера для соединения, затем нажмите **Подключить**.  
+  
+4.  Находясь в обозревателе объектов, щелкните правой кнопкой мыши службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , затем выберите пункт **Просмотр журналов**.  
+  
+5.  Для просмотра событий служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выберите **Службы SQL Server Integration Services**. Параметр **События NT** автоматически включается и отключается параметром **Службы SQL Server Integration Services** .  
+  
+### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Просмотр событий службы, относящихся к службам Integration Services, в программе просмотра событий  
+  
+1.  При использовании классического вида **панели управления**щелкните **Администрирование**; если используется вид по категориям, щелкните **Производительность и обслуживание** , а затем **Администрирование**.  
+  
+2.  Щелкните **Просмотр событий**.  
+  
+3.  В диалоговом окне **Просмотр событий** выберите **Приложение**.  
+  
+4.  Найдите в столбце **Источник** оснастки **Приложение** запись со значением **SQLISService**, щелкните ее правой кнопкой мыши и выберите **Свойства**.  
+  
+5.  При необходимости щелкните стрелку вверх или вниз для просмотра предыдущего или следующего события.  
+  
+6.  При необходимости щелкните значок «Копировать в буфер обмена» для копирования сведений о событии.  
+  
+7.  Выберите отображение данных о событии при помощи байтов или слов.  
+  
+8.  Нажмите кнопку **ОК**.  
+  
+9. В меню **Консоль** выберите **Выход** для закрытия диалогового окна **Просмотр событий** .  
+ 
+## <a name="related-tasks"></a>Связанные задачи  
+ Сведения о просмотре записей журнала см. в разделе [Регистрация событий в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+
