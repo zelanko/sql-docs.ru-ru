@@ -17,8 +17,8 @@ helpviewer_keywords:
 - user interface
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
