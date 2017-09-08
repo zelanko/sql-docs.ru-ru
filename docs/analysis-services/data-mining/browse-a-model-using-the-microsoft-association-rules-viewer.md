@@ -1,33 +1,38 @@
 ---
-title: "Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "наборы элементов [службы Analysis Services]"
-  - "модели интеллектуального анализа данных [службы Analysis Services], ассоциации"
-  - "содержимое модели интеллектуального анализа данных, просмотр"
-  - "правила [интеллектуальный анализ данных]"
-  - "средство просмотра правил взаимосвязи [службы Analysis Services]"
-  - "анализ потребительской корзины [службы Analysis Services]"
-  - "взаимосвязи [службы Analysis Services]"
-  - "средство просмотра правил взаимосвязи (Майкрософт)"
-  - "зависимости [службы Analysis Services]"
+title: "Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- mining models [Analysis Services], associations
+- mining model content, viewing
+- rules [Data Mining]
+- Association Rules Viewer [Analysis Services]
+- market basket analysis [Analysis Services]
+- associations [Analysis Services]
+- Microsoft Association Rules Viewer
+- dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8145dd87dd2c1e09663a8b6f6c0cea6dcb1ae7f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)
+# <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)
   Средство просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, которые построены с помощью алгоритма ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] ― это алгоритм установления взаимосвязей для использования при создании моделей интеллектуального анализа данных, которые можно использовать для анализа покупательского поведения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
   
  Ниже перечислены основные причины использования алгоритма ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -37,9 +42,9 @@ caps.handback.revision: 39
 -   Поиск правил, прогнозирующих на основе существующих элементов наличие других элементов в транзакции.  
   
 > [!NOTE]  
->  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
- Пошаговое руководство по созданию, просмотру и использованию модели интеллектуального анализа данных взаимосвязей см. в разделе [Урок 3. Построение сценария потребительской корзины (учебник по интеллектуальному анализу данных — средний уровень)](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md).  
+ Пошаговое руководство по созданию, просмотру и использованию модели интеллектуального анализа данных взаимосвязей см. в разделе [Урок 3. Построение сценария потребительской корзины (учебник по интеллектуальному анализу данных — средний уровень)](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Вкладки средства просмотра  
  При просмотре модели интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]модель отображается на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных с использованием соответствующего средства просмотра для данной модели. Средство просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] содержит следующие вкладки.  
@@ -77,14 +82,14 @@ caps.handback.revision: 39
  [В начало](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Dependency"></a> Сеть зависимостей  
- Вкладка **Сеть зависимостей** содержит средство просмотра сети зависимостей. Каждый узел в средстве просмотра представляет элемент, например «область = Самарская область».  Стрелка между узлами представляет взаимосвязь между элементами. Направление стрелки указывает на взаимосвязь между элементами в соответствии с правилами, обнаруженными алгоритмом. Например, средство просмотра содержит три элемента: A, Б и B. А и Б прогнозируют В. Если выбрать узел В, то две стрелки указывают на узел В: от A к В и от Б к В.  
+ Вкладка **Сеть зависимостей** содержит средство просмотра сети зависимостей. Каждый узел в средстве просмотра представляет элемент, например «область = Самарская область». Стрелка между узлами представляет взаимосвязь между элементами. Направление стрелки указывает на взаимосвязь между элементами в соответствии с правилами, обнаруженными алгоритмом. Например, средство просмотра содержит три элемента: A, Б и B. А и Б прогнозируют В. Если выбрать узел В, то две стрелки указывают на узел В: от A к В и от Б к В.  
   
  Ползунок слева от средства просмотра выступает в качестве фильтра, привязанного к вероятности правил. При движении ползунка вниз отображаются только самые прочные связи.  
   
  [В начало](#BKMK_ViewerTabs)  
   
-## См. также  
- [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   

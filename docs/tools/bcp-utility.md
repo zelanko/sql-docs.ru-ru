@@ -32,10 +32,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0acf7ff593e09d2f866caf458def8385408c84ee
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: d6c9588690a1848e022fd12bf8fa338f258338ec
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="bcp-utility"></a>Программа bcp
@@ -89,7 +89,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 ## <a name="arguments"></a>Аргументы  
  ***файл_данных***<a name="data_file"></a>  
- Полный путь файла данных. После выполнения массового импорта данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] файл данных содержит данные, которые будут скопированы в указанную таблицу или представление. После выполнения массового экспорта данных из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]файл данных содержит данные, скопированные из таблицы или представления. Путь может содержать от 1 до 255 символов. Файл данных может содержать максимум 2^63 – 1 строк.  
+ Полный путь файла данных. После выполнения массового импорта данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]файл данных содержит данные, которые будут скопированы в указанную таблицу или представление. После выполнения массового экспорта данных из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]файл данных содержит данные, скопированные из таблицы или представления. Путь может содержать от 1 до 255 символов. Файл данных может содержать максимум 2^63 – 1 строк.  
   
  ***database_name***<a name="db_name"></a>  
  Имя базы данных, в которой находится указанная таблица или представление. Эта база данных будет по умолчанию использоваться для пользователя, если не указано иное.  
@@ -108,7 +108,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 -   **format**<a name="format"></a> — создает файл форматирования, основанный на указанных параметрах (**-n**, **-c**, **-w**или **-N**) и разделителях таблиц или представлений. При выполнении массового копирования данных программа **bcp** может обратиться к файлу форматирования, что позволяет избежать повторного ввода данных о формате в интерактивном режиме. Параметр **format** требует наличия параметра **-f**. Для создания XML-файла форматирования, кроме того, необходим параметр **-x**. Дополнительные сведения см в разделе [Создание файла форматирования XML (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md). В качестве значения необходимо указать **nul** (**format nul**).  
   
  ***owner***<a name="schema"></a>  
- Имя владельца таблицы или представления. Можно не указывать необязательный параметр*owner* , если пользователь, выполняющий операцию, является владельцем указанной таблицы или представления. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вернет сообщение об ошибке и операция завершится, если аргумент *owner* не указан, а пользователь, выполняющий операцию, не является владельцем указанной таблицы или представления.  
+ Имя владельца таблицы или представления. Можно не указывать необязательный параметр*owner* , если пользователь, выполняющий операцию, является владельцем указанной таблицы или представления. *вернет сообщение об ошибке и операция завершится, если аргумент* owner [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не указан, а пользователь, выполняющий операцию, не является владельцем указанной таблицы или представления.  
   
 **"** ***query*** **"**<a name="query"></a> Is a [!INCLUDE[tsql](../includes/tsql-md.md)] query that returns a result set. Если запрос возвращает несколько результирующих наборов, то в файл данных будет скопирован только первый результирующий набор. Последующие результирующие наборы не учитываются. Используйте двойные кавычки для запроса и одинарные кавычки для выражений, внедренных в запрос. При выполнении массового копирования данных из запроса необходимо, помимо прочего, указывать аргумент**queryout** .  
   
@@ -121,7 +121,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Имя целевого представления при копировании данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**) или представления-источника при копировании данных из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**out**). В качестве целевых представлений могут выступать только те представления, в которых все столбцы ссылаются на одну таблицу. Дополнительные сведения об ограничениях, накладываемых на копирование данных в представления, см. в разделе [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md).  
   
  **-a** ***packet_size***<a name="a"></a>  
- Указывает число байтов в каждом сетевом пакете, отправляемом от сервера и к серверу. Параметр конфигурации сервера можно задать с помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (или системной хранимой процедуры **sp_configure**). Однако параметр конфигурации сервера в отдельных случаях можно изменить с помощью этого параметра. Значение*packet_size* может находиться в пределах от 4096 до 65535 байт, значение по умолчанию равно 4096.  
+ Указывает число байтов в каждом сетевом пакете, отправляемом от сервера и к серверу. Параметр конфигурации сервера можно задать с помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (или системной хранимой процедуры **sp_configure** ). Однако параметр конфигурации сервера в отдельных случаях можно изменить с помощью этого параметра. Значение*packet_size* может находиться в пределах от 4096 до 65535 байт, значение по умолчанию равно 4096.  
   
  Увеличение размера пакета может повысить производительность операций массового копирования. Если был запрошен пакет большего размера, но он не может быть предоставлен, то используется значение по умолчанию. Статистика производительности, формируемая программой **bcp** , показывает используемый размер пакета.  
   
@@ -208,7 +208,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   Отключение проверки ограничений (настройка по умолчанию) может потребоваться в тех ситуациях, когда входные данные содержат строки, нарушающие эти ограничения. Импорт данных можно выполнить с отключенными ограничениями CHECK, после чего использовать инструкции языка [!INCLUDE[tsql](../includes/tsql-md.md)] для удаления недопустимых значений.  
   
   > [!NOTE]
-  > Теперь программа **bcp** производит проверку данных, которые могут привести к ошибкам в работе существующих скриптов, если файлы данных будут содержать недопустимые данные.
+  > Теперь программа**bcp** производит проверку данных, которые могут привести к ошибкам в работе существующих скриптов, если файлы данных будут содержать недопустимые данные.
   
   > [!NOTE]
   > Параметр **-m** *max_errors* не применяется при проверке ограничений.
@@ -225,7 +225,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию. Дополнительные сведения см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** ***application_intent***<a name="K"></a>   
- Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Активные вторичные реплики: вторичные реплики для чтения (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-L** ***last_row***<a name="L"></a>  
  Указывает номер последней строки для экспорта из таблицы или импорта из файла данных. Значение параметра должно быть больше (>) 0, но меньше (<) или равно (=) номеру последней строки. Если параметр отсутствует, по умолчанию используется последняя строка файла.  
@@ -279,7 +279,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Дополнительные сведения см. в подразделе " [Примечания](#remarks)" ниже.  
   
  **-r** ***row_term***<a name="r"></a>  
- Указывает признак конца строки. Значение по умолчанию —  **\n**  (символ перевода строки). Используйте этот параметр, чтобы переопределить признак конца строки по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Указывает признак конца строки. Значением по умолчанию является **\n** (символ перевода строки). Используйте этот параметр, чтобы переопределить признак конца строки по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Если в команде bcp.exe указан признак конца строки в шестнадцатеричном виде, то значение будет усечено до 0x00. Например, если указать значение 0x410041, то будет использовано значение 0x41.  
   
@@ -362,7 +362,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  При массовом копировании вычисляемые столбцы и столбцы типа **timestamp** копируются из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в файл данных обычным способом.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Указание идентификаторов, содержащих пробелы или кавычки  
- Идентификаторы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут содержать такие символы, как внедренные пробелы и кавычки. Такие идентификаторы должны обрабатываться следующим образом.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут содержать такие символы, как внедренные пробелы и кавычки. Такие идентификаторы должны обрабатываться следующим образом.  
   
 -   Если идентификатор или имя файла содержит пробел или кавычку в командной строке, заключите идентификатор в двойные кавычки ("").  
   
@@ -387,7 +387,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   Данные в Юникоде имеют четную длину.  
   
- Возможно, те недопустимые данные, импорт которых мог выполняться операцией массового импорта в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], теперь не удастся загрузить, тогда как в предыдущих версиях ошибка возникала только при попытке клиента подключиться к недопустимым данным. Добавленная проверка снижает вероятность непредвиденных ситуаций во время запроса данных после массовой загрузки.  
+ Возможно, те недопустимые данные, импорт которых мог выполняться операцией массового импорта в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , теперь не удастся загрузить, тогда как в предыдущих версиях ошибка возникала только при попытке клиента подключиться к недопустимым данным. Добавленная проверка снижает вероятность непредвиденных ситуаций во время запроса данных после массовой загрузки.  
   
 ## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>Массовый экспорт или импорт документов SQLXML  
  Чтобы выполнить массовый экспорт или импорт SQLXML-данных используйте один из следующих типов данных в файле форматирования:  
@@ -421,7 +421,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 ## <a name="character-mode--c-and-native-mode--n-best-practices"></a>Рекомендации для символьного режима (-c) и собственного режима (-n)  
  Этот раздел содержит рекомендации для символьного режима (-c) и собственного режима (-n).  
   
--   (Администратор/пользователь) Если возможно, используйте собственный формат (-n) во избежание проблем с разделением. Используйте собственный формат для экспорта и импорта с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Экспортируйте данные из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью параметра - c или -w, если данные планируется импортировать в базу данных, отличную от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   (Администратор/пользователь) Если возможно, используйте собственный формат (-n) во избежание проблем с разделением. Используйте собственный формат для экспорта и импорта с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Экспортируйте данные из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью параметра - c или -w, если данные планируется импортировать в базу данных, отличную от[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   (Администратор) Проверьте данные при использовании BCP OUT. Например, при использовании BCP OUT, BCP IN, а затем BCP OUT убедитесь, что данные экспортируются правильно и значения признака конца не используются как часть какого-либо значения данных. Попробуйте переопределить признаки конца по умолчанию (с помощью параметров -t и - r) на случайные шестнадцатеричные значения, чтобы избежать конфликта между значениями признака конца и значениями данных.  
   
@@ -434,7 +434,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)  
   
--   В. Копирование строк из таблицы в файл данных (в смешанном режиме проверки подлинности)  
+-   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Копирование строк из таблицы в файл данных (в смешанном режиме проверки подлинности)  
   
 -   Г. Копирование данных из файла в таблицу  
   
@@ -611,11 +611,11 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
 |Форматы данных для массового экспорта или импорта (SQL Server)<br />&emsp;&#9679;&emsp;[Использование собственного формата для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование символьного формата для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование собственного формата Юникода для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование символьного формата Юникода для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Сохранение значений идентификаторов при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Файлы форматирования для импорта или экспорта данных (SQL Server)<br />&emsp;&#9679;&emsp;[Создание файла форматирования (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для массового импорта данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для пропуска столбца таблицы (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для пропуска поля данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Примеры массового импорта и экспорта XML-документов (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## <a name="see-also"></a>См. также:  
- [Подготовка данных для массового экспорта или импорта &#40; SQL Server &#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
+ [Подготовка данных к массовому экспорту или импорту (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption &#40; Transact-SQL &#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   

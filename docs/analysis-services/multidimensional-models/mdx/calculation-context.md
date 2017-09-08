@@ -1,27 +1,32 @@
 ---
-title: "Контекст вычисления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Контекст вычисления | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6101305123e48bf5194313c852f2a24e45e5847a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Контекст вычисления
+# <a name="calculation-context"></a>Контекст вычисления
   Контекстом вычисления является известное подпространство куба, где оценивается выражение, а все координаты либо известны, либо могут получены с помощью выражения.  
   
-## Определение контекста вычисления  
+## <a name="determining-the-calculation-context"></a>Определение контекста вычисления  
  Любые набор, элемент, кортеж, числовая функция выполняются в контексте всего многомерного выражения или инструкции. Когда такой аргумент, как кортеж, передается в функцию, в явном виде задаются только некоторые координаты в пространстве куба. Для получения остальных координат используется текущий контекст вычисления.  
   
  Контекст вычисления для неуказанных координат ячейки или элементов атрибута определяется в следующем порядке.  
@@ -31,7 +36,7 @@ caps.handback.revision: 5
 2.  Предложение WHERE (если применимо). В этом предложении, которое также называется *осью среза*, можно указать набор, кортеж или элемент, ограничивающий элементы, которые возвращаются запросом по осям столбцов и строк. Элемент по умолчанию каждой иерархии атрибута, который не указан явно по осям столбцов или строк, по существу является частью оси среза.  
   
     > [!NOTE]  
-    >  Когда координаты ячейки для отдельного атрибута указаны и по оси среза, и по другой оси, координаты, указанные в функции, могут иметь преимущество при определении элементов набора по этой оси. Примерами таких функций являются [Filter (многомерные выражения)](../../../mdx/filter-mdx.md) и [Order (многомерные выражения)](../../../mdx/order-mdx.md), результат можно отфильтровать или упорядочить по элементам атрибута, которые исключены из контекста вычисления предложением WHERE или инструкцией SELECT в предложении FROM.  
+    >  Когда координаты ячейки для отдельного атрибута указаны и по оси среза, и по другой оси, координаты, указанные в функции, могут иметь преимущество при определении элементов набора по этой оси. Примерами таких функций являются [Filter (многомерные выражения)](../../../mdx/filter-mdx.md) и [Order (многомерные выражения)](../../../mdx/order-mdx.md) , результат можно отфильтровать или упорядочить по элементам атрибута, которые исключены из контекста вычисления предложением WHERE или инструкцией SELECT в предложении FROM.  
   
 3.  Именованные наборы и вычисляемые элементы, определенные в запросе или выражении.  
   
@@ -70,9 +75,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  Чтобы увеличить производительность запроса, следует удалить элементы и кортежи как можно раньше в процессе разрешений. Таким образом уменьшается время вычисления сложного запроса на конечном наборе элементов, поскольку запрос обрабатывает минимально возможное количество ячеек.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

@@ -1,37 +1,42 @@
 ---
-title: "Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Контрольный список: Использование PowerShell для проверки PowerPivot для SharePoint | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
+# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
   Ни одна из операций установки или восстановления [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] не завершена без прохождения проверочного теста, который подтверждает работоспособность служб и данных. В этой статье рассказывается о том, как выполнить эти шаги с помощью Windows PowerShell. Каждому шагу посвящен отдельный подраздел с тем, чтобы можно было перейти непосредственно к конкретным задачам. Например, выполните скрипт, приведенный в подразделе [Базы данных](#bkmk_databases) этого раздела для проверки имени приложения службы и баз данных содержимого, если необходимо запланировать их для обслуживания или резервного копирования.  
   
 |||  
 |-|-|  
-|![Содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Содержимое, связанное с PowerShell")|Полный скрипт PowerShell приведен в конце раздела. Используйте полный скрипт в качестве отправной точки создания пользовательского скрипта для аудита полного развертывания [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
+|![Содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell")|Полный скрипт PowerShell приведен в конце раздела. Используйте полный скрипт в качестве отправной точки создания пользовательского скрипта для аудита полного развертывания [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 #124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint &#2013;124; SharePoint 2010|  
   
  **В этой статье**. Обозначенные буквами элементы в содержании соответствуют областям на схеме. На диаграмме показано:  
   
 |||  
 |-|-|  
-|[Подготовка среды PowerShell](#bkmk_prerequisites)<br /><br /> [Симптомы и рекомендуемые действия](#bkmk_symptoms)<br /><br /> **(A)** [Службы Analysis Services для Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService и PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Приложения и прокси-серверы службы PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Базы данных](#bkmk_databases)<br /><br /> [Компоненты SharePoint](#bkmk_features)<br /><br /> [Задания таймера](#bkmk_timer_jobs)<br /><br /> [Правила определения исправности](#bkmk_health_rules)<br /><br /> **(E)** [Журналы Windows и ULS](#bkmk_logs)<br /><br /> [Поставщик MSOLAP](#bkmk_msolap)<br /><br /> [Клиентская библиотека ADOMD.Net](#bkmk_adomd)<br /><br /> [Правила сбора данных об исправности](#bkmk_health_collection)<br /><br /> [Решения](#bkmk_solutions)<br /><br /> [Действия по выполнению проверки вручную](#bkmk_manual)<br /><br /> [Дополнительные ресурсы](#bkmk_more_resources)<br /><br /> [Полный скрипт PowerShell](#bkmk_full_script)|![powershell verification of powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
+|[Подготовка среды PowerShell](#bkmk_prerequisites)<br /><br /> [Симптомы и рекомендуемые действия](#bkmk_symptoms)<br /><br /> **(A)** [Службы Analysis Services для Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService и PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Приложения и прокси-серверы службы PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Базы данных](#bkmk_databases)<br /><br /> [Компоненты SharePoint](#bkmk_features)<br /><br /> [Задания таймера](#bkmk_timer_jobs)<br /><br /> [Правила определения исправности](#bkmk_health_rules)<br /><br /> **(E)** [Журналы Windows и ULS](#bkmk_logs)<br /><br /> [Поставщик MSOLAP](#bkmk_msolap)<br /><br /> [Клиентская библиотека ADOMD.Net](#bkmk_adomd)<br /><br /> [Правила сбора данных об исправности](#bkmk_health_collection)<br /><br /> [Решения](#bkmk_solutions)<br /><br /> [Действия по выполнению проверки вручную](#bkmk_manual)<br /><br /> [Дополнительные ресурсы](#bkmk_more_resources)<br /><br /> [Полный скрипт PowerShell](#bkmk_full_script)|![Проверка powerpivot с PowerShell](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "проверка powerpivot с powershell")|  
   
 ##  <a name="bkmk_prerequisites"></a> Подготовка среды PowerShell  
  В этом разделе описаны действия по подготовке среды PowerShell. В зависимости от текущей конфигурации среды создания скриптов некоторые действия могут не потребоваться.  
@@ -58,7 +63,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![powerpivot in sharepoint general application set](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot in sharepoint general application set")|При желании можно проверить большинство компонентов в центре администрирования с помощью панели управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]. Чтобы открыть информационную панель в центре администрирования, выберите **Общие параметры приложения**, а затем щелкните **Информационная панель управления** в **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Дополнительные сведения о панели мониторинга см. в разделе [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot в наборе общие приложения sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot в наборе общие приложения sharepoint")|При желании можно проверить большинство компонентов в центре администрирования с помощью панели управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Чтобы открыть информационную панель в центре администрирования, выберите **Общие параметры приложения**, а затем щелкните **Информационная панель управления** в **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Дополнительные сведения о панели мониторинга см. в разделе [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Симптомы и рекомендуемые действия  
  В следующей таблице приведен список симптомов или проблем и предложенный подраздел, в котором приведены сведения о том, как устранить данную проблему.  
@@ -67,7 +72,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |Обновление данных не выполняется|См. раздел [Задания таймера](#bkmk_timer_jobs) и проверьте, что **Оперативное задание таймера обновления данных [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** находится в сети.|  
 |На панели мониторинга управления отображаются старые данные|См. раздел [Задания таймера](#bkmk_timer_jobs) и проверьте, что **панель управления заданием таймера обработки** включена.|  
-|Некоторые части панели мониторинга управления|При установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint в ферму с топологией центра администрирования без служб Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint необходимо скачать и установить клиентскую библиотеку Microsoft ADOMD.NET, если требуется полный доступ к встроенным отчетам на информационной панели управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]. Некоторые отчеты на информационной панели используют ADOMD.NET для доступа к внутренним данным, предоставляющим данные отчетов об обработке запросов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и работоспособности сервера в ферме. Дополнительные сведения см. в разделе [ADOMD.Net client Library](#bkmk_adomd) и в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/ru-ru/c2372180-e847-4cdb-b267-4befac3faf7e).|  
+|Некоторые части панели мониторинга управления|При установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint в ферму с топологией центра администрирования без служб Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint необходимо скачать и установить клиентскую библиотеку Microsoft ADOMD.NET, если требуется полный доступ к встроенным отчетам на информационной панели управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Некоторые отчеты на информационной панели используют ADOMD.NET для доступа к внутренним данным, предоставляющим данные отчетов об обработке запросов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и работоспособности сервера в ферме. Дополнительные сведения см. в разделе [ADOMD.Net client Library](#bkmk_adomd) и в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
 ##  <a name="bkmk_windows_service"></a> Службы Analysis Services для Windows  
  Приведенный в этом разделе скрипт проверяет экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Убедитесь в том, что служба **запущена**.  
@@ -127,7 +132,7 @@ Farm      : SPFarm Name=SharePoint_Config
 ```  
   
 ##  <a name="bkmk_powerpivot_service_application"></a> Приложения и прокси-серверы службы PowerPivot  
- Состояние должно быть **В сети**. Приложение служб Excel не использует базы данных приложения службы, поэтому командлет не возвращает имя базы данных. Запишите базу данных, которая используется приложением службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], чтобы можно было удостовериться в том, что она находится в сети в подразделе базы данных далее в этом разделе.  
+ Состояние должно быть **В сети**. Приложение служб Excel не использует базы данных приложения службы, поэтому командлет не возвращает имя базы данных. Запишите базу данных, которая используется приложением службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , чтобы можно было удостовериться в том, что она находится в сети в подразделе базы данных далее в этом разделе.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и приложения службы Excel**  
   
@@ -177,7 +182,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![примечание](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание")Пул приложений также можно проверить на странице **Управление приложениями-службами** центра администрирования. Щелкните имя приложения службы, затем нажмите кнопку **Свойства** на ленте.  
+ ![Примечание](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")пул приложений также можно проверить на странице центра администрирования **управление приложениями службы**. Щелкните имя приложения службы, затем нажмите кнопку **Свойства** на ленте.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и прокси-серверы приложения службы Excel**  
   
@@ -281,8 +286,8 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Журналы Windows и ULS  
  **Журнал событий Windows**  
   
- Следующая команда выполняет поиск в журнале событий Windows событий, связанных с экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint. Сведения об отключении событий или изменении уровня событий см. в статье [Настройка и просмотр файлов журнала SharePoint и журнала диагностики (Power Pivot для SharePoint)](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
-  
+ Следующая команда выполняет поиск в журнале событий Windows событий, связанных с экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint. Сведения об отключении события или изменении уровня событий см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики &#40; Power Pivot для SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 
  **Имя службы:** MSOLAP$POWERPIVOT.  
   
  **Отображаемое имя в службах Windows:** SQL Server Analysis Services (POWERPIVOT).  
@@ -360,7 +365,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- Дополнительные сведения см. в статьях [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/ru-ru/2c62daf9-1f2d-4508-a497-af62360ee859) и [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+ Дополнительные сведения см. в статьях [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) и [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 ##  <a name="bkmk_adomd"></a> Клиентская библиотека ADOMD.Net  
   
@@ -377,7 +382,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- Дополнительные сведения можно найти в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/ru-ru/c2372180-e847-4cdb-b267-4befac3faf7e).  
+ Дополнительные сведения можно найти в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).  
   
 ##  <a name="bkmk_health_collection"></a> Правила сбора данных об исправности  
  Убедитесь в том, что в поле **Состояние** указано значение «В сети», а в поле **Включен** — значение True.  
@@ -430,7 +435,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_manual"></a> Действия по выполнению проверки вручную  
  В этом разделе описаны шаги по проверке, которые нельзя выполнить с помощью командлетов PowerShell.  
   
- **Плановое обновление данных.** Для расписания обновления книги задайте **Кроме того, как можно скорее обновите данные**.  Дополнительные сведения см. в разделе "Проверка обновления данных" статьи [Планирование обновления данных и источники данных, которые не поддерживают аутентификацию Windows (Power Pivot для SharePoint)](../../../analysis-services/power-pivot-sharepoint/schedule data refresh and data sources - no windows authentication.md).  
+ **Плановое обновление данных.** Для расписания обновления книги задайте **Кроме того, как можно скорее обновите данные**.  Дополнительные сведения см. в разделе "Проверка обновления данных" статьи [Планирование обновления данных и источники данных, которые не поддерживают аутентификацию Windows (Power Pivot для SharePoint)](../../../analysis-services/power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).  
   
 ##  <a name="bkmk_more_resources"></a> Дополнительные ресурсы  
  [Командлеты для администрирования веб-сервера (IIS) в Windows PowerShell](http://technet.microsoft.com/library/ee790599.aspx).  

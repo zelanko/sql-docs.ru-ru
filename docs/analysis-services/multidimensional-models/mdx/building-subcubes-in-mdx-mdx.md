@@ -1,36 +1,41 @@
 ---
-title: "Построение вложенных кубов в многомерных выражениях (многомерные выражения) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "запросы [многомерные выражения], вложенные кубы"
-  - "вложенные кубы [многомерные выражения]"
-  - "отфильтрованные представления [многомерные выражения]"
-  - "многомерные выражения [службы Analysis Services], вложенные кубы"
-  - "многомерные выражения [службы Analysis Services], вложенные кубы"
-  - "CREATE SUBCUBE, инструкция"
+title: "Построение вложенных кубов в многомерных Выражениях (многомерные Выражения) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [MDX], subcubes
+- subcubes [MDX]
+- filtered views [MDX]
+- MDX [Analysis Services], subcubes
+- Multidimensional Expressions [Analysis Services], subcubes
+- CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a60ea4f39735f9dfb6d8b3283faa58d38e6a075
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Построение вложенных кубов в многомерных выражениях (многомерные выражения)
+# <a name="building-subcubes-in-mdx-mdx"></a>Построение вложенных кубов в многомерных выражениях (многомерные выражения)
   Вложенный куб — это подмножество куба, полученное на основании отфильтрованного представления базовых данных. Ограничивая куб до вложенного куба, можно повысить производительность запросов.  
   
- Для определения вложенного куба предназначена инструкция [CREATE SUBCUBE](../Topic/CREATE%20SUBCUBE%20Statement%20\(MDX\).md) , описанная в данном разделе.  
+ Для определения вложенного куба предназначена инструкция [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) , описанная в данном разделе.  
   
-## Синтаксис инструкции CREATE SUBCUBE  
+## <a name="create-subcube-syntax"></a>Синтаксис инструкции CREATE SUBCUBE  
  Чтобы создать вложенный куб, используется следующий синтаксис:  
   
 ```  
@@ -39,9 +44,9 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Синтаксис инструкции CREATE SUBCUBE очень прост. Аргумент *Subcube_Identifier* указывает куб, из которого создается данный вложенный куб. Аргумент *Subcube_Expression* определяет часть куба, которая станет вложенным кубом.  
   
- После создания вложенного куба он становится контекстом для всех запросов многомерных выражений либо до закрытия сеанса, либо до выполнения инструкции [DROP SUBCUBE](../Topic/DROP%20SUBCUBE%20Statement%20\(MDX\).md) .  
+ После создания вложенного куба он становится контекстом для всех запросов многомерных выражений либо до закрытия сеанса, либо до выполнения инструкции [DROP SUBCUBE](../../../mdx/mdx-data-definition-drop-subcube.md) .  
   
-### Содержимое вложенного куба  
+### <a name="what-a-subcube-contains"></a>Содержимое вложенного куба  
  Хотя инструкция CREATE SUBCUBE довольно проста в использовании, она не указывает явно все элементы, которые войдут во вложенный куб. При определении вложенного куба применяются следующие правила.  
   
 -   При включении во вложенный куб элемента иерархии **(Все)** туда включаются все элементы этой иерархии.  
@@ -58,7 +63,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Наконец, если оригинальный контекст не заменяется, функции наборов, значения которых рассчитаны в подзапросе выборки, вычисляются в контексте этого подзапроса. Если контекст заменяется, функции наборов вычисляются в контексте всего куба.  
   
-## Пример инструкции CREATE SUBCUBE  
+## <a name="create-subcube-example"></a>Пример инструкции CREATE SUBCUBE  
  В следующем примере создается вложенный куб, ограничивающий куб «Бюджет» счетами 4200 и 4300.  
   
  `CREATE SUBCUBE Budget AS SELECT {[Account].[Account].&[4200], [Account].[Account].&[4300] } ON 0 FROM Budget`  
@@ -67,7 +72,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   

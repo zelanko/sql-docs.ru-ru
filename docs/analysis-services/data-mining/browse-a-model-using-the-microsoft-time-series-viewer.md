@@ -1,31 +1,36 @@
 ---
-title: "Просмотр модели с помощью средства просмотра временных рядов (Майкрософт) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "интеллектуальный анализ данных [службы Analysis Services], непрерывные столбцы"
-  - "содержимое модели интеллектуального анализа данных, просмотр"
-  - "средство просмотра временных рядов (Майкрософт)"
-  - "диаграммы [службы Analysis Services]"
-  - "средство просмотра временных рядов [службы Analysis Services]"
-  - "непрерывные столбцы"
-  - "алгоритмы регрессии [службы Analysis Services]"
+title: "Просмотр модели в средство просмотра временных рядов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], continuous columns
+- mining model content, viewing
+- Microsoft Time Series Viewer
+- charts [Analysis Services]
+- Time Series Viewer [Analysis Services]
+- continuous columns
+- regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
+# <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
   В средстве просмотра временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа данных, построенные с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
   
 -   Алгоритм ARTxp, оптимизированный для краткосрочного прогнозирования.  
@@ -37,7 +42,7 @@ caps.handback.revision: 44
  Дополнительные сведения об этих алгоритмах см. в разделах [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md) и [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
 > [!NOTE]  
->  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Вкладки средства просмотра  
  При просмотре модели интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]модель отображается на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных с использованием соответствующего средства просмотра для данной модели. Средство просмотра временных рядов ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) содержит следующие вкладки:  
@@ -85,10 +90,10 @@ caps.handback.revision: 44
   
  [В начало](#BKMK_ViewerTabs)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Алгоритм временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Примеры запросов моделей временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Примеры запросов для модели временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

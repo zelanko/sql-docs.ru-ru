@@ -1,27 +1,32 @@
 ---
-title: "Выбор столбца, используемого для тестирования модели интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "столбцы [службы Analysis Services], прогнозируемые столбцы интеллектуального анализа данных"
-  - "диаграмма точности интеллектуального анализа данных [службы Analysis Services], столбцы"
-  - "прогнозируемые столбцы интеллектуального анализа данных [службы Analysis Services]"
+title: "Выбор столбца, используемого для тестирования модели интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], predictable mining columns
+- Mining Accuracy Chart [Analysis Services], columns
+- predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Выбор столбца, используемого для тестирования модели интеллектуального анализа данных
+# <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Выбор столбца, используемого для тестирования модели интеллектуального анализа данных
   Прежде чем измерять точность модели интеллектуального анализа данных, необходимо решить, какие результаты вы хотите оценить. Для большинства моделей интеллектуального анализа данных необходимо выбрать хотя бы один столбец, который будет использоваться в качестве прогнозируемого атрибута при создании модели. Поэтому при проверке точности модели обычно необходимо выбрать для проверки этот атрибут.  
   
  В следующем списке указаны некоторые дополнительные соображения, связанные с выбором прогнозируемого атрибута для использования при проверке.  
@@ -40,7 +45,7 @@ caps.handback.revision: 35
   
 -   Если флажок **Синхронизировать столбцы и значения прогноза**установлен, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически выбирают прогнозируемые столбцы с одинаковыми именами и соответствующими типами данных. Если столбцы не удовлетворяют этим критериям, можно снять этот флажок и выбрать прогнозируемый столбец вручную. Это может потребоваться для проверки модели с внешним набором данных, столбцы которого отличаются от столбцов модели. Однако, если выбрать столбец с неправильным типом данных, это приведет к ошибке или плохим результатам.  
   
-### Укажите прогнозируемый столбец.  
+### <a name="specify-the-outcome-to-predict"></a>Укажите прогнозируемый столбец.  
   
 1.  Дважды щелкните структуру интеллектуального анализа данных, чтобы открыть ее в конструкторе интеллектуального анализа данных.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 35
   
 5.  Чтобы определить точность модели, необходимо указать конкретное значение результата, выбрав его в списке **Значение прогнозирования** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выбрать и сопоставить данные проверки модели](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Выбор типа диаграммы точности и задание параметров диаграммы](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

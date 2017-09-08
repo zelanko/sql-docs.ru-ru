@@ -1,29 +1,34 @@
 ---
-title: "Вычисляемые элементы в подзапросах выборки и вложенных кубах | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Вычисляемые элементы в подзапросах выборки и вложенных кубах | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Вычисляемые элементы в подзапросах выборки и вложенных кубах
-  Вычисляемый элемент — это элемент измерения, значение которого вычисляется из выражения во время выполнения и может использоваться в подзапросах выборки и вложенных кубах, чтобы более точно определить пространство куба запроса.  
+# <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
+  Вычисляемый элемент — это элемент измерения, значение которого вычисляется из выражения во время выполнения и может использоваться в подзапросах выборки и вложенных кубах, чтобы более точно определить пространство куба запроса.  
   
-## Включение вычисляемых элементов в подпространстве  
- Свойство строки подключения **SubQueries** в разделе <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или свойство **DBPROPMSMDSUBQUERIES** в разделе [Поддерживаемые свойства XMLA (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) определяет поведение или квоту для вычисляемых элементов или вычисляемых наборов в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
+## <a name="enabling-calculated-members-in-the-subspace"></a>Включение вычисляемых элементов в подпространстве  
+ Свойство строки подключения **SubQueries** в разделе <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или свойство **DBPROPMSMDSUBQUERIES** в разделе [Поддерживаемые свойства XMLA (XMLA)](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) определяет поведение или квоту для вычисляемых элементов или вычисляемых наборов в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
   
  Свойство SubQueries может принимать следующие значения.  
   
@@ -121,12 +126,12 @@ Where [Measures].[Reseller Sales Amount]
   
  В приведенных результатах агрегированные значения для [All Geographies], [United States], [Oregon] и [Washington] получаются на основе статической обработки родителей &[Portland]&[OR] и &[Spokane]&[WA]. Из вычисляемого элемента не берется ничего.  
   
-### Замечания  
+### <a name="remarks"></a>Замечания  
  В выражениях подзапроса выборки или вложенного куба допускается использование только элементов, вычисляемых в сеансе, или элементов, вычисляемых глобально. Наличие в многомерном запросе элементов, вычисляемых в запросе, приведет к ошибке выполнения выражения подзапроса выборки или вложенного куба.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Подзапросы выборки в запросах](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Поддерживаемые свойства XMLA (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)  
+ [Поддерживаемые свойства XMLA &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   

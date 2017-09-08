@@ -1,41 +1,46 @@
 ---
-title: "Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сравнение [службы Analysis Services]"
-  - "модель упрощенного алгоритма Байеса [службы Analysis Services]"
-  - "классификаторы Байеса"
-  - "содержимое модели интеллектуального анализа данных, просмотр"
-  - "прогнозирующее моделирование [службы Analysis Services]"
-  - "средство просмотра упрощенных алгоритмов Байеса [службы Analysis Services]"
-  - "интеллектуальный анализ данных [службы Analysis Services], прогнозирующее моделирование"
-  - "средство просмотра упрощенных алгоритмов Байеса (Microsoft)"
-  - "гистограммы [службы Analysis Services]"
-  - "модели интеллектуального анализа [службы Analysis Services], прогнозирующее моделирование"
-  - "зависимости [службы Analysis Services]"
+title: "Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса Майкрософт упрощенного | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- discrimination [Analysis Services]
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- mining model content, viewing
+- predictive modeling [Analysis Services]
+- Naive Bayes Viewer [Analysis Services]
+- data mining [Analysis Services], predictive modeling
+- Microsoft Naive Bayes Viewer
+- histograms [Analysis Services]
+- mining models [Analysis Services], predictive modeling
+- dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec5fa6be2358366b181b0608025d3d3a4b94a321
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)
+# <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)
   Средство просмотра упрощенного алгоритма Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, которые построены по упрощенным алгоритмам Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, хорошо адаптирующийся к задачам прогнозирующего моделирования. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
   
  Ввиду того что одной из главных задач упрощенной модели Байеса является предоставление способа быстрого просмотра данных в наборе, средство просмотра упрощенных алгоритмов Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) содержит несколько методов отображения взаимодействия между прогнозируемыми и входными атрибутами.  
   
 > [!NOTE]  
->  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Вкладки средства просмотра  
  При просмотре модели интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]модель отображается на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных с использованием соответствующего средства просмотра для данной модели. Средство просмотра упрощенных алгоритмов Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) содержит следующие вкладки, на которых можно изучить данные:  
@@ -74,22 +79,22 @@ caps.handback.revision: 39
 ##  <a name="BKMK_Discrimination"></a> Сравнение атрибутов  
  Чтобы воспользоваться вкладкой **Сравнение атрибутов** , выберите прогнозируемый атрибут и пару его состояний из списков **Атрибут**, **Значение 1**и **Значение 2** . В столбцах сетки на вкладке **Сравнение атрибутов** отобразятся следующие сведения.  
   
- **Attribute**  
+ **Атрибуты**  
  Перечисляет другие атрибуты из набора данных, которые содержат состояние, сильно благоприятствующее одному из состояний прогнозируемого атрибута.  
   
  **Значения**  
- Показывает значение атрибута в столбце **Атрибут**.  
+ Показывает значение атрибута в столбце **Атрибут** .  
   
- **Подходит к \<значению 1>**  
+ **Отдает приоритет \<значение 1 >**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 1**.  
   
- **Подходит к \<значению 2>**  
+ **Отдает приоритет \<значение 2 >**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 2**.  
   
  [В начало](#BKMK_ViewerTabs)  
   
-## См. также  
- [Упрощенный алгоритм Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  

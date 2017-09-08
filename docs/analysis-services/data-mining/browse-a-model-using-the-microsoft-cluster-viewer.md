@@ -1,39 +1,44 @@
 ---
-title: "Просмотр модели с помощью средства просмотра кластеров (Майкрософт) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кластеры [службы Analysis Services]"
-  - "сравнение [службы Analysis Services]"
-  - "имена [службы Analysis Services], кластеры"
-  - "средство просмотра кластеров (Microsoft)"
-  - "содержимое модели интеллектуального анализа данных, просмотр"
-  - "сравнение кластеров"
-  - "просмотр кластеров"
-  - "отображение кластеров"
-  - "интеллектуальный анализ данных [службы Analysis Services], кластеры"
-  - "средство просмотра кластеров [службы Analysis Services]"
-  - "модели интеллектуального анализа данных [службы Analysis Services], кластеры"
+title: "Просмотр модели в средстве просмотра кластеров (Microsoft) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [Analysis Services]
+- discrimination [Analysis Services]
+- names [Analysis Services], clusters
+- Microsoft Cluster Viewer
+- mining model content, viewing
+- comparing clusters
+- viewing clusters
+- displaying clusters
+- data mining [Analysis Services], clusters
+- Cluster Viewer [Analysis Services]
+- mining models [Analysis Services], clusters
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 561b0d339a7de446e6c96f3848998dba44409769
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Просмотр модели с помощью средства просмотра кластеров (Майкрософт)
+# <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеров (Майкрософт)
   Средство просмотра кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом сегментации, он используется для просмотра данных с целью обнаружения аномалий в данных и создания прогнозов. Дополнительные сведения об этом алгоритме см. в статье [Microsoft Clustering Algorithm](../../analysis-services/data-mining/microsoft-clustering-algorithm.md).  
   
 > [!NOTE]  
->  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md).  
+>  Чтобы просмотреть подробные сведения об использованных в модели уравнениях и обнаруженных закономерностях, используйте средство просмотра деревьев содержимого общего вида [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделах [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) и [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Вкладки средства просмотра  
  При просмотре модели интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]модель отображается на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных с использованием соответствующего средства просмотра для данной модели. Средство просмотра кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] содержит следующие вкладки для изучения кластерных моделей интеллектуального анализа данных:  
@@ -49,7 +54,7 @@ caps.handback.revision: 42
 ###  <a name="BKMK_Diagram"></a> Диаграмма кластеров  
  Вкладка **Диаграмма кластеров** в средстве просмотра кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] содержит все кластеры в модели интеллектуального анализа данных. Заливка линии, соединяющей кластеры, показывает степень их сходства. Светлая заливка или отсутствие заливки означает, что кластеры не очень схожи. Чем темнее становится линия, тем сильнее становится сходство связей. Количество линий, отображаемых в окне просмотра, можно настроить, перемещая ползунок справа от кластеров. При движении ползунка вниз отображаются только самые прочные связи.  
   
- По умолчанию тень обозначает заполнение кластера. Используя параметры **Переменная****заливки** и **Состояние**, можно выбрать, какую пару атрибута и состояния представляет заливка. Чем темнее заливка, тем сильнее распределение атрибута для конкретного состояния. Распределение уменьшается по мере того, как заливка становится светлее.  
+ По умолчанию тень обозначает заполнение кластера. Используя параметры **Переменная****заливки** и **Состояние** , можно выбрать, какую пару атрибута и состояния представляет заливка. Чем темнее заливка, тем сильнее распределение атрибута для конкретного состояния. Распределение уменьшается по мере того, как заливка становится светлее.  
   
  Чтобы переименовать кластер, щелкните правой кнопкой мыши его узел и выберите команду **Переименовать кластер**. Новое имя сохранится на сервере.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 42
   
  Стандартные имена кластеров можно изменять, сделав их более описательными. Чтобы переименовать кластер, щелкните заголовок его столбца правой кнопкой мыши и выберите команду **Переименовать кластер**. Можно также скрыть кластеры с помощью команды **Скрыть столбец**.  
   
- Чтобы открыть окно, содержащее более полное и подробное представление кластеров, дважды щелкните либо ячейку в столбце **Состояния**, либо гистограмму в средстве просмотра.  
+ Чтобы открыть окно, содержащее более полное и подробное представление кластеров, дважды щелкните либо ячейку в столбце **Состояния** , либо гистограмму в средстве просмотра.  
   
  Щелкните заголовок столбца для сортировки атрибутов по важности для этого кластера. Изменить порядок столбцов в окне просмотра также можно путем перетаскивания.  
   
@@ -78,8 +83,8 @@ caps.handback.revision: 42
   
  [В начало](#BKMK_ViewerTabs)  
   
-## См. также  
- [Алгоритм кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+## <a name="see-also"></a>См. также  
+ [Microsoft Clustering Algorithm](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   

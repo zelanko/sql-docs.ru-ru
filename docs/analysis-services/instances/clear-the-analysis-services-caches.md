@@ -1,24 +1,29 @@
 ---
-title: "Очистка кэша служб Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Очистка кэша служб Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Очистка кэша служб Analysis Services
+# <a name="clear-the-analysis-services-caches"></a>Очистка кэша служб Analysis Services
   Службы Analysis Services кэшируют данные для повышения производительности запросов. В этом разделе приводятся рекомендации по использованию команды XMLA ClearCache для очистки кэшей, созданных в ответ на запрос многомерных выражений. Эффекты выполнения команды ClearCache различаются в зависимости от используемой модели (табличной или многомерной).  
   
  **Время очистки кэша для многомерных моделей**  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
  В отличие от очистки кэшей многомерной модели при тестировании производительности, для очистки кэшей табличной модели нет общих рекомендаций. Если в среде табличной модели, в которой содержатся конфиденциальные данные, не выполняется развертывание, то ни одна из административных задач сама по себе не требует очистки кэша.  
   
-## Очистка кэша для моделей служб Analysis Services  
+## <a name="clear-the-cache-for-analysis-services-models"></a>Очистка кэша для моделей служб Analysis Services  
  Чтобы очистить кэш, используйте XMLA и среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Кэш вы можете очищать на уровне базы данных, куба, измерения, таблицы или группы мер. Следующие действия по очистке кэша на уровне базы данных относятся и к многомерным и к табличным моделям.  
   
 > [!NOTE]  
@@ -47,15 +52,15 @@ caps.handback.revision: 11
   
  Для очистки кэша необходимо указать идентификатор объекта в инструкции **ClearCache** в запросе XMLA. Сначала в этом разделе описывается, как получить идентификатор объекта.  
   
-#### Шаг 1. Получение идентификатора объекта  
+#### <a name="step-1-get-the-object-identifier"></a>Шаг 1. Получение идентификатора объекта  
   
-1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] щелкните объект правой кнопкой мыши, выберите пункт **Свойства** и скопируйте значение свойства "Идентификатор" на панели **Свойства**. Такой подход работает для баз данных, кубов, измерений и таблиц.  
+1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]щелкните объект правой кнопкой мыши, выберите пункт **Свойства**и скопируйте значение свойства "Идентификатор" на панели **Свойства** . Такой подход работает для баз данных, кубов, измерений и таблиц.  
   
 2.  Чтобы получить идентификатор группы мер, щелкните правой кнопкой мыши группу мер и выберите пункт **Создать скрипт для группы мер**. Выберите команду **CREATE** или **ALTER**и отправьте запрос в окно. Идентификатор группы мер будет виден в определении объекта. Скопируйте идентификатор определения объекта.  
   
-#### Шаг 2. Запуск запроса  
+#### <a name="step-2-run-the-query"></a>Шаг 2. Запуск запроса  
   
-1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] щелкните правой кнопкой мыши базу данных, укажите пункт **Создать запрос** и выберите пункт **XMLA**.  
+1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]щелкните правой кнопкой мыши базу данных, укажите пункт **Создать запрос**и выберите пункт **XMLA**.  
   
 2.  Скопируйте следующий пример кода в окно запроса XMLA. Замените **DatabaseID** на идентификатор базы данных для текущего соединения.  
   
@@ -88,8 +93,7 @@ caps.handback.revision: 11
     </return>  
     ```  
   
-## См. также  
- [Создание скриптов для административных задач в службах Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>См. также:  
  [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
