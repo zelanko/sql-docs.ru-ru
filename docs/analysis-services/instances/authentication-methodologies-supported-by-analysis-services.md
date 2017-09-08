@@ -1,24 +1,29 @@
 ---
-title: "Методики проверки подлинности, поддерживаемые службами Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Методики проверки подлинности, поддерживаемые службами Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d7e13fb81b3c59d348f9ccb8e4933683cf96f0b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Методики проверки подлинности, поддерживаемые службами Analysis Services
+# <a name="authentication-methodologies-supported-by-analysis-services"></a>Методики проверки подлинности, поддерживаемые службами Analysis Services
   Для подключений клиентского приложения к экземпляру служб Analysis Services требуется проверка подлинности Windows (встроенная). Предоставить удостоверение пользователя Windows можно с помощью любого из следующих методов.  
   
 -   NTLM  
@@ -71,17 +76,17 @@ caps.handback.revision: 8
   
  Для анонимной проверки подлинности можно задать удостоверение анонимного пользователя для определенной учетной записи пользователя Windows (IUSR_GUEST по умолчанию) или удостоверение пула приложений. Учетная запись анонимного пользователя будет использоваться для соединения со службами Analysis Services и должна иметь разрешения на доступ к данным в экземпляре служб Analysis Services. При использовании этого подхода в подключении используется только удостоверение пользователя, связанное с анонимной учетной записью. Если приложение требует дополнительного управления идентификаторами, необходимо выбрать какой-то другой вариант либо дополнить этот вариант собственным решением по управлению идентификаторами.  
   
- Обычный и анонимный режимы доступны только при настройке служб Analysis Services для доступа по протоколу HTTP, при этом установление соединения должно производиться с помощью IIS и msmdpump.dll. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ Обычный и анонимный режимы доступны только при настройке служб Analysis Services для доступа по протоколу HTTP, при этом установление соединения должно производиться с помощью IIS и msmdpump.dll. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Сохраненные учетные данные**  
+ **Stored Credentials**  
   
  У большинства служб приложений среднего уровня имеются функции для хранения имени пользователя и пароля, которые затем используются для получения данных из хранилища низкого уровня, например служб Analysis Services или реляционного механизма SQL Server. Как таковые сохраненные учетные данные являются пятым вариантом получения данных. Среди ограничений, связанных с этим методом, можно указать затраты на обновление имен пользователей и паролей и использование одного удостоверения в подключении. Если решению требуется удостоверение исходного инициатора вызова, то использовать сохраненные учетные данные невозможно.  
   
  Дополнительные сведения о сохраненных учетных данных см. в разделах [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) и [Использование служб Excel со службой Secure Store в SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Использование олицетворения и безопасность транспорта](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)   
+ [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Настройка служб Analysis Services для ограниченного делегирования Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Регистрация имени участника-службы для экземпляра служб Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

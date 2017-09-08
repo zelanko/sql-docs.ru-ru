@@ -1,33 +1,38 @@
 ---
-title: "События трассировки служб Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler, службы Analysis Services"
-  - "мониторинг служб Analysis Services [SQL Server]"
-  - "производительность [службы Analysis Services], SQL Server Profiler"
-  - "события [службы Analysis Services]"
-  - "классы событий [службы Analysis Services], о классах событий"
-  - "Profiler [SQL Server Profiler], службы Analysis Services"
-  - "классы событий [службы Analysis Services]"
+title: "События трассировки служб Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# События трассировки служб Analysis Services
+# <a name="analysis-services-trace-events"></a>События трассировки служб Analysis Services
   За активностью экземпляра Microsoft SQL Server Analysis Services (SSAS) можно наблюдать путем отслеживания и анализа событий трассировки, создаваемых экземпляром.  События трассировки сгруппированы для облегчения поиска связанных событий трассировки.  Каждое событие трассировки содержит набор данных, имеющих отношение к событию; не все фрагменты данных имеют отношение к событиям.  
   
- События трассировки можно запускать и записывать с помощью **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]** (см. раздел [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)), а также запускать с помощью команды XMLA как **расширенные события SQL Server** и впоследствии анализировать (см. раздел [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
+ События трассировки можно запускать и записывать с помощью **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**(см. раздел [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)), а также запускать с помощью команды XMLA как **расширенные события SQL Server** и впоследствии анализировать (см. раздел [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
   
  В следующих таблицах приводятся описания каждой категории и событий в этих категориях. Каждая таблица содержит следующие столбцы.  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|Существующий сеанс|Существующий сеанс.|  
 |43|Инициализация сеанса|Инициализация сеанса.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

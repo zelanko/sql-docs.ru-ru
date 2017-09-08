@@ -1,24 +1,29 @@
 ---
-title: "Настройка максимального размера передаваемого файла (Power Pivot для SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка максимального размера передаваемого (Power Pivot для SharePoint) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e79739162ee4eba9fde6af1efddd7b5b273b73d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка максимального размера передаваемого файла (Power Pivot для SharePoint)
+# <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Настройка максимального размера передаваемого файла (Power Pivot для SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] часто содержат большие объемы данных, при этом размер файлов превышает максимально возможный для передачи в SharePoint. При попытке передать файл, размер которого больше предельно допустимого, на SharePoint возникнет следующая ошибка:  
   
 -   «Указанный файл больше максимально возможного размера файла».  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
  Для изменения максимального размера файла для передачи необходимо быть администратором SharePoint.  
   
-### Настройка максимального размера файла для службы Excel Services  
+### <a name="configure-maximum-file-size-for-excel-services"></a>Настройка максимального размера файла для службы Excel Services  
   
 1.  В разделе «Управление приложениями» центра администрирования выберите пункт **Управление приложениями служб**.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 9
   
 3.  Выберите **Расположение доверенных файлов**.  
   
-4.  Выберите расположение, чтобы изменить его свойства. По умолчанию служба Excel Services считает веб-приложение по умолчанию надежным сайтом. При использовании веб-приложения по умолчанию щелкните элемент **http://**, чтобы открыть страницу настройки для этого расположения.  
+4.  Выберите расположение, чтобы изменить его свойства. По умолчанию служба Excel Services считает веб-приложение по умолчанию надежным сайтом. При использовании веб-приложения по умолчанию щелкните элемент **http://** , чтобы открыть страницу настройки для этого расположения.  
   
 5.  Прокрутите список до пункта **Свойства книги**.  
   
@@ -47,14 +52,14 @@ caps.handback.revision: 9
   
 7.  Нажмите кнопку **ОК**.  
   
-### Настройка максимального размера файла для веб-приложения SharePoint  
+### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Настройка максимального размера файла для веб-приложения SharePoint  
   
 1.  В разделе «Управление приложениями» центра администрирования выберите **Управление веб-приложениями**.  
   
     > [!NOTE]  
     >  Выполните следующие шаги, только если параметр «Максимальный размер книги» в службе Excel Services был увеличен.  
   
-2.  Выберите приложение (например, **SharePoint — 80**).  
+2.  Выберите приложение (например, **SharePoint — 80**).  
   
 3.  На ленте «Веб-приложения» на кнопке «Общие параметры» щелкните стрелку вниз.  
   

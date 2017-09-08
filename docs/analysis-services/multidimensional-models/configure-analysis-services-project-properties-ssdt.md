@@ -1,56 +1,61 @@
 ---
-title: "Настройка свойств проекта служб Analysis Services (среда SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL"
-helpviewer_keywords: 
-  - "проекты [службы Analysis Services], свойства"
+title: "Настройка свойств проекта служб Analysis Services (SSDT) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
+helpviewer_keywords:
+- projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3f655f93b5998e211922c5744ae1beeb9c3fdb72
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка свойств проекта служб Analysis Services (среда SSDT)
-  В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяется с некоторыми свойствами по умолчанию, которые влияют на сборку и развертывание проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+# <a name="configure-analysis-services-project-properties-ssdt"></a>Настройка свойств проекта служб Analysis Services (среда SSDT)
+  В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяется с некоторыми свойствами по умолчанию, которые влияют на сборку и развертывание проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Чтобы изменить свойства проекта, щелкните правой кнопкой мыши объект проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и выберите пункт **Свойства**. Либо можно выбрать команду **Свойства** в меню "Проект".  
   
-## Описание свойства  
+## <a name="property-description"></a>Описание свойства  
  Следующая таблица описывает каждое свойство проекта, приводит список его значений по умолчанию и предоставляет сведения об изменении его значения.  
   
 |Свойство|Параметр по умолчанию|Description|  
 |--------------|---------------------|-----------------|  
-|Выпуск сервера построения / развертывания|Выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором выполнялась разработка проекта|Определяет выпуск сервера, на котором проект будет в конечном счете развернут. Если над проектом работает несколько разработчиков, нужно иметь представление о выпуске сервера, чтобы знать, какие функции можно включать в проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|Выпуск сервера построения / развертывания|Выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором выполнялась разработка проекта|Определяет выпуск сервера, на котором проект будет в конечном счете развернут. Если над проектом работает несколько разработчиков, нужно иметь представление о выпуске сервера, чтобы знать, какие функции можно включать в проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Выпуск сервера построения / развертывания|Версия, используемая для разработки проектов|Определяет версию сервера, на котором проект будет в конечном счете развернут.|  
 |Построение / Выходные данные|/bin|Относительный путь для выходных данных проекта в процессе его построения.|  
 |Построение / Удаление паролей|True|Определяет, будут ли известные пароли удалены из строки подключения, которая прописывается в каталог выхода во время процесса построения. Пароли удаляются с целью повышения безопасности. Если пароли удаляются, то потребуется их замена в процессе развертывания проекта, чтобы проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] получил доступ к источнику данных.|  
-|Отладка / Объект запуска|\<Текущий активный объект>|Определяет объект, который будет запущен при запуске отладки.|  
+|Отладка / Объект запуска|\<Текущий активный объект >|Определяет объект, который будет запущен при запуске отладки.|  
 |Развертывание / Режим развертывания|Только развертывание изменений|По умолчанию развертываются только изменения в объектах проекта (при условии, что никакие другие изменения объектов не были сделаны за пределами проекта). Также можно сделать выбор к развертыванию всех объектов проекта во время каждого развертывания. Для лучшей производительности используйте только развертывание изменений.|  
 |Развертывание / Параметры выполнения|По умолчанию|По умолчанию службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют расчет процессов, требуемых для развертывания изменений объектов. Обычно это приводит к кратчайшему времени развертывания. Однако можно выбрать или полный набор процессов развертывания, или не выполнять такой расчет с каждым развертыванием.|  
 |Развертывание/ Транзакционное развертывание|False|По умолчанию развертывание всех или только измененных объектов не производится в единой транзакции с обработкой этих развертываемых объектов. Развертывание может завершиться успешно и продолжаться даже в случае неудачных обработок. Можно изменить это правило умолчания, чтобы объединить развертывание и обработку в одну транзакцию.|  
-|Сервер развертывания/целевой сервер|localhost|По умолчанию объекты базы данных в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будут развернуты на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], заданном по умолчанию на локальном компьютере, на котором используется среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Измените это правило умолчания, чтобы задать именованный экземпляр на локальном компьютере или на любом экземпляре любого удаленного компьютера, на котором есть разрешения на создание объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|Развертывание / База данных|\<имя проекта>|По умолчанию имя базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], в которой объекты проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будут проиллюстрированы при развертывании, представляет собой имя, заданное проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] при его определении. Измените это свойство, чтобы изменить имя базы данных на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], заданном свойством "Server".|  
+|Сервер развертывания/целевой сервер|localhost|По умолчанию объекты базы данных в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будут развернуты на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , заданном по умолчанию на локальном компьютере, на котором используется среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Измените это правило умолчания, чтобы задать именованный экземпляр на локальном компьютере или на любом экземпляре любого удаленного компьютера, на котором есть разрешения на создание объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|Развертывание / База данных|\<имя проекта >|По умолчанию имя базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в которой объекты проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будут проиллюстрированы при развертывании, представляет собой имя, заданное проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] при его определении. Измените это свойство, чтобы изменить имя базы данных на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , заданном свойством "Server".|  
   
-## Конфигурации свойств  
+## <a name="property-configurations"></a>Конфигурации свойств  
  Свойства определяются на основе конфигурации. Настройки проекта позволяют разработчикам работать с проектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] при различных настройках построения, отладки и развертывания, не разрешая прямого редактирования XML-файлов проекта.  
   
  Первоначально проект создается с простой конфигурацией, называемой «Разработка». Можно создать дополнительные конфигурации и переключаться между ними, используя диспетчер конфигурации.  
   
  До тех пор пока дополнительные конфигурации не будут созданы, все разработчики используют эту общую конфигурацию. Однако во время различных фаз разработки проекта — например, во время начальной разработки или тестирования проекта — разные разработчики смогут использовать разные источники данных и развертывать проект на разные сервера для разных целей. Конфигурации позволяют совмещать в себе эти различные настройки в разных файлах конфигурации.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Построение проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

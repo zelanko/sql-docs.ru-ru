@@ -1,33 +1,38 @@
 ---
-title: "добавить столбцы к структуре интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "структуры интеллектуального анализа данных [службы Analysis Services], столбцы"
-  - "столбцы [интеллектуальный анализ данных], столбцы структуры интеллектуального анализа данных"
-  - "добавление столбцов"
+title: "Добавить столбцы к структуре интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], columns
+- columns [data mining], mining structure columns
+- adding columns
 ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a6799af9ef4737a93ec7580e87593a4d1e7c020
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# добавить столбцы к структуре интеллектуального анализа данных
+# <a name="add-columns-to-a-mining-structure"></a>добавить столбцы к структуре интеллектуального анализа данных
   Используйте конструктор интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , чтобы добавить столбцы к структуре интеллектуального анализа данных после ее определения в мастере интеллектуального анализа данных. Можно добавить любой столбец, существующий в представлении источника данных, который использовался при определении структуры интеллектуального анализа данных.  
   
 > [!NOTE]  
 >  К структуре интеллектуального анализа данных можно добавить несколько копий столбцов. Тем не менее следует избегать использования более чем одного экземпляра столбца в одной и той же модели, поскольку в противном случае могут возникнуть ложные корреляции между исходным и производным столбцами.  
   
-### Добавление столбца к структуре интеллектуального анализа данных  
+### <a name="to-add-a-column-to-a-mining-structure"></a>Добавление столбца к структуре интеллектуального анализа данных  
   
 1.  Перейдите на вкладку **Структура интеллектуального анализа данных** в конструкторе интеллектуального анализа данных.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  При добавлении уже существующего столбца в структуру будет включена копия, а к имени будет добавлена цифра 1. Можно изменить имя скопированного столбца на более наглядное, введя новое имя в качестве значения свойства **Имя** столбца структуры интеллектуального анализа данных.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

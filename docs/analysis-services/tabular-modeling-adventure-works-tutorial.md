@@ -1,36 +1,44 @@
 ---
-title: "Табличное моделирование (учебник по Adventure Works) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-keywords: 
-  - "Службы Analysis Services"
-  - "Табличная модель"
-  - "Учебник"
-  - "Службы SSAS"
+title: "Табличное моделирование (учебник Adventure Works) | Документы Microsoft"
+ms.custom: 
+ms.date: 04/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+keywords:
+- "Службы Analysis Services"
+- "Табличная модель"
+- "Учебник"
+- "Службы SSAS"
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 30028afc0a7d994441a0958b207b7ab70c40f133
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Табличное моделирование (учебник по Adventure Works)
-В этом учебнике содержатся уроки по созданию табличной модели служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services с помощью среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+# <a name="tabular-modeling-adventure-works-tutorial"></a>Табличное моделирование (учебник по Adventure Works)
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
+Этот учебник содержит уроки по созданию табличной модели служб Analysis Services в [уровне совместимости 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) с помощью [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)и развертывания модели служб Analysis Services сервер локально или в Azure.  
+ 
+Если вы используете 2017 г. SQL Server или Azure Analysis Services и вы хотите создать модель на совместимость 1400 уровня, используйте [Azure Analysis Services — учебник по Adventure Works](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). Эта обновленная версия использует новый, современный возможность получить данные для подключения и импорта исходных данных и использует язык M Настройка разделов.
+ 
   
+## <a name="what-youll-learn"></a>Обзор учебника   
   
-## Обзор учебника  
-В ходе работы с этим учебником нам предстоит выполнить следующие действия.  
-  
--   Создание нового проекта табличной модели в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+-   Инструкции по созданию нового проекта табличной модели в SSDT.
   
 -   Импорт данных из реляционной базы данных SQL Server в проект табличной модели.  
   
@@ -44,60 +52,64 @@ caps.handback.revision: 35
   
 -   Обеспечение безопасности объектов моделей и данных за счет создания ролей и присвоения членства пользователям.  
   
--   Развертывание табличной модели в «песочницу» или производственный экземпляр служб Analysis Services, работающий в табличном режиме.  
+-   Порядок развертывания табличной модели служб Analysis server в локальной или в Azure.  
   
-## Сценарий  
-Этот учебник основывается на вымышленной организации [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] — крупная транснациональная производственная компания, производящая и реализующая металлические и композитные велосипеды на рынках Северной Америки, Европы и Азии. Штаб-квартира компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] находится в городе Боселл, штат Вашингтон. В ней работают 500 сотрудников компании. Кроме того, компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] имеет в своем составе несколько групп сбыта на региональных рынках.  
+## <a name="scenario"></a>Сценарий  
+Этот учебник основывается на вымышленной компании Adventure Works Cycles. Adventure Works — это большая многонациональная производственная компания, производящая и реализующая металлические и Композитные велосипеды для рынков Северной Америки, Европы и Азии. С помощью headquarters в городе Ботель, штат Вашингтон компания ней работают 500 сотрудников. Кроме того Adventure Works использует несколько региональных групп продаж, на протяжении его рынков сбыта.  
   
 Для обеспечения более качественной поддержки потребностей анализа данных отделов продаж и маркетинга и руководства необходимо создать табличную модель для пользователей с целью анализа данных интернет-продаж в образце базы данных AdventureWorksDW.  
   
-Чтобы выполнить этот учебник и создать табличную модель Adventure Works по интернет-продажам, необходимо выполнить ряд занятий. В рамках каждого занятия есть ряд задач. Выполнение каждой задачи в нужном порядке является обязательным для завершения занятия. В определенном занятии может быть несколько задач, которые приводят к схожему результату. Однако способ выполнения задач может немного отличаться. Это необходимо, чтобы показать, что зачастую существует более одного способа решения определенной задачи, а также чтобы стимулировать пользователя использовать навыки, приобретенные при выполнении предыдущих задач.  
+Чтобы выполнить этот учебник и создать табличную модель Adventure Works по интернет-продажам, необходимо выполнить ряд занятий. В рамках каждого занятия есть ряд задач. Выполнение каждой задачи в нужном порядке является обязательным для завершения занятия. Когда в определенном занятии может быть несколько задач, которые приводят к схожему результату, но способ выполнения каждой задачи, немного отличается. Это показано, что часто более одного способа решения определенной задачи, а также чтобы стимулировать пользователя использовать навыки, вы узнали, при выполнении предыдущих задач.  
   
-Цель занятий — провести пользователя через создание простой табличной модели, запущенной в режиме In-Memory, с использованием разных функций из среды [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Поскольку каждое занятие строится на основе предыдущего занятия, их следует выполнять по порядку. После завершения всех занятий будет создан и развернут образец табличной модели Adventure Works для интернет-продаж на сервере служб Analysis Services.  
+Цель занятий — провести пользователя через создание простой табличной модели, запущенной в режиме в памяти с использованием разных функций, включенных в SSDT. Поскольку каждое занятие строится на основе предыдущего занятия, их следует выполнять по порядку. После завершения всех занятий, будет создан и развернут образец Интернет-продаж Adventure Works табличной модели на сервере служб Analysis Services.  
   
 Этот учебник не содержит занятий или сведений об управлении развернутой базой данных табличной модели с помощью среды SQL Server Management Studio или использовании клиентского приложения для создания отчетов для подключения к развернутой модели для просмотра данных модели.  
   
-## Предварительные требования  
-Для прохождения этого учебника необходимо, чтобы на компьютере были установлены следующие компоненты:  
+## <a name="prerequisites"></a>Предварительные требования  
+Чтобы завершить этот учебник, необходимо иметь следующие компоненты:  
   
--   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Экземпляр служб Analysis Services, работающий в табличном режиме.  
+-   Последнюю версию [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. [Получить последнюю версию](https://msdn.microsoft.com/library/mt204009.aspx).
+
+-   Последняя версия SQL Server Management Studio. [Получить последнюю версию](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. [Получите последнюю версию.](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   Клиентское приложение, например [Power BI Desktop](https://powerbi.microsoft.com/desktop/) или [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel.    
   
--   Образец базы данных Adventure Works DW 2014. Этот образец базы данных включает данные, необходимые для выполнения заданий учебника. Скачать образец базы данных можно по ссылке [http://go.microsoft.com/fwlink/?LinkID=335807](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Экземпляр SQL Server с образцом базы данных Adventure Works DW 2014. Этот образец базы данных включает данные, необходимые для выполнения заданий учебника. [Получить последнюю версию](http://go.microsoft.com/fwlink/?LinkID=335807).  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 или более поздняя версия (для использования с функцией анализа в Excel на занятии 11).  
+
+-   Azure Analysis Services или SQL Server 2016 или более поздней версии экземпляра служб Analysis Services для развертывания модели с целью. [Зарегистрируйтесь для получения бесплатной пробной версии Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/).
   
-## Занятия  
+## <a name="lessons"></a>Занятия  
 Этот учебник включает следующие занятия.  
   
 |Занятие|Предположительное время выполнения|  
 |----------|------------------------------|  
 |[Занятие 1. Создание нового проекта табличной модели](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 минут.|  
 |[Занятие 2. Добавление данных](../analysis-services/lesson-2-add-data.md)|20 минут|  
-|[Занятие 3. Переименование столбцов](../analysis-services/lesson-3-rename-columns.md)|20 минут|  
-|[Занятие 4. Диалоговое окно "Пометить как таблицу данных"](../analysis-services/lesson-4-mark-as-date-table.md)|3 минуты|  
-|[Занятие 5. Создание связей](../analysis-services/lesson-5-create-relationships.md)|10 минут.|  
-|[Занятие 6. Создание вычисляемых столбцов](../analysis-services/lesson-6-create-calculated-columns.md)|15 минут|  
-|[Занятие 7. Создание мер](../analysis-services/lesson-7-create-measures.md)|30 минут|  
-|[Занятие 8. Создание ключевых показателей эффективности](../analysis-services/lesson-8-create-key-performance-indicators.md)|15 минут|  
-|[Занятие 9. Создание перспектив](../Topic/Lesson%209:%20Create%20Perspectives.md)|5 минут|  
-|[Занятие 10. Создание иерархий](../analysis-services/lesson-10-create-hierarchies.md)|20 минут|  
-|[Занятие 11. Создание секций](../analysis-services/lesson-11-create-partitions.md)|15 минут|  
-|[Занятие 12. Создание ролей](../analysis-services/lesson-12-create-roles.md)|15 минут|  
-|[Занятие 13. Анализ в Excel](../analysis-services/lesson-13-analyze-in-excel.md)|20 минут|  
-|[Занятие 14. Развертывание](../analysis-services/lesson-14-deploy.md)|5 минут|  
+|[Урок 3. Отметка в качестве таблицы дат](../analysis-services/lesson-3-mark-as-date-table.md)|3 минуты|  
+|[Занятие 4: Создание связей](../analysis-services/lesson-4-create-relationships.md)|10 минут.|  
+|[Занятие 5: Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md)|15 минут|
+|[Занятие 6: Создание мер](../analysis-services/lesson-6-create-measures.md)|30 минут|  
+|[Урок 7. Создание ключевых показателей эффективности](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 минут|  
+|[Занятие 8: Создание перспектив](../analysis-services/lesson-8-create-perspectives.md)|5 минут|  
+|[Занятие 9: Создание иерархий](../analysis-services/lesson-9-create-hierarchies.md)|20 минут|  
+|[Занятие 10: Создание секций](../analysis-services/lesson-10-create-partitions.md)|15 минут|  
+|[Занятие 11: Создание ролей](../analysis-services/lesson-11-create-roles.md)|15 минут|  
+|[Урок 12. Анализ в Excel](../analysis-services/lesson-12-analyze-in-excel.md)|20 минут| 
+|[Урок 13. Развертывание](../analysis-services/lesson-13-deploy.md)|5 минут|  
   
-## Дополнительные занятия  
-Этот учебник также включает в себя [дополнительные занятия](../Topic/Supplemental%20Lessons.md). Ознакомление с содержащимися здесь разделами не требуется для прохождения этого учебника, но может оказаться полезным для лучшего освоения функций для работы с расширенной табличной моделью.  
+## <a name="supplemental-lessons"></a>Дополнительные занятия  
+Этот учебник также включает в себя [дополнительные занятия](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e). Ознакомление с содержащимися здесь разделами не требуется для прохождения этого учебника, но может оказаться полезным для лучшего освоения функций для работы с расширенной табличной моделью.  
   
 |Занятие|Предположительное время выполнения|  
 |----------|------------------------------|  
-|[Реализация динамической безопасности с помощью фильтров строк](../analysis-services/implement-dynamic-security-by-using-row-filters.md)|30 минут|  
-|[Настройка свойств отчетов для отчетов Power View](../analysis-services/configure-reporting-properties-for-power-view-reports.md)|30 минут|  
+|[Реализация динамической безопасности с помощью фильтров строк](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)|30 минут|  
+
   
-## Следующий шаг  
-Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+## <a name="next-step"></a>Следующий шаг  
+Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
   
   
+
+

@@ -1,31 +1,36 @@
 ---
-title: "добавить вложенную таблицу в структуру интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы [службы Analysis Services], вложенные"
-  - "вложенные таблицы"
-  - "структуры интеллектуального анализа данных [службы Analysis Services], вложенные таблицы"
-  - "добавление вложенных таблиц"
+title: "Добавить вложенную таблицу к структуре интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], nested
+- nested tables
+- mining structures [Analysis Services], nested tables
+- adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a33c2958724cf1d64a0706427afa377d4db9e8bc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# добавить вложенную таблицу в структуру интеллектуального анализа данных
+# <a name="add-a-nested-table-to-a-mining-structure"></a>добавить вложенную таблицу в структуру интеллектуального анализа данных
   Используйте конструктор интеллектуального анализа данных, чтобы добавить к структуре вложенную таблицу, предварительно созданную мастером интеллектуального анализа данных.  
   
-### Добавление вложенной таблицы в структуру интеллектуального анализа данных  
+### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Добавление вложенной таблицы в структуру интеллектуального анализа данных  
   
 1.  Перейдите на вкладку **Структура интеллектуального анализа данных** в конструкторе интеллектуального анализа данных.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 27
   
      К структуре интеллектуального анализа данных добавлен новый столбец таблицы, содержащий ключевой столбец. Дополнительные сведения о способе добавления новых столбцов см. в разделе [Добавление столбцов к структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md).  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

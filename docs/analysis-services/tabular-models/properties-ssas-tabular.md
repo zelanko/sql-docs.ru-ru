@@ -1,27 +1,32 @@
 ---
-title: "Свойства (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства (табличные службы SSAS)
+# <a name="properties-ssas-tabular"></a>Свойства (табличные службы SSAS)
   Проекты табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] имеют различные свойства, которые определяют поведение проекта, модели, отчетов и развертывания. Параметры свойств сохраняются в формате XML в файле Model.bim, однако все свойства, описанные в этом разделе, можно настроить в окнах **Свойства** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Раздел|Description|  
 |-----------|-----------------|  

@@ -1,27 +1,32 @@
 ---
-title: "Средства и способы обработки (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обработка [службы Analysis Services]"
-  - "обработка [службы Analysis Services]"
+title: "Средства и подходы для обработки (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process [Analysis Services]
+- processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Средства и способы обработки (службы Analysis Services)
+# <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
   Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняют этими данными объекты служб Analysis Services.  
   
  Как администратор служб Analysis Services, вы можете выполнять и мониторить обработку объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с применением следующих подходов.  
@@ -49,7 +54,7 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  В этом разделе описываются средства и подходы для обработки многомерных моделей. Дополнительные сведения об обработке табличных моделей см. в разделах [Обработка базы данных, таблицы или секции (службы Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) и [Обработка данных (табличные службы Analysis Services)](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
-### Обработка объектов в среде SQL Server Management Studio  
+### <a name="processing-objects-in-sql-server-management-studio"></a>Обработка объектов в среде SQL Server Management Studio  
   
 1.  Запустите среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и подключитесь к службам Analysis Services.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 34
   
      В диалоговом окне «Ход обработки» отображается текущее состояние выполнения каждой из команд. Если сообщение о состоянии усечено, нажмите кнопку **Просмотр подробностей** , чтобы просмотреть сообщение целиком.  
   
-### Обработка объектов в SQL Server Data Tools  
+### <a name="processing-objects-in-sql-server-data-tools"></a>Обработка объектов в SQL Server Data Tools  
   
 1.  Запустите среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и откройте уже развернутый проект.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 34
   
 3.  Щелкните измерение правой кнопкой мыши и выберите команду **Обработать**. Вы можете щелкнуть правой кнопкой мыши несколько измерений, чтобы одновременно обработать несколько объектов. Дополнительные сведения см. в разделе [Пакетная обработка (службы Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
-4.  Убедитесь в том, что в диалоговом окне **Обработка измерения** в разделе **Список объектов** для столбца **Параметры обработки**выбран параметр **Обработка. Полная**. Если этот параметр не выбран, выделите столбец **Параметры обработки**, а затем в раскрывающемся списке выберите пункт **Полная обработка**.  
+4.  Убедитесь в том, что в диалоговом окне **Обработка измерения** в разделе **Список объектов** для столбца **Параметры обработки**выбран параметр **Обработка. Полная**. Если этот параметр не выбран, выделите столбец **Параметры обработки**, а затем в раскрывающемся списке выберите пункт **Полная обработка** .  
   
 5.  Нажмите кнопку **Запустить**.  
   
@@ -97,11 +102,11 @@ caps.handback.revision: 34
   
 1.  Перед обработкой объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно выполнить анализ влияния на связанные объекты, нажав кнопку **Анализ влияния** в одном из диалоговых окон **Обработка объектов** .  
   
-2.  Щелкните правой кнопкой мыши измерение, куб, группу мер или секцию, чтобы открыть диалоговое окно **Обработка объектов**.  
+2.  Щелкните правой кнопкой мыши измерение, куб, группу мер или секцию, чтобы открыть диалоговое окно **Обработка объектов** .  
   
 3.  Нажмите кнопку **Анализ влияния**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] просматривают модель и сообщают о требованиях повторной обработки для объектов, которые связаны с объектом, выбранным для обработки.  
   
-### Обработка объектов с помощью XMLA  
+### <a name="processing-objects-using-xmla"></a>Обработка объектов с помощью XMLA  
   
 1.  Запустите среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и подключитесь к службам Analysis Services.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 34
   
 7.  Нажмите в строке меню кнопку **Запрос**и выберите пункт **Выполнить**.  
   
-### Обработка объектов с помощью PowerShell  
+### <a name="processing-objects-using-powershell"></a>Обработка объектов с помощью PowerShell  
   
 1.  Начиная с этого выпуска SQL Server, командлеты служб Analysis Services PowerShell можно использовать для обработки объектов. Следующие командлеты можно запускать интерактивно или из скрипта:  
   
@@ -131,7 +136,7 @@ caps.handback.revision: 34
   
     -   [Командлет Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md), который может использоваться для выполнения скриптов XMLA, MDX или DMX, содержащих команды обработки.  
   
-### Наблюдение за обработкой объектов в приложении SQL Server Profiler  
+### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Наблюдение за обработкой объектов в приложении SQL Server Profiler  
   
 1.  Подключитесь к экземпляру служб Analysis Services в приложении SQL Server Profiler.  
   
@@ -149,15 +154,15 @@ caps.handback.revision: 34
   
     -   Также можно добавить события блокировки, если идет диагностика проблем с производительностью, относящихся к обработке.  
   
-### Обработка объектов служб Analysis Services с использованием служб Integration Services  
+### <a name="process-analysis-services-objects-using-integration-services"></a>Обработка объектов служб Analysis Services с использованием служб Integration Services  
   
 1.  В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]создайте пакет, который используют задачу «Обработка средствами Analysis Services» для автоматического заполнения объектов новыми данными при регулярном обновлении исходной реляционной базы данных.  
   
-2.  В окне **Область элементов служб SSIS** дважды щелкните элемент **Обработка средствами Analysis Services**, чтобы добавить его в пакет.  
+2.  В окне **Область элементов служб SSIS**дважды щелкните элемент **Обработка средствами Analysis Services** , чтобы добавить его в пакет.  
   
 3.  Измените задачу, указав соединение с базой данных, объекты для обработки и параметр обработки. Дополнительные сведения о реализации этой задачи см. в разделе [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

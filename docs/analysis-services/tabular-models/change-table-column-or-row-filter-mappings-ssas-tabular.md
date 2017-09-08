@@ -1,24 +1,29 @@
 ---
-title: "Изменение сопоставлений фильтров таблиц, столбцов и строк (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Изменение таблиц, столбцов и сопоставления фильтров строк (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b80323e5aaf1dd6c469ddffefb5d92542e9d3a19
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Изменение сопоставлений фильтров таблиц, столбцов и строк (табличные службы SSAS)
+# <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Изменение сопоставлений фильтров таблиц, столбцов и строк (табличные службы SSAS)
   В этом разделе описано, как изменить сопоставления таблиц, столбцов или фильтров строк в диалоговом окне **Изменение свойств таблицы** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Параметры в диалоговом окне **Изменение свойств таблицы** различаются в зависимости от способа импорта данных — путем выбора таблиц из списка или с помощью SQL-запроса. Если первоначальный импорт данных в таблицу был выполнен выбором из списка, то диалоговое окно **Изменение свойств таблицы** отображается в режиме предварительного просмотра таблицы. В этом режиме отображается только подмножество данных, ограниченное первыми 50 строками исходной таблицы. Если первоначальный импорт данных в таблицу был выполнен с помощью инструкции SQL, то диалоговое окно **Изменение свойств таблицы** содержит только инструкцию SQL. Используя инструкцию запроса SQL, можно получить подмножество строк, создав фильтр или вручную изменив инструкцию SQL.  
@@ -28,7 +33,7 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  Если таблица содержит больше одной секции, использовать диалоговое окно «Изменение свойств таблицы» для изменения сопоставлений фильтров строк нельзя. Чтобы изменить сопоставления фильтров строк для таблиц с несколькими секциями, используйте диспетчер секций. Дополнительные сведения см. в разделе [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
-#### Изменение сопоставлений фильтров таблицы, столбцов и строк  
+#### <a name="to-change-table-column-or-row-filter-mappings"></a>Изменение сопоставлений фильтров таблицы, столбцов и строк  
   
 1.  В конструкторе моделей щелкните таблицу, затем откройте меню **Таблица** и выберите пункт **Свойства таблицы**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
   
          В случае ошибки и при необходимости начать заново нажмите кнопку **Очистить фильтры строк**.  
   
-## См. также раздел  
- [Диалоговое окно "Изменение свойств таблицы" (службы SSAS)](../Topic/Edit%20Table%20Properties%20Dialog%20Box%20\(SSAS\).md)  
+## <a name="see-also"></a>См. также раздел  
+ [Диалоговое окно "Изменение свойств таблицы" (службы SSAS)](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)  
   
   

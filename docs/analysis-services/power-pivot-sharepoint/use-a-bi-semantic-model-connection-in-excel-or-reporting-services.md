@@ -1,24 +1,29 @@
 ---
-title: "Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование соединения семантической модели бизнес-Аналитики в Excel или Reporting Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
+# <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
   В этом разделе описывается использование соединений BISM, созданных по указаниям из других разделов. Если семантическая модель бизнес-аналитики еще не создана, см. разделы [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) и [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Соединение из Excel  
@@ -30,7 +35,7 @@ caps.handback.revision: 9
   
 -   Щелкните правой кнопкой мыши соединение BISM в библиотеке и выберите команду **Запустить Excel**.  
   
- ![Снимок экрана: команда быстрого запуска BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "Снимок экрана: команда быстрого запуска BISM")  
+ ![Команда быстрого запуска экрана BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "команда быстрого запуска экрана BISM")  
   
  Нажмите кнопку **Включить** при появлении подсказки для включения подключения к данным. Excel откроет книгу, содержащую список полей сводной таблицы, заполненный полями из базового источника данных.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 9
   
 2.  Нажмите кнопку **Из служб Analysis Services** и импортируйте данные с помощью мастера подключения к данным.  
   
-3.  Введите URL-адрес SharePoint файла соединения BISM (например, **http://mysharepoint/shared documents/myData.bism**). Для учетных данных входа в систему выберите вариант по умолчанию, **Использовать проверку подлинности Windows**. Нажмите кнопку **Далее**.  
+3.  Введите URL-адрес SharePoint файла соединения BISM (например, `http://mysharepoint/shared documents/myData.bism`). Для учетных данных входа в систему выберите вариант по умолчанию, **Использовать проверку подлинности Windows**. Нажмите кнопку **Далее**.  
   
 4.  На следующей странице снова нажмите **Далее** . Несмотря на то что будет предложено выбрать базу данных, можно использовать только одну базу данных, которая указана в соединении BISM.  
   

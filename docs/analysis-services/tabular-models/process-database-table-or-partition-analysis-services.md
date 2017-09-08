@@ -1,27 +1,32 @@
 ---
-title: "Обработка базы данных, таблицы или секции (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1"
+title: "Обработка базы данных, таблицы или секции (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 89e7f6904f4e47fc6f2047acec2b7bbc02c68c20
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Обработка базы данных, таблицы или секции (службы Analysis Services)
-  Приведенные в этой статье задачи описывают обработку базы данных табличной модели, таблицы или секций вручную с помощью диалогового окна **Обработка \<объект>** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="process-database-table-or-partition-analysis-services"></a>Обработка базы данных, таблицы или секции (службы Analysis Services)
+  В этом разделе описывается, как обработка базы данных табличной модели, таблицы или секций вручную с помощью **процесс \<объекта >** диалоговое окно в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Дополнительные сведения об обработке табличной модели см. в разделе [Обработка данных (табличные службы SSAS)](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
   
 ###  <a name="bkmk_process_db"></a> Обработка базы данных  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните правой кнопкой мыши базу данных, которую необходимо обработать, и выберите команду **Обработать базу данных**.  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши базу данных, которую необходимо обработать, и выберите команду **Обработать базу данных**.  
   
 2.  В диалоговом окне **Обработка базы данных** выберите один из следующих режимов обработки из списка **Режим** :  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 8
   
 ###  <a name="bkmk_process_table"></a> Обработка таблицы  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в базе данных табличной модели, которая содержит обрабатываемую таблицу, разверните узел **Таблицы**, затем щелкните правой кнопкой мыши таблицу, которую необходимо обработать, и выберите команду **Обработать таблицу**.  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в базе данных табличной модели, которая содержит обрабатываемую таблицу, разверните узел **Таблицы** , затем щелкните правой кнопкой мыши таблицу, которую необходимо обработать, и выберите команду **Обработать таблицу**.  
   
 2.  В диалоговом окне **Обработка таблицы** выберите один из следующих режимов обработки из списка **Режим** :  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 8
   
 ###  <a name="bkmk_process_partition"></a> Обработка одной или нескольких секций  
   
-1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните правой кнопкой мыши таблицу, в которой есть секции для обработки, и выберите пункт **Секции**.  
+1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши таблицу, в которой есть секции для обработки, и выберите пункт **Секции**.  
   
 2.  В диалоговом окне **Секции** на вкладке **Секции**нажмите кнопку «Обработать».  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 8
   
 4.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Секции табличных моделей (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
  [Создание секций табличной модели и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   

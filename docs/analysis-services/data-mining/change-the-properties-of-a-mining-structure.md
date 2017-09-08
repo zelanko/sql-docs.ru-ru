@@ -1,25 +1,30 @@
 ---
-title: "изменить свойства структуры интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "структуры интеллектуального анализа данных [службы Analysis Services], свойства"
+title: "Изменить свойства структуры интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], properties
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 908bf89105dbcfc4c61a4018c92a8cee71237fb9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# изменить свойства структуры интеллектуального анализа данных
+# <a name="change-the-properties-of-a-mining-structure"></a>изменить свойства структуры интеллектуального анализа данных
   Имеется два вида свойств структур интеллектуального анализа данных (свойства обоих видов могут изменяться):  
   
 -   Свойства структуры интеллектуального анализа данных, влияющие на структуру в целом  
@@ -30,7 +35,7 @@ caps.handback.revision: 28
   
  Дополнительные сведения о свойствах структур интеллектуального анализа данных см. в разделе [Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md).  
   
-### Изменение свойств структуры интеллектуального анализа данных  
+### <a name="to-change-the-properties-of-a-mining-structure"></a>Изменение свойств структуры интеллектуального анализа данных  
   
 1.  На вкладке **Структура интеллектуального анализа данных** конструктора интеллектуального анализа данных щелкните правой кнопкой мыши структуру интеллектуального анализа данных или столбец в такой структуре, а затем выберите пункт **Свойства**.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 28
   
      Новое значение вступает в силу после выбора другого элемента в конструкторе.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

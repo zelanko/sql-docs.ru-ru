@@ -1,34 +1,39 @@
 ---
-title: "SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "хранимые процедуры [службы Analysis Services], интеллектуальный анализ данных"
-  - "SystemGetAccuracyResults, хранимая процедура"
-  - "перекрестная проверка [интеллектуальный анализ данных]"
+title: "SystemGetAccuracyResults (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [Analysis Services], data mining
+- SystemGetAccuracyResults
+- cross-validation [data mining]
 ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6b2eca528b40afd905661e2508e93529159b8627
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)
+# <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)
   Возвращает показатели точности перекрестной проверки для структуры интеллектуального анализа и всех связанных с ней моделей, исключая модели кластеризации.  
   
- Эта хранимая процедура возвращает показатели для всего набора данных как единой секции. Чтобы выполнить секционирование набора данных на перекрестные разделы и вернуть метрики для каждой секции, используйте [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
+ Эта хранимая процедура возвращает показатели для всего набора данных как единой секции. Чтобы выполнить секционирование набора данных на перекрестные разделы и вернуть метрики для каждой секции, используйте [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   
 > [!NOTE]  
->  Эта хранимая процедура не поддерживается для моделей, построенных с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] или алгоритма кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, для кластеризованных моделей используется отдельная хранимая процедура, [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
+>  Эта хранимая процедура не поддерживается для моделей, построенных с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] или алгоритма кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, для кластеризованных моделей используется отдельная хранимая процедура, [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -41,7 +46,7 @@ SystemGetAccuracyResults(<mining structure>,
 [,<test list>])  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *структура интеллектуального анализа данных*  
  Имя структуры интеллектуального анализа данных в текущей базе данных.  
   
@@ -81,21 +86,21 @@ SystemGetAccuracyResults(<mining structure>,
   
  По умолчанию **null**.  
   
- (необязательно).  
+ (необязательно)  
   
  *целевой порог*  
  Число от 0,0 до 1, определяющее минимальную вероятность, при которой прогнозируемое значение будет считаться правильным.  
   
  По умолчанию это значение равно **null**, оно означает, что правильными считаются все прогнозы.  
   
- (необязательно).  
+ (необязательно)  
   
  *список тестирования*  
  Строка, указывающая параметры тестирования. Этот параметр зарезервирован для использования в будущем.  
   
- (необязательно).  
+ (необязательно)  
   
-## Тип возвращаемых данных  
+## <a name="return-type"></a>Тип возвращаемых данных  
  Возвращенный набор строк содержит оценки по каждой секции и статистической функции для всех моделей.  
   
  Следующая таблица содержит список столбцов, возвращаемых методом **GetValidationResults**.  
@@ -106,12 +111,12 @@ SystemGetAccuracyResults(<mining structure>,
 |AttributeName|Имя прогнозируемого столбца.|  
 |AttributeState|Целевое значение в прогнозируемом столбце.<br /><br /> Если столбец содержит значение, показатели собираются только для заданного состояния.<br /><br /> Если значение не задано или равно NULL, показатели вычисляются для наиболее вероятного состояния каждого прогноза.|  
 |PartitionIndex|Определяет секцию, к которой применяется результат.<br /><br /> Для этой процедуры значение всегда равно 0.|  
-|PartitionCases|Целое число, указывающее количество строк в наборе вариантов, основанное на параметре *\<data set>*.|  
+|PartitionCases|Целое число, указывающее количество строк в наборе вариантов, на основе  *\<набор данных >* параметра.|  
 |Тест|Тип выполненного теста.|  
 |Measure|Имя меры, возвращенной тестом. Меры для каждой модели зависят от типа модели и типа прогнозируемого значения.<br /><br /> Список мер, возвращаемых для каждого прогнозируемого типа, см. в разделе [Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Определение каждой меры см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Значение|Значение для заданной меры.|  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  В следующей таблице приводятся примеры значений, с помощью которых можно указать в структуре интеллектуального анализа данные, используемые для перекрестной проверки. Если для перекрестной проверки нужно использовать проверочные варианты, то структура интеллектуального анализа данных должна содержать набор проверочных данных. Сведения о том, как определить набор проверочных данных во время создания структуры интеллектуального анализа данных, см. в разделе [Обучающие и проверочные наборы данных](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 |Целое значение|Description|  
@@ -126,7 +131,7 @@ SystemGetAccuracyResults(<mining structure>,
   
  Дополнительные сведения о сценариях, в которых применяется перекрестная проверка, см. в разделе [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  Этот пример возвращает меры точности для одной модели дерева принятия решений, `v Target Mail DT`, связанного со структурой интеллектуального анализа `vTargetMail` . Код в четвертой строке указывает, что результаты должны быть основаны на вариантах проверки, отфильтрованных конкретным фильтром для каждой модели.  `[Bike Buyer]` задает столбец для прогноза, а значение 1 на следующей строке указывает, что модель необходимо оценивать только для заданной цифры 1, означающей «Да, купит».  
   
  В последней строке кода задано пороговое значение состояния, равное 0,5. Оно означает, что прогнозы с вероятностью более 50 процентов при вычислении точности следует продолжать как «хорошие».  
@@ -144,7 +149,7 @@ CALL SystemGetAccuracyResults (
   
  Образец результатов:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Мера|Значение|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Measure|Значение|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Покупатель велосипеда|1|0|1638|Классификация|Истинный положительный результат|605|  
 |v Target Mail DT|Покупатель велосипеда|1|0|1638|Классификация|Ложный положительный результат|177|  
@@ -154,13 +159,13 @@ CALL SystemGetAccuracyResults (
 |v Target Mail DT|Покупатель велосипеда|1|0|1638|Вероятность|Точность прогноза|0.0936717116894395|  
 |v Target Mail DT|Покупатель велосипеда|1|0|1638|Вероятность|Корень среднеквадратичной погрешности|0.361630800104946|  
   
-## Требования  
- Перекрестная проверка доступна только в версиях [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)], начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+## <a name="requirements"></a>Требования  
+ Перекрестная проверка доступна только в версиях [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] , начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## См. также  
- [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults, хранимая процедура](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
+ [Systemgetaccuracyresults, хранимая процедура](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [Хранимая процедура SystemGetClusterCrossValidationResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "Доступ к данным PowerPivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot Data Access | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad15d17a17809c6190a45b9ead89bc66ed6962d6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Доступ к данным PowerPivot
+# <a name="power-pivot-data-access"></a>Доступ к данным PowerPivot
   В этом разделе описаны способы извлечения данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованной в библиотеке SharePoint.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] хранятся в книге Excel. Строка подключения — это URL-адрес книги на сайте SharePoint.  
@@ -30,7 +35,7 @@ caps.handback.revision: 8
  На ферме SharePoint службы Excel используют локальный поставщик OLE DB для MSOLAP для подключения к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Поставщик отправляет запрос на подключение к [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint на ферме. Сервер загружает данные, выполняет запрос и возвращает результирующий набор.  
   
 ##  <a name="queryproc"></a> Запрос данных Power Pivot в SharePoint  
- При просмотре книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из библиотеки SharePoint данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , содержащиеся в книге, обнаруживаются, извлекаются и обрабатываются отдельными экземплярами сервера служб Analysis Services в ферме, пока службы Excel подготавливают слой представления данных. Полностью обработанную книгу можно просмотреть в окне браузера или классическом приложении Excel 2010 с надстройкой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ При просмотре книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из библиотеки SharePoint данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , содержащиеся в книге, обнаруживаются, извлекаются и обрабатываются отдельными экземплярами сервера служб Analysis Services в ферме, пока службы Excel подготавливают слой представления данных. Полностью обработанную книгу можно просмотреть в окне браузера или классическом приложении Excel 2010 с надстройкой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Следующая диаграмма иллюстрирует путь обработки запроса в ферме. Поскольку данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] входят в состав книги Excel 2010, обработка запроса осуществляется при открытии пользователем книги Excel из библиотеки SharePoint и при взаимодействии со сводной таблицей или сводной диаграммой, которые содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
  Не все данные в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] обрабатываются [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Службы Excel обрабатывают данные таблиц и ячеек листа. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint обрабатывает только сводные таблицы, сводные диаграммы и срезы, которые расходятся с данными [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Доступ к данным табличной модели](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

@@ -1,24 +1,29 @@
 ---
-title: "Настройка учетных записей служб Power Pivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка учетных записей служб Power Pivot | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка учетных записей служб Power Pivot
+# <a name="configure-power-pivot-service-accounts"></a>Настройка учетных записей служб Power Pivot
   Установка [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]включает две службы, поддерживающие операции сервера. **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** — это службы Windows, обеспечивающие обработку данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и поддержку запросов на сервере приложений. Учетная запись входа для этих служб всегда указывается во время настройки SQL Server при установке служб Analysis Services в режиме интеграции SharePoint.  
   
  Для приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которая является общей веб-службой, работающей под идентификатором пула приложений на ферме SharePoint, необходимо указать вторую учетную запись. Эта учетная запись указывается, когда вы настраиваете установку [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или PowerShell.  
@@ -98,16 +103,16 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] связано с системной службой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которая обеспечивает интеграцию с SharePoint и инфраструктуру для обработки запросов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Пул приложений, указанный для приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , является удостоверением системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В ферме может применяться несколько приложений службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Каждое из созданных приложений должно запускаться в собственном пуле приложений.  
   
-#### Учетная запись службы Analysis Services  
+#### <a name="analysis-services-service-account"></a>Учетная запись службы Analysis Services  
   
 |Требование|Description|  
 |-----------------|-----------------|  
-|Требования провизионирования|Эта учетная запись может быть указана во время установки SQL Server на странице **Службы Analysis Services — конфигурация мастера установки** (либо параметром установки **ASSVCACCOUNT** в случае установки из командной строки).<br /><br /> Имя пользователя или пароль можно изменить с помощью центра администрирования, PowerShell или средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Использование других средств для изменения учетных записей и паролей не поддерживается.|  
+|Требования провизионирования|Эта учетная запись может быть указана во время установки SQL Server на странице **Службы Analysis Services — конфигурация мастера установки** (либо параметром установки **ASSVCACCOUNT** в случае установки из командной строки).<br /><br /> Имя пользователя или пароль можно изменить с помощью центра администрирования, PowerShell или средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Использование других средств для изменения учетных записей и паролей не поддерживается.|  
 |Требования к учетной записи пользователя домена|Эта учетная запись должна быть учетной записью пользователя домена Windows. Использование встроенных учетных записей компьютера (таких как учетные записи локальной или сетевой службы) недопустимо. Программа установки SQL Server обеспечивает выполнение требования использовать учетную запись пользователя домена, блокируя установку при указании учетной записи компьютера.|  
-|Требования к разрешениям|Эта учетная запись должна быть членом групп безопасности SQLServerMSASUser$\<сервер>$PowerPivot и WSS_WPG на локальном компьютере. Эти разрешения должны предоставляться автоматически. Дополнительные сведения о проверке и предоставлении разрешений см. в разделе [Предоставление административных разрешений учетной записи службы PowerPivot вручную](#updatemanually) этой статьи и в статье [Начальная конфигурация (PowerPivot для SharePoint)](http://msdn.microsoft.com/ru-ru/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
-|Требования к масштабированию|Если в ферме устанавливается несколько экземпляров [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для сервера SharePoint, все экземпляры сервера служб Analysis Services должны запускаться от имени одной и той же учетной записи пользователя домена. Например, если первый экземпляр [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] настроен для запуска от имени Contoso\ssas-srv01, то все остальные экземпляры [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)], развернутые в той же ферме, также должны запускаться от имени Contoso\ssas-srv01 (имя учетной записи приведено для примера и может отличаться).<br /><br /> Настройка всех экземпляров службы для запуска под одной и той же учетной записью позволяет системной службе [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] назначать задания по обработке запросов или обновлению данных любому экземпляру службы Analysis Services в ферме. Кроме того, это дает возможность администрировать экземпляры сервера служб Analysis Services с помощью функции управления учетными записями центра администрирования. Поскольку для всех экземпляров [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] используется одна и та же учетная запись, появляется возможность изменить учетную запись или пароль только один раз, после чего все экземпляры службы, в которых используются эти учетные данные, будут обновлены автоматически.<br /><br /> Программа установки SQL Server обеспечивает соблюдение требования по использованию одной и той же учетной записи. При масштабном развертывании, когда в ферме SharePoint уже есть экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для установленного сервера SharePoint, программа установки блокирует новую установку, если указанная учетная запись [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] отличается от уже используемой в ферме.|  
+|Требования к разрешениям|Эта учетная запись должна быть членом SQLServerMSASUser$\<server > $PowerPivot и группы безопасности WSS_WPG на локальном компьютере. Эти разрешения должны предоставляться автоматически. Дополнительные сведения о проверке и предоставлении разрешений см. в разделе [Предоставление административных разрешений учетной записи службы PowerPivot вручную](#updatemanually) этой статьи и в статье [Начальная конфигурация (PowerPivot для SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
+|Требования к масштабированию|Если в ферме устанавливается несколько экземпляров [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для сервера SharePoint, все экземпляры сервера служб Analysis Services должны запускаться от имени одной и той же учетной записи пользователя домена. Например, если первый экземпляр [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] настроен для запуска от имени Contoso\ssas-srv01, то все остальные экземпляры [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , развернутые в той же ферме, также должны запускаться от имени Contoso\ssas-srv01 (имя учетной записи приведено для примера и может отличаться).<br /><br /> Настройка всех экземпляров службы для запуска под одной и той же учетной записью позволяет системной службе [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] назначать задания по обработке запросов или обновлению данных любому экземпляру службы Analysis Services в ферме. Кроме того, это дает возможность администрировать экземпляры сервера служб Analysis Services с помощью функции управления учетными записями центра администрирования. Поскольку для всех экземпляров [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] используется одна и та же учетная запись, появляется возможность изменить учетную запись или пароль только один раз, после чего все экземпляры службы, в которых используются эти учетные данные, будут обновлены автоматически.<br /><br /> Программа установки SQL Server обеспечивает соблюдение требования по использованию одной и той же учетной записи. При масштабном развертывании, когда в ферме SharePoint уже есть экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для установленного сервера SharePoint, программа установки блокирует новую установку, если указанная учетная запись [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] отличается от уже используемой в ферме.|  
   
-#### Пул приложений службы Power Pivot  
+#### <a name="power-pivot-service-application-pool"></a>Пул приложений службы Power Pivot  
   
 |Требование|Description|  
 |-----------------|-----------------|  
@@ -125,11 +130,11 @@ caps.handback.revision: 15
   
 3.  Нажмите кнопку **Выполнить**.  
   
- Если другие методы не действуют, можно обеспечить наличие нужных разрешений, предоставив приложению службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] разрешения на системное администрирование служб Analysis Services, а затем явно добавив удостоверение приложения службы в группу безопасности Windows SQLServerMSASUser$\<имя_сервера>$PowerPivot. Эти действия необходимо повторить для каждого экземпляра служб Analysis Services, интегрированного с фермой SharePoint.  
+ В качестве последнего средства можно обеспечить правильных разрешений, предоставив разрешения на системное администрирование служб Analysis [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложения службы, а затем явно добавив удостоверение приложения службы SQLServerMSASUser$\<имя_сервера > $PowerPivot Windows группы безопасности. Эти действия необходимо повторить для каждого экземпляра служб Analysis Services, интегрированного с фермой SharePoint.  
   
  Группы безопасности Windows может обновить только локальный администратор.  
   
-1.  В среде SQL Server Management Studio установите соединение с экземпляром служб Analysis Services от имени \<имя_сервера>\POWERPIVOT.  
+1.  В SQL Server Management Studio подключитесь к экземпляру служб Analysis Services как \<имя_сервера > \POWERPIVOT.  
   
 2.  Щелкните имя сервера правой кнопкой мыши и выберите пункт **Свойства**.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 15
   
 8.  Откройте **Группы**.  
   
-9. Дважды щелкните SQLServerMSASUser$\<имя_сервера> $PowerPivot.  
+9. Дважды щелкните пункт SQLServerMSASUser$\<имя_сервера > $PowerPivot.  
   
 10. Нажмите кнопку **Добавить**.  
   
@@ -178,10 +183,10 @@ caps.handback.revision: 15
   
 8.  Введите пароль и нажмите кнопку **ОК**.  
   
- Если установлены службы Reporting Services, используйте диспетчер конфигурации служб Reporting Services для обновления паролей сервера отчетов и соединения с базой данных сервера отчетов. Дополнительные сведения см. в разделе [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md).  
+ Если установлены службы Reporting Services, используйте диспетчер конфигурации служб Reporting Services для обновления паролей сервера отчетов и соединения с базой данных сервера отчетов. Дополнительные сведения см. в разделе [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка службы PowerPivot для SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Настройка учетной записи автоматического обновления данных Power Pivot (Power Pivot для SharePoint)](http://msdn.microsoft.com/ru-ru/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Настройка учетной записи автоматического обновления данных Power Pivot (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

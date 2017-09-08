@@ -1,30 +1,35 @@
 ---
-title: "Действия (службы Analysis Services — многомерные данные) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "действия [службы Analysis Services]"
-  - "действия [службы Analysis Services], о действиях"
-  - "многомерные выражения [службы Analysis Services], действия"
-  - "кубы [службы Analysis Services], действия"
-  - "объекты OLAP [службы Analysis Services], действия"
+title: "Действия (службы Analysis Services — многомерные данные) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services]
+- actions [Analysis Services], about actions
+- MDX [Analysis Services], actions
+- cubes [Analysis Services], actions
+- OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Действия (службы Analysis Services — многомерные данные)
+# <a name="actions-analysis-services---multidimensional-data"></a>Действия (службы Analysis Services — многомерные данные)
   Действия могут быть разных типов, поэтому их создание должно осуществляться соответствующим образом. Действия могут представлять собой следующее.  
   
 -   Действия детализации, которые возвращают набор строк, представляющих основополагающие данные выделенных ячеек куба, в которых происходит действие.  
@@ -41,7 +46,7 @@ caps.handback.revision: 34
   
  Условие — это многомерное выражение типа **Boolean** , вычисление которого приводит к получению события действия. Если вычисление условия приводит к получению значения **true**, то выполняется действие. В ином случае действие не выполняется.  
   
- Тип — это разновидность действия, предназначенного для выполнения. С другой стороны, <xref:Microsoft.AnalysisServices.Action> является абстрактным классом, поэтому вместо него должен использоваться один из производных классов. Две разновидности действий являются стандартными: детализация и формирование отчетов. Они имеют соответствующие производные классы: <xref:Microsoft.AnalysisServices.DrillThroughAction> и <xref:Microsoft.AnalysisServices.ReportAction>. Другие действия охвачены в классе <xref:Microsoft.AnalysisServices.StandardAction>.  
+ Тип — это разновидность действия, предназначенного для выполнения. <xref:Microsoft.AnalysisServices.Action> является абстрактным классом, поэтому вместо него должен использоваться один из производных классов. Две разновидности действий являются стандартными: детализация и формирование отчетов. Они имеют соответствующие производные классы: <xref:Microsoft.AnalysisServices.DrillThroughAction> и <xref:Microsoft.AnalysisServices.ReportAction>. Другие действия охвачены в классе <xref:Microsoft.AnalysisServices.StandardAction> .  
   
  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]действие является хранимой инструкцией языка многомерных выражений, которая может представляться клиентским приложениям и использоваться ими. Другими словами, действием называется клиентская команда, определяемая и хранимая на сервере. Действие также содержит сведения, указывающие, когда и как выражение языка многомерных выражений должно быть показано и использовано клиентским приложением. Указанная действием операция может запустить приложение, используя в качестве параметра сведения в действии, либо получая сведения на основе указанных в действии критериев.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 34
 > [!IMPORTANT]  
 >  Чтобы позволить бизнес-пользователю применять действия, используемое клиентское приложение должно их поддерживать.  
   
-## Типы действий  
+## <a name="types-of-actions"></a>Типы действий  
  В следующей таблице приведен список типов действий, доступных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Тип действия|Description|  
@@ -69,10 +74,10 @@ caps.handback.revision: 34
 |.|Выполняет команду OLE DB.|  
 |URL-адрес|Отображает динамическую веб-страницу в браузереБраузер Интернета.|  
   
-## Разрешение и выполнение действий  
+## <a name="resolving-and-executing-actions"></a>Разрешение и выполнение действий  
  Когда бизнес-пользователь получает доступ к объекту, для которого был определен командный объект, инструкция, связанная с действием, разрешается автоматически, становясь доступной в клиентском приложении, но действие не выполняется автоматически. Действие выполняется, только когда бизнес-пользователь производит зависящую от клиента операцию, инициирующую действие. Например, клиентское приложение может представлять действия в виде раскрывающегося меню, которое отображается при щелчке правой кнопкой мыши определенного элемента или ячейки.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Действия в многомерных моделях](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

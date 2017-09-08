@@ -1,60 +1,65 @@
 ---
-title: "Настройка свойств мер | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "аддитивность [службы Analysis Services]"
-  - "ID, свойство"
-  - "ErrorConfiguration, свойство"
-  - "AggregateFunction, свойство"
-  - "DisplayFolder, свойство"
-  - "IgnoreUnrelatedDimensions, свойство"
-  - "FormatString, свойство"
-  - "Description, свойство"
-  - "полуаддитивные"
-  - "свойства [службы Analysis Services], группы мер"
-  - "агрегатные функции [службы Analysis Services]"
-  - "DataType, свойство"
-  - "ProcessingMode, свойство"
-  - "MeasureExpression, свойство"
-  - "AggregationPrefix, свойство"
-  - "Visible, свойство"
-  - "свойства [службы Analysis Services], меры"
-  - "StorageLocation, свойство"
-  - "StorageMode, свойство"
-  - "форматы [службы Analysis Services], меры"
-  - "Source, свойство"
-  - "агрегаты [службы Analysis Services], меры"
-  - "меры [службы Analysis Services], свойства"
-  - "неаддитивные [службы Analysis Services]"
-  - "Name, свойство"
-  - "меры [службы Analysis Services], форматы отображения"
-  - "ProcessingPriority, свойство"
-  - "группы мер [службы Analysis Services], свойства"
-  - "Type, свойство"
-  - "ProactiveCaching, свойство"
+title: "Настройка свойств мер | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- additivity [Analysis Services]
+- ID property
+- ErrorConfiguration property
+- AggregateFunction property
+- DisplayFolder property
+- IgnoreUnrelatedDimensions property
+- FormatString property
+- Description property
+- semiadditive
+- properties [Analysis Services], measure groups
+- aggregate functions [Analysis Services]
+- DataType property
+- ProcessingMode property
+- MeasureExpression property
+- AggregationPrefix property
+- Visible property
+- properties [Analysis Services], measures
+- StorageLocation property
+- StorageMode property
+- formats [Analysis Services], measures
+- Source property
+- aggregations [Analysis Services], measures
+- measures [Analysis Services], properties
+- nonadditive [Analysis Services]
+- Name property
+- measures [Analysis Services], display formats
+- ProcessingPriority property
+- measure groups [Analysis Services], properties
+- Type property
+- ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 50
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 576efdd0bac4b8298e3d204b065bbbd55ba6fff3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка свойств мер
+# <a name="configure-measure-properties"></a>Настройка свойств мер
   Меры имеют свойства, позволяющие определять и управлять их работой и отображением для пользователей.  
   
- Свойства в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно задать при создании или изменении куба или меры. Можно также задать их программным способом с помощью многомерных выражений или объектов AMO. Дополнительные сведения см. в разделах [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [Инструкция CREATE MEMBER (многомерные выражения)](../Topic/CREATE%20MEMBER%20Statement%20\(MDX\).md) и [Программирование основных объектов AMO OLAP](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
+ Свойства в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно задать при создании или изменении куба или меры. Можно также задать их программным способом с помощью многомерных выражений или объектов AMO. Дополнительные сведения см. в разделах [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [Инструкция CREATE MEMBER (многомерные выражения)](../../mdx/mdx-data-definition-create-member.md) и [Программирование основных объектов AMO OLAP](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
   
-## Свойства мер  
+## <a name="measure-properties"></a>Свойства мер  
  Меры наследуют определенные свойства у группы мер, элементами которых они являются, если только эти свойства не переопределены на уровне мер. Свойства мер определяют статистическое вычисление, тип данных, отображаемые для пользователей имена, папку отображения, строку форматирования, выражения меры, базовые исходные столбцы и видимость для пользователей.  
   
 |Свойство|Определение|  
@@ -70,8 +75,8 @@ caps.handback.revision: 50
 |**Source**|Обязательный. Столбец в представлении источника данных, к которому привязана мера. См. раздел [Источники данных и привязки (многомерные службы SSAS)](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).|  
 |**Visible**|Определяет видимость меры в клиентских приложениях.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка свойств группы мер](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
- [Изменение мер](../../analysis-services/modifying-measures.md)  
+ [Изменение мер](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   

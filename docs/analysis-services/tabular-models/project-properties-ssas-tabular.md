@@ -1,28 +1,33 @@
 ---
-title: "Свойства проекта (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.depservconfig.f1"
-  - "sql13.asvs.bidtoolset.semmodelprojprop.f1"
+title: "Свойства (табличные службы SSAS) проекта | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.depservconfig.f1
+- sql13.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f87694c9f464aee76eec4fe34e5888e5e6e4ef02
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства проекта (табличные службы SSAS)
-  В этом разделе описаны свойства проекта табличной модели. Каждый проект табличной модели имеет параметры развертывания и свойства сервера развертывания, которые указывают порядок развертывания проекта и модели. Например, сервер, на котором будет развернута модель, и имя базы данных развернутой модели. Эти параметры отличаются от свойств модели, которые влияют на базу данных рабочей области модели. Описанные здесь свойства проекта находятся в модальном диалоговом окне "Свойства", которое отличается от окна свойств, используемого для отображения других типов свойств. Для отображения модальных свойств проекта в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в **обозревателе решений** щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
+# <a name="project-properties-ssas-tabular"></a>Свойства проекта (табличные службы SSAS)
+  В этом разделе описаны свойства проекта табличной модели. Каждый проект табличной модели имеет параметры развертывания и свойства сервера развертывания, которые указывают порядок развертывания проекта и модели. Например, сервер, на котором будет развернута модель, и имя базы данных развернутой модели. Эти параметры отличаются от свойств модели, которые влияют на базу данных рабочей области модели. Описанные здесь свойства проекта находятся в модальном диалоговом окне "Свойства", которое отличается от окна свойств, используемого для отображения других типов свойств. Для отображения модальных свойств проекта в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в **обозревателе решений**щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
   
  Разделы данной темы:  
   
@@ -57,13 +62,13 @@ caps.handback.revision: 27
   
 ##  <a name="bkmk_conf_proj_settings"></a> Настройка параметров свойств "Параметры развертывания" и "Сервер развертывания"  
   
-1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в **обозревателе решений** щелкните правой кнопкой мыши проект, а затем выберите пункт **Свойства**.  
+1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в **обозревателе решений**щелкните правой кнопкой мыши проект, а затем выберите пункт **Свойства**.  
   
 2.  В окне **Свойства** щелкните свойство и введите значение или нажмите стрелку вниз для выбора параметра.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Свойства модели (табличные службы SSAS)](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [Свойства модели &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [Развертывание решений табличной модели (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

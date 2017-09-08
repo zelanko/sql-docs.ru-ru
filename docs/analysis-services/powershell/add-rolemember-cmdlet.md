@@ -1,37 +1,48 @@
 ---
-title: "Командлет Add-RoleMember | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Командлет Add-RoleMember | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 827c8bbc-d48f-4e49-9ea5-abb1380f7623
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e2a71e5b4fb5aae12ce16b419da832d4b1237d28
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Командлет Add-RoleMember
+# <a name="add-rolemember-cmdlet"></a>Командлет Add-RoleMember
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Добавляет элемент к указанной роли в табличной или многомерной базе данных служб Analysis Services.  
+
+>[!NOTE] 
+>В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
  `Add-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  
   
  `Add-RoleMember [-MemberName] <System.String> [-DatabaseRole] <Microsoft.AnalysisServices.Role> [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Командлет Add-RoleMember добавляет допустимого члена к существующей роли базы данных. Разрешены только роли базы данных. С помощью этого командлета нельзя добавлять членов к роли сервера.  
   
  За один раз можно добавить только одного члена, которым может быть учетная запись пользователя или группы.  
   
-## Параметры  
+## <a name="parameters"></a>Параметры  
   
-### -MemberName \<строка>  
+### <a name="-membername-string"></a>-MemberName \<строка >  
  Указывает пользователя или группу Windows, которые добавляются к роли.  
   
 |||  
@@ -42,7 +53,7 @@ caps.handback.revision: 14
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Database \<строка>  
+### <a name="-database-string"></a>-Базы данных \<строка >  
  Указывает базу данных, к которой относится роль.  
   
 |||  
@@ -53,7 +64,7 @@ caps.handback.revision: 14
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -RoleName \<строка>  
+### <a name="-rolename-string"></a>-RoleName \<строка >  
  Указывает роль, к которой добавляются члены.  
   
 |||  
@@ -64,7 +75,7 @@ caps.handback.revision: 14
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -DatabaseRole \<строка>  
+### <a name="-databaserole-string"></a>-DatabaseRole \<строка >  
  Указывает объект Microsoft.AnalysisServices.Role, к которому будет добавлен член. Используйте этот параметр, как альтернативу параметрам –Database и –RoleName при необходимости указания роли базы данных через конвейер.  
   
 |||  
@@ -75,10 +86,10 @@ caps.handback.revision: 14
 |Принимать входные данные конвейера?|true (ByPropertyName)|  
 |Принимать символы-шаблоны?|false|  
   
-### \<Общие параметры>  
+### <a name="commonparameters"></a>\<Общие параметры >  
  Этот командлет поддерживает общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. Дополнительные сведения см. в разделе [Об общих параметрах](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Входы и выходы  
+## <a name="inputs-and-outputs"></a>Входы и выходы  
  Входной тип — это тип объектов, которые можно направить в командлет. Тип возвращаемого значения — это тип объектов, возвращаемых командлетом.  
   
 |||  
@@ -86,7 +97,7 @@ caps.handback.revision: 14
 |Входные данные|Нет.|  
 |Выходные данные|Нет|  
   
-## Пример 1  
+## <a name="example-1"></a>Пример 1  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername “adventure-works\bobh” –database “AdventureWorks” –rolename “Reader”  
@@ -94,7 +105,7 @@ PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername “adventure
   
  Эта команда добавляет учетную запись пользователя домена Windows к роли Reader в базе данных AdventureWorks, которая выполняется на локальном экземпляре по умолчанию.  
   
-## Пример 2  
+## <a name="example-2"></a>Пример 2  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> $roles= dir .\databases\AWTEST\Roles  
@@ -104,7 +115,7 @@ PS SQLSERVER:\sqlas\localhost\default> add-rolemember –membername:“adventure
   
  Строка 1 добавляет все роли базы данных из базы данных AWTEST в конвейер. Строка 2, в которой вы набираете $roles, отображает массив ролей. Строка 3 добавляет пользователя Windows adventure-works\bobh в качестве члена первой из ролей в массиве.  
   
-## Пример 3  
+## <a name="example-3"></a>Пример 3  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles=dir  
@@ -113,8 +124,6 @@ PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles[0] | Add-ro
   
  Эта команда добавляет учетную запись пользователя домена Windows в первую роль в массиве, который создан посредством перечисления дочерних элементов папки Roles в контексте конкретной базы данных (AWTEST).  
   
-## См. также  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Управление табличными моделями с помощью PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+
   
   

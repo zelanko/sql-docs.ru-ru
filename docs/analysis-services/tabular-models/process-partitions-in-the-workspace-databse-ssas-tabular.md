@@ -1,31 +1,36 @@
 ---
-title: "Обработка секций в базе данных рабочей области (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обработка секций в базе данных рабочей области (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 650821073c8c2c15d143ba0fb2ff24e1352c9cb6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Обработка секций в базе данных рабочей области (табличные службы SSAS)
+# <a name="process-partitions-in-the-workspace-databse-ssas-tabular"></a>Обработка секций в базе данных рабочей области (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Приведенные в этом разделе задачи описывают обработку секций в базе данных рабочей области модели с помощью диалогового окна **Обработка секций** в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  После развертывания модели в другом экземпляре служб Analysis Services администраторы баз данных могут создавать секции и управлять ими в (развернутой) модели с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], скриптов или пакета служб IS. Дополнительные сведения см. в разделе [Создание секций табличной модели и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ###  <a name="bkmk_create_new"></a> Обработка секции  
   
-1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] выберите в меню **Модель** пункт **Обработать** (Обновить), а затем пункт **Обработать секции**.  
+1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]выберите в меню **Модель** пункт **Обработать** (Обновить), а затем пункт **Обработать секции**.  
   
 2.  В списке **Режим** выберите один из следующих режимов обработки:  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 12
   
 3.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [Создание секций и управление ими в базе данных рабочей области (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
   

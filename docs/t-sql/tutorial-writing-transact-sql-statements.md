@@ -1,34 +1,39 @@
 ---
-title: "Учебник. Составление инструкций Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "Инструкции Transact-SQL, учебники"
-  - "учебники по Transact-SQL"
-  - "учебники [Transact-SQL]"
+title: "Учебник: Составление инструкций Transact-SQL | Документы Microsoft"
+ms.custom: 
+ms.date: 08/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- Transact-SQL statements, tutorials
+- Transact-SQL tutorials
+- tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c42fed70b1335a48bcc219682d5be5e4010e0e5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Учебник. Составление инструкций Transact-SQL
-Учебник «Составление инструкций [!INCLUDE[tsql](../includes/tsql-md.md)]». Этот учебник предназначен для пользователей, не умеющих составлять инструкции SQL. Он поможет новым пользователям начать обучение с просмотра некоторых простых инструкций по созданию таблиц и вставке данных. Этот учебник использует язык [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)]-реализацию стандарта SQL. Он представляет собой краткое введение в язык [!INCLUDE[tsql](../includes/tsql-md.md)] и не заменяет обучение языку [!INCLUDE[tsql](../includes/tsql-md.md)]. Инструкции в учебнике намеренно простые и не представляют всей сложности типичной производственной базы данных.  
+# <a name="tutorial-writing-transact-sql-statements"></a>Учебник. Составление инструкций Transact-SQL
+Учебник «Составление инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] ». Этот учебник предназначен для пользователей, не умеющих составлять инструкции SQL. Он поможет новым пользователям начать обучение с просмотра некоторых простых инструкций по созданию таблиц и вставке данных. Этот учебник использует язык [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] -реализацию стандарта SQL. Он представляет собой краткое введение в язык [!INCLUDE[tsql](../includes/tsql-md.md)] и не заменяет обучение языку [!INCLUDE[tsql](../includes/tsql-md.md)] . Инструкции в учебнике намеренно простые и не представляют всей сложности типичной производственной базы данных.  
   
->**ПРИМЕЧАНИЕ**. Если вы новичок, то, возможно, вам будет проще использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], а не создавать инструкции [!INCLUDE[tsql](../includes/tsql-md.md)].  
+>**ПРИМЕЧАНИЕ** . Если вы новичок, то, возможно, вам будет проще использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , а не создавать инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
-## Дополнительные сведения  
+## <a name="finding-more-information"></a>Дополнительные сведения  
 Дополнительные сведения об отдельных инструкциях см. в электронной документации по SQL Server либо по имени инструкции, либо используя вкладку "Содержание" для просмотра 1800 языковых элементов, перечисленных в алфавитном порядке в разделе [Справочник по Transact-SQL (компонент Database Engine)](../t-sql/transact-sql-reference-database-engine.md). Еще одной хорошей стратегией нахождения информации является ее поиск по ключевым словам, относящимся к интересующей вас тематике. Например, чтобы узнать, как возвратить часть даты (например, месяц), выполните поиск в индексе по **датам [SQL Server]**, а затем используйте **функции извлечения частей даты**. Это приведет к разделу [DATEPART (Transact-SQL)](../t-sql/functions/datepart-transact-sql.md). В качестве другого примера, чтобы выяснить, как работать со строками, ищите **строковые функции**. Это приведет к разделу [Строковые функции (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md).  
   
-## Обзор учебника  
+## <a name="what-you-will-learn"></a>Обзор учебника  
 В этом учебнике показано, как создать базу данных и таблицу в ней, вставить данные в таблицу, обновить их, прочитать и удалить данные, удалить таблицу. Будут созданы представления и хранимые процедуры, а для базы данных и данных будет настроен пользователь.  
   
 Учебник разделен на три занятия.  
@@ -42,7 +47,7 @@ caps.handback.revision: 21
 [Урок 3. Удаление объектов базы данных](../t-sql/lesson-3-deleting-database-objects.md)  
 В этом занятии доступ к данным будет запрещен, данные из таблицы удалены, сама таблица тоже удалена вместе с базой данных.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
 Чтобы завершить этот учебник, не нужно обладать знаниями языка SQL, но нужно иметь основные понятия о базах данных, таких как таблицы. С помощью этого учебника будут созданы база данных и пользователь Windows. Эти задачи требуют высокого уровня разрешений, так что следует войти в систему в качестве администратора.  
   
 В системе должно быть установлено следующее.  
@@ -56,3 +61,5 @@ caps.handback.revision: 21
   
   
   
+
+

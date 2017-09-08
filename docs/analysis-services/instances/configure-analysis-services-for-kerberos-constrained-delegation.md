@@ -1,24 +1,29 @@
 ---
-title: "Настройка служб Analysis Services для ограниченного делегирования Kerberos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка служб Analysis Services для ограниченного делегирования Kerberos | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6158c7263fcd620f1ac577522b09f8ac4b9e08d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка служб Analysis Services для ограниченного делегирования Kerberos
+# <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Настройка служб Analysis Services для ограниченного делегирования Kerberos
   Во время настройки служб Analysis Services для проверки подлинности Kerberos, скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: олицетворения пользовательского удостоверения с помощью служб Analysis Services для доступа к данным или делегирования пользовательского удостоверения с помощью служб Analysis Services в службу более низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
   
 > [!TIP]  
@@ -44,9 +49,9 @@ caps.handback.revision: 14
   
 |Задача|Description|  
 |----------|-----------------|  
-|Этап 1. Убедитесь, что учетные записи подходят для делегирования|Убедитесь, что учетные записи, используемые для запуска служб, имеют необходимые свойства в Active Directory. Учетные записи службы в Active Directory должны быть отмечены как критические учетные записи или исключены явным образом из сценариев делегирования. Дополнительные сведения см. в разделе [Основные сведения об учетных записях пользователей](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Примечание. Как правило, все учетные записи и серверы должны принадлежать к одному домену Active Directory или доверенным доменам одного леса. Но поскольку Windows Server 2012 поддерживает делегирование через across границы домена, можно настроить ограниченное делегирование Kerberos через границы домена, если домен имеет функциональный уровень Windows Server 2012. Другой вариант — настроить службы Analysis Services для доступа по HTTP-протоколу и использовать методы проверки подлинности служб IIS через клиентское соединение. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).|  
+|Этап 1. Убедитесь, что учетные записи подходят для делегирования|Убедитесь, что учетные записи, используемые для запуска служб, имеют необходимые свойства в Active Directory. Учетные записи службы в Active Directory должны быть отмечены как критические учетные записи или исключены явным образом из сценариев делегирования. Дополнительные сведения см. в разделе [Основные сведения об учетных записях пользователей](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> Примечание. Как правило, все учетные записи и серверы должны принадлежать к одному домену Active Directory или доверенным доменам одного леса. Но поскольку Windows Server 2012 поддерживает делегирование через across границы домена, можно настроить ограниченное делегирование Kerberos через границы домена, если домен имеет функциональный уровень Windows Server 2012. Другой вариант — настроить службы Analysis Services для доступа по HTTP-протоколу и использовать методы проверки подлинности служб IIS через клиентское соединение. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).|  
 |Этап 2. Регистрация имени участника-службы|Прежде чем задать ограниченное делегирование, необходимо зарегистрировать имя участника-службы (SPN) для экземпляра служб Analysis Services. Имя участника-службы Analysis Services необходимо при настройке ограниченного делегирования Kerberos для служб среднего уровня. Инструкции см. в разделе [SPN registration for an Analysis Services instance](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md) .<br /><br /> Имя участника-службы задает уникальный идентификатор службы в домене, настроенном для проверки подлинности Kerberos. Клиентские соединения с использованием встроенной безопасности часто запрашивают имя участника-службы в составе проверки подлинности SSPI. Запрос перенаправляется к контроллеру домена (DC) Active Directory, а служба проверки подлинности Kerberos предоставляет билет, если имя участника-службы, указанное клиентом, имеет совпадающую регистрацию имени участника-службы в Active Directory.|  
-|Этап 3. Настройка ограниченного делегирования|После проверки предназначенных для использования учетных записей и регистрации для них имен участников-служб следующим шагом будет настройка служб более высокого уровня, например IIS, Reporting Services, веб-службы SharePoint для ограниченного делегирования с указанием имени участника-службы Analysis Services в качестве конкретной службы, для которой разрешено делегирование.<br /><br /> Службы, запускаемые в режиме SharePoint, например службы Excel Services или Reporting Services в режиме интеграции с SharePoint, часто содержат книги и отчеты, которые используют многомерные или табличные данные служб Analysis Services. Настройка ограниченного делегирования для этих служб — обычная задача настройки конфигурации, необходимая для поддержки обновления данных из служб Excel. По следующим ссылкам можно получить инструкции для служб SharePoint, а также других служб, которые, по всей вероятности, будут передавать запросы на подключение к данным более низкого уровня для данных служб Analysis Services:<br /><br /> [Делегирование удостоверения для служб Excel Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) или [Настройка служб Excel Services в SharePoint Server 2010 для проверки подлинности Kerberos](http://support.microsoft.com/kb/2466519).<br /><br /> [Делегирование удостоверения для служб PerformancePoint Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Делегирование удостоверения для служб SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> По службам IIS 7.0 см. раздел [Настройка проверки подлинности Windows (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) или [Настройка служб SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services для использования проверки подлинности Kerberos](http://support.microsoft.com/kb/917409).|  
+|Этап 3. Настройка ограниченного делегирования|После проверки предназначенных для использования учетных записей и регистрации для них имен участников-служб следующим шагом будет настройка служб более высокого уровня, например IIS, Reporting Services, веб-службы SharePoint для ограниченного делегирования с указанием имени участника-службы Analysis Services в качестве конкретной службы, для которой разрешено делегирование.<br /><br /> Службы, запускаемые в режиме SharePoint, например службы Excel Services или Reporting Services в режиме интеграции с SharePoint, часто содержат книги и отчеты, которые используют многомерные или табличные данные служб Analysis Services. Настройка ограниченного делегирования для этих служб — обычная задача настройки конфигурации, необходимая для поддержки обновления данных из служб Excel. По следующим ссылкам можно получить инструкции для служб SharePoint, а также других служб, которые, по всей вероятности, будут передавать запросы на подключение к данным более низкого уровня для данных служб Analysis Services:<br /><br /> [Делегирование удостоверения для служб Excel Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) или [Настройка служб Excel Services в SharePoint Server 2010 для проверки подлинности Kerberos](http://support.microsoft.com/kb/2466519)<br /><br /> [Делегирование удостоверения для служб PerformancePoint Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Делегирование удостоверения для служб SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> По службам IIS 7.0 см. раздел [Настройка проверки подлинности Windows (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) или [Настройка служб SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services для использования проверки подлинности Kerberos](http://support.microsoft.com/kb/917409).|  
 |Этап 4. Проверка подключения|В процессе тестирования попробуйте установить соединение с удаленного компьютера с различными удостоверениями и запросите службы Analysis Services с использованием тех же приложений, которые будут использоваться пользователями из сферы бизнеса. Можно использовать приложение SQL Server Profiler для контроля за соединением. По запросу должно отобразиться пользовательское удостоверение. Дополнительные сведения см. в подразделе [Проверка олицетворенного или делегированного удостоверения](#bkmk_test) этого раздела.|  
   
 ##  <a name="bkmk_delegate"></a> Настройка служб Analysis Services для доверенного делегирования  
@@ -77,25 +82,25 @@ caps.handback.revision: 14
   
      Вкладка «Делегирование» отображается только в том случае, если учетная запись пользователя (OlapSvc) назначена службе (службам Analysis Services) и служба имеет зарегистрированное имя участника-службы. Для регистрации имени участника-службы необходимо, чтобы служба была запущена.  
   
-     ![SSAS_Kerberos_1_AccountProperties](../../analysis-services/instances/media/ssas-kerberos-1-accountproperties.png "SSAS_Kerberos_1_AccountProperties")  
+     ![SSAS_Kerberos_1_AccountProperties](../../analysis-services/instances/media/ssas-kerberos-1-accountproperties.gif "SSAS_Kerberos_1_AccountProperties")  
   
 3.  На странице «Добавление службы» выберите **Пользователи или компьютеры**.  
   
-     ![SSAS_Kerberos_2_](../../analysis-services/instances/media/ssas-kerberos-2.png "SSAS_Kerberos_2_")  
+     ![SSAS_Kerberos_2_](../../analysis-services/instances/media/ssas-kerberos-2.gif "SSAS_Kerberos_2_")  
   
 4.  На странице «Выбор пользователей или компьютеров» введите имя учетной записи, используемой для запуска экземпляра SQL Server, который содержит табличные шаблоны баз данных служб Analysis Services. Нажмите кнопку **ОК** , чтобы подтвердить учетную запись службы.  
   
      Если учетную запись выбрать не удается, убедитесь, что SQL Server запущен и имеет имя участника-службы, зарегистрированное для этой учетной записи. Дополнительные сведения об именах участников-служб для базы данных см. в разделе [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
-     ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.png "SSAS_Kerberos_3_SelectUsers")  
+     ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   
 5.  Экземпляр SQL Server должен появиться на странице «Добавление служб». Службы, которые используют эту учетную запись, также появятся в списке. Выберите нужный экземпляр SQL Server. Нажмите кнопку **ОК** , чтобы подтвердить экземпляр.  
   
-     ![SSAS_Kerberos_4_](../../analysis-services/instances/media/ssas-kerberos-4.png "SSAS_Kerberos_4_")  
+     ![SSAS_Kerberos_4_](../../analysis-services/instances/media/ssas-kerberos-4.gif "SSAS_Kerberos_4_")  
   
 6.  Страница свойств учетной записи служб Analysis Services теперь должна выглядеть примерно так, как на следующем снимке экрана. Нажмите кнопку **ОК** , чтобы сохранить внесенные изменения.  
   
-     ![SSAS_Kerberos_5_Finished](../../analysis-services/instances/media/ssas-kerberos-5-finished.png "SSAS_Kerberos_5_Finished")  
+     ![SSAS_Kerberos_5_Finished](../../analysis-services/instances/media/ssas-kerberos-5-finished.gif "SSAS_Kerberos_5_Finished")  
   
 7.  Для проверки успешного делегирования подключитесь с удаленного клиентского компьютера под другим удостоверением и отправьте запрос для табличной модели. Пользовательское удостоверение должно отобразиться для соответствующего запроса в приложении SQL Server Profiler.  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 14
   
  Кроме того, полное описание каждого параметра во вкладке "Делегирование" диалогового окна свойств объекта Active Directory см. в разделе [Самое запутанное диалоговое окно Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) . В этой статье также объясняется, как использовать LDP для тестирования и интерпретации результатов тестирования.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   

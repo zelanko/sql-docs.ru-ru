@@ -1,35 +1,46 @@
 ---
-title: "Командлет Remove-RoleMember | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Командлет remove-RoleMember | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e38f56ab-facd-4bef-9502-f52f8486a6a6
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c093787d86398acaaeaca8f282e1f588c3e726d7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Командлет Remove-RoleMember
+# <a name="remove-rolemember-cmdlet"></a>Командлет Remove-RoleMember
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Удаляет член из указанной роли в базе данных служб Analysis Services.  
+
+>[!NOTE] 
+>В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
  `Remove-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  
   
  `Remove-RoleMember [-DatabaseRole] <Microsoft.AnalysisServices.Role> [-MemberName] <System.String>  [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Командлет Remove-RoleMember удаляет существующий член из роли в базе данных служб Analysis Services.  
   
-## Параметры  
+## <a name="parameters"></a>Параметры  
   
-### -MemberName \<строка>  
+### <a name="-membername-string"></a>-MemberName \<строка >  
  Указывает пользователя или группу Windows, которые удаляются из роли.  
   
 |||  
@@ -40,7 +51,7 @@ caps.handback.revision: 8
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Database \<строка>  
+### <a name="-database-string"></a>-Базы данных \<строка >  
  Указывает базу данных, к которой относится роль.  
   
 |||  
@@ -51,7 +62,7 @@ caps.handback.revision: 8
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -RoleName \<строка>  
+### <a name="-rolename-string"></a>-RoleName \<строка >  
  Указывает роль, из которой удаляются члены.  
   
 |||  
@@ -62,7 +73,7 @@ caps.handback.revision: 8
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -DatabaseRole \<строка>  
+### <a name="-databaserole-string"></a>-DatabaseRole \<строка >  
  Указывает объект Microsoft.AnalysisServices.Role, из которого будет удален член. Используйте этот параметр, как альтернативу параметрам –Database и –RoleName при необходимости указания роли базы данных через конвейер.  
   
 |||  
@@ -73,13 +84,13 @@ caps.handback.revision: 8
 |Принимать входные данные конвейера?|true (ByPropertyName)|  
 |Принимать символы-шаблоны?|false|  
   
-### \<Общие параметры>  
+### <a name="commonparameters"></a>\<Общие параметры >  
  Этот командлет поддерживает общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. Дополнительные сведения см. в разделе [Об общих параметрах](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Входы и выходы  
+## <a name="inputs-and-outputs"></a>Входы и выходы  
  Нет.  
   
-## Пример 1  
+## <a name="example-1"></a>Пример 1  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername “adventure-works\bobh” –database “AdventureWorks” –rolename “Reader”  
@@ -87,7 +98,7 @@ PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername “advent
   
  Эта команда удаляет учетную запись пользователя домена Windows из роли Reader в базе данных AdventureWorks, которая выполняется на локальном экземпляре по умолчанию.  
   
-## Пример 2  
+## <a name="example-2"></a>Пример 2  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default> $roles= dir .\databases\AWTEST\Roles  
@@ -97,7 +108,7 @@ PS SQLSERVER:\sqlas\localhost\default> remove-rolemember –membername:“advent
   
  Строка 1 добавляет все роли базы данных из базы данных AWTEST в конвейер. Строка 2, в которой вы набираете $roles, отображает массив ролей. Строка 3 удаляет пользователя Windows «adventure-works\bobh» из первой из ролей в массиве.  
   
-## Пример 3  
+## <a name="example-3"></a>Пример 3  
   
 ```  
 PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles=dir  
@@ -106,8 +117,6 @@ PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles[0] | Remove
   
  Эта команда удаляет учетную запись пользователя домена Windows из первой роли в массиве, который создан посредством перечисления дочерних элементов папки Roles в контексте конкретной базы данных (AWTEST).  
   
-## См. также  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Управление табличными моделями с помощью PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+
   
   

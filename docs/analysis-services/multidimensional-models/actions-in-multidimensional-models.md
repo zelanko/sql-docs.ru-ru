@@ -1,29 +1,34 @@
 ---
-title: "Действия в многомерных моделях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "действия [службы Analysis Services], создание"
-  - "действия отчетов [службы Analysis Services]"
-  - "действия детализации [службы Analysis Services]"
-  - "кубы [службы Analysis Services], действия"
+title: "Действия в многомерных моделях | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- actions [Analysis Services], creating
+- report actions [Analysis Services]
+- drillthrough actions [Analysis Services]
+- cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Действия в многомерных моделях
+# <a name="actions-in-multidimensional-models"></a>Действия в многомерных моделях
   Действие представляет собой инициированную пользователем операцию для выбранного куба или его части. Эта операция может запускать приложение, для которого в качестве параметра используется выбранный элемент, или получать сведения о выбранном элементе. Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Для построения действий для куба используется вкладка **Действия** конструктора кубов. Укажите следующее.  
@@ -82,7 +87,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  Определение действий типов «HTML» и «Командная строка» производится на языке сценариев служб анализа данных (ASSL) или с помощью объектов AMO. Дополнительные сведения см. в разделах [Элемент Action (ASSL)](../../analysis-services/scripting/objects/action-element-assl.md), [Элемент Type (Action) (ASSL)](../../analysis-services/scripting/properties/type-element-action-assl.md) и [Программирование расширенных объектов AMO OLAP](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
   
-## Создание действия «Построение отчета»  
+## <a name="creating-a-reporting-action"></a>Создание действия «Построение отчета»  
  Сервер отчетов отвечает на запросы с URL-адресами для отчетов. Чтобы создать действие построения отчета, выберите в меню **Куб** пункт **Создать действие с отчетами**. Для действия отчета доступны следующие параметры.  
   
  **Сервер отчетов**  
@@ -95,7 +100,7 @@ caps.handback.revision: 20
 |**Формат отчета**|HTML5, HTML3, Excel или PDF.|  
   
 > [!NOTE]  
->  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно задать шифрование Transport Layer Security (https:) в свойстве имени сервера.  
+>  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно задать шифрование Transport Layer Security (https:) в свойстве имени сервера.  
   
  **Параметры (необязательно)**  
  Параметры отправляются на сервер в составе строки URL-адреса во время создания действия. В них включены **Имя параметра** и **Значение параметра**, представляющее собой многомерное выражение.  
@@ -121,13 +126,13 @@ parametervalue1
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
 ```  
   
-## Создание действия детализации  
+## <a name="creating-a-drillthrough-action"></a>Создание действия детализации  
  Действие детализации задается действием набора строк, возвращаемым клиентскому приложению в виде инструкции детализации. Цель действия является элементом группы мер. Чтобы создать действие детализации, выберите в меню **Куб** пункт **Создать действие детализации**. Для действия детализации доступны следующие параметры:  
   
  **Столбцы детализации**  
  Выберите одно или несколько измерений и столбцы детализации для каждого измерения, возвращенные клиентскому приложению действием.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

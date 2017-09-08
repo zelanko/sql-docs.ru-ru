@@ -1,33 +1,38 @@
 ---
-title: "Настройка после установки (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "После установки конфигурации (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e172989400466a7ab78e3a2ff24022651524bd0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка после установки (службы Analysis Services)
+# <a name="post-install-configuration-analysis-services"></a>Настройка после установки (службы Analysis Services)
   После установки служб Analysis Services требуется дополнительная настройка, чтобы обеспечить полноценное функционирование сервера и сделать его доступным для типового пользования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
  Впоследствии потребуется дополнительная работа, когда появятся базы данных, готовые к развертыванию. А именно, требуется настроить членство в роли базы данных, чтобы предоставить пользователю доступ к данным, разработать стратегию резервного копирования и восстановления баз данных, а также решить, нужна ли запланированная рабочая нагрузка по обработке для обновления данных через регулярные промежутки времени. Дополнительные сведения о развертывании и администрировании базы данных можно найти по следующим ссылкам: [Базы данных многомерной модели (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) и [Базы данных табличной модели (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
-## Конфигурация экземпляра  
+## <a name="instance-configuration"></a>Конфигурация экземпляра  
  Analysis Services — реплицируемая служба, то есть можно установить несколько экземпляров служб на одиночном сервере. Каждый дополнительный экземпляр устанавливается отдельно как именованный экземпляр с помощью программы установки SQL Server и настраивается независимо в соответствии с запланированным применением. Например, сервер разработки может выполнять «черный ящик» или использовать значения по умолчанию для хранения данных, которые иначе могли быть изменены на серверах, выполняющих рабочие нагрузки. Другой пример, в котором полезна корректировка системной конфигурации, — установка экземпляра служб Analysis Services на оборудовании, совместно используемом другими службами. Если выполняется размещение нескольких ресурсоемких приложений на одном и том же оборудовании, можно настроить свойства сервера так, чтобы уменьшить порог памяти для оптимизации доступных ресурсов для всех приложений.  
   
-## Действия перед установкой  
+## <a name="post-installation-tasks"></a>Действия перед установкой  
   
 |Ссылка|Описание задачи|  
 |----------|----------------------|  
@@ -39,12 +44,12 @@ caps.handback.revision: 10
 |[Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|В процессе установки необходимо выбрать режим сервера, который определяет тип модели (табличной или многомерной), которая запускается на сервере. Если нет уверенности в режиме сервера, используйте сведения в этом разделе, чтобы определить, какой режим установлен.|  
 |[Переименование экземпляра служб Analysis Services](../../analysis-services/instances/rename-an-analysis-services-instance.md)|Описательное имя может помочь различить несколько экземпляров, имеющих различные режимы сервера или используемых в основном подразделениями или группами работников в вашей организации. При необходимости изменить имя экземпляра, чтобы упростить управление установками, воспользуйтесь сведениями в этом разделе, чтобы выяснить, как это сделать.|  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  Сведения о подключении к службам Analysis Services из приложений Майкрософт или пользовательских приложений, использующих клиентские библиотеки. В зависимости от требований к решениям иногда требуется настроить службу для проверки подлинности Kerberos. Соединения, которые должны пересекать границы между доменами, требуют доступа по протоколу HTTP. Инструкции по выполнению следующих шагов см. в разделе [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) .  
   
-## См. также  
- [Установка SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md)   
- [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](../Topic/Install%20Analysis%20Services%20in%20Multidimensional%20and%20Data%20Mining%20Mode.md)   
+## <a name="see-also"></a>См. также  
+ [Установка SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md)   
+ [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Установка служб Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Установка служб Analysis Services в режиме Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
