@@ -1,39 +1,44 @@
 ---
-title: "Просмотр и сохранение результатов прогнозирующего запроса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "прогнозирующие запросы [службы Analysis Services]"
-  - "просмотр результатов прогнозирующего запроса"
-  - "отображение результатов прогнозирующего запроса"
-  - "прогнозирование моделей интеллектуального анализа [службы Analysis Services], просмотр результатов"
+title: "Просмотр и сохранение результатов прогнозирующего запроса | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- viewing prediction query results
+- displaying prediction query results
+- Mining Model Prediction [Analysis Services], viewing results
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a28c176cb6d08fee89ea5a0add547d1e2cee48c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Просмотр и сохранение результатов прогнозирующего запроса
+# <a name="view-and-save-the-results-of-a-prediction-query"></a>Просмотр и сохранение результатов прогнозирующего запроса
   После создания запроса в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью построителя прогнозирующих запросов, можно выполнить этот запрос и просмотреть результат, переключившись в представление результатов запроса.  
   
  Можно сохранить результаты прогнозирующего запроса в таблице в любом источнике данных, определенном в проекте служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Можно либо создать новую таблицу, либо сохранить результаты запроса в существующую таблицу. При сохранении результатов в существующую таблицу можно выбрать перезапись данных, хранящихся в таблице в текущий момент, в противном случае результаты будут добавлены к существующим данным в таблице.  
   
-### Выполните запрос и просмотрите результаты  
+### <a name="run-a-query-and-view-the-results"></a>Выполните запрос и просмотрите результаты  
   
 1.  На панели инструментов вкладки **Прогнозирование моделей интеллектуального анализа** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]нажмите кнопку **Результат** .  
   
      Откроется окно результатов и выполнится запрос. Результаты отображаются в сетке в средстве просмотра.  
   
-### Cохраните результаты прогнозирующего запроса в таблицу  
+### <a name="save-the-results-of-a-prediction-query-to-a-table"></a>Cохраните результаты прогнозирующего запроса в таблицу  
   
 1.  На панели инструментов вкладки **Прогнозирование моделей интеллектуального анализа данных** в конструкторе интеллектуального анализа данных нажмите кнопку **Сохранить результат запроса**.  
   

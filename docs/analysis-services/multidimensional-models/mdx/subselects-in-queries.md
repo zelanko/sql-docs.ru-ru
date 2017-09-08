@@ -1,27 +1,32 @@
 ---
-title: "Подзапросы выборки в запросах | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Подзапросы выборки в запросах | Документы Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Подзапросы выборки в запросах
+# <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
   Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
   
-## Подзапросы выборки в примерах  
+## <a name="subselects-by-example"></a>Подзапросы выборки в примерах  
  Начнем с примера того, как подзапросы выборки могут помочь сформировать результаты, которые нам требуется отобразить. Предположим, требуется сформировать таблицу, отражающую динамику продаж за несколько лет по 10 самым популярным продуктам.  
   
  Полученный результат должен иметь следующий вид.  
@@ -158,7 +163,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
  Приведенные выше результаты — это 10 самых популярных продуктов, проданных во Франции через Интернет.  
   
-## Инструкция подзапроса выборки  
+## <a name="subselect-statement"></a>Инструкция подзапроса выборки  
  Имя участника-службы для подзапроса выборки:  
   
 ```  
@@ -209,7 +214,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |Вашингтон|2 467 248,34 $|$ 80 450 596,98|  
 |Seattle|75 164,86 $|$ 80 450 596,98|  
   
- В приведенном выше примере «Seattle» является дочерним для «Washington», «Portland» — для «Орегона», «Oregon» и «Washington» — дочерние для «United States», а «United States» — для [Customer Geography].[All Customers]. Все элементы, показанные в данном примере, имеют другие элементы с общим родителем, влияющие на статистическое значение родителя, т. е. города Спокане, Такома и Эверетт имеют общего родителя с Сиэтлом и все они будут влиять на сумму для продаж через Интернет в штате Вашингтон. Значение Reseller Sales Amount не зависит от атрибута «Customer Geography», поэтому в результатах отображается значение «Все». Следующее многомерное выражение иллюстрирует влияние фильтра на предложение подзапроса выборки.  
+ В приведенном выше примере «Seattle» является дочерним для «Washington», «Portland» — для «Орегона», «Oregon» и «Washington» — дочерние для «United States», а «United States» — для [Customer Geography].[All Customers]. Все элементы, показанные в данном примере, имеют другие элементы с общим родителем, влияющие на статистическое значение родителя, т. е. города Спокане, Такома и Эверетт имеют общего родителя с Сиэтлом и все они будут влиять на сумму для продаж через Интернет в штате Вашингтон. Значение Reseller Sales Amount не зависит от атрибута «Customer Geography», поэтому в результатах отображается значение «Все». Следующее многомерное выражение иллюстрирует влияние фильтра на предложение подзапроса выборки.  
   
 ```  
 SELECT { [Customer].[Customer Geography].[All Customers]  
@@ -233,7 +238,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |All Customers|2 467 248,34 $|$ 80 450 596,98|  
 |United States|2 467 248,34 $|$ 80 450 596,98|  
 |Вашингтон|2 467 248,34 $|$ 80 450 596,98|  
-|Seattle|75 164,86 $|80 450 596,98 $|  
+|Seattle|75 164,86 $|$ 80 450 596,98|  
   
  Приведенные выше результаты показывают, что только предки и потомки штата Вашингтон входят в подпространство, по которому вычислялась внешняя инструкция SELECT. Орегон и Портленд были удалены из вложенного куба, поскольку Орегон и все другие штаты, имеющие общего родителя, не были упомянуты в подзапросе выборки, тогда как Вашингтон был.  
   
@@ -339,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Очевидно, между двумя наборами результатов есть различия. Первый запрос ответил на вопрос, каковы пять наиболее популярных продуктов в пяти наиболее успешных регионах, а второй запрос — где лучше всего продаются пять наиболее популярных продуктов.  
   
-### Замечания  
+### <a name="remarks"></a>Замечания  
  Для подзапросов выборки действуют следующие ограничения.  
   
 -   Предложение WHERE не фильтрует подпространство.  
@@ -350,6 +355,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Предложение HAVING нельзя использовать в предложении оси, вместо него следует применять выражение функции [Filter (многомерные выражения)](../../../mdx/filter-mdx.md).  
   
--   По умолчанию в подзапросах выборки запрещены вычисляемые элементы, однако это ограничение можно изменить по сеансам путем присвоения значения свойству строки подключения **SubQueries** в свойстве <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES**, описанном в статье [Поддерживаемые свойства XMLA (XMLA)](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства **SubQueries** или **DBPROP_MSMD_SUBQUERIES** см. в разделе [Вычисляемые элементы в подзапросах выборки и вложенных кубах](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md).  
+-   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для **вложенные запросы** свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES** свойство в [ Поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) или **DBPROP_MSMD_SUBQUERIES** см. в разделе **Вычисляемые элементы в подзапросах выборки и вложенных кубах**.  
   
   

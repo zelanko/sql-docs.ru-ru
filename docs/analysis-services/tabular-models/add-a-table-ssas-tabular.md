@@ -1,27 +1,32 @@
 ---
-title: "Добавление таблицы (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление таблицы (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d68422844c6c5692ebfe362cb6e6d44400e705b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Добавление таблицы (табличные службы SSAS)
+# <a name="add-a-table-ssas-tabular"></a>Добавление таблицы (табличные службы SSAS)
   В этом разделе описывается добавление таблицы из источника данных, из которого ранее выполнялся импорт данных в модель. Чтобы добавить таблицу из того же источника данных, можно использовать существующее соединение с источником данных. Рекомендуется всегда использовать одно соединение для импорта любого количества таблиц из одного источника данных.  
   
-### Добавление таблицы из существующего источника данных  
+### <a name="to-add-a-table-from-an-existing-data-source"></a>Добавление таблицы из существующего источника данных  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в меню **Модель** выберите пункт **Существующие соединения**.  
   
@@ -39,8 +44,8 @@ caps.handback.revision: 5
 > [!NOTE]  
 >  Если из одного источника данных одновременно импортируется несколько таблиц, то в модели будут автоматически созданы все связи, существующие между этими таблицами в источнике. Однако если таблица добавляется позже, то может понадобиться вручную создать в модели связи между новыми таблицами и ранее импортированными таблицами.  
   
-## См. также  
- [Импорт данных (табличные службы SSAS)](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>См. также  
+ [Импорт данных (табличные службы SSAS)](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
  [Удаление таблицы (табличные службы SSAS)](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   

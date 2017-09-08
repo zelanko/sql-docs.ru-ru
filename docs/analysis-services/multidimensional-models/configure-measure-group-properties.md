@@ -1,29 +1,34 @@
 ---
-title: "Настройка свойств группы мер | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "свойства [службы Analysis Services], группы мер"
+title: "Настройка свойств группы мер | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- properties [Analysis Services], measure groups
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16613e83f5632864fd86ff46067a72ed9dc88539
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка свойств группы мер
+# <a name="configure-measure-group-properties"></a>Настройка свойств группы мер
   Группы мер имеют свойства, которые позволяют определить функционирование групп мер.  
   
-## Свойства группы мер  
+## <a name="measure-group-properties"></a>Свойства группы мер  
  Свойства группы мер определяют характеристики всей группы мер и устанавливают характеристики по умолчанию для определенных свойств мер в группе мер.  
   
 |Свойство|Определение|  
@@ -31,7 +36,7 @@ caps.handback.revision: 17
 |**AggregationPrefix**|Применяется к режиму хранения ROLAP. Назначает общий префикс для индексированных представлений в SQL Server, используемых для хранения агрегатов для разделов, связанных с этой группой мер.|  
 |**DataAggregation**|Это свойство зарезервировано для будущего использования и в настоящее время не оказывает никакого влияния. Поэтому не рекомендуется изменять этот параметр.|  
 |**Description**|Это свойство можно использовать для документирования группы мер.|  
-|**ErrorConfiguration**|Настраиваемые параметры обработки ошибок для обработки повторяющихся ключей, неизвестных ключей, ключей NULL, предельного количества ошибок, действий при обнаружении ошибки и файла журнала ошибок. См раздел [Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md).|  
+|**ErrorConfiguration**|Настраиваемые параметры обработки ошибок для обработки повторяющихся ключей, неизвестных ключей, ключей NULL, предельного количества ошибок, действий при обнаружении ошибки и файла журнала ошибок. См раздел [Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Предполагаемое количество строк в таблице фактов.|  
 |**EstimatedSize**|Предполагаемый размер группы мер в байтах.|  
 |**Идентификатор**|Идентификатор объекта.|  

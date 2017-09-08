@@ -1,27 +1,32 @@
 ---
-title: "Смена источника секции на другую таблицу фактов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "таблицы фактов [службы Analysis Services]"
-  - "секции [службы Analysis Services], таблицы фактов"
+title: "Смена источника секции на другую таблицу фактов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fact tables [Analysis Services]
+- partitions [Analysis Services], fact tables
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e9e6cf4d28935289d84849129d600a797df15c5b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Смена источника секции на другую таблицу фактов
+# <a name="change-a-partition-source-to-use-a-different-fact-table"></a>Смена источника секции на другую таблицу фактов
   При создании секции для куба можно использовать различные таблицы фактов. Таблицы могут принадлежать представлению отдельного источника данных, представлениям различных источников данных или различным источникам данных. Представление источника данных также может содержать различные таблицы из нескольких источников данных.  
   
  Все таблицы фактов и измерения для секций куба должны иметь такую же структуру, как таблица фактов и измерения куба. Например, различные таблицы фактов могут иметь одинаковую структуру, но содержать данные за разные годы или для разных линий продукции.  
@@ -32,7 +37,7 @@ caps.handback.revision: 29
   
  Можно, но не рекомендуется, использовать различные таблицы фактов с дублирующимися данными. В этом случае необходимо использовать фильтры в секциях, чтобы гарантировать, что данные, используемые одной секцией, не используются другой. Дополнительные сведения см. в разделе [Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

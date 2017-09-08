@@ -1,32 +1,37 @@
 ---
-title: "Просмотр журнала обновления данных (PowerPivot для SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "автоматическое обновление данных [службы Analysis Services с SharePoint]"
-  - "журнал обновления данных [службы Analysis Services с SharePoint]"
-  - "запланированное обновление данных [службы Analysis Services с SharePoint]"
-  - "обновление данных [службы Analysis Services с SharePoint]"
+title: "Просмотр журнала (Power Pivot для SharePoint) обновления данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unattended data refresh [Analysis Services with SharePoint]
+- data refresh history [Analysis Services with SharePoint]
+- scheduled data refresh [Analysis Services with SharePoint]
+- data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Просмотр журнала обновления данных (PowerPivot для SharePoint)
+# <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Просмотр журнала обновления данных (PowerPivot для SharePoint)
   В журнале обновления данных регистрируются все действия обновления данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в книге Excel. Операции обновления данных выполняются на экземпляре сервера служб Analysis Services на ферме SharePoint по заданному пользователем расписанию. По умолчанию журнал обновления данных хранится в течение одного года. Однако администратор фермы может задать другую политику сохранения для журнала использования и событий, которая будет определять срок хранения записей обновления данных.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
  **В этом разделе:**  
   
@@ -41,13 +46,13 @@ caps.handback.revision: 16
 ##  <a name="prereq"></a> Предварительные требования  
  Для просмотра журнала обновления данных необходим уровень разрешений «Участие» или выше.  
   
- Необходимо включить и создать расписание обновления данных в книге, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Если обновление данных не запланировано, то вместо подробных данных журнала будет отображена страница определения расписания.  
+ Необходимо включить и создать расписание обновления данных в книге, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если обновление данных не запланировано, то вместо подробных данных журнала будет отображена страница определения расписания.  
   
 ##  <a name="viewhistory"></a> Просмотр журнала обновления данных для отдельной книги  
   
-1.  На сайте SharePoint откройте библиотеку, которая содержит книгу Excel с данными [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+1.  На сайте SharePoint откройте библиотеку, которая содержит книгу Excel с данными [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-     Визуальный индикатор, указывающий, какие книги в библиотеке SharePoint содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], отсутствует. Книги, содержащие обновляемые данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], должны быть известны заранее.  
+     Визуальный индикатор, указывающий, какие книги в библиотеке SharePoint содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , отсутствует. Книги, содержащие обновляемые данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , должны быть известны заранее.  
   
 2.  Выберите книгу и нажмите стрелку вниз, которая отображается справа.  
   
@@ -56,15 +61,15 @@ caps.handback.revision: 16
  Откроется страница журнала с полной сводкой всех действий обновления для данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в текущей книге Excel.  
   
 ##  <a name="viewITOps"></a> Просмотр журнала обновления данных для всех книг  
- С помощью панели мониторинга управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в центре администрирования администраторы фермы и администраторы приложения службы могут просматривать состояние и полный журнал обновления данных для всех книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Дополнительные сведения см. в разделе [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+ С помощью панели мониторинга управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в центре администрирования администраторы фермы и администраторы приложения службы могут просматривать состояние и полный журнал обновления данных для всех книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения см. в разделе [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="pageelements"></a> Использование сведений из журнала  
  На странице журнала обновления данных содержатся подробные сведения о каждой операции обновления. Сведения на этой странице позволяют определить, произошло ли обновление и, если нет, почему оно завершилось сбоем.  
   
 |Элемент|Description|  
 |----------|-----------------|  
-|Название|Определяет имя файла книги Excel, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|  
-|Текущее состояние|В число допустимых значений входят **Запланировано**, **Обновление**, **Выполнено** и **Сбой**.<br /><br /> Состояние **Запланировано** отображается при создании расписания. После первого запуска обновления данных это сообщение о состоянии больше не появляется.<br /><br /> Состояние **Обновление** показывает, что выполняется обновление данных. Запрос находится в очереди или выполняется на сервере.<br /><br /> Состояние **Выполнено** показывает, что последняя операция обновления данных завершилась, а обновленная книга возвращена обратно в библиотеку SharePoint.<br /><br /> Состояние **Сбой** показывает, что последняя операция обновления данных завершилась сбоем. Обновленные данные не были сохранены. Книга содержит те же данные, которые находились в ней до начала обновления данных.|  
+|Название|Определяет имя файла книги Excel, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Текущее состояние|В число допустимых значений входят **Запланировано**, **Обновление**, **Выполнено**и **Сбой**.<br /><br /> Состояние**Запланировано** отображается при создании расписания. После первого запуска обновления данных это сообщение о состоянии больше не появляется.<br /><br /> Состояние**Обновление** показывает, что выполняется обновление данных. Запрос находится в очереди или выполняется на сервере.<br /><br /> Состояние**Выполнено** показывает, что последняя операция обновления данных завершилась, а обновленная книга возвращена обратно в библиотеку SharePoint.<br /><br /> Состояние**Сбой** показывает, что последняя операция обновления данных завершилась сбоем. Обновленные данные не были сохранены. Книга содержит те же данные, которые находились в ней до начала обновления данных.|  
 |Последнее успешное обновление|Указывает дату, когда последнее обновление данных завершилось успешно.|  
 |Следующее обновление по расписанию|Указывает дату, на которую запланировано следующее обновление данных.<br /><br /> Ссылка **Настроить расписание** открывает страницу определения расписания. Если для книги есть разрешения уровня "Участие", вы можете щелкнуть ссылку для просмотра и изменения расписания, которое управляет автоматическим обновлением данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в книге.|  
 |Запущено|В разделе подробных данных журнала состояние **Запущено** показывает фактическое время обработки. Фактическое время обработки может отличаться от времени в расписании. Обработка начнется в тот момент, когда на сервере будет доступен достаточный объем памяти. Если сервер очень занят, то обработка может начаться через несколько часов после запланированного времени запуска.|  
@@ -72,9 +77,9 @@ caps.handback.revision: 16
 |Time|Показывает совокупное время с момента запуска обновления данных до момента завершения.|  
 |Состояние|Показывает запись журнала об успешном завершении операции обновления или сбое.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/ru-ru/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Обновление данных Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

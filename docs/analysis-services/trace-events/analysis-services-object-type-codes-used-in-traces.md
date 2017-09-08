@@ -1,28 +1,33 @@
 ---
-title: "Коды типов объектов служб Analysis Services, используемые для трассировки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Коды типов, используемые для трассировки объектов служб Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Коды типов объектов служб Analysis Services, используемые для трассировки
+# <a name="analysis-services-object-type-codes-used-in-traces"></a>Коды типов объектов служб Analysis Services, используемые для трассировки
   На этой странице перечислены типы всех объектов (шестизначное число) модели данных служб Analysis Services. Эти коды отображаются в журналах трассировки и используются для определения типа объекта, связанного с определенной блокировкой. Например, время ожидания блокировки в базе данных будет указывать на тип объекта 100002, который является типом объекта базы данных.  
   
 > [!NOTE]  
 >  Ниже перечислено большее число кодов, чем в действительности будет отображаться в журнале трассировки. Ниже представлен полный список кодов типов для каждого объекта, но только те объекты, которые будут заблокированы, будут представлять код типа объекта в журнале трассировки.  
   
-## Ссылка на тип объекта  
+## <a name="object-type-reference"></a>Ссылка на тип объекта  
   
 |Тип объекта|Имя объекта|  
 |-----------------|-----------------|  

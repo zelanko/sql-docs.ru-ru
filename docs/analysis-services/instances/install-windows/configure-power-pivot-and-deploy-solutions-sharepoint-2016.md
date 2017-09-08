@@ -1,23 +1,28 @@
 ---
-title: "Настройка Power Pivot и развертывание решений (SharePoint 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка Power Pivot и развертывание решений (SharePoint 2016) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 01d737c9c1ac225ca00f4b824567d013673a8f57
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка Power Pivot и развертывание решений (SharePoint 2016)
-  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)], в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016** , чтобы выполнить следующее.  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Настройка Power Pivot и развертывание решений (SharePoint 2016)
+  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016** , чтобы выполнить следующее.  
   
 -   Развертывание файлов решения SharePoint.  
   
@@ -25,7 +30,7 @@ caps.handback.revision: 8
   
 -   Дополнительные сведения о серверных службах и установке сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] см. в разделе [Установка служб Analysis Services в режиме Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
- Сведения об установке средства настройки [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016 см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
+ Дополнительные сведения об установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства настройки SharePoint 2016, в разделе [Установка или удаление надстройки Power Pivot для надстройки SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
   
     4.  В левом окне выберите **Создание семейства веб-сайтов** . Запишите **URL-адрес сайта** для ссылок на него на следующих шагах. Если сервер SharePoint еще не настроен, мастер настройки по умолчанию выбирает веб-приложение, а для URL-адресов семейства веб-сайтов назначается корень `http://[ServerName]`. Чтобы изменить значения по умолчанию, просмотрите следующие страницы в левом окне: **Создание веб-приложения по умолчанию** и **Развертывание решения веб-приложения**.  
   
-5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в подразделе "Вводимые значения для настройки сервера" раздела [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/ru-ru/d61f49c5-efaa-4455-98f2-8c293fa50046) в этом разделе.  
+5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в подразделе "Вводимые значения для настройки сервера" раздела [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) в этом разделе.  
   
 6.  При необходимости удалите действия, которые не нужно выполнять на данном этапе. Например, если вы хотите настроить службу Secure Store позже, щелкните **Настроить службу Secure Store**и снимите флажок **Включить данное действие в список задач**.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 8
   
 8.  Выберите **Выполнить** , чтобы выполнить все действия из списка задач. Обратите внимание, что кнопка **Выполнить** становится доступной только после проверки действий. Если кнопка **Выполнить** недоступна, сначала выберите **Проверить** .  
   
- Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/ru-ru/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Проверка конфигурации Power Pivot  
  **Службы.**  
@@ -83,13 +88,13 @@ caps.handback.revision: 8
   
 1.  В разделе "Системные параметры" центра администрирования выберите **Управление компонентами фермы**.  
   
-2.  Параметр **Функция интеграции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** должен иметь значение **Активна**.  
+2.  Параметр **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Функция интеграции** должен иметь значение **Активна**.  
   
  **Функция интеграции семейства веб-сайтов:**  
   
 1.  Перейдите к URL-адресу сайта, который был создан средством настройки.  
   
-     Выберите **Параметры** ![Параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "Параметры SharePoint"), а затем **Параметры сайта**.  
+     Выберите **параметры**![параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint"), а затем нажмите кнопку **параметры сайта**.  
   
      Выберите **Компоненты семейства веб-сайтов**.  
   

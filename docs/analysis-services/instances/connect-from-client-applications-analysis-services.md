@@ -1,24 +1,33 @@
 ---
-title: "Подключение из клиентских приложений (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Подключение из клиентских приложений (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connection.login.analysisserver.f1
+- sql13.swb.connecttoas.connectionproperties.f1
+- sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Подключение из клиентских приложений (службы Analysis Services)
+# <a name="connect-from-client-applications-analysis-services"></a>Подключение из клиентских приложений (службы Analysis Services)
   Начинающим пользователям служб Analysis Services следует использовать сведения в этом разделе для подключения к существующему экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью стандартных средств и приложений. В этом разделе также объясняется, как подключаться для тестирования под разными удостоверениями пользователей.  
   
 -   [Подключение с помощью среды SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
@@ -42,7 +51,7 @@ caps.handback.revision: 9
   
  Разрешения можно проверить с помощью среды SSMS с определенным удостоверением пользователя, а затем подключиться к службам Analysis Services от имени этого пользователя.  
   
- Удерживайте клавишу SHIFT и щелкните правой кнопкой мыши значок **Среда SQL Server Management Studio**, чтобы получить доступ к параметру **Запуск от имени другого пользователя**.  
+ Удерживайте клавишу SHIFT и щелкните правой кнопкой мыши значок **Среда SQL Server Management Studio** , чтобы получить доступ к параметру **Запуск от имени другого пользователя** .  
   
 1.  Запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. В диалоговом окне **Соединение с сервером** выберите тип сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -69,7 +78,7 @@ caps.handback.revision: 9
     ```  
   
 ##  <a name="bkmk_excel"></a> Подключение с использованием Excel  
- Microsoft Excel часто используется для анализа бизнес-данных. В рамках установки Excel пакет Office устанавливает поставщик OLE DB для служб Analysis Services (MSOLAP DDL), ADOMD.NET и другие поставщики данных, облегчающие подготовку к использованию данных на сетевых серверах. При использовании одной из новых версий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с клиентом более старой версии Excel, вероятнее всего, потребуется установить более новые версии поставщиков данных на каждую рабочую станцию, которая подключается к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Поставщики данных, используемые для соединений со службами Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).  
+ Microsoft Excel часто используется для анализа бизнес-данных. В рамках установки Excel пакет Office устанавливает поставщик OLE DB для служб Analysis Services (MSOLAP DDL), ADOMD.NET и другие поставщики данных, облегчающие подготовку к использованию данных на сетевых серверах. При использовании одной из новых версий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с клиентом более старой версии Excel, вероятнее всего, потребуется установить более новые версии поставщиков данных на каждую рабочую станцию, которая подключается к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Поставщики данных, используемые для соединений со службами Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md) .  
   
  При настройке соединения с кубом служб Analysis Services или шаблоном базы данных Excel сохраняет сведения о соединении в ODC-файле для использования в будущем. Соединение выполняется в контексте безопасности текущего пользователя Windows. Для успешного соединения у этой учетной записи пользователя должно быть разрешение на чтение базы данных.  
   
@@ -77,7 +86,7 @@ caps.handback.revision: 9
   
  Разрешения можно проверить, запуская Excel с конкретным удостоверением пользователя.  
   
- Удерживайте клавишу SHIFT и щелкните правой кнопкой мыши значок **Excel**, чтобы получить доступ к параметру **Запуск от имени другого пользователя**.  
+ Удерживайте клавишу SHIFT и щелкните правой кнопкой мыши значок **Excel** , чтобы получить доступ к параметру **Запуск от имени другого пользователя** .  
   
 1.  На вкладке «Данные» в Excel щелкните **«Из других источников**», затем щелкните **«Из служб Analysis Services**». Введите имя сервера, а затем выберите куб или перспективу для запроса.  
   
@@ -120,7 +129,7 @@ caps.handback.revision: 9
   
      Для проверки используйте Excel или SSMS на удаленном компьютере, указывая IP-адрес и порт, используемые экземпляром служб Analysis Services. В случае удачной попытки соединения правила брандмауэра допустимы для экземпляра и экземпляр разрешает удаленные соединения.  
   
-     Кроме того, при использовании протокола TCP/IP для соединения следует помнить, что службы Analysis Services требуют, чтобы подключения клиента исходили из того же домена или доверенного домена. Если соединения проходят через периметр безопасности, вероятнее всего, потребуется настроить доступ по протоколу HTTP. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+     Кроме того, при использовании протокола TCP/IP для соединения следует помнить, что службы Analysis Services требуют, чтобы подключения клиента исходили из того же домена или доверенного домена. Если соединения проходят через периметр безопасности, вероятнее всего, потребуется настроить доступ по протоколу HTTP. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 -   Можно ли подключиться, используя одни средства, но не другие? Проблема может заключаться в неверной версии клиентских библиотек. Получить клиентские библиотеки можно на странице загрузки «Пакет дополнительных компонентов SQL Server».  
   
@@ -128,10 +137,10 @@ caps.handback.revision: 9
   
  [Устранение проблем с возможным подключением для подключений служб SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx). Этот документ был опубликован несколько лет назад, но сведения и методологии по-прежнему актуальны.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Олицетворение (табличные службы SSAS)](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [Олицетворение &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [Создание источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

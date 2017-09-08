@@ -1,23 +1,28 @@
 ---
-title: "Настройка PowerPivot и развертывание решений (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "power-view"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка Power Pivot и развертывание решений (SharePoint 2013) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- power-view
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Настройка PowerPivot и развертывание решений (SharePoint 2013)
-  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)], в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013**, чтобы выполнить следующее.  
+# <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
+  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013** , чтобы выполнить следующее.  
   
 -   Развертывание файлов решения SharePoint.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 14
   
 |Название|Описание|  
 |----------|-----------------|  
-|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013|SharePoint 2013|  
+|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Средство настройки|SharePoint 2010 в сочетании с SharePoint 2010 с пакетом обновления 1 (SP1)|  
   
  **Примечание.** Для выполнения следующих шагов нужно быть администратором фермы. Если вы появится примерно следующее сообщение об ошибке:  
@@ -53,7 +58,7 @@ caps.handback.revision: 14
   
  Необходимо либо выполнить вход с учетной записью, при которой устанавливался SharePoint, либо настроить учетную запись установки в качестве главного администратора сайта центра администрирования SharePoint.  
   
-1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки** и **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013**. Инструмент присутствует в списке, только если на локальном сервере установлен компонент [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint.  
+1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013**. Инструмент присутствует в списке, только если на локальном сервере установлен компонент [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint.  
   
 2.  Выберите **Настройка или восстановление [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint**, а затем нажмите кнопку **ОК**.  
   
@@ -67,11 +72,11 @@ caps.handback.revision: 14
   
     3.  **Парольная фраза.**Введите парольную фразу. При создании новой фермы SharePoint парольная фраза будет использоваться при каждом добавлении нового сервера или приложения в ферму SharePoint. Если ферма уже существует, введите парольную фразу, которая позволяет добавить приложение службы в ферму.  
   
-    4.  **Сервер [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для служб Excel**: введите имя сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint. При развертывании в конфигурации с одиночным сервером последний совпадает с сервером базы данных. `[ServerName]\powerpivot`  
+    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для служб Excel**: введите имя сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint. При развертывании в конфигурации с одиночным сервером последний совпадает с сервером базы данных. `[ServerName]\powerpivot`  
   
     5.  В левом окне выберите **Создание семейства веб-сайтов** . Запишите **URL-адрес сайта** для ссылок на него на следующих шагах. Если сервер SharePoint еще не настроен, мастер настройки по умолчанию выбирает веб-приложение, а для URL-адресов семейства веб-сайтов назначается корень `http://[ServerName]`. Чтобы изменить значения по умолчанию, просмотрите следующие страницы в левом окне: **Создание веб-приложения по умолчанию** и **Развертывание решения веб-приложения**.  
   
-5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в подразделе "Вводимые значения для настройки сервера" раздела [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/ru-ru/d61f49c5-efaa-4455-98f2-8c293fa50046) в этом разделе.  
+5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в подразделе "Вводимые значения для настройки сервера" раздела [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) в этом разделе.  
   
 6.  При необходимости удалите действия, которые не нужно выполнять на данном этапе. Например, при дальнейшей необходимости настройки службы Secure Store щелкните **Настроить службу Secure Store**и снимите флажок **Включить данное действие в список задач**.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 14
   
 8.  Нажмите кнопку **Выполнить** для выполнения всех действий из списка задач. Обратите внимание, что кнопка **Выполнить** становится доступной только после проверки действий. Если кнопка **Выполнить** недоступна, сначала нажмите кнопку **Проверить** .  
   
- Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/ru-ru/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Проверка конфигурации Power Pivot  
  **Службы.**  
@@ -92,13 +97,13 @@ caps.handback.revision: 14
   
 1.  В разделе «Системные параметры» центра администрирования выберите **Управление компонентами фермы**.  
   
-2.  Параметр **Функция интеграции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** должен иметь значение **Активна**.  
+2.  Параметр **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Функция интеграции** должен иметь значение **Активна**.  
   
  **Функция интеграции семейства веб-сайтов:**  
   
 1.  Перейдите к URL-адресу сайта, который был создан средством настройки.  
   
-     Выберите **Параметры**![Параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "Параметры SharePoint"), а затем **Параметры сайта**.  
+     Нажмите кнопку **параметры**![параметры SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint")и нажмите кнопку **параметры сайта**.  
   
      Щелкните **Компоненты коллекции сайтов**.  
   

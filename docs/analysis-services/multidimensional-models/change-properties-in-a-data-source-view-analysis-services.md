@@ -1,31 +1,36 @@
 ---
-title: "Изменение свойств в представлении источника данных (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "понятные имена [службы Analysis Services]"
-  - "имена [службы Analysis Services], представления источников данных"
-  - "просмотр таблиц"
-  - "отображение таблиц"
-  - "представления источников данных [службы Analysis Services], таблицы"
-  - "таблицы [службы Analysis Services], представления источников данных"
+title: "Измените свойства в представлении источника данных (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Изменение свойств в представлении источника данных (службы Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>Изменение свойств в представлении источника данных (службы Analysis Services)
   После определения представления источников данных с помощью мастера представлений источников данных и добавления в представление источника данных таблиц, представлений, именованных вычислений и именованных запросов, может понадобиться изменить свойства, связанные с:  
   
 -   критерием совпадения представления источников данных;  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  Можно также просмотреть метаданные объекта, полученные из источника данных, которые нельзя изменить.  
   
-## Просмотр или изменение свойств представления источников данных  
+## <a name="viewing-or-changing-data-source-view-properties"></a>Просмотр или изменение свойств представления источников данных  
  Свойства представления источника данных, отличающиеся от описания представления источников данных, устанавливаются мастером представлений источников данных при первоначальном определении представления источников данных. В следующей таблице приведен список и описание свойств представления источников данных.  
   
 > [!NOTE]  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 |RetrieveRelationships|Указывает, получаются ли связи из базы данных. Значение по умолчанию — True.|  
 |SchemaRestriction|Указывает ограничения, если такие имеются, для схем, получаемых из источника данных. По умолчанию никаких ограничений схемы не существует.|  
   
-## Просмотр или изменение свойств DataTable  
+## <a name="viewing-or-changing-datatable-properties"></a>Просмотр или изменение свойств DataTable  
  Свойства**DataTable** являются свойствами таблиц, представлений и именованных запросов в представлении источника данных. Эти свойства устанавливаются при добавлении каких-либо из этих объектов к представлению источника данных. В следующей таблице приведен список и описание свойств объектов **DataTable** представления источников данных.  
   
 |Свойство|Description|  
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |Схема|Указывает схему базы данных, применимую для таблицы, представления или именованного запроса. Это свойство нельзя изменить.|  
 |TableType|Указывает тип таблицы для таблицы, представления или именованного запроса. Это свойство нельзя изменить.|  
   
-## Просмотр или изменение свойств DataColumn  
+## <a name="viewing-or-changing-datacolumn-properties"></a>Просмотр или изменение свойств DataColumn  
  Свойства**DataColumn** являются свойствами столбцов таблиц, представлений и именованных запросов в представлении источника данных. Эти свойства устанавливаются при добавлении каких-либо из этих объектов в представление источника данных либо из базовой таблицы, представления, именованного запроса; либо они устанавливаются в том виде, в каком определяются именованным вычислением. В следующей таблице приведен список и описание свойств объектов **DataColumn** представления источников данных.  
   
 |Свойство|Description|  
@@ -80,7 +85,7 @@ caps.handback.revision: 34
 |Длина|Указывает максимальную длину столбца на основании данных в столбце базовой таблицы или представления.|  
 |Название|Указывает имя базового столбца или именованного вычисления. Свойство **Name** используется объектами OLAP и интеллектуального анализа данных при определении атрибутов на основании именованных вычислений. Это свойство можно изменять только для именованных вычислений.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

@@ -1,33 +1,38 @@
 ---
-title: "Обработка секций табличной модели (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обработка секций табличной модели (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46fe768f2176501fc6b15a0f14f0d6bff808b065
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Обработка секций табличной модели (табличные службы SSAS)
+# <a name="process-tabular-model-partitions-ssas-tabular"></a>Обработка секций табличной модели (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Приведенные в этом разделе задачи описывают обработку секций в базе данных model с помощью диалогового окна **Обработка секций** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ###  <a name="bkmk_create_new"></a> Обработка секции  
   
-1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните правой кнопкой мыши таблицу, в которой есть секции для обработки, и выберите пункт **Секции**.  
+1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши таблицу, в которой есть секции для обработки, и выберите пункт **Секции**.  
   
 2.  В диалоговом окне **Секции** на вкладке **Секции**нажмите кнопку «Обработка».  
   
-3.  В диалоговом окне **Обработка секций** выберите один из следующих режимов из списка **Режим**:  
+3.  В диалоговом окне **Обработка секций** выберите один из следующих режимов из списка **Режим** :  
   
     |Режим|Description|  
     |----------|-----------------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 6
   
 4.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Секции табличных моделей (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
  [Создание секций табличной модели и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   

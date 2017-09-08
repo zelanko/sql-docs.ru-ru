@@ -1,24 +1,29 @@
 ---
-title: "Столбцы данных командных событий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "категория событий «Командные события»"
+title: "Команда Events Data Columns | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Столбцы данных командных событий
+# <a name="command-events-data-columns"></a>Столбцы данных командных событий
   В следующей таблице перечислены столбцы данных для данного класса событий в категории событий **Командные события** .  
   
  Категория событий **Командные события** имеет следующие классы событий:  
@@ -66,12 +71,12 @@ caps.handback.revision: 36
 |CPUTime|Указывает количество времени процессора (в миллисекундах), использованное процессом в интервале между событием начала команды и событием конца команды.|  
 |Ошибка|Содержит номер любой ошибки, связанной с командным событием.|  
 |Severity|Содержит уровень серьезности исключения, связанного с командным событием. Возможны следующие значения.<br /><br /> 0 = успешное завершение<br /><br /> 1 = информационное сообщение<br /><br /> 2 = предупреждение<br /><br /> 3 = ошибка|  
-|Успешно |Указывает на успешность или сбой командного события. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
+|Успешно|Указывает на успешность или сбой командного события. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
 |SessionType|Содержит сущность, которая вызвала операцию, связанную с событием конца команды.|  
 |NTDomainName|Содержит учетную запись домена Windows, связанную с командным событием.|  
 |ClientProcessID|Содержит уникальный идентификатор клиентского процесса, связанный с командным событием.|  
   
-## См. также  
- [Категория событий «Командные события»](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>См. также  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

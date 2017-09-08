@@ -1,24 +1,29 @@
 ---
-title: "Использование динамических административных представлений для мониторинга служб Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Используйте динамические административные представления (DMV) для мониторинга служб Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Использование динамических административных представлений для мониторинга служб Analysis Services
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Использование динамических административных представлений для мониторинга служб Analysis Services
   Динамические административные представления служб Analysis Services — это структуры запросов, которые предоставляют сведения о локальных операциях сервера и его состоянии. Структура запроса — это интерфейс для наборов строк схемы, которые возвращают метаданные и сведения об экземпляре служб Analysis Services.  
   
  В большинстве запросов к динамическим административным представлениям используется инструкция **SELECT** и схема **$System** с набором строк схемы XML/A.  
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Если динамическое административное представление недоступно для определенного набора строк, сервер возвращает следующую ошибку: "Тип запроса "\<набор_строк_схемы>" не распознан сервером". Все остальные ошибки указывают на проблемы с синтаксисом.  
+>  Если динамическое административное Представление недоступно для определенного набора строк, то сервер возвращает следующую ошибку: « \<schemarowset > тип запроса не распознан сервером». Все остальные ошибки указывают на проблемы с синтаксисом.  
   
 |Набор строк|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[Набор строк DISCOVER_TRACE_EVENT_CATEGORIES](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Возвращает список доступных категорий.|  
 |[Набор строк DISCOVER_TRACES](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Возвращает список трассировок, работающих в данном соединении.|  
 |[Набор строк DISCOVER_TRANSACTIONS](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Возвращает список транзакций, работающих в данном соединении.|  
-|[Набор строк DISCOVER_XEVENT_TRACE_DEFINITION](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|Возвращает список трассировок xevent, работающих в данном соединении.|  
+|[Набор строк DISCOVER_XEVENT_TRACE_DEFINITION](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Возвращает список трассировок xevent, работающих в данном соединении.|  
 |[Набор строк DMSCHEMA_MINING_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Список отдельных столбцов всех моделей интеллектуального анализа данных, доступных в текущем соединении.|  
 |[Набор строк DMSCHEMA_MINING_FUNCTIONS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Возвращает список функций, поддерживаемых алгоритмами интеллектуального анализа данных на сервере.|  
 |[Набор строк DMSCHEMA_MINING_MODEL_CONTENT](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Возвращает набор строк, состоящий из столбцов, описывающий текущую модель.|  
@@ -163,8 +168,8 @@ ORDER BY TABLE_NAME ASC
 |[Набор строк MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Возвращает полное имя каждого свойства, включая тип свойства, тип данных и другие метаданные.|  
 |[MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Возвращает список наборов, определенных в текущем соединении.|  
   
-## См. также раздел  
- [Руководство по использованию служб SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+## <a name="see-also"></a>См. также раздел  
+ [Руководстве по использованию служб Analysis Services SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [Новый System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Новая функция SYSTEMRESTRICTEDSCHEMA для ограниченных наборов строк и динамических административных представлений](http://go.microsoft.com/fwlink/?LinkId=231885)  
   

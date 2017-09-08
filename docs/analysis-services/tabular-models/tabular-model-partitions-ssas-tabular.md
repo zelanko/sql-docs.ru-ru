@@ -1,26 +1,31 @@
 ---
-title: "Секции табличных моделей (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssms.partitions.partitionmgr.imbi.f1"
+title: "Секции табличных моделей (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssms.partitions.partitionmgr.imbi.f1
 ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Секции табличных моделей (табличные службы SSAS)
+# <a name="tabular-model-partitions-ssas-tabular"></a>Секции табличных моделей (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями и создавать новые секции с помощью диалогового окна **Секции** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В этом разделе описываются секции в развернутой табличной модели базы данных. Дополнительные сведения о создании и управлении секциями во время разработки модели см. в разделе [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
  Разделы данной темы:  
@@ -66,10 +71,10 @@ caps.handback.revision: 11
  Дополнительные сведения о создании ролей при создании моделей с помощью [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] см. в разделе [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md). Дополнительные сведения об управлении членами ролей для развернутых табличных моделей с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. в разделе [Роли табличных моделей (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Параллельная обработка  
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] поддерживает параллельную обработку для таблиц с двумя или более секциями, повышая производительность обработки. Параллельная обработка не имеет параметров конфигурации (см. примечания). Параллельная обработка происходит по умолчанию, когда вы запускаете обработку таблицы или выбираете несколько секций одной и той же таблицы и нажимаете "Обработка". Также вы можете обрабатывать секции таблицы независимо друг от друга.  
+Службы Analysis Services поддерживает параллельную обработку для таблиц с двумя или более секциями, повышающую производительность обработки. Параллельная обработка не имеет параметров конфигурации (см. примечания). Параллельная обработка происходит по умолчанию, когда вы запускаете обработку таблицы или выбираете несколько секций одной и той же таблицы и нажимаете "Обработка". Также вы можете обрабатывать секции таблицы независимо друг от друга.  
   
 > [!NOTE]  
->  Указать, должны ли операции обновления выполняться последовательно или параллельно, можно с помощью параметра свойства **maxParallism** и [команды Sequence (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md). TMSL поддерживается только для табличных моделей 1200.
+>  Указать, должны ли операции обновления выполняться последовательно или параллельно, можно с помощью параметра свойства **maxParallism** и [команды Sequence (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).
 
 > [!NOTE]  
 >  При обнаружении повторной кодировки параллельная обработка может привести к повышенному использованию системных ресурсов. Это связано с тем, что при повторной кодировке потребуется прервать и заново запустить несколько операций над секциями.  

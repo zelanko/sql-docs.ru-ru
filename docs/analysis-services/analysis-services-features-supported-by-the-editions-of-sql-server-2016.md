@@ -1,54 +1,34 @@
 ---
-title: "Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Функции, поддерживаемые различными выпусками SQL Server 2016 служб Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 06/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
 caps.latest.revision: 4
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 3
----
-# Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server 2016
-В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
- Выпуск SQL Server Evaluation доступен для ознакомления в течение 180 дней.  
-  
- Заметки о последнем выпуске см. в разделе [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md). Актуальные сведения о новых возможностях см. в разделе [Новые возможности в службах Analysis Services](../analysis-services/what-s-new-in-analysis-services.md).
-    
- **Оцените SQL Server 2016!**    
-    
- > [![Скачать на странице центра оценки](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Скачайте SQL Server 2016 на странице центра оценки](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
-    
-> ![Значок виртуальной машины Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Разверните виртуальную машину с уже установленным SQL Server 2016](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
-    
-  
- Компоненты, поддерживаемые выпусками Evaluation и Developer, перечислены в разделе SQL Server Enterprise Edition.
-  
- Чтобы перейти к таблице, относящейся к технологии SQL Server, щелкните ссылку на нее: 
- 
- -  [Службы Analysis Services](#SSAS)  
-  
--   [Семантическая модель бизнес-аналитики (многомерная)](#BIMD)  
-  
--   [Семантическая модель бизнес-аналитики (табличная)](#BIT)  
-  
--   [Power Pivot для SharePoint](#PPSP)  
-  
--   [Интеллектуальный анализ данных](#DM)  
-  
--   [Клиенты бизнес-аналитики](#BIC)  
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 064715ecd2a47b3c6034deefb5281f2745a601ae
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
 
-##  <a name="SSAS"></a> Службы Analysis Services  
+---
+# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server 2016
+[!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
+
+В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server 2016 Analysis Services. Возможности, поддерживаемые выпусками Evaluation и Developer Enterprise edition см.
+
+## <a name="analysis-services-servers"></a>Службы Analysis Services (серверы)
   
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
@@ -58,7 +38,21 @@ caps.handback.revision: 3
 |Экземпляры отказоустойчивого кластера AlwaysOn|Да<br /><br /> Количество узлов равно максимуму, поддерживаемому операционной системой|Да<br /><br /> Поддержка 2 узлов|||||Да<br /><br /> Количество узлов равно максимуму, поддерживаемому операционной системой|  
 |Возможности программирования (объекты AMO, ADOMD.Net, OLEDB, XML для аналитики, ASSL, TMSL)|Да|Да|||||Да|  
   
-##  <a name="BIMD"></a> Семантическая модель бизнес-аналитики (многомерная)  
+## <a name="tabular-models"></a>Табличные модели 
+  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|Иерархии|Да|Да|||||Да|  
+|Ключевые показатели эффективности|Да|Да|||||Да|  
+|Перспективы|Да||||||Да|  
+|Переводы|Да|Да|||||Да|  
+|Вычисления DAX, запросы DAX, запросы многомерных выражений|Да|Да|||||Да|  
+|Безопасность на уровне строк|Да|Да|||||Да|  
+|Несколько секций|Да||||||Да|  
+|Режим хранения в памяти|Да|Да|||||Да|  
+|Режим хранения DirectQuery|Да||||||Да|  
+
+## <a name="multidimensional-models"></a>Многомерные модели 
   
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
@@ -76,7 +70,7 @@ caps.handback.revision: 3
 |Детализация|Да|Да|||||Да|  
 |Расширенные типы иерархии (родители-потомки, неоднородные иерархии)|Да|Да|||||Да|  
 |Расширенные измерения (ссылочные измерения, измерения "многие ко многим")|Да|Да|||||Да|  
-|Связанные меры и измерения|Да|Да <sup>2</sup> |||||Да|  
+|Связанные меры и измерения|Да|Да  <sup>2</sup> |||||Да|  
 |Переводы|Да|Да|||||Да|  
 |Aggregations|Да|Да|||||Да|  
 |Несколько секций|Да|Да, до 3|||||Да|  
@@ -94,23 +88,9 @@ caps.handback.revision: 3
 |Выражения мер|Да||||||Да|  
   
  <sup>1</sup> Полуаддитивная мера LastChild поддерживается в выпуске Standard, а другие полуаддитивные меры, например None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren и ByAccount, не поддерживаются. Аддитивные меры, например Sum, Count, Min, Max, и неаддитивные меры (DistinctCount) поддерживаются во всех выпусках.  
-  <sup>2</sup> Выпуск Standard поддерживает связывания мер и измерений в одной базе данных, но не из других баз данных или экземпляров.
-   
-##  <a name="BIT"></a> Семантическая модель бизнес-аналитики (табличная)  
+  <sup>2</sup> standard edition поддерживает связывания меры и измерения в пределах той же базе данных, но не из других баз данных или экземпляров.
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Иерархии|Да|Да|||||Да|  
-|Ключевые показатели эффективности|Да|Да|||||Да|  
-|Перспективы|Да||||||Да|  
-|Переводы|Да|Да|||||Да|  
-|Вычисления DAX, запросы DAX, запросы многомерных выражений|Да|Да|||||Да|  
-|Безопасность на уровне строк|Да|Да|||||Да|  
-|Несколько секций|Да||||||Да|  
-|Режим хранения в памяти|Да|Да|||||Да|  
-|Режим хранения DirectQuery|Да||||||Да|  
-  
-##  <a name="PPSP"></a> Power Pivot для SharePoint  
+## <a name="power-pivot-for-sharepoint"></a>Power Pivot для SharePoint  
   
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
@@ -121,7 +101,7 @@ caps.handback.revision: 3
 |Обновление данных Power Pivot|Да||||||Да|  
 |Веб-каналы данных Power Pivot|Да||||||Да|  
   
-##  <a name="DM"></a> Интеллектуальный анализ данных  
+## <a name="data-mining"></a>Интеллектуальный анализ данных  
   
 |Имя функции|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
@@ -140,23 +120,9 @@ caps.handback.revision: 3
 |Прогнозирование последовательности|Да||||||Да|  
 |Множественные цели прогнозирования для упрощенного алгоритма Байеса, нейронной сети и логистической регрессии|Да||||||Да|  
   
-##  <a name="BIC"></a> Клиенты бизнес-аналитики  
- Следующие клиентские приложения доступны в центре загрузки Майкрософт и предоставляются с целью упростить создание документов бизнес-аналитики, запускаемых в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При размещении этих документов в серверной среде используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], поддерживающий этот тип документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
-  
-|Имя средства|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
-|---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Надстройки интеллектуального анализа данных для Excel и Visio 2010 (.xlsx, .vsdx)|Да|Да|||||Да|  
-|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010 и 2013 (.xlsx)|Да||||||Да|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] (.xlsx)|Да||||||Да|  
-  
-> [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] является надстройкой Excel для создания книг с моделью данных.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] не зависит от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], но для обмена данными и совместной работы с книгами Excel в рамках модели данных SharePoint требуется [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]. Эта функция доступна в составе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
->   
->      В Excel 2016 функция Power Pivot является встроенной, поэтому надстройка Power Pivot более не требуется.  
-> 2.  В таблице выше указаны выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], необходимые для включения этих клиентских средств, но сами инструменты могут обращаться к данным, размещенным в любом выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-  
- ## См. также:  
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
- [Спецификации SQL Server 2016](../Topic/Product%20Specifications%20for%20SQL%20Server%202016.md)   
- [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ ## <a name="see-also"></a>См. также:  
+ [Спецификации SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
+ [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+
+
 

@@ -1,0 +1,214 @@
+---
+title: "+ (Объединение строк) (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 12/06/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- concatenation
+- +
+- string
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- concatenation [SQL Server]
+- string concatenation operators
+- + (string concatenation)
+ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
+caps.latest.revision: 51
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 66f482d424c6be56d89e8ec5b99cff30b2ddab0b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="-string-concatenation-transact-sql"></a>+ (объединение строк) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Оператор в строковом выражении, объединяющий две или более символьных или двоичных строки, два или более столбцов или несколько строк и имен столбцов в одно выражение (строковый оператор).  Например `SELECT 'book'+'case';` возвращает `bookcase`.
+  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+expression + expression  
+```  
+  
+## <a name="arguments"></a>Аргументы  
+ *expression*  
+ Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) какой-либо один из данных типов в символьных и двоичных данных категории типов, за исключением **изображения**, **ntext**, или **текст**типы данных. Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения.  
+  
+ При сцеплении двоичных строк с любыми символами между двоичными строками необходимо использовать явное преобразование в символьные данные. В следующем примере показано, когда `CONVERT`, или `CAST`, должен использоваться с двоичным объединением и когда `CONVERT`, или `CAST`, не должен использоваться.  
+  
+```  
+DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
+SET @mybin1 = 0xFF  
+SET @mybin2 = 0xA5  
+-- No CONVERT or CAST function is required because this example   
+-- concatenates two binary strings.  
+SELECT @mybin1 + @mybin2  
+-- A CONVERT or CAST function is required because this example  
+-- concatenates two binary strings plus a space.  
+SELECT CONVERT(varchar(5), @mybin1) + ' '   
+   + CONVERT(varchar(5), @mybin2)  
+-- Here is the same conversion using CAST.  
+SELECT CAST(@mybin1 AS varchar(5)) + ' '   
+   + CAST(@mybin2 AS varchar(5))  
+  
+```  
+  
+## <a name="result-types"></a>Типы результата  
+ Возвращает тип данных аргумента с самым высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+  
+## <a name="remarks"></a>Замечания  
+ При работе с пустыми строками нулевой длины оператор + (объединение строк) ведет себя иначе, чем при работе со значениями NULL или с неизвестными значениями. Символьная строка символа нулевой длины может быть указана в виде двух одинарных кавычек без каких-либо символов между ними. Двоичная строка нулевой длины может быть указана как 0x без указания каких-либо байтовых значений в шестнадцатеричной константе. При сцеплении строки нулевой длины всегда сцепляются две указанные строки. При работе со строками со значением NULL результат объединения зависит от настроек сеанса. При присоединении нулевого значения к известному значению результатом будет неизвестное значение, объединение строк с нулевым значением также дает нулевое значение, как и в арифметических действиях с нулевыми значениями. Тем не менее, это поведение можно изменить, изменив значение `CONCAT_NULL_YIELDS_NULL` для текущего сеанса. Дополнительные сведения см. в разделе [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
+  
+ Если результат объединения строк превышает предел в 8 000 байт, то он усекается. Однако усечения не произойдет, если хотя бы одна из сцепляемых строк принадлежит к типу больших значений.  
+  
+## <a name="examples"></a>Примеры  
+  
+### <a name="a-using-string-concatenation"></a>A. Использование объединения строк  
+ В следующем примере создается единственный столбец с заголовком `Name` из нескольких символьных столбцов, где за фамилией лица следуют запятая, один пробел и имя того же лица. Результирующий набор сортируется в алфавитном порядке по возрастанию, сначала по фамилии, а затем по имени.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT (LastName + ', ' + FirstName) AS Name  
+FROM Person.Person  
+ORDER BY LastName ASC, FirstName ASC;  
+```  
+  
+### <a name="b-combining-numeric-and-date-data-types"></a>Б. Объединение числовых типов данных и дат  
+ В следующем примере используется `CONVERT` объединяет **числовое** и **даты** типов данных.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
+FROM Sales.SalesOrderHeader  
+WHERE SalesOrderID = 50001;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `------------------------------------------------`  
+  
+ `The order is due on 04/23/2007`  
+  
+ `(1 row(s) affected)`  
+  
+### <a name="c-using-multiple-string-concatenation"></a>В. Использование объединения нескольких строк  
+ Следующий пример сцепляет несколько строк в одну длинную строку для отображения фамилии и первой буквы инициалов вице-президентов в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. После фамилии ставится запятая, а после первой буквы инициалов — точка.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
+FROM Person.Person AS p  
+    JOIN HumanResources.Employee AS e  
+    ON p.BusinessEntityID = e.BusinessEntityID  
+WHERE e.JobTitle LIKE 'Vice%'  
+ORDER BY LastName ASC;  
+GO  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `Name               Title`  
+  
+ `-------------      ---------------`  
+  
+ `Duffy, T.          Vice President of Engineering`  
+  
+ `Hamilton, J.       Vice President of Production`  
+  
+ `Welcker, B.        Vice President of Sales`  
+  
+ `(3 row(s) affected)`  
+ 
+### <a name="d-using-large-strings-in-concatenation"></a>Г. Использование больших строк в объединения
+Следующий пример Сцепляет несколько строк в одну длинную строку, а затем пытается вычислить длину окончательную строку. Окончательный длина результирующего набора является 16000, так как выражение вычисления начинается со значения влево, @x + @z + @y = > (@x + @z) + @y. В этом случае результат (@x + @z) будет усечен до 8000 байт и затем @y добавляется результирующего набора, что делает 16000 длину последней строки. Поскольку @y является строка тип больших значений усечения не произойдет.
+
+```
+DECLARE @x varchar(8000) = replicate('x', 8000)
+DECLARE @y varchar(max) = replicate('y', 8000)
+DECLARE @z varchar(8000) = replicate('z',8000)
+SET @y = @x + @z + @y
+-- The result of following select is 16000
+SELECT len(@y) AS y
+GO
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `y      `  
+  
+ `-------`  
+  
+ `16000`  
+  
+  `(1 row(s) affected)`  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="e-using-string-concatenation"></a>Д. Использование объединения строк  
+ В следующем примере создается единственный столбец под заголовком столбца `Name` из столбцов нескольких знаков, где за фамилией контактного представителя следуют запятая, пробел и имя контактного лица. Результирующий набор сортируется в алфавитном порядке по возрастанию, сначала по фамилии, а затем по имени.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT (LastName + ', ' + FirstName) AS Name  
+FROM DimEmployee  
+ORDER BY LastName ASC, FirstName ASC;  
+```  
+  
+### <a name="f-using-multiple-string-concatenation"></a>Е. Использование объединения нескольких строк  
+ Следующий пример Сцепляет несколько строк в одну длинную строку для отображения фамилии и первой буквы инициалов вице-президентов в образце базы данных. После фамилии ставится запятая, а после первой буквы инициалов — точка.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  
+FROM DimEmployee  
+WHERE Title LIKE '%Vice Pres%'  
+ORDER BY LastName ASC;  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+```  
+Name               Title                                           
+-------------      ---------------  
+Duffy, T.          Vice President of Engineering  
+Hamilton, J.       Vice President of Production  
+Welcker, B.        Vice President of Sales  
+```  
+  
+## <a name="see-also"></a>См. также:  
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
+ [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
+ [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
+ [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
+ [+= &#40; Объединение строк &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+  
+  
+
+
+
+
