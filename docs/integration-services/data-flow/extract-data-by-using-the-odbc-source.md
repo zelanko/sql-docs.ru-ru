@@ -1,25 +1,30 @@
 ---
-title: "Извлечение данных с помощью источника ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Извлечение данных с помощью источника ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 236c2b7caf1ec3ade0a140bfabfc32f3a21a9ea1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Извлечение данных с помощью источника ODBC
+# <a name="extract-data-by-using-the-odbc-source"></a>Извлечение данных с помощью источника ODBC
   Эта процедура описывает, как извлечь данные с использованием источника ODBC. Чтобы добавить и настроить источник ODBC, пакет должен уже содержать не менее одной задачи потока данных.  
   
-### Извлечение данных с использованием ODBC-источника  
+### <a name="to-extract-data-using-an-odbc-source"></a>Извлечение данных с использованием ODBC-источника  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]откройте необходимый пакет служб [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] .  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 8
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также  
- [Редактор источника ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [Редактор источника ODBC (страница "Столбцы")](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [Редактор источника ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>См. также  
+ [Редактор источника ODBC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
+ [Редактор источника ODBC &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [Редактор источника ODBC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

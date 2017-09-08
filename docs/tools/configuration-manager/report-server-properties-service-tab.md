@@ -1,25 +1,30 @@
 ---
-title: "Свойства сервера отчетов (вкладка &#171;Службы&#187;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства сервера (вкладка «службы») отчета | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37d55395dbd3692c4853f5620360a65bf987b69c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
-# Свойства сервера отчетов (вкладка &#171;Службы&#187;)
+# <a name="report-server-properties-service-tab"></a>Свойства сервера отчетов (вкладка «Службы»)
   Это служба сервера отчетов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значения свойств, выделенные светло-серым цветом, с помощью этого приложения изменить нельзя.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  
  Отображает расположение программных файлов, используемых этой службой.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 22
  **Состояние**  
  Указывает, была ли служба запущена, остановлена или отключена.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Службы SQL Server](../../tools/configuration-manager/sql-server-services.md)  
   
   

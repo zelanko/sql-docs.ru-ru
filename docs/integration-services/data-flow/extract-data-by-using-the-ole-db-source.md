@@ -1,29 +1,34 @@
 ---
-title: "Извлечение данных с помощью источника OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "извлечение данных [службы Integration Services]"
-  - "источники [службы Integration Services], OLE DB"
-  - "источник OLE DB [службы Integration Services]"
+title: "Извлечение данных с помощью источника OLE DB | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Извлечение данных с помощью источника OLE DB
+# <a name="extract-data-by-using-the-ole-db-source"></a>Извлечение данных с помощью источника OLE DB
   Чтобы добавить и настроить источник OLE DB, пакет уже должен иметь по крайней мере одну задачу потока данных.  
   
-### Извлечение данных при помощи источника OLE DB  
+### <a name="to-extract-data-using-an-ole-db-source"></a>Извлечение данных при помощи источника OLE DB  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -39,14 +44,14 @@ caps.handback.revision: 23
   
     -   **Таблица или представление** .   Выберите таблицу или представление в базе данных, с которой соединяется диспетчер соединений OLE DB.  
   
-    -   **Переменная имени представления или имени таблицы**. Выберите пользовательскую переменную, которая содержит имя таблицы или представления в базе данных, с которой соединяется диспетчер соединений OLE DB.  
+    -   **Переменная имени представления или имени таблицы** . Выберите пользовательскую переменную, которая содержит имя таблицы или представления в базе данных, с которой соединяется диспетчер соединений OLE DB.  
   
     -   **Команда SQL** .   Введите команду SQL или нажмите **Создать запрос** , чтобы написать команду SQL при помощи **Построителя запросов**.  
   
         > [!NOTE]  
         >  Команда может включать параметры. Дополнительные сведения см. в разделе [Сопоставления параметров запросов с переменными в компонентах потока данных](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md).  
   
-    -   **Команда SQL из переменной**. Выберите пользовательскую переменную, содержащую команду SQL.  
+    -   **Команда SQL из переменной** . Выберите пользовательскую переменную, содержащую команду SQL.  
   
         > [!NOTE]  
         >  Переменные должны определяться в области той же задачи потока данных, которая содержит источник OLE DB, либо в области того же пакета. Кроме того, переменная должна иметь строковый тип данных.  
@@ -55,7 +60,7 @@ caps.handback.revision: 23
   
 8.  Существует дополнительная возможность обновления имен выходных столбцов путем редактирования значений в списке **Выходной столбец** .  
   
-9. Чтобы настроить выход ошибок, щелкните **Вывод ошибок**. Дополнительные сведения см. в разделе [Настройка вывода ошибок в компоненте потока данных](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. Чтобы настроить выход ошибок, щелкните **Вывод ошибок**. Дополнительные сведения см. в статье [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Можно нажать **Предварительный просмотр** , чтобы просмотреть до 200 строк данных, извлеченных из источника OLE DB.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 23
   
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md)   

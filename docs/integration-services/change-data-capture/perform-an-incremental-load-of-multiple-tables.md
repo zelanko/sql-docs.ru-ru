@@ -1,24 +1,29 @@
 ---
-title: "Выполнение добавочной загрузки нескольких таблиц | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "добавочная загрузка [службы Integration Services], несколько таблиц"
+title: "Добавочная Загрузка нескольких таблиц | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/03/2017
+
 ---
-# Выполнение добавочной загрузки нескольких таблиц
+# <a name="perform-an-incremental-load-of-multiple-tables"></a>Выполнение добавочной загрузки нескольких таблиц
   На диаграмме в разделе [Улучшение добавочных загрузок с помощью системы отслеживания измененных данных](../../integration-services/change-data-capture/change-data-capture-ssis.md)показан базовый пакет, выполняющий добавочную загрузку только для одной таблицы. Однако чаще требуется добавочная загрузка не одной, а нескольких таблиц  
   
  Если выполняется добавочная загрузка нескольких таблиц, некоторые шаги достаточно выполнить один раз для всех таблиц, а другие приходится повторять для каждой исходной таблицы. Существуют следующие режимы выполнения этих шагов в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -27,10 +32,10 @@ caps.handback.revision: 26
   
 -   Использование нескольких задач потока данных в одном пакете.  
   
-## Загрузка нескольких таблиц с помощью родительского пакета и нескольких дочерних пакетов  
+## <a name="loading-multiple-tables-by-using-a-parent-package-and-multiple-child-packages"></a>Загрузка нескольких таблиц с помощью родительского пакета и нескольких дочерних пакетов  
  Для шагов, которые достаточно выполнить один раз, можно использовать родительский пакет. Дочерние пакеты выполнят шаги, которые необходимо повторить для каждой исходной таблицы.  
   
-#### Создание родительского пакета для шагов, которые достаточно выполнить один раз.  
+#### <a name="to-create-a-parent-package-that-performs-those-steps-that-only-have-to-be-done-once"></a>Создание родительского пакета для шагов, которые достаточно выполнить один раз.  
   
 1.  Создайте родительский пакет.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 26
   
 4.  Используйте несколько задач «Выполнение пакета», чтобы выполнить дочерние пакеты для каждой загружаемой таблицы. Передайте конечные точки, вычисленные в родительском пакете, в каждый дочерний пакет с помощью конфигураций переменной родительского пакета.  
   
-     Дополнительные сведения см. в разделах [Задача "Выполнение пакета"](../../integration-services/control-flow/execute-package-task.md) и [Использование значений переменных и параметров в дочернем пакете](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     Дополнительные сведения см. в разделах [Задача "Выполнение пакета"](../../integration-services/control-flow/execute-package-task.md) и [Использование значений переменных и параметров в дочернем пакете](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
-#### Создание дочерних пакетов для шагов, которые нужно выполнить для каждой исходной таблицы  
+#### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Создание дочерних пакетов для шагов, которые нужно выполнить для каждой исходной таблицы  
   
 1.  Создайте дочерний пакет для каждой исходной таблицы.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 26
   
          Пример, демонстрирующий использование этого преобразования для применения операций обновления и удаления, см. в разделе [Применение изменений в назначении](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
-## Загрузка нескольких таблиц с помощью нескольких задач потока данных в одном пакете  
+## <a name="loading-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Загрузка нескольких таблиц с помощью нескольких задач потока данных в одном пакете  
  Можно также использовать один пакет, содержащий отдельную задачу потока данных для каждой загружаемой исходной таблицы.  
   
-#### Загрузка нескольких таблиц с помощью нескольких задач потока данных в одном пакете  
+#### <a name="to-load-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>Загрузка нескольких таблиц с помощью нескольких задач потока данных в одном пакете  
   
 1.  Создайте один пакет.  
   

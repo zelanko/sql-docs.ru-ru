@@ -26,7 +26,7 @@
 ## [Параметры для средства проверки конфигурации системы](check-parameters-for-the-system-configuration-checker.md)  
 ## [Настройка SQL Server в установке Server Core](configure-sql-server-on-a-server-core-installation.md)  
 ## [Установка SQL Server в Server Core](install-sql-server-on-server-core.md)  
-## [Установка SQL Server с помощью мастера установки (программа установки)](install-sql-server-from-the-installation-wizard-setup.md)  
+## [Установка SQL Server с помощью мастера установки (программа установки)](install-sql-server-from-the-installation-wizard-setup.md)
 ## [Установка SQL Server из командной строки](install-sql-server-2016-from-the-command-prompt.md)  
 ## [Установка SQL Server с помощью файла конфигурации](install-sql-server-2016-using-a-configuration-file.md)  
 ## [Установка SQL Server с помощью SysPrep](install-sql-server-using-sysprep.md)  
