@@ -4,137 +4,196 @@ description: "В этом разделе показано, как создать
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 2e23ba46381b1fb80b8ac335f6d7630f02a222bb
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Миграция базы данных SQL Server с Windows и Linux с помощью резервного копирования и восстановления
 
-SQL Server резервного копирования, и функция восстановления рекомендуется использовать для миграции базы данных из SQL Server в Windows до RC2 2017 г. SQL Server в Linux. Этот раздел содержит пошаговые инструкции для этого метода. В этом учебнике рассматриваются следующие задачи:
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-- Загрузите файл резервной копии AdventureWorks на компьютере с ОС Windows
-- Перенос резервного копирования на компьютер Linux
-- Восстановите базу данных с помощью команды Transact-SQL
+SQL Server резервного копирования, и функция восстановления рекомендуется использовать для миграции базы данных из SQL Server в Windows до RC2 2017 г. SQL Server в Linux. В этом учебнике поможет выполнить шаги, необходимые для перемещения базы данных Linux с помощью резервного копирования и восстановления методы.
 
-> [!NOTE] 
-> В этом учебнике предполагается, что вы установили [RC2 2017 г. SQL Server](sql-server-linux-setup.md) и [средств SQL Server](sql-server-linux-setup-tools.md) на целевом сервере Linux.
+> [!div class="checklist"]
+> * Создать файл резервной копии в Windows с помощью SSMS
+> * Установка оболочки Bash в Windows
+> * Перемещение файла резервной копии для Linux в оболочке Bash
+> * Восстановление резервной копии файла в Linux с помощью Transact-SQL
+> * Выполните запрос, чтобы проверка миграции
 
-## <a name="download-the-adventureworks-database-backup"></a>Загрузите резервной копии базы данных AdventureWorks
+## <a name="prerequisites"></a>Предварительные требования
 
-Несмотря на то, что можно использовать те же действия для восстановления любой базы данных, в базе данных AdventureWorks предоставляет хороший пример. Он поставляется в виде существующего файла резервной копии базы данных.
+С этим учебником требуются следующие необходимые компоненты:
 
->[!NOTE] 
-> Чтобы восстановить базу данных SQL Server в Linux, необходимо сделать резервную источника из SQL Server 2014 или SQL Server 2016. Резервное копирование SQL Server номер сборки не может быть больше, чем восстановление SQL Server номер сборки.  
+* Компьютер Windows со следующими:
+  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) установлен.
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) установлен.
+  * Целевой базы данных для миграции.
 
-1. На компьютере Windows, перейдите в раздел [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) и загрузите **Backup.zip полной базы данных Adventure Works 2014**.
+* Компьютер Linux с установлены следующие компоненты:
+  * SQL Server 2017 г., RC2. В разделе примеры использования установки для [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), или [Ubuntu](quickstart-install-connect-ubuntu.md).
+  * SQL Server 2017 г RC2 [средства командной строки](sql-server-linux-setup-tools.md).
 
-   > [!TIP] 
-   > Несмотря на то, что в этом учебнике показано резервного копирования и восстановления между Windows и Linux, можно также использовать браузер в Linux непосредственно загрузить образцы AdventureWorks на компьютер Linux.
+## <a name="create-a-backup-on-windows"></a>Создание резервной копии в Windows
 
-2. Откройте ZIP-файл и извлеките файл AdventureWorks2014.bak в папку на компьютере.
+Существует несколько способов создания файла резервной копии базы данных в Windows. В следующих действиях используется SQL Server Management Studio (SSMS).
 
-## <a name="transfer-the-backup-file-to-linux"></a>Передача файла резервной копии в Linux
+1. Запуск **SQL Server Management Studio** на компьютере Windows.
 
-Чтобы восстановить базу данных, сначала следует перенести файл резервной копии на компьютере Windows на целевом компьютере Linux.
+1. В диалоговом окне соединения введите **localhost**.
 
-1. Для Windows установите оболочку Bash. Существует несколько параметров, включая следующие:
+1. В обозревателе объектов разверните **баз данных**.
 
-   - Загрузите открытой Bash оболочки, такие как [PuTTY](http://www.putty.org/).
-   - Или, в Windows 10 используйте новую [встроенных команд Bash (бета-версия)](https://msdn.microsoft.com/en-us/commandline/wsl/about).
-   - Если вы работаете с Git, используйте [Git Bash оболочки](https://git-scm.com/downloads).
+1. Щелкните правой кнопкой мыши целевой базы данных, выберите **задачи**, а затем нажмите кнопку **создайте резервную копию...** .
 
-2. Откройте оболочку Bash (терминалов) и перейдите в каталог, содержащий **AdventureWorks2014.bak**.
+   ![Использование среды SSMS для создания файла резервной копии](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
-3. Используйте **scp** команду (безопасного копирования), чтобы переместить файл на целевом компьютере Linux. Следующий пример передачи **AdventureWorks2014.bak** для домашнего каталога *user1* на сервере с именем *linuxserver1*.
+1. В **резервное копирование копии базы данных** диалогового окна, убедитесь, что **тип резервной копии** — **полного** и **создать резервную копию на** — **диск**. Обратите внимание, имя и расположение файла. Например, база данных с именем **YourDB** на SQL Server 2016 имеет путь по умолчанию для резервной копии из `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
+
+1. Нажмите кнопку **ОК** в резервную копию базы данных.
+
+> [!NOTE]
+> Другой вариант — выполнить запрос Transact-SQL для создания файла резервной копии. Следующие команды Transact-SQL выполняются те же действия, как предыдущие шаги для базы данных называется **YourDB**:
+>
+> ```sql
+> BACKUP DATABASE [YourDB] TO  DISK =
+> N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak'
+> WITH NOFORMAT, NOINIT, NAME = N'YourDB-Full Database Backup',
+> SKIP, NOREWIND, NOUNLOAD, STATS = 10
+> GO
+> ```
+
+## <a name="install-a-bash-shell-on-windows"></a>Установка оболочки Bash в Windows
+
+Чтобы восстановить базу данных, сначала следует перенести файл резервной копии на компьютере Windows на целевом компьютере Linux. В этом учебнике мы переместите файл в Linux из оболочки Bash (окно терминала) под управлением Windows.
+
+1. Установите на компьютер Windows, которая поддерживает оболочке Bash **scp** (безопасный копирования) и **ssh** команд (удаленного имени входа). Две следующие примеры.
+
+   * [Подсистемы Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * В оболочке Git Bash ([https://git-scm.com/downloads](https://git-scm.com/downloads))
+
+1. Откройте сеанс Bash в Windows.
+
+## <a id="scp"></a>Скопируйте файл резервной копии в Linux
+
+1. В сеансе Bash перейдите в каталог, содержащий файл архива. Например:
 
    ```bash
-   sudo scp AdventureWorks2014.bak user1@linuxserver1:./
+   cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
-   
-   В предыдущем примере можно вместо этого указать IP-адрес вместо имени сервера.
 
-Существует несколько альтернативы использованию scp. Один является применение [Samba](https://help.ubuntu.com/community/Samba) для настройки сетевой папке SMB между Windows и Linux. Пошаговое руководство Ubuntu см. в разделе [Создание сетевой папки через Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). После установки, его можно получить в виде файла сети общую папку из Windows, таких как  **\\ \\machinenameorip\\совместное использование**.
+1. Используйте **scp** команду, чтобы переместить файл на целевом компьютере Linux. Следующий пример передачи **YourDB.bak** для домашнего каталога *user1* на сервер Linux с IP-адресом *192.0.2.9*:
 
-## <a name="move-the-backup-file"></a>Перемещение файла резервной копии
+   ```bash
+   scp YourDB.bak user1@192.0.2.9:./
+   ```
+   ![Команда точку подключения службы](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
-В этот момент файл резервной копии находится на сервере Linux. Перед восстановлением базы данных в SQL Server, резервное копирование необходимо поместить в подкаталоге **/var/opt/mssql**.
+> [!TIP]
+> Существуют альтернативы использованию scp для передачи файлов. Один является применение [Samba](https://help.ubuntu.com/community/Samba) для настройки сетевой папке SMB между Windows и Linux. Пошаговое руководство Ubuntu см. в разделе [Создание сетевой папки через Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). После установки, его можно получить в виде файла сети общую папку из Windows, таких как  **\\ \\machinenameorip\\совместное использование**.
 
-1. Откройте терминал на целевом компьютере Linux с используемой резервной копией.
+## <a name="move-the-backup-file-before-restoring"></a>Переместите файл резервной копии перед восстановлением
 
-2. Перейдите в режим суперпользователя.
+В этот момент файл резервной копии находится на сервер Linux в домашнем каталоге пользователя. Перед восстановлением базы данных в SQL Server, резервное копирование необходимо поместить в подкаталоге **/var/opt/mssql**.
+
+1. В одном сеансе Windows Bash удаленного подключения на целевом компьютере Linux с **ssh**. Следующий пример соединяет компьютер Linux **192.0.2.9** имени пользователя **user1**.
+
+   ```bash
+   ssh user1@192.0.2.9
+   ```
+
+   Команды выполняются на удаленном сервере Linux.
+
+1. Перейдите в режим суперпользователя.
 
    ```bash
    sudo su
    ```
 
-3. Создайте новый каталог резервного копирования. Если каталог уже существует, параметр -p не выполняет никаких действий.
+1. Создайте новый каталог резервного копирования. Если каталог уже существует, параметр -p не выполняет никаких действий.
 
    ```bash
    mkdir -p /var/opt/mssql/backup
    ```
 
-4. Переместите файл резервной копии к этому каталогу. В следующем примере файл резервной копии находится в домашнем каталоге *user1*. Изменить команду, чтобы соответствовать расположение **AdventureWorks2014.bak** на компьютере.
+1. Переместите файл резервной копии к этому каталогу. В следующем примере файл резервной копии находится в домашнем каталоге *user1*. Измените команду, чтобы соответствовать расположение и имя файла резервной копии.
 
    ```bash
-   mv /home/user1/AdventureWorks2014.bak /var/opt/mssql/backup/
+   mv /home/user1/YourDB.bak /var/opt/mssql/backup/
    ```
 
-5. Выход из режима суперпользователя.
+1. Выход из режима суперпользователя.
 
    ```bash
    exit
    ```
 
-## <a name="restore-the-database-backup"></a>Восстановите резервную копию базы данных
+## <a name="restore-your-database-on-linux"></a>Восстановить базу данных в Linux
 
-Восстановление резервной копии, можно использовать команду RESTORE языка Transact-SQL базы данных (TQL).
+Чтобы восстановить резервную копию базы данных, можно использовать **RESTORE DATABASE** команды Transact-SQL (TQL).
 
-> [!NOTE] 
-> В следующих действиях используется средство sqlcmd. Если вы этого еще не установки средства SQL Server, в разделе [Установка SQL Server в Linux](sql-server-linux-setup.md).
+> [!NOTE]
+> В следующих шагах используется **sqlcmd** средства. Если вы этого еще не установки средства SQL Server, в разделе [средства командной строки установки SQL Server в Linux](sql-server-linux-setup-tools.md).
 
-1. В одном терминала, запустите **sqlcmd**. Следующий пример подключается к локальному экземпляру SQL Server с *SA* пользователя. Введите пароль, когда запрос или задайте с помощью параметра -P пароль.
+1. В одном терминала, запустите **sqlcmd**. Следующий пример подключается к локальному экземпляру SQL Server с **SA** пользователя. Пароль при появлении запроса введите или укажите пароль, добавив **-P** параметра.
 
    ```bash
    sqlcmd -S localhost -U SA
    ```
 
-2. После подключения введите следующие **восстановления данных** команды, нажимая клавишу ВВОД после каждой строки. Пример ниже восстановление **AdventureWorks2014.bak** файл из */var/opt/mssql/backup* каталога.
+1. В `>1` введите следующие **RESTORE DATABASE** команды, нажимая клавишу ВВОД после каждой строки (Невозможно скопировать и вставить вся команда несколько строк за один раз). Замените все вхождения `YourDB` с именем базы данных.
 
    ```sql
-   RESTORE DATABASE AdventureWorks
-   FROM DISK = '/var/opt/mssql/backup/AdventureWorks2014.bak'
-   WITH MOVE 'AdventureWorks2014_Data' TO '/var/opt/mssql/data/AdventureWorks2014_Data.mdf',
-   MOVE 'AdventureWorks2014_Log' TO '/var/opt/mssql/data/AdventureWorks2014_Log.ldf'
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
    GO
    ```
 
    Должно появиться сообщение, которое база данных успешно восстановлена.
 
-3. Проверка восстановления путем изменения контекста к базе данных AdventureWorks. 
+1. Проверка восстановления, перечисляя все базы данных на сервере. Восстановленная база данных должна быть указана.
 
    ```sql
-   USE AdventureWorks
+   SELECT Name FROM sys.Databases
    GO
    ```
 
-4. Выполните следующий запрос, содержащий 10 самых популярных продуктов в **Production.Products** таблицы.
+1. Запустите другие запросы перенесенной базы данных. Следующая команда переключает контекст для **YourDB** базы данных и выбирает строки из одного из его таблиц.
 
    ```sql
-   SELECT TOP 10 Name, ProductNumber FROM Production.Product ORDER BY Name
+   USE YourDB
+   SELECT * FROM YourTable
    GO
    ```
 
-![Выходные данные из запроса Production.Products](./media/sql-server-linux-migrate-restore-database/sql-server-linux-adventureworks-query.png)
+1. После завершения с помощью **sqlcmd**, тип `exit`.
+
+1. После завершения работы в удаленном **ssh** сеанса, введите `exit` еще раз.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о других методов переноса базы данных и данных см. в разделе [переноса баз данных в SQL Server в Linux](sql-server-linux-migrate-overview.md). 
+В этом учебнике вы узнали, как для резервного копирования базы данных в Windows и переместите его на сервер Linux, под управлением SQL Server, RC2 2017 г. Узнать, как для:
+> [!div class="checklist"]
+> * Используйте SSMS и Transact-SQL для создания файла резервной копии в Windows
+> * Установка оболочки Bash в Windows
+> * Используйте **scp** для перемещения файлов резервной копии из Windows для Linux
+> * Используйте **ssh** удаленно подключаться к компьютер Linux
+> * Переместить файл резервной копии для подготовки к восстановлению
+> * Используйте **sqlcmd** для выполнения команд Transact-SQL
+> * Восстановите резервную копию базы данных с **RESTORE DATABASE** команды 
+
+Затем исследовать другие сценарии миграции для SQL Server в Linux. 
+
+> [!div class="nextstepaction"]
+>[Перенос баз данных в SQL Server в Linux](sql-server-linux-migrate-overview.md)
 
