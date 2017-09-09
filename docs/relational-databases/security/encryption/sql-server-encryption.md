@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 8c449858a5f72cb7647c32a22b7a5906754d23bf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-encryption"></a>Шифрование SQL Server
@@ -44,7 +44,7 @@ ms.lasthandoff: 07/31/2017
  [Выбор алгоритма шифрования](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  Сведения о выборе эффективного алгоритма шифрования.  
   
- [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  Общие сведения о прозрачном шифровании данных.  
   
  [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  

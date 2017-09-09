@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Защита интеллектуальной собственности SQL Server
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 
 Хранимые процедуры и данные можно зашифровать, но скрыть структуру данных невозможно, и пользователи, у которых есть право на подключение отладчика к серверному процессу, могут получить расшифрованные процедуры и данные из памяти во время выполнения.
 
-Если клиенты не являются администраторами компьютеров, вы можете ограничить их доступ. Вы можете зашифровать резервные копии и файлы данных с помощью [прозрачного шифрования данных](../../relational-databases/security/encryption/transparent-data-encryption-tde.md), а также производить аудит действий всех пользователей. Но администраторы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и администраторы компьютера [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] могут отклонить эти действия.
+Если клиенты не являются администраторами компьютеров, вы можете ограничить их доступ. Вы можете зашифровать резервные копии и файлы данных с помощью [прозрачного шифрования данных](../../relational-databases/security/encryption/transparent-data-encryption.md), а также производить аудит действий всех пользователей. Но администраторы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и администраторы компьютера [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] могут отклонить эти действия.
 
 ## <a name="solution"></a>Решение
 Есть разные способы настройки клиентского доступа к данным без установки [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] на компьютерах клиентов. Самым простым способом является, вероятно, использование [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], где у клиентов нет роли администратора, а также [постоянного шифрования](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Дополнительные сведения об основах работы с [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] см. в статье [Что такое база данных SQL? Введение в базу данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview).  

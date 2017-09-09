@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f07eec3427ee1e691da665323455bb35690dc93a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server"></a>Установка SQL Server
@@ -49,11 +49,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="get-the-installation-media"></a>Получение установочного носителя
 
-Место, откуда можно скачать [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], зависит от выпуска.
-
-- **Выпуски Enterprise, Standard и Express SQL Server** предназначены для использования в рабочей среде. Чтобы получить установочный носитель с выпуском Enterprise или Standard, обратитесь к своему поставщику программного обеспечения. Сведения о приобретении и каталог партнеров Майкрософт можно найти на [веб-сайте приобретения продуктов Майкрософт](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
-
-- **Бесплатные выпуски** доступны на [странице загружаемых файлов SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads).
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>Как установить [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  

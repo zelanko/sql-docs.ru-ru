@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
@@ -42,7 +42,8 @@ ms.lasthandoff: 08/16/2017
 
 - Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .
 
-![примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Заметки о текущем выпуске см. в разделе [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> [!NOTE]
+> Заметки о текущем выпуске приводятся в разделе [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)  
 -  Синтаксис `CREATE OR ALTER <object>` теперь доступен для [процедур](../t-sql/statements/create-procedure-transact-sql.md), [представлений](../t-sql/statements/create-view-transact-sql.md), [функций](../t-sql/statements/create-function-transact-sql.md) и [триггеров](../t-sql/statements/create-trigger-transact-sql.md).
@@ -250,7 +251,7 @@ ms.lasthandoff: 08/16/2017
 
 - Подключения, [использующие множественные активные результирующие наборы (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md), теперь могут получить доступ к таблицам, оптимизированным для памяти, и скомпилированным в собственном коде хранимым процедурам.
 
-- Поддержка [прозрачного шифрования данных](../relational-databases/security/encryption/transparent-data-encryption-tde.md). Если база данных настроена для шифрования, файлы в [файловой группе, оптимизированной для памяти,](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) теперь также шифруются.
+- Поддержка [прозрачного шифрования данных](../relational-databases/security/encryption/transparent-data-encryption.md). Если база данных настроена для шифрования, файлы в [файловой группе, оптимизированной для памяти,](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) теперь также шифруются.
 
 Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).
 

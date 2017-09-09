@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Настройка хранилища оптимизированных для памяти таблиц
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   При наличии четного числа шпинделей файлы контрольных точек будут распределяться равномерно по всем физическим дискам. В SQL Server 2014 так не происходит.  
   
 ## <a name="encryption"></a>Шифрование  
- В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище таблиц, оптимизированных для памяти, будет зашифровано в ходе включения прозрачного шифрования данных в базе данных. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище таблиц, оптимизированных для памяти, будет зашифровано в ходе включения прозрачного шифрования данных в базе данных. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

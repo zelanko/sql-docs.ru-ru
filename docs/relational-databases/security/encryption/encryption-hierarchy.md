@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93c2bdc00890de016ad26a45786e2d3a9fef9c33
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="encryption-hierarchy"></a>Иерархия средств шифрования
@@ -106,7 +106,7 @@ ms.lasthandoff: 06/22/2017
  Симметричный ключ — это ключ, используемый и для шифрования, и для дешифрования данных. Данные при использовании симметричного ключа шифруются и дешифруются быстро, и он вполне подходит для повседневной защиты конфиденциальных данных, хранящихся в базе данных.  
   
 ### <a name="transparent-data-encryption"></a>прозрачное шифрование данных.  
- Прозрачное шифрование данных (TDE) является особым случаем шифрования с использованием симметричного ключа. TDE шифрует всю базу данных, используя симметричный ключ, который называется ключом шифрования базы данных. Ключ шифрования базы данных защищен другими ключами или сертификатами, которые, в свою очередь, защищаются главным ключом базы данных или асимметричным ключом, хранящимся в модуле расширенного управления ключами. Дополнительные сведения см. в разделе [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ Прозрачное шифрование данных (TDE) является особым случаем шифрования с использованием симметричного ключа. TDE шифрует всю базу данных, используя симметричный ключ, который называется ключом шифрования базы данных. Ключ шифрования базы данных защищен другими ключами или сертификатами, которые, в свою очередь, защищаются главным ключом базы данных или асимметричным ключом, хранящимся в модуле расширенного управления ключами. Дополнительные сведения см. в разделе [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>См. также  
  [Обеспечение безопасности SQL Server](../../../relational-databases/security/securing-sql-server.md)  
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
  [Функции безопасности (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Иерархия разрешений (ядро СУБД)](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Иерархия разрешений (компонент Database Engine)](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Защищаемые объекты](../../../relational-databases/security/securables.md)  
   
   
