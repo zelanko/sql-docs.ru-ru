@@ -4,10 +4,10 @@ hide_bc: true
 title: "Документация по Microsoft SQL | Документация Майкрософт"
 description: "Сведения об SQL"
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: b280992dadacae7b54d94ba90caadff878f1cd4c
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: b744860d1899695d83b44860f18755ba97bf6f21
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -209,6 +209,7 @@ ms.lasthandoff: 08/19/2017
                                                 <ul>
                                                     <li><a href="/sql/t-sql/language-reference">T-SQL</a></li>
                                                     <li><a href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">Динамические административные представления</a></li>
+                                                    <li><a href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
                                                     <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
                                             </div>
@@ -246,7 +247,7 @@ ms.lasthandoff: 08/19/2017
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Средства и службы миграции</h4>
                                                 <ul>
                                                     <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Служба миграции базы данных Azure (закрытая предварительная версия)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Помощник по миграции данных</a></li>
+                                                    <li><a href="/sql/dma/dma-overview">Помощник по миграции данных</a></li>
                                                     <li><a href="/sql/ssma/sql-server-migration-assistant">Помощник по миграции SQL Server</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Перенесите свою базу данных в Azure</h4>

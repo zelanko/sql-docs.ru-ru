@@ -142,7 +142,7 @@
             - name: Установить
               href: /sql/sql-server/install/
               homepage: /sql/sql-server/install/planning-a-sql-server-installation
-            - name: База данных Stretch
+            - name: Stretch Database
               href: /sql/sql-server/stretch-database/
               homepage: /sql/sql-server/stretch-database/stretch-database
             - name: Службы Analysis Services
@@ -287,7 +287,7 @@
                     - name: "Типы данных\_XML"
                       href: /sql/analysis-services/xmla/xml-data-types/
                       homepage: /sql/analysis-services/xmla/xml-data-types/xml-data-types-xmla
-            - name: ядро СУБД
+            - name: Компонент Database Engine
               href: /sql/database-engine/
               homepage: /sql/database-engine/sql-server-database-engine-overview
               items:
@@ -348,7 +348,7 @@
                 - name: Производительность
                   href: /sql/integration-services/performance/
                   homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-                - name: Безопасность
+                - name: безопасность
                   href: /sql/integration-services/security/
                   homepage: /sql/integration-services/security/security-overview-integration-services
                 - name: Служба
@@ -458,7 +458,7 @@
                 - name: Работа с отчетами
                   href: /sql/reporting-services/reports/
                   homepage: /sql/reporting-services/reports/reporting-services-reports-ssrs
-                - name: Безопасность
+                - name: безопасность
                   href: /sql/reporting-services/security/
                   homepage: /sql/reporting-services/security/reporting-services-security-and-protection
                 - name: Подписки
@@ -633,7 +633,7 @@
                 - name: Опубликовать
                   href: /sql/relational-databases/replication/publish/
                   homepage: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-                - name: Безопасность
+                - name: безопасность
                   href: /sql/relational-databases/replication/security/
                   homepage: /sql/relational-databases/replication/security/security-overview-replication
                 - name: Транзакционная
@@ -825,7 +825,7 @@
                     - name: Transactions
                       href: /sql/relational-databases/clr-integration-data-access-transactions/
                       homepage: /sql/relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions
-                - name: Безопасность
+                - name: безопасность
                   href: /sql/relational-databases/clr-integration/security/
                   homepage: /sql/relational-databases/clr-integration/security/clr-integration-code-access-security
                   items:
@@ -839,7 +839,7 @@
               href: /sql/relational-databases/native-client/
               homepage: /sql/relational-databases/native-client/sql-server-native-client-programming
               items:
-                - name: Компоненты
+                - name: Функции
                   href: /sql/relational-databases/native-client/features/
                   homepage: /sql/relational-databases/native-client/features/sql-server-native-client-features
                 - name: Приложения
@@ -1007,9 +1007,6 @@
                         - name: безопасность
                           href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
                           homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-        - name: SQL Server Release Notes
-          href: /sql/release-notes/
-          homepage: /sql/release-notes/sql-server-release-notes
         - name: расширения интеллектуального анализа данных
           href: /sql/dmx/
           homepage: /sql/dmx/data-mining-extensions-dmx-reference

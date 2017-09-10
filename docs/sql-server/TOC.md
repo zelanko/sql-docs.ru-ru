@@ -14,17 +14,15 @@
 
 # Заметки о выпуске
 
-## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
-## [Заметки о выпуске SQL Server](../release-notes/sql-server-release-notes.md)
+## [Заметки о выпуске SQL Server](sql-server-release-notes.md)
 ## [Заметки о выпуске для SQL Server 2016](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 Release Notes (Заметки о выпуске SQL Server 2017)](sql-server-2017-release-notes.md)
-
-## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
-## [Заметки о выпуске SQL Server 2012](../release-notes/sql-server-2012-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+## [Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+## [Заметки о выпуске SQL Server 2012](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
 
 # [службы Analysis Services](../analysis-services/analysis-services.md)
 # [Ядро СУБД](../database-engine/sql-server-database-engine-overview.md)
@@ -35,6 +33,7 @@
 # [Службы Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [Помощник по миграции SQL Server](../ssma/sql-server-migration-assistant.md)
-# [База данных Stretch](../sql-server/stretch-database/stretch-database.md)
+# [Помощник по миграции данных](../dma/dma-overview.md)
+# [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Учебные материалы по SQL Server](tutorials-for-sql-server-2016.md)
-# [Отображение локального содержимого в окне справки](../release-notes/sql-server-help-installation.md)
+# [Отображение локального содержимого в окне справки](sql-server-help-installation.md)
