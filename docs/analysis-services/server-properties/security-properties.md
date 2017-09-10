@@ -1,36 +1,41 @@
 ---
-title: "Свойства безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "безопасность [службы Analysis Services], свойства"
-  - "SecurityPackageList, свойство"
-  - "BuiltinAdminsAreServerAdmins, свойство"
-  - "DisableClientImpersonation, свойство"
-  - "ErrorMessageMode, свойство"
-  - "RequiredProtectionLevel, свойство"
-  - "ServiceAccountIsServerAdmin, свойство"
-  - "RequireClientAuthentication, свойство"
+title: "Свойства безопасности | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- security [Analysis Services], properties
+- SecurityPackageList property
+- BuiltinAdminsAreServerAdmins property
+- DisableClientImpersonation property
+- ErrorMessageMode property
+- RequiredProtectionLevel property
+- ServiceAccountIsServerAdmin property
+- RequireClientAuthentication property
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0233cd9c2e9eff5cc776b921e092206524546a52
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства безопасности
+# <a name="security-properties"></a>Свойства безопасности
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера безопасности, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** многомерный и табличный режим сервера  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  **RequireClientAuthentication**  
  Логическое свойство, указывает, требуется ли проверка подлинности клиента.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 15
  Значение по умолчанию False означает, что олицетворение клиента включено.  
   
  **BuiltinAdminsAreServerAdmins**  
- Логическое свойство, указывает, являются ли члены группы администраторов локального компьютера администраторами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Логическое свойство, указывает, являются ли члены группы администраторов локального компьютера администраторами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **ServiceAccountIsServerAdmin**  
  Логическое свойство, указывает, является ли учетная запись службы администратором сервера.  
@@ -67,7 +72,7 @@ caps.handback.revision: 15
  **AdministrativeDataProtection\ RequiredProtectionLevel**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

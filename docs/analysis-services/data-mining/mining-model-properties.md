@@ -1,29 +1,34 @@
 ---
-title: "Свойства модели интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "модели интеллектуального анализа данных [службы Analysis Services], свойства"
-  - "интеллектуальный анализ данных [службы Analysis Services], свойства"
-  - "столбцы [интеллектуальный анализ данных], свойства"
-  - "конструктор интеллектуального анализа данных"
-  - "свойства [интеллектуальный анализ данных]"
+title: "Свойства модели интеллектуального анализа | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], properties
+- data mining [Analysis Services], properties
+- columns [data mining], properties
+- Data Mining Designer
+- properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства модели интеллектуального анализа данных
+# <a name="mining-model-properties"></a>Свойства модели интеллектуального анализа данных
   Модели интеллектуального анализа данных имеют следующие типы свойств.  
   
 -   Свойства, которые наследуются от структуры интеллектуального анализа данных и определяют тип данных и содержимого, используемые моделью.  
@@ -36,7 +41,7 @@ caps.handback.revision: 32
   
  После изменения любого свойства модели необходимо повторно обработать модель с учетом изменений. Повторная обработка необходима даже в том случае, если изменение затрагивает только метаданные, например при добавлении псевдонима столбца или описания.  
   
-## Свойства моделей  
+## <a name="properties-of-models"></a>Свойства моделей  
  В этой таблице описываются свойства, связанные с моделями интеллектуального анализа данных. Кроме того, есть свойства, связанные с отдельными столбцами модели интеллектуального анализа данных.  
   
 |Свойство|Description|  
@@ -47,7 +52,7 @@ caps.handback.revision: 32
 |**Название**|Устанавливает имя модели интеллектуального анализа данных.|  
 |**AllowDrillThrough**|Указывает, включена ли детализация в модели интеллектуального анализа данных.|  
   
-## Свойства столбцов модели  
+## <a name="properties-of-model-columns"></a>Свойства столбцов модели  
  Для каждого столбца в модели интеллектуального анализа данных можно установить следующие свойства, относящиеся к интеллектуальному анализу данных. Значения этих свойств можно установить различными для каждой модели интеллектуального анализа данных в структуре интеллектуального анализа данных.  
   
 |Свойство|Description|  
@@ -58,9 +63,9 @@ caps.handback.revision: 32
 |**SourceColumnID**|Указывает имя столбца структуры интеллектуального анализа данных, на котором основан столбец модели.<br /><br /> Это свойство предназначено только для чтения.|  
 |**Использование**|Устанавливает, как столбец будет использоваться моделью интеллектуального анализа данных.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)   
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   

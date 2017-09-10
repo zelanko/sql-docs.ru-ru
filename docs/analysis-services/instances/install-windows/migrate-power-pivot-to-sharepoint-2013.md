@@ -1,33 +1,38 @@
 ---
-title: "Перенос Power Pivot в SharePoint 2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Перенос Power Pivot для SharePoint 2013 | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0722554c3ebfea2f80bc9643db337dd6d181ef11
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Перенос Power Pivot в SharePoint 2013
+# <a name="migrate-power-pivot-to-sharepoint-2013"></a>Перенос Power Pivot в SharePoint 2013
   
   
  SharePoint 2013 не поддерживает обновление на месте. Однако процедура **обновления присоединением базы данных поддерживается**. Это поведение отличается от обновления до версии SharePoint 2010, при котором клиент может выбрать между двумя базовыми подходами к обновлению: обновление на месте и обновление присоединением базы данных.  
   
- Если имеется установленная версия [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)], интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложения службы из фермы SharePoint 2010 в ферму SharePoint 2013. В этом разделе описаны действия, необходимые, чтобы завершить обновление с переподключением баз данных и миграцию, связанные со службами [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
+ Если имеется установленная версия [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложения службы из фермы SharePoint 2010 в ферму SharePoint 2013. В этом разделе описаны действия, необходимые, чтобы завершить обновление с переподключением баз данных и миграцию, связанные со службами [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
-### Общие сведения о переносе  
+### <a name="migration-overview"></a>Общие сведения о переносе  
   
 |1|2|3|4|  
 |-------|-------|-------|-------|  
@@ -62,9 +67,9 @@ caps.handback.revision: 18
 ##  <a name="bkmk_backup_restore"></a> 2) Резервное копирование, копирование и восстановление баз данных  
  Процесс "Обновление с переподключением баз данных SharePoint" представляет собой последовательность шагов для архивации, копирования и восстановления баз данных содержимого и приложения службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] на ферме SharePoint 2013.  
   
-1.  **Перевод базы данных в режим только чтения.** В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] щелкните правой кнопкой мыши имя базы данных и выберите пункт **Свойства**. На странице **Параметры** установите значение свойства **База данных доступна только для чтения**, равное **True**.  
+1.  **Перевод базы данных в режим только чтения.** В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши имя базы данных и выберите пункт **Свойства**. На странице **Параметры** установите значение свойства **База данных доступна только для чтения** , равное **True**.  
   
-2.  **Создание резервной копии.** Создайте резервную копию каждой базы данных содержимого и базы данных приложения службы, для которых необходимо выполнить перенос в ферму SharePoint 2013. В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] щелкните правой кнопкой мыши имя базы данных, выберите пункт **Задачи**, а затем команду **Создать резервную копию**.  
+2.  **Создание резервной копии.** Создайте резервную копию каждой базы данных содержимого и базы данных приложения службы, для которых необходимо выполнить перенос в ферму SharePoint 2013. В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши имя базы данных, выберите пункт **Задачи**, а затем команду **Создать резервную копию**.  
   
 3.  Скопируйте файлы резервной копии базы данных (BAK) на целевой сервер.  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 18
   
 -   **Подключение баз данных содержимого.**  
   
-     Используйте командлеты PowerShell в консоли управления SharePoint 2013 для подключения перенесенной базы данных содержимого. База данных приложения службы не требует подключения, это необходимо только для баз данных содержимого. ![Содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Содержимое, связанное с PowerShell")  
+     Используйте командлеты PowerShell в консоли управления SharePoint 2013 для подключения перенесенной базы данных содержимого. База данных приложения службы не требует подключения, только баз данных контента: ![содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
@@ -104,7 +109,7 @@ caps.handback.revision: 18
     -   > [!TIP]  
         >  На этом этапе в процессе переноса можно создавать новые расписания для перенесенных книг. Однако эти расписания создаются в новой базе данных приложения службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , а не в базе данных, скопированной из старой фермы SharePoint. Поэтому она не содержит ни одного из старых расписаний. После выполнения следующей процедуры для использования старой базы данных и переноса старых расписаний новые расписания недоступны.  
   
-### Устранение неполадок при попытке подключения баз данных  
+### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Устранение неполадок при попытке подключения баз данных  
  В этом разделе описаны возможные проблемы, обнаруживаемые при подключении базы данных.  
   
 1.  **Ошибки проверки подлинности.** При обнаружении ошибок, связанных с проверкой подлинности, определите, какой режим проверки подлинности используется в исходных веб-приложениях. Ошибка может быть вызвана несовпадением способов проверки подлинности между веб-приложением SharePoint 2013 и веб-приложением SharePoint 2010. Дополнительные сведения см. в разделе [1) Подготовка фермы SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
@@ -130,7 +135,7 @@ caps.handback.revision: 18
   
 -   **Перенос расписаний, вариант 1. Администратор фермы SharePoint**  
   
-    1.  В элементе управления SharePoint 2013 выполните командлет `Set-PowerPivotServiceApplication` с параметром `-StartMigratingRefreshSchedules` для обеспечения автоматического переноса по запросу расписания ![Содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "Содержимое, связанное с PowerShell"). При использовании следующего сценария Windows PowerShell предполагается наличие только одного приложения службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
+    1.  В SharePoint 2013 управления выполните `Set-PowerPivotServiceApplication` командлет с `-StartMigratingRefreshSchedules` для обеспечения автоматического переноса по запросу расписания ![содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое,связанноесPowerShell"). При использовании следующего сценария Windows PowerShell предполагается наличие только одного приложения службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -163,7 +168,7 @@ caps.handback.revision: 18
   
 -   Книги SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] не обновляются автоматически при их использовании в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013. После переноса базы данных содержимого, которая содержит книги 2008 R2, можно использовать книги, но обновление расписаний не происходит.  
   
--   Дополнительные сведения см. в статье [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   Дополнительные сведения см. в статье [Обновление книг и запланированное обновление данных (SharePoint 2013 )](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_additional_resources"></a> Дополнительные ресурсы  
   

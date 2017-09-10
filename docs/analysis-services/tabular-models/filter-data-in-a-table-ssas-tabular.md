@@ -1,34 +1,39 @@
 ---
-title: "Фильтрация данных в таблице (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.notallitemsshowing.f1"
-  - "sql13.asvs.bidtoolset.autofiltermenu.f1"
-  - "sql13.asvs.bidtoolset.customfilterdb.f1"
+title: "Фильтрация данных в таблице (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.notallitemsshowing.f1
+- sql13.asvs.bidtoolset.autofiltermenu.f1
+- sql13.asvs.bidtoolset.customfilterdb.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 310909a6e5f607a9473fca8720d718351ef00476
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Фильтрация данных в таблице (табличные службы SSAS)
+# <a name="filter-data-in-a-table-ssas-tabular"></a>Фильтрация данных в таблице (табличные службы SSAS)
   Чтобы ограничить число строк, загружаемых в таблицу во время импорта данных, можно применить фильтры. После выполнения импорта данных отдельные строки удалить нельзя. Можно применить пользовательские фильтры для отображения строк. Строки, не соответствующие условиям сортировки, скрыты. Фильтрацию можно выполнять по одному или нескольким столбцам. Фильтры добавляются друг к другу, что означает, что каждый дополнительный фильтр основывается на текущем фильтре и еще более ограничивает подмножество данных.  
   
 > [!NOTE]  
 >  Окно предварительного просмотра фильтра ограничивает количество отображаемых значений. При превышении этого ограничения выводится сообщение.  
   
-### Фильтрация данных на основе значений столбцов  
+### <a name="to-filter-data-based-on-column-values"></a>Фильтрация данных на основе значений столбцов  
   
 1.  В конструкторе моделей выберите таблицу и щелкните стрелку в заголовке столбца, по которому необходимо выполнить фильтрацию.  
   
@@ -40,20 +45,20 @@ caps.handback.revision: 13
   
     -   Выберите пункт **Числовые фильтры** или **Текстовые фильтры** (в зависимости от типа столбца), а затем одну из команд операторов сравнения (например, **Равно**) или нажмите кнопку **Настраиваемый фильтр**. В диалоговом окне **Настраиваемый фильтр** создайте фильтр и нажмите кнопку **ОК**.  
   
-### Очистка фильтра для столбца  
+### <a name="to-clear-a-filter-for-a-column"></a>Очистка фильтра для столбца  
   
 1.  Нажмите стрелку в заголовке столбца, для которого необходимо очистить фильтр.  
   
-2.  Щелкните **Снять фильтр с поля: \<имя столбца>**.  
+2.  Нажмите кнопку **снять фильтр с \<имя столбца >**.  
   
-### Очистка всех фильтров для таблицы  
+### <a name="to-clear-all-filters-for-a-table"></a>Очистка всех фильтров для таблицы  
   
 1.  В конструкторе моделей выберите таблицу, для которой необходимо сбросить фильтры.  
   
 2.  В меню **Столбец** выберите пункт **Очистить все фильтры**.  
   
-## См. также  
- [Сортировка и фильтрация данных (табличные службы SSAS)](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>См. также  
+ [Сортировка и фильтрация данных (табличные службы SSAS)](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
  [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   

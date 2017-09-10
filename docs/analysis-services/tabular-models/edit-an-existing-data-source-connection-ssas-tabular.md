@@ -1,26 +1,31 @@
 ---
-title: "Изменение существующего соединения с источником данных (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "Изменение существующего соединения источника данных (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Изменение существующего соединения с источником данных (табличные службы SSAS)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Изменение существующего соединения с источником данных (табличные службы SSAS)
   В этом разделе описано изменение свойств существующего соединения с источником данных в табличной модели.  
   
  После создания соединения с внешним источником данных это соединение можно изменить несколькими способами.  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   Можно изменить таблицы, представления или столбцы, которые получаются из внешнего источника данных.  
   
-## Изменение соединения  
+## <a name="modify-a-connection"></a>Изменение соединения  
  Эта процедура описывает, как изменить соединение с источником данных базы данных. Некоторые параметры для работы с источниками данных зависят от типа источника данных, однако можно легко определить эти различия.  
   
-#### Изменение внешнего источника данных, который используется текущим соединением  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>Изменение внешнего источника данных, который используется текущим соединением  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в меню **Модель** выберите пункт **Существующие соединения**.  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  Если новый источник данных содержит дополнительные таблицы, которых не было в первоначальном источнике данных, то необходимо повторно открыть измененное соединение и добавить эти таблицы.  
   
-## Изменение сопоставлений таблиц и столбцов (привязки)  
+## <a name="edit-table-and-column-mappings-bindings"></a>Изменение сопоставлений таблиц и столбцов (привязки)  
  Эта процедура описывает порядок изменения сопоставлений после изменения источника данных.  
   
-#### Изменение сопоставлений столбцов после изменения источника данных  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>Изменение сопоставлений столбцов после изменения источника данных  
   
 1.  В конструкторе моделей выберите таблицу.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      При сохранении текущего набора свойств таблицы может появиться сообщение, указывающее на необходимость обработки таблиц. Чтобы загрузить обновленные данные в модель, нажмите кнопку **Обработать** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка данных (табличные службы SSAS)](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [Поддерживаемые источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

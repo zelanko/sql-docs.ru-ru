@@ -1,24 +1,29 @@
 ---
-title: "Data Sources Supported (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Поддерживаемые источники данных (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e5457f0c2abf5f1b7cdae5ff2ae57b5298a72d82
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Data Sources Supported (SSAS Tabular)
+# <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   В этом разделе описаны типы источников данных, которые могут использоваться в табличной модели.  
   
 ##  <a name="bkmk_supported_ds"></a> Поддерживаемые источники данных для моделей в памяти  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
 |-|-|-|-|  
 |Source|Версии|Тип файла|Поставщики|  
 |Базы данных Access|Microsoft Access 2010 и более поздних версий|ACCDB или MDB|Поставщик OLE DB для ACE 14|  
-|Реляционные базы данных SQL Server|Microsoft SQL Server 2008 и более поздних версий, Microsoft SQL Server Data Warehouse 2008 и более поздних версий, база данных SQL Microsoft Azure, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Обратите внимание, что система APS ранее была известна как SQL Server Parallel Datawarehouse (PDW). Изначально для подключения к PDW из служб Analysis Services требовался специальный поставщик данных. В SQL Server 2012 он был заменен. Начиная с SQL Server 2012, для подключения к PDW и APS используется SQL Server Native Client. Дополнительные сведения об APS см. на веб-сайте [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(неприменимо)|Поставщик OLE DB для SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server<br /><br /> Поставщик OLE DB для клиента SQL Server Native Client 10.0<br /><br /> Поставщик данных .NET Framework для клиента SQL|  
+|Реляционные базы данных SQL Server|SQL Server 2008 и более поздней версии, данные хранилища SQL Server 2008 и более поздней версии, Azure SQL базы данных, хранилище данных SQL Azure, Analytics Platform System (APS)<br /><br /> <br /><br /> Обратите внимание, что система APS ранее была известна как SQL Server Parallel Datawarehouse (PDW). Изначально для подключения к PDW из служб Analysis Services требовался специальный поставщик данных. В SQL Server 2012 он был заменен. Начиная с SQL Server 2012, для подключения к PDW и APS используется SQL Server Native Client. |(неприменимо)|Поставщик OLE DB для SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server<br /><br /> Поставщик OLE DB для клиента SQL Server Native Client 10.0<br /><br /> Поставщик данных .NET Framework для клиента SQL|  
 |Реляционные базы данных Oracle|Oracle 9i и более поздних версий|(неприменимо)|Поставщик OLE DB для Oracle<br /><br /> Поставщик данных .NET Framework для клиента Oracle<br /><br /> Поставщик данных .NET Framework для SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Реляционные базы данных Teradata|Teradata V2R6 и более поздних версий|(неприменимо)|Поставщик TDOLEDB OLE DB<br /><br /> Поставщик данных .NET для Teradata|  
 |Реляционные базы данных Informix||(неприменимо)|Поставщик OLE DB для Informix|  
@@ -37,7 +42,7 @@ caps.handback.revision: 28
 |Другие реляционные базы данных|(неприменимо)|(неприменимо)|Поставщик OLE DB или драйвер ODBC|  
 |Текстовые файлы|(неприменимо)|TXT, TAB, CSV|Поставщик OLE DB ACE 14 для Microsoft Access|  
 |Файлы Microsoft Excel|Excel 2010 и более поздних версий|XLSX, XLSM, XLSB, XLTX, XLTM|Поставщик OLE DB для ACE 14|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книга|Microsoft SQL Server 2008 и более поздних версий, службы Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (используется только с книгами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], опубликованными на фермах SharePoint с установленным [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)])|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книга|Microsoft SQL Server 2008 и более поздних версий, службы Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (используется только с книгами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованными на фермах SharePoint с установленным [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] )|  
 |Куб служб Analysis Services|Microsoft SQL Server 2008 и более поздних версий, службы Analysis Services|(неприменимо)|ASOLEDB 10|  
 |Веб-каналы данных<br /><br /> (используются для импорта данных из отчетов служб Reporting Services, сервисных документов Atom, Microsoft Azure Marketplace DataMarket и одиночных веб-каналов данных)|Формат Atom 1.0<br /><br /> Любая база данных или документ, который предоставляется как служба данных Windows Communication Foundation (WCF) (ранее служба данных ADO.NET).|ATOMSVC для сервисного документа, определяющего один или несколько потоков<br /><br /> ATOM для документа веб-канала Atom|Поставщик веб-каналов данных Microsoft для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Поставщик данных веб-каналов .NET Framework для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Файлы подключения к базе данных Office||ODC||  
@@ -66,8 +71,9 @@ Microsoft SQL Server    |  2008 и более поздних версий      |
   
 Поставщики OLE DB иногда обеспечивают повышенную производительность для данных большого объема. Если нужно выбрать один из нескольких поставщиков, подходящих для некоторого источника данных, вначале следует проверить работу поставщика OLE DB.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Импорт данных (табличные службы SSAS)](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [Импорт данных (табличные службы SSAS)](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
+

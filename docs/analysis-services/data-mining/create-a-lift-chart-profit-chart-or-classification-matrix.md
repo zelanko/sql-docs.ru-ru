@@ -1,25 +1,30 @@
 ---
-title: "Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Диаграмма точности интеллектуального анализа данных [службы Analysis Services], структуры интеллектуального анализа данных"
+title: "Создать диаграмму точности прогнозов, диаграммы роста прибыли или матрицу классификации | Документы Microsoft"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации
+# <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации
   Диаграмма точности для модели интеллектуального анализа данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создается в пять простых шагов.  
   
 -   Выберите структуру интеллектуального анализа данных, содержащую модели интеллектуального анализа данных, которые нужно сравнить.  
@@ -34,7 +39,7 @@ caps.handback.revision: 20
   
  Эти шаги одинаковы для диаграммы точности прогнозов, диаграммы роста прибыли и матрицы классификации. Далее описываются процедуры настройки общих параметров для этих типов диаграмм. Дополнительные сведения о создании отчета перекрестной проверки см. в разделе [Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-### Откройте структуру интеллектуального анализа данных в конструкторе диаграмм точности  
+### <a name="open-the-mining-structure-in-the-accuracy-chart-designer"></a>Откройте структуру интеллектуального анализа данных в конструкторе диаграмм точности  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте конструктор интеллектуального анализа данных.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 20
   
 3.  Перейдите на вкладку **Диаграмма точности интеллектуального анализа** .  
   
-### Выберите модели интеллектуального анализа данных для включения в диаграмму  
+### <a name="select-mining-models-for-inclusion-in-the-chart"></a>Выберите модели интеллектуального анализа данных для включения в диаграмму  
   
 1.  На вкладке **Диаграмма точности интеллектуального анализа** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]перейдите на вкладку **Выбор входных данных** .  
   
@@ -59,9 +64,9 @@ caps.handback.revision: 20
   
 5.  Щелкните текстовое поле **Прогнозируемое значение** и выберите значение из списка. Если данные в прогнозируемом столбце имеют непрерывный тип, введите в это текстовое поле значение.  
   
-     Дополнительные сведения см. в разделе [Выбор столбца, используемого для тестирования модели интеллектуального анализа ](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md).  
+     Дополнительные сведения см. в разделе [Выбор столбца, используемого для тестирования модели интеллектуального анализа](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md).  
   
-### Выбор проверочных данных  
+### <a name="select-testing-data"></a>Выбор проверочных данных  
   
 1.  На вкладке **Выбор входных данных** страницы **Диаграмма точности интеллектуального анализа** задайте источник данных, который будет использоваться для создания диаграммы. Для этого выберите один из параметров в группе **Выбор набора данных для диаграммы точности**.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  С помощью вкладки **Выбор входных данных** нельзя создавать фильтры для проверочных вариантов модели или структуры интеллектуального анализа данных. Чтобы создать фильтр для модели интеллектуального анализа данных, нужно изменить ее свойство «Фильтр». Дополнительные сведения см. в разделе [Применение фильтра к модели интеллектуального анализа данных](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
   
-### Настройка параметров диаграммы и формирование диаграммы  
+### <a name="configure-chart-settings-and-generate-the-chart"></a>Настройка параметров диаграммы и формирование диаграммы  
   
 1.  На вкладке **Диаграмма точности интеллектуального анализа данных** перейдите на вкладку диаграммы, которую нужно создать.  
   
@@ -110,8 +115,8 @@ caps.handback.revision: 20
      **Доход на единицу**  
      Сумма прибыли, связанная с каждой успешной продажей.  
   
-## См. также  
- [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

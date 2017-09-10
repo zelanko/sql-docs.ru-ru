@@ -1,24 +1,29 @@
 ---
-title: "Столбцы данных событий &#171;Определение состояния сервера&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "категория события «Определение состояния сервера»"
+title: "Состояние сервера столбцы данных событий обнаружения | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Столбцы данных событий &#171;Определение состояния сервера&#187;
+# <a name="discover-server-state-events-data-columns"></a>Столбцы данных событий «Определение состояния сервера»
   Категория событий «Определение состояния сервера» содержит следующие классы событий.  
   
 |**Идентификатор события**|**Имя события**|**Описание события**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 32
   
  В следующих таблицах перечисляются столбцы данных для каждого из этих классов событий.  
   
-## Столбцы данных — класс начала определения состояния сервера  
+## <a name="server-state-discover-begin-classdata-columns"></a>Столбцы данных — класс начала определения состояния сервера  
   
 |||||  
 |-|-|-|-|  
@@ -50,7 +55,7 @@ caps.handback.revision: 32
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , где произошло событие определения состояния сервера.|  
 |RequestProperties|45|9|Содержит свойства текущего запроса XMLA.|  
   
-## Столбцы данных — класс данных определения состояния сервера  
+## <a name="server-state-discover-data-classdata-columns"></a>Столбцы данных — класс данных определения состояния сервера  
   
 |||||  
 |-|-|-|-|  
@@ -65,7 +70,7 @@ caps.handback.revision: 32
 |TextData|42|9|Содержит текстовые данные, связанные с ответом сервера на запрос распознавания.|  
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , где произошло событие определения состояния сервера.|  
   
-## Столбцы данных — класс завершения определения состояния сервера  
+## <a name="server-state-discover-end-classdata-columns"></a>Столбцы данных — класс завершения определения состояния сервера  
   
 |||||  
 |-|-|-|-|  
@@ -88,7 +93,7 @@ caps.handback.revision: 32
 |TextData|42|9|Содержит текстовые данные, связанные с ответом сервера на запрос распознавания.|  
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , где произошло событие определения состояния сервера.|  
   
-## См. также  
- [Категория событий «Определение состояния сервера»](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+## <a name="see-also"></a>См. также  
+ [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

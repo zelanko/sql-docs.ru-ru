@@ -1,68 +1,73 @@
 ---
-title: "Свойства журнала | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize, свойство"
-  - "QueryLogTableName, свойство"
-  - "TraceBackgroundDistributionPeriod, свойство"
-  - "TraceMaxRowsetSize, свойство"
-  - "NullKeyConvertedToUnknown, свойство"
-  - "CrashReportsFolder, свойство"
-  - "TraceDefinitionFile, свойство"
-  - "SQLDumperFlagsOn, свойство"
-  - "KeyErrorLimit, свойство"
-  - "SnapshotDefinitionFile, свойство"
-  - "MinidumpErrorList, свойство"
-  - "ErrorLogFileName, свойство"
-  - "KeyDuplicate, свойство"
-  - "IgnoreDataTruncation, свойство"
-  - "журналы [службы Analysis Services]"
-  - "Enabled, свойство"
-  - "FileSizeMB, свойство"
-  - "TraceFileWriteTrailerPeriod, свойство"
-  - "TraceQueryResponseTextChunkSize, свойство"
-  - "File, свойство"
-  - "FileBufferSize, свойство"
-  - "TraceRowsetBackgroundFlushPeriod, свойство"
-  - "ErrorLogFileSize, свойство"
-  - "TraceRequestParameters, свойство"
-  - "KeyErrorLimitAction, свойство"
-  - "CreateQueryLogTable, свойство"
-  - "LogDir, свойство"
-  - "TraceBackgroundFlushPeriod, свойство"
-  - "TraceFileBufferSize, свойство"
-  - "SQLDumperFlagsOff, свойство"
-  - "QueryLogConnectionString, свойство"
-  - "KeyNotFound, свойство"
-  - "KeyErrorLogFile, свойство"
-  - "TraceReportFQDN, свойство"
-  - "KeyErrorAction, свойство"
-  - "QueryLogFileName, свойство"
-  - "MessageLogs, свойство"
-  - "MiniDumpFlagsOn, свойство"
-  - "SnapshotFrequencySec, свойство"
-  - "QueryLogSampling, свойство"
-  - "CreateAndSendCrashReports, свойство"
-  - "LogDurationSec, свойство"
+title: "Свойства журнала | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства журнала
+# <a name="log-properties"></a>Свойства журнала
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера журналов, список которых приведен в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
-## Общие сведения  
+## <a name="general"></a>Общие сведения  
  **Файл**  
  Строковое свойство, идентифицирующее имя файла журнала сервера. Данное свойство применяется только в том случае, когда для ведения журнала используется дисковый файл, а не таблица базы данных (настройка по умолчанию).  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Журнал ошибок  
- Эти свойства можно задать на уровне экземпляра сервера, чтобы изменить значения по умолчанию для конфигурации обработки ошибок, которые применяются в других средствах и конструкторах. Дополнительные сведения см. в разделах [Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md) и <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>.  
+## <a name="error-log"></a>Журнал ошибок  
+ Эти свойства можно задать на уровне экземпляра сервера, чтобы изменить значения по умолчанию для конфигурации обработки ошибок, которые применяются в других средствах и конструкторах. В разделе [конфигурации ошибок для кубов, секций и обработка измерения &#40; Службы SSAS — многомерные &#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) и <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> для получения дополнительной информации.  
   
  **ErrorLog\ErrorLogFileName**  
  Свойство, используемое в качестве значения по умолчанию во время выполнения операции обработки сервером.  
@@ -84,7 +89,7 @@ caps.handback.revision: 23
  Свойство, используемое в качестве значения по умолчанию во время выполнения операции обработки сервером.  
   
  **ErrorLog\KeyErrorAction**  
- Определяет действие, выполняемое сервером при возникновении ошибки **KeyNotFound**. Допустимые действия для этой ошибки:  
+ Определяет действие, выполняемое сервером при возникновении ошибки **KeyNotFound** . Допустимые действия для этой ошибки:  
   
 -   **ConvertToUnknown** указывает, что сервер должен выделить ключевое значение ошибки неизвестному элементу.  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 23
 -   **StopLogging** сообщает серверу, что он должен остановить запись ошибок в журнал, когда достигается предельное количество ошибок, но при этом продолжить обработку.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- Определяет действие, выполняемое сервером при возникновении ошибки **KeyNotFound**. Допустимые действия для этой ошибки:  
+ Определяет действие, выполняемое сервером при возникновении ошибки **KeyNotFound** . Допустимые действия для этой ошибки:  
   
 -   **IgnoreError** указывает, что сервер должен продолжить обработку, не записывая ошибку в журнал и не учитывая ее при подсчете предельного количества ошибок ключа. Пропуск данной ошибки просто разрешает продолжение обработки без увеличения количества ошибок и вывода ошибки на экран или в файл журнала. Рассматриваемая запись имеет нарушение целостности данных и не может быть добавлена в базу данных. Запись или будет пропущена, или будет добавлена в неизвестный элемент, что определяется свойством **KeyErrorAction** .  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  Свойство, используемое в качестве значения по умолчанию во время выполнения операции обработки сервером.  
   
-## Исключение  
+## <a name="exception"></a>Исключение  
  **Exception\CreateAndSendCrashReports**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## «Черный ящик»  
+## <a name="flight-recorder"></a>«Черный ящик»  
  **FlightRecorder\Enabled**  
  Логическое свойство, указывающее, используется ли функция «черного ящика».  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  Значением по умолчанию для этого свойства является пустая строка, что по умолчанию соответствует файлу FlightRecorderTraceDef.xml.  
   
-## Журнал запросов  
+## <a name="query-log"></a>Журнал запросов  
  **Область применения:** только в многомерном режиме сервера  
   
  **QueryLog\QueryLogFileName**  
@@ -199,7 +204,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  Дополнительные сведения о настройке журнала запросов см. в разделе [Настройка журнала запросов в службах Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
-## Trace  
+## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -230,7 +235,7 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

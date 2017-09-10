@@ -1,47 +1,52 @@
 ---
-title: "Предоставление разрешений объекту источника данных (службы Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.datasources.f1"
-helpviewer_keywords: 
-  - "разрешения на чтение и запись"
-  - "права доступа пользователя [службы Analysis Services], источники данных"
-  - "безопасность [службы Analysis Services], источники данных"
-  - "строки соединения [службы Analysis Services]"
-  - "источники данных [службы Analysis Services], безопасность"
+title: "Предоставление разрешений на объект источника данных (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.datasources.f1
+helpviewer_keywords:
+- read/write permissions
+- user access rights [Analysis Services], data sources
+- security [Analysis Services], data sources
+- connection strings [Analysis Services]
+- data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e64c0b5496352e1336046c4066de1f0cf625462
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Предоставление разрешений объекту источника данных (службы Analysis Services
-  Обычно, большинству пользователей службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] нет необходимости в доступе к источникам данных, которые обуславливают проект службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . обычно пользователи лишь запрашивают данные в рамках базы данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Однако в контексте интеллектуального анализа данных, например выполнения прогнозов, основанных на модели интеллектуального анализа данных, пользователю необходимо соединить обучающие данные, полученные моделью интеллектуального анализа данных, с данными, предоставленными пользователем. Для подключения источника данных, содержащего предоставленные пользователем данные, пользователь использует запрос расширений интеллектуального анализа данных, в котором содержится либо предложение [OPENQUERY (DMX)](../Topic/OPENQUERY%20\(DMX\).md), либо предложение [OPENROWSET (DMX)](../Topic/OPENROWSET%20\(DMX\).md).  
+# <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Предоставление разрешений объекту источника данных (службы Analysis Services
+  Обычно, большинству пользователей службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] нет необходимости в доступе к источникам данных, которые обуславливают проект службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . обычно пользователи лишь запрашивают данные в рамках базы данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Однако в контексте интеллектуального анализа данных, например выполнения прогнозов, основанных на модели интеллектуального анализа данных, пользователю необходимо соединить обучающие данные, полученные моделью интеллектуального анализа данных, с данными, предоставленными пользователем. Для подключения источника данных, содержащего предоставленные пользователем данные, пользователь использует запрос расширений интеллектуального анализа данных, в котором содержится либо предложение [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md), либо предложение [OPENROWSET (DMX)](../../dmx/source-data-query-openrowset.md).  
   
  Чтобы выполнить DMX-запрос, соединяющийся с источником данных, пользователю необходимо обладать доступом к объекту источника данных в рамках базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . По умолчанию, только Администраторы Сервера и Базы данных имеют доступ к объектам источника данных. Это значит, что пользователь не может получить доступ к объекту источника данных до тех пор, пока администратор не предоставит ему разрешения.  
   
 > [!IMPORTANT]  
 >  Из соображений безопасности выдача DMX-запросов с использованием открытой строки соединения в предложении OPENROWSET отключена.  
   
-## Настройка Разрешений на чтение источнику данных  
+## <a name="set-read-permissions-to-a-data-source"></a>Настройка Разрешений на чтение источнику данных  
  Роли базы данных может быть отказано в разрешениях на доступ к объекту источника данных, либо предоставлены разрешения на чтение.  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
   
 2.  На вкладке **Доступ к Источнику Данных** , поместите объект источника данных в список **Источник Данных** , а затем выберите **Чтение** в списке **Доступ** для источника данных. Если данный параметр недоступен, проверьте вкладку **Общие** , чтобы проверить, выбран ли Полный Доступ. Если Полный Доступ уже предоставляет разрешение, вы не сможете переопределить разрешения на источнике данных.  
   
-## Работа со строкой соединения, используемой объектом источника данных  
+## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>Работа со строкой соединения, используемой объектом источника данных  
  Источник данных содержит строку соединения, используемую для подключения к основному источнику данных. В такой строке соединения могут указываться следующие параметры:  
   
 -   **Указание имени пользователя и пароля**  
@@ -52,13 +57,13 @@ caps.handback.revision: 38
   
      Если в строке соединения, используемой объектом источника данных, указывается проверка подлинности Windows, то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должны иметь возможность выполнить олицетворение клиента. Если источник данных находится на удаленном компьютере, два компьютера должны быть доверенными для олицетворения с использованием проверки подлинности Kerberos, в противном случае запрос обычно завершается ошибкой. Подробнее см. в разделе [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) .  
   
-     Если клиент не разрешает олицетворение (через значение уровня олицетворения в OLE DB и другие компоненты системы), служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытается создать анонимное соединение к базовому источнику данных. Анонимные соединения к удаленным источникам данных редко являются успешными, так как большинство источников данных не принимает анонимные соединения).    
+     Если клиент не разрешает олицетворение (через значение уровня олицетворения в OLE DB и другие компоненты системы), служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытается создать анонимное соединение к базовому источнику данных. Анонимные соединения к удаленным источникам данных редко являются успешными, так как большинство источников данных не принимает анонимные соединения).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Источники данных в многомерных моделях](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Свойства строки подключения (службы Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
+ [Свойства строки соединения &#40; Службы Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставление настраиваемого доступа к измерению данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   

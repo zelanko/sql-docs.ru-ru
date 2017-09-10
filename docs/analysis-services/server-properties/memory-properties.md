@@ -1,35 +1,40 @@
 ---
-title: "Свойства памяти | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LowMemoryLimit, свойство"
-  - "MinimumAllocatedMemory, свойство"
-  - "MidMemoryPrice, свойство"
-  - "MemoryHeapType, свойство"
-  - "память [службы Analysis Services]"
-  - "DefaultPagesCountToReuse, свойство"
-  - "TotalMemoryLimit, свойство"
-  - "SessionMemoryLimit, свойство"
-  - "VirtualMemoryLimit, свойство"
-  - "WaitCountIfHighMemory, свойство"
-  - "HighMemoryPrice, свойство"
-  - "HeapTypeForObjects, свойство"
+title: "Свойства памяти | Документы Microsoft"
+ms.custom: 
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LowMemoryLimit property
+- MinimumAllocatedMemory property
+- MidMemoryPrice property
+- MemoryHeapType property
+- memory [Analysis Services]
+- DefaultPagesCountToReuse property
+- TotalMemoryLimit property
+- SessionMemoryLimit property
+- VirtualMemoryLimit property
+- WaitCountIfHighMemory property
+- HighMemoryPrice property
+- HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a26f0b5272c12e45ed1bf99c0d297fa7f89773ae
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства памяти
+# <a name="memory-properties"></a>Свойства памяти
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] сначала выделяет небольшой объем памяти, чтобы запросы могли выполняться незамедлительно. Дополнительная память выделяется по мере увеличения числа запросов и рабочей нагрузки. 
   
   С помощью параметров конфигурации можно контролировать пороговые уровни нагрузки, при которых будет выделяться дополнительная память. Например, параметр **HardMemoryLimit** задает принудительное состояние нехватки памяти (по умолчанию этот порог неактивен), при котором запросы отклоняются до тех пор, пока не будет доступно больше ресурсов.
@@ -101,7 +106,7 @@ HardMemoryLimit | Еще одно пороговое значение, при д
 **-1** | Automatic (по умолчанию). Подсистема самостоятельно определяет, что следует использовать.
 **1** | Куча служб Analysis Services.
 **2** | Куча Windows с низкой степенью фрагментации (LFH).
-**5** | Гибридный распределитель. Этот механизм распределения будет использовать кучу LFH Windows для выделения \< = 16 КБ и кучу AS для выделения > 16 КБ. 
+**5** | Гибридный распределитель. Этот механизм распределения будет использовать LFH Windows для \<= выделение 16 КБ и кучи AS для > выделение 16 КБ. 
 **6** | Распределитель Intel TBB. Доступен в службах Analysis Services в SQL Server 2016 с пакетом обновления 1 (SP1) и более поздних версий.
   
   
@@ -136,8 +141,9 @@ HardMemoryLimit | Еще одно пороговое значение, при д
  **WaitCountIfHighMemory**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [Руководство по использованию Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
+  [Руководство по использованию Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
   
+

@@ -1,41 +1,46 @@
 ---
-title: "Свойства хранилища файлов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Income, свойство"
-  - "InitialBonus, свойство"
-  - "PercentScanPerPrice, свойство"
-  - "свойства хранилища файлов"
-  - "BackgroundTrimCost, свойство"
-  - "Tax, свойство"
-  - "PerformanceTrace, свойство"
-  - "MinimumBalance, свойство"
-  - "UnbufferedThreshold, свойство"
-  - "BackgroundTrimAmount, свойство"
-  - "MaximumBalance, свойство"
-  - "MemoryLimitMin, свойство"
-  - "MemoryLimit, свойство"
+title: "Свойства хранилища файлов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Income property
+- InitialBonus property
+- PercentScanPerPrice property
+- FileStore properties
+- BackgroundTrimCost property
+- Tax property
+- PerformanceTrace property
+- MinimumBalance property
+- UnbufferedThreshold property
+- BackgroundTrimAmount property
+- MaximumBalance property
+- MemoryLimitMin property
+- MemoryLimit property
 ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68845b8dc5ff1b025134b227605363607db4b7cf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства хранилища файлов
+# <a name="filestore-properties"></a>свойства хранилища файлов
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера хранилища файлов, перечисленные в следующих таблицах. Эти дополнительные свойства следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** многомерный и табличный режим сервера  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  **MemoryLimit**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
  **UnbufferedThreshold**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Категория модели памяти  
+## <a name="memory-model-category"></a>Категория модели памяти  
  **MemoryModel\Tax**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 19
  **MemoryModel\InitialBonus**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

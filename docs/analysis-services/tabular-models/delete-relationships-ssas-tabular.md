@@ -1,26 +1,31 @@
 ---
-title: "Удаление связей (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Удаление связей (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b71d8acb6016e425d62c49caa536fafaed8404c9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Удаление связей (табличные службы SSAS)
+# <a name="delete-relationships-ssas-tabular"></a>Удаление связей (табличные службы SSAS)
   Удалять существующие связи можно с помощью конструктора моделей в представлении диаграмм или диалогового окна «Управление связями». Сведения об использовании связей в табличных моделях см. в разделе [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
-## Замечания об удалении связей  
+## <a name="considerations-for-deleting-relationships"></a>Замечания об удалении связей  
  Принимая решение об удалении связи, необходимо учитывать следующие моменты.  
   
 -   Отменить удаление связи невозможно. Можно создать связь повторно, но это действие потребует полного пересчета формул в модели. Таким образом, перед удалением связи всегда нужно сначала проверить, не используется ли она в формулах.  
@@ -31,15 +36,15 @@ caps.handback.revision: 13
   
 -   Помимо изменения результатов сводной таблицы и формулы, операции создания и удаления связей приводят к пересчету книги, что может занять некоторое время.  
   
-## Удаление связей  
+## <a name="delete-relationships"></a>Удаление связей  
   
-#### Удаление связи с помощью представления диаграммы  
+#### <a name="to-delete-a-relationship-by-using-diagram-view"></a>Удаление связи с помощью представления диаграммы  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в меню **Модель** укажите **Представление модели**и выберите пункт **Представление диаграммы**.  
   
 2.  Правой кнопкой мыши щелкните линию связи между двумя таблицами и выберите команду **Удалить**.  
   
-#### Удаление связи с помощью диалогового окна «Управление связями»  
+#### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>Удаление связи с помощью диалогового окна «Управление связями»  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]выберите меню **Таблица** и выберите команду **Управление связями**.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 13
   
 4.  В диалоговом окне **Управление связями** нажмите кнопку **Закрыть**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
  [Создание связи между двумя таблицами (табличные службы SSAS)](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   

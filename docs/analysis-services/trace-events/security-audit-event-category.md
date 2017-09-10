@@ -1,26 +1,31 @@
 ---
-title: "Категория событий &#171;Аудит безопасности&#187; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Security Audit, категория событий [SQL Server]"
-  - "классы событий [службы Analysis Services], аудит безопасности"
-  - "события безопасности [службы Analysis Services]"
+title: "Категория событий Security Audit | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [Analysis Services], security audit
+- security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb384601c49088675c25547b3ae7dc21b4510380
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Категория событий &#171;Аудит безопасности&#187;
+# <a name="security-audit-event-category"></a>Категория событий «Аудит безопасности»
   Категория событий «Аудит безопасности» содержит классы событий, описанные в следующей таблице:  
   
 |Класс событий|Идентификатор события|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 25
   
  Дополнительные сведения о столбцах, связанных с каждым из классов событий «Аудит безопасности», см. в разделе [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "Создание и настройка коллекции Power Pivot | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание и настройка коллекции Power Pivot | Документы Microsoft"
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание и настройка коллекции Power Pivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекция — это специальный тип библиотеки документов SharePoint. Она предлагает широкие возможности для просмотра опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], и управления ими.  
+# <a name="create-and-customize-power-pivot-gallery"></a>Создание и настройка коллекции Power Pivot
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекция — это специальный тип библиотеки документов SharePoint. Она предлагает широкие возможности для просмотра опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , и управления ими.  
   
 ##  <a name="bkmk_top"></a> В этом разделе  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 16
     >  Для коллекции Power Pivot требуется Microsoft Silverlight.  Браузер Microsoft Edge не поддерживает Silverlight.   
     > Чтобы просмотреть содержание библиотеки в Edge, щелкните вкладку **Библиотека** в коллекции Power Pivot, а затем измените представление библиотеки документов на **Все документы**.    
     > Чтобы изменить представление по умолчанию, щелкните вкладку **Библиотека** и щелкните "Изменить представление". Щелкните "Сделать представлением по умолчанию", а затем "ОК", чтобы сохранить представление по умолчанию.  
-    >  Дополнительную информацию о том, что поддерживается в Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Дополнительную информацию о том, что поддерживается в Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Для создания библиотеки необходимо быть владельцем сайта, на котором она создается.  
   
@@ -51,12 +56,12 @@ caps.handback.revision: 16
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не может находиться на ограниченном сайте. Родительский сайт, который содержит галерею [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , должен быть добавлен либо в перечень доверенных сайтов, либо в зону "Местная интрасеть".  
   
--   Для приложения необходимо развернуть решение веб-приложения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и активировать функцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для семейства веб-сайтов. Дополнительные сведения см. в статьях [Развертывание решений PowerPivot в SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) и [Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md).  
+-   Для приложения необходимо развернуть решение веб-приложения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и активировать функцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для семейства веб-сайтов. Дополнительные сведения см. в статьях [Развертывание решений PowerPivot в SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md) и[Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Для просмотра или создания отчета Reporting Services, созданного на основе книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , книга и отчет должны находиться в одной библиотеке галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Используемая в отчете книга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] должна содержать внедренные данные или не более одного внешнего источника данных, представляющего собой книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="overview"></a> Обзор  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] является шаблоном библиотеки, который доступен при установке [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] на сервере SharePoint. Коллекция [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] позволяет получить не только точное предварительное отображение содержимого файла, но и факты о происхождении документа. Можно быстро просмотреть, кто создал документ и когда он был изменен в последний раз. Чтобы создать изображения для предварительного просмотра, коллекция [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] использует службу моментальных снимков, которая может считывать книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и отчеты служб Reporting Services, содержащие данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Если опубликовать файл, который служба моментальных снимков не может прочитать, то для этого файла будет недоступно изображение просмотра.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] является шаблоном библиотеки, который доступен при установке [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] на сервере SharePoint. Коллекция [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] позволяет получить не только точное предварительное отображение содержимого файла, но и факты о происхождении документа. Можно быстро просмотреть, кто создал документ и когда он был изменен в последний раз. Чтобы создать изображения для предварительного просмотра, коллекция [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] использует службу моментальных снимков, которая может считывать книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и отчеты служб Reporting Services, содержащие данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если опубликовать файл, который служба моментальных снимков не может прочитать, то для этого файла будет недоступно изображение просмотра.  
   
  Изображение предварительного просмотра зависит от способа подготовки книги к просмотру в службах Excel. Представление в галерее [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] должно совпадать с тем, которое появляется при просмотре книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в браузере. Однако область предварительного просмотра ограничена. Чтобы разместить книгу или отчет в доступной области, может потребоваться усечение. Чтобы просмотреть полный документ, может понадобиться открыть книгу или отчет.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 16
   
     3.  Выберите пункт **Коллекция [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** в разделе "Библиотеки".  
   
-    1.  **SharePoint 2013**: щелкните значок "Параметры" ![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.png "Параметры SharePoint"). Щелкните **Содержание сайта**.  
+    1.  **SharePoint 2013**: щелкните значок параметров ![параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint"). Щелкните **Содержание сайта**.  
   
     2.  Щелкните **Добавить приложение**.  
   
@@ -92,13 +97,13 @@ caps.handback.revision: 16
   
  Чтобы настроить внешний вид отображения книги в списке, можно изменить порядок сортировки и фильтры. По умолчанию документы представлены в том порядке, в котором они были внесены в список. Последний внесенный документ отображается сверху. После публикации документ сразу появляется в списке. После обновления и повторной публикации документ занимает новое место в списке.  
   
- Нельзя включить или отключить предварительный просмотр для конкретных документов. Служба моментальных снимков создает изображения для предварительного просмотра всех книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и отчетов служб Reporting Services, основанных на книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], хранящихся в той же библиотеке. Эти изображения могут просматривать все пользователи, имеющие разрешения на просмотр документа.  
+ Нельзя включить или отключить предварительный просмотр для конкретных документов. Служба моментальных снимков создает изображения для предварительного просмотра всех книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и отчетов служб Reporting Services, основанных на книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , хранящихся в той же библиотеке. Эти изображения могут просматривать все пользователи, имеющие разрешения на просмотр документа.  
   
  Нельзя расширить галерею [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , чтобы предоставить предварительный просмотр для документов других типов. Предварительный просмотр поддерживается только для книг Excel 2010 или отчетов служб SQL Server 2008 R2 Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Нельзя изменить параметры, управляющие источниками данных в документе. Данные об отдельных документах, например об авторе или последнем изменении книги, определяются фиксированным набором неизменяемых столбцов.  
   
-#### Изменение порядка сортировки, добавление фильтров или ограничение числа документов  
+#### <a name="change-sort-order-add-filters-or-limit-the-number-of-documents"></a>Изменение порядка сортировки, добавление фильтров или ограничение числа документов  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] всегда отображает значения полей «Последнее обновление» и «Создано». Отключить эти столбцы нельзя. Нельзя сделать доступными другие столбцы для библиотеки. Используйте следующие инструкции для изменения порядка сортировки, добавления фильтра или ограничения числа отображаемых документов.  
   
 1.  На сайте SharePoint откройте коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -120,7 +125,7 @@ caps.handback.revision: 16
 ####  <a name="bkmk_hide_refresh_button"></a> Отключение или скрытие кнопки обновления  
  Кнопку **Управление обновлением данных** скрыть нельзя. Однако кнопка становится недоступной, если пользователь не имеет достаточных разрешений.  
   
- ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.png "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  Владельцы книг или авторы должны иметь разрешение **Участие** , чтобы иметь возможность создавать расписание обновления данных для книги. Пользователи с разрешениями "Участие" могут открывать и изменять страницу конфигурации обновления данных, задавая учетные данные и создавая расписание обновления данных.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 16
 |Все документы|Это стандартный макет всех библиотек документов. Можно выбрать этот режим для управления отдельными документами или просмотра содержимого библиотеки в формате списка.<br /><br /> Это представление служит для изменения свойств, удаления или перемещения отдельных документов.<br /><br /> При включении управления версиями необходимо использовать это представление при добавлении и извлечении документов из библиотеки.|  
 |Режим театра и режим карусели|Эти специализированные режимы рекомендуется использовать при отображении небольшого количества связанных документов. Поворот миниатюр включает все страницы всех документов в библиотеке. При наличии большого количества документов эти режимы не рекомендуется использовать для пользователей, которым необходимо найти или открыть определенную книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Режим театра: область предварительного просмотра центрируется. Миниатюры всех листов меньшего размера отображаются на обеих сторонах в нижней части страницы.<br /><br /> Режим карусели: область предварительного просмотра центрируется. Миниатюры, которые отображаются непосредственно до и после текущей миниатюры, располагаются рядом с областью предварительного просмотра.|  
   
-### Переключение в другое представление  
+### <a name="switch-to-a-different-view"></a>Переключение в другое представление  
   
 1.  На сайте SharePoint откройте коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -147,10 +152,11 @@ caps.handback.revision: 16
   
 3.  В области "Управление представлениями" текущего представления выберите желаемое представление в списке. В число стандартных представлений входят «Галерея», «Театр» и «Карусель». Либо можно выбрать параметр «Все документы», если нужно перемещать, удалять документы или управлять документами в библиотеке.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок установки PowerPivot для SharePoint](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
  [Использование коллекции PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Удаление коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
+

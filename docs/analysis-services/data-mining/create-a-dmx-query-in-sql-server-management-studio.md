@@ -1,31 +1,36 @@
 ---
-title: "Создание DMX-запроса в среде SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "шаблоны [службы Analysis Services], запросы"
-  - "среда SQL Server Management Studio [службы Analysis Services], запросы расширения интеллектуального анализа данных"
-  - "прогнозирования [службы Analysis Services], прогнозирующие запросы расширения интеллектуального анализа данных"
-  - "прогнозы [расширения интеллектуального анализа данных]"
-  - "прогнозирующие запросы [расширения интеллектуального анализа данных]"
-  - "запросы [расширение интеллектуального анализа данных], прогнозирующие запросы"
-  - "модели интеллектуального анализа данных [службы Analysis Services], расширение интеллектуального анализа данных"
+title: "Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services], queries
+- SQL Server Management Studio [Analysis Services], DMX queries
+- predictions [Analysis Services], DMX prediction queries
+- predictions [DMX]
+- prediction queries [DMX]
+- queries [DMX], prediction queries
+- mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание DMX-запроса в среде SQL Server Management Studio
+# <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Создание DMX-запроса в среде SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор возможностей, упрощающих создание прогнозирующих запросов, запросов содержимого и запросов определения данных к моделям интеллектуального анализа данных и структурам интеллектуального анализа данных.  
   
 -   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]доступен графический построитель прогнозирующих запросов, упрощающий написание прогнозирующих запросов и сопоставление наборов данных с моделью.  
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
  Также можно создавать пользовательские шаблоны для часто используемых запросов или команд.  
   
-## Шаблоны XMLA-запросов  
+## <a name="xmla-query-templates"></a>Шаблоны XMLA-запросов  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также предоставляют шаблоны для XMLA-запросов.  
   
  Типы запросов, выполняемые с помощью XML для аналитики и расширений интеллектуального анализа данных, в некоторой степени перекрываются. Например, запросы к содержимому модели можно создавать с помощью расширений интеллектуального анализа данных или с помощью набора строк схемы интеллектуального анализа данных, однако иногда наборы строк схемы содержат данные, которые недоступны DMX-запросам содержимого.  
@@ -58,19 +63,19 @@ caps.handback.revision: 43
   
 ##  <a name="BKMK_Building_Queries"></a> Построение и выполнение DMX-запроса  
   
-#### Откройте окно создания DMX-запроса  
+#### <a name="open-a-new-dmx-query-window"></a>Откройте окно создания DMX-запроса  
   
 1.  Щелкните значок **Создать запрос** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]и выберите пункт **Создать запрос расширений интеллектуального анализа данных сервера анализа данных**.  
   
 2.  В открывшемся диалоговом окне **Подключиться к серверу** выберите экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , содержащий требуемые модели интеллектуального анализа данных.  
   
-#### Откройте обозреватель шаблонов  
+#### <a name="open-template-explorer"></a>Откройте обозреватель шаблонов  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выберите в меню **Вид** пункт **Обозреватель шаблонов**.  
   
 2.  Щелкните значок **Сервер анализа данных** , чтобы просмотреть представление в виде дерева шаблонов, применимых к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-#### Примените шаблон, чтобы построить запрос  
+#### <a name="apply-a-template-to-build-a-query"></a>Примените шаблон, чтобы построить запрос  
   
 -   Щелкните правой кнопкой мыши нужный тип запроса и выберите команду **Открыть**.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 43
   
  [Создание запроса содержимого к модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)  
   

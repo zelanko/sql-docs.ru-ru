@@ -1,112 +1,117 @@
 ---
-title: "Свойства OLAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog, свойство"
-  - "DefaultPageSizeForProp, свойство"
-  - "UseSinglePassForDimSecurityAutoExist, свойство"
-  - "DeepCompressValue, свойство"
-  - "CacheRowsetRows, свойство"
-  - "Income, свойство"
-  - "AggregationNewAlgo, свойство"
-  - "MemoryAdjustFactor, свойство"
-  - "DimensionLatencyAccuracy, свойство"
-  - "InitialBonus, свойство"
-  - "DefaultPageSizeForDataHeader, свойство"
-  - "MaxCPUUsage, свойство"
-  - "DistinctBuffer, свойство"
-  - "PartitionLatencyAccuracy, свойство"
-  - "MaxRetries, свойство"
-  - "UseDataCacheRegistryMultiplyKey, свойство"
-  - "ConvertDeletedToUnknown, свойство"
-  - "DatabaseConnectionPoolMax, свойство"
-  - "DataFileInitEnabled, свойство"
-  - "DefaultPageSizeForHash, свойство"
-  - "MaxRolapOrConditions, свойство"
-  - "UseDataCacheFreeLastPageMemory, свойство"
-  - "OLAP [службы Analysis Services], свойства"
-  - "MapHandleAlgorithm, свойство"
-  - "IndexBuildEnabled, свойство"
-  - "MaxObjectsInParallel, свойство"
-  - "IgnoreNullRolapRows, свойство"
-  - "DimensionPropertyCacheSize, свойство"
-  - "DefaultRefreshInterval, свойство"
-  - "CheckDistinctRecordSortOrder, свойство"
-  - "BufferMemoryLimit, свойство"
-  - "EnableTableGrouping, свойство"
-  - "ExpressNonEmptyUseEnabled, свойство"
-  - "CopyLinkedDataCacheAndRegistry, свойство"
-  - "UseDataSlice, свойство"
-  - "MemoryLimitErrorEnabled, свойство"
-  - "Enabled, свойство"
-  - "EnableRolapOptimization, свойство"
-  - "DatabaseConnectionPoolTimeout, свойство"
-  - "UseDataCacheRegistryHashTable, свойство"
-  - "AggregationsBuildEnabled, свойство"
-  - "Tax, свойство"
-  - "DatabaseConnectionPoolGeneralTimeout, свойство"
-  - "DefaultPageSizeForString, свойство"
-  - "DatabaseConnectionPoolConnectTimeout, свойство"
-  - "MinimumBalance, свойство"
-  - "OptimizeSchema, свойство"
-  - "UseCalculationCacheRegistry, свойство"
-  - "MaxTableDepth, свойство"
-  - "DataSliceInitEnabled, свойство"
-  - "PrefetchLowerGranularities, свойство"
-  - "UseVBANet, свойство"
-  - "BufferRecordLimit, свойство"
-  - "DefaultPageSizeForIndexHeader, свойство"
-  - "MaximumBalance, свойство"
-  - "CalculationCacheRegistryMaxIterations, свойство"
-  - "DefaultDrillthroughMaxRows, свойство"
-  - "IndexBuildThreshold, свойство"
-  - "UseDataCacheRegistry, свойство"
-  - "MemoryAdjustConst, свойство"
-  - "ApplyIntersect, свойство"
-  - "IndexFileInitEnabled, свойство"
-  - "CacheRowsetToDisk, свойство"
-  - "DataCacheRegistryMaxIterations, свойство"
-  - "AllowSEFiltering, свойство"
-  - "ForceMultiPass, свойство"
-  - "ApplySubtract, свойство"
-  - "IndexUseEnabled, свойство"
-  - "AggregationsUseEnabled, свойство"
-  - "DataPlacementOptimization, свойство"
-  - "UseMaterializedIterators, свойство"
-  - "CacheRecordLimit, свойство"
-  - "ROLAPDimensionProcessingEffort, свойство"
-  - "DefaultPageSizeForIndex, свойство"
-  - "EnableRolapDimQueryTableGrouping, свойство"
-  - "DimensionPropertyKeyCache, свойство"
-  - "SleepIntervalSecs, свойство"
-  - "DefaultPageSizeForData, свойство"
-  - "MapFormatMask, свойство"
-  - "CalculationEvaluationPolicy, свойство"
-  - "AggregationMemoryLimitMin, свойство"
-  - "RecordsReportGranularity, свойство"
-  - "MemoryLimit, свойство"
-  - "AggregationMemoryLimitMax, свойство"
+title: "Свойства OLAP | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- AggregationPerfLog property
+- DefaultPageSizeForProp property
+- UseSinglePassForDimSecurityAutoExist property
+- DeepCompressValue property
+- CacheRowsetRows property
+- Income property
+- AggregationNewAlgo property
+- MemoryAdjustFactor property
+- DimensionLatencyAccuracy property
+- InitialBonus property
+- DefaultPageSizeForDataHeader property
+- MaxCPUUsage property
+- DistinctBuffer property
+- PartitionLatencyAccuracy property
+- MaxRetries property
+- UseDataCacheRegistryMultiplyKey property
+- ConvertDeletedToUnknown property
+- DatabaseConnectionPoolMax property
+- DataFileInitEnabled property
+- DefaultPageSizeForHash property
+- MaxRolapOrConditions property
+- UseDataCacheFreeLastPageMemory property
+- OLAP [Analysis Services], properties
+- MapHandleAlgorithm property
+- IndexBuildEnabled property
+- MaxObjectsInParallel property
+- IgnoreNullRolapRows property
+- DimensionPropertyCacheSize property
+- DefaultRefreshInterval property
+- CheckDistinctRecordSortOrder property
+- BufferMemoryLimit property
+- EnableTableGrouping property
+- ExpressNonEmptyUseEnabled property
+- CopyLinkedDataCacheAndRegistry property
+- UseDataSlice property
+- MemoryLimitErrorEnabled property
+- Enabled property
+- EnableRolapOptimization property
+- DatabaseConnectionPoolTimeout property
+- UseDataCacheRegistryHashTable property
+- AggregationsBuildEnabled property
+- Tax property
+- DatabaseConnectionPoolGeneralTimeout property
+- DefaultPageSizeForString property
+- DatabaseConnectionPoolConnectTimeout property
+- MinimumBalance property
+- OptimizeSchema property
+- UseCalculationCacheRegistry property
+- MaxTableDepth property
+- DataSliceInitEnabled property
+- PrefetchLowerGranularities property
+- UseVBANet property
+- BufferRecordLimit property
+- DefaultPageSizeForIndexHeader property
+- MaximumBalance property
+- CalculationCacheRegistryMaxIterations property
+- DefaultDrillthroughMaxRows property
+- IndexBuildThreshold property
+- UseDataCacheRegistry property
+- MemoryAdjustConst property
+- ApplyIntersect property
+- IndexFileInitEnabled property
+- CacheRowsetToDisk property
+- DataCacheRegistryMaxIterations property
+- AllowSEFiltering property
+- ForceMultiPass property
+- ApplySubtract property
+- IndexUseEnabled property
+- AggregationsUseEnabled property
+- DataPlacementOptimization property
+- UseMaterializedIterators property
+- CacheRecordLimit property
+- ROLAPDimensionProcessingEffort property
+- DefaultPageSizeForIndex property
+- EnableRolapDimQueryTableGrouping property
+- DimensionPropertyKeyCache property
+- SleepIntervalSecs property
+- DefaultPageSizeForData property
+- MapFormatMask property
+- CalculationEvaluationPolicy property
+- AggregationMemoryLimitMin property
+- RecordsReportGranularity property
+- MemoryLimit property
+- AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства OLAP
+# <a name="olap-properties"></a>Свойства OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают перечисленные в следующих таблицах свойства сервера OLAP. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** только в многомерном режиме сервера  
   
-## Память  
+## <a name="memory"></a>Память  
  **DefaultPageSizeForData**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 18
  **DefaultPageSizeForProp**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## LazyProcessing  
+## <a name="lazyprocessing"></a>LazyProcessing  
  **Включено**  
  Логическое свойство, которое указывает, включена ли отложенная обработка агрегатов.  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 18
  **MaxRetries**  
  32-разрядное целочисленное свойство со знаком, определяющее число неудачных попыток отложенной обработки, после которого возникает ошибка.  
   
-## ProcessPlan  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 18
  **OptimizeSchema**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## ProactiveCaching  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 18
  **PartitionLatencyAccuracy**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Процесс  
+## <a name="process"></a>Процесс  
  **AggregationMemoryLimitMax**  
  64-разрядное свойство со значением двойной точности с плавающей запятой, определяющее максимальный размер памяти, выделяемой на обработку, в процентах от физической памяти.  
   
@@ -223,7 +228,7 @@ caps.handback.revision: 18
  **BufferRecordLimit**  
  32-разрядное целочисленное свойство со знаком, устанавливающее количество записей, которые можно поместить в буфер во время обработки.  
   
- Значение этого свойства по умолчанию — 1 048 576 (записей).  
+ Значение этого свойства по умолчанию — 1 048 576 (записей).  
   
  **CacheRecordLimit**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -286,7 +291,7 @@ caps.handback.revision: 18
  **ROLAPDimensionProcessingEffort**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Запрос  
+## <a name="query"></a>Запрос  
  **AggregationsUseEnabled**  
  Логическое свойство, которое определяет, будут ли во время выполнения использоваться хранимые агрегаты. Это свойство позволяет отключить агрегаты без изменения статистической схемы и без повторной обработки в целях оценки производительности и получения сведений.  
   
@@ -313,12 +318,12 @@ caps.handback.revision: 18
  **DefaultDrillthroughMaxRows**  
  32-разрядное целочисленное свойство со знаком, которое указывает число строк, возвращаемых детализированным запросом.  
   
- Значение по умолчанию для этого свойства составляет 10 000 (строк).  
+ Значение по умолчанию для этого свойства составляет 10 000 (строк).  
   
  **DimensionPropertyCacheSize**  
  Подписанное 32-разрядное целочисленное свойство, указывающее объем памяти (в байтах), используемой для сохранения в кэше тех элементов измерения, которые применяются в запросе.  
   
- Значение по умолчанию равно 4 000 000 байт (или 4 МБ) на одну иерархию атрибутов, на один активный запрос. Значение по умолчанию обеспечивает хорошо сбалансированный размер кэша для решений со стандартными иерархиями. Однако измерения с очень большим количеством элементов (которые исчисляются миллионами) или глубокие иерархии работают лучше, если увеличить это значение.  
+ Значение по умолчанию равно 4 000 000 байт (или 4 МБ) на одну иерархию атрибутов, на один активный запрос. Значение по умолчанию обеспечивает хорошо сбалансированный размер кэша для решений со стандартными иерархиями. Однако измерения с очень большим количеством элементов (которые исчисляются миллионами) или глубокие иерархии работают лучше, если увеличить это значение.  
   
  Последствия увеличение размера кэша.  
   
@@ -326,7 +331,7 @@ caps.handback.revision: 18
   
      Обратите внимание, что объем памяти, используемый этими кэшами, считается несжимаемым и учитывается при вычислении значения **TotalMemoryLimit**.  
   
--   Затрагивает все базы данных на сервере. Свойство **DimensionPropertyCachesize** распространяется на весь сервер. Изменение этого свойства влияет на все базы данных, которые работают в этом экземпляре.  
+-   Затрагивает все базы данных на сервере. Свойство**DimensionPropertyCachesize** распространяется на весь сервер. Изменение этого свойства влияет на все базы данных, которые работают в этом экземпляре.  
   
  Способ оценки потребностей кэша измерения.  
   
@@ -430,7 +435,7 @@ caps.handback.revision: 18
  **DataCache\ MemoryModel\ Tax**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Задания  
+## <a name="jobs"></a>Задания  
  **ProcessAggregation\ MemoryModel\ Income**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -476,7 +481,7 @@ caps.handback.revision: 18
  **ProcessAggregation\ ProcessProperty\ Tax**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "Мастер формирования схем (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "реляционная схема [службы Analysis Services]"
+title: "Мастер формирования схем (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 789106378805f50a4a27dbb02ace2e8e0943daed
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Мастер формирования схем (службы Analysis Services)
+# <a name="schema-generation-wizard-analysis-services"></a>Мастер формирования схем (службы Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] поддерживает два метода работы с реляционными схемами при определении объектов OLAP в рамках проекта или базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В целом, определение объектов OLAP основано на модели логических данных, созданной в представлении источника данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Такое представление источника данных определяется на основе элементов схемы одного или более источников реляционных данных в соответствии с настройками представления источников данных.  
   
  Можно также сначала определять объекты OLAP, а затем генерировать представление источника данных, источник данных и базовую схему реляционной базы данных, поддерживающую эти объекты OLAP. Эта реляционная база данных называется базой данных предметной области.  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
  В качестве общего правила любые изменения объекта, изначально созданного мастером формирования схем, перезаписываются при последующем повторном формировании объекта мастером формирования схем. Первичным исключением из этого правила является добавление столбцов к таблице, созданной мастером формирования схем. В этом случае мастер формирования схем сохраняет добавленные к таблице столбцы, а также данные в этих столбцах.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В следующей таблице приводятся дополнительные темы, объясняющие принципы работы с мастером формирования схем.  
   
 |Раздел|Description|  
@@ -44,9 +49,9 @@ caps.handback.revision: 16
 |[Основные сведения о схемах баз данных](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|Содержит описание схемы, формируемой для баз данных предметной области и промежуточной области.|  
 |[Основные сведения о добавочном создании](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|Содержит описание возможностей постепенного создания мастера формирования схем.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Источники данных в многомерных моделях](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Поддерживаемые источники данных (службы SSAS — многомерные базы данных)](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Поддерживаемые источники данных (службы SSAS — многомерные базы данных)](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

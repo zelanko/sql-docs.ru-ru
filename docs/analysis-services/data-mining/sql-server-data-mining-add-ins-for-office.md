@@ -1,23 +1,28 @@
 ---
-title: "Надстройки интеллектуального анализа данных SQL Server для Office | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Для Office надстройки интеллектуального анализа данных SQL Server | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Надстройки интеллектуального анализа данных SQL Server для Office
+# <a name="sql-server-data-mining-add-ins-for-office"></a>Надстройки интеллектуального анализа данных SQL Server для Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.  
   
  Мастера и средства управления данными в надстройках предоставляют пошаговые инструкции для выполнения следующих стандартных задач интеллектуального анализа данных.  
@@ -40,7 +45,7 @@ caps.handback.revision: 10
   
      Если базовые навыки работы с интеллектуальным анализом данных отсутствуют, воспользуйтесь мастером **Запрос** для создания прогнозирующих запросов.  
   
-     Опытные пользователи могут создавать пользовательские DMX-запросы с помощью **расширенного редактора запросов** с поддержкой перетаскивания и автоматизировать прогнозы с помощью Excel VBA.  
+     Опытные пользователи могут создавать пользовательские DMX-запросы с помощью **расширенного редактора запросов**с поддержкой перетаскивания и автоматизировать прогнозы с помощью Excel VBA.  
   
 -   **Документирование и управление.** После создания набора данных и построения моделей задокументируйте свою работу и идеи, создав статистическую сводку по данным и параметрам модели.  
   
@@ -52,10 +57,10 @@ caps.handback.revision: 10
   
      Опытные пользователи оценят возможности **трассировки** , которые позволяют просматривать инструкции XMLA и DMX, отправленные на сервере.  
   
-## Приступая к работе  
+## <a name="getting-started"></a>Приступая к работе  
  Дополнительные сведения см. в статье [Состав надстройки интеллектуального анализа данных для Office](http://go.microsoft.com/fwlink/p/?LinkId=616849).  
   
-## Поддержка и требования  
+## <a name="support-and-requirements"></a>Поддержка и требования  
  Надстройки интеллектуального анализа данных SQL Server для Office доступны для бесплатной загрузки. Чтобы использовать эти средства, следует предварительно установить одну из следующих версий Office:  
   
 -   Office 2010, 32- или 64-разрядная версия  
@@ -73,7 +78,7 @@ caps.handback.revision: 10
   
 -   Standard Edition  
   
- В зависимости от выпуска служб SQL Server Analysis Services, с которым устанавливается соединение, некоторые дополнительные алгоритмы могут оказаться недоступными. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ В зависимости от выпуска служб SQL Server Analysis Services, с которым устанавливается соединение, некоторые дополнительные алгоритмы могут оказаться недоступными. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
  Дополнительные сведения об установке см. на этой странице Центра загрузки: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

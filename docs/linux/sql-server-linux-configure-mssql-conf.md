@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql conf
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [Параметры сортировки](#collation) | Задайте новые параметры сортировки для SQL Server в Linux. |
 | [Отзывы пользователей](#customerfeedback) | Выберите ли SQL Server отправляет отзыв в корпорацию Майкрософт. |
+| [Профиль компонента Database Mail](#dbmail) | Настроить почтовый профиль по умолчанию базы данных для SQL Server в Linux |
 | [Каталог данных по умолчанию](#datadir) | Перейдите в каталог по умолчанию для новых файлов данных базы данных SQL Server (.mdf). |
 | [Каталог журнала по умолчанию](#datadir) | Изменение каталога по умолчанию для новых файлов журналов (LDF) базы данных SQL Server. |
 | [Каталог дампа по умолчанию](#dumpdir) | Перейдите в каталог по умолчанию для новых дампы памяти и другие файлы устранения неполадок. |
@@ -214,6 +215,13 @@ ms.lasthandoff: 08/28/2017
     | **Фильтрация** | Отфильтрованные использует основе вычитания разработки, где всю память в процессе будет включен, если не исключены явным образом. Структура понимает внутренних SQLPAL и среде узла, за исключением некоторых регионах из дампа.
     | **Полный** | Полный дамп процесса завершения, включающий все области находится в **/proc/$ pid и сопоставлений**. Это не управляется **coredump.captureminiandfull** параметр. |
 
+## <a id="dbmail"></a>Настроить почтовый профиль по умолчанию базы данных для SQL Server в Linux
+
+**Sqlpagent.databasemailprofile** позволяет установить профиль электронной почты базы данных по умолчанию для оповещений по электронной почте.
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>Высокий уровень доступности
 
 **Hadr.hadrenabled** параметр активирует группы доступности на экземпляре SQL Server. Следующая команда включает группы доступности, задав **hadr.hadrenabled** значение 1. Необходимо перезапустить SQL Server для параметра вступили в силу.

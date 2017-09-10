@@ -1,41 +1,46 @@
 ---
-title: "Технический справочник по упрощенному алгоритму Байеса (Майкрософт) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MINIMUM_DEPENDENCY_PROBABILITY, параметр"
-  - "MAXIMUM_INPUT_ATTRIBUTES, параметр"
-  - "модель упрощенного алгоритма Байеса [службы Analysis Services]"
-  - "классификаторы Байеса"
-  - "упрощенные алгоритмы Байеса [службы Analysis Services]"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES, параметр"
-  - "MAXIMUM_STATES, параметр"
+title: "Технический справочник Майкрософт упрощенный алгоритм Байеса | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MINIMUM_DEPENDENCY_PROBABILITY parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- naive bayes algorithms [Analysis Services]
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91e15d1d56b8d548651c316d3169fc36b4a7fd04
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
+# <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
   Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом классификации, предоставляемым службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
   
-## Реализация упрощенного алгоритма Байеса (Майкрософт)  
+## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Реализация упрощенного алгоритма Байеса (Майкрософт)  
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Алгоритм учитывает все пары значений входного атрибута и выходного атрибута.  
   
  Описание математических свойств теоремы Байеса выходит за рамки данной документации; дополнительные сведения см. в статье Microsoft Research под названием [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=207029)(Обучаемые байесовские сети: сочетание знаний и статистических данных).  
   
  Описание уточнения вероятностей во всех моделях для учета возможных отсутствующих величин см. в разделе [Отсутствующие значения (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
-### Выбор компонентов  
+### <a name="feature-selection"></a>Выбор компонентов  
  Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] проводит автоматический выбор компонентов для уменьшения количества значений, учитываемых при построении модели. Дополнительные сведения см. в разделе [Выбор компонентов (интеллектуальный анализ данных)](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
 |Алгоритм|Метод анализа|Комментарии|  
@@ -50,10 +55,10 @@ caps.handback.revision: 16
   
 -   Для ограничения количества значений, учитываемых для каждого атрибута, следует уменьшить параметр MINIMUM_STATES.  
   
-## Настройка упрощенного алгоритма Байеса  
+## <a name="customizing-the-naive-bayes-algorithm"></a>Настройка упрощенного алгоритма Байеса  
  Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на поведение, производительность и точность получающейся в результате модели интеллектуального анализа. Можно также изменять способ обработки данных в модели, устанавливая на столбцах флаги модели или устанавливая флаги на структуре интеллектуального анализа данных, чтобы задать способы обработки отсутствующих значений столбцов и значений, равных NULL.  
   
-### Задание параметров алгоритма  
+### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
  Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на производительность и точность получающейся в результате модели интеллектуального анализа данных. В следующей таблице содержатся описания всех параметров.  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
@@ -76,7 +81,7 @@ caps.handback.revision: 16
   
  Значение по умолчанию — 100.  
   
-### Флаги моделирования  
+### <a name="modeling-flags"></a>Флаги моделирования  
  Алгоритм деревьев решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает следующие флаги модели. Чтобы задать порядок обработки в ходе анализа значений в каждом столбце, во время создания структуры или модели интеллектуального анализа данных определяются флаги модели. Дополнительные сведения см. в разделе [Флаги моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
 |Флаг моделирования|Description|  
@@ -84,10 +89,10 @@ caps.handback.revision: 16
 |MODEL_EXISTENCE_ONLY|Означает, что столбец будет обрабатываться так, будто у него два возможных состояния: отсутствует и присутствует. NULL означает отсутствие значения.<br /><br /> Применяется к столбцу модели интеллектуального анализа данных.|  
 |NOT NULL|Указывает, что столбец не может принимать значение NULL. Если во время обучения модели службы Analysis Services обнаружат значение NULL, возникнет ошибка.<br /><br /> Применяется к столбцу структуры интеллектуального анализа данных.|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  Древовидная модель упрощенного алгоритма Байеса должна содержать ключевой столбец, входные столбцы и один прогнозируемый столбец. Непрерывные атрибуты не допускаются; если в данных содержатся непрерывные числовые данные, они будут пропущены или дискретизированы.  
   
-### Входные и прогнозируемые столбцы  
+### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице. Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Столбец|Типы содержимого|  
@@ -98,9 +103,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Упрощенный алгоритм Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

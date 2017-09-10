@@ -1,31 +1,36 @@
 ---
-title: "Переименование экземпляра служб Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "экземпляры служб Analysis Services, переименование"
-  - "переименование экземпляров служб Analysis Services"
-  - "имена [службы Analysis Services], переименование экземпляров"
-  - "имена [службы Analysis Services]"
+title: "Переименование экземпляра служб Analysis Services | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- instances of Analysis Services, renaming
+- renaming instances of Analysis Services
+- names [Analysis Services], renaming instances
+- names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 53
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Переименование экземпляра служб Analysis Services
-  Существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно переименовать с помощью средства **переименования экземпляра**, установленного вместе со средой Management Studio (веб-установка).  
+# <a name="rename-an-analysis-services-instance"></a>Переименование экземпляра служб Analysis Services
+  Существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно переименовать с помощью средства **переименования экземпляра** , установленного вместе со средой Management Studio (веб-установка).  
   
 > [!IMPORTANT]  
 >  При переименовании экземпляра средство переименования экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется с расширенными правами доступа, обновляя имя службы Windows, учетные записи безопасности и записи реестра, связанные с этим экземпляром. Чтобы обеспечить выполнение этих действий, не забудьте перед запуском средства выполнить вход от имени администратора локальной системы.  
@@ -35,9 +40,9 @@ caps.handback.revision: 53
 > [!NOTE]  
 >  Средство переименования экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не поддерживается в кластерной среде.  
   
-### Подключение к экземпляру служб Analysis Services  
+### <a name="to-rename-an-instance-of-analysis-services"></a>Подключение к экземпляру служб Analysis Services  
   
-1.  Запустите средство **переименования экземпляра** (**asinstancerename.exe**) из папки C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
+1.  Запустите средство **переименования экземпляра** ( **asinstancerename.exe**) из папки C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio.  
   
 2.  В диалоговом окне **Переименование экземпляра** в списке **Экземпляр для переименования** выберите экземпляр, который необходимо переименовать.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 53
   
      Экземпляр служб Analysis Services будет остановлен и перезапущен в процессе изменения имени.  
   
-### Контрольный список действий после переименования  
+### <a name="post-rename-checklist"></a>Контрольный список действий после переименования  
   
 1.  Чтобы возобновить доступ к базам данных, выполняющимся на переименованном экземпляре, потребуется вручную изменить соединения с данными в Excel или в других клиентских приложениях. Также следует проверить все стандартные соединения, например общие источники данных служб Reporting Services, файлы ODC Excel и файлы подключения семантических моделей бизнес-аналитики, которые могут ссылаться на переименованный экземпляр. Дополнительные сведения см. в разделе [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 53
   
      Это показывается в следующем примере. Предположим, что сервер в табличном режиме установлен как экземпляр под именем «Tabular» с использованием виртуальной учетной записи по умолчанию. При этом конфигурация будет следующей:  
   
-    1.  Имя экземпляра = \<server>\TABULAR  
+    1.  Имя экземпляра = \<server > \TABULAR  
   
     2.  Имя службы = MSOLAP$TABULAR  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 53
   
      Теперь допустим, что экземпляр переименован в «TAB2». В результате изменения имени конфигурация будет выглядеть следующим образом:  
   
-    1.  Имя экземпляра = \<server>\TAB2  
+    1.  Имя экземпляра = \<server > \TAB2  
   
     2.  Имя службы = MSOLAP$TAB2  
   

@@ -1,37 +1,42 @@
 ---
-title: "Создание связи между двумя таблицами (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.createrelatdb.f1"
-  - "sql13.asvs.bidtoolset.managereldb.f1"
+title: "Создать связь между двумя таблицами (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.createrelatdb.f1
+- sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание связи между двумя таблицами (табличные службы SSAS)
+# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Создание связи между двумя таблицами (табличные службы SSAS)
   Если таблицы в источнике данных не участвуют в связях или добавляются новые таблицы, новые связи можно создать с помощью средств конструктора моделей. Сведения об использовании связей в табличных моделях см. в разделе [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
-## Создание связи между двумя таблицами  
+## <a name="create-a-relationship-between-two-tables"></a>Создание связи между двумя таблицами  
   
-#### Создание связи между двумя таблицами в представлении диаграммы (перетаскивание)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-click-and-drag"></a>Создание связи между двумя таблицами в представлении диаграммы (перетаскивание)  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]откройте меню **Модель** , выберите пункт **Представление модели**, а затем пункт **Представление диаграммы**.  
   
 2.  Щелкните (и удерживайте нажатым) столбец в таблице, а затем перетащите указатель в связанный столбец подстановки в связанной таблице подстановки и отпустите кнопку мыши. Связь будет создана автоматически в правильном порядке.  
   
-#### Создание связи между двумя таблицами в представлении диаграммы (щелчок правой кнопкой мыши)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-right-click"></a>Создание связи между двумя таблицами в представлении диаграммы (щелчок правой кнопкой мыши)  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]откройте меню **Модель** , выберите пункт **Представление модели**, а затем пункт **Представление диаграммы**.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 7.  Нажмите кнопку **Создать**.  
   
-#### Создание связи между двумя таблицами в представлении данных  
+#### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Создание связи между двумя таблицами в представлении данных  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]откройте меню **Таблица** и выберите пункт **Создать связи**.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 16
   
 6.  Нажмите кнопку **Создать**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Удаление связей (табличные службы SSAS)](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
  [Связи (табличные службы SSAS)](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   

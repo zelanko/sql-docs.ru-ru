@@ -1,24 +1,29 @@
 ---
-title: "Столбцы данных событий уведомлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "категория событий «События уведомления»"
+title: "Столбцы данных событий уведомлений | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Столбцы данных событий уведомлений
+# <a name="notification-events-data-columns"></a>Столбцы данных событий уведомлений
   События уведомлений — это события, не вызванные непосредственно пользователями служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, уведомления происходят при обновлении пользователями базовых таблиц для упреждающего кэширования.  
   
  В категории событий «События уведомления» есть следующие классы событий:  
@@ -30,7 +35,7 @@ caps.handback.revision: 30
   
  В следующей таблице перечислены столбцы данных для класса событий.  
   
-## Уведомление  
+## <a name="notification"></a>Уведомление  
   
 |**Имя столбца**|**Идентификатор столбца**|**Тип столбца**|**Описание столбца**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в котором было создано уведомление.|  
 |RequestProperties|45|9|Содержит свойства запроса XMLA.|  
   
-## Определяемые пользователем  
+## <a name="user-defined"></a>Определяемые пользователем  
   
 |**Имя столбца**|**Идентификатор столбца**|**Тип столбца**|**Описание столбца**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|Содержит текстовые данные, связанные с событием уведомления.|  
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в котором было создано уведомление.|  
   
-## См. также  
- [Категория событий «События уведомления»](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>См. также  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

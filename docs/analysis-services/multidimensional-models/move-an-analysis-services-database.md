@@ -1,28 +1,33 @@
 ---
-title: "Перемещение базы данных служб Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "перемещение баз данных [службы Anlysis Services]"
-  - "перемещение баз данных"
-  - "операции [службы Analysis Services — многомерные данные]"
+title: "Перемещение базы данных служб аналитики | Документы Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving databases [Anlysis Services]
+- moving databases
+- operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 73d410fdb16765b5ae1022362f11be8e918140fa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Перемещение базы данных служб Analysis Services
+# <a name="move-an-analysis-services-database"></a>Перемещение базы данных служб Analysis Services
   Часто возникают ситуации, когда администратору баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо переместить базу данных для многомерной или табличной модели в другое место. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта.  
   
  Существует много способов перенести базу данных в другое место. В этом документе описаны следующие распространенные сценарии:  
@@ -38,9 +43,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  При отсоединении базы данных без назначения ей пароля эта база данных оказывается в незащищенном состоянии. Рекомендуется назначить базе данных пароль для защиты конфиденциальных данных. Кроме того, к папке базы данных, к вложенным папкам и к файлам следует применять соответствующие меры защиты доступа, чтобы исключить несанкционированный доступ к этим объектам.  
   
-## Процедуры  
+## <a name="procedures"></a>Процедуры  
   
-#### Перемещение базы данных в интерактивном режиме с помощью среды SSMS  
+#### <a name="moving-a-database-interactively-using-ssms"></a>Перемещение базы данных в интерактивном режиме с помощью среды SSMS  
   
 1.  Найдите перемещаемую базу данных на левой или правой панели среды SSMS.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 9. Введите пароль, который использовался в шаге 3, и нажмите кнопку **ОК** , чтобы выполнить команду присоединения.  
   
-#### Перемещение базы данных программным путем с помощью объектов AMO  
+#### <a name="moving-a-database-programmatically-using-amo"></a>Перемещение базы данных программным путем с помощью объектов AMO  
   
 1.  В приложении на C# проведите адаптацию следующего образца кода и выполните указанные задачи.  
   
@@ -98,11 +103,11 @@ caps.handback.revision: 14
   
  `}`  
   
-1.  В приложении на C# вызовите метод `MoveDb()`, указав необходимые параметры.  
+1.  В приложении на C# вызовите метод `MoveDb()` , указав необходимые параметры.  
   
 2.  Скомпилируйте и выполните код для перемещения базы данных.  
   
-#### Перемещение базы данных с помощью скрипта XML для аналитики  
+#### <a name="moving-a-database-by-script-using-xmla"></a>Перемещение базы данных с помощью скрипта XML для аналитики  
   
 1.  Откройте новую вкладку XML для аналитики в среде SSMS.  
   
@@ -136,18 +141,18 @@ caps.handback.revision: 14
   
  `</Attach>`  
   
-1.  Замените шаблон `%dbFolder%` полным путем к папке базы данных в формате UNC, шаблон `%ReadOnlyMode%` — соответствующим значением (**ReadOnly** или **ReadWrite**), а шаблон `%password%` — паролем. Символы «%» являются частью шаблона, и поэтому их необходимо удалить.  
+1.  Замените шаблон `%dbFolder%` полным путем к папке базы данных в формате UNC, шаблон `%ReadOnlyMode%` — соответствующим значением ( **ReadOnly** или **ReadWrite**), а шаблон `%password%` — паролем. Символы «%» являются частью шаблона, и поэтому их необходимо удалить.  
   
 2.  Выполните команду XML для аналитики.  
   
-## См. также  
- <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Подключение и отключение баз данных служб Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
+ [Присоединение и отсоединение баз данных служб Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Место хранения базы данных](../../analysis-services/multidimensional-models/database-storage-location.md)   
  [Режимы ReadWriteModes базы данных](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Элемент Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Элемент Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
+ [Элемент detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [Элемент ReadWriteMode](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
  [Элемент DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   

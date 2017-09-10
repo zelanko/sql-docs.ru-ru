@@ -1,24 +1,29 @@
 ---
-title: "Управление ролями с помощью среды SSMS (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Управление ролями с помощью среды SSMS (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7458aa948c023e073f3080116fed980e8571c78
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Управление ролями с помощью среды SSMS (табличные службы SSAS)
+# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Управление ролями с помощью среды SSMS (табличные службы SSAS)
   С помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно создавать, изменять роли развернутой табличной модели или управлять ими.  
   
  Задачи данной темы:  
@@ -32,7 +37,7 @@ caps.handback.revision: 10
 -   [Удаление роли](#bkmk_deletet_role)  
   
 > [!CAUTION]  
->  Повторное развертывание проекта табличной модели с ролями, определенными с помощью диспетчера ролей в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], приводит к перезаписи ролей, определенных в развернутой табличной модели.  
+>  Повторное развертывание проекта табличной модели с ролями, определенными с помощью диспетчера ролей в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , приводит к перезаписи ролей, определенных в развернутой табличной модели.  
   
 > [!CAUTION]  
 >  Использование среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для управления базой данных рабочей области табличной модели, когда проект открыт в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , может привести к повреждению файла Model.bim. При создании ролей и управлении ими в базе данных рабочей области табличной модели пользуйтесь диспетчером ролей среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 6.  В окне параметров членства выберите **Добавить**и затем в диалоговом окне **Выбор пользователей или групп** добавьте нужных пользователей или группы Windows в качестве членов.  
   
-7.  Если у создаваемой роли есть разрешение «Чтение», добавлять фильтры строк для любой таблицы можно с помощью формулы DAX. Чтобы добавить фильтры строк, в диалоговом окне **Свойства ролей — \<имя_роли>** на вкладке **Выбор страницы** выберите пункт **Фильтры строк**.  
+7.  Если у создаваемой роли есть разрешение «Чтение», добавлять фильтры строк для любой таблицы можно с помощью формулы DAX. Чтобы добавить фильтры строк, в **свойства ролей — \<rolename >** диалогового **Выбор страницы**, щелкните на **фильтры строк**.  
   
-8.  В окне фильтров строк выберите таблицу, щелкните поле **Фильтр DAX** и введите формулу DAX в поле **Фильтр DAX — \<имя_таблицы>**.  
+8.  В окне фильтров строк выберите таблицу, а затем щелкните **фильтр DAX** поле, а затем в **DAX-фильтр — \<tablename >** введите формулу DAX.  
   
     > [!NOTE]  
-    >  Поле "DAX-фильтр — \<имя_таблицы>" не предлагает автозаполнения для запросов или функции вставки. Чтобы использовать автозаполнение при написании DAX-формулы, следует использовать редактор DAX-формул в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  DAX-фильтр — \<tablename > поле не содержит редактор запросов автозаполнения или функции вставки. Чтобы использовать автозаполнение при написании DAX-формулы, следует использовать редактор DAX-формул в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Для сохранения роли нажмите кнопку **OК** .  
   
@@ -76,13 +81,13 @@ caps.handback.revision: 10
   
 -   В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните табличный шаблон базы данных, содержащий роль, которую нужно изменить, разверните **Роли**, щелкните правой кнопкой мыши роль и выберите команду **Свойства**.  
   
-     В диалоговом окне **Свойства роли** \<имя_роли> можно изменять разрешения, добавлять или удалять членов и добавлять или изменять фильтры строк.  
+     В **свойства роли** \<rolename > диалоговое окно, можно изменить разрешения, добавить или удалить членов и добавлять или изменять фильтры строк.  
   
 ###  <a name="bkmk_deletet_role"></a> Удаление роли  
   
 -   В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните шаблон базы данных, содержащий роль, которую нужно удалить, разверните **Роли**, щелкните правой кнопкой мыши роль и выберите команду **Удалить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

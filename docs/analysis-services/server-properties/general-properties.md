@@ -1,55 +1,60 @@
 ---
-title: "Общие свойства | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout, свойство"
-  - "InstanceVisible, свойство"
-  - "TempDir, свойство"
-  - "AdminTimeout, свойство"
-  - "MinIdleSessionTimeout, свойство"
-  - "MaxIdleSessionTimeout, свойство"
-  - "IdleOrphanSessionTimeout, свойство"
-  - "BackupDir, свойство"
-  - "CommitTimeout, свойство"
-  - "ExternalCommandTimeout, свойство"
-  - "Enabled, свойство"
-  - "ForceCommitTimeout, свойство"
-  - "Port, свойство"
-  - "CoordinatorShutdownMode, свойство"
-  - "ServerTimeout, свойство"
-  - "AllowedBrowsingFolders, свойство"
-  - "CoordinatorCancelCount, свойство"
-  - "DataDir, свойство"
-  - "CoordinatorQueryMaxThreads, свойство"
-  - "Свойство CoordinatorExecutionMode"
-  - "ExternalConnectionTimeout, свойство"
-  - "CollationName, свойство"
-  - "EnableFast1049Locale, свойство"
-  - "CoordinatorBuildMaxThreads, свойство"
-  - "Language, свойство"
-  - "StatisticsStoreSize, свойство"
-  - "RepositoryConnectionString, свойство"
+title: "Общие свойства | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Общие свойства
+# <a name="general-properties"></a>Общие свойства
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. В этом разделе описываются свойства сервера из файла msmdsrv.ini, которые не отнесены к тому или иному определенному разделу, например Security (безопасность), Network (сеть) или ThreadPool (пул потоков). Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** многомерный или табличный режим сервера, если не указано иное.  
   
-## Общая категория  
+## <a name="non-specific-category"></a>Общая категория  
  **AdminTimeout**  
  Свойство с 32-разрядным целочисленным значением со знаком, определяющее время ожидания администратора (в секундах). Это дополнительное свойство следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -73,15 +78,11 @@ caps.handback.revision: 29
  Свойство с 32-разрядным целочисленным значением со знаком, определяющее максимальное количество потоков, назначенных для создания индексов секций. Увеличьте это значение, чтобы ускорить индексацию секций за счет использования памяти. Дополнительные сведения об этом свойстве см. в [Руководстве по использованию служб SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorCancelCount**  
- Свойство с 32-разрядным целочисленным значением со знаком, определяющее, как часто сервер должен проверять возникновение события Cancel (на основе внутреннего счетчика итераций). Уменьшите это значение, чтобы чаще проверять событие Cancel за счет общей производительности.  
-  
- Свойство**CoordinatorCancelCount** не учитывается в табличном режиме сервера.  
+ Свойство с 32-разрядным целочисленным значением со знаком, определяющее, как часто сервер должен проверять возникновение события Cancel (на основе внутреннего счетчика итераций). Уменьшите это значение, чтобы чаще проверять событие Cancel за счет общей производительности. Это свойство учитывается в табличном режиме сервера.  
   
  **CoordinatorExecutionMode**  
  Свойство с 32-разрядным целочисленным значением со знаком, определяющее максимальное количество параллельных операций, которые сервер пытается выполнить, включая обработку и запросы. Ноль (0) указывает, что сервер принимает решение на основе внутреннего алгоритма. Положительное число указывает общее количество операций. Отрицательное число с обратным знаком указывает максимальное количество операций на процессор.  
-  
- Свойство**CoordinatorExecutionMode** не учитывается в табличном режиме сервера.  
-  
+
  Значение этого свойства по умолчанию равно -4, то есть сервер ограничен 4 параллельными операциями на процессор. Дополнительные сведения об этом свойстве см. в [Руководстве по использованию служб SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorQueryMaxThreads**  
@@ -110,19 +111,19 @@ caps.handback.revision: 29
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **ExternalCommandTimeout**  
- Целочисленное свойство, определяющее время ожидания в секундах для команд, выданных внешним серверам, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Целочисленное свойство, определяющее время ожидания в секундах для команд, выданных внешним серверам, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Значение данного свойства по умолчанию составляет 3600 (секунд).  
   
  **ExternalConnectionTimeout**  
- Целочисленное свойство, определяющее время ожидания в секундах для создания соединений с внешними серверами, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это свойство не учитывается, если в строке подключения указано время ожидания соединения.  
+ Целочисленное свойство, определяющее время ожидания в секундах для создания соединений с внешними серверами, включая реляционные источники данных и внешние серверы служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Это свойство не учитывается, если в строке подключения указано время ожидания соединения.  
   
  Значение данного свойства по умолчанию составляет 60 (секунд).  
   
  **ForceCommitTimeout**  
  Целочисленное свойство, задающее время ожидания в миллисекундах для операции фиксации записи до отмены других команд, предшествующих текущей команде, в том числе выполняемым запросам. Это обеспечивает выполнение фиксации транзакции за счет отмены таких операций с более низким приоритетом, как запросы.  
   
- Значение этого свойства по умолчанию равно 30 секундам (30 000 миллисекундам), то есть другие команды не используют время ожидания, пока время ожидания фиксации транзакции не достигнет 30 секунд.  
+ Значение этого свойства по умолчанию равно 30 секундам (30 000 миллисекундам), то есть другие команды не используют время ожидания, пока время ожидания фиксации транзакции не достигнет 30 секунд.  
   
 > [!NOTE]  
 >  Запросы и процессы, отмененные этим событием, будут выдавать следующее сообщение об ошибке: "`Server: The operation has been cancelled`".  
@@ -155,7 +156,7 @@ caps.handback.revision: 29
  Целочисленное свойство, определяющее максимальное время ожидания в секундах для бездействующего сеанса. Значение по умолчанию — нуль (0). Оно означает, что время ожидания сеансов не истекает никогда. Однако бездействующие сеансы все равно будут удаляться, если для сервера действуют ограничения ресурсов.  
   
  **MinIdleSessionTimeout**  
- Целочисленное свойство, определяющее минимальное время ожидания для бездействующего сеанса (в секундах). Значение по умолчанию — 2700 секунд. После истечения этого времени серверу разрешается закончить сеанс простоя, но только если требуется память.  
+ Целочисленное свойство, определяющее минимальное время ожидания для бездействующего сеанса (в секундах). Значение по умолчанию — 2700 секунд. После истечения этого времени серверу разрешается закончить сеанс простоя, но только если требуется память.  
   
  **Порт**  
  Целочисленное свойство, определяющее номер порта, на котором сервер прослушивает соединения клиентов. Если это свойство не задано, то сервер динамически находит первый неиспользуемый порт.  
@@ -168,14 +169,14 @@ caps.handback.revision: 29
  **TempDir**  
  Строковое свойство, задающее расположение для сохранения временных файлов во время обработки, восстановления и других действий. Значение этого свойства по умолчанию определяется настройкой. Если свойство не задано, то по умолчанию используется папка Data.  
   
-## Категория RequestPrioritization  
+## <a name="requestprioritization-category"></a>Категория RequestPrioritization  
  **Включено**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

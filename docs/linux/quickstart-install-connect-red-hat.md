@@ -1,19 +1,19 @@
 ---
 title: "Приступая к работе с 2017 г. SQL Server в Red Hat Enterprise Linux | Документы Microsoft"
 description: "Этого краткого руководства показано, как установить 2017 г. SQL Server в Red Hat Enterprise Linux, а затем создать и запросов к базе данных с помощью sqlcmd."
-author: sabotta
-ms.author: carlasab
-manager: craigg
-ms.date: 07/24/2017
+author: rothja
+ms.author: jroth
+manager: jhubbard
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 53f3c2dbda293d6c3f9beb8bd16287b6aa0d9e26
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5309c2884fa4bf46a4c9c7224f4c1f21be23e7e6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Установка SQL Server и создать базу данных в Red Hat
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
    sudo yum install -y mssql-server
    ```
 
-1. После завершения установки пакета, запустите **установки mssql conf** и следуйте инструкциям на экране, чтобы задать пароль учетной записи SA и выбранного выпуска.
+1. После завершения установки пакета, запустите **установки mssql conf** и следуйте инструкциям на экране, чтобы задать пароль учетной записи SA и выберите ваш выпуск.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -116,3 +116,4 @@ ms.lasthandoff: 08/02/2017
 > **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Другие средства включают в себя [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) и [кода Visual Studio](sql-server-linux-develop-use-vscode.md).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+

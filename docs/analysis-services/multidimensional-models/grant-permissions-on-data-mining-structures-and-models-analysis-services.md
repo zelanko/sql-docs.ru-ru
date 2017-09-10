@@ -1,37 +1,42 @@
 ---
-title: "Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.miningmodels.f1"
-helpviewer_keywords: 
-  - "интеллектуальный анализ данных [службы Analysis Services], безопасность"
-  - "разрешения [службы Analysis Services], модели интеллектуального анализа данных"
-  - "модели интеллектуального анализа данных [службы Analysis Services], безопасность"
-  - "структуры интеллектуального анализа данных [службы Analysis Services], безопасность"
-  - "разрешения [службы Analysis Services], структуры интеллектуального анализа данных"
-  - "права доступа пользователей [службы Analysis Services], структуры интеллектуального анализа данных"
-  - "права доступа пользователей [службы Analysis Services], модели интеллектуального анализа данных"
+title: "Предоставление разрешений структурам интеллектуального анализа данных и модели (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.miningmodels.f1
+helpviewer_keywords:
+- data mining [Analysis Services], security
+- permissions [Analysis Services], mining models
+- mining models [Analysis Services], security
+- mining structures [Analysis Services], security
+- permissions [Analysis Services], mining structures
+- user access rights [Analysis Services], mining structures
+- user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 12b69f08e0c56b614c2e181ca3cb62a24496e2b9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)
-  По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных.   Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
+# <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)
+  По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных. Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
   
-## Установка разрешений для доступа к интеллектуальному анализу данных  
+## <a name="set-permissions-to-access-a-mining-structure"></a>Установка разрешений для доступа к интеллектуальному анализу данных  
   
 1.  Подключитесь к Analysis Services в среде SSMS. Если вам нужны пошаговые инструкции, см. раздел [Подключение из клиентских приложений (службы Analysis Services)](../../analysis-services/instances/connect-from-client-applications-analysis-services.md).  
   
@@ -47,30 +52,30 @@ caps.handback.revision: 37
   
 7.  Нажмите **ОК** для завершения процесса создания роли.  
   
-## Установка разрешений для доступа к модели интеллектуального анализа данных  
- Для модели интеллектуального анализа данных роль может иметь разрешения **Чтение** или **Чтение/Запись**, так же как разрешения **Детализация** и **Чтение определения**, которые позволяют просматривать базовые данные.  
+## <a name="set-permissions-to-access-a-mining-model"></a>Установка разрешений для доступа к модели интеллектуального анализа данных  
+ Для модели интеллектуального анализа данных роль может иметь разрешения **Чтение** или **Чтение/Запись** , так же как разрешения **Детализация** и **Чтение определения** , которые позволяют просматривать базовые данные.  
   
  **Примечание** . Если включить детализацию как структуры, так и модели интеллектуального анализа данных, то любой пользователь, член роли с разрешениями детализации в модели и структуре интеллектуального анализа данных также видит столбцы в структуре, даже если эти столбцы не входят в модель интеллектуального анализа данных. Поэтому, чтобы защитить конфиденциальные сведения, необходимо настроить представление источника данных для маскирования персональных данных и разрешать доступ к детализации структуры интеллектуального анализа данных только при необходимости.  
   
- Чтобы предоставить разрешения на чтение или на чтение и запись роли базы данных, пользователь должен быть членом роли сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], которая обладает разрешениями «Полный контроль» (администратор).  
+ Чтобы предоставить разрешения на чтение или на чтение и запись роли базы данных, пользователь должен быть членом роли сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которая обладает разрешениями «Полный контроль» (администратор).  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
   
-2.  На вкладке **Интеллектуальный анализ** поместите модель интеллектуального анализа в список **Модели интеллектуального анализа**, а затем выберите **Чтение**, **Чтение/Запись**, **Детализация** или **Навигация** для данной модели интеллектуального анализа.  
+2.  На вкладке **Интеллектуальный анализ** поместите модель интеллектуального анализа в список **Модели интеллектуального анализа** , а затем выберите **Чтение**, **Чтение/Запись**, **Детализация**или **Навигация** для данной модели интеллектуального анализа.  
   
 3.  На вкладке **Членство** , введите учетные записи пользователя Windows и группы, которые подключаются к Analysis Services, используя данную роль.  
   
 4.  Нажмите **ОК** для завершения процесса создания роли.  
   
- Чтобы использовать источник данных в запросе детализации, применяющем предложение OPENQUERY расширения интеллектуального анализа данных, роль базы данных также должна иметь разрешения на чтение и запись в соответствующий объект источника данных. Дополнительные сведения см. в разделах [Предоставление разрешений объекту источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) и [OPENQUERY (расширения интеллектуального анализа данных)](../Topic/OPENQUERY%20\(DMX\).md).  
+ Чтобы использовать источник данных в запросе детализации, применяющем предложение OPENQUERY расширения интеллектуального анализа данных, роль базы данных также должна иметь разрешения на чтение и запись в соответствующий объект источника данных. Дополнительные сведения см. в разделах [Предоставление разрешений объекту источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) и [OPENQUERY (расширения интеллектуального анализа данных)](../../dmx/source-data-query-openquery.md).  
   
 > [!NOTE]  
 >  По умолчанию выдача запросов расширений интеллектуального анализа данных с использованием OPENROWSET отключена.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставление настраиваемого доступа к измерению данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

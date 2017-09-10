@@ -1,38 +1,43 @@
 ---
-title: "Требования и вопросы, связанные с развертыванием служб Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "память [службы Analysis Services]"
-  - "масштабируемость [службы Analysis Services]"
-  - "место [службы Analysis Services]"
-  - "развертывания служб Analysis Services, требования"
-  - "развертывание [службы Analysis Services], требования"
-  - "место на диске [службы Analysis Services]"
-  - "требования [службы Analysis Services]"
-  - "процессоры [службы Analysis Services]"
-  - "системные требования [службы Analysis Services]"
-  - "доступность [службы Analysis Services]"
+title: "Требования и рекомендации для анализа служб развертывания | Документы Microsoft"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- memory [Analysis Services]
+- scalability [Analysis Services]
+- space [Analysis Services]
+- Analysis Services deployments, requirements
+- deploying [Analysis Services], requirements
+- disk space [Analysis Services]
+- requirements [Analysis Services]
+- processors [Analysis Services]
+- system requirements [Analysis Services]
+- availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Требования и вопросы, связанные с развертыванием служб Analysis Services
+# <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Требования и вопросы, связанные с развертыванием служб Analysis Services
   Производительность и доступность решения зависят от многих факторов, среди которых мощность оборудования, топология серверов, характеристики решения (например, использование секций, распределенных на нескольких серверах, или хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения на уровне служб, а также сложность модели данных.  
   
-## Требования к памяти и процессору  
+## <a name="memory-and-processor-requirements"></a>Требования к памяти и процессору  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в следующих случаях требуется больше ресурсов памяти и процессора:  
   
 -   При обработке больших или сложных кубов. Для этого требуется больше ресурсов памяти и процессора в сравнении с обработкой малых или простых кубов.  
@@ -47,15 +52,15 @@ caps.handback.revision: 26
   
  Объем доступных службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ресурсов процессора и памяти отличается в зависимости от выпуска SQL Server, операционной системы, оборудования и использования виртуальных или физических процессоров. Дополнительные сведения приведены по следующим ссылкам:  
   
- [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)  
+ [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [Вычисление производительности выпуска SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+ [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)  
   
  [Спецификации максимальной емкости (службы Analysis Services)](../../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
-## Требования к месту на диске  
+## <a name="disk-space-requirements"></a>Требования к месту на диске  
  Объем места на диске зависит от различных аспектов установки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и задач, связанных с обработкой объектов. Далее приведен список требований к свободному месту на диске.  
   
  Кубы  
@@ -73,24 +78,24 @@ caps.handback.revision: 26
 ##  <a name="BKMK_Availability"></a> Вопросы доступности  
  В среде служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] куб или модель интеллектуального анализа данных могут быть недоступны для запросов вследствие возникновения сбоев оборудования или ошибок программного обеспечения. Куб может быть недоступным во время обработки.  
   
-### Поддержание доступности в случае возникновения сбоев оборудования или ошибок программного обеспечения  
+### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Поддержание доступности в случае возникновения сбоев оборудования или ошибок программного обеспечения  
  Возникновение сбоев оборудования или ошибок программного обеспечения обусловлено различными причинами. Поддержание доступности установки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] заключается не только в диагностике источника ошибок, но и в обеспечении дополнительных ресурсов, позволяющих пользователям использовать систему в случае ошибок и сбоев. Для предоставления дополнительных ресурсов, необходимых для поддержания доступности в случае возникновения сбоев оборудования или ошибок программного обеспечения, обычно используется кластеризация и балансировка нагрузки серверов.  
   
  Чтобы обеспечить доступность в случае возникновения сбоев оборудования или ошибок программного обеспечения, следует рассмотреть возможность развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на отказоустойчивом кластере. В этом случае при ошибке основного узла по какой-либо причине или при необходимости его перезагрузки кластеризация [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows переходит на второй узел. После отработки отказа, которая выполняется очень быстро, запросы пользователей направляются в экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , запущенный на вторичном узле. Дополнительные сведения об отказоустойчивых кластерах см. в статье [Технологии Windows Server: отказоустойчивые кластеры](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx).  
   
  Другое решение проблемы доступности заключается в развертывании проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на несколько рабочих серверов. Затем можно использовать функцию балансировки нагрузки сети (NLB) серверов Windows для объединения рабочих серверов в отдельный кластер. В кластере NLB, если сервер, входящий в кластер, недоступен вследствие возникновения сбоев оборудования или ошибок программного обеспечения, служба NLB направляет запросы пользователей на серверы, оставшиеся доступными.  
   
-### Поддержание доступности во время обработки структурных изменений  
+### <a name="providing-availability-while-processing-structural-changes"></a>Поддержание доступности во время обработки структурных изменений  
  Некоторые изменения в кубе могут вызвать недоступность куба во время его обработки. Например, при выполнении структурных изменений в измерении куба, даже при повторной обработке измерения, необходимо обработать все кубы, использующие это измененное измерение. Во время обработки таких кубов пользователи не могут выполнять запросы к этим кубам, а также к моделям интеллектуального анализа данных, основанным на кубе с измененным измерением.  
   
  Чтобы обеспечить доступность во время обработки структурных изменений, влияющих на один или несколько кубов в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , следует рассмотреть использование промежуточного сервера и мастера синхронизации баз данных. Эта функция позволяет обновлять данные и метаданные на промежуточном сервере, а затем выполнять синхронизацию рабочего и промежуточного серверов в сети. Дополнительные сведения см. в разделе [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md).  
   
- Для прозрачной обработки добавочных обновлений исходных данных включите упреждающее кэширование. Упреждающее кэширование позволяет обновлять кубы с новыми исходными данными без обработки вручную и влияния на доступность кубов. Дополнительные сведения см. в разделе [Упреждающее кэширование (секции)](../Topic/Proactive%20Caching%20\(Partitions\).md).  
+ Для прозрачной обработки добавочных обновлений исходных данных включите упреждающее кэширование. Упреждающее кэширование позволяет обновлять кубы с новыми исходными данными без обработки вручную и влияния на доступность кубов. Дополнительные сведения см. в разделе [Упреждающее кэширование (секции)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ##  <a name="BKMK_Scalability"></a> Вопросы масштабируемости  
  Несколько экземпляров [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на одном компьютере могут вызвать проблемы производительности. Для решения этих проблем можно увеличить на сервере ресурсы процессора, памяти и место на диске. Возможно, также придется выполнить масштабирование экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на несколько компьютеров.  
   
-### Масштабирование служб Analysis Services на несколько компьютеров  
+### <a name="scaling-analysis-services-across-multiple-computers"></a>Масштабирование служб Analysis Services на несколько компьютеров  
  Существует несколько способов масштабирования установки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на несколько компьютеров. Описание этих параметров приводится в следующем списке.  
   
 -   Если на одном компьютере установлено несколько экземпляров служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , то можно переместить один или несколько экземпляров на другой компьютер.  

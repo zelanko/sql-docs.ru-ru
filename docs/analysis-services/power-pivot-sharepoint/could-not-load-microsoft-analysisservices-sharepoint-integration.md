@@ -1,25 +1,30 @@
 ---
-title: "Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Не удалось загрузить «Microsoft.AnalysisServices.SharePoint.Integration» | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a69a219376c2a67b003eaa6769843dc23791d829
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration
-  В среде SharePoint 2010, где установлен [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, эта ошибка возникает, если решение на уровне приложений для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] развернуто неправильно.  
+# <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Не удалось загрузить Microsoft.AnalysisServices.SharePoint.Integration
+  В среде SharePoint 2010, где установлен [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, эта ошибка возникает, если решение на уровне приложений для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] развернуто неправильно.  
   
-## Сведения  
+## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
@@ -28,10 +33,10 @@ caps.handback.revision: 7
 |Причина|Решение Powerpivotwebapp не развернуто или развернуто неправильно.|  
 |Текст сообщения|Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration|  
   
-## Объяснение  
+## <a name="explanation"></a>Объяснение  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует пакеты решений для развертывания своих компонентов на сервере SharePoint. Одно из решений развернуто неправильно. Поэтому при попытке открыть коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или другие страницы приложения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint возникает эта ошибка.  
   
-## Действие пользователя  
+## <a name="user-action"></a>Действие пользователя  
  Выполните развертывание пакета решения.  
   
 1.  В разделе «Системные параметры» центра администрирования выберите **Управление решениями фермы**.  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
   
 5.  Нажмите кнопку **ОК**.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Развертывание решений PowerPivot в SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

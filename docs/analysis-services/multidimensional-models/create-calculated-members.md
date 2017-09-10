@@ -1,29 +1,34 @@
 ---
-title: "Создание вычисляемых элементов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "вычисляемые элементы [службы Analysis Services]"
-  - "пользовательские меры [службы Analysis Services]"
-  - "элементы [службы Analysis Services], вычисляемые"
-  - "вычисления [службы Analysis Services], вычисляемые элементы"
+title: "Создание вычисляемых элементов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание вычисляемых элементов
+# <a name="create-calculated-members"></a>Создание вычисляемых элементов
   Можно создать пользовательские меры или элементы измерения, называемые вычисляемыми элементами, с помощью комбинации данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент со значением «Евро», конвертирующий доллары в евро с помощью умножения меры доллара на коэффициент конвертации. Затем можно в отдельной строке или столбце отобразить значение в евро для конечных пользователей.  
   
  Определения вычисляемых элементов хранятся, но их значения существуют только в памяти. В предыдущем примере значение для пользователей отображается в марках, но это значение не хранится как данные куба.  
@@ -76,12 +81,12 @@ caps.handback.revision: 26
   
  Можно копировать или перетаскивать компоненты куба из вкладки **Метаданные** панели **Средства вычисления** в поле **Выражение** на панели «Выражения вычисления». Можно копировать или перетаскивать функции из вкладки **Функции** панели **Средства вычисления** в поле **Выражение** на панели «Выражения вычисления».  
   
-## Обращение к вычисляемым элементам  
+## <a name="addressing-calculated-members"></a>Обращение к вычисляемым элементам  
  Во время создания вычисляемого элемента на панели инструментов **Конструктор кубов** на вкладке **Вычисления**можно указать родительскую иерархию, в которой будет храниться вычисляемый элемент. Родительская иерархия определяет способ обращения к вычисляемому элементу в соответствии со следующими правилами.  
   
 -   Если вычисляемый элемент создан в измерении мер, то обращаться к такому вычисляемому элементу можно в указанном измерении.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

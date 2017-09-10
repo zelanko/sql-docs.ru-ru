@@ -1,24 +1,29 @@
 ---
-title: "Создание мер и управление ими (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание мер и управление ими (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание мер и управление ими (табличные службы SSAS)
+# <a name="create-and-manage-measures-ssas-tabular"></a>Создание мер и управление ими (табличные службы SSAS)
   Мера — это формула, которая создается специально для использования в отчете или сводной таблице (или сводной диаграмме) Excel. Меры могут быть основаны на стандартных агрегатных функциях, например COUNT или SUM, либо на пользовательских формулах на языке выражений анализа данных (DAX). Приведенные в этом разделе задачи описывают, каким образом производится создание мер и управление ими с помощью сетки мер таблицы.  
   
  В этот раздел включены следующее задачи:  
@@ -33,7 +38,7 @@ caps.handback.revision: 18
   
 -   [Удаление меры](#bkmk_delete)  
   
-## Задания  
+## <a name="tasks"></a>Задания  
  Создание мер и управление ими производится в сетке мер таблицы. Просматривать сетку мер таблицы в конструкторе моделей можно только в представлении данных. В представлении диаграммы создавать меры или увидеть сетку мер нельзя. Однако в этом представлении отображаются существующие меры. Чтобы отобразить сетку мер таблицы, в меню **Таблица** выберите команду **Показать сетку мер**.  
   
 ###  <a name="bkmk_create_stand"></a> Создание меры с помощью стандартной формулы агрегата  
@@ -60,9 +65,9 @@ caps.handback.revision: 18
   
 -   Щелкните меру правой кнопкой мыши в сетке мер и выберите команду **Удалить**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Меры (табличные службы SSAS)](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Ключевые показатели эффективности (табличные службы SSAS)](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Вычисляемые столбцы (табличные службы SSAS)](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)  
+ [Вычисляемые столбцы (табличные службы SSAS)](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

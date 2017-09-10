@@ -1,56 +1,61 @@
 ---
-title: "Свойства сети | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LingerTimeout, свойство"
-  - "EnableNagleAlgorithm, свойство"
-  - "MinPendingAcceptExCount, свойство"
-  - "MaxPendingSendCount, свойство"
-  - "EnableBinaryXML, свойство"
-  - "MinPendingReceiveCount, свойство"
-  - "MaxCompletedReceiveCount, свойство"
-  - "DisableNonblockingMode, свойство"
-  - "RequestSizeThreshold, свойство"
-  - "CompressionLevel, свойство"
-  - "ReceiveBufferSize, свойство"
-  - "EnableCompression, свойство"
-  - "ServerSendTimeout, свойство"
-  - "IPV4Support, свойство"
-  - "MaxPendingReceiveCount, свойство"
-  - "MaxPendingAcceptExCount, свойство"
-  - "IPV6Support, свойство"
-  - "MaxAllowedRequestSize, свойство"
-  - "ServerReceiveTimeout, свойство"
-  - "EnableLingerOnClose, свойство"
-  - "InitialConnectTimeout, свойство"
-  - "SendBufferSize, свойство"
-  - "ScatterReceiveMultiplier, свойство"
-  - "свойства сети [службы Analysis Services]"
+title: "Свойства сетевого | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LingerTimeout property
+- EnableNagleAlgorithm property
+- MinPendingAcceptExCount property
+- MaxPendingSendCount property
+- EnableBinaryXML property
+- MinPendingReceiveCount property
+- MaxCompletedReceiveCount property
+- DisableNonblockingMode property
+- RequestSizeThreshold property
+- CompressionLevel property
+- ReceiveBufferSize property
+- EnableCompression property
+- ServerSendTimeout property
+- IPV4Support property
+- MaxPendingReceiveCount property
+- MaxPendingAcceptExCount property
+- IPV6Support property
+- MaxAllowedRequestSize property
+- ServerReceiveTimeout property
+- EnableLingerOnClose property
+- InitialConnectTimeout property
+- SendBufferSize property
+- ScatterReceiveMultiplier property
+- network properties [Analysis Services]
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e866ebb50ceb59a43f6d32303aa59092250e230b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства сети
+# <a name="network-properties"></a>Свойства сети
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** многомерный и табличный режим сервера  
   
-## Общие сведения  
+## <a name="general"></a>Общие сведения  
  **ListenOnlyOnLocalConnections**  
  Логическое свойство, указывающее прослушивание только локальных соединений, например локального сервера.  
   
-## Средство прослушивания  
+## <a name="listener"></a>Средство прослушивания  
  **IPV4Support**  
  Свойство с 32-разрядным целочисленным значением со знаком, определяющее поддержку протокола IPv4. Это свойство имеет одно из значений, содержащихся в следующей таблице.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 15
 |Значение|Описание|  
 |-----------|-----------------|  
 |*0*|Протокол IPv6 отключен; подключение клиентов невозможно.|  
-|*1*|(По умолчанию) необходим протокол IPv6; сервер невозможно запустить без прослушивания по IPv6. |  
+|*1*|(По умолчанию) необходим протокол IPv6; сервер невозможно запустить без прослушивания по IPv6.|  
 |*2*|Дополнительный протокол IPv6; сервер пытается прослушать по протоколу IPv6, но запускается в любом случае.|  
   
  **MaxAllowedRequestSize**  
@@ -81,14 +86,14 @@ caps.handback.revision: 15
  **ServerSendTimeout**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Запросы  
+## <a name="requests"></a>Запросы  
  **EnableBinaryXML**  
  Логическое свойство, определяющее, распознает ли сервер запросы в двоичном XML-формате.  
   
  **EnableCompression**  
  Логическое свойство, определяющее сжатие запросов.  
   
-## Ответы  
+## <a name="responses"></a>Ответы  
  **CompressionLevel**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 15
  Логическое свойство, определяющее включение на сервере двоичных XML-ответов.  
   
  **EnableCompression**  
- Логическое свойство, определяющее сжатие ответов клиентам.   
+ Логическое свойство, определяющее сжатие ответов клиентам.  
   
-## TCP  
+## <a name="tcp"></a>TCP  
  **InitialConnectTimeout**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -141,7 +146,7 @@ caps.handback.revision: 15
  **SocketOptions\ SendBufferSize**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

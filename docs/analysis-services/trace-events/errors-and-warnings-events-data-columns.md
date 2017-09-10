@@ -1,31 +1,36 @@
 ---
-title: "Столбцы данных событий ошибок и предупреждений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Errors and Warnings, категория событий [SQL Server]"
+title: "Ошибки и предупреждения Events Data Columns | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a909f39446c2a90347e8253c7fb54c1abe91c353
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Столбцы данных событий ошибок и предупреждений
+# <a name="errors-and-warnings-events-data-columns"></a>Столбцы данных событий ошибок и предупреждений
   Категория событий «Аудит безопасности» имеет следующие классы событий.  
   
 -   Класс ошибки  
   
  В следующей таблице содержится список столбцов данных для данного класса событий.  
   
-## Столбцы данных — класс событий ошибок  
+## <a name="error-event-classdata-columns"></a>Столбцы данных — класс событий ошибок  
   
 |**Имя столбца**|**Идентификатор столбца**|**Тип столбца**|**Описание столбца**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -33,7 +38,7 @@ caps.handback.revision: 24
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |SessionType|8|8|Содержит тип сущности, которая вызвала ошибку.|  
 |Severity|22|1|Содержит уровень серьезности исключения, связанного с событием ошибки. Возможны следующие значения.<br /><br /> 0 = успешное завершение<br /><br /> 1 = информационное сообщение<br /><br /> 2 = предупреждение<br /><br /> 3 = ошибка|  
-|Успешно |23|1|Указывает на успешность или сбой события ошибки. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
+|Успешно|23|1|Указывает на успешность или сбой события ошибки. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
 |Ошибка|24|1|Содержит номер любой ошибки, связанной с событием ошибки.|  
 |ConnectionID|25|1|Содержит уникальный идентификатор соединения, связанный с событием ошибки.|  
 |DatabaseName|28|8|Содержит имя экземпляра служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на котором возникла ошибка.|  
@@ -47,7 +52,7 @@ caps.handback.revision: 24
 |TextData|42|9|Содержит текстовые данные, связанные с событием ошибки.|  
 |ServerName|43|8|Содержит имя сервера, на котором запущен экземпляр служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на котором возникла ошибка.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Категория событий «Аудит безопасности»](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

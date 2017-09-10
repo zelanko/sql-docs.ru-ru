@@ -1,31 +1,36 @@
 ---
-title: "Создание измерения с помощью мастера измерений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "измерения [службы Analysis Services], создание"
+title: "Создание измерения с помощью мастера измерений | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], creating
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff4a16fdc7f18eae35de5023116a11179fb11c5b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание измерения с помощью мастера измерений
+# <a name="create-a-dimension-using-the-dimension-wizard"></a>Создание измерения с помощью мастера измерений
   Можно создать новое измерение с помощью мастера измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-### Создание нового измерения  
+### <a name="to-create-a-new-dimension"></a>Создание нового измерения  
   
-1.  В **обозревателе решений** щелкните правой кнопкой мыши узел **Измерения** и выберите команду **Создать измерение**.  
+1.  В **обозревателе решений**щелкните правой кнопкой мыши узел **Измерения**и выберите команду **Создать измерение**.  
   
 2.  На странице **Выбор метода создания** мастера измерений выберите **Использовать существующую таблицу**, а затем нажмите кнопку **Далее**.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 17
     > [!NOTE]  
     >  После добавления, удаления и настройки атрибутов и иерархий в измерении с помощью мастера измерений можно использовать конструктор измерений.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание измерения с помощью существующей таблицы](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

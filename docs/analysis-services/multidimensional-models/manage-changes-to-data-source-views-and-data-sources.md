@@ -1,36 +1,41 @@
 ---
-title: "Управление изменениями в источниках данных и представлениях источников данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "изменение источников данных"
-  - "изменение представлений источников данных"
-  - "представления источников данных [службы Analysis Services], обновления схем"
-  - "источники данных [службы Analysis Services], обновления схем"
+title: "Управление изменениями для представления источников данных и источники данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data sources
+- modifying data source views
+- data source views [Analysis Services], schema updates
+- data sources [Analysis Services], schema updates
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3b1913d392467f4ba78976d9ab73919e7ac06051
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Управление изменениями в источниках данных и представлениях источников данных
+# <a name="manage-changes-to-data-source-views-and-data-sources"></a>Управление изменениями в источниках данных и представлениях источников данных
   При повторном запуске мастера формирования схем он повторно использует тот же источник данных и представление источника данных, которые он использовал при первоначальном формировании. При добавлении источника данных или представления источников данных мастер не использует их. При удалении оригинального источника данных или представления источников данных после первоначального формирования мастер необходимо запустить с самого начала. Все предыдущие настройки мастера также удаляются. Любые существующие объекты в основной базе данных, связанные с удаленным источником данных или представлением источника данных, при следующем запуске мастера формирования схем воспринимаются как объекты, созданные пользователем.  
   
  Если во время формирования представление источника данных не отражает реального состояния основной базы данных, мастер формирования схем может обнаружить ошибки при формировании схемы для базы данных предметной области. Например, если представление источника данных указывает, что тип данных столбца **int**, но тип данных этого столбца на самом деле **string**, мастер формирования схем устанавливает тип данных для внешнего ключа в **INT** для совпадения с представлением источника данных, а затем выдает сбой при создании связи, поскольку реальный тип данных **string**.  
   
  С другой стороны, при изменении строки соединения с источником данных на другую базу данных по сравнению с предыдущим формированием не возникает ошибки. Используется эта новая база данных, а в предыдущую базу данных не вносятся никакие изменения.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Основные сведения о добавочном создании](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   

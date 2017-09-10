@@ -1,27 +1,32 @@
 ---
-title: "Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1dbd22c1c09de66200cda7300f34666ea453777a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016)
-  [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] представляет собой набор компонентов сервера приложений и служб, которые обеспечивают доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)]. Надстройка [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint (**spPowerpivot16.msi**) — это пакет установщика, используемый для установки компонентов сервера приложений.  
+# <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016)
+  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] представляет собой набор компонентов сервера приложений и служб, которые обеспечивают доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] . Надстройка [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint (**spPowerpivot16.msi**) — это пакет установщика, используемый для установки компонентов сервера приложений.  
   
  **Примечание.** В этой статье описывается установка файлов решений [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и средства настройки [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016. После установки сведения о средстве настройки и дополнительных компонентах см. в разделе [Настройка PowerPivot и развертывание решений (SharePoint 2013)](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
- Дополнительные сведения о том, как загрузить **spPowerPivot16.msi**, см. в документации по [Microsoft® SQL Server® 2016 Power Pivot® для Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854).  
+ Дополнительные сведения о том, как загрузить **spPowerPivot16.msi**, см. в документации по [Microsoft® SQL Server® 2016 Power Pivot® для Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675).  
   
  **В этом разделе:**  
   
@@ -37,17 +42,16 @@ caps.handback.revision: 12
   
 -   [Удаление или восстановление надстройки](#bkmk_remove_addin)  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+
+**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
   
 ##  <a name="bkmk_background"></a> Историческая справка  
   
 -   **Сервер приложений:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в SharePoint 2016 имеются возможности использования рабочих книг в качестве источников данных, возможности запланированного обновления данных и панель мониторинга управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
-     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] — пакет установщика [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows (**spPowerpivot16.msi**), который развертывает клиентские библиотеки служб Analysis Services и копирует файлы установки [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] на компьютер. Установщик не разворачивает и не настраивает функции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в SharePoint. По умолчанию устанавливаются следующие компоненты:  
+     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] — пакет установщика [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows (**spPowerpivot16.msi**), который развертывает клиентские библиотеки служб Analysis Services и копирует файлы установки [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] на компьютер. Установщик не разворачивает и не настраивает функции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в SharePoint. По умолчанию устанавливаются следующие компоненты:  
   
-    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]. Этот компонент содержит скрипты PowerShell (PS1-файлы), пакеты решения SharePoint (WSP-файлы) и средство настройки [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] для развертывания [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint 2016.  
+    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]. Этот компонент содержит скрипты PowerShell (PS1-файлы), пакеты решения SharePoint (WSP-файлы) и средство настройки [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] для развертывания [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint 2016.  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Поставщик OLE DB для служб Analysis Services (MSOLAP).  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 12
     -   [Удаление Power Pivot для SharePoint](../../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
   
 ##  <a name="bkmk_where_to_install"></a> Куда устанавливать spPowerPivot16.msi?  
- Мы рекомендуем устанавливать **spPowerPivot16.msi** на всех серверах фермы SharePoint, чтобы обеспечить согласованность конфигурации, в том числе на серверах приложений и серверах веб-интерфейса. В пакет установщика входят поставщики данных служб Analysis Services, а также средство настройки [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]. При установке **spPowerPivot16.msi** вы можете исключить определенные компоненты.  
+ Мы рекомендуем устанавливать **spPowerPivot16.msi** на всех серверах фермы SharePoint, чтобы обеспечить согласованность конфигурации, в том числе на серверах приложений и серверах веб-интерфейса. В пакет установщика входят поставщики данных служб Analysis Services, а также средство настройки [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] . При установке **spPowerPivot16.msi** вы можете исключить определенные компоненты.  
   
  **Поставщики данных.** Некоторые технологии SharePoint и SQL Server используют поставщики данных служб Analysis Services, включая службы PerformancePoint и Power View. Установка **spPowerPivot16.msi** на всех серверах SharePoint обеспечивает полный набор поставщиков данных служб Analysis Services, а также постоянную возможность подключения к [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме.  
   
@@ -79,16 +83,16 @@ caps.handback.revision: 12
   
 -   **spPowerPivot16.msi** подходит только для 64-разрядной версии (в соответствии с требованиями к продуктам и технологиям SharePoint).  
   
--   Сервер [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] в режиме [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Office Online Server будет использовать экземпляр служб SQL Server Analysis Services в качестве сервера [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Службы Analysis Services могут работать на локальном сервере SharePoint или на удаленном компьютере. Эти службы нельзя установить на сервер Office Online Server.  
+-   Сервер в [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] режиме. Office Online Server будет использовать экземпляр служб SQL Server Analysis Services в качестве сервера [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Службы Analysis Services могут работать на локальном сервере SharePoint или на удаленном компьютере. Эти службы нельзя установить на сервер Office Online Server.  
   
 -   **Разрешения.** Чтобы установить [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)], текущий пользователь должен иметь права администратора на этом компьютере и быть членом группы администраторов фермы SharePoint.  
   
--   Дополнительные сведения о требованиях и необходимых условиях для [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] см. в разделе [Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint](../Topic/Hardware%20and%20Software%20Requirements%20for%20Analysis%20Services%20Server%20in%20SharePoint%20Mode.md).  
+-   Дополнительные сведения о требованиях и необходимых условиях для [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] см. в разделе [Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f).  
   
 ##  <a name="bkmk_install"></a> Установка Power Pivot для SharePoint  
  Пакет установщика **spPowerpivot16.msi** поддерживает как графический пользовательский интерфейс, так и режим командной строки. При использовании этих методов установки необходимо запустить MSI-файл с правами администратора. После установки сведения о средстве настройки и дополнительных компонентах см. в разделе [Настройка PowerPivot и развертывание решений (SharePoint 2013)](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
-### Установка с помощью пользовательского интерфейса  
+### <a name="user-interface-installation"></a>Установка с помощью пользовательского интерфейса  
  Чтобы установить [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] с помощью графического пользовательского интерфейса, выполните следующие шаги.  
   
 1.  Запустите **spPowerPivot16.msi**.  
@@ -103,7 +107,7 @@ caps.handback.revision: 12
   
 6.  Нажмите **Установить** , чтобы завершить установку.  
   
-### Установка из командной строки  
+### <a name="command-line-installation"></a>Установка из командной строки  
  Для установки из командной строки откройте командную строку с правами администратора, а затем запустите файл **spPowerPivot16.msi**. Например:  
   
  `Msiexec.exe /i spPowerPivot16.msi`.  
@@ -114,11 +118,11 @@ caps.handback.revision: 12
 Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt  
 ```  
   
-### Автоматическая установка из командной строки для создания скрипта  
- Вы можете использовать параметр **/q** или **/quiet** для автоматической установки, в ходе которой не будут выводиться никакие диалоговые окна или сообщения. Автоматическая установка удобна, если установку надстройки нужно выполнить из скрипта.  
+### <a name="quiet-command-line-installation-for-scripting"></a>Автоматическая установка из командной строки для создания скрипта  
+ Вы можете использовать переключатели **/q** или **/quiet** для автоматической установки, в ходе которой не будут выводиться никакие диалоговые окна или сообщения. Автоматическая установка удобна, если установку надстройки нужно выполнить из скрипта.  
   
 > [!IMPORTANT]  
->  При использовании параметра **/q** для автоматической установки из командной строки условия лицензионного соглашения не выводятся. Независимо от метода установки, использование программного обеспечения регулируется лицензионным соглашением и пользователь несет ответственность за его соблюдение.  
+>  При использовании параметра **/q** для автоматической установки из командной строки условия лицензионного соглашения не отображаются. Независимо от метода установки, использование программного обеспечения регулируется лицензионным соглашением и пользователь несет ответственность за его соблюдение.  
   
  **Выполнение автоматической установки**  
   
@@ -130,7 +134,7 @@ Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt
     Msiexec.exe /i spPowerPivot16.msi /q  
     ```  
   
-### Установка из командной строки для включения определенных компонентов  
+### <a name="command-line-installation-to-include-specific-components"></a>Установка из командной строки для включения определенных компонентов  
  Нет необходимости в средстве настройки [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] на каждом сервере SharePoint, однако рекомендуется установить этот компонент как минимум на двух серверах, чтобы он был доступен в нужный момент.  
   
  При установке spPowerPivot16.msi вы можете использовать параметры командной строки для выбора конкретных элементов, например установить только поставщиков данных, но не средство настройки [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] . Следующая командная строка представляет собой пример установки всех компонентов, кроме средства настройки.  
@@ -151,9 +155,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
  Среди файлов, которые программа spPowerPivot16.msi скопирует на жесткий диск, три являются файлами решения SharePoint. Область одного файла решения — уровень фермы, а область другого файла — уровень веб-приложения. Это относится к следующим файлам:  
   
 -   `PowerPivot16FarmSolution.wsp`  
-  
--   `PowerPivot16Farm14Solution.wsp`  
-  
+
 -   `PowerPivot16WebApplicationSolution.wsp`  
   
  Файлы решений копируются в следующую папку:  
@@ -166,9 +168,9 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
  На экране "Пуск" в Windows введите "power" и в результатах поиска приложений щелкните **Настройка [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]**. Обратите внимание, что результаты поиска могут включать две ссылки, так как программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает отдельные средства настройки служб [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013 и SharePoint 2016. Убедитесь, что вы запускаете средство настройки [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] .  
   
- ![PowerPivot for SharePoint 2016 Configuration](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot for SharePoint 2016 Configuration")  
+ ![Настройка PowerPivot для SharePoint 2016](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot для SharePoint 2016")  
   
- **или**  
+ **Or**  
   
 1.  Откройте меню **Пуск**, **Все программы**.  
   
@@ -176,7 +178,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
 3.  Щелкните **Средства настройки**.  
   
-4.  Выберите **Настройка [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]**.  
+4.  На странице приветствия нажмите кнопку **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Конфигурация**.  
   
  Дополнительные сведения о средстве настройки см. в разделе [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
@@ -208,3 +210,4 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
     ```  
   
   
+

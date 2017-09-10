@@ -1,30 +1,35 @@
 ---
-title: "создать измерение интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "структуры интеллектуального анализа данных [службы Analysis Services], измерения"
+title: "Создание измерения интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], dimensions
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 238af959c27daaf75415cf913fddb823f6927c85
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# создать измерение интеллектуального анализа данных
+# <a name="create-a-data-mining-dimension"></a>создать измерение интеллектуального анализа данных
   Если структура интеллектуального анализа данных основана на кубе OLAP, то можно создать измерение, которое содержит содержимое модели интеллектуального анализа данных. После этого можно встроить это измерение обратно в исходный куб.  
   
  Также можно просмотреть измерение, использовать его для исследования результатов модели или выполнить запрос к измерению с помощью многомерного выражения.  
   
-### Создание измерения интеллектуального анализа данных  
+### <a name="to-create-a-data-mining-dimension"></a>Создание измерения интеллектуального анализа данных  
   
 1.  В конструкторе интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]перейдите либо на вкладку **Структура интеллектуального анализа данных** , либо на вкладку **Модели интеллектуального анализа данных** .  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 12
   
      Измерение интеллектуального анализа данных создается и добавляется в папку **Измерения** в обозревателе решений. Если выбран пункт **Создать куб**, то также создается новый куб и добавляется в папку **Кубы** .  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -1,31 +1,36 @@
 ---
-title: "Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обратная совместимость [службы Analysis Services]"
-  - "контрольные данные [интеллектуальный анализ данных]"
-  - "развертывание [службы Analysis Services]"
-  - "временные ряды [службы Analysis Services]"
-  - "развертывание [службы Analysis Services — интеллектуальный анализ данных]"
-  - "синхронизация [службы Analysis Services]"
-  - "развертывание [службы Analysis Services]"
+title: "Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server
   В этом разделе описаны известные проблемы совместимости, которые могут возникнуть во время развертывания модели или структуры интеллектуального анализа данных, созданной в экземпляре служб [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , в базе данных со службами SQL Server 2005 Analysis Services, а также при развертывании моделей, созданных в SQL Server 2005, на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Развертывание на экземпляре служб SQL Server 2000 Analysis Services не поддерживается.  
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  Если источник данных обслуживается поставщиком данных клиента SQL 10, то необходимо также изменить определение источника данных, указав предыдущую версию собственного клиента SQL Server. В противном случае среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] создает сообщение об ошибке, извещающее о том, что поставщик не зарегистрирован.  
   
 ##  <a name="bkmk_Holdout"></a> Развертывание моделей с контрольными данными  
- Если созданная в службах [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] структура интеллектуального анализа данных содержит контрольную секцию данных для проверки моделей интеллектуального анализа данных, то такая структура может быть развернута на экземпляре SQL Server 2005, однако сведения о секции будут потеряны.  
+ При создании структуры интеллектуального анализа данных, который содержит контрольную секцию для тестирования моделей интеллектуального анализа данных, структуры интеллектуального анализа данных могут развертываться на экземпляре SQL Server 2005, но сведения о секции будут потеряны.  
   
  При открытии структуры интеллектуального анализа данных в службах SQL Server 2005 Analysis Services среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] выдает ошибку и производит повторное формирование структуры, удаляя контрольную секцию.  
   
- После повторного построения структуры размер контрольной секции данных больше не отображается в окне свойств, однако значение \<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent> может остаться в файле скрипта ASSL.  
+ После перестроения структуры размер контрольной секции, больше не доступны в окне «Свойства»; Тем не менее, значение \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) по-прежнему присутствовать в файле скрипта ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Развертывание моделей с фильтрами  
- Если в службах [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] к модели интеллектуального анализа данных применен фильтр, то такая модель может быть развернута на экземпляре SQL Server 2005, но фильтр к ней применен не будет.  
+ Если применить фильтр к модели интеллектуального анализа данных, модели можно развернуть на экземпляре SQL Server 2005, но не будет применяться фильтр.  
   
  При открытии модели интеллектуального анализа данных среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] выдает ошибку и производит повторное формирование модели, чтобы удалить фильтр.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  При попытке синхронизации базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] сервер вернет ошибку, а синхронизация будет отменена.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

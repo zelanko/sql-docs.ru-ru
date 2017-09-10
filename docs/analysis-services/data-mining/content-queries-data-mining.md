@@ -1,23 +1,28 @@
 ---
-title: "Запросы содержимого (интеллектуальный анализ данных) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Запросы (интеллектуальный анализ данных) содержимого | Документы Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Запросы содержимого (интеллектуальный анализ данных)
+# <a name="content-queries-data-mining"></a>Запросы содержимого (интеллектуальный анализ данных)
   Запрос содержимого позволяет извлечь сведения о внутренней статистике и структуре модели интеллектуального анализа данных. Иногда запрос содержимого может предоставить информацию, которую не удается получить с помощью средства просмотра. Результаты запроса содержимого можно также использовать для извлечения информации программным образом с целью ее последующего использования.  
   
  В данном разделе предоставлены общие сведения о том, какого рода сведения могут быть получены в ответ на запрос к содержимому, а также об общем синтаксисе расширений интеллектуального анализа данных для запросов к содержимому.  
@@ -195,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Дополнительные сведения о работе с иерархическими наборами строк см. в спецификации OLEDB на сайте MSDN.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../../dmx/understanding-the-dmx-select-statement.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   

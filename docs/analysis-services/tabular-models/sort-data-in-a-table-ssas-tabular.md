@@ -1,27 +1,32 @@
 ---
-title: "Сортировка данных в таблице (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сортировка данных в таблице (табличные службы SSAS) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 48ec433aeb6884117d1341c52a5735ef5302ad58
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Сортировка данных в таблице (табличные службы SSAS)
+# <a name="sort-data-in-a-table-ssas-tabular"></a>Сортировка данных в таблице (табличные службы SSAS)
   Данные могут быть отсортированы по алфавиту (в прямом или обратном порядке) и по значениям (по возрастанию или по убыванию) в одном или нескольких столбцах.  
   
-### Сортировка данных в таблице по текстовому столбцу  
+### <a name="to-sort-the-data-in-a-table-based-on-a-text-column"></a>Сортировка данных в таблице по текстовому столбцу  
   
 1.  В конструкторе моделей выберите столбец буквенно-цифровых данных, диапазон ячеек в столбце или удостоверьтесь в том, что активная ячейка находится в столбце таблицы, который содержит буквенно-цифровые данные, а затем щелкните стрелку в заголовке столбца, по которому необходимо отфильтровать данные.  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  В некоторых случаях данные, импортированные из другого приложения, могут иметь начальные пробелы перед данными. Для правильной сортировки данных необходимо удалить ведущие пробелы.  
   
-### Сортировка данных в таблице по числовому столбцу  
+### <a name="to-sort-the-data-in-a-table-based-on-a-numeric-column"></a>Сортировка данных в таблице по числовому столбцу  
   
 1.  В конструкторе моделей выберите столбец буквенно-цифровых данных, диапазон ячеек в столбце или удостоверьтесь в том, что активная ячейка находится в столбце таблицы, который содержит буквенно-цифровые данные, а затем щелкните стрелку в заголовке столбца, по которому необходимо отфильтровать данные.  
   
@@ -47,8 +52,8 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  Если результаты не соответствуют ожиданию, возможно, столбец содержит числа, сохраненные в формате текста. Например, отрицательные числа, импортированные из систем составления отчетности, или число, введенное с апострофом «’» в начале, сохраняются как текст.  
   
-## См. также  
- [Сортировка и фильтрация данных (табличные службы SSAS)](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>См. также  
+ [Сортировка и фильтрация данных (табличные службы SSAS)](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
  [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   

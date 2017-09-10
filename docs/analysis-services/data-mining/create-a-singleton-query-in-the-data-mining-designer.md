@@ -1,26 +1,31 @@
 ---
-title: "Создание одноэлементного запроса в конструкторе интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "одноэлементные запросы [службы Analysis Services]"
-  - "прогнозирование моделей интеллектуального анализа [службы Analysis Services], одноэлементные запросы"
+title: "Создание одноэлементного запроса в конструкторе интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfbb55881c274dee8560cbba14319bcc831b38c2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
+# <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
   Одноэлементный запрос используется при необходимости создать прогноз для одного объекта. Дополнительные сведения об одноэлементных запросах см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
   
  На вкладке **Прогноз модели интеллектуального анализа данных** конструктора интеллектуального анализа данных можно создавать много различных типов запросов. Запросы можно создавать с помощью конструктора, либо путем ввода инструкций расширения интеллектуального анализа данных (DMX-инструкций). Кроме того, можно начать работу с конструктором, а затем изменить созданный в нем запрос путем изменения DMX-инструкций или путем добавления предложений WHERE или ORDER BY.  
@@ -39,7 +44,7 @@ AS [t]
   
  Следующие шаги объясняют процедуру создания прогнозирующего запроса.  
   
-### Создание одноэлементного запроса с помощью конструктора интеллектуального анализа данных  
+### <a name="to-create-a-singleton-query-by-using-the-data-mining-designer"></a>Создание одноэлементного запроса с помощью конструктора интеллектуального анализа данных  
   
 1.  Перейдите на вкладку **Прогноз моделей интеллектуального анализа данных** в конструкторе интеллектуального анализа данных.  
   
@@ -67,7 +72,7 @@ AS [t]
   
      Например, выберите **Прогнозирующая функция**, затем выберите функцию **PredictProbability**.  
   
-7.  Щелкните **Критерий или аргумент** в строке **PredictProbability**, затем введите имя столбца для прогнозирования и, при необходимости, укажите конкретное значение для прогнозирования.  
+7.  Щелкните **Критерий или аргумент** в строке **PredictProbability** , затем введите имя столбца для прогнозирования и, при необходимости, укажите конкретное значение для прогнозирования.  
   
      Например, введите **[Bike Buyer], 1**.  
   
@@ -79,7 +84,7 @@ AS [t]
   
      Откроется новый экран, в котором отобразится результат запроса. Чтобы просмотреть созданную DMX-инструкцию, щелкните **SQL**.  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Прогнозирующие запросы (интеллектуальный анализ данных)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

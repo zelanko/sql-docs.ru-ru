@@ -1,30 +1,35 @@
 ---
-title: "Указание столбца, который будет использоваться в модели в качестве регрессора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Указать столбец для использования в качестве Регрессора в модели | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25b142831c6b4cb1dd1afaa25734f0b0435de18c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Указание столбца, который будет использоваться в модели в качестве регрессора
+# <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Указание столбца, который будет использоваться в модели в качестве регрессора
   Модель линейной регрессии представляет значение прогнозируемого атрибута как результат формулы, в которой входные данные комбинируются таким образом, чтобы они как можно ближе соответствовали предполагаемой линии регрессии. Этот алгоритм принимает только числовые значения и автоматически обнаруживает входные данные, которые обеспечивают наиболее близкое соответствие.  
   
  Однако можно указать, что столбец включается в качестве регрессора добавлением в модель параметра FORCE_REGRESSOR и указанием использования регрессоров. Это может понадобиться, когда атрибут имеет значение даже в том случае, если эффект слишком мал и не может быть обнаружен моделью либо когда необходимо обеспечить включение атрибута в формулу.  
   
- В следующей процедуре показано, как создать простую модель линейной регрессии с помощью образцов данных, использованных в [учебнике по нейронным сетям](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md). Модель не обязательно будет надежной, однако она демонстрирует, как использовать конструктор интеллектуального анализа данных для настройки модели линейной регрессии.  
+ В следующей процедуре показано, как создать простую модель линейной регрессии с помощью образцов данных, использованных в [учебнике по нейронным сетям](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b). Модель не обязательно будет надежной, однако она демонстрирует, как использовать конструктор интеллектуального анализа данных для настройки модели линейной регрессии.  
   
-### Как создать простую модель линейной регрессии  
+### <a name="how-to-create-a-simple-linear-regression-model"></a>Как создать простую модель линейной регрессии  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], в **обозревателе решений**разверните узел **Структуры интеллектуального анализа данных**.  
   
@@ -59,10 +64,10 @@ caps.handback.revision: 6
   
      В средстве просмотра модель представляется единственным узлом, содержащим формулу регрессии. Можно просмотреть формулу в окне **Обозначения интеллектуального анализа данных**или получить коэффициенты для формулы с помощью запросов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
- [Технический справочник по алгоритму линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

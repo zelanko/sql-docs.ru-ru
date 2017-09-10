@@ -1,24 +1,29 @@
 ---
-title: "Столбцы данных о событиях сеанса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "категория события «События сеанса»"
+title: "Столбцы данных о событиях сеанса | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Столбцы данных о событиях сеанса
+# <a name="session-events-data-columns"></a>Столбцы данных о событиях сеанса
   Категория событий сеанса содержит следующие классы событий:  
   
 |**Идентификатор события**|**Имя события**|**Описание события**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 21
   
  В следующей таблице содержится список столбцов данных для данного класса событий.  
   
-## Existing Connection  
+## <a name="existing-connection"></a>Existing Connection  
   
 |**Имя столбца**|**Идентификатор столбца**|**Тип столбца**|**Описание столбца**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
 |SPID|41|1|Идентификатор процесса сервера. Это уникально идентифицирует пользователя сеанса. Непосредственно соответствует идентификатору GUID сеанса, используемому XML/A.|  
 |ServerName|43|8|Имя сервера, формирующего событие.|  
   
-## Существующий сеанс  
+## <a name="existing-session"></a>Существующий сеанс  
   
 |**Имя столбца**|**Идентификатор столбца**|**Тип столбца**|**Описание столбца**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
 |ServerName|43|8|Имя сервера, формирующего событие.|  
 |RequestProperties|45|9|Свойства запроса XMLA.|  
   
-## Инициализация сеанса  
+## <a name="session-initialize"></a>Инициализация сеанса  
   
 |||||  
 |-|-|-|-|  
@@ -85,7 +90,7 @@ caps.handback.revision: 21
 |ServerName|43|8|Имя сервера, формирующего событие.|  
 |RequestProperties|45|9|Свойства запроса XMLA.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Категория событий «Аудит безопасности»](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

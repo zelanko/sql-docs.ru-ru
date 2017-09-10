@@ -1,30 +1,35 @@
 ---
-title: "Связанные группы мер | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "связанные группы мер [службы Analysis Services]"
-  - "ссылка групп мер"
-  - "мастер связанных групп мер"
-  - "группы мер [службы Analysis Services], связанные"
-  - "связанные измерения [службы Analysis Services]"
+title: "Связанные группы мер | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linked measure groups [Analysis Services]
+- referencing measure groups
+- Linked Measure Group Wizard
+- measure groups [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Связанные группы мер
+# <a name="linked-measure-groups"></a>Связанные группы мер
   Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
   
  Корпорация Майкрософт рекомендует, чтобы исходные и связанные группы мер находились в решениях, которые выполняются на том же сервере. Связывание с группой мер на удаленном сервере планируется отменить в будущих версиях (см. раздел [Нерекомендуемые функции служб Analysis Services в SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
@@ -32,7 +37,7 @@ caps.handback.revision: 41
 > [!IMPORTANT]  
 >  Связанные группы мер доступны только для чтения. Для получения самых последних изменений следует удалить и повторно создать все связанные группы мер на основе измененного исходного объекта. По этой причине копирование и вставка группы мер между проектами является альтернативным подходом, который следует рассматривать в том случае, если в будущем в группу мер необходимо будет вносить изменения.  
   
-## Ограничения на использование  
+## <a name="usage-limitations"></a>Ограничения на использование  
  Как уже отмечалось ранее, важное ограничение использования связанных мер заключается в невозможности напрямую настраивать связанную меру. Изменение типа данных, формата, привязки данных и видимости, а также членства элементов в самой группе мер ― это все те изменения, которые необходимо внести в исходную группу мер.  
   
  С точки зрения операций связанные группы мер идентичны другим группам мер для клиентских приложений, и запросы к ним выполняют так же, как и к другим группам мер.  
@@ -51,7 +56,7 @@ caps.handback.revision: 41
   
  Меры в связанной группе мер можно непосредственно организовать только вместе со связанными измерениями, полученными из той же базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Можно использовать вычисляемые элементы для связи данных из связанных групп мер с другими, несвязанными измерениями в кубе. Для связи несвязанных измерений со связанной группой мер также можно использовать косвенную связь, например ссылку или связь «многие ко многим».  
   
-## Создание или изменение связанной меры  
+## <a name="create-or-modify-a-linked-measure"></a>Создание или изменение связанной меры  
  Создайте связанную группу мер с помощью среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
 1.  Внесите все необходимые изменения в исходную группу мер сейчас в исходном кубе с тем, чтобы не пришлось повторно создавать связанные группы мер в последующих кубах. Можно переименовать связанный объект, но любые другие свойства изменять нельзя.  
@@ -66,12 +71,12 @@ caps.handback.revision: 41
   
 6.  Нажмите кнопку **Готово** , чтобы создать связанный объект. Связанные объекты отображаются на панели мер и измерений и обозначаются значком связи.  
   
-## Защита связанной меры  
+## <a name="secure-a-linked-measure"></a>Защита связанной меры  
  После того как ссылка определена, управление доступом к измерениям в связанной группе мер осуществляется так же, как и доступ к другим группам мер. В конструкторе ролей связанный объект отображается рядом со своими аналогами, которые не имеют связей. Дополнительные сведения об управлении безопасностью группы мер см. в разделе [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Чтобы определить или использовать связанную группу мер, учетная запись службы Windows для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна принадлежать к роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеющей права доступа **ReadDefinition** и **Read** в исходном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на исходный куб и группу мер, или к роли "Администраторы" служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для исходного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  [Определите связанные измерения](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

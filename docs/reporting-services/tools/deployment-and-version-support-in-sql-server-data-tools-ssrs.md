@@ -1,5 +1,5 @@
 ---
-title: "Развертывание и поддержка версий в SQL Server Data Tools (SSRS) | Документы Microsoft"
+title: "Развертывание и поддержка версий в SQL Server Data Tools (SSDT) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
+ms.translationtype: MT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Развертывание и поддержка версий в SQL Server Data Tools (SSRS)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Развертывание и поддержка версий в SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] поддерживает следующие сценарии:  
   
 -   Открытые определения отчетов (*RDL) и проекты сервера отчетов (\*RPTPROJ).  
@@ -78,3 +78,4 @@ ms.lasthandoff: 08/09/2017
  [Публикация источников данных и отчетов](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
+

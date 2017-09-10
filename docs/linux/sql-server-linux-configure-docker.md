@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Настройка образов контейнеров 2017 г. SQL Server на Docker
@@ -139,7 +139,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 Этот метод дает возможность совместного использования и просматривать файлы на узле за пределами Docker.
 
 > [!IMPORTANT]
-> Сопоставление тома узла для Docker на Mac с SQL Server на образе Linux в настоящее время не поддерживается. Вместо этого используйте контейнеры томов данных. Это ограничение относится только к `/var/opt/msql` каталога. Чтение из подключенного каталога работает нормально. Например можно подключить узла каталога, с ключом-v на Mac и восстановление резервной копии из BAK-файл, который находится на узле.
+> Сопоставление тома узла для Docker на Mac с SQL Server на образе Linux в настоящее время не поддерживается. Вместо этого используйте контейнеры томов данных. Это ограничение относится только к `/var/opt/mssql` каталога. Чтение из подключенного каталога работает нормально. Например можно подключить узла каталога, с ключом-v на Mac и восстановление резервной копии из BAK-файл, который находится на узле.
 
 ### <a name="use-data-volume-containers"></a>Используйте контейнеры томов данных
 

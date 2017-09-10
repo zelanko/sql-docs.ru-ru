@@ -1,27 +1,32 @@
 ---
-title: "Журнал операций в службах Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Записи операций в службах Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e23d96e675fba4ed740b8adbb8402d3ae7fd06e2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Журнал операций в службах Analysis Services
+# <a name="log-operations-in-analysis-services"></a>Журнал операций в службах Analysis Services
   Экземпляр служб Analysis Services будет записывать уведомления сервера, ошибки и предупреждения в журнал msmdsrv.log. Для каждого устанавливаемого экземпляра создается один журнал. Администраторы обращаются к этому журналу для анализа как обычных, так и непредвиденных событий. В последних версиях ведение журнала было усовершенствовано, чтобы собирать больше сведений. Записи журнала теперь включают сведения о версии и выпуске продукта, а также о процессоре, памяти, подключении и событиях блокировки. Список всех изменений можно просмотреть в разделе [Улучшения ведения журнала](http://support.microsoft.com/kb/2965035).  
   
- Помимо встроенного ведения журнала, многие администраторы и разработчики используют средства, предоставляемые сообществом служб Analysis Services для сбора данных об операциях сервера, например **ASTrace**. Ссылки на загрузки вы найдете здесь: [Примеры для служб аналитики, предоставленные сообществом Microsoft SQL Server](https://sqlsrvanalysissrvcs.codeplex.com/).  
+ Помимо встроенного ведения журнала, многие администраторы и разработчики используют средства, предоставляемые сообществом служб Analysis Services для сбора данных об операциях сервера, например **ASTrace**. Ссылки на загрузки вы найдете здесь: [Примеры для служб аналитики, предоставленные сообществом Microsoft SQL Server](https://sqlsrvanalysissrvcs.codeplex.com/) .  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -47,16 +52,16 @@ caps.handback.revision: 12
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Журнал ошибок|Постоянное наблюдение и устранение основных неполадок|Да|  
 |Таблица OlapQueryLog реляционной базы данных|Журнал запросов|Сбор входных данных для мастера оптимизации использования|Нет|  
-|Файлы SQLDmp\<guid>.mdmp|Сбои и исключения|Устранение серьезных неполадок|Нет|  
+|Файлы SQLDmp\<guid > файлы с расширением mdmp|Сбои и исключения|Устранение серьезных неполадок|Нет|  
   
  Настоятельно рекомендуется ознакомиться со следующей ссылкой для получения дополнительных сведений, не охваченных в этом разделе. [Подсказки к начальному сбору данных от службы технической поддержки Майкрософт](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Общие сведения о параметрах конфигурации файла журнала  
- Разделы для каждого журнала можно найти в файле конфигурации сервера msmdsrv.ini, расположенном в папке \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config. Инструкции по изменению файла см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Разделы для каждого журнала можно найти в файле конфигурации сервера msmdsrv.ini, расположенном в папке \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config. Инструкции по изменению файла см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md) .  
   
  По возможности рекомендуется задать свойства ведения журнала на странице свойств сервера Management Studio. Тем не менее иногда необходимо изменить файл msmdsrv.ini непосредственно для настройки параметров, которые не отображаются в средствах администрирования.  
   
- ![Раздел файла конфигурации, показывающий параметры журнала](../../analysis-services/instances/media/ssas-logfilesettings.png "Раздел файла конфигурации, показывающий параметры журнала")  
+ ![Раздел файла конфигурации, показывающий параметры журнала](../../analysis-services/instances/media/ssas-logfilesettings.png "раздел файла конфигурации, показывающий параметры журнала")  
   
 ##  <a name="bkmk_msmdsrv"></a> Файл журнала службы MSMDSRV  
  Службы Analysis Services записывают операции сервера в файл msmdsrv.log, по одному на экземпляр, расположенный в папке \Program files\Microsoft SQL Server\\<экземпляр\>\Olap\Log.  
@@ -100,7 +105,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_querylog"></a> Журналы запросов  
  Журнал запросов — немного неверное название, в том смысле, что он не регистрирует действия пользователей, связанные с запросами MDX или DAX. Вместо этого он собирает данные о запросах, сформированные службами Analysis Services, которые впоследствии используются в качестве входных данных в мастере оптимизации с учетом использования. Данные, собранные в журнале запросов, не предназначены для прямого анализа. В частности, наборы данных описаны в битовых массивах, при этом ноль или один указывают на части набора данных, включенные в запрос. Эти данные тоже предназначены для мастера.  
   
- Для мониторинга и устранения неполадок запросов многие разработчики и администраторы используют средство сообщества **ASTrace**. Также можно использовать приложение SQL Server Profiler, xEvents или трассировку служб Analysis Services. Ссылки, связанные с трассировкой, см. в разделе [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md).  
+ Для мониторинга и устранения неполадок запросов многие разработчики и администраторы используют средство сообщества **ASTrace**. Также можно использовать приложение SQL Server Profiler, xEvents или трассировку служб Analysis Services. Ссылки, связанные с трассировкой, см. в разделе [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
   
  Когда следует использовать журнал запросов Рекомендуется включить журнал запросов как часть процедуры по настройке производительности запросов, включающей мастер оптимизации с учетом использования. Журнал запросов не существует, пока не включен компонент, не создана поддерживающая структура данных и не заданы свойства, используемые службами Analysis Services для обнаружения и заполнения журнала.  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 12
   
 2.  Предоставьте учетной записи службы Analysis Services достаточно разрешений в базе данных. Учетной записи необходимо предоставить разрешение на создание таблицы, записи в таблицу и считывания из таблицы.  
   
-3.  В SQL Server Management Studio щелкните правой кнопкой мыши **Службы Analysis Services** | **Свойства** | **Общие** и задайте параметру **CreateQueryLogTable** значение true.  
+3.  В SQL Server Management Studio щелкните правой кнопкой мыши **Службы Analysis Services** | **Свойства** | **Общие**и задайте параметру **CreateQueryLogTable** значение true.  
   
 4.  При необходимости измените **QueryLogSampling** или **QueryLogTableName** , если необходимо собирать образцы запросов с другой скоростью или использовать другое имя для таблицы.  
   
@@ -118,7 +123,7 @@ caps.handback.revision: 12
   
  Параметры журнала запросов применяются ко всему серверу. Указанные настройки будут использоваться всеми базами данных на этом сервере.  
   
- ![Параметры журнала запросов в среде Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "Параметры журнала запросов в среде Management Studio")  
+ ![Запросить параметры журнала в среде Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "параметры журнала запросов в среде Management Studio")  
   
  После того как параметры конфигурации указаны, запустите запрос многомерных выражений несколько раз. Если значение выборки равно 10, запустите запрос 11 раз. Убедитесь, что таблица создана. В среде Management Studio подключитесь к ядру реляционной СУБД, откройте папку базы данных, откройте папку **Таблицы** и убедитесь, что **OlapQueryLog** существует. Если таблица сразу не отображается, обновите содержимое папки, чтобы отобразить изменения содержимого.  
   
@@ -180,9 +185,9 @@ caps.handback.revision: 12
   
 -   Используйте ASTrace2012 вместо журнала запросов, чтобы узнать, кто отправляет запросы к кубам. Журнал запросов обычно используется для ввода данных в мастер оптимизации с учетом использования, и данные, которые он записывает, не просто прочитать или интерпретировать. ASTrace2012 — это широко используемое средство сообщества, собирающее операции запросов. Ссылки для загрузки см. в разделе [Примеры сообщества Microsoft SQL Server: службы Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление экземплярами служб Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
+ [Введение в мониторинг служб Analysis Services в SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Свойства сервера служб Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

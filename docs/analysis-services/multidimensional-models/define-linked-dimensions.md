@@ -1,27 +1,32 @@
 ---
-title: "Определите связанные измерения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "измерения [службы Analysis Services], связанные"
-  - "связанные измерения [службы Analysis Services]"
+title: "Определите связанные измерения | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d7830d5075da8ab4b741ecb31bbdefb3acdf6cb9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Определите связанные измерения
+# <a name="define-linked-dimensions"></a>Определите связанные измерения
   Связанное измерение основано на измерении, созданном и хранящемся в другой базе данных служб Analysis Services с той же версией и уровнем совместимости. С помощью связанного измерения можно создавать, хранить и поддерживать измерения в одной базе данных, при этом данное измерение будет доступно для пользователей нескольких баз данных. Для пользователей связанное измерение ничем не отличается от других измерений.  
   
  Связанные измерения доступны только для чтения. Если необходимо изменить измерение или создать новые связи, необходимо изменить исходное измерение, а затем удалить и повторно создать связанное измерение и его связи. Обновлять связанное измерение, чтобы получить изменения из исходного объекта, нельзя.  
@@ -31,14 +36,14 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  Поскольку обновление недоступно, большинство разработчиков служб Analysis Services предпочитают копировать измерения, а не связать их. Можно копировать измерения между проектами в рамках одного решения. Дополнительные сведения см. в разделе [Обновление связанных измерений в службах SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  База данных, предоставляющая измерение, и текущая база данных, использующая его в данный момент, должны иметь одну и ту же версию и уровень совместимости. Дополнительные сведения см. в разделе [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  База данных-источник должна быть развернута и находиться в режиме «в сети». Серверы, публикующие или использующие связанные объекты, должны быть настроены на разрешение операции (см. ниже).  
   
  Используемое измерение не может быть связанным измерением.  
   
-## Настройте сервер на разрешение связанных объектов  
+## <a name="configure-server-to-allow-linked-objects"></a>Настройте сервер на разрешение связанных объектов  
   
 1.  Установите соединение с сервером служб Analysis Services в SQL Server Management Studio. В обозревателе объектов щелкните правой кнопкой мыши имя сервера и выберите пункт **Аспекты**.  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 37
   
 3.  Установите для параметра **LinkedObjectsLinksToOtherInstances** значение **TRUE** , чтобы разрешить серверу запрашивать данные для связанных объектов в базах данных, работающих на других экземплярах.  
   
-## Создайте связанное измерение в SQL Server Data Tools  
+## <a name="create-a-linked-dimension-in-sql-server-data-tools"></a>Создайте связанное измерение в SQL Server Data Tools  
   
-1.  Запустите мастер. В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] щелкните правой кнопкой мыши папку **Измерения** в базе данных или проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], а затем выберите **Создать связанное измерение**.  
+1.  Запустите мастер. В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]щелкните правой кнопкой мыши папку **Измерения** в базе данных или проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем выберите **Создать связанное измерение**.  
   
 2.  Установите соединение с базой данных Analysis Services, предоставляющей измерение. На странице **Выбор источника данных** мастера связанных объектов выберите источник данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или создайте новый.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 37
   
 2.  В диспетчере соединений проверьте, что установлен поставщик **Собственный поставщик OLE DB\Поставщик OLE DB для служб Analysis Services 11.0 (Майкрософт)**.  
   
-3.  Введите имя сервера (для именованного экземпляра используйте формат *имя_сервера*\\*имя_экземпляра*) или введите **localhost**, чтобы подключиться к серверу служб Analysis Services, запущенному на том же компьютере.  
+3.  Введите имя сервера (для именованного экземпляра используйте формат *имя_сервера*\\*имя_экземпляра* ) или введите **localhost** , чтобы подключиться к серверу служб Analysis Services, запущенному на том же компьютере.  
   
 4.  Используйте проверку подлинности Windows для соединения.  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 37
   
 7.  На странице «Сведения об олицетворении» выберите **Использовать учетную запись службы**. Нажмите кнопку **Далее**и завершите работу мастера. Созданное соединение будет выбрано в мастере связанных объектов.  
   
-## Следующие шаги  
+## <a name="next-steps"></a>Следующие шаги  
  Структуру связанного измерения изменить нельзя, поэтому она не отображается на вкладке **Структура измерения** конструктора измерений. После обработки связанного измерения его можно просмотреть на вкладке **Браузер** . Также можно изменить его имя и создать перевод для имени.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
- [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+ [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

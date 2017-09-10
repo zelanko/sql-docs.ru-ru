@@ -1,35 +1,40 @@
 ---
-title: "Обновление данных PowerPivot в SharePoint 2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обновление данных PowerPivot в SharePoint 2013 Power | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 30482b2c269a3d73bd6ef4852d295ae37e52c5e3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Обновление данных PowerPivot в SharePoint 2013
+# <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Обновление данных PowerPivot в SharePoint 2013
   Обновление данных служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint 2013 использует службы Excel в качестве основного компонента для загрузки и обновления данных модели на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работает на внешней ферме SharePoint. Архитектура служб SharePoint 2013 Excel поддерживает как **интерактивное** , так и **плановое**обновление данных.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
  **В этом разделе:**  
   
--   [интерактивное](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [Проверка подлинности Windows с подключением к данным книги и интерактивным обновлением данных](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [плановое](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [Архитектура планового обновления данных в SharePoint 2013](#bkmk_refresh_architecture)  
   
@@ -37,13 +42,13 @@ caps.handback.revision: 14
   
 -   [Дополнительные сведения](#bkmk_moreinformation)  
   
-## Историческая справка  
+## <a name="background"></a>Историческая справка  
  Службы SharePoint Server 2013 Excel управляют обновлением данных для книг Excel 2013 и запускают обработку модели данных на сервере [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающем в режиме интеграции с SharePoint. Для книг Excel 2010 службы Excel также управляют загрузкой и сохранением книг и моделей данных. Однако при этом службы Excel при отправке команд обработки к модели данных полагаются на системные службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В следующей таблице сведены компоненты, которые отправляют команды на обновление данных, в зависимости он версии книги. В качестве рабочей среды подразумевается ферма SharePoint 2013, настроенная на использование служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server в режиме интеграции с SharePoint.  
   
 ||||  
 |-|-|-|  
 ||Книги Excel 2013|Книги Excel 2010|  
-|Запуск обновления данных|**Интерактивное:** пользователь, прошедший проверку подлинности<br /><br /> **Плановое**: системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Системная служба|  
+|Запуск обновления данных|**Интерактивное:** пользователь, прошедший проверку подлинности<br /><br /> **Плановое** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Системная служба|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Системная служба|  
 |Загрузка книги из баз данных содержимого|Службы SharePoint 2013 Excel|Службы SharePoint 2013 Excel|  
 |Загрузка модели данных на экземпляр служб Analysis Services|Службы SharePoint 2013 Excel|Службы SharePoint 2013 Excel|  
 |Отправка команд обработки на экземпляр служб Analysis Services|Службы SharePoint 2013 Excel|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Системная служба|  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
  **(\*)** Дополнительные сведения об обновлении книг см. в статье [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
-##  <a name="bkmk_interactive_refresh"></a> интерактивное  
+##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  Интерактивное или ручное обновление данных в службах SharePoint Server 2013 Excel Services может обновить модели сведениями из оригинальных источников данных. Интерактивное обновление данных становится доступным после настройки приложения служб Excel путем регистрации сервера [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [Управление параметрами модели данных в службах Excel (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
 > [!NOTE]  
@@ -86,7 +91,7 @@ caps.handback.revision: 14
   
 4.  **Примечание.** Обновленная книга в библиотеку документов автоматически не сохраняется.  
   
- ![интерактивное обновление данных](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "интерактивное обновление данных")  
+ ![интерактивное](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "интерактивное")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Проверка подлинности Windows с подключением к данным книги и интерактивным обновлением данных  
  Службы Excel отправляют серверу службы Analysis Services команду обработки на олицетворение учетной записи пользователя. Чтобы получить системные права, достаточные для выполнения процедуры делегирования и олицетворения для пользователя, учетная запись службы Analysis Services запрашивает право доступа **Работа в режиме операционной системы** на локальном сервере. Кроме того, сервер службы Analysis Services должен иметь возможность делегировать учетные записи пользователя источникам данных. Результат запроса отправляется службам Excel.  
@@ -127,7 +132,7 @@ caps.handback.revision: 14
   
  Дополнительные сведения см. в статье [Работа в режиме операционной системы](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx).  
   
-##  <a name="bkmk_scheduled_refresh"></a> плановое  
+##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Основные особенности планового обновления данных**  
   
 -   Требует развертывания надстройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
@@ -142,7 +147,7 @@ caps.handback.revision: 14
   
 -   **Учетные данные.** Используется сохраненные учетные данные. Удостоверение текущего пользователя не используется.  
   
--   **Поддерживаемые книги.** Книги, созданные с помощью надстройки [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel 2010 или с помощью Excel 2013. Не поддерживаются книги, созданные в Excel 2010 с помощью надстройки [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Обновите книгу по крайней мере до формата [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения об обновлении книг см. в статье [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Поддерживаемые книги.** Книги, созданные с помощью надстройки [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel 2010 или с помощью Excel 2013. Не поддерживаются книги, созданные в Excel 2010 с помощью надстройки [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Обновите книгу по крайней мере до формата [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения об обновлении книг см. в статье [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  Отображение страницы **Управление обновлением данных**  
   
@@ -162,7 +167,7 @@ caps.handback.revision: 14
   
     -   сохранение книги в базе данных содержимого.  
   
- ![управление контекстным меню обновления данных](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "управление контекстным меню обновления данных")  
+ ![Управление контекстным меню обновления данных](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "управление контекстным меню обновления данных")  
   
 > [!TIP]  
 >  Сведения об обновлении книг из SharePoint Online см. в техническом документе [Refreshing Excel workbooks with embedded Power Pivot models from SharePoint Online](http://technet.microsoft.com/library/jj992650.aspx) (Обновление книг Excel с внедренными моделями PowerPivot из SharePoint Online) (http://technet.microsoft.com/library/jj992650.aspx).  
@@ -170,7 +175,7 @@ caps.handback.revision: 14
 ##  <a name="bkmk_refresh_architecture"></a> Архитектура планового обновления данных в SharePoint 2013  
  На следующем рисунке показана архитектура обновления данных для SharePoint 2013 и SQL Server 2012 с пакетом обновления 1 (SP1).  
   
- ![архитектура обновления данных SQL Server 2012 с пакетом обновления 1 (SP1)](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "архитектура обновления данных SQL Server 2012 с пакетом обновления 1 (SP1)")  
+ ![Архитектура обновления данных в SQL Server 2012 SP1](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "архитектура обновления данных в SQL Server 2012 SP1")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -189,9 +194,9 @@ caps.handback.revision: 14
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] требуются соответствующие поставщики данных и клиентские библиотеки, чтобы сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint мог обращаться к источникам данных.  
   
 > [!NOTE]  
->  Так как системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] больше не загружает и не сохраняет модели [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], большинство настроек кэширования моделей на сервере приложений к ферме SharePoint 2013 не применяются.  
+>  Так как системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] больше не загружает и не сохраняет модели [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , большинство настроек кэширования моделей на сервере приложений к ферме SharePoint 2013 не применяются.  
   
-## Данные журнала обновления данных  
+## <a name="data-refresh-log-data"></a>Данные журнала обновления данных  
  **Данные об использовании** . Здесь можно просмотреть данные об обновлении данных на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Просмотр данных об использовании  
   
 1.  В центре администрирования SharePoint щелкните **Панель мониторинга управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** в группе **Общие параметры приложения**.  
@@ -208,12 +213,12 @@ caps.handback.revision: 14
   
 -   Категория **Обновления данных**.  
   
- Просмотрите **Настройка ведения журнала диагностики**. Дополнительные сведения см. в разделе [Настройка и просмотр файлов журнала SharePoint и ведение журнала диагностики (Power Pivot для SharePoint)](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+ Просмотрите **Настройка ведения журнала диагностики**. Дополнительные сведения см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики (Power Pivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).
   
 ##  <a name="datarefresh_additional_authentication"></a> Другие вопросы проверки подлинности  
  Параметры в диалоговом окне **Параметры проверки подлинности служб Excel** в Excel 2013 задают удостоверение Windows, которым службы Excel и [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользуются для обновления данных.  
   
--   **Использовать учетную запись пользователя, прошедшего проверку подлинности.** Службы Excel выполняют обновление данных с удостоверением текущего пользователя, вошедшего в систему.  
+-   **Использовать учетную запись пользователя, прошедшего проверку подлинности.**Службы Excel выполняют обновление данных с удостоверением текущего пользователя, вошедшего в систему.  
   
 -   **Использовать сохраненные учетные данные**. Предполагается использование идентификатора приложения в службе SharePoint Secure Store, по которому службы Excel извлекают имя пользователя и пароль для проверки подлинности при обновлении данных.  
   
@@ -229,7 +234,7 @@ caps.handback.revision: 14
   
 4.  В диалоговом окне **Свойства соединения** нажмите **Определение**, а затем нажмите кнопку **Параметры проверки подлинности…** .  
   
- ![Параметры проверки подлинности служб Excel](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "Параметры проверки подлинности служб Excel")  
+ ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
  Дополнительные сведения об аутентификации при обновлении данных и использовании учетных данных см. в записи блога [Refreshing PowerPivot Data in SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx)(Обновление данных PowerPivot в SharePoint 2013).  
   
@@ -238,7 +243,7 @@ caps.handback.revision: 14
   
  [Службы Excel в SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Установка служб Analysis Services в режиме Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "Развертывание решений моделей с использованием программы развертывания | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "развертывание [службы Analysis Services], командная строка"
-  - "программы командной строки [SQL Server], Microsoft.AnalysisServices.Deployment"
-  - "Microsoft.AnalysisServices.Deployment, программа"
-  - "развертывания служб Analysis Services, командная строка"
+title: "Развертывание решений модели с использованием программы развертывания | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying [Analysis Services], command prompt
+- command prompt utilities [SQL Server], Microsoft.AnalysisServices.Deployment
+- Microsoft.AnalysisServices.Deployment utility
+- Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Развертывание решений моделей с использованием программы развертывания
+# <a name="deploy-model-solutions-with-the-deployment-utility"></a>Развертывание решений моделей с использованием программы развертывания
   Программа **Microsoft.AnalysisServices.Deployment** позволяет запустить механизм развертывания служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки. В качестве входных файлов программа использует выходные XML-файлы, сформированные при построении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Входные файлы можно легко изменять для настройки развертывания проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -61,7 +66,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  Аргумент **/d** используется только в режиме вывода. Этот аргумент не будет учитываться, если указан режим ответов или режим без вывода сообщений. Дополнительные сведения о режимах см. в подразделе [Режимы](#Modes)далее в этом разделе.  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Программа **Microsoft.AnalysisServices.Deployment** использует набор файлов, которые содержат определения объектов, адресаты развертывания, параметры развертывания и параметры настройки конфигурации, и пытается развернуть определения объекта на указанные адресаты развертывания с помощью указанных параметров развертывания и параметров настройки конфигурации. Эта программа может предоставить пользовательский интерфейс, если будет вызвана в режиме файлов ответов или в режиме вывода. Дополнительные сведения о том, как использовать пользовательский интерфейс, предоставляемый этой программой для создания файлов ответов, см. в разделе [Развертывание решений модели с использованием мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  Эта программа находится в папке «\Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio».  
@@ -73,11 +78,11 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 |----------|-----------------|  
 |Режим без вывода сообщений|Интерфейс пользователя не отображается, а все сведения, необходимые для развертывания, берутся из входных файлов. В режиме без вывода сообщений программа не отображает ход выполнения. Вместо этого может использоваться дополнительный файл журнала, в котором фиксируется ход выполнения и сведения об ошибках для последующего просмотра.|  
 |Режим ответов|Отображается пользовательский интерфейс мастера развертывания, а пользовательские ответы сохраняются в указанных входных файлах для последующего развертывания. В режиме ответов развертывание не происходит. Режим ответов предназначен только для сбора ответов пользователей|  
-|Режим вывода|Интерфейс пользователя не отображается, а все сведения, необходимые для развертывания, берутся из входных файлов.<br /><br /> Однако, в отличие от режима без вывода сообщений, вывод из программы записывается в выходной файл скрипта и не отправляется адресатам развертывания, обозначенным во входных файлах. Если не указан аргумент **/d**, то при формировании выходного файла скрипта программа подключается к каждой цели развертывания, чтобы сравнить метаданные.|  
+|Режим вывода|Интерфейс пользователя не отображается, а все сведения, необходимые для развертывания, берутся из входных файлов.<br /><br /> Однако, в отличие от режима без вывода сообщений, вывод из программы записывается в выходной файл скрипта и не отправляется адресатам развертывания, обозначенным во входных файлах. Если не указан аргумент **/d** , то при формировании выходного файла скрипта программа подключается к каждой цели развертывания, чтобы сравнить метаданные.|  
   
  [Назад к аргументам](#Arguments)  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующем примере показано, как развернуть проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в базе данных в автоматическом режиме, регистрируя ход выполнения и сообщения об ошибках для последующего просмотра:  
   
  `Microsoft.AnalysisServices.Deployment.exe`  
@@ -86,7 +91,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по программе командной строки (Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

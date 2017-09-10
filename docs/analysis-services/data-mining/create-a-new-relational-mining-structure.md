@@ -1,30 +1,35 @@
 ---
-title: "создать новую реляционную структуру интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "структуры интеллектуального анализа данных [службы Analysis Services], относительные"
-  - "структуры интеллектуального анализа данных [службы Analysis Services], создание"
-  - "реляционные модели интеллектуального анализа данных [службы Analysis Services]"
+title: "Создать новую структуру интеллектуального анализа реляционных данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], relational
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# создать новую реляционную структуру интеллектуального анализа данных
+# <a name="create-a-new-relational-mining-structure"></a>создать новую реляционную структуру интеллектуального анализа данных
   Создайте в мастере интеллектуального анализа данных новую структуру интеллектуального анализа данных, используя данные из реляционной базы данных или другого источника, а затем сохраните структуру и связанные с ней модели в базе данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-## Создание реляционной структуры интеллектуального анализа данных  
+## <a name="to-create-a-relational-mining-structure"></a>Создание реляционной структуры интеллектуального анализа данных  
   
 1.  В обозревателе решений щелкните правой кнопкой мыши папку **Структуры интеллектуального анализа данных** в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и выберите пункт **Создать структуру интеллектуального анализа данных**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 29
   
 11. На странице **Завершение работы мастера** введите имя для структуры интеллектуального анализа и соответствующей первоначальной модели интеллектуального анализа данных, которая будет создана, а затем нажмите кнопку **Готово**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

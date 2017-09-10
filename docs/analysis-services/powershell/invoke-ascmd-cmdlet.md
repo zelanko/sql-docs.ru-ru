@@ -1,34 +1,42 @@
 ---
-title: "Командлет Invoke-ASCmd | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Командлет Invoke-ASCmd | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 366263980ae7ad9d5a792e6525888080a38ebbf6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Командлет Invoke-ASCmd
+# <a name="invoke-ascmd-cmdlet"></a>Командлет Invoke-ASCmd
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Позволяет администратору базы данных выполнить сценарий XMLA, многомерные выражения (MDX), инструкции расширений интеллектуального анализа данных (DMX) или сценарий TMSL.  
   
  Язык TMSL поддерживается только в табличном режиме сервера в экземпляре служб Analysis Services SQL Server 2016.  
   
  Если вы хотите создать базы данных или другие объекты, то используете именно этот командлет с входным файлом сценария.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
  `Invoke-ASCmd –Query <string> [-Server <string>] [-Database <string>] [-Credential <PSCredential>] [-ConnectionTimeout <int>] [-QueryTimeout <int>] [-Variable <string[]>] [-TraceFile <string>] [-TraceFileFormat <TraceFileFormatOption>] [-TraceFileDelimiter <string>] [-TraceTimeout <int>] [-TraceLevel <TraceLevelOption>] [<CommonParameters>]`  
   
  `Invoke-ASCmd –InputFile <string> [-Server <string>] [-Database <string>] [-Credential <PSCredential>] [-ConnectionTimeout <int>] [-QueryTimeout <int>] [-Variable <string[]>] [-TraceFile <string>] [-TraceFileFormat <TraceFileFormatOption>] [-TraceFileDelimiter <string>] [-TraceTimeout <int>] [-TraceLevel <TraceLevelOption>] [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Командлет ASCmd может выполнять запросы или скрипты, содержащиеся во входных файлах.  
   
  Поддерживаются следующие команды для XMLA: Alter, Backup, Batch, BeginTransaction, Cancel, ClearCache, CommitTransaction, Create, Delete, DesignAggregations, Drop, Insert, Lock, MergePartitions, NotifyTableChange, Process, Restore, RollbackTransaction, SetPasswordEncryptionKey, Statement (используется для выполнения запросов многомерных выражений и инструкций расширений интеллектуального анализа данных), Subscribe, Synchronize, Unlock, Update, UpdateCells.  
@@ -37,10 +45,10 @@ caps.handback.revision: 15
   
  Этот командлет поддерживает параметр –Credential, который можно использовать, если экземпляр служб Analysis Services настроен для доступа по протоколу HTTP. Параметр –Credential принимает объект PSCredential, который содержит идентификатор пользователя Windows. Службы IIS будут олицетворять этого пользователя при подключении к службам Analysis Services. Чтобы запустить скрипт, необходимо обладать разрешениями системного администратора на этом экземпляре служб Analysis Services.  
   
-## Параметры  
+## <a name="parameters"></a>Параметры  
   
-### -Query \<строка>  
- Указывает, что фактический скрипт, запрос или инструкция задается непосредственно в командной строке, а не в файле. Также запрос можно указать в качестве входа конвейера. При использовании командлета **Invoke-AsCmd** необходимо указать либо значение **–InputFile**, либо значение **–Query**.  
+### <a name="-query-string"></a>-Query \<строка >  
+ Указывает, что фактический скрипт, запрос или инструкция задается непосредственно в командной строке, а не в файле. Также запрос можно указать в качестве входа конвейера. При использовании командлета **Invoke-AsCmd** необходимо указать либо значение **–InputFile** , либо значение **–Query**.  
   
 |||  
 |-|-|  
@@ -50,8 +58,8 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|True (ByValue)|  
 |Принимать символы-шаблоны?|false|  
   
-### -InputFile \<строка>  
- Идентифицирует файл, содержащий сценарий XMLA, запрос многомерных выражений, инструкцию расширения интеллектуального анализа данных или сценарий TMSL (в формате JSON). При использовании командлета **Invoke-AsCmd** необходимо указать либо значение **–InputFile**, либо значение **–Query**.  
+### <a name="-inputfile-string"></a>-InputFile \<строка >  
+ Идентифицирует файл, содержащий сценарий XMLA, запрос многомерных выражений, инструкцию расширения интеллектуального анализа данных или сценарий TMSL (в формате JSON). При использовании командлета **Invoke-AsCmd** необходимо указать либо значение **–InputFile** , либо значение **–Query**.  
   
 |||  
 |-|-|  
@@ -61,7 +69,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Server \<строка>  
+### <a name="-server-string"></a>-Server \<строка >  
  Указывает экземпляр служб Analysis Services, к которому подключится командлет и где он будет выполняться. Если имя сервера не указано, произойдет подключение к серверу localhost. Для экземпляров по умолчанию достаточно указать имя сервера. Для именованных экземпляров используйте формат имя_сервера\имя_экземпляра. Для HTTP-соединений используйте формат http[s]://server[:port]/virtualdirectory/msmdpump.dll.  
   
 |||  
@@ -72,7 +80,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Database \<строка>  
+### <a name="-database-string"></a>-Базы данных \<строка >  
  Определяет базу данных, в которой выполняются запросы MDX или инструкции DMX. Параметр базы данных не учитывается, если командлет выполняет скрипт XML для аналитики, так как скрипт XML для аналитики содержит внедренное имя базы данных.  
   
 |||  
@@ -83,14 +91,14 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Credential \<учетные данные ПК>  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
  Указывает объект PSCredential, который содержит имя пользователя и пароль Windows. Укажите этот параметр, только если экземпляр служб Analysis Services настроен для доступа HTTP с использованием обычной проверки подлинности. Для соединений в собственном режиме, в которых используются интегрированные функции безопасности, этот параметр не учитываются.  
   
  Если этот параметр указан, учетные данные, которые он содержит, добавляются в строку подключения. Службы IIS будут олицетворять этого пользователя при соединении со службами Analysis Services. Если учетные данные не будут указаны, будут использованы учетные данные по умолчанию для пользователя, который запускает это средство.  
   
  Для использования этого параметра необходимо сначала создать объект PSCredential с помощью командлета Get-Credential, чтобы указать имя пользователя и пароль (например, `$Cred=Get-Credential “adventure-works\admin”`. этот объект можно затем передать по конвейеру в параметр –Credential `(-Credential:$Cred`.  
   
- Дополнительные сведения о проверке подлинности и использовании учетных данных см. в разделе [Создание скриптов PowerShell в службах Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). Дополнительные сведения о HTTP-доступе см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+   Дополнительные сведения о HTTP-доступе см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 |||  
 |-|-|  
@@ -100,7 +108,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|True (ByValue)|  
 |Принимать символы-шаблоны?|false|  
   
-### -ConnectionTimeout \<int>  
+### <a name="-connectiontimeout-int"></a>-ConnectionTimeout \<int >  
  Задает количество секунд до истечения времени ожидания соединения с экземпляром служб Analysis Services. Значение времени ожидания должно быть целым числом от 0 до 65 534. Если указано значение 0, попытки соединения не прекращаются.  
   
 |||  
@@ -111,7 +119,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -QueryTimeout \<int>  
+### <a name="-querytimeout-int"></a>-QueryTimeout \<int >  
  Задает время ожидания запросов (в секундах). Если значение времени ожидания не указано, срок выполнения запросов неограничен. Время ожидания должно быть целым числом от 1 до 65 535.  
   
 |||  
@@ -122,7 +130,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Variable \<строка[]>  
+### <a name="-variable-string"></a>-Переменной \<string [] >  
  Задаются дополнительные переменные скрипта. Каждая переменная является парой «имя-значение». Если в значении содержатся пробелы или управляющие символы, оно должно заключаться в двойные кавычки. Для указания нескольких переменных и их значений используйте массив PowerShell.  
   
 |||  
@@ -133,7 +141,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -TraceFile \<строка>  
+### <a name="-tracefile-string"></a>-TraceFile \<строка >  
  Определяет файл, в который поступают события трассировки служб Analysis Services при выполнении скрипта XML для аналитики, запроса многомерных выражений или инструкции расширений интеллектуального анализа данных. Если файл уже существует, он будет автоматически перезаписан (кроме файлов трассировки, созданных с параметрами -TraceLevel:Duration и –TraceLevel:DurationResult). Имена файлов, содержащие пробелы, должны быть заключены в кавычки (""). Если указано недопустимое имя файла, выдается сообщение об ошибке.  
   
 |||  
@@ -144,7 +152,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -TraceFileFormat \<строка>  
+### <a name="-tracefileformat-string"></a>-TraceFileFormat \<строка >  
  Устанавливает формат файла для параметра –TraceFile (если этот параметр указан). Доступны следующие значения: text и csv. Значением по умолчанию является «csv».  
   
 |||  
@@ -155,7 +163,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -TraceFileDelimiter \<строка>  
+### <a name="-tracefiledelimiter-string"></a>-TraceFileDelimiter \<строка >  
  Указывает, какой символ будет использоваться в качестве разделителя в файле трассировки, если выбран формат файла трассировки CSV. Разделителем по умолчанию является символ | (вертикальная черта).  
   
 |||  
@@ -166,7 +174,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -TraceTimeout \<int>  
+### <a name="-tracetimeout-int"></a>-TraceTimeout \<int >  
  Задает количество секунд, в течение которых ядро служб Analysis Services ожидает, прежде чем завершить трассировку (если указан параметр –TraceFile). Предполагается, что трассировка заканчивается, если в течение заданного периода времени не записываются никакие сообщения трассировки. По умолчанию период равен 5 секундам.  
   
 |||  
@@ -177,7 +185,7 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -TraceLevel \<TraceLevelOption>  
+### <a name="-tracelevel-traceleveloption"></a>-TraceLevel \<TraceLevelOption >  
  Задает тип данных, которые собираются и записываются в файл трассировки. Возможны следующие значения: High, Medium, Low, Duration, DurationResult.  
   
 |||  
@@ -188,10 +196,10 @@ caps.handback.revision: 15
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### \<Общие параметры>  
+### <a name="commonparameters"></a>\<Общие параметры >  
  Этот командлет поддерживает общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. Дополнительные сведения см. в разделе [Об общих параметрах](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Входы и выходы  
+## <a name="inputs-and-outputs"></a>Входы и выходы  
  Входной тип — это тип объектов, которые можно направить в командлет. Тип возвращаемого значения — это тип объектов, возвращаемых командлетом.  
   
 |||  
@@ -199,7 +207,7 @@ caps.handback.revision: 15
 |Входные данные|PSObject|  
 |Выходные данные|Строковые значения|  
   
-## Пример 1 (с входным файлом XMLA)  
+## <a name="example-1-xmla-input-file"></a>Пример 1 (с входным файлом XMLA)  
   
 ```  
 Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"  
@@ -219,7 +227,7 @@ Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"
 </Discover>  
 ```  
   
-## Пример 2 (с входным файлом TMSL)  
+## <a name="example-2-tmsl-input-file"></a>Пример 2 (с входным файлом TMSL)  
  Этот пример идентичен первому, только теперь используется сценарий TMSL (JSON) и требуется табличный экземпляр SQL Server 2016. Вы можете создать сценарий TMSL в SQL Server Management Studio.  
   
  Если используется несколько экземпляров и табличным является именованный экземпляр, не забудьте задать имя сервера.  
@@ -228,16 +236,13 @@ Invoke-ASCmd –InputFile:"C:\MyFolder\DiscoverConnections.xmla"
 Invoke-ASCmd –InputFile "C:\folder-name\T1200-NewDB.json" -Server "server-name\instance-name"  
 ```  
   
-## Пример 3 (запрос)  
+## <a name="example-3-query"></a>Пример 3 (запрос)  
   
 ```  
 Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas-microsoft-com:xml analysis'><RequestType>DISCOVER_DATASOURCES</RequestType><Restrictions></Restrictions><Properties></Properties></Discover>"  
 ```  
   
- Запрос Discover в XML для аналитики возвращает доступные источники данных для сервера анализа данных, а также необходимые для подключения к ним сведения. Результаты возвращаются в формате XML. Чтобы упростить чтение, выходные данные можно перенаправить в XML-файл (например, добавив в команду `| Out-file C:\Results\XMLAQueryOutput.xml`) и просмотреть результаты в браузере или другом приложении, поддерживающем структурированный код XML.  
+ Запрос Discover в XML для аналитики возвращает доступные источники данных для сервера анализа данных, а также необходимые для подключения к ним сведения. Результаты возвращаются в формате XML. Чтобы упростить чтение, выходные данные можно перенаправить в XML-файл (например, добавив в команду `| Out-file C:\Results\XMLAQueryOutput.xml` ) и просмотреть результаты в браузере или другом приложении, поддерживающем структурированный код XML.  
   
-## См. также  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Управление табличными моделями с помощью PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

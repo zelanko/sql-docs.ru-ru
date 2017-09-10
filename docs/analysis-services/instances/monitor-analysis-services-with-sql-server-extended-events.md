@@ -1,39 +1,44 @@
 ---
-title: "Мониторинг служб Analysis Services с помощью расширенных событий SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XEvents"
-  - "Sql13.ssms.XeASNewEventSession.General.f1"
-  - "Sql13.ssms.XeASNewEventSession.Events.f1"
-  - "Sql13.ssms.XeASNewEventSession.Targets.f1"
-  - "Sql13.ssms.XeASNewEventSession.Advanced.f1"
+title: "Мониторинг служб Analysis Services с помощью расширенных событий SQL Server | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- XEvents
+- Sql13.ssms.XeASNewEventSession.General.f1
+- Sql13.ssms.XeASNewEventSession.Events.f1
+- Sql13.ssms.XeASNewEventSession.Targets.f1
+- Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Мониторинг служб Analysis Services с помощью расширенных событий SQL Server
+# <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Мониторинг служб Analysis Services с помощью расширенных событий SQL Server
   Расширенные события (*xEvents*) — это упрощенная система трассировки и мониторинга производительности, которая использует очень небольшое количество системных ресурсов. Это делает систему идеальным средством для диагностики проблем как на производственных, так и на тестовых серверах. Система также характеризуется высокой масштабируемостью и возможностями настройки. В SQL Server 2016 ее использование упрощено благодаря поддержке новых встроенных средств. В SQL Server Management Studio для подключений к экземплярам служб Analysis Services можно настроить, запустить и отслеживать динамическую трассировку так же, как и при использовании приложения SQL Server Profiler. Добавление улучшенных средств не только делает xEvents более рациональной заменой SQL Server Profiler, но и позволяет упорядочить диагностику проблем в ядре СУБД и рабочих нагрузках служб Analysis Services.  
   
- Кроме использования [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] вы также можете настроить сеансы расширенных событий [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] традиционным способом — с помощью скриптов XMLA, поддерживаемых в предыдущих выпусках.  
+ Кроме использования [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]вы также можете настроить сеансы расширенных событий  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] традиционным способом — с помощью скриптов XMLA, поддерживаемых в предыдущих выпусках.  
   
  Все события служб Analysis Services можно регистрировать и направлять конкретным получателям, как определено в [расширенных событиях](../../relational-databases/extended-events/extended-events.md).  
   
 > [!NOTE]  
->  Просмотрите это [краткое вводное видео](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) или прочитайте [публикацию в блоге службы поддержки](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx), чтобы узнать больше о расширенных событиях xEvents для служб Analysis Services в SQL Server 2016.  
+>  Просмотрите это [краткое вводное видео](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) или прочитайте [публикацию в блоге службы поддержки](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) , чтобы узнать больше о расширенных событиях xEvents для служб Analysis Services в SQL Server 2016.  
   
 ##  <a name="bkmk_top"></a> В этом разделе  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 11
   
 -   **CommandBegin** и **CommandEnd**.  
   
--   **QueryBegin**, **QueryEnd** и **QuerySubcubeVerbose** (показывает весь запрос MDX или DAX, отправляемый на сервер), а также **ResourceUsage** для статистики по ресурсам, потребленным запросом, и количеству возвращенных строк.  
+-   **QueryBegin**, **QueryEnd**и **QuerySubcubeVerbose** (показывает весь запрос MDX или DAX, отправляемый на сервер), а также **ResourceUsage** для статистики по ресурсам, потребленным запросом, и количеству возвращенных строк.  
   
 -   **ProgressReportBegin** и **ProgressReportEnd** (для операций обработки).  
   
@@ -72,13 +77,13 @@ caps.handback.revision: 11
   
  Не забудьте при настройке сеанса включить поля событий, чтобы можно было легко просматривать сведения, представляющие интерес.  
   
- Параметр **Настроить** находится в удаленной области диалогового окна.  
+ Параметр**Настроить** находится в удаленной области диалогового окна.  
   
- ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
+ ![Настройка SSAS xevents](../../analysis-services/instances/media/ssas-xevents-configure.PNG "Настройка ssas xevents")  
   
- В конфигурации на вкладке "Поля событий" выберите поле **TextData**, чтобы оно отображалось рядом с событием и показывало возвращаемые значения, включая запросы, которые выполняются на сервере.  
+ В конфигурации на вкладке "Поля событий" выберите поле **TextData** , чтобы оно отображалось рядом с событием и показывало возвращаемые значения, включая запросы, которые выполняются на сервере.  
   
- После настройки сеанса для нужных событий и хранения данных можно, нажав кнопку сценария, отправить конфигурацию в одно из поддерживаемых целевых расположений: файл, новый запрос в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и буфер обмена.  
+ После настройки сеанса для нужных событий и хранения данных можно, нажав кнопку сценария, отправить конфигурацию в одно из поддерживаемых целевых расположений: файл, новый запрос в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и буфер обмена.  
   
  **Обновление сеансов**  
   
@@ -123,10 +128,10 @@ caps.handback.revision: 11
  Определяет уникальный идентификатор для данной трассировки.  
   
  *trace_name*  
- Имя, присвоенное данной трассировке. Как правило, понятное определение трассировки. Обычно принято использовать в качестве имени значение *trace_id*.  
+ Имя, присвоенное данной трассировке. Как правило, понятное определение трассировки. Обычно принято использовать в качестве имени значение *trace_id* .  
   
  *AS_event*  
- Событие служб Analysis Services, к которому должен быть предоставлен доступ. Имена событий см. в разделе [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md).  
+ Событие служб Analysis Services, к которому должен быть предоставлен доступ. Имена событий см. в разделе [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md) .  
   
  *data_filename*  
  Имя файла данных, который содержит данные события. Это имя имеет в качестве суффикса отметку времени, что позволяет предотвратить перезапись данных, если одно и то же сообщение трассировки передается снова и снова.  
@@ -136,7 +141,7 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В этом разделе](#bkmk_top)|  
+|![Значок стрелки, используемый с обратно к верхней](../../analysis-services/instances/media/uparrow16x16.gif "значок стрелки, используемый с обратно к верхней") [в этом разделе](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> Скрипт XMLA для остановки расширенных событий в службах Analysis Services  
  Чтобы остановить объект расширенных событий трассировки, необходимо удалить этот объект с помощью команды скрипта удаления объекта, аналогичной применяемой в XML для аналитики, как показано ниже.  
@@ -164,9 +169,9 @@ caps.handback.revision: 11
   
 ||  
 |-|  
-|![Значок стрелки, используемый со ссылкой «В начало»](../../analysis-services/instances/media/uparrow16x16.png "Значок стрелки, используемый со ссылкой «В начало»") [В этом разделе](#bkmk_top)|  
+|![Значок стрелки, используемый с обратно к верхней](../../analysis-services/instances/media/uparrow16x16.gif "значок стрелки, используемый с обратно к верхней") [в этом разделе](#bkmk_top)|  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

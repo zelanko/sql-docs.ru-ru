@@ -1,23 +1,28 @@
 ---
-title: "Запросы, определяющие данные (интеллектуальный анализ данных) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Запросы определения данных (интеллектуальный анализ данных) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a42d980837958ff2b605eeaac01dd61739bc1078
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Запросы, определяющие данные (интеллектуальный анализ данных)
+# <a name="data-definition-queries-data-mining"></a>Запросы, определяющие данные (интеллектуальный анализ данных)
   При интеллектуальном анализе данных категория *запрос определения данных* означает инструкции расширения интеллектуального анализа данных или команды XMLA, которые выполняют следующие действия.  
   
 -   Создание, изменение или обработка объектов интеллектуального анализа данных, например моделей.  
@@ -37,7 +42,7 @@ caps.handback.revision: 12
  [Создание сценариев инструкций определений данных](#bkmk_Export)  
   
 ##  <a name="bkmk_Create"></a> Создание запросов определений данных  
- Запросы определений данных (инструкции) можно создать в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с помощью построителя прогнозирующих запросов, а в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — в окне запросов расширений интеллектуального анализа данных. Инструкции определения данных в расширениях интеллектуального анализа данных являются частью языка определения данных (DDL) в службах Analysis Services.  
+ Запросы определений данных (инструкции) можно создать в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]с помощью построителя прогнозирующих запросов, а в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]— в окне запросов расширений интеллектуального анализа данных. Инструкции определения данных в расширениях интеллектуального анализа данных являются частью языка определения данных (DDL) в службах Analysis Services.  
   
  Дополнительные сведения о синтаксисе инструкции определения конкретных данных см. в разделе [Справочник по расширениям интеллектуального анализа данных](../../dmx/data-mining-extensions-dmx-reference.md).  
   
@@ -81,14 +86,14 @@ caps.handback.revision: 12
   
 |||  
 |-|-|  
-|Работа с шаблонами для DMX-запросов.|[Использование шаблонов служб Analysis Services в среде SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Работа с шаблонами для DMX-запросов.|[Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Построитель прогнозирующих запросов может использоваться для создания любых запросов.|[Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Выполнив захват определений запроса с помощью программы SQL Server Profiler, пользуйтесь полученными трассировками для слежения за службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Выполнив захват определений запроса с помощью программы SQL Server Profiler, пользуйтесь полученными трассировками для слежения за службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |Подробнее о языках скриптов и языках программирования для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Справочник по XML для аналитики (XMLA)](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (расширения интеллектуального анализа данных)](../../dmx/import-dmx.md)|  
-|Подробнее об OPENROWSET и других способах запроса внешних данных.|[&#60;запрос источника данных&#62;](../Topic/%3Csource%20data%20query%3E.md).|  
+|Подробнее об OPENROWSET и других способах запроса внешних данных.|[&#60;запрос источника данных&#62;](../../dmx/source-data-query.md).|  
   
-## См. также  
- [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также:  
+ [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

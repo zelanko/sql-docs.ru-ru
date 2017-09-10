@@ -1,26 +1,37 @@
 ---
-title: "Справочник по PowerShell для Power Pivot для SharePoint | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/16/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Справочник по PowerShell для Power Pivot для SharePoint | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/16/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 39567e2b212761ac2dd726a1f8f33893a83f245c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Справочник по PowerShell для Power Pivot для SharePoint
-  В этом разделе перечисляются командлеты PowerShell, которые используются для настройки и администрирования установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Дополнительные сведения о разрешении командлетов и просмотре встроенной справки см. в разделе [Настройка PowerPivot с помощью Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+# <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Справочник по PowerShell для Power Pivot для SharePoint
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
+  В этом разделе перечисляются командлеты PowerShell, которые используются для настройки и администрирования установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Дополнительные сведения о разрешении командлетов и просмотре встроенной справки см. в разделе [Настройка PowerPivot с помощью Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+
+>[!NOTE] 
+>В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
   
-## Список командлетов  
+## <a name="cmdlet-list"></a>Список командлетов  
  Чтобы просмотреть список командлетов из командной строки PowerShell:  
   
 1.  Откройте консоль управления SharePoint с параметром **Запуск от имени администратора** .  
@@ -40,7 +51,7 @@ caps.handback.revision: 11
 |[Командлет «Set-PowerPivotSystemService»](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 | SharePoint 2016|  
 |[Командлет «Update-PowerPivotSystemService»](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 | SharePoint 2016|  
   
- Примечание. Указанные далее командлеты работали только в SharePoint 2010, не поддерживаемом [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ Примечание. Указанные далее командлеты работали только в SharePoint 2010, не поддерживаемом [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
   
 -   Get-PowerPivotEngineService  
   
@@ -57,3 +68,4 @@ caps.handback.revision: 11
 -   Update-PowerPivotEngineService  
   
   
+

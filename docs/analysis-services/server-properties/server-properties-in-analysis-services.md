@@ -1,31 +1,36 @@
 ---
-title: "Свойства сервера в службах Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "службы SSAS, свойства конфигурации"
-  - "службы Analysis Services, свойства конфигурации"
-  - "службы SQL Server Analysis Services, свойства конфигурации"
-  - "параметры конфигурации [службы Analysis Services]"
-  - "свойства сервера [службы Analysis Services]"
-  - "свойства [службы Analysis Services], конфигурация"
-  - "свойства [службы Analysis Services]"
+title: "Свойства сервера в службах Analysis Services | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Свойства сервера в службах Analysis Services
-  Администратор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может изменить по умолчанию свойства конфигурации сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на том же сервере.  
+# <a name="server-properties-in-analysis-services"></a>Свойства сервера в службах Analysis Services
+  Администратор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может изменить по умолчанию свойства конфигурации сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на том же сервере.  
   
  Для настройки сервера используйте среду SQL Server Management Studio или измените файл msmdsrv.ini соответствующего экземпляра.  
  
@@ -34,7 +39,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  В установке по умолчанию файл msmdsrv.ini находится в папке \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config.
 > 
-> В число других свойств, влияющих на конфигурацию сервера, входят свойства конфигурации развертывания в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения об этих свойствах см. в разделе [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md).
+> В число других свойств, влияющих на конфигурацию сервера, входят свойства конфигурации развертывания в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения об этих свойствах см. в разделе [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
 ##  <a name="bkmk_config"></a> Настройка свойств в среде Management Studio 
   
@@ -67,7 +72,7 @@ caps.handback.revision: 21
   
 ##  <a name="bkmk_ref"></a> Справочник по свойствам сервера  
   
- Следующие подразделы содержат описание различных свойств конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ Следующие подразделы содержат описание различных свойств конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 |Раздел|Description|  
 |-----------|-----------------|  
@@ -85,8 +90,8 @@ caps.handback.revision: 21
 |[Свойства безопасности](../../analysis-services/server-properties/security-properties.md)|Раздел безопасности содержит основные и расширенные свойства, определяющие разрешения доступа. К ним относятся параметры, управляющие действиями администраторов и пользователей.|  
 |[Свойства пула потоков](../../analysis-services/server-properties/thread-pool-properties.md)|Свойства пула потоков управляют количеством потоков, которые создает сервер. Они предназначены, главным образом, для расширенного использования.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление экземплярами служб Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

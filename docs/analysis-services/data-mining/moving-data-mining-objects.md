@@ -1,34 +1,39 @@
 ---
-title: "Перемещение объектов интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "интеллектуальный анализ данных [службы Analysis Services], модели"
-  - "редактор интеллектуального анализа данных [службы Analysis Services]"
-  - "модели интеллектуального анализа данных [службы Analysis Services], управление"
-  - "конструктор интеллектуального анализа данных"
-  - "модели интеллектуального анализа данных [службы Analysis Services], изменение"
+title: "Перемещение объектов интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], models
+- data mining editor [Analysis Services]
+- mining models [Analysis Services], managing
+- Data Mining Designer
+- mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 caps.latest.revision: 45
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 198dd7792a24f0090aec82593704f0f2165b0d43
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Перемещение объектов интеллектуального анализа данных
+# <a name="moving-data-mining-objects"></a>Перемещение объектов интеллектуального анализа данных
   Самым распространенным случаем перемещения объектов интеллектуального анализа данных является развертывание модели из тестовой среды или среды анализа в рабочей среде или обеспечение общего доступа к моделям для других пользователей.  
   
  В данном разделе описывается использование средств и языков скриптов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]для перемещения объектов интеллектуального анализа данных.  
   
-## Перемещение объектов интеллектуального анализа данных между базами данных или серверами  
+## <a name="moving-data-mining-objects-between-databases-or-servers"></a>Перемещение объектов интеллектуального анализа данных между базами данных или серверами  
  Объекты интеллектуального анализа данных можно перемещать между базами данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или экземплярами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] следующими способами:  
   
 -   Повторное развертывание решения в другой базе данных.  
@@ -41,12 +46,12 @@ caps.handback.revision: 45
   
  В следующем разделе данные методы обсуждаются более подробно.  
   
-### Развертывание  
+### <a name="deploying"></a>Развертывание  
  Для развертывания решения на другом сервере или в другой базе данных необходимо иметь файл решения, созданный в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Дополнительные сведения о развертывании решений служб Analysis Services см. в разделе [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-### Создание скриптов  
+### <a name="scripting"></a>Создание скриптов  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько языков, с помощью которых можно создавать скрипты для работы с объектами.  
   
 -   **XML для аналитики**: можно создать скрипт для работы с объектами с помощью XMLA, щелкнув правой кнопкой мыши соответствующие объекты в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для выполнения скрипта откройте его в окне **Запрос XMLA** на целевом сервере.  
@@ -65,12 +70,12 @@ caps.handback.revision: 45
   
  Дополнительные сведения см. в разделе [Разработка на языке ASSL (язык ASSL)](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
-### Резервное копирование и восстановление  
+### <a name="backup-and-restore"></a>Резервное копирование и восстановление  
  Резервное копирование и восстановление из копии всей базы данных служб Analysis Services является лучшим методом, если решение интеллектуального анализа данных зависит от объектов OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет функции резервного копирования и восстановления, ускоряющие и облегчающие резервное копирование баз данных.  
   
  Дополнительные сведения о резервном копировании см. в разделе [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
-### Импорт и экспорт  
+### <a name="exporting-and-importing"></a>Импорт и экспорт  
  Экспорт и последующий импорт моделей и структур интеллектуального анализа данных с помощью инструкций DMX — лучший способ перемещения или создания резервных копий отдельных реляционных объектов интеллектуального анализа данных. Дополнительные сведения о синтаксисе расширения интеллектуального анализа данных для этих операций см. в следующих разделах:  
   
 -   [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)  
@@ -82,7 +87,7 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  С помощью инструкций DMX нельзя экспортировать и импортировать модели OLAP. Если модель интеллектуального анализа данных основана на кубе OLAP, для резервного копирования и восстановления всей базы данных необходимо воспользоваться функциями служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] либо выполнить повторное развертывание куба и его моделей.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

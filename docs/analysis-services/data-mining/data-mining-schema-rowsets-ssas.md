@@ -1,36 +1,41 @@
 ---
-title: "Наборы строк схемы интеллектуального анализа данных (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "наборы строк схемы [службы Analysis Services], интеллектуальный анализ данных"
-  - "интеллектуальный анализ данных [службы Analysis Services], запросы"
-  - "содержимое модели интеллектуального анализа данных"
-  - "интеллектуальный анализ данных [службы Analysis Services], наборы строк схемы"
-  - "наборы строк схемы [службы Analysis Services], извлечение"
-  - "интеллектуальный анализ данных [Analysis Services], устранение неполадок"
+title: "Интеллектуальный анализ данных наборов строк схемы (службы SSAs) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schema rowsets [Analysis Services], data mining
+- data mining [Analysis Services], queries
+- mining model content
+- data mining [Analysis Services], schema rowsets
+- schema rowsets [Analysis Services], retrieving
+- data mining [Analysis Services], troubleshooting
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: deaa583071c754683120c1c519232c3c2de6b0b7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Наборы строк схемы интеллектуального анализа данных (SSAS)
-  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] многие существующие наборы строк схемы интеллектуального анализа данных OLE DB доступны в виде набора системных таблиц, к которым можно выполнять запросы с помощью инструкций расширений интеллектуального анализа данных. Путем создания запросов к наборам строк схемы интеллектуального анализа данных можно определить доступные службы, получить последние сведения о состоянии моделей и структур и выяснить подробности о содержимом или параметрах модели. Описание наборов строк схемы интеллектуального анализа данных см. в разделе [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+# <a name="data-mining-schema-rowsets-ssas"></a>Наборы строк схемы интеллектуального анализа данных (SSAS)
+  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]многие существующие наборы строк схемы интеллектуального анализа данных OLE DB доступны в виде набора системных таблиц, к которым можно выполнять запросы с помощью инструкций расширений интеллектуального анализа данных. Путем создания запросов к наборам строк схемы интеллектуального анализа данных можно определить доступные службы, получить последние сведения о состоянии моделей и структур и выяснить подробности о содержимом или параметрах модели. Описание наборов строк схемы интеллектуального анализа данных см. в разделе [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
 >  Кроме того, можно выполнить запрос к этому набору строк схемы интеллектуального анализа данных с помощью XMLA. Дополнительные сведения о выполнении этого действия в среде SQL Server Management Studio см. в разделе [Создание запроса интеллектуального анализа данных с помощью XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  
   
-## Список наборов строк схемы интеллектуального анализа данных  
+## <a name="list-of-data-mining-schema-rowsets"></a>Список наборов строк схемы интеллектуального анализа данных  
  В следующей таблице перечислены наборы строк схемы интеллектуального анализа данных, которые могут пригодиться при запросах и наблюдении.  
   
 |Имя набора строк|Description|  
@@ -48,10 +53,10 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  Список в таблице не является исчерпывающим. В нем показаны только наборы строк, наиболее важные для диагностики.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующем разделе даны некоторые примеры запросов к наборам строк схемы интеллектуального анализа данных.  
   
-### Пример 1. Перечисление служб интеллектуального анализа данных  
+### <a name="example-1-list-data-mining-services"></a>Пример 1. Перечисление служб интеллектуального анализа данных  
  Следующий запрос возвращает список служб интеллектуального анализа, доступных на текущем сервере, что свидетельствует о том, что алгоритмы включены. Столбцы для каждой службы интеллектуального анализа содержат флаги моделирования и типы содержимого, которые может использовать каждый алгоритм; идентификатор GUID для каждой службы и любые пределы прогнозирования, назначенные для каждой службы.  
   
 ```  
@@ -59,7 +64,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### Пример 2. Перечисление параметров модели интеллектуального анализа данных  
+### <a name="example-2-list-mining-model-parameters"></a>Пример 2. Перечисление параметров модели интеллектуального анализа данных  
  Следующий запрос возвращает параметры, которые использовались для создания конкретной модели интеллектуального анализа.  
   
 ```  
@@ -68,7 +73,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### Пример 3. Перечисление всех наборов строк  
+### <a name="example-3-list-all-rowsets"></a>Пример 3. Перечисление всех наборов строк  
  Следующий пример возвращает полный список наборов строк, доступных на текущем сервере.  
   
 ```  
@@ -77,3 +82,4 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
   
+

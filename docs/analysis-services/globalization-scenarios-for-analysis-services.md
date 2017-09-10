@@ -1,31 +1,36 @@
 ---
-title: "Сценарии глобализации для служб Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "поддержка нескольких языков [службы Analysis Services]"
-  - "языки [службы Analysis Services]"
-  - "SSAS, вопросы международного использования"
-  - "вопросы международного использования [службы Analysis Services]"
-  - "вопросы применения по всему миру [службы Analysis Services]"
-  - "SQL Server Analysis Services, вопросы международного использования"
-  - "службы Analysis Services, вопросы международного использования"
+title: "Сценарии глобализации для служб Analysis Services | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple language support [Analysis Services]
+- languages [Analysis Services]
+- SSAS, international considerations
+- international considerations [Analysis Services]
+- global considerations [Analysis Services]
+- SQL Server Analysis Services, international considerations
+- Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 23602752bf7a996b66974ce3d5dcf9c8bf6389cd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Сценарии глобализации для служб Analysis Services
+# <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранят многоязычные данные и метаданные, а также управляют ими как в табличных, так и в многомерных моделях данных. Данные хранятся в Юникоде (UTF-16), в кодировках, использующих кодировку Юникод. При загрузке данных ANSI в модель данных символы хранятся с использованием эквивалентных кодовых точек Юникода.  
   
  Поддержка Юникода означает, что службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут хранить данные в любом из языков, поддерживаемых клиентскими и серверными операционными системами Windows, позволяя читать, записывать, сортировать и сравнивать данные в любой кодировке, используемой на компьютере Windows. Клиентские приложения бизнес-аналитики, использующие данные служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , могут представлять данные на выбранном пользователем языке, при условии что в модели существуют данные на этом языке.  
@@ -50,7 +55,7 @@ caps.handback.revision: 39
   
 -   Одна модель данных предоставляет различные переведенные названия, чтобы имена полей и значения отображались на языке, выбранном пользователем. Для компаний, работающих в странах с несколькими государственными языками, например, в Канаде, Бельгии и Швейцарии, поддержка нескольких языков в клиентских и серверных приложениях является стандартным требованием при написании кода. Этот сценарий обеспечивается с помощью переводов и преобразований валют. Подробные сведения и ссылки см. в разделе [Средства](#bkmk_features) ниже.  
   
--   Среда разработки и рабочая среда географически расположены в разных странах. Все чаще решение разрабатывается в одной стране, а затем разворачивается в другой. Важно уметь задавать свойства языка и параметров сортировки, если вам нужно подготовить решение, разработанное на одном языке, для развертывания на сервере, использующем другой языковой пакет. Настройка этих свойств позволяет переопределить унаследованные значения по умолчанию, получаемые от исходной системы. Дополнительные сведения о настройке свойств см. в разделе [Языки и параметры сортировки (службы Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md).  
+-   Среда разработки и рабочая среда географически расположены в разных странах. Все чаще решение разрабатывается в одной стране, а затем разворачивается в другой. Важно уметь задавать свойства языка и параметров сортировки, если вам нужно подготовить решение, разработанное на одном языке, для развертывания на сервере, использующем другой языковой пакет. Настройка этих свойств позволяет переопределить унаследованные значения по умолчанию, получаемые от исходной системы. Дополнительные сведения см. в разделе [Языки и параметры сортировки (службы Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md) .  
   
 ##  <a name="bkmk_features"></a> Средства для создания глобализованного многоязычного решения  
  На уровне клиента глобализованные приложения, которые используют многомерные данные [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или работают с ними, могут использовать многоязыковые и интернациональные возможности служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -67,11 +72,11 @@ caps.handback.revision: 39
 |Реализация поддержки преобразования|Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы создать файлы преобразования, которые сначала заполняются, а затем импортируются в модель.<br /><br /> Дополнительные сведения см. в разделе [Переводы в табличных моделях (службы Analysis Services)](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Используйте[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы определить преобразования для заголовков, описаний и типов учетных записей для кубов, а также мер, измерений и атрибутов.<br /><br /> Дополнительные сведения см. в разделе [Переводы в многомерных моделях (службы Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Урок по использованию этой функции можно найти в [Уроке 9. Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md) учебника [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |Преобразование валюты|Недоступно.|Преобразование валюты выполняется с помощью специальных сценариев многомерных выражений, которые преобразуют меры, содержащие данные валюты. Вы можете создать скрипт многомерных выражений, использующий комбинацию данных и метаданных из измерений, атрибутов и групп мер для конвертации мер, содержащих данные в валюте, с помощью мастера бизнес-аналитики в [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] . См. раздел [Преобразования валюты (службы Analysis Services)](../analysis-services/currency-conversions-analysis-services.md).|  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка параметров перевода в службах Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Интернационализация для приложений Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Центр разработчиков Go Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Запись приложений Магазина Windows с адаптивной конструкцией, основанной на языковых стандартах](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Разработка универсальных приложений для Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Центр разработчиков go Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Разработка приложения магазина Windows с адаптивной проектирования на основе языкового стандарта](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Разработка универсальных приложений Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

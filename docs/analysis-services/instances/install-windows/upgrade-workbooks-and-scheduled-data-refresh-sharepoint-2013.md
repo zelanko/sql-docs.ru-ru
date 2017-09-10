@@ -1,22 +1,27 @@
 ---
-title: "Обновление книг и запланированное обновление данных (SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обновление книг и запланированное обновление данных (SharePoint 2013) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Обновление книг и запланированное обновление данных (SharePoint 2013)
+# <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Обновление книг и запланированное обновление данных (SharePoint 2013)
   В этом разделе описывается, как работать с книгами, созданными в предыдущих средах [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Также вы узнаете, как обновлять книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , чтобы использовать преимущества новых функций, представленных в этом выпуске. Дополнительные сведения о новых возможностях см. в статье [Новые возможности PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
@@ -42,16 +47,16 @@ caps.handback.revision: 20
 -   Становится возможным плановое обновление данных для книг, которые работают с сервером служб [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Analysis Services в режиме интеграции с SharePoint.  
   
 > [!IMPORTANT]  
->  Нельзя выполнить откат обновленной книги, поэтому обязательно создайте копию файла, если предполагается его использование в предыдущих версиях [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] или [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
+>  Нельзя выполнить откат обновленной книги, поэтому обязательно создайте копию файла, если предполагается его использование в предыдущих версиях [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]или [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].  
   
  В следующей таблице содержатся сведения о наличии поддержки и поведении книг [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в зависимости от среды, в которой была создана книга. Описанное поведение включает общие методы работы пользователя, поддерживаемые варианты обновления книги в определенной среде и плановое обновление данных книги, которая еще не была обновлена.  
   
-### Поведение и варианты обновления книги  
+### <a name="workbook-behavior-and-upgrade-options"></a>Поведение и варианты обновления книги  
   
 |Создано в|\<|Поддержка и поведение|>|  
 |----------------|--------|--------------------------|--------|  
 ||**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2008 R2 для SharePoint 2010**|**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2012 для SharePoint 2010**|**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2012 с пакетом обновления 1 (SP1) для SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel 2010**|Все компоненты|**Взаимодействие.** Пользователи могут взаимодействовать с книгой в браузере и использовать ее в качестве источника данных для других решений.<br /><br /> **Обновление.** Книги в библиотеке документов будут автоматически обновлены, если для системной службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint включено автоматическое обновление.<br /><br /> **Расписание обновления данных.** НЕ поддерживается. Книгу необходимо обновить.|**Взаимодействие.** Пользователи могут взаимодействовать с книгой и использовать ее в качестве источника данных для других решений.<br /><br /> **Обновление.** Автоматическое обновление недоступно. Необходимо вручную обновить книги 2008 R2 до версии 2012 или до версии Office 2013.<br /><br /> **Расписание обновления данных.** НЕ поддерживается. Книгу необходимо обновить.|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel 2010**|Все компоненты|**Взаимодействие.** Пользователи могут взаимодействовать с книгой в браузере и использовать ее в качестве источника данных для других решений.<br /><br /> **Обновление.** Книги в библиотеке документов будут автоматически обновлены, если для системной службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint включено автоматическое обновление.<br /><br /> **Расписание обновления данных.** НЕ поддерживается. Книгу необходимо обновить.|**Взаимодействие.** Пользователи могут взаимодействовать с книгой и использовать ее в качестве источника данных для других решений.<br /><br /> **Обновление.** Автоматическое обновление недоступно. Необходимо вручную обновить книги 2008 R2 до версии 2012 или до версии Office 2013.<br /><br /> **Расписание обновления данных.** НЕ поддерживается. Книгу необходимо обновить.|  
 |**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2012 для Excel**|Не поддерживается|Все компоненты|**Взаимодействие.** Пользователи могут взаимодействовать с книгой в браузере и использовать ее в качестве источника данных для других решений. Расписание обновления данных доступно.<br /><br /> **Обновление.** Автоматическое обновление не поддерживается. Пользователи могут вручную обновить книги до версии Office 2013.<br /><br /> **Расписание обновления данных:** поддерживается.|  
 |**Excel 2013**|Не поддерживается|Не поддерживается|Все компоненты|  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 20
   
  **Обновление книги.** Плановое обновление данных не будет работать, пока книга не будет обновлена до книги 2012. Для обновления книги и содержащейся в ней модели выполните одно из следующих действий.  
   
--   Скачайте и откройте книгу в Microsoft Excel 2010 с помощью установленной надстройки SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel.  
+-   Скачайте и откройте книгу в Microsoft Excel 2010 с помощью установленной надстройки SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel.  
   
      Откройте окно [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и обновите модель [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
@@ -82,9 +87,9 @@ caps.handback.revision: 20
   
      Затем сохраните книгу и повторно опубликуйте ее на сервере SharePoint.  
   
- Дополнительные сведения об изменениях функций служб Analysis Services см. в разделе [Изменение действия функций служб Analysis Services в SQL Server 2016](../../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md).  
+ Дополнительные сведения об изменениях функций служб Analysis Services см. в разделе [Изменение действия функций служб Analysis Services в SQL Server 2016](../../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md).  
   
- Дополнительные сведения о журнале обновления см. в разделе [Просмотр журнала обновления данных (PowerPivot для SharePoint)](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
+ Дополнительные сведения о журнале обновления см. в разделе [Просмотр журнала обновления данных (Power Pivot для SharePoint)](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_to_2012sp1_from_2012"></a> Обновление до книг Office 2013 из версий, созданных с помощью надстройки PowerPivot 2012 для Excel  
  В этом разделе описывается обновление **до** SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] с пакетом обновления 1 (SP1) в Excel 2013 **из** SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для книг Excel 2010.  
@@ -149,7 +154,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  Обратите внимание, что не поддерживается публикация книг новой версии на предшествующих экземплярах SQL Server [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Экземпляр [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] не загружает книги, созданные в версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)], а экземпляр SQL Server 2012 не загружает книги Office 2013 с расширенными моделями данных, созданные с помощью версии [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в Excel.  
   
 ###  <a name="bkmk_msolapxslx"></a> Как проверить сведения о поставщике данных MSOLAP в книге PowerPivot  
- Чтобы определить текущую версию поставщика OLE DB для книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , выполните следующие действия. Для проверки сведений подключения к данным не требуется установка надстройки [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)].  
+ Чтобы определить текущую версию поставщика OLE DB для книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , выполните следующие действия. Для проверки сведений подключения к данным не требуется установка надстройки [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] .  
   
 1.  Нажмите кнопку **Соединения**на вкладке «Данные» в Excel. Нажмите кнопку **Свойства**.  
   
@@ -168,10 +173,10 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  С помощью прокрутки перейдите в раздел MSOLAP. Убедитесь, что в списке поставщиков OLAP, установленных в системе, указан MSOLAP.5. Убедитесь, что для параметра MSOLAP | CurVer задано значение MSOLAP.5  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Перенос Power Pivot в SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [Обновление Power Pivot для SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Новые возможности в службах Analysis Services](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [Просмотр журнала обновления данных (Power Pivot для SharePoint)](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [Обновление представления данных, журнал &#40; Power Pivot для SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "Измерения в многомерных моделях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLAP [службы Analysis Services], измерения"
-  - "измерения [службы Analysis Services], об измерениях"
-  - "OLAP-объекты [службы Analysis Services], измерения"
+title: "Измерения в многомерных моделях | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP [Analysis Services], dimensions
+- dimensions [Analysis Services], about dimensions
+- OLAP objects [Analysis Services], dimensions
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 46
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3e98c77a6b243bd5890aac6612db663377bd1bb3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Измерения в многомерных моделях
+# <a name="dimensions-in-multidimensional-models"></a>Измерения в многомерных моделях
   Измерение базы данных является коллекцией объектов, называемых атрибутами, которые используются для предоставления сведений о данных фактов в одном или нескольких кубах. Например, типичным атрибутом измерения «Продукт» может быть название, категория, размер, цена продукта или линия товаров. Эти объекты привязаны к одному или нескольким столбцам в одной или нескольких таблицах в представлении источника данных. По умолчанию эти атрибуты отображаются как иерархии атрибутов и позволяют понять смысл данных фактов в кубе. Атрибуты могут быть организованы в пользовательские иерархии, которые обеспечивают различные пути доступа к данным и помогают пользователям при просмотре данных в кубе.  
   
  Кубы содержат все измерения, которыми пользователи пользуются при анализе данных фактов. Экземпляр измерения базы данных в кубе называется измерением куба и относится к одной или нескольким группам мер в кубе. Измерение базы данных может использоваться в кубе несколько раз. Например, если таблица фактов содержит несколько зависимых от времени фактов, то для облегчения анализа каждого из них может быть определено отдельное измерение куба. Однако необходимо существование только одного зависимого от времени измерения базы данных, что означает также необходимость существования лишь одной зависимой от времени таблицы реляционной базы данных для поддержки нескольких зависимых от времени измерений куба.  
@@ -30,7 +35,7 @@ caps.handback.revision: 46
 > [!NOTE]  
 >  Сведения о проблемах производительности, связанных с конструкцией измерений, см. в разделе [Руководство по управлению производительностью служб Analysis Services SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=306717).  
   
-## Определение измерений, атрибутов и иерархий  
+## <a name="defining-dimensions-attributes-and-hierarchies"></a>Определение измерений, атрибутов и иерархий  
  Для определения измерений, атрибутов и иерархий базы данных и куба проще всего воспользоваться мастером кубов, который позволяет создавать измерения одновременно с определением куба. Мастер кубов создает измерения на основе обнаруженных или указанных пользователем таблиц измерений из представления источников данных, используемого для куба. После этого мастер создает измерения базы данных и добавляет их к новому кубу, создавая измерения куба.  
   
  При создании куба в него можно также добавить любые измерения, которые уже существуют в базе данных. Эти измерения могли быть ранее определены мастером измерений для другого куба. После того как измерение базы данных определено, его изменение и настройка производятся в конструкторе измерений. Кроме того, в ограниченной степени измерение куба может быть настроено при помощи конструктора кубов.  
@@ -38,7 +43,7 @@ caps.handback.revision: 46
 > [!NOTE]  
 >  Разрабатывать и настраивать измерения, атрибуты и иерархии можно также программным способом с помощью XML для аналитики или объектов AMO. Дополнительные сведения см. в разделах [Справочник по языку ASSL](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) и [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
  [Определение измерений базы данных](../../analysis-services/multidimensional-models/define-database-dimensions.md)  
@@ -47,16 +52,16 @@ caps.handback.revision: 46
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Описывает определение, изменение и настройку атрибута измерения базы данных при помощи конструктора измерений.  
   
- [Определение связей атрибутов](../../analysis-services/multidimensional-models/define-attribute-relationships.md)  
+ [Определение связей атрибутов](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  Описывает определение, изменение и настройку связи атрибутов при помощи конструктора измерений.  
   
- [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/create-user-defined-hierarchies.md)  
+ [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Описывает определение, изменение и настройку пользовательской иерархии атрибутов измерений при помощи конструктора измерений.  
   
- [Использование мастера бизнес-аналитики для улучшения измерений](../Topic/Use%20the%20Business%20Intelligence%20Wizard%20to%20Enhance%20Dimensions.md)  
+ [Использование мастера бизнес-аналитики для улучшения измерений](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Описывает, как улучшить измерение базы данных при помощи мастера бизнес-аналитики.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

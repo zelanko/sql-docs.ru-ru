@@ -1,27 +1,32 @@
 ---
-title: "Регистрация экземпляра служб Analysis Services в группе серверов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Регистрация экземпляра служб Analysis Services в группе серверов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Регистрация экземпляра служб Analysis Services в группе серверов
+# <a name="register-an-analysis-services-instance-in-a-server-group"></a>Регистрация экземпляра служб Analysis Services в группе серверов
   При наличии большого числа экземпляров сервера служб Analysis Services можно создавать группы серверов в среде Management Studio и тем самым упростить администрирование сервера. Группа серверов должна обеспечить близость связанных серверов внутри рабочей области администрирования. Предположим, нужно управлять десятью отдельными экземплярами служб Analysis Services. Группирование по режиму сервера, времени работы или отделу или региону может упростить просмотр и подключение к экземплярам с одинаковыми характеристиками. Вы можете также добавить описательную информацию, которая поможет вспомнить, каким образом используется сервер.  
   
- ![Область зарегистрированных серверов с рядовыми серверами](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "Область зарегистрированных серверов с рядовыми серверами")  
+ ![Область зарегистрированного сервера со рядовых серверов](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "область зарегистрированных серверов с рядовыми серверами")  
   
  Группы серверов создаются в виде иерархической структуры. Локальная группа серверов — корневой узел. Он всегда содержит экземпляры служб Analysis Services, запущенные на локальном компьютере. Удаленные серверы можно добавить в любую группу, включая локальную группу.  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
   
  Сведения о соединении, определенном для сервера, включая имя сервера, сохраняется вместе с регистрацией сервера. Нельзя изменить сведения о соединении или использовать зарегистрированное имя при подключении к серверу, используя другие средства.  
   
-## Создание группы серверов и добавление зарегистрированных серверов  
+## <a name="create-a-server-group-and-add-registered-servers"></a>Создание группы серверов и добавление зарегистрированных серверов  
   
 1.  В среде Management Studio в меню «Вид» щелкните «Зарегистрированные серверы», чтобы открыть панель «Зарегистрированные серверы» в рабочей области. По умолчанию локальная группа серверов уже создана. Все экземпляры служб Analysis Services, запущенные на локальном сервере, являются ее членами.  
   

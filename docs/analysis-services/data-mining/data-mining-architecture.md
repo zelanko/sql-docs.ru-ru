@@ -1,23 +1,28 @@
 ---
-title: "Архитектора интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Архитектора интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Архитектора интеллектуального анализа данных
+# <a name="data-mining-architecture"></a>Архитектора интеллектуального анализа данных
   В этом разделе описывается архитектура решений интеллектуального анализа данных, размещаемых на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В подразделах этого раздела описывается логическая и физическая архитектура экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который поддерживает интеллектуальный анализ данных, а также приводятся сведения о клиентах, поставщиках и протоколах, которые используются для связи с серверами интеллектуального анализа данных и работы с объектами интеллектуального анализа как локально, так и удаленно.  
   
  В целом интеллектуальный анализ данных SQL Server работает как служба в рамках экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающего в многомерном режиме. Именно поэтому рекомендуется просмотреть следующие разделы электронной документации, в которых описывается работа, обслуживание и настройка многомерных решений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -32,10 +37,10 @@ caps.handback.revision: 11
   
  Дополнительные сведения о реализации интеллектуального анализа данных в решении бизнес-аналитики см. в разделе «Руководства к решениям» в библиотеке MSDN.  
   
-## В этом разделе  
- [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
  [Службы интеллектуального анализа данных и источники данных](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 11
   
  [Общие сведения о безопасности (интеллектуальный анализ данных)](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Программирование многомерной модели](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
  [Программирование интеллектуального анализа данных](../../analysis-services/data-mining-programming.md)  
   

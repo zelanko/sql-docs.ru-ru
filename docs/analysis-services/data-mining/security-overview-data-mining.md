@@ -1,31 +1,36 @@
 ---
-title: "Общие сведения о безопасности (интеллектуальный анализ данных) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "безопасность [службы Analysis — интеллектуальный анализ данных], о безопасности"
+title: "Общие сведения о безопасности (интеллектуальный анализ данных) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Общие сведения о безопасности (интеллектуальный анализ данных)
+# <a name="security-overview-data-mining"></a>Общие сведения о безопасности (интеллектуальный анализ данных)
   Защита служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется на нескольких уровнях. Необходимо защитить каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и его источники данных, чтобы убедиться, что только авторизованные пользователи имеют разрешения на чтение или на чтение и запись в выбранных измерениях, моделях интеллектуального анализа данных и источниках данных. Необходимо также обезопасить базовые источники данных, чтобы предотвратить несанкционированный доступ к конфиденциальным бизнес-данным. Процесс защиты экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] описывается в следующих разделах.  
   
 ##  <a name="bkmk_Architecture"></a> Архитектура защиты  
  В следующих источниках приводятся сведения об архитектуре безопасности экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая то, как службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для проверки подлинности доступа пользователей.  
   
--   [Роли безопасности (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Роли безопасности (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Свойства безопасности](../../analysis-services/server-properties/security-properties.md)  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  При использовании пакетов служб Integration Services для очистки данных, обновления моделей интеллектуального анализа данных или для прогнозирования необходимо позаботиться о том, чтобы служба Integration Services имела соответствующие разрешения на работу с базой данных, в которой хранится модель, и соответствующие разрешения на работу с данными источника.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

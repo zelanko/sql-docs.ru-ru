@@ -1,26 +1,31 @@
 ---
-title: "Создание мер и групп мер в многомерных моделях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группы мер [службы Analysis Services], определение"
+title: "Создание меры и группы мер в многомерных моделях | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8dc45f7d47484dbc3b1d5e7684f4e3a5d3075dc2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание мер и групп мер в многомерных моделях
+# <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Создание мер и групп мер в многомерных моделях
   *Мера* — это агрегат значений числовых данных, например сумма, количество, минимальное, максимальное, среднее или созданное вами многомерное выражение. *Группа мер* — это контейнер для одной или нескольких мер. Все меры находятся в группе мер даже в том случае, если имеется только одна мера. Куб должен иметь как минимум одну меру и группу мер.  
   
  Этот раздел включает следующие подразделы:  
@@ -42,7 +47,7 @@ caps.handback.revision: 17
 |-|-|  
 |Мастер кубов|Запустите мастер кубов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для создания куба.<br /><br /> В обозревателе решений щелкните правой кнопкой мыши узел **Кубы** и выберите команду **Создать куб**. Справку по этим действиям см. в разделе [Многомерное моделирование (учебник по Adventure Works)](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> При создании куба на основе таблиц из существующего хранилища данных определения мер и групп мер материализуются в качестве части процесса создания куба. В мастере выберите, какие факты и таблицы фактов нужно использовать в качестве основы для объектов меры и группы мер в кубе.|  
 |Диалоговое окно создания меры|Если куб уже существует в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], дважды щелкните имя куба в обозревателе решений, чтобы открыть его в конструкторе кубов. В области "Меры" щелкните правой кнопкой мыши верхний узел, чтобы создать новую группу мер или новую меру с помощью указания исходной таблицы, столбца и типа агрегирования. Этот подход требует выбора метода агрегирования из фиксированного списка готовых функций. В разделе [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) представлено описание наиболее часто используемых агрегатов.|  
-|вычисляемый элемент|Вычисляемые элементы позволяют добиться гибкости и широких возможностей анализа кубов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , так как можно управлять временем и способом их создания. Иногда мера требуется только временно — в течение сеанса пользователя или в среде Management Studio в рамках исследования.<br /><br /> В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте вкладку "Вычисления", чтобы создать новый вычисляемый элемент.<br /><br /> Выберите этот подход при создании меры на основе многомерного выражения. Дополнительные сведения см. в разделах [Построение мер в многомерных выражениях](../../analysis-services/multidimensional-models/mdx/building-measures-in-mdx.md), [Вычисления](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
+|вычисляемый элемент|Вычисляемые элементы позволяют добиться гибкости и широких возможностей анализа кубов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , так как можно управлять временем и способом их создания. Иногда мера требуется только временно — в течение сеанса пользователя или в среде Management Studio в рамках исследования.<br /><br /> В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте вкладку "Вычисления", чтобы создать новый вычисляемый элемент.<br /><br /> Выберите этот подход при создании меры на основе многомерного выражения. Дополнительные сведения см. в разделах [Построение мер в многомерных выражениях](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [Вычисления](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |Многомерные выражения или XMLA|В SQL Server Management Studio можно выполнять многомерные выражения или XMLA, чтобы изменить базу данных для включения новой вычисляемой меры. Этот подход полезен для нерегламентированной проверки данных после развертывания решения на сервере. См. раздел [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md).|  
   
 ##  <a name="bkmk_comps"></a> Компоненты меры  
@@ -61,7 +66,7 @@ caps.handback.revision: 17
   
  На следующей диаграмме показана таблица фактов **FactSalesQuota** и две связанные с ней таблицы измерений — **DimTime** и **DimEmployee**. В образце куба Adventure Works эти таблицы используются в качестве основы для группы мер Sales Quotas и измерений Time и Employee.  
   
- ![Таблица FactSalesQuota с двумя таблицами измерений](../../analysis-services/multidimensional-models/media/factsalesquota.gif "Таблица FactSalesQuota с двумя таблицами измерений")  
+ ![Таблица FactSalesQuota с двумя таблицами измерений](../../analysis-services/multidimensional-models/media/factsalesquota.gif "таблица FactSalesQuota с двумя таблицами измерений")  
   
  Таблица фактов содержит столбцы двух основных типов: столбцы атрибутов и столбцы мер.  
   
@@ -69,12 +74,12 @@ caps.handback.revision: 17
   
 -   Столбцы мер определяют меры, которые содержатся в группе мер.  
   
- При запуске мастера кубов внешние ключи отфильтровываются. В списке оставшихся столбцов для выбора находятся столбцы мер, а также столбцы атрибутов, которые не определены как внешний ключ. В примере **FactSalesQuote** мастер предложит **CalendarYear** и **CalendarQuarter** в дополнение к **SalesAmountQuota**. Только столбец меры **SalesAmountQuota** приведет к созданию поддающейся обработке меры для многомерной модели. Для определения суммы каждой квоты существуют другие столбцы на основе даты. Следует исключить из списка мер в мастере кубов другие столбцы — **CalendarYear** и **CalendarQuarter** (или позднее удалить их из группы мер в конструкторе).  
+ При запуске мастера кубов внешние ключи отфильтровываются. В списке оставшихся столбцов для выбора находятся столбцы мер, а также столбцы атрибутов, которые не определены как внешний ключ. В примере **FactSalesQuote** мастер предложит **CalendarYear** и **CalendarQuarter** в дополнение к **SalesAmountQuota**. Только столбец меры **SalesAmountQuota** приведет к созданию поддающейся обработке меры для многомерной модели. Для определения суммы каждой квоты существуют другие столбцы на основе даты. Следует исключить из списка мер в мастере кубов другие столбцы — **CalendarYear** и **CalendarQuarter**(или позднее удалить их из группы мер в конструкторе).  
   
  Вывод из данного обсуждения: не все столбцы, предлагаемые мастером, полезны в качестве меры. Полагайтесь на собственное понимание данных и того, как они будут использоваться, при выборе столбцов для использования в качестве меры. Помните, что можно щелкнуть правой кнопкой мыши таблицу в представлении источника данных для нахождения данных, которые помогут определить, какие столбцы использовать в качестве мер. Дополнительные сведения см. в разделе [Просмотр данных в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md).  
   
 > [!NOTE]  
->  Не все меры извлекаются непосредственно из значения, хранимого в столбце таблицы фактов. Например, мера **Sales Person Count**, определенная в группе мер **Sales Quota** примера куба Adventure Works, фактически основана на подсчете уникальных значений (или числа различных элементов) в столбце **EmployeeKey** таблицы фактов **FactSalesQuota**.  
+>  Не все меры извлекаются непосредственно из значения, хранимого в столбце таблицы фактов. Например, мера **Sales Person Count** , определенная в группе мер **Sales Quota** примера куба Adventure Works, фактически основана на подсчете уникальных значений (или числа различных элементов) в столбце **EmployeeKey** таблицы фактов **FactSalesQuota** .  
   
 ##  <a name="bkmk_grain"></a> Гранулярность группы мер  
  Группы мер имеют гранулярность, которая описывает уровень детализации, поддерживаемой таблицей фактов. Гранулярность устанавливается через отношение внешнего ключа к измерению.  
@@ -85,8 +90,8 @@ caps.handback.revision: 17
   
  Можно задать гранулярность группы мер по определенному измерению с помощью вкладки **Использование измерений** конструктора кубов. Дополнительные сведения о связях между измерениями см. в разделе [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Меры и их группы](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+ [Меры и группы мер](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   

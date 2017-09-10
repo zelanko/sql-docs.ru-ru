@@ -1,35 +1,46 @@
 ---
-title: "Командлет Restore-ASDatabase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Командлет RESTORE-ASDatabase | Документы Microsoft"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 96e61c207316b216a1706834188a4f6f235cb52e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Командлет Restore-ASDatabase
+# <a name="restore-asdatabase-cmdlet"></a>Командлет Restore-ASDatabase
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Восстанавливает многомерную или табличную базу данных из файла резервной копии служб Analysis Services (ABF-файла) в экземпляре служб Analysis Services.  
+
+>[!NOTE] 
+>В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
  `Restore-ASDatabase [-RestoreFile] <string> [-Name] <string> [-AllowOverwrite <SwitchParameter>] Locations <Microsoft.AnalysisServices.RestoreLocation[]>] [-Security <Microsoft.AnalysisServices.RestoreSecurity>] [-Password <System.SecureString>] [-StorageLocation <System.string>] [-Server <string>] [-Credential <PSCredential>] [<CommonParameters>]`  
   
-## Description  
+## <a name="description"></a>Description  
  Дает возможность системному администратору служб Analysis Services восстанавливать многомерную или табличную базу данных из файла резервной копии (ABF-файла) на экземпляре локального или удаленного сервера. Если восстанавливаемый файл был зашифрован, используйте параметр –FilePassword, чтобы указать пароль, который будет использоваться для расшифровки файла.  
   
  Этот командлет поддерживает параметр –Credential, который можно использовать, если экземпляр служб Analysis Services настроен для доступа по протоколу HTTP. Параметр –Credential принимает объект PSCredential, который содержит идентификатор пользователя Windows. Службы IIS будут олицетворять этого пользователя при подключении к службам Analysis Services. Чтобы восстановить файл, необходимо обладать разрешениями системного администратора на этом экземпляре служб Analysis Services.  
   
-## Параметры  
+## <a name="parameters"></a>Параметры  
   
-### -RestoreFile \<строка>  
+### <a name="-restorefile-string"></a>-RestoreFile \<строка >  
  Задает путь и имя восстанавливаемого файла. Если указать только имя файла без пути, будет использоваться хранилище резервных копий по умолчанию.  
   
 |||  
@@ -40,7 +51,7 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Name \<строка>  
+### <a name="-name-string"></a>-Имя \<строка >  
  Указывает базу данных служб Analysis Services, резервная копия которой восстанавливается.  
   
 |||  
@@ -51,7 +62,7 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -AllowOverwrite \<переключатель>  
+### <a name="-allowoverwrite-switchparameter"></a>-AllowOverwrite \<SwitchParameter >  
  Перезаписывает базу данных с тем же именем и в том же расположении.  
   
 |||  
@@ -62,7 +73,7 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Locations \<Microsoft.AnalysisServices.RestoreLocation[]>  
+### <a name="-locations-microsoftanalysisservicesrestorelocation"></a>-Расположения \<Microsoft.AnalysisServices.RestoreLocation [] >  
  Указывает расположение удаленных восстанавливаемых секций.  
   
 |||  
@@ -73,7 +84,7 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Security \<Microsoft.AnalysisServices.RestoreSecurity>  
+### <a name="-security-microsoftanalysisservicesrestoresecurity"></a>-Security \<Microsoft.AnalysisServices.RestoreSecurity >  
  Представляет параметры безопасности, используемые для операции восстановления. Допустимы значения: CopyAll, SkipMembership, IgnoreSecurity. CopyAll восстанавливает роли и членство в них. SkipMembership восстанавливает только роль. IgnoreSecurity восстанавливает базу данных без ролей.  
   
 |||  
@@ -84,7 +95,7 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Password \<SecureString>  
+### <a name="-password-securestring"></a>-Пароль \<SecureString >  
  Указывает пароль, используемый для восстановления зашифрованного файла резервной копии. Необходимо указать пароль, который первоначально использовался для шифрования файла.  
   
 |||  
@@ -95,7 +106,7 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -StorageLocation \<строка>  
+### <a name="-storagelocation-string"></a>-StorageLocation \<строка >  
  Указывает место хранения базы данных. Это расположение файлов базы данных в файловой системе. Установите этот параметр, если используется не расположение по умолчанию, которое соответствует папке резервных копий на целевом экземпляре.  
   
 |||  
@@ -106,7 +117,7 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Server \<строка>  
+### <a name="-server-string"></a>-Server \<строка >  
  Указывает экземпляр служб Analysis Services, к которому подключится командлет и где он будет выполняться. Если имя сервера не указано, произойдет подключение к серверу localhost. Для экземпляров по умолчанию достаточно указать имя сервера. Для именованных экземпляров используйте формат имя_сервера\имя_экземпляра. Для HTTP-соединений используйте формат http[s]://server[:port]/virtualdirectory/msmdpump.dll.  
   
 |||  
@@ -117,14 +128,14 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|false|  
 |Принимать символы-шаблоны?|false|  
   
-### -Credential \<учетные данные ПК>  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
  Указывает объект PSCredential, который содержит имя пользователя и пароль Windows. Укажите этот параметр, только если экземпляр служб Analysis Services настроен для доступа HTTP с использованием обычной проверки подлинности. Для соединений в собственном режиме, в которых используются интегрированные функции безопасности, этот параметр не учитываются.  
   
  Если этот параметр указан, учетные данные, которые он содержит, добавляются в строку подключения. Службы IIS будут олицетворять этого пользователя при соединении со службами Analysis Services. Если учетные данные не будут указаны, будут использованы учетные данные по умолчанию для пользователя, который запускает это средство.  
   
  Для использования этого параметра необходимо сначала создать объект PSCredential с помощью командлета Get-Credential, чтобы указать имя пользователя и пароль (например, `$Cred=Get-Credential “adventure-works\admin”`. этот объект можно затем передать по конвейеру в параметр –Credential `(-Credential:$Cred`.  
   
- Дополнительные сведения о проверке подлинности и использовании учетных данных см. в разделе [Создание скриптов PowerShell в службах Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). Дополнительные сведения о HTTP-доступе см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md).  
+ Дополнительные сведения о HTTP-доступе см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 |||  
 |-|-|  
@@ -134,10 +145,10 @@ caps.handback.revision: 11
 |Принимать входные данные конвейера?|True (ByValue)|  
 |Принимать символы-шаблоны?|false|  
   
-### \<Общие параметры>  
+### <a name="commonparameters"></a>\<Общие параметры >  
  Этот командлет поддерживает общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. Дополнительные сведения см. в разделе [Об общих параметрах](http://go.microsoft.com/fwlink/?linkID=227825).  
   
-## Входы и выходы  
+## <a name="inputs-and-outputs"></a>Входы и выходы  
  Входной тип — это тип объектов, которые можно направить в командлет. Тип возвращаемого значения — это тип объектов, возвращаемых командлетом.  
   
 |||  
@@ -145,7 +156,7 @@ caps.handback.revision: 11
 |Входные данные|System.String<br /><br /> В командлет можно передавать по конвейеру строковые значения.|  
 |Выходные данные|Нет.|  
   
-## Пример 1  
+## <a name="example-1"></a>Пример 1  
   
 ```  
 PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase awtest.abf testawrestoredb –security:CopyAll  
@@ -153,7 +164,7 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase awtest.abf testawresto
   
  Эта команда восстанавливает файл резервной копии служб Analysis Services (awtest.abf) из локальной папки резервных копий на локальный экземпляр служб Analysis Services по умолчанию. Имя базы данных не обязательно должно существовать; в этом случае имя базы данных задается в процессе операции восстановления. При указании ключа –Security:CopyAll в новую (восстанавливаемую) базу данных из резервной копии базы данных будут добавлены роли и членство в ролях.  
   
-## Пример 2  
+## <a name="example-2"></a>Пример 2  
   
 ```  
 PS SQLSERVER:\SQLAS\Localhost\default > $pwd = read-host –AsSecureString –Prompt “Password”   
@@ -169,7 +180,7 @@ PS SQLSERVER:\SQLAS\Localhost\default >Remove-Variable –Name pwd
   
  Строки 4 и 5 удаляют пароль.  
   
-## Пример 3 (удаленный сценарий)  
+## <a name="example-3-remote-scenario"></a>Пример 3 (удаленный сценарий)  
  В этом примере показано, как восстановить локальный файл резервной копии из общей папки на удаленном экземпляре служб Analysis Services. Здесь файл резервной копии восстанавливается в виде базы данных с именем **internetsales** на экземпляре служб Analysis Services по умолчанию на компьютере с именем **ssas-aw-srv01**.  
   
  Файл резервной копии находится на общем сетевом ресурсе с общим доступом на чтение. Удаленный экземпляр служб Analysis Services должен иметь разрешение на чтение файла. Расположением файла должна быть сетевая папка (без дисков).  
@@ -181,7 +192,7 @@ PS SQLSERVER:\> restore-asdatabase -restorefile "\\FileServer01\DBFiles\Internet
 " -server "SSAS-AW-SRV01"  
 ```  
   
-## Пример 4  
+## <a name="example-4"></a>Пример 4  
   
 ```  
 PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\myremoteserver\backups\testdb.abf” –name Contoso_Retail –server myremoteserver –storagelocation “\\myremoteserver\restoreDBFiles”  
@@ -189,8 +200,4 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\my
   
  Эта команда восстанавливает зашифрованный файл резервной копии служб Analysis Services (testdb.abf) из удаленной папки резервных копий на удаленный экземпляр служб Analysis Services по умолчанию. Параметр —StorageLocation используется для помещения файлов базы данных в расположение, отличное от расположения по умолчанию, в данном случае — в общий файловый ресурс restoreDBfiles.  
   
-## См. также  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Управление табличными моделями с помощью PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
-  
+

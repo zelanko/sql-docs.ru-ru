@@ -1,34 +1,39 @@
 ---
-title: "Определение свойства среза секции (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "секции [службы Analysis Services], срезы данных"
-  - "срезы данных [службы Analysis Services]"
+title: "Определение свойства среза секции (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitions [Analysis Services], data slices
+- data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0dc6d3620e26186c57a78ddb88e44548384c7b7d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Определение свойства среза секции (службы Analysis Services)
+# <a name="set-the-partition-slice-property-analysis-services"></a>Определение свойства среза секции (службы Analysis Services)
   Срез данных является важной функцией оптимизации, которая помогает направить запросы к данным соответствующих секций. Прямое указание свойства Slice позволяет повысить производительность запросов, переписав стандартные срезы, сформированные для секций MOLAP и HOLAP. Также свойство Slice обеспечивает дополнительную проверку при обработке секции.  
   
  С помощью свойства Slice можно задать срез данных после создания секции, но до ее обработки. На вкладке "Секции" разверните группу мер, щелкните правой кнопкой мыши секцию и выберите **Свойства**.  
   
  Описание преимуществ использования срезов данных см. в разделе [Указание среза в секции куба служб SSAS](http://go.microsoft.com/fwlink/?LinkId=317783).  
   
-## Определение среза  
+## <a name="defining-a-slice"></a>Определение среза  
  Допустимые значения для свойства среза — элемент многомерного выражения, набор или кортеж. В следующем примере показан допустимый синтаксис среза.  
   
 |Срез|Элемент, набор или кортеж|  
@@ -40,13 +45,13 @@ caps.handback.revision: 33
  Срез данных секции должен как можно точнее соответствовать данным в секции. Например, если секция ограничена данными за 2012 год, то срез данных секции должен определять элемент 2012 измерения «Время». Не всегда возможно указать срез данных, точно отражающий содержимое секции. Например, если секция содержит данные только за январь и февраль, а уровнями измерения Time являются «Год», «Квартал» и «Месяц», то мастер секционирования не может выбрать только элементы «Январь» и «Февраль». В таких случаях выберите родительский элемент, отражающий содержимое секции. В данном примере выберите «Квартал 1».  
   
 > [!NOTE]  
->  Обратите внимание, что динамические функции многомерных выражений (такие как [Generate (многомерное выражение)](../../mdx/generate-mdx.md) или [Except (многомерное выражение)](../Topic/Except%20\(MDX\).md)) не поддерживаются в свойстве Slice для секций. Необходимо определить срез с помощью явных кортежей или ссылок на элементы.  
+>  Обратите внимание, что динамические функции многомерных выражений (такие как [Generate (многомерное выражение)](../../mdx/generate-mdx.md) или [Except (многомерное выражение)](../../mdx/except-mdx-function.md)) не поддерживаются в свойстве Slice для секций. Необходимо определить срез с помощью явных кортежей или ссылок на элементы.  
 >   
 >  Например, вместо того чтобы использовать оператор диапазона (:) для определения диапазона, потребуется перечислить каждый элемент по конкретным годам.  
 >   
 >  Если необходимо определить сложный срез, рекомендуется идентифицировать кортежи в срезе с помощью скрипта изменения XMLA. Затем вы можете использовать программу командной строки ascmd или элемент [Задача "Выполнение DDL службами Analysis Services"](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) в службах Integration Services для запуска скрипта и создания указанного набора элементов непосредственно перед секционированием.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

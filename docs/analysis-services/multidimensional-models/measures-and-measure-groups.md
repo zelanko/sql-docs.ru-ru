@@ -1,34 +1,39 @@
 ---
-title: "Меры и их группы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "группы мер [службы Analysis Services]"
-  - "меры [службы Analysis Services], о мерах"
-  - "OLAP-объекты [службы Analysis Services], меры"
-  - "агрегатные функции [службы Analysis Services]"
-  - "гранулярность"
-  - "группы мер [службы Analysis Services], о группах мер"
-  - "меры [службы Analysis Services]"
-  - "агрегаты [службы Analysis Services], меры"
-  - "таблицы фактов [службы Analysis Services]"
+title: "Меры и группы мер | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- measure groups [Analysis Services]
+- measures [Analysis Services], about measures
+- OLAP objects [Analysis Services], measures
+- aggregate functions [Analysis Services]
+- granularity
+- measure groups [Analysis Services], about measure groups
+- measures [Analysis Services]
+- aggregations [Analysis Services], measures
+- fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 42
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Меры и их группы
+# <a name="measures-and-measure-groups"></a>Меры и их группы
   Куб содержит *меры* в *группах мер*, бизнес-логику, а также коллекцию измерений, дающих контекст для вычисления числовых данных, которые предоставляет мера. Меры и группы мер являются неотъемлемой частью куба. Куб не может существовать без них.  
   
  В этом разделе описываются [Measures](#bkmk_measure) и [Measure Groups](#bkmk_mg). Здесь также приведена следующая таблица с ссылками на инструкции по созданию и настройке мер и групп мер.  
@@ -42,7 +47,7 @@ caps.handback.revision: 42
 |[Определить полуаддитивный режим](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Полуаддитивный режим ссылается на агрегаты, которые являются допустимыми для одних измерений, но не других. Распространенным примером является баланс банковского счета. Может потребоваться выполнить агрегирование баланса по клиентам и областям, но не по времени. Например, нет смысла складывать баланс одного и того же счета за несколько дней подряд. Чтобы определить полуаддитивный режим, используйте мастер добавления бизнес-аналитики.|  
 |[Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Используйте существующую группу мер в других кубах той же базы данных или в других базах данных служб Analysis Services.|  
   
-##  <a name="bkmk_measure"></a> меры  
+##  <a name="bkmk_measure"></a> Measures  
  Мера представляет собой столбец, содержащий количественно исчислимые данные, обычно числовые, для которых может быть выполнена статистическая обработка. Меры представляют некоторые аспекты организационных действий, выраженных в денежном (доход, прибыль или затраты) или числовом (уровень запасов, число сотрудников, клиентов или заказов) выражении, или как более сложные вычисления, включающие в себя бизнес-логику.  
   
  Каждый куб должен содержать по крайней мере одну меру, но большинство кубов имеют несколько мер, иногда сотни. Структурно меры часто сопоставляются с исходным столбцом в таблице фактов, где столбец предоставляет значения, используемые для наполнения меры. Кроме того, можно также определить меру с помощью многомерных выражений.  
@@ -51,22 +56,22 @@ caps.handback.revision: 42
   
  В этом примере **товарооборот посредников** объединяется с различными уровнями иерархии **территории сбыта** .  
   
- ![Сводная таблица с вызванными мерами и размерами](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "Сводная таблица с вызванными мерами и размерами")  
+ ![Сводная таблица с мерами и измерениями, вызванной](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "сводной таблицы с мерами и измерениями, вызванной")  
   
  Меры выдают правильные результаты, когда таблица фактов, содержащая числовые исходные данные, также содержит ссылки на таблицы измерений, которые используются в запросе. На примере товарооборота посредников, если каждая строка, хранящая объем продаж, содержит указатель на таблицу продуктов, таблицу дат или таблицу территории сбыта, то запросы, которые включают элементы из этих измерений, будут обработаны правильно.  
   
  Что произойдет, если мера не связана с измерениями, используемыми в запросе? Как правило, службы Analysis Services отображают меру по умолчанию, и значение будет одинаковым для всех элементов. В этом примере **продажи через Интернет**, которые состоят из заказов, напрямую размещенных клиентами через интернет-каталог, не имеют отношения к торговой организации.  
   
- ![Pivottable showing repeated measure values](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
+ ![Сводная таблица, показывающая повторяющиеся значения мер](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "Сводная таблица, показывающая повторяющиеся значения мер")  
   
  Чтобы свести к минимуму вероятность возникновения такого поведения в клиентском приложении, можно создать несколько кубов или перспектив в одной базе данных, при этом каждый куб или перспектива должны содержать только связанные объекты. Связи, которые необходимо проверить, находятся между группой мер (сопоставляется с таблицей фактов) и измерениями.  
   
-##  <a name="bkmk_mg"></a> Группы мер  
+##  <a name="bkmk_mg"></a> Measure Groups  
  Меры в кубе группируются по базовым таблицам фактов в группы мер. Группы мер используются для связи измерений с мерами. Они применяются также для мер, которые в качестве статистической обработки производят подсчет числа различных объектов, — помещение каждой из таких мер в отдельную группу позволяет оптимизировать процесс статистической обработки.  
   
  Простой объект <xref:Microsoft.AnalysisServices.MeasureGroup> состоит из основной информации: имя группы, режим хранения и режим обработки. Он также содержит составные части: меры, измерения и разделы, которые составляют группу мер.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   

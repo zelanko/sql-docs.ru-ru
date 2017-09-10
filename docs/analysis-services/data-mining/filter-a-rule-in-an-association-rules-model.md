@@ -1,27 +1,32 @@
 ---
-title: "Фильтрация правила в модели ассоциативных правил | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "фильтрование правил [службы Analysis Services]"
-  - "средство просмотра модели интеллектуального анализа [службы Analysis Services], правила"
-  - "средство просмотра правил"
+title: "Фильтр правила в ассоциации модели правил | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtering rules [Analysis Services]
+- Mining Model Viewer [Analysis Services], rules
+- Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 88eb75188ed36a8a79178f6b893c5301ffd2d47e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Фильтрация правила в модели ассоциативных правил
+# <a name="filter-a-rule-in-an-association-rules-model"></a>Фильтрация правила в модели ассоциативных правил
   Чтобы ограничить итоговый список, показав только нужные взаимосвязи, с моделями взаимосвязей можно использовать фильтрацию. Например, можно отфильтровать правила, чтобы показать только правила, содержащие определенный товар.  
   
  В конструкторе интеллектуального анализа данных вы используете элементы управления на вкладке **Правила** средства просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] , чтобы отфильтровать отображаемые правила.  Можно также создать запрос для модели, чтобы просмотреть только набор элементов, содержащий определенное значение.  
@@ -29,7 +34,7 @@ caps.handback.revision: 28
 > [!NOTE]  
 >  Этот параметр доступен только для моделей интеллектуального анализа данных, созданных по алгоритму взаимосвязей (Майкрософт).  
   
-### Фильтрация правил для модели взаимосвязей  
+### <a name="filter-a-rule-in-an-association-model"></a>Фильтрация правил для модели взаимосвязей  
   
 1.  Откройте модель интеллектуального анализа данных в **средстве просмотра правил взаимосвязи**. Для этого в среде SQL Server Management Studio щелкните правой кнопкой мыши имя модели и выберите команду **Обзор**. Чтобы сделать это в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], дважды щелкните структуру интеллектуального анализа данных, которая содержит модель, а затем перейдите на вкладку **Средство просмотра моделей интеллектуального анализа данных** окна **Конструктор интеллектуального анализа данных**.  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  Средство просмотра помещает в кэш первоначальный список правил на основании запроса к модели интеллектуального анализа данных и не обновляет список правил, если не изменить условия запроса путем указания параметров максимального числа строк, вероятности, важности или отображения длинных имен. Поэтому, если после ввода условия отображаемые элементы не обновляются немедленно, можно вызвать принудительное обновление данных в средстве просмотра, установив и сняв флажок **Показывать длинное имя** .  
   
-### Создание запроса к наборам элементов в модели взаимосвязей  
+### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Создание запроса к наборам элементов в модели взаимосвязей  
   
 -   [Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Урок 3. Построение сценария покупательского поведения (учебник по интеллектуальному анализу данных — средний уровень)](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)  
+ [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Занятие 3: Построение сценария потребительской корзины &#40; учебник по интеллектуальному анализу данных — средний &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Проектирование агрегатов (службы Analysis Services — многомерные данные) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "статистические выражения [службы Analysis Services], секции"
-  - "секции [службы Analysis Services], агрегаты"
+title: "Проектирование статистических схем (службы Analysis Services — многомерные) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregations [Analysis Services], partitions
+- partitions [Analysis Services], aggregations
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7fef45841f28152dfed66aa95f670e8a21a3d903
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Проектирование агрегатов (службы Analysis Services — многомерные данные)
+# <a name="designing-aggregations-analysis-services---multidimensional"></a>Проектирование агрегатов (службы Analysis Services — многомерные данные)
   Агрегатами называются предварительно вычисленные сводки по данным куба, помогающие службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ускорить выполнение запросов.  
   
  Для настройки параметров хранения и проектирования статистических схем для секции применяется мастер статистических схем. Мастер работает с одной секцией группы мер, поэтому каждую секцию можно настроить по-своему. Мастер руководит настройкой хранилища и проектированием статистических схем для секции. Для получения дополнительных сведений о настройке хранилища см.  
@@ -42,7 +47,7 @@ caps.handback.revision: 33
   
  Последний шаг мастера позволяет продолжить или отложить обработку. В первом случае будут созданы спроектированные агрегаты, а во втором они будут сохранены для будущей обработки. В зависимости от размеров секции, обработка может занять значительное время. При необходимости можно прервать обработку секции.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

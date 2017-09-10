@@ -1,31 +1,36 @@
 ---
-title: "Создание куба с помощью мастера кубов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кубы [службы Analysis Services], создание"
+title: "Создать куб с помощью мастера кубов | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание куба с помощью мастера кубов
+# <a name="create-a-cube-using-the-cube-wizard"></a>Создание куба с помощью мастера кубов
   Новый куб можно создать с помощью мастера кубов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-### Создание нового куба  
+### <a name="to-create-a-new-cube"></a>Создание нового куба  
   
-1.  В **обозревателе решений** щелкните правой кнопкой мыши узел **Кубы** и выберите команду **Создать куб**.  
+1.  В **обозревателе решений**щелкните правой кнопкой мыши узел **Кубы**и выберите команду **Создать куб**.  
   
 2.  На странице мастера кубов **Выбор метода создания** выберите параметр **Использовать существующие таблицы**, а затем нажмите кнопку **Далее**.  
   

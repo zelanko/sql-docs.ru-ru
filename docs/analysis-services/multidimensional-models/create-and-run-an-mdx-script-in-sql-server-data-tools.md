@@ -1,31 +1,36 @@
 ---
-title: "Создание и выполнение скрипта многомерных выражений SQL Server Data Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "многомерные выражения [службы Analysis Services], скрипты"
-  - "скрипты [службы Analysis Services], создание"
-  - "скрипты [многомерные выражения], создание"
+title: "Создание и выполнение скрипта многомерных Выражений в SQL Server Data Tools | Документы Microsoft"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MDX [Analysis Services], scripts
+- scripts [Analysis Services], creating
+- scripts [MDX], creating
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52acda53b174bcbb2734a5ebcf86292c32ec8f3a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание и выполнение скрипта многомерных выражений SQL Server Data Tools
+# <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Создание и выполнение скрипта многомерных выражений SQL Server Data Tools
   Чтобы создать и запустить скрипт многомерных выражений в службах  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо находиться в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с уже созданным и готовым к редактированию кубом.  
   
-### Создание скрипта многомерных выражений  
+### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>Создание скрипта многомерных выражений  
   
 1.  Откройте куб, для которого необходимо создать скрипт многомерных выражений, и в разделе **Представление**нажмите кнопку **Вычисления**.  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 31
   
 4.  Чтобы запустить скрипт многомерных выражений, разверните и обработайте куб с вновь внесенными изменениями скрипта многомерных выражений.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Базовый скрипт многомерных выражений (многомерные выражения)](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Инструкции для создания скриптов многомерных выражений (многомерные выражения)](../../mdx/mdx-scripting-statements-mdx.md)  
+ [Основные понятия о сценариях многомерных Выражений &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Инструкции сценариев многомерных Выражений &#40; Многомерные Выражения &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   
   

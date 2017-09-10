@@ -1,33 +1,38 @@
 ---
-title: "Определение именованных запросов в представлении источника данных (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "именованные запросы [службы Analysis Services], создание"
-  - "изменение именованных запросов"
-  - "представления источников данных [службы Analysis Services], именованные запросы"
+title: "Определение именованных запросов в представлении источника данных (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- named queries [Analysis Services], creating
+- modifying named queries
+- data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19b3f52626202c555cb51173508f2a1954318b83
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Определение именованных запросов в представлении источника данных (службы Analysis Services)
+# <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Определение именованных запросов в представлении источника данных (службы Analysis Services)
   Именованный запрос является выражением SQL, представленным в виде таблицы. В именованном запросе можно указать выражение SQL для выбора строк и столбцов, возвращаемых из одной или нескольких таблиц в одном или нескольких источниках данных. Именованный запрос подобен другим таблицам со строками и связями в представлении источника данных, за исключением того, что он основан на выражении.  
   
  Именованный запрос позволяет расширять реляционную схему таблиц, существующих в представлении источника данных, не изменяя базового источника данных. Например, ряд именованных запросов можно использовать для разбиения сложной таблицы измерения на меньшие, более простые таблицы измерений для использований в измерениях баз данных. Именованный запрос может быть использован для соединения нескольких таблиц баз данных из одного или более источников данных в одну таблицу представления источников данных.  
   
-## Создание именованного запроса  
+## <a name="creating-a-named-query"></a>Создание именованного запроса  
   
 > [!NOTE]  
 >  Именованное вычисление нельзя добавить в именованный запрос, а именованный запрос не может быть основан на таблице, которая содержит именованное вычисление.  
@@ -38,7 +43,7 @@ caps.handback.revision: 31
   
  **Примечание** При определении именованного запроса, обращающегося к источнику данных [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, именованный запрос, который содержит связанный вложенный запрос и предложение GROUP BY, завершится неудачно. Дополнительные сведения см. в статье [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](http://support.microsoft.com/kb/274729) (Внутренняя ошибка инструкции SELECT, содержащей связанный вложенный запрос и предложение GROUP BY) в базе знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## Добавление или изменение именованного запроса  
+## <a name="add-or-edit-a-named-query"></a>Добавление или изменение именованного запроса  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект или подключитесь к базе данных, которая содержит представление источника данных, в который необходимо добавить именованный запрос.  
   
@@ -57,11 +62,11 @@ caps.handback.revision: 31
     4.  Введите запрос на нижней панели или воспользуйтесь средствами графического построителя запросов для его создания.  
   
     > [!NOTE]  
-    >  Помните, что пользовательский интерфейс построителя запросов зависит от источника данных. Вместо графического интерфейса можно воспользоваться универсальным текстовым. Для выполнения одних и тех же задач доступны оба пользовательских интерфейса, но выполняемые при этом действия будут отличаться. Дополнительные сведения см. в разделе [Диалоговое окно "Создание именованного запроса" или "Изменение именованного запроса" (службы Analysis Services — многомерные данные)](../Topic/Create%20or%20Edit%20Named%20Query%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md).  
+    >  Помните, что пользовательский интерфейс построителя запросов зависит от источника данных. Вместо графического интерфейса можно воспользоваться универсальным текстовым. Для выполнения одних и тех же задач доступны оба пользовательских интерфейса, но выполняемые при этом действия будут отличаться. Дополнительные сведения см. в разделе [Диалоговое окно "Создание именованного запроса" или "Изменение именованного запроса" (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941).  
   
 5.  Нажмите кнопку **ОК**. В заголовке таблицы появится значок с двумя пересекающимися таблицами, указывающий на то, что таблица была заменена именованным запросом.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
