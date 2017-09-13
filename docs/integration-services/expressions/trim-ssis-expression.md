@@ -64,8 +64,8 @@ TRIM(FirstName + " "+ LastName)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция LTRIM & #40; Выражение служб SSIS & #41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
- [RTRIM & #40; Выражение служб SSIS & #41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [Функции & #40; Выражение служб SSIS & #41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Функция LTRIM &#40;Выражение служб SSIS&#41;](../../integration-services/expressions/ltrim-ssis-expression.md)   
+ [RTRIM &#40;Выражение служб SSIS&#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [Функции &#40;Выражение служб SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
