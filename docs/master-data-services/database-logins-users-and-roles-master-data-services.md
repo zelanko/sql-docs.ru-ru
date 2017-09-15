@@ -1,5 +1,5 @@
 ---
-title: "Имена входа, пользователей и ролей (Master Data Services) базы данных | Документы Microsoft"
+title: "Имена входа, пользователи и роли базы данных (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87acd8344bdce17c711c317518d7b47845458e24
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: dc95616efefbe35dc835accc377743451556288e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Имена входа, пользователи и роли базы данных (службы Master Data Services)
@@ -68,6 +68,6 @@ ms.lasthandoff: 08/02/2017
 |**stg**|Содержит таблицы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и представления, связанные с промежуточным процессом. Запрещается удалять любые из этих объектов. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
 ## <a name="see-also"></a>См. также:  
- [Защита объектов базы данных &#40; Службы Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md)  
   
   

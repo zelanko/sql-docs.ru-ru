@@ -1,5 +1,5 @@
 ---
-title: "Пользователи и группы (Master Data Services) | Документы Microsoft"
+title: "Пользователи и группы (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d08ef5501ae6cbbd17f54c31ab36523fbb28c49
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e7ce67245871cff2682bec6e314a21fdca31a954
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="users-and-groups-master-data-services"></a>Пользователи и группы (службы Master Data Services)
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/02/2017
  Не присваивайте отдельным пользователям дополнительные разрешения и не включайте пользователей в несколько групп, имеющих доступ к службам [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Кроме того, не используйте разрешения для элементов иерархии, за исключением случаев, когда группе необходим был ограниченный доступ к определенным элементам.  
   
 ## <a name="see-also"></a>См. также:  
- [Добавить пользователя &#40; Службы Master Data Services &#41;](../master-data-services/add-a-user-master-data-services.md)   
- [Добавить группу &#40; Службы Master Data Services &#41;](../master-data-services/add-a-group-master-data-services.md)   
- [Удаление пользователей или групп &#40; Службы Master Data Services &#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
- [Проверить разрешения пользователя &#40; Службы Master Data Services &#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [Добавление пользователя (службы Master Data Services)](../master-data-services/add-a-user-master-data-services.md)   
+ [Добавление группы (службы Master Data Services)](../master-data-services/add-a-group-master-data-services.md)   
+ [Удаление пользователей или групп (службы Master Data Services)](../master-data-services/delete-users-or-groups-master-data-services.md)   
+ [Проверка разрешений пользователя (службы Master Data Services)](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

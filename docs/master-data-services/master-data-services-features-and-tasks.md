@@ -1,5 +1,5 @@
 ---
-title: "Функции служб Master Data Services и задачи | Документы Microsoft"
+title: "Функции и задачи служб Master Data Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdf3bd232ff92759bee00d20ed26879d700ed59b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-features-and-tasks"></a>Функции и задачи служб Master Data Services
@@ -30,35 +30,35 @@ ms.lasthandoff: 08/02/2017
   
 -   [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
--   [Атрибуты &#40; Службы Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
--   [Атрибуты на основе домена &#40; Службы Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Группы атрибутов &#40; Службы Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)  
+-   [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)  
   
 ## <a name="maintain-master-data"></a>Обслуживание основных данных  
   
--   [Надстройка служб Master Data Services для Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Надстройка Master Data Services для Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Члены &#40; Службы Master Data Services &#41;](../master-data-services/members-master-data-services.md)  
+-   [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
 -   [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
--   [Заметки &#40; Службы Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)  
   
--   [Иерархии &#40; Службы Master Data Services &#41;](../master-data-services/hierarchies-master-data-services.md)  
+-   [Иерархии (службы Master Data Services)](../master-data-services/hierarchies-master-data-services.md)  
   
--   [Коллекции &#40; Службы Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
 ## <a name="improve-data-quality"></a>Повышение качества данных  
   
--   [Бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
--   [Проверка &#40; Службы Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Проверка (службы Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
--   [Версии &#40; Службы Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+-   [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
--   [Уведомления &#40; Службы Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+-   [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  
   
 -   [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "К категории операции веб-службы (Master Data Services) | Документы Microsoft"
+title: "Операции веб-службы по категориям (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Операции веб-службы по категориям (службы Master Data Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
   
 ## <a name="entity-operations"></a>Операции с сущностями  
- Эти операции служат для создания, обновления и удаления элементов одной сущности. Дополнительные сведения см. в разделе [сущности &#40; Службы Master Data Services &#41; ](../../master-data-services/entities-master-data-services.md) и [члены &#40; Службы Master Data Services &#41; ](../../master-data-services/members-master-data-services.md).  
+ Эти операции служат для создания, обновления и удаления элементов одной сущности. Дополнительные сведения см. в разделах [Сущности (службы Master Data Services)](../../master-data-services/entities-master-data-services.md) и [Элементы (службы Master Data Services)](../../master-data-services/members-master-data-services.md).  
   
 ||  
 |-|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
   
 ## <a name="attribute-and-hierarchy-operations"></a>Операции с атрибутами и иерархиями  
- Эти операции служат для получения сведений об атрибутах и иерархиях. Атрибуты и иерархии также можно изменять с помощью операций с моделями, например <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>. Дополнительные сведения см. в разделе [атрибуты &#40; Службы Master Data Services &#41; ](../../master-data-services/attributes-master-data-services.md) и [иерархий &#40; Службы Master Data Services &#41; ](../../master-data-services/hierarchies-master-data-services.md).  
+ Эти операции служат для получения сведений об атрибутах и иерархиях. Атрибуты и иерархии также можно изменять с помощью операций с моделями, например <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>. Дополнительные сведения см. в разделах [Атрибуты (службы Master Data Services)](../../master-data-services/attributes-master-data-services.md) и [Иерархии (службы Master Data Services)](../../master-data-services/hierarchies-master-data-services.md).  
   
 ||  
 |-|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
   
 ## <a name="annotation-operations"></a>Операции с заметками  
- Эти операции служат для создания, обновления и удаления заметок. Дополнительные сведения см. в разделе [заметки &#40; Службы Master Data Services &#41; ](../../master-data-services/annotations-master-data-services.md).  
+ Эти операции служат для создания, обновления и удаления заметок. Дополнительные сведения см. в разделе [Заметки (службы Master Data Services)](../../master-data-services/annotations-master-data-services.md).  
   
 ||  
 |-|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
   
 ## <a name="version-and-validation-operations"></a>Операции проверки и операции с версиями  
- Эти операции используются для копирования и проверки версий. Дополнительные сведения см. в разделе [версии &#40; Службы Master Data Services &#41; ](../../master-data-services/versions-master-data-services.md) и [проверку &#40; Службы Master Data Services &#41; ](../../master-data-services/validation-master-data-services.md).  
+ Эти операции используются для копирования и проверки версий. Дополнительные сведения см. в разделах [Версии (службы Master Data Services)](../../master-data-services/versions-master-data-services.md) и [Проверка (службы Master Data Services)](../../master-data-services/validation-master-data-services.md).  
   
 ||  
 |-|  
@@ -124,7 +124,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Операции импорта данных  
- Эти операции используются для импорта данных в базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Эти операции используются для импорта данных в базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -153,7 +153,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
 ## <a name="security-operations"></a>Операции по обеспечению безопасности  
- С помощью этих операций выполняется изменение параметров безопасности, управляющих доступом к базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Безопасность (службы Master Data Services)](../../master-data-services/security-master-data-services.md).  
+ С помощью этих операций выполняется изменение параметров безопасности, управляющих доступом к базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Безопасность (службы Master Data Services)](../../master-data-services/security-master-data-services.md).  
   
 ||  
 |-|  

@@ -1,5 +1,5 @@
 ---
-title: "«База данных конфигурации» (диспетчер конфигурации служб Master Data Services) | Документы Microsoft"
+title: "Страница \"Конфигурация базы данных\" (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.dbpg.f1
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 212031f92de47da41ad2716b81740c6a42487e59
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 841c3ca5ade98f3fb474e52eeaa5123c6ab4a483
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>Страница «Конфигурация базы данных» (диспетчер конфигурации служб Master Data Services)
@@ -45,6 +45,6 @@ ms.lasthandoff: 08/02/2017
  Эти параметры доступны в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] и хранятся в таблице системных параметров (mdm.tblSystemSetting) базы данных. Список параметров см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Установка служб Master Data Services и настройка](../master-data-services/master-data-services-installation-and-configuration.md) [баз данных требования &#40; Службы Master Data Services &#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
+[Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [Требования к базе данных (службы Master Data Services)](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

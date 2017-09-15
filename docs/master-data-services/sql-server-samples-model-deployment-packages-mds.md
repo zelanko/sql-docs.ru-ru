@@ -1,5 +1,5 @@
 ---
-title: "Примеры SQL Server: Модель развертывания пакетов (MDS) | Документы Microsoft"
+title: "Примеры SQL Server: пакеты развертывания моделей (MDS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
@@ -14,23 +14,23 @@ keywords:
 - "образец"
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
+author: smartysanthosh
+ms.author: nagavo
 manager: craigg
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7a031ba18c6782cdd73ae31ef395bc2ecdcf102
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bda0dbc730e24017dfc1978e691d3da654a15149
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="sql-server-examples-model-deployment-packages-mds"></a>Примеры SQL Server: Пакеты развертывания модели (MDS)
-  Примеры пакетов модели с данными входят в комплект установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. По умолчанию для этих файлы пакета находятся \<диска > \Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
+# <a name="sql-server-examples-model-deployment-packages-mds"></a>Примеры SQL Server: пакеты развертывания моделей (MDS)
+  Примеры пакетов модели с данными входят в комплект установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Расположение по умолчанию для файлов пакетов — \<диск>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   
  Инструкции по развертыванию образцов пакетов моделей см. в разделе [Развертывание образцов моделей и данных](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Вы можете развернуть эти образцы пакетов моделей с помощью [средства MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]  
->  **Пример обновления в[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Обновления примеров в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 >   
 >  Образцы пакетов были обновлены для поддержки перечисленных ниже новых возможностей.  
 >   
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/02/2017
  
 
  
- В Master Data Services пакет находится в XML-файл, содержащий развертываемую структуру модели и при необходимости данные из модели. Пакеты модели используются для перемещения копий моделей из одной среды служб MDS в другую либо для создания моделей в существующей среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
+ В службах Master Data Services пакет представляет собой XML-файл, содержащий развертываемую структуру модели и (необязательно) данные этой модели. Пакеты модели используются для перемещения копий моделей из одной среды служб MDS в другую либо для создания моделей в существующей среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  

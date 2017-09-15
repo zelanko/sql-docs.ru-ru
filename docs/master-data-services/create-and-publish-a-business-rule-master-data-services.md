@@ -1,5 +1,5 @@
 ---
-title: "Создание и публикация бизнес-правило (Master Data Services) | Документы Microsoft"
+title: "Создание и публикация бизнес-правила (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8ea50a2feb5c35e431422c1786d7731bf97d8fb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c74bf4d6520ca399be34da8369f6f62b2eb3d3ec
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
@@ -107,7 +107,7 @@ ms.lasthandoff: 08/02/2017
 |Имя|Описание|  
 |----------|-----------------|  
 |Состояние|После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что бизнес-правило обновляется.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> При наличии ошибок во время создания или изменения бизнес-правила появляется следующее изображение.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Название|Имя бизнес-правила.|  
+|Имя|Имя бизнес-правила.|  
 |Описание|Описание бизнес-правила.|  
 |Состояние бизнес-правила|Одно из следующих состояний бизнес-правила: правило не определено, активно, исключено, ожидающие изменения, ожидающие исключения и ожидается удаление.|  
 |Исключена.|Указывает, исключено ли бизнес-правило.|  
@@ -119,11 +119,11 @@ ms.lasthandoff: 08/02/2017
   
     -   [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Проверьте версию на соответствие бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
- [Изменение имени бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [Добавление нескольких условий к бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [Изменение имени бизнес-правила (службы Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

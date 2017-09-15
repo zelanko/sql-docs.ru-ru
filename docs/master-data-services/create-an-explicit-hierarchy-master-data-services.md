@@ -1,5 +1,5 @@
 ---
-title: "Создание явной иерархии (Master Data Services) | Документы Microsoft"
+title: "Создание явной иерархии (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/01/2016
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 62f9ade96cdeeb658681abd16c81b48edbd84c1a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1bbc9d8a78915c3be4a5530c3d47909505dea599
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Создание явной иерархии (службы Master Data Services)
-  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] явные иерархии создаются, если необходима неоднородная иерархия, элементы которой могут располагаться на любом уровне. Явные иерархии содержат элементы из одной сущности.  
+  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]явные иерархии создаются, если необходима неоднородная иерархия, элементы которой могут располагаться на любом уровне. Явные иерархии содержат элементы из одной сущности.  
   
  После создания явной иерархии в нее можно добавлять элементы в функциональной области **Обозреватель** .  
   
@@ -62,8 +62,8 @@ ms.lasthandoff: 08/02/2017
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок состояния ОК](../master-data-services/media/mds-statusicon-ok.png "значок состояния ОК")|  
-|Название|Имя явной иерархии.|  
+|Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния")|  
+|Имя|Имя явной иерархии.|  
 |Обязательно|Указывает, является ли явная иерархия обязательной.|  
 |Автор|Имя пользователя, создавшего явную иерархию.|  
 |Создано|Дата и время создания явной иерархии.|  
@@ -77,9 +77,9 @@ ms.lasthandoff: 08/02/2017
   
   
 ## <a name="see-also"></a>См. также:  
- [Явные иерархии &#40; Службы Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Производные иерархии с явными ограничениями &#40; Службы Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Изменение имени явной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Производные иерархии с явными ограничениями (службы Master Data Services)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [Изменение имени явной иерархии (службы Master Data Services)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   
 

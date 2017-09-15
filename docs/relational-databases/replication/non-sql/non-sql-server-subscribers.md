@@ -1,7 +1,7 @@
 ---
 title: "Подписчики, отличные от подписчиков SQL Server | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,15 +24,17 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cae789ce180c32c4651f967a7d7fdc246effe2
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server
-  Следующие подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , могут подписаться на публикации моментальных снимков и публикации транзакций, используя принудительные подписки. Подписки поддерживаются для двух самых последних версий каждой из баз данных, приведенных в списке, с использованием самой последней версии поставщика OLE DB из приводимого списка.  
+# <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+Следующие подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , могут подписаться на публикации моментальных снимков и публикации транзакций, используя принудительные подписки. Подписки поддерживаются для двух самых последних версий каждой из баз данных, приведенных в списке, с использованием самой последней версии поставщика OLE DB из приводимого списка.  
   
  Разнородная репликация на подписчики, отличные от подписчика SQL Server, устарела. Публикация Oracle устарела. Для перемещения данных создайте решения с помощью системы отслеживания измененных данных и служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -43,8 +45,22 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------------|--------------|  
 |Oracle;|Все платформы, поддерживаемые Oracle|Поставщик OLE DB для Oracle (поставляемый Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows, за исключением версии 9.x|Поставщик OLE DB для Microsoft Host Integration Server (HIS)|  
+
+Сведения о версии Oracle  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает следующие разнородные сценарии для репликации транзакций и репликации моментальных снимков.  
   
- Сведения о создании подписок для Oracle и IBM DB2 см. в разделах [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) и [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+-   Публикация данных с подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на подписчики, отличные от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   Публикация данных в Oracle и из Oracle имеет следующие ограничения:  
+  | |2016 или более ранние версии |2017 или более поздние версии |
+  |-------|-------|--------|
+  |Репликация из Oracle |Поддержка только Oracle 10g или более ранних версий |Поддержка только Oracle 10g или более ранних версий |
+  |Репликация в Oracle |Версии до Oracle 12c |Не поддерживается |
+
+
+ Разнородная репликация на подписчики, отличные от подписчика SQL Server, устарела. Публикация Oracle устарела. Для перемещения данных создайте решения с помощью системы отслеживания измененных данных и служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+Сведения о создании подписок для Oracle и IBM DB2 см. в разделах [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) и [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Вопросы использования подписчиков, отличных от подписчиков SQL Server  
  При репликации на подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо помнить о следующем:  
@@ -55,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Когда публикация создается в мастере создания публикаций, а затем включается для подписчиков, отличных от подписчиков SQL Server, с помощью диалогового окна «Свойства публикации», владелец всех объектов в базе данных подписки не указывается для подписчиков, отличных от подписчиков[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , в то время как для подписчиков [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] он устанавливается как владелец соответствующего объекта в базе данных публикации.  
   
--   Если публикация имеет подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , то публикация должна быть включена для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перед тем как будут созданы какие-либо подписки для подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Если публикация имеет подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], то публикация должна быть включена для подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], перед тем как будут созданы какие-либо подписки для подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   По умолчанию скрипты, создаваемые агентом моментальных снимков для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , используют в синтаксисе инструкции CREATE TABLE идентификаторы без кавычек. Поэтому опубликованная таблица с именем 'test' реплицируется как 'TEST'. Чтобы сохранить регистр символов для имени таблицы публикации, укажите для агента распространителя параметр **-QuotedIdentifier** . Параметр **-QuotedIdentifier** должен также применяться, если имена опубликованных объектов (таких как таблицы, столбцы и ограничения) содержат пробелы или слова, которые являются зарезервированными словами в той версии базы данных, которая используется на подписчике, не являющемся подписчиком[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этом параметре см. в разделе [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   По умолчанию скрипты, создаваемые агентом моментальных снимков для подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используют в синтаксисе `CREATE TABLE` идентификаторы без кавычек. Поэтому опубликованная таблица с именем 'test' реплицируется как 'TEST'. Чтобы сохранить регистр символов для имени таблицы публикации, укажите для агента распространителя параметр **-QuotedIdentifier** . Параметр **-QuotedIdentifier** должен также применяться, если имена опубликованных объектов (таких как таблицы, столбцы и ограничения) содержат пробелы или слова, которые являются зарезервированными словами в той версии базы данных, которая используется на подписчике, не являющемся подписчиком[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этом параметре см. в разделе [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   Учетная запись, под которой запускается агент распространителя, должна иметь доступ с правом на чтение к установочному каталогу поставщика OLE DB.  
   
@@ -67,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Для СУБД IBM DB2 база данных указывается в строке соединения с DB2. Дополнительные сведения см. в статье [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
--   Если распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняется на 64-разрядной платформе, необходимо использовать 64-разрядную версию соответствующего поставщика OLE DB.  
+-   Если распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняется на 64-разрядной платформе, нужно использовать 64-разрядную версию соответствующего поставщика OLE DB.  
   
 -   Репликация перемещает данные в формате Юникода независимо от параметров сортировки и кодовых страниц, используемых на издателе и подписчике. При репликации между издателями и подписчиками рекомендуется выбрать совместимые параметры сортировки и кодовую страницу.  
   
@@ -104,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

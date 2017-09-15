@@ -1,7 +1,7 @@
 ---
 title: "Обзор публикации Oracle | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,20 +20,31 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a7e0593342073272cfe3aae01ea4c28e5e2304
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5574123253385152cc04e879439b8ea8b26b3b27
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="oracle-publishing-overview"></a>Обзор публикации Oracle
-  Начиная с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], в топологию репликации можно включать издателей Oracle, начиная с Oracle версии 9i. Серверы публикаций можно развернуть на любом оборудовании и под управлением любой операционной системы, поддерживаемой Oracle. Эта функция, разработанная на базе репликации моментальных снимков и репликации транзакций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , представляет аналогичные производительность и удобство работы.  
+# <a name="oracle-publishing-overview"></a>Обзор публикации Oracle  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+Начиная с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], в топологию репликации можно включать издателей Oracle, начиная с Oracle версии 9i. Серверы публикаций можно развернуть на любом оборудовании и под управлением любой операционной системы, поддерживаемой Oracle. Эта функция, разработанная на базе репликации моментальных снимков и репликации транзакций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , представляет аналогичные производительность и удобство работы.  
   
- Публикация Oracle устарела. Разнородная репликация на подписчики, отличные от подписчика SQL Server, устарела. Для перемещения данных создайте решения с помощью системы отслеживания измененных данных и служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает следующие разнородные сценарии для репликации транзакций и репликации моментальных снимков.  
   
-> [!CAUTION]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   Публикация данных с подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на подписчики, отличные от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   Публикация данных в Oracle и из Oracle имеет следующие ограничения:  
+  | |2016 или более ранние версии |2017 или более поздние версии |
+  |-------|-------|--------|
+  |Репликация из Oracle |Поддержка только Oracle 10g или более ранних версий |Поддержка только Oracle 10g или более ранних версий |
+  |Репликация в Oracle |Версии до Oracle 12c |Не поддерживается |
+
+
+ Разнородная репликация на подписчики, отличные от подписчика SQL Server, устарела. Публикация Oracle устарела. Для перемещения данных создайте решения с помощью системы отслеживания измененных данных и служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
   
 ## <a name="snapshot-replication-for-oracle"></a>Репликация моментальных снимков для Oracle  
  Публикации моментальных снимков Oracle реализованы в стиле публикации моментальных снимков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Когда агент моментальных снимков запущен для публикации Oracle, он создает соединение с издателем Oracle и обрабатывает каждую таблицу в публикации. Обрабатывая каждую таблицу, агент получает строки таблицы и создает скрипты схемы, которые затем сохраняются в хранилище моментального снимка публикации. Полный набор данных создается при каждом запуске агента моментальных снимков, по этой причине триггеры отслеживания изменений не добавляются в таблицы Oracle, как в случае репликации транзакций. Репликация моментальных снимков предоставляет удобный способ переноса данных с минимальным воздействием на публикующую систему.  
@@ -49,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  [Разнородная репликация базы данных](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   
+

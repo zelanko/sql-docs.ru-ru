@@ -1,25 +1,30 @@
 ---
-title: "Промежуточная таблица связей (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "промежуточная таблица связей [службы Master Data Services]"
-  - "база данных [службы Master Data Services], таблица связей"
+title: "Промежуточная таблица связей (службы Master Data Services) | Документы Майкрософт"
+ms.custom: 
+ms.date: 04/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relationships staging table [Master Data Services]
+- database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a43b9a600e62b63468c21b9a32f1a706a7ec5eda
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
-# Промежуточная таблица связей (службы Master Data Services)
+# <a name="relationship-staging-table-master-data-services"></a>Промежуточная таблица связей (службы Master Data Services)
   Используйте промежуточную таблицу связей (stg.name_Relationship) в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для изменения расположения элементов в явной иерархии на основе связей между элементами.  
   
 ##  <a name="TableColumns"></a> Столбцы таблицы  
@@ -36,11 +41,12 @@ caps.handback.revision: 8
 |**ParentCode**|Обязательно<br /><br /> Для связи родительский-дочерний элемент код объединенного элемента, который должен стать родительским для дочернего или объединенного элемента.<br /><br /> Для одноуровневых отношений код одного из одноуровневых элементов.||  
 |**ChildCode**|Обязательно<br /><br /> Для связи родительский-дочерний элемент код объединенного или конечного элемента, который должен стать дочерним элементом.<br /><br /> Для одноуровневых отношений код одного из одноуровневых элементов.||  
 |**Порядок сортировки**|Необязательно<br /><br /> Целое число, указывающее порядковый номер элемента относительно других элементов на уровнях ниже родителя. У всех дочерних элементов должен быть уникальный идентификатор.||  
-|**ErrorCode**|Отображает код ошибки. Для всех записей со значением **ImportStatus_ID**, равным **2**, см. раздел [Ошибки промежуточного процесса (службы Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md).||  
+|**ErrorCode**|Отображает код ошибки. Для всех записей со значением **ImportStatus_ID** , равным **2**, см. раздел [Ошибки промежуточного процесса (службы Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md).||  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Просмотр ошибок, возникающих во время помещения на промежуточное хранение (службы Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Ошибки промежуточного процесса (службы Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
+

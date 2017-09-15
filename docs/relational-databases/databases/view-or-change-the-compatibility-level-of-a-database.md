@@ -18,11 +18,11 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fa6785003c2e66f446cdc3a41960c5e3d18fad69
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6dda5a53fd91104e9dacccb2f1a9b402b3b08ae0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Просмотр или изменение уровня совместимости базы данных
@@ -90,7 +90,7 @@ GO
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере изменяется уровень совместимости базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на `120,` т. е. на значение уровня совместимости для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере изменяется уровень совместимости базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на `120`, т. е. на значение уровня совместимости для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -99,3 +99,4 @@ GO
 ```  
   
   
+

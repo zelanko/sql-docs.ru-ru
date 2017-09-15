@@ -1,5 +1,5 @@
 ---
-title: "Создание индекса (Master Data Services) | Документы Microsoft"
+title: "Создание индекса (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4d03606ab8a45d6c7b326fd64b6900ac7e67356
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ee405ebea31b8ca2a178b2d287a1ba1b8d4e97f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
@@ -54,8 +54,8 @@ ms.lasthandoff: 08/02/2017
   
 |Имя столбца|Description|  
 |-----------------|-----------------|  
-|Состояние|Состояние индекса.<br /><br /> При нажатии кнопки **Сохранить**, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") изображение, указывающее, что индекс обновляется.<br /><br /> При наличии ошибок при создании или изменении индекса, ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
-|Название|Имя индекса.|  
+|Состояние|Состояние индекса.<br /><br /> Когда вы нажимаете **Сохранить**, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление индекса.<br /><br /> Если при создании или редактировании индекса произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
+|Имя|Имя индекса.|  
 |Уникальный|Указывает, является ли индекс уникальным.|  
 |On Attributes|Показывает отображаемые имена атрибутов, для которых определен индекс.|  
   

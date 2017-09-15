@@ -1,5 +1,5 @@
 ---
-title: "Обновление сборок SQLCLR после загрузки обновлений .NET Framework | Документы Microsoft"
+title: "Обновление сборок SQLCLR после установки обновлений .NET Framework | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8930c3779fdc34535a9543268a5a728b78a2d269
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Обновление сборок SQLCLR после загрузки обновлений .NET Framework
@@ -58,6 +58,6 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 ## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Обновление схемы баз данных DQS после установки обновления SQL Server](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
+ [Обновление схемы базы данных DQS после установки обновления SQL Server](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   
   

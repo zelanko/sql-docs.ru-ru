@@ -1,7 +1,7 @@
 ---
 title: "Разнородная репликация базы данных | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,32 +18,39 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6eee43a7755f2e018a7ed4e9f822983b03b7181a
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5fae2c0c64f4aa703661792641dd99009562ba1a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="heterogeneous-database-replication"></a>разнородная репликация базы данных
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает следующие разнородные сценарии для репликации транзакций и репликации моментальных снимков.  
-  
--   Публикация данных из Oracle в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="heterogeneous-database-replication"></a>разнородная репликация базы данных  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает следующие разнородные сценарии для репликации транзакций и репликации моментальных снимков.  
   
 -   Публикация данных с подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на подписчики, отличные от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
-  
+
+-   Публикация данных в Oracle и из Oracle имеет следующие ограничения:  
+  | |2016 или более ранние версии |2017 или более поздние версии |
+  |-------|-------|--------|
+  |Репликация из Oracle |Поддержка только Oracle 10g или более ранних версий |Поддержка только Oracle 10g или более ранних версий |
+  |Репликация в Oracle |Версии до Oracle 12c |Не поддерживается |
+
+
  Разнородная репликация на подписчики, отличные от подписчика SQL Server, устарела. Публикация Oracle устарела. Для перемещения данных создайте решения с помощью системы отслеживания измененных данных и служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="publishing-data-from-oracle"></a>Публикация данных из Oracle  
- Для публикации данных из Oracle можно использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , причем большинство функций и простота их использования такие же, как и в случае репликации моментальных снимков и репликации транзакций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Публикация данных из Oracle идеально подходит для следующих сценариев:  
+ Для публикации данных из Oracle можно использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , причем большинство функций и простота их использования такие же, как и в случае репликации моментальных снимков и репликации транзакций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Для этой функции требуется Oracle 10G или более ранней версии. Публикация данных из Oracle идеально подходит для следующих сценариев:  
   
 |Сценарий|Описание|  
 |--------------|-----------------|  
-|Развертывание приложений на платформе[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework|Разработка при помощи [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при работе с данными, реплицируемыми из базы данных, отличающейся от базы данных[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
-|Серверы промежуточного хранения данных|Поддержание синхронизации промежуточных баз данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с базой данных, отличной от базы данных[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|Развертывание приложений на платформе[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework|Ведите разработку с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при работе с данными, реплицируемыми из базы данных, отличной от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|Серверы промежуточного хранения данных|Поддерживайте синхронизацию промежуточных баз данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с базой данных, отличной от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |Переход на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Протестируйте приложения в реальном времени совместно с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при репликации изменений исходной системы. Переключение на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при успешном испытании миграции.|  
   
  Дополнительные сведения см. в статье [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
@@ -58,3 +65,4 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
   
+

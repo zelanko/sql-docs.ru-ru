@@ -1,5 +1,5 @@
 ---
-title: "Сущности (Master Data Services) | Документы Microsoft"
+title: "Сущности (службы основных данных) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d59e75dac7220c1ce03913c0c765e816623cc2a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ae0e3ae300d2b896261e7426491448989a5e0f45
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="entities-master-data-services"></a>Сущности (службы основных данных)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-entities-relate-to-other-model-objects"></a>Связь сущностей с другими объектами модели  
  Сущность можно рассматривать как таблицу, содержащую основные данные, в которой строки представляют элементы, а столбцы — атрибуты.  
   
- ![Службы Master Data Services сущность в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "службы Master Data Services сущность в виде таблицы")  
+ ![Сущность служб Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность служб Master Data Services, представленная в виде таблицы")  
   
  Сущность заполняется перечнем основных данных, которыми нужно управлять.  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 08/02/2017
 ## <a name="entity-examples"></a>Примеры сущности  
  В следующих примерах сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
- ![Bike сущности таблицы Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "велосипеда таблицы сущности продукта")  
+ ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта "Велосипед"")  
   
  В следующем примере сущность «Продукт» является центральной. Сущность «Подкатегория» является атрибутом на основе домена сущности «Продукт». Сущность «Категория» является атрибутом на основе домена сущности «Подкатегория». StandardCost и ListPrice — это атрибуты в свободной форме сущности Product, а FilePhoto — это файловый атрибут сущности Product.  
   
- ![Древовидная структура сущности продукта](../master-data-services/media/mds-conc-entity-ui.gif "древовидная структура сущности продукта")  
+ ![Древовидная структура сущности "Продукт"](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности "Продукт"")  
   
 > [!NOTE]  
 >  Это пример на основе пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Иерархическая древовидная структура показывает отношения между сущностями и атрибутами на основе домена. Она предназначена для отображения отношений, а не для демонстрации уровней важности.  

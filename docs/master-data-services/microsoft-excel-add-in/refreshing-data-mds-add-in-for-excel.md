@@ -1,5 +1,5 @@
 ---
-title: "Обновление данных (надстройка MDS для Excel) | Документы Microsoft"
+title: "Обновление данных (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6159c4b30b0cd2c4f718efaddc7c915f1fb43dfd
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ac5d258c4c59154bbf03528cd81ac53a6901f15f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Обновление данных (надстройка MDS для Excel)
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], обновление данных, когда требуется получить последние данные из репозитория MDS без открытия нового листа. Обновить можно либо все, либо только выделенные ячейки. Эта возможность может оказаться полезной при вставке столбцов с пользовательскими формулами или других данных, которые не управляются MDS и которые нужно сохранить.  
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]обновление данных можно выполнить, когда необходимо получить последние данные из репозитория MDS без открытия нового листа. Обновить можно либо все, либо только выделенные ячейки. Эта возможность может оказаться полезной при вставке столбцов с пользовательскими формулами или других данных, которые не управляются MDS и которые нужно сохранить.  
   
 ## <a name="when-you-can-refresh-mds-managed-data"></a>Когда можно обновлять данные, управляемые MDS  
  Можно обновлять на активном листе данные, управляемые MDS, если активный лист уже содержит данные, управляемые MDS. Если на листе изменялись значения атрибутов или добавлялись новые элементы, то необходимо опубликовать изменения, прежде чем появится возможность обновления.  

@@ -1,5 +1,5 @@
 ---
-title: "Превращение группы атрибутов в видимую для пользователей (Master Data Services) | Документы Microsoft"
+title: "Превращение группы атрибутов в видимую для пользователей (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9b4e9b3fb165d2aa8c445daa5d38c7a8d81ed03
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e3922c3ad81de37e73f08bd840def40146c8bf12
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
--   Должна существовать хотя бы одна группа атрибутов. Дополнительные сведения см. в статье [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
+-   Должна существовать хотя бы одна группа атрибутов. Дополнительные сведения см. в статье [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md).  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>Превращение группы атрибутов в видимую для пользователей  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 8.  Нажмите кнопку **Сохранить**.  
   
 ## <a name="see-also"></a>См. также:  
- [Группы атрибутов &#40; Службы Master Data Services &#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Создать группу атрибутов &#40; Службы Master Data Services &#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+ [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
+ [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

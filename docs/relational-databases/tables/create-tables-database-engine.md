@@ -15,22 +15,20 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57e54a247e190cdf6e52746ca591af5cc4de8507
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 6251736a0ba3f21e0dca7f97d32efb03205200d8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="create-tables-database-engine"></a>Создание таблиц (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Предусмотрена возможность создавать новые таблицы, присваивать им имена и добавлять к существующим базам данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Предусмотрена возможность создавать таблицы, присваивать им имена и добавлять к существующим базам данных, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-> **ПРИМЕЧАНИЕ.** При подключении к базе данных SQL Azure новый параметр таблицы запускает сценарий создания шаблона таблицы. Измените параметры, затем запустите скрипт для создания новой таблицы. Дополнительные сведения см. в разделе [Общие сведения о SQL Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
-   
- 
+
   
 ##  <a name="Permissions"></a> Сначала проверьте разрешения!  
 Эта задача требует разрешения CREATE TABLE в базе данных и разрешения ALTER на схему, в которой создается таблица.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  В обозревателе объектов щелкните правой кнопкой мыши узел **Таблицы** базы данных и выберите **Создать таблицу**.  
   
-4.  Введите имена столбцов, выберите типы данных и определите для каждого столбца, могут ли в нем присутствовать значения NULL, как показано на следующей иллюстрации.  
+4.  Введите имена столбцов, выберите типы данных и определите для каждого столбца, могут ли в нем присутствовать значения NULL, как показано на следующей иллюстрации:  
   
      ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Чтобы указать, что столбец является столбцом первичного ключа, щелкните его правой кнопкой мыши и выберите **Задать первичный ключ**. Дополнительные сведения см. в статье [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md).  
   
-7.  Чтобы создать связи по внешнему ключу, проверочные ограничения или индексы, щелкните правой кнопкой мыши панель конструктора таблиц и выберите из списка объект, как показано на следующей иллюстрации.  
+7.  Чтобы создать связи по внешнему ключу, проверочные ограничения или индексы, щелкните правой кнопкой мыши панель конструктора таблиц и выберите в списке объект, как показано на следующей иллюстрации:  
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   

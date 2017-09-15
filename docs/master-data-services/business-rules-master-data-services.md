@@ -1,5 +1,5 @@
 ---
-title: "Бизнес-правил (Master Data Services) | Документы Microsoft"
+title: "Бизнес-правила (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/18/2017
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c8929bcaf6bc937ae6c8bf4bdb0e1b0d2e02f64
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f28a6820698413cd3e5b2a6f827fd7b5a055d7c1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rules-master-data-services"></a>Бизнес-правила (службы Master Data Services)
   Бизнес-правило в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]— это правило, позволяющее обеспечить качество и точность основных данных. Бизнес-правило можно использовать для автоматического обновления данных, отправки электронной почты или запуска бизнес-процесса или рабочего процесса.  
   
- Чтобы просмотреть примеры бизнес-правил, см. [примеры бизнес-правил &#40; Службы Master Data Services &#41; ](../master-data-services/business-rule-examples-master-data-services.md).  
+ Примеры бизнес-правил см. в статье [Примеры бизнес-правил (службы Master Data Services) ](../master-data-services/business-rule-examples-master-data-services.md).  
   
 ## <a name="create-and-publish-business-rules"></a>Создание и публикация бизнес-правил  
  Бизнес-правила представляют собой инструкции **If/Then/Else** , создаваемые в пользовательском интерфейсе [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Если значение атрибута удовлетворяет указанному условию, выполняется определенное действие. В противном случае выполняется действие Else. Возможны такие действия, как задание значения по умолчанию или изменение значения. Эти действия могут сочетаться с отправкой уведомления по электронной почте.  
   
- Бизнес-правила могут основываться на определенных значениях атрибутов (например, предпринимать действие, если Цвет=Синий) или на изменении значения атрибута (например, предпринимать действие, если значение атрибута «Цвет» изменяется). Дополнительные сведения об отслеживании изменений общего характера см. в разделе [отслеживания изменений &#40; Службы Master Data Services &#41; ](../master-data-services/change-tracking-master-data-services.md).  
+ Бизнес-правила могут основываться на определенных значениях атрибутов (например, предпринимать действие, если Цвет=Синий) или на изменении значения атрибута (например, предпринимать действие, если значение атрибута «Цвет» изменяется). Дополнительные сведения об отслеживании изменений общего вида см. в разделе [Отслеживание изменений (службы Master Data Services)](../master-data-services/change-tracking-master-data-services.md).  
   
  Для использования бизнес-правил сначала необходимо создать и опубликовать правила, а затем применить опубликованные правила к данным. Правила можно применять к подмножествам данных или ко всем данным в версии путем проверки версии. Версию нельзя зафиксировать, пока все атрибуты не пройдут проверку на соответствие бизнес-правилам.  
   
@@ -77,26 +77,26 @@ ms.lasthandoff: 08/02/2017
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание и публикация бизнес-правила.|[Создание и публикация бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
-|Добавление нескольких условий к бизнес-правилу.|[Добавление нескольких условий к бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Создание бизнес-правила, которое требует заполнения атрибутов.|[Требуется атрибут значения &#40; Службы Master Data Services &#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Создание бизнес-правила, которое запускает действие при изменении значений атрибутов.|[Запуск действия в зависимости от значения атрибута &#40; Службы Master Data Services &#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Создание бизнес-правила для использования пользовательского сценария как условия|[Расширение бизнес-правил &#40; Службы Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Создание бизнес-правила для использования пользовательского сценария как действия|[Расширение бизнес-правил &#40; Службы Master Data Services &#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Изменение имени существующего бизнес-правила.|[Изменение имени бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Настройка [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] для отправки уведомлений при применении бизнес-правил.|[Настройка бизнес-правилах отправки уведомлений &#40; Службы Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Применение бизнес-правил к определенным элементам.|[Проверка конкретных элементов с использованием бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|Исключите бизнес-правило, чтобы оно не использовалось.|[Исключить бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|Удаление существующего бизнес-правила.|[Удаление бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|Создание и публикация бизнес-правила.|[Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|Добавление нескольких условий к бизнес-правилу.|[Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
+|Создание бизнес-правила, которое требует заполнения атрибутов.|[Запрос значений атрибута (службы Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Создание бизнес-правила, которое запускает действие при изменении значений атрибутов.|[Инициирование действия на основе значения атрибута (службы Master Data Services)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Создание бизнес-правила для использования пользовательского сценария как условия|[Расширение бизнес-правил (службы Master Data Services)](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Создание бизнес-правила для использования пользовательского сценария как действия|[Расширение бизнес-правил (службы Master Data Services)](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Изменение имени существующего бизнес-правила.|[Изменение имени бизнес-правила (службы Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Настройка [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] для отправки уведомлений при применении бизнес-правил.|[Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Применение бизнес-правил к определенным элементам.|[Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Исключите бизнес-правило, чтобы оно не использовалось.|[Исключение бизнес-правила (службы Master Data Services)](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
+|Удаление существующего бизнес-правила.|[Удаление бизнес-правила (службы Master Data Services)](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
 -   [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Версии &#40; Службы Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+-   [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
--   [Проверка &#40; Службы Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Проверка (службы Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
--   [Отслеживание изменений &#40; Службы Master Data Services &#41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [Отслеживание изменений (службы Master Data Services)](../master-data-services/change-tracking-master-data-services.md)  
   
   

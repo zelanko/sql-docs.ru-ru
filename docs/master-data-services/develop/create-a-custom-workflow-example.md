@@ -1,5 +1,5 @@
 ---
-title: "Пример настраиваемого рабочего процесса (Master Data Services) | Документы Microsoft"
+title: "Пример настраиваемого рабочего процесса (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -13,21 +13,21 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2b3ad5ab349456364d2aa0af8826dd6970e55b1
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bfc0c557f8c645fe7dfa56850bce64b533bc9340
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="create-a-custom-workflow---example"></a>Создать пользовательский рабочий процесс — пример
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]при создании библиотеки классов пользовательского рабочего процесса, создайте класс, реализующий интерфейс Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender. Этот интерфейс содержит один метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>, который вызывается службой SQL Server MDS Workflow Integration Service при запуске рабочего процесса. <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> Метод содержит два параметра: *workflowType* содержится текст, введенный в **тип рабочего процесса** текстовое поле в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], и *dataElement* содержит метаданные и данные элемента для элемента, который инициировал бизнес-правило рабочего процесса.  
+# <a name="create-a-custom-workflow---example"></a>Создание настраиваемого рабочего процесса — пример
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] при создании библиотеки классов настраиваемого рабочего процесса создается класс, реализующий интерфейс Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender. Этот интерфейс содержит один метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>, который вызывается службой SQL Server MDS Workflow Integration Service при запуске рабочего процесса. Метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> содержит два параметра: параметр *workflowType* содержит текст, введенный в текстовое поле **Тип рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], а параметр *dataElement* содержит метаданные и данные элемента, который инициировал бизнес-правило рабочего процесса.  
   
 ## <a name="custom-workflow-example"></a>Пример пользовательского рабочего процесса  
- Следующий пример кода демонстрирует, как с помощью метода <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> можно извлечь атрибуты Name, Code и LastChgUserName из XML-данных элемента, вызвавшего срабатывание бизнес-правила рабочего процесса, а также как вызвать хранимую процедуру для вставки этих данных в другую базу данных. Пример XML-данных элемента и объяснение теги, он содержит см [пользовательский рабочий процесс XML-описание &#40; Службы Master Data Services &#41; ](../../master-data-services/develop/create-a-custom-workflow-xml-description.md).  
+ Следующий пример кода демонстрирует, как с помощью метода <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> можно извлечь атрибуты Name, Code и LastChgUserName из XML-данных элемента, вызвавшего срабатывание бизнес-правила рабочего процесса, а также как вызвать хранимую процедуру для вставки этих данных в другую базу данных. Пример XML-данных элемента с описанием содержащихся в них тегов см. в разделе [Описание XML настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-xml-description.md).  
   
 ```csharp  
 using System;  
@@ -75,6 +75,6 @@ namespace MDSWorkflowTestLib
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Создать пользовательский рабочий процесс &#40; Службы Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [Создание настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
   
   

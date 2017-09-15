@@ -1,5 +1,5 @@
 ---
-title: "Настройка уведомлений по электронной почте (Master Data Services) | Документы Microsoft"
+title: "Настройка уведомлений электронной почты (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - notifications [Master Data Services], configuring notifications
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10139480120dffc47c93d36022b7c15e196a2a76
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6d2c212964afe4048e08343324e4fb29294eda08
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Настройка уведомления электронной почты (службы Master Data Services)
@@ -45,8 +45,8 @@ ms.lasthandoff: 08/02/2017
 -   В [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] есть параметры, влияющие на рассылку уведомлений. Эти параметры можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Уведомления &#40; Службы Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)   
- [Устранение неполадок в уведомлениях по электронной почте (службы Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
- [Настройка бизнес-правилах отправки уведомлений &#40; Службы Master Data Services &#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)   
+ [Устранение неполадок в уведомлениях электронной почты (службы Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
+ [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

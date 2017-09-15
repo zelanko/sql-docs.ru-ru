@@ -1,5 +1,5 @@
 ---
-title: "Модели параметры развертывания (Master Data Services) | Документы Microsoft"
+title: "Варианты развертывания модели (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b32c2f58468c64d4c311b196f012b1a645bb216f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6e4cdd4041ee2065b6cd2aa898068289eda66d9e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="model-deployment-options-master-data-services"></a>Варианты развертывания модели (службы Master Data Services)
@@ -45,6 +45,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [Развертывание пакета развертывания модели с помощью мастера](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [Развертывание моделей &#40; Службы Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
   

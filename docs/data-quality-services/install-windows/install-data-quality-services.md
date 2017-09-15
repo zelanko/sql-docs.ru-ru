@@ -1,5 +1,5 @@
 ---
-title: "Установка служб Data Quality Services | Документы Microsoft"
+title: "Установка служб Data Quality Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c5b6c77d5a7b08a7fd497278d4f858f34be776e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|Платформа .NET Framework 4.0 (при ее отсутствии устанавливается во время установки клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] )<br /><br /> Internet Explorer 6.0 с пакетом обновления 1 (SP1) или более поздняя версия.|  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]и [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] можно установить на одном компьютере или на разных компьютерах. Оба компонента можно установить независимо друг от друга и в любой последовательности. Тем не менее для использования [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]необходимо установить [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , с которым будет устанавливаться соединение.  
+>  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] могут устанавливаться и работать на одном или на разных компьютерах. Оба компонента можно установить независимо друг от друга и в любой последовательности. Тем не менее для использования [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]необходимо установить [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , с которым будет устанавливаться соединение.  
 >   
 >  Чтобы подключиться к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] или с помощью текущего или более раннюю версию [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] и преобразование " очистка DQS ". Дополнительные сведения об обновлении существующей версии служб DQS в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в статье [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md).  
 >   
@@ -120,10 +120,10 @@ ms.lasthandoff: 08/02/2017
  [Обновление сборок SQLCLR после загрузки обновлений .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
- [Удаление объектов служб Data Quality Server](../../sql-server/install/remove-data-quality-server-objects.md)   
- [Установка компонентов бизнес-аналитики SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
+ [Удаление объектов сервера служб Data Quality](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [Установка компонентов бизнес-аналитики SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Удаление SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)   
  [Службы Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Устранение неполадок установки и настройки в DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Устранение неполадок во время установки и настройки DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

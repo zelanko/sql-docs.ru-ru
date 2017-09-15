@@ -1,5 +1,5 @@
 ---
-title: "Развертывание модели (Master Data Services) | Документы Microsoft"
+title: "Развертывание моделей (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploying-models-master-data-services"></a>Развертывание моделей (службы Master Data Services)
-  В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] пакет представляет собой XML-файл, содержащий развертываемую структуру модели и (необязательно) данные этой модели. Пакеты модели используется для перемещения копий моделей из одной среды служб MDS в другую, либо для создания новых моделей в существующей среде MDS.  
+  В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]пакет представляет собой XML-файл, содержащий развертываемую структуру модели и (необязательно) данные этой модели. Пакеты модели используется для перемещения копий моделей из одной среды служб MDS в другую, либо для создания новых моделей в существующей среде MDS.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**Средство MDSModelDeploy** обратно совместим с пакетами, созданными в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] или более поздней версии.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **Средство MDSModelDeploy** обратно совместимо с пакетами, созданными в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] или более поздней версии.  
   
 ## <a name="tools-for-deploying-models"></a>Инструменты для развертывания моделей  
  Для работы с пакетами модели можно использовать одно из трех средств, в зависимости от задач, которые требуется выполнить.  
@@ -81,6 +81,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>См. также  
   
--   [Варианты развертывания модели &#40; Службы Master Data Services &#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [Варианты развертывания модели (службы Master Data Services)](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

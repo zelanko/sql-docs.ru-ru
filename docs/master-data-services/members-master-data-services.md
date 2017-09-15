@@ -1,5 +1,5 @@
 ---
-title: "Элементы (Master Data Services) | Документы Microsoft"
+title: "Элементы (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="members-master-data-services"></a>Элементы (службы основных данных)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  В этом примере таблица представляет собой сущность, строки в таблице представляют элементы, а столбцы — атрибуты. Каждая ячейка представляет значение атрибута для определенного элемента.  
   
- ![Службы Master Data Services сущность в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "службы Master Data Services сущность в виде таблицы")  
+ ![Сущность служб Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность служб Master Data Services, представленная в виде таблицы")  
   
 ## <a name="member-types"></a>Типы элементов  
  Существует три типа элементов: конечные элементы, консолидированные элементы и элементы коллекции.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="member-example"></a>Пример элемента  
  В следующем примере каждый элемент состоит из значений атрибутов Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto.  
   
- ![Bike сущности таблицы Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "велосипеда таблицы сущности продукта")  
+ ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта "Велосипед"")  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

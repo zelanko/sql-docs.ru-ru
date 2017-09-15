@@ -1,6 +1,6 @@
 ---
-title: "Обновлено - Master Data Services для SQL Server docs | Документы Microsoft"
-description: "Отображение фрагментов обновленное содержимое для последних измененных в документации для Master Data Services (MDS) для Microsoft SQL Server."
+title: "Обновленные документы по службам Master Data Services для SQL Server | Документы Майкрософт"
+description: "Отрывки из недавно обновленного содержимого в документации по службам Master Data Services (MDS) для Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -15,34 +15,34 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: master-data-services-mds
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 7947edbc9068cad20b534afdfe154da8d54898d2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Новые и недавно обновленные: веб-службы Master Data Services для SQL Server
+# <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Новые и обновленные статьи по службам Master Data Services для SQL Server
 
 
 
-Почти каждый день Корпорация Майкрософт обновляет некоторые из его существующих статей на его [Docs.Microsoft.com](http://docs.microsoft.com/) документации веб-сайта. В этой статье отображает выдержки из недавно обновлены статьи. Ссылки на новые статьи также может быть указан.
+Почти каждый день корпорация Майкрософт вносит изменения в свои статьи на веб-сайте документации [Docs.Microsoft.com](http://docs.microsoft.com/). В этой статье приводятся отрывки из обновленных недавно статей, а также ссылки на новые статьи.
 
-В этой статье создается программой, которая периодически запускается повторно. Иногда фрагмент могут отображаться идеально подходит форматирования или как разметки из статьи источника. Образы никогда не отображается.
+Статья создается программой и периодически обновляется. Отрывки из измененных статей могут иметь неидеальный формат или разметку исходной статьи. Картинки здесь не отображаются.
 
-Следующий диапазон дат и темы отображаются последние обновления:
+Последние обновления соответствуют следующему периоду времени и предметной области:
 
 
 
-- *Диапазон обновлений дат:* &nbsp; **2017 г-05-23** &nbsp; - в - &nbsp; **2017 г-07-17**
-- *Предметной области:* &nbsp; **Master Data Services (MDS) для SQL Server**.
+- *Диапазон дат для обновлений:* &nbsp; **23.05.2017** &nbsp;—&nbsp; **17.07.2017**
+- *Предметная область:* &nbsp; **службы Master Data Services (MDS) для SQL Server**.
 
 
 
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>Недавно созданные новые статьи
+## <a name="new-articles-created-recently"></a>Недавно созданные статьи
 
 Приведенные ниже ссылки указывают на новые статьи, которые были добавлены недавно.
 
@@ -56,27 +56,27 @@ ms.lasthandoff: 08/02/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список статей, недавно обновлены
+## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
 
-Compact представлены ссылки на обновленные статьи, перечисленные в разделе отрывки.
-
-
-
-&nbsp;
-
-## <a name="updated-articles-with-excerpts"></a>Обновлены статьи с отрывки
-
-В этом разделе отображается отрывки обновлений, полученные из статей, в которых были недавно крупных обновлений.
-
-Из семантической контексту отрывки, показанные здесь отображаются раздельно. Кроме того иногда фрагмент отделяется от синтаксис важные разметки окружающего в реальной статьи. Поэтому эти отрывки являются только общие рекомендации. Только отрывки позволяют знаете ли потребностей гарантирует времени, нажмите кнопку и посетите реальной статьи.
-
-Для этих и других причин не копировать из этих отрывки кода и не выполняют как точное истинности любой фрагмент текста. Вместо этого посетите реальной статьи.
+В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
 
 
 &nbsp;
 
-***Ни одна из статей в этой области были обновлены в последнее время, в данный момент.***
+## <a name="updated-articles-with-excerpts"></a>Обновленные статьи с отрывками
+
+В этом разделе приводятся отрывки из статей, в которые недавно были внесены значительные изменения.
+
+Отрывки отображаются отдельно от соответствующего семантического контекста. Кроме того, иногда фрагмент отделяется от синтаксиса разметки, окружающей саму статью. Таким образом, эти отрывки приводятся только для общего сведения. Они позволяют понять, стоит ли вам перейти по ссылке и прочитать всю статью полностью.
+
+По этой и другим причинам не копируйте код из этих отрывков и не воспринимайте содержание этих отрывков как однозначно верное. Вместо этого пройдите по ссылке и ознакомьтесь с фактическим текстом статьи.
+
+
+
+&nbsp;
+
+***Ни одна из статей в этой предметной области за последнее время изменениям не подвергалась.***
 
 
 
@@ -84,41 +84,41 @@ Compact представлены ссылки на обновленные ста
 
 &nbsp;
 
-## <a name="similar-articles"></a>Аналогичные статей
+## <a name="similar-articles"></a>Похожие статьи
 
-В этом разделе перечислены схожий статей для недавно обновлены статьи в других предметных областей, в одном репозитории GitHub.com: [MicrosoftDocs /**sql документы pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+Этот раздел содержит похожие статьи, аналогичные недавно измененным, для других предметных областей в том же репозитории GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
 <!--  20170717-1101  -->
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметных областей, которые имеют новые или недавно обновленные статьи
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (4 + 4): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новый + обновленные (2 + 0): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
-- [Новый + обновленные (1 + 2): **подключение к SQL** документы](../connect/new-updated-connect.md)
-- [Новый + обновленные (6 + 0): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
-- [Новый + обновленные (13 + 2): **Linux для SQL** документы](../linux/new-updated-linux.md)
-- [Новый + обновленные (1 + 0): **Master Data Services (MDS) для SQL** документы](../master-data-services/new-updated-master-data-services.md)
-- [Новый + обновленные (1 + 0): **ODBC (Open Database Connectivity) для SQL** документы](../odbc/new-updated-odbc.md)
-- [Новый + обновленные (8 + 4): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
-- [Новый + обновленные (2 + 2): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
-- [Новый + обновленные (0 + 1): **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
-- [Новый + обновленные (1 + 0): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
-- [Новый + обновленные (1 + 0): **средства для SQL** документы](../tools/new-updated-tools.md)
+- [Новые + обновленные (4+4): **Расширенная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (2+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (1+2): **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (6+0): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (13+2): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (1+0): **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
+- [Новые + обновленные (1+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
+- [Новые + обновленные (8+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (2+2): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (1+0): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (1+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметных областей, в которых нет новых или недавно обновленных статей
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (0 + 0): **объектов данных ActiveX (ADO) для SQL** документы](../ado/new-updated-ado.md)
-- [Новый + обновленные (0 + 0): **Data Quality Services для SQL** документы](../data-quality-services/new-updated-data-quality-services.md)
-- [Новый + обновленные (0 + 0): **расширений интеллектуального анализа (DMX) для SQL** документы](../dmx/new-updated-dmx.md)
-- [Новый + обновленные (0 + 0): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
-- [Новый + обновленные (0 + 0): **многомерных выражений (MDX) для SQL** документы](../mdx/new-updated-mdx.md)
-- [Новый + обновленные (0 + 0): **PowerShell для SQL** документы](../powershell/new-updated-powershell.md)
-- [Новый + обновленные (0 + 0): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
-- [Новый + обновленные (0 + 0): **образцы для SQL** документы](../sample/new-updated-sample.md)
-- [Новый + обновленные (0 + 0): **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
-- [Новый + обновленные (0 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
-- [Новый + обновленные (0 + 0): **XQuery для SQL** документы](../xquery/new-updated-xquery.md)
+- [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
+- [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
+- [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
+- [Новые + обновленные (0+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
+- [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новые + обновленные (0+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
+- [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
 
 &nbsp;

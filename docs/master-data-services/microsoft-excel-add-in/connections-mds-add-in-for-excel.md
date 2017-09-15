@@ -1,5 +1,5 @@
 ---
-title: "Соединения (надстройка MDS для Excel) | Документы Microsoft"
+title: "Соединения (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3223a2a26e9476549afd5bd5dbdef84337414ac8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1c301a0192a0fd8a894a92dacc5503b27ce180f1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Соединения (настройка MDS для Excel)
   Для скачивания данных в [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]необходимо сначала создать соединение. Соединение — это данные, по которым веб-служба [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] узнает, с какой базой данных MDS нужно устанавливать соединение.  
   
- Строка подключения обычно является URL-адрес [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] веб-приложения, например `http://contoso/mds`.  
+ Строкой подключения обычно является URL-адрес веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], например `http://contoso/mds`.  
   
  При каждом запуске Excel необходимо устанавливать соединение с репозиторием MDS. Единственное исключение — когда активный лист уже содержит данные, управляемые MDS. В этом случае соединение устанавливается автоматически при каждом обновлении и при каждой публикации данных на листе.  
   

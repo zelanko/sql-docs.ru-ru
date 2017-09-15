@@ -1,7 +1,7 @@
 ---
 title: "Сводка по функциям разных версий PolyBase | Документация Майкрософт"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>Сводка функций PolyBase по версиям
@@ -44,8 +44,20 @@ ms.lasthandoff: 08/28/2017
 |Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|да|нет|да|да|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>Передача операторов T-SQL, поддерживаемых вычислением
+В SQL Server и APS передачу в кластер Hadoop поддерживают лишь некоторые операторы. В следующей таблице перечислены все поддерживаемые операторы и приводится ряд неподдерживаемых операторов. 
 
-  
+||||
+|-|-|-| 
+|**Тип оператора**|**Отправка в Hadoop**|**Отправка в хранилище BLOB-объектов**|
+|Проекции столбца|да|нет|
+|Предикаты|да|нет|
+|Статистические вычисления|частично|нет|
+|Соединения между внешними таблицами|нет|нет|
+|Соединения между внешними и локальными таблицами|нет|нет|
+|Сортировки|нет|нет|
+
+Частичная статистическая обработка означает, что окончательная статистическая обработка должна выполняться после достижения данными SQL Server, но часть статистической обработки происходит в Hadoop. Это общий метод вычисления статистических схем в системах с массивно-параллельной обработкой данных.  
 ## <a name="see-also"></a>См. также:  
  [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

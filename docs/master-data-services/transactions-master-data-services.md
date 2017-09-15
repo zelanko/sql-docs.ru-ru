@@ -1,5 +1,5 @@
 ---
-title: "Транзакции (Master Data Services) | Документы Microsoft"
+title: "Транзакции (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
 
 
 --------------------------------------------------
-  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] транзакция регистрируется при каждом выполнении действия с элементом. Все пользователи могут просматривать транзакции, а администраторы также могут их обращать (отменять). Транзакции отображают дату, время и пользователя, выполнившего действие, а также другие сведения. Пользователь может добавить к транзакции заметку, чтобы указать причину выполнения транзакции.  
+  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]транзакция регистрируется при каждом выполнении действия с элементом. Все пользователи могут просматривать транзакции, а администраторы также могут их обращать (отменять). Транзакции отображают дату, время и пользователя, выполнившего действие, а также другие сведения. Пользователь может добавить к транзакции заметку, чтобы указать причину выполнения транзакции.  
   
 ## <a name="when-transaction-are-recorded"></a>Время регистрации транзакций  
  Транзакции записываются, когда элементы:  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  В функциональной области **Управление версиями** администратор может просматривать все транзакции всех пользователей для моделей, к которым у них имеется доступ, а также обращать любые такие транзакции.
  
 > [!NOTE]  
->  Администраторы могут просматривать все транзакции всех пользователей, пока они не имеют разрешение только для чтения, уровень применяется в **управление версиями** функциональной области. Например, если администратор имеет значение только для чтения разрешений и обновлением уровень разрешений, администратор не сможет для просмотра других пользовательских транзакций, так как разрешение только для чтения имеют приоритет над разрешение update.
+>  Администраторы могут просматривать все транзакции всех пользователей до тех пор, если только в функциональной области **Управление версиями** для них не задан уровень разрешений только для чтения. Например, если у администратора есть разрешение только на чтение и разрешение на обновление, он не сможет просматривать транзакции других пользователей, так как разрешение только на чтение имеет приоритет над разрешением на обновление.
   
  Вы можете настроить длительность хранения данных журнала транзакций. Для этого необходимо определить свойство **Срок хранения журнала, дн.** в системных параметрах базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , а также задать значение **Хранение журнала в днях** при создании или изменении модели. Дополнительные сведения см. в разделах [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md) и [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>См. также  
   
--   [Администраторы &#40; Службы Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)  
+-   [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)  
   
--   [Заметки &#40; Службы Master Data Services &#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)  
   
   
 

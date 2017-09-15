@@ -1,5 +1,5 @@
 ---
-title: "Производные иерархии (Master Data Services) | Документы Microsoft"
+title: "Производные иерархии (Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a960ab217ff83af957bbf3a738372dd0c83de98
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3c29bf064f8f7c07d7b053dc08f71b443dc75dc4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Производные иерархии (Master Data Services)
@@ -60,40 +60,40 @@ ms.lasthandoff: 08/02/2017
   
  Структура иерархии показывает, как группируются элементы. Сущность с наибольшим числом элементов располагается в самом низу.  
   
- ![Иерархия, производный от структуры модели](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "иерархии производным от структуры модели")  
+ ![Иерархия, являющаяся производной от структуры модели](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "Иерархия, являющаяся производной от структуры модели")  
   
  В производной иерархии можно выделить связь между «Продуктом» и «Подкатегорией» и затем между «Подкатегорией» и «Категорией». При просмотре элементов в этой иерархии каждый уровень дерева содержит элементы из одной сущности.  
   
- ![Пример иерархии производным горного велосипеда](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "горного велосипеда пример производной иерархии")  
+ ![Пример производной иерархии от узла "Горный велосипед"](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Пример производной иерархии от узла "Горный велосипед"")  
   
  Иерархия такого типа предотвращает перемещение элемента на недопустимый уровень. Например, можно переместить велосипед Road-650 из одной подкатегории, «Дорожные велосипеды», в другую, «Горные велосипеды». Нельзя перенести Road-650 напрямую внутри категории, например 1 {велосипеды}. Каждый раз при перемещении элемента в дереве иерархии значение атрибута на основе домена для элемента изменяется, отражая это перемещение.  
   
 ## <a name="notes"></a>Примечания  
  Все элементы в производной иерархии сортируются по коду. Нельзя менять порядок сортировки.  
   
- Если атрибут на основе домена для элемента пуст и атрибут используется в производной иерархии, то элемент не отображается в иерархии. Можно создать бизнес-правила, которые требуют заполнения атрибутов. Дополнительные сведения см. в разделе [требуют значения атрибутов &#40; Службы Master Data Services &#41; ](../master-data-services/require-attribute-values-master-data-services.md).  
+ Если атрибут на основе домена для элемента пуст и атрибут используется в производной иерархии, то элемент не отображается в иерархии. Можно создать бизнес-правила, которые требуют заполнения атрибутов. Дополнительные сведения см. в разделе [Запрос значений атрибута (службы Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой производной иерархии.|[Создание производной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Скрытие или удаление уровней в существующей производной иерархии.|[Скрытие или удаление уровней в производной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|Удаление существующей производной иерархии.|[Удаление производной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|Создание новой производной иерархии.|[Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Скрытие или удаление уровней в существующей производной иерархии.|[Скрытие или удаление уровней в производной иерархии (службы Master Data Services)](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии (службы Master Data Services)](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Удаление существующей производной иерархии.|[Удаление производной иерархии (службы Master Data Services)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Атрибуты на основе домена &#40; Службы Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Явные иерархии &#40; Службы Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Рекурсивные иерархии &#40; Службы Master Data Services &#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [Рекурсивные иерархии (службы Master Data Services)](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Производные иерархии с явными ограничениями &#40; Службы Master Data Services &#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Производные иерархии с явными ограничениями (службы Master Data Services)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Отображение связей "многие ко многим" в производных иерархиях &#40; Службы Master Data Services &#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
+-   [Отображение связей "многие ко многим" в производных иерархиях (Master Data Services)](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
--   [Коллекции &#40; Службы Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

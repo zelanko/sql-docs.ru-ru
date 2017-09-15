@@ -1,5 +1,5 @@
 ---
-title: "Описание XML настраиваемого рабочего процесса (Master Data Services) | Документы Microsoft"
+title: "Описание XML настраиваемого рабочего процесса (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ca6f208bab4ed0b7932d3bd5f7e9a911b8b2c8af
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 704c66f3d7748e2a0b49fed2567a606dc507627d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="create-a-custom-workflow---xml-description"></a>Создание настраиваемого рабочего процесса - XML-описание
-  В веб-службе [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> вызывается службой SQL Server MDS Workflow Integration Service при запуске рабочего процесса. Этот метод получает метаданные и данные об элементе, вызвавшем срабатывание бизнес-правила рабочего процесса, в виде блока XML-данных. Примеры кода, который реализует обработчик рабочего процесса см. в разделе [пользовательского рабочего процесса примера &#40; Службы Master Data Services &#41; ](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+# <a name="create-a-custom-workflow---xml-description"></a>Создание настраиваемого рабочего процесса — описание XML
+  В веб-службе [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> вызывается службой SQL Server MDS Workflow Integration Service при запуске рабочего процесса. Этот метод получает метаданные и данные об элементе, вызвавшем срабатывание бизнес-правила рабочего процесса, в виде блока XML-данных. Пример кода, который реализует обработчик рабочего процесса, см. в разделе [Пример пользовательского рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md).  
   
  В следующем примере показано, как могут выглядеть XML-данные, которые отправляются обработчику рабочего процесса.  
   
@@ -70,18 +70,18 @@ ms.lasthandoff: 08/02/2017
   
 |Тег|Description|  
 |---------|-----------------|  
-|\<Тип >|Текст, введенный в **тип рабочего процесса** текстовое поле в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] для идентификации какие пользовательского рабочего процесса сборки для загрузки.|  
-|\<SendData >|Значение типа Boolean, контролируются **включать данные элемента в сообщении** флажок в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Значение 1 означает, что \<MemberData > раздел отправки; в противном случае \<MemberData > не отправляется раздел.|  
-|< Server_URL >|Текст, введенный в **рабочего процесса сайта** текстовое поле в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|< Action_ID >|Текст, введенный в **имя рабочего процесса** текстовое поле в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|\<MemberData >|Содержит данные элемента, вызвавшего срабатывание действия рабочего процесса. Это включается только в том случае, если значение \<SendData > равно 1.|  
-|\<Введите*xxx*>|Этот набор тегов содержит метаданные о создании элемента, например дату создания и автора.|  
+|\<Type>|Текст, введенный в поле **Тип рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], указывает пользовательскую сборку рабочего процесса, которая будет загружаться.|  
+|\<SendData>|Логическое значение, которое в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] управляется флажком **Включить в сообщение данные элементов**. Значение 1 означает, что раздел \<MemberData> отправляется. В противном случае раздел \<MemberData> не отправляется.|  
+|<Server_URL>|Текст, введенный в поле **Сайт рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
+|<Action_ID>|Текст, введенный в поле **Имя рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
+|\<MemberData>|Содержит данные элемента, вызвавшего срабатывание действия рабочего процесса. Эти данные включаются, только если значение \<SendData> равно 1.|  
+|\<Enter*xxx*>|Этот набор тегов содержит метаданные о создании элемента, например дату создания и автора.|  
 |\<LastChg*xxx*>|Этот набор тегов содержит метаданные о последнем изменении, внесенном в элемент, например дату внесения изменения и автора.|  
-|\<Имя >|Первый атрибут элемента, который был изменен. Этот пример элемента содержит только атрибуты Name и Code.|  
-|\<Код >|Следующий атрибут элемента, который был изменен. Если бы этот пример элемента содержал больше атрибутов, то они следовали бы за первым.|  
+|\<Name>|Первый атрибут элемента, который был изменен. Этот пример элемента содержит только атрибуты Name и Code.|  
+|\<Code>|Следующий атрибут элемента, который был изменен. Если бы этот пример элемента содержал больше атрибутов, то они следовали бы за первым.|  
   
 ## <a name="see-also"></a>См. также:  
- [Создать пользовательский рабочий процесс &#40; Службы Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
- [Пример настраиваемого рабочего процесса &#40; Службы Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
+ [Создание настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
+ [Пример настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   
   

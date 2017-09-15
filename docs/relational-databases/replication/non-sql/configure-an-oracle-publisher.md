@@ -1,7 +1,7 @@
 ---
 title: "Настройка издателя Oracle | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  Используя предоставленный скрипт, создайте в базе данных Oracle административного пользователя для репликации.  
   
-2.  На каждую из публикуемых таблиц предоставьте разрешение SELECT непосредственно (не через роль) пользователю с правами администратора Oracle, созданному на шаге 1.  
+2.  На каждую из публикуемых таблиц предоставьте разрешение SELECT непосредственно (не через роль) пользователю с правами администратора Oracle, созданному на шаге 1.  
   
-3.  Установите на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиентское ПО Oracle и поставщик OLE DB, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если распространитель запущен на 64-разрядной платформе, необходимо использовать 64-разрядную версию поставщика OLE DB Oracle.  
+3.  Установите на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиентское ПО Oracle и поставщик OLE DB, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если распространитель запущен на 64-разрядной платформе, нужно использовать 64-разрядную версию поставщика OLE DB Oracle.  
   
 4.  Настройте базу данных Oracle как издатель на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает следующие разнородные сценарии для репликации транзакций и репликации моментальных снимков.  
   
+-   Публикация данных с подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на подписчики, отличные от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+-   Публикация данных в Oracle и из Oracle имеет следующие ограничения:  
+  | |2016 или более ранние версии |2017 или более поздние версии |
+  |-------|-------|--------|
+  |Репликация из Oracle |Поддержка только Oracle 10g или более ранних версий |Поддержка только Oracle 10g или более ранних версий |
+  |Репликация в Oracle |Версии до Oracle 12c |Не поддерживается |
+
+ Разнородная репликация на подписчики, отличные от подписчика SQL Server, устарела. Публикация Oracle устарела. Для перемещения данных создайте решения с помощью системы отслеживания измененных данных и служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+
  Список объектов, которые могут реплицироваться из базы данных Oracle, приводится в статье [Рассмотрение структуры и ограничений издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Этот скрипт доступен также в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<диск>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>*\MSSQL\Install\oracleadmin.sql. Он также содержится в разделе [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
- Подключитесь к базе данных Oracle под учетной записью с правами доступа администратора базы данных (DBA) и выполните скрипт. Данный скрипт запрашивает имя пользователя и пароль для схемы администратора репликации, а также табличное пространство по умолчанию, в котором будут создаваться объекты (табличное пространство уже должно существовать в базе данных Oracle). Сведения об указании других табличных пространств для объектов см. в статье [Управление табличными пространствами Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Выберите любое имя пользователя и надежный пароль, запишите их, так как позднее при настройке базы данных Oracle как издателя запрашиваются это имя и пароль. Рекомендуется использовать схему только для объектов, которые требуются для репликации. Не создавайте таблиц, которые будут публиковаться в этой схеме.  
+ Подключитесь к базе данных Oracle под учетной записью с правами доступа администратора базы данных (DBA) и выполните скрипт. Данный скрипт запрашивает имя пользователя и пароль для схемы администратора репликации, а также табличное пространство по умолчанию, в котором будут создаваться объекты (табличное пространство уже должно существовать в базе данных Oracle). Сведения об указании других табличных пространств для объектов см. в статье [Управление табличными пространствами Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Выберите любое имя пользователя и надежный пароль, запишите их, так как они запрашиваются позднее при настройке базы данных Oracle в качестве издателя. Рекомендуется использовать схему только для объектов, которые требуются для репликации. Не создавайте таблиц, которые будут публиковаться в этой схеме.  
   
 ### <a name="creating-the-user-schema-manually"></a>Создание пользовательской схемы вручную  
  При создании схемы администратора репликации необходимо предоставить схеме следующие разрешения, непосредственно или через роль базы данных:  
@@ -109,9 +122,9 @@ ms.lasthandoff: 06/22/2017
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Например: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Например: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`.  
   
-4.  Если настройка сети прошла удачно, будет выполнен вход и появится окно сеанса `SQL` .  
+4.  Если настройка сети прошла удачно, будет выполнен вход и появится запрос `SQL`.  
   
 5.  Если при подключении к базе данных Oracle возникли проблемы, см. раздел «Распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не удается подключиться к экземпляру базы данных Oracle» в [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

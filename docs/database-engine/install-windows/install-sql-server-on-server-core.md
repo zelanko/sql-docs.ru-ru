@@ -1,8 +1,10 @@
 ---
 title: "Установка SQL Server 2016 в Server Core | Документы Майкрософт"
 ms.custom: 
-ms.date: 11/10/2016
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 043a3dbcfcdfe75e77e8d50bd9698a05fbbf02c4
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: df7853f5a49a4c3b2bab4f5573cd9559e55c8b44
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
-  Можно установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core. В этом разделе приводятся подробные сведения, относящиеся к установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на Windows Server Core.  
+Можно установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core.   
   
- Вариант установки Server Core предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core см. в разделе [Установка Server Core](https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)]см. в разделе [Server Core для Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+Вариант установки Server Core предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core см. в разделе [Установка Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)]см. в разделе [Server Core для Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
  Список текущих поддерживаемых операционных систем см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
 
@@ -78,9 +80,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="install"></a>Установить  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не поддерживает установку с помощью мастера установки в операционной системе Server Core. При установке на Server Core программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полный тихий режим без вывода сообщений с использованием параметра /Q или простой режим без вывода сообщений с использованием параметра /QS. Дополнительные сведения см. в статье [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя установить параллельно с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере с [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core.  
   
  Независимо от метода установки, необходимо подтвердить свое согласие с условиями лицензии на использование пакета программ как физического лица или от имени организации, если на используемое программное обеспечение не распространяется отдельное соглашение [!INCLUDE[msCoName](../../includes/msconame-md.md)] , такое как соглашение о корпоративном лицензировании Майкрософт или отдельное соглашение с независимым поставщиком программного обеспечения или изготовителем оборудования (OEM).  
   
@@ -263,7 +262,7 @@ ms.lasthandoff: 08/02/2017
          Если файл DefaultSetup.ini не существует, создайте его и скопируйте в папки \x86 и \x64 корневой папки исходного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Настройка удаленного доступа для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при работе в Server Core  
- Чтобы настроить удаленный доступ к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , который запускается в установке Server Core ОС [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)], выполните действия, описанные ниже.  
+ Чтобы настроить удаленный доступ к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], который запускается в Server Core, выполните описанные ниже действия.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Включение удаленных подключений на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -291,7 +290,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Включите поддержку TCP/IP на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Протокол TCP/IP для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Server Core можно включить через Windows PowerShell. Выполните следующие действия.  
   
-1.  На компьютере, где запущена ОС [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core, запустите диспетчер задач.  
+1.  На сервере запустите диспетчер задач.  
   
 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
   
@@ -299,7 +298,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  В окне **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** выполните следующий скрипт, чтобы включить протокол TCP/IP:  
   
-```  
+```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
 $wmi = new-object ($smo + 'Wmi.ManagedComputer')  
 # Enable the TCP protocol on the default instance.  If the instance is named, replace MSSQLSERVER with the instance name in the following line.  
@@ -331,9 +330,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 3.  В диалоговом окне **Создание новой задачи** введите **cmd **в поле** Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем** .  
   
 ## <a name="see-also"></a>См. также:  
- [Установка SQL Server 2016, с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
+ [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Установка Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
  [Командлеты отказоустойчивого кластера в Windows PowerShell](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   

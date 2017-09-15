@@ -1,5 +1,5 @@
 ---
-title: "Явные иерархии (Master Data Services) | Документы Microsoft"
+title: "Явные иерархии (Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ca0d83ac41efca3c9a0c1a71f87e9176bfd34553
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/02/2017
   
  Для объединения этих конечных элементов в заданных точках консолидации можно создать консолидированные элементы для сущности Product. Для этого надо вставить консолидированные элементы на том уровне дерева иерархии, где планируется объединить конечные элементы. Не существует никаких ограничений на то, где именно необходимо вставлять консолидированные элементы, однако каждый из них (и конечный, и объединенный) можно использовать только один раз.  
   
- ![Пример явной иерархии велосипед Mountain](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явной иерархии велосипед Mountain")  
+ ![Пример явной иерархии от узла "Горный велосипед"](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явной иерархии от узла "Горный велосипед"")  
   
  Консолидированные элементы можно использовать для группировки элементов на любом уровне, при этом консолидированные и конечные элементы сортируются в том порядке, который для них определен.  
   
@@ -88,16 +88,16 @@ ms.lasthandoff: 08/02/2017
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой явной иерархии.|[Создать явную иерархию &#40; Службы Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Изменение имени существующей явной иерархии.|[Изменение имени явной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Удаление существующей явной иерархии.|[Удаление явной иерархии &#40; Службы Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Создание новой явной иерархии.|[Создание явной иерархии (службы Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Изменение имени существующей явной иерархии.|[Изменение имени явной иерархии (службы Master Data Services)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Удаление существующей явной иерархии.|[Удаление явной иерархии (службы Master Data Services)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>См. также  
   
--   [Производные иерархии &#40; Службы Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Коллекции &#40; Службы Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   
 

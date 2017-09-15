@@ -1,5 +1,5 @@
 ---
-title: "Запустите DQSInstaller.exe для завершения установки сервера DQS | Документы Microsoft"
+title: "Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,15 +14,15 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e61f0e79491b3c55505031e4b4e1ddef34278ea
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
-  Чтобы завершить установку сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], необходимо запустить файл DQSInstaller.exe после установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В этом разделе описан запуск файла DQSInstaller.exe на экране **Пуск** или в меню **Пуск** , в проводнике Windows и из командной строки. Для запуска файла DQSInstaller.exe можно воспользоваться любым из этих способов.  
+  Чтобы завершить установку сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , необходимо запустить файл DQSInstaller.exe после установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В этом разделе описан запуск файла DQSInstaller.exe на экране **Пуск** или в меню **Пуск** , в проводнике Windows и из командной строки. Для запуска файла DQSInstaller.exe можно воспользоваться любым из этих способов.  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 08/02/2017
 |-exportkbs|Экспорт всех баз знаний в файл резервной копии DQS (файл DQSB). Также необходимо указать полный путь и имя файла, в который будут экспортированы все базы знаний.<br /><br /> Дополнительные сведения см. в статье [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> Например: `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
 |-importkbs|Импорт всех баз знаний из файла резервной копии DQS (файл DQSB) после завершения установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Также необходимо указать полный путь и имя файла, из которого будут импортированы все базы знаний.<br /><br /> Дополнительные сведения см. в статье [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> Например: `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|Обновляет схемы баз данных DQS. Этот параметр следует использовать после установки обновления SQL Server на ранее настроенном экземпляре служб DQS. Дополнительные сведения см. в разделе [Обновление схемы базы данных DQS после установки обновления SQL Server](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md).|`dqsinstaller.exe -upgrade`|  
-|-uninstall|Удаляет [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с текущего экземпляра SQL Server.<br /><br /> Также вы можете экспортировать все базы знаний из имеющейся установки Data Quality Server в файл резервной копии DQS (файл DQSB), а затем удалить Data Quality Server. Дополнительные сведения см. в статье [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).<br /><br /> **\*\*Важные \* \***  при удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] из экземпляра SQL server с `–uninstall` параметр командной строки, DQS будут удалены все объекты в рамках процесса удаления. Удалять данные объекты вручную после удаления [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] не потребуется, как упоминалось в разделе [Удаление объектов служб Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md).|**Удаление только Data Quality Server**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **Экспорт всех баз знаний в файл и последующее удаление Data Quality Server**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> Например: `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
+|-uninstall|Удаляет [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с текущего экземпляра SQL Server.<br /><br /> Также вы можете экспортировать все базы знаний из имеющейся установки Data Quality Server в файл резервной копии DQS (файл DQSB), а затем удалить Data Quality Server. Дополнительные сведения см. в статье [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).<br /><br /> **\*\* Важно! \*\*** Если установить [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] из экземпляра SQL Server, используя параметр командной строки `–uninstall` , все объекты DQS в процессе удаления будут уничтожены. Удалять данные объекты вручную после удаления [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] не потребуется, как упоминалось в разделе [Удаление объектов служб Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md).|**Удаление только Data Quality Server**<br /><br /> `dqsinstaller.exe –uninstall`<br /><br /> **Экспорт всех баз знаний в файл и последующее удаление Data Quality Server**<br /><br /> `dqsinstaller.exe –uninstall <path><filename>`<br /><br /> Например: `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
   
  **Запуск программы DQSInstaller.exe из командной строки**  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 08/02/2017
 -   Убедитесь, что исходные данные доступны для операций DQS и возможен экспорт обработанных данных в таблицу в базе данных. См. раздел [Предоставление доступа к данным для операций со службами DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
+ [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Обновление сборок SQLCLR после загрузки обновлений .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   

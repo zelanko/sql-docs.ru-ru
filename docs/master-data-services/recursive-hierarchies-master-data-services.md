@@ -1,29 +1,34 @@
 ---
-title: "Рекурсивные иерархии (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "рекурсивные иерархии [службы Master Data Services]"
-  - "иерархии (службы Master Data Services), рекурсивные иерархии"
+title: "Рекурсивные иерархии (Master Data Services) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive hierarchies [Master Data Services]
+- hierarchies [Master Data Services], recursive hierarchies
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 21d8ccb0efe3e39e4636be3f6e6ebd2cf57184b2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
-# Рекурсивные иерархии (службы Master Data Services)
+# <a name="recursive-hierarchies-master-data-services"></a>Рекурсивные иерархии (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]рекурсивная иерархия — это производная иерархия, которая содержит рекурсивную связь. Рекурсивная связь возникает, когда у сущности есть атрибут, который базируется на самой сущности, на основе домена.  
   
-## Образец рекурсивной иерархии  
- Типичным примером рекурсивной иерархии может служить организационная структура. В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для этого создается сущность «Сотрудник» с основанным на домене атрибутом «Менеджер». Атрибут «Менеджер» заполняется из списка сотрудников. В организации, взятой для образца, все сотрудники могут быть менеджерами.  
+## <a name="recursive-hierarchy-example"></a>Образец рекурсивной иерархии  
+ Типичным примером рекурсивной иерархии может служить организационная структура. В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]для этого создается сущность «Сотрудник» с основанным на домене атрибутом «Менеджер». Атрибут «Менеджер» заполняется из списка сотрудников. В организации, взятой для образца, все сотрудники могут быть менеджерами.  
   
  ![mds_conc_recursive_table_w_data](../master-data-services/media/mds-conc-recursive-table-w-data.gif "mds_conc_recursive_table_w_data")  
   
@@ -33,23 +38,23 @@ caps.handback.revision: 8
   
  Чтобы включить каждый элемент в иерархию только один раз, можно закрепить нулевые связи. При этом элементы с пустыми значениями атрибутов на основе домена отображаются на высшем уровне иерархии.  
   
- ![mds_conc_recursive_UI_example_anchored](../master-data-services/media/mds-conc-recursive-ui-example-anchored.png "mds_conc_recursive_UI_example_anchored")  
+ ![mds_conc_recursive_UI_example_anchored](../master-data-services/media/mds-conc-recursive-ui-example-anchored.gif "mds_conc_recursive_UI_example_anchored")  
   
  Если не закрепить нулевые связи, то элементы будут включаться несколько раз. Все элементы отображаются на высшем уровне. Они также отображаются под теми элементами, атрибутами которых являются.  
   
- ![mds_conc_recursive_UI_example_nonanchored](../master-data-services/media/mds-conc-recursive-ui-example-nonanchored.png "mds_conc_recursive_UI_example_nonanchored")  
+ ![mds_conc_recursive_UI_example_nonanchored](../master-data-services/media/mds-conc-recursive-ui-example-nonanchored.gif "mds_conc_recursive_UI_example_nonanchored")  
   
  В данном примере Марсия находится на высшем уровне. Она не является менеджером ни для кого из сотрудников, поскольку она не используется как значение атрибута на основе домена для какого-либо другого элемента сущности «Сотрудник». У Роберта, с другой стороны, есть более низкий уровень, поскольку для Марсии Роберт является значением ее атрибута «Менеджер».  
   
-## Правила  
+## <a name="rules"></a>Правила  
   
 -   Производная иерархия не может содержать более одной рекурсивной связи. Однако эта иерархия может содержать другие производные связи (например, производная иерархия, содержащая рекурсивную связь «Менеджер-Сотрудник», также может иметь связи «Страна-Менеджер» и «Сотрудник-Магазин»).  
   
--   Нельзя назначать разрешения элементам (на вкладке **Элементы иерархии**) в рекурсивной иерархии.  
+-   Нельзя назначать разрешения элементам (на вкладке **Элементы иерархии** ) в рекурсивной иерархии.  
   
 -   В рекурсивные иерархии не могут включаться циклические связи. Например, Катерина не может быть менеджером Сэндип, если Сэндип — ее менеджер. Также Катерина не может быть своим собственным менеджером.  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -57,7 +62,7 @@ caps.handback.revision: 8
 |Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии (службы Master Data Services)](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Удаление существующей производной иерархии.|[Удаление производной иерархии (службы Master Data Services)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
-## См. также  
+## <a name="related-content"></a>См. также  
   
 -   [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  
   

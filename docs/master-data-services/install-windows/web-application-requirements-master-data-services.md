@@ -1,5 +1,5 @@
 ---
-title: "Веб-приложения требованиям (Master Data Services) | Документы Microsoft"
+title: "Требования для веб-приложений (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/13/2017
@@ -14,20 +14,20 @@ keywords:
 - "службы master data services"
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b3ca26f48614ee2ed12275ec148dcaec3c044ce5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e8e0c4a9f925192c79dcb998c159d311c80256c5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] — это веб-приложение, размещенное в службах IIS. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] работает только в Internet Explorer (IE) 9 или более поздней версии. Internet Explorer 8 и более ранние версии, а также Microsoft Edge и Chrome не поддерживаются.  
 
-**Инструкции по установке и настройке IIS**, в разделе [Установка и настройка служб IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
+**Инструкции по установке и настройке IIS** см. в разделе [Установка и настройка служб IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
  С помощью программы [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] создайте и настройте веб-приложение для размещения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] настраивает службы IIS на локальном компьютере, поэтому она лучше всего подходит для начальных задач веб-конфигурации. Например, можно настроить службы [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с одним веб-приложением [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или первое веб-приложение в конфигурации с масштабным развертыванием служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. С помощью средств IIS выполняются более сложные задачи, например настройка нескольких веб-серверов в конфигурации с масштабным развертыванием.  
   
@@ -77,13 +77,13 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
 |Тип|Описание|  
 |----------|-----------------|  
 |Учетная запись Windows|Выполнять вход на компьютер веб-сервера необходимо с учетной записью Windows, которая имеет разрешения на настройку ролей Windows, служб ролей и компонентов, а также на создание пулов приложений, веб-сайтов и веб-приложений в службах IIS на локальном компьютере и управление ими.|  
-|Учетная запись службы|При создании веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] в программе [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]необходимо указать удостоверение для пула приложений, в котором оно выполняется. Эта учетная запись может отличаться от учетной записи службы, которая была указана при создании базы данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Данное удостоверение должно быть учетной записью пользователя домена, оно добавляется к роли базы данных mds_exec в базе данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для доступа к ней. Дополнительные сведения см. в разделе [имена входа базы данных, пользователи и роли](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Данная учетная запись также добавляется в группу Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, которой предоставляется разрешение на доступ к временному каталогу компиляции **MDSTempDir**в файловой системе. Дополнительные сведения см. в статье [Разрешения для папок и файлов (службы Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
+|Учетная запись службы|При создании веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] в программе [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]необходимо указать удостоверение для пула приложений, в котором оно выполняется. Эта учетная запись может отличаться от учетной записи службы, которая была указана при создании базы данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Данное удостоверение должно быть учетной записью пользователя домена, оно добавляется к роли базы данных mds_exec в базе данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для доступа к ней. Дополнительные сведения см. в разделе [Имена входа, пользователи и роли базы данных](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Данная учетная запись также добавляется в группу Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, которой предоставляется разрешение на доступ к временному каталогу компиляции **MDSTempDir**в файловой системе. Дополнительные сведения см. в статье [Разрешения для папок и файлов (службы Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
   
 ## <a name="see-also"></a>См. также:  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Конфигурация веб-страницу &#40; Диспетчер конфигурации Master Data Services &#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Страница "Веб-конфигурация" (диспетчер конфигурации Master Data Services)](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   
 

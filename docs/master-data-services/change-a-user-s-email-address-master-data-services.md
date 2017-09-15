@@ -1,5 +1,5 @@
 ---
-title: "Изменение пользователем &#39; s адрес электронной почты (Master Data Services) | Документы Microsoft"
+title: "Изменение адреса электронной почты пользователя (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49bb15d77cbc8dcf86421d76353a0a38f8688b6d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4f517794666925bf95095dc724b5bd3afd7067d8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="change-a-user39s-email-address-master-data-services"></a>Изменение пользователем &#39; s адрес электронной почты (Master Data Services)
+# <a name="change-a-user39s-email-address-master-data-services"></a>Изменение адреса электронной почты пользователя (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить адрес электронной почты, на который отправляются уведомления, и формат по умолчанию для писем с уведомлениями.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Назначение разрешений для функциональной области &#40; Службы Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  

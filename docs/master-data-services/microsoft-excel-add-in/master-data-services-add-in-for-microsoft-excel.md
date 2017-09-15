@@ -1,5 +1,5 @@
 ---
-title: "Надстройка служб Master Data Services для Microsoft Excel | Документы Microsoft"
+title: "Надстройка Master Data Services для Microsoft Excel | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
@@ -30,8 +30,8 @@ ms.lasthandoff: 08/02/2017
  В [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно с помощью служб Data Quality Services (DQS) сопоставить данные, прежде чем загружать их в MDS. Это поможет предотвратить дублирование данных в MDS.  
 
 ## <a name="downloads"></a>Файлы для загрузки 
->*  Загрузите надстройку служб Master Data Services для Excel для SQL Server 2016 с пакетом обновления 1 из [этой странице центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836866). 
->* Загрузить [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] для CTP1 2017 г. SQL Server из [этой странице центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836867). Эта надстройка также работает для SQL Server RC1 2017 г.
+>*  Скачайте надстройку служб Master Data Services для Excel для пакета обновления 1 (SP1) SQL Server 2016 с [этой страницы Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836866). 
+>* Скачайте [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] для ознакомительной версии для сообщества 1 (CTP1) SQL Server 2017 с [этой страницы Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836867). Эта надстройка также подходит для релиз-кандидата 1 (RC1) SQL Server 2017.
 
  
   

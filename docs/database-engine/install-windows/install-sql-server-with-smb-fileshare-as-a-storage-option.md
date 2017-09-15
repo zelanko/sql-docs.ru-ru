@@ -1,8 +1,10 @@
 ---
 title: "Установка SQL Server с общей папкой SMB в качестве хранилища | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,28 +17,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
-  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]системные базы данных (Master, Model, MSDB и TempDB) и пользовательские базы данных компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно установить, используя файловый сервер SMB в качестве хранилища. Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
+Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]системные базы данных (Master, Model, MSDB и TempDB) и пользовательские базы данных компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно установить, используя файловый сервер SMB в качестве хранилища. Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Файловый поток в настоящее время не поддерживается в общей папке SMB.  
   
 ## <a name="installation-considerations"></a>Рекомендации по установке  
   
-### <a name="smb-file-share-formats"></a>Форматы общей папки SMB:  
+### <a name="smb-fileshare-formats"></a>Форматы общей папки SMB:  
  При указании общей папки SMB путь может быть указан в одном из следующих форматов UNC для изолированных баз данных и баз данных FCI:  
   
 -   \\\имя_сервера\имя_папки\  
   
 -   \\\имя_сервера\имя_папки  
   
- Дополнительные сведения об универсальных именах (UNC) см. в разделе [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Дополнительные сведения об универсальных именах (UNC) см. в статье [UNC](http://msdn.microsoft.com/library/gg465305.aspx).  
   
  Путь UNC замыкания на себя (путь UNC, где именем сервера является localhost, 127.0.0.1 или имя локального компьютера) не поддерживается. В качестве особого случая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием кластера файлового сервера, размещенного на том же узле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , также не поддерживается. Чтобы предотвратить возникновение этой ситуации, рекомендуется создавать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кластер файлового сервера на отдельных кластерах Windows.  
   
@@ -61,11 +63,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
-5.  [sp_attach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
-  
-### <a name="installation-options"></a>Параметры установки  
+### <a name="installation-options"></a>Варианты установки  
   
 -   На странице "Настройка компонента ядра СУБД" пользовательского интерфейса программы настройки перейдите на вкладку "Каталоги данных" и задайте для параметра "Корневой каталог данных" значение "\\\fileserver1\share1\".  
   
@@ -102,12 +100,12 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  Полный доступ для общих папок и разрешения NTFS для общих папок SMB должны действовать только для учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователей Windows, которым назначена роль администратора сервера.  
   
-     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если в качестве учетной записи службы используется учетная запись системы, предоставьте разрешения для учетной записи компьютера в формате *<имя_домена>***\\***<имя_компьютера>***$**.  
+     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если в качестве учетной записи службы используется учетная запись системы, предоставьте разрешения для учетной записи компьютера в формате \<*имя_домена*>\\<*имя_компьютера*>\*$*  
   
     > [!NOTE]  
     >  Если в качестве хранилища задана общая папка SMB, во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве учетной записи службы необходимо задать учетную запись домена. При использовании общей папки SMB учетную запись системы можно задать в качестве учетной записи службы только после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Виртуальные учетные записи не могут проходить проверку подлинности в удаленном расположении. Все виртуальные учетные записи используют разрешение локальной учетной записи. Укажите учетную запись компьютера в формате *<имя_домена>***\\***<имя_компьютера>***$**.  
+    >  Виртуальные учетные записи не могут проходить проверку подлинности в удаленном расположении. Все виртуальные учетные записи используют разрешение локальной учетной записи. Укажите учетную запись компьютера в формате \<*имя_домена*>\\<*имя_компьютера*>\*$*.  
   
 -   Учетная запись, которая использовалась для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], при установке кластера должна иметь разрешение «Полный доступ» к общей папке SMB, используемой в качестве каталога данных, или к любым другим папкам данных (каталог пользовательской базы данных, каталог журналов пользовательской базы данных, папка TempDB, каталог журналов TempDB, папка резервного копирования).  
   

@@ -17,49 +17,25 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Переместить базу данных, защищаемую прозрачным шифрованием, в другой экземпляр SQL Server
   В этом разделе описано, как защитить базу данных с применением прозрачного шифрования данных и переместить базу данных на другой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Функция прозрачного шифрования данных выполняет шифрование и дешифрование ввода-вывода в реальном времени для файлов данных и журналов. При шифровании используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных, где можно получить к нему доступ при восстановлении. Ключ шифрования базы данных является симметричным ключом, защищенным сертификатом, который хранится в базе данных **master** на сервере, или асимметричным ключом, защищенным модулем расширенного управления ключами.  
+   
+##  <a name="Restrictions"></a> Ограничения  
   
- **В этом разделе**  
-  
--   **Перед началом работы выполните следующие действия.**  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Безопасность](#Security)  
-  
--   **Создание базы данных, защищаемой с применением прозрачного шифрования данных с помощью следующих средств:**  
-  
-     [Среда SQL Server Management Studio](#SSMSCreate)  
-  
-     [Transact-SQL](#TsqlCreate)  
-  
--   **Перемещение базы данных с помощью следующих средств:**  
-  
-     [Среда SQL Server Management Studio](#SSMSMove)  
-  
-     [Transact-SQL](#TsqlMove)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Restrictions"></a> Ограничения  
-  
--   В случае перемещения базы данных, защищаемой прозрачным шифрованием, также необходимо переместить сертификат или асимметричный ключ, который служит для открытия ключа шифрования базы данных. Сертификат или асимметричный ключ должен быть установлен в базе данных **master** целевого сервера, чтобы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имел доступ к файлам базы данных. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+-   В случае перемещения базы данных, защищаемой прозрачным шифрованием, также необходимо переместить сертификат или асимметричный ключ, который служит для открытия ключа шифрования базы данных. Сертификат или асимметричный ключ должен быть установлен в базе данных **master** целевого сервера, чтобы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имел доступ к файлам базы данных. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 -   Для восстановления сертификата необходимо хранить копии файла сертификата и файла закрытого ключа. Пароль для закрытого ключа не обязательно должен совпадать с паролем главного ключа базы данных.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] хранит созданные файлы здесь в папке **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** по умолчанию. В других системах имена и расположения файлов могут быть иными.  
   
-###  <a name="Security"></a> Безопасность  
-  
-####  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Разрешения  
   
 -   Требуется разрешение **CONTROL DATABASE** в базе данных **master** для создания главного ключа базы данных.  
   
@@ -68,6 +44,8 @@ ms.lasthandoff: 06/22/2017
 -   Требуется разрешение **CONTROL DATABASE** в зашифрованной базе данных и разрешение **VIEW DEFINITION** на сертификат или асимметричный ключ, используемый для шифрования ключа шифрования базы данных.  
   
 ##  <a name="SSMSProcedure"></a> Создание базы данных, защищаемой с применением прозрачного шифрования данных  
+
+В следующих процедурах показано, как создать базу данных, защищенную с помощью TDE, с использованием SQL Server Management Studio и Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Использование среды SQL Server Management Studio  
   
@@ -109,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -161,7 +139,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> Перемещение базы данных  
+##  <a name="TsqlProcedure"></a> Перемещение базы данных, защищаемой с применением прозрачного шифрования данных 
+
+В следующих процедурах показано, как переместить базу данных, защищенную с помощью TDE, с использованием SQL Server Management Studio и Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Использование среды SQL Server Management Studio  
   
@@ -282,7 +262,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  
@@ -327,6 +307,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Присоединение и отсоединение базы данных (SQL Server)](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Прозрачное шифрование данных в Базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Прозрачное шифрование данных в Базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

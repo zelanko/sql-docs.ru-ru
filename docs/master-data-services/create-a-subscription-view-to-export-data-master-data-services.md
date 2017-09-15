@@ -1,5 +1,5 @@
 ---
-title: "Создание представления подписки для экспорта данных (Master Data Services) | Документы Microsoft"
+title: "Создание представления подписки для экспорта данных (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 863c5976f20cda1edc4ecba9ae81db599ec94d99
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Создание представления подписки для экспорта данных (службы Master Data Services)
@@ -69,8 +69,8 @@ ms.lasthandoff: 08/02/2017
   
 |Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние представления.<br /><br /> При нажатии кнопки **Сохранить**, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") изображение, показывающее, что представление обновляется.<br /><br /> При наличии ошибок во время создания или изменения представления появляется ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
-|Название|Имя представления подписки.|  
+|Состояние|Состояние представления.<br /><br /> Когда вы нажимаете **Сохранить**, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
+|Имя|Имя представления подписки.|  
 |Модель|Имя модели.|  
 |Версия|Имя версии.|  
 |Флаг версии|Имя флага версии.|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>См. также:  
  [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
- [Удалить представление подписки &#40; Службы Master Data Services &#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [Создание флага версии &#40; Службы Master Data Services &#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [Удаление представления подписки (службы Master Data Services)](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

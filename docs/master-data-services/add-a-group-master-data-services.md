@@ -1,5 +1,5 @@
 ---
-title: "Добавление группы (Master Data Services) | Документы Microsoft"
+title: "Добавление группы (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - adding groups [Master Data Services]
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f333376223c44056bc8380c705a0289113bcdbd7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2311a84c5127336613f86c7d69d61e381e1499f5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="add-a-group-master-data-services"></a>Добавление группы (службы Master Data Services)
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Назначение разрешений для функциональной области &#40; Службы Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  

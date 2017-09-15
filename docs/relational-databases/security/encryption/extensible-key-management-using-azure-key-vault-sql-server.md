@@ -22,11 +22,11 @@ caps.latest.revision: 66
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  В этой статье описывается Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статьях [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Использование соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)и [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
 ##  <a name="Uses"></a> Что такое расширенное управление ключами (EKM) и для чего оно нужно?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет несколько видов шифрования для защиты конфиденциальных данных, включая [прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md), [шифрование на уровне столбцов (CLE)](../../../t-sql/functions/cryptographic-functions-transact-sql.md) и [шифрование резервной копии](../../../relational-databases/backup-restore/backup-encryption.md). Во всех этих случаях в рамках этой традиционной иерархии ключей данные шифруются с помощью симметричного ключа шифрования (DEK). Симметричный ключ шифрования затем шифруется иерархией ключей, хранящихся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Альтернативой этой модели является модель поставщика расширенного управления ключами. Архитектура поставщика расширенного управления ключами позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] защитить ключи шифрования данных с помощью асимметричного ключа, который хранится за пределами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] во внешнем поставщике служб шифрования. Эта модель добавляет дополнительный уровень безопасности и разделяет управление ключами и данными.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет несколько видов шифрования для защиты конфиденциальных данных, включая [прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md), [шифрование на уровне столбцов (CLE)](../../../t-sql/functions/cryptographic-functions-transact-sql.md) и [шифрование резервной копии](../../../relational-databases/backup-restore/backup-encryption.md). Во всех этих случаях в рамках этой традиционной иерархии ключей данные шифруются с помощью симметричного ключа шифрования (DEK). Симметричный ключ шифрования затем шифруется иерархией ключей, хранящихся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Альтернативой этой модели является модель поставщика расширенного управления ключами. Архитектура поставщика расширенного управления ключами позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] защитить ключи шифрования данных с помощью асимметричного ключа, который хранится за пределами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] во внешнем поставщике служб шифрования. Эта модель добавляет дополнительный уровень безопасности и разделяет управление ключами и данными.  
    
  На следующем рисунке традиционная управляемая службой иерархия ключей сравнивается с хранилищем ключей Azure.  
   

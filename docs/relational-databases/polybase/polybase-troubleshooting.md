@@ -2,7 +2,7 @@
 title: "Устранение неполадок с PolyBase| Документация Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Устранение неполадок c PolyBase
@@ -227,8 +227,18 @@ ms.lasthandoff: 07/31/2017
  - Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 1 МБ. 
  - PolyBase не поддерживает типы данных Hive 0.12+ (например, Char(), VarChar()).   
  - При экспорте данных в формате файлов ORC из SQL Server или хранилища данных SQL Azure столбцы с большим объемом текста могут ограничиваться всего 50 столбцами из-за ошибок нехватки памяти в Java. Чтобы обойти эту проблему, экспортируйте подмножество столбцов.
-- [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - Не удается прочесть или записать данные, зашифрованные в местах хранения в Hadoop. Сюда входят зашифрованные зоны HDFS или прозрачное шифрование.
+ - PolyBase не может подключиться к экземпляру Hortonworks, если включена поддержка KNOX. 
+ - PolyBase не удается подключиться к экземпляру Hadoop, если параметру hadoop.RPC.Protection задано значение, отличное от проверки подлинности.
+
+[PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## <a name="hadoop-name-node-high-availability"></a>Высокий уровень доступности узла имени Hadoop
+Сегодня PolyBase не взаимодействует со службами высокой доступности узла имени, такими как Zookeeper или Knox. Однако есть проверенное решение, которое можно использовать для обеспечения функциональности. 
+
+Решение проблемы: использование DNS-имени для перенаправления соединений на активный узел имени. Для этого необходимо, чтобы для взаимодействия с узлом внешний источник данных использовал DNS-имя. При возникновении отработки отказа следует изменить IP-адрес, связанный с DNS-именем, используемым в определении внешнего источника данных. В результате все новые соединения будут перенаправляться на соответствующий узел имени. В случае отработки существующие подключения завершатся ошибкой. Чтобы автоматизировать этот процесс, периодический сигнал может проверить связь с активным узлом имени. Если периодический сигнал завершается ошибкой, можно предположить, что возникла отработка отказа, и автоматически переключиться на IP-адреса дополнительных серверов.
+
+
 ## <a name="error-messages-and-possible-solutions"></a>Сообщения об ошибках и возможные решения
 
 Сведения об устранении ошибок во внешних таблицах см. в записи блога Муршеда Замана (Murshed Zaman) [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Ошибки установки PolyBase и возможные решения").

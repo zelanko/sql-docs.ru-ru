@@ -1,5 +1,5 @@
 ---
-title: "Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe | Документы Microsoft"
+title: "Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e85b9553a3300f51f52fab300642f15f3f08617f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe
@@ -59,7 +59,7 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  Если в [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] имеются существующие базы знаний с теми же именами, что и у импортируемых баз данных, к именам импортируемых баз данных будет добавлен символ подчеркивания (_) и целочисленное значение, отсчитываемое от единицы. Например, если повторяется домен «CompanyName», то импортируемый домен получит имя «CompanyName_1».  
   
 ## <a name="see-also"></a>См. также:  
- [Запустите DQSInstaller.exe для завершения установки сервера DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Экспорт базы знаний в файл DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [Импорт базы знаний из файла DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  

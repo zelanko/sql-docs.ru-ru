@@ -1,5 +1,5 @@
 ---
-title: "Администраторы (Master Data Services) | Документы Microsoft"
+title: "Администраторы (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aa037c47b7ec276188e1f67d5a415bfba1da232
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c4944d4a47c7581c1273d21e5dbf3df59ae258a3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>См. также:  
  [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Создать базу данных служб Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Уведомления &#40; Службы Master Data Services &#41;](../master-data-services/notifications-master-data-services.md)  
+ [Создание базы данных служб Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  
   
   

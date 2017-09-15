@@ -1,5 +1,5 @@
 ---
-title: "Создание и выполнение отношений синхронизации сущностей (Master Data Services) | Документы Microsoft"
+title: "Создание и выполнение отношений синхронизации сущностей (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 14bc03c2c8c462895102d6c34c62cf23724c706f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Создание и выполнение отношений синхронизации сущностей (Master Data Services)
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
 |Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Статус отношений синхронизации.<br /><br /> При нажатии кнопки **Сохранить** или выполнить отношения синхронизации ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") изображение, показывающее, что выполняется обновление связи синхронизации.<br /><br /> При наличии ошибок при создании, редактировании или выполнении отношений синхронизации, ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
+|Состояние|Статус отношений синхронизации.<br /><br /> Когда вы нажимаете **Сохранить** или выполняете отношение синхронизации, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление отношения синхронизации.<br /><br /> Если при создании, редактировании или выполнении отношения синхронизации произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Исходная модель|Имя исходной модели.|  
 |Исходная версия|Имя исходной версии.|  
 |Исходная сущность|Имя исходной сущности.|  

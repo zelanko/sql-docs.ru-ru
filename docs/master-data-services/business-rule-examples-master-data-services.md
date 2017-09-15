@@ -1,5 +1,5 @@
 ---
-title: "Примеры правил бизнеса (Master Data Services) | Документы Microsoft"
+title: "Примеры бизнес-правил (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/05/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 73f7c989b5a2d99f4eb826f2445adddc7bf9d374
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 57ecfaefcf4ba428e05617b89423e72774a50a51
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rule-examples-master-data-services"></a>Примеры бизнес-правил (службы Master Data Services)
 В этой статье приводятся примеры бизнес-правил для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Эти примеры можно найти в образцах моделей, которые устанавливаются вместе с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Инструкции по развертыванию образцы моделей см. в разделе [установки служб основных данных и конфигурации](../master-data-services/master-data-services-installation-and-configuration.md).  
+Инструкции по развертыванию образцов моделей см. в разделе [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
   
   
 ## <a name="business-rule-examples"></a>Примеры бизнес-правил  
@@ -152,7 +152,7 @@ Else
   
 **Просмотр примеров бизнес-правил в образцах моделей**  
 1. Перейдите на веб-сайт [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , настроенный после установки служб MDS, и щелкните поле **Администрирование системы** .   
-Инструкции по настройке веб-сайта см. в разделе [установки служб основных данных и конфигурации](../master-data-services/master-data-services-installation-and-configuration.md).  
+Инструкции по настройке веб-сайта см. в разделе [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Щелкните образец модели, содержащий бизнес-правило из приведенных выше таблиц, а затем щелкните **Сущности**.  
 3. Выберите сущность, к которой применяется правило, как указано в таблицах выше, а затем щелкните **Бизнес-правила**.  
 4. Щелкните имя бизнес-правила, которое нужно просмотреть. В пользовательском интерфейсе отобразятся инструкции **If**, **Then** и **Else** .  

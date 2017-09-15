@@ -1,5 +1,5 @@
 ---
-title: "Изменение имени версии (Master Data Services) | Документы Microsoft"
+title: "Изменение имени версии (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c00530ff2b9938314e50cdde09e6f9fc33791fd8
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 52436cbd38e92c97ce939af21eacb089f3b4797f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-a-version-name-master-data-services"></a>Изменение имени версии (службы Master Data Services)
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/02/2017
 4.  Нажмите клавишу ВВОД.  
   
 ## <a name="see-also"></a>См. также:  
- [Проверьте версию на соответствие бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [Блокировка версии &#40; Службы Master Data Services &#41;](../master-data-services/lock-a-version-master-data-services.md)   
- [Фиксация версии &#40; Службы Master Data Services &#41;](../master-data-services/commit-a-version-master-data-services.md)   
- [Версии &#40; Службы Master Data Services &#41;](../master-data-services/versions-master-data-services.md)  
+ [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)   
+ [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)   
+ [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   

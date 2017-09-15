@@ -1,5 +1,5 @@
 ---
-title: "Сопоставление схожих данных (надстройка MDS для Excel) | Документы Microsoft"
+title: "Сопоставление схожих данных (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a169250d4996d5ce7cdc8b44e46c64d604a3607
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3bb995f72c56735a15861a5c515cc9e086d5c3f4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>Сопоставление схожих данных (надстройка MDS для Excel)
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], использование функциональных возможностей служб Data Quality Services (DQS) для определения схожести данных.  
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]воспользуйтесь возможностями служб Data Quality Services (DQS) для определения схожести данных.  
   
  Для этого можно:  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 -   Просмотрите дополнительные сведения для определения схожих данных. Дополнительные сведения см. в разделе [Столбцы сопоставления качества данных (службы DQS)](../../master-data-services/microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Сопоставление качества данных в надстройка MDS для Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [Сопоставление качества данных в надстройке MDS для Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Сопоставление данных](../../data-quality-services/data-matching.md)  
   
   

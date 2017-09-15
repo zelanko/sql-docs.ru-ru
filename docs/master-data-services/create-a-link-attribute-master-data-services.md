@@ -1,5 +1,5 @@
 ---
-title: "Создание атрибута ссылки (Master Data Services) | Документы Microsoft"
+title: "Создание атрибута ссылки (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b5c1a0c51283b981daf0df5e65740892fb830c2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6f33d47bfad908ab0b1348fcc7dbfdc1d8aa8a89
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Создание атрибута ссылки (службы Master Data Services)
@@ -45,8 +45,8 @@ ms.lasthandoff: 08/02/2017
   
 |Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки Save, ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния") , указывающее, выполняется обновление атрибута.<br /><br /> При наличии ошибок во время создания или изменения атрибута появляется ![значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки") изображение.<br /><br /> В противном случае находится в работоспособном состоянии и ![значок состояние OK](../master-data-services/media/mds-statusicon-ok.png "значок состояние OK") изображение.|  
-|Название|Имя атрибута.|  
+|Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете "Сохранить", появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
+|Имя|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Description|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
@@ -99,8 +99,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>См. также:  
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [Изменение имени атрибута и типа данных &#40; Службы Master Data Services &#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Создать атрибут на основе домена &#40; Службы Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Создание файлового атрибута (службы Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

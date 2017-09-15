@@ -1,5 +1,5 @@
 ---
-title: "Системные параметры (Master Data Services) | Документы Microsoft"
+title: "Системные параметры (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="system-settings-master-data-services"></a>Системные параметры (службы Master Data Services)
-  Для всех веб-приложений и веб-служб, связанных с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], можно задавать системные настройки.  
+  Для всех веб-приложений и веб-служб, связанных с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , можно задавать системные настройки.  
   
  Многие из этих параметров можно изменить в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] на странице **База данных** . Другие параметры можно настроить в таблице системных параметров (mdm.tblSystemSetting) в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/02/2017
 |Параметр диспетчера конфигурации|Системный параметр|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Регистрация всех промежуточных транзакций в журнале**|**StagingTransactionLogging**|Применимо только к SQL Server 2008 R2. Определяет, будет ли вестись запись в журнал транзакций при загрузке промежуточных данных в базу данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Значение по умолчанию — **Выключено** или **2**. Измените значение на **Включено** или **1** , чтобы включить ведение журнала.|  
-|**Интервал промежуточного хранения пакетов**|**StagingBatchInterval**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** определяется период (в секундах) после выбора параметра **Запуск пакетов** , в течение которого будет обрабатываться пакет. Значение по умолчанию — **60** секунд (1 минута).|  
+|**Интервал промежуточного хранения пакетов**|**StagingBatchInterval**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Integration Management** functional area, the number of seconds after you select **Start Batches** that your batch is processed. Значение по умолчанию — **60** секунд (1 минута).|  
   
  Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
@@ -83,10 +83,10 @@ ms.lasthandoff: 08/02/2017
   
 |Параметр диспетчера конфигурации|Системный параметр|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Количество элементов в иерархии, задаваемое по умолчанию**|**HierarchyChildNodeLimit**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** определяет максимальное количество элементов, которые отображаются в каждом узле иерархии до появления ссылки **…еще…** (…). Ссылку **…еще…** можно щелкнуть для отображения следующей группы элементов. Значение по умолчанию — **50**.|  
-|**Отображать имена в иерархии по умолчанию**|**ShowNamesInHierarchy**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** параметр по умолчанию, выбираемый при просмотре иерархий.<br /><br /> Значение по умолчанию — **Да** или **1**, что задает отображение имени и кода каждого элемента. Измените значение на **Нет** или **2** , чтобы отображать только код.|  
-|**Количество атрибутов на основе домена в списке**|**DBAListRowLimit**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** количество атрибутов, отображаемых в списке при двойном щелчке в сетке значений атрибутов на основе домена. Значение по умолчанию — **50**. Если имеется более 50 элементов, вместо этого отображается диалоговое окно с возможностью поиска.|  
-||**GridFilterDefaultFuzzySimilarityLevel**|Определяет функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** уровень подобия, применяемый при использовании условия фильтра **Совпадает** . Значение по умолчанию — **0,3**. При выборе значения ближе к **1** возвращаются элементы, более соответствующие указанным критериям. Задайте значение **1** для точного сопоставления.|  
+|**Количество элементов в иерархии, задаваемое по умолчанию**|**HierarchyChildNodeLimit**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[!INCLUDE[ssMDSmdm](../Token/ssMDSmdm_md.md)]** определяет максимальное количество элементов, которые отображаются в каждом узле иерархии до появления ссылки **…еще…** (…). Ссылку **…еще…** можно щелкнуть для отображения следующей группы элементов. Значение по умолчанию — **50**.|  
+|**Отображать имена в иерархии по умолчанию**|**ShowNamesInHierarchy**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Значение по умолчанию — **Да** или **1**, что задает отображение имени и кода каждого элемента. Измените значение на **Нет** или **2** , чтобы отображать только код.|  
+|**Количество атрибутов на основе домена в списке**|**DBAListRowLimit**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. Значение по умолчанию — **50**. Если имеется более 50 элементов, вместо этого отображается диалоговое окно с возможностью поиска.|  
+||**GridFilterDefaultFuzzySimilarityLevel**|Определяет функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. Значение по умолчанию — **0,3**. При выборе значения ближе к **1** возвращаются элементы, более соответствующие указанным критериям. Задайте значение **1** для точного сопоставления.|  
   
 ##  <a name="xls"></a> Надстройка для параметров Excel  
   
@@ -99,8 +99,8 @@ ms.lasthandoff: 08/02/2017
   
 |Параметр диспетчера конфигурации|Системный параметр|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Шаг приращения для новых бизнес-правил**|**BusinessRuleDefaultPriorityIncrement**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** шаг приращения для приоритетов всех новых бизнес-правил. Значение по умолчанию ― **10**.|  
-|**Количество элементов, к которым применяются бизнес-правила**|**BusinessRuleRealtimeMemberCount**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** максимальное количество элементов в сетке, к которым могут применяться бизнес-правила. В [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]— максимальное число элементов на активном листе, к которым применяется бизнес-правило. Значение по умолчанию — **10000**.|  
+|**Шаг приращения для новых бизнес-правил**|**BusinessRuleDefaultPriorityIncrement**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Значение по умолчанию ― **10**.|  
+|**Количество элементов, к которым применяются бизнес-правила**|**BusinessRuleRealtimeMemberCount**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. В [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]— максимальное число элементов на активном листе, к которым применяется бизнес-правило. Значение по умолчанию — **10000**.|  
   
  Дополнительные сведения см. в статье [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md).  
   
@@ -108,11 +108,11 @@ ms.lasthandoff: 08/02/2017
   
 |Параметр диспетчера конфигурации|Системный параметр|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**URL-адрес диспетчера основных данных для уведомлений**|**MDMRootURL**|URL-адрес для [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] веб-приложение, которое используется в ссылке в уведомлениях электронной почты, например `http://constoso/mds`.|  
+|**URL-адрес диспетчера основных данных для уведомлений**|**MDMRootURL**|URL-адрес для веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], используемый в ссылке в уведомлениях, передаваемых по электронной почте, например `http://constoso/mds`.|  
 |**Интервал передачи уведомлений по электронной почте**|**NotificationInterval**|Частота отправки уведомлений по электронной почте в секундах. Значение по умолчанию — **120** секунд (2 минуты).|  
 |**Число уведомлений в одном сообщении электронной почты**|**NotificationsPerEmail**|Максимальное число ошибок проверки, которые могут быть перечислены в одном уведомлении по электронной почте. Остальные ошибки, если они есть, не будут включены в сообщение электронной почты, но с ними можно ознакомиться в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Формат сообщений электронной почты по умолчанию**|**EmailFormat**|Формат для всех уведомлений по электронной почте. Значение по умолчанию — **HTML** или **1**. Значение **2** этого параметра базы данных означает **Текст**.<br /><br /> Примечание. Этот формат можно переопределить для отдельного пользователя в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], изменив и сохранив **Формат электронной почты** на вкладке **Общие** пользователя.|  
-|**Регулярное выражение для адреса электронной почты**|**EmailRegExPattern**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** регулярное выражение, которое служит для проверки адреса электронной почты, введенного на вкладке **Общие** пользователя. Дополнительные сведения о регулярных выражениях см. в разделе [Элементы языка регулярных выражений](http://go.microsoft.com/fwlink/?LinkId=164401) библиотеки MSDN.|  
+|**Регулярное выражение для адреса электронной почты**|**EmailRegExPattern**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. Дополнительные сведения о регулярных выражениях см. в разделе [Элементы языка регулярных выражений](http://go.microsoft.com/fwlink/?LinkId=164401) библиотеки MSDN.|  
 |**Учетная запись компонента Database Mail**|**EmailProfilePrincipalAccount**|Отображает учетную запись компонента Database Mail, которая используется при отправке уведомлений по электронной почте. Профиль по умолчанию — **mds_email_user**.|  
 |**Профиль компонента Database Mail**|**DatabaseMailProfile**|Профиль компонента Database Mail, который используется при отправке уведомлений по электронной почте. Значение по умолчанию — пусто.|  
 ||**ValidationIssueHTML**|В формате HTML — текст сообщения электронной почты, которое получают пользователи при сбое проверки бизнес-правила.|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/02/2017
   
 |Параметр диспетчера конфигурации|Системный параметр|Description|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **** частоту (в секундах) применения разрешений пользователей и групп, задаваемых на вкладке **Элементы иерархии** . Значение по умолчанию — **3600** секунд (60 минут).|  
+||**SecurityMemberProcessInterval**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Значение по умолчанию — **3600** секунд (60 минут).|  
   
  Дополнительные сведения см. в разделе [Срочное применение разрешений для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/02/2017
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>См. также:  
- [Защита объектов базы данных &#40; Службы Master Data Services &#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md)  
   
   

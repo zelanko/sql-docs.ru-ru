@@ -1,5 +1,5 @@
 ---
-title: "Задачи установки служб Master Data Services | Документы Microsoft"
+title: "Задачи установки для служб Master Data Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/24/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 caps.latest.revision: 32
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f810e987b5cebe9f4b790e298725d1593499e7ee
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ffeb77252907d7b2dfae4c60491ee6d9b239e641
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="installation-tasks-for-master-data-services"></a>Задачи установки служб Master Data Services
-  В этой статье обзор задач установки, со ссылками на инструкции. Пошаговое руководство по установке и настройке служб Master Data Services, в разделе [установки служб основных данных и конфигурации](../../master-data-services/master-data-services-installation-and-configuration.md) 
+# <a name="installation-tasks-for-master-data-services"></a>Задачи установки для служб Master Data Services
+  В этой статье приводятся общие сведения о задачах установки со ссылками на инструкции. Пошаговое руководство по установке и настройке служб Master Data Services см. в статье [Установка и настройка служб Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md). 
   
 -   [Предварительная подготовка](#preinstall). Проверьте системные требования перед установкой [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 |Действие|Сведения|См. также|  
 |------------|-------------|--------------------|  
-|Откройте программу [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] и выполните действия после установки.|После завершения установки откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] выполняет на локальном компьютере следующие действия после установки:<br /><br /> Создание группы Windows **MDS_ServiceAccounts**, содержащей учетные записи служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для пулов приложений.<br /><br /> Создание папки MDSTempDir в пути установки служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] и назначение разрешений для группы **MDS_ServiceAccounts**. В этой папке компилируются временные файлы для веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] файл Web.config выполняет настройку **tempDirectory** атрибут  **\<компиляции >** элемент на путь к папке MDSTempDir.|[Разрешения для папок и файлов (службы Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Раздел "Веб-конфигурация" (службы Master Data Services)](../../master-data-services/web-configuration-reference-master-data-services.md)|  
+|Откройте программу [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] и выполните действия после установки.|После завершения установки откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] выполняет на локальном компьютере следующие действия после установки:<br /><br /> Создание группы Windows **MDS_ServiceAccounts**, содержащей учетные записи служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для пулов приложений.<br /><br /> Создание папки MDSTempDir в пути установки служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] и назначение разрешений для группы **MDS_ServiceAccounts**. В этой папке компилируются временные файлы для веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> Присваивание атрибуту **tempDirectory** элемента **\<compilation>** значения пути к папке MDSTempDir в файле Web.config служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|[Разрешения для папок и файлов (службы Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Раздел "Веб-конфигурация" (службы Master Data Services)](../../master-data-services/web-configuration-reference-master-data-services.md)|  
 |Создание базы данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|С помощью [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] создайте базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для хранения основных данных.|[Создание базы данных служб Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Создание веб-приложения служб [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|С помощью программы [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] создайте и настройте веб-приложение для размещения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Свяжите базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с веб-приложением|Свяжите веб-приложение [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] с базой данных [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] с помощью программы [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Связывание базы данных служб Master Data Services и веб-приложения](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  

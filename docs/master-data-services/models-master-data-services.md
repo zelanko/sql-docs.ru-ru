@@ -1,5 +1,5 @@
 ---
-title: "Модели (Master Data Services) | Документы Microsoft"
+title: "Модели (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 635cb271e49ec96f889fdbba508e0374b186a8c9
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="models-master-data-services"></a>Модели (службы основных данных)
@@ -48,10 +48,10 @@ ms.lasthandoff: 08/02/2017
   
  На рисунке отображены связи между объектами модели.  
   
- ![Объекты в модели службы Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "объекты в модели службы Master Data Services")  
+ ![Объекты в модели служб Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Объекты в модели служб Master Data Services")  
   
 > [!NOTE]  
->  Производные иерархии — это тоже объекты модели, но на рисунке они не показаны. Производные иерархии происходят от связей атрибутов на основе домена, существующих между сущностями. В разделе [производных иерархий &#40; Службы Master Data Services &#41; ](../master-data-services/derived-hierarchies-master-data-services.md) для получения дополнительной информации.  
+>  Производные иерархии — это тоже объекты модели, но на рисунке они не показаны. Производные иерархии происходят от связей атрибутов на основе домена, существующих между сущностями. Дополнительные сведения см. в разделе [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md).  
   
  Основные данные — это данные, содержащиеся в объектах модели. В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]основные данные хранятся в виде элементов сущностей.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="model-example"></a>Пример модели  
  В следующем примере объекты в модели «Продукт» логически группируют данные, связанные с продуктом.  
   
- ![Пример продукта модели основных данных](../master-data-services/media/mds-conc-model.gif "продукта пример основных данных модели")  
+ ![Пример основных данных модели "Продукт"](../master-data-services/media/mds-conc-model.gif "Пример основных данных модели "Продукт"")  
   
  Другие распространенные модели:  
   
@@ -74,9 +74,9 @@ ms.lasthandoff: 08/02/2017
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание модели для организации основных данных.|[Создать модель &#40; Службы Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Изменение имени существующей модели.|[Изменение модели &#40; Службы Master Data Services &#41;](../master-data-services/edit-model-master-data-services.md)|  
-|Удаление существующей модели.|[Удалить модель &#40; Службы Master Data Services &#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|Создание модели для организации основных данных.|[Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)|  
+|Изменение имени существующей модели.|[Изменение модели (службы Master Data Services)](../master-data-services/edit-model-master-data-services.md)|  
+|Удаление существующей модели.|[Удаление модели (службы Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/02/2017
   
 -   [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
--   [Атрибуты &#40; Службы Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
--   [Развертывание моделей &#40; Службы Master Data Services &#41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Разрешения объекта модели &#40; Службы Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

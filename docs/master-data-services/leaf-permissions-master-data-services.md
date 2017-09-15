@@ -1,5 +1,5 @@
 ---
-title: "Конечные разрешения (Master Data Services) | Документы Microsoft"
+title: "Разрешения конечного элемента (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: caaea89264b37bd2c92f9c72a1cb7644b67b1fd4
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4b7ff5003d1d54d6668719b527402591bed9d1e2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="leaf-permissions-master-data-services"></a>Разрешения конечного элемента (службы основных данных)
@@ -76,8 +76,8 @@ ms.lasthandoff: 08/02/2017
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [Члены &#40; Службы Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
- [Атрибуты &#40; Службы Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)  
+ [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)   
+ [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   
 

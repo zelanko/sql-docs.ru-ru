@@ -1,5 +1,5 @@
 ---
-title: "Безопасность (Master Data Services) | Документы Microsoft"
+title: "Безопасность (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a011cac6d34c73cffb9fba286ebe64ebb9e7103
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4b540d7f5a204d6543bc32b5ec46fef766c9b973
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="security-master-data-services"></a>Безопасность (службы Master Data Services)
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/02/2017
   
  Систему безопасности также можно использовать для назначения администратора конкретной модели и функциональной области (например, для предоставления разрешения на создание версии модели Customer или установки прав доступа).  
   
- Система безопасности [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] связана с локальными пользователями и группами или пользователями и группами домена Active Directory. Система безопасности MDS позволяет создавать разные уровни детализации при определении данных, к которым пользователь будет иметь доступ. Из-за гранулярности система безопасности может стать сложной, и необходимо будет соблюдать осторожность при использовании перекрывающихся пользователей и групп. Дополнительные сведения см. в разделе [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] связана с локальными пользователями и группами или пользователями и группами домена Active Directory. Система безопасности MDS позволяет создавать разные уровни детализации при определении данных, к которым пользователь будет иметь доступ. Из-за гранулярности система безопасности может стать сложной, и необходимо будет соблюдать осторожность при использовании перекрывающихся пользователей и групп. Дополнительные сведения см. в разделе [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
  Можно назначить доступ безопасности в функциональной области **Разрешения пользователей и групп** веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] или с помощью веб-службы.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Те, кто имеет доступ к данным в функциональной области **Обозреватель** .  
   
--   Те, кто имеет возможность выполнения административных задач в областях, отличных от области **Обозреватель**. Эти пользователи называются [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Те, кто имеет возможность выполнения административных задач в областях, отличных от области **Обозреватель**. Эти пользователи называются [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
 ## <a name="how-to-set-security"></a>Настройка безопасности  
  Для предоставления пользователю или группе разрешения на доступ к данным или функциям MDS необходимо назначить:  
@@ -57,18 +57,18 @@ ms.lasthandoff: 08/02/2017
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание пользователя, который имеет полное разрешение доступа к модели.|[Создание администратора модели &#40; Службы Master Data Services &#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
-|Добавление группы Active Directory к [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Это будет первым шагом к выдаче группе разрешения на доступ к данным в веб-приложении [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Добавить группу &#40; Службы Master Data Services &#41;](../master-data-services/add-a-group-master-data-services.md)|  
-|Назначение разрешения для функциональной области веб-приложения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Назначение разрешений для функциональной области &#40; Службы Master Data Services &#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
-|Назначение разрешения для значений атрибутов путем назначения разрешения для объектов модели.|[Назначение разрешений для объекта модели &#40; Службы Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|Назначение разрешения для значений элементов путем назначения разрешений для узлов иерархии.|[Назначение разрешений элемента иерархии &#40; Службы Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|Создание пользователя, который имеет полное разрешение доступа к модели.|[Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)|  
+|Добавление группы Active Directory к [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Это будет первым шагом к выдаче группе разрешения на доступ к данным в веб-приложении [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Добавление группы (службы Master Data Services)](../master-data-services/add-a-group-master-data-services.md)|  
+|Назначение разрешения для функциональной области веб-приложения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|[Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|Назначение разрешения для значений атрибутов путем назначения разрешения для объектов модели.|[Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Назначение разрешения для значений элементов путем назначения разрешений для узлов иерархии.|[Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [Администраторы &#40; Службы Master Data Services &#41;](../master-data-services/administrators-master-data-services.md)   
- [Пользователи и группы &#40; Службы Master Data Services &#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [Разрешения функциональной области &#40; Службы Master Data Services &#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [Разрешения объекта модели &#40; Службы Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Разрешения для элементов иерархии &#40; Службы Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Способ определения разрешений &#40; Службы Master Data Services &#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
+ [Пользователи и группы (службы Master Data Services)](../master-data-services/users-and-groups-master-data-services.md)   
+ [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

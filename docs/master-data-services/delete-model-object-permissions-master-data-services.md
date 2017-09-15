@@ -1,5 +1,5 @@
 ---
-title: "Удаление разрешений объекта модели (Master Data Services) | Документы Microsoft"
+title: "Удаление разрешений для объекта модели (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5bf923fa19030df4beebcd560de8fe7b8b5be21
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bbd4b5ff1b7ddfa2abe6b4c42000b0480d26cb70
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Удаление разрешений для объекта модели (службы Master Data Services)
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/02/2017
 9. Нажмите кнопку **Сохранить**.  
   
 ## <a name="see-also"></a>См. также:  
- [Разрешения объекта модели &#40; Службы Master Data Services &#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Назначение разрешений для объекта модели &#40; Службы Master Data Services &#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+ [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

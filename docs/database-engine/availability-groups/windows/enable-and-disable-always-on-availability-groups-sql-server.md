@@ -1,7 +1,7 @@
 ---
 title: "Включение и отключение групп доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 08/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: de6fef9bc4ccda44bd805d281dc0a3780aaa96c8
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: b5e469b56253649e0e23de004b3ae6de54dfb3e9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Включение и отключение групп доступности AlwaysOn (SQL Server)
@@ -157,7 +157,7 @@ ms.lasthandoff: 08/02/2017
      Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
     > [!NOTE]  
-    >  Дополнительные сведения о задании в командлете **Enable-SqlAlwaysOn** перезапуска службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. ниже в разделе [Когда командлет перезапускает службу SQL Server?](#WhenCmdletRestartsSQL).  
+    >  Дополнительные сведения о настройке перезапуска службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для командлета **Enable-SqlAlwaysOn** см. ниже в разделе [Когда командлет перезапускает службу SQL Server?](#WhenCmdletRestartsSQL)  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/02/2017
  Следующая команда PowerShell включает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляре SQL Server (*Computer*\\*Instance*).  
   
 ```  
-Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
 ##  <a name="DisableAOAG"></a> Отключение групп доступности AlwaysOn  
@@ -214,16 +214,16 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Измените каталог (**cd**) на каталог экземпляра сервера, включенного в настоящее время, для которого необходимо отключить группы доступности AlwaysOn.  
   
-2.  С помощью командлета **Disable-SqlAlwaysOn** включите группы доступности AlwaysOn.  
+2.  С помощью командлета **Disable-SqlAlwaysOn** отключите группы доступности AlwaysOn.  
   
      Например, следующая команда отключает группы доступности AlwaysOn в экземпляре SQL Server (*Computer*\\*Instance*).  Эта команда требует перезапуска экземпляра, который будет предложено подтвердить.  
   
     ```  
-    Disable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+    Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  Сведения о том, как контролировать перезапуск службы **с помощью командлета** Disable-SqlAlwaysOn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , см. в подразделе [Когда командлет перезапускает службу SQL Server?](#WhenCmdletRestartsSQL)далее в этом разделе.  
+    >  Дополнительные сведения о настройке перезапуска службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для командлета **Disable-SqlAlwaysOn** см. ниже в разделе [Когда командлет перезапускает службу SQL Server?](#WhenCmdletRestartsSQL).  
   
      Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
@@ -232,7 +232,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 -   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a> Дальнейшие действия. После отключения AlwaysOn  
- После отключения групп доступности AlwaysOn экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо перезапустить. Диспетчер конфигурации SQL Server автоматически перезапускает экземпляр сервера. Но если использовался командлет **Disable-SqlAlwaysOn** , то потребуется перезапустить экземпляр сервера вручную. Дополнительные сведения см. в статье [sqlservr Application](../../../tools/sqlservr-application.md).  
+ После отключения групп доступности AlwaysOn экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо перезапустить. Диспетчер конфигурации SQL Server автоматически перезапускает экземпляр сервера. Но если использовался командлет **Disable-SqlAlwaysOn**, то потребуется перезапустить экземпляр сервера вручную. Дополнительные сведения см. в статье [sqlservr Application](../../../tools/sqlservr-application.md).  
   
  На перезапущенном экземпляре сервера происходит следующее:  
   
@@ -253,7 +253,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 4.  Базы данных-получатели переводятся в состояние RESTORING. Вы можете либо удалить эти базы данных, либо восстановить их при помощи функции RESTORE WITH RECOVERY. Однако восстановленные базы данных больше не будут участвовать в синхронизации данных группы доступности.  
   
 ##  <a name="WhenCmdletRestartsSQL"></a> Когда командлет перезапускает службу SQL Server?  
- В экземпляре сервера, запущенном в настоящее время, использование командлетов **Enable-SqlAlwaysOn** или **Disable-SqlAlwaysOn** для смены текущей настройки функции AlwaysOn может стать причиной перезапуска службы SQL Server. Алгоритм перезапуска зависит от следующих условий:  
+ В запущенном экземпляре сервера использование командлетов **Enable-SqlAlwaysOn** или **Disable-SqlAlwaysOn** для смены текущей настройки функции AlwaysOn может стать причиной перезапуска службы SQL Server. Алгоритм перезапуска зависит от следующих условий:  
   
 |указан параметр -NoServiceRestart;|указан параметр -Force.|Перезапущена ли служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ?|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  

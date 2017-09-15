@@ -1,5 +1,5 @@
 ---
-title: "Обновление схемы баз данных DQS после установки обновления SQL Server | Документы Microsoft"
+title: "Обновление схемы базы данных DQS после установки обновления SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85fb184a0c084c0cd13467161c49506a2a56c2ec
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Обновление схемы базы данных DQS после установки обновления SQL Server

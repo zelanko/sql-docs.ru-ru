@@ -1,5 +1,5 @@
 ---
-title: "Промежуточная хранимая процедура (Master Data Services) | Документы Microsoft"
+title: "Промежуточная хранимая процедура (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,24 +11,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2c12151d25b7d563a8a37a7ccfd617bca5cb479
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 19ce25e1182e362761b1919f36d72623dd7289e7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Промежуточная хранимая процедура (службы Master Data Services)
   При запуске промежуточного процесса из [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]используется одна из трех хранимых процедур.  
   
--   stg.udp_\<name > _Leaf  
+-   stg.udp_\<имя>_Leaf  
   
--   stg.udp_\<name > _Consolidated  
+-   stg.udp_\<имя>_Consolidated  
   
--   stg.udp_\<name > _Relationship  
+-   stg.udp_\<имя>_Relationship  
   
  Где имя — это имя промежуточной таблицы, определенной при создании сущности.  
   

@@ -1,25 +1,30 @@
 ---
-title: "Зарезервированные слова (службы Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "зарезервированные слова [службы Master Data Services]"
-  - "зарезервированные слова, службы Master Data Services"
+title: "Зарезервированные слова (службы Master Data Services) | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reserved words [Master Data Services]
+- Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: af5326c054f80b376e43db0d18dfeb2b9ef85997
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
-# Зарезервированные слова (службы Master Data Services)
+# <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]при создании элементов и объектов модели нельзя использовать некоторые слова. В противном случае могут возникнуть ошибки.  
   
 > [!NOTE]  
@@ -48,13 +53,13 @@ caps.handback.revision: 11
   
 -   **Идентификатор**  
   
--   **код**  
+-   **Code**  
   
 -   **EnterUserName**  
   
 -   **LastChgUserName**  
   
--   **Название**  
+-   **Name**  
   
 -   **EnterDTM**  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 11
 ##  <a name="members"></a> Члены  
  Для элементов нельзя использовать **MDMMemberStatus**, **MDMUnused**или **ROOT** в качестве значения атрибута **Code** .  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

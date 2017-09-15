@@ -1,7 +1,7 @@
 ---
 title: "Новые возможности в ядре СУБД SQL Server 2017 | Документация Майкрософт"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e3d06068b28a6870a5c34286f073c32519428e39
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Новые возможности в ядре СУБД SQL Server 2017
@@ -29,12 +29,9 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]  
 > SQL Server 2017 также включает функции, добавленные в пакеты обновления SQL Server 2016. Описание этих элементов см. в статье [Новые возможности в SQL Server 2016 (ядро СУБД)](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 
+**Усовершенствования**  
 
-## <a name="sql-server-database-engine-rc1"></a>Ядро СУБД SQL Server (релиз-кандидат 1)  
-- Сборки CLR теперь можно добавлять в список разрешенных в качестве обходного пути для функции `clr strict security`, описанной в CTP 2.0. Для поддержки списка разрешений доверенных сборок добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
-
-## <a name="sql-server-database-engine-previous-ctps"></a>Ядро СУБД SQL Server (предыдущие CTP)  
-- Среда CLR использует управление доступом для кода (CAS) в .NET Framework, которое больше не поддерживается в качестве границы безопасности. Сборки среды CLR, созданные с помощью `PERMISSION_SET = SAFE`, могут получать доступ к внешним системным ресурсам, вызывать неуправляемый код и получать права системного администратора. Начиная с [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], появился параметр `sp_configure`, называемый `clr strict security`, для повышения безопасности сборок среды CLR. `clr strict security` включен по умолчанию и рассматривает сборки `SAFE` и `EXTERNAL_ACCESS`, как если бы они были помечены `UNSAFE`. Параметр `clr strict security` можно отключить для обеспечения обратной совместимости, но это делать не рекомендуется. Корпорация Майкрософт рекомендует подписывать все сборки с помощью сертификата или асимметричного ключа с соответствующим именем входа, которому предоставлено разрешение `UNSAFE ASSEMBLY` в базе данных master. Дополнительные сведения см. в статье о параметре [clr strict security](configure-windows/clr-strict-security.md).  
+- Среда CLR использует управление доступом для кода (CAS) в .NET Framework, которое больше не поддерживается в качестве границы безопасности. Сборки среды CLR, созданные с помощью `PERMISSION_SET = SAFE`, могут получать доступ к внешним системным ресурсам, вызывать неуправляемый код и получать права системного администратора. Начиная с [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], появился параметр `sp_configure`, называемый `clr strict security`, для повышения безопасности сборок среды CLR. `clr strict security` включен по умолчанию и рассматривает сборки `SAFE` и `EXTERNAL_ACCESS`, как если бы они были помечены `UNSAFE`. Параметр `clr strict security` можно отключить для обеспечения обратной совместимости, но это делать не рекомендуется. Корпорация Майкрософт рекомендует подписывать все сборки с помощью сертификата или асимметричного ключа с соответствующим именем входа, которому предоставлено разрешение `UNSAFE ASSEMBLY` в базе данных master. Сборки CLR можно добавлять в список разрешенных в качестве обходного пути для функции `clr strict security`. Для поддержки списка разрешений доверенных сборок добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md). Дополнительные сведения см. в статье о параметре [clr strict security](configure-windows/clr-strict-security.md).  
 - Новая функция DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) предоставляет сводку атрибутов и сведения о файлах журналов транзакций, которые помогают контролировать работоспособность журнала транзакций.  
 - Возобновляемое перестроение индексов в подключенном режиме. Возобновляемое перестроение индексов в подключенном режиме позволяет возобновить эту операцию с момента остановки после сбоя (например, при отработке отказа в реплику или нехватке места на диске). Ее можно также приостановить и возобновить позже. Например, может потребоваться временно высвободить ресурсы системы с целью выполнения задачи высоким приоритетом или выполнить перестроение индекса в другом периоде обслуживания, если доступные периоды недостаточны для обработки большой таблицы. И, наконец, для возобновляемого перестроения индексов в подключенном режиме не требуется значительное пространство журнала, что позволяет выполнять усечение журнала во время работы операции возобновляемого перестроения. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **Параметр IDENTITY_CACHE для ALTER DATABASE SCOPED CONFIGURATION**. Новый параметр IDENTITY_CACHE был добавлен в инструкцию T-SQL `ALTER DATABASE SCOPED CONFIGURATION`. Если этому параметру задано значение `OFF`, он позволяет ядру СУБД избежать пропусков в значениях столбцов удостоверений при непредвиденной перезагрузке или отработке отказа сервера на вторичный сервер. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   

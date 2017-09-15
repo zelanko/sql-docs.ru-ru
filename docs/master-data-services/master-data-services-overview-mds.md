@@ -1,5 +1,5 @@
 ---
-title: "Обзор служб Master Data Services (MDS) | Документы Microsoft"
+title: "Общие сведения о службах Master Data Services (MDS) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/14/2017
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4b1f65db7d29cfd0e081694b208f1add5cae21eb
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-overview-mds"></a>Общие сведения о службах Master Data Services (MDS)
   В этом разделе описаны ключевые функции организации данных и управления ими с помощью [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]позволяет управлять основного набора данных в вашей организации. Можно организовать данные в модели, создавать правила для обновления данных и контролировать, кто обновляет данные. Excel возможность совместного использования основной набор данных с другими людьми в вашей организации. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] позволяют управлять основным набором данных в вашей организации. Можно организовывать данные в модели, создавать правила для обновления данных и контролировать тех, кто обновляет данные. Excel позволяет использовать основной набор данных совместно с другими людьми в вашей организации. 
   
  >  Описание архитектуры [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] см. в статье [Master Data Services — основы](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) на сайте simple-talk.com. Сведения о новых функциях [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] см. на странице [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md).  
    **Инструкции по установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], настройке базы данных и веб-сайта и развертыванию образцов моделей см. в статье** [Установка и конфигурация служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
@@ -39,17 +39,17 @@ ms.lasthandoff: 08/02/2017
   
  Модель продукта в сети может содержать сущности, такие как продукт, цвет и стиль. Сущность цвета может содержать элементы для красного, серебряного и черного цвета.  
   
- ![Цвет сущности](../master-data-services/media/mds-productmodel-colorentity-composite.png "цвет сущности")  
+ ![Сущность цвета](../master-data-services/media/mds-productmodel-colorentity-composite.png "Сущность цвета")  
   
  Модели также содержат атрибуты, определенные в сущностях. Атрибут содержит значения, которые помогают описывать элементы сущности. Существуют атрибуты в свободной форме и атрибуты на основе домена.  Атрибут на основе домена содержит значения, которые заполняются элементами из сущности и могут использоваться как значения атрибутов для других сущностей.  
   
- Например, в сущности продукта могут иметься атрибуты в свободной форме для стоимости и веса. И отсутствует атрибут на основе домена для цвета ![номер 1](../master-data-services/media/mds-number1.png "номер 1") , содержащий значения которого заполняются элементами сущности цвета. Этот основной список цветов используется в качестве значения атрибута для сущности продукта ![номер 2](../master-data-services/media/mds-number2.png "номер 2").  
+ Например, в сущности продукта могут иметься атрибуты в свободной форме для стоимости и веса. В то же время там может быть атрибут на основе домена для цвета ![Номер 1](../master-data-services/media/mds-number1.png "Номер 1"), значения которого заполняются элементами сущности цвета. Этот основной список цветов используется в качестве значений атрибута для сущности продукта ![Номер 2](../master-data-services/media/mds-number2.png "Номер 2").  
   
- ![Атрибут на основе домена для цвета](../master-data-services/media/mds-productentity-color-domainattribute.png "атрибут на основе домена для цвета")  
+ ![Атрибут на основе домена для цвета](../master-data-services/media/mds-productentity-color-domainattribute.png "Атрибут на основе домена для цвета")  
   
- Производные иерархии происходят от связей между сущностями в модели. Это связи атрибутов на основе домена. В модели продукта, что производную иерархию цвета ![номер 1](../master-data-services/media/mds-number1.png "номер 1") , происходящую от связи между сущностями цвета ![номер 2](../master-data-services/media/mds-number2.png "номер 2") и продукта ![номер 3](../master-data-services/media/mds-number3.png "номер 3") сущностей.  
+ Производные иерархии происходят от связей между сущностями в модели. Это связи атрибутов на основе домена. Например, в модели продукта может быть производная иерархия цвета ![Номер 1](../master-data-services/media/mds-number1.png "Номер 1"), происходящая от связи между сущностями цвета ![Номер 2](../master-data-services/media/mds-number2.png "Номер 2") и продукта ![Номер 3](../master-data-services/media/mds-number3.png "Номер 3").  
   
- ![Цвет производной иерархии](../master-data-services/media/mds-derivedhierarchy.png "цвет производной иерархии")  
+ ![Производная иерархия на основе цвета](../master-data-services/media/mds-derivedhierarchy.png "Производная иерархия на основе цвета")  
   
  После определения базовой структуры данных можно начать добавление записей данных (элементов) с помощью функции импорта. Загрузите данные в промежуточные таблицы, проверьте данные с помощью бизнес-правил и загрузите данные в таблицы MDS.  Также можно использовать бизнес-правила для задания значений атрибутов.  
   

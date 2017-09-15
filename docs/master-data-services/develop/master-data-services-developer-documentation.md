@@ -1,5 +1,5 @@
 ---
-title: "Документация для разработчиков служб Master Data Services | Документы Microsoft"
+title: "Документация для разработчика служб Master Data Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 46b9d4302eb2ba1133fb1840c29112aaebad22b4
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a63efdc2a7d0501bcc64f3f2281e0389d013bbaa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-developer-documentation"></a>Документация для разработчика служб Master Data Services
@@ -41,14 +41,14 @@ ms.lasthandoff: 08/02/2017
  [Создание классов-посредников веб-службы диспетчера основных данных](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
  Описывает процесс включения публикации метаданных с веб-сайта [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], а также создания классов-посредников, которые могут быть использованы для программного доступа к операциям веб-службы.  
   
- [Операции по категориям веб-службы &#40; Службы Master Data Services &#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [Операции веб-службы по категориям (службы Master Data Services)](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
  Разбитый на категории перечень операций веб-службы класса <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Пользовательские рабочие процессы  
  Веб-служба [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] использует бизнес-правила для создания базовых решений рабочих процессов. Можно автоматически обновлять или проверять данные, а также отправлять уведомления по электронной почте на основе заданных условий. Бизнес-правила в [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] предназначены для управления наиболее распространенными сценариями рабочих процессов. Если рабочему процессу требуется более сложная обработка событий, например многоуровневые утверждения или сложные деревья принятия решений, можно настроить [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на отправку данных созданной вами пользовательской сборке. Для обработки пользовательских рабочих процессов необходимо настроить и запустить службу SQL Server MDS Workflow Integration Service на компьютере с веб-приложением, а также создать сборку, которая реализует интерфейс <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Содержимое пользовательского рабочего процесса  
- [Создать пользовательский рабочий процесс &#40; Службы Master Data Services &#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
+ [Создание настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  Описание создания сборки обработчика рабочего процесса, настройки и запуска службы SQL Server MDS Workflow Integration Service, а также создания бизнес-правила в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], которое запускает пользовательский рабочий процесс.  
   
 ## <a name="web-server-namespaces"></a>Пространства имен веб-сервера  

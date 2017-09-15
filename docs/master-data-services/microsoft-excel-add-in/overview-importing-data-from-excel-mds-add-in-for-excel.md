@@ -1,5 +1,5 @@
 ---
-title: "Обзор: Импорт данных из Excel (надстройка MDS для Excel) | Документы Microsoft"
+title: "Обзор импорта данных из Excel (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,20 +12,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c84ecb3308a641a538bcb8aaf85ebcf728d15cb3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e6aa429d0435515189a28199ca4653a623c50a0f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Обзор импорта данных из Excel (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно опубликовать данные в репозитории MDS, если их необходимо передать другим пользователям. После публикации они станут доступными для загрузки другим пользователям надстройки.  
   
- Все добавленные и обновившиеся при публикации данные публикуются в репозитории MDS. Удаленные данные не публикуются, их необходимо удалить отдельно. Дополнительные сведения см. в разделе [Delete a Row &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md).  
+ Все добавленные и обновившиеся при публикации данные публикуются в репозитории MDS. Удаленные данные не публикуются, их необходимо удалить отдельно. Дополнительные сведения см. в разделе [Удаление строки (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md).  
   
 > [!NOTE]  
 >  Публикация не может быть использована для создания новой сущности. Дополнительные сведения о создании сущностей см. в разделе [Создание сущности (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md).  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Можно просмотреть транзакции для элемента, сделанные другими пользователями. Можно также просмотреть все свои транзакции для элемента, даже если вы больше не имеете разрешений на определенные атрибуты. Транзакции, включающие атрибуты, для которых установлено разрешение "Запретить", просмотреть нельзя.  
   
- Можно просмотреть все транзакции, выполненные для элемента. Дополнительные сведения см. в разделе [View All Annotations or Transactions for a Member &#40;MDS Add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
+ Можно просмотреть все транзакции, выполненные для элемента. Дополнительные сведения см. в разделе [Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
   
 > [!IMPORTANT]  
 >  Если введена заметка длиной более 500 символов, то она автоматически усекается.  
@@ -66,6 +66,6 @@ ms.lasthandoff: 08/02/2017
   
 -   [Обновление данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [Надстройка служб Master Data Services для Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Надстройка Master Data Services для Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   

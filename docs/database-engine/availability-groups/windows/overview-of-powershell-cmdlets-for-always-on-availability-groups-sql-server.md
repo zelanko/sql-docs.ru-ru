@@ -1,7 +1,7 @@
 ---
 title: "Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 08/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85c4fe763b9f8fdbff001c516f23c2e5109120e1
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: c9b62d5874c2fbe00a1a9508a865f866578ef1db
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)
@@ -56,8 +56,8 @@ ms.lasthandoff: 08/02/2017
   
 |Командлеты|Описание|Поддерживается на|  
 |-------------|-----------------|------------------|  
-|**Disable-SqlAlways On**|Отключает компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для экземпляра сервера.|Экземпляр сервера, указанный параметром **Path**, **InputObject**или параметром **Name** . (Необходим выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
-|**Enable-SqlAlways On**|Включает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в экземпляре [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , который поддерживает компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Дополнительные сведения о поддержке [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Любой выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|**Disable-SqlAlwaysOn**|Отключает компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для экземпляра сервера.|Экземпляр сервера, указанный параметром **Path**, **InputObject**или параметром **Name** . (Необходим выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
+|**Enable-SqlAlwaysOn**|Включает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в экземпляре [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , который поддерживает компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Дополнительные сведения о поддержке [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Любой выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |**New-SqlHadrEndPoint**|Создает новую конечную точку зеркального отображения базы данных на экземпляре сервера. Эта конечная точка необходима для перемещения данных между базой данных-источником и базой данных-получателем.|Любой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**Set-SqlHadrEndpoint**|Изменяет свойства существующей конечной точки зеркального отображения базы данных, например имя, состояние и свойства проверки подлинности.|Экземпляр сервера, который поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и в котором отсутствует конечная точка зеркального отображения базы данных|  
   

@@ -1,7 +1,7 @@
 ---
 title: "Настройка учетных записей службы Windows и разрешений | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 08/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -55,10 +55,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95e1b4bdb62d4c3795f5b22352936d95155ca958
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 2fa9ca92039b8e26aecd78ca0f6c1bdc03f36d71
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
@@ -285,7 +285,7 @@ ms.lasthandoff: 08/02/2017
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$**имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$***имя_компьютера***$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] : **SQLServerMSASUser$***имя_компьютера***$***PowerPivot*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Настройка квот памяти для процесса** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\ReportServer**. Именованный экземпляр: **NT SERVICE\$\\$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\ReportServer**. Именованный экземпляр: **NT SERVICE\\ReportServer$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию и именованный экземпляр: **NT SERVICE\MsDtsServer130**. У служб[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] нет отдельного процесса для именованного экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Разрешение на запись в журнал событий приложений<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Олицетворение клиента после проверки подлинности** (SeImpersonatePrivilege)|  
 |**Полнотекстовый поиск:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\MSSQLFDLauncher**. Именованный экземпляр: **NT Service\ MSSQLFDLauncher$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию или именованный экземпляр: **SQLServer2005SQLBrowserUser***$имя_компьютера*. В браузере[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет отдельного процесса для именованного экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  

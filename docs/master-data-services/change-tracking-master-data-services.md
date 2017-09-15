@@ -1,5 +1,5 @@
 ---
-title: "Изменение отслеживания (Master Data Services) | Документы Microsoft"
+title: "Отслеживание изменений (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6851da978ab681f0236bc9737e7f628c0089abe0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0def93a0f88d19ba894508d4a5d39de59dbd7a28
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-tracking-master-data-services"></a>Отслеживание изменений (службы Master Data Services)
@@ -36,15 +36,15 @@ ms.lasthandoff: 08/02/2017
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Добавление атрибутов в группу отслеживания изменений.|[Добавление атрибутов в группу отслеживания изменений & #40; Службы Master Data Services & #41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|Создание бизнес-правила для инициации действий на основе изменений атрибута.|[Запуск действия в зависимости от значения атрибута & #40; Службы Master Data Services & #41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Добавление атрибутов в группу отслеживания изменений.|[Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Создание бизнес-правила для инициации действий на основе изменений атрибута.|[Инициирование действия на основе значения атрибута (службы Master Data Services)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Проверка & #40; Службы Master Data Services & #41;](../master-data-services/validation-master-data-services.md)  
+-   [Проверка (службы Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
--   [Бизнес-правила & #40; Службы Master Data Services & #41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
--   [Атрибуты & #40; Службы Master Data Services & #41;](../master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   

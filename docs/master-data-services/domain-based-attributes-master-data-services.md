@@ -1,5 +1,5 @@
 ---
-title: "Атрибуты на основе домена (Master Data Services) | Документы Microsoft"
+title: "Атрибуты на основе домена (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], domain-based attributes
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 60a442e917aa4079c5b78e929181a864e81de65a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: b4165f006ea12587b8c3e385d6c1c01e3aa9d9e5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Атрибуты на основе домена (службы Master Data Services)
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
  Сущность «Подкатегория» имеет атрибут на основе домена с именем «Категория». Атрибут «Категория» заполняется значениями из сущности «Категория».  
   
- ![Атрибуты на основе домена в сущности](../master-data-services/media/mds-conc-domain-based-attribute-conceptual.gif "атрибуты на основе домена в сущности")  
+ ![Атрибуты на основе домена в сущности](../master-data-services/media/mds-conc-domain-based-attribute-conceptual.gif "Атрибуты на основе домена в сущности")  
   
 ## <a name="use-same-entity-for-multiple-domain-based-attributes"></a>Использование одной и той же сущности для нескольких атрибутов на основе домена  
  Одну и ту же сущность можно использовать в качестве атрибута на основе домена для нескольких других сущностей. Например, можно создать сущность "ИндикаторДаНет" со следующими элементами: "Да", "Нет" и "Может быть". Можно создать атрибут «ВНаличии» на основе домена и использовать сущность «ИндикаторДаНет» как источник. Также можно создать другой атрибут на основе домена под названием Approved и использовать сущность YesNoIndicator в качестве источника. Каждый раз, когда пользователи должны выбирать из списка членов сущности «ИндикаторДаНет», можно использовать сущность как атрибут на основе домена.  

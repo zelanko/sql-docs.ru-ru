@@ -1,5 +1,5 @@
 ---
-title: "Обзор: Импорт данных из таблиц (Master Data Services) | Документы Microsoft"
+title: "Обзор: импорт данных из таблиц (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Обзор: импорт данных из таблиц (службы Master Data Services)
@@ -78,27 +78,27 @@ ms.lasthandoff: 08/02/2017
   
 -   [Конечный элемент таблицы элементов (службы Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Промежуточная таблица консолидированных элементов &#40; Службы Master Data Services &#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Промежуточная таблица связей (службы Master Data Services)](../master-data-services/relationship-staging-table-master-data-services.md)  
   
  Для каждой сущности в модели есть промежуточная таблица. Имя таблицы обозначает соответствующую сущность и ее тип, например конечный элемент. На этом изображении показаны промежуточные таблицы для сущностей валюты, клиента и продукта.  
   
- ![Промежуточные таблицы в базе данных MDS](../master-data-services/media/mds-staging-tables.png "промежуточные таблицы в базе данных MDS")  
+ ![Промежуточные таблицы в базе данных MDS](../master-data-services/media/mds-staging-tables.png "Промежуточные таблицы в базе данных MDS")  
   
  Имя таблицы указывается при создании сущности и не может быть изменено. Если имя промежуточной таблицы содержит _1 (или другое число), то на момент создания сущности уже существовала другая таблица с тем же именем.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных хранимых процедур.  
   
--   stg.udp_\<name > _Leaf  
+-   stg.udp_\<имя>_Leaf  
   
--   stg.udp_\<name > _Consolidated  
+-   stg.udp_\<имя>_Consolidated  
   
--   stg.udp_\<name > _Relationship  
+-   stg.udp_\<имя>_Relationship  
   
  Для каждой сущности в модели есть три хранимые процедуры, которые соответствуют конечному элементу, объединенному элементу и промежуточным таблицам связей.  На следующем изображении показаны промежуточные хранимые процедуры для сущностей валюты, клиента и продукта.  
   
- ![Промежуточные хранимые процедуры в базе данных MDS](../master-data-services/media/mds-staging-storedprocedures.png "промежуточных хранимых процедур в базе данных MDS")  
+ ![Промежуточные хранимые процедуры в базе данных MDS](../master-data-services/media/mds-staging-storedprocedures.png "Промежуточные хранимые процедуры в базе данных MDS")  
   
  Дополнительные сведения о хранимых процедурах см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>См. также  
   
--   [Проверка &#40; Службы Master Data Services &#41;](../master-data-services/validation-master-data-services.md)  
+-   [Проверка (службы Master Data Services)](../master-data-services/validation-master-data-services.md)  
   
 -   [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   

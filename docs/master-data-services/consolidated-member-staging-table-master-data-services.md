@@ -1,5 +1,5 @@
 ---
-title: "Объединенный элемент таблицы элементов (Master Data Services) | Документы Microsoft"
+title: "Промежуточная таблица консолидированных элементов (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 14
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e80d2ee59cc1e7b407c0642e97b4fe2077d6f6f1
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 85205881ceb730739152ea60f886723d3f3827ce
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Промежуточная таблица консолидированных элементов (службы Master Data Services)
@@ -42,12 +42,12 @@ ms.lasthandoff: 08/02/2017
 |**Code**<br /><br /> Требуется, за исключением случаев, когда коды формируются автоматически для **ImportType1** или **2**. Дополнительные сведения см. в разделе [Автоматическое создание кодов (службы Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md).|Уникальный код элемента.|  
 |**Название**<br /><br /> Необязательно|Имя элемента.|  
 |**NewCode**|Используйте только при изменении кода элемента.|  
-|\<Имя атрибута >|Столбец существует для каждого атрибута в сущности. Используется с параметром **ImportType** , который равен **0** или **2**. Для атрибутов в свободной форме укажите новое текстовое или строковое значение атрибута. Для основанных на домене атрибутов необходимо указать код элемента, который будет атрибутом. Для атрибутов ссылок URL-адрес должен начинаться с **http://**.<br /><br /> <br /><br /> Примечание. Промежуточное хранение файловых атрибутов не поддерживается.|  
+|\<Имя атрибута>|Столбец существует для каждого атрибута в сущности. Используется с параметром **ImportType** , который равен **0** или **2**. Для атрибутов в свободной форме укажите новое текстовое или строковое значение атрибута. Для основанных на домене атрибутов необходимо указать код элемента, который будет атрибутом. Для атрибутов ссылок URL-адрес должен начинаться с **http://**.<br /><br /> <br /><br /> Примечание. Промежуточное хранение файловых атрибутов не поддерживается.|  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Просмотр ошибок, возникающих во время помещения на промежуточное хранение (службы Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Ошибки промежуточного процесса &#40; Службы Master Data Services &#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+ [Ошибки промежуточного процесса (службы Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
 

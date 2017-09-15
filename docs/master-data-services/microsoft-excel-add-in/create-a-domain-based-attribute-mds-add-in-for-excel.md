@@ -1,5 +1,5 @@
 ---
-title: "Создание атрибута на основе домена (надстройка MDS для Excel) | Документы Microsoft"
+title: "Создание атрибута на основе домена (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f67b43f772e9693f5abbb396b6987527a5220a1d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0183ba6f178fbc9f392b4e711ccaba49220ffa3e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Создание атрибута на основе домена (надстройка MDS для Excel)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Чтобы использовать значения из имеющейся сущности, выберите имя сущности.
     
-    Если существует более пятидесяти сущностей, можно фильтровать и поиска для сущности. В противном случае выберите сущность из раскрывающегося списка.  
+    Если существует более пятидесяти сущностей, можно выполнить фильтрацию и поиск сущности. В противном случае выберите сущность в раскрывающемся списке.  
   
 6.  Если на предыдущем шаге был указан **выбранный столбец** , в поле **Новое имя сущности** введите имя новой сущности. Оно может совпадать с именем столбца (атрибута).  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>См. также:  
  [Атрибуты на основе домена (службы Master Data Services)](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [Создать сущность &#40; Надстройка MDS для Excel &#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
+ [Создание сущности (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [Построение модели (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

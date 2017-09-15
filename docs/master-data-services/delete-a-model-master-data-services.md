@@ -1,5 +1,5 @@
 ---
-title: "Удаление модели (Master Data Services) | Документы Microsoft"
+title: "Удаление модели (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be50aa7e9de502b0db2cb427bf894081196b579e
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f1ac3250d2d1f852ec43bf88fb206b2009fc0430
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-model-master-data-services"></a>Удаление модели (службы Master Data Services)
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/02/2017
   
 6.  В дополнительном диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
- В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **сохранить модель** кнопки, ![обновление](../master-data-services/media/mds-model-status-updating.png "обновление") изображение, указывает, что модель обновляется. При наличии ошибок при создании или изменении модели, ![ошибка](../master-data-services/media/mds-model-status-error.png "ошибка") изображение. В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
+ В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **Сохранить модель** появляется изображение ![Обновляется](../master-data-services/media/mds-model-status-updating.png "Обновляется"), которое указывает, что модель обновляется. При наличии ошибок во время создания или изменения модели появляется изображение ![Ошибка](../master-data-services/media/mds-model-status-error.png "Ошибка"). В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
   
 ## <a name="see-also"></a>См. также:  
- [Модели &#40; Службы Master Data Services &#41;](../master-data-services/models-master-data-services.md)   
- [Создать модель &#40; Службы Master Data Services &#41;](../master-data-services/create-a-model-master-data-services.md)  
+ [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)   
+ [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)  
   
   

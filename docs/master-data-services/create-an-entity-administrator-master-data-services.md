@@ -1,5 +1,5 @@
 ---
-title: "Создание администратора сущностей (Master Data Services) | Документы Microsoft"
+title: "Создание администратора сущностей (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e26187fb7d92fcbae23646b92d6cf02ee5511f5e
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: b322107b8fa557d82b03a6b08b96c872be5205af
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Создание администратора сущностей (службы Master Data Services)
@@ -51,9 +51,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>См. также:  
  [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
- [Назначение разрешений для объекта модели & #40; Службы Master Data Services & #41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Назначение разрешений элемента иерархии & #40; Службы Master Data Services & #41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Разрешения объекта модели & #40; Службы Master Data Services & #41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Разрешения для элементов иерархии & #40; Службы Master Data Services & #41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

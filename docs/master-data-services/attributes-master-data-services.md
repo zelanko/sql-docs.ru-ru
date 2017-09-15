@@ -1,5 +1,5 @@
 ---
-title: "Атрибуты (Master Data Services) | Документы Microsoft"
+title: "Атрибуты (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>Атрибуты (службы Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Связь атрибутов с другими объектами модели  
  Атрибут можно представить как столбец таблицы сущности. Значение атрибута — это значение, описывающее определенный элемент.  
   
- ![Службы Master Data Services сущность в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "службы Master Data Services сущность в виде таблицы")  
+ ![Сущность служб Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность служб Master Data Services, представленная в виде таблицы")  
   
  При создании сущности, содержащей множество атрибутов, можно организовать атрибуты в группы. Дополнительные сведения см. в разделе [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md).  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="attribute-examples"></a>Примеры атрибутов  
  В следующем примере сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
- ![Bike сущности таблицы Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "велосипеда таблицы сущности продукта")  
+ ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта "Велосипед"")  
   
  В следующем примере сущность Product содержит:  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
  Сущность Subcategory используется в качестве атрибута на основе домена сущности Product. Сущность Category используется в качестве атрибута на основе домена сущности Subcategory. Как и сущность Product, сущности Category и Subcategory по умолчанию содержат атрибуты Name и Code.  
   
- ![Древовидная структура сущности продукта](../master-data-services/media/mds-conc-entity-ui.gif "древовидная структура сущности продукта")  
+ ![Древовидная структура сущности "Продукт"](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности "Продукт"")  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

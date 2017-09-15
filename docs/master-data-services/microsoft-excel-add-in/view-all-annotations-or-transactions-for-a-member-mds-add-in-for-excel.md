@@ -1,5 +1,5 @@
 ---
-title: "Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel) | Документы Microsoft"
+title: "Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,18 +12,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 468c203df40b817dd22ada447172fb4d2afee340
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 84b4772712d6b921614470cff72a6d33f3b1df0e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel)
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], просмотреть заметки (комментарии) и транзакции для строк данных (элементов), если вы хотите просмотреть обновления данных во времени.  
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно просмотреть заметки (комментарии) и транзакции для строк данных (элементов), если необходимо узнать, как менялись данные с течением времени.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Чтобы выполнить эту процедуру:  

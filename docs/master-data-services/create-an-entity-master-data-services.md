@@ -1,5 +1,5 @@
 ---
-title: "Создание сущности (Master Data Services) | Документы Microsoft"
+title: "Создание сущности (службы Master Data Services) | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2766ad2cb250200e7fbb3f19f96eab7b5f748a9a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 9b081ac7c85401a43533863f2495dad9032c7ba0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
@@ -71,8 +71,8 @@ ms.lasthandoff: 08/02/2017
   
 |Имя|Описание|  
 |----------|-----------------|  
-|Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "значок для обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок состояния ОК](../master-data-services/media/mds-statusicon-ok.png "значок состояния ОК")|  
-|Название|Имя сущности.|  
+|Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния")|  
+|Имя|Имя сущности.|  
 |Описание|Описание сущности.|  
 |Промежуточная таблица|Имя префикса таблицы, которая используется для хранения данных.|  
 |Тип журнала транзакций|Тип журнала транзакций сущности.|  
@@ -95,8 +95,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>См. также:  
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)   
- [Явные иерархии &#40; Службы Master Data Services &#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Изменение сущности &#40; Службы Master Data Services &#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Изменение сущности (службы Master Data Services)](../master-data-services/edit-an-entity-master-data-services.md)   
  [Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)  
   
   
