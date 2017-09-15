@@ -1,7 +1,7 @@
 ---
 title: "Инструкция ROLLBACK TRANSACTION (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -55,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Аргументы  
  *transaction_name*  
- Имя, присвоенное транзакции в BEGIN TRANSACTION. *transaction_name* должны соответствовать правилам для идентификаторов, но используются только первые 32 символа имени транзакции. При вложении транзакций *transaction_name* должно быть имя из внешней инструкции BEGIN TRANSACTION. *transaction_name* — всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывается.  
+ Имя, присвоенное транзакции в BEGIN TRANSACTION. *transaction_name* должны соответствовать правилам для идентификаторов, но используются только первые 32 символа имени транзакции. При вложении транзакций *transaction_name* должно быть имя из внешней инструкции BEGIN TRANSACTION. *transaction_name* всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не учитывается регистр знаков.  
   
  **@***tran_name_variable*  
  Имя определенной пользователем переменной, содержащей допустимое имя транзакции. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных.  
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  Инструкция ROLLBACK TRANSACTION не может ссылаться на *savepoint_name* в распределенных транзакциях, запущенных явно с помощью BEGIN DISTRIBUTED TRANSACTION или вызванных из локальной транзакции.  
   
- Нельзя выполнить откат транзакции после выполнения инструкции COMMIT TRANSACTION, кроме случая, когда инструкция COMMIT TRANSACTION связана с вложенной транзакцией, которая содержится внутри откатываемой транзакции. В этом случае будет выполнен также откат вложенной транзакции, даже если для нее была выполнена инструкция COMMIT TRANSACTION.  
+ Нельзя выполнить откат транзакции после выполнения инструкции COMMIT TRANSACTION, кроме случая, когда инструкция COMMIT TRANSACTION связана с вложенной транзакцией, которая содержится внутри откатываемой транзакции. В этом случае будет вложенные транзакции выполняется откат, даже если для нее была выполнена инструкция COMMIT TRANSACTION.  
   
  Внутри транзакции допускается использование повторяющихся имен точки сохранения, но инструкция ROLLBACK TRANSACTION, использующая повторяющееся имя точки сохранения, откатывает транзакцию лишь к самой последней точке, установленной с помощью инструкции SAVE TRANSACTION для этого имени.  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   Инструкции в пакете, следующие за инструкцией, вызвавшей срабатывание триггера, не выполняются.  
   
- @@TRANCOUNT увеличивается на единицу при срабатывании триггера даже в режиме автоматической фиксации. (Система обрабатывает триггер как неявную вложенную транзакцию.)  
+@@TRANCOUNT увеличивается на единицу при срабатывании триггера даже в режиме автоматической фиксации. (Система обрабатывает триггер как неявную вложенную транзакцию.)  
   
- Инструкция ROLLBACK TRANSACTION в хранимой процедуре не влияет на последующие инструкции в пакете, вызвавшем процедуру; последующие инструкции в пакете выполняются. Инструкции ROLLBACK TRANSACTION в триггерах уничтожают пакет, содержащий инструкцию, вызвавшую триггер; последующие инструкции в пакете не выполняются.  
+Инструкция ROLLBACK TRANSACTION в хранимой процедуре не влияет на последующие инструкции в пакете, вызвавшем процедуру; последующие инструкции в пакете выполняются. Инструкции ROLLBACK TRANSACTION в триггерах уничтожают пакет, содержащий инструкцию, вызвавшую триггер; последующие инструкции в пакете не выполняются.  
   
- Эффект, оказываемый инструкцией ROLLBACK на курсоры, определяется тремя правилами:  
+Эффект, оказываемый инструкцией ROLLBACK на курсоры, определяется тремя правилами:  
   
 1.  Если параметр CURSOR_CLOSE_ON_COMMIT установлен в ON, инструкция ROLLBACK закрывает, но не освобождает все открытые курсоры.  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере демонстрируется эффект отката именованной транзакции:  
+ В следующем примере демонстрируется эффект отката именованной транзакции: После создания таблицы, следующие инструкции запустить именованной транзакции вставки двух строк и откатить транзакцию с именем в переменной @TransactionName. Другой оператор вне именованные транзакции вставляются две строки. Запрос возвращает результаты предыдущих инструкций.   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>См. также:  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   

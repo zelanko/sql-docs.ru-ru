@@ -1,7 +1,7 @@
 ---
 title: "sql_variant (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4eb946d5b6ed5a9c6d33789166327bd2dd25d7c1
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 014cf6a2859bc60b4366418363681b1cd53dc5c6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Тип данных, хранящий значения различных типов данных, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)),[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,7 +68,7 @@ ODBC не поддерживает полностью **sql_variant**. Поэт�
   
 |Иерархия типов данных|Семейство типов данных|  
 |---|---|
-|**sql_variant**|**sql_variant**|  
+|**sql_variant**|sql_variant |  
 |**datetime2**|Дата и время|  
 |**datetimeoffset**|Дата и время|  
 |**datetime**|Дата и время|  
@@ -93,7 +91,7 @@ ODBC не поддерживает полностью **sql_variant**. Поэт�
 |**char**|Юникод|  
 |**varbinary**|Двоичный|  
 |**binary**|Двоичный|  
-|**uniqueidentifier**|**Uniqueidentifier**|  
+|**uniqueidentifier**|Уникальный идентификатор |  
   
 Следующие правила применяются к **sql_variant** сравнения:
 -   Когда **sql_variant** сравниваются значения разные базовые типы и базовым типам данных относятся к разным семействам, значение, семейство типов которого находится выше в иерархии, считается большего из двух значений.  
@@ -115,7 +113,44 @@ ODBC не поддерживает полностью **sql_variant**. Поэт�
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
 |Определяемые пользователем типы|**datetimeoffset**|  
+
+## <a name="examples"></a>Примеры  
+
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Использование sql_variant в таблице  
+ Следующий пример создает таблицу с типом данных sql_variant. Затем в примере извлекается `SQL_VARIANT_PROPERTY` сведения о `colA` значение `46279.1` где `colB`  = `1689`, учитывая, что `tableA` имеет `colA` типа `sql_variant` и `colB`.  
   
+```sql    
+CREATE   TABLE tableA(colA sql_variant, colB int)  
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
+FROM      tableA  
+WHERE      colB = 1689  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Обратите внимание, что каждое из этих трех значений **sql_variant**.  
+  
+```  
+Base Type    Precision    Scale  
+---------    ---------    -----  
+decimal      8           2  
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>Б. Использование в качестве переменной типа sql_variant   
+ Приведенный ниже, создает переменную с типом данных sql_variant, а затем извлекает `SQL_VARIANT_PROPERTY` сведения о переменной с именем @v1.  
+  
+```sql    
+DECLARE @v1 sql_variant;  
+SET @v1 = 'ABC';  
+SELECT @v1;  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');  
+```    
+
+
 ## <a name="see-also"></a>См. также:
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)

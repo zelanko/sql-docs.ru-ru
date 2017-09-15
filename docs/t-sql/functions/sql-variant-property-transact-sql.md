@@ -1,7 +1,7 @@
 ---
 title: "SQL_VARIANT_PROPERTY (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cc3088c7025333c5cea3766cc65f56efdd45134
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: bd9b181c04a96ee90b0bbb54546a1d925761224f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -39,8 +39,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SQL_VARIANT_PROPERTY ( expression , property )  
 ```  
   
@@ -49,14 +47,14 @@ SQL_VARIANT_PROPERTY ( expression , property )
  Является выражением типа **sql_variant**.  
   
  *Свойство*  
- Содержит имя **sql_variant** свойства, для которого должны быть предоставлены сведения. *Свойство* — **varchar (**128**)**, и может принимать одно из следующих значений.  
+ Содержит имя **sql_variant** свойства, для которого должны быть предоставлены сведения. *Свойство* — **varchar (**128**)**, и может принимать одно из следующих значений:  
   
 |Значение|Description|Возвращаемый базовый тип sql_variant|  
 |-----------|-----------------|----------------------------------------|  
 |**Тип BaseType**|Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Введенные значения недопустимы.|  
 |**Точность**|Количество знаков числового базового типа данных:<br /><br /> **DateTime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **число с плавающей запятой** = 53<br /><br /> **реальные** = 24<br /><br /> **десятичное число** (p, s) и **числовое** (p, s) = p<br /><br /> **Money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **бит** = 1<br /><br /> Все остальные типы = 0|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
 |**Масштаб**|Количество знаков справа от десятичного разделителя числового базового типа данных:<br /><br /> **десятичное число** (p, s) и **числовое** (p, s) = s<br /><br /> **Money** и **smallmoney** = 4<br /><br /> **DateTime** = 3<br /><br /> все остальные типы = 0|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
-|**TotalBytes**|Число байтов, необходимое для хранения данных и метаданных значения. Эта информация может быть полезной при проверке максимального размера данных в **sql_variant** столбца. Если значение превышает 900, создание индекса приведет к ошибке.|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
+|**TotalBytes**|Число байтов, необходимое для хранения данных и метаданных значения. Эта информация может быть полезной при проверке максимального размера данных в **sql_variant** столбца. Если значение превышает 900, создание индекса завершается ошибкой.|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
 |**Параметры сортировки**|Представляет параметры сортировки конкретного **sql_variant** значение.|**sysname**<br /><br /> NULL = Введенные значения недопустимы.|  
 |**MaxLength**|Максимальная длина типа данных, в байтах. Например **MaxLength** из **nvarchar (**50**)** равен 100, **MaxLength** из **int** — 4.|**int**<br /><br /> NULL = Введенные значения недопустимы.|  
   
@@ -64,9 +62,10 @@ SQL_VARIANT_PROPERTY ( expression , property )
  **sql_variant**  
   
 ## <a name="examples"></a>Примеры  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Использование sql_variant в таблице  
  В следующем примере извлекается `SQL_VARIANT_PROPERTY` сведения о `colA` значение `46279.1` где `colB`  = `1689`, учитывая, что `tableA` имеет `colA` типа `sql_variant` и `colB`.  
   
-```  
+```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
 INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
 SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
@@ -86,10 +85,10 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>Б. Использование в качестве переменной типа sql_variant   
  В следующем примере извлекается `SQL_VARIANT_PROPERTY` сведения о переменной с именем @v1.  
   
-```  
+```sql    
 DECLARE @v1 sql_variant;  
 SET @v1 = 'ABC';  
 SELECT @v1;  
