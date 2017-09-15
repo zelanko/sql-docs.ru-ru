@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.translationtype: HT
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="specify-parameters"></a>Указание параметров
@@ -89,7 +89,7 @@ GO
   
  Если значение по умолчанию указать нельзя, укажите NULL. Желательно, чтобы процедура возвращала сообщение, если она выполняется без значения для параметра.  
   
- В следующем примере создается процедура `usp_GetSalesYTD` с единственным входным параметром `@SalesPerson`. В качестве значения по умолчанию параметру присваивается значение NULL, которое используется в инструкциях обработки ошибок для выдачи сообщения, если процедура выполняется с неопределенным параметром `@SalesPerson` .  
+ В следующем примере создается процедура `uspGetSalesYTD` с единственным входным параметром `@SalesPerson`. В качестве значения по умолчанию параметру присваивается значение NULL, которое используется в инструкциях обработки ошибок для выдачи сообщения, если процедура выполняется с неопределенным параметром `@SalesPerson` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,10 +123,10 @@ GO
   
 ```  
 -- Run the procedure without specifying an input value.  
-EXEC Sales.usp_GetSalesYTD;  
+EXEC Sales.uspGetSalesYTD;  
 GO  
 -- Run the procedure with an input value.  
-EXEC Sales.usp_GetSalesYTD N'Blythe';  
+EXEC Sales.uspGetSalesYTD N'Blythe';  
 GO  
 ```  
   
@@ -210,3 +210,4 @@ These items can be purchased for less than $700.00.
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+
