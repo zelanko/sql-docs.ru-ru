@@ -45,7 +45,7 @@
 # [Расширенные события](../relational-databases/extended-events/extended-events.md)
 # [Графы](../relational-databases/graphs/sql-graph-overview.md)
 # [Иерархические данные](hierarchical-data-sql-server.md)  
-# [Импорт и экспорт данных](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+# [Импорт и экспорт данных](../relational-databases/import-export/overview-import-export.md)
 # [OLTP в памяти](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 # [Индексы](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)
