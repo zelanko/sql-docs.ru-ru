@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Новые и недавно обновленные документы для SQL Server
@@ -169,13 +169,13 @@ ms.lasthandoff: 07/31/2017
 
 ## <a name="similar-articles"></a>Похожие статьи
 
-Этот раздел содержит похожие статьи, аналогичные недавно измененным, для других предметных областей в том же репозитории GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+Этот раздел содержит похожие статьи, аналогичные недавно измененным, для других предметных областей в том же репозитории GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/).
 
 <!--  20170717-1101  -->
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (4+4): **Дополнительные аналитические функции для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (4+4): **Расширенная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Новые + обновленные (2+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Новые + обновленные (1+2): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (6+0): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)

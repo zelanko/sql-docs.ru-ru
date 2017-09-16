@@ -1,51 +1,51 @@
 ---
 title: "Занятие 1. Основы работы в SQL Server Management Studio | Документы Майкрософт"
 ms.custom: 
-ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.date: 08/30/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- database-engine
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 8ef902752c9ea7ead6129b0009f6762bc0457047
+ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
+ms.openlocfilehash: 28a91a6c2e41a7c360c484d8c34e5ee52761e865
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это мощное и гибкое средство. Однако пользователи, не работавшие с Microsoft Visual Studio, иногда не знают, как быстро воспользоваться той или иной функцией. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) — это мощное и гибкое средство. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  
   
 Это занятие содержит следующие разделы:  
   
--   [Начало работы в среде SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms166996.aspx)  
+-   [Начало работы в среде SQL Server Management Studio (SSMS)](lesson-1-1-start-sql-server-management-studio.md)  
   
--   [Соединение с зарегистрированными серверами и с обозревателем объектов](https://msdn.microsoft.com/library/ms170681.aspx)  
+-   [Соединение с зарегистрированными серверами и с обозревателем объектов](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
   
--   [Изменение макета среды](https://msdn.microsoft.com/library/ms170069.aspx)  
+-   [Изменение макета среды](lesson-1-3-change-the-environment-layout.md)  
   
--   [Отображение окна запроса](https://msdn.microsoft.com/library/ms169823.aspx)  
+-   [Отображение окна запроса](lesson-1-4-display-the-query-window.md)  
   
--   [Отображение страницы "Подробности обозревателя объектов"](https://msdn.microsoft.com/library/ms170076.aspx)  
+-   [Отображение страницы "Подробности обозревателя объектов"](lesson-1-5-show-the-object-explorer-details-page.md)  
   
--   [Выбор схемы сочетаний клавиш](https://msdn.microsoft.com/library/ms167416.aspx)  
+-   [Выбор схемы сочетаний клавиш](lesson-1-6-select-the-keyboard-shortcut-scheme.md)  
   
--   [Настройка параметров запуска](https://msdn.microsoft.com/library/ms166556.aspx) 
+-   [Настройка параметров запуска](lesson-1-7-set-the-startup-options.md) 
   
--   [Восстановление установленной по умолчанию конфигурации среды SQL Server Management Studio](https://msdn.microsoft.com/library/ms166550.aspx)  
+-   [Восстановление установленной по умолчанию конфигурации среды SQL Server Management Studio](lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  
   
--   [Сводка. Основные средства перемещения](https://msdn.microsoft.com/library/ms170043.aspx)  
+-   [Сводка. Основные средства перемещения](lesson-1-9-summary-basic-navigation.md)  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Запуск среды SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-1-start-sql-server-management-studio.md)  
+[Запуск среды SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
   
   
   
