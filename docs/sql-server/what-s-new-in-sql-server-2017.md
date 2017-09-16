@@ -1,7 +1,7 @@
 ---
 title: "Новые возможности в SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 08/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
@@ -34,6 +34,7 @@ SQL Server 2017 включает множество новых функций, 
 - **Сборки CLR** теперь можно добавлять в список разрешенных в качестве обходного пути для функции `clr strict security`, описанной в CTP 2.0. Для поддержки списка разрешенных доверенных сборок (RC1) добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).  
 - **Возобновляемая перестройка индексов в подключенном режиме**: позволяет возобновить эту операцию с момента остановки после сбоя (например, при отработке отказа в реплику или нехватке места на диске) либо приостановить и возобновить ее позже. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - Параметр **IDENTITY_CACHE** для ALTER DATABASE SCOPED CONFIGURATION позволяет избежать пропусков в значениях столбцов удостоверений при непредвиденной перезагрузке или отработке отказа сервера на вторичный сервер. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
+- Новое поколение функций обработки запросов, использующих стратегии оптимизации для адаптации к среде выполнения рабочих нагрузок ваших приложений. В первую версию семейства функций для **адаптивной обработки запросов** мы включили три улучшения: **адаптивные соединения в пакетном режиме**, **обратная связь по временно предоставляемому буферу памяти в пакетном режиме** и **выполнение с чередованием** для многооператорных функций с табличными значениями.  См. раздел [Адаптивная обработка запросов в базах данных SQL](../relational-databases/performance/adaptive-query-processing.md).
 - **Автоматическая настройка базы данных** предоставляет сведения о возможных проблемах с обработкой запросов и рекомендуемые решения. Она также может автоматически исправлять выявленные проблемы. См. раздел [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md) (Автоматическая настройка). (CTP 2.0)
 - Новые **возможности для баз данных графов**, предназначенные для моделирования связей "многие ко многим", включают новый синтаксис [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) для создания граничных таблиц и таблиц узлов, а также ключевое слово [MATCH](../t-sql/queries/match-sql-graph.md) для запросов. См. раздел [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017). (CTP 2.0)
 - Параметр sp_configure, который называется `clr strict security`, включен по умолчанию для повышения безопасности сборок CLR. См. раздел [CLR strict security](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)
@@ -112,14 +113,9 @@ SQL Server Analysis Services 2017 включает множество улуч
 
 Дополнительные сведения см. в разделе [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) (Новые возможности служб машинного обучения SQL Server).
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) получить справку 
-- [Stack Overflow (с тегом sql-server) — задавайте вопросы о разработке для SQL](http://stackoverflow.com/questions/tagged/sql-server)
-- [Форумы MSDN — задавайте технические вопросы](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect — сообщайте об ошибках и запрашивайте функции](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit — общее обсуждение по SQL Server](https://www.reddit.com/r/SQLServer/)
-- [Условия лицензии и информация о Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="next-steps"></a>Следующие шаги
 - Ознакомьтесь с [заметками о выпуске SQL Server 2017](sql-server-2017-release-notes.md).
 - [Новые возможности SQL Server 2017 на Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 - Узнайте, [что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md).
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
