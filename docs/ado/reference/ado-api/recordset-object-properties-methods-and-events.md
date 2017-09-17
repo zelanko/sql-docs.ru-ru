@@ -1,0 +1,143 @@
+---
+title: "Свойства объекта набора записей, методы и события | Документы Microsoft"
+ms.prod: sql-non-specified
+ms.technology:
+- drivers
+ms.custom: 
+ms.date: 01/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset object [ADO], members
+ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
+caps.latest.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: e2d35cf15880ae2dfa902acaccca04cb204a6d77
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="recordset-object-properties-methods-and-events"></a>Свойства объекта набора записей, методы и события
+## <a name="propertiescollections"></a>Свойства и коллекции  
+ [Свойство AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+  
+ [Свойство AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+  
+ [Свойство ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)  
+  
+ [Свойство ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+  
+ [BOF, EOF свойства](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+  
+ [Свойство закладка](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+  
+ [Свойство CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)  
+  
+ [Свойство CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+  
+ [Свойство CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)  
+  
+ [Свойства DataMember](../../../ado/reference/ado-api/datamember-property.md)  
+  
+ [Свойства источника данных](../../../ado/reference/ado-api/datasource-property-ado.md)  
+  
+ [Свойство EditMode](../../../ado/reference/ado-api/editmode-property.md)  
+  
+ [Коллекция полей](../../../ado/reference/ado-api/fields-collection-ado.md)  
+  
+ [Свойства фильтра](../../../ado/reference/ado-api/filter-property.md)  
+  
+ [Свойство Index](../../../ado/reference/ado-api/index-property.md)  
+  
+ [Свойство LockType](../../../ado/reference/ado-api/locktype-property-ado.md)  
+  
+ [Свойство MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+  
+ [Свойство MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
+  
+ [Свойство PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+  
+ [Свойства PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)  
+  
+ [Коллекция свойств](../../../ado/reference/ado-api/properties-collection-ado.md)  
+  
+ [Свойство RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
+  
+ [Свойство сортировки](../../../ado/reference/ado-api/sort-property.md)  
+  
+ [Свойство Source (набора записей ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+  
+ [State, свойство](../../../ado/reference/ado-api/state-property-ado.md)  
+  
+ [Свойство Status (набора записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+  
+ [Свойство StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)  
+  
+## <a name="methods"></a>Методы  
+ [AddNew-метод](../../../ado/reference/ado-api/addnew-method-ado.md)  
+  
+ [Cancel-метод](../../../ado/reference/ado-api/cancel-method-ado.md)  
+  
+ [Метод CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+  
+ [Метод CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+  
+ [Метод Clone](../../../ado/reference/ado-api/clone-method-ado.md)  
+  
+ [Close-метод](../../../ado/reference/ado-api/close-method-ado.md)  
+  
+ [Метод CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+  
+ [Удаление метода (набора записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+  
+ [Find-метод](../../../ado/reference/ado-api/find-method-ado.md)  
+  
+ [Метод GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)  
+  
+ [Метод GetString](../../../ado/reference/ado-api/getstring-method-ado.md)  
+  
+ [Move-метод](../../../ado/reference/ado-api/move-method-ado.md)  
+  
+ [MoveFirst, MoveLast, MoveNext и MovePrevious методов](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+  
+ [Метод NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
+  
+ [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+  
+ [Requery-метод](../../../ado/reference/ado-api/requery-method.md)  
+  
+ [Метод повторной синхронизации](../../../ado/reference/ado-api/resync-method.md)  
+  
+ [Save-метод](../../../ado/reference/ado-api/save-method.md)  
+  
+ [Метод поиска](../../../ado/reference/ado-api/seek-method.md)  
+  
+ [Поддерживает метод](../../../ado/reference/ado-api/supports-method.md)  
+  
+ [Метод обновления](../../../ado/reference/ado-api/update-method.md)  
+  
+ [Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
+  
+## <a name="events"></a>События  
+ [Событие EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+  
+ [Событие FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
+  
+ [Событие FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
+  
+ [WillChangeField и FieldChangeComplete события](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+  
+ [WillChangeRecord и RecordChangeComplete события](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+  
+ [WillChangeRecordset и RecordsetChangeComplete события](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+  
+ [WillMove и MoveComplete события](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+  
+## <a name="see-also"></a>См. также:  
+ [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Интеграция службы Reporting Services с помощью элементов управления ReportViewer — начало работы
 
-Узнайте, как разработчики могут встроить разбиением на страницы в веб-сайтов ASP.Net и приложений Windows forms, через службы Reporting Services 2016 элемента управления ReportViewer. Можно добавить элемент управления в новый проект или обновите существующий проект.
+Узнайте, как разработчики могут встроить разбиением на страницы в веб-сайты ASP.NET и приложения Windows Forms, через службы Reporting Services 2016 элемента управления ReportViewer. Можно добавить элемент управления в новый проект или обновите существующий проект.
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Добавление элемента управления ReportViewer для нового веб-проекта
 
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Добавление элемента управления ReportViewer в новый проект Windows forms
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Добавление элемента управления ReportViewer в новый проект Windows Forms
 
 1. Создайте новый **приложение Windows Forms** или откройте существующий проект.
 
@@ -242,7 +242,7 @@ ms.lasthandoff: 08/09/2017
 
     ![службы ssRS-remove старого rvcontrol элементов](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Щелкните правой кнопкой мыши в любом месте на панели инструментов, а затем выберите **Выбор элементов...** .
+3. Щелкните правой кнопкой мыши в любом месте на панели инструментов, а затем выберите **Выбор элементов... **.
 
     ![службы ssRS элемент панели инструментов выберите](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -281,6 +281,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также:
 
 [Сбор данных в элементе управления ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Дополнительные вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
 
 
