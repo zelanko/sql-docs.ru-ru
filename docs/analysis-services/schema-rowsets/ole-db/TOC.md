@@ -1,0 +1,5 @@
+# [Набор строк DBSCHEMA_CATALOGS](dbschema-catalogs-rowset.md)
+# [Набор строк DBSCHEMA_COLUMNS](dbschema-columns-rowset.md)
+# [Набор строк DBSCHEMA_PROVIDER_TYPES](dbschema-provider-types-rowset.md)
+# [Набор строк DBSCHEMA_TABLES](dbschema-tables-rowset.md)
+# [Наборы строк схемы OLE DB](ole-db-schema-rowsets.md)

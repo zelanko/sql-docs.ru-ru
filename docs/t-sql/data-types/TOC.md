@@ -1,0 +1,52 @@
+# [Обзор](data-types-transact-sql.md)  
+# [Константы](constants-transact-sql.md)  
+# [Преобразование](data-type-conversion-database-engine.md)  
+# [Приоритет](data-type-precedence-transact-sql.md)  
+# [Синонимы](data-type-synonyms-transact-sql.md)  
+# [Точность, масштаб и длина](precision-scale-and-length-transact-sql.md)  
+# [bit](bit-transact-sql.md)  
+# [курсор](cursor-transact-sql.md)  
+# [Дата и время](date-and-time-types.md)  
+## [date](date-transact-sql.md)  
+## [datetime](datetime-transact-sql.md)  
+## [datetime2](datetime2-transact-sql.md)  
+## [datetimeoffset](datetimeoffset-transact-sql.md)  
+## [smalldatetime](smalldatetime-transact-sql.md)  
+## [time](time-transact-sql.md)  
+
+# [Методы hierarchyid](hierarchyid-data-type-method-reference.md)  
+## [GetAncestor (компонент Database Engine)](getancestor-database-engine.md)  
+## [GetDescendant (компонент Database Engine)](getdescendant-database-engine.md)  
+## [GetLevel (компонент Database Engine)](getlevel-database-engine.md)  
+## [GetRoot (компонент Database Engine)](getroot-database-engine.md)  
+## [IsDescendantOf (компонент Database Engine)](isdescendantof-database-engine.md)  
+## [Parse (компонент Database Engine)](parse-database-engine.md)  
+## [Read (компонент Database Engine)](read-database-engine.md)  
+## [GetReparentedValue (компонент Database Engine)](getreparentedvalue-database-engine.md)  
+## [ToString (компонент Database Engine)](tostring-database-engine.md)  
+## [Write (компонент Database Engine)](write-database-engine.md)  
+
+# [Числовые типы](numeric-types.md)  
+## [decimal и numeric](decimal-and-numeric-transact-sql.md)  
+## [float и real](float-and-real-transact-sql.md)  
+## [int, bigint, smallint и tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  
+## [money и smallmoney](money-and-smallmoney-transact-sql.md)  
+
+# [rowversion](rowversion-transact-sql.md)  
+
+# [Строковые и двоичные типы](string-and-binary-types.md)  
+## [binary и varbinary](binary-and-varbinary-transact-sql.md)  
+## [char и varchar](char-and-varchar-transact-sql.md)  
+## [nchar и nvarchar](nchar-and-nvarchar-transact-sql.md)  
+## [ntext, text, и image](ntext-text-and-image-transact-sql.md)  
+
+# [Пространственная география](../../t-sql/spatial-geography/spatial-types-geography.md)
+# [Пространственная геометрия](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+
+# [sql_variant](sql-variant-transact-sql.md)  
+
+# [Таблица](table-transact-sql.md)  
+
+# [uniqueidentifier](uniqueidentifier-transact-sql.md)  
+
+# [XML](../../t-sql/xml/xml-transact-sql.md)

@@ -1,0 +1,8 @@
+# [Требования к архитектуре клиента для разработки служб Analysis Services](client-architecture-requirements-for-analysis-services-development.md)
+# [Типы данных в службах Analysis Services](data-types-in-analysis-services.md)
+# [Локальные кубы (службы Analysis Services — многомерные данные)](local-cubes-analysis-services-multidimensional-data.md)
+# [Спецификации максимальной емкости (службы Analysis Services)](maximum-capacity-specifications-analysis-services.md)
+# [Правила именования объектов (службы Analysis Services)](object-naming-rules-analysis-services.md)
+# [Серверные компоненты ядра OLAP](olap-engine-server-components.md)
+# [Основные сведения об архитектуре Microsoft OLAP](understanding-microsoft-olap-architecture.md)
+# [Основные сведения о физической архитектуре Microsoft OLAP](understanding-microsoft-olap-physical-architecture.md)
