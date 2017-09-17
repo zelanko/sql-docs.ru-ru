@@ -48,6 +48,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Службы Integration Services & #40; Службы SSIS & #41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Службы Integration Services &#40;Службы SSIS&#41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

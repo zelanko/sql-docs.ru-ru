@@ -65,10 +65,10 @@ Microsoft SQL Server Migration Assistant для Sybase тест-инженера
 Обратите внимание, что текущая версия SSMA тест-инженер не поддерживает параллельное выполнение разными пользователями на том же исходном или целевом сервере.  
   
 ## <a name="getting-started"></a>Приступая к работе  
-[Создание тестовых случаев & #40; SybaseToSQL & #41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
+[Создание тестовых случаев &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Установка компонентов SSMA на SQL Server & #40; SybaseToSQL & #41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[Параметры проекта & #40; Преобразование & #41; & #40; SybaseToSQL & #41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+[Установка компонентов SSMA на SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[Параметры проекта &#40;Преобразование&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
 

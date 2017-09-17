@@ -64,9 +64,9 @@ ms.lasthandoff: 08/02/2017
 >  Для каждого типа сервера существует свой шаблон по умолчанию. Изменения шаблона по умолчанию для одного типа сервера не влияет на шаблон по умолчанию для сервера другого типа. Дополнительные сведения о настройке шаблона по умолчанию для определенного типа сервера см. в разделе [Установка значений по умолчанию для определения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Создание шаблона трассировки & #40; Приложение SQL Server Profiler & #41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Изменение шаблона трассировки & #40; Приложение SQL Server Profiler & #41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
- [Экспорт шаблона трассировки & #40; Приложение SQL Server Profiler & #41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+ [Создание шаблона трассировки &#40;Приложение SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Изменение шаблона трассировки &#40;Приложение SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Экспорт шаблона трассировки &#40;Приложение SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

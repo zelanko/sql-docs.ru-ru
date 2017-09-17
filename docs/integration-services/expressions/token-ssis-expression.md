@@ -104,6 +104,6 @@ TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функции & #40; Выражение служб SSIS & #41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Функции &#40;Выражение служб SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

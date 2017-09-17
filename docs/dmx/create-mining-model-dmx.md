@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
  Имя структуры интеллектуального анализа данных формируется путем добавления строки «_structure» к имени модели, что гарантирует несовпадение имени структуры и модели.  
   
- Чтобы создать модель интеллектуального анализа данных для существующей структуры интеллектуального анализа данных, используйте [ALTER MINING STRUCTURE & #40; расширений интеллектуального анализа данных & #41;](../dmx/alter-mining-structure-dmx.md) инструкции.  
+ Чтобы создать модель интеллектуального анализа данных для существующей структуры интеллектуального анализа данных, используйте [ALTER MINING STRUCTURE &#40; расширений интеллектуального анализа данных &#41;](../dmx/alter-mining-structure-dmx.md) инструкции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -114,13 +114,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список типов данных, типов содержимого, распределений столбцов и флагов моделирования, используемых при определении столбца, см. в следующих разделах.  
   
--   [Типы данных & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Типы данных &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Содержимого типы & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Содержимого типы &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Распределения столбцов & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Распределения столбцов &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Моделирование флаги & #40; интеллектуального анализа данных & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Моделирование флаги &#40; интеллектуального анализа данных &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующих \<связи столбцов > предложения.  
   
@@ -141,7 +141,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- Список параметров, которые связаны с каждым алгоритмом, см. [алгоритмов интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Список параметров, которые связаны с каждым алгоритмом, см. [алгоритмов интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="remarks"></a>Замечания  
  Если необходимо создать модель со встроенным набором проверочных данных, следует после ALTER MINING STRUCTURE использовать инструкцию CREATE MINING STRUCTURE. При этом не все типы моделей поддерживают набор контрольных данных. Дополнительные сведения см. в статье [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md).  
@@ -207,9 +207,9 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
 
