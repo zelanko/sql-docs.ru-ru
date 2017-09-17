@@ -1,7 +1,7 @@
 ---
 title: "IsNull (тип данных geometry) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/03/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9136a2caf43fea8d5cccd90d8dba85d815511afe
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 5e213bd847f2d5836802d93ade5fa46f3dc3d1a9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (тип данных geometry)
@@ -35,7 +35,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 .IsNull  
 ```  
   
@@ -49,8 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Этот метод в основном используется инфраструктурой SQL Server; не рекомендуется использовать `IsNull` для проверки, имеет ли экземпляр значение NULL.  
   
-## <a name="examples"></a>Примеры  
-  
+
 ## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

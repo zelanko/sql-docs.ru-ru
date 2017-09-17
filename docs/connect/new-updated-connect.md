@@ -1,6 +1,6 @@
 ---
-title: "Обновлено - служб Reporting Services для SQL Server docs | Документы Microsoft"
-description: "Отображение фрагментов обновленное содержимое для последних измененных в документации для служб Reporting Services для Microsoft SQL Server."
+title: "Обновлено - подключиться к SQL Server docs | Документы Microsoft"
+description: "Отображение фрагментов обновленное содержимое для последних измененных в документации, для подключения к Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -14,15 +14,15 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
-ms.workload: reporting-services
+ms.workload: connect-to-sql
 ms.translationtype: MT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 690b622224a31f4327b6dc199b1687f1726937c2
+ms.openlocfilehash: 9d17b20e61c26ad9f8eb12a139ec7ecd2ed9497c
 ms.contentlocale: ru-ru
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Новые и недавно обновленные: службы Reporting Services для SQL Server
+# <a name="new-and-recently-updated-connect-to-sql-server"></a>Новые и недавно обновленные: подключение к SQL Server
 
 
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/13/2017
 
 
 - *Диапазон обновлений дат:* &nbsp; **2017 г-07-18** &nbsp; - в - &nbsp; **2017 г-09-11**
-- *Предметной области:* &nbsp; **служб Reporting Services для SQL Server**.
+- *Предметной области:* &nbsp; **подключение к SQL Server**.
 
 
 
@@ -47,7 +47,11 @@ ms.lasthandoff: 09/13/2017
 Следующие ссылки на новые статьи, которые недавно были добавлены.
 
 
-***На данный момент новых статей нет.***
+1. [Домашняя страница для программирования для Microsoft SQL Server клиента](homepage-sql-connection-programming.md)
+2. [Подключение с использованием проверки подлинности Azure Active Directory](php/azure-active-directory.md)
+3. [Устойчивость простоя подключения](php/connection-resiliency.md)
+4. [PHP Linux и Mac драйверы установки учебника](php/installation-tutorial-linux-mac.md)
+5. [Модули подключения для базы данных Microsoft SQL](sql-connection-libraries.md)
 
 
 
@@ -73,43 +77,13 @@ ms.lasthandoff: 09/13/2017
 
 Compact представлены ссылки на обновленные статьи, которые перечислены в разделе отрывки.
 
-1. [Свойства сервера (страница «Дополнительно») — службы Reporting Services](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-server-properties-advanced-page---reporting-servicestoolsserver-properties-advanced-page-reporting-servicesmd"></a>1. &nbsp;[Свойства сервера (страница «Дополнительно») — службы Reporting Services](tools/server-properties-advanced-page-reporting-services.md)
-
-*Обновлено: 2017 г-08-25* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 122.  ms.author= "asaxton".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 92858a7e7239197af4ac2745ffc857d8c04f55cd e86bd4767f668b4ce80dc70056181d001f8e1b89  (PR=2953  ,  Filename=server-properties-advanced-page-reporting-services.md  ,  Dirpath=docs\reporting-services\tools\  ,  MergeCommitSha40=c003d58dd887ce1eddc142fa62f8050b73c0c935) -->
-
-
-
-**AccessControlAllowCredentials** указывает, может быть предоставлен ответа на запрос клиента, если установлен флаг «учетные данные» в значение true. Значение по умолчанию — **false**.
-
-**AccessControlAllowHeaders** список заголовков, которые дадут сервера, когда клиент делает запрос разделителями-запятыми. Это свойство может быть пустой строкой, указав * разрешает все заголовки.
-
-**AccessControlAllowMethods** список с разделителями запятыми HTTP-методов, позволяющих серверу, когда клиент делает запрос. По умолчанию используются значения (GET, PUT, POST, PATCH, DELETE), указав * позволит выполнять все методы.
-
-**AccessControlAllowOrigin** список источников, которым позволит серверу, когда клиент делает запрос разделителями-запятыми. Значение по умолчанию пусто, что запрещает все запросы, указав * будет разрешить все источники, если не заданы учетные данные; Если заданы учетные данные, должен быть указан явный список источников.
-
-**AccessControlExposeHeaders** список заголовков, сервер будет предоставлять клиентам разделителями-запятыми. Значение по умолчанию — пусто.
-
-**AccessControlMaxAge** указывает количество секунд, результаты Предварительный запрос можно кэшировать. Значение по умолчанию — 600 (10 минут).
-
-
+***Ни одна из статей в этой предметной области за последнее время изменениям не подвергалась.***
 
 
 
