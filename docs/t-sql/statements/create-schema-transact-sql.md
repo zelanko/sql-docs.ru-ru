@@ -1,0 +1,198 @@
+---
+title: "Создание СХЕМЫ (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 12/01/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CREATE_SCHEMA_TSQL
+- SCHEMA
+- CREATE SCHEMA
+- SCHEMA_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- owners [SQL Server], schemas
+- table creation [SQL Server], CREATE SCHEMA statement
+- permissions [SQL Server], schemas
+- schemas [SQL Server], creating
+- CREATE SCHEMA statement
+ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
+caps.latest.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 58eaf0c325ab4884dfe1e67ae0b0889a2ca6769a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Создает схему в текущей базе данных. При помощи транзакции CREATE SCHEMA также можно создавать таблицы и представления в новой схеме и предоставлять разрешения GRANT, DENY или REVOKE на такие объекты.  
+  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+-- Syntax for SQL Server and Azure SQL Database  
+  
+CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
+  
+<schema_name_clause> ::=  
+    {  
+    schema_name  
+    | AUTHORIZATION owner_name  
+    | schema_name AUTHORIZATION owner_name  
+    }  
+  
+<schema_element> ::=   
+    {   
+        table_definition | view_definition | grant_statement |   
+        revoke_statement | deny_statement   
+    }  
+```  
+  
+```  
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
+```  
+  
+## <a name="arguments"></a>Аргументы  
+ *schema_name*  
+ Имя, по которому схема идентифицируется в данной базе данных.  
+  
+ АВТОРИЗАЦИЯ *owner_name*  
+ Указывает имя участника уровня базы данных, который является владельцем схемы. Этому участнику могут принадлежать и другие схемы, при этом текущая схема может не использоваться по умолчанию.  
+  
+ *Table_Definition*  
+ Указывает инструкцию CREATE TABLE, которая создает таблицу внутри схемы. У участника, выполняющего эту инструкцию, должно быть разрешение CREATE TABLE в текущей базе данных.  
+  
+ *view_definition*  
+ Указывает инструкцию CREATE VIEW, которая создает представление внутри схемы. У участника, выполняющего эту инструкцию, должно быть разрешение CREATE VIEW в текущей базе данных.  
+  
+ *grant_statement*  
+ Указывает инструкцию GRANT, которая предоставляет разрешения на любой защищаемый объект, за исключением новой схемы.  
+  
+ *revoke_statement*  
+ Указывает инструкцию REVOKE, которая отменяет разрешения на любой защищаемый объект, за исключением новой схемы.  
+  
+ *deny_statement*  
+ Указывает инструкцию DENY, которая запрещает разрешения на любой защищаемый объект, за исключением новой схемы.  
+  
+## <a name="remarks"></a>Замечания  
+  
+> [!NOTE]  
+>  Выражения, которые содержат инструкцию CREATE SCHEMA AUTHORIZATION, но не определяют имя, разрешены только для обратной совместимости. Выражение не вызывает ошибку, но не создает схему.  
+  
+ Инструкция CREATE SCHEMA создает схему, содержащиеся в ней таблицы и представления, а также разрешения GRANT, REVOKE или DENY на любой защищаемый объект в одной инструкции. Эта инструкция должна выполняться как отдельный пакет. При помощи инструкции CREATE SCHEMA объекты создаются внутри создаваемой схемы.  
+  
+ Транзакции CREATE SCHEMA являются атомарными. Если в процессе выполнения инструкции CREATE SCHEMA возникают ошибки, ни один из указанных защищаемых объектов не создается и ни одно разрешение не предоставляется.  
+  
+ Защищаемые объекты, которые необходимо создать при помощи инструкции CREATE SCHEMA, могут быть перечислены в любом порядке, за исключением представлений, ссылающихся на другие представления. В этом случае ссылающееся представление должно быть создано после того представления, на которое оно ссылается.  
+  
+ Таким образом, при помощи инструкции GRANT можно предоставлять разрешения на объект еще до того, как он будет создан, а инструкция CREATE VIEW может появляться раньше инструкций CREATE TABLE, создающих таблицы, на которые ссылается представление. Кроме того, инструкции CREATE TABLE могут декларировать внешние ключи к таблицам, определенным позже в инструкции CREATE SCHEMA.  
+  
+> [!NOTE]  
+>  В инструкциях CREATE SCHEMA поддерживаются DENY и REVOKE. Предложения DENY и REVOKE будут исполняться в той последовательности, в которой они появляются в инструкции CREATE SCHEMA.  
+  
+ Участник, выполняющий инструкцию CREATE SCHEMA, может указать другого участника базы данных в качестве владельца создаваемой схемы. Для этого необходимы дополнительные разрешения, описанные в подразделе «Разрешения» далее в этом разделе.  
+  
+ Новая схема принадлежит одному из следующих участников уровня базы данных: пользователю базы данных, роли базы данных или роли приложения. Объекты, создаваемые в схеме, принадлежат владельцу схемы и имеют значение NULL для **principal_id** в **sys.objects**. Владение объектами, содержащимися в схеме, можно передать любому участнику уровня базы данных, однако у владельца схемы всегда остается разрешение CONTROL на объекты в схеме.  
+  
+> [!CAUTION]  
+>  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+  
+ **Неявная схема и создание пользователя**  
+  
+ В некоторых случаях пользователь может использовать базу данных без учетной записи пользователя базы данных (субъект базы данных в базе данных). Это может произойти в следующих ситуациях:  
+  
+-   Имя входа имеет **CONTROL SERVER** права.  
+  
+-   Пользователь Windows не имеет индивидуальной учетной записи пользователя базы данных (субъект базы данных в базе данных), однако получает доступ в базу данных как член группы Windows, которая имеет учетную запись пользователя базы данных (субъект базы данных для группы Windows).  
+  
+ Когда пользователь без учетной записи пользователя базы данных создает объект без определения существующей схемы, субъект базы данных и схема по умолчанию будут автоматически созданы в базе данных для этого пользователя. Созданные субъект и схема базы данных будут иметь то же имя, которым пользовался пользователь при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (имя входа в систему проверки подлинности или имя пользователя Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ).  
+  
+ Данное поведение необходимо, чтобы позволить пользователям, базирующимся в группах Windows, создавать и обладать объектами. Однако это может привести к неумышленному созданию схем и пользователей. Для избежания создания пользователей и съем, каждый раз, при возможности, явно создавайте субъекты базы данных и назначайте схему по умолчанию. Или явно выражайте существующую схему при создании объектов в базе данных, используя двух- или трехчастные имена объектов.  
+
+>  [!NOTE]
+>  Неявное создание пользователя Azure Active Directory не допускается на [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Поскольку создание пользователя Azure AD из внешнего поставщика необходимо проверить состояние пользователей в AAD, создании учетной записи пользователя завершится с ошибкой 2760: **указанное имя схемы "\<user_name@domain>» не существует или у вас разрешение на его использование.** И появляется сообщение об ошибке 2759: **CREATE SCHEMA завершилось неудачно из-за предыдущих ошибок.** Чтобы устранить эти ошибки, пользователя Azure AD из внешнего поставщика сначала создать и затем снова запустите инструкцию создания объекта.
+ 
+  
+## <a name="deprecation-notice"></a>Уведомление об устаревании  
+ Инструкции CREATE SCHEMA, не указывающие имя схемы, поддерживаются в данный момент только для обратной совместимости. Такие инструкции на самом деле не создают схему внутри базы данных, а создают таблицы и представления, а также предоставляют разрешения. Участникам не нужны разрешения CREATE SCHEMA для выполнения этой более ранней формы инструкции CREATE SCHEMA, поскольку схема не создается. Эта функция не будет включена в последующие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+## <a name="permissions"></a>Permissions  
+ Требует разрешения CREATE SCHEMA в базе данных.  
+  
+ Чтобы создать объект, указанный в инструкции CREATE SCHEMA, у пользователя должно быть соответствующее разрешение CREATE.  
+  
+ Чтобы назначить другого пользователя владельцем создаваемой схемы, у участника должно быть разрешение IMPERSONATE на этого пользователя. Если роль базы данных указана в качестве владельца, то вызывающий объект должен входить в роль или иметь на нее разрешение ALTER.  
+  
+> [!NOTE]  
+>  Для обеспечения обратной совместимости синтаксиса разрешения на CREATE SCHEMA не проверяются, поскольку схема не создается.  
+  
+## <a name="examples"></a>Примеры  
+  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Создание схемы и предоставление разрешений  
+ В следующем примере создается схема `Sprockets`, принадлежащая `Annik`, которая содержит таблицу `NineProngs`. Инструкция предоставляет разрешение `SELECT` для `Mandar` и запрещает `SELECT` для `Prasanna`. Обратите внимание на то, что `Sprockets` и `NineProngs` создаются в одной инструкции.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+CREATE SCHEMA Sprockets AUTHORIZATION Annik  
+    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    GRANT SELECT ON SCHEMA::Sprockets TO Mandar  
+    DENY SELECT ON SCHEMA::Sprockets TO Prasanna;  
+GO   
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>Б. Создание схемы и таблицы в схеме  
+ В следующем примере создается схема `Sales` и создает таблицу `Sales.Region` в этой схеме.  
+  
+```  
+CREATE SCHEMA Sales;  
+GO;  
+  
+CREATE TABLE Sales.Region   
+(Region_id int NOT NULL,  
+Region_Name char(5) NOT NULL)  
+WITH (DISTRIBUTION = REPLICATE);  
+GO  
+```  
+  
+### <a name="c-setting-the-owner-of-a-schema"></a>В. Владельца схемы  
+ В следующем примере создается схема `Production` владельцем `Mary`.  
+  
+```  
+CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
+GO  
+```  
+  
+## <a name="see-also"></a>См. также:  
+ [Разрешение ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [Удаление СХЕМЫ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
+ [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
+ [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
+ [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)   
+ [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
+ [sys.schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [Создание схемы базы данных](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
+  
+  
+
+
+

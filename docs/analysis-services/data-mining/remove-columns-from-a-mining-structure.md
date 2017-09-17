@@ -1,28 +1,33 @@
 ---
-title: "удалить столбцы из структуры интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "структуры интеллектуального анализа данных [службы Analysis Services], столбцы"
-  - "удаление столбцов"
-  - "удаление столбцов"
-  - "столбцы [интеллектуальный анализ данных], столбцы структуры интеллектуального анализа данных"
+title: "Удалить столбцы из структуры интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], columns
+- removing columns
+- deleting columns
+- columns [data mining], mining structure columns
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4fc6781554893147c9f2e5d1c3eb74c3526ec878
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# удалить столбцы из структуры интеллектуального анализа данных
+# <a name="remove-columns-from-a-mining-structure"></a>удалить столбцы из структуры интеллектуального анализа данных
   Конструктор интеллектуального анализа данных можно использовать для удаления столбцов структуры интеллектуального анализа данных после ее создания. Возможны следующие причины удаления столбца структуры интеллектуального анализа данных.  
   
 -   Структура интеллектуального анализа данных содержит несколько копий столбца, и вы хотите избежать дублирования данных в модели.  
@@ -33,7 +38,7 @@ caps.handback.revision: 27
   
  При удалении столбца из структуры интеллектуального анализа данных не производится его удаления из представления источников данных или внешних данных. Удаляются только метаданные. Однако при изменении столбцов, используемых в структуре интеллектуального анализа данных, необходимо выполнить повторную обработку структуры и любых, основанных на ней моделей.  
   
-### Удаление столбца из структуры интеллектуального анализа данных  
+### <a name="to-remove-a-column-from-the-mining-structure"></a>Удаление столбца из структуры интеллектуального анализа данных  
   
 1.  Перейдите на вкладку **Структура интеллектуального анализа данных** в конструкторе интеллектуального анализа данных.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 27
   
 4.  В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

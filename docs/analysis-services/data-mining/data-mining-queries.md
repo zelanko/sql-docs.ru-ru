@@ -1,29 +1,34 @@
 ---
-title: "Запросы интеллектуального анализа данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "прогнозирующие запросы [службы Analysis Services]"
-  - "запросы [расширение интеллектуального анализа данных], создание"
-  - "прогнозирующие запросы [расширения интеллектуального анализа данных]"
-  - "Построитель прогнозирующих запросов"
-  - "модели интеллектуального анализа данных [службы Analysis Services], запросы"
+title: "Запросы интеллектуального анализа данных | Документы Microsoft"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- queries [DMX], creating
+- prediction queries [DMX]
+- Prediction Query Builder
+- mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Запросы интеллектуального анализа данных
+# <a name="data-mining-queries"></a>Запросы интеллектуального анализа данных
   Запросы интеллектуального анализа Возможные действия:  
   
 -   Применить модели к новым данным, чтобы сделать один или несколько прогнозов. Входные значения можно предоставить в качестве параметров или в одном пакете.  
@@ -73,14 +78,14 @@ caps.handback.revision: 44
   
 -   Для просмотра моделей каждого типа служат дополнительные средства просмотра интеллектуального анализа данных, предусмотренные для алгоритма каждого типа. Дополнительные сведения см. в разделе [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md).  
   
--   Просмотр содержимого моделей каждого типа выполняется с помощью **средства просмотра деревьев содержимого общего вида (Майкрософт)**. О том, как интерпретировать этих сведения, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+-   Просмотр содержимого моделей каждого типа выполняется с помощью **средства просмотра деревьев содержимого общего вида (Майкрософт)**. О том, как интерпретировать этих сведения, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ##  <a name="bkmk_Interfaces"></a> Средства и интерфейс для построения запросов  
- Запросы интеллектуального анализа данных можно строить интерактивно с помощью одного из имеющихся в SQL Server средств работы с запросами. Графический построитель прогнозирующих запросов доступен как в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , так и в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Если вы ранее не пользовались построителем прогнозирующих запросов, рекомендуется пройти учебник [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md) , чтобы познакомиться с его интерфейсом. Краткое описание приведено в подразделе "Создание запроса" раздела [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
+ Запросы интеллектуального анализа данных можно строить интерактивно с помощью одного из имеющихся в SQL Server средств работы с запросами. Графический построитель прогнозирующих запросов доступен как в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , так и в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Если вы ранее не пользовались построителем прогнозирующих запросов, рекомендуется пройти учебник [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) , чтобы познакомиться с его интерфейсом. Краткое описание приведено в подразделе "Создание запроса" раздела [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md).  
   
  Построитель прогнозирующих запросов является полезным для запуска запросов, которые будут настраиваться позже. Можно легко добавить источники данных и сопоставить их со столбцами, а затем переключиться в представление DMX и настроить запрос, добавив в него предложение WHERE или другие функции.  
   
- Познакомившись с моделями интеллектуального анализа данных и научившись строить запросы, можно также писать запросы напрямую с помощью расширений интеллектуального анализа данных. Расширения интеллектуального анализа данных ― это язык запросов, похожий на Transact-SQL, который может быть использован множеством разных клиентов. Язык расширений интеллектуального анализа данных прекрасно подходит для создания пользовательских прогнозов и сложных запросов. Основные сведения о расширениях интеллектуального анализа данных см. в разделе [Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../Topic/Creating%20and%20Querying%20Data%20Mining%20Models%20with%20DMX:%20Tutorials%20\(Analysis%20Services%20-%20Data%20Mining\).md).  
+ Познакомившись с моделями интеллектуального анализа данных и научившись строить запросы, можно также писать запросы напрямую с помощью расширений интеллектуального анализа данных. Расширения интеллектуального анализа данных ― это язык запросов, похожий на Transact-SQL, который может быть использован множеством разных клиентов. Язык расширений интеллектуального анализа данных прекрасно подходит для создания пользовательских прогнозов и сложных запросов. Основные сведения о расширениях интеллектуального анализа данных см. в разделе [Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0).  
   
  Редакторы расширений интеллектуального анализа данных есть как в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , так и в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Кроме того, запросы можно начинать с помощью построителя прогнозирующих запросов, а затем перейти в представление текстового редактора и скопировать инструкцию расширений интеллектуального анализа данных в другой клиент. Дополнительные сведения см. в разделе [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md).  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 44
   
  Дополнительные сведения о контекстах безопасности, необходимых для выполнения запросов интеллектуального анализа данных, см. в разделе [Общие сведения о безопасности (интеллектуальный анализ данных)](../../analysis-services/data-mining/security-overview-data-mining.md).  
   
-## В этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В этом разделе подробно представлены все типы запросов интеллектуального анализа данных, а также ссылки на детальные примеры создания запросов к моделям интеллектуального анализа данных.  
   
  [Прогнозирующие запросы (интеллектуальный анализ данных)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -152,22 +157,22 @@ caps.handback.revision: 44
   
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## Связанные задачи  
+## <a name="related-tasks"></a>Связанные задачи  
  Используйте эти ссылки, чтобы научиться создавать запросы интеллектуального анализа данных и работать с ними.  
   
 |Задания|Ссылки|  
 |-----------|-----------|  
-|Просмотрите учебники и пошаговые руководства по запросам интеллектуального анализа данных|[Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — начальный уровень)](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)<br /><br /> [Учебник по расширениям интеллектуального анализа данных для прогнозирования временных рядов](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md)|  
+|Просмотрите учебники и пошаговые руководства по запросам интеллектуального анализа данных|[Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — начальный уровень)](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [Учебник по расширениям интеллектуального анализа данных для прогнозирования временных рядов](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
 |Использование инструментов для создания запросов интеллектуального анализа данных в среде SQL Server Management Studio и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Создание DMX-запроса в среде SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Применение функций прогнозирования к модели](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Изменение прогнозирующего запроса вручную](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Работа с внешними данными, используемыми в прогнозирующих запросах|[Выбор и сопоставление входных данных для прогнозирующего запроса](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Выбор и сопоставление входных данных для прогнозирующего запроса](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Использование результатов запросов|[Просмотр и сохранение результатов прогнозирующего запроса](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |Использование шаблонов запросов на языках DMX и XMLA в среде Management Studio|[создать одноэлементный прогнозирующий запрос из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Создание запроса интеллектуального анализа данных с помощью XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Использование шаблонов служб Analysis Services в среде SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Дополнительные сведения о запросах содержимого и примеры|[Создание запроса содержимого к модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [запросить параметры, используемые для создания модели интеллектуального анализа данных](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Запросы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |Настройка параметров запроса и устранение проблем с разрешением запроса|[изменить значение времени ожидания для запросов интеллектуального анализа данных](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
-|Использование компонентов интеллектуального анализа данных из служб Integration Services|[Задача «Запрос интеллектуального анализа данных»](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Преобразование «Запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Использование компонентов интеллектуального анализа данных из служб Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## См. также раздел  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "Указание таблицы дат для использования с логикой операций со временем (табличные службы SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Указание таблицы дат | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: c23ab7153ce90c55c9858dde6a0f0083bc92def7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Указание таблицы дат для использования с логикой операций со временем (табличные службы SSAS)
-  Для использования логики операций со временем в формулах DAX необходимо указать таблицу дат и уникальный столбец идентификаторов (datetime) типа данных Date. После указания в таблице дат столбца в качестве уникального идентификатора можно создавать связи между столбцами таблицы дат и любых таблиц фактов.  
+# <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Указание таблицы дат для использования с логики операций со временем
+  Для использования функции логики операций со временем в формулах DAX, необходимо указать таблицу дат и столбец уникальных идентификаторов (datetime) типа данных Date. После указания в таблице дат столбца в качестве уникального идентификатора можно создавать связи между столбцами таблицы дат и любых таблиц фактов.  
   
- При использовании логики операций со временем действуют следующие правила.  
+ При использовании функций логики операций со временем, применяются следующие правила:  
   
 -   При использовании логики операций со временем в DAX никогда не указывайте столбец datetime из таблицы фактов. Всегда создавайте в модели отдельную таблицу дат, содержащую хотя бы один столбец datetime с типом данных Date и уникальными значениями.  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 5
   
 -   Создайте связи между таблицами фактов и столбцами типа данных Date в таблице дат.  
   
-#### Указание таблицы дат и уникального идентификатора  
+#### <a name="to-specify-a-date-table-and-unique-identifier"></a>Указание таблицы дат и уникального идентификатора  
   
 1.  В конструкторе моделей щелкните таблицу дат.  
   
@@ -51,8 +56,8 @@ caps.handback.revision: 5
   
 4.  При необходимости создайте связи между таблицами фактов и таблицей дат.  
   
-## См. также  
- [Вычисления (табличные службы SSAS)](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Функции логики операций со временем (DAX)](http://msdn.microsoft.com/ru-ru/91df278d-4b28-40c1-a572-cdb91f081517)  
+## <a name="see-also"></a>См. также:  
+ [Вычисления](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
+ [Функции логики операций со временем (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

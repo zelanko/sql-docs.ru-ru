@@ -1,46 +1,39 @@
 ---
-title: "Советы и рекомендации по глобализации (службы Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "переводы [службы Analysis Services], клиентские приложения"
-  - "сравнения данных"
-  - "сравнения дней недели [службы Analysis Services]"
-  - "время [службы Analysis Services]"
-  - "сравнения месяцев [службы Analysis Services]"
+title: "Глобализация советы и рекомендации по обеспечению (службы Analysis Services) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- translations [Analysis Services], client applications
+- date comparisons
+- day-of-week comparisons [Analysis Services]
+- time [Analysis Services]
+- month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Советы и рекомендации по глобализации (службы Analysis Services)
+# <a name="globalization-tips-and-best-practices-analysis-services"></a>Советы и рекомендации по глобализации (службы Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Только многомерные  
   
  Эти советы и рекомендации помогут улучшить переносимость решений для бизнес-аналитики и избежать ошибок, которые непосредственно связаны с языковыми параметрами и параметрами сортировки.  
   
--   [Использование одинаковых параметров сортировки во всем стеке](#bkmk_sameColl)  
-  
--   [Общие рекомендации для параметров сортировки](#bkmk_recos)  
-  
--   [Чувствительность к регистру идентификаторов объекта](#bkmk_objid)  
-  
--   [Тестирование языкового стандарта с помощью Excel и SQL Server Profiler](#bkmk_test)  
-  
--   [Написание MDX-запросов в решении, содержащем переводы](#bkmk_mdx)  
-  
--   [Написание MDX-запросов, содержащих значения даты и времени](#bkmk_datetime)  
-  
 ##  <a name="bkmk_sameColl"></a> Использование одинаковых параметров сортировки во всем стеке  
- Если это возможно, попробуйте использовать те же параметры сортировки в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], которые применяются для компонента Database Engine, чтобы добиться соответствия чувствительности к ширине, регистру и диакритическим знакам.  
+ Если это возможно, попробуйте использовать те же параметры сортировки в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которые применяются для компонента Database Engine, чтобы добиться соответствия чувствительности к ширине, регистру и диакритическим знакам.  
   
  Каждая служба имеет свои собственные параметры сортировки. По умолчанию для ядра СУБД используется SQL_Latin1_General_CP1_CI_AS, а для Analysis Services — Latin1_General_AS. Значения по умолчанию совместимы с точки зрения чувствительности к регистру, ширине и диакритическим знакам. Помните, что, если изменить какие-либо параметры сортировки, могут возникнуть проблемы, если свойства параметров сортировки существенно отличаются.  
   
@@ -90,7 +83,7 @@ caps.handback.revision: 32
  Только к идентификаторам, а не именам объектов применяются типы поведения, описанные в таблице. Если вы заметите изменения в работе решения (после установки SQL Server 2012 SP2 или более поздней версии), то это изменение, по всей видимости, будет связано с обработкой. Идентификаторы объектов не влияют на запросы. Для обоих языков запросов (DAX и MDX) механизм обработки формул использует имя объекта (а не идентификатор).  
   
 > [!NOTE]  
->  Изменения кода, связанные с учета регистра, были критическими изменениями для некоторых приложений. Дополнительные сведения см. в разделе [Критические изменения функций служб Analysis Services SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md).  
+>  Изменения кода, связанные с учета регистра, были критическими изменениями для некоторых приложений. Дополнительные сведения см. в разделе [Критические изменения функций служб Analysis Services SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) .  
   
 ##  <a name="bkmk_test"></a> Тестирования языков с помощью Excel, SQL Server Profiler и SQL Server Management Studio  
  При тестировании переводов соединение должно указывать код языка перевода. Как указано в разделе [Получение другого языка из служб SSAS в Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), для тестирования переводов можно использовать Excel.  
@@ -105,19 +98,19 @@ caps.handback.revision: 32
   
      Вы увидите переводы на французский из образца базы данных Adventure Works.  
   
-     ![Сводная таблица Excel с переводами на французский](../analysis-services/media/ssas-localetest-excel.png "Сводная таблица Excel с переводами на французский")  
+     ![Сводная таблица Excel с переводами на французский](../analysis-services/media/ssas-localetest-excel.png "сводной таблицы Excel с переводами на французский")  
   
  Затем можно использовать приложение SQL Server Profiler для подтверждения кода языка. Щелкните событие `Session Initialize` , а затем найдите `<localeidentifier>1036</localeidentifier>`в текстовом поле под списком свойств.  
   
  В среде Management Studio можно указать код языка для соединения с сервером.  
   
--   В обозревателе объектов последовательно выберите **Подключения** | **Службы Analysis Services** | **Параметры** и откройте вкладку **Дополнительные параметры соединения**.  
+-   В обозревателе объектов последовательно выберите **Подключения** | **Службы Analysis Services** | **Параметры**и откройте вкладку **Дополнительные параметры соединения** .  
   
 -   Введите `Local Identifier=1036` и нажмите кнопку **Подключение**.  
   
 -   Выполните MDX-запрос к базе данных Adventure Works. Результатами запроса должны быть переводы на французский.  
   
-     ![Запрос многомерных выражений с переводами на французский в SSMS](../analysis-services/media/ssas-localetest-ssms.png "Запрос многомерных выражений с переводами на французский в SSMS")  
+     ![Запрос многомерных Выражений с переводами на французский в SSMS](../analysis-services/media/ssas-localetest-ssms.png "запрос многомерных Выражений с переводами на французский в SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Написание MDX-запросов в решении, содержащем переводы  
  Переводы предоставляют отображаемые сведения об именах объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , однако идентификаторы тех же самых объектов не переводятся. По возможности для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] необходимо использовать идентификаторы и ключи, а не переведенные заголовки и имена. Например, для обеспечения мобильности в нескольких языках необходимо использовать ключи элементов, а не имена элементов для инструкций многомерных выражений и скриптов.  
@@ -144,8 +137,7 @@ caps.handback.revision: 32
   
      В следующем MDX-запросе, заимствованном из записи на форуме, описывается, как использовать формат для возврата дат в определенном формате независимо от базовых региональных параметров.  
   
-     Исходное сообщение см. в записи на форуме [SSAS 2012 создает недопустимые даты (Network Steve)](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2).  
-  
+
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
     member [LinkTimeAdd15Date_Manual] as Format(dateadd("d",11,"2014-12-13"), "mm/dd/yyyy")  
@@ -158,7 +150,7 @@ caps.handback.revision: 32
   
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Сценарии глобализации для служб Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Написание инструкций Transact-SQL, адаптированных к международному использованию](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

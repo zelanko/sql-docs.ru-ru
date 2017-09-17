@@ -1,26 +1,31 @@
 ---
-title: "Совместное использование веб-каналов данных Power Pivot с помощью библиотеки каналов данных (Power Pivot для SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "веб-каналы данных [службы Analysis Services с SharePoint]"
+title: "Совместное использование веб-каналов данных с помощью библиотеки каналов данных (Power Pivot для SharePoint) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31457f6abb88dff525bd19609b8dd552adadfeb8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Совместное использование веб-каналов данных Power Pivot с помощью библиотеки каналов данных (Power Pivot для SharePoint)
+# <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Совместное использование веб-каналов данных Power Pivot с помощью библиотеки каналов данных (Power Pivot для SharePoint)
   Каналом данных называется поток XML-данных, создаваемый службой или приложением и представляющий данные в формате Atom. Он все чаще используется для передачи данных между приложениями и средствами просмотра на стороне клиента. В развернутой службе [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint веб-каналы данных используются для заполнения источника данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данными приложений или служб, поддерживающих Atom.  
   
  Если в организации уже используется сочетание приложений с поддержкой Atom, то изучение этих форматов может и не понадобиться, поскольку данные передаются между приложениями без дополнительных преобразований. Однако организациям, использующим пользовательские решения для публикации веб-каналов Atom, часто нужны способы обеспечения доступа к каналам для специалистов по работе с данными. Один из таких способов заключается в создании и предоставлении общего доступа к сервисным документам данных (ATOMSVC-файлам), которые предназначены для создания каналов и установления соединения с источниками данных в сети. Специальная библиотека, которая называется библиотекой каналов данных, поддерживает создание и предоставление общего доступа к сервисным документам данных в веб-приложении SharePoint.  
@@ -38,7 +43,7 @@ caps.handback.revision: 26
  [Следующий шаг. Использование сервисного документа данных](#usedsdoc)  
   
 > [!NOTE]  
->  Хотя каналы данных служат для добавления веб-данных к источнику данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], создаваемому в [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], все клиентские приложения, совместимые с веб-каналами Atom, могут обрабатывать сервисный документ данных.  
+>  Хотя каналы данных служат для добавления веб-данных к источнику данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , создаваемому в [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], все клиентские приложения, совместимые с веб-каналами Atom, могут обрабатывать сервисный документ данных.  
   
 ##  <a name="prereq"></a> Предварительные требования  
  Необходимо развертывание [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, обеспечивающее обработку запросов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме SharePoint. Развертывание поддержки каналов данных производится с помощью пакета решения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -82,14 +87,14 @@ caps.handback.revision: 26
   
 6.  Сохраните документ. Сервисный документ данных сохраняется как физический ATOMSVC-файл в библиотеке содержимого, настроенной для данного типа содержимого.  
   
- Когда необходимо использовать сервисный документ данных, можно открыть книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] и выбрать параметр **Из веб-канала данных** в мастере импорта данных. При получении запроса пользователь указывает URL-адрес сервисного документа данных в SharePoint, чтобы начать операцию импорта данных. Дополнительные сведения см. в разделе [Использование веб-каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
+ Когда необходимо использовать сервисный документ данных, можно открыть книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] и выбрать параметр **Из веб-канала данных** в мастере импорта данных. При получении запроса пользователь указывает URL-адрес сервисного документа данных в SharePoint, чтобы начать операцию импорта данных. Дополнительные сведения см. в статье [Использование веб-каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ##  <a name="securedsdoc"></a> Обеспечение безопасности сервисного документа данных  
  Сервисный документ данных наследует разрешения библиотеки, в которой он содержится. Разрешения, задаваемые для документа, определяют, может ли пользователь открыть, изменить или удалить сервисный документ данных.  
   
  Для использования сервисного документа данных для импорта каналов данных в клиентском приложении [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] пользователю необходимы только разрешения на просмотр документа. Для разрешения URL-адреса в мастере импорта достаточно разрешений на просмотр.  
   
- Разрешения на просмотр сервисного документа данных проверяются только в момент начала выполнения операции импорта канала данных. После импорта регулярная проверка разрешений документа выполняться не будет. Веб-каналы, добавленные к источнику данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], существуют в виде статичных данных, отключенных от сервисного документа данных, обеспечившего данные исходного соединения.  
+ Разрешения на просмотр сервисного документа данных проверяются только в момент начала выполнения операции импорта канала данных. После импорта регулярная проверка разрешений документа выполняться не будет. Веб-каналы, добавленные к источнику данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , существуют в виде статичных данных, отключенных от сервисного документа данных, обеспечившего данные исходного соединения.  
   
  Аналогичным образом все расположенные далее в расписании операции обновления данных «Обновить» также не включают сервисный документ данных. Во время импорта данные соединения для каждого веб-канала копируются в источник данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в целях обновления. По сути дела, разрешения сервисного документа данных при обновлении данных не проверяются, поскольку сам документ никогда не указывается в операции обновления.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 26
 ##  <a name="usedsdoc"></a> Следующий шаг. Использование сервисного документа данных  
  Для использования сервисного документа данных, созданного в библиотеке SharePoint, служит параметр импорта **Из каналов данных** источника данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Инструкции см. в разделе [Использование веб-каналов данных (Power Pivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-каналы данных Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

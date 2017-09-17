@@ -1,22 +1,27 @@
 ---
-title: "Развертывание решений PowerPivot в SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Развертывание решений PowerPivot для SharePoint | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a9725c24b4cc324db21e9c39cdd9feef0829cae
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Развертывание решений PowerPivot в SharePoint
+# <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
   Используйте следующие инструкции, чтобы вручную развернуть два пакета решений, которые добавляют компоненты [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среду SharePoint Server 2010. Развертывание решений — это обязательный шаг по настройке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint на сервере SharePoint 2010. Сведения о просмотре полного списка необходимых действий см. в разделе [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Кроме того, для развертывания решений можно использовать средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . При установке одиночного сервера проще и удобнее использовать средство настройки, однако если вы предпочитаете знакомое средство или если требуется настроить несколько компонентов одновременно, то лучше пользоваться центром администрирования и PowerShell. Дополнительные сведения об использовании средства настройки см. в разделе [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
@@ -38,7 +43,7 @@ caps.handback.revision: 13
  [О решениях PowerPivot](#intro)  
   
 ##  <a name="bkmk_classic"></a> Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell с **консоли управления SharePoint 2010**, заменив **http://\<имя сайта верхнего уровня>** нужным именем сайта SharePoint.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **консоль управления SharePoint 2010**, заменив **http://\<имя верхнего уровня сайта >** с Имя сайта SharePoint:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -47,7 +52,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  Должно быть возвращено значение **false**. Если значение равно **true**, доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] с помощью этого веб-приложения невозможен.  
   
 ##  <a name="bkmk_farm"></a> Шаг 1. Развертывание решения фермы  
- В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/ru-ru/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Это действие выполняется один раз после установки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.  
   
@@ -118,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Нажмите **Отозвать решение**.  
   
- Если при развертывании сервера возникли проблемы, связанные с решением фермы, повторите развертывание, выбрав в средстве настройки **вариант** Восстановить [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Предпочтительнее выполнять операции восстановления с помощью PowerPivot Configuration Tool, так как они включают меньше шагов. Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/ru-ru/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Если при развертывании сервера возникли проблемы, связанные с решением фермы, повторите развертывание, выбрав в средстве настройки **вариант** Восстановить [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Предпочтительнее выполнять операции восстановления с помощью PowerPivot Configuration Tool, так как они включают меньше шагов. Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Если же необходимо повторное развертывание всех решений, обязательно выполните его в следующем порядке:  
   
@@ -146,7 +151,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |Powerpivotfarm.wsp|Добавляет файл Microsoft.AnalysisServices.SharePoint.Integration.dll к глобальной сборке.<br /><br /> Добавляет файл Microsoft.AnalysisServices.ChannelTransport.dll к глобальной сборке.<br /><br /> Устанавливает функции и файлы ресурсов, а также регистрирует типы содержимого.<br /><br /> Добавляет шаблоны библиотек для библиотек веб-канала данных и коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Добавляет страницы приложений для настройки приложений службы, панели мониторинга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , обновления данных и коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |powerpivotwebapp.wsp|Добавляет файлы ресурсов Microsoft.AnalysisServices.SharePoint.Integration.dll в папку расширений веб-сервера на сервере клиентского веб-интерфейса.<br /><br /> Добавляет веб-службу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] к серверу клиентского веб-интерфейса.<br /><br /> Добавляет возможность формирования эскизов для коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обновление Power Pivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Настройка PowerPivot с помощью Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

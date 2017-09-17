@@ -1,34 +1,39 @@
 ---
-title: "Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "библиотека веб-потоков данных"
-  - "веб-каналы данных [службы Analysis Services с SharePoint]"
+title: "Создание или Настройка библиотеки веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feed library
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55a0d510b8d80ca4c3752194b4c9c488ac4d787b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint)
+# <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint)
   *Библиотека каналов данных* — это специализированная библиотека SharePoint, которая позволяет регистрировать сервисные документы данных Atom (ATOMSVC) и предоставлять к ним общий доступ. Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
   
 -   Создавать и изменять *сервисные документы данных*, используемые для указания HTTP-соединения с определенным каналом.  
   
 -   Предоставлять общий доступ и управлять сервисными документами данных в централизованном местоположении.  
   
--   Визуально определять сервисные документы данных по значкам, что позволяет легко отличать их от других документов, хранящихся в той же библиотеке: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.png "GMNI_IconDataFeed")  
+-   Визуально определять сервисные документы данных по значкам, что позволяет легко отличать сервисных документов из других документов, хранящихся в той же библиотеке: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  В библиотеке каналов данных всегда содержатся сервисные документы данных (ATOMSVC), но никогда не содержатся сами каналы данных. В отличие от канала данных, состоящего из статических XML-данных, в сервисных документах данных указывается URL-адрес к службам или приложениям, используемым для создания канала по требованию, благодаря чему предоставляются сведения соединения, которые могут использоваться повторно при повторяющихся операциях импорта.  
   
@@ -41,14 +46,14 @@ caps.handback.revision: 22
  [Добавление типа содержимого потока данных в любую библиотеку](#addtolib)  
   
 ##  <a name="prereq"></a> Предварительные требования  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если шаблон библиотеки потоков данных недоступен, то это предварительное условие, вероятнее всего, не было выполнено. Дополнительные сведения см. в статье [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate power pivot integration for site collections in ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если шаблон библиотеки потоков данных недоступен, то это предварительное условие, вероятнее всего, не было выполнено. Дополнительные сведения см. в статье [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Создавать библиотеку на сайте может только его владелец.  
   
 ##  <a name="createlib"></a> Создание новой библиотеки потоков данных  
  Создание библиотеки потоков данных является первым этапом включения каналов данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Поскольку библиотека потоков данных обеспечивает страницы приложения и управления для сервисных документов данных, эту библиотеку необходимо установить до создания новых документов.  
   
- Библиотека каналов данных создается на основе встроенного шаблона стандартного *типа содержимого сервисного документа данных*, определяющего свойства и режимы работы сервисного документа данных.  
+ Библиотека каналов данных создается на основе встроенного шаблона стандартного *типа содержимого сервисного документа данных* , определяющего свойства и режимы работы сервисного документа данных.  
   
 1.  В левом верхнем углу страницы нажмите кнопку **Действия сайта** .  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 22
   
  Ссылка на библиотеку потоков данных отобразится на панели навигации быстрого запуска для данного сайта.  
   
- После создания библиотеки с ее помощью можно создавать сервисные документы данных. Дополнительные сведения см. в разделе [Использование веб-каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
+ После создания библиотеки с ее помощью можно создавать сервисные документы данных. Дополнительные сведения см. в статье [Использование веб-каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ##  <a name="addtolib"></a> Добавление типа содержимого потока данных в любую библиотеку  
  Если не требуется создавать специальную библиотеку каналов данных, но желательно создать сервисный документ данных и управлять ими с сайта SharePoint, можно вручную добавить и настроить тип содержимого документа службы данных для любой библиотеки, которая будет использоваться для общего доступа к файлам документов служб данных (ATOMSVC).  
@@ -71,7 +76,7 @@ caps.handback.revision: 22
   
  Для всех библиотек, в которых необходимо создать или изменить документы регистрации каналов данных, необходимо повторить следующие действия.  
   
-#### Шаг 1. Включение управления типами содержимого  
+#### <a name="step-1-enable-content-type-management"></a>Шаг 1. Включение управления типами содержимого  
   
 1.  Откройте библиотеку документов, для которой нужно включить несколько типов содержимого.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 22
   
 7.  Нажмите кнопку **ОК**.  
   
-#### Шаг 2. Добавление типа содержимого сервисного документа данных  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Шаг 2. Добавление типа содержимого сервисного документа данных  
   
 1.  В разделе «Типы содержимого» выберите пункт **Добавить из существующих типов содержимого сайта**. Если эта страница не отображается, вернитесь на сайт, выберите в средствах библиотеки **Библиотека** , а затем выберите **Параметры библиотеки**.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 22
   
 5.  Нажмите кнопку **ОК**.  
   
-#### Шаг 3. Проверка конфигурации сервисного документа данных  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Шаг 3. Проверка конфигурации сервисного документа данных  
   
 1.  Откройте домашнюю страницу сайта.  
   
@@ -109,9 +114,9 @@ caps.handback.revision: 22
   
 4.  Щелкните стрелку вниз рядом с командой «Создать документ» и выберите пункт **Сервисный документ данных**. Откроется страница «Новый сервисный документ данных».  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование веб-каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Удаление библиотеки веб-каналов данных Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Удаление библиотеки каналов данных Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Веб-каналы данных Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

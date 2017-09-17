@@ -1,35 +1,33 @@
 ---
-title: "Создание надежного расположения для сайтов PowerPivot в центре администрирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание надежного расположения для сайтов PowerPivot в центре администрирования | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9f2913ee3aa26a01a704fbdd94a4d01b7044f73a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/01/2017
+
 ---
-# Создание надежного расположения для сайтов PowerPivot в центре администрирования
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Создание надежного расположения для сайтов PowerPivot в центре администрирования
   Службы Excel позволяют указать, какие расположения являются допустимыми репозиториями для книг, открываемых на сервере SharePoint. Эти расположения называются надежными. Можно использовать разные параметры конфигурации для каждого создаваемого надежного расположения. При развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint может понадобиться создание надежных расположений для сайтов, в которых содержатся книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , что позволит применить параметры, наиболее подходящие для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , во время сохранения параметров по умолчанию для всех остальных расположений фермы.  
   
- Этот раздел состоит из следующих подразделов.  
   
- [Предварительные требования](#prereq)  
-  
- [Обзор](#overview)  
-  
- [Создание надежного расположения для доступа к данным PowerPivot](#create)  
-  
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для обозначения URL-адреса как надежного расположения пользователь должен быть администратором фермы или службы.  
   
  Необходимо знать URL-адрес сайта SharePoint, содержащего коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или другую библиотеку, в которой хранятся книги. Чтобы получить этот адрес, откройте сайт с библиотекой, щелкните правой кнопкой мыши **коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, выберите команду **Свойства** и скопируйте первую часть URL-адреса, содержащую имя сервера и путь к сайту.  
@@ -56,7 +54,7 @@ caps.handback.revision: 7
 6.  В поле «Тип расположения» выберите **Microsoft SharePoint Foundation**.  
   
     > [!IMPORTANT]  
-    >  Типы расположения UNC и HTTP не поддерживаются для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+    >  Типы расположения UNC и HTTP не поддерживаются для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 7.  Оставьте все настройки по умолчанию для свойств «Управление сеансами», «Свойства книги» и «Вычисления».  
   
@@ -68,8 +66,8 @@ caps.handback.revision: 7
   
 11. Нажмите кнопку **ОК**.  
   
-## См. также  
- [Коллекция PowerPivot](../Topic/Power%20Pivot%20Gallery.md)   
+## <a name="see-also"></a>См. также  
+ [Коллекция PowerPivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [Создание и настройка коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Использование коллекции PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
