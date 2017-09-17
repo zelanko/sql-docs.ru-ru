@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df7853f5a49a4c3b2bab4f5573cd9559e55c8b44
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
@@ -28,7 +28,7 @@ ms.lasthandoff: 09/08/2017
   
 Вариант установки Server Core предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core см. в разделе [Установка Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)]см. в разделе [Server Core для Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
- Список текущих поддерживаемых операционных систем см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
+ Список текущих поддерживаемых операционных систем см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 ## <a name="prerequisites"></a>Предварительные требования  
   
@@ -327,7 +327,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  
 1.  Нажмите CTRL+SHIFT+ESC, чтобы отобразить диспетчер задач.  
 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
-3.  В диалоговом окне **Создание новой задачи** введите **cmd **в поле** Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем** .  
+3.  В диалоговом окне **Создание новой задачи** введите **cmd** в поле **Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем **.  
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   

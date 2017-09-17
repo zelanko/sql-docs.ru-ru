@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Устранение неполадок c PolyBase
@@ -229,7 +229,6 @@ ms.lasthandoff: 08/30/2017
  - При экспорте данных в формате файлов ORC из SQL Server или хранилища данных SQL Azure столбцы с большим объемом текста могут ограничиваться всего 50 столбцами из-за ошибок нехватки памяти в Java. Чтобы обойти эту проблему, экспортируйте подмножество столбцов.
  - Не удается прочесть или записать данные, зашифрованные в местах хранения в Hadoop. Сюда входят зашифрованные зоны HDFS или прозрачное шифрование.
  - PolyBase не может подключиться к экземпляру Hortonworks, если включена поддержка KNOX. 
- - PolyBase не удается подключиться к экземпляру Hadoop, если параметру hadoop.RPC.Protection задано значение, отличное от проверки подлинности.
 
 [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
