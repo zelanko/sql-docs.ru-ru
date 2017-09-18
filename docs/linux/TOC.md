@@ -19,6 +19,7 @@
 ### [Установка полнотекстового поиска SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [Подготовка виртуальной машины SQL в Azure](sql-server-linux-azure-virtual-machine.md)
+### [Регистрация общедоступного репозитория](sql-server-linux-change-repo.md)
 
 ## Configure
 ### [Настройка с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md)
