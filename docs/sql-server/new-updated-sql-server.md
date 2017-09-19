@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Новые и недавно обновленные документы для SQL Server
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/29/2017
 
 
 
-- *Диапазон дат для обновлений:* &nbsp; **23.05.2017** &nbsp;—&nbsp; **17.07.2017**
+- *Диапазон дат выхода обновлений:* &nbsp; **18.07.2017** &nbsp;—&nbsp; **11.09.2017**
 - *Предметная область:* &nbsp; **SQL Server**.
 
 
@@ -44,11 +44,29 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="new-articles-created-recently"></a>Недавно созданные статьи
 
-Приведенные ниже ссылки указывают на новые статьи, которые были добавлены недавно.
+Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Выпуски и поддерживаемых функций SQL Server 2017](editions-and-components-of-sql-server-2017.md)
-2. [Настройка SQL Server для отправки отзыва в Майкрософт](sql-server-customer-feedback.md)
+1. [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+2. [Заметки о выпуске SQL Server 2012](sql-server-2012-release-notes.md)
+3. [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+4. [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+5. [Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)](sql-server-2012-sp3-release-notes.md)
+6. [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+7. [Окно справки и автономное содержимое для SQL Server](sql-server-help-installation.md)
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>Обновленные статьи с отрывками
+
+В этом разделе приводятся отрывки из статей, в которые недавно внесены значительные изменения.
+
+Отрывки отображаются отдельно от соответствующего семантического контекста. Кроме того, иногда фрагмент отделяется от синтаксиса разметки, окружающей саму статью. Таким образом, эти отрывки приводятся только для общего сведения. Они позволяют понять, стоит ли вам перейти по ссылке и прочитать всю статью полностью.
+
+По этой и другим причинам не копируйте код из этих отрывков и не воспринимайте содержание этих отрывков как однозначно верное. Вместо этого пройдите по ссылке и ознакомьтесь с фактическим текстом статьи.
+
 
 
 
@@ -61,17 +79,8 @@ ms.lasthandoff: 08/29/2017
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
+1. [Что нового в SQL Server 2016](#TitleNum_1)
 
-
-&nbsp;
-
-## <a name="updated-articles-with-excerpts"></a>Обновленные статьи с отрывками
-
-В этом разделе приводятся отрывки из статей, в которые недавно были внесены значительные изменения.
-
-Отрывки отображаются отдельно от соответствующего семантического контекста. Кроме того, иногда фрагмент отделяется от синтаксиса разметки, окружающей саму статью. Таким образом, эти отрывки приводятся только для общего сведения. Они позволяют понять, стоит ли вам перейти по ссылке и прочитать всю статью полностью.
-
-По этой и другим причинам не копируйте код из этих отрывков и не воспринимайте содержание этих отрывков как однозначно верное. Вместо этого пройдите по ссылке и ознакомьтесь с фактическим текстом статьи.
 
 
 
@@ -81,129 +90,81 @@ ms.lasthandoff: 08/29/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd"></a>1. &nbsp; [Программа улучшения качества SQL Server Data Tools](customer-experience-improvement-program-for-sql-server-data-tools.md)
+### <a name="1-nbsp-whats-new-in-sql-server-2016what-s-new-in-sql-server-2016md"></a>1. &nbsp;[Что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md)
 
-*Обновлено: 14.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Далее](#TitleNum_2))
+*Обновлено: 08.09.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 25.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 e35a35aaa3c8ee8a4419b6318ebff9db027aa73d 16a623cf0ab4c9e6d7a17f4617804432c863ac86  (PR=2038  ,  Filename=customer-experience-improvement-program-for-sql-server-data-tools.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=be884b2d1b316506592f939167c5be91ddc2a9f6) -->
-
-
-
- Программа улучшения качества программного обеспечения разработана, чтобы помочь корпорации Майкрософт улучшать свои продукты. Эта программа собирает сведения об аппаратном обеспечении и способах использования продукта людьми, не вмешиваясь в ход выполнения пользовательских задач на компьютере. Собранные сведения помогают корпорации Майкрософт определить, что нужно доработать. В этом документе мы расскажем, как согласиться на участие в программе улучшения качества программного обеспечения SQL Server Data Tools (SSDT) для Visual Studio 2017, Visual Studio 2015 и Visual Studio 2013.  
-
-**Выбор вариантов и управление участием в программе улучшения качества программного обеспечения (CEIP) для SQL Server Data Tools для Visual Studio 2017**
-
- SSDT для Visual Studio 2017 — это инструмент моделирования данных, поставляемый с SQL Server 2017. Он использует стандартные возможности CEIP, встроенные в Visual Studio 2017. Дополнительные сведения о том, как отправить отзыв через программу CEIP в Visual Studio 2017, см. в следующем [справочном документе по Visual Studio](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback).  
-  
- В предварительных версиях SQL Server 2017 участие пользователя в программе CEIP включено по умолчанию. Вы можете изменять эту настройку в соответствии с приведенными ниже инструкциями.  
-  
- **В Visual Studio (применимо к Visual Studio 2017 с полными языковыми настройками)**  
-  
- При запуске программы установки SSDT на компьютере с Visual Studio добавляются только шаблоны проектов SQL Server и Business Intelligence. В этом случае управлять участием в программе CEIP можно с помощью элемента "Параметры отзывов пользователей" в Visual Studio.  
-  
-1.  Запустите среду Visual Studio.  
-  
-2.  В меню "Справка" выберите **Отправить отзыв** > **Параметры**.  
-  
-3.  Чтобы отключить программу CEIP, нажмите кнопку **Нет, я не хочу участвовать**, а затем нажмите кнопку **ОК**.  
-  
-     Чтобы включить программу CEIP, нажмите кнопку **Да, я хочу участвовать**, а затем нажмите кнопку **ОК**.  
-  
-
-  
- **Использование политики на основе реестра или групповой политики**  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [Выпуски и поддерживаемые функции SQL Server 2016](editions-and-components-of-sql-server-2016.md)
-
-*Обновлено: 16.06.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_1))
-
-<!-- Source markdown line 113.  ms.author= "mikeray".  -->
+<!-- Source markdown line 34.  ms.author= "craigg".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 471ad35ebf1898470033d43c7bd43cbac5ddfece 7814e4d7428907161a9a2567280fb9fe20d5f273  (PR=2064  ,  Filename=editions-and-components-of-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=727d9ccd8cd1e40d89cfe74291edae92988b407c) -->
+<!-- git diff --ignore-all-space --unified=0 e5bc0c05f120289f09a535400a4d521e4113ae55 0607d0a9af1c9a8dd9d3d7b0606895ff23bbffdc  (PR=0  ,  Filename=what-s-new-in-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
 
 
 
-**Выпуски Evaluation и Developer**  
-Поддерживаемые компоненты для выпусков Developer и Evaluation указаны в списке возможностей SQL Server Enterprise в приведенных ниже таблицах.
-Список возможностей, которые были добавлены в выпуск Developer для [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, см. в статье [о выпусках SQL Server 2016 SP1](https://aka.ms/uw6cw4).  
+- Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
+- Скачайте последнюю версию [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+- Есть учетная запись Azure? Запустите [виртуальную машину с уже установленным решением SQL Server 2016](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
-Выпуск Developer по-прежнему поддерживает всего 1 клиент для [распределенного воспроизведения SQL Server--../tools/distributed-replay/sql-server-distributed-replay.md). 
-  
-**<a name="Cross-BoxScaleLimits"></a> Ограничения масштабирования **
+**Ядро СУБД SQL Server 2016**
 
-  
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Максимальная вычислительная мощность, используемая одним экземпляром — [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]<sup>1</sup>|Максимум, поддерживаемый операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер| 
-|Максимальная вычислительная мощность, используемая одним экземпляром — [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] или [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|Максимум, поддерживаемый операционной системой|Ограничение: меньшее из 4 процессоров и 24 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
-|Максимальный объем памяти для буферного пула [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Максимум, поддерживаемый операционной системой|128 ГБ|64 ГБ|1410 МБ|1410 МБ|
-|Максимальный объем памяти для кэша сегмента columnstore на экземпляр [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
-|Максимальный объем данных, оптимизированных для памяти, на базу данных в [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Неограниченная память| 32 ГБ<sup>2</sup>| 16 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>| 352 ГБ<sup>2</sup>|  
+- Теперь вы можете настроить **несколько файлов базы данных tempDB** во время установки и настройки SQL Server.
+- В базе данных нового **хранилища запросов** хранятся тексты запросов, планы выполнения и метрики производительности. Это позволяет легко выполнять мониторинг и устранять проблемы с производительностью. На панели мониторинга указано, какие запросы потребляют больше всего времени, памяти или ресурсов ЦП.
+- **Темпоральные таблицы** — это хронологические таблицы, в которые записываются все изменения данных, а также дата и время таких изменений.
+- Новые встроенные средства **поддержки JSON** в SQL Server обеспечивают импорт, экспорт, синтаксический анализ и хранение файлов JSON.
+- Новый обработчик запросов **PolyBase** интегрирует SQL Server с внешними данными в Hadoop или хранилище BLOB-объектов Azure. Теперь вы можете импортировать и экспортировать данные, а также выполнять запросы.
+- Новая функция **Stretch Database** позволяет выполнять безопасную динамическую архивацию данных из локальной базы данных SQL Server в базу данных Azure SQL в облаке. SQL Server автоматически обращается к данным в локальных и удаленных связанных базах данных.
+- **Выполняющаяся в памяти OLTP.**
+    - Реализована поддержка FOREIGN KEY, ограничений UNIQUE и CHECK, а также скомпилированных в собственном коде хранимых процедур OR, NOT SELECT DISTINCT, OUTER JOIN и вложенных запросов в SELECT.
+    - Поддерживаются таблицы до 2 ТБ (от 256 ГБ).
+    - Усовершенствованы индексы хранилища столбцов для сортировки и поддержки групп доступности AlwaysOn.
+- Новые функции безопасности:
+    - **Постоянное шифрование.** Если оно включено, доступ к зашифрованным конфиденциальным данным в базе данных SQL Server 2016 получают только приложения с ключом шифрования. Ключ никогда не передается в SQL Server.
 
 
 
 
 
-<a name="similars2"/>
 
-&nbsp;
 
 ## <a name="similar-articles"></a>Похожие статьи
 
-Этот раздел содержит похожие статьи, аналогичные недавно измененным, для других предметных областей в том же репозитории GitHub.com: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+Этот раздел содержит похожие статьи, аналогичные недавно измененным, для других предметных областей в том же общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (4+4): **Расширенная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (2+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новые + обновленные (1+2): **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (6+0): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (13+2): **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (1+0): **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Новые + обновленные (1+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (8+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (2+2): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (1+0): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
-- [Новые + обновленные (1+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
-
+- [Новые + обновленные (3+12): документация по **расширенной аналитике для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (5+0): документация по **подключению к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (5+1): документация по **ядру СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (19+82): документация по **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (1+8): документация по **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (12+1): документация по **реляционным базам данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (0+1): документация по **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (7+1): документация по **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (1+1): документация по **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (0+2): документация по **помощнику по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
+- [Новые + обновленные (1+4): документация по **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (4+1): документация по **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (0+1): документация по **средствам для SQL**](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
+- [Новые + обновленные (0+0): документация по **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
-- [Новые + обновленные (0+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (0+0): документация по **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
+- [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
-- [Новые + обновленные (0+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
-- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 
