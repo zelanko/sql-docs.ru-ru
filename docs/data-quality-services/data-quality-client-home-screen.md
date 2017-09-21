@@ -1,29 +1,34 @@
 ---
-title: "Главный экран клиента DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/29/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
+title: "Начальный экран клиента Data Quality Client | Microsoft Docs"
+ms.custom: 
+ms.date: 02/29/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Главный экран клиента DQS
-  Этот экран служит для получения доступа к пользовательским интерфейсам для каждого из трех основных [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) группы задач: управление базой знаний, проекты качества данных и администрирования.  
+# <a name="data-quality-client-home-screen"></a>Главный экран клиента DQS
+  Этот экран обеспечивает доступ к пользовательским интерфейсам каждой из трех основных групп задач служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): управление базами знаний, проекты служб DQS и администрирование.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
   
-### Управление базами знаний  
+### <a name="knowledge-base-management"></a>Управление базами знаний  
  База знаний DQS представляет собой репозиторий метаданных, которые используются DQS для повышения качества данных. Эти метаданные создаются как платформой служб DQS в процессе автоматизированного обнаружения набора знаний, так и администратором данных в процессе интерактивного управления доменами.  
   
  **Новая база знаний**  
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
  Открывать заблокированную базу знаний и изменять ее может только пользователь, который заблокировал базу. В этом случае база знаний открывается в состоянии, которое она имела на момент закрытия и которое показано в скобках. Если база знаний заблокирована, но ее заблокировал другой пользователь, то вы можете открыть ее только в режиме для чтения.  
   
-### Проекты служб Data Quality Services  
+### <a name="data-quality-projects"></a>Проекты служб Data Quality Services  
  Проект качества данных — это процесс, в котором службы DQS выполняют очистку данных или сопоставление данных как с помощью автоматизированного процесса исправления данных, так и с помощью интерактивного процесса очистки данных.  
   
  **Создать проект служб DQS**  
@@ -49,7 +54,7 @@ caps.handback.revision: 14
  **Недавно открытый проект служб DQS**  
  Выберите в списке на экране уже созданный проект. Открыть заблокированный проект может только пользователь, который его заблокировал. В этом случае проект открывается в состоянии, которое он имел на момент закрытия и которое показано в скобках. Если проект был завершен, то он будет открыт на шаге «Экспорт».  
   
-### Администрирование  
+### <a name="administration"></a>Администрирование  
  Администрирование DQS позволяет мониторить, настраивать и обслуживать DQS.  
   
  **Мониторинг активности**  
@@ -58,9 +63,9 @@ caps.handback.revision: 14
  **Конфигурация**  
  Показывает свойства конфигурации для учетных записей службы эталонных данных (через Windows Azure Marketplace и непосредственно в службы эталонных данных), общие параметры (интерактивная очистка, сопоставление и профилирование) и параметры серьезности журнала.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Проекты качества данных & #40; DQS & #41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [Проекты служб Data Quality Services &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Администрирование DQS](../data-quality-services/dqs-administration.md)  
   
   

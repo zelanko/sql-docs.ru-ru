@@ -1,25 +1,30 @@
 ---
 title: "Создание базы знаний | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.selectkb.f1"
-  - "sql13.dqs.kb.newkb.f1"
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.selectkb.f1
+- sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4f440bb34a0939653d6708fcc9c46735fc3cdf9a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Создание базы знаний
+# <a name="create-a-knowledge-base"></a>Создание базы знаний
   В этом разделе описано, как создать базу знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) и подготовить ее для управления доменами, обнаружения знаний или добавления политики сопоставления.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
@@ -32,9 +37,9 @@ caps.handback.revision: 20
 ####  <a name="Permissions"></a> Разрешения  
  Для создания базы знаний необходимо иметь роль dqs_administrator или dqs_kb_editor в базе данных DQS_MAIN.  
   
-##  <a name="Createaknowledgebase"></a> Создание базы знаний  
+##  <a name="Createaknowledgebase"></a> Create a knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запустите клиентское приложение DQS](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Создать базу знаний**.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 20
   
     -   Выберите **Нет** , если новая база знаний не должна основываться на существующей базе знаний или файле данных.  
   
-    -   Выберите **Существующая база знаний** , чтобы создать новую базу знаний на основе базе знаний, которая уже была создана на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], или на базе знаний по умолчанию. Выберите базу знаний из **Выбор базы знаний** раскрывающегося списка или нажмите кнопку **Обзор** для отображения **Выберите базу знаний** диалоговом выберите существующий набор знаний базы на базе новой базы знаний на и нажмите кнопку **ОК**. При выборе базы знаний из таблицы домены и правила сопоставления в базе знаний будут отображаться в правой части диалогового окна. Можно также выбрать **данных DQS** базы знаний, в которой по умолчанию в базе знаний Майкрософт, содержащий общие домены out of box и знаний, относящиеся к компании, адрес и данные стороны США.  
+    -   Выберите **Существующая база знаний** , чтобы создать новую базу знаний на основе базе знаний, которая уже была создана на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], или на базе знаний по умолчанию. Выберите базу знаний из раскрывающегося списка **Выбор базы знаний** или нажмите кнопку **Обзор** , чтобы отобразить диалоговое окно **Выбор базы знаний** , выберите существующую базу знаний, на которой основывается существующая база знаний, а затем нажмите кнопку **ОК**. При выборе базы знаний из таблицы домены и правила сопоставления в базе знаний будут отображаться в правой части диалогового окна. Вы можете также выбрать базу знаний **Данные служб DQS** , которая является базой знаний по умолчанию, содержащей типовые готовые домены и наборы знаний, относящиеся к американской организации, адрес и данные стороны.  
   
     -   Выберите **Импортировать из файла DQS** , чтобы создать базу знаний на основе DQS-файла, расположенного на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Нажмите кнопку **Обзор**, выберите файл данных DQS с расширением DQS и нажмите кнопку **ОК**.  
   
@@ -59,6 +64,6 @@ caps.handback.revision: 20
 6.  Нажмите кнопку **Создать**.  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После создания базы знаний  
- После создания базы знаний откроется мастер, с помощью которого можно выполнить обнаружение знаний, мастер для создания политики сопоставления или страницы для управления доменами. Дополнительные сведения о обнаружения набора знаний, Управление доменами или политики сопоставления в разделе [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md), или [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
+ После создания базы знаний откроется мастер, с помощью которого можно выполнить обнаружение знаний, мастер для создания политики сопоставления или страницы для управления доменами. Дополнительные сведения об обнаружении знаний, управлении доменами и политике сопоставления см. в разделах [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
   

@@ -1,28 +1,33 @@
 ---
 title: "Импорт доменов из файла Excel при обнаружении набора знаний | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a33a9e7a45689a4585c4e091d909420f46d8b23
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Импорт доменов из файла Excel при обнаружении набора знаний
-  В этом разделе описывается, как импортировать один или несколько доменов из файла Excel в действие обнаружения знаний [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Процесс импорта упрощает процесс формирования набора знаний, экономя время и силы. Это позволяет пользователям, у которых данные хранятся в файлах Excel или текстовых файлах, создавать базу знаний с применением этих данных. (См. [Импорт значений из файла Excel в домен](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) Дополнительные сведения об импорте значений в домене существующую базу знаний.) Экспорт в файл Excel не поддерживается.  
+# <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Импорт доменов из файла Excel при обнаружении набора знаний
+  В этом разделе описывается, как импортировать один или несколько доменов из файла Excel в действие обнаружения знаний [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Процесс импорта упрощает процесс формирования набора знаний, экономя время и силы. Это позволяет пользователям, у которых данные хранятся в файлах Excel или текстовых файлах, создавать базу знаний с применением этих данных. (Дополнительные сведения об импорте значений в домен существующей базы знаний см. в разделе [Импорт значений в домен из файла Excel](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).) Экспорт в файл Excel не поддерживается.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
- Для импорта доменов из файла Excel, должна быть установлена программа Excel на компьютере, [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] устанавливается на; необходимо создания файла Excel со значениями домена (см. [принцип работы импорта](#How)); и вам необходимо создать и открыть базу знаний, чтобы импортировать домен.  
+ Для импорта доменов из файла Excel необходимо установить Microsoft Excel на компьютер, на котором установлено приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Необходимо создать файл Excel со значениями домена (см. раздел [How the import works](#How)). Кроме того, необходимо создать и открыть базу знаний, в которую будет импортироваться домен.  
   
 ###  <a name="Security"></a> Безопасность  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 24
   
 ##  <a name="Import"></a> Импорт доменов из файла Excel в базу знаний  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запустите клиентское приложение DQS](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] выполните одно из следующих действий.  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 24
   
 5.  В диалоговом окне **Выбрать файл Excel** перейдите в папку с файлом Excel, из которого будут импортироваться данные, выберите файл Excel и нажмите кнопку **Открыть**.  
   
-6.  Из **лист** раскрывающегося списка выберите лист в файле Excel, который требуется импортировать из.  
+6.  В раскрывающемся списке **Лист** выберите лист в файле Excel, откуда будет осуществляться импорт.  
   
-7.  Выберите **Использовать первую строку как заголовок** , если следует рассматривать первую строку как заголовок данных, а значения в первой строке как имена столбцов. Снимите флажок **использовать первую строку как заголовок** первой строки считается значение данных, в этом случае DQS будут использовать имена заголовков Excel (буквы алфавита) для столбца.  
+7.  Выберите **Использовать первую строку как заголовок** , если следует рассматривать первую строку как заголовок данных, а значения в первой строке как имена столбцов. Отмените выбор варианта **Использовать первую строку как заголовок** , если содержимое первой строки должно рассматриваться как значение данных. В этом случае службы DQS будут использовать в качестве заголовков имена столбцов Excel (буквы алфавита).  
   
 8.  Выберите столбец, затем либо сопоставьте с ним существующий домен, либо создайте новый домен. Для этого щелкните значок **Создать домен** , в результате чего откроется диалоговое окно **Создать домен** , затем сопоставьте домен со столбцом. Тип данных домена должен совпадать с типом данных столбца. Повторите эти действия для всех столбцов таблицы.  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 24
 14. Убедитесь, что база знаний опубликована, и нажмите кнопку **ОК**.  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После импорта доменов из файла Excel  
- После импорта доменов из файла Excel можно добавить наборы знаний в домены или использовать домены в проекте очистки данных или сопоставления в зависимости от содержания доменов. Дополнительные сведения см. в разделе [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md), [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md), [очистки данных](../data-quality-services/data-cleansing.md), или [Сопоставление данных](../data-quality-services/data-matching.md).  
+ После импорта доменов из файла Excel можно добавить наборы знаний в домены или использовать домены в проекте очистки данных или сопоставления в зависимости от содержания доменов. Дополнительные сведения см. в разделах [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md), [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md), [Очистка данных](../data-quality-services/data-cleansing.md) и [Сопоставление данных](../data-quality-services/data-matching.md).  
   
-##  <a name="How"></a> Принцип работы импорта  
+##  <a name="How"></a> How the import works  
  В ходе операции импорта служба DQS интерпретирует файл Excel следующим образом:  
   
 -   Столбец представляет домен  

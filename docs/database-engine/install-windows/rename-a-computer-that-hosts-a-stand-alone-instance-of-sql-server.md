@@ -1,8 +1,10 @@
 ---
 title: "Переименование компьютера, на который установлен изолированный экземпляр SQL Server | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/08/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -24,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f5fc3acde45aa4dab6738f0d88ec9d8005864b6
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Переименование компьютера, на который установлен изолированный экземпляр SQL Server
-  Если изменить имя компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], новое имя будет распознано в момент следующего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не нужно заново запускать программу установки, чтобы изменить имя компьютера. Вместо этого следует выполнить следующие шаги для обновления системных метаданных, хранимых в представлении каталога sys.servers и возвращаемых системной функцией @@SERVERNAME. Обновите системные метаданные таким образом, чтобы отразить в них изменения в именах компьютеров для удаленных соединений и приложений, в которых используется системная функция @@SERVERNAME или которые запрашивают имя сервера в представлении каталога sys.servers.  
+Если изменить имя компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], новое имя будет распознано в момент следующего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не нужно заново запускать программу установки, чтобы изменить имя компьютера. Вместо этого следует выполнить следующие шаги для обновления системных метаданных, хранимых в представлении каталога sys.servers и возвращаемых системной функцией @@SERVERNAME. Обновите системные метаданные таким образом, чтобы отразить в них изменения в именах компьютеров для удаленных соединений и приложений, в которых используется системная функция @@SERVERNAME или которые запрашивают имя сервера в представлении каталога sys.servers.  
   
- Следующие действия нельзя использовать для переименования экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ими можно воспользоваться только для изменения части имени экземпляра, соответствующей имени компьютера. Например, можно изменить имя компьютера MB1, на котором расположен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем Instance1, на другое имя, например MB2. Однако часть имени, представляющая собой имя экземпляра (Instance1), останется неизменной. В данном примере \\\\*ИмяКомпьютера*\\*ИмяЭкземпляра* изменится с \\\MB1\Instance1 на \\\MB2\Instance1.  
+Следующие действия нельзя использовать для переименования экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ими можно воспользоваться только для изменения части имени экземпляра, соответствующей имени компьютера. Например, можно изменить имя компьютера MB1, на котором расположен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем Instance1, на другое имя, например MB2. Однако часть имени, представляющая собой имя экземпляра (Instance1), останется неизменной. В данном примере \\\\*ИмяКомпьютера*\\*ИмяЭкземпляра* изменится с \\\MB1\Instance1 на \\\MB2\Instance1.  
   
  **Перед началом**  
   
@@ -51,11 +53,11 @@ ms.lasthandoff: 08/02/2017
   
  Подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью нового имени компьютера станет возможно после перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы убедиться в том, что системная функция @@SERVERNAME возвращает новое имя локального экземпляра сервера, необходимо вручную выполнить следующую процедуру, применяющуюся в сценарии пользователя. Какая именно процедура должна быть выполнена, зависит от того, установлен ли на компьютере именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или экземпляр по умолчанию.  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Переименование компьютера, на котором расположен изолированный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Переименование компьютера, на котором расположен изолированный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Для компьютера с измененным именем, на котором установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию, следует выполнить следующие процедуры.  
   
-    ```  
+    ```sql
     sp_dropserver <old_name>;  
     GO  
     sp_addserver <new_name>, local;  
@@ -66,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Для компьютера с измененным именем, на котором установлен именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует выполнить следующие процедуры.  
   
-    ```  
+    ```sql
     sp_dropserver <old_name\instancename>;  
     GO  
     sp_addserver <new_name\instancename>, local;  
@@ -78,7 +80,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="after-the-renaming-operation"></a>После операции переименования  
  После переименования компьютера все соединения, которые используют прежнее имя, должны подключаться с помощью нового имени.  
   
-#### <a name="to-verify-that-the-renaming-operation-has-completed-successfully"></a>Подтверждение успешного завершения переименования  
+## <a name="verify-renaming-operation"></a>Проверка операции переименования  
   
 -   Выберите данные из @@SERVERNAME или sys.servers. Функция @@SERVERNAME возвращает новое имя, а в таблице sys.servers отображается новое имя. В следующем примере показано использование @@SERVERNAME.  
   
@@ -93,18 +95,18 @@ ms.lasthandoff: 08/02/2017
   
  Чтобы исправить ошибку, необходимо удалить имена для удаленного входа в систему для этого сервера.  
   
-#### <a name="to-drop-remote-logins"></a>Удаление удаленных входов в систему  
+### <a name="drop-remote-logins"></a>Сброс удаленных входов в систему  
   
 -   В случае с экземпляром по умолчанию, выполните следующие действия:  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   В случае с именованным экземпляром, выполните следующие действия:  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
@@ -114,6 +116,6 @@ ms.lasthandoff: 08/02/2017
  **Имена-псевдонимы клиентов**. Операция переименования компьютера повлияет на псевдонимы клиентов, в которых используются именованные каналы. Например, если псевдоним «PROD_SRVR» указывает на SRVR1 и в нем используется протокол именованных каналов, то имя канала будет выглядеть следующим образом: `\\SRVR1\pipe\sql\query`. После переименования компьютера путь именованного канала станет недействительным. Дополнительные сведения об именованных каналах см. в разделе [Создание допустимой строки подключения, использующей протокол именованных каналов](http://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## <a name="see-also"></a>См. также:  
- [Установка SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+ [Установка SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   
   

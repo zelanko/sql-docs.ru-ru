@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
@@ -83,6 +83,8 @@ ms.lasthandoff: 07/31/2017
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ В учетных записях субъектов нет паролей, доступных для изменения администраторам, так как они основаны на сертификатах, выданных Майкрософт.
   
 ## <a name="the-guest-user"></a>Пользователь-гость  
  Каждая база данных включает в себя пользователя `guest`. Разрешения, предоставленные пользователю `guest` , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. Пользователя `guest` нельзя удалить, но его можно отключить, если отменить его разрешение CONNECT. Разрешение CONNECT можно отменить, выполнив инструкцию `REVOKE CONNECT FROM GUEST;` в любой базе данных, кроме `master` или `tempdb`.  

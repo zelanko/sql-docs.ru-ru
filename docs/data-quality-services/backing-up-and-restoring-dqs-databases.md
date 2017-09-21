@@ -1,22 +1,27 @@
 ---
 title: "Резервное копирование и восстановление баз данных DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Резервное копирование и восстановление баз данных DQS
+# <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
   В этом разделе описывается, как проводить резервное копирование и восстановление баз данных DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  В обозревателе объектов разверните узел **Базы данных** .  
   
-3.  Создайте резервную копию базы данных DQS_STAGING_DATA. Пошаговые инструкции по резервному копированию базы данных SQL Server в разделе [Создание полной резервной копии базы данных & #40; SQL Server & #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+3.  Создайте резервную копию базы данных DQS_STAGING_DATA. Пошаговые инструкции по резервному копированию базы данных SQL Server см. в разделе [Создание полной резервной копии базы данных &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Создайте резервную копию базы данных DQS_PROJECTS.  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  Отключитесь от текущего экземпляра SQL Server и подключитесь к экземпляру SQL Server, на котором нужно восстановить эти базы данных.  
   
-7.  Восстановите базу данных DQS_MAIN. Пошаговые инструкции для восстановления базы данных SQL Server см. в разделе [восстановить SSMS с помощью резервной копии базы данных](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Восстановите базу данных DQS_MAIN. Пошаговые инструкции по восстановлению базы данных SQL Server см. в разделе [Восстановление резервной копии базы данных с помощью среды SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Восстановите базу данных DQS_PROJECTS.  
   
 9. Восстановите базу данных DQS_STAGING_DATA.  
   
-10. В обозревателе объектов щелкните правой кнопкой мыши сервер и нажмите кнопку **новый запрос**.  
+10. В обозревателе объектов щелкните сервер правой кнопкой мыши и выберите команду **Создать запрос**.  
   
-11. В окне редактора запросов скопируйте следующие инструкции SQL и замените *\< пароль>* с паролем, которое вы указали во время установки DQS для главного ключа базы данных:  
+11. Скопируйте в окно редактора запросов следующие инструкции SQL, заменив *\<PASSWORD>* на пароль, использованный вами при установке DQS для главного ключа базы данных.  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Управление базами данных DQS](../data-quality-services/manage-dqs-databases.md)  
   
   

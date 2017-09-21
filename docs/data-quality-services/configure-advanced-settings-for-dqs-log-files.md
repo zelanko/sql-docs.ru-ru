@@ -1,25 +1,30 @@
 ---
 title: "Настройка дополнительных параметров для файлов журнала DQS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "файлы журналов, дополнительные параметры"
-  - "файлы журналов DQS, дополнительные параметры"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log files,advanced settings
+- dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5182c032b4a0c21358631df64f43dc16cdbd9ecf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Настройка дополнительных параметров для файлов журнала DQS
+# <a name="configure-advanced-settings-for-dqs-log-files"></a>Настройка дополнительных параметров для файлов журнала DQS
   В этом разделе описано, как настроить дополнительные параметры файлов журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , такие как скользящий предельный размер файла для файлов журнала, шаблон метки времени для событий и т. д.  
   
 > [!NOTE]  
@@ -36,17 +41,17 @@ caps.handback.revision: 13
 -   Чтобы настраивать параметры журналов [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , необходимо быть членом группы администраторов на компьютере, где изменяется файл DQLog.Client.xml.  
   
 ##  <a name="DQSServer"></a> Настройка параметров журнала сервера DQS  
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Параметры журнала присутствуют в формате XML в **значение** столбец **ServerLogging** строк в таблице A_CONFIGURATION базы данных DQS_MAIN. Вы можете выполнить следующий SQL-запрос для просмотра сведений о конфигурации:  
+ Параметры журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] представлены в формате XML в столбце **VALUE** строки **ServerLogging** в таблице A_CONFIGURATION базы данных DQS_MAIN. Вы можете выполнить следующий SQL-запрос для просмотра сведений о конфигурации:  
   
 ```  
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
 ```  
   
- Необходимо обновить соответствующие сведения в столбце **VALUE** строки **ServerLogging** , чтобы изменить параметры конфигурации для журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . В этом примере обновляются параметры журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], устанавливается скользящий предел файла данных равным 25 000 KБ (по умолчанию он равен 20 000 KБ).  
+ Необходимо обновить соответствующие сведения в столбце **VALUE** строки **ServerLogging** , чтобы изменить параметры конфигурации для журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . В этом примере обновляются параметры журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , устанавливается скользящий предел файла данных равным 25 000 KБ (по умолчанию он равен 20 000 KБ).  
   
 1.  Запустите среду Microsoft SQL Server Management Studio и подключитесь к соответствующему экземпляру SQL Server.  
   
-2.  В обозревателе объектов щелкните правой кнопкой мыши сервер и нажмите кнопку **новый запрос**.  
+2.  В обозревателе объектов щелкните сервер правой кнопкой мыши и выберите команду **Создать запрос**.  
   
 3.  В окно редактора запросов скопируйте следующие инструкции SQL:  
   
@@ -94,7 +99,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 4.  Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
   
-5.  Чтобы применить изменения, внесенные в конфигурацию журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], необходимо выполнить следующие инструкции Transact-SQL. Откройте новое окно редактора запросов и вставьте следующие инструкции Transact-SQL:  
+5.  Чтобы применить изменения, внесенные в конфигурацию журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , необходимо выполнить следующие инструкции Transact-SQL. Откройте новое окно редактора запросов и вставьте следующие инструкции Transact-SQL:  
   
     ```  
     USE [DQS_MAIN]  
@@ -109,10 +114,10 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 6.  Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
   
 > [!NOTE]  
->   [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Конфигурация параметров журнала динамически создается и сохраняется в DQS_MAIN. Файл журнала, который обычно находится в C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Log, если установлен экземпляр по умолчанию SQL Server. Однако изменения, внесенные непосредственно в этот файл, не сохраняются, они перезаписываются параметрами конфигурации из таблицы A_CONFIGURATION базы данных DQS_MAIN.  
+>  Конфигурация параметров журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] создается автоматически и хранится в файле DQS_MAIN.Log, который обычно находится в папке C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log, если был установлен экземпляр SQL Server по умолчанию. Однако изменения, внесенные непосредственно в этот файл, не сохраняются, они перезаписываются параметрами конфигурации из таблицы A_CONFIGURATION базы данных DQS_MAIN.  
   
 ##  <a name="DQSClient"></a> Настройка параметров журнала клиента DQS  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] Файл параметров конфигурации журнала, DQLog.Client.xml обычно находится в C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. Содержание этого XML-файла подобно XML-файлу с параметрами конфигурации журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , который был изменен ранее. Настройка параметров журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
+ Файл параметров конфигурации журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] DQLog.Client.xml обычно находится в папке C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config. Содержание этого XML-файла подобно XML-файлу с параметрами конфигурации журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , который был изменен ранее. Настройка параметров журнала [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Откройте любой редактор XML-файлов или Блокнот с правами администратора.  
   
@@ -120,7 +125,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Внесите необходимые изменения и сохраните этот файл, чтобы изменения журнала были применены.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Настройка степеней серьезности для файлов журнала DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

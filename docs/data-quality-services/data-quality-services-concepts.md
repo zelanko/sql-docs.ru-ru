@@ -1,22 +1,27 @@
 ---
 title: "Основные понятия служб Data Quality Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 01/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Основные понятия служб Data Quality Services
+# <a name="data-quality-services-concepts"></a>Основные понятия служб Data Quality Services
   В этом разделе содержится краткая сводка по основным понятиям служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) в управлении набором знаний, проектах служб DQS и их администрировании.  
   
 ##  <a name="Knowledge"></a> Основные понятия управления знаниями  
@@ -32,24 +37,24 @@ caps.handback.revision: 17
   
  **Политика сопоставления**  
   
- Политика сопоставления содержит правила сопоставления, используемые для выполнения дедупликации данных. Процесс политики сопоставления позволяет создавать правила сопоставления, настраивать их на основе результатов сопоставления и профилирования данных, а также добавлять политику в базу знаний. Дополнительные сведения см. в статье [Data Matching](../data-quality-services/data-matching.md).  
+ Политика сопоставления содержит правила сопоставления, используемые для выполнения дедупликации данных. Процесс политики сопоставления позволяет создавать правила сопоставления, настраивать их на основе результатов сопоставления и профилирования данных, а также добавлять политику в базу знаний. Дополнительные сведения см. в статье [Сопоставление данных](../data-quality-services/data-matching.md).  
   
  **Службы эталонных данных**  
   
  С помощью эталонных данных можно проверить, исправить и обогатить данные, воспользовавшись службами компаний, гарантирующих качество своих эталонных данных. Для подключения к поставщикам эталонных данных можно использовать службы Windows Azure Marketplace или установить прямое соединение с поставщиком. Дополнительные сведения см. в статье [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
- Дополнительные сведения об управлении знаний в DQS см. в разделе [базы знаний DQS и домены](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Дополнительные сведения об управлении знаниями в DQS см. в разделе [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Основные понятия проекта служб DQS  
- Диспетчер данных выполняет операции повышения качества данных (очистки и сопоставления) с использованием проекта качества данных в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
+ Диспетчер данных выполняет операции повышения качества данных (очистки и сопоставления) с использованием проекта качества данных в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
  **Очистка данных**  
   
  Очистка данных в DQS выполняется на основе знаний, хранящихся в базе знаний DQS. Очистка данных в DQS представляет собой двухэтапный процесс.  
   
--   **Автоматическая очистка**: DQS использует знания в выбранной базе знаний для проекта очистки, чтобы предложить исправления и рекомендации для значений в источнике данных.  
+-   **Автоматическая очистка**. DQS использует знания из выбранной базы знаний для проекта очистки, чтобы предложить исправления и рекомендации для значений в источнике данных.  
   
--   **Очистка интерактивных**: диспетчер данных может выполнить интерактивный процесс очистки для изменения или дополнения исправлений данных, предложенных данные автоматизированный процесс очистки. Диспетчер данных делает это с помощью уровней достоверности и статистики, определенной процессом очистки данных, или путем ввода вручную собственных изменений проекта.  
+-   **Интерактивная очистка**. Администратор данных может выполнить интерактивный процесс очистки для изменения или дополнения исправлений данных, предложенных автоматизированным процессом очистки данных. Диспетчер данных делает это с помощью уровней достоверности и статистики, определенной процессом очистки данных, или путем ввода вручную собственных изменений проекта.  
   
  После очистки данных диспетчер данных может экспортировать обработанные данные в базу данных SQL Server, CSV-файл или файл Excel. Дополнительные сведения см. в статье [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 17
   
  Профилирование данных дает диспетчерам данных статистику реального времени и сведения о данных, которые обрабатываются в DQS, для операций очистки или сопоставления при выполнении проекта качества данных. Профилирование данных позволяет оценить эффективность операций очистки и сопоставления в проекте качества данных, а уведомления помогают пользователю выполнять действия для совершенствования операций очистки и сопоставления. Дополнительные сведения см. в статье [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- Дополнительные сведения о проектах качества данных в DQS см. в разделе [проекты качества данных & #40; DQS & #41;](../data-quality-services/data-quality-projects-dqs.md).  
+ Дополнительные сведения о проектах служб DQS см. в разделе [Проекты служб Data Quality Services &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md).  
   
 ##  <a name="Admin"></a> Основные понятия администрирования служб DQS  
  Администратор DQS может выполнять разнообразные административные задачи в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -78,17 +83,17 @@ caps.handback.revision: 17
   
 -   Задавать пороговые значения для операций очистки и сопоставления. Дополнительные сведения см. в статье [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Включать и отключать уведомления о профилировании. Дополнительные сведения см. в разделе [Включить или отключить уведомления профилирования в DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
+-   Включать и отключать уведомления о профилировании. Дополнительные сведения см. в разделе [Включение или отключение уведомлений по профилированию в DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
 -   Настраивать степени серьезности для файлов журнала DQS на уровне действий или на более точном уровне модулей. Дополнительные сведения см. в статье [Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
  **Безопасность DQS**  
   
- Роли в рамках механизма обеспечения безопасности SQL Server используются для обеспечения безопасности DQS. Три роли DQS, которые определяют уровень доступа для пользователя в [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] приложения: dqs_administrator, dqs_kb_editor и dqs_kb_operator. Роли нельзя предоставлять пользователям в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Для этого используется среда SQL Server Management Studio. Дополнительные сведения см. в статье [DQS Security](../data-quality-services/dqs-security.md).  
+ Роли в рамках механизма обеспечения безопасности SQL Server используются для обеспечения безопасности DQS. Уровень доступа пользователя в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] определяется тремя ролями DQS: dqs_administrator, dqs_kb_editor и dqs_kb_operator. Роли нельзя предоставлять пользователям в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Для этого используется среда SQL Server Management Studio. Дополнительные сведения см. в статье [DQS Security](../data-quality-services/dqs-security.md).  
   
  Дополнительные сведения об администрировании DQS см. в разделе [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Службы Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

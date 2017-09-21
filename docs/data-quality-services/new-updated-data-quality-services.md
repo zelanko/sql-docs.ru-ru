@@ -1,28 +1,28 @@
 ---
-title: "Обновлено — документы по реляционным базам данных | Документация Майкрософт"
-description: "Отображение фрагментов обновленного содержимого для последних изменений в документации по реляционным базам данных."
+title: "Обновленные статьи: документация \"Службы Data Quality Services для SQL Server\" | Microsoft Docs"
+description: "Отрывки из недавно обновленного содержимого в документации по службам Data Quality Services для Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
-editor: BYHAM
+editor: 
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
+ms.workload: data-quality-services
 ms.translationtype: HT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.openlocfilehash: c28c7e0a78c4fbbed04e2b30b7bdaff2638163ad
 ms.contentlocale: ru-ru
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-relational-databases-docs"></a>Новые и недавно обновленные статьи — документы по реляционным базам данных
+# <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Новые и обновленные статьи: Службы Data Quality Services для SQL Server
 
 
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/13/2017
 
 
 - *Диапазон дат обновлений:* &nbsp; **18.07.2017**&nbsp;–&nbsp;**11.09.2017**
-- *Предметная область:* &nbsp; **Реляционные базы данных**.
+- *Предметная область:* &nbsp; **Службы Data Quality Services для SQL Server**.
 
 
 
@@ -47,18 +47,7 @@ ms.lasthandoff: 09/13/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Импорт данных в SQL Server или базу данных Azure из Excel](import-export/import-data-from-excel-to-sql.md)
-2. [Устранение неполадок с подключением PolyBase к Kerberos](polybase/polybase-troubleshoot-connectivity.md)
-3. [Прозрачное шифрование данных (TDE)](security/encryption/transparent-data-encryption.md)
-4. [Прозрачное шифрование для хранилища и базы данных SQL Azure](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Прозрачное шифрование с поддержкой использования собственных ключей для хранилища и базы данных SQL Azure](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [Смена средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [Удаление средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [Условия лицензии для общих управляющих объектов (SMO) Microsoft SQL Server](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+***На данный момент новых статей нет.***
 
 
 
@@ -84,56 +73,13 @@ ms.lasthandoff: 09/13/2017
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Автоматическая настройка](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [Автоматическая настройка](automatic-tuning/automatic-tuning.md)
-
-*Обновлено: 16.08.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
-
-
-
-**Автоматическое исправление выбранного плана**
-
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] позволяет при обнаружении ухудшения работы с выбранным планом автоматически переключиться на последний известный эффективный план.
-
-![SQL plan choice correction--media/force-last-good-plan.png "Исправление выбранного плана SQL")
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] автоматически обнаруживает возможное ухудшение работы с выбранным планом, в том числе с планом, который должен использоваться в качестве замены.
-Когда ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] применяет последний известный эффективный план, автоматически отслеживается также производительность и нового, принудительно используемого плана. Если новый план не лучше плана с ухудшением производительности, его использование будет отменено, а ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] скомпилирует новый план. Если ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] подтверждает, что новый план лучше плана с ухудшением производительности, новый план будет сохранен до перекомпиляции (например, при следующем сборе статистики или изменении схемы).
-
-**Включение автоматического исправления выбранного плана**
-
-
-Вы можете отдельно для каждой базы данных включить автоматическую настройку и указать, что при ухудшении производительности после изменения плана следует принудительно использовать последний известный эффективный план. Автоматическая настройка включается с помощью следующей команды.
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-После включения этого параметра, если предполагаемая производительность процессора замедлится более чем на 10 секунд или если число ошибок в новом плане будет больше, чем в рекомендуемом, ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] автоматически принудительно применит рекомендуемую конфигурацию и проверит, что принудительно используемый план лучше текущего.
-
-**Альтернатива — исправление выбранного плана вручную**
-
-
-Без автоматической настройки пользователи должны периодически проверять состояние системы и искать запросы, в которых были потери производительности. Если какой-то план привел к ухудшению производительности, пользователь должен найти
-
+***Ни одна из статей в этой предметной области за последнее время изменениям не подвергалась.***
 
 
 

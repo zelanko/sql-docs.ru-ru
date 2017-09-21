@@ -1,24 +1,29 @@
 ---
 title: "Импорт значений проекта очистки в домен | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importprojectvalues.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccbaa61727e3d3ef85c0de713bbb596cede7797a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Импорт значений проекта очистки в домен
+# <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
   В службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) можно импортировать в домен знания о качестве данных, собранные в проекте очистки данных о качестве или в пакете служб Integration Services с компонентом DQS Cleansing. Это позволяет не допустить потери надежных знаний и обеспечить постоянное улучшение базы знаний.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
@@ -36,7 +41,7 @@ caps.handback.revision: 21
   
 ##  <a name="Import"></a> Импорт значений проекта очистки  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запустите клиентское приложение DQS](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте базу знаний в разделе управления доменами.  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 21
 4.  Перейдите на вкладку **Значения домена** , щелкните значок **Импорт значений** на панели значков, а затем выберите пункт **Импорт значений проекта**. Появляется диалоговое окно **Импорт значений проекта** со списком проектов качества данных и пакетов служб Integration Services, которые были очищены с помощью домена.  
   
     > [!NOTE]  
-    >  Если проект не будет создана с использованием этого домена или любых связанных доменов или проект не был завершен, **Импорт значений проекта** параметр будет недоступен.  
+    >  Если никакие проекты не создавались с помощью этого домена или связанных с ним доменов или проект не был завершен, пункт **Импорт значений проекта** будет недоступен.  
   
 5.  В диалоговом окне **Импорт значений проекта** :  
   
-    -   Выберите **все** в **импортированные** раскрывающегося списка, чтобы отобразить все проекты или **Нет** для отображения только проекты, значения которого еще не были импортированы.  
+    -   Выберите **Все** в раскрывающемся списке **Импортировано** для вывода всех проектов или **Нет** , чтобы показать только проекты, значения которых еще не были импортированы.  
   
     -   Выберите проект, из которого хотите импортировать значения.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 21
 10. Нажмите кнопку **Готово**.  
   
     > [!NOTE]  
-    >  Дополнительные сведения о работе со значениями в **значения домена** см. в разделе [Изменение значений домена](../data-quality-services/change-domain-values.md).  
+    >  Дополнительные сведения о работе со значениями на вкладке **Значения домена** см. в разделе [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После импорта значений проекта в домен  
  После импорта знаний служб DQS, собранных в процессе очистки, в домен вы можете приступать к другим задачам управления доменами с использованием этого домена и значений. Дополнительные сведения см. в разделе [Управление доменом](../data-quality-services/managing-a-domain.md).  
@@ -109,8 +114,8 @@ caps.handback.revision: 21
   
 -   Импортировать значения из проекта можно только тогда, когда база знаний имеет состояние «в обработке» и заблокирована пользователем, выполняющим импорт.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Очистка данных](../data-quality-services/data-cleansing.md)   
- [Преобразование «Очистка DQS»](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [Преобразование "Очистка DQS"](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

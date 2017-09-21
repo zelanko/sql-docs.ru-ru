@@ -1,7 +1,7 @@
 ---
 title: "Настройка PolyBase | Документация Майкрософт"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
-ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 95a149c4a59de88373206f1b90419c0b7359bb90
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-configuration"></a>Конфигурация PolyBase
@@ -30,8 +30,7 @@ ms.lasthandoff: 07/31/2017
  Обеспечьте подключение к внешнему источнику данных с помощью SQL Server. Тип подключения ощутимо влияет на производительность запросов. Например, в рамках 10-гигабитного соединения Ethernet ответ на запрос PolyBase приходит быстрее, чем в рамках 1-гигабитного соединения Ethernet.  
   
  Необходимо настроить SQL Server для подключения к вашей версии Hadoop или хранилищу BLOB-объектов Azure с помощью **sp_configure**. В PolyBase поддерживается два типа распределений: Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH).  Полный список поддерживаемых внешних источников данных см. в статье [Конфигурация PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
- 
- Обратите внимание: PolyBase не поддерживает шифрование зон Cloudera. 
+1. Обратите внимание: PolyBase не поддерживает шифрование зон Cloudera. 
   
 ### <a name="run-spconfigure"></a>Выполнение процедуры sp_configure  
   
@@ -67,6 +66,20 @@ ms.lasthandoff: 07/31/2017
 3.  На компьютере SQL Server в файле **yarn.site.xml** найдите свойство **yarn.application.classpath** . Вставьте значение, скопированное на компьютере с Hadoop, в качестве значения элемента.  
 
 4. Для всех версий CDH 5.X необходимо добавить параметры конфигурации **mapreduce.application.classpath** либо в конец **файла yarn.site.xml**, либо в **файл mapred-site.xml**. HortonWorks содержит эти настройки в конфигурациях **yarn.application.classpath**.
+
+## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>Подключение к кластеру Hadoop с параметром Hadoop.RPC.Protection
+Типичный способ защиты взаимодействия в кластере Hadoop — изменение конфигурации hadoop.rpc.protection на Privacy (Конфиденциальность) или Integrity (Целостность). По умолчанию PolyBase предполагает, что задана конфигурация Authenticate (Проверка подлинности). Чтобы переопределить эту настройку по умолчанию, необходимо добавить в файл core-site.xml следующее свойство. Смена конфигурации позволит осуществлять безопасную передачу данных между узлами Hadoop и использовать SSL-подключение к SQL Server.
+
+```
+<!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
+  <property>
+    <name>hadoop.rpc.protection</name>
+    <value></value>
+  </property> 
+```
+
+
+
 
 ## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>Пример yarn-site.xml mapred-site.xml файлов и CDH 5.X кластера.
 

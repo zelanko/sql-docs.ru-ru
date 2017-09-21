@@ -1,22 +1,27 @@
 ---
-title: "Импорт домена из файла .dqs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Импорт домена из файла DQS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4adc315932a7632077913866b648cba4947a9d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Импорт домена из файла .dqs
+# <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
   В этом разделе описывается импорт домена из файла .dqs в существующую базу знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Файл данных .dqs создается путем экспорта домена или базы знаний из приложения [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Файл данных .dqs зашифрован, поэтому его нельзя просмотреть.  
   
  Использование файла данных .dqs для экспорта домена из одной базы знаний и последующего его импорта в другую базу знаний упрощает процесс создания набора знаний, экономя время и усилия. Это обеспечивает возможность совместного использования домена и набора знаний из него, что позволяет сэкономить время. Импортировать можно один отдельный домен или один составной домен (содержащий несколько отдельных доменов). Файл DQS, содержащий один домен, включает все сведения о домене, включая свойства домена, значения и сведения о правилах, кроме сведений о сопоставляемых ссылочных данных. Файл DQS, содержащий составной домен, включает все сведения составного домена, в том числе все данные отдельных доменов, которые входят в составной домен, а также свойства, отношения значений и правила составного домена, кроме сопоставленных ссылочных данных. Будут импортированы опубликованные и неопубликованные данные.  
@@ -33,15 +38,15 @@ caps.handback.revision: 18
 ####  <a name="Permissions"></a> Разрешения  
  Для импорта домена из файла данных .dqs необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a> Импорт домена из файла DQS  
+##  <a name="Import"></a> Import a domain from a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запустите клиентское приложение DQS](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте базу знаний в разделе управления доменами.  
   
 3.  Щелкните значок **Импорт домена из файла данных** .  
   
-4.  В **импорта из файла данных** диалоговое окно, перейдите в папку, в который требуется импортировать файл из файла (типа DQS-файла) и нажмите кнопку **Open**.  
+4.  В диалоговом окне **Импорт из файла данных** перейдите к папке, содержащей файл для импорта, выберите или введите в поле имя файла .dqs и нажмите кнопку **Открыть**.  
   
 5.  В диалоговом окне **Импорт домена** нажмите кнопку **ОК**.  
   
@@ -51,6 +56,6 @@ caps.handback.revision: 18
 6.  Убедитесь, что импортированный домен отображается в списке **Домен** . Если был импортирован составной домен, убедитесь, что он и отдельные домены, входящие в его состав, отображаются в списке **Домен** .  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После импорта домена из файла DQS  
- После импорта домена из файла DQS можно добавить набор знаний в домен или использовать его в проекте очистки данных или сопоставления в зависимости от содержания домена. Дополнительные сведения см. в разделе [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md), [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md), [очистки данных](../data-quality-services/data-cleansing.md), или [Сопоставление данных](../data-quality-services/data-matching.md).  
+ После импорта домена из файла DQS можно добавить набор знаний в домен или использовать его в проекте очистки данных или сопоставления в зависимости от содержания домена. Дополнительные сведения см. в разделах [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md), [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md), [Очистка данных](../data-quality-services/data-cleansing.md) и [Сопоставление данных](../data-quality-services/data-matching.md).  
   
   

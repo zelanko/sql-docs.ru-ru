@@ -1,23 +1,28 @@
 ---
-title: "Экспорт базы знаний в файл .dqs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Экспорт базы знаний в файл DQS | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3aa8fa674fc21b52bcf924218448641624673cb7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Экспорт базы знаний в файл .dqs
-  В этом разделе описывается экспорт всей базы знаний в файл данных DQS в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Экспортировать в файл данных можно домен или всю базу знаний. Сведения об экспорте домена см. в разделе [Экспорт домена в файл .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
+# <a name="export-a-knowledge-base-to-a-dqs-file"></a>Экспорт базы знаний в файл .dqs
+  В этом разделе описывается экспорт всей базы знаний в файл данных DQS в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Экспортировать в файл данных можно домен или всю базу знаний. Сведения об экспорте домена см. в разделе [Экспорт домена в файл DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
  Экспорт базы знаний в файл DQS и последующий импорт в качестве другой базы знаний упрощает процесс создания знаний и экономит время. Благодаря этому можно использовать базу знаний и ее знания совместно с другими пользователями. Файл DQS будет содержать все сведения базы знаний, включая домены и политику сопоставления, кроме присоединенных ссылочных данных. После импорта файла DQS следует повторно добавить необходимые домены в соответствующие службы ссылочных данных. Экспортируются как опубликованные, так и неопубликованные данные базы знаний.  
   
@@ -33,15 +38,15 @@ caps.handback.revision: 19
 ####  <a name="Permissions"></a> Разрешения  
  Для экспорта базы знаний в файл данных DQS необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Export"></a> Экспорт базы знаний в файл DQS.  
+##  <a name="Export"></a> Export a knowledge base to a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запустите клиентское приложение DQS](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте базу знаний в разделе управления доменами.  
   
-3.  На странице управления доменами (с любой выбранной вкладке) щелкните **экспортировать данные базы знаний** значок над списком доменов и нажмите кнопку **Экспорт базы знаний**. Кроме того, вы можете щелкнуть правой кнопкой в **домена** список, наведите указатель мыши на **экспортировать**, и нажмите кнопку **Экспорт базы знаний**.  
+3.  На странице «Управление доменами» (при любой выбранной вкладке) щелкните значок **Экспортировать данные базы знаний** над списком «Домен» и выберите **Экспортировать базу знаний**. Кроме того, вы можете щелкнуть правой кнопкой мыши список **Домен** , указать пункт **Экспорт**, а затем **Экспортировать базу знаний**.  
   
-4.  В **Экспорт в файл данных** диалоговое окно, перейдите в папку, в который требуется сохранить файл, имя файла или оставьте имя базы знаний, Сохранить **файлы данных DQS (\*.dqs)** как **Сохранить как** Введите и нажмите кнопку **Сохранить**.  
+4.  В диалоговом окне **Экспорт в файл данных** перейдите в папку, где планируется сохранить файл, присвойте файлу имя или оставьте имя базы знаний, оставьте **Файлы данных DQS (\*.dqs)** в качестве **Типа файла** и нажмите кнопку **Сохранить**.  
   
 5.  В диалоговом окне **Экспортировать базу знаний** убедитесь, что в строке состояния сообщается о завершении экспорта. Нажмите кнопку **ОК**.  
   

@@ -1,32 +1,37 @@
 ---
-title: "Настройка служб DQS для использования справочных данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.administration.rdsconfiguration.f1"
-  - "sql13.dqs.administration.configuration.createDirectRDS.f1"
-  - "sql13.dqs.admin.config.rds.f1"
+title: "Настройка служб DQS для использования эталонных данных | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.administration.rdsconfiguration.f1
+- sql13.dqs.administration.configuration.createDirectRDS.f1
+- sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db1e4d797fa5794c24569f18e300bc4ab64c725c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
-# Настройка служб DQS для использования справочных данных
+# <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
   В этом разделе описывается настройка служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) на использование ссылочных данных для очистки данных. Можно использовать ссылочные данные как из Windows Azure Marketplace, так и непосредственно от сторонних поставщиков ссылочных данных в сети.  
   
-## Перед началом  
+## <a name="before-you-begin"></a>Перед началом  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
- Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
+ Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Дополнительные сведения о создании ключа учетной записи Marketplace см. по адресу [Создание учетной записи](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId = 212936). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
   
 ###  <a name="Security"></a> Безопасность  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 15
   
 ##  <a name="Marketplace"></a> Настройка служб DQS на использование ссылочных данных из Marketplace  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запустите клиентское приложение DQS](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] в разделе **Администрирование**выберите команду **Настройка**.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 15
   
 ##  <a name="ThirdParty"></a> Настройка служб DQS на использование ссылочных данных от сторонних поставщиков ссылочных данных в сети  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запустите клиентское приложение DQS](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] в разделе **Администрирование**выберите команду **Настройка**.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 15
   
     1.  В поле **Имя** введите имя нового поставщика служб ссылочных данных с прямой ссылкой для подключения.  
   
-    2.  (Необязательно) В **Описание** Введите описание нового поставщика служб данных прямых ссылок.  
+    2.  (Необязательно.) В поле **Описание** введите описание нового поставщика служб ссылочных данных с прямой ссылкой для подключения.  
   
     3.  В поле **Категория** введите категорию данных, предоставляемых новым поставщиком служб ссылочных данных с прямой ссылкой для подключения.  
   
@@ -76,6 +81,6 @@ caps.handback.revision: 15
  Теперь службы ссылочных данных из настроенного стороннего поставщика служб ссылочных данных с непосредственным подключением по сети можно использовать в DQS.  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки служб DQS на использование ссылочных данных  
- Теперь необходимо сопоставить требуемые домены базы знаний со ссылочными данными, доступными в только что настроенных поставщиках данных. Для этого в разделе [присоединить домен или составной домен со ссылочными данными](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
+ Теперь необходимо сопоставить требуемые домены базы знаний со ссылочными данными, доступными в только что настроенных поставщиках данных. Для этого см. раздел [Подсоединение обычного или составного домена к эталонным данным](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
   
