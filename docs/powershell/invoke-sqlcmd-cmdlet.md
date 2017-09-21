@@ -19,11 +19,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.translationtype: HT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 2172a7e83454030f0cee9eaec1909c0cfb019d63
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd, командлет
@@ -129,7 +129,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Максимальная длина символьных выходных данных|-w|-MaxCharLength|  
 |Максимальная длина двоичных выходных данных|-w|-MaxBinaryLength|  
 |Подключаться с помощью шифрования SSL|Параметр отсутствует|-EncryptConnection|  
-|Отображать сообщения об ошибках|Параметр отсутствует|-OutputSqlErrors|  
+|Отображать сообщения об ошибках|Параметр отсутствует|-OutputSqlErrors: требуется логический оператор $true или $false|  
 |Выводить сообщения в поток stderr|-r|Параметр отсутствует|  
 |Использовать региональные настройки клиента|-r|Параметр отсутствует|  
 |Выполнить указанный запрос и продолжить работу|-Q|Параметр отсутствует|  
@@ -151,7 +151,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Подключение с помощью проверки подлинности Windows|-e|Параметр отсутствует|  
   
 ## <a name="see-also"></a>См. также:  
- [Использование командлетов ядра СУБД](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
+ [Использование командлетов компонента Database Engine](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
  [Программа sqlcmd](../tools/sqlcmd-utility.md)   
  [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
