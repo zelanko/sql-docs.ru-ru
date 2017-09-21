@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Восстановление изначальной топологии группы доступности](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> Реакция на разрушительный сбой в основном центре обработки данных  
  На следующем рисунке показана последовательность действий, осуществляемых в удаленном центре обработки данных после разрушительного сбоя в основном центре обработки данных.  
   
  ![Действия по обработке сбоя в основном центре обработки данных](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Действия по обработке сбоя в основном центре обработки данных")  
