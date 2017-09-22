@@ -60,7 +60,7 @@ TLS используется для шифрования подключения 
 - Ограничение доступа к`mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - Переместить системные каталоги SSL (необязательно)  
