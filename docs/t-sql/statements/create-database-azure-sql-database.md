@@ -34,10 +34,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe808df2a3d0f55ab00946db2bd86aa8d9fb3511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cccf648270523e86e502caebfbc7f6ba6a55cfd7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (база данных SQL Azure)
@@ -130,11 +130,11 @@ CREATE DATABASE database_name
 |150 ГБ|Недоступно|√|√|√|√|  
 |200 ГБ|Недоступно|√|√|√|√|  
 |250 ГБ|Недоступно|√ (D)|√ (D)|√|√|  
-|300 ГБ|Недоступно|√|√|√|√|  
-|400 ГБ|Недоступно|√|√|√|√|
-|500 ГБ|Недоступно|√|√|√ (D)|√|
-|750 ГБ|Недоступно|√|√|√|√|
-|1024 ГБ|Недоступно|√|√|√|√ (D)|
+|300 ГБ|Недоступно|Недоступно|√|√|√|  
+|400 ГБ|Недоступно|Недоступно|√|√|√|
+|500 ГБ|Недоступно|Недоступно|√|√ (D)|√|
+|750 ГБ|Недоступно|Недоступно|√|√|√|
+|1024 ГБ|Недоступно|Недоступно|√|√|√ (D)|
 |От 1024 ГБ до 4096 ГБ с приращением 256 ГБ * |Недоступно|Недоступно|Недоступно|Недоступно|√|√|  
   
  \*P11 и P15 позволяют MAXSIZE до 4 ТБ 1024 ГБ, размер по умолчанию.  P11 и P15 могут использовать до 4 ТБ хранилища включены без дополнительной платы. На уровне Premium MAXSIZE больше 1 ТБ, доступен в следующих областях: нам East2, Запад США, Вирджиния государственных организаций США, Западной Европе, Германия центра, Южная Восточная Азия, восток Японии, Восточная Австралия, Канады центра и Восточная Канада. Текущие ограничения в разделе [одной базы данных](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
@@ -292,7 +292,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 -  [sys.dm_database_copies &#40; База данных Azure SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER DATABASE &#40; База данных Azure SQL &#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
+-   [ALTER DATABASE &#40; База данных Azure SQL &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)   
     
   
 

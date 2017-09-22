@@ -2,7 +2,7 @@
 title: "Удаление базы данных (Transact-SQL) | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 09/15/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -30,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 347995e21c5930007404fd8a9dd8bb29d9879981
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Удаляет одну или несколько пользовательских баз данных или моментальных снимков базы данных из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,7 +51,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```  
   
 ```  
--- Azure SQL Database and Parallel Data Warehouse Syntax   
+-- Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse Syntax   
 DROP DATABASE database_name [;]  
 ```  
   
@@ -105,10 +105,15 @@ DROP DATABASE database_name [;]
  Удаление Включение базы данных для базы данных Stretch не приводит к удалению удаленных данных. Если вы хотите удалить удаленных данных, необходимо удалить вручную.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- Для удаления базы данных необходимо соединение с базой данных master.  
+ Для удаления базы данных необходимо соединение с базой данных master.
   
- Инструкция DROP DATABASE должна быть единственной инструкцией в пакете SQL, и ее можно удалить только одновременно с базой данных.  
+ Инструкция DROP DATABASE должна быть единственной инструкцией в пакете SQL, и ее можно удалить только одновременно с базой данных.
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ Для удаления базы данных необходимо соединение с базой данных master.
+  
+ Инструкция DROP DATABASE должна быть единственной инструкцией в пакете SQL, и ее можно удалить только одновременно с базой данных.
+
 ## <a name="permissions"></a>Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

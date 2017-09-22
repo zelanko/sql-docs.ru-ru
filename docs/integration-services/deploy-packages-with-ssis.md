@@ -25,14 +25,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>Развертывание пакетов с помощью служб SSIS
-Службы [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат средства, облегчающие развертывание пакетов на другом компьютере. Средства развертывания управляют любыми зависимостями, такими как конфигурации или требуемые пакету файлы. В данном учебнике демонстрируется, как с помощью этих средств устанавливать пакеты и их зависимости на целевом компьютере.    
+Службы[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат средства, облегчающие развертывание пакетов на другом компьютере. Средства развертывания управляют любыми зависимостями, такими как конфигурации или требуемые пакету файлы. В данном учебнике демонстрируется, как с помощью этих средств устанавливать пакеты и их зависимости на целевом компьютере.    
     
 Сначала требуется выполнить задачи для подготовки к развертыванию. Необходимо создать новый проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и добавить в проект существующие пакеты и файлы данных. Не нужно создавать никакие пакеты; вместо этого работа ведется только с завершенными пакетами, созданными при выполнении заданий этого учебника. Функциональность пакетов из данного учебника менять не придется, тем не менее, может оказаться полезным после добавления пакетов в проект открыть их в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и просмотреть содержимое каждого пакета. Содержимое пакетов показывает их зависимости, такие как файлы журнала, а также другие интересные особенности пакетов.    
     
@@ -57,14 +57,14 @@ ms.lasthandoff: 08/03/2017
 - Образцы данных, завершенные пакеты, конфигурации и файл сведений. Эти файлы устанавливаются вместе при скачивании [примеров баз данных Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
 > **Примечание.** Пользователь должен иметь разрешение на создание и удаление таблиц в базе данных AdventureWorks, а также других используемых данных.         
     
--   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).    
+-   [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).    
     
 **Целевой компьютер.** На компьютере, где будут развернуты пакеты, **должны быть установлены следующие компоненты.**    
     
 - SQL Server
 - Образцы данных, завершенные пакеты, конфигурации и файл сведений. Эти файлы устанавливаются вместе при скачивании [примеров баз данных Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
     
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     

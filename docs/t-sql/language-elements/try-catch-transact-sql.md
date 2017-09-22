@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 542fba03b289dd0f393e3e5013cad0730c6d0756
+ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
+ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -95,21 +95,21 @@ END CATCH
 ## <a name="retrieving-error-information"></a>Получение информации об ошибке  
  В области блока CATCH для получения сведений об ошибке, приведшей к выполнению данного блока CATCH, можно использовать следующие системные функции:  
   
--   функция ERROR_NUMBER() возвращает номер ошибки.  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) возвращает номер ошибки.  
   
--   Функция ERROR_SEVERITY() возвращает степень серьезности ошибки.  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) возвращает серьезность.  
   
--   Функция ERROR_STATE() возвращает код состояния ошибки.  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) возвращает код состояния ошибки.  
   
--   Функция ERROR_PROCEDURE() возвращает имя хранимой процедуры или триггера, в котором произошла ошибка.  
+-   [Функция ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) возвращает имя хранимой процедуры или триггера, в которой произошла ошибка.  
   
--   Функция ERROR_LINE() возвращает номер строки, которая вызвала ошибку, внутри подпрограммы.  
+-   [Функция ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) возвращает номер строки в подпрограмму, которая вызвала ошибку.  
   
--   Функция ERROR_MESSAGE() возвращает полный текст сообщения об ошибке. Текст содержит значения подставляемых параметров, таких как длина, имена объектов или время.  
+-   [Функция ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) возвращает полный текст сообщения об ошибке. Текст содержит значения подставляемых параметров, таких как длина, имена объектов или время.  
   
  Эти функции возвращают значение NULL, если их вызов происходит вне области блока CATCH. С помощью этих функций сведения об ошибке могут быть получены из любого места внутри блока CATCH. Например, следующий скрипт демонстрирует хранимую процедуру, которая содержит функции обработки ошибок. В блоке `CATCH` конструкции `TRY…CATCH` вызывается хранимая процедура и возвращаются сведения об ошибке.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -137,7 +137,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- Функции ошибку_ * также работают в `CATCH` блок [скомпилированные в собственном коде хранимой процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Ошибка\_ \* функции также работают в `CATCH` блок [скомпилированные в собственном коде хранимой процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>Ошибки, не обрабатываемые конструкцией TRY…CATCH  
  Конструкции TRY…CATCH не обрабатывают следующие условия.  
@@ -162,7 +162,7 @@ END CATCH;
   
  Следующий пример показывает, как ошибка разрешения имени объекта, формируемая инструкцией `SELECT`, не отлавливается конструкцией `TRY…CATCH`, но отлавливается блоком `CATCH`, когда та же самая инструкция `SELECT` выполняется внутри хранимой процедуры.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -179,7 +179,7 @@ END CATCH
   
  Выполнение инструкции `SELECT` внутри хранимой процедуры приведет к ошибке, которая возникнет на уровне ниже, чем блок `TRY`. Такая ошибка будет обработана конструкцией `TRY…CATCH`.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -212,7 +212,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Использование TRY…CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на нуль. Эта ошибка приводит к передаче управления связанному блоку `CATCH`.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>Б. Использование конструкции TRY…CATCH внутри транзакции  
  В следующем примере показано использование блока `TRY…CATCH` внутри транзакции. Инструкция внутри блока `TRY` приводит к ошибке нарушения ограничения.  
   
-```  
+```t-sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -261,7 +261,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>В. Использование TRY…CATCH с XACT_STATE  
  В следующем примере показано, как использовать конструкцию `TRY…CATCH` для обработки ошибок, возникших внутри транзакции. Функция `XACT_STATE` определяет, должна ли транзакция быть зафиксирована или откачена. В данном примере параметр `SET XACT_ABORT` находится в состоянии `ON`. В результате, если произойдет ошибка нарушения ограничения, транзакция станет нефиксируемой.  
   
-```  
+```t-sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-trycatch"></a>Г. Использование TRY…CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на нуль. Эта ошибка приводит к передаче управления связанному блоку `CATCH`.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

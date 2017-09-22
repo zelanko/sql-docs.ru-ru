@@ -16,17 +16,17 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 729df20de5d57a664467a4b799312d066bb3ec63
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c4de8bcf161a8e4a5e33535769d3f8f7b5f7ad7a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW Установка и настройка
 Инструкции по установке и конфигурации для WideWorldImportersDW базы данных.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Чтобы использовать полную версию примера, используйте SQL Server Evaluation, Developer или Enterprise Edition.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Для получения наилучших результатов используйте выпуска июня 2016 г. или более поздней версии.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Для получения наилучших результатов используйте выпуска июня 2016 г. или более поздней версии.
 
 ## <a name="download"></a>Загрузить
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
 5. При необходимости изменить целевое расположение для данных и файлы журналов, в **файлы** области. Обратите внимание, что это лучший способ размещения данных и файлы журнала на разных дисках.
 6. Нажмите кнопку **ОК**. Это инициирует восстановление базы данных. После завершения работы, вы получите базы данных WideWorldImporters, установленных на экземпляре SQL Server.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>База данных SQL Azure
 
 Чтобы импортировать bacpac в новую базу данных SQL, можно использовать среду Management Studio.
 

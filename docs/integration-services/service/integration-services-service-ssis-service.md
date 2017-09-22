@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cc307b473ce31150de8a970a6d44e46dcdc04c3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Службы Integration Services (службы SSIS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/03/2017
  При установке компонента служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также устанавливается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию запускается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и устанавливается ее автоматический запуск. Однако необходимо также установить среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы использовать эту службу для управления хранимыми и эксплуатируемыми пакетами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 > [!NOTE]
-> Для соединения непосредственно с экземпляром устаревшей версии службы Integration Service необходимо использовать версию SQL Server Management Studio (SSMS), соответствующую версии SQL Server, где выполняются службы Integration Services. Например, чтобы соединиться с устаревшей версией служб Integration Services, выполняющихся на экземпляре SQL Server 2016, необходимо использовать версию SSMS, выпущенную для SQL Server 2016. [Скачайте SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+> Для соединения непосредственно с экземпляром устаревшей версии службы Integration Service необходимо использовать версию SQL Server Management Studio (SSMS), соответствующую версии SQL Server, где выполняются службы Integration Services. Например, чтобы соединиться с устаревшей версией служб Integration Services, выполняющихся на экземпляре SQL Server 2016, необходимо использовать версию SSMS, выпущенную для SQL Server 2016. [Скачайте SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 >
 >   В диалоговом окне SSMS **Соединение с сервером** нельзя вводить имя сервера, на котором работает более ранняя версия службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединяться с экземпляром службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере.   
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 08/03/2017
  Соединение с экземпляром служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на удаленном сервере из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или другого управляющего приложения требует определенного набора прав на сервере для пользователей этого приложения.  
   
 > [!IMPORTANT]
-> Для соединения непосредственно с экземпляром устаревшей версии службы Integration Service необходимо использовать версию SQL Server Management Studio (SSMS), соответствующую версии SQL Server, где выполняются службы Integration Services. Например, чтобы соединиться с устаревшей версией служб Integration Services, выполняющихся на экземпляре SQL Server 2016, необходимо использовать версию SSMS, выпущенную для SQL Server 2016. [Скачайте SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+> Для соединения непосредственно с экземпляром устаревшей версии службы Integration Service необходимо использовать версию SQL Server Management Studio (SSMS), соответствующую версии SQL Server, где выполняются службы Integration Services. Например, чтобы соединиться с устаревшей версией служб Integration Services, выполняющихся на экземпляре SQL Server 2016, необходимо использовать версию SSMS, выпущенную для SQL Server 2016. [Скачайте SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
 >
 >  Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере.
   

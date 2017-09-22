@@ -1,19 +1,19 @@
 ---
 title: "Настройка параметров SQL Server в Linux | Документы Microsoft"
 description: "В этом разделе описывается использование средства mssql conf для настройки параметров 2017 г. SQL Server в Linux."
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql conf
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>Изменение параметров сортировки SQL Server
 
-**Набор параметров сортировки** параметр изменяет значения параметров сортировки в любом из поддерживаемых параметров сортировки:
+**Набор параметров сортировки** параметр изменяет значения параметров сортировки в любом из поддерживаемых параметров сортировки.
+
+1. Первый [резервное копирование всех баз данных пользователя](sql-server-linux-backup-and-restore-database.md) на сервере.
+
+1. Затем с помощью [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) хранимой процедуры для отсоединения базы данных пользователя.
 
 1. Запустите **набор параметров сортировки** параметр и следуйте указаниям:
 
@@ -61,7 +65,9 @@ ms.lasthandoff: 09/05/2017
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. Программа mssql conf будет пытаться восстановить базы данных, используя указанные параметры сортировки и перезапустите службу. Если имеются ошибки, откат параметров сортировки к предыдущему значению.
+1. Mssql conf программа попытается изменить значение указанных параметров сортировки и перезапустите службу. Если имеются ошибки, откат параметров сортировки к предыдущему значению.
+
+1. Восстановить резервные копии базы данных пользователя.
 
 Список поддерживаемых параметров сортировки, запустите [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) функция: `SELECT Name from sys.fn_helpcollations()`.
 

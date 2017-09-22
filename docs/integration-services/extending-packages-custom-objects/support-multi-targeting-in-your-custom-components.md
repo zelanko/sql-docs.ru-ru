@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf7649b06354bfa621624ddfcf22bdea90bf0467
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 57ac95d7883ce47e1a39d4d50d3f60b968bccf21
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Поддержка нескольких версий в пользовательские компоненты
- Теперь можно использовать конструктор служб SSIS в SQL Server Data Tools (SSDT) для создания, поддержания и запускать пакеты, предназначенные для SQL Server 2016, SQL Server 2014 или SQL Server 2012. Процедуру получения SSDT для Visual Studio 2015 см. в разделе [загрузить последние SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx). 
+ Теперь можно использовать конструктор служб SSIS в SQL Server Data Tools (SSDT) для создания, поддержания и запускать пакеты, предназначенные для SQL Server 2016, SQL Server 2014 или SQL Server 2012. Процедуру получения SSDT для Visual Studio 2015 см. в разделе [загрузить последние SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). 
 
  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации**выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    

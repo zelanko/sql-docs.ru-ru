@@ -1,7 +1,7 @@
 ---
 title: "@@SERVICENAME (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8e93602aed47f8b5147d39eaf41503488f57a855
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: d800a7dc222b3ac25777cd83964b755185817a7a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="servicename-transact-sql"></a>@@SERVICENAME (Transact-SQL)
+# <a name="x40x40servicename-transact-sql"></a>& #x 40; & #x 40; SERVICENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает имя раздела реестра, согласно которому запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. @@SERVICENAME возвращает «MSSQLSERVER», если текущий экземпляр является экземпляром по умолчанию, то функция возвращает имя экземпляра, если текущий экземпляр является именованным экземпляром.  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 @@SERVICENAME  
 ```  
   
@@ -70,3 +69,4 @@ MSSQLSERVER
  [Управление службами компонента Database Engine](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
+

@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1a3d4995d3cc79f9a31533b918268f14204d511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a37c630af512d85e22b3547eb520aebe22546040
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # Свойства TCP/IP (вкладка «Протоколы»)
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
   
 ## См. также:  
  [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Создание допустимой строки соединения с использованием протокола TCP/IP](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [Создание допустимой строки подключения с использованием протокола TCP/IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)  
   
   
 

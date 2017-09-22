@@ -32,10 +32,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 802642d2c9ba70c2a8750dc0ed5536e198a33f6f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: d3e4af471573ffa2220eb9dfb1ee7a129899b5eb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER DATABASE &#40; База данных Azure SQL &#41;](https://msdn.microsoft.com/library/mt574871.aspx) 
+-   [ALTER DATABASE &#40; База данных Azure SQL &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database) 
 
 -   [ALTER DATABASE &#40; Хранилище данных Azure SQL &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
@@ -654,7 +654,7 @@ MULTI_USER
  ПОЛНОЕ  
  Включен полный нетранзакционный доступ к данным FILESTREAM в таблицах FileTable.  
   
- Имя_каталога =  *\<directory_name >*  
+ Имя_каталога = * \<directory_name >*  
  Имя каталога, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов уровня базы данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Проверка уникальности выполняется без учета регистра, независимо от параметров сортировки. Этот параметр должен быть задан до создания таблицы FileTable в этой базе данных.  
   
  **\<HADR_options >:: =**  
@@ -987,7 +987,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | ОТКЛЮЧЕНИЕ
 > [!IMPORTANT]  
 >  В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр ANSI_PADDING всегда будет иметь значение ON, а все приложения, явно присваивающие ему значение OFF, будут вызывать ошибку. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Рекомендуется всегда задавать для параметра ANSI_PADDING значение ON. При создании или управлении индексами, основанными на вычисляемых столбцах или индексированных представлениях, параметр ANSI_PADDING должен быть установлен в ON.  
   
- **char (*n*) ** и  **двоичный (*n*) ** столбцы, допускающие значения NULL, дополняются до длины столбца, если параметр ANSI_PADDING имеет значение On но конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. **char (*n*) ** и  **двоичный (*n*) ** столбцы, которые не допускают значения NULL всегда подгоняются по длине столбца.  
+ **char (*n*) ** и * *двоичный (*n*) ** столбцы, допускающие значения NULL, дополняются до длины столбца, если параметр ANSI_PADDING имеет значение On но конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. **char (*n*) ** и * *двоичный (*n*) ** столбцы, которые не допускают значения NULL всегда подгоняются по длине столбца.  
   
  Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют настройки уровня базы данных по умолчанию для ANSI_PADDING. По умолчанию клиенты ODBC и OLE DB при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают параметр ANSI_PADDING инструкции SET на уровне соединения с состоянием ON для сеанса. Дополнительные сведения см. в разделе [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   

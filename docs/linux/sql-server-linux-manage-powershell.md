@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 75bbcf35ae4547c1ba2404324b31eeb4bdd7ea1e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Использование PowerShell в Windows для управления SQL Server в Linux
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Установите последнюю версию SQL PowerShell в Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) в Windows входит в состав [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). При работе с SQL Server, следует всегда использовать последнюю версию SSMS и SQL PowerShell. Последнюю версию SSMS постоянно обновляется и оптимизированы и в настоящее время работает с SQL Server версии-кандидата 2 2017 г. в Linux. Чтобы загрузить и установить последнюю версию, в разделе [загрузка SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). Быть в курсе событий, последняя версия SSMS предлагает при наличии доступного для загрузки новой версии. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) в Windows входит в состав [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms). При работе с SQL Server, следует всегда использовать последнюю версию SSMS и SQL PowerShell. Последнюю версию SSMS постоянно обновляется и оптимизированы и в настоящее время работает с SQL Server версии-кандидата 2 2017 г. в Linux. Чтобы загрузить и установить последнюю версию, в разделе [загрузка SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Быть в курсе событий, последняя версия SSMS предлагает при наличии доступного для загрузки новой версии. 
 
 ## <a name="before-you-begin"></a>Перед началом
 
@@ -71,7 +71,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 - Создайте экземпляр класса [сервера](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) объекта
 - Подключиться к **сервера** и отобразить несколько свойств
 
-Не забудьте заменить  **\<your_server_instance\>**  с IP-адрес или имя узла экземпляра RC2 2017 г. SQL Server в Linux.
+Не забудьте заменить ** \<your_server_instance\> ** с IP-адрес или имя узла экземпляра RC2 2017 г. SQL Server в Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -111,7 +111,7 @@ HostDistribution : Ubuntu
 - Используйте **Get SqlErrorLog** журналы, чтобы соединиться с экземпляром 2017 г. SQL Server в Linux и получает ошибку с момента **за вчерашний день**
 - Выходные данные для **Out-GridView** командлета
 
-Не забудьте заменить  **\<your_server_instance\>**  с IP-адрес или имя узла экземпляра RC2 2017 г. SQL Server в Linux.
+Не забудьте заменить ** \<your_server_instance\> ** с IP-адрес или имя узла экземпляра RC2 2017 г. SQL Server в Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>См. также:
-- [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
 

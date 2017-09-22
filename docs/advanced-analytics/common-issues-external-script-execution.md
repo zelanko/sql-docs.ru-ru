@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f564922466740d2410f686651d889e7a3fec5fe9
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Распространенные проблемы с выполнением внешних скриптов в SQL Server
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/08/2017
 - Обход проходной проверки (SeChangeNotifyPrivilege)
 - Настройка квот памяти для процесса (SeIncreaseQuotaSizePrivilege)
 
-Сведения об этих прав пользователя см. в разделе «права и привилегии Windows» [обновления для Windows, Настройка учетных записей и разрешений](https://msdn.microsoft.com/library/ms143504.aspx).
+Сведения об этих прав пользователя см. в разделе «права и привилегии Windows» [обновления для Windows, Настройка учетных записей и разрешений](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).
 
 > [!TIP]
 > Если вы знакомы с использованием средства поддержки диагностики платформы (SDP) для диагностики SQL Server, можно использовать для просмотра выходного файла с именем MachineName_UserRights.txt SDP.

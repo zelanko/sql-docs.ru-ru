@@ -18,11 +18,11 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c5a2673c5e38d6bd216116cd14225f1ed064487
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1ad3eee80539ea31af3ccf9e117b2f39b4921846
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
  Безопасность опубликованного отчета обеспечивается через назначение ролей при использовании модели безопасности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на основе ролей. Опубликованные отчеты доступны по URL-адресам, через веб-части SharePoint или на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Также можно перейти к этим отчетам и открыть их в построителе отчетов.  
   
 ### <a name="report-snapshots"></a>Моментальные снимки отчета  
- Отчет можно также опубликовать в виде моментального снимка, содержащего как сведения о макете, так и данные на время запуска отчета. Моментальные снимки отчета не сохраняются в каком-то определенном формате отображения, а преобразуются в него (например, в HTML) только при запросе пользователя или приложения. Дополнительные сведения см. в разделе [Поиск и просмотр отчетов в диспетчере отчетов (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd255286.aspx).  
+ Отчет можно также опубликовать в виде моментального снимка, содержащего как сведения о макете, так и данные на время запуска отчета. Моментальные снимки отчета не сохраняются в каком-то определенном формате отображения, а преобразуются в него (например, в HTML) только при запросе пользователя или приложения. Дополнительные сведения см. в разделе [поиск и просмотр отчетов в диспетчере отчетов &#40; Построитель отчетов и службы SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
 ## <a name="rendered-reports"></a>Подготовленные отчеты  
  Подготовленный отчет — это полностью обработанный отчет, содержащий как данные, так и сведения о форматировании отчета в формате, позволяющем его просматривать (например HTML). Пока отчет не преобразован в выходной формат, просмотреть его нельзя. Подготовить отчет можно одним из следующих способов:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также  
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

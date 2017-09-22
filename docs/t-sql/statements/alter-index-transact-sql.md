@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfe0bfe90cfb8a168fd2c87d662ba978c12a898e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **Применяется к**: SQL Server (начиная с SQL Server 2008) и базы данных SQL Azure.  
   
- Параметр SORT_IN_TEMPDB, MAXDOP и DATA_COMPRESSION — параметры, могут быть указаны при перестроении одиночной секции (СЕКЦИИ =  *n* ). XML-индексы не могут быть указаны в операции перестроения одиночной секции.  
+ Параметр SORT_IN_TEMPDB, MAXDOP и DATA_COMPRESSION — параметры, могут быть указаны при перестроении одиночной секции (СЕКЦИИ = * n *). XML-индексы не могут быть указаны в операции перестроения одиночной секции.  
   
  DISABLE  
  Помечает индекс как отключенный и недоступный для использования компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Любой индекс может быть отключен. Определение отключенного индекса остается в системном каталоге без базовых индексных данных. Отключение кластеризованного индекса блокирует доступ пользователя к данным базовой таблицы. Чтобы активировать индекс, следует использовать инструкцию ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING. Дополнительные сведения см. в разделе [отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md) и [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -356,7 +356,7 @@ FILLFACTOR = *fillfactor*
   
  Дополнительные сведения см. в разделе [параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY  **=**  {ON | {OFF}  
+ IGNORE_DUP_KEY ** = ** {ON | {OFF}  
  Определяет ответ на ошибку, случающуюся, когда операция вставки пытается вставить в уникальный индекс повторяющиеся значения ключа. Параметр IGNORE_DUP_KEY применяется только к операциям вставки, производимым после создания или перестроения индекса. Значение по умолчанию — OFF.  
   
  ON  
@@ -371,7 +371,7 @@ FILLFACTOR = *fillfactor*
   
  Для обратной совместимости синтаксиса аргумент WITH IGNORE_DUP_KEY эквивалентен аргументу WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE  **=**  {ON | {OFF}  
+ STATISTICS_NORECOMPUTE ** = ** {ON | {OFF}  
  Указывает, выполнялся ли перерасчет статистики распределения. Значение по умолчанию — OFF.  
   
  ON  
@@ -407,7 +407,7 @@ FILLFACTOR = *fillfactor*
  
 **Применяется к**: SQL Server (начиная с SQL Server 2014) и базы данных SQL Azure.  
   
- ONLINE  **=**  {ON | **OFF** } \<применяемое к rebuild_index_option >  
+ ONLINE ** = ** {ON | **OFF** } \<применяемое к rebuild_index_option >  
  Определяет, будут ли базовые таблицы и связанные индексы доступны для запросов и изменения данных во время операций с индексами. Значение по умолчанию — OFF.  
   
  Для XML-индекса или пространственного индекса поддерживается только значение ONLINE = OFF; при ONLINE = ON возникает ошибка.  
@@ -431,9 +431,9 @@ FILLFACTOR = *fillfactor*
   
 -   подмножество секционированного индекса (секционированный индекс можно целиком перестроить в сети).  
 
--  База данных SQL до версии 12 и SQL Server до SQL Server 2012, не допускают `ONLINE` параметр для построения кластеризованного индекса или перестроить операций, если базовая таблица содержит **varchar(max)** или **varbinary(max)**  столбцов.
+-  База данных SQL до версии 12 и SQL Server до SQL Server 2012, не допускают `ONLINE` параметр для построения кластеризованного индекса или перестроить операций, если базовая таблица содержит **varchar(max)** или **varbinary(max) ** столбцов.
 
-ВОЗОБНОВЛЯЕМЫЕ  **=**  {ON | **OFF**}
+ВОЗОБНОВЛЯЕМЫЕ ** = ** {ON | **OFF**}
 
 **Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)  
 
@@ -443,13 +443,13 @@ FILLFACTOR = *fillfactor*
 
  ОТКЛЮЧЕНИЕ индекса операция не возобновляемые.
 
-MAX_DURATION  **=**  *время* [**МИНУТ**] используется с **RESUMABLE = ON** (требует **ONLINE = ON**).
+MAX_DURATION ** = ** *время* [**МИНУТ**] используется с **RESUMABLE = ON** (требует **ONLINE = ON**).
  
 **Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)  
 
 Показывает время (целочисленное значение, указанное в минутах), возобновляемые сети операцию index выполняется до приостановки. 
 
-ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
+ALLOW_ROW_LOCKS ** = ** { **ON** | {OFF}  
  
 **Применяется к**: SQL Server (начиная с SQL Server 2008) и базы данных SQL Azure.  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}
  OFF  
  Блокировки строк не используются.  
   
-ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
+ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}  
   
 **Применяется к**: SQL Server (начиная с SQL Server 2008) и базы данных SQL Azure.
   
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
 > [!NOTE]
 >  Индекс не может быть реорганизован, если ALLOW_PAGE_LOCKS установлен в состояние OFF.  
   
- MAXDOP  **=**  max_degree_of_parallelism  
+ MAXDOP ** = ** max_degree_of_parallelism  
  
 **Применяется к**: SQL Server (начиная с SQL Server 2008) и базы данных SQL Azure.  
   
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
 > [!NOTE]
 >  Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- COMPRESSION_DELAY  **=**  { **0** |*длительность [минут]* }  
+ COMPRESSION_DELAY ** = ** { **0** |*длительность [минут]* }  
  Эта функция доступна начиная с SQL Server 2016  
   
  Для таблицы на диске задержка задает минимальное количество минут, которые должны оставаться в состоянии CLOSED разностную группу строк в разностную группу строк, до SQL Server можно сжать в сжатую группу строк. Так как не отслеживания вставки и обновления таблиц на диске время в отдельных строках, SQL Server применяет задержка разностных групп строк в состояние CLOSED.  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE  **=**  {ON | **OFF** } \<применяемое к single_partition_rebuild_index_option >  
+ ONLINE ** = ** {ON | **OFF** } \<применяемое к single_partition_rebuild_index_option >  
  Указывает, является ли секция индекса базовой таблицы или индекса могут быть перестроены в интерактивном или автономном режиме. Если **ПЕРЕСТРОИТЬ** выполняются в сети (**ON**) в этой таблице становятся доступными для запросов и изменения данных во время обработки индекса.  Значение по умолчанию — **OFF**.  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **Применяется к**: SQL Server (начиная с SQL Server 2014) и базы данных SQL Azure.
   
- Перестроение индекса в режиме «в сети» должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в сети будет ожидать блокировки с низким приоритетом, позволяя другим операциям продолжить, время ожидания операции оперативного построения индекса. Пропуск **WAIT AT LOW PRIORITY** параметр эквивалентен `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Дополнительные сведения см. в разделе [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx). 
+ Перестроение индекса в режиме «в сети» должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в сети будет ожидать блокировки с низким приоритетом, позволяя другим операциям продолжить, время ожидания операции оперативного построения индекса. Пропуск **WAIT AT LOW PRIORITY** параметр эквивалентен `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Дополнительные сведения см. в разделе [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
   
  MAX_DURATION = *время* [**МИНУТ**]  
   
@@ -618,7 +618,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
 **Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)
   
- Возобновление перестроения индекса в сети после паузы должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в сети будет ожидать блокировки с низким приоритетом, позволяя другим операциям продолжить, время ожидания операции оперативного построения индекса. Пропуск **WAIT AT LOW PRIORITY** параметр эквивалентен `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Дополнительные сведения см. в разделе [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx). 
+ Возобновление перестроения индекса в сети после паузы должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в сети будет ожидать блокировки с низким приоритетом, позволяя другим операциям продолжить, время ожидания операции оперативного построения индекса. Пропуск **WAIT AT LOW PRIORITY** параметр эквивалентен `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Дополнительные сведения см. в разделе [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql). 
 
 
 ПРИОСТАНОВКА

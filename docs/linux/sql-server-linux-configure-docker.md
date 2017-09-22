@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 6a187e6ad238743d0643ef56b76ace7977def228
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Настройка образов контейнеров 2017 г. SQL Server на Docker
@@ -96,13 +96,13 @@ Docker обеспечивает возможность запуска неско
 В следующем примере создаются два контейнера SQL Server и сопоставляет их с порты **1401** и **1402** на хост-компьютере.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 Теперь имеются два экземпляра SQL Server, запущенный в отдельные контейнеры. Клиенты могут подключаться к каждому экземпляру SQL Server с помощью IP-адрес узла Docker и номер порта для контейнера.
@@ -129,11 +129,11 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 Первый параметр — подключение к каталогу на узле в качестве тома данных в контейнере. Чтобы сделать это, используйте `docker run` с `-v <host directory>:/var/opt/mssql` флаг. Это позволяет данные для восстановления между выполнениями контейнера.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 Этот метод дает возможность совместного использования и просматривать файлы на узле за пределами Docker.
@@ -146,11 +146,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 Второй вариант — использовать контейнер томов данных. Можно создать контейнер томов данных, указав имя тома вместо каталог узла с `-v` параметра. В следующем примере создается общего тома данных с именем **sqlvolume**.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 > [!NOTE]
@@ -170,6 +170,7 @@ docker volume ls
 > При удалении контейнера томов данных, все данные SQL Server, в контейнере, *окончательно* удалены.
 
 ### <a name="backup-and-restore"></a>Резервное копирование и восстановление
+
 Помимо этих методов контейнера можно также использовать стандартные резервного копирования SQL Server и восстановить методы. Файлы резервных копий можно использовать для защиты данных или перемещения данных на другой экземпляр SQL Server. Дополнительные сведения см. в разделе [резервное копирование и восстановление баз данных SQL Server в Linux](sql-server-linux-backup-and-restore-database.md).
 
 > [!WARNING]
@@ -210,6 +211,8 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
 ```PowerShell
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 ```
+
+## <a name="copy-files-into-a-container"></a>Скопируйте файлы в контейнер
 
 Чтобы скопировать файл в контейнер, используйте следующую команду:
 
@@ -310,14 +313,14 @@ sudo systemctl start docker
 
 Если контейнер SQL Server не запускается, выполните следующие проверки.
 
-- Если появляется сообщение об ошибке, таких как **"не удалось создать конечную точку CONTAINER_NAME сетевой мост. Ошибка при запуске прокси-сервера: привязка 0.0.0.0:1433 прослушивания tcp: адрес уже используется. "** , а затем пытаетесь сопоставление контейнера порта 1433 порт, который уже используется. Это может произойти, если вы используете SQL Server локально на хост-компьютере. Он также может произойти, если запустить два контейнера SQL Server и сопоставьте их оба на один и тот же порт узла. В этом случае используйте `-p` параметр для сопоставления портов другой узел контейнера порт 1433. Например: 
+- Если появляется сообщение об ошибке, таких как **"не удалось создать конечную точку CONTAINER_NAME сетевой мост. Ошибка при запуске прокси-сервера: привязка 0.0.0.0:1433 прослушивания tcp: адрес уже используется. " **, а затем пытаетесь сопоставление контейнера порта 1433 порт, который уже используется. Это может произойти, если вы используете SQL Server локально на хост-компьютере. Он также может произойти, если запустить два контейнера SQL Server и сопоставьте их оба на один и тот же порт узла. В этом случае используйте `-p` параметр для сопоставления портов другой узел контейнера порт 1433. Например: 
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
 - Проверьте, есть ли сообщения об ошибках из контейнера.
@@ -331,6 +334,14 @@ sudo systemctl start docker
 - Если вы используете программное обеспечение управления контейнера, убедитесь, что он поддерживает контейнера процессы, выполняющиеся как корневой. Процесс sqlservr в контейнере работает как корень.
 
 - Просмотрите [SQL Server программа установки и журналы ошибок](#errorlogs).
+
+### <a name="enable-dump-captures"></a>Включить снимки дампа
+
+Если произошел сбой процесса SQL Server внутри контейнера, необходимо создать новый контейнер с **SYS_PTRACE** включена. Это добавляет Linux возможность трассировки процесса, который необходим для создания файла дампа при возникновении исключения. Файл дампа может использоваться службой поддержки для помощи в устранении проблемы. Следующей командой docker run включающий эту возможность.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+```
 
 ### <a name="sql-server-connection-failures"></a>Сбоев соединений SQL Server
 

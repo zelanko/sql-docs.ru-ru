@@ -4,16 +4,16 @@ description: "Этого краткого руководства показан�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: d454dca437f64a73879ed689fce1100c74a6fcde
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Установка SQL Server и создать базу данных на SUSE Linux Enterprise Server
@@ -72,7 +72,11 @@ ms.lasthandoff: 09/07/2017
    systemctl status mssql-server
    ```
 
-1. Если вы планируете удаленное подключение, также может потребоваться открыть порт SQL Server TCP (по умолчанию 1433), в брандмауэре.
+1. Если вы планируете удаленное подключение, также может потребоваться открыть порт SQL Server TCP (по умолчанию 1433), в брандмауэре. Если вы используете брандмауэр SuSE, то придется изменить **/etc/sysconfig/SuSEfirewall2** файла конфигурации. Изменить **FW_SERVICES_EXT_TCP** входа включать номер порта сервера SQL.
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
 
 На этом этапе SQL Server выполняется на компьютере SLES и готов к использованию!
 

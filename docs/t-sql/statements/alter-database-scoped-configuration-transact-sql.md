@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 917329cd5305aac791629300f5a90bf52d9d9ce4
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0fbb1f0699328a59749e5bba7efd7661e9b36e5a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -44,11 +44,11 @@ ms.lasthandoff: 09/01/2017
   
 - настроить модель оценки кратности оптимизатора запросов независимо от уровня совместимости базы данных;  
   
-- включить или выключить перехват параметров на уровне базы данных;  
+- включить или выключить перехват параметров на уровне базы данных;
   
-- включить или выключить исправления оптимизации запросов на уровне базы данных.  
+- включить или выключить исправления оптимизации запросов на уровне базы данных.
 
-- Включить или отключить кэш идентификации на уровне базы данных.  
+- Включить или отключить кэш идентификации на уровне базы данных.
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,44 +80,54 @@ ALTER DATABASE SCOPED CONFIGURATION
  
 Задает параметры для баз данных-получателей (все базы данных-получатели должны иметь одинаковые значения).  
   
-MAXDOP  **=**  {\<значение > | ОСНОВНОЙ}  
+MAXDOP ** = ** {\<значение > | ОСНОВНОЙ}  
 **\<Значение >**  
   
 Указывает значение по умолчанию, следует использовать параметр MAXDOP для инструкций. значение по умолчанию 0 и указывает, что конфигурация сервера будет использоваться вместо этого. Переопределяет MAXDOP на уровне базы данных (если он установлен в 0) **максимальная степень параллелизма** заданы на уровне сервера с процедуры sp_configure. Указания запросов по-прежнему можно переопределить DB области для настройки определенных запросов, требующих другой параметр MAXDOP. Эти параметры ограничены MAXDOP для группы рабочей нагрузки.   
 
 Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр max degree of parallelism. SQL Server учитывает планы параллельного выполнения для запросов, операций языка DDL индексами, параллельной вставки, сети изменить столбец, collectiion параллельных статистики и курсоры заполнения статических курсоров и.
  
-Чтобы задать этот параметр на уровне экземпляра, в разделе [Настройка параметра max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Для выполнения этой задачи на уровне запроса, добавьте **QUERYTRACEON** [указание запроса](https://msdn.microsoft.com/library/ms181714.aspx)  
+Чтобы задать этот параметр на уровне экземпляра, в разделе [Настройка параметра max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
+
+> [!TIP] 
+> Для выполнения этой задачи на уровне запроса, добавьте **MAXDOP** [указание запроса](../../t-sql/queries/hints-transact-sql-query.md).  
   
 PRIMARY  
   
-Можно установить только для баз данных-получателей и показывает, что конфигурация одному набору на сервере-источнике. Если конфигурации основные изменения получателей также настроит то же значение. **ОСНОВНОЙ** параметр по умолчанию для баз данных-получателей  
+Может устанавливаться только для баз данных-получателей, пока база данных в на сервере-источнике и показывает, что конфигурация одному набору на сервере-источнике. Если конфигурация для основные изменения значения на сервере-получателе изменится соответствующим образом не требуется задать баз данных-получателей значение, явным образом данном. **ОСНОВНОЙ** параметр по умолчанию для баз данных-получателей.  
   
-LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | ОСНОВНОЙ}  
+LEGACY_CARDINALITY_ESTIMATION ** = ** {ON | **OFF** | ОСНОВНОЙ}  
 
-Позволяет задать модель оценки кратности оптимизатора запросов SQL Server 2012 и более ранней версии, независимо от уровня совместимости базы данных. Значение по умолчанию — **OFF**, которая задает модель оценки кратности оптимизатора запросов в зависимости от уровня совместимости базы данных. Установка этого параметра **ON** эквивалентно [флагу трассировки 9481](https://support.microsoft.com/en-us/kb/2801413). Для этого на уровне экземпляра, в разделе [флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Для выполнения этой задачи на уровне запроса, добавьте **QUERYTRACEON** [указание запроса](https://msdn.microsoft.com/library/ms181714.aspx).  
+Позволяет задать модель оценки кратности оптимизатора запросов SQL Server 2012 и более ранней версии, независимо от уровня совместимости базы данных. Значение по умолчанию — **OFF**, которая задает модель оценки кратности оптимизатора запросов в зависимости от уровня совместимости базы данных. Установка этого параметра **ON** эквивалентен включению [флагу трассировки 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+
+> [!TIP] 
+> Для выполнения этой задачи на уровне запроса, добавьте **QUERYTRACEON** [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, для выполнения этой задачи на уровне запроса, добавьте **используйте ПОДСКАЗКУ** [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) вместо использования флага трассировки. 
   
 PRIMARY  
   
-Это значение допустимо только для баз данных-получателей и задает значение, заданное для источника запроса оптимизатор параметр оценки количества элементов модели для всех баз данных-получателей. При изменении конфигурации на сервере-источнике для модель оценки кратности оптимизатора запросов, на сервере-получателе изменится соответствующим образом. **ОСНОВНОЙ** параметр по умолчанию для баз данных-получателей.  
+Это значение допустимо только для баз данных-получателей пока база данных на сервере-источнике в и задает значение, заданное для источника запроса оптимизатор параметр оценки количества элементов модели для всех баз данных-получателей. При изменении конфигурации на сервере-источнике для модель оценки кратности оптимизатора запросов, на сервере-получателе изменится соответствующим образом. **ОСНОВНОЙ** параметр по умолчанию для баз данных-получателей.  
   
-PARAMETER_SNIFFING  **=**  { **ON** | ОТКЛЮЧИТЬ | ОСНОВНОЙ}  
+PARAMETER_SNIFFING ** = ** { **ON** | ОТКЛЮЧИТЬ | ОСНОВНОЙ}  
 
-Включает или отключает сканирование параметров. Значение по умолчанию — ON. Это эквивалентно [флагу трассировки 4136](https://support.microsoft.com/en-us/kb/980653). Для этого на уровне экземпляра, в разделе [флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Для этого на уровне запроса. в разделе **OPTIMIZE FOR UNKNOWN** [указание запроса](https://msdn.microsoft.com/library/ms181714.aspx).  
+Включает или отключает [пробное сохранение параметров](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Значение по умолчанию — ON. Это эквивалентно [флагу трассировки 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+
+> [!TIP] 
+> Для выполнения этой задачи на уровне запроса, в разделе **OPTIMIZE FOR UNKNOWN** [указание запроса](../../t-sql/queries/hints-transact-sql-query.md). Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, для выполнения этой задачи на уровне запроса **используйте ПОДСКАЗКУ** [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) также доступна. 
   
 PRIMARY  
   
-Это значение допустимо только для баз данных-получателей и значение на всех баз данных-получателей для этого параметра будет значение для источника. Если конфигурация для основные изменения значения на сервере-получателе изменится соответствующим образом. Это значение по умолчанию для баз данных-получателей.  
+Это значение допустимо только для баз данных-получателей пока база данных на сервере-источнике в и указывает, значение на всех баз данных-получателей для этого параметра значение, заданное для источника. Если на сервере-источнике с помощью конфигурации [пробное сохранение параметров](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) изменений на сервере-получателе изменится соответствующим образом баз данных-получателей не требуется задать значение явным образом данном. Это значение по умолчанию для баз данных-получателей.  
   
-QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | ОСНОВНОЙ}  
+QUERY_OPTIMIZER_HOTFIXES ** = ** {ON | **OFF** | ОСНОВНОЙ}  
 
-Включает или отключает исправления оптимизации запросов независимо от уровня совместимости базы данных. Значение по умолчанию — **OFF**. Это эквивалентно [флагу трассировки 4199](https://support.microsoft.com/en-us/kb/974006).   
+Включает или отключает исправления оптимизации запросов независимо от уровня совместимости базы данных. Значение по умолчанию — **OFF**. Это эквивалентно Включение [флагу трассировки 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
-Для этого на уровне экземпляра, в разделе [флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Для выполнения этой задачи на уровне запроса, добавьте **QUERYTRACEON** [указание запроса](https://msdn.microsoft.com/library/ms181714.aspx).  
+> [!TIP] 
+> Для выполнения этой задачи на уровне запроса, добавьте **QUERYTRACEON** [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, для выполнения этой задачи на уровне запроса, добавить ПОДСКАЗКУ используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) вместо использования флага трассировки.  
   
 PRIMARY  
   
-Это значение допустимо только для баз данных-получателей и значение на всех баз данных-получателей для этого параметра будет значение для источника. Если конфигурация для основные изменения значения на сервере-получателе изменится соответствующим образом. Это значение по умолчанию для баз данных-получателей.  
+Это значение допустимо только для баз данных-получателей пока база данных на сервере-источнике в и указывает, значение на всех баз данных-получателей для этого параметра значение, заданное для источника. Если конфигурация для основные изменения значения на сервере-получателе изменится соответствующим образом не требуется задать баз данных-получателей значение, явным образом данном. Это значение по умолчанию для баз данных-получателей.  
   
 ОЧИСТИТЬ PROCEDURE_CACHE  
 
@@ -171,7 +181,7 @@ IDENTITY_CACHE = { **ON** | {OFF}
   
  **DacFx**  
   
- Поскольку это новая возможность в базе данных SQL Azure и SQL Server 2016, которая влияет на схему базы данных ALTER DATABASE SCOPED CONFIGURATION, Экспорт схемы (с данными или без) нельзя будет необходимо импортировать в более старой версии SQL Server, например SQL Server 2012 или SQ L Server 2014.   Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из базы данных SQL Azure или SQL Server 2016 базы данных, используемой этой новой функции не удастся импортировать на сервер нижнего уровня.  
+ Поскольку ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server 2016, которая влияет на схему базы данных, Экспорт схемы (с данными или без) не будет невозможно импортировать с более старой версией SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или < C2 настроек [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] базы данных, используемой этой новой функции не удастся импортировать на сервер нижнего уровня.  
   
 ## <a name="metadata"></a>Метаданные  
 
@@ -198,10 +208,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
-В этом примере задается MAXDOP для базы данных-получателя, как и для его базы данных-источника в случае географической репликации.  
+В этом примере задается MAXDOP для базы данных-получателя должны совпадать, заданным для его базы данных-источника в случае географической репликации.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
 ### <a name="c-set-legacycardinalityestimation"></a>В. Набор LEGACY_CARDINALITY_ESTIMATION  
@@ -209,15 +219,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY
 Этот пример устанавливает LEGACY_CARDINALITY_ESTIMATION в значение ON для базы данных-получателя в случае географической репликации.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY  
-SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 Этот пример устанавливает LEGACY_CARDINALITY_ESTIMATION для базы данных-получателя, как и для его базы данных-источника в случае географической репликации.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
 ### <a name="d-set-parametersniffing"></a>Г. Набор PARAMETER_SNIFFING  
@@ -231,16 +239,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
 В этом примере задает PARAMETER_SNIFFING OFF для базы данных-источника в случае географической репликации.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING=OFF  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 В этом примере устанавливается PARAMETER_SNIFFING для базы данных-получателя, он находится в базе данных-источнике   
 в случае географической репликации.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING =PRIMARY  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>Д. Набор QUERY_OPTIMIZER_HOTFIXES  
@@ -276,8 +282,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Рекомендации и инструкции для параметра конфигурации «max degree of parallelism» в SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION ресурсы    
-* [Оценка количества элементов (SQL Server)](https://msdn.microsoft.com/library/dn600374.aspx)
-* [Оптимизация запроса планов с помощью SQL Server 2014 механизм оценки количества элементов](https://msdn.microsoft.com/library/dn673537.aspx)
+* [Оценка количества элементов (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING ресурсы    
 * [«Я чуждо параметр!»](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)

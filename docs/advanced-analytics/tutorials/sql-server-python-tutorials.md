@@ -2,7 +2,7 @@
 title: "Учебники по SQL Server Python | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b891cda72d5a69aafe461918674218fd3279c423
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 70b2ada0c6b2cade444af1f7dde67f0adfd90b35
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-python-tutorials"></a>Учебники по SQL Server Python
@@ -47,10 +47,6 @@ ms.lasthandoff: 09/01/2017
 
    Вы создадите модель с помощью **rxLinMod**, в новом **revoscalepy** библиотеки. Будет запускать код из удаленного терминала Python, а моделирования будет выполняться в контексте вычислений SQL Server.
 
-+ [Создать прогнозную модель с Python (GitHub)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
-
-  Создать модель машинного обучения для прогнозирования потребность бизнеса ski аренды и ввода в эксплуатацию эту модель для прогнозирования повседневного спроса, с помощью хранимых процедур. Предоставляется весь код и данные.
-
 + [Аналитика в базе данных Python для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md)
 
   НОВЫЕ ФУНКЦИИ! Построение комплексное решение Python, с помощью T-SQL для хранимой процедуры. Весь код Python включено.
@@ -67,7 +63,10 @@ ms.lasthandoff: 09/01/2017
 
   Узнайте, как использовать машинного обучения для прогнозирования будущих внаем, что позволяет бизнес-планом и персонал будущих требований бизнеса ski аренды.
 
-+ [НОВЫЕ ФУНКЦИИ! Выполнение клиента кластеризации с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
+  > [!TIP]
+  > Теперь включает собственный оценки из моделей Python!
+
++ [Выполнение клиента кластеризации с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     Узнайте, как использовать алгоритм Kmeans для выполнения незащищенных кластеризации клиентов.
 
@@ -83,14 +82,14 @@ ms.lasthandoff: 09/01/2017
 
 После запуска программы установки SQL Server, не забывайте следующие важные действия:
 
-+ Включение возможности выполнения внешнего сценария, выполнив`sp_configure 'external scripts enabled', 1`
-+ Перезагрузите сервер
-+ Убедитесь в наличии необходимых разрешений на службу, которая обращается к внешней среде выполнения
-+ Убедитесь в наличии необходимых разрешений для подключения к серверу для чтения данных, а также для создания объектов базы данных, необходимые для образца вашей учетной записи пользователя Windows или имя входа SQL
++ Включение возможности выполнения внешнего сценария, запустив `sp_configure 'external scripts enabled', 1`.
++ Перезапустите сервер.
++ Убедитесь в наличии необходимых разрешений на службу, которая обращается к внешней среде выполнения.
++ Убедитесь в наличии необходимых разрешений для подключения к серверу для чтения данных, а также для создания объектов базы данных, необходимые для образца вашей учетной записи пользователя Windows или имя входа SQL.
 
 Если возникли трудности, см. статью для некоторых распространенных проблем: [Устранение неполадок службы машины обучения](../machine-learning-troubleshooting-faq.md)
 
 ## <a name="see-also"></a>См. также:
 
-[R учебники по SQL Server](sql-server-r-tutorials.md)
+[Учебные материалы по R в SQL Server](sql-server-r-tutorials.md)
 

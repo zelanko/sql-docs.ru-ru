@@ -18,16 +18,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2269955b34d8077a56c83044bf12c262be166aa8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 07d44a56b531bc2e933480559a2f6d3d2457578e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="package-properties-dialog-box"></a>диалоговое окно «Свойства пакета»
   Используйте диалоговое окно **Свойства пакета** для просмотра свойств пакетов, хранящихся на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Дополнительные сведения см. в разделе [Службы Integration Services (сервер служб SSIS)](https://msdn.microsoft.com/library/ms141134.aspx).  
+ Дополнительные сведения см. в разделе [Службы Integration Services (сервер служб SSIS)](/sql-docs/docs/integration-services/integration-services-ssis-packages).  
   
  **Выбор действия**  
   

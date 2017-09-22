@@ -44,10 +44,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 357b2d42e404c7bcbfcd8ba8edd4714187159f0b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ea93e3764e23cd34662abd693908c6218b30e977
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="restore-statements-transact-sql"></a>ВОССТАНОВЛЕНИЕ инструкции (Transact-SQL)
@@ -680,7 +680,7 @@ RESTORE DATABASE Sales
 ## <a name="much-more-information"></a>Гораздо больше сведений.  
  - [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
 - [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
- - [Restore a Database Backup Using SSMS](https://msdn.microsoft.com/library/ms177429.aspx)
+ - [Restore a Database Backup Using SSMS](/sql-docs/docs/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
  - [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   

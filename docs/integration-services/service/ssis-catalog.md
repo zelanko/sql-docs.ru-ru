@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -394,7 +394,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>Резервное копирование, восстановление и перемещение каталога служб SSIS
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]включает в себя базу данных SSISDB. Создайте запрос представления в базе данных SSISDB для просмотра объектов, настроек и рабочих данных, которые хранятся в каталоге **SSISDB** . Этот раздел содержит инструкции для выполнения резервного копирования и восстановления базы данных.  
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] включена база данных SSISDB. Создайте запрос представления в базе данных SSISDB для просмотра объектов, настроек и рабочих данных, которые хранятся в каталоге **SSISDB** . Этот раздел содержит инструкции для выполнения резервного копирования и восстановления базы данных.  
   
  В каталоге **SSISDB** хранятся пакеты, которые развернуты на сервере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения о каталоге см. в разделе [Каталог служб SSIS](../../integration-services/service/ssis-catalog.md).  
   
@@ -455,7 +455,7 @@ ms.lasthandoff: 08/03/2017
   
     ```  
   
-     Хранимые процедуры CLR [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] требуют предоставления разрешения UNSAFE для имени входа, поскольку имени входа необходим дополнительный доступ к ресурсам, на которые существуют ограничения, например API-интерфейс Microsoft Win32. Дополнительные сведения о коде разрешения UNSAFE см. в разделе [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] требуют предоставления разрешения UNSAFE для имени входа, поскольку имени входа необходим дополнительный доступ к ресурсам, на которые существуют ограничения, например API-интерфейс Microsoft Win32. Дополнительные сведения о коде разрешения UNSAFE см. в разделе [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -563,7 +563,7 @@ ms.lasthandoff: 08/03/2017
      ![Просмотрите результаты в мастере обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "просмотрите результаты в мастере обновления SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On для каталога служб SSIS (SSISDB)
-  Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые совместно выполняют переход на другой ресурс. Дополнительные сведения см. в разделе [Группы доступности AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx).  
+  Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые совместно выполняют переход на другой ресурс. Дополнительные сведения см. в разделе [Группы доступности AlwaysOn](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
   
  Для обеспечения высокого уровня доступности для каталога служб SSIS (SSISDB) и его содержимого (проектов, пакетов, журналов выполнения и т. д.) можно добавить базу данных SSISDB (практически так же, как и любую другую базу данных) в группу доступности AlwaysOn. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
  
@@ -585,7 +585,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Установить SQL Server 2016 с компонентом Integration Services (SSIS) на каждом узле кластера.  
   
-3.  Включение групп доступности AlwaysOn для каждого экземпляра SQL Server. Более подробные сведения см. в разделе [Включение групп доступности AlwaysOn](https://msdn.microsoft.com/library/ff878259.aspx) .  
+3.  Включение групп доступности AlwaysOn для каждого экземпляра SQL Server. Более подробные сведения см. в разделе [Включение групп доступности AlwaysOn](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) .  
   
 ###  <a name="Firsttime"></a> Настройка поддержки служб SSIS для AlwaysOn  
   
@@ -607,12 +607,12 @@ ms.lasthandoff: 08/03/2017
   
 3.  Установите флажок **Включить интеграцию со средой CLR**. Каталог использует хранимые процедуры CLR.  
   
-4.  Щелкните **Включить автоматическое выполнение хранимой процедуры служб Integration Services при запуске SQL Server** , чтобы хранимая процедура [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) выполнялась каждый раз при перезапуске экземпляра сервера служб SSIS. Хранимая процедура осуществляет обслуживание состояния операций для каталога SSISDB. Она исправляет состояние любых пакетов, выполнявшихся в момент отключения экземпляра сервера служб SSIS.  
+4.  Щелкните **Включить автоматическое выполнение хранимой процедуры служб Integration Services при запуске SQL Server** , чтобы хранимая процедура [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) выполнялась каждый раз при перезапуске экземпляра сервера служб SSIS. Хранимая процедура осуществляет обслуживание состояния операций для каталога SSISDB. Она исправляет состояние любых пакетов, выполнявшихся в момент отключения экземпляра сервера служб SSIS.  
   
-5.  Введите **пароль**и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](https://msdn.microsoft.com/library/aa337546.aspx).  
+5.  Введите **пароль**и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key).  
   
 ####  <a name="Step2"></a> Шаг 2. Добавление SSISDB в группу доступности AlwaysOn  
- Процедура добавления базы данных SSISDB в группу доступности AlwaysOn практически не отличается от добавления другой базы данных пользователей в группу доступности. См. раздел [Использование мастера групп доступности](https://msdn.microsoft.com/library/hh403415.aspx).  
+ Процедура добавления базы данных SSISDB в группу доступности AlwaysOn практически не отличается от добавления другой базы данных пользователей в группу доступности. См. раздел [Использование мастера групп доступности](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio).  
   
  Необходимо ввести пароль, указанный при создании каталога служб SSIS на странице **Выбор баз данных** мастера **создания групп доступности** .  
   
@@ -658,7 +658,7 @@ ms.lasthandoff: 08/03/2017
   
 5.  Следуйте инструкциям в пункте [Шаг 3. Включение поддержки служб SSIS для AlwaysOn](#Step3).  
   
-##  <a name="RelatedContent"></a> Related Content  
+##  <a name="RelatedContent"></a> См. также  
   
 -   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
   

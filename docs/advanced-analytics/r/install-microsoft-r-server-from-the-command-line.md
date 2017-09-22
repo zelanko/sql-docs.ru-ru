@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 811709fae77dee6daa46a97a51c44c02e372d9a8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>Установка Microsoft R Server из командной строки
@@ -83,7 +83,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 Для каждого устанавливаемого компонента создается отдельная вложенная папка.
 
-Чтобы настроить другой экземпляр Microsoft R Server с теми же параметрами, можно повторно использовать файл конфигурации, созданный во время установки. Дополнительные сведения см. в статье [Установка SQL Server с помощью файла конфигурации](https://msdn.microsoft.com/library/dd239405.aspx)
+Чтобы настроить другой экземпляр Microsoft R Server с теми же параметрами, можно повторно использовать файл конфигурации, созданный во время установки. Дополнительные сведения см. в разделе [Установка SQL Server с помощью файла конфигурации](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
 
 
 ## <a name="customize-your-r-environment"></a>Настройка среды R

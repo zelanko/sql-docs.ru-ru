@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Приступая к работе с простой пример мастера импорта и экспорта
 Узнайте, что следует ожидать в мастере экспорта и импорта SQL Server при рассмотрении типичный сценарий — Импорт данных из электронной таблицы Excel к базе данных SQL Server. Даже если вы планируете использовать другой источник и назначение другой, в этом разделе показано большинство что нужно знать о запуске мастера.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Необходимое условие - — это мастер, установленной на компьютере?
-Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Если вы хотите запустить мастер, но нет [! ВКЛЮЧИТЬ[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Ниже приведен в этом примере источник данных Excel
 Вот исходные данные, которые вы собираетесь скопировать - небольшая таблица двух столбцов на листе WizardWalkthrough книги WizardWalkthrough.xlsx Excel.

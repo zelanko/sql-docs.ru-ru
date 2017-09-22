@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Доставка электронной почтой в службах Reporting Services
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/09/2017
  Для сервера отчетов в основном режиме модуль доставки электронной почты настраивается с помощью диспетчера конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] основного режима и путем изменения файлов конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Для сервера отчетов в режиме SharePoint модуль доставки электронной почты настраивается с помощью страниц управления SharePoint и сценариев PowerShell.  
   
  
- Дополнительные сведения о настройке сервера отчетов в основном режиме см. в разделе [Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)](https://msdn.microsoft.com/library/ms189342.aspx).
+ Сведения о настройке сервера отчетов в собственном режиме см. в разделе [параметры - электронной почты, режиме собственного Reporting Services (диспетчер конфигурации)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
  
  
  Дополнительные сведения о настройке сервера отчетов в режиме интеграции с SharePoint см. в следующих разделах:  
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)  
   

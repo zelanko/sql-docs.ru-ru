@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
@@ -117,7 +117,7 @@ ms.lasthandoff: 08/03/2017
   
              На странице **Выбор назначения** мастера вы можете создать или выбрать существующий файл.  
   
-             Чтобы обновить файлы пакета при преобразовании проекта, запустите **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Чтобы обновить файлы пакета, не выполняя преобразование проекта, запустите из среды ****  Мастер преобразования проектов служб Integration Services [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем **Мастер обновления пакетов служб SSIS**. Если выполняется только обновление файлов пакета, следует убедиться в том, что внесенные изменения сохранены. В противном случае при преобразовании проекта в модель развертывания проекта несохраненные изменения в пакете преобразованы не будут.  
+             Чтобы обновить файлы пакета при преобразовании проекта, запустите **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Чтобы обновить файлы пакета, не выполняя преобразование проекта, запустите из среды ** ** Мастер преобразования проектов служб Integration Services [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем **Мастер обновления пакетов служб SSIS**. Если выполняется только обновление файлов пакета, следует убедиться в том, что внесенные изменения сохранены. В противном случае при преобразовании проекта в модель развертывания проекта несохраненные изменения в пакете преобразованы не будут.  
   
      Дополнительные сведения об обновлении пакетов см. в разделах [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) и [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Если проект и все пакеты прошли испытание на совместимость, нажмите кнопку **ОК** для преобразования пакета.  
   
-> **ПРИМЕЧАНИЕ.** Для преобразования проекта в модель развертывания проектов воспользуйтесь **мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **ПРИМЕЧАНИЕ.** Для преобразования проекта в модель развертывания проектов воспользуйтесь **мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
 
 ## <a name="integration-services-deployment-wizard"></a>Мастер развертывания служб Integration Services
   **Мастер развертывания служб Integration Services** поддерживает две модели развертывания:
@@ -309,7 +309,7 @@ static void Main()
  На этой странице можно просмотреть выбранные параметры. Вы можете изменить выбранные параметры, нажав кнопку **Назад**или кнопку любого из шагов на левой панели. Щелкните **Развернуть** , чтобы начать развертывание.  
   
 #### <a name="results"></a>Результаты  
- После завершения развертывания появится страница **Результаты** . На ней отображается состояние выполнения каждого действия. Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки. Нажмите кнопку **сохранить отчет...**  для сохранения результатов в XML-файла или нажмите кнопку **закрыть** для завершения работы мастера.
+ После завершения развертывания появится страница **Результаты** . На ней отображается состояние выполнения каждого действия. Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки. Нажмите кнопку **сохранить отчет... ** для сохранения результатов в XML-файла или нажмите кнопку **закрыть** для завершения работы мастера.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,7 +403,7 @@ static void Main()
 14. Нажмите кнопку **ОК** дважды для сохранения изменений.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур
-  После настройки проекта [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для использования модели развертывания проекта можно вызывать хранимые процедуры в каталоге служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , чтобы развернуть проект и выполнить пакеты. Дополнительные сведения о модели развертывания проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+  При настройке [! ВКЛЮЧИТЬ[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  Для развертывания и выполнения пакетов также можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в разделе **См. также** .  
   
@@ -421,9 +421,9 @@ static void Main()
   
 1.  Вызовите [catalog.deploy_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md), чтобы развернуть проект [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], который содержит пакет, на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-     Для получения двоичного содержимого [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] файла развертывания проекта для  *@project_stream*  параметр, с помощью инструкции SELECT с функцией OPENROWSET и поставщик МАССОВОГО набора строк. Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md).  
+     Можно использовать инструкцию SELECT с функцией OPENROWSET и поставщиком больших наборов строк (BULK) для получения двоичного содержимого файла развертывания проекта [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для параметра *@project_stream* . Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md).  
   
-     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment.ispac) и сохраняются в параметре *@ProjectBinary* с типом varbinary(max). Значение параметра *@ProjectBinary* присваивается параметру *@project_stream* .  
+     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment.ispac) и сохраняются в параметре *@ProjectBinary* с типом varbinary(max). Значение параметра *@ProjectBinary* присваивается параметру *@project_stream* .  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  

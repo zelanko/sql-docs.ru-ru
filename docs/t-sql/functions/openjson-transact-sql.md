@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -67,7 +67,7 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
   
 ![Синтаксис с предложением в возвращающей табличное значение функции OPENJSON](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON с помощью синтаксиса")
 
-*with_clause* содержит список столбцов с их типами для **OPENJSON** для возврата. По умолчанию **OPENJSON** соответствует ключей в *jsonExpression* с именами столбцов в *with_clause*. Если имя столбца не соответствует имени ключа, можно предоставить необязательный *column_path*, который является [выражения пути JSON](../../relational-databases/json/json-path-expressions-sql-server.md) , ссылается на ключ в *jsonExpression*. 
+*with_clause* содержит список столбцов с их типами для **OPENJSON** для возврата. По умолчанию **OPENJSON** соответствует ключей в *jsonExpression* с именами столбцов в *with_clause* (в этом случае ключи совпадений подразумевает, что существует с учетом регистра). Если имя столбца не соответствует имени ключа, можно предоставить необязательный *column_path*, который является [выражения пути JSON](../../relational-databases/json/json-path-expressions-sql-server.md) , ссылается на ключ в *jsonExpression*. 
 
 ## <a name="arguments"></a>Аргументы  
 ### <a name="jsonexpression"></a>*jsonExpression*  

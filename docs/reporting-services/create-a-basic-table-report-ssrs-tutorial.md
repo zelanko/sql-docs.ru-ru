@@ -20,17 +20,17 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
 
-В этом учебнике используется конструктор отчетов в SQL Server Data Tools для создания базового [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбиением на страницы отчет с таблицей, на основе  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  базы данных. Можно также создать [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] отчеты с помощью построителя отчетов с разбиением на страницы. 
+В этом учебнике используется конструктор отчетов в SQL Server Data Tools для создания базового [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбиением на страницы отчет с таблицей, на основе ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] ** базы данных. Можно также создать [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] отчеты с помощью построителя отчетов с разбиением на страницы. 
 
 Мере изучения этого учебника, можно будет создать проект отчета, указать сведения о соединении, определить запрос, добавьте область данных таблицы, группы и всего некоторых полей и предварительного просмотра отчета.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 -   База данных [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Дополнительные сведения см. в разделе [Образцы баз данных Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
- -   [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) с установленными компонентами "SQL Server Reporting Services", в состав которых входит конструктор отчетов.    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) с компонентами «SQL Server Reporting Services» установлен, поэтому у вас есть конструктор отчетов.    
   
 Для получения данных из базы данных [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] необходимо иметь разрешения только на чтение.
 
@@ -66,4 +66,4 @@ ms.lasthandoff: 08/09/2017
 
 [Учебники по службам Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Остались вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

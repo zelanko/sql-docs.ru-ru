@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14789bafd555a4980875de78c85b32f535a8c0fe
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Установить предварительно обученные машинного обучения моделей, основанных на SQL Server
@@ -37,8 +37,8 @@ ms.lasthandoff: 09/01/2017
 
 В настоящее время модели, которые доступны являются моделями глубокие нейронные сети (DNN) для анализа и изображение классификация мнений. Все четыре предварительно обученные модели были обучена на CNTK. Конфигурации всех сетей, был основан на следующих справочных реализаций:
 
-+ Resnet 18
-+ Resnet 50
++ ResNet 18
++ ResNet 50
 + ResNet 101
 + AlexNet
 
@@ -133,3 +133,4 @@ ms.lasthandoff: 09/01/2017
 В этом примере демонстрируется использование предварительно обученные модели для классификации:
 
 [Анализ мнений, с помощью Featurizer текста](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+

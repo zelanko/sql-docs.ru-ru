@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a4fa8a4080a8483aba8494dd1195c7fbb1aec67a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Массовое копирование данных с помощью программы bcp для SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-В этом разделе показано, как использовать [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) служебной программы командной строки для массового копирования данных между экземпляром RC2 2017 г. SQL Server в Linux и файлом данных в указанном пользователем формате.
+В этом разделе показано, как использовать [bcp](/sql-docs/docs/tools/bcp-utility) служебной программы командной строки для массового копирования данных между экземпляром RC2 2017 г. SQL Server в Linux и файлом данных в указанном пользователем формате.
 
 Можно использовать `bcp` для импорта большого количества строк в таблицы SQL Server или экспорта данных из таблицы SQL Server в файлы данных. За исключением случаев использования с параметром queryout `bcp` не требует знания языка Transact-SQL. `bcp` Служебной программы командной строки работает с Microsoft SQL Server, работающий локально или в облаке, Linux, Windows или Docker и базы данных SQL Azure и хранилище данных SQL Azure.
 
@@ -136,8 +136,8 @@ cat ~/test_export.txt
 ```
 
 ## <a name="see-also"></a>См. также:
-- [bcp, программа](https://msdn.microsoft.com/en-us/library/ms162802.aspx)
-- [Форматы данных для совместимости с помощью программы bcp](https://msdn.microsoft.com/en-us/library/ms190759.aspx)
-- [Массовый импорт данных с помощью инструкции BULK INSERT](https://msdn.microsoft.com/en-us/library/ms175915.aspx)
-- [BULK INSERT (Transact-SQL)](https://msdn.microsoft.com/en-us/library/ms188365.aspx)
+- [bcp, программа](/sql-docs/docs/tools/bcp-utility)
+- [Форматы данных для совместимости с помощью программы bcp](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
+- [Массовый импорт данных с помощью инструкции BULK INSERT](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
+- [BULK INSERT (Transact-SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
 

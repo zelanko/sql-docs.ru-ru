@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be1cdd060537883c0bad107790847003b4749738
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ec9cbf6cc2e8d74fdc87881622e1a1258aeea260
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Драйвер Microsoft ODBC для SQL Server в Windows
@@ -32,7 +32,7 @@ Microsoft ODBC Driver 13.1, 13 и 11 for [!INCLUDE[ssNoVersion](../../../include
 
 | Version       | Возможности, поддерживаемые      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Постоянное шифрование</li><li>Проверка подлинности Azure AD</li><li>Группы доступности AlwaysOn (AG)</li></ul>   | 
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Постоянное шифрование</li><li>Проверка подлинности Azure AD</li><li>Группы доступности AlwaysOn</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Международное доменное имя (IDN)</li></ul> |
 | Драйвер Microsoft ODBC 11 для SQL Server | <ul><li>Организация пулов соединений с учетом драйвера</li><li>Устойчивость подключений</li><li>Асинхронное выполнение (метод опроса)</li></ul> |    
 
@@ -55,8 +55,8 @@ Microsoft ODBC Driver 13.1, 13 и 11 for [!INCLUDE[ssNoVersion](../../../include
   
 ## <a name="see-also"></a>См. также:  
 - [Основные сведения об SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [Построение приложений с использованием собственного клиента SQL Server](https://msdn.microsoft.com/library/ms130904.aspx)   
+- [Построение приложений с использованием собственного клиента SQL Server](/sql-docs/docs/relational-databases/native-client/applications/building-applications-with-sql-server-native-client)   
 - [SQL Server Native Client: вопросы и ответы](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [Справочник по программированию ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [Собственный клиент SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131415.aspx)  
+- [Собственный клиент SQL Server (ODBC)](/sql-docs/docs/relational-databases/native-client/odbc/sql-server-native-client-odbc)  
 

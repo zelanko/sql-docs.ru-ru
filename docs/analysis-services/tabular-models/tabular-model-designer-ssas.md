@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee8b777d6e7439e94a2e5687a28ccf521e8aebdc
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f8f894ec1836e12eb57a7b2e629ff06464f266fb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Конструктор табличных моделей (службы SSAS)
-  Конструктор табличных моделей входит в состав [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и интегрируется с Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Имеются дополнительные шаблоны типов проектов, предназначенные специально для разработки профессиональных решений табличных моделей.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно установить, бесплатно скачав из Интернета. Дополнительные сведения см. в статье [Скачивание последней версии SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) .   
+  Конструктор табличных моделей входит в [! ВКЛЮЧИТЬ[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) подробные сведения.   
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  При установке среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]к доступным типам проектов добавляются новые типовые шаблоны проекта для создания табличных моделей. После создания нового проекта табличной модели на основе одного из шаблонов можно приступать к созданию моделей с помощью средств и мастеров конструктора табличных моделей.  

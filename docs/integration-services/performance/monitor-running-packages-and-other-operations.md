@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 411086a4a75b002faa7e07befa77e7277a494bab
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Наблюдение за выполнением пакетов и других операций
@@ -123,7 +123,7 @@ ms.lasthandoff: 08/03/2017
  В разделе <xref:Microsoft.SqlServer.Management.IntegrationServices> пространства имен и классы.  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
-  В текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], доступны стандартные отчеты в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяют осуществлять мониторинг [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проекты, которые были развернуты для [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера. Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
+  Для текущего выпуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предусмотрены стандартные отчеты, помогающие отслеживать проекты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутые на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
   
  На любой странице отчета в верхней части имеется значок возврата на предыдущую страницу, значок обновления сведений, отображаемых на странице, и значок печати, который позволяет распечатать текущую страницу.  
   
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
  Инструкции по созданию и добавлению пользовательского отчета см. в разделе [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Просмотр отчетов для сервера служб Integration Services
-  В текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], доступны стандартные отчеты в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяют осуществлять мониторинг [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проекты, которые были развернуты для [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера.  Дополнительные сведения об отчетах см. в разделе [Отчеты для сервера служб Integration Services](#reports).  
+  Для текущего выпуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предусмотрены стандартные отчеты, помогающие отслеживать проекты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутые на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  Дополнительные сведения об отчетах см. в разделе [Отчеты для сервера служб Integration Services](#reports).  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Просмотр отчетов для сервера служб Integration Services  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 08/03/2017
     -   **Все соединения**  
 
 ## <a name="see-also"></a>См. также:  
- [Запуск проектов и пакетов](https://msdn.microsoft.com/library/hh213290.aspx)   
- [Отчеты по устранению неполадок при выполнении пакета](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [Запуск проектов и пакетов](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
+ [Отчеты по устранению неполадок для выполнения пакетов](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
 

@@ -1,7 +1,7 @@
 ---
 title: "@@DBTS (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/30/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,13 +23,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f044c71018186baaf2bd5c27076b78aae139b34f
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 4a90150c55cdeb89788fdb86faf8aef8a1efdcd2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="dbts-transact-sql"></a>@@DBTS (Transact-SQL)
+# <a name="x40x40dbts-transact-sql"></a>& #x 40; & #x 40; DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает значение текущего типа данных **timestamp** для текущей базы данных. Эта отметка времени гарантированно уникальна в пределах базы данных.
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```
 @@DBTS  
 ```  
   

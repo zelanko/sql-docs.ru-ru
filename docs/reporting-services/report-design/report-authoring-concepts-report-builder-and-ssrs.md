@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Основные понятия разработки отчетов (построитель отчетов и службы SSRS)
@@ -32,16 +32,16 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Отчеты, элементы отчетов и определения отчетов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Описывает различные термины, используемые для описания отчетов в разных состояниях, в том числе для отчета во время начального определения, для опубликованного отчета и для отчета, просматриваемого пользователем.  
   
  [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Описывает различия в создании, хранении и управлении встроенными и общими источниками данных.  
   
- [Области данных и карты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [Области данных и карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Описывает типы областей данных, которые можно добавить в макет отчета. Области данных определяют внешний вид отчета: таблица, матрица, список или диаграмма.  
   
- [Концепция параметров отчета (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  
+ [Концепция параметров отчета (построитель отчетов и службы SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
  Описывает способы определения и использования параметров отчета, а также порядок независимого управления параметрами отчета из определения отчета на сервере отчетов.  
   
 ## <a name="see-also"></a>См. также  

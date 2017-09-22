@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Соответствие JDBC 4.1 для JDBC Driver
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |Новая функция|Description|  
 |-----------------|-----------------|  
-|Новая функция Escape<br /><br /> Ограниченная функция Escape возврата строк|Поддерживается частично<br /><br /> Синтаксис escape-последовательностей: ограничение \<строки > [OFFSET < смещение_строки >]<br /><br /> Escape-синтаксис состоит из двух частей: обязательная часть «строки» задает количество возвращаемых строк, а необязательная часть «смещение_строки» указывает количество строк, которые необходимо пропустить перед началом возврата строк.<br /><br /> Драйвер будет поддерживать только обязательную часть, преобразуя запрос, используя TOP вместо LIMIT (SQL Server не поддерживает LIMIT).<br /><br /> Драйвер вызовет исключение, если используется необязательная часть «смещение_строки», так как в SQL Server нет встроенной конструкции для ее поддержки.<br /><br /> Дополнительные сведения см. в разделе [с помощью Escape-последовательностей SQL](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+|Новая функция Escape<br /><br /> Ограниченная функция Escape возврата строк|Поддерживается частично<br /><br /> Синтаксис escape-последовательностей: ограничение \<строк > [OFFSET < смещение_строки >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
   
  Спецификация Java Database Connectivity API 4.1 поддерживается драйвером Microsoft JDBC 4.2 для SQL Server со следующими сопоставлениями типов данных.  
   

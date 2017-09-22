@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Пакет служб Integration Services (SSIS) и параметров проекта
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Хранимые процедуры &#40; каталог служб Integration Services &#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [Настройка диалоговое окно](../integration-services/service/configure-dialog-box.md)  
+-   [Диалоговое окно «Настройка»](../integration-services/service/configure-dialog-box.md)  
   
 -   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -164,8 +164,8 @@ ms.lasthandoff: 08/03/2017
   
     > **ПРЕДУПРЕЖДЕНИЕ!!!** Можно изменять список на месте или в окне **Свойства** изменить значения свойств параметра. Можно удалить параметр, нажав кнопку **Удалить (X)** на панели инструментов. Воспользуйтесь последней кнопкой на панели инструментов для открытия диалогового окна **Управление значениями параметров** и указания значения параметра, которое будет использоваться только при выполнении пакета в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
-## <a name="parameterize-dialog-box"></a>Диалоговое окно «Параметризация»
-**Параметризация** диалоговое окно позволяет связать новый или существующий параметр со свойством задачи. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши задачу или вкладку «Поток управления» в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и выберите команду **Параметризация**. Следующий список описывает элементы пользовательского интерфейса в диалоговом окне. Дополнительные сведения о параметрах см. в разделе [Параметры служб Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
+## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
+**Параметризация** диалоговое окно позволяет связать новый или существующий параметр со свойством задачи. Откройте диалоговое окно, щелкните правой кнопкой мыши задачу или вкладку «поток управления» в [! ВКЛЮЧИТЬ[ssIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).
   
 ### <a name="options"></a>Параметры  
  **Свойство**  
@@ -180,10 +180,10 @@ ms.lasthandoff: 08/03/2017
  **Создание нового параметра**  
  Выберите этот параметр для создания нового параметра, который необходимо связать со свойством задачи.  
   
- **Имя**  
+ **Название**  
  Задайте имя создаваемого параметра.  
   
- **Описание**  
+ **Description**  
  Задайте описание параметра.  
   
  **Значение**  
@@ -195,7 +195,7 @@ ms.lasthandoff: 08/03/2017
  **Конфиденциальные**  
  Установив или сняв флажок, определите конфиденциальность параметра. Конфиденциальные значения параметров шифруются в каталоге и при просмотре с помощью Transact-SQL или в среде SQL Server Management Studio отображаются как значения NULL.  
   
- **Обязательное**  
+ **Обязательно**  
  Укажите, необходимо ли задавать параметру значение, отличное от значения по умолчанию проекта, перед выполнением пакета.  
  
 ## <a name="set-parameter-values-after-the-project-is-deployed"></a>Задать значения параметров после развертывания проекта

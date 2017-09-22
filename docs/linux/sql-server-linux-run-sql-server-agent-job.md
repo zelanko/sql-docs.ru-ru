@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск задания агента SQL Server в Linux
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 > [!TIP]
 > Можно использовать любой клиент T-SQL для выполнения этих команд. Например, в Linux можно использовать [sqlcmd](sql-server-linux-setup-tools.md) или [кода Visual Studio](sql-server-linux-develop-use-vscode.md). С удаленного сервера Windows можно выполнять запросы в SQL Server Management Studio (SSMS) или использовать пользовательский интерфейс для управления заданиями, как описано в следующем разделе.
 
-1. **Создать задание**. В следующем примере используется [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) Создание задания с именем `Daily AdventureWorks Backup`.
+1. **Создать задание**. В следующем примере используется [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) Создание задания с именем `Daily AdventureWorks Backup`.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
 
     ```
 
-2. **Добавьте один или несколько шагов задания**. В следующем сценарии Transact-SQL используется [sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) Создание шага задания, которое создает резервную копию `AdventureWlorks2014` базы данных.
+2. **Добавьте один или несколько шагов задания**. В следующем сценарии Transact-SQL используется [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) Создание шага задания, которое создает резервную копию `AdventureWlorks2014` базы данных.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
     GO
     ```
 
-3. **Создание расписания задания**. В этом примере используется [sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) Создание ежедневного расписания для задания.
+3. **Создание расписания задания**. В этом примере используется [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) Создание ежедневного расписания для задания.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/02/2017
    GO
     ```
 
-4. **Присоединить расписание заданий для задания**. Используйте [sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) присоединение расписания задания к заданию.
+4. **Присоединить расписание заданий для задания**. Используйте [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) присоединение расписания задания к заданию.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/02/2017
     GO
     ```
 
-5. **Назначение задания на целевом сервере**. Назначение задания на целевом сервере с [sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx). В этом примере локальный сервер является целевым.
+5. **Назначение задания на целевом сервере**. Назначение задания на целевом сервере с [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). В этом примере локальный сервер является целевым.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

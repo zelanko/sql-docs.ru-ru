@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 21010e4ad5633aced0c59c9016fbfbab8324c6fe
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8fe9d54e1d635b5c8f1dd6e00e33bd92136343b4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Использование данных из кубов OLAP в R
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 
 ### <a name="samples"></a>Примеры
 
-Если вы хотите больше узнать о кубах, можете создать куб, который используется в этих примерах, следуя указаниям учебника по службам Analysis Services вплоть до занятия 4: [Создание куба OLAP](https://msdn.microsoft.com/library/ms170208.aspx).
+Если вы хотите больше узнать о кубах, можете создать куб, который используется в этих примерах, следуя указаниям учебника по службам Analysis Services вплоть до занятия 4: [Создание куба OLAP](/sql-docs/docs/analysis-services/multidimensional-modeling-adventure-works-tutorial).
 
 Можно также скачать существующий куб в качестве резервной копии и восстановить его в экземпляре служб Analysis Services. Например, можно скачать полностью обработанный куб для [многомерной модели Adventure Works SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)в формате ZIP и восстановить его в своем экземпляр SSAS. Дополнительные сведения см. в разделе [Резервное копирование и восстановление](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)или [Командлет Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 

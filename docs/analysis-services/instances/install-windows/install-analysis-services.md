@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ba3bacb78e49319db1e458d776cead3429e6c60
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cf762b3aaeb222e456b0b46256a7d7f0efddbf48
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-analysis-services"></a>Установка SQL Server Analysis Services
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="get-tools-and-designers"></a>Получение средств и конструкторов  
  Программа установки SQL Server больше не устанавливает конструкторы моделей и средства управления, используемые для разработки решений и администрирования сервера. В этом выпуске для средств предусмотрена отдельная установка — см. следующие ссылки:  
   
--   [Скачивание SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)  
+-   [Скачивание SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
   
--   [Скачать SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   [Скачать SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
  Вам потребуется среда SSMS и SSDT, для работы с данными и экземплярами служб Analysis Services. Средства можно установить в любом месте, но не забудьте настроить порты на сервере перед подключением. Дополнительные сведения см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   

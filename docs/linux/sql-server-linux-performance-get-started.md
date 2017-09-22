@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4f4f58b682451b7dabf336241ec94797a4d1469e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c6a5fa2872d7888d28ba34aae959aac9b13ea4b0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Пошаговое руководство для повышения производительности SQL Server в Linux
@@ -157,11 +157,11 @@ SQL Server поддерживает скомпилированных храни�
 ### <a name="learn-more-about-in-memory-oltp"></a>Дополнительные сведения об In-Memory OLTP
 Дополнительные сведения об In-Memory OLTP см. в следующих разделах:
 
-- [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)
-- [Миграция в In-Memory OLTP](https://msdn.microsoft.com/library/dn247639.aspx)
-- [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://msdn.microsoft.com/library/mt718711.aspx)
-- [Мониторинг и устранение неполадок с использованием памяти](https://msdn.microsoft.com/library/dn465869.aspx)
-- [In-Memory OLTP (оптимизация в памяти)](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
+- [Миграция в In-Memory OLTP](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
+- [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
+- [Мониторинг и устранение неполадок с использованием памяти](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
+- [In-Memory OLTP (оптимизация в памяти)](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
 
 ## <a name="use-query-store"></a>Использование хранилища запросов
 Хранилище запросов собирает сведения о запросах, планы выполнения и статистику выполнения подробные производительности.

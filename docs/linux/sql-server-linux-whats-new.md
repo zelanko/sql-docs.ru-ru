@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 649c7cbd03b6d2e61dbbb572a34cdbcd2a7ab7cd
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности для 2017 г. SQL Server в Linux
@@ -131,7 +131,7 @@ ms.lasthandoff: 08/02/2017
 [Улучшения по сравнению с пакетом обновления 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) в этом выпуске CTP1.1:
 - Клонирование базы данных для среды CLR, Filestream или Filetable, объектов в памяти и хранилища запросов.
 - **Создание** или **ALTER** операторы для программирования объектов.
-- Новый **используйте ПОДСКАЗКУ** запроса параметр, чтобы предоставить подсказки для обработчика запросов. Дополнительные сведения: [подсказки в запросе](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- Новый **используйте ПОДСКАЗКУ** запроса параметр, чтобы предоставить подсказки для обработчика запросов. Дополнительные сведения: [подсказки в запросе](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
 - Учетная запись службы SQL теперь можно программным образом определять включить закрепление страниц в памяти и быстрой инициализации файлов разрешения.
 - Поддержка число файлов TempDB, размер файла и параметры увеличения файла.
 - Расширенные диагностики в showplan XML.

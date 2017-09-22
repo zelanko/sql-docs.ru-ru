@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc7eb87bc446752680c83aa656d9591fbb70e295
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f7c47ab0833a0ce5693effc269f24d9ed2baf3dd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/09/2017
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): использование SQLXML 4.0 экспорте реляционных данных в формат XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Сбор данных, обработки и визуализации
-* [службы Analysis Services](https://msdn.microsoft.com/library/bb500153.aspx);
-* [Службы интеграции](https://msdn.microsoft.com/library/ms136025.aspx)  
-* [Службы Master Data Services](https://msdn.microsoft.com/library/hh230994.aspx)
-* [Службы репликации](https://msdn.microsoft.com/library/ms147384.aspx)
-* [службы Reporting Services](https://msdn.microsoft.com/library/bb522713.aspx)
-* [Компонент Service Broker](https://msdn.microsoft.com/library/bb522893.aspx)
+* [службы Analysis Services](/sql-docs/docs/analysis-services/analysis-services-developer-documentation);
+* [Службы интеграции](/sql-docs/docs/integration-services/integration-services-developer-documentation)  
+* [Службы Master Data Services](/sql-docs/docs/master-data-services/develop/master-data-services-developer-documentation)
+* [Службы репликации](/sql-docs/docs/relational-databases/replication/concepts/replication-developer-documentation)
+* [службы Reporting Services](/sql-docs/docs/reporting-services/reporting-services-developer-documentation)
+* [Компонент Service Broker](/sql-docs/docs/database-engine/configure-windows/sql-server-service-broker)
 
 
  

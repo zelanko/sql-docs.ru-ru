@@ -15,16 +15,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7db6b5fc01c5d85b75ebdd6c78ba004a94135bf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c28834d50b2b81be99c29fb97c6227380b05c5d1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>Применение правил качества данных к источнику данных
   Можно использовать службы Data Quality Services (DQS) для корректировки данных в потоке данных пакета, подключив преобразование DQS Cleansing к источнику данных. Дополнительные сведения о языке DQS см. в разделе [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md). Дополнительные сведения об этом преобразовании см. в разделе [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
   
- При обработке данных с помощью преобразования DQS Cleansing, создается проект служб DQS на сервере служб DQS. Для управления проектом используется клиент DQS. Дополнительные сведения см. в статье [Открытие, разблокировка, переименование и удаление проекта качества данных](https://msdn.microsoft.com/library/hh510417.aspx).  
+ При обработке данных с помощью преобразования DQS Cleansing, создается проект служб DQS на сервере служб DQS. Для управления проектом используется клиент DQS. Дополнительные сведения см. в статье [Открытие, разблокировка, переименование и удаление проекта качества данных](/sql-docs/docs/data-quality-services/open-unlock-rename-and-delete-a-data-quality-project).  
   
 ### <a name="to-correct-data-in-the-data-flow"></a>Исправление данных в потоке данных  
   

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 08/09/2017
 3.  Щелкните, чтобы захватить край столбца, и перетащите его вправо или влево на нужное расстояние.  
   
 ## <a name="see-also"></a>См. также:  
- [Область данных табликса (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Ячейки области данных Табликса, строк и столбцов (построитель отчетов) и службы SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Области данных Табликса (построитель отчетов и службы SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [Ячейки области данных Табликса, строк и столбцов (построитель отчетов) и службы SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
  [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Матрицы (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [Списки (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [Матрицы (построитель отчетов и службы SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
+ [Списки (построитель отчетов и службы SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

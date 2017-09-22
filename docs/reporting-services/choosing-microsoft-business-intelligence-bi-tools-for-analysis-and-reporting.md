@@ -15,11 +15,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c41e28d5083de71906106a09cf4b129d3e1907c5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Выбор средства Microsoft Business Intelligence (BI) для анализа и отчетности
@@ -38,17 +38,17 @@ ms.lasthandoff: 08/09/2017
 |Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 поддерживается)|  
 |Визуализация и анализ данных||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Трехмерные карты](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5 (поддерживает просмотр файлов размером до 1 ГБ)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [Приложения Power BI для мобильных устройств](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Службы Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(с использованием Power BI для мобильных устройств)|  
-|Совместная работа и общий доступ|||[Сайты SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Сайтов групп SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
+|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр < файлы 10 МБ)](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)<br/>(с использованием Power BI для мобильных устройств)|  
+|Совместная работа и общий доступ|||[Веб-сайты SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Сайтов групп SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Корпоративная бизнес-аналитика**|IT Pro||||||  
-|Создавайте многомерные или табличные корпоративные модели||||||[службы Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx);|  
+|Создавайте многомерные или табличные корпоративные модели||||||[службы Analysis Services](/sql-docs/docs/analysis-services/analysis-services);|  
 |Создавайте специальные визуализации данных|||[Power View для SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Создавайте панели мониторинга|||[Панели мониторинга SharePoint](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [Службы PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
-|Создавайте рабочие отчеты||||||*[Службы Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)|  
-|Создавайте пользовательские и внедренные отчеты|||||[Power BI Embedded](https://azure.microsoft.com/services/power-bi-embedded/)|*[Службы Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)|  
+|Создавайте рабочие отчеты||||||*[Службы Reporting Services](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
+|Создавайте пользовательские и внедренные отчеты|||||[Power BI Embedded](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
 |**Дополнительные аналитические функции**|Data Scientist||||||  
 |Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 поддерживается)|  
-|Используйте алгоритмы интеллектуального анализа данных||||||[Интеллектуальный анализ данных в службах Analysis Services](https://msdn.microsoft.com/library/bb510516.aspx)<br/><br/>[Службы R SQL Server](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|Используйте алгоритмы интеллектуального анализа данных||||||[Интеллектуальный анализ данных в службах Analysis Services](/sql-docs/docs/analysis-services/data-mining/data-mining-ssas)<br/><br/>[Службы R SQL Server](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
  *Службы Reporting Services имеют несколько функций, поддерживающих доставку современных и разбитых на страницы отчетов.  
   

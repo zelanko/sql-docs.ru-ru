@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 95ed4009d425fbc3383812ba3689f4caff487cd7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -143,7 +143,7 @@ ms.lasthandoff: 08/09/2017
 |Подробные шаги по установке и настройке службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint.|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) и [Добавление дополнительного сервера отчетов к ферме &#40; Масштабируемые службы SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Горизонтально масштабируемое развертывание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint путем добавления дополнительных серверов отчетов.|[Добавление дополнительного сервера отчетов к ферме &#40; Масштабируемые службы SSRS &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [топологии развертывания для компонентов бизнес-Аналитики SQL Server в SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Добавление дополнительных клиентских веб-интерфейсов SharePoint с установленными компонентами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для просмотра и отображения элементов отчетов.|[Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Настройка электронной почты для подписок и предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|[Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)](https://msdn.microsoft.com/library/hh231673.aspx)|  
+|Настройка электронной почты для [! ВКЛЮЧИТЬ[ssRSnoversion](/sql-docs/docs/reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application)|  
 |Последние сведения об этом выпуске доступны на TechNet Wiki.|[Рекомендации, советы и сведения по устранению неполадок служб SQL Server 2012 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## <a name="next-steps"></a>Следующие шаги
@@ -152,4 +152,4 @@ ms.lasthandoff: 08/09/2017
 [Веб-часть средства просмотра отчетов на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
 [Викторина. Настройка служб SSRS 2012 для интеграции с SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

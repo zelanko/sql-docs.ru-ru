@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка SQL Server Full-Text Search в Linux
@@ -86,7 +86,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>Поддерживаемые языки
 
-Компонент Full-Text Search использует [средства разбиения по словам](https://msdn.microsoft.com/library/ms142509.aspx) , определяющие, как определить отдельные слова на основе языка. Можно получить список средств разбиения по словам, зарегистрированных с помощью запроса к **sys.fulltext_languages** представления каталога. Средства разбиения по словам для следующих языков устанавливаются вместе с SQL Server, RC2 2017 г.:
+Компонент Full-Text Search использует [средства разбиения по словам](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) , определяющие, как определить отдельные слова на основе языка. Можно получить список средств разбиения по словам, зарегистрированных с помощью запроса к **sys.fulltext_languages** представления каталога. Средства разбиения по словам для следующих языков устанавливаются вместе с SQL Server, RC2 2017 г.:
 
 | Язык | КОД языка |
 |---|---|
@@ -146,11 +146,11 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a>Фильтры
 
-Компонент Full-Text Search также работает с текстом, хранящихся в двоичные файлы. Но в этом случае требуется установленный фильтр для обработки файла. Дополнительные сведения о фильтрах см. в разделе [Настройка и управление фильтрами для поиска](https://msdn.microsoft.com/library/ms142499.aspx).
+Компонент Full-Text Search также работает с текстом, хранящихся в двоичные файлы. Но в этом случае требуется установленный фильтр для обработки файла. Дополнительные сведения о фильтрах см. в разделе [Настройка и управление фильтрами для поиска](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
 
 Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»**. Для SQL Server, RC2 2017 г. устанавливаются следующие фильтры:
 
-| Название компонента | Идентификатор класса | Версия |
+| Название компонента | Идентификатор класса | Version |
 |---|---|---|
 |площадь | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -258,9 +258,9 @@ sudo zypper update mssql-server-fts
 |XML | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Семантический поиск
-[Семантический поиск](https://msdn.microsoft.com/library/gg492075.aspx) лежит компонент Full-Text Search для извлечения и индексирования статистически соответствующих *ключевых фраз*. Это позволяет запрашивать значения в документах в базе данных. Это также позволяет найти документы, которые похожи.
+[Семантический поиск](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) лежит компонент Full-Text Search для извлечения и индексирования статистически соответствующих *ключевых фраз*. Это позволяет запрашивать значения в документах в базе данных. Это также позволяет найти документы, которые похожи.
 
-Чтобы использовать семантического поиска, необходимо сначала загрузить и прикрепить [базы данных статистики семантики языка](https://msdn.microsoft.com/library/gg509085.aspx).
+Чтобы использовать семантического поиска, необходимо сначала загрузить и прикрепить [базы данных статистики семантики языка](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
 
 1. На компьютере с ОС Windows [загрузки. MSI-файл для базы данных статистики семантики языка](https://www.microsoft.com/download/details.aspx?id=54277).
 

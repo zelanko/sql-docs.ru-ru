@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74357e2741e01e44f0f9d504456fca10f29f78e7
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 6823b8a9cd3f92781d0fd3518f50b8866ba12d48
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Ограничения безопасности для SQL Server в Linux
@@ -27,7 +27,7 @@ SQL Server в Linux в настоящее время имеет следующи
 * Использование ключей, хранящихся в хранилище ключей Azure не поддерживается.
 * SQL Server создает свой собственный самозаверяющий сертификат для шифрования соединения. В настоящее время SQL Server не должен содержать пользователя, предоставленный сертификат для SSL или TLS. 
 
-Дополнительные сведения о функции безопасности, доступные в SQL Server см. в разделе [центр обеспечения безопасности для ядра СУБД SQL Server и базы данных SQL Azure](https://msdn.microsoft.com/library/bb510589.aspx).
+Дополнительные сведения о функции безопасности, доступные в SQL Server см. в разделе [центр обеспечения безопасности для ядра СУБД SQL Server и базы данных SQL Azure](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database).
 
 ## <a name="next-steps"></a>Следующие шаги
 

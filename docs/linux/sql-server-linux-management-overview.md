@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: b9fc5e53400fb83006d47213c84541dadfb11b38
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5f7c0f61cf9f441c56529ddaaddc96a0c318ce59
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Выбрать правильное средство для управления SQL Server в Linux
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Практически все, что можно сделать в клиентском средстве также можно с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления (DMV)](https://msdn.microsoft.com/library/ms188754.aspx) , запрос состояния и конфигурации SQL Server. Существуют также [команд Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) для задачи управления базами данных. Эти команды запускаются в любое клиентское средство, которое поддерживает подключение к SQL Server и выполнение запросов Transact-SQL. Примеры включают [sqlcmd](sql-server-linux-setup-tools.md), [кода Visual Studio](sql-server-linux-develop-use-vscode.md), и [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
+Практически все, что можно сделать в клиентском средстве также можно с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления (DMV)](/sql-docs/docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views) , запрос состояния и конфигурации SQL Server. Существуют также [команд Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) для задачи управления базами данных. Эти команды запускаются в любое клиентское средство, которое поддерживает подключение к SQL Server и выполнение запросов Transact-SQL. Примеры включают [sqlcmd](sql-server-linux-setup-tools.md), [кода Visual Studio](sql-server-linux-develop-use-vscode.md), и [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio в Windows
 

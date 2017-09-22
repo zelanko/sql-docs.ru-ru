@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81b5951a4f4a79d7d56fbf01af3fc1cef247510c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Работа с входными и выходными данными (R в быстрый запуск SQL Server)
 
-При необходимости выполнять код R в SQL Server требуется включить в системной хранимой процедуры, R-скрипта [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). Эта хранимая процедура используется для запуска среды выполнения R в контексте SQL Server, который передает данные в R, безопасно управляет пользовательскими сеансами R и возвращает результаты клиенту.
+При необходимости выполнять код R в SQL Server требуется включить в системной хранимой процедуры, R-скрипта [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Эта хранимая процедура используется для запуска среды выполнения R в контексте SQL Server, который передает данные в R, безопасно управляет пользовательскими сеансами R и возвращает результаты клиенту.
 
 ## <a name="bkmk_SSMSBasics"></a>Создание простых тестовых данных
 
@@ -143,5 +143,5 @@ EXECUTE sp_execute_external_script
 
 Изучите некоторые из проблем, которые могут возникнуть при передаче данных между R и SQL Server, например неявные преобразования и различия в табличных данных R и SQL.
 
-[SQL и R данных типов и объектов данных](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+[Типы и объекты данных R и SQL](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 

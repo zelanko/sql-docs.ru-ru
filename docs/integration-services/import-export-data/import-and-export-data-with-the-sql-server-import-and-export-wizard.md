@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server
@@ -41,11 +41,11 @@ ms.lasthandoff: 08/17/2017
  Мастер импорта и экспорта[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет простой способ копирования данных из источника в целевой объект. В этом обзоре описываются источники данных, которые мастер можно использовать в качестве источников и назначений, а также разрешения, необходимые для запуска мастера.
 
 ## <a name="get-the-wizard"></a>Получить мастера
-Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Если вы хотите запустить мастер, но нет [! ВКЛЮЧИТЬ[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>Что происходит при запуске мастера?
 -    **См. список шагов.** Описание действия в мастере см. в разделе [шаги в мастере экспорта и импорта SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Имеется также отдельной странице документации для каждой страницы мастера.  
-    \-или\-
+    \- или \-
 -   **См. простой пример.** Для быстрого просмотра на нескольких экранах, см в сеансе типичные, взгляните на этот простой пример начала до конца на одной странице - [Приступая к работе с простой пример мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a>Какие источники и назначения можно использовать?  
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="how-do-i-connect-to-my-data"></a>Как подключаться Мои данные?
 Сведения о подключении к источнику данных часто используемые см. в одном из следующих страниц.
--   [Подключение к SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [Диалоговое окно "Подключение к SQL Server"](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к базе данных Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключиться к неструктурированным файлам (текстовые файлы)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключиться к Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)

@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55fa14d4d8e28f602c49613cf81e981c12856177
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-profiler"></a>Приложение SQL Server Profiler
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
 
  ## <a name="where-is-the-profiler"></a>Где находится профилировщик?
  
- В SSMS профилировщик можно запустить несколькими способами. [Ниже приведен раздел со списком способов для запуска профилировщика.](https://msdn.microsoft.com/library/ms173799.aspx)
+ В SSMS профилировщик можно запустить несколькими способами. [Ниже приведен раздел со списком способов для запуска профилировщика.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
   
 ## <a name="capture-and-replay-trace-data"></a>Захват и воспроизведение данных трассировки 
 В следующей таблице показаны компоненты, с помощью которых мы рекомендуем выполнять захват и воспроизведение данных трассировки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .
@@ -57,8 +57,8 @@ ms.lasthandoff: 08/02/2017
 ||||  
 |-|-|-|  
 |**Функция\целевая рабочая нагрузка**|**Реляционный механизм**|**службы Analysis Services**;|  
-|**Захват трассировки**|Графический пользовательский интерфейс[расширенных событий](https://msdn.microsoft.com/library/bb630282.aspx) в среде SQL Server Management Studio|Приложение SQL Server Profiler|  
-|**Воспроизведение трассировки**|[Распределенное воспроизведение](https://msdn.microsoft.com/library/ff878183.aspx)|Приложение SQL Server Profiler|  
+|**Захват трассировки**|Графический пользовательский интерфейс[расширенных событий](/sql-docs/docs/relational-databases/extended-events/extended-events) в среде SQL Server Management Studio|Приложение SQL Server Profiler|  
+|**Воспроизведение трассировки**|[Распределенное воспроизведение](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|Приложение SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>Приложение SQL Server Profiler  
  Приложение Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] — это графический пользовательский интерфейс для трассировки SQL, с помощью которого можно наблюдать за экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или службами Analysis Services. Приложение позволяет собирать и сохранять данные о каждом событии в файле или в таблице для последующего анализа. Например, с помощью приложения можно следить за производственной средой, чтобы определить, какие хранимые процедуры снижают производительность из-за того, что выполняются слишком медленно. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]используется для действий, таких как:  
@@ -132,7 +132,7 @@ ms.lasthandoff: 08/02/2017
   
  В SQL Server предусмотрено два способа трассировки экземпляра SQL Server: с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системных хранимых процедур.  
   
- **Фильтр**  
+ **Filter**  
  При создании трассировки или шаблона можно определить критерии для фильтрации данных, собираемых событием. Чтобы трассировки не становились слишком большими, можно устанавливать фильтры, чтобы собирать только подмножества данных о событиях. Например, в трассировке можно указать определенные имена пользователей Microsoft Windows, тем самым уменьшив объем выходных данных.  
   
  Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий.  
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/02/2017
 |Содержит описание процесса экспорта шаблона трассировки.|[Экспорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |Содержит описание процесса импорта шаблона трассировки.|[Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |Содержит описание процесса извлечения скрипта из трассировки.|[Извлечение скрипта из трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Содержит описание процесса согласования трассировки с данными журнала производительности Windows.|[Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Содержит описание процесса согласования трассировки с данными журнала производительности Windows.|[Сопоставление трассировки с журналом производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |Содержит описание процесса упорядочения столбцов, отображаемых в трассировке.|[Упорядочивание столбцов, отображаемых в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |Содержит описание процесса запуска приложения SQL Server Profiler.|[Запуск приложения SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |Содержит описание процесса сохранения трассировок и шаблонов трассировок.|[Сохранение трассировок и шаблонов трассировок](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
@@ -201,7 +201,7 @@ ms.lasthandoff: 08/02/2017
  [Категория событий Sessions](../../relational-databases/event-classes/sessions-event-category.md)   
  [Категория событий Stored Procedures](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [Категория событий TSQL](../../relational-databases/event-classes/tsql-event-category.md)   
- [Производительность сервера и мониторинг активности](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Мониторинг производительности и действий сервера](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
 

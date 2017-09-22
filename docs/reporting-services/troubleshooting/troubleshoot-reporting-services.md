@@ -15,17 +15,17 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b5e30cca2aa3c75ca4d13e89e7af7b181a18916
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Устранение неполадок со службами Reporting Services
   Разделы этой статьи содержат сведения о том, как выявить и устранить проблемы с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
-![Небольшой значок папки](../../reporting-services/troubleshooting/media/filefolder-small.png)**Устранение неполадок со службами Reporting Services**   
+![Небольшой значок папки](../../reporting-services/troubleshooting/media/filefolder-small.png)**Устранение неполадок со службами Reporting Services   **  
 + [Устранение неполадок при подготовке отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,10 +39,10 @@ ms.lasthandoff: 08/09/2017
 
 +  [Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Устранение неполадок при подключении к серверу и базе данных (службы Reporting Serivces).](https://msdn.microsoft.com/library/mt650905.aspx)  
++  [Устранение неполадок подключения базы данных со службами Reporting Serivces серверу и](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
 
- ![Маленький значок папки](../../reporting-services/troubleshooting/media/filefolder-small.png)**ошибки и ссылок на события**   
- + [Ошибки и ссылок на события &#40; Службы Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ ![Маленький значок папки](../../reporting-services/troubleshooting/media/filefolder-small.png)**ошибки и ссылок на события   **  
+ + [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Причины ошибок служб Reporting Services и способы их устранения](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
