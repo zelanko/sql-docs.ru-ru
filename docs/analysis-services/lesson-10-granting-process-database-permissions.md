@@ -59,7 +59,7 @@ ms.lasthandoff: 09/01/2017
     Роль «Обработка объектов базы данных» определена и развернута. После развертывания куба в производственной среде администраторы развернутого куба могут по мере необходимости добавлять пользователей в эту роль, чтобы передавать ответственность за обработку определенным пользователям.  
   
 > [!NOTE]  
-> Завершенный проект десятого занятия доступен для загрузки и установки образцов. Дополнительные сведения см. в статье [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md).  
+> Завершенный проект десятого занятия доступен для загрузки и установки образцов. Дополнительные сведения см. в статье [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Роли и разрешения (службы Analysis Services)](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
