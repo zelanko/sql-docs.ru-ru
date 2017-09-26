@@ -1,46 +1,52 @@
 ---
-title: "Задача Hive для Azure HDInsight | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/28/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.afphivetask.f1"
-  - "sql14.dts.designer.afphivetask.f1"
+title: "Задача Hive для Azure HDInsight | Документы Microsoft"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/28/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.afphivetask.f1
+- sql14.dts.designer.afphivetask.f1
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f9e67e91b5cd38482ab1151d5942c9c55c04136c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/26/2017
+
 ---
-# Задача Hive для Azure HDInsight
-  **Задача Hive для Azure HDInsight** позволяет выполнить скрипт Hive в кластере Azure HDInsight.
+# <a name="azure-hdinsight-hive-task"></a>Задача Hive для Azure HDInsight
+**Задача Hive для Azure HDInsight** позволяет выполнить скрипт Hive в кластере Azure HDInsight.
      
-Чтобы добавить **задачу Hive для Azure HDInsight**, перетащите ее в конструктор SSIS, дважды щелкните или щелкните правой кнопкой мыши и выберите **Изменить**, чтобы открыть диалоговое окно **Редактор задач Hive для Azure HDInsight**.  
+Чтобы добавить **задачу Hive для Azure HDInsight**, перетащите ее в конструктор SSIS, дважды щелкните или щелкните правой кнопкой мыши и выберите **Изменить** , чтобы открыть диалоговое окно **Редактор задач Hive для Azure HDInsight** .  
   
- **Задача Hive для Azure HDInsight** входит в состав пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure для SQL Server 2016. Пакет дополнительных компонентов можно скачать [отсюда](http://go.microsoft.com/fwlink/?LinkID=626967).  
+**Задача Hive для Azure HDInsight** — это компонент [пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
  В следующем списке описаны поля этого диалогового окна.  
   
-1.  В поле **AzureSubscriptionConnection** выберите существующий диспетчер соединений подписки Azure (или создайте новый), ссылающийся на подписку Azure, в которой размещается кластер HDInsight.  
+1.  Для **HDInsightConnection** поля, выберите существующий диспетчер подключений Azure HDInsight или создайте новую, относится к кластеру Azure HDInsight используется для выполнения сценария.
   
-2.  В поле **HDInsightClusterName** введите имя кластера HDInsight, в котором требуется запустить сценарий Hive.  
+2.  Для **AzureStorageConnection** поля, выберите существующий диспетчер подключений хранилища Azure или создайте новую, ссылается на учетную запись хранилища Azure связанной с кластером. Это только требуется, чтобы загрузить журналы вывода и ошибки выполнения скрипта.
+ 
+3.  Для **BlobContainer** укажите имя контейнера хранилища, связанной с кластером. Это только требуется, чтобы загрузить журналы вывода и ошибки выполнения скрипта.
   
-3.  В поле **LocalLogFolder** щелкните **...** (многоточие) и выберите папку для скачивания журналов обработки Hive из кластера HDInsight.  
+4.  Для **LocalLogFolder** укажите папку, в которую будут загружены журналы вывода и ошибки выполнения скрипта. Это только требуется, чтобы загрузить журналы вывода и ошибки выполнения скрипта.   
   
-4.  Существует два способа задать скрипт Hive.  
+5.  Существует два способа задать скрипт Hive для выполнения:
   
-    1.  **Встроенный скрипт**: щелкните **...** (многоточие) рядом с полем **Скрипт** и введите встроенный скрипт в диалоговом окне **Ввод скрипта**.  
+    1.  **Встроенный скрипт**: укажите **сценарий** поле введите встроенный скрипт для выполнения в **ввод скрипта** диалоговое окно.
   
-    2.  **Файл сценария**: передайте файла сценария в расположение большого двоичного объекта и укажите его значение **BlobName**. Если большой двоичный объект не находится в используемом по умолчанию хранилище или контейнере кластера HDInsight, нужно указать значения **ExternalStorageAccountName** и **ExternalBlobContainer** . Если используется внешний большой двоичный объект, убедитесь, что он настроен как общедоступный.  
+    2.  **Файл сценария**: передайте файла сценария в хранилище больших двоичных объектов Azure и укажите **BlobName** поля. Если большой двоичный объект не находится в учетной записи хранения по умолчанию или контейнера, связанного с кластером HDInsight, **ExternalStorageAccountName** и **ExternalBlobContainer** поля должен быть указан. Внешний большой двоичный объект убедитесь в том, что он настроен как общедоступный.  
   
-     Если использованы оба способа, будет задействован файл скрипта, а встроенный скрипт будет проигнорирован.  
-  
-  
+     Если указаны оба аргумента, будет использоваться файл скрипта и встроенный скрипт будет игнорироваться.
+

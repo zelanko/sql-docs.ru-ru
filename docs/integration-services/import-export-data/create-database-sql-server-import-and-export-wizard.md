@@ -1,38 +1,47 @@
 ---
-title: "Создание базы данных (мастер импорта и экспорта SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.impexpwizard.createdatabase.f1"
+title: "Создание базы данных (мастер экспорта и импорта SQL Server) | Документы Microsoft"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
----
-# Создание базы данных (мастер импорта и экспорта SQL Server)
-Если на странице **Выбор назначения** выбрать вариант **Создать** для создания целевой базы данных SQL Server, мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает диалоговое окно **Создание базы данных**. На этой странице можно указать имя новой базы данных. При необходимости можно также изменить параметры для начального размера и автоматического увеличения новой базы данных и ее файла журнала. 
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3f8c2b652515f4c84121dcf14371a9e86c8f86f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/26/2017
 
-> [!NOTE] Если вам нужны сведения об инструкции CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)], а не о диалоговом окне **Создание базы данных** мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. раздел [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+---
+# <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
+Если на странице **Выбор назначения** выбрать вариант **Создать** для создания целевой базы данных SQL Server, мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает диалоговое окно **Создание базы данных** . На этой странице можно указать имя новой базы данных. При необходимости можно также изменить параметры для начального размера и автоматического увеличения новой базы данных и ее файла журнала. 
+
+**Create Database** диалоговом окне в мастере доступны только основные параметры, доступные для создания новой базы данных SQL Server. Чтобы просмотреть и настроить все параметры для нового [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания базы данных или Настройка базы данных после ее создания. 
+
+> [!NOTE]
+> Если вам нужны сведения об инструкции CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)], а не о диалоговом окне **Создание базы данных** мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. раздел [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>Снимок экрана: страница "Создание базы данных"  
 На следующем снимке экрана показано диалоговое окно **Создание базы данных** в мастере.  
 
-Это окно мастера содержит лишь подмножество параметров, доступных для создания базы данных SQL Server. Чтобы просмотреть и настроить все параметры для новой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] при создании и настройке базы данных. 
-
-![Create database page of the Import and Export Wizard](../../integration-services/import-export-data/media/create-database.png "Create database page of the Import and Export Wizard")  
+![Страница создания базы данных из мастера импорта и экспорта](../../integration-services/import-export-data/media/create-database.png "страницы создания базы данных из мастера импорта и экспорта")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Ввод имени новой базы данных  
 **Название**  
- Введите уникальное имя для базы данных назначения SQL Server. При вводе имени обязательно следуйте соглашениям об именовании SQL Server.  
+ Введите имя целевой базы данных SQL Server.
+ 
+### <a name="naming-requirements"></a>Требования к именованию
+При вводе имени обязательно следуйте соглашениям об именовании SQL Server.  
   
 -   Имя базы данных должно быть уникальным в рамках экземпляра SQL Server.  
   
@@ -40,7 +49,7 @@ caps.handback.revision: 52
   
 -   Имя базы данных должно соответствовать правилам для идентификаторов в SQL Server. Ниже приведены наиболее важные требования.  
   
-    -   Первым символом должна быть буква, подчеркивание (_), символ (@), или символ решетки (#).  
+    -   Первым символом должна быть буква, подчеркивание (_), символ @ или решетка (#).  
   
     -   Далее могут идти буквы, числа, символ @, знак доллара ($), решетка или подчеркивание.  
   
@@ -50,9 +59,8 @@ caps.handback.revision: 52
 
 ## <a name="optionally-specify-data-file-and-log-file-options"></a>При необходимости можно указать файл данных и файл журналов.
 
-> [!TIP] Требуется указать имя для новой базы данных в поле **Имя**, а для других параметров, определяющих размер файла и его увеличение, обычно можно оставить значения по умолчанию.
->
-> Дополнительные сведения о параметрах размера файла, отображаемых на этой странице, см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+> [!TIP]
+> Требуется указать имя для новой базы данных в поле **Имя** , а для других параметров, определяющих размер файла и его увеличение, обычно можно оставить значения по умолчанию.
 
 ### <a name="data-file-options"></a>Параметры для файлов данных  
  **Начальный размер**  
@@ -79,6 +87,11 @@ caps.handback.revision: 52
   
  **Размер приращения**  
  Задайте количество мегабайтов, на которое может возрастать файл журнала.  
-  
+
+### <a name="more-info"></a>Дополнительные сведения
+Дополнительные сведения о параметрах размера файла, отображаемых на этой странице, см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+
 ## <a name="whats-next"></a>Дальнейшие действия  
- После указания имени для новой базы данных и нажатия кнопки **ОК** в диалоговом окне **Создание базы данных** снова открывается страница **Выбор назначения**. Дополнительные сведения см. в разделе [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
+ После указания имени для новой базы данных и нажатия кнопки **ОК**в диалоговом окне **Создание базы данных** снова открывается страница **Выбор назначения** . Дополнительные сведения см. в разделе [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
+
+

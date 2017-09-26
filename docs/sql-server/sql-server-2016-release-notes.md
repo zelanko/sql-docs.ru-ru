@@ -16,11 +16,11 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.translationtype: HT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>Заметки о выпуске SQL Server 2016
@@ -30,9 +30,9 @@ ms.lasthandoff: 06/22/2017
    
 [![Скачать на странице центра оценки](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Скачать SQL Server 2016 на странице **[центра оценки](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-[Маленький значок виртуальной машины Azure![](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)**, чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
+[Маленький значок виртуальной машины Azure![](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Есть ли учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , чтобы запустить виртуальную машину с уже установленным SQL Server 2016 с пакетом обновления 1 (SP1).
     
-[![Скачать SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS.** Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
+[![Скачать SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS.** Чтобы получить последнюю версию среды SQL Server Management Studio, перейдите на страницу **[Скачивание SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**.   
     
  Сведения о новых возможностях см. в разделе [Что нового в SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Ядро СУБД (общедоступная версия)](#bkmk_ga_instalpatch) 
 
--   [База данных Stretch (общедоступная версия)](#bkmk_ga_stretch)
+-   [Stretch Database (общедоступная версия)](#bkmk_ga_stretch)
 
 -   [Хранилище запросов (общедоступная версия)](#bkmk_ga_query_store)
 
@@ -89,15 +89,15 @@ ms.lasthandoff: 06/22/2017
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>Проблема с определенным символом в имени базы данных или таблицы
 
-**Проблема и последствия для клиентов:** попытка включить базу данных Stretch для базы данных или таблицы завершается ошибкой, если имя объекта содержит символ, который считается другим символом при преобразовании из нижнего в верхний регистр. Примером символа, вызывающего эту проблему, может служить символ "ƒ" (который вводится с помощью кода ALT+159).
+**Проблема и последствия для клиентов:** попытка включить Stretch Database для базы данных или таблицы завершается ошибкой, если имя объекта содержит символ, который считается другим символом при преобразовании из нижнего в верхний регистр. Примером символа, вызывающего эту проблему, может служить символ "ƒ" (который вводится с помощью кода ALT+159).
 
-**Обходное решение.** Если вы хотите включить базу данных Stretch для базы данных или таблицы, единственным выходом является переименование объекта с целью удалить проблемный символ.
+**Обходное решение.** Если вы хотите включить Stretch Database для базы данных или таблицы, единственным выходом является переименование объекта с целью удалить проблемный символ.
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>Проблема с индексом, в котором используется ключевое слово INCLUDE
 
-**Проблема и последствия для клиентов.** При попытке включить базу данных Stretch для таблицы с индексом, в котором используется ключевое слово INCLUDE для включения в индекс дополнительных столбцов, происходит ошибка.
+**Проблема и последствия для клиентов.** При попытке включить Stretch Database для таблицы с индексом, в котором используется ключевое слово INCLUDE для включения в индекс дополнительных столбцов, происходит ошибка.
 
-**Обходное решение.** Удалите индекс, в котором используется ключевое слово INCLUDE, включите базу данных Stretch для таблицы, а затем снова создайте индекс. При этом следует соблюдать принятые в организации правила и политики обслуживания, чтобы влияние на работу пользователей таблицы было минимальным или нулевым.
+**Обходное решение.** Удалите индекс, в котором используется ключевое слово INCLUDE, включите Stretch Database для таблицы, а затем снова создайте индекс. При этом следует соблюдать принятые в организации правила и политики обслуживания, чтобы влияние на работу пользователей таблицы было минимальным или нулевым.
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 

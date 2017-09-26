@@ -1,39 +1,44 @@
 ---
-title: "Сопоставление типов данных в мастере импорта и экспорта SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/11/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сопоставление типов данных в мастере экспорта и импорта SQL Server | Документы Microsoft"
+ms.custom: 
+ms.date: 01/11/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 caps.latest.revision: 2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4eca10e506087ee5d8106cb05c861c4efa49a65d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/26/2017
+
 ---
-# Сопоставление типов данных в мастере импорта и экспорта SQL Server
+# <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Сопоставление типов данных в мастере импорта и экспорта SQL Server
  В мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно задать имя, тип данных и свойства типа данных для столбцов в новых целевых таблицах и файлах, но нельзя указать настраиваемые преобразования для значений столбцов. Поэтому важное значение имеет встроенное сопоставление типов данных из источника с типами данных в назначении.  
   
-##  <a name="a-namewizardmappinga-how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> Каким образом мастер выполняет сопоставление типов данных источника и назначения?
-При сопоставлении типов данных из одной системы или версии базы данных с другой мастер использует файлы сопоставления, устанавливаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Например, он может сопоставить типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типами данных Oracle. По умолчанию файлы сопоставления в XML-формате устанавливаются в следующие папки.
--   **C:\Program Files\Microsoft SQL Server\130\DTS\MappingFiles** (для 64-разрядной версии)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTS\MappingFiles** (для 32-разрядной версии).  
+##  <a name="wizardMapping"></a> Каким образом мастер выполняет сопоставление типов данных источника и назначения?
+При сопоставлении типов данных из одной системы или версии базы данных с другой мастер использует файлы сопоставления, устанавливаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, он может сопоставить типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типами данных Oracle. По умолчанию файлы сопоставления в XML-формате устанавливаются в следующие папки.
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (для 64-разрядная версия)
+-   **\Microsoft SQL C:\Program файлы (x86) Server\130\DTSMappingFiles\* * (для 32-разрядная версия).  
   
- Если существующий файл сопоставления был изменен или в папку был добавлен новый файл сопоставления, необходимо закрыть и заново открыть мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], чтобы загрузить новые или измененные файлы.  
+ Если существующий файл сопоставления был изменен или в папку был добавлен новый файл сопоставления, необходимо закрыть и заново открыть мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , чтобы загрузить новые или измененные файлы.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>Можно изменить существующий файл сопоставления
 Если требуются различные сопоставления между типами данных, можно обновить файлы сопоставлений, чтобы изменить сопоставления, используемые мастером. Например, если при передаче данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в DB2 необходимо сопоставить тип данных **nchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типом данных **GRAPHIC** DB2 , а не с типом данных **VARGRAPHIC** DB2, то в файле сопоставления **SqlClientToIBMDB2.xml** необходимо изменить сопоставление **nchar** для использования типа **GRAPHIC** вместо **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Можно добавить новый файл сопоставления
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливает сопоставления между многими часто используемыми комбинациями источника и назначения. Можно также добавить новые файлы сопоставления в каталог **MappingFiles** для поддержки дополнительных источников и назначений. Новые файлы сопоставления должны быть согласованы с опубликованной XSD-схемой и выполнять сопоставления между уникальными сочетаниями, источниками и назначениями. Схема для файлов сопоставления (**DataTypeMapping.xsd**) опубликована [здесь](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливает сопоставления между многими часто используемыми комбинациями источника и назначения. Можно также добавить новые файлы сопоставления в каталог **MappingFiles** для поддержки дополнительных источников и назначений. Новые файлы сопоставления должны быть согласованы с опубликованной XSD-схемой и выполнять сопоставления между уникальными сочетаниями, источниками и назначениями. Схема для файлов сопоставления ( **DataTypeMapping.xsd**) опубликована [здесь](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
  
 ## <a name="sample-mapping-file"></a>Образец файла сопоставления
-Вот фрагмент XML-файла сопоставления, который сопоставляет типы данных SQL Server (или, точнее, из типов данных, используемых поставщиком данных .Net Framework для SQL Server) с типами данных Oracle. Можно видеть, что тип данных SQL Server **int** сопоставляется с типом данных Oracle **INTEGER**.
+Вот фрагмент XML-файла сопоставления, который сопоставляет типы данных SQL Server (или, точнее, из типов данных, используемых поставщиком данных .Net Framework для SQL Server) с типами данных Oracle. Можно видеть, что тип данных SQL Server **int** сопоставляется с типом данных Oracle **INTEGER** .
   
 ```xml  
   
@@ -76,3 +81,5 @@ caps.handback.revision: 2
 </dtm:DataTypeMappings>  
   
 ```  
+
+

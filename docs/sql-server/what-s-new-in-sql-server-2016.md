@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
-ms.openlocfilehash: 2508b5409b48e4b2a6447a6663c143cbc3ff6309
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
@@ -38,7 +38,7 @@ ms.lasthandoff: 07/31/2017
 
  **Оцените SQL Server уже сегодня!** 
 - Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Скачайте последнюю версию [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx). 
+- Скачайте последнюю версию [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). 
 - Есть учетная запись Azure? Запустите [виртуальную машину с уже установленным решением SQL Server 2016](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 ## <a name="sql-server-2016-database-engine"></a>Ядро СУБД SQL Server 2016
@@ -99,7 +99,7 @@ ms.lasthandoff: 07/31/2017
 - **Переработанный механизм визуализации отчетов** с поддержкой HTML5 
 - Новые **типы диаграмм**: "дерево" и "солнечные лучи" 
 
-См. раздел о [службах Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx).
+См. раздел о [службах Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).
 
 ## <a name="next-steps"></a>Следующие шаги   
 - [Установка SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
-ms.openlocfilehash: 0bdc983c4a80781eaba888c3e214fc23a4ddad22
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0a64043328380b107fb7e33716ec0bb48d061dd1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Скачать SQL Server Data Tools (SSDT)
@@ -123,11 +123,11 @@ ISO-образ SSDT можно использовать в качестве ал
   
 -   [Разработка базы данных вне сети с учетом проекта](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
   
--   [Руководство по службам SSIS. Создание простого ETL-пакета](https://msdn.microsoft.com/library/ms169917.aspx)  
+-   [Руководство по службам SSIS. Создание простого ETL-пакета](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)  
   
--   [Руководства по службам Analysis Services](https://msdn.microsoft.com/library/hh231701.aspx)  
+-   [Руководства по службам Analysis Services](/sql-docs/docs/analysis-services/analysis-services-tutorials-ssas)  
   
--   [Создание простого табличного отчета (учебник по службам SSRS)](https://msdn.microsoft.com/library/ms167305.aspx)  
+-   [Создание простого табличного отчета (учебник по службам SSRS)](/sql-docs/docs/reporting-services/create-a-basic-table-report-ssrs-tutorial)  
   
 
 

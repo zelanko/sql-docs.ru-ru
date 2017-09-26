@@ -1,32 +1,37 @@
 ---
-title: "Справочник по сообщениям об ошибках служб Integration Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "номера ошибок [службы Integration Services]"
-  - "значения hresult [службы Integration Services]"
-  - "ошибки [службы Integration Services], список"
+title: "Об ошибках служб Integration Services и справочник по сообщениям | Документы Microsoft"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error numbers [Integration Services]
+- hresults [Integration Services]
+- errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/26/2017
+
 ---
-# Справочник по сообщениям об ошибках служб Integration Services
-  Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime>.  
+# <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
+  Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime> .  
   
  Этот список полезен, когда появляется код ошибки без описания. Этот список сейчас не включает сведения об устранении неполадок.  
   
 > [!IMPORTANT]  
->  Причиной многих ошибок, возникающих при работе служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , являются другие компоненты. В этом разделе перечислены все ошибки, возникающие при использовании компонентов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Если не получается найти ошибку в списке, значит она вызвана компонентом, не включенным в службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Это могут быть поставщики OLE DB и другие компоненты баз данных, например компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] и службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], а также прочие службы и компоненты: файловая система, SMTP-сервер или очередь сообщений Майкрософт. Дополнительные сведения о сообщениях об этих внешних ошибках см. в документации по соответствующему компоненту.  
+>  Причиной многих ошибок, возникающих при работе служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , являются другие компоненты. В этом разделе перечислены все ошибки, возникающие при использовании компонентов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Если не получается найти ошибку в списке, значит она вызвана компонентом, не включенным в службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Это могут быть поставщики OLE DB и другие компоненты баз данных, например компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] и службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а также прочие службы и компоненты: файловая система, SMTP-сервер или очередь сообщений Майкрософт. Дополнительные сведения о сообщениях об этих внешних ошибках см. в документации по соответствующему компоненту.  
   
  Этот список содержит следующие категории сообщений.  
   
@@ -357,7 +362,7 @@ caps.handback.revision: 44
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Недопустимое имя объекта "%1". Имя должно начинаться с алфавитного символа.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Недопустимое имя объекта "%1". Имя должно начинаться с алфавитного символа или знака подчеркивания "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Недопустимое имя объекта "%1". Имя должно содержать только алфавитно-цифровые символы или знаки подчеркивания "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Недопустимое имя объекта "%1". Имя не может содержать следующие символы: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Недопустимое имя объекта "%1". Имя не может содержать следующие символы: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Не удалось загрузить свойство значения "%1" при использовании механизма сохраняемости по умолчанию.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Диспетчер соединений "%1" не принадлежит к типу "%2".|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" пуст.|  
@@ -2336,3 +2341,4 @@ caps.handback.revision: 44
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 не допускает вставку столбцов внешних метаданных.|  
   
   
+
