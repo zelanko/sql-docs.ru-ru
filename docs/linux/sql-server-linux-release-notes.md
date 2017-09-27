@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/09/2017
 
 В следующей таблице перечислены выпуски SQL Server 2017 г., описанные в этом разделе.
 
-| Выпуск | Версия | Дата выпуска |
+| Выпуск | Version | Дата выпуска |
 |-----|-----|-----|
 | [ВЕРСИЯ-КАНДИДАТ 2](#RC2) | 14.0.900.75 | 8-2017 |
 | [ВЕРСИЯ-КАНДИДАТ 1](#RC1) | 14.0.800.90 | 7-2017 |
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 | [SQL Server Data Tools для Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Код Visual Studio](https://code.visualstudio.com) с [mssql расширения](https://aka.ms/mssql-marketplace) | последние |
 
-### <a name="unsupported-features-and-services"></a>Неподдерживаемые функции и службы
+### <a name="Unsupported"></a>Неподдерживаемые функции и службы
 
 Следующие функции и службы недоступны в Linux в настоящее время. Во время месячную периодичность обновления программы предварительного просмотра будет более включена поддержка этих возможностей.
 
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/09/2017
 | &nbsp; | Таблицы filetable |
 | &nbsp; | Задать сборки среды CLR с EXTERNAL_ACCESS или UNSAFE разрешение |
 | &nbsp; | Расширение буферного пула |
-| **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
+| **SQL Server, агент** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
 | &nbsp; | Предупреждения |
 | &nbsp; | Агент чтения журнала. |
 | &nbsp; | Система отслеживания измененных данных |
@@ -172,7 +172,7 @@ ms.lasthandoff: 08/09/2017
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-#### <a name="full-text-search"></a>Full-Text Search
+#### <a name="full-text-search"></a>Компонент Full-text Search
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 #### <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
@@ -273,7 +273,7 @@ ms.lasthandoff: 08/09/2017
 | &nbsp; | Системные расширенные хранимые процедуры (XP_CMDSHELL, и т. д.) |
 | &nbsp; | Таблицы filetable |
 | &nbsp; | Задать сборки среды CLR с EXTERNAL_ACCESS или UNSAFE разрешение |
-| **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
+| **SQL Server, агент** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
 | &nbsp; | Предупреждения |
 | &nbsp; | Агент чтения журнала. |
 | &nbsp; | Система отслеживания измененных данных |
@@ -366,7 +366,7 @@ ms.lasthandoff: 08/09/2017
 
 В Linux последовательное обновление SQL Server 2017 г CTP-версии 2.1 для версии-кандидата 1 не поддерживается. После обновления вторичной реплики, отключится от первичной реплики до обновления первичной реплики. Корпорация Майкрософт планирует устранить эту проблему в будущих выпусках.
 
-#### <a name="full-text-search"></a>Full-Text Search
+#### <a name="full-text-search"></a>Компонент Full-text Search
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 #### <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
@@ -506,7 +506,7 @@ ms.lasthandoff: 08/09/2017
 #### <a name="always-on-availability-group"></a>Всегда в группе доступности
 - `sys.fn_hadr_backup_is_preffered_replica`не работает для `CLUSTER_TYPE=NONE` или `CLUSTER_TYPE=EXTERNAL` тем, что он использует реестр кластера WSFC реплицируются ключа, которого не доступен. Мы работаем над предоставляет аналогичные функциональные возможности через другую функцию. 
 
-#### <a name="full-text-search"></a>Full-Text Search
+#### <a name="full-text-search"></a>Компонент Full-text Search
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 #### <a name="sql-agent"></a>Агент SQL Server
@@ -670,7 +670,7 @@ ms.lasthandoff: 08/09/2017
 - Группы доступности, созданных с помощью `CLUSTER_TYPE=NONE` и не были добавлены как ресурсы кластера будет продолжать работать после обновления. Рекомендуется использовать в сценариях чтения шкалы. В разделе [группы доступности чтения шкалы Настройка для SQL Server в Linux](sql-server-linux-availability-group-configure-rs.md).
 - `sys.fn_hadr_backup_is_preffered_replica`не работает для `CLUSTER_TYPE=NONE` или `CLUSTER_TYPE=EXTERNAL` тем, что он использует реестр кластера WSFC реплицируются ключа, которого не доступен. Мы работаем над предоставляет аналогичные функциональные возможности через другую функцию. 
 
-#### <a name="full-text-search"></a>Full-Text Search
+#### <a name="full-text-search"></a>Компонент Full-text Search
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 - Средства разбиения по словам корейского занимает несколько секунд для загрузки и приводит к ошибке при первом использовании. После первоначальной ошибки он должен работать нормально.
@@ -810,7 +810,7 @@ ms.lasthandoff: 08/09/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Не удается переместить системные базы данных с помощью служебной программы mssql conf.
@@ -844,7 +844,7 @@ ms.lasthandoff: 08/09/2017
    - [SLES](sql-server-linux-availability-group-cluster-sles.md)
    - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
-#### <a name="full-text-search"></a>Full-Text Search
+#### <a name="full-text-search"></a>Компонент Full-text Search
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 - Средства разбиения по словам корейского занимает несколько секунд для загрузки и приводит к ошибке при первом использовании. После первоначальной ошибки он должен работать нормально.
@@ -949,7 +949,8 @@ ms.lasthandoff: 08/09/2017
 | &nbsp; | Проверка подлинности Windows. |
 | &nbsp; | расширенное управление ключами |
 | &nbsp; | Использование сертификата, предоставленного пользователем для SSL или TLS |
-| **Службы** | SQL Server, агент |
+| **Службы** | Агент SQL Server
+ |
 | &nbsp; | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
@@ -987,7 +988,7 @@ ms.lasthandoff: 08/09/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.
@@ -1005,7 +1006,7 @@ ms.lasthandoff: 08/09/2017
    - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    
-#### <a name="full-text-search"></a>Full-Text Search
+#### <a name="full-text-search"></a>Компонент Full-text Search
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 - Средства разбиения по словам корейского занимает несколько секунд для загрузки и приводит к ошибке при первом использовании. После первоначальной ошибки он должен работать нормально.
@@ -1107,7 +1108,8 @@ ms.lasthandoff: 08/09/2017
 | &nbsp; | Проверка подлинности Windows. |
 | &nbsp; | расширенное управление ключами |
 | &nbsp; | Использование сертификата, предоставленного пользователем для SSL или TLS |
-| **Службы** | SQL Server, агент |
+| **Службы** | Агент SQL Server
+ |
 | &nbsp; | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
@@ -1147,7 +1149,7 @@ ms.lasthandoff: 08/09/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.
@@ -1252,7 +1254,8 @@ ms.lasthandoff: 08/09/2017
 | &nbsp; | Проверка подлинности Windows. |
 | &nbsp; | расширенное управление ключами |
 | &nbsp; | Использование сертификата, предоставленного пользователем для SSL или TLS |
-| **Службы** | SQL Server, агент |
+| **Службы** | Агент SQL Server
+ |
 | &nbsp; | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
@@ -1292,7 +1295,7 @@ ms.lasthandoff: 08/09/2017
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас. 
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас. 
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.
@@ -1388,7 +1391,8 @@ v
 | &nbsp; | Проверка подлинности Windows. |
 | &nbsp; | расширенное управление ключами |
 | &nbsp; | Использование сертификата, предоставленного пользователем для SSL или TLS |
-| **Службы** | SQL Server, агент |
+| **Службы** | Агент SQL Server
+ |
 | &nbsp; | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
@@ -1424,7 +1428,7 @@ v
 
 - Диспетчер конфигурации SQL Server не удается подключиться к SQL Server в Linux.
 
-- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\>**  метод вместо сейчас.
+- **CREATE ASSEMBLY** не будут работать при попытке использовать файл. Используйте **FROM \<bits\> ** метод вместо сейчас.
 
 #### <a name="databases"></a>Базы данных
 - Изменение расположения файлов данных и журналов базы данных TempDB не поддерживается.

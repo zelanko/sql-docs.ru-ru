@@ -2,7 +2,7 @@
 title: "Какой &#39; новые возможности SSMA для Access(AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 06347e6e199fe2aea5f4854b3b355bf28d8d1769
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-access-accesstosql"></a>Какой &#39; новые возможности SSMA для Access (AccessToSQL)
 В этом разделе перечислены SSMA для Access изменения в каждом выпуске.  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+V7.5 выпуск SSMA для Access была дополнена несколько улучшений, чтобы обеспечить большую доступность для людей с ограниченными возможностями.
+
+> [!IMPORTANT]
+> Версия .net 4.5.2 является необходимым условием для установки SSMA v7.5. Кроме того начиная с v7.4, 32-разрядной версии SSMA прекращается.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 V7.4 выпуск SSMA для Access содержит следующие изменения:

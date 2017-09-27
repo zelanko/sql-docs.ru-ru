@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant | Документы Microsoft"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>Помощник миграции SQL Server
-Microsoft SQL Server миграции Assistant (SSMA) — это средство, предназначены для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и Sybase.  
+Microsoft SQL Server миграции Assistant (SSMA) — это средство, предназначены для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и SAP ASE.  
   
 ## <a name="migration-sources"></a>Источники миграции  
   
@@ -37,7 +37,7 @@ Microsoft SQL Server миграции Assistant (SSMA) — это средств
   
 -   [SQL Server Migration Assistant для Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [SQL Server Migration Assistant для Sybase ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-  [SQL Server Migration Assistant для SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>Поддерживаемые источники и целевой версии
 Для поддерживаемых источников данных ознакомьтесь с информацией в центре загрузки для загрузки SSMA.
@@ -49,19 +49,18 @@ SSMA поддержка следующих версий.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- База данных SQL Azure
 - SQL Server 2017 г. в Windows и Linux (Предварительная версия)
 - ** Хранилище данных azure SQL
 
 ** Этот целевой объект поддерживается только SSMA для Oracle.
  
-
 ## <a name="downloads"></a>Файлы для загрузки
 - [SSMA для Access](http://aka.ms/ssmaforaccess)
 - [SSMA для DB2](http://aka.ms/ssmafordb2)
 - [SSMA для MySql](http://aka.ms/ssmaformysql)
 - [SSMA для Oracle](http://aka.ms/ssmafororacle)
-- [SSMA для СУБД Sybase ASE](http://aka.ms/ssmaforsybase)
+- [SSMA для SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Получение поддержки SSMA  
 **Центр справки и поддержки для Microsoft SQL Server миграции Assistant (SSMA):**  

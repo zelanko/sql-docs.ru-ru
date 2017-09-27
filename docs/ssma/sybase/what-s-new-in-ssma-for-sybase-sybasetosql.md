@@ -1,7 +1,7 @@
 ---
-title: "Какой &#39; новые возможности SSMA для СУБД Sybase (SybaseToSQL) | Документы Microsoft"
+title: "Какой &#39; новые возможности SSMA для SAP ASE (SybaseToSQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 1054c9279039eda01320e1afd9745b6a53200b3f
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: ceb656fe1a2a210f26ce9f548a6c5ab7c68a29f7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-sybase-sybasetosql"></a>Какой &#39; новые возможности SSMA для СУБД Sybase (SybaseToSQL)
-В этом разделе перечислены SSMA для Sybase изменения в каждом выпуске. 
+# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>Какой &#39; новые возможности SSMA для SAP ASE (SybaseToSQL)
+В этом разделе перечислены SSMA для SAP ASE (прежнее название — SSMA для СУБД Sybase) изменения в каждом выпуске. 
+
+## <a name="ssma-v75"></a>SSMA v7.5
+V7.5 выпуск SSMA для SAP ASE содержит следующие изменения:
+-   Дополнено несколько улучшений, чтобы обеспечить большую доступность для людей с ограниченными возможностями.
+-   Обновить для предоставления поддержки для СОЗДАНИЯ или ЗАМЕНЫ синтаксиса.
+
+> [!IMPORTANT]
+> Версия .net 4.5.2 является необходимым условием для установки SSMA v7.5. Кроме того начиная с v7.4, 32-разрядной версии SSMA прекращается.  
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 V7.4 выпуск SSMA для СУБД Sybase содержит следующие изменения:
