@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   In-Memory OLTP устанавливается вместе со **службами компонента Database Engine**.  
   
-     Для установки создания отчетов ([определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (для управления In-Memory OLTP с помощью обозревателя объектов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ) [загрузите среду SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).  
+     Для установки создания отчетов ([определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (для управления In-Memory OLTP с помощью обозревателя объектов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ) [загрузите среду SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Важные примечания относительно использования [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   

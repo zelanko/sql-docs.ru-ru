@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Создание файлов дампа для выполнения пакетов
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
      Вызовите эту хранимую процедуру для приостановки выполняемого пакета и создания файла дампа.  
   
- Если вы используете модель развертывания пакетов, для указания параметра дампа отладки в командной строке создаются отладочные файлы дампа с помощью служебной программы **dtexec** или **dtutil** . Дополнительные сведения см. в разделе [служебная программа dtexec](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) и [прежних версий пакета развертывания &#40; Службы SSIS &#41; ](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ Если вы используете модель развертывания пакетов, для указания параметра дампа отладки в командной строке создаются отладочные файлы дампа с помощью служебной программы **dtexec** или **dtutil** . Дополнительные сведения см. в статьях [Программа dtexec](../../integration-services/packages/dtexec-utility.md) и [Программа dtutil](../../integration-services/dtutil-utility.md). Дополнительные сведения о моделях развертывания пакетов см. в разделах [Развертывание проектов и пакетов служб Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) и [Устаревшее развертывание пакетов &#40;службы SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Формат отладочного файла дампа  
  Если указывается параметр создания дампа отладки, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают следующие отладочные файлы дампа:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/21/2017
   
 -   Отладочный файл дампа с расширением TMP. Этот файл имеет текстовый формат.  
   
- По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранят эти файлы в папке * \<диск >:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранят эти файлы в папке  *\<диск >:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  В следующей таблице приведено описание лишь некоторых разделов TMP-файла. Этот файл также содержит дополнительные данные, не описанные в этой таблице.  
   

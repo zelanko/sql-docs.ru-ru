@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [Скачать SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
- Вам потребуется среда SSMS и SSDT, для работы с данными и экземплярами служб Analysis Services. Средства можно установить в любом месте, но не забудьте настроить порты на сервере перед подключением. Дополнительные сведения см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+ Вам потребуется среда SSMS и SSDT, для работы с данными и экземплярами служб Analysis Services. Средства можно установить в любом месте, но не забудьте настроить порты на сервере перед подключением. Дополнительные сведения см. в разделе [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 ## <a name="install-using-a-wizard"></a>Установка с помощью мастера  
  В следующем списке приведены страницы в мастере установки SQL Server, используемые при установке служб Analysis Services.  

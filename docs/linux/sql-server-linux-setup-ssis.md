@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 1.  Импорт ключей GPG общедоступный репозиторий.
 
     ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
 
