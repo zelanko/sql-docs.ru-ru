@@ -217,7 +217,7 @@ dtexec /option [value] [/option [value]]...
   
      Некоторые примеры использования параметра **/ConsoleLog** см. в разделе **Примечания** .  
   
--   ** /D[служб терминалов](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+-   **/D[служб терминалов](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
      Аргумент *package_path* указывает относительный путь к пакету служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , начиная с корневой папки хранилища пакетов служб SSIS, а также содержит имя пакета [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Если путь или имя файла, указанные в аргументе *package_path* , содержат пробел, то аргумент *package_path* необходимо заключить в кавычки.  
   
