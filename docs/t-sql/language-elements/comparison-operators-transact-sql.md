@@ -44,9 +44,9 @@ ms.lasthandoff: 09/01/2017
 |[>= (больше или равно)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Больше или равно|  
 |[<= (меньше или равно)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Меньше или равно|  
 |[<> (не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|Не равно|  
-|[! = (Не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Не равно (не определено стандартом ISO)|  
-|[! < (Не меньше чем)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Не меньше (не определено стандартом ISO)|  
-|[! > (Не больше чем)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Не больше (не определено стандартом ISO)|  
+|[!= (Не равно)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Не равно (не определено стандартом ISO)|  
+|[!< (Не меньше чем)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Не меньше (не определено стандартом ISO)|  
+|[!> (Не больше чем)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Не больше (не определено стандартом ISO)|  
   
 ## <a name="boolean-data-type"></a>Тип данных Boolean  
  Результат выполнения оператора сравнения имеет **логическое** тип данных. Это имеет три значения: TRUE, FALSE и UNKNOWN. Выражения, возвращающие **логическое** тип данных, называются логических выражений.  

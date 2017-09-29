@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 В этом учебнике приводится описание сценария работы, что позволит лучше понять контекст для этих занятий. Дополнительные сведения см. в разделе [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
-Для выполнения всех занятий этого учебника потребуются образцы данных, файлов проекта и программное обеспечение. Инструкции по поиску и установке необходимых компонентов для этого учебника см. в разделе [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md).  
+Для выполнения всех занятий этого учебника потребуются образцы данных, файлов проекта и программное обеспечение. Инструкции по поиску и установке необходимых компонентов для этого учебника см. в разделе [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 Кроме того, для успешного завершения этого учебника необходимо иметь следующие разрешения.  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/01/2017
 > База данных куба, которая будет создана в этом учебнике, представляет собой упрощенную версию проекта многомерной модели служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , который входит в состав образцов баз данных Adventure Works, доступных для загрузки на сайте CodePlex. Учебная версия многомерной базы данных Adventure Works была упрощена с целью обеспечить ускоренное овладение рядом основных навыков. После завершения работы с учебником попробуйте поработать с проектом многомерной модели самостоятельно, чтобы более детально ознакомиться с многомерным моделированием в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Следующий шаг  
-Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Lesson 1: Defining a Data Source View within an Analysis Services Project](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Определение представления источников данных в проекте служб Analysis Services](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   
   

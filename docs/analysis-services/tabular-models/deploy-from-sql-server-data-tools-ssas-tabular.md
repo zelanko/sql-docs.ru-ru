@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>Развертывание из SQL Server Data Tools
   Используйте задачи в этом разделе для развертывания решения табличной модели с помощью команды «развертывание» в SSDT.  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> Настройка параметров свойств «Параметры развертывания» и «Сервер развертывания»  
  Перед развертыванием решения табличной модели прежде всего необходимо указать параметры развертывания и свойства сервера развертывания. Дополнительные сведения о свойствах развертывания и параметрах см. в разделе [развертывание решений табличной модели](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
 #### <a name="to-configure-options-and-properties"></a>Чтобы настроить параметры и свойства  

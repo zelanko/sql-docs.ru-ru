@@ -32,7 +32,7 @@ ms.lasthandoff: 09/01/2017
   
 -   На удаленном сервере должна быть включена функция **Разрешить удаленные соединения с данным компьютером** , а учетная запись, выдающая запрос на обработку, должна быть в списке разрешенных пользователей.  
   
--   Правила брандмауэра Windows должны разрешать входящие соединения с [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Проверьте возможность подключения к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. См. раздел [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Правила брандмауэра Windows должны разрешать входящие соединения с [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Проверьте возможность подключения к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. См. раздел [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Устраните все ошибки локальной обработки перед попыткой проведения удаленной обработки. Проверьте, чтобы при получении локального запроса на обработку данные успешно извлекались из внешнего реляционного источника данных. Инструкции по настройке учетных данных для получения данных см. в разделе [Задание параметров олицетворения (службы SSAS — многомерные)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   

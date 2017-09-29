@@ -146,7 +146,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  MAXDOP = *max_degree_of_parallelism*  
  **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (уровнями производительности P2 и P3 только).  
   
- Переопределяет **максимальная степень параллелизма** параметр конфигурации в течение операции с индексами. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации в течение операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
 > [!IMPORTANT]  
 >  Параметр MAXDOP нельзя использовать для пространственных или XML-индексов.  
