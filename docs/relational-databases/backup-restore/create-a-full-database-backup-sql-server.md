@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. В разделе **Шифрование** установите флажок **Зашифровать резервную копию** , чтобы определить, следует ли использовать шифрование для резервной копии. Используйте раскрывающийся список **Алгоритм** для выбора алгоритма шифрования.  Используйте раскрывающийся список **Сертификат или асимметричный ключ** , чтобы выбрать существующий сертификат или асимметричный ключ. Шифрование поддерживается в SQL Server 2014 и более поздних версиях. Дополнительные сведения об этом параметре шифрования см. в разделе [Резервное копирование базы данных (страница "Параметры резервного копирования")](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
-Также для создания резервных копий баз данных можно использовать [мастер планов обслуживания базы данных](https://msdn.microsoft.com/library/ms191002.aspx) . 
+Также для создания резервных копий баз данных можно использовать [мастер планов обслуживания базы данных](../maintenance-plans/use-the-maintenance-plan-wizard.md) . 
 
 ### <a name="examples"></a>Примеры  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**А.  Полное резервное копирование на диск в расположение по умолчанию**

@@ -14,11 +14,11 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Средства для управления ключами постоянного шифрования
 
-Для управления ключами постоянного шифрования можно использовать [среду SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) и [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx).
+Для управления ключами постоянного шифрования можно использовать [среду SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) и [PowerShell](../../scripting/sql-server-powershell.md).
 
 - **SQL Server Management Studio (SSMS)** предоставляет диалоговые окна и мастеры для выполнения задач, касающихся доступа к хранилищу ключей и доступа к базе данных, поэтому среда SSMS не поддерживает разделение ролей, но упрощает процесс настройки ключей. Дополнительные сведения об управлении ключами с помощью среды SSMS см. в разделе:
     - [Подготовка главных ключей столбцов](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|Хранилище запросов делит время на автоматически создаваемые интервалы времени и сохраняет сводные статистические данные в таких интервалах для каждого выполненного плана. Размер интервала регулируется параметром конфигурации "Интервал сбора статистики" (в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) или параметром `INTERVAL_LENGTH_MINUTES` с помощью [параметров ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Сводная статистика времени выполнения для выполненных планов. Все собранные показатели выражаются в виде четырех статистических функций: среднее, минимальное, максимальное и стандартное отклонение.|  
   
- Дополнительные сведения о представлениях хранилища запросов см. в разделе **Связанные представления, функции и процедуры** статьи [Мониторинг производительности с использованием хранилища запросов](https://msdn.microsoft.com/library/dn817826.aspx).  
+ Дополнительные сведения о представлениях хранилища запросов см. в разделе **Связанные представления, функции и процедуры** статьи [Мониторинг производительности с использованием хранилища запросов](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Обработка запросов  
  Хранилище запросов взаимодействует с конвейером обработки запросов в следующих ключевых моментах:  

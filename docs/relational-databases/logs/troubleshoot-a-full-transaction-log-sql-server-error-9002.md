@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  Чтобы определить, что препятствует усечению журнала транзакций в конкретном случае, используйте столбцы **log_reuse_wait** и **log_reuse_wait_desc** представления каталога **sys.database**. Дополнительные сведения см. в разделе [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Описание причин, которые могут задержать усечение журнала, см. в разделе [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > **ВАЖНО!**  
->  Если при возникновении ошибки 9002 база данных находилась в состоянии восстановления, то после устранения проблемы восстановите базу данных с помощью инструкции [ALTER DATABASE *имя_базы_данных* SET ONLINE.](https://msdn.microsoft.com/library/bb522682.aspx)  
+>  Если при возникновении ошибки 9002 база данных находилась в состоянии восстановления, то после устранения проблемы восстановите базу данных с помощью инструкции [ALTER DATABASE *имя_базы_данных* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  При переполнении журнала транзакций предусмотрены следующие ответные действия:  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>Завершение длительной транзакции
 ### <a name="discovering-long-running-transactions"></a>Обнаружение длительных транзакций
 Очень длительная транзакция может привести к переполнению журнала транзакций. Длительные транзакции можно обнаружить следующими способами:
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-Данное динамическое административное представление возвращает сведения о транзакциях на уровне базы данных. Столбцы этого представления содержат сведения о времени первой записи журнала [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), текущем состоянии транзакции [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx)и [регистрационном номере (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) первой записи в журнале транзакций [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx).
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).**
+Данное динамическое административное представление возвращает сведения о транзакциях на уровне базы данных. Столбцы этого представления содержат сведения о времени первой записи журнала [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), текущем состоянии транзакции [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)и [регистрационном номере (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) первой записи в журнале транзакций [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 Эта инструкция позволяет установить идентификатор владельца транзакции, таким образом, можно отследить источник транзакции для более упорядоченной остановки (фиксацией, а не откатом).
 
 ### <a name="kill-a-transaction"></a>Завершение транзакции
-В некоторых случаях может потребоваться завершить процесс, для этого можно применить инструкцию [KILL](https://msdn.microsoft.com/library/ms173730.aspx) . Ее следует использовать с осторожностью, особенно если запущены критические процессы, которые нельзя завершать. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx).
+В некоторых случаях может потребоваться завершить процесс, для этого можно применить инструкцию [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Ее следует использовать с осторожностью, особенно если запущены критические процессы, которые нельзя завершать. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).
 
 ## <a name="see-also"></a>См. также:  
 [Статья базы знаний — неожиданное увеличение или переполнение журнала транзакций в SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

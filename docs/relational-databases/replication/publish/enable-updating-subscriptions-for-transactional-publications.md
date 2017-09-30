@@ -18,11 +18,11 @@ caps.latest.revision: 42
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37269f8738b6020ce6d05501251161f8c40c3c9b
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: e989a795ff6179bdab183a2c7814f099b0448f38
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Включение обновляемых подписок для публикаций транзакций
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Выполните [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав значение **true** для параметра **@allow_sync_tran**.  
   
-3.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, используемое на шаге 2, для параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — для параметров **@job_name** @password **@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
+3.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся на шаге 2, в параметре **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_name** и **@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
 4.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 06/22/2017
  [Типы публикации для репликации транзакций](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/mt740635.aspx)   
+ [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-to-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Использование программы sqlcmd с переменными скрипта](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d0fea4f1ffe507d0b410a16a668a138a7f0dee2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
@@ -273,7 +273,7 @@ ms.lasthandoff: 09/01/2017
 -   [Восстановление состояния на определенный момент времени с помощью STOPAT](#PITR)  
   
 > [!NOTE]  
->  Руководство по использованию SQL Server 2016 со службой хранилища BLOB-объектов Microsoft Azure см. в статье [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx)(Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases).  
+>  Руководство по использованию SQL Server 2016 со службой хранилища BLOB-объектов Microsoft Azure см. в статье [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases).  
   
 ###  <a name="SAS"></a> Создание подписанного URL-адреса  
  В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)(Shared Access Signatures, Part 1: Understanding the SAS Model). Для этого примера требуется Microsoft Azure PowerShell. Сведения об установке и использовании Azure PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -412,6 +412,6 @@ Write-Host $tSql
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

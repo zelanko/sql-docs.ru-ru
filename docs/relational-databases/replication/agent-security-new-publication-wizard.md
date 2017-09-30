@@ -16,11 +16,11 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a616e9fafab7a881795675bd1eaf4bd01e718105
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ffe19ff2c9ae121c8cf78ffd253ce2d44d90e2e9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="agent-security-new-publication-wizard"></a>Безопасность агентов (мастер создания публикаций)
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/mt740635.aspx)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-updatable-subscription-to-transactional-publication.md)   
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Управление именами для входа и паролями при репликации](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   

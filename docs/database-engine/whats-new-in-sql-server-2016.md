@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
@@ -438,7 +438,7 @@ AlwaysOn теперь поддерживает зашифрованные баз
 ###  <a name="Tools"></a> Улучшенные инструменты
 
 ####  <a name="SSMS"></a> Среда Management Studio
-Скачайте последнюю версию [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+Скачайте последнюю версию [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] поддерживает библиотеку проверки подлинности Active Directory (ADAL), которая находится в стадии разработки для подключения к Microsoft Azure. Она заменяет проверку подлинности на основе сертификатов, используемую в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - Для установки [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] требуется платформа .NET 4.6. Платформа .NET 4.6 устанавливается автоматически, если устанавливается компонент [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .

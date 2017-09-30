@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 7a78735cc1ccee742982c51a12bab2b5d47b046e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Если значение **allow_push** равно **0**, то необходимо выполнить процедуру [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав **allow_push** в **@property** и значение **true** в **@value**.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите следующее.  
   

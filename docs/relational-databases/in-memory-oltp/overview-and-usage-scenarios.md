@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
@@ -63,8 +63,8 @@ ms.lasthandoff: 06/22/2017
 Используйте таблицы, оптимизированные для памяти, для основных таблиц транзакций, т. е. для таблиц с транзакциями, которые оказывают самое большое влияние на производительность. Используйте скомпилированные в собственном коде хранимые процедуры для оптимизации выполнения логики, связанной с бизнес-транзакциями. Чем больше логики можно отправить в хранимые процедуры в базе данных, тем больше преимуществ вы получите от выполняющейся в памяти OLTP.
 
 Чтобы приступить к работе в имеющемся приложении, сделайте следующее:
-1. Используйте [отчет анализа производительности транзакций](https://msdn.microsoft.com/library/dn205133.aspx) , чтобы выявить объекты, которые требуется перенести. 
-2. Используйте помощников по [оптимизации памяти](https://msdn.microsoft.com/library/dn284308.aspx) и [компиляции в собственном коде](https://msdn.microsoft.com/library/dn358355.aspx) для миграции.
+1. Используйте [отчет анализа производительности транзакций](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) , чтобы выявить объекты, которые требуется перенести. 
+2. Используйте помощников по [оптимизации памяти](memory-optimization-advisor.md) и [компиляции в собственном коде](native-compilation-advisor.md) для миграции.
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
@@ -82,8 +82,8 @@ ms.lasthandoff: 06/22/2017
 
 Используйте таблицу, оптимизированную для памяти, чтобы принимать данные. Если прием состоит в основном из вставок (а не обновлений), а объем данных, хранимых в выполняющейся в памяти OLTP, играет важную роль, примените одну из следующих рекомендаций:
 
-- Используйте задание для регулярной разгрузки пакетов данных в дисковую таблицу с [кластеризованным индексом columnstore](https://msdn.microsoft.com/library/gg492088.aspx)с помощью задания, выполняющего операции `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`.
-- Используйте [временную таблицу, оптимизированную для памяти](https://msdn.microsoft.com/library/mt590207.aspx) , для управления статистическими данными. В этом режиме статистические данные находятся на диске, а перемещением данных управляет система.
+- Используйте задание для регулярной разгрузки пакетов данных в дисковую таблицу с [кластеризованным индексом columnstore](../indexes/columnstore-indexes-overview.md)с помощью задания, выполняющего операции `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`.
+- Используйте [временную таблицу, оптимизированную для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) , для управления статистическими данными. В этом режиме статистические данные находятся на диске, а перемещением данных управляет система.
 
 Репозиторий примеров SQL Server содержит приложение интеллектуальной сетки, которое использует временную таблицу, оптимизированную для памяти, табличный тип, оптимизированный для памяти, и скомпилированную в собственном коде хранимую процедуру для повышения скорости приема данных, а также управляет объемом хранилища выполняющейся в памяти OLTP для данных датчиков: 
 
@@ -228,10 +228,10 @@ ms.lasthandoff: 06/22/2017
 - Демонстрацию производительности с использованием выполняющейся в памяти OLTP см. по адресу [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [17-минутный видеоролик, в котором объясняется, что такое выполняющаяся в памяти OLTP, а также показывается демонстрация](https://www.youtube.com/watch?v=l5l5eophmK4) (демонстрация начинается с 8:25)
 - [Скрипт, позволяющий включить выполняющуюся в памяти OLTP и задать рекомендуемые параметры](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [Основная документация по выполняющейся в памяти OLTP](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Основная документация по выполняющейся в памяти OLTP](in-memory-oltp-in-memory-optimization.md)
 - [Повышение производительности и использования ресурсов благодаря выполняющейся в памяти OLTP в базе данных SQL Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Приступая к работе с In-Memory (в режиме предварительной версии) в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](https://msdn.microsoft.com/library/mt590207.aspx)
+- [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Выполняющаяся в памяти OLTP — рекомендации по общим шаблонам рабочих нагрузок и миграции](http://msdn.microsoft.com/library/dn673538.aspx) 
 

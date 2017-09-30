@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   *Модель восстановления* — это свойство базы данных, которое управляет процессом регистрации транзакций, определяет, требуется ли для журнала транзакций резервное копирование, а также определяет, какие типы операций восстановления доступны. Существует три модели восстановления: простая модель восстановления, модель полного восстановления и модель восстановления с неполным протоколированием. Обычно в базе данных используется модель полного восстановления или простая модель восстановления. Базу данных можно в любой момент переключить на использование другой модели восстановления. База данных **model** задает модель восстановления по умолчанию для новых баз данных.  
   
-  Более подробное описание [моделей восстановления](https://msdn.microsoft.com/library/ms189275.aspx)см. в статье [Модели восстановления SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) , составленной ребятами из [MSSQLTips!](https://www.mssqltips.com/)
+  Более подробное описание [моделей восстановления](recovery-models-sql-server.md)см. в статье [Модели восстановления SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) , составленной ребятами из [MSSQLTips!](https://www.mssqltips.com/)
   
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 
--   [Back up the transaction log](https://msdn.microsoft.com/library/ms179478.aspx) **before** switching from the [full recovery or bulk-logged recovery model](https://msdn.microsoft.com/library/ms189275.aspx).  
+-   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
   
 -   Восстановление на момент времени невозможно в модели с неполным протоколированием. Выполнение транзакций в модели восстановления с неполным протоколированием, которая может потребовать восстановления журнала транзакций, может привести к потере данных. Чтобы до максимума повысить восстанавливаемость данных в сценарии аварийного восстановления, следует переключаться в модель восстановления с неполным протоколированием только в следующих случаях.  
   

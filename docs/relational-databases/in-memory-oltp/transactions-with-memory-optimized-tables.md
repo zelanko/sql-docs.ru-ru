@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -84,18 +84,18 @@ SQL Server имеет следующие режимы запуска транз�
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION; — явная транзакция.  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT) — табличное указание.  
+                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 Обратите внимание, что потребности в указании `WITH (SNAPSHOT)` можно избежать, если воспользоваться параметром базы данных `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. Если этот параметр имеет значение `ON`, уровень изоляции доступа к таблице, оптимизированной для памяти, автоматически повышается до уровня изоляции SNAPSHOT.  
   
@@ -308,7 +308,7 @@ SQL Server имеет следующие режимы запуска транз�
   
 - В хранимой процедуре, скомпилированной в собственном коде, нельзя использовать явные инструкции управления транзакциями. BEGIN TRANSACTION и ROLLBACK TRANSACTION и т. д. запрещены.  
   
-- Дополнительные сведения о контроле над транзакциями с блоками ATOMIC см. в разделе [Блоки Atomic](https://msdn.microsoft.com/library/dn452281.aspx)  
+- Дополнительные сведения о контроле над транзакциями с блоками ATOMIC см. в разделе [Блоки Atomic](atomic-blocks-in-native-procedures.md)  
   
 <a name="othertxnlinks44ni"/>  
   

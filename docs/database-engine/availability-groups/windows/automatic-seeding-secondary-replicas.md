@@ -3,7 +3,7 @@ title: "Автоматическое заполнение для вторичн�
 description: "Использование автоматического заполнения для инициализации вторичных реплик."
 services: data-lake-analytics
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/25/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: a472109765c0ac77e9064a385a7125877cee0423
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Автоматическое заполнение для вторичных реплик
@@ -273,11 +273,9 @@ GO
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [Руководство по мониторингу и устранению неполадок в группах доступности AlwaysOn](http://technet.microsoft.com/library/dn135328.aspx)
-
-> В создании этого материала принял участие Аллан Хирт ([Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt)), сотрудник со статусом Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

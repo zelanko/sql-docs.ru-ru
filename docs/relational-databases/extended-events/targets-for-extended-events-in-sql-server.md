@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f61a7661093216f4aae6ebf71b9d7159200e5dbd
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 
 
 - Установка последней версии часто обновляемой служебной программы для SQL Server Management Studio (SSMS.exe). Дополнительные сведения см. в разделе:
-    - [Скачивание SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+    - [Скачивание SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 - Умение использовать **обозреватель объектов** в SSMS.exe, чтобы щелкнуть правой кнопкой мыши целевой узел в сеансе событий для [удобного просмотра выходных данных](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).

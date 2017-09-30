@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
@@ -99,7 +99,7 @@ ms.lasthandoff: 07/31/2017
 Помощник по оптимизации памяти позволяет создавать скрипт преобразования дисковой таблицы в оптимизированную для обработки в памяти таблицу. Он устанавливается в составе SQL Server Data Tools (SSDT).
 
 - [Помощник по оптимизации памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [Скачать SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
+- [Скачать SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>DACPAC-файл

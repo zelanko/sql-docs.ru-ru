@@ -16,11 +16,11 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a8e5888afba843d601f6dc85395c52b08b9b597
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8ec5dd80718de624c3e45ac81eceedc7dfaed2ad
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="login-for-updatable-subscriptions"></a>Имя входа для обновляемых подписок
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
  Для данного параметра необходим уже определенный связанный или удаленный сервер. Дополнительные сведения см. в статьях [Linked Servers (Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md) (Связанные серверы (ядро СУБД)) и [Remote Servers](../../database-engine/configure-windows/remote-servers.md) (Удаленные серверы). Убедитесь в том, что имя входа, используемое для связанного сервера или удаленного сервера, имеет надежный пароль и обладает только разрешениями, описанными в данном разделе.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание обновляемой подписки для публикации транзакций](https://msdn.microsoft.com/library/ms152769.aspx)   
+ [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Updatable Subscriptions- For Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  (Обновляемые подписки для репликации транзакций)  
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  

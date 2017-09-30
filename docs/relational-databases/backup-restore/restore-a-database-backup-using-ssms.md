@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
   Этот раздел содержит сведения о восстановлении полной резервной копии базы данных с использованием среды SQL Server Management Studio.    
        
 ### <a name="important"></a>Важно!    
-Перед восстановлением базы данных по модели полного восстановления или восстановления с неполным протоколированием, возможно, необходимо будет выполнить резервное копирование активного журнала транзакций (который называется [заключительным фрагментом журнала](https://msdn.microsoft.com/library/ms179314.aspx)). Дополнительные сведения см. в статье [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
+Перед восстановлением базы данных по модели полного восстановления или восстановления с неполным протоколированием, возможно, необходимо будет выполнить резервное копирование активного журнала транзакций (который называется [заключительным фрагментом журнала](tail-log-backups-sql-server.md)). Дополнительные сведения см. в статье [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
 
 При восстановлении базы данных из другого экземпляра примите во внимание сведения из раздела [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).   
     

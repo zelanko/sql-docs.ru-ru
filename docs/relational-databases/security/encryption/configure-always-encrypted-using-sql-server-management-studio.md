@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-В этой статье описываются задачи по использованию [среды SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) для настройки постоянного шифрования и управления базами данных, использующих постоянное шифрование.
+В этой статье описываются задачи по использованию [среды SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) для настройки постоянного шифрования и управления базами данных, использующих постоянное шифрование.
 
 Среда SSMS, используемая для настройки постоянного шифрования, обрабатывает как ключи постоянного шифрования, так и конфиденциальные данные, поэтому ключи и данные отображаются внутри процесса SSMS в виде обычного текста. Таким образом, среду SSMS следует запускать на защищенном компьютере. Если база данных размещена на сервере SQL Server, убедитесь, что среда SSMS запущена на компьютере, отличном от компьютера с экземпляром SQL Server. Поскольку основной задачей функции постоянного шифрования является обеспечение целостности зашифрованных конфиденциальных данных даже в случае нарушения безопасности системы базы данных, выполнение скрипта PowerShell, обрабатывающего ключи или конфиденциальные данные на сервере SQL Server, может снизить или вообще отменить эффект действия функции. Дополнительные рекомендации по безопасности см. в разделе [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Вопросы безопасности для управления ключами).
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 06/22/2017
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> Включение и отключение функции Always Encrypted, применяемой для подключения к базе данных   
 
 После включения функции Always Encrypted, применяемой для подключения к базе данных, поставщик данных .NET Framework для SQL Server, используемый в SQL Server Management Studio, получает установку на прозрачное выполнение следующих действий:   
 -   расшифровка любых значений, полученных из зашифрованных столбцов и возращенных в результатах запроса;   
@@ -105,7 +105,7 @@ ms.lasthandoff: 06/22/2017
 >  4.   Откройте вкладку **Дополнительные свойства** и добавьте параметр `Column Encryption Setting=Enabled`, чтобы включить функцию Always Encrypted, или удалите параметр, чтобы отключить ее.   
 >  5.   Нажмите кнопку **Соединить**.   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Параметризация для Always Encrypted   
  
 Параметризация для Always Encrypted — это функция в SQL Server Management Studio, которая автоматически преобразует переменные Transact-SQL в параметры запросов (экземпляры [класса SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Требуются службы SSMS версии не ниже 17.0.) Это позволяет основному поставщику данных .NET Framework для SQL Server определять данные, предназначенные для зашифрованных столбцов, и шифровать эти данные перед отправкой в базу данных. 
   

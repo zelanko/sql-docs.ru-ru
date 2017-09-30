@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Руководство по архитектуре страниц и экстентов
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |-------|-------|
 |Data |Строки со всеми данными, за исключением данных text, ntext, image, nvarchar(max), varchar(max), varbinary(max) и xml, если для текста в строке установлено значение ON. |
 |Указатель |Записи индекса. |
-|Текст или изображение |Типы данных больших объектов: text, ntext, image, nvarchar(max), varchar(max), varbinary(max) и данные xml. <br> Столбцы переменной длины, когда размер строки данных превышает 8 КБ: varchar, nvarchar, varbinary и sql_variant. |
+|Текст/изображение |Типы данных больших объектов: text, ntext, image, nvarchar(max), varchar(max), varbinary(max) и данные xml. <br> Столбцы переменной длины, когда размер строки данных превышает 8 КБ: varchar, nvarchar, varbinary и sql_variant. |
 |Глобальная карта распределения, общая глобальная карта распределения |Сведения о том, размещены ли экстенты. |
 |Свободное место на страницах (PFS) |Сведения о размещении страниц и доступном на них свободном месте. |
 |карта распределения индекса |Сведения об экстентах, используемых таблицей или индексом для единицы распределения. |

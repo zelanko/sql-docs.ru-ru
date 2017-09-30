@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework
@@ -289,7 +289,7 @@ cmd.ExecuteNonQuery();
   
 Для использования этих поставщиков не требуется изменять код приложения, однако необходимо учесть следующие моменты.
 
-- Вы (или ваш администратор баз данных) должны проверить правильность имени поставщика, настроенного в метаданных главного ключа столбца, и убедиться, что путь к ключу главного ключа столбца соответствует формату пути к ключу, который является допустимым для данного поставщика. Для настройки ключей рекомендуется использовать средство, такое как среда SQL Server Management Studio, которое при выполнении инструкции [CREATE COLUMN MASTER KEY (Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) автоматически создает допустимые имена поставщиков и пути к ключам. Дополнительные сведения см. в разделах [Configuring Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) (Настройка Always Encrypted с помощью среды SQL Server Management Studio ) и [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
+- Вы (или ваш администратор баз данных) должны проверить правильность имени поставщика, настроенного в метаданных главного ключа столбца, и убедиться, что путь к ключу главного ключа столбца соответствует формату пути к ключу, который является допустимым для данного поставщика. Для настройки ключей рекомендуется использовать средство, такое как среда SQL Server Management Studio, которое при выполнении инструкции [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) автоматически создает допустимые имена поставщиков и пути к ключам. Дополнительные сведения см. в разделах [Configuring Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) (Настройка Always Encrypted с помощью среды SQL Server Management Studio ) и [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 - Необходимо убедиться, что приложение может получать доступ к ключам в хранилище ключей. Для этого может потребоваться предоставить приложению доступ к ключу или хранилищу ключей (в зависимости от хранилища ключей) или выполнить другие действия по настройке конкретного хранилища ключей. Например, для доступа к хранилищу, реализующему CNG или CAPI (например, к аппаратному модулю безопасности), на компьютере с приложением необходимо установить библиотеку, реализующую CNG или CAPI для хранилища. Дополнительные сведения см. в разделе [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Создание и хранение главных ключей столбцов (постоянное шифрование)).
 
 ### <a name="using-azure-key-vault-provider"></a>Использование поставщика хранилища ключей Azure
@@ -373,7 +373,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Управление обращениями для получения метаданных для параметров запроса
 
-Если для соединения включена функция Always Encrypted, по умолчанию поставщик данных .NET Framework для SQL Server будет вызывать [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) для каждого параметризованного запроса, передавая инструкцию запроса (без значений параметров) в SQL Server. **sys.sp_describe_parameter_encryption** анализирует инструкцию запроса и для каждого параметра, который должен быть зашифрован, возвращает связанные с шифрованием сведения, позволяющие поставщику данных .NET Framework для SQL Server шифровать значения параметров. Описанное выше поведение обеспечивает высокий уровень прозрачности для клиентского приложения. Пока значения, предназначенные для зашифрованных столбцов, передаются поставщику данных NET Framework для SQL Server в объектах SqlParameter, приложению (и разработчику приложений) не требуется знать, какие запросы получают доступ к зашифрованным столбцам.
+Если для соединения включена функция Always Encrypted, по умолчанию поставщик данных .NET Framework для SQL Server будет вызывать [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) для каждого параметризованного запроса, передавая инструкцию запроса (без значений параметров) в SQL Server. **sys.sp_describe_parameter_encryption** анализирует инструкцию запроса и для каждого параметра, который должен быть зашифрован, возвращает связанные с шифрованием сведения, позволяющие поставщику данных .NET Framework для SQL Server шифровать значения параметров. Описанное выше поведение обеспечивает высокий уровень прозрачности для клиентского приложения. Пока значения, предназначенные для зашифрованных столбцов, передаются поставщику данных NET Framework для SQL Server в объектах SqlParameter, приложению (и разработчику приложений) не требуется знать, какие запросы получают доступ к зашифрованным столбцам.
 
 
 ### <a name="query-metadata-caching"></a>Кэширование метаданных запроса
@@ -392,7 +392,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 > [!NOTE]
 > Настройка Always Encrypted на уровне запроса дает ограниченный выигрыш в производительности для платформы .NET 4.6.2 и более поздних версий, где реализовано кэширование метаданных шифрования параметра.
 
-Для управления поведением функции Always Encrypted в отдельных запросах необходимо использовать этот конструктор  [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) и [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx). Ниже приведены некоторые полезные рекомендации.
+Для управления поведением функции Always Encrypted в отдельных запросах необходимо использовать этот конструктор [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) и [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx). Ниже приведены некоторые полезные рекомендации.
 - Если большинство запросов, отправляемых клиентским приложением через подключение к базе данных, получает доступ к зашифрованным столбцам:
     - Задайте для ключевого слова строки подключения **Параметр шифрования столбца** значение *Включено*.
     - Задайте **SqlCommandColumnEncryptionSetting.Disabled** для отдельных запросов, которые не обращаются к зашифрованным столбцам. Будет отключена возможность вызова sys.sp_describe_parameter_encryption и расшифровки всех значений в наборе результатов.
@@ -544,7 +544,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>Справочник по API Always Encrypted
 
-**Namespace:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**Пространство имен:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
 
 **Сборка:** System.Data (в System.Data.dll)
 

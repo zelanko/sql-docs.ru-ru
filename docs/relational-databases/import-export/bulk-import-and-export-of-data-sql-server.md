@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
-ms.openlocfilehash: 284ecb40056837fac33f71bcadf0a886293db6f6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0cd72ac1a99d3a2ccf121b4b659229b2fc6117c0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Массовый импорт и экспорт данных (SQL Server)
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 |[bcp, программа](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Программа командной строки (Bcp.exe), массово экспортирующая и импортирующая данные и создающая файлы форматирования.|Да|Да|  
 |[BULK INSERT, инструкция](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] , импортирующая данные непосредственно из файла данных в таблицу базы данных или несекционированное представление.|Да|Нет|  
 |[Инструкция INSERT ... Инструкция SELECT * FROM OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] , использующая поставщик больших наборов строк OPENROWSET для массового импорта данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью функции OPENROWSET(BULK…), применяющейся для выборки данных в предложение INSERT.|Да|Нет| 
-|[мастер импорта и экспорта SQL Server](https://msdn.microsoft.com/library/ms141209.aspx)|Мастер создает простые пакеты, которые импортируют и экспортируют данные в многочисленных распространенных форматах, включая базы данных, электронные таблицы и текстовые файлы.|Да|Да|  
+|[мастер импорта и экспорта SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Мастер создает простые пакеты, которые импортируют и экспортируют данные в многочисленных распространенных форматах, включая базы данных, электронные таблицы и текстовые файлы.|Да|Да|  
   
 > [!IMPORTANT]
 > Значения файлов с разделителями-запятыми (CSV) не поддерживаются операциями массового импорта SQL Server. Но в некоторых случаях CSV-файл можно использовать как файл данных для массового импорта данных в SQL Server. Обратите внимание, что признаком конца поля CSV-файла не обязательно должна быть запятая. Дополнительные сведения см. в разделе [Подготовка данных к массовому экспорту или импорту (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).

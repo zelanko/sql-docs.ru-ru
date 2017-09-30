@@ -16,10 +16,10 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/07/2017
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     Дополнительные сведения о параметрах сортировки Windows см. в разделе [Имя параметров сортировки Windows (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx).  
+     Дополнительные сведения о параметрах сортировки Windows см. в разделе [Имя параметров сортировки Windows (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md).  
   
 5.  В поле **Имя пользователя** укажите учетную запись пользователя Windows, который будет суперпользователем по умолчанию для служб Master Data Services. Суперпользователь имеет доступ ко всем функциональным областям и может добавлять, удалять и обновлять все модели.  
 

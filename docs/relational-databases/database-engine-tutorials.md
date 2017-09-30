@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d54ac6d74c9794acfcc241e56ee6c128c9c50e2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
@@ -48,10 +48,10 @@ ms.lasthandoff: 06/22/2017
 [Учебник. Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Этот учебник учит создавать политики, которые обеспечивают принудительное выполнение стандартов по администрированию сайта.  
   
-[Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 В этом учебнике показано, как выполнять резервное копирование и восстановление в SQL Server для службы хранения больших двоичных объектов в Windows Azure.  
   
-[Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016 (Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases) ](https://msdn.microsoft.com/library/dn466438.aspx)  
+[Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016 (Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases) ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 С помощью этого учебника вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища больших двоичных объектов Windows Azure.  
   
 ## <a name="see-also"></a>См. также:  
