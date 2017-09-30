@@ -4,6 +4,7 @@
 ## [Заметки о выпуске](sql-server-linux-release-notes.md)
 ## [Новые возможности в этом выпуске](sql-server-linux-whats-new.md)
 ## [Новые и недавно обновленные статьи](new-updated-linux.md)
+## [Выпуски и поддерживаемые функции](sql-server-linux-editions-and-components-2017.md)
 
 # Краткие руководства
 ## [Установка и подключение — Red Hat](quickstart-install-connect-red-hat.md)
@@ -44,7 +45,10 @@
 ### [Экспорт и импорт BACPAC из Windows](sql-server-linux-migrate-ssms.md)
 ### [Миграция с помощью помощника по миграции SQL Server (SSMA)](sql-server-linux-migrate-ssma.md)
 ### [Массовое копирование с помощью bcp](sql-server-linux-migrate-bcp.md)
-### [Загрузка данных с помощью SSIS](sql-server-linux-migrate-ssis.md)
+
+## [Извлечение, преобразование и загрузка](sql-server-linux-migrate-ssis.md)
+### [Настройка служб SSIS](sql-server-linux-configure-ssis.md)
+### [Планирование пакетов служб SSIS](sql-server-linux-schedule-ssis-packages.md)
 
 ## [Настройка непрерывности бизнес-процессов](sql-server-linux-business-continuity-dr.md)
 ### [Резервное копирование и восстановление](sql-server-linux-backup-and-restore-database.md)
