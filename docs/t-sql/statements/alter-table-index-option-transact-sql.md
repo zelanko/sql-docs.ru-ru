@@ -70,7 +70,7 @@ ms.lasthandoff: 09/08/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- PAD_INDEX ** = ** {ON | **OFF** }  
+ PAD_INDEX  **=**  {ON | **OFF** }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Определяет разреженность индекса. Значение по умолчанию — OFF.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/08/2017
  ОТКЛЮЧЕНИЕ или *fillfactor* не указан  
  Страницы промежуточного уровня заполнены почти в соответствии их производительным возможностям, на них остается место как минимум для одной строки максимального размера, какой только может иметь индекс, с заданным набором ключей на промежуточных страницах.  
   
- Значение коэффициента ЗАПОЛНЕНИЯ ** = ** *fillfactor*  
+ Значение коэффициента ЗАПОЛНЕНИЯ  **=**  *fillfactor*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Определяет величину в процентах, показывающую насколько должен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] заполнять конечный уровень каждой страницы индекса во время его создания и изменения. Заданное значение должно быть целым числом от 1 до 100. Значение по умолчанию равно 0.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  Значения коэффициента заполнения 0 и 100 одинаковы во всех отношениях.  
   
- IGNORE_DUP_KEY ** = ** {ON | **OFF** }  
+ IGNORE_DUP_KEY  **=**  {ON | **OFF** }  
  Определяет ответ на ошибку, случающуюся, когда операция вставки пытается вставить в уникальный индекс повторяющиеся значения ключа. Параметр IGNORE_DUP_KEY применяется только к операциям вставки, производимым после создания или перестроения индекса. Параметр не имеет значения при выполнении [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), или [обновление](../../t-sql/queries/update-transact-sql.md). Значение по умолчанию — OFF.  
   
  ON  
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/08/2017
   
  Для обратной совместимости синтаксиса аргумент WITH IGNORE_DUP_KEY эквивалентен аргументу WITH IGNORE_DUP_KEY = ON.  
   
- STATISTICS_NORECOMPUTE ** = ** {ON | **OFF** }  
+ STATISTICS_NORECOMPUTE  **=**  {ON | **OFF** }  
  Указывает, пересчитываются ли статистики. Значение по умолчанию — OFF.  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  Автоматическое обновление статистических данных включено.  
   
- ALLOW_ROW_LOCKS ** = ** { **ON** | {OFF}  
+ ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, разрешена ли блокировка строк. Значение по умолчанию — ON.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  Блокировки строк не используются.  
   
- ALLOW_PAGE_LOCKS ** = ** { **ON** | {OFF}  
+ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, разрешена ли блокировка страниц. Значение по умолчанию — ON.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  Блокировки страниц не используются.  
   
- ПАРАМЕТР SORT_IN_TEMPDB ** = ** {ON | **OFF** }  
+ ПАРАМЕТР SORT_IN_TEMPDB  **=**  {ON | **OFF** }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает, следует ли сохранять результаты сортировки в **tempdb**. Значение по умолчанию — OFF.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  Промежуточные результаты сортировки хранятся в той же базе данных, где и индекс.  
   
- ONLINE ** = ** {ON | **OFF** }  
+ ONLINE  **=**  {ON | **OFF** }  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Определяет, будут ли базовые таблицы и связанные индексы доступны для запросов и изменения данных во время операций с индексами. Значение по умолчанию — OFF. REBUILD может выполняться как операция в режиме ONLINE.  
@@ -168,10 +168,10 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MAXDOP ** = ** *max_degree_of_parallelism*  
+ MAXDOP  **=**  *max_degree_of_parallelism*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Переопределяет **максимальная степень параллелизма** параметр конфигурации в течение операции с индексами. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации в течение операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
  *max_degree_of_parallelism* может быть:  
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 09/08/2017
   
  Дополнительные сведения о сжатии см. в разделе [сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
-В СЕКЦИЯХ **(** { \<выражение_номера_секции > | \<диапазона >} [ **,**... * n * ] **)** **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+В СЕКЦИЯХ **(** { \<выражение_номера_секции > | \<диапазона >} [ **,**...  *n*  ] **)** **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает секции, к которым применяется параметр DATA_COMPRESSION. Если таблица не секционирована, аргумент ON PARTITIONS приведет к ошибке. Если не указано предложение ON PARTITIONS, параметр DATA_COMPRESSION применяется ко всем секциям секционированной таблицы.  
   
