@@ -22,11 +22,11 @@ caps.latest.revision: 47
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e951423b908dacc56729ede2fcca7339ce83acf0
+ms.translationtype: HT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: d088599955f156dd82f327bcc9833bbae64b6185
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd — использование с переменными скрипта
@@ -58,26 +58,32 @@ ms.lasthandoff: 06/22/2017
 ## <a name="implicitly-setting-scripting-variables"></a>Неявное задание переменных скрипта  
  При запуске программы **sqlcmd** с параметром, с которым связана переменная **sqlcmd** , переменной **sqlcmd** неявно присваивается значение, заданное для этого параметра. В следующем примере программа `sqlcmd` запускается с параметром `-l` . Этим неявно определяется переменная SQLLOGINTIMEOUT.  
   
- `c:\> sqlcmd -l 60`  
+```
+c:\> sqlcmd -l 60
+```
+ 
+Кроме того, переменные сценария, которые в нем содержатся, задаются с помощью параметра **-v** . В следующем скрипте (имя файла `testscript.sql`) `ColumnName` является переменной скрипта.  
+ 
+```
+USE AdventureWorks2012;
+
+SELECT x.$(ColumnName)
+FROM Person.Person x
+WHERE x.BusinessEntityID < 5;
+```
+
+Кроме того, с помощью параметра `-v` можно указать имя возвращаемого столбца:  
+ 
+```
+sqlcmd -v ColumnName ="FirstName" -i c:\testscript.sql
+```
+
+Чтобы возвратить другой столбец с помощью того же скрипта, измените значение переменной скрипта `ColumnName` .  
   
- Кроме того, переменные сценария, которые в нем содержатся, задаются с помощью параметра **-v** . В следующем скрипте (имя файла `testscript.sql`) `ColumnName` является переменной скрипта.  
-  
- `USE AdventureWorks2012;`  
-  
- `SELECT x.$(ColumnName)`  
-  
- `FROM Person.Person x`  
-  
- `WHERE x.BusinessEntityID < 5;`  
-  
- Кроме того, с помощью параметра `-v` можно указать имя возвращаемого столбца:  
-  
- `sqlcmd -v ColumnName ="FirstName" -i c:\testscript.sql`  
-  
- Чтобы возвратить другой столбец с помощью того же скрипта, измените значение переменной скрипта `ColumnName` .  
-  
- `sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql`  
-  
+```
+sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
+```
+
 ## <a name="guidelines-for-scripting-variable-names-and-values"></a>Правила выбора имен и значений переменных скрипта  
  Присваивая имена переменным скрипта, необходимо придерживаться следующих правил.  
   
@@ -106,243 +112,226 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sqlcmd-scripting-variables"></a>Переменные скрипта sqlcmd  
  Переменные, которые определяются программой **sqlcmd** , называются переменными сценария. В следующей таблице приведен список переменных сценария программы **sqlcmd** .  
   
-|Переменная|Связанный параметр|Чтение-запись|По умолчанию|  
-|--------------|--------------------|----------|-------------|  
-|SQLCMDUSER*|-U|Чтение|""|  
-|SQLCMDPASSWORD*|-P|--|""|  
-|SQLCMDSERVER*|-S|Чтение|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-H|Чтение|"ComputerName"|  
-|SQLCMDDBNAME|-d|Чтение|""|  
-|SQLCMDLOGINTIMEOUT|-l|Чтение-запись|"8" (секунд)|  
-|SQLCMDSTATTIMEOUT|-t|Чтение-запись|"0" = неограниченное время ожидания|  
-|SQLCMDHEADERS|-H|Чтение-запись|"0"|  
-|SQLCMDCOLSEP|-S|Чтение-запись|" "|  
-|SQLCMDCOLWIDTH|-w|Чтение-запись|"0"|  
-|SQLCMDPACKETSIZE|-A|Чтение|"4096"|  
-|SQLCMDERRORLEVEL|-M|Чтение-запись|"0"|  
-|SQLCMDMAXVARTYPEWIDTH|-y|Чтение-запись|«256»|  
-|SQLCMDMAXFIXEDTYPEWIDTH|-y|Чтение-запись|"0" = неограниченное время ожидания|  
-|SQLCMDEDITOR||Чтение-запись|"edit.com"|  
-|SQLCMDINI||Чтение|""|  
+|        Переменная         | Связанный параметр | Чтение-запись |         По умолчанию         |
+| ----------------------- | -------------- | --- | ----------------------- |
+| SQLCMDUSER*             | -U             | Чтение   | ""                      |
+| SQLCMDPASSWORD*         | -P             | --  | ""                      |
+| SQLCMDSERVER*           | -S             | Чтение   | "DefaultLocalInstance"  |
+| SQLCMDWORKSTATION       | -H             | Чтение   | "ComputerName"          |
+| SQLCMDDBNAME            | -d             | Чтение   | ""                      |
+| SQLCMDLOGINTIMEOUT      | -l             | Чтение-запись | "8" (секунд)           |
+| SQLCMDSTATTIMEOUT       | -t             | Чтение-запись | "0" = неограниченное время ожидания |
+| SQLCMDHEADERS           | -H             | Чтение-запись | "0"                     |
+| SQLCMDCOLSEP            | -S             | Чтение-запись | " "                     |
+| SQLCMDCOLWIDTH          | -w             | Чтение-запись | "0"                     |
+| SQLCMDPACKETSIZE        | -A             | Чтение   | "4096"                  |
+| SQLCMDERRORLEVEL        | -M             | Чтение-запись | "0"                     |
+| SQLCMDMAXVARTYPEWIDTH   | -y             | Чтение-запись | «256»                   |
+| SQLCMDMAXFIXEDTYPEWIDTH | -y             | Чтение-запись | "0" = неограниченное время ожидания         |
+| SQLCMDEDITOR            |                | Чтение-запись | "edit.com"              |
+| SQLCMDINI               |                | Чтение   | ""                      |
+
+Значения переменных SQLCMDUSER, SQLCMDPASSWORD и SQLCMDSERVER задаются при использовании команды **:Connect** .  
+
+Пометка «Чтение» означает, что значение может быть задано только один раз в процессе инициализации программы.  
   
- \* Значения переменных SQLCMDUSER, SQLCMDPASSWORD и SQLCMDSERVER задаются при использовании команды **:Connect** .  
-  
- Пометка «Чтение» означает, что значение может быть задано только один раз в процессе инициализации программы.  
-  
- Пометка "Чтение и запись" означает, что переменная может быть изменена командой **setvar** , и все последующие команды будут использовать новое значение.  
+Пометка "Чтение и запись" означает, что переменная может быть изменена командой **setvar** , и все последующие команды будут использовать новое значение.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-the-setvar-command-in-a-script"></a>A. Использование команды setvar в скрипте  
  Команда **setvar** позволяет управлять многими параметрами программы **sqlcmd** в сценарии. В следующем примере создается скрипт `test.sql` , в котором переменной `SQLCMDLOGINTIMEOUT` присваивается значение `60` , а другой переменной скрипта, `server`, присваивается значение `testserver`. Следующий код входит в скрипт `test.sql`.  
-  
- `:setvar SQLCMDLOGINTIMEOUT 60`  
-  
- `:setvar server "testserver"`  
-  
- `:connect $(server) -l $(SQLCMDLOGINTIMEOUT)`  
-  
- `USE AdventureWorks2012;`  
-  
- `SELECT FirstName, LastName`  
-  
- `FROM Person.Person;`  
-  
- `The script is then called by using sqlcmd:`  
-  
- `sqlcmd -i c:\test.sql`  
+
+```
+:setvar SQLCMDLOGINTIMEOUT 60
+:setvar server "testserver"
+:connect $(server) -l $(SQLCMDLOGINTIMEOUT)
+
+USE AdventureWorks2012;
+
+SELECT FirstName, LastName
+FROM Person.Person;
+```
+
+Затем скрипт вызывается с помощью sqlcmd:
+
+```
+sqlcmd -i c:\test.sql
+```
   
 ### <a name="b-using-the-setvar-command-interactively"></a>Б. Интерактивное использование команды setvar  
  В следующем примере показана интерактивная установка переменной сценария с помощью команды `setvar` .  
-  
- `sqlcmd`  
-  
- `:setvar  MYDATABASE AdventureWorks2012`  
-  
- `USE $(MYDATABASE);`  
-  
- `GO`  
-  
+
+```
+sqlcmd
+:setvar  MYDATABASE AdventureWorks2012
+USE $(MYDATABASE);
+GO
+```
+
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Changed database context to 'AdventureWorks2012'`  
-  
- `1>`  
+```
+Changed database context to 'AdventureWorks2012'
+1>
+```
   
 ### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>В. Использование переменных среды командной строки в программе sqlcmd  
  В следующем примере устанавливаются четыре переменные среды `are` , которые затем вызываются из `sqlcmd`.  
-  
- `C:\>SET tablename=Person.Person`  
-  
- `C:\>SET col1=FirstName`  
-  
- `C:\>SET col2=LastName`  
-  
- `C:\>SET title=Ms.`  
-  
- `C:\>sqlcmd -d AdventureWorks2012`  
-  
- `1> SELECT TOP 5 $(col1) + ' ' + $(col2) AS Name`  
-  
- `2> FROM $(tablename)`  
-  
- `3> WHERE Title ='$(title)'`  
-  
- `4> GO`  
+
+```
+C:\>SET tablename=Person.Person
+C:\>SET col1=FirstName
+C:\>SET col2=LastName
+C:\>SET title=Ms.
+C:\>sqlcmd -d AdventureWorks2012
+1> SELECT TOP 5 $(col1) + ' ' + $(col2) AS Name
+2> FROM $(tablename)
+3> WHERE Title ='$(title)'
+4> GO
+```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>Г. Использование переменных среды уровня пользователя в программе sqlcmd  
  В следующем примере пользовательская переменная среды `%Temp%` устанавливается в командной строке и передается входному файлу `sqlcmd` . Чтобы просмотреть пользовательские переменные среды, на **панели управления**дважды щелкните компонент **Система**. Перейдите на вкладку **Дополнительно** и щелкните **Переменные среды**.  
   
- Следующий программный код является частью входного файла `c:\testscript.txt`:  
-  
- `:OUT $(MyTempDirectory)`  
-  
- `USE AdventureWorks2012;`  
-  
- `SELECT FirstName`  
-  
- `FROM AdventureWorks2012.Person.Person`  
-  
- `WHERE BusinessEntityID` `< 5;`  
-  
- Следующий программный код вводится в командной строке:  
-  
- `C:\ >SET MyTempDirectory=%Temp%\output.txt`  
-  
- `C:\ >sqlcmd -i C:\testscript.txt`  
-  
+ Следующий программный код является частью входного файла `c:\testscript.txt`:
+
+```
+:OUT $(MyTempDirectory)
+USE AdventureWorks2012;
+
+SELECT FirstName
+FROM AdventureWorks2012.Person.Person
+WHERE BusinessEntityID` `< 5;
+```
+
+Следующий программный код вводится в командной строке:
+
+```
+C:\ >SET MyTempDirectory=%Temp%\output.txt
+C:\ >sqlcmd -i C:\testscript.txt
+```
+
  Следующий результат передается выходному файлу C:\Documents and Settings\\<пользователь\>\Local Settings\Temp\output.txt.  
-  
- `Changed database context to 'AdventureWorks2012'.`  
-  
- `FirstName`  
-  
- `--------------------------------------------------`  
-  
- `Gustavo`  
-  
- `Catherine`  
-  
- `Kim`  
-  
- `Humberto`  
-  
- `(4 rows affected)`  
-  
+
+```
+Changed database context to 'AdventureWorks2012'.
+FirstName
+--------------------------------------------------
+Gustavo
+Catherine
+Kim
+Humberto
+
+(4 rows affected)
+```
+
 ### <a name="e-using-a-startup-script"></a>Д. Использование скрипта запуска  
  Сценарий запуска **sqlcmd** выполняется при запуске программы **sqlcmd** . В следующем примере задается переменная среды `SQLCMDINI`. Ниже приведено содержимое сценария `init.sql.`  
-  
- `SET NOCOUNT ON`  
-  
- `GO`  
-  
- `DECLARE @nt_username nvarchar(128)`  
-  
- `SET @nt_username = (SELECT rtrim(convert(nvarchar(128), nt_username))`  
-  
- `FROM sys.dm_exec_sessions WHERE spid = @@SPID)`  
-  
- `SELECT  @nt_username + ' is connected to ' +`  
-  
- `rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('servername'))) +`  
-  
- `' (' +`  
-  
- `rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('productversion'))) +`  
-  
- `')'`  
-  
- `:setvar SQLCMDMAXFIXEDTYPEWIDTH 100`  
-  
- `SET NOCOUNT OFF`  
-  
- `GO`  
-  
- `:setvar SQLCMDMAXFIXEDTYPEWIDTH`  
-  
+
+```
+SET NOCOUNT ON
+GO
+
+DECLARE @nt_username nvarchar(128)
+SET @nt_username = (SELECT rtrim(convert(nvarchar(128), nt_username))
+FROM sys.dm_exec_sessions WHERE spid = @@SPID)
+SELECT  @nt_username + ' is connected to ' +
+rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('servername'))) +
+' (' +`  
+rtrim(CONVERT(nvarchar(20), SERVERPROPERTY('productversion'))) +
+')'
+:setvar SQLCMDMAXFIXEDTYPEWIDTH 100
+SET NOCOUNT OFF
+GO
+
+:setvar SQLCMDMAXFIXEDTYPEWIDTH
+```
+
  Таким образом файл `init.sql` вызывается при запуске `sqlcmd` .  
   
- `C:\> SET sqlcmdini=c:\init.sql`  
-  
- `>1 Sqlcmd`  
-  
+```
+c:\> SET sqlcmdini=c:\init.sql
+>1 Sqlcmd
+```
+
  Результат.  
-  
- `>1 < user > is connected to < server > (9.00.2047.00)`  
+
+```
+>1 < user > is connected to < server > (9.00.2047.00)
+```
+
   
 > [!NOTE]  
 >  Параметр **-X** отключает функцию сценария запуска.  
   
 ### <a name="f-variable-expansion"></a>Е. Расширение переменной  
  В следующем примере показана работа с данными в форме переменной **sqlcmd** .  
-  
- `USE AdventureWorks2012;`  
-  
- `CREATE TABLE AdventureWorks2012.dbo.VariableTest`  
-  
- `(`  
-  
- `Col1 nvarchar(50)`  
-  
- `);`  
-  
- `GO`  
-  
+
+```
+USE AdventureWorks2012;
+CREATE TABLE AdventureWorks2012.dbo.VariableTest
+(
+Col1 nvarchar(50)
+);
+GO
+```
+
  Вставляет одну строку в столбец `Col1` объекта базы данных `dbo.VariableTest` , содержащего значение `$(tablename)`.  
-  
- `INSERT INTO AdventureWorks2012.dbo.VariableTest(Col1)`  
-  
- `VALUES('$(tablename)');`  
-  
- `GO`  
+
+```
+INSERT INTO AdventureWorks2012.dbo.VariableTest(Col1)
+VALUES('$(tablename)');
+GO
+```
   
  В командной строке `sqlcmd` , если ни одна переменная не равна `$(tablename)`, следующие инструкции возвращают эту строку.  
   
- `C:\> sqlcmd`  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';`  
-  
- `>2 GO`  
-  
- `>3 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';`  
-  
- `>4 GO`  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `>1 Col1`  
-  
- `>2 ------------------`  
-  
- `>3 $(tablename)`  
-  
- `>4`  
-  
- `>5 (1 rows affected)`  
-  
+```
+C:\> sqlcmd
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';
+>2 GO
+>3 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';
+>4 GO
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+>1 Col1
+>2 ------------------
+>3 $(tablename)
+>4
+>5 (1 rows affected)
+```
+
  При условии, что переменная `MyVar` равна `$(tablename)`.  
-  
- `>6 :setvar MyVar $(tablename)`  
-  
+
+```
+>6 :setvar MyVar $(tablename)
+```
+
  Эти инструкции возвращают строку и сообщение «Переменная сценария "tablename" не определена».  
-  
- `>6 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';`  
-  
- `>7 GO`  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';`  
-  
- `>2 GO`  
-  
+
+```
+>6 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';
+>7 GO
+
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(tablename)';
+>2 GO
+```
+
  Эти инструкции возвращают строку.  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(MyVar)';`  
-  
- `>2 GO`  
-  
- `>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(MyVar)';`  
-  
- `>2 GO`  
+
+```
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(MyVar)';
+>2 GO
+```
+
+```
+>1 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = N'$(MyVar)';
+>2 GO
+```
   
 ## <a name="see-also"></a>См. также:  
  [Использование программы sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   

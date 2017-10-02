@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  Планы выполнения ссылаются на объекты с помощью трехкомпонентных имен (`database.schema.object`).   
 
 При переименовании базы данных произойдет сбой принудительного выполнения планов, что приведет к повторной компиляции при выполнении всех последующих запросов.  
+
+##  <a name="Recovery"></a> Использование флагов трассировки на критически важных серверах для улучшения восстановления после сбоев
+ 
+  Глобальные флаги трассировки 7745 и 7752 можно использовать для повышения производительности хранилища запросов в сценариях высокой доступности и аварийного восстановления.
   
+  Флаг трассировки 7745 будет препятствовать поведению по умолчанию, при котором хранилище запросов записывает данные на диск до того, как SQL Server сможет завершить работу.
+  
+  Флаг трассировки 7752 позволяет SQL Server запускать запросы перед полной загрузкой хранилища запросов. Поведение хранилища запросов по умолчанию препятствует запуску запросов до восстановления хранилища запросов.
+
 ## <a name="see-also"></a>См. также:  
  [Query Store Catalog Views (Transact-SQL) ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  (Представления каталогов хранилища запросов (Transact-SQL))  
  [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  (Хранимые процедуры хранилища запросов (Transact-SQL))  

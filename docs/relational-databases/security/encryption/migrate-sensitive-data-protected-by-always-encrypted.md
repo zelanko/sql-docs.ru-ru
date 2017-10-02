@@ -17,68 +17,65 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da73d0d20404f513e22dcdf0340e24fe85dc3184
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 20eb76a9e2cc89015167b5199f1a6f8dd5baec16
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Перенос конфиденциальных данных с помощью функции постоянного шифрования
-  Чтобы во время операций массового копирования загрузить зашифрованные данные, не проверяя метаданные на сервере, создайте пользователя с параметром **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Этот параметр предназначен для средств устаревших версий сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , выпущенных до выпуска [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (например, bcp.exe), или для сторонних рабочих процессов извлечения, преобразования и загрузки (ETL), которые не могут использовать функцию постоянного шифрования. Таким образом пользователи могут безопасно перемещать зашифрованные данные из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  
-  
-## <a name="the-allowencryptedvaluemodifications-option"></a>Параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
- Команды [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) и [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) имеют параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Если задано значение ON (значение по умолчанию — OFF), этот параметр отключает проверки шифрованных метаданных на сервере в операциях массового копирования, что позволяет пользователю массово копировать зашифрованные данные из одной таблицы или базы данных в другую и при этом не расшифровывать данные.  
-  
-## <a name="data-migration-scenarios"></a>Сценарии переноса данных  
- В таблице ниже показаны рекомендуемые параметры, подходящие для нескольких сценариев переноса.  
-  
- ![Миграция постоянного шифрования](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "Миграция постоянного шифрования")  
-  
-## <a name="bulk-loading-of-encrypted-data"></a>Массовая загрузка зашифрованных данных  
- Загружайте зашифрованные данные с помощью такого процесса:  
-  
-1.  Присвойте параметру значение ON для пользователя в базе данных, в которую массово копируются данные. Например:  
-  
-    ```  
-    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
-    ```  
-  
-2.  Подключившись, как этот пользователь, запустите приложение или средство массового копирования. (Если приложение использует драйвер клиента с включенным постоянным шифрованием, убедитесь, что строка подключения для источника данных не содержит параметр **column encryption setting=enabled** , который оставляет зашифрованными данные, извлеченные из зашифрованных столбцов. Дополнительные сведения см. в разделе [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Постоянное шифрование (разработка клиентских приложений)).  
-  
-3.  Снова задайте для параметра ALLOW_ENCRYPTED_VALUE_MODIFICATIONS значение OFF. Например:  
-  
-    ```  
-    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
-    ```  
-  
-## <a name="potential-for-data-corruption"></a>Возможное повреждение данных  
- Неправильное использование этого параметра может привести к повреждению данных. Параметр **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** позволяет пользователю вставлять данные в зашифрованные столбцы в базе данных, в том числе данные, зашифрованные с помощью разных ключей, неверно зашифрованные данные и данные, которые вообще не зашифрованы. Если пользователь случайно копирует данные, которые неправильно зашифрованы с помощью схемы шифрования (ключ шифрования столбца, алгоритм, тип шифрования), настроенной для целевого столбца, вы не сможете расшифровать эти данные (они будут повреждены). Этот параметр следует использовать осторожно, так как он может повредить данные в базе данных.  
-  
- Приведенный ниже сценарий демонстрирует, как неправильный импорт данных может привести к их повреждению:  
-  
-1.  Для пользователя задано значение ON для этого параметра.  
-  
-2.  Пользователь запускает приложение, которое подключается к базе данных. Приложение с помощью массовых API-интерфейсов вставляет обычные текстовые значения в зашифрованные столбцы. Приложение ожидает, что драйвер клиента с включенным постоянным шифрованием зашифрует данные при вставке. Но приложение настроено неправильно, поэтому или оно использует драйвер, не поддерживающий постоянное шифрование, или строка подключения не содержит параметр **column encryption setting=enabled**.  
-  
-3.  Приложение отправляет обычные текстовые значения на сервер. Так как проверки зашифрованных метаданных на сервере отключены для пользователя, сервер позволяет вставлять в зашифрованный столбец недопустимые данные (открытый текст вместо зашифрованных данных).  
-  
-4.  То же или другое приложение подключается к базе данных с помощью драйвера с включенным постоянным шифрованием и параметром **column encryption setting=enabled** в строке подключения, а затем извлекает данные. Приложение ожидает, что драйвер расшифрует данные. Но драйверу это не удается, так как данные зашифрованы неверно.  
-  
-## <a name="best-practice"></a>Рекомендации  
-  
--   Используйте назначенные учетные записи пользователя для долговременных рабочих нагрузок, использующих этот параметр.  
-  
--   Работая с кратковременно работающими приложениями или средствами массового копирования, которым нужно переместить зашифрованные данные, но не нужно их расшифровывать, задавайте для параметра значение ON непосредственно перед запуском приложения, возвращая значение OFF сразу после запуска операции.  
-  
--   Не разрабатывайте новые приложения с помощью этого параметра. Лучше используйте драйвер клиента (например, ADO 4.6.1), в котором есть API, отключающий проверки зашифрованных метаданных на время одного сеанса.  
-  
-## <a name="see-also"></a>См. также:  
- [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)   
- [ALTER USER (Transact-SQL)](../../../t-sql/statements/alter-user-transact-sql.md)   
- [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Мастер постоянного шифрования](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
- [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
-  
-
+ <a name="to-load-encrypted-data-without-performing-metadata-checks-on-the-server-during-bulk-copy-operations-create-the-user-with-the-allowencryptedvaluemodifications-option-this-option-is-intended-to-be-used-by-legacy-tools-from-versions-of-includessnoversionincludesssnoversion-mdmd-older-than-includesssql15includessssql15-mdmd-such-as-bcpexe-or-by-using-third-party-extract-transform-load-etl-work-flows-that-cannot-use-always-encrypted-this-allows-a-user-to-securely-move-encrypted-data-from-one-set-of-tables-containing-encrypted-columns-to-another-set-of-tables-with-encrypted-columns-in-the-same-or-a-different-database"></a>Чтобы во время операций массового копирования загрузить зашифрованные данные, не проверяя метаданные на сервере, создайте пользователя с параметром **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Этот параметр предназначен для средств устаревших версий сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , выпущенных до выпуска [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (например, bcp.exe), или для сторонних рабочих процессов извлечения, преобразования и загрузки (ETL), которые не могут использовать функцию постоянного шифрования. Таким образом пользователи могут безопасно перемещать зашифрованные данные из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  
+ -  
+ -## Параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
+ - Команды [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) и [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) имеют параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Если задано значение ON (значение по умолчанию — OFF), этот параметр отключает проверки шифрованных метаданных на сервере в операциях массового копирования, что позволяет пользователю массово копировать зашифрованные данные из одной таблицы или базы данных в другую и при этом не расшифровывать данные.  
+ -  
+ -## Сценарии переноса данных  
+ - В таблице ниже показаны рекомендуемые параметры, подходящие для нескольких сценариев переноса.  
+ -  
+ - ![Миграция постоянного шифрования](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "Миграция постоянного шифрования")  
+ -  
+ -## Массовая загрузка зашифрованных данных  
+ - Загружайте зашифрованные данные с помощью такого процесса:  
+ -  
+ -1.  Присвойте параметру значение ON для пользователя в базе данных, в которую массово копируются данные. Например:  
+ -  
+ -    ```  
+ -    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
+ -    ```  
+ -  
+ -2.  Run your bulk copy application or tool connecting as that user. (If your application uses an Always Encrypted enabled client driver, make sure the connection string for the data source does not contain **column encryption setting=enabled** to ensure the data retrieved from encrypted columns remains encrypted. For more information, see [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md).)  
+ -  
+ -3.  Set the ALLOW_ENCRYPTED_VALUE_MODIFICATIONS option back to OFF. For example:  
+ -  
+ -    ```  
+ -    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
+ -    ```  
+ -  
+ -## Potential for Data Corruption  
+ - Improper use of this option can lead to data corruption. The **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** option allows the user to insert any data into encrypted columns in the database, including data that is encrypted with different keys, incorrectly encrypted, or not encrypted at all. If the user accidently copies the data that is not correctly encrypted using the encryption scheme (column encryption key, algorithm, encryption type) set up for the target column, you will not be able to decrypt the data (the data will be corrupted). This option must be used carefully, as it can lead to corrupting data in the database.  
+ -  
+ - The following scenario demonstrates how improperly importing data could lead to data corruption:  
+ -  
+ -1.  The option is set to ON for a user.  
+ -  
+ -2.  The user runs the application that connects to the database. The application uses bulk APIs to insert plain text values to encrypted columns. The application expects an Always Encrypted-enabled client driver to encrypt the data on insert. However, the application is misconfigured, so that either it ends up using a driver that does not support Always Encrypted or the connection string does not contain **column encryption setting=enabled**.  
+ -  
+ -3.  The application sends plaintext values to the server. As cryptographic metadata checks are disabled in the server for the user, the server lets the incorrect data (plaintext instead of correctly encrypted ciphertext) to be inserted into an encrypted column.  
+ -  
+ -4.  The same or another application connects to the database using an Always Encrypted-enabled driver and with **column encryption setting=enabled** in the connection string, and retrieves the data. The application expects the data to be transparently decrypted. However, the driver fails to decrypt the data because the data is incorrect ciphertext.  
+ -  
+ -## Best practice  
+ -  
+ --   Use designated user accounts for long running workloads using this option.  
+ -  
+ --   For short running bulk copy applications or tools that need to move encrypted data without decrypting it, set the option to ON immediately before running the application and set it back to OFF immediately after running the operation.  
+ -  
+ --   Do not use this option for developing new applications. Instead, use a client driver (such as  ADO 4.6.1) that offers an API for suppressing cryptographic metadata checks for a single session.  
+ -  
+ -## See Also  
+ - [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
+ - [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
+ - [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+ - [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
