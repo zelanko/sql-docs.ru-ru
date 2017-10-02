@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Есть несколько сущностей вне модели базы данных DQS, которые должны существовать для базы данных DQS, функционирующей в качестве [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], а именно два имени входа SQL Server (##MS_dqs_db_owner_login## и ##MS_dqs_service_login##) и хранимые процедуры инициализации (DQInitDQS_MAIN) в базе данных master.  
   
- Дополнительные сведения о резервном копировании и восстановлении в SQL Server см. в разделе [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+ Дополнительные сведения о резервном копировании и восстановлении в SQL Server см. в разделе [Резервное копирование и восстановление баз данных SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>Используемый по умолчанию размер автоувеличения и модель восстановления для баз данных DQS  
  Чтобы предотвратить неограниченный рост баз данных DQS и журналов транзакций с потенциальным заполнением жесткого диска, заданы следующие условия.  
