@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Обеспечивайте целостность данных с помощью транзакций**. Дополнительные сведения см. в разделе [Транзакции служб Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Перехват и обработка ошибок пакетов с помощью обработчиков событий  
  Обработчики событий могут реагировать на многие события, вызванные пакетами и объектами в них.  
