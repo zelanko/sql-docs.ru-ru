@@ -1,0 +1,6 @@
+# [Разработка пользовательского компонента назначения](developing-a-custom-destination-component.md)
+# [Разработка пользовательского компонента источника](developing-a-custom-source-component.md)
+# [Разработка пользовательского компонента преобразования с асинхронными выходами](developing-a-custom-transformation-component-with-asynchronous-outputs.md)
+# [Разработка пользовательского компонента преобразования с синхронными выходами](developing-a-custom-transformation-component-with-synchronous-outputs.md)
+# [Разработка компонентов потоков данных с несколькими входами](developing-data-flow-components-with-multiple-inputs.md)
+# [Разработка компонентов потока данных определенных типов](developing-specific-types-of-data-flow-components.md)
