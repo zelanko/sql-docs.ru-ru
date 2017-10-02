@@ -3,7 +3,7 @@ title: "Выпуски и поддерживаемые функции SQL Server
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Выпуски и поддерживаемые функции SQL Server 2017
@@ -57,8 +57,6 @@ ms.lasthandoff: 08/28/2017
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
->[!NOTE]
->Любые сведения в этой статье могут изменяться, так как они относятся к предварительному выпуску SQL Server 2017. 
   
 Требования для установки сильно зависят от потребностей приложения. Различные выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] удовлетворяют индивидуальным требованиям каждой организации или отдельного лица к производительности, среде выполнения и цене. Набор устанавливаемых компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] зависит от потребностей конкретного пользователя. В следующих разделах содержатся сведения, на основе которых из множества выпусков и компонентов, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], можно сделать наилучший выбор.  
 
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/28/2017
 |Enterprise|Выпуск [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition является предложением высшего класса, обеспечивающим полный набор возможностей ЦОД с исключительно высокой производительностью, неограниченными возможностями виртуализации и исчерпывающими средствами бизнес-аналитики, что позволяет добиться высокого уровня обслуживания важнейших рабочих нагрузок и предоставить конечным пользователям доступ к анализу данных.|  
 |Standard Edition|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard обеспечивает основные функции управления данными и предоставляет базу данных бизнес-аналитики для приложений, работающих в отделах и небольших организациях. Поддерживаются распространенные средства разработки в локальных системах и вычислительных облаках, что делает возможным эффективное управление базами данных с минимальными затратами ИТ-ресурсов.|  
 |Web Edition|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition — это вариант с низкой совокупной стоимостью владения, предназначенный для размещения веб-сайтов и дополнительных веб-услуг, который по доступной цене обеспечивает масштабируемость и функции управления для небольших и крупномасштабных веб-проектов.|  
-|Разработчик|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition позволяет разработчикам создавать приложения любого типа на базе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Он включает все функциональные возможности выпуска Enterprise Edition, однако лицензируется как система для разработки и тестирования, а не для применения в качестве рабочего сервера. Выпуск[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition является идеальным выбором для тех, кто создает<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] и тестирует приложения.|  
+|Разработчик|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition позволяет разработчикам создавать приложения любого типа на базе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Он включает все функциональные возможности выпуска Enterprise Edition, однако лицензируется как система для разработки и тестирования, а не для применения в качестве рабочего сервера. Выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition является идеальным выбором для тех, кто создает и тестирует приложения.|  
 |Экспресс-выпуски|Выпуск Express является бесплатной базой данных начального уровня и идеально подходит для обучения, а также для создания управляемых данными приложений, работающих на рабочих станциях и небольших серверах. Этот выпуск — лучший выбор для независимых поставщиков программного обеспечения, непрофессиональных разработчиков и любителей, создающих клиентские приложения. Если необходимы дополнительные функции базы данных, выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express можно легко обновить до версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]более высокого класса. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, облегченная версия Express, которая имеет все программные функции, запускается в пользовательском режиме, быстро устанавливается, не требует настройки; количество предварительных условий для ее установки невелико.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Использование [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с веб-сервером  
@@ -157,9 +155,9 @@ ms.lasthandoff: 08/28/2017
 |Зеркальное отображение базы данных|Да|Да<br /><br /> Только полная безопасность|Только следящий сервер|Только следящий сервер|Только следящий сервер| 
 |Сжатие резервных копий|Да|Да|Нет|Нет|Нет| 
 |Моментальный снимок базы данных|Да|Да|Да|Да|Да|
-|Экземпляры отказоустойчивого кластера AlwaysOn|Да<br /><br /> Количество узлов равно максимуму, поддерживаемому операционной системой|Да<br /><br /> Поддержка 2 узлов|Нет|Нет|Нет|  
-|Группы доступности AlwaysOn|Да<br /><br /> До 8 вторичных реплик, включая 2 синхронные вторичные реплики|Нет|Нет|Нет|Нет|
-|Базовые группы доступности <sup>2</sup>|Нет|Да<br /><br /> Поддержка 2 узлов|Нет|Нет|Нет|
+|Экземпляры отказоустойчивого кластера AlwaysOn<sup>2</sup>|Да|Да|Нет|Нет|Нет|  
+|Группы доступности AlwaysOn<sup>3</sup>|Да|Нет|Нет|Нет|Нет|
+|Базовые группы доступности<sup>4</sup>|Нет|Да|Нет|Нет|Нет|
 |Восстановление страниц и файлов в режиме «в сети»|Да|Нет|Нет|Нет|Нет|
 |Индексирование в сети|Да|Нет|Нет|Нет|Нет|
 |Возобновляемая перестройка индексов в подключенном режиме|Да|Нет|Нет|Нет|Нет|
@@ -170,12 +168,18 @@ ms.lasthandoff: 08/28/2017
 |Помощник по восстановлению базы данных|Да|Да|Да|Да|Да|
 |Зашифрованная резервная копия|Да|Да|Нет|Нет|Нет|
 |Гибридное резервное копирование в Microsoft Azure (резервное копирование на URL-адрес)|Да|Да|Нет|Нет|Нет|
-|Группа доступности без кластеров|Да|Да|Да|Нет|Нет|Нет|
+|Группа доступности без кластеров|Да|Да|Нет|Нет|Нет|Нет|
 |Группа доступности с минимальным числом реплик для фиксации|Да|Да|Да|Нет|Нет|Нет|
   
- <sup>1</sup> Дополнительные сведения об установке SQL Server на Server Core см. в разделе [установить SQL Server на Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
-<sup>2</sup> Дополнительные сведения о базовых группах доступности см. в разделе [Базовые группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+<sup>1</sup> Дополнительные сведения об установке SQL Server на Server Core см. в разделе [установить SQL Server на Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
+
+<sup>2</sup> В выпуске Enterprise количество узлов равно максимуму, поддерживаемому операционной системой. В выпуске Standard поддерживается два узла. 
+
+<sup>3</sup> В выпуске Enterprise поддерживается до 8 вторичных реплик, включая 2 синхронные вторичные реплики. 
+
+<sup>4</sup> В выпуске Standard поддерживаются базовые группы доступности. Базовая группа доступности поддерживает две реплики с одной базой данных. Дополнительные сведения о базовых группах доступности см. в разделе [Базовые группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+
 
 ##  <a name="RDBMSSP"></a> Масштабируемость и производительность реляционных СУБД  
   
@@ -263,8 +267,8 @@ ms.lasthandoff: 08/28/2017
 |Пользовательские экземпляры|Нет|Нет|Нет|Да|Да| 
 |LocalDB|Нет|Нет|Нет|Да|Нет| 
 |Выделенное административное соединение|Да|Да|Да|Да, с помощью флага трассировки|Да, с помощью флага трассировки|   
-|Поддержка скриптов PowerShell|Да|Да|Да|Да|Да| 
 |Поддержка SysPrep <sup>1</sup>|Да|Да|Да|Да|Да| 
+|Поддержка сценариев PowerShell<sup>2</sup>|Да|Да|Да|Да|Да| 
 |Поддержка операций с компонентами приложения уровня данных — извлечение, развертывание, обновление, удаление|Да|Да|Да|Да|Да| 
 |Автоматизация политики (проверка по расписанию и изменение)|Да|Да|Да|Нет|Нет|   
 |Сборщик данных производительности|Да|Да|Да|Нет|Нет| 
@@ -282,6 +286,7 @@ ms.lasthandoff: 08/28/2017
   
  <sup>1</sup> Дополнительные сведения см. в разделе [Вопросы по установке SQL Server с помощью SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
+ <sup>2</sup> В Linux сценарии PowerShell поддерживаются с компьютеров Windows, ориентированных на серверы SQL Server на базе Linux. 
 ##  <a name="DevTools"></a> Средства разработки  
   
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express| 
@@ -393,7 +398,7 @@ ms.lasthandoff: 08/28/2017
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|Нет|Нет| 
 |StreamInsight HA|StreamInsight Premium Edition|Нет|Нет|Нет|Нет|   
   
-> [![Скачать SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Скачайте последнюю версию SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![Скачать SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[Скачайте последнюю версию SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
   
 ## <a name="next-steps"></a>Следующие шаги 
  [Спецификации SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

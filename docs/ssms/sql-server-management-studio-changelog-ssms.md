@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
@@ -175,7 +175,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Always On:
   - Исправлена ошибка, из-за которой свойства реплики доступности для групп доступности WSFC всегда отображались как режим "Автоматическая отработка отказа".
   - Исправлена ошибка, из-за которой список маршрутизации, доступный только для чтения, перезаписывался при обновлении группы доступности.
-- Постоянное шифрование: исправлена проблема, из-за которой в создаваемом файле журнала отсутствовали данные, созданные DacFx.
+- Always Encrypted: исправлена проблема, из-за которой в создаваемом файле журнала отсутствовали данные, созданные DacFx.
 - ShowPlan: исправлена ошибка, из-за которой для операторов неадаптивного соединения в пользовательском интерфейсе всегда отображался атрибут фактического типа соединения.
 - Программа установки:
   - Исправлена ошибка, из-за которой SSMS 17.0 разрывал SSDT в Visual Studio 2013 [элемент Connect № 3133479].
@@ -355,7 +355,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * Устранена проблема, появившаяся в SSMS 16.5.2. Эта проблема приводила к раскрытию узла "Таблица", если в таблице было несколько разреженных столбцов.
 
-* Пользователи могут развертывать пакеты SSIS, содержащие диспетчер подключений OData, который используется для подключения ресурса Microsoft Dynamics AX или CRM Online к каталогу SSIS. Дополнительные сведения см. в разделе [Диспетчер соединений OData](https://msdn.microsoft.com/library/dn584133.aspx).
+* Пользователи могут развертывать пакеты SSIS, содержащие диспетчер подключений OData, который используется для подключения ресурса Microsoft Dynamics AX или CRM Online к каталогу SSIS. Дополнительные сведения см. в разделе [Диспетчер соединений OData](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
 
 * Настройка Always Encrypted для существующей таблицы завершается с ошибками, в которых указаны посторонние объекты. [Идентификатор Connect 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * [Новый вариант аутентификации — **универсальная аутентификация Active Directory**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Это механизм аутентификации на основе маркеров, работающий с помощью Azure Active Directory. Он поддерживает многофакторную и встроенную аутентификацию, а также проверку пароля.
 
-* Новые шаблоны расширенных событий, соответствующие шаблонам SQL Server Profiler [(элемент Microsoft Connect № 2543925)](https://connect.microsoft.com/SQLServer/feedback/details/2543925/sql-server-extended-events-profiler-tool). См. дополнительные сведения о включенных в выпуск [шаблонах SQL Server Profiler](https://msdn.microsoft.com/library/ms190176.aspx).
+* Новые шаблоны расширенных событий, соответствующие шаблонам SQL Server Profiler [(элемент Microsoft Connect № 2543925)](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
 
 * Новые диалоговые окна "Создание базы данных" и "Свойства базы данных" для баз данных Azure SQL.
 
