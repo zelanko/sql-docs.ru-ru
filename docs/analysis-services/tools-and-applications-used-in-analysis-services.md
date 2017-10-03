@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8b56417b89b618598f716245e7562f5986a911b5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5b9e63d4c7cdc57814b04b2e96e52bda17a25f5a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Средства и приложения, использующиеся в службах Analysis Services
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
  SQL Server Management Studio (SSMS) — основное средство администрирования для всех компонентов SQL Server, включая службы Analysis Services. Среда SSMS является бесплатной загрузки, обновляются ежемесячно. 
   
-**[Скачивание SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)** 
+**[Загрузите SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** 
   
  Среда SSMS включает расширенные события (xEvents), предоставляя Упрощенная альтернатива трассировки приложения SQL Server Profiler для мониторинга активности и диагностики проблем на серверах служб Azure Analysis Services и SQL Server 2016. Дополнительные сведения см. в статье [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) .  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
  Для выполнения многих административных задач можно использовать команды PowerShell. В разделе [Справочник PowerShell](../analysis-services/powershell/analysis-services-powershell-reference.md) для получения дополнительной информации.  
   
 ### <a name="community-and-third-party-tools"></a>Средства сообщества и сторонние средства  
- Примеры кодов сообщества см. на [странице CodePlex Analysis Services](http://sqlsrvanalysissrvcs.codeplex.com/) . Рекомендации по сторонним средствам, которые поддерживают Analysis Services, см. на[Форумах](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices).  
+ Примеры кодов сообщества см. на [странице CodePlex Analysis Services](http://sqlsrvanalysissrvcs.codeplex.com/) . Рекомендации по сторонним средствам, которые поддерживают Analysis Services, см. на[Форумах](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) .  
   
 ## <a name="see-also"></a>См. также:  
  [Уровень совместимости многомерной базы данных](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

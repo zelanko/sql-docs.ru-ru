@@ -1,7 +1,7 @@
 ---
 title: "Какой &#39; новые возможности служб Integration Services в SQL Server 2017 г. | Документы Microsoft"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Какой &#39; новые возможности служб Integration Services в SQL Server 2017 г.
@@ -29,13 +29,23 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="highlights-of-this-release"></a>Краткое описание этой версии
 
-Ниже приведены наиболее важных новых функций в службах Integration Services для 2017 г. SQL Server.
+Ниже приведены наиболее важных новых функций служб Integration Services в SQL Server 2017 г..
 
 -   **Горизонтальное масштабирование**. Легко распространять выполнение пакетов служб SSIS на нескольких компьютерах рабочих и управление выполнений и работников с одного главного компьютера. Дополнительные сведения см. в разделе [масштабирования службы интеграции Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
 
 -   **Службы Integration Services в Linux**. Выполнение пакетов служб SSIS на компьютерах Linux. Дополнительные сведения см. в разделе [извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 -   **Усовершенствования подключения**. Подключиться к каналам OData Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online с обновленными компонентами OData. 
+
+## <a name="new-in-azure-data-factory"></a>Новые возможности фабрики данных Azure
+
+В общедоступной предварительной версии фабрики данных Azure версии 2 в сентябре 2017 г. Теперь можно выполнять следующие действия:
+-   Развертывание пакетов на базу данных каталога служб SSIS (SSISDB) в базе данных SQL Azure.
+-   Запускайте пакеты развертывания в Azure на среду выполнения служб SSIS Azure интеграции компонента фабрики данных Azure версии 2.
+
+Дополнительные сведения см. в разделе [усилие SQL Server Integration Services рабочих нагрузок в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Эти новые возможности SQL Server Data Tools (SSDT) 17,2 или более поздней версии требуется, но не требуют 2017 г. SQL Server или SQL Server 2016. При развертывании пакетов в Azure, мастер развертывания пакетов всегда обновляет пакеты в формате последней версии пакета.
 
 ## <a name="new-in-the-azure-feature-pack"></a>Новые возможности в пакете дополнительных компонентов Azure
 

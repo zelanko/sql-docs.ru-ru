@@ -2,7 +2,7 @@
 title: "Какой &#39; новые возможности служб Integration Services в SQL Server 2016 | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/16/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,18 +19,28 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Какой &#39; новые возможности служб Integration Services в SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- В этом разделе описаны функции, которые были добавлены или обновлены в SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
-## <a name="improvements-grouped-by-category"></a>Усовершенствования, сгруппированные по категориям  
+В этом разделе описаны функции, которые были добавлены или обновлены в SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Он также включает компоненты добавленных или обновленных в [пакет дополнительных компонентов Azure для служб Integration Services &#40; Службы SSIS &#41; ](../integration-services/azure-feature-pack-for-integration-services-ssis.md) за промежуток времени SQL Server 2016.  
+
+## <a name="new-for-ssis-in-azure-data-factory"></a>Новые возможности для служб SSIS в фабрике данных Azure
+
+В общедоступной предварительной версии фабрики данных Azure версии 2 в сентябре 2017 г. Теперь можно выполнять следующие действия:
+-   Развертывание пакетов на базу данных каталога служб SSIS (SSISDB) в базе данных SQL Azure.
+-   Запускайте пакеты развертывания в Azure на среду выполнения служб SSIS Azure интеграции компонента фабрики данных Azure версии 2.
+
+Дополнительные сведения см. в разделе [усилие SQL Server Integration Services рабочих нагрузок в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Эти новые возможности SQL Server Data Tools (SSDT) 17,2 или более поздней версии требуется, но не требуют 2017 г. SQL Server или SQL Server 2016. При развертывании пакетов в Azure, мастер развертывания пакетов всегда обновляет пакеты в формате последней версии пакета.
+
+## <a name="2016-improvements-by-category"></a>Усовершенствования 2016 по категориям  
   
 -   **Управляемость**  
   
@@ -154,7 +164,7 @@ ms.lasthandoff: 08/21/2017
  Дополнительные сведения см. в разделе [каталога служб SSIS &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Поддержка Always On в каталоге служб SSIS  
- Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые выполняют отработку отказа совместно. Дополнительные сведения см. в статье [Группы доступности AlwaysOn](https://msdn.microsoft.com/library/hh510230.aspx).  
+ Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые выполняют отработку отказа совместно. Дополнительные сведения см. в статье [Группы доступности AlwaysOn](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  В SQL Server 2016 SSIS предоставляют новые возможности, обеспечивающие легкое развертывание в централизованном каталоге служб SSIS (т. е. пользователь база данных SSISDB). Чтобы обеспечить высокую доступность для базы данных SSISDB и ее содержимого (проектов, пакетов, журналов выполнения и т. п.), можно добавить ее в группу доступности Always On, как и любую другую пользовательскую базу данных. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
   
@@ -313,7 +323,7 @@ ms.lasthandoff: 08/21/2017
 ### <a name="better-design-experience"></a>Улучшенная процедура разработки
 
 ####  <a name="OneDesigner"></a> Поддержка нескольких версий в конструкторе служб SSIS  
- Теперь можно использовать конструктор SSIS в SQL Server Data Tools (SSDT) для Visual Studio 2015, чтобы создавать, обслуживать и выполнять пакеты, ориентированные на SQL Server 2016, SQL Server 2014 или SQL Server 2012. Процедуру получения SSDT см. в разделе [Скачивание последней версии SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx). 
+ Теперь можно использовать конструктор SSIS в SQL Server Data Tools (SSDT) для Visual Studio 2015, чтобы создавать, обслуживать и выполнять пакеты, ориентированные на SQL Server 2016, SQL Server 2014 или SQL Server 2012. Процедуру получения SSDT см. в разделе [Скачивание последней версии SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации**выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    
