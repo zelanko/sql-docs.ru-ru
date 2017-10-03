@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Занятие 1–1. Запуск SQL Server Management Studio
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/21/2017
   * В более старых версиях Windows в меню **Пуск** наведите указатель на пункт **Все программы**, затем на пункт [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и выберите **SQL Server Management Studio**. Кроме того, в диалоговом окне **Выполнить** можно ввести **SSMS.exe** и нажать кнопку **ОК**.  
   
     > [!NOTE]  
-    >  Если среда SSMS не открывается, возможно, она не была успешно установлена. Установите среду SSMS из [Центра загрузки](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Среда SSMS не устанавливается автоматически вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Чтобы получить доступ ко всем возможностям, используйте последнюю версию.  
+    >  Если среда SSMS не открывается, возможно, она не была успешно установлена. Установите среду SSMS из [Центра загрузки](../download-sql-server-management-studio-ssms.md). Среда SSMS не устанавливается автоматически вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Чтобы получить доступ ко всем возможностям, используйте последнюю версию.  
   
 2.  В следующем шаге вы подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью компонента **Обозреватель объектов** среды SSMS. Если панель "Обозреватель объектов" не отображается, в меню **Вид** выберите пункт **Обозреватель объектов**. В меню обозревателя объектов нажмите кнопку **Подключиться** и выберите пункт **Ядро СУБД**. Должно открыться диалоговое окно **Соединение с сервером** . (Если вы ранее устанавливали среду SSMS, пользовательские параметры могут быть настроены так, что диалоговое окно **Соединение с сервером** появляется автоматически.)  
   

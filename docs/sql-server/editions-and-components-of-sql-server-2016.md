@@ -39,10 +39,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 49ad187a9cdee375d8e03dfabff37fc110b60d94
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: da8692d3cf786157c5e573e18df51e27c41c19c2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Выпуски и поддерживаемые функции SQL Server 2016
@@ -378,7 +378,7 @@ ms.lasthandoff: 09/21/2017
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|Нет|Нет| 
 |StreamInsight HA|StreamInsight Premium Edition|Нет|Нет|Нет|Нет|   
   
-> [![Download SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[Download the latest version of SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![Скачать SSMS](../ssms/download-sql-server-management-studio-ssms.md) **[Скачайте последнюю версию SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## <a name="see-also"></a>См. также:  
  [Спецификации SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

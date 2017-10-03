@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
@@ -355,7 +355,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * Устранена проблема, появившаяся в SSMS 16.5.2. Эта проблема приводила к раскрытию узла "Таблица", если в таблице было несколько разреженных столбцов.
 
-* Пользователи могут развертывать пакеты SSIS, содержащие диспетчер подключений OData, который используется для подключения ресурса Microsoft Dynamics AX или CRM Online к каталогу SSIS. Дополнительные сведения см. в разделе [Диспетчер соединений OData](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
+* Пользователи могут развертывать пакеты SSIS, содержащие диспетчер подключений OData, который используется для подключения ресурса Microsoft Dynamics AX или CRM Online к каталогу SSIS. Дополнительные сведения см. в разделе [Диспетчер соединений OData](../integration-services/connection-manager/odata-connection-manager.md).
 
 * Настройка Always Encrypted для существующей таблицы завершается с ошибками, в которых указаны посторонние объекты. [Идентификатор Connect 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * [Новый вариант аутентификации — **универсальная аутентификация Active Directory**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Это механизм аутентификации на основе маркеров, работающий с помощью Azure Active Directory. Он поддерживает многофакторную и встроенную аутентификацию, а также проверку пароля.
 
-* Новые шаблоны расширенных событий, соответствующие шаблонам SQL Server Profiler [(элемент Microsoft Connect № 2543925)](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
+* Новые шаблоны расширенных событий, соответствующие шаблонам SQL Server Profiler [(элемент Microsoft Connect № 2543925)](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * Новые диалоговые окна "Создание базы данных" и "Свойства базы данных" для баз данных Azure SQL.
 

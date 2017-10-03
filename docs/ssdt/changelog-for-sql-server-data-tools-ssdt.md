@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 45915dbb8ce5883c379c0cebdbc62e6ff43ede1a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
-Это журнал изменений для [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
 
@@ -368,7 +368,7 @@ Console.WriteLine(result.DeploymentReport);
 
 - **Управление версиями и нумерация выпусков.** Теперь версии помечаются числовым значением, а не по месяцам. Это соответствует новой политике SSMS и упрощает ситуации, в которых выходит несколько выпусков или исправлений в месяц. Текущий выпуск имеет версию 16.3. Это третье обновление после выпуска RTM. Исправление будет иметь версию от 16.3.1 и т. д., а следующее обновление (запланированное на следующий месяц) будет иметь версию 16.4.
 - **Службы Analysis Services. Обозреватель табличных моделей.** Обозреватель табличных моделей упрощает просмотр различных объектов метаданных в модели, например источников данных, таблиц, мер и связей. Он реализован как отдельное окно средств, которое можно отобразить, открыв меню "Вид" в Visual Studio, выбрав "Другие окна" и щелкнув "Обозреватель табличных моделей". Обозреватель табличных моделей по умолчанию отображается в области обозревателя решений на отдельной вкладке. Обозреватель табличных моделей упорядочивает объекты метаданных в древовидную структуру, которая сильно напоминает схему табличной модели 1200, а также обладает множеством новых возможностей.
-- **Средства работы с базами данных. Постоянное шифрование.** В этом выпуске представлены новые диалоговые окна [управления постоянно зашифрованным ключом](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted), упрощающие добавление главных ключей или ключей шифрования столбцов в проект базы данных либо добавление динамичной базы данных в обозревателе объектов SQL Server. Этот выпуск поддерживает сертификаты в хранилище сертификатов Windows. В будущих выпусках планируется реализовать поддержку Azure Key Vault и поставщиков CNG.
+- **Средства работы с базами данных. Постоянное шифрование.** В этом выпуске представлены новые диалоговые окна [управления постоянно зашифрованным ключом](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md), упрощающие добавление главных ключей или ключей шифрования столбцов в проект базы данных либо добавление динамичной базы данных в обозревателе объектов SQL Server. Этот выпуск поддерживает сертификаты в хранилище сертификатов Windows. В будущих выпусках планируется реализовать поддержку Azure Key Vault и поставщиков CNG.
     - При создании главного ключа или ключа шифрования столбцов изменения могут не отражаться в обозревателе объектов SQL Server сразу же после выбора команды "Обновить базу данных". Чтобы обойти эту проблему, обновите узел базы данных в обозревателе объектов SQL Server.
     - При попытке зашифровать столбец в таблице с данными из обозревателя объектов SQL Server может возникнуть сбой. Сейчас эта функция поддерживается только в проектах базы данных SSDT и SSMS. В будущем выпуске будет включена поддержка обозревателя объектов SQL Server.
 
@@ -456,7 +456,7 @@ Console.WriteLine(result.DeploymentReport);
 [Скачать SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md) (Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI))  
 [Новые возможности в SQL Server 2016 (ядро СУБД)](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Новые возможности в службах Analysis Services](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
-[Новые возможности служб Integration Services в SQL Server 2016](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
+[Новые возможности в службах Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
 
