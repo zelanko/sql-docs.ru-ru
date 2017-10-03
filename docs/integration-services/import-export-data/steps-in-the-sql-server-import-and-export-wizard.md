@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: dcd4329c30108f85174e65bb5e9f9dc9d7296bd0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 22d1f4b78fadab6d7b6659104b54a564f11da308
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Шаги в мастере экспорта и импорта SQL Server
@@ -60,7 +60,7 @@ ms.lasthandoff: 09/21/2017
 
 -   **Запустите мастер.** Если вы готовы запустить мастер и хотите знать, как это сделать, см. раздел [Запуск мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **Запустите мастер.** Если вы хотите запустить мастер, но нет [! ВКЛЮЧИТЬ[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+-     **Запустите мастер.** Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 
 

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 105f4ca9859a2c8f0d16cb5e961dc1e395a83b62
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9cf879fae78095f5fa6cb6f10d20cb0dfe6d12a1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
   
 * **Локальные файлы Excel**. Выберите документ Excel и укажите, какие листы необходимо импортировать. После импорта эти данные сохраняются в определении мобильного отчета. Чтобы обновить данные из исходного файла Excel, используйте команду **Обновить данные** в верхнем правом углу вкладки [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Дополнительные сведения о [подготовке данных Excel для мобильных отчетов SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **[! ВКЛЮЧИТЬ[PRODUCT_NAME](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).   
+* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]Общие наборы данных**: просмотрите список опубликованных наборов данных на сервере и выберите те, которые нужно добавить в мобильный отчет. Мобильные отчеты на основе данных сервера всегда остаются связанными с исходными наборами данных сервера и отражают последнее состояние данных на сервере. См. [список поддерживаемых источников данных](https://msdn.microsoft.com/library/ms159219.aspx).   
   
   См. дополнительные сведения о [получении данных из общих наборов в издателе мобильных отчетов](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   

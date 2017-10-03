@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 14a7f9cb0f9888339140a226d31368deaf7b32f5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql conf
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-**MSSQL conf** — это сценарий конфигурации, который устанавливается вместе с SQL Server, RC2 2017 г. для Red Hat Enterprise Linux, SUSE Linux Enterprise Server и Ubuntu. Эту программу можно использовать для настройки следующих параметров:
+**MSSQL conf** — это сценарий конфигурации, который устанавливается вместе с SQL Server 2017 г. для Red Hat Enterprise Linux, SUSE Linux Enterprise Server и Ubuntu. Эту программу можно использовать для настройки следующих параметров:
 
 |||
 |---|---|

@@ -22,10 +22,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 677198cbaa71a795d9e08d328b55d5d611901112
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 811b5df37a88fa7a03eec2b9bc05acb87ec67bcc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Табличное моделирование (учебник по Adventure Works)
@@ -68,7 +68,7 @@ ms.lasthandoff: 09/21/2017
 ## <a name="prerequisites"></a>Предварительные требования  
 Чтобы завершить этот учебник, необходимо иметь следующие компоненты:  
   
--   Последняя версия [! ВКЛЮЧИТЬ[ssBIDevStudioFull](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+-   Последняя версия [! ВКЛЮЧИТЬ[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 -   Последняя версия SQL Server Management Studio. [Получить последнюю версию](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   

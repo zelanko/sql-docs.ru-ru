@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6b712ca0975108b0b7fb4bfe0a5ffa50ce44c8fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Создание пакетов в SQL Server Data Tools
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/21/2017
  Видеоматериалы, которые демонстрируют способ создания базового пакета с помощью шаблона пакетов по умолчанию, см. в статье [Создание базового пакета (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## <a name="get-sql-server-data-tools"></a>Загрузка SQL Server Data Tools
-Инструкции по установке SQL Server Data Tools (SSDT) см. в разделе [Скачать SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Инструкции по установке SQL Server Data Tools (SSDT) см. в разделе [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="create-a-package-in-sql-server-data-tools-using-the-package-template"></a>Создание пакета в SQL Server Data Tools с использованием шаблона пакета  
   

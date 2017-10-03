@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: reporting-services
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 690b622224a31f4327b6dc199b1687f1726937c2
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: b4a8b5b8db36f4ae7418934311eb6706de0ea43a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Новые и недавно обновленные: службы Reporting Services для SQL Server
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *Диапазон обновлений дат:* &nbsp; **2017 г-07-18** &nbsp; - в - &nbsp; **2017 г-09-11**
+- *Диапазон обновлений дат:* &nbsp; **2017 г-09-11** &nbsp; - в - &nbsp; **2017 г-09-27**
 - *Предметной области:* &nbsp; **служб Reporting Services для SQL Server**.
 
 
@@ -44,10 +44,11 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="new-articles-created-recently"></a>Недавно созданные статьи
 
-Следующие ссылки на новые статьи, которые недавно были добавлены.
+Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-***На данный момент новых статей нет.***
+1. [Добавление веб-части средства просмотра отчетов на страницу SharePoint](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
+2. [Развертывание веб-части средства просмотра отчетов на сайте SharePoint](report-server-sharepoint/deploy-report-viewer-web-part.md)
 
 
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="updated-articles-with-excerpts"></a>Обновленные статьи с отрывками
 
-В этом разделе отображается отрывки обновлений, полученные из статей, в которых были недавно крупных обновлений.
+В этом разделе приводятся отрывки из статей, в которые недавно внесены значительные изменения.
 
 Отрывки отображаются отдельно от соответствующего семантического контекста. Кроме того, иногда фрагмент отделяется от синтаксиса разметки, окружающей саму статью. Таким образом, эти отрывки приводятся только для общего сведения. Они позволяют понять, стоит ли вам перейти по ссылке и прочитать всю статью полностью.
 
@@ -69,47 +70,17 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
+### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
 
-Compact представлены ссылки на обновленные статьи, которые перечислены в разделе отрывки.
-
-1. [Свойства сервера (страница «Дополнительно») — службы Reporting Services](#TitleNum_1)
+В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
 
 
 
-&nbsp;
 
 &nbsp;
 
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-server-properties-advanced-page---reporting-servicestoolsserver-properties-advanced-page-reporting-servicesmd"></a>1. &nbsp;[Свойства сервера (страница «Дополнительно») — службы Reporting Services](tools/server-properties-advanced-page-reporting-services.md)
-
-*Обновлено: 2017 г-08-25* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 122.  ms.author= "asaxton".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 92858a7e7239197af4ac2745ffc857d8c04f55cd e86bd4767f668b4ce80dc70056181d001f8e1b89  (PR=2953  ,  Filename=server-properties-advanced-page-reporting-services.md  ,  Dirpath=docs\reporting-services\tools\  ,  MergeCommitSha40=c003d58dd887ce1eddc142fa62f8050b73c0c935) -->
-
-
-
-**AccessControlAllowCredentials** указывает, может быть предоставлен ответа на запрос клиента, если установлен флаг «учетные данные» в значение true. Значение по умолчанию — **false**.
-
-**AccessControlAllowHeaders** список заголовков, которые дадут сервера, когда клиент делает запрос разделителями-запятыми. Это свойство может быть пустой строкой, указав * разрешает все заголовки.
-
-**AccessControlAllowMethods** список с разделителями запятыми HTTP-методов, позволяющих серверу, когда клиент делает запрос. По умолчанию используются значения (GET, PUT, POST, PATCH, DELETE), указав * позволит выполнять все методы.
-
-**AccessControlAllowOrigin** список источников, которым позволит серверу, когда клиент делает запрос разделителями-запятыми. Значение по умолчанию пусто, что запрещает все запросы, указав * будет разрешить все источники, если не заданы учетные данные; Если заданы учетные данные, должен быть указан явный список источников.
-
-**AccessControlExposeHeaders** список заголовков, сервер будет предоставлять клиентам разделителями-запятыми. Значение по умолчанию — пусто.
-
-**AccessControlMaxAge** указывает количество секунд, результаты Предварительный запрос можно кэшировать. Значение по умолчанию — 600 (10 минут).
-
-
+***Ни одна из статей в этой предметной области за последнее время изменениям не подвергалась.***
 
 
 
@@ -123,35 +94,35 @@ Compact представлены ссылки на обновленные ста
     Then run Run-533-*.BAT
 -->
 
-В этом разделе перечислены схожий статей для недавно обновлены статьи в других предметных областей, в общедоступный репозиторий GitHub.com: [MicrosoftDocs, sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
+Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (3 + 12): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новый + обновленные (5 + 0): **подключение к SQL** документы](../connect/new-updated-connect.md)
-- [Новый + обновленные (5 + 1): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
-- [Новый + обновленные (19 + 82): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
-- [Новый + обновленные (1 + 8): **Linux для SQL** документы](../linux/new-updated-linux.md)
-- [Новый + обновленные (12 + 1): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
-- [Новый + обновленные (0 + 1): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
-- [Новый + обновленные (7 + 1): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
-- [Новый + обновленные (1 + 1): **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
-- [Новый + обновленные (0 + 2): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
-- [Новый + обновленные (1 + 4): **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
-- [Новый + обновленные (4 + 1): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
-- [Новый + обновленные (0 + 1): **средства для SQL** документы](../tools/new-updated-tools.md)
+- [Новый + обновленные (0 + 1): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новый + обновленные (0 + 1): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (4 + 1): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
+- [Новый + обновленные (17 + 0): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
+- [Новый + обновленные (3 + 0): **Linux для SQL** документы](../linux/new-updated-linux.md)
+- [Новый + обновленные (1 + 1): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
+- [Новый + обновленные (2 + 0): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
+- [Новый + обновленные (0 + 1): **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
+- [Новый + обновленные (0 + 1): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новый + обновленные (0 + 0): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (0 + 0): **подключение к SQL** документы](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
-- [Новый + обновленные (0 + 0): **Master Data Services (MDS) для SQL** документы](../master-data-services/new-updated-master-data-services.md)
+- [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новый + обновленные (0 + 0): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
+- [Новый + обновленные (0 + 0): **средства для SQL** документы](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
 

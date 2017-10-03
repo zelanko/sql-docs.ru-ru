@@ -2,7 +2,7 @@
 title: "Какой &#39; новые возможности службы обучения машины | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Новые возможности службы обучения машины в SQL Server
@@ -30,16 +30,13 @@ ms.lasthandoff: 09/18/2017
 
 CATCH, то последняя объявление! [Python в 2017 г. SQL Server: усиленной в базе данных машинного обучения](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> Теперь можно запустить R в базах данных Azure SQL! Дополнительные сведения см. в разделе [в этой статье](r/using-r-in-azure-sql-database.md), или этот блог от команды разработчиков SQL Server: [Announcing Предварительная версия служб обучения компьютера с поддержкой R в базе данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
+
 ## <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 
 Сервер Microsoft машины обучения в SQL Server теперь предоставляет полную поддержку построения и развертывания решений машины обучения в R или Python. Вот краткое описание этой версии.
 
-> [!IMPORTANT]
-> 
-> Службы машины обучения, включая использование R или Python, в настоящее время не поддерживаются при запуске SQL Server в Linux или в базе данных Azure SQL. Поиск изменений в более поздней версии.
-> 
-> Собственный оценки с помощью функции ПРОГНОЗИРОВАНИЯ в настоящее время поддерживается в выпуске Linux.
- 
 ### <a name="in-database-python-integration"></a>Интеграция Python в базе данных
 
 Можно запустить Python в хранимых процедурах или Python удаленно с помощью имени компьютера SQL Server в контексте выполнения. Такая интеграция открывает новые пути для подавляющего сообщества разработчиков Python и специалистов по анализу данных, чтобы использовать возможности SQL Server. 
@@ -60,9 +57,13 @@ CATCH, то последняя объявление! [Python в 2017 г. SQL Ser
 
 + Поддержка Python в Microsoft машины обучения Server (изолированный)
 
-    2017 г. SQL Server включает в себя возможность установить автономная версия Microsoft машинного обучения платформы. С помощью сервера обучения машины, можно распространять и масштабировать кода R или Python без использования SQL Server.
+    2017 г. SQL Server включает в себя возможность установить автономную машины обучения Microsoft Server. С помощью сервера обучения машины, можно распространять и масштабировать кода R или Python без использования SQL Server.
 
-    Пример запущен сервер обучения Майкрософт машины Python разделе [публикации и использования кода Python](python/publish-consume-python-code.md).
+### <a name="linux-support"></a>Поддержка Linux
+
+Машинное обучение с помощью R или Python в базе данных в настоящее время не поддерживается в SQL Server в Linux. Найдите объявления в более поздней версии.
+
+Однако в Linux могут выполнять [оценки собственного](sql-native-scoring.md) с помощью функции ПРОГНОЗИРОВАНИЯ T-SQL. Оценки собственного позволяет оценки из предварительно обученные модели очень быстро, без вызова или даже требования среды выполнения R. Это означает, что SQL Server в Linux можно использовать для создания прогнозов очень быстро, для обслуживания клиентских приложений.
 
 ### <a name="new-algorithms"></a>Новые алгоритмы
 

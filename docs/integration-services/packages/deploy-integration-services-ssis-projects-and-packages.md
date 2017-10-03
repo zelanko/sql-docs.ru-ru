@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
@@ -117,7 +117,7 @@ ms.lasthandoff: 09/21/2017
   
              На странице **Выбор назначения** мастера вы можете создать или выбрать существующий файл.  
   
-             Чтобы обновить файлы пакета при преобразовании проекта, запустите **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Чтобы обновить файлы пакета, не выполняя преобразование проекта, запустите из среды ** ** Мастер преобразования проектов служб Integration Services [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем **Мастер обновления пакетов служб SSIS**. Если выполняется только обновление файлов пакета, следует убедиться в том, что внесенные изменения сохранены. В противном случае при преобразовании проекта в модель развертывания проекта несохраненные изменения в пакете преобразованы не будут.  
+             Чтобы обновить файлы пакета при преобразовании проекта, запустите **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Чтобы обновить файлы пакета, не выполняя преобразование проекта, запустите из среды ****  Мастер преобразования проектов служб Integration Services [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем **Мастер обновления пакетов служб SSIS**. Если выполняется только обновление файлов пакета, следует убедиться в том, что внесенные изменения сохранены. В противном случае при преобразовании проекта в модель развертывания проекта несохраненные изменения в пакете преобразованы не будут.  
   
      Дополнительные сведения об обновлении пакетов см. в разделах [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) и [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
@@ -271,7 +271,7 @@ static void Main()
   
 2.  Если проект и все пакеты прошли испытание на совместимость, нажмите кнопку **ОК** для преобразования пакета.  
   
-> **ПРИМЕЧАНИЕ.** Для преобразования проекта в модель развертывания проектов воспользуйтесь **мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+> **ПРИМЕЧАНИЕ.** Для преобразования проекта в модель развертывания проектов воспользуйтесь **мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Мастер развертывания служб Integration Services
   **Мастер развертывания служб Integration Services** поддерживает две модели развертывания:
@@ -309,7 +309,7 @@ static void Main()
  На этой странице можно просмотреть выбранные параметры. Вы можете изменить выбранные параметры, нажав кнопку **Назад**или кнопку любого из шагов на левой панели. Щелкните **Развернуть** , чтобы начать развертывание.  
   
 #### <a name="results"></a>Результаты  
- После завершения развертывания появится страница **Результаты** . На ней отображается состояние выполнения каждого действия. Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки. Нажмите кнопку **сохранить отчет... ** для сохранения результатов в XML-файла или нажмите кнопку **закрыть** для завершения работы мастера.
+ После завершения развертывания появится страница **Результаты** . На ней отображается состояние выполнения каждого действия. Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки. Нажмите кнопку **сохранить отчет...**  для сохранения результатов в XML-файла или нажмите кнопку **закрыть** для завершения работы мастера.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,7 +403,7 @@ static void Main()
 14. Нажмите кнопку **ОК** дважды для сохранения изменений.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур
-  При настройке [! ВКЛЮЧИТЬ[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+  После настройки проекта [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для использования модели развертывания проекта можно вызывать хранимые процедуры в каталоге служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , чтобы развернуть проект и выполнить пакеты. Дополнительные сведения о модели развертывания проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  Для развертывания и выполнения пакетов также можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в разделе **См. также** .  
   

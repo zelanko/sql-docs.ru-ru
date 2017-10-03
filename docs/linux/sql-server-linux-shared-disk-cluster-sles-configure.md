@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 02cf781a1035326ad5073f6a6d3219e8a7d9c070
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Настройка SLES общего диска кластера для SQL Server
@@ -23,9 +23,6 @@ ms.lasthandoff: 08/02/2017
 Это руководство содержит инструкции для создания общего диска кластера 2 узла для SQL Server в SUSE Linux Enterprise Server (SLES). Кластеризации уровень основан на SUSE [высокий уровень доступности расширения (для которых Имеется)](https://www.suse.com/products/highavailability) построены на основе [Pacemaker](http://clusterlabs.org/). 
 
 Дополнительные сведения о конфигурации кластера, параметры агента ресурсов, управления, советы и рекомендации см. в разделе [SUSE Linux Enterprise высокого уровня доступности расширения 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
-
-> [!NOTE]
-> На этом этапе интеграции SQL Server с Pacemaker в Linux не, а также как WSFC в Windows. Из в SQL, неизвестно о наличии кластера, все orchestration находится за пределами в и служба управляется как отдельный экземпляр Pacemaker. Кроме того имя виртуальной сети доступен только в WSFC, не имеет эквивалента в одной и той же в Pacemaker. Ожидается, что @@servername и sys.servers для возврата имени узла, а sys.dm_os_cluster_nodes кластера динамических административных представлений и sys.dm_os_cluster_properties нет записей. Чтобы использовать строку подключения, указывающая на строку имя сервера и не используйте IP-адрес, они будут иметь для регистрации в своих DNS-сервера IP-адрес, используемый для создания виртуального IP-ресурс (как описано ниже) с именем выбранного сервера.
 
 ## <a name="prerequisites"></a>Предварительные требования
 

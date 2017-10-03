@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3d2e6ea5bd6d2436946a015addc1e25f3dd98ce1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Свойства TCP/IP (вкладка "IP-адреса")
   Чтобы настроить параметры протокола TCP/IP для определенного IP-адреса, используйте диалоговое окно **Свойства TCP/IP (вкладка "IP-адреса")** . Для всех адресов одновременно посредством выбора пункта **Все IP** можно настроить только **Динамические TCP-порты** и **TCP-порт**.  
   
- Изменения вступят в силу после перезапуска SQL Server. Сведения о запуске и остановке службы обозревателя SQL см. в разделе [Запуск и остановка службы обозревателя SQL Server](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).  
+ Изменения вступят в силу после перезапуска SQL Server. Сведения о запуске и остановке службы обозревателя SQL см. в разделе [Запуск и остановка службы обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ## <a name="static-vs-dynamic-ports"></a>Статические и Динамические порты  
  Экземпляр SQL Server по умолчанию прослушивает входящие соединения через порт 1433. Порт может быть изменен по соображениям безопасности или в силу требований клиентского приложения. По умолчанию именованные экземпляры (включая SQL Server Express) настроены на прослушивание динамических портов. Чтобы настроить статический порт, оставьте поле **Динамические TCP-порты** пустым и укажите доступный номер порта в поле **TCP-порт** . Дополнительные сведения об открытии портов в брандмауэре см. «Настройка Брандмауэра Windows для разрешения доступа к SQL Server» в электронной документации по SQL Server.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Создание допустимой строки соединения с использованием протокола TCP/IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
+ [Создание допустимой строки соединения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Служба обозревателя SQL Server](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

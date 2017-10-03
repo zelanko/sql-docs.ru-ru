@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>конструктор служб SSIS
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>Вкладка «Параметры»  
  Параметры служб Integration Services (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время их выполнения. Можно создать параметры проекта на уровне проекта и параметры пакета на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется. Эта вкладка позволяет управлять параметрами пакета.  
   
- Дополнительные сведения о параметрах см. в разделе [Параметры служб Integration Services (SSIS)](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters).  
+ Дополнительные сведения о параметрах см. в разделе [Параметры служб Integration Services (SSIS)](integration-services-ssis-package-and-project-parameters.md).  
   
 > **ВАЖНО!**  Параметры доступны только для проектов, разработанных для модели развертывания проекта. Следовательно, вкладка «Параметры» появится только для пакетов, которые являются частью проекта, настроенного на использование модели развертывания проекта.  
   

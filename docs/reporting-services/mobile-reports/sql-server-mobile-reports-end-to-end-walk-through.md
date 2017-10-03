@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по применению конца в конец
@@ -37,11 +37,11 @@ ms.lasthandoff: 09/21/2017
 ## <a name="before-we-start"></a>Действия перед началом работы  
 Для начала вам потребуются такие продукты:  
   
-* Для создания источников данных и ключевых показателей эффективности и публиковать наборы данных и мобильные отчеты, необходим доступ к [! ВКЛЮЧИТЬ[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server).  
-* Чтобы [создавать общие наборы данных](/sql-docs/docs/reporting-services/install-windows/install-report-builder).  
+* Для создания источников данных и ключевых показателей эффективности и публиковать наборы данных и мобильные отчеты, необходим доступ к [! ВКЛЮЧИТЬ[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Чтобы [создавать общие наборы данных](../install-windows/install-report-builder.md).  
 * Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Сценарии и образцы баз данных AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
-*  OR: World Wide Importers образца базы данных, доступных из [образцы Microsoft SQL Server](/sql-docs/docs/sample/microsoft-sql-server-samples) страницы.
+*  OR: World Wide Importers образца базы данных, доступных из [образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md) страницы.
 * Для просмотра результата: 
   *   [зарегистрируйтесь в службе Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) и
   *  [скачайте мобильное приложение Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) на устройство под управлением iOS, Windows 10 или телефон с Android.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="create-a-shared-data-source"></a>Создание общего источника данных  
   
-Вы можете создать общий источник данных для мобильных отчетов из любого источника данных, поддерживаемого службами Reporting Services. В разделе [список поддерживаемых источников данных](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).  
+Вы можете создать общий источник данных для мобильных отчетов из любого источника данных, поддерживаемого службами Reporting Services. В разделе [список поддерживаемых источников данных](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. На веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] щелкните **Создать** > **Источник данных**.  
   
@@ -66,11 +66,11 @@ ms.lasthandoff: 09/21/2017
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-Дополнительные сведения об [общих источниках данных в службе Reporting Services](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs).  
+Дополнительные сведения об [общих источниках данных в службе Reporting Services](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
    
 ## <a name="shared-dataset">Создание общего набора данных</a>  
   
-Использовать существующий [! ВКЛЮЧИТЬ[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder), или запустить его на веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.   
+Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](https://msdn.microsoft.com/library/ff519551.aspx)или запустите его на веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.     
   
 1. Чтобы запустить [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , на веб-портале **щелкните** > **Создать** Отчет с разбивкой на страницы [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

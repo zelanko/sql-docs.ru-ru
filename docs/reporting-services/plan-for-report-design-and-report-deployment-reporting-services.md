@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0a59b89b558922f27c91fb2452df157f7baa3918
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 39bd1c3e734a91d2219b405febbccd508c08b78e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Планирование создания и развертывания отчетов | Службы Reporting Services
@@ -96,7 +96,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools для Visual Studio 2015](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+-   [SQL Server Data Tools для Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_reportviewer"></a> Элементы управления ReportViewer  
  Элемент управления ReportViewer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] может отображать RDLC-отчет в режиме локального предварительного просмотра или в удаленном режиме. Этот элемент управления может отображать RDL-файл, размещенный на сервере отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Следующая таблица содержит список версий языка определения отчетов, поддерживаемых элементами управления ReportViewer для локальной обработки (RDLC). Сводку по поддержке языка определения отчетов на стороне сервера см. в разделе [Сервер отчетов и поддержка RDL-схемы](#bkmk_report_server_rdl_schema_support).  

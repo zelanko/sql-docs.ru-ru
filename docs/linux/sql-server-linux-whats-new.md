@@ -1,19 +1,19 @@
 ---
-title: "Новые возможности для SQL Server 2017 г., RC1 для Linux | Документы Microsoft"
+title: "Новые возможности для SQL Server 2017 г. для Linux | Документы Microsoft"
 description: "В этом разделе представлены новые возможности в текущем выпуске 2017 г. SQL Server в Linux."
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности для 2017 г. SQL Server в Linux
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 В этом разделе описаны новые для SQL Server 2017 г., выполняемым на платформе Linux.
+
+## <a name="ga"></a>ГЛОБАЛЬНЫЙ АДМИНИСТРАТОР
+
+Выпуск общедоступной Availaiblity версии (GA) содержит следующие улучшения и исправления:
+
+- Файлы базы данных теперь может размещаться в NFS. Это устраняет проблемы со сценариями NFS общего диска с подключением удаленного хранилища для контейнера платформ и Монтирование папок для Docker для Windows.
+- Другие исправления различных ошибок и улучшения.
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ ms.lasthandoff: 09/21/2017
 [Улучшения по сравнению с пакетом обновления 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) в этом выпуске CTP1.1:
 - Клонирование базы данных для среды CLR, Filestream или Filetable, объектов в памяти и хранилища запросов.
 - **Создание** или **ALTER** операторы для программирования объектов.
-- Новый **используйте ПОДСКАЗКУ** запроса параметр, чтобы предоставить подсказки для обработчика запросов. Дополнительные сведения: [подсказки в запросе](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
+- Новый **используйте ПОДСКАЗКУ** запроса параметр, чтобы предоставить подсказки для обработчика запросов. Дополнительные сведения: [подсказки в запросе](../t-sql/queries/hints-transact-sql-query.md).
 - Учетная запись службы SQL теперь можно программным образом определять включить закрепление страниц в памяти и быстрой инициализации файлов разрешения.
 - Поддержка число файлов TempDB, размер файла и параметры увеличения файла.
 - Расширенные диагностики в showplan XML.

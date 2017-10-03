@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 105284d935888db46be8081bfca0c181eb920636
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 2a3ad57f9cd898d4c059df725b380be28622035e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
@@ -43,7 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 OPENQUERY ( linked_server ,'query' )  
 ```  
   
@@ -59,7 +58,7 @@ OPENQUERY ( linked_server ,'query' )
   
  Функцию OPENQUERY нельзя использовать для выполнения расширенных хранимых процедур на связанном сервере. Однако расширенную хранимую процедуру можно выполнить на связанном сервере с помощью четырехкомпонентного имени. Например:  
   
-```  
+```t-sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
@@ -73,7 +72,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. Выполнение передаваемого запроса UPDATE  
  В следующем примере используется передаваемый запрос `UPDATE` к связанному серверу, созданному в примере А.  
   
-```  
+```t-sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +80,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>Б. Выполнение передаваемого запроса INSERT  
  В следующем примере используется передаваемый запрос `INSERT` к связанному серверу, созданному в примере А.  
   
-```  
+```t-sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,10 +88,17 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>В. Выполнение передаваемого запроса DELETE  
  В следующем примере используется передаваемый запрос `DELETE` для удаления строки, созданной в примере В.  
   
-```  
+```t-sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
+### <a name="d-executing-a-select-pass-through-query"></a>Г. Выполнение передаваемого запроса SELECT  
+ В следующем примере используется передаваемый `SELECT` запрос, чтобы выбрать строки, созданной в примере в.  
+  
+```t-sql  
+SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
+```  
+    
 ## <a name="see-also"></a>См. также:  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
@@ -107,3 +113,4 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
+

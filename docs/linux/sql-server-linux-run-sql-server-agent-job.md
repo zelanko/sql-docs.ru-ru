@@ -4,146 +4,203 @@ description: "Этот учебник показывает, как для зап
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: bd57860078a1dec510e0c8547a97291975a4d330
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск задания агента SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Задания SQL Server используются для выполнения регулярных та же последовательность команд в базе данных SQL Server. В этом разделе приведены примеры создания задания агента SQL Server для Linux с помощью Transact-SQL и SQL Server Management Studio (SSMS).
+Задания SQL Server используются для выполнения регулярных та же последовательность команд в базе данных SQL Server. Этот учебник пример того, как создать задание агента SQL Server в Linux с помощью Transact-SQL и SQL Server Management Studio (SSMS).
 
-Известные проблемы с агентом SQL Server в этом выпуске см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+> [!div class="checklist"]
+> * Установка агента SQL Server в Linux
+> * Создать новое задание для создания ежедневных резервных копий базы данных
+> * Планирование и запуск задания
+> * Повторите эти действия в среде SSMS (необязательно)
 
-## <a name="prerequisites"></a>Предварительные требования 
-Для создания и запуска заданий, необходимо сначала установить службу агента SQL Server. Инструкции по установке см. в разделе [раздел установки агента SQL Server](sql-server-linux-setup-sql-agent.md).
+Известные проблемы с агентом SQL Server в Linux см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+
+## <a name="prerequisites"></a>Предварительные требования
+
+С этим учебником требуются следующие необходимые компоненты:
+
+* Компьютер Linux со следующими компонентами:
+  * 2017 г. SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), или [Ubuntu](quickstart-install-connect-ubuntu.md)) с помощью средства командной строки.
+
+Следующие компоненты являются необязательными.
+
+* Компьютер Windows с помощью SSMS:
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) для дополнительных шагов SSMS.
+
+## <a name="install-sql-server-agent"></a>Установка агента SQL Server
+
+Чтобы использовать агент SQL Server в Linux, необходимо сначала установить **mssql-server-agent** пакета на компьютере, на котором уже установлен 2017 г. SQL Server.
+
+1. Установка **mssql-server-agent** с команду, соответствующую операционной системе Linux.
+
+   | Платформа | Выполнение команд установки |
+   |-----|-----|
+   | RHEL | `sudo yum install mssql-server-agent` |
+   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
+   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+
+1. Перезапустите SQL Server с помощью следующей команды:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a name="create-a-sample-database"></a>Создание образца базы данных
+
+Выполните следующие действия для создания образца базы данных с именем **SampleDB**. Эта база данных используется для ежедневного задания резервного копирования.
+
+1. На компьютере Linux откройте сеанс терминала bash.
+
+1. Используйте **sqlcmd** запустите Transact-SQL **CREATE DATABASE** команды.
+
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'CREATE DATABASE SampleDB'
+   ```
+
+1. Убедитесь, что база данных создается путем перечисления баз данных на сервере.
+
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'SELECT Name FROM sys.Databases'
+   ```
 
 ## <a name="create-a-job-with-transact-sql"></a>Создание задания с помощью Transact-SQL
 
-Ниже приведен пример того, как создать задание агента SQL Server в Linux с помощью команды Transact-SQL. Эти задания в этом примере выполняется ежедневного резервного копирования на образце базы данных `SampleDB`. 
-
+Следующие шаги создания задания агента SQL Server в Linux с помощью команды Transact-SQL. Задание выполняется ежедневной резервной копии образца базы данных **SampleDB**.
 
 > [!TIP]
 > Можно использовать любой клиент T-SQL для выполнения этих команд. Например, в Linux можно использовать [sqlcmd](sql-server-linux-setup-tools.md) или [кода Visual Studio](sql-server-linux-develop-use-vscode.md). С удаленного сервера Windows можно выполнять запросы в SQL Server Management Studio (SSMS) или использовать пользовательский интерфейс для управления заданиями, как описано в следующем разделе.
 
-1. **Создать задание**. В следующем примере используется [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) Создание задания с именем `Daily AdventureWorks Backup`.
+1. Используйте [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) Создание задания с именем `Daily SampleDB Backup`.
 
-    ```tsql
-     -- Adds a new job executed by the SQLServerAgent service 
-     -- called 'Daily SampleDB Backup'  
-     CREATE DATABASE SampleDB
-     USE msdb ;  
-     GO  
-     EXEC dbo.sp_add_job  
-         @job_name = N'Daily SampleDB Backup' ;  
-     GO
-
-    ```
-
-2. **Добавьте один или несколько шагов задания**. В следующем сценарии Transact-SQL используется [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) Создание шага задания, которое создает резервную копию `AdventureWlorks2014` базы данных.
-
-    ```tsql
-    -- Adds a step (operation) to the job  
-    EXEC sp_add_jobstep  
-      @job_name = N'Daily SampleDB Backup',  
-      @step_name = N'Backup database',  
-      @subsystem = N'TSQL',  
-      @command = N'BACKUP DATABASE SampleDB TO DISK = \
-      N''/var/opt/mssql/data/SampleDB.bak'' WITH NOFORMAT, NOINIT, \
-              NAME = ''SampleDB-full'', SKIP, NOREWIND, NOUNLOAD, STATS = 10',   
-      @retry_attempts = 5,  
-      @retry_interval = 5 ;  
-    GO
-    ```
-
-3. **Создание расписания задания**. В этом примере используется [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) Создание ежедневного расписания для задания.
-
-    ```tsql
-    -- Creates a schedule called 'Daily'  
-    EXEC dbo.sp_add_schedule  
-     @schedule_name = N'Daily SampleDB',  
-     @freq_type = 4,  
-     @freq_interval = 1,
-     @active_start_time = 233000 ;  
-   USE msdb ;  
+   ```sql
+   -- Adds a new job executed by the SQLServerAgent service
+   -- called 'Daily SampleDB Backup'
+   USE msdb ;
    GO
-    ```
+   EXEC dbo.sp_add_job
+      @job_name = N'Daily SampleDB Backup' ;
+   GO
+   ```
 
-4. **Присоединить расписание заданий для задания**. Используйте [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) присоединение расписания задания к заданию.
+1. Вызовите [sp_add_jobstep](../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md) Создание шага задания, которое создает резервную копию `SampleDB` базы данных.
 
-    ```tsql
-    -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
-    EXEC sp_attach_schedule  
-     @job_name = N'Daily SampleDB Backup',  
-     @schedule_name = N'Daily SampleDB';  
-    GO
-    ```
+   ```sql
+   -- Adds a step (operation) to the job
+   EXEC sp_add_jobstep
+      @job_name = N'Daily SampleDB Backup',
+      @step_name = N'Backup database',
+      @subsystem = N'TSQL',
+      @command = N'BACKUP DATABASE SampleDB TO DISK = \
+         N''/var/opt/mssql/data/SampleDB.bak'' WITH NOFORMAT, NOINIT, \
+         NAME = ''SampleDB-full'', SKIP, NOREWIND, NOUNLOAD, STATS = 10',
+      @retry_attempts = 5,
+      @retry_interval = 5 ;
+   GO
+   ```
 
-5. **Назначение задания на целевом сервере**. Назначение задания на целевом сервере с [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). В этом примере локальный сервер является целевым.
+1. Затем создайте ежедневного расписания для задания с [sp_add_schedule](../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md).
 
-    ```tsql
-    EXEC dbo.sp_add_jobserver  
-     @job_name = N'Daily SampleDB Backup',  
-     @server_name = N'(LOCAL)';  
-    GO
-    ```
-6. **Запустить задание**. 
+   ```sql
+   -- Creates a schedule called 'Daily'
+   EXEC dbo.sp_add_schedule
+      @schedule_name = N'Daily SampleDB',
+      @freq_type = 4,
+      @freq_interval = 1,
+      @active_start_time = 233000 ;
+   USE msdb ;
+   GO
+   ```
 
-    ```tsql
-    EXEC dbo.sp_start_job N' Daily SampleDB Backup' ;
-    GO
-    ```
+1. Присоединить расписание задания к заданию с [sp_attach_schedule](../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md).
+
+   ```sql
+   -- Sets the 'Daily' schedule to the 'Daily SampleDB Backup' Job
+   EXEC sp_attach_schedule
+      @job_name = N'Daily SampleDB Backup',
+      @schedule_name = N'Daily SampleDB';
+   GO
+   ```
+
+1. Используйте [sp_add_jobserver](../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md) для назначения задания на целевом сервере. В этом примере целью является локальный сервер.
+
+   ```sql
+   EXEC dbo.sp_add_jobserver
+      @job_name = N'Daily SampleDB Backup',
+      @server_name = N'(LOCAL)';
+   GO
+   ```
+1. Запустить задание с [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).
+
+   ```sql
+   EXEC dbo.sp_start_job N' Daily SampleDB Backup' ;
+   GO
+   ```
+
 ## <a name="create-a-job-with-ssms"></a>Создание задания с помощью SSMS
 
 Можно также создать и управлять заданиями удаленно с помощью SQL Server Management Studio (SSMS) в Windows.
 
-1. **Запустите SSMS в Windows и подключитесь к экземпляру SQL Server для Linux.** Дополнительные сведения см. в разделе [управления SQL Server в Linux с помощью SSMS](sql-server-linux-develop-use-ssms.md).
+1. Запустите SSMS в Windows и подключитесь к экземпляру SQL Server для Linux. Дополнительные сведения см. в разделе [управления SQL Server в Linux с помощью SSMS](sql-server-linux-develop-use-ssms.md).
 
-1. **Создать новую базу данных с именем SampleDB**.
+1. Убедитесь, что вы создали образец базы данных с именем **SampleDB**.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
-2. **Убедитесь, что агент SQL был установлен и настроен правильно.** Найдите знак «плюс» рядом с агентом SQL Server в обозревателе объектов. Если агент SQL Server не установлен, в разделе [установки агента SQL Server в Linux](sql-server-linux-setup-sql-agent.md).
+1. Убедитесь, что агент SQL выполнена [установлен](sql-server-linux-setup-sql-agent.md) и правильно настроен. Найдите знак «плюс» рядом с агентом SQL Server в обозревателе объектов. Если агент SQL Server не включена, попробуйте перезагрузить **mssql server** службы в Linux.
 
-    ![Убедитесь, что был установлен агент SQL Server](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png)
+   ![Убедитесь, что был установлен агент SQL Server](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png)
 
+1. Создайте новое задание.
 
-3. **Создайте новое задание.**
+   ![Создать новое задание](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-2.png)
 
-    ![Создать новое задание](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-2.png)
+1. Имя задания и создайте вашего шаг задания.
 
+   ![Создание шага задания](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-3.png)
 
-4. **Имя задания и создайте вашего шаг задания.**
+1. Укажите, какие подсистемы, которые вы хотите использовать, и действия необходимо выполнить шаг задания.
 
-    ![Создание шага задания](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-3.png)
+   ![Задание подсистемы](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-4.png)
 
+   ![Действие шага задания](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-5.png)
 
-5. **Укажите, какие подсистемы, которые вы хотите использовать, и действия необходимо выполнить шаг задания.**
+1. Создайте новое расписание задания.
 
-    ![Задание подсистемы](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-4.png)
+   ![расписание заданий;](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-    ![Действие шага задания](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-5.png)
+   ![расписание заданий;](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
-6. **Создайте новое расписание задания.**
-
-    ![расписание заданий;](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
-  
-    ![расписание заданий;](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
-
-7. **Запустите задание.**
+1. Запустите задание.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о создании и управлении заданий агента SQL Server см. в разделе [агента SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent).
+В этом учебнике вы узнали, как:
+
+> [!div class="checklist"]
+> * Установка агента SQL Server в Linux
+> * Использование Transact-SQL и системные хранимые процедуры для создания заданий
+> * Создать задание, выполняющее ежедневное резервное копирование базы данных
+> * Использовать пользовательский Интерфейс SSMS для создания и управления заданиями
+
+Далее изучение других возможностей для создания и управления заданиями.
+
+> [!div class="nextstepaction"]
+>[Документация по SQL Server, агент](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
 

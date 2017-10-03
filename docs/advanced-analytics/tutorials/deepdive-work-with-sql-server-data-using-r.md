@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6aa23c7a8f2daefcf0b138bb39926eb2e377c22b
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6db9cc485778e4074b5b648b23572edee3a0f42e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="work-with-sql-server-data-using-r"></a>Работа с данными SQL Server, с помощью R
@@ -100,7 +100,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 
 - **Как проверить подключение к базе данных и запросы SQL?**
   
-    Перед выполнением кода на языке R с помощью сервера может потребоваться проверить, доступна ли база данных из среды разработки R. [Обозреватель сервера Visual Studio](https://msdn.microsoft.com/library/x603htbk.aspx) и [среда SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) являются бесплатными средствами с эффективными возможностями подключения к базам данных и функциями управления.
+    Перед выполнением кода на языке R с помощью сервера может потребоваться проверить, доступна ли база данных из среды разработки R. [Обозреватель сервера Visual Studio](https://msdn.microsoft.com/library/x603htbk.aspx) и [среда SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) являются бесплатными средствами с эффективными возможностями подключения к базам данных и функциями управления.
   
     Если вы не хотите устанавливать дополнительные средства управления базами данных, то можете создать тестовое подключение к экземпляру SQL Server с помощью компонента [Администратор источников данных ODBC](https://msdn.microsoft.com/library/ms714024.aspx) на панели управления. Если база данных настроена правильно и вы ввели верные имя пользователя и пароль, то вы увидите созданную базу данных и сможете выбрать ее в качестве базы данных по умолчанию.
   

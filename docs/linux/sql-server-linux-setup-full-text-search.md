@@ -4,16 +4,16 @@ description: "В этом разделе описывается установк
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1f19074764820bddf2cc2a0e8fe4204120a5041d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка SQL Server Full-Text Search в Linux
@@ -86,7 +86,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>Поддерживаемые языки
 
-Компонент Full-Text Search использует [средства разбиения по словам](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) , определяющие, как определить отдельные слова на основе языка. Можно получить список средств разбиения по словам, зарегистрированных с помощью запроса к **sys.fulltext_languages** представления каталога. Средства разбиения по словам для следующих языков устанавливаются вместе с SQL Server, RC2 2017 г.:
+Компонент Full-Text Search использует [средства разбиения по словам](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) , определяющие, как определить отдельные слова на основе языка. Можно получить список средств разбиения по словам, зарегистрированных с помощью запроса к **sys.fulltext_languages** представления каталога. Средства разбиения по словам для следующих языков устанавливаются вместе с SQL Server 2017 г.:
 
 | Язык | КОД языка |
 |---|---|
@@ -146,9 +146,9 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a>Фильтры
 
-Компонент Full-Text Search также работает с текстом, хранящихся в двоичные файлы. Но в этом случае требуется установленный фильтр для обработки файла. Дополнительные сведения о фильтрах см. в разделе [Настройка и управление фильтрами для поиска](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
+Компонент Full-Text Search также работает с текстом, хранящихся в двоичные файлы. Но в этом случае требуется установленный фильтр для обработки файла. Дополнительные сведения о фильтрах см. в разделе [Настройка и управление фильтрами для поиска](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»**. Для SQL Server, RC2 2017 г. устанавливаются следующие фильтры:
+Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»**. Для SQL Server 2017 г устанавливаются следующие фильтры:
 
 | Название компонента | Идентификатор класса | Version |
 |---|---|---|
@@ -258,37 +258,28 @@ sudo zypper update mssql-server-fts
 |XML | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Семантический поиск
-[Семантический поиск](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) лежит компонент Full-Text Search для извлечения и индексирования статистически соответствующих *ключевых фраз*. Это позволяет запрашивать значения в документах в базе данных. Это также позволяет найти документы, которые похожи.
+[Семантический поиск](../relational-databases/search/semantic-search-sql-server.md) лежит компонент Full-Text Search для извлечения и индексирования статистически соответствующих *ключевых фраз*. Это позволяет запрашивать значения в документах в базе данных. Это также позволяет найти документы, которые похожи.
 
-Чтобы использовать семантического поиска, необходимо сначала загрузить и прикрепить [базы данных статистики семантики языка](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
+Для использования семантического поиска, необходимо сначала восстановить базу данных семантической статистики языка на компьютере.
 
-1. На компьютере с ОС Windows [загрузки. MSI-файл для базы данных статистики семантики языка](https://www.microsoft.com/download/details.aspx?id=54277).
+1. С помощью средства, такие как [sqlcmd](sql-server-linux-setup-tools.md), для выполнения следующей команды Transact-SQL на экземпляре SQL Server для Linux. Эта команда восстанавливает базу данных статистики языка.
 
-    > [!NOTE]
-    > В это время загрузки для базы данных. MSI-файл, поэтому компьютером Windows необходима для выполнения этого шага.
+   ```sql
+   RESTORE DATABASE [semanticsdb] FROM
+   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
+   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   GO
+   ```
 
-2. Запустите. MSI-файл, чтобы извлечь базу данных и файлов журнала.
+   > [!NOTE]
+   > При необходимости измените пути в предыдущей команды RESTORE для настройки конфигурации.
 
-3. Переместите файлы баз данных и журналов на компьютер Linux SQL Server.
+1. Выполните следующую команду Transact-SQL, чтобы зарегистрировать базу данных статистики семантики языка.
 
-    > [!TIP]
-    > Руководство для перемещения файлов из Windows, Linux см. в разделе [передачи файла в ОС Linux](sql-server-linux-migrate-restore-database.md#scp).
-
-4. Выполните следующую команду Transact-SQL на экземпляре SQL Server для Linux для присоединения базы данных статистики языка.
-
-    ```tsql
-    CREATE DATABASE semanticsdb  
-            ON ( FILENAME = N'var/opt/mssql/data/semanticsdb.mdf' )  
-            LOG ON ( FILENAME = N'var/opt/mssql/data/semanticsdb_log.ldf' )  
-            FOR ATTACH;  
-    GO  
-    ```
-
-5. Выполните следующую команду Transact-SQL, чтобы зарегистрировать базу данных статистики семантики языка.
-
-    ```tsql
+    ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
-    GO  
+    GO
     ```
 
 ## <a name="next-steps"></a>Следующие шаги

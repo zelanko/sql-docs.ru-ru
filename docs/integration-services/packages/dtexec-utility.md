@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
@@ -66,7 +66,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> Вопросы установки на 64-разрядные компьютеры  
  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают 64-разрядную версию программы **dtexec** (dtexec.exe). Если какие-либо пакеты нужно запустить в 32-разрядном режиме, следует установить 32-разрядную версию программы **dtexec** . Чтобы установить 32-разрядную версию программы **dtexec** , во время установки необходимо выбрать клиентские средства или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
- По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Как правило, является путь к каталогу 32-разрядных * \<диска >*: \Program \Microsoft SQL Server\110\DTS\Binn файлы (x86), а путь к каталогу 64-разрядных * \<диска >*: \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Как правило, является путь к каталогу 32-разрядных  *\<диска >*: \Program \Microsoft SQL Server\110\DTS\Binn файлы (x86), а путь к каталогу 64-разрядных  *\<диска >*: \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **ПРИМЕЧАНИЕ.** Если для запуска программы используется агент SQL Server, то он автоматически использует 64-разрядную версию программы. Чтобы определить точное расположение исполняемого файла программы, агент SQL Server использует реестр, а не переменную среды PATH.  
   
@@ -217,11 +217,11 @@ dtexec /option [value] [/option [value]]...
   
      Некоторые примеры использования параметра **/ConsoleLog** см. в разделе **Примечания** .  
   
--   **/D[служб терминалов](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+--   **/D [ts]** *путь к пакету*: (необязательно). Загружает пакет из хранилища пакетов служб SSIS. Пакеты, которые хранятся в хранилище пакетов служб SSIS, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
-     Аргумент *package_path* указывает относительный путь к пакету служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , начиная с корневой папки хранилища пакетов служб SSIS, а также содержит имя пакета [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Если путь или имя файла, указанные в аргументе *package_path* , содержат пробел, то аргумент *package_path* необходимо заключить в кавычки.  
+     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     Параметр **/DTS** не может использоваться одновременно с параметром **/File** или **/SQL** . Если указано несколько параметров, то выполнение программы **dtexec** завершится с ошибкой.  
+     The **/DTS** option cannot be used together with the **/File** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/De[crypt]**  *password*(необязательный). Задает пароль для расшифровки, используемый при загрузке пакета с шифрованием пароля.  
   
@@ -233,7 +233,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/ Dump** *код ошибки*: по умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке * \<диска >*: \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/ Dump** *код ошибки*: по умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке  *\<диска >*: \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **ПРИМЕЧАНИЕ.** Файлы дампа отладки могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
   
@@ -245,7 +245,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**(необязательный). Создает отладочные файлы дампа MDMP и TMP, если во время работы пакета происходит любая ошибка.  
   
-     По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке * \<диска >*: папка \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке  *\<диска >*: папка \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **ПРИМЕЧАНИЕ.** Файлы дампа отладки могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
   
@@ -262,10 +262,9 @@ dtexec /option [value] [/option [value]]...
      Используйте параметр **/Env[Reference]** вместе с параметрами **/ISServer** и **/Server** .  
   
      Этот параметр используется агентом SQL Server.  
-  
--   ** /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
-  
-     Аргумент *filespec* определяет путь и имя файла пакета. Можно указывать либо путь в формате UNC, либо локальный путь. Если путь или имя файла, указанные в аргументе *filespec* , содержат пробел, то аргумент *filespec* необходимо заключить в кавычки.  
+  --   **/F [ile]** *filespec*: (необязательно). Производит загрузку пакета, сохраненного в файловой системе. Пакеты, которые сохраняются в файловой системе, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+
+  Аргумент *filespec* определяет путь и имя файла пакета. Можно указывать либо путь в формате UNC, либо локальный путь. Если путь или имя файла, указанные в аргументе *filespec* , содержат пробел, то аргумент *filespec* необходимо заключить в кавычки.  
   
      Параметр **/File** не может использоваться одновременно с параметром **/DTS** или **/SQL** . Если указано несколько параметров, то выполнение программы **dtexec** завершится с ошибкой.  
   
@@ -413,21 +412,21 @@ dtexec /option [value] [/option [value]]...
   
      Параметр **/Ser[ver]** необходим при указании параметра **/ISServer** .  
   
--   ** /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+--   **/SQ [L]** *путь к пакету*: загружает пакет, хранящийся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в **msdb** базы данных. Пакеты, которые хранятся в базе данных **msdb** , развертываются с помощью модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
-     Аргумент *package_path* задает имя извлекаемого пакета. В случае наличия в пути папок их имена должны завершаться обратной косой чертой ("\\"). Значение *package_path* может быть заключено в кавычки. Если путь или имя файла, указанные в аргументе *package_path* , содержат пробел, то аргумент *package_path* необходимо заключить в кавычки.  
+     The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     Параметры **/User**, **/Password**и **/Server** можно использовать совместно с параметром **/SQL** .  
+     You can use the **/User**, **/Password**, and **/Server** options together with the **/SQL** option.  
   
-     В случае отсутствия параметра **/User** для доступа к пакету используется проверка подлинности Windows. При использовании параметра **/User** указанное имя входа **/User** рассматривается как относящееся к проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
-     Параметр **/Password** используется только совместно с параметром **/User** . В случае использования параметра **/Password** доступ к пакету осуществляется с применением указанных имени пользователя и пароля. При отсутствии параметра **/Password** будет использоваться пустой пароль.  
+     The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
-    > **ВАЖНО!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     При отсутствии параметра **/Server** подразумевается использование локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию.  
+     If the **/Server** option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
   
-     Параметр **/SQL** не может использоваться одновременно с параметром **/DTS** или **/File** . Если указано несколько параметров, то выполнение программы **dtexec** завершится с ошибкой.  
+     The **/SQL** option cannot be used together with the **/DTS** or **/File** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/Su[m]**(необязательный). Выводит добавочный счетчик, содержащий количество строк, которые будут получены следующим компонентом.  
   

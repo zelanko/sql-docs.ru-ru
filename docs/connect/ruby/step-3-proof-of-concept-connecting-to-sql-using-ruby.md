@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a645a57cac6eef7507aed9ea81df9fc75eb32dd4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 445782c1958ee5344f64b365dd81725c5ac8e6f6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Шаг 3: Эксперимент подключение к SQL с помощью Ruby
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="step-3--insert-a-row"></a>Шаг 3: Вставьте строку  
   
-В этом примере показано, как выполнить [вставить](/sql-docs/docs/t-sql/statements/insert-transact-sql) инструкции безопасно, передавать параметры, которые защитить приложения от [атаки SQL injection](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) значение.    
+В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передавать параметры, которые защитить приложения от [атаки SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
   
 Чтобы использовать TinyTDS с Azure, рекомендуется выполнить несколько `SET` инструкции для изменения способа обработки определенные сведения в текущем сеансе. Рекомендуется `SET` инструкции приведены в следующем образце кода. Например `SET ANSI_NULL_DFLT_ON` позволит новых столбцов, созданных допустимы значения null, даже если допустимость столбца не указан явно.  
   

@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Работа с входными и выходными данными (R в быстрый запуск SQL Server)
 
-При необходимости выполнять код R в SQL Server требуется включить в системной хранимой процедуры, R-скрипта [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Эта хранимая процедура используется для запуска среды выполнения R в контексте SQL Server, который передает данные в R, безопасно управляет пользовательскими сеансами R и возвращает результаты клиенту.
+При необходимости выполнять код R в SQL Server требуется включить в системной хранимой процедуры, R-скрипта [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Эта хранимая процедура используется для запуска среды выполнения R в контексте SQL Server, который передает данные в R, безопасно управляет пользовательскими сеансами R и возвращает результаты клиенту.
 
 ## <a name="bkmk_SSMSBasics"></a>Создание простых тестовых данных
 

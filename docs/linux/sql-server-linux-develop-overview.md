@@ -4,24 +4,24 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 7fcd3350796d88d02011f0d45e666851d69cfd78
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Как приступить к разработке приложений для SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Можно создавать приложения, подключения и использования RC2 2017 г. SQL Server в Linux из различных языков программирования, например C#, Java, Node.js, PHP, Python, Ruby и C++. Можно также использовать популярных веб-платформ и платформ объекта реляционного сопоставления (ORM).
+Можно создавать приложения, подключения и использования 2017 г. SQL Server в Linux из различных языков программирования, например C#, Java, Node.js, PHP, Python, Ruby и C++. Можно также использовать популярных веб-платформ и платформ объекта реляционного сопоставления (ORM).
 
 > [!TIP]
 > Эти же параметры разработки также обеспечивают целевого SQL Server на других платформах. Приложение можно настроить SQL Server, работающий локально или в облаке, в Linux, Windows или Docker на macOS. Или можно выбрать целевую базу данных SQL Azure и хранилище данных SQL Azure.
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 - Попробуйте использовать примеры кода.
 
 > [!TIP]
-> Если вы хотите разрабатывать приложения для RC2 2017 г. SQL Server на Docker, взгляните на **macOS** учебники.
+> Если вы хотите разрабатывать приложения для 2017 г. SQL Server на Docker, взгляните на **macOS** учебники.
 
 ## <a name="create-new-applications"></a>Создание нового приложения
 
@@ -43,11 +43,11 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="use-existing-applications"></a>Использовать существующие приложения
 
-При наличии существующей базы данных приложения можно просто изменить строку соединения целевой RC2 2017 г. SQL Server в Linux. Убедитесь в том прочитать о [известные проблемы](sql-server-linux-release-notes.md) в RC2 2017 г. SQL Server в Linux.
+При наличии существующей базы данных приложения можно просто изменить строку соединения целевой 2017 г. SQL Server в Linux. Убедитесь в том прочитать о [известные проблемы](sql-server-linux-release-notes.md) в 2017 г. SQL Server в Linux.
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Используйте существующие средства SQL в Windows с помощью SQL Server в Linux
 
-Средства, которые в данный момент выполняются на Windows, таких как среда SSMS, SSDT и PowerShell, также работают с RC2 2017 г. SQL Server в Linux. Несмотря на то, что они работают не под управлением изначально в Linux, вы можете управлять удаленным экземплярам SQL Server в Linux. 
+Средства, которые в данный момент выполняются на Windows, таких как среда SSMS, SSDT и PowerShell, также работают с 2017 г. SQL Server в Linux. Несмотря на то, что они работают не под управлением изначально в Linux, вы можете управлять удаленным экземплярам SQL Server в Linux. 
 
 См. Дополнительные сведения в следующих разделах:
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/02/2017
 
 Вы можете использовать новый [mssql расширения](https://aka.ms/mssql-marketplace) для [кода Visual Studio](https://code.visualstudio.com) на macOS, Windows и Linux. Пошаговое руководство см. в следующем учебнике:
 
-- [Используйте Visual Studio код](sql-server-linux-develop-use-vscode.md)
+- [Использование Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
 Можно также использовать новые средства командной строки, которые являются собственными для Linux. Эти средства включают следующие:
 

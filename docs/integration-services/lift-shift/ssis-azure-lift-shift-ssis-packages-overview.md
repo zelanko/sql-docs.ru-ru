@@ -1,6 +1,6 @@
 ---
 title: "Точность прогноза и сдвинуть рабочих нагрузок SQL Server Integration Services в облаке | Документы Microsoft"
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 3d22689e440b2a498f76d43ede74ad3f6f756796
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Усилие SQL Server Integration Services рабочих нагрузок в облако
@@ -48,14 +48,20 @@ ms.lasthandoff: 09/25/2017
 
 Фабрика данных также поддерживает другие типы интеграции среды выполнения. Дополнительные сведения о IR служб SSIS и других типов среды выполнения интеграции см. в разделе [выполнения интеграции в фабрике данных Azure](/azure/data-factory/concepts-integration-runtime.md).
 
-## <a name="package-features-on-azure"></a>Компоненты пакета в Azure
+## <a name="prerequisites"></a>Предварительные требования
+Возможности, описанные в этом разделе требуется SQL Server Data Tools (SSDT) 17,2 или более поздней версии, но не требуют 2017 г. SQL Server или SQL Server 2016. При развертывании пакетов в Azure, мастер развертывания пакетов всегда обновляет пакеты в формате последней версии пакета.
+
+Дополнительные сведения о предварительных требованиях в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+
+## <a name="ssis-features-on-azure"></a>Компоненты служб SSIS в Azure
+
 При подготовке экземпляра базы данных SQL для размещения SSISDB устанавливаются пакет дополнительных компонентов Azure для служб SSIS и распространяемый пакет доступа. Эти компоненты обеспечивают подключение к файлам Excel и Access и к различным источникам данных Azure. В настоящее время невозможно установить компоненты сторонних разработчиков для служб SSIS.
 
-Продолжайте проектировать и создавать пакеты локально в SSDT или Visual Studio с помощью SSDT установлены.
+Имя базы данных SQL, на котором размещена SSISDB становится первой части четырехкомпонентного имени для использования во время развертывания и управления пакетами из SSDT и SSMS - `<sql_database_name>.database.windows.net`.
 
 Необходимо использовать модель развертывания проекта не модели развертывания пакетов, для проектов, развертываемых в SSISDB в базе данных SQL Azure.
 
-Имя базы данных SQL, на котором размещена SSISDB становится первой части четырехкомпонентного имени для использования во время развертывания и управления пакетами из SSDT и SSMS - `<sql_database_name>.database.windows.net`.
+Продолжайте проектировать и создавать пакеты локально в SSDT или Visual Studio с помощью SSDT установлены.
 
 Сведения о подключении к локальным источникам данных из облака с использованием проверки подлинности Windows см. в разделе [подключение к локальным источникам данных с проверкой подлинности Windows](ssis-azure-connect-with-windows-auth.md).
 

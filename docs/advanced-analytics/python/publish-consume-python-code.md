@@ -1,7 +1,7 @@
 ---
 title: "Публикация и использование кода Python | Документы Microsoft"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,25 +13,26 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77a4c36636b48474a6d227f6ea18e08e50add4bc
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 
 # <a name="publish-and-consume-python-web-services"></a>Публикация и использование Python веб-служб
 
-**Применяется к: SQL Server 2017 г CTP 2.0 (Предварительная версия)**
+Можно развернуть рабочее решение Python в веб-службу с помощью функции ввода в эксплуатацию в Microsoft Server обучения машины. В этом разделе описывается для успешной публикации и запуска решения.
 
-Можно развернуть рабочее решение Python в веб-службу с помощью функции ввода в эксплуатацию в Microsoft Server обучения машины.
-
-В этом разделе описывает шаги для выполнения, для успешной публикации, а затем запустите решение.
+> [!IMPORTANT]
+>
+> Этот образец разработан для версии Python, который входит в состав машины обучения Server (изолированный) и в Machine Learning Server версии 9.1.0 используются функциональные возможности.
+ > 
+ > Аналогичный пример, использующий возможности в последнем выпуске машины обучения Microsoft Server, версии 9.2.0, см в этой статье на сайте сервера машины обучения: [развертывание и управление веб-службами в Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
 
 В этой статье предназначен для специалистов по анализу данных, чтобы узнать, как опубликовать как веб-службы, размещается в Microsoft Server обучения машины кода Python или модели. Здесь также описывается, как приложения могут использовать в коде или модель. В этой статье предполагается, что вы специализация Python.
 
-> [!IMPORTANT]
-> Python веб-службы доступны только с поддержкой Python экземпляров SQL Server 2017 г CTP 2.0 (Предварительная версия). Доступность этой функции будут развертываться в будущих выпусках.
+**Применяется к: машинного обучения Server (изолированный) в SQL Server 2017 г.**
 
 ## <a name="overview-of-workflow"></a>Обзор рабочего процесса
 

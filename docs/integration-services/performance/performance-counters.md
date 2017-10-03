@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 20627d31b8b12990de28a5703244789a6171a388
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a079ca03c21823aa8a3308bccc92cc71e92930c5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="performance-counters"></a>Счетчики производительности
@@ -121,5 +121,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Необходимо запустить службу «Журналы и оповещения производительности» с помощью локальной учетной записи или учетной записи домена, входящей в группу «Администраторы».  
 
 ## <a name="see-also"></a>См. также:  
- [Запуск проектов и пакетов](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages) [событий, регистрируемых в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md) [событий, регистрируемых в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
 

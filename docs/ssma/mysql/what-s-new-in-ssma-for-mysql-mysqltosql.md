@@ -2,7 +2,7 @@
 title: "Какой &#39; новые возможности SSMA для MySQL (MySQLToSql) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: e5d5ca50b24eb8c7d21fa2058e9be6fed0af2270
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>Какой &#39; новые возможности SSMA для MySQL (MySQLToSql)
 В этом разделе перечислены SSMA для MySQL изменения в каждом выпуске. 
+
+## <a name="ssma-v76"></a>SSMA v7.6
+V7.6 выпуск SSMA для MySQL была расширена с целевой исправления, повышения качества и преобразование метрик и поддержка 2017 г. SQL Server (Предварительная версия). Поддержка 2017 г. SQL Server в Windows и Linux в общедоступной предварительной версии и не должен использоваться для миграции в рабочей среде.
+
+> [!IMPORTANT]
+> SSMA v7.4 и более поздние версии .net 4.5.2 является необходимым условием установки и 32-разрядной версии средства больше не поддерживаются.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 V7.5 выпуск SSMA для MySQL была дополнена несколько улучшений, чтобы обеспечить большую доступность для людей с ограниченными возможностями.

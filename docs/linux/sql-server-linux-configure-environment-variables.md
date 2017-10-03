@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 4951f503a7b5c395f86cb6daf2ba705ca69fbd83
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 2bbb64b775ab59665ac2c8eefdd21e514b4906cd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Настройка RC2 2017 г. SQL Server в Linux, можно использовать несколько переменных в другой среде. Эти переменные используются в двух сценариях:
+Настройка 2017 г. SQL Server в Linux, можно использовать несколько переменных в другой среде. Эти переменные используются в двух сценариях:
 
 - Настройка начальной настройки с `mssql-conf setup` команды.
 - Для настройки нового [контейнера SQL Server в Docker](quickstart-install-connect-docker.md).
@@ -71,13 +71,13 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 При выполнении Docker на Linux или macOS, используйте следующий синтаксис в одинарные кавычки:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 Если вы используете Docker в Windows, используйте следующий синтаксис в двойные кавычки:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

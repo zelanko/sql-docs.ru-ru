@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bbb36ba4a739f0c7871261b61d298428ec3b2191
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/21/2017
 
 ODBC имеет доступ к данным основной собственный API для приложений, написанных на языках C и C++ для SQL Server. Имеется драйвер ODBC для большинства источников данных. Другие языки, использующие ODBC включают COBOL, Perl, PHP и Python. ODBC широко используется в сценариях интеграции данных.
 
-Драйвер ODBC поставляется с помощью средств, таких как [ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility) и [ **bcp**](/sql-docs/docs/tools/bcp-utility). **Sqlcmd** программа позволяет выполнять инструкции Transact-SQL, системные процедуры и сценарии SQL. **Bcp** программа массового копирования данных между экземпляром Microsoft SQL Server и файлом данных в формате, можно выбрать. Можно использовать **bcp** выполнять импорт большого количества новых строк в таблицы SQL Server или экспорт данных из таблиц в файлы данных.  
+Драйвер ODBC поставляется с помощью средств, таких как [ **sqlcmd** ](../../tools/sqlcmd-utility.md) и [ **bcp**](../../tools/bcp-utility.md). **Sqlcmd** программа позволяет выполнять инструкции Transact-SQL, системные процедуры и сценарии SQL. **Bcp** программа массового копирования данных между экземпляром Microsoft SQL Server и файлом данных в формате, можно выбрать. Можно использовать **bcp** выполнять импорт большого количества новых строк в таблицы SQL Server или экспорт данных из таблиц в файлы данных.  
 
 ## <a name="code-example-in-c"></a>Пример кода в C++
 

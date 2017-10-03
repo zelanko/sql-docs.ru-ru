@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4edc1b7348e9b34c924236819f0122ea5277d3e8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Использование массового копирования с драйвером JDBC
@@ -858,7 +858,7 @@ public class Program
  Следующее приложение показывает, как загрузить данные с помощью класса SQLServerBulkCopy. В этом примере CSV-файл используется для копирования данных, экспортированных из таблицы Production.Product в базе данных AdventureWorks, в аналогичную таблицу в той же базе данных.  
   
 > [!IMPORTANT]  
->  Этот образец не запустится, пока вы не создадите рабочие таблицы, как описано в [Настройка таблицы](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) его получить.  
+>  Этот образец не запустится, пока вы не создадите рабочие таблицы, как описано в [Настройка таблицы](../../ssms/download-sql-server-management-studio-ssms.md) его получить.  
   
 1.  Откройте **SQL Server Management Studio** и подключитесь к SQL Server с базой данных AdventureWorks.  
   

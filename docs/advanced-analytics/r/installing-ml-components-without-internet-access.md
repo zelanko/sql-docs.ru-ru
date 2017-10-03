@@ -1,7 +1,7 @@
 ---
 title: "Установка компонентов обучения компьютер без доступа к Интернету | Документы Microsoft"
 ms.custom: 
-ms.date: 09/20/2017
+ms.date: 09/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 1facfc7a52aa9e98aacc6c6d059acf8823e86170
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41ff26c5ff2c41f600be5f45fd66dec31672b803
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Установка компонентов обучения компьютер без доступа к Интернету
@@ -102,21 +102,16 @@ Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?Li
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 Откройте Microsoft Python     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
 Сервер Microsoft Python    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
-**2017 г. SQL Server CTP 3.0** |
-Microsoft R Open     |без изменений; использовать CTP 2.0|
-Microsoft R Server     |без изменений; использовать CTP 2.0|
-Откройте Microsoft Python     |без изменений; использовать CTP 2.0|
-Сервер Microsoft Python    |без изменений; использовать CTP 2.0|
-**CTP-версии 2017 г. SQL Server 4.0** |
-Microsoft R Open     |без изменений; использовать CTP 2.0|
-Microsoft R Server     |без изменений; использовать CTP 2.0|
-Откройте Microsoft Python     |без изменений; использовать CTP 2.0|
-Сервер Microsoft Python    |без изменений; использовать CTP 2.0|
-**SQL Server RTM 2017 г.** |
-Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Сервер Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+**SQL Server 2017 г., RC1** |
+Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
+Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
+Откройте Microsoft Python     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
+Сервер Microsoft Python    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
+**SQL Server 2017 г. версия-Кандидат 2** |
+Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
+Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
+Откройте Microsoft Python     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
+Сервер Microsoft Python    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
 
 ### <a name="bkmk_2016Installers"></a>Загружаемые файлы для SQL Server 2016
 

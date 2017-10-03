@@ -4,16 +4,16 @@ description: "В этом разделе описывается использо
 author: meet-bhagdev
 ms.author: meetb
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 838a7d492f9826d966da205fc4727eae48ff6e42
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail и оповещения по электронной почте с агентом SQL Server в Linux
@@ -23,11 +23,12 @@ ms.lasthandoff: 08/02/2017
 Следующие шаги показывают, как настройка компонента DB Mail и использовать его с помощью агента SQL Server (**mssql-server-agent**) в Linux. 
 
 > [!NOTE]
-> Для использования компонента DB Mail с SQL Server в Linux, необходимо использовать SQL Server 2017 г RC2 или более поздней версии.
+> Для использования компонента DB Mail с SQL Server в Linux, необходимо использовать SQL Server, RC1 2017 г. или более поздней версии.
 
 ## <a name="prerequisites"></a>Предварительные требования
--   SQL Server 2017 г., RC2 и более поздних версий
--   Агент SQL Server v14.0.800.90-2 и выше (Если вы планируете использовать электронной почты для оповещений)
+
+- SQL Server 2017 г., RC1 и более поздних версий
+- Агент SQL Server v14.0.800.90-2 и выше (Если вы планируете использовать электронной почты для оповещений)
 
 ## <a name="1-enable-db-mail"></a>1. Включение компонента DB Mail
 

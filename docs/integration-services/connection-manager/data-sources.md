@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-sources"></a>Источники данных
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/21/2017
   
 > **ПРИМЕЧАНИЕ.** Источники данных можно добавлять только в проекты, использующие модель развертывания пакета. Если проект был настроен для использования модели развертывания проекта, то вместо источников данных используются созданные на уровне проекта диспетчеры соединений, которые позволяют использовать соединения совместно.  
 >   
->  Дополнительные сведения о моделях развертывания см. в разделе [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages). Сведения о преобразовании проектов в модели развертывания проектов см. в разделе [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Дополнительные сведения о моделях развертывания см. в разделе [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Сведения о преобразовании проектов в модели развертывания проектов см. в разделе [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
   
  Применение источников данных в пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] дает следующие преимущества.  
   

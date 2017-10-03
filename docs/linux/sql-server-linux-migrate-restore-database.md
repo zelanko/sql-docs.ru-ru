@@ -1,6 +1,6 @@
 ---
 title: "Миграция базы данных SQL Server с Windows и Linux | Документы Microsoft"
-description: "В этом разделе показано, как создать резервную копию базы данных SQL Server Windows и восстановите ее на компьютер Linux под управлением SQL Server, RC2 2017 г."
+description: "Этот учебник демонстрирует создайте резервную копию базы данных SQL Server в Windows и восстановите ее на компьютер Linux под управлением 2017 г. SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Миграция базы данных SQL Server с Windows и Linux с помощью резервного копирования и восстановления
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-SQL Server резервного копирования, и функция восстановления рекомендуется использовать для миграции базы данных из SQL Server в Windows до RC2 2017 г. SQL Server в Linux. В этом учебнике поможет выполнить шаги, необходимые для перемещения базы данных Linux с помощью резервного копирования и восстановления методы.
+SQL Server резервного копирования, и функция восстановления рекомендуется использовать для миграции базы данных из SQL Server в Windows 2017 г. SQL Server в Linux. В этом учебнике поможет выполнить шаги, необходимые для перемещения базы данных Linux с помощью резервного копирования и восстановления методы.
 
 > [!div class="checklist"]
 > * Создать файл резервной копии в Windows с помощью SSMS
@@ -39,8 +39,7 @@ SQL Server резервного копирования, и функция вос
   * Целевой базы данных для миграции.
 
 * Компьютер Linux с установлены следующие компоненты:
-  * SQL Server 2017 г., RC2. В разделе примеры использования установки для [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), или [Ubuntu](quickstart-install-connect-ubuntu.md).
-  * SQL Server 2017 г RC2 [средства командной строки](sql-server-linux-setup-tools.md).
+  * 2017 г. SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), или [Ubuntu](quickstart-install-connect-ubuntu.md)) с помощью средства командной строки.
 
 ## <a name="create-a-backup-on-windows"></a>Создание резервной копии в Windows
 
@@ -182,7 +181,7 @@ SQL Server резервного копирования, и функция вос
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В этом учебнике вы узнали, как для резервного копирования базы данных в Windows и переместите его на сервер Linux, под управлением SQL Server, RC2 2017 г. Узнать, как для:
+В этом учебнике вы узнали, как резервное копирование базы данных в Windows и переместите его на сервер Linux 2017 г. SQL Server. Узнать, как для:
 > [!div class="checklist"]
 > * Используйте SSMS и Transact-SQL для создания файла резервной копии в Windows
 > * Установка оболочки Bash в Windows

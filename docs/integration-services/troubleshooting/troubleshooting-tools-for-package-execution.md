@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **Обеспечивайте целостность данных с помощью транзакций**. Дополнительные сведения см. в разделе [Транзакции служб Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Перехват и обработка ошибок пакетов с помощью обработчиков событий  
  Обработчики событий могут реагировать на многие события, вызванные пакетами и объектами в них.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Устранение неполадок выполнения пакетов с помощью журналов  
  С помощью ведения журналов можно отследить многие события в выполняющихся пакетах. Регистраторы захватывают сведения о конкретных событиях с целью последующего анализа и сохраняют их в таблицу базы данных, неструктурированный файл, XML-файл или в любом другом поддерживаемом формате вывода данных.  
   
--   **Включите ведение журналов**. Выходные данные журналов можно детализировать, выбрав только события и только объекты, сведения о которых требуется захватить. Дополнительные сведения см. в статье [Ведение журналов в службах Integration Services (SSIS)](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
+-   **Включите ведение журналов**. Выходные данные журналов можно детализировать, выбрав только события и только объекты, сведения о которых требуется захватить. Дополнительные сведения см. в статье [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md).  
   
--   **Для устранения неполадок, связанных с поставщиком, выберите событие пакета, называемое «Диагностика».** Существуют сообщения журнала, которые могут помочь при устранении неполадок взаимодействия пакета с внешним источником данных. Дополнительные сведения см. в статье [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
+-   **Для устранения неполадок, связанных с поставщиком, выберите событие пакета, называемое «Диагностика».** Существуют сообщения журнала, которые могут помочь при устранении неполадок взаимодействия пакета с внешним источником данных. Дополнительные сведения см. в статье [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Дополните выходные данные журналов**. При обычном ведении журналов строки присоединяются к назначению при каждом выполнении пакета. Хотя каждая строка выходных данных журнала определяет пакет по имени и уникальному идентификатору, а также определяет выполнение пакета по уникальному идентификатору ExecutionID, большой объем выходных данных анализировать трудно.  
   

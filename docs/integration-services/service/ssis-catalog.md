@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3e2139cf2c56b1f716aac32aa6b3f71cb49a2d61
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/21/2017
 > [!NOTE]
 > Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому присоединена база данных **SSISDB** , остановлен или не отвечает, процесс ISServerExec.exe завершается. Сообщение записывается в журнал событий Windows.  
 >   
->  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+>  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="features-and-capabilities"></a>Функции и возможности  
   
@@ -563,7 +563,7 @@ ms.lasthandoff: 09/21/2017
      ![Просмотрите результаты в мастере обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "просмотрите результаты в мастере обновления SSISDB")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On для каталога служб SSIS (SSISDB)
-  Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые совместно выполняют переход на другой ресурс. Дополнительные сведения см. в разделе [Группы доступности AlwaysOn](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
+  Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые совместно выполняют переход на другой ресурс. Дополнительные сведения см. в разделе [Группы доступности AlwaysOn](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  Для обеспечения высокого уровня доступности для каталога служб SSIS (SSISDB) и его содержимого (проектов, пакетов, журналов выполнения и т. д.) можно добавить базу данных SSISDB (практически так же, как и любую другую базу данных) в группу доступности AlwaysOn. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
  
@@ -585,7 +585,7 @@ ms.lasthandoff: 09/21/2017
   
 2.  Установить SQL Server 2016 с компонентом Integration Services (SSIS) на каждом узле кластера.  
   
-3.  Включение групп доступности AlwaysOn для каждого экземпляра SQL Server. Более подробные сведения см. в разделе [Включение групп доступности AlwaysOn](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) .  
+3.  Включение групп доступности AlwaysOn для каждого экземпляра SQL Server. Более подробные сведения см. в разделе [Включение групп доступности AlwaysOn](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) .  
   
 ###  <a name="Firsttime"></a> Настройка поддержки служб SSIS для AlwaysOn  
   
@@ -607,12 +607,12 @@ ms.lasthandoff: 09/21/2017
   
 3.  Установите флажок **Включить интеграцию со средой CLR**. Каталог использует хранимые процедуры CLR.  
   
-4.  Щелкните **Включить автоматическое выполнение хранимой процедуры служб Integration Services при запуске SQL Server** , чтобы хранимая процедура [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) выполнялась каждый раз при перезапуске экземпляра сервера служб SSIS. Хранимая процедура осуществляет обслуживание состояния операций для каталога SSISDB. Она исправляет состояние любых пакетов, выполнявшихся в момент отключения экземпляра сервера служб SSIS.  
+4.  Щелкните **Включить автоматическое выполнение хранимой процедуры служб Integration Services при запуске SQL Server** , чтобы хранимая процедура [catalog.startup](../system-stored-procedures/catalog-startup.md) выполнялась каждый раз при перезапуске экземпляра сервера служб SSIS. Хранимая процедура осуществляет обслуживание состояния операций для каталога SSISDB. Она исправляет состояние любых пакетов, выполнявшихся в момент отключения экземпляра сервера служб SSIS.  
   
-5.  Введите **пароль**и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key).  
+5.  Введите **пароль**и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ####  <a name="Step2"></a> Шаг 2. Добавление SSISDB в группу доступности AlwaysOn  
- Процедура добавления базы данных SSISDB в группу доступности AlwaysOn практически не отличается от добавления другой базы данных пользователей в группу доступности. См. раздел [Использование мастера групп доступности](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio).  
+ Процедура добавления базы данных SSISDB в группу доступности AlwaysOn практически не отличается от добавления другой базы данных пользователей в группу доступности. См. раздел [Использование мастера групп доступности](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
  Необходимо ввести пароль, указанный при создании каталога служб SSIS на странице **Выбор баз данных** мастера **создания групп доступности** .  
   

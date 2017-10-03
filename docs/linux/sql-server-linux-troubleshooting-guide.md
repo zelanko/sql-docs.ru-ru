@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21b7d94bcf15e1ae2d99dd44f4b0030929b92111
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-В этом документе описывается устранение неполадок Microsoft SQL Server, работающим на платформе Linux или в контейнер Docker. При устранении неполадок SQL Server в Linux, убедитесь в помните ограничения этой частной предварительной версии. Можно найти их в список [заметки о выпуске](sql-server-linux-release-notes.md).
+В этом документе описывается устранение неполадок Microsoft SQL Server, работающим на платформе Linux или в контейнер Docker. При устранении неполадок SQL Server в Linux, не забудьте просмотреть поддерживаемые функции и известные ограничения в [SQL Server в заметках о выпуске Linux](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a>Устранение ошибок соединения
 Если возникли затруднения при подключении к экземпляру SQL Server в Linux, существует несколько необходимо проверить следующее. 
@@ -38,11 +38,11 @@ ms.lasthandoff: 08/02/2017
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Единственным исключением из этого метода относится к виртуальным машинам Azure. Для виртуальных машин Azure [найти общедоступный IP-адрес для виртуальной Машины на портале Azure](sql-server-linux-azure-virtual-machine.md#connect).
+   > Единственным исключением из этого метода относится к виртуальным машинам Azure. Для виртуальных машин Azure [найти общедоступный IP-адрес для виртуальной Машины на портале Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Если это применимо, проверьте, что был открыт в брандмауэре порт SQL Server (по умолчанию 1433).
 
-- Для виртуальных машин Azure, убедитесь, что [правило группы безопасности сети для порта SQL Server по умолчанию](sql-server-linux-azure-virtual-machine.md#remote).
+- Для виртуальных машин Azure, убедитесь, что [правило группы безопасности сети для порта SQL Server по умолчанию](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Убедитесь, что имя пользователя и пароль не должен содержать опечаток, лишних пробелов и неправильный регистр символов.
 

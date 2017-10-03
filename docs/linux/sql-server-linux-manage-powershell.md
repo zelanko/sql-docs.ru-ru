@@ -4,31 +4,31 @@ description: "Этот раздел предоставляет сведения 
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 7b607d624207b75ac2488f55fb75353110cf252c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Использование PowerShell в Windows для управления SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-В этом разделе описываются [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) и будет выполнено несколько примеров о том, как использовать его с RC2 2017 г. SQL Server в Linux. Поддержка PowerShell для SQL Server в настоящее время доступен в Windows, поэтому можно использовать, если используется компьютер Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
+В этом разделе описываются [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) и будет выполнено несколько примеров о том, как использовать его с 2017 г. SQL Server в Linux. Поддержка PowerShell для SQL Server в настоящее время доступен в Windows, поэтому можно использовать, если используется компьютер Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Установите последнюю версию SQL PowerShell в Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) в Windows входит в состав [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms). При работе с SQL Server, следует всегда использовать последнюю версию SSMS и SQL PowerShell. Последнюю версию SSMS постоянно обновляется и оптимизированы и в настоящее время работает с SQL Server версии-кандидата 2 2017 г. в Linux. Чтобы загрузить и установить последнюю версию, в разделе [загрузка SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). Быть в курсе событий, последняя версия SSMS предлагает при наличии доступного для загрузки новой версии. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) в Windows входит в состав [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). При работе с SQL Server, следует всегда использовать последнюю версию SSMS и SQL PowerShell. Последнюю версию SSMS постоянно обновляется и оптимизированы и в настоящее время работает с SQL Server 2017 в Linux. Чтобы загрузить и установить последнюю версию, в разделе [загрузка SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Быть в курсе событий, последняя версия SSMS предлагает при наличии доступного для загрузки новой версии.
 
 ## <a name="before-you-begin"></a>Перед началом
 
-Чтение [известные проблемы](sql-server-linux-release-notes.md) для SQL Server 2017 г RC2 в Linux.
+Чтение [известные проблемы](sql-server-linux-release-notes.md) для SQL Server 2017 г. в Linux.
 
 ## <a name="launch-powershell-and-import-the-sqlserver-module"></a>Запустите PowerShell и импорт *sqlserver* модуля
 
@@ -66,12 +66,12 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 Воспользуемся PowerShell в Windows для подключения к экземпляру 2017 г. SQL Server в Linux и отобразить несколько свойств сервера.
 
 Скопируйте и вставьте приведенные ниже команды в командной строке PowerShell. При выполнении этих команд PowerShell выполняет следующие действия:
-- Отображение *запрос учетных данных Windows PowerShell* диалоговое окно, которое запрашивает учетные данные (*имя пользователя SQL* и *пароль SQL*) для подключения к экземпляру SQL Server, RC2 2017 г. в Linux
+- Отображение *запрос учетных данных Windows PowerShell* диалоговое окно, которое запрашивает учетные данные (*имя пользователя SQL* и *пароль SQL*) для подключения к вашей 2017 г. SQL Server экземпляр в Linux
 - Загружать сборки управляющих объектов SQL Server (SMO)
 - Создайте экземпляр класса [сервера](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) объекта
 - Подключиться к **сервера** и отобразить несколько свойств
 
-Не забудьте заменить ** \<your_server_instance\> ** с IP-адрес или имя узла экземпляра RC2 2017 г. SQL Server в Linux.
+Не забудьте заменить  **\<your_server_instance\>**  с IP-адрес или имя узла экземпляра 2017 г. SQL Server в Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -107,11 +107,11 @@ HostDistribution : Ubuntu
 Давайте PowerShell в Windows, чтобы проверить журналы ошибок подключения на экземпляре 2017 г. SQL Server в Linux. Мы будем использовать **Out-GridView** журналы для отображения сведений из-за ошибки в показано представление сетки.
 
 Скопируйте и вставьте приведенные ниже команды в командной строке PowerShell. Они может занять несколько минут. Эти команды выполните следующие действия.
-- Отображение *запрос учетных данных Windows PowerShell* диалоговое окно, которое запрашивает учетные данные (*имя пользователя SQL* и *пароль SQL*) для подключения к экземпляру SQL Server, RC2 2017 г. в Linux
+- Отображение *запрос учетных данных Windows PowerShell* диалоговое окно, которое запрашивает учетные данные (*имя пользователя SQL* и *пароль SQL*) для подключения к вашей 2017 г. SQL Server экземпляр в Linux
 - Используйте **Get SqlErrorLog** журналы, чтобы соединиться с экземпляром 2017 г. SQL Server в Linux и получает ошибку с момента **за вчерашний день**
 - Выходные данные для **Out-GridView** командлета
 
-Не забудьте заменить ** \<your_server_instance\> ** с IP-адрес или имя узла экземпляра RC2 2017 г. SQL Server в Linux.
+Не забудьте заменить  **\<your_server_instance\>**  с IP-адрес или имя узла экземпляра 2017 г. SQL Server в Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>См. также:
-- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
+- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
 

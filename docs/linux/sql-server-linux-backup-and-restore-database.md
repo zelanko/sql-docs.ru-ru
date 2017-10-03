@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 6bd05a89f0c06bc03de931b898be18f3cbea0c8c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Резервные копии баз данных может занять от RC2 2017 г. SQL Server в Linux с помощью тех же средств, как другие платформы. На сервере Linux, можно использовать `sqlcmd` для подключения к SQL Server и создания резервных копий. В операционной системе Windows можно подключиться к SQL Server в Linux и резервных копий с помощью пользовательского интерфейса. Функциональные возможности резервного копирования является одинаковым для платформы. Например, можно сделать резервную копию баз данных локально, чтобы удаленные диски, а также к [службы хранилища больших двоичных объектов Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
+Резервные копии баз данных может занять от 2017 г. SQL Server в Linux с помощью тех же средств, как другие платформы. На сервере Linux, можно использовать `sqlcmd` для подключения к SQL Server и создания резервных копий. В операционной системе Windows можно подключиться к SQL Server в Linux и резервных копий с помощью пользовательского интерфейса. Функциональные возможности резервного копирования является одинаковым для платформы. Например, можно сделать резервную копию баз данных локально, чтобы удаленные диски, а также к [службы хранилища больших двоичных объектов Microsoft Azure](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## <a name="backup-with-sqlcmd"></a>Резервное копирование с помощью sqlcmd
 
@@ -75,7 +75,7 @@ sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/m
 
 Ниже приведены шаги Создание резервной копии с помощью SSMS. 
 
-1. Запустите SSMS и подключитесь к серверу в RC2 2017 г. SQL Server в Linux.
+1. Запустите SSMS и подключитесь к серверу в 2017 г. SQL Server в Linux.
 
 1. В обозревателе объектов щелкните правой кнопкой базу данных, нажмите кнопку **задачи**, а затем нажмите кнопку **создайте резервную копию...** .
 

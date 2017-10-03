@@ -11,24 +11,24 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5f7c0f61cf9f441c56529ddaaddc96a0c318ce59
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 4639379a65fc28c363f6510c1a393df8840dc7f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Выбрать правильное средство для управления SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Существует несколько способов управления RC2 2017 г. SQL Server в Linux. Следующий раздел выполнять обзор различных управления инструментов и методов с указателями на дополнительные ресурсы.
+Существует несколько способов управления 2017 г. SQL Server в Linux. Следующий раздел выполнять обзор различных управления инструментов и методов с указателями на дополнительные ресурсы.
 
 ## <a name="mssql-conf"></a>MSSQL conf 
 **Mssql conf** средство настраивает SQL Server в Linux. Дополнительные сведения см. в разделе [Настройка SQL Server в Linux с mssql conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Практически все, что можно сделать в клиентском средстве также можно с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления (DMV)](/sql-docs/docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views) , запрос состояния и конфигурации SQL Server. Существуют также [команд Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) для задачи управления базами данных. Эти команды запускаются в любое клиентское средство, которое поддерживает подключение к SQL Server и выполнение запросов Transact-SQL. Примеры включают [sqlcmd](sql-server-linux-setup-tools.md), [кода Visual Studio](sql-server-linux-develop-use-vscode.md), и [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
+Практически все, что можно сделать в клиентском средстве также можно с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) , запрос состояния и конфигурации SQL Server. Существуют также [команд Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) для задачи управления базами данных. Эти команды запускаются в любое клиентское средство, которое поддерживает подключение к SQL Server и выполнение запросов Transact-SQL. Примеры включают [sqlcmd](sql-server-linux-setup-tools.md), [кода Visual Studio](sql-server-linux-develop-use-vscode.md), и [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio в Windows
 

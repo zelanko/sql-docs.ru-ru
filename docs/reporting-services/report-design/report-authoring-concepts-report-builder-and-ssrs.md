@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Основные понятия разработки отчетов (построитель отчетов и службы SSRS)
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
  [Области данных и карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Описывает типы областей данных, которые можно добавить в макет отчета. Области данных определяют внешний вид отчета: таблица, матрица, список или диаграмма.  
   
- [Концепция параметров отчета (построитель отчетов и службы SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [Концепция параметров отчета (построитель отчетов и службы SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Описывает способы определения и использования параметров отчета, а также порядок независимого управления параметрами отчета из определения отчета на сервере отчетов.  
   
 ## <a name="see-also"></a>См. также  

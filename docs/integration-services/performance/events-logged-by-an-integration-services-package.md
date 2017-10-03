@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: df4b2e68a9b024ed2911d4b5c1d5bcea8984ae15
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Регистрация событий в пакете служб Integration Services
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
   
  В этом разделе содержатся сведения о часто встречающихся сообщениях о событиях, записываемых пакетом в журнал событий приложений. По умолчанию пакет записывает некоторые из этих сообщений, даже если режим записи в журнал для пакета не включен. Однако существуют другие сообщения, которые пакет записывает, только если для пакета включен режим записи в журнал. Независимо от того, записывает ли пакет эти сообщения в журнал по умолчанию или потому что запись была разрешена, источником событий для сообщений в пакете является SQLISPackage.  
   
- Общие сведения о способах выполнения пакетов служб SSIS см. в разделе [Запуск проектов и пакетов](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages).  
+ Общие сведения о способах выполнения пакетов служб SSIS см. в разделе [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md).  
   
  Сведения о диагностике выполняющихся пакетов см. в разделе [Устранение неполадок инструментов с помощью отчетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   

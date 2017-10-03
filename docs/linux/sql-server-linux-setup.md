@@ -4,23 +4,23 @@ description: "Установка, обновление и удаление SQL S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-В этом разделе объясняется, как для установки, обновления и удаления 2017 г. SQL Server в Linux. В Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu поддерживается SQL Server, RC2 2017 г. Она также доступна как образ Docker, который можно запустить на подсистема Docker в Linux или Docker для Windows или Mac.
+В этом разделе объясняется, как для установки, обновления и удаления 2017 г. SQL Server в Linux. В Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu поддерживается 2017 г. SQL Server. Она также доступна как образ Docker, который можно запустить на подсистема Docker в Linux или Docker для Windows или Mac.
 
 > [!TIP]
 > Чтобы быстро приступить к работе, перейти к одной части краткого руководства для [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), или [Docker](quickstart-install-connect-docker.md).
@@ -51,6 +51,12 @@ ms.lasthandoff: 08/29/2017
 
 > [!NOTE]
 > Модуль SQL Server был протестирован до 1 ТБ памяти в данный момент.
+
+Если вы используете **сетевой файловой системы (NFS)** удаленные общие ресурсы в рабочей среде, ознакомьтесь со следующими требованиями поддержки:
+
+- Использование NFS версии **4.2 или более поздней версии**. NFS более ранних версий не поддерживают необходимые компоненты, такие как fallocate и создания разреженный файл, общие для современных файловых систем.
+- Найдите только **/var/opt/mssql** каталогов на подключения NFS. Другие файлы, такие как системные файлы SQL Server и не поддерживаются.
+- Убедитесь, что клиенты NFS использовать параметр «nolock» при подключении к удаленной общей папке.
 
 ## <a id="platforms"></a>Установка SQL Server
 
@@ -91,7 +97,55 @@ SQL Server в Linux можно установить из командной ст
 > Она поддерживается только может понижаться до выпуска в пределах той же основной версии, например 2017 г. SQL Server.
 
 > [!IMPORTANT]
-> Возврат к предыдущей версии поддерживаются только между RC2 и версии-кандидата 1 в данный момент.
+> Возврат к предыдущей версии поддерживаются только между RTM и версия-кандидат 2, версия-кандидат 1 в данный момент.
+
+## <a id="repositories"></a>Изменение исходных репозиториев
+
+При установке или обновлении SQL Server, можно получить последнюю версию SQL Server из репозитория настроенных Microsoft. Это важно отметить, что существует два основных типа хранилища для каждого распределения:
+
+- **Накопительный пакет обновления (CU)**: репозиторий накопительное обновление (CU) содержит пакеты для базовой версии SQL Server и исправления или улучшения версии. Накопительные пакеты обновления относятся только к версии, например 2017 г. SQL Server. Их появления в обычных ритме.
+
+- **GDR**: GDR репозитория пакетов для базовой версии SQL Server и только важные исправления и обновления для системы безопасности содержит версии. Эти обновления также добавляются в следующий выпуск CU.
+
+Каждое CU и GDR содержит полный пакет SQL Server и все последующие обновления для этого репозитория. Обновление с версии GDR на текущую версию поддерживается изменение настроенного хранилища SQL Server. Вы также можете [понизить](#rollback) для любого из выпусков в ваш основной номер версии (например: 2017 г.).
+
+> [!NOTE]
+> Обновление с накопительным пакетом обновления версии GDR не поддерживается.
+
+Для изменения из репозитория GDR в репозитории CU выполните следующие действия:
+
+1. Удаляет ранее настроенный Предварительный просмотр репозитория.
+
+   | Платформа | Команда удаления репозитория |
+   |-----|-----|
+   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+
+1. Настройте новый репозиторий.
+
+   | Платформа | Хранилище | Command |
+   |-----|-----|-----|
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017.repo` |
+   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017-gdr.repo` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+
+1. Обновление системы.
+
+   | Платформа | Команда обновления |
+   |-----|-----|
+   | RHEL | `sudo yum update` |
+   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
+   | Ubuntu | `sudo apt-get update` |
+
+
+1. [Установка](#platforms) или [обновление](#upgrade) SQL Server на новое хранилище.
+
+   > [!IMPORTANT]
+   > На этом этапе, если вы решили выполнить полную установку с помощью [по основам](#platforms), помните, что вы настроили целевой репозиторий. В учебниках по не нужно повторять этот шаг. Это особенно важно, если настроить хранилище GDR, так как статьи краткого руководства используйте CU репозитория.
 
 ## <a id="uninstall"></a>Удаление SQL Server
 

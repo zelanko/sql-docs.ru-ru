@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 218bc141af70829a34ea91f0cf0e22ad05860652
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6c498acedd2821127137ec6be1bd2e04e6b3da09
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
@@ -122,7 +122,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
  Определяет, что должна быть изменена текущая используемая база данных.  
   
- ИЗМЕНИТЬ имя ** = ** *новое_имя_базы_данных*  
+ ИЗМЕНИТЬ имя  **=**  *новое_имя_базы_данных*  
  Переименование базы данных с именем, указанным в качестве *новое_имя_базы_данных*.  
   
  COLLATE *collation_name*  
@@ -252,7 +252,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
-- [ALTER DATABASE &#40; База данных Azure SQL &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)  
+- [ALTER DATABASE &#40; База данных Azure SQL &#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)   

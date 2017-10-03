@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ada9817d628b9c146899807bba35a6651842afa3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4fd91a36594a8d0d50e3f4eb8490497d6fe0e172
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>запустить мастер импорта и экспорта SQL Server
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/21/2017
 -   Из [Visual Studio c SQL Server Data Tools (SSDT)](#startVS).
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Необходимое условие - — это мастер, установленной на компьютере?
-Если вы хотите запустить мастер, но нет [! ВКЛЮЧИТЬ[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 > [!NOTE]
 > Чтобы использовать 64-разрядной версии мастера экспорта и импорта SQL Server, необходимо установить SQL Server. SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS), 32-разрядных приложений и установить только 32-разрядных файлов, включая 32-разрядную версию мастера.
@@ -87,7 +87,7 @@ ms.lasthandoff: 09/21/2017
 
     ![Запуск мастера SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
 
-Если у вас не установлен SQL Server или SQL Server есть, но нет SQL Server Management Studio, см. статью [Скачивание SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+Если у вас не установлен SQL Server или SQL Server есть, но нет SQL Server Management Studio, см. статью [Скачивание SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
   
 ## <a name="startVS"></a>Visual Studio
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>Запуск мастера экспорта и импорта SQL Server из Visual Studio и SQL Server Data Tools (SSDT) 
@@ -103,10 +103,10 @@ ms.lasthandoff: 09/21/2017
 
     ![Запуск мастера из папки "Пакеты"](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
-Если среда Visual Studio не установлена или установлена без SQL Server Data Tools, см. статью [Скачать SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Если среда Visual Studio не установлена или установлена без SQL Server Data Tools, см. статью [Скачать SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="get-the-wizard"></a>Получить мастера
-Если вы хотите запустить мастер, но нет [! ВКЛЮЧИТЬ[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="get-help-while-the-wizard-is-running"></a>Получение справки во время работы мастера
 > [!TIP]

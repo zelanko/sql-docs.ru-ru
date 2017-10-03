@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: dc9e7c04025c01db9eee05d467fc9b5317aa11ec
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 942e05985c353e6c6cc433ace0dfddd204b02252
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="folder-properties-dialog-box"></a>Диалоговое окно «Свойства папки»
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
 5.  Нажмите кнопку **ОК** , чтобы принять изменения и закрыть диалоговое окно **Свойства папки** .  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40; Службы SSIS &#41; Сервер](/sql-docs/docs/integration-services/integration-services-ssis-packages)   
+ [Службы Integration Services &#40; Службы SSIS &#41; Сервер](../integration-services-ssis-packages.md)   
  [Catalog.grant_permission &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ec9cbf6cc2e8d74fdc87881622e1a1258aeea260
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: be37bf73c0fe662b15c8ad26210ed243b5ca317c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Драйвер Microsoft ODBC для SQL Server в Windows
@@ -55,8 +55,8 @@ Microsoft ODBC Driver 13.1, 13 и 11 for [!INCLUDE[ssNoVersion](../../../include
   
 ## <a name="see-also"></a>См. также:  
 - [Основные сведения об SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [Построение приложений с использованием собственного клиента SQL Server](/sql-docs/docs/relational-databases/native-client/applications/building-applications-with-sql-server-native-client)   
+- [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client: вопросы и ответы](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [Справочник по программированию ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [Собственный клиент SQL Server (ODBC)](/sql-docs/docs/relational-databases/native-client/odbc/sql-server-native-client-odbc)  
+- [Собственный клиент SQL Server (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
 

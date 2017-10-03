@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: d581d48098ab1ee1b983a98a18d53ba68b1e8728
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Конфигурация SQL Server для использования с помощью R
@@ -96,7 +96,7 @@ Columnstore не может быть столь же эффективна, ес�
 
 + [Включить сжатие таблицы или индекса](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Руководство по индексам ColumnStore](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)
++ [Руководство по индексам ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### <a name="memory-optimized-tables"></a>Таблицы, оптимизированные для памяти
 

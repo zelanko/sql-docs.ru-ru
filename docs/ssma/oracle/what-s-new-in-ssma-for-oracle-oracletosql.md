@@ -15,14 +15,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: cc5ee3189d00f7124754769b12f5d3cb1b8156b5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>Какой &#39; новые возможности SSMA для Oracle (OracleToSQL)
 В этом разделе перечислены SSMA для Oracle изменения в каждом выпуске.  
+
+## <a name="ssma-v76"></a>SSMA v7.6
+V7.6 выпуск SSMA для Oracle была расширена с целевой исправления, повышения качества и преобразование метрик и поддержка 2017 г. SQL Server (Предварительная версия). Поддержка 2017 г. SQL Server в Windows и Linux в общедоступной предварительной версии и не должен использоваться для миграции в рабочей среде.
+
+> [!IMPORTANT]
+> SSMA v7.4 и более поздние версии .net 4.5.2 является необходимым условием установки и 32-разрядной версии средства больше не поддерживаются.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 V7.5 выпуск SSMA для Oracle содержит следующие изменения:
