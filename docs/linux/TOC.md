@@ -12,6 +12,17 @@
 ## [Установка и подключение — Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Запуск и подключение — Docker](quickstart-install-connect-docker.md)
 
+# Учебники
+## [1_Миграция с Windows](sql-server-linux-migrate-restore-database.md)
+## [2_Миграция с Oracle](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
+## [3_Миграция в Docker](tutorial-restore-backup-in-sql-server-container.md)
+## [4_Создание задания](sql-server-linux-run-sql-server-agent-job.md)
+## [5_Настройка проверки подлинности AD](sql-server-linux-active-directory-authentication.md)
+## [6_Создание экземпляра отказоустойчивого кластера](sql-server-linux-shared-disk-cluster-configure.md)
+### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+
 # Основные понятия
 ## Установить
 ### [Установка SQL Server](sql-server-linux-setup.md)
@@ -19,12 +30,13 @@
 ### [Установка агента SQL Server](sql-server-linux-setup-sql-agent.md)
 ### [Установка полнотекстового поиска SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-### [Подготовка виртуальной машины SQL в Azure](sql-server-linux-azure-virtual-machine.md)
+### [Регистрация общедоступного репозитория](sql-server-linux-change-repo.md)
+### [Подготовка виртуальной машины SQL в Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
 
 ## Configure
 ### [Настройка с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md)
 ### [Переменные сред](sql-server-linux-configure-environment-variables.md)
-### [Docker](sql-server-linux-configure-docker.md)
+### [Настройка контейнеров Docker](sql-server-linux-configure-docker.md)
 ### [Отзывы пользователей](sql-server-linux-customer-feedback.md)
 
 ## [Разработка](sql-server-linux-develop-overview.md)
@@ -36,12 +48,10 @@
 ## [Управление](sql-server-linux-management-overview.md)
 ### [Использование для управления SSMS](sql-server-linux-manage-ssms.md)
 ### [Использование для управления PowerShell](sql-server-linux-manage-powershell.md)
-### [Создание и запуск заданий](sql-server-linux-run-sql-server-agent-job.md)
 ### [Использование доставки журналов](sql-server-linux-use-log-shipping.md)
 ### [Использование DB Mail и оповещений по почте](sql-server-linux-db-mail-sql-agent.md)
 
 ## [анализа](sql-server-linux-migrate-overview.md)
-### [Восстановление из Windows](sql-server-linux-migrate-restore-database.md)
 ### [Экспорт и импорт BACPAC из Windows](sql-server-linux-migrate-ssms.md)
 ### [Миграция с помощью помощника по миграции SQL Server (SSMA)](sql-server-linux-migrate-ssma.md)
 ### [Массовое копирование с помощью bcp](sql-server-linux-migrate-bcp.md)
@@ -53,7 +63,7 @@
 ## [Настройка непрерывности бизнес-процессов](sql-server-linux-business-continuity-dr.md)
 ### [Резервное копирование и восстановление](sql-server-linux-backup-and-restore-database.md)
 #### [Интерфейс виртуальных устройств — Linux](sql-server-linux-backup-vdi-specification.md)
-### [Экземпляр отказоустойчивого кластера](sql-server-linux-shared-disk-cluster-configure.md)
+### [Экземпляр отказоустойчивого кластера](sql-server-linux-shared-disk-cluster-concepts.md)
 #### [Red Hat Enterprise Linux]()
 ##### [Настройка (дополнение HA)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Работа (дополнение HA)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
@@ -72,9 +82,10 @@
 ## [Безопасность](sql-server-linux-security-overview.md)
 ### [Начало работы с функциями безопасности](sql-server-linux-security-get-started.md)
 ### [Шифрование подключений](sql-server-linux-encrypted-connections.md)
-### [Проверка подлинности Active Directory](sql-server-linux-active-directory-authentication.md)
 
-## [Оптимизация производительности](sql-server-linux-performance-get-started.md)
+## Производительность
+### [Рекомендации](sql-server-linux-performance-best-practices.md)
+### [Начало работы с функциями повышения производительности](sql-server-linux-performance-get-started.md)
 
 # Примеры
 ## Автоматическая установка
@@ -85,6 +96,11 @@
 # Ресурсы
 ## [Диагностика](sql-server-linux-troubleshooting-guide.md)
 ## [Документация по SQL Server](../sql-server/sql-server-technical-documentation.md)
+## Участники
+### [Мониторинг](../sql-server/partner-monitor-sql-server.md)
+### [Высокий уровень доступности и аварийное восстановление](../sql-server/partner-hadr-sql-server.md)
+### [Управление](../sql-server/partner-management-sql-server.md)
+### [Разработка](../sql-server/partner-dev-sql-server.md)
 ## [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
