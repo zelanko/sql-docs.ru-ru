@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfFieldElement"></a>Атрибуты элемента \<FIELD>  
  В этом разделе описываются атрибуты элемента \<FIELD>, которые обобщены в следующем синтаксисе схемы:  
   
- \<FIELD  
+ Значения xsi:type элемента <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfColumnElement"></a>Атрибуты элемента \<COLUMN>  
  В этом разделе описываются атрибуты элемента \<COLUMN>, которые обобщены в следующем синтаксисе схемы:  
   
- \<COLUMN  
+ Типы данных <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> Помещение значения xsi:type в набор данных  
  Если XML-документ проверяется при помощи языка определения схемы XML (XSD), значение xsi:type не помещается в набор данных. Тем не менее, сведения xsi:type можно поместить в набор данных, загрузив XML-файл форматирования в XML-документ, например `myDoc`, как показано в следующем фрагменте кода:  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -362,7 +362,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  Поля данных соответствуют «один к одному» столбцам таблицы. В элементе `<ROW>` файла форматирования столбец `Age` сопоставляется с первым полем, столбец `FirstName` — со вторым, а столбец `LastName` — с третьим.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -398,7 +398,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  В элементе `<ROW>` файла форматирования столбец `Age` сопоставляется с первым полем, столбец `FirstName` — с третьим, а столбец `LastName` — со вторым.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -433,7 +433,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  В элементе `<ROW>` файла форматирования столбец `Age` сопоставляется с первым полем, столбец `FirstName` — с третьим, а столбец `LastName` — с четвертым.  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -464,7 +465,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> Г. Сопоставление типа данных xsi:type элемента \<FIELD> с типом данных xsi:type элемента \<COLUMN>  
  Следующий пример демонстрирует различные типы полей и их сопоставление со столбцами.  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -501,13 +502,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> Д. сопоставление XML-данных с таблицей;  
  В следующем примере создается пустая таблица из двух столбцов (`t_xml`), первый столбец которой сопоставляется с типом данных `int` , а второй — с типом данных `xml` .  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  Следующий XML-файл форматирования загружает файл данных в таблицу `t_xml`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -525,7 +526,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> Е. импорт полей фиксированной длины и полей фиксированной ширины.  
  В следующем примере описываются поля фиксированной ширины в `10` или `6` символов каждое. Файл форматирования представляет длину и ширину этих полей в виде `LENGTH="10"` и `LENGTH="6"`соответственно. Каждая строка файлов данных заканчивается сочетанием символов возврата каретки и перевода строки, {CR}{LF}, которое в файле форматирования представлено в виде `TERMINATOR="\r\n"`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  

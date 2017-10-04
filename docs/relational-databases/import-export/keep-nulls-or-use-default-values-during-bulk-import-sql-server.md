@@ -24,11 +24,11 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 280e52e4ffbb86b02007493c4d000d3be0decece
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 74e0dabe8b6691e467e82d7267c40ef578d84490
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 
 |Контур|
 |---|
-|[Сохранение значений NULL](#keep_nulls)<br />[Использование значений по умолчанию при выполнении инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />&emsp;&#9679;&emsp;[Образец файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />[Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL без файла форматирования](#bcp_null)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию без файла форматирования](#bcp_default)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL без файла форматирования](#bulk_null)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию без файла форматирования](#bulk_default)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#openrowset__default_fmt)<p>                                                                                                                                                                                                                  </p>|
+|[Сохранение значений NULL](#keep_nulls)<br />[Использование значений по умолчанию при выполнении инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />&emsp;&#9679;&emsp;[Образец файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />[Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL без файла форматирования](#bcp_null)<br />&emsp;&#9679;&emsp;[Использование команды bcp и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию без файла форматирования](#bcp_default)<br />&emsp;&#9679;&emsp;[Использование команды bcp и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL без файла форматирования](#bulk_null)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию без файла форматирования](#bulk_default)<br />&emsp;&#9679;&emsp;[Использование инструкции BULK INSERT и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и сохранение значений NULL с помощью файла форматирования в формате, отличном от XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Использование инструкции OPENROWSET(BULK...) и значений по умолчанию с помощью файла форматирования в формате, отличном от XML](#openrowset__default_fmt)
 
 ## Сохранение значений NULL<a name="keep_nulls"></a>  
 Следующие квалификаторы указывают, что вместо пустого поля в файле данных необходимо вставить не значение по умолчанию, а значение NULL.  Для инструкции [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)по умолчанию любым столбцам, не участвующим в операции массовой загрузки, присваивается значение NULL.
@@ -67,7 +67,8 @@ ms.lasthandoff: 06/22/2017
 
 ### **Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже сценарий создает тестовую базу данных и таблицу с именем `myNulls`.  Заметьте, что в четвертом столбце таблицы ( `Kids`) хранится значение по умолчанию.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -83,6 +84,7 @@ CREATE TABLE dbo.myNulls (
 
 ### **Образец файла данных**<a name="sample_data_file"></a>
 С помощью Блокнота создайте пустой файл `D:\BCP\myNulls.bcp` и вставьте данные, приведенные ниже.  Обратите внимание, что в третьей записи в четвертом столбце значение отсутствует.
+
 ```
 1,Anthony,Grosse,Yes,1980-02-23
 2,Alica,Fatnowna,No,1963-11-14
@@ -90,6 +92,7 @@ CREATE TABLE dbo.myNulls (
 ```
 
 Кроме того, можно выполнить следующий сценарий PowerShell для создания и заполнения файла данных:
+
 ```powershell
 cls
 # revise directory as desired
@@ -120,7 +123,7 @@ Invoke-Item $bcpFile;
 ### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myNulls.fmt`в формате, отличном от XML, на основе схемы `myNulls`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, **t,** используется для указания запятой в качестве признака [конца поля](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), а **T** используется для указания доверенного подключения с использованием встроенной системы безопасности.  В командной строке введите следующую команду:
 
- ```
+ ```cmd
 bcp TestDatabase.dbo.myNulls format nul -c -f D:\BCP\myNulls.fmt -t, -T
 
 REM Review file
@@ -141,7 +144,8 @@ Notepad D:\BCP\myNulls.fmt
 ### **Использование команды [bcp](../../tools/bcp-utility.md) и сохранение значений NULL без файла форматирования**<a name="bcp_null"></a>
 
 Параметр**-k** .  В командной строке введите следующую команду:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -154,7 +158,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
   
 ### **Использование команды [bcp](../../tools/bcp-utility.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
 Параметры**-k** и **-f** . В командной строке введите следующую команду:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -167,7 +172,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 
 ### **Использование команды [bcp](../../tools/bcp-utility.md) и значений по умолчанию без файла форматирования**<a name="bcp_default"></a>
 В командной строке введите следующую команду:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -180,7 +186,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
   
 ### **Использование команды [bcp](../../tools/bcp-utility.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
 Параметр**-f** .  В командной строке введите следующую команду:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNulls;"
 
@@ -193,7 +200,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 
 ### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и сохранение значений NULL без файла форматирования**<a name="bulk_null"></a>
 Аргумент**KEEPNULLS** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 TRUNCATE TABLE dbo.myNulls; -- for testing
@@ -211,7 +219,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 
 ### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
 **KEEPNULLS** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -229,7 +238,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 
 ### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и значений по умолчанию без файла форматирования**<a name="bulk_default"></a>
 Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -247,7 +257,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 
 ### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 USE TestDatabase;
 GO
 
@@ -265,7 +276,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -284,7 +295,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
 Табличное указание**KEEPDEFAULTS** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
-```tsql
+```sql
 USE TestDatabase;
 GO
 
