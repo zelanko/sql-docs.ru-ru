@@ -112,7 +112,7 @@ ms.lasthandoff: 07/31/2017
   
  В командной строке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows введите:  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, -r \n -T  
 ```  
   
@@ -145,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ### <a name="examples"></a>Примеры  
  В примерах, содержащихся в этом разделе, рассматривается массовый импорт символьных данных из файла данных `Department-c-t.txt` , созданного в предыдущем примере, в таблицу `myDepartment` образца базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . Перед выполнением примеров следует создать эту таблицу. Для этого в схеме **dbo** в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 DROP TABLE myDepartment;  
@@ -163,7 +163,7 @@ GO
   
  В командной строке Windows введите:  
   
-```  
+```cmd
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
@@ -178,7 +178,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
  В редакторе запросов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
   
-```tsql  
+```sql  
 USE AdventureWorks;  
 GO  
 BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'  

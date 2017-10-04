@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 ---
 
 # <a name="insert-sql-graph"></a>INSERT (граф SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
   Добавляет одну или несколько строк для `node` или `edge` в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 Синтаксис для вставки в таблицу узел совпадает с обычной таблицы. 
 
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
