@@ -160,7 +160,7 @@ ms.lasthandoff: 10/02/2017
 4. **Установите агент ресурсов отказоустойчивого кластера для SQL Server.** Выполните следующие команды на обоих узлах:
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```
