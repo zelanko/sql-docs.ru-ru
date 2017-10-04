@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e29110bc0e536375dc2d21ec852a634069fa868
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -54,12 +54,12 @@ ms.lasthandoff: 09/01/2017
 -   [Примеры для некластеризованных индексов columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Перейдите к сценариям:  
--   [Индексы ColumnStore для операционной аналитики в реальном времени](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [Индексы Сolumnstore для хранилищ данных](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [Индексы ColumnStore для операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Индексы Сolumnstore для хранилищ данных](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Подробнее:  
--   [Руководство по индексам ColumnStore](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [Обзор возможностей индексов ColumnStore](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [Руководство по индексам ColumnStore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Обзор возможностей индексов ColumnStore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
