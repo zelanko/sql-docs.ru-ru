@@ -1,7 +1,7 @@
 ---
 title: "Новые возможности в SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/14/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
+SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения.
 
-SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. В этом разделе представлены новые возможности последнего релиз-кандидата SQL Server 2017 (RC2, август 2017 г.) и выпусков Community Technical Preview (CTP) в определенных функциональных областях.
-
-[![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте последнюю версию релиз-кандидата SQL Server 2017 (RC2, август 2017 г.)](http://go.microsoft.com/fwlink/?LinkID=829477).
-В этом выпуске исправлены ошибки и повышена производительность.
+[![Скачать из центра оценки](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте выпуск SQL Server 2017 за октябрь 2017 г.:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 >**Запускайте SQL Server в Linux!** Дополнительные сведения см. в разделе [Документации по SQL Server на Linux](https://docs.microsoft.com/sql/linux/).
 

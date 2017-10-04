@@ -1,7 +1,7 @@
 ---
 title: "Заметки о выпуске SQL Server 2017 | Документация Майкрософт"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,56 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017
-В этом разделе описываются ограничения и проблемы, связанные с [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. Дополнительные сведения см. в следующих статьях:
-- [Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-- [Release notes for SQL Server 2017 on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes) (Заметки о выпуске для SQL Server 2017 в Linux).
+Этот раздел описывает ограничения и проблемы, связанные с SQL Server 2017. Дополнительные сведения см. в следующих статьях:
+- [Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Заметки о выпуске для SQL Server в Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
-[![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте последнюю версию релиз-кандидата SQL Server 2017 (RC2, август 2017 г.)](http://go.microsoft.com/fwlink/?LinkID=829477).
+**Оцените SQL Server!**
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [ Развернуть виртуальную машину с SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 — общедоступный выпуск (октябрь 2017 г.)
+### <a name="database-engine"></a>Компонент Database Engine
+
+- **Проблема и последствия для клиентов:** после обновления существующая сетевая папка FILESTREAM может стать недоступной.
+
+- **Решение.** Сначала перезагрузите компьютер и проверьте доступность сетевой папки FILESTREAM. Если она по-прежнему недоступна, сделайте следующее.
+
+    1. В диспетчере конфигурации SQL Server щелкните экземпляр SQL Server правой кнопкой мыши и выберите пункт **Свойства**. 
+    2. На вкладке **FILESTREAM** снимите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода**, а затем нажмите кнопку **Применить**.
+    3. Снова установите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода** для имени исходной общей папки и нажмите кнопку **Применить**.
+
+### <a name="master-data-services-mds"></a>Службы Master Data Services (MDS)
+- **Проблема и последствия для клиентов:** когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается следующая ошибка: `"The model permission cannot be saved. The object guid is not valid"`
+
+- **Решения.** 
+  - Предоставьте разрешение для подузлов в представлении в виде дерева, а не для корневого уровня.
+  - либо
+  - Запустите скрипт, описанный в блоге команды разработчиков MDS, посвященном [ошибке при применении разрешения на уровне сущности](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx).
+
+### <a name="analysis-services"></a>Службы Analysis Services
+- **Проблема и последствия для клиентов:** для табличных моделей на уровне совместимости 1400 при использовании операции Get Data соединители данных для некоторых источников, таких как Amazon Redshift, IBM Netezza и Impala, пока недоступны.
+- **Решение.** Отсутствует.   
+
+- **Проблема и последствия для клиентов:** в моделях прямых запросов на уровне совместимости 1400 с перспективами может возникнуть сбой при запросе или обнаружении метаданных.
+- **Решение.** Удалите перспективы и повторите развертывание.
+
+### <a name="tools"></a>Инструменты
+- **Проблема и последствия для клиентов:** выполнение *DReplay* завершается сбоем со следующим сообщением: "Ошибка. Произошла непредвиденная ошибка DReplay!".
+- **Решение.** Отсутствует.
+
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>Релиз-кандидат SQL Server 2017 (RC2 — август 2017 г.)
 Для этого выпуска нет заметок о выпуске SQL Server на платформе Windows. См. [заметки о выпуске SQL Server на платформе Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>Релиз-кандидат SQL Server 2017 (RC1 — июль 2017 г.)
