@@ -93,13 +93,13 @@ WHERE JobTitle LIKE 'Vice President%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Average vacation hours       Total sick leave hours`
+```
+Average vacation hours       Total sick leave hours
+ ----------------------       ----------------------
+25                           97
   
-`----------------------       ----------------------`
-  
-`25                           97`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>Б. Использование функций SUM и AVG в предложении GROUP BY  
 При использовании с предложением `GROUP BY` каждая агрегатная функция создает одно значение для каждой группы вместо всей таблицы. В следующем примере создается итоговое значение для каждой территории продаж в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Итог содержит средний бонус, полученный продавцами по каждой территории, и сумму продаж за текущий год для каждой территории.
@@ -141,11 +141,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+437.4042
   
-`437.4042`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-using-avg-without-distinct"></a>Г. Использование функции AVG без ключевого слова DISTINCT  
 Без ключевого слова DISTINCT функция `AVG` находит среднюю справочную цену всех продуктов в таблице `Product` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], учитывая и все повторяющиеся значения.
@@ -157,11 +158,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+438.6662
   
-`438.6662`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="e-using-the-over-clause"></a>Д. Использование предложения OVER  
 Следующий пример показывает использование функции AVG с предложением OVER для получения скользящего среднего годовых продаж на каждой территории в таблице `Sales.SalesPerson` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Данные секционируются по `TerritoryID` и логически сортируются по `SalesYTD`. Это означает, что функция AVG вычисляется для каждой территории на основании объема продаж за год. Обратите внимание, что в `TerritoryID` 1 для продаж за 2005 год используются две строки, в которых представлены два менеджера по продажам с показателями за этот год. После расчета среднего значения продаж для двух данных строк в вычисление включается третья строка, представляющая продажи за 2006 год.

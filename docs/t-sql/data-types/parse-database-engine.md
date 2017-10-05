@@ -79,11 +79,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`hierarchyidRepresentation    StringRepresentation`
-  
-`-------------------------    -----------------------`
-  
-`0x5ADE                       /1/1/3/`
+```
+hierarchyidRepresentation    StringRepresentation
+-------------------------    -----------------------
+0x5ADE                       /1/1/3/
+```
   
 ### <a name="b-clr-example"></a>Б. Пример CLR  
 В следующем фрагменте кода вызывается метод Parse():

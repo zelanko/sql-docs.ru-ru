@@ -128,11 +128,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+0
   
- `0`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>Г. Выполнение поиска с учетом регистра  
 В следующем примере выполняется поиск с учетом регистра для строки `'TEST'` в `'This is a Test``'`.
@@ -148,9 +149,10 @@ SELECT CHARINDEX ( 'TEST',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `0`  
+```
+-----------
+0
+```  
   
 В следующем примере выполняется поиск с учетом регистра для строки `'Test'` в `'This is a Test'`.
   
@@ -165,9 +167,10 @@ SELECT CHARINDEX ( 'Test',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>Д. Выполнение поиска без учета регистра  
 В следующем примере выполняется поиск строки `'TEST'` в `'This is a Test'` без учета регистра.
@@ -184,9 +187,10 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -199,9 +203,10 @@ SELECT CHARINDEX('is', 'This is a string');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `3`  
+```
+---------
+3
+```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>Ж. Поиск с позиции, отличной от первой  
 В следующем примере возвращается первый расположение `is` строка в `This is a string`, начиная с четвертого позиции.
@@ -212,9 +217,10 @@ SELECT CHARINDEX('is', 'This is a string', 4);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `6`  
+```
+---------
+ 6
+ ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>З. Результаты, если строка не найдена  
 В следующем примере показан возвращаемое значение, если свойство *string_pattern* не найден в строке.
@@ -225,9 +231,10 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `0`  
+```
+---------
+0
+```  
   
 ## <a name="see-also"></a>См. также:
 [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
