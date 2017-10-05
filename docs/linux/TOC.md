@@ -11,6 +11,7 @@
 ## [Установка и подключение — SUSE](quickstart-install-connect-suse.md)
 ## [Установка и подключение — Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Запуск и подключение — Docker](quickstart-install-connect-docker.md)
+## [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 # Учебники
 ## [1_Миграция с Windows](sql-server-linux-migrate-restore-database.md)
@@ -31,7 +32,6 @@
 ### [Установка полнотекстового поиска SQL Server](sql-server-linux-setup-full-text-search.md)
 ### [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [Регистрация общедоступного репозитория](sql-server-linux-change-repo.md)
-### [Подготовка виртуальной машины SQL в Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
 
 ## Configure
 ### [Настройка с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md)
