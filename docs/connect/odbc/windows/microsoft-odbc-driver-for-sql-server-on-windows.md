@@ -48,7 +48,7 @@ Microsoft ODBC Driver 13.1, 13 и 11 for [!INCLUDE[ssNoVersion](../../../include
 -   [Использование постоянного шифрования с драйвером ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [С помощью Azure Active Directory с помощью драйвера ODBC](../../../connect/odbc/using-azure-active-directory.md) 
 -   [С помощью прозрачного сетевого разрешение IP-адресов](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
-  
+
 ## <a name="community"></a>Сообщество  
 - [Блог команды разработчиков Microsoft ODBC Driver For SQL Server](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [Форум по доступу к данным SQL Server](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
