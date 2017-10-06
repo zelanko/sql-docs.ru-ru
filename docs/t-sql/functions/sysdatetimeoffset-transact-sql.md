@@ -83,17 +83,14 @@ SELECT SYSDATETIME() AS SYSDATETIME
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      2007-04-30 13:10:02.0474381`  
-  
- `SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00`  
-  
- `SYSUTCDATETIME()   2007-04-30 20:10:02.0474381`  
-  
- `CURRENT_TIMESTAMP  2007-04-30 13:10:02.047`  
-  
- `GETDATE()          2007-04-30 13:10:02.047`  
-  
- `GETUTCDATE()       2007-04-30 20:10:02.047`  
+ ```
+SYSDATETIME()      2007-04-30 13:10:02.0474381
+SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
+SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
+CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
+GETDATE()          2007-04-30 13:10:02.047
+GETUTCDATE()       2007-04-30 20:10:02.047
+```  
   
 ### <a name="b-converting-date-and-time-to-date"></a>Б. Преобразование даты и времени в дату  
  В следующем примере показано, как преобразовать значения даты и времени в тип `date`.  
@@ -109,17 +106,14 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
+ ```
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+```  
   
 ### <a name="c-converting-date-and-time-to-times"></a>В. Преобразование даты и времени во время  
  В следующем примере показано, как преобразовать значения даты и времени в тип `time`.  
@@ -135,17 +129,14 @@ SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      13:18:45.3490361`  
-  
- `SYSDATETIMEOFFSET()13:18:45.3490361`  
-  
- `SYSUTCDATETIME()   20:18:45.3490361`  
-  
- `CURRENT_TIMESTAMP  13:18:45.3470000`  
-  
- `GETDATE()          13:18:45.3470000`  
-  
- `GETUTCDATE()       20:18:45.3470000`  
+ ```
+SYSDATETIME()      13:18:45.3490361
+SYSDATETIMEOFFSET()13:18:45.3490361
+SYSUTCDATETIME()   20:18:45.3490361
+CURRENT_TIMESTAMP  13:18:45.3470000
+GETDATE()          13:18:45.3470000
+GETUTCDATE()       20:18:45.3470000
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующих примерах с помощью шести системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит возврат даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.  
@@ -164,17 +155,14 @@ SELECT SYSDATETIME() AS SYSDATETIME
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      2007-04-30 13:10:02.0474381`  
-  
- `SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00`  
-  
- `SYSUTCDATETIME()   2007-04-30 20:10:02.0474381`  
-  
- `CURRENT_TIMESTAMP  2007-04-30 13:10:02.047`  
-  
- `GETDATE()          2007-04-30 13:10:02.047`  
-  
- `GETUTCDATE()       2007-04-30 20:10:02.047`  
+ ```
+SYSDATETIME()      2007-04-30 13:10:02.0474381
+SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
+SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
+CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
+GETDATE()          2007-04-30 13:10:02.047
+GETUTCDATE()       2007-04-30 20:10:02.047
+```  
   
 ### <a name="e-converting-date-and-time-to-date"></a>Д. Преобразование даты и времени в дату  
  В следующем примере показано, как преобразовать значения даты и времени в тип `date`.  
@@ -190,17 +178,14 @@ SELECT CONVERT (date, SYSDATETIME())
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
-  
- `2007-04-30`  
+ ```
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+2007-04-30
+```  
   
 ### <a name="f-converting-date-and-time-to-times"></a>Е. Преобразование даты и времени во время  
  В следующем примере показано, как преобразовать значения даты и времени в тип `time`.  
@@ -216,17 +201,14 @@ SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SYSDATETIME()      13:18:45.3490361`  
-  
- `SYSDATETIMEOFFSET()13:18:45.3490361`  
-  
- `SYSUTCDATETIME()   20:18:45.3490361`  
-  
- `CURRENT_TIMESTAMP  13:18:45.3470000`  
-  
- `GETDATE()          13:18:45.3470000`  
-  
- `GETUTCDATE()       20:18:45.3470000`  
+ ```
+SYSDATETIME()      13:18:45.3490361
+SYSDATETIMEOFFSET()13:18:45.3490361
+SYSUTCDATETIME()   20:18:45.3490361
+CURRENT_TIMESTAMP  13:18:45.3470000
+GETDATE()          13:18:45.3470000
+GETUTCDATE()       20:18:45.3470000
+```  
   
 ## <a name="see-also"></a>См. также:  
  [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

@@ -206,9 +206,10 @@ SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
-  
- `20`  
+```
+--------
+20
+```  
   
 Следующий пример возвращает компонент года даты `12/20/1974`.
   
@@ -220,9 +221,10 @@ SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
-  
- `1974`  
+```
+--------
+1974
+```  
   
 ## <a name="see-also"></a>См. также:
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

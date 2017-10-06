@@ -86,13 +86,13 @@ SELECT @startdate + 1.25 AS 'Start Date',
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Start Date                  Add Date`  
+ ```
+Start Date                  Add Date
+--------------------------- ---------------------------
+1900-01-11 06:00:00.000     1900-01-15 00:00:00.000
   
- `--------------------------- ---------------------------`  
-  
- `1900-01-11 06:00:00.000     1900-01-15 00:00:00.000`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+ ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>В. Сложение данных символьного и целочисленного типов  
  В следующем примере добавляется **int** типа данных значение и символьное значение можно преобразовать в символьный тип данных для **int**. Если имеется символ, который не является допустимым в **char** строку, [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращает сообщение об ошибке.  
@@ -105,11 +105,12 @@ SELECT '125127' + @addvalue;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
+ ```
+-----------------------
+125142
   
- `125142`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

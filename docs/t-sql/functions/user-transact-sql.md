@@ -72,11 +72,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-user-with-default-constraints"></a>Б. Применение функции USER в ограничении DEFAULT  
  В следующем примере создается таблица с использованием функции `USER` в ограничении `DEFAULT` для столбца менеджеров по продажам.  
@@ -113,21 +114,17 @@ GO
   
  Результирующий набор (обратите внимание на значение столбца `entry-person`):  
   
- `part_id     description                    entry_person`  
+ ```
+part_id     description                    entry_person
+----------- ------------------------------ -------------------------
+100         Red pencil                     dbo
+101         Blue pencil                    dbo
+102         Green pencil                   dbo
+103         Black pencil                   dbo
+104         Yellow pencil                  dbo
   
- `----------- ------------------------------ -------------------------`  
-  
- `100         Red pencil                     dbo`  
-  
- `101         Blue pencil                    dbo`  
-  
- `102         Green pencil                   dbo`  
-  
- `103         Black pencil                   dbo`  
-  
- `104         Yellow pencil                  dbo`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+```  
   
 ### <a name="c-using-user-in-combination-with-execute-as"></a>В. Применение функции USER в сочетании с предложением EXECUTE AS  
  Следующий пример иллюстрирует работу функции `USER` при вызове из сеанса олицетворения.  
@@ -147,11 +144,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Mario`  
-  
- `DBO`  
+ ```
+DBO
+Mario
+DBO
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -167,11 +164,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   

@@ -198,13 +198,13 @@ SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstUse`  
+ ```
+FirstUse  
+1  
   
- `1`  
-  
- `SecondUse`  
-  
- `2`  
+SecondUse  
+2
+```  
   
 ### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>Б. Присваивание переменной следующего значения из последовательности  
  Следующий пример показывает три способа присвоить переменной следующее значение последовательности.  

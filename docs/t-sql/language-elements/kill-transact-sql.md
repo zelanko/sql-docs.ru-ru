@@ -116,8 +116,10 @@ JOIN sys.dm_exec_connections AS conn
   
  Если откат сеанса или UOW завершен к моменту выполнения инструкции KILL *идентификатор сеанса*|*UOW* выполняется инструкция WITH STATUSONLY, или если нет идентификатор сеанса или UOW производится откат, KILL *идентификатор сеанса*|*UOW* WITH STATUSONLY возвращает следующую ошибку:  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  Аналогичный отчет о состоянии может быть получен при повторном выполнении инструкции KILL *идентификатор сеанса*|*UOW* без использования параметра WITH STATUSONLY, однако не рекомендуется делать это. Повторение KILL *идентификатор сеанса* инструкция может вызвать завершение нового процесса, если процесс отката был завершен, и идентификатор сеанса было присвоено новой задачи до запуска новой инструкции KILL. Указание параметра WITH STATUSONLY предотвращает указанные последствия.  
   

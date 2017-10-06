@@ -78,15 +78,13 @@ ORDER BY LastName;
   
  Здесь приводится частичный результирующий набор.  
   
- `Name`  
-  
- `------------------------------`  
-  
- `ABBAS, Syed`  
-  
- `ABERCROMBIE, Kim`  
-  
- `ABOLROUS, Hazem`  
+ ```
+Name
+------------------------------
+ABBAS, Syed
+ABERCROMBIE, Kim
+ABOLROUS, Hazem
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   

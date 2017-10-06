@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 dm_execution_performance_counters [ @execution_id = ] execution_id  
   
 ```  
@@ -69,14 +69,14 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="example"></a>Пример  
  В следующем примере функция возвращает статистику для запущенного выполнения с идентификатором 34.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
 ## <a name="example"></a>Пример  
  В следующем примере функция возвращает статистику для всех выполнений, запущенных на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в зависимости от разрешений.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

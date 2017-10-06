@@ -89,38 +89,32 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Object Name`  
-  
- `------------------------------`  
-  
- `Person`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorks2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
+```
+Object Name
+------------------------------
+Person
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorks2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+ ```
+ 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Следующий пример демонстрирует использование `PARSENAME` для получения информации о таблице `Person` в базе данных `AdventureWorks2012`.  
   
@@ -135,38 +129,31 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `Object Name`  
-  
- `------------------------------`  
-  
- `DimCustomer`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorksPDW2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
+```
+Object Name
+------------------------------
+DimCustomer
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+dbo
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorksPDW2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+```
   
 ## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   

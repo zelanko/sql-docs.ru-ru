@@ -105,13 +105,13 @@ SELECT x = SUBSTRING('abcdef', 2, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
+ ```
+x  
+----------  
+bcd  
   
- `----------`  
-  
- `bcd`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>Б. Использование SUBSTRING с данными типа text, ntext или image  
   
@@ -130,13 +130,13 @@ WHERE pub_id = '1756';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `pub_id logo    pr_info`  
-  
- `------ ---------------------- ----------`  
-  
- `1756   0x474946383961E3002500 This is sa`  
-  
- `(1 row(s) affected)`  
+ ```
+ pub_id logo    pr_info
+------ ---------------------- ----------
+1756   0x474946383961E3002500 This is sa
+
+(1 row(s) affected)
+```  
   
  В следующем примере показано влияние ПОДСТРОКИ на обоих **текст** и **ntext** данных. Во-первых, пример создает новую таблицу в базе данных `pubs` под именем `npub_info`. Во-вторых, пример создает столбец `pr_info` в таблице `npub_info` из первых 80 символов столбца `pub_info.pr_info` и добавляет `ü` в качестве первого символа. Наконец `INNER JOIN` получает все идентификационные номера издателей и `SUBSTRING` обоих **текст** и **ntext** сведениями об издателях.  
   
@@ -196,15 +196,13 @@ ORDER BY LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName             Initial`  
-  
- `-------------------- -------`  
-  
- `Barbariol            A`  
-  
- `Barber               D`  
-  
- `Barreto de Mattos    P`  
+ ```
+LastName             Initial
+-------------------- -------
+Barbariol            A
+Barber               D
+Barreto de Mattos    P
+```  
   
  Приведенный ниже показано, как вернуть второй, третий и четвертый символы строковой константы `abcdef`.  
   
@@ -216,11 +214,11 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
-  
- `-----`  
-  
- `bcd`  
+ ```
+x
+-----
+bcd
+```  
   
 ## <a name="see-also"></a>См. также:  
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

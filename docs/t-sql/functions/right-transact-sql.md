@@ -100,17 +100,14 @@ ORDER BY EmployeeKey;
   
  Здесь приводится частичный результирующий набор.  
   
- `Name`  
-  
- `-----`  
-  
- `lbert`  
-  
- `Brown`  
-  
- `rello`  
-  
- `lters`  
+ ```
+Name
+-----
+lbert
+Brown
+rello
+lters
+ ```  
   
 ### <a name="c-using-right-with-a-character-string"></a>В. С помощью вправо с символьной строкой  
  В следующем примере используется `RIGHT` для возврата две правых символов символьной строки `abcdefg`.  
@@ -123,9 +120,10 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------`  
-  
- `fg`  
+```
+-------  
+fg
+```  
   
 ## <a name="see-also"></a>См. также:  
  [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

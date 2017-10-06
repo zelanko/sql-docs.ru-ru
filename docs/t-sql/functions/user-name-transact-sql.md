@@ -77,11 +77,12 @@ GO
   
  Далее приведен результирующий набор для пользователя, который является членом предопределенной роли сервера sysadmin.  
   
- `------------------------------`  
+ ```
+------------------------------  
+dbo  
   
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="c-using-username-in-the-where-clause"></a>В. Использование USER_NAME в предложении WHERE  
  Следующий пример иллюстрирует поиск в таблице `sysusers` строки, имя которой равняется результату работы системной функции `USER_NAME` для пользователя с идентификационным номером, равным `1`.  
@@ -93,13 +94,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `name`  
+ ```
+name  
+------------------------------  
+dbo  
   
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="d-calling-username-during-impersonation-with-execute-as"></a>Г. Вызов USER_NAME во время олицетворения пользователя с помощью EXECUTE AS  
  Следующий пример показывает, как `USER_NAME` ведет себя во время олицетворения пользователя.  
@@ -119,11 +120,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Zelig`  
-  
- `DBO`  
+ ```
+DBO  
+Zelig  
+DBO
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

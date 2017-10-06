@@ -67,15 +67,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                    Upper                    LowerUpper`  
+ ```
+Lower                    Upper                    LowerUpper  
+---------------------    ---------------------    --------------------  
+minipump                 MINIPUMP                 minipump 
+taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
   
- `---------------------    ---------------------    --------------------`  
-  
- `minipump                 MINIPUMP                 minipump`  
-  
- `taillights - battery     TAILLIGHTS - BATTERY     taillights - battery`  
-  
- `(2 row(s) affected)`  
+(2 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере используются функции `LOWER` и `UPPER`, причем функция `UPPER` вложена в функцию `LOWER`, при выборе названий продуктов ценой от 11 до 20 долларов.  
@@ -93,13 +92,12 @@ WHERE ListPrice between 11.00 and 20.00;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                 Upper                  LowerUpper`  
-  
- `--------------------  ---------------------  --------------------`  
-  
- `minipump              MINIPUMP               minipump`  
-  
- `taillights – battery  TAILLIGHTS – BATTERY   taillights - battery`  
+ ```
+Lower                 Upper                  LowerUpper  
+--------------------  ---------------------  --------------------  
+minipump              MINIPUMP               minipump  
+taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
+```  
   
 ## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
