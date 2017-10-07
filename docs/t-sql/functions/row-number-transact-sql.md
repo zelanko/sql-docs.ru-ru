@@ -241,16 +241,17 @@ GROUP BY LastName, FirstName;
 ```  
   
  Здесь приводится частичный результирующий набор.  
-  
- ```
-RowNumber  FirstName  LastName            SalesQuota
----------  ---------  ------------------  -------------
-1          Jillian    Carson              12,198,000.00
-2          Linda      Mitchell            11,786,000.00
-3          Michael    Blythe              11,162,000.00
-4          Jae        Pak                 10,514,000.00
- ```  
-  
+
+```  
+
+RowNumber  FirstName  LastName            SalesQuota  
+---------  ---------  ------------------  -------------  
+1          Jillian    Carson              12,198,000.00  
+2          Linda      Mitchell            11,786,000.00  
+3          Michael    Blythe              11,162,000.00  
+4          Jae        Pak                 10,514,000.00  
+```
+
 ### <a name="f-using-rownumber-with-partition"></a>Е. Использование ROW_NUMBER() с PARTITION  
  Следующий пример демонстрирует использование функции `ROW_NUMBER` с аргументом `PARTITION BY`. В результате `ROW_NUMBER` функции для нумерации строк в каждой секции.  
   
@@ -269,18 +270,19 @@ GROUP BY LastName, FirstName, SalesTerritoryKey;
 ```  
   
  Здесь приводится частичный результирующий набор.  
-  
- ```
-RowNumber  LastName            Territory  SalesQuota
----------  ------------------  ---------  -------------
-1          Campbell            1           4,025,000.00
-2          Ansman-Wolfe        1           3,551,000.00
-3          Mensa-Annan         1           2,275,000.00
-1          Blythe              2          11,162,000.00
-1          Carson              3          12,198,000.00
-1          Mitchell            4          11,786,000.00
-2          Ito                 4           7,804,000.00
- ```  
+ 
+```  
+ 
+RowNumber  LastName            Territory  SalesQuota  
+---------  ------------------  ---------  -------------  
+1          Campbell            1           4,025,000.00  
+2          Ansman-Wolfe        1           3,551,000.00  
+3          Mensa-Annan         1           2,275,000.00  
+1          Blythe              2          11,162,000.00  
+1          Carson              3          12,198,000.00  
+1          Mitchell            4          11,786,000.00  
+2          Ito                 4           7,804,000.00  
+```
   
 ## <a name="see-also"></a>См. также:  
  [Ранг &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
