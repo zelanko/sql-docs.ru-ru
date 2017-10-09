@@ -126,11 +126,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="examples"></a>Примеры  
  В следующем примере отменяется разрешение `EXECUTE` на коллекцию XML-схем `Invoices4` у пользователя `Wanida`. Коллекция XML-схем `Invoices4` размещена внутри схемы `Sales` базы данных `AdventureWorks2012`.  
   
- `USE AdventureWorks2012;`  
-  
- `REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ REVOKE EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 FROM Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [ПРЕДОСТАВЬТЕ разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   

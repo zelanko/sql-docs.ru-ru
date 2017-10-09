@@ -62,20 +62,20 @@ SELECT @g.STBoundary().ToString();
 ### <a name="b-using-stboundary-on-a-linestring-instance-with-the-same-endpoints"></a>Б. Использование STBoundary() в экземпляре LineString с одинаковыми конечными точками  
  В следующем примере создается действительный экземпляр `LineString` с одинаковыми конечными точками. `STBoundary()` возвращает пустую коллекцию `GeometryCollection`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, -2 2, 0 0)', 0);`  
-  
- `SELECT @g.STBoundary().ToString();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, -2 2, 0 0)', 0);  
+ SELECT @g.STBoundary().ToString();
+ ```  
   
 ### <a name="c-using-stboundary-on-a-curvepolygon-instance"></a>В. Использование STBoundary() в экземпляре CurvePolygon  
  В следующем примере `STBoundary()` используется в пустом экземпляре `CurvePolygon`. `STBoundary()` возвращает экземпляр `CircularString`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);`  
-  
- `SELECT @g.STBoundary().ToString();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(0 0, 2 2, 0 2, -2 2, 0 0))', 0);  
+ SELECT @g.STBoundary().ToString();
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

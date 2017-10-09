@@ -128,11 +128,11 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>Примеры  
  В ходе выполнения следующего примера пользователю `EXECUTE` предоставляется разрешение `Invoices4` для коллекции XML-схем `Wanida`. Коллекция XML-схем `Invoices4` размещена внутри схемы `Sales` базы данных `AdventureWorks2012`.  
   
- `USE AdventureWorks2012;`  
-  
- `GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Запрет разрешения на коллекцию схем XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   

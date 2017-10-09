@@ -201,10 +201,10 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Сборка `ComplexNumber` может быть создана при выполнении образцов скриптов UserDefinedDataType. Дополнительные сведения см. в разделе [определяемый пользователем тип](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
- `ALTER ASSEMBLY ComplexNumber`  
-  
- `FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll'`  
-  
+ ```
+ ALTER ASSEMBLY ComplexNumber 
+ FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
+  ```
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>Б. Добавление файла, связанного со сборкой  
  На следующем примере показано, как производится передача файла с исходным кодом `Class1.cs`, связанного со сборкой `MyClass`. При этом предполагается, что сборка `MyClass` уже создана в базе данных.  
   

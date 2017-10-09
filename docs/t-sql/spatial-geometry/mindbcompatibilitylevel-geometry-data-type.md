@@ -50,28 +50,24 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. Проверка типа CircularString на совместимость с уровнем совместимости 110  
  В следующем примере экземпляр `CircularString` проверяется на совместимость с более ранней версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)';`  
-  
- `IF @g.MinDbCompatibilityLevel() <= 110`  
-  
- `BEGIN`  
-  
- `SELECT @g.ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)'; 
+ IF @g.MinDbCompatibilityLevel() <= 110 
+ BEGIN 
+ SELECT @g.ToString(); 
+ END
+ ```  
   
 ### <a name="b-testing-linestring-type-for-compatibility-with-compatibility-level-100"></a>Б. Проверка типа LineString на совместимость с уровнем совместимости 100  
  В следующем примере экземпляр `LineString` проверяется на совместимость с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)';`  
-  
- `IF @g.MinDbCompatibilityLevel() <= 100`  
-  
- `BEGIN`  
-  
- `SELECT @g.ToString();`  
-  
- `END`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 9, 5 6)'; 
+ IF @g.MinDbCompatibilityLevel() <= 100 
+ BEGIN 
+ SELECT @g.ToString(); 
+ END
+``` 
   
 ## <a name="see-also"></a>См. также:  
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  

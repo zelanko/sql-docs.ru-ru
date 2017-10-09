@@ -54,20 +54,20 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. Вызов функции ShortestLineTo() для непересекающихся экземпляров  
  В этом примере ищется кратчайшее расстояние между экземпляром `CircularString` и экземпляром `LineString` и возвращается экземпляр `LineString`, соединяющий эти две точки:  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(-4 7, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>Б. Вызов функции ShortestLineTo() для пересекающихся экземпляров  
  Этот пример возвращает пустой экземпляр `LineString`, поскольку экземпляр `LineString` пересекает экземпляр `CircularString`:  
   
- `DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';`  
-  
- `DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';`  
-  
- `SELECT @g1.ShortestLineTo(@g2).ToString();`  
+```
+ DECLARE @g1 geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
+ DECLARE @g2 geometry = 'LINESTRING(0 5, 7 10, 3 7)';  
+ SELECT @g1.ShortestLineTo(@g2).ToString();
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [ShortestLineTo &#40; тип данных geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  

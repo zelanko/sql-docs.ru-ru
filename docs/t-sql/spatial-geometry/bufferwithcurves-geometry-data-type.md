@@ -81,75 +81,81 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. Вызов метода BufferWithCurves() со значением параметра < 0 для экземпляра одномерного геометрического объекта  
  В следующем примере возвращается пустой экземпляр `GeometryCollection`:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(-1).ToString(); 
+ ```
   
 ### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>Б. Вызов метода BufferWithCurves() со значением параметра < 0 для экземпляра двумерного геометрического объекта  
  В следующем примере возвращается экземпляр `CurvePolygon` с отрицательным буфером:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString()`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.BufferWithCurves(-1).ToString()
+ ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>В. Вызов функции BufferWithCurves() со значением параметра < 0, которая возвращает пустую коллекцию GeometryCollection  
  В следующем примере показано, что происходит при *расстояние* параметр равен -2:  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))';`  
-  
- `SELECT @g.BufferWithCurves(-2).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
+ SELECT @g.BufferWithCurves(-2).ToString();
+ ```  
   
  Это **ВЫБЕРИТЕ** инструкция возвращает`GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>Г. Вызов функции BufferWithCurves() со значением параметра = 0  
  В следующем примере возвращается копия вызывающего **geometry** экземпляр:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(0).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(0).ToString();
+ ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>Д. Вызов функции BufferWithCurves() с ненулевым, но очень малым значением параметра  
  В следующем примере также возвращается копия вызывающего **geometry** экземпляр:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.BufferWithCurves(@distance).ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'; 
+ DECLARE @distance float = 1e-20; 
+ SELECT @g.BufferWithCurves(@distance).ToString();
+ ```  
   
 ### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>Е. Вызов функции BufferWithCurves() со значением параметра > 0  
  В следующем примере возвращается экземпляр `CurvePolygon`:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves(2).ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves(2).ToString();
+ ```  
   
 ### <a name="g-passing-a-valid-string-parameter"></a>Ж. Передача допустимого строкового параметра  
  В следующем примере возвращается тот же экземпляр `CurvePolygon`, который упоминался ранее, но методу передается строковый параметр:  
   
- `DECLARE @g geometry= 'LINESTRING(3 4, 8 11)';`  
-  
- `SELECT @g.BufferWithCurves('2').ToString();`  
+```
+ DECLARE @g geometry= 'LINESTRING(3 4, 8 11)'; 
+ SELECT @g.BufferWithCurves('2').ToString();
+ ```  
   
 ### <a name="h-passing-an-invalid-string-parameter"></a>З. Передача недопустимого строкового параметра  
  В следующем примере возникнет ошибка:  
   
- `DECLARE @g geometry = 'LINESTRING(3 4, 8 11)'`  
-  
- `SELECT @g.BufferWithCurves('a').ToString();`  
+```
+ DECLARE @g geometry = 'LINESTRING(3 4, 8 11)' 
+ SELECT @g.BufferWithCurves('a').ToString();
+ ```  
   
  Обратите внимание на то, что в предыдущих двух примерах передавался строковый литерал методу `BufferWithCurves()`. Первый пример будет работать, поскольку строковый литерал может быть преобразован в числовое значение. Но во втором примере возникнет исключение `ArgumentException`.  
   
 ### <a name="i-calling-bufferwithcurves-on-multipoint-instance"></a>И. Вызов метода BufferWithCurves() для экземпляра объекта MultiPoint  
  Следующий пример возвращает два экземпляра `GeometryCollection` и один экземпляр `CurvePolygon`:  
   
- `DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))';`  
-  
- `SELECT @g.BufferWithCurves(1).ToString();`  
-  
- `SELECT @g.BufferWithCurves(1.5).ToString();`  
-  
- `SELECT @g.BufferWithCurves(1.6).ToString();`  
+```
+ DECLARE @g geometry = 'MULTIPOINT((1 1),(1 4))'; 
+ SELECT @g.BufferWithCurves(1).ToString(); 
+ SELECT @g.BufferWithCurves(1.5).ToString(); 
+ SELECT @g.BufferWithCurves(1.6).ToString();
+ ```  
   
  Первые два **ВЫБЕРИТЕ** инструкции возвращают `GeometryCollection` экземпляра, так как параметр *расстояние* меньше или равен 1/2 расстояния между двумя точками (1 1) и (1-4). Третий **ВЫБЕРИТЕ** инструкция возвращает `CurvePolygon` экземпляра, так как помещенные в буфер экземпляры двух точек (1 1) и (1-4) перекрываются.  
   

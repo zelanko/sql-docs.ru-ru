@@ -102,11 +102,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="c-using-multiple-string-concatenation"></a>В. Использование объединения нескольких строк  
  Следующий пример сцепляет несколько строк в одну длинную строку для отображения фамилии и первой буквы инициалов вице-президентов в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. После фамилии ставится запятая, а после первой буквы инициалов — точка.  
@@ -125,17 +125,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### <a name="d-using-large-strings-in-concatenation"></a>Г. Использование больших строк в объединения
 Следующий пример Сцепляет несколько строк в одну длинную строку, а затем пытается вычислить длину окончательную строку. Окончательный длина результирующего набора является 16000, так как выражение вычисления начинается со значения влево, @x + @z + @y = > (@x + @z) + @y. В этом случае результат (@x + @z) будет усечен до 8000 байт и затем @y добавляется результирующего набора, что делает 16000 длину последней строки. Поскольку @y является строка тип больших значений усечения не произойдет.
@@ -151,13 +149,13 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-string-concatenation"></a>Д. Использование объединения строк  

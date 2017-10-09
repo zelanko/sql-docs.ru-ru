@@ -60,19 +60,15 @@ EnvelopeAggregate ( geography_operand )
 ## <a name="examples"></a>Примеры  
  В следующем примере выполняется `EnvelopeAggregate` на наборе **geography** расположение точек в границах города.  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT City,`  
-  
- `geography::EnvelopeAggregate(SpatialLocation) AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE PostalCode LIKE('981%')`  
-  
- `GROUP BY City;`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT City,  
+ geography::EnvelopeAggregate(SpatialLocation) AS SpatialLocation  
+ FROM Person.Address  
+ WHERE PostalCode LIKE('981%')  
+ GROUP BY City;
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

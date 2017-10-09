@@ -64,9 +64,10 @@ SELECT @g.STCentroid().ToString();
 ### <a name="b-computing-the-centroid-of-a-curvepolygon-instance"></a>Б. Вычисление центроида экземпляра объекта CurvePolygon  
  В следующем примере вычисляется центроид экземпляра `CurvePolygon`.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';`  
-  
- `SELECT @g.STCentroid().ToString() AS Centroid`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))';  
+ SELECT @g.STCentroid().ToString() AS Centroid
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

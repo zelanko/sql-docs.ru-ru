@@ -54,31 +54,34 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. Использование функции STConvexHull() в неинициализированном экземпляре географического объекта  
  В следующем примере используется `STConvexHull()` в неинициализированном **geography** экземпляра.  
   
- `DECLARE @g geography;`  
-  
- `SELECT @g.STConvexHull();`  
+```
+ DECLARE @g geography;  
+ SELECT @g.STConvexHull();
+ ```  
   
 ### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>Б. Использование функции STConvexHull() в пустом экземпляре географического объекта  
  В следующем примере используется `STConvexHull()` в пустом экземпляре `Polygon`.  
   
- `DECLARE @g geography = 'POLYGON EMPTY';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON EMPTY';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
 ### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>В. Обнаружение выпуклой оболочки невыпуклого экземпляра объекта Polygon  
  В следующем примере метод `STConvexHull()` используется для поиска выпуклой оболочки невыпуклого экземпляра `Polygon`.  
   
 ```  
-DECLARE @g geography;  
-SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
-SELECT @g.STConvexHull().ToString();  
+ DECLARE @g geography;  
+ SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
+ SELECT @g.STConvexHull().ToString();  
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>Г. Обнаружение выпуклой оболочки экземпляра географического объекта с углом пакета больше 90 градусов  
  В следующем примере используется `STConvexHull()` на **geography** экземпляра с углом пакета больше 90 градусов.  
   
- `DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
   

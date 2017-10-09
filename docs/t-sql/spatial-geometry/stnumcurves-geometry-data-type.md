@@ -50,20 +50,20 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. Использование метода STNumCurves() в экземпляре CircularString  
  В следующем примере описывается получение определенного количества кривых в экземпляре `CircularString`:  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>Б. Использование метода STNumCurves() в экземпляре CompoundCurve  
  В следующем примере метод `STNumCurves()` используется для возврата определенного количества кривых в экземпляре `CompoundCurve`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)   

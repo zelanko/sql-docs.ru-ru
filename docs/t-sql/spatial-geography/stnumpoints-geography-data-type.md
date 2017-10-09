@@ -71,9 +71,10 @@ SELECT @g.STNumPoints();
 ### <a name="c-returning-the-number-of-points-in-a-compoundcurve"></a>В. Возврат числа точек в объекте CompoundCurve  
  В следующем примере возвращается число точек в экземпляре CompoundCurve. Запрос возвращает 5 вместо 6, так как функция STNumPoints() учитывает точку соединения между сегментами только один раз.  
   
- `DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658),( -122.348 47.658, -121.56 48.12, -122.358 47.653))'`  
-  
- `SELECT @g.STNumPoints();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658),( -122.348 47.658, -121.56 48.12, -122.358 47.653))'  
+ SELECT @g.STNumPoints();
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

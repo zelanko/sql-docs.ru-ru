@@ -68,11 +68,11 @@ SELECT @g.STUnion(@h).ToString();
 ### <a name="b-computing-the-union-of-a-polygon-instance-with-a-curvepolygon-instance"></a>Б. Вычисление объединения экземпляра Polygon с экземпляром CurvePolygon  
  Следующий пример возвращает экземпляр `GeometryCollection`, содержащий сегмент дуги.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
  Функция `STUnion()` возвращает результат, содержащий сегмент дуги, так как экземпляр, вызвавший `STUnion()`, содержит сегмент дуги.  
   

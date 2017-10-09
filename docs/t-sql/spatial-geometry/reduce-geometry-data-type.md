@@ -76,32 +76,31 @@ SELECT @g.Reduce(.75).ToString();
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>Б. Использование функции Reduce() с разными уровнями допуска для экземпляра CircularString  
  В следующем примере используется `Reduce()` с тремя уровнями допуска для **CircularString** экземпляр:  
   
- `DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)';`  
-  
- `SELECT @g.Reduce(5).ToString();`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
+ SELECT @g.Reduce(5).ToString(); 
+ SELECT @g.Reduce(15).ToString(); 
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  В примере получается следующий вывод.  
   
- `CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0)`  
-  
- `COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0))`  
-  
- `LINESTRING (0 0, 24 0)`  
+ ```
+ CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0) 
+ COMPOUNDCURVE (CIRCULARSTRING (0 0, 8 8, 16 0), (16 0, 24 0)) 
+ LINESTRING (0 0, 24 0)
+ ```  
   
  Каждый из возвращенных экземпляров содержит конечные точки (0 0) и (24 0).  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>В. Использование функции Reduce() с разными уровнями допуска для экземпляра CompoundCurve  
  В следующем примере используется `Reduce()` с двумя уровнями допуска для **CompoundCurve** экземпляр:  
   
- `DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';`  
-  
- `SELECT @g.Reduce(15).ToString();`  
-  
- `SELECT @g.Reduce(16).ToString();`  
+```
+ DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  
+ SELECT @g.Reduce(15).ToString();  
+ SELECT @g.Reduce(16).ToString();
+ ```  
   
  Обратите внимание, что в этом примере второй **ВЫБЕРИТЕ** инструкция возвращает **LineString** экземпляр: `LineString(0 0, 16 0)`.  
   

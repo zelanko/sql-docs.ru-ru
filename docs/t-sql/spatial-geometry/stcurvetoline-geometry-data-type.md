@@ -60,50 +60,44 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Использование неинициализированной переменной геометрии и пустого экземпляра  
  В следующем примере первый **ВЫБЕРИТЕ** инструкция использует неинициализированный **geometry** экземпляра для вызова `STCurveToLine` метода, а вторая **ВЫБЕРИТЕ** Инструкция использует пустой **geometry** экземпляра. Таким образом, метод возвращает **NULL** в первой инструкции и **GeometryCollection** сбора для второй инструкции.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
-  
- `SET @g = geometry::Parse('LINESTRING EMPTY');`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType(); 
+ SET @g = geometry::Parse('LINESTRING EMPTY'); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="b-using-a-linestring-instance"></a>Б. Использование экземпляра объекта LineString  
  **ВЫБЕРИТЕ** инструкции в следующем примере используется **LineString** экземпляра для вызова метода STCurveToLine. Таким образом, метод возвращает **LineString** экземпляра.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)');`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>В. Использование экземпляра объекта CircularString  
  Первый **ВЫБЕРИТЕ** инструкции в следующем примере используется **CircularString** экземпляра для вызова метода STCurveToLine. Таким образом, метод возвращает **LineString** экземпляра. Это **ВЫБЕРИТЕ** инструкции также сравнивает длину двух экземпляров, которые являются приблизительно.  Наконец, вторая **ВЫБЕРИТЕ** инструкция возвращает число точек для каждого экземпляра.  Он возвращает только 5 точек для **CircularString** экземпляр, но 65 точек для **LineString**экземпляра.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def];`  
-  
- `SELECT @g1.STNumPoints(), @g2.STNumPoints();`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def]; 
+ SELECT @g1.STNumPoints(), @g2.STNumPoints();
+ ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>Г. Использование экземпляра объекта CurvePolygon  
  **ВЫБЕРИТЕ** инструкции в следующем примере используется **CurvePolygon** экземпляра для вызова метода STCurveToLine. Таким образом, метод возвращает **многоугольника** экземпляра.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)   

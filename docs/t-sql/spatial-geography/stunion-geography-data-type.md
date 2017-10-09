@@ -77,20 +77,20 @@ SELECT @g.STUnion(@h).ToString();
 ### <a name="b-producing-a-fullglobe-result"></a>Б. Формирование результата FullGlobe  
  В следующем примере `FullGlobe` формируется в результате объединения двух экземпляров `STUnion()` с помощью `Polygon`.  
   
- `DECLARE @g geography = 'POLYGON ((-122.358 47.653, -122.358 47.658,-122.348 47.658, -122.348 47.649, -122.358 47.653))';`  
-  
- `DECLARE @h geography = 'POLYGON ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON ((-122.358 47.653, -122.358 47.658,-122.348 47.658, -122.348 47.649, -122.358 47.653))';  
+ DECLARE @h geography = 'POLYGON ((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
 ### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>В. Формирование треугольного отверстия из объединения объекта CurvePolygon и треугольного отверстия.  
  В следующем примере треугольное отверстие формируется из объединения объекта `CurvePolygon` с экземпляром `Polygon`.  
   
- `DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';`  
-  
- `DECLARE @h geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 0, 0.7 0.7, 0 1), (0 1, 0 0)))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON ((-0.5 0, 0 1, 0.5 0.5, -0.5 0))';  
+ DECLARE @h geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 0, 0.7 0.7, 0 1), (0 1, 0 0)))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
 ## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
