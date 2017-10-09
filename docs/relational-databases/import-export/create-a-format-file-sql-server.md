@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
@@ -73,7 +73,7 @@ ms.lasthandoff: 07/31/2017
   
  В командной строке Windows введите следующую команду `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -103,7 +103,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  В командной строке Windows введите следующую команду `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Дополнительные сведения об использовании символьного формата данных Юникод см. в статье [Использование символьного формата Юникод для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>Е. Использование файла форматирования с параметром кодовой страницы  
- При создании файла форматирования с помощью команды bcp (например, с использованием "`bcp forma`t …" ) в этом файле записываются сведения о параметрах сортировки или кодовой странице.   
+ При создании файла форматирования с помощью bcp-команды (например, "`bcp forma`t…" ) в этом файле записываются сведения о параметрах сортировки или кодовой странице.   
 В следующем примере файла форматирования для таблицы с 5 столбцами указаны параметры сортировки.  
   
 ```  
@@ -203,13 +203,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  В командной строке Windows введите следующую команду `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
 ```  
   
  Созданный файл форматирования `Department-c.xml`содержит следующие XML-элементы:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -242,13 +242,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  В командной строке Windows введите следующую команду `bcp` :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  Созданный файл форматирования `Department-n.xml`содержит следующие XML-элементы:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

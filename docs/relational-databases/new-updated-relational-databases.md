@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Новые и недавно обновленные статьи — документы по реляционным базам данных
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **18.07.2017**&nbsp;–&nbsp;**11.09.2017**
+- *Диапазон дат обновлений:* &nbsp; **11.09.2017**&nbsp;–&nbsp;**27.09.2017**
 - *Предметная область:* &nbsp; **Реляционные базы данных**.
 
 
@@ -47,18 +47,7 @@ ms.lasthandoff: 09/13/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Импорт данных в SQL Server или базу данных Azure из Excel](import-export/import-data-from-excel-to-sql.md)
-2. [Устранение неполадок с подключением PolyBase к Kerberos](polybase/polybase-troubleshoot-connectivity.md)
-3. [Прозрачное шифрование данных (TDE)](security/encryption/transparent-data-encryption.md)
-4. [Прозрачное шифрование для хранилища и базы данных SQL Azure](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Прозрачное шифрование с поддержкой использования собственных ключей для хранилища и базы данных SQL Azure](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [Смена средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [Удаление средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [Условия лицензии для общих управляющих объектов (SMO) Microsoft SQL Server](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+1. [Импорт и экспорт данных в SQL Server и базе данных SQL Azure](import-export/overview-import-export.md)
 
 
 
@@ -80,11 +69,11 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
+### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Автоматическая настройка](#TitleNum_1)
+1. [Основные сведения о типах пространственных данных](#TitleNum_1)
 
 
 
@@ -95,44 +84,34 @@ ms.lasthandoff: 09/13/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [Автоматическая настройка](automatic-tuning/automatic-tuning.md)
+### <a name="1-nbsp-spatial-data-types-overviewspatialspatial-data-types-overviewmd"></a>1. &nbsp; [Общие сведения о типах пространственных данных](spatial/spatial-data-types-overview.md)
 
-*Обновлено: 16.08.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Обновлено: 26.09.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
+<!-- Source markdown line 27.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
+<!-- git diff --ignore-all-space --unified=0 96dd44cf49e96d1d543a629d49de297dba9c1753 2e9629f852ea42a213c7c24831bcfa53e40358f2  (PR=0  ,  Filename=spatial-data-types-overview.md  ,  Dirpath=docs\relational-databases\spatial\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
 
 
 
-**Автоматическое исправление выбранного плана**
-
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] позволяет при обнаружении ухудшения работы с выбранным планом автоматически переключиться на последний известный эффективный план.
-
-![SQL plan choice correction--media/force-last-good-plan.png "Исправление выбранного плана SQL")
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] автоматически обнаруживает возможное ухудшение работы с выбранным планом, в том числе с планом, который должен использоваться в качестве замены.
-Когда ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] применяет последний известный эффективный план, автоматически отслеживается также производительность и нового, принудительно используемого плана. Если новый план не лучше плана с ухудшением производительности, его использование будет отменено, а ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] скомпилирует новый план. Если ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] подтверждает, что новый план лучше плана с ухудшением производительности, новый план будет сохранен до перекомпиляции (например, при следующем сборе статистики или изменении схемы).
-
-**Включение автоматического исправления выбранного плана**
-
-
-Вы можете отдельно для каждой базы данных включить автоматическую настройку и указать, что при ухудшении производительности после изменения плана следует принудительно использовать последний известный эффективный план. Автоматическая настройка включается с помощью следующей команды.
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-После включения этого параметра, если предполагаемая производительность процессора замедлится более чем на 10 секунд или если число ошибок в новом плане будет больше, чем в рекомендуемом, ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] автоматически принудительно применит рекомендуемую конфигурацию и проверит, что принудительно используемый план лучше текущего.
-
-**Альтернатива — исправление выбранного плана вручную**
-
-
-Без автоматической настройки пользователи должны периодически проверять состояние системы и искать запросы, в которых были потери производительности. Если какой-то план привел к ухудшению производительности, пользователь должен найти
+ -  Существует два типа пространственных данных. Тип данных **geometry** поддерживает планарные или эвклидовы данные (система координат для плоской Земли). Тип данных **geometry** соответствует спецификации "Simple Features for SQL" консорциума OGC версии 1.1.0 и стандарту SQL MM (стандарт ISO).
+ -
+ - Кроме того, ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] поддерживает тип данных **geography**, который используется для хранения эллиптических (географических) данных, таких как координаты широты и долготы в GPS.
+ -
+ -> [!IMPORTANT]
+ -> Подробное описание и примеры использования функций обработки пространственных данных, реализованных в ..!NCLUDE-NotShown--ssSQL11--../../includes/sssql11-md.md)], в том числе усовершенствования типов пространственных данных см. в скачиваемом техническом документе [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407) (Новые функции обработки пространственных данных в SQL Server с рабочим названием "Denali").
+ -
+ -##  <a name="objects"></a> Объекты пространственных данных
+ - Типы данных **geometry** и **geography** поддерживают шестнадцать объектов пространственных данных или типов экземпляров. Однако только одиннадцать из этих типов экземпляров являются *материализуемыми*. Такие экземпляры можно создавать в базе данных и работать с ними. Эти экземпляры наследуют от родительских типов данных некоторые свойства, которые разделяют их на **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** или несколько экземпляров **geometry** или **geography** в коллекции **GeometryCollection**. Тип**Geography** имеет дополнительный тип экземпляра **FullGlobe**.
+ -
+ - На рисунке ниже изображена иерархия **geometry** , на которой основаны типы данных **geometry** и **geography** . Инстанциируемые типы **geometry** и **geography** выделены синим.
+ -
+ - ![geom_hierarchy--../../relational-databases/spatial/media/geom-hierarchy.gif)
+ -
+ - Как показано на рисунке, десятью материализуемыми типами **geometry** и **geography** являются **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**и **GeometryCollection**. Есть один дополнительный тип, допускающий создание экземпляров, для типа данных geography: **FullGlobe**. Типы данных **geometry** и **geography** могут распознавать определенный экземпляр, если он имеет правильный формат, даже в том случае, если он не был определен явно. Например, если определить экземпляр **Point** явно с помощью метода STPointFromText(), то типы данных **geometry** и **geography** будут распознавать экземпляр как **Point**, если входные данные метода имели правильный формат. Если определить такой же экземпляр с помощью метода `STGeomFromText()` , то оба типа данных **geometry** и **geography** будут распознавать экземпляр как **Point**.
 
 
 
@@ -151,24 +130,20 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (3+12):документация **Расширенная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (5+0): документация **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (5+1): документация **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (19+82): документация **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (1+8): документация **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (12+1): документация **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (0+1): документация **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (7+1): документация **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (1+1): документация **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+2): документация **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (1+4): документация **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (4+1): документация **Transact-SQL**](../t-sql/new-updated-t-sql.md)
-- [Новые + обновленные (0+1): документация **Средства для SQL**](../tools/new-updated-tools.md)
+- [Новые + обновленные (0+1): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (0+1): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (4+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (17+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (3+0): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (1+1): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+1): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (0+0): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
@@ -176,6 +151,10 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
+- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
 

@@ -89,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  После того, как Excel откроется, используйте вкладку Данные для подключения к службе Analysis Services. Поскольку вы используете Excel в качестве другого пользователя Windows, параметр **Используйте проверку подлинности Windows** является правильным типом учетных данных для использования при проверке ролей. Если вам нужна помощь с выполнением этого шага, см. раздел [Подключение из клиентских приложений (службы Analysis Services)](../../analysis-services/instances/connect-from-client-applications-analysis-services.md).  
   
-     Если при подключении вы получаете ошибки, проверьте конфигурацию порта Analysis Services и удостоверьтесь, что сервер принимает удаленные подключения. Обратитесь к разделу [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) для конфигурации порта.  
+     Если при подключении вы получаете ошибки, проверьте конфигурацию порта Analysis Services и удостоверьтесь, что сервер принимает удаленные подключения. Обратитесь к разделу [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) для конфигурации порта.  
   
 #### <a name="step-5-script-role-definition-and-assignments"></a>Шаг 5. Определение и назначения роли скрипта  
   

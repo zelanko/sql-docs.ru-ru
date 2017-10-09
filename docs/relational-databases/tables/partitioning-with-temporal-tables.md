@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: cb93e468300aea6a666ad04e9ce6ad20e1b85fc2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>Секционирование с помощью темпоральных таблиц
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
   Секционирование в текущей и прежней таблицах можно использовать независимо друг от друга. Но с помощью секционирования нельзя изменить содержание данных без системного управления версиями.  
   
 > [!NOTE]  
->  Секционирование доступно для выпуска Enterprise Edition.  
+>  До выхода SQL Server 2016 с пакетом обновления 1 (SP1) функция секционирования была доступна только в выпусках Enterprise Edition. В SQL Server 2016 с пакетом обновления 1 (SP1) и более поздних версиях секционирование поддерживается во всех выпусках.
   
 -   **Для текущей таблицы:**  
   

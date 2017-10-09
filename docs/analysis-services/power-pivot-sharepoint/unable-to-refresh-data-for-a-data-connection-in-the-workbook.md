@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **Сценарий 1: служба не запущена**  
   
- Не запущен экземпляр служб SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]). Истечение срока действия пароля стало причиной остановки выполнения службы. Дополнительные сведения об изменении пароля см. в разделах [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) и [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ Не запущен экземпляр служб SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]). Истечение срока действия пароля стало причиной остановки выполнения службы. Дополнительные сведения об изменении пароля см. в разделах [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) и [Запуск и остановка службы PowerPivot для SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
  **Сценарий 2a: открытие более ранней версии книги на сервере**  
   

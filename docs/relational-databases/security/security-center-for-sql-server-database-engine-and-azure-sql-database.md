@@ -3,7 +3,7 @@ title: "Центр обеспечения безопасности для баз
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 06/28/2017
+ms.date: 09/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: ec39e8b4a49d0a452a4030a18f7b7a4c7a5d9922
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**Кто выполняет проверку подлинности?**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Проверка подлинности Windows<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Проверка подлинности|Кто выполняет проверку подлинности? (Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
+|**Кто выполняет проверку подлинности?**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Проверка подлинности Windows<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Проверка подлинности<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Active Directory|Кто выполняет проверку подлинности? (Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
 |**Где выполняется проверка подлинности?**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") В базе данных master: имена для входа и пользователи базы данных<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") В пользовательской базе данных: включенные пользователи базы данных|Аутентификация в базе данных master (имена для входа и пользователи базы данных)<br /><br /> [создать имя входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Управление базами данных и именами входа в базе данных SQL Azure](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Проверка подлинности в пользовательской базе данных<br /><br /> [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**Использование других идентификаторов**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Учетные данные<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security center-sqlserver") Выполнение от другого имени для входа<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Выполнение от имени другого пользователя базы данных|[Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Выполнение в контексте другого имени входа](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Выполнение от имени другого пользователя базы данных](../../t-sql/statements/execute-as-transact-sql.md)|  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**Автоматизированный аудит**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Аудит (уровень сервера и базы данных)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Аудит (уровень базы данных)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Обнаружение угроз|[Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Аудит базы данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Приступая к работе с обнаружением угроз для базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
+|**Автоматизированный аудит**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Аудит (уровень сервера и базы данных)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Аудит (уровень базы данных)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Обнаружение угроз| <br /><br /> [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Аудит базы данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Приступая к работе с обнаружением угроз для базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Оценка уязвимостей базы данных SQL](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
 |**Пользовательский аудит**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Триггеры|Реализация пользовательского аудита: создание [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) и [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
 |**Соответствие**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Соответствие|SQL Server: стандарт<br />                        [Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> База данных SQL:<br />                        [Центр управления безопасностью Microsoft Azure: соответствие функций требованиям регулирования](http://azure.microsoft.com/support/trust-center/services/)|  
   

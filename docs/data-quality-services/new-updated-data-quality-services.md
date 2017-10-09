@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: data-quality-services
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: c28c7e0a78c4fbbed04e2b30b7bdaff2638163ad
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 153edd4079a3baa18a590771dc407314d0cd267e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Новые и обновленные статьи: Службы Data Quality Services для SQL Server
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **18.07.2017**&nbsp;–&nbsp;**11.09.2017**
+- *Диапазон дат обновлений:* &nbsp; **11.09.2017**&nbsp;–&nbsp;**27.09.2017**
 - *Предметная область:* &nbsp; **Службы Data Quality Services для SQL Server**.
 
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
+### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
@@ -97,24 +97,20 @@ ms.lasthandoff: 09/13/2017
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (3+12):документация **Расширенная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (5+0): документация **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (5+1): документация **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (19+82): документация **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (1+8): документация **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (12+1): документация **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (0+1): документация **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (7+1): документация **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (1+1): документация **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+2): документация **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (1+4): документация **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (4+1): документация **Transact-SQL**](../t-sql/new-updated-t-sql.md)
-- [Новые + обновленные (0+1): документация **Средства для SQL**](../tools/new-updated-tools.md)
+- [Новые + обновленные (0+1): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (0+1): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (4+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (17+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (3+0): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (1+1): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+1): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (0+0): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
@@ -122,6 +118,10 @@ ms.lasthandoff: 09/13/2017
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
+- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
 

@@ -1,5 +1,5 @@
 # [Обзор](in-memory-oltp-in-memory-optimization.md)  
-# [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](survey-of-initial-areas-in-in-memory-oltp.md)  
+# [Перечень технологий выполнения OLTP в памяти для повышения производительности службы Transact-SQL](survey-of-initial-areas-in-in-memory-oltp.md)  
 # [Общие сведения и сценарии использования](overview-and-usage-scenarios.md)
 # [Техническая документация по внутренним компонентам для SQL Server 2016 ](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  

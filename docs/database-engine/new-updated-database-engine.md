@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ce80496cdf82c2bc2df2447ed043216e6c78ad7e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: dc4a5516662b200b4224facbb4c9cf4588c1b42e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Новые и недавно обновленные статьи: документация по ядру СУБД
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/13/2017
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **18.07.2017**&nbsp;–&nbsp;**11.09.2017**
+- *Диапазон дат обновлений:* &nbsp; **11.09.2017**&nbsp;–&nbsp;**27.09.2017**
 - *Предметная область:* &nbsp; **ядро СУБД**.
 
 
@@ -47,11 +47,10 @@ ms.lasthandoff: 09/13/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Установка SQL Server](install-windows/installation-for-sql-server.md)
-2. [Поддерживаемые обновления версий и выпусков SQL Server 2017](install-windows/supported-version-and-edition-upgrades-2017.md)
-3. [Ядро СУБД SQL Server](sql-server-database-engine-overview.md)
-4. [Новые возможности в ядре СУБД SQL Server 2016](whats-new-in-sql-server-2016.md)
-5. [Новые возможности в ядре СУБД SQL Server 2017](whats-new-in-sql-server-2017.md)
+1. [Добавление компонентов в экземпляр SQL Server (программа установки)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
+2. [Установка SQL Server из командной строки](install-windows/install-sql-server-from-the-command-prompt.md)
+3. [Установка SQL Server с помощью файла конфигурации](install-windows/install-sql-server-using-a-configuration-file.md)
+4. [Непрерывность бизнес-процессов и восстановление базы данных — SQL Server](sql-server-business-continuity-dr.md)
 
 
 
@@ -73,11 +72,11 @@ ms.lasthandoff: 09/13/2017
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
+### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Автоматическое заполнение для вторичных реплик](#TitleNum_1)
+1. [Установка обновлений из командной строки](#TitleNum_1)
 
 
 
@@ -88,41 +87,36 @@ ms.lasthandoff: 09/13/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-seeding-for-secondary-replicasavailability-groupswindowsautomatic-seeding-secondary-replicasmd"></a>1. &nbsp; [Автоматическое заполнение для вторичных реплик](availability-groups/windows/automatic-seeding-secondary-replicas.md)
+### <a name="1-nbsp-installing-updates-from-the-command-promptinstall-windowsinstalling-updates-from-the-command-promptmd"></a>1. &nbsp; [Установка обновлений из командной строки](install-windows/installing-updates-from-the-command-prompt.md)
 
-*Обновлено: 21.08.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Обновлено: 12.09.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 55.  ms.author= "mikeray".  -->
+<!-- Source markdown line 48.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0b7b6a23f38bfe5959ccd170527a9bbdb308dc4b dc51fdf69649ed6cae03584cff7bc900d5b72149  (PR=2896  ,  Filename=automatic-seeding-secondary-replicas.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=80642503480add90fc75573338760ab86139694c) -->
+<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
 
 
 
-В SQL Server 2016 и более ранних версиях папка, в которой будет создана база данных с помощью автоматического заполнения, уже должна существовать, и путь к ней должен совпадать с путем в первичной реплике.
+- Обновите на компьютере все экземпляры ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] и все общие компоненты, такие как ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] и средства управления:
 
-В SQL Server 2017 корпорация Майкрософт рекомендует использовать одни и те же пути к данным и файлам журналов во всех репликах, входящих в группу доступности. Но при необходимости можно использовать разные пути. Например, в кроссплатформенной группе доступности один экземпляр SQL Server находится в Windows, а другой — в Linux. Пути на различных платформах будут разными. SQL Server 2017 поддерживает реплики группы доступности на экземплярах SQL Server с различными путями по умолчанию.
+```
+    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
+```
 
-В следующей таблице представлены примеры разметки диска, которые поддерживают автоматическое заполнение.
+- Удалите обновление из одного экземпляра ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] и всех общих компонентов, таких как ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] и средства управления:
 
-|Основной экземпляр</br>Путь к данным по умолчанию|Вторичный экземпляр</br>Путь к данным по умолчанию|Основной экземпляр</br>Расположение исходного файла|Вторичный экземпляр</br> Расположение целевого файла
-|:------|:------|:------|:------
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
-|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
-|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
+```
+    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
+```
 
-Это изменение не влияет на сценарии, в которых расположение баз данных для первичной и вторичной реплики не совпадает с путями для экземпляров по умолчанию. При этом пути к файлам для вторичной реплики по-прежнему должны соответствовать путям к файлам для первичной реплики.
+- Удалите обновление только из общих компонентов ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], таких как ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] и средства управления:
 
-|Основной экземпляр</br>Путь к данным по умолчанию|Вторичный экземпляр</br>Путь к данным по умолчанию|Основной экземпляр</br>Размещение файла|Вторичный экземпляр</br> Размещение файла
-|:------|:------|:------|:------
-|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
-
-Если в первичной и вторичной репликах используются как пути по умолчанию, так и отличные от них пути, поведение SQL Server 2017 будет отличаться от поведения предыдущих выпусков. Поведение SQL Server 2017 описано в следующей таблице.
+```
+    <package_name>.exe /qs /Action=RemovePatch
+```
 
 
 
@@ -141,24 +135,20 @@ ms.lasthandoff: 09/13/2017
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (3+12):документация **Расширенная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (5+0): документация **Подключение к SQL**](../connect/new-updated-connect.md)
-- [Новые + обновленные (5+1): документация **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (19+82): документация **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (1+8): документация **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (12+1): документация **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (0+1): документация **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Новые + обновленные (7+1): документация **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (1+1): документация **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+2): документация **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (1+4): документация **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (4+1): документация **Transact-SQL**](../t-sql/new-updated-t-sql.md)
-- [Новые + обновленные (0+1): документация **Средства для SQL**](../tools/new-updated-tools.md)
+- [Новые + обновленные (0+1): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (0+1): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (4+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (17+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (3+0): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (1+1): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+1): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (0+0): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
@@ -166,6 +156,10 @@ ms.lasthandoff: 09/13/2017
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (0+0): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
+- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 
 
