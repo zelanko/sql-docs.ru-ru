@@ -29,6 +29,7 @@
 ### [Использование файла форматирования для пропуска столбца таблицы](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ### [Использование файла форматирования для пропуска поля данных](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Импорт неструктурированного файла с помощью мастера импорта неструктурированных файлов](import-flat-file-wizard.md)
 # [Импорт и экспорт данных с помощью мастера импорта и экспорта](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [Импорт данных из Excel](import-data-from-excel-to-sql.md) 
 # [Импорт документов JSON](../json/import-json-documents-into-sql-server.md)
