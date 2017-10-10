@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Домашняя страница для программирования для Microsoft SQL Server клиента
@@ -52,9 +52,9 @@ ms.lasthandoff: 09/13/2017
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[! [Эмблема C#] [изображение ref-320-c#]](#an-110-ado-net-docu) | &nbsp;[! [ORM Entity Framework, платформы .NET Framework] [изображение ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[! [Эмблема Java] [изображение ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[! [Эмблема Node.js] [изображение ref-340-узел]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[! [Эмблема PHP] [изображение ref-360-php]](#an-170-php-docu) |
-| &nbsp;[! [Эмблема Python] [изображение ref-370-python]](#an-180-python-docu) | &nbsp;[! [Произносится эмблемы] [изображение ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![Логотип C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework платформы .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Эмблема Java][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Node.js логотип][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![Логотип PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Логотип Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Произносится эмблемы][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -103,7 +103,7 @@ EF имеет прямой или косвенной связи со следу�
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), или [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Усовершенствования языка синтаксиса, такие как ** => ** оператором в C#.
+- Усовершенствования языка синтаксиса, такие как  **=>**  оператором в C#.
 - Удобных программ, создающих исходный код для классов, которые сопоставляются с таблицами в базе данных SQL. Например [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
@@ -152,7 +152,7 @@ JDBC Документация включает следующие основны
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | Корень нашей документации JDBC. |
 | [Справочник](./jdbc/reference/index.md) | Интерфейсы, классы и члены. |
-| [Руководство по программированию для драйвера JDBC SQL](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Сведения о конфигурации, а также примеры кода. |
+| [Руководство по программированию для драйвера JDBC для SQL](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Сведения о конфигурации, а также примеры кода. |
 | &nbsp; | <br /> |
 
 
