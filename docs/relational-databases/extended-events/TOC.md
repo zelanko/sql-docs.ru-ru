@@ -8,6 +8,7 @@
 # [Подсистема расширенных событий](sql-server-extended-events-engine.md)  
 # [Сеансы расширенных событий](sql-server-extended-events-sessions.md)  
 # [Средства расширенных событий](extended-events-tools.md)  
+## [Использование профилировщика XEvent для SSMS](use-the-ssms-xe-profiler.md)
 ## [Использование сеанса system_health](use-the-system-health-session.md)  
 ## [Использование поставщика PowerShell для расширенных событий](use-the-powershell-provider-for-extended-events.md)  
 # [Изменение сеанса расширенных событий](alter-an-extended-events-session.md)  

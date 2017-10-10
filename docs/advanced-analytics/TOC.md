@@ -104,15 +104,24 @@
 
 # [Инструкции](r/sql-server-machine-learning-tasks.md)
 
-## [Управление пакетами R](r/r-package-management-for-sql-server-r-services.md)
+## [Управление пакетами R для SQL Server](r/r-package-management-for-sql-server-r-services.md)
+
+### [Установка новых пакетов R в SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
 ### [Включение управления пакетами R для экземпляра SQL Server](r/r-package-how-to-enable-or-disable.md)
-### [Где получить пакеты R](r/installing-and-managing-r-packages.md)
-### [Установка дополнительных пакетов машинного обучения в SQL Server](r/install-additional-r-packages-on-sql-server.md)
-### [Создание локального репозитория пакетов с помощью miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+
 ### [Определение установленных пакетов на SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Библиотеки пакетов пользователей](r/packages-installed-in-user-libraries.md)
-### [Синхронизация пакетов R, используемых SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [Использование функций RevoScaleR для поиска или установки пакетов R в SQL Server](r/use-revoscaler-to-manage-r-packages.md)
+
+### [Синхронизация пакетов R, установленных в SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [Пакеты R, установленные вместе с SQL Server](r/installing-and-managing-r-packages.md)
+
+### [Создание локального репозитория пакетов с помощью miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+
+### [Как избежать ошибок, связанных с библиотеками пакетов пользователей для R](r/packages-installed-in-user-libraries.md)
+
 
 ## Изучение данных и моделирование
 
