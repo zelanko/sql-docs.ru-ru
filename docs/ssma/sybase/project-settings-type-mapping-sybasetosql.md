@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77c02b875a22fefec54c59518f4972cbd7aefd4b
+ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
+ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры (сопоставление типов) проекта (SybaseToSQL)
@@ -61,32 +61,32 @@ ms.lasthandoff: 08/02/2017
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**двоичные [\*...8000]**|**двоичные [\*]**|  
+|**двоичные [\*... 8000]**|**двоичные [\*]**|  
 |**двоичные [8001..\*]**|**varbinary(max)**|  
-|**бит**|**бит**|  
+|**bit**|**bit**|  
 |**char**|**char**|  
 |**переменной типа char**|**varchar**|  
-|**переменной типа char [\*...8000]**|**varchar [\*]**|  
+|**переменной типа char [\*... 8000]**|**varchar [\*]**|  
 |**переменной типа char [8001..\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
-|**char [8001..\& #42;]**|**varchar(max)**|  
+|**char[\*.. 8000]**|**char[\*]**|  
+|**char [8001..\*;]**|**varchar(max)**|  
 |**символ**|**char**|  
 |**Изменение символа**|**varchar**|  
-|**символ varying [\*...8000]**|**varchar [\*]**|  
+|**символ varying [\*... 8000]**|**varchar [\*]**|  
 |**символ varying [8001..\*]**|**varchar(max)**|  
-|**символ [\*...8000]**|**char[\*]**|  
+|**символ [\*... 8000]**|**char[\*]**|  
 |**символ [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**DEC**|**decimal**|  
-|**dec[\*..\*]**|**Decimal [\*]**|  
-|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**dec[\*.. \*]**|**Decimal [\*]**|  
+|**dec[\*.. \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
-|**Decimal [\*...\*]**|**Decimal [\*]**|  
-|**Decimal [\*...\*][\*..\*]**|**decimal[\*][\*]**|  
+|**Decimal [\*... \*]**|**Decimal [\*]**|  
+|**Decimal [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**число двойной точности**|**число с плавающей запятой [53]**|  
 |**float**|**число с плавающей запятой [53]**|  
-|**число с плавающей запятой [\*...15]**|**число с плавающей запятой [24]**|  
+|**число с плавающей запятой [\*... 15]**|**число с плавающей запятой [24]**|  
 |**число с плавающей запятой [16..\*]**|**число с плавающей запятой [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
@@ -94,61 +94,61 @@ ms.lasthandoff: 08/02/2017
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**Национальный char**|**nchar**|  
-|**Национальный char [\*...4000]**|**nchar [\*]**|  
+|**Национальный char [\*... 4000]**|**nchar [\*]**|  
 |**Национальный char переменной**|**nvarchar**|  
-|**Национальный char переменной [\*...4000]**|**nvarchar [\*]**|  
+|**Национальный char переменной [\*... 4000]**|**nvarchar [\*]**|  
 |**Национальный char переменной [4001..\*]**|**nvarchar(max)**|  
 |**Национальный char [4001..\*]**|**nvarchar(max)**|  
 |**символов национального алфавита**|**nchar**|  
-|**национальных символов [\*...4000]**|**nchar [\*]**|  
+|**национальных символов [\*... 4000]**|**nchar [\*]**|  
 |**национальных символов [4001..\*]**|**nvarchar(max)**|  
 |**изменение символов национального алфавита**|**nvarchar**|  
-|**изменение символов национального алфавита [\*...4000]**|**nvarchar [\*]**|  
+|**изменение символов национального алфавита [\*... 4000]**|**nvarchar [\*]**|  
 |**изменение символов национального алфавита [4001..\*]**|**nvarchar(max)**|  
 |**Национальный varchar**|**nvarchar**|  
-|**Национальный varchar [\*...4000]**|**nvarchar [\*]**|  
+|**Национальный varchar [\*... 4000]**|**nvarchar [\*]**|  
 |**Национальный varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar переменной**|**nvarchar**|  
-|**nchar varying [\*...4000]**|**nvarchar [\*]**|  
+|**nchar varying [\*... 4000]**|**nvarchar [\*]**|  
 |**nchar varying [4001..\*]**|**nvarchar(max)**|  
-|**nchar [\*...4000]**|**nchar [\*]**|  
+|**nchar [\*... 4000]**|**nchar [\*]**|  
 |**nchar [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**числовые [\*...\*]**|**числовые [\*]**|  
-|**числовые [\*...\*][\*..\*]**|**numeric[\*][\*]**|  
+|**числовые [\*... \*]**|**числовые [\*]**|  
+|**числовые [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar [\*...4000]**|**nvarchar [\*]**|  
+|**nvarchar [\*... 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  
 |**real**|**число с плавающей запятой [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
-|**sysname [\*...\*]**|**nvarchar [255]**|  
+|**sysname [\*... \*]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**время [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**unichar переменной**|**nvarchar**|  
-|**различные unichar [\*...4000]**|**nvarchar [\*]**|  
+|**различные unichar [\*... 4000]**|**nvarchar [\*]**|  
 |**unichar переменной [4001..\*]**|**nvarchar(max)**|  
-|**unichar [\*...4000]**|**nchar [\*]**|  
+|**unichar [\*... 4000]**|**nchar [\*]**|  
 |**unichar [4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar [\*...4000]**|**nvarchar [\*]**|  
+|**univarchar [\*... 4000]**|**nvarchar [\*]**|  
 |**univarchar [4001..\*]**|**nvarchar(max)**|  
 |**без знака bigint**|**числовой [20] [0]**|  
 |**Целочисленное число без знака**|**bigint**|  
 |**smallint без знака**|**int**|  
 |**тип tinyint и без знака**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*...8000]**|**varbinary [\*]**|  
+|**varbinary [\*... 8000]**|**varbinary [\*]**|  
 |**varbinary [8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*...8000]**|**varchar [\*]**|  
+|**varchar [\*... 8000]**|**varchar [\*]**|  
 |**varchar [8001..\*]**|**varchar(max)**|  
   
 

@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ee541357482633787726addb17434dbd59b82d9
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -122,7 +122,13 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Для таблиц с какими-либо из этих характеристик следует использовать инструкцию DELETE.  
   
- Инструкция TRUNCATE TABLE не может активировать триггер, поскольку она не записывает в журнал удаление отдельных строк. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Инструкция TRUNCATE TABLE не может активировать триггер, поскольку она не записывает в журнал удаление отдельных строк. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md). 
+ 
+ В [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+
+- Инструкция TRUNCATE TABLE нельзя использовать в инструкции ОПИСАНИЯ.
+
+- Инструкция TRUNCATE TABLE не выполнена внутри транзакции.
   
 ## <a name="truncating-large-tables"></a>Усечение больших таблиц  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет возможность удалять или усекать таблицы, имеющие более чем 128 экстентов, без удержания одновременной блокировки всех кластеров страниц, необходимых для удаления.  
