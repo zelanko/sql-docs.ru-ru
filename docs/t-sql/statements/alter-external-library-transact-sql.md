@@ -1,7 +1,7 @@
 ---
 title: "ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/18/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 541419770828e01cca82fb33ead1b22170f8e4f3
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: b728fa43959ee047173b1533e70d46e5b1e0f7c1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-Изменяет существующее содержимое библиотеки.  
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+
+Изменяет содержимое существующего пакета, внешние библиотеки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -77,6 +78,13 @@ WITH ( LANGUAGE = 'R' )
 
 Задает имя внешнего источника данных, содержащий местоположение файла библиотеки. Это расположение должно указывать путь к хранилищу BLOB-объектов Azure. Для создания внешнего источника данных, используйте [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
+> [!IMPORTANT] 
+> В настоящее время больших двоичных объектов не поддерживаются как источник данных в выпуске 2017 г. SQL Server.
+
+**library_bits**
+
+Задает содержимое пакета как Шестнадцатеричный литерал, аналогично сборки. Этот параметр позволяет пользователям создавать библиотеки для изменения библиотеки, если они имеют необходимое разрешение, но не имеют доступ к пути файла в папку, для которой у сервера есть доступ.
+
 **ПЛАТФОРМА = WINDOWS**
 
 Указывает платформу для библиотеки содержимого. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформе. Windows является единственным поддерживаемой платформы.
@@ -84,22 +92,29 @@ WITH ( LANGUAGE = 'R' )
 ## <a name="remarks"></a>Замечания
 
 Для языка R, пакеты необходимо подготовить в виде файлов ZIP-архив. ПОЧТОВЫЙ модуль для Windows. В настоящее время поддерживается только на платформу Windows.  
+
 `ALTER EXTERNAL LIBRARY` Инструкции только отправляет биты библиотеки в базе данных. Изменения библиотеки фактически не устанавливается, пока пользователь запускает внешнего скрипта после него, выполнив [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 ## <a name="permissions"></a>Permissions
+
 Требуется `ALTER ANY EXTERNAL LIBRARY` разрешение. Пользователей, создавших внешней библиотеки, можно изменить, внешние библиотеки.
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере изменяется вызывается customPackage внешней библиотеки.
+Следующие примеры изменяет вызывается customPackage внешней библиотеки.
 
-```sql  
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Замените содержимое библиотеки с помощью файла
+
+В следующем примере изменяется внешней библиотеки вызывается customPackage, с помощью ZIP-файл, содержащий обновленные bits.
+
+```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
 ```  
-Затем выполните `sp_execute_external_script` процедуру, чтобы установить библиотеку.
+
+Чтобы установить обновленную библиотеку, выполните хранимую процедуру `sp_execute_external_script`.
 
 ```sql   
 EXEC sp_execute_external_script 
@@ -107,15 +122,22 @@ EXEC sp_execute_external_script
 @script=N'
 # load customPackage
 library(customPackage)
-
 # call customPackageFunc
 OutputDataSet <- customPackageFunc()
 '
-with result sets (([result] int));    
+WITH RESULT SETS (([result] int));
 ```
 
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>Б. Изменить существующую библиотеку с помощью байтового потока
+
+В следующем примере изменяется существующую библиотеку, передавая новых битов как шестнадцатеричная литерала.
+
+```SQL
+ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+```
 
 ## <a name="see-also"></a>См. также:  
+
 [Создание ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](create-external-library-transact-sql.md)
 [DROP ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  

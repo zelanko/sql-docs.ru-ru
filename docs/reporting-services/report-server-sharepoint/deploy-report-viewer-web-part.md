@@ -1,7 +1,7 @@
 ---
-title: "Развертывание веб-части средства просмотра отчетов на сайте SharePoint | Документы Microsoft"
+title: "Развертывание веб-части просмотра отчетов служб отчетов SQL Server на сайте SharePoint | Документы Microsoft"
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,27 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части средства просмотра отчетов на сайте SharePoint
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части просмотра отчетов служб отчетов SQL Server на сайте SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Веб-части средства просмотра отчетов является собственной веб-части, который может использоваться для просмотра отчетов служб SQL Server Reporting Services (собственный режим) на сайте SharePoint. Веб-части, чтобы просматривать, печатать и экспортировать отчеты на сервере отчетов. Веб-части средства просмотра отчетов связан с файлы определения отчетов (RDL), обрабатываемых на сервере отчетов служб отчетов SQL Server или сервера отчетов Power BI. Эта веб-часть средства просмотра отчетов не может использоваться с отчетами Power BI, размещенных на сервере отчетов Power BI.
+Веб-часть средства просмотра отчетов имеет пользовательские веб-части, который может использоваться для просмотра отчетов SQL Server Reporting Services (собственный режим) на сайте SharePoint. Веб-части, чтобы просматривать, печатать и экспортировать отчеты на сервере отчетов. Веб-часть средства просмотра отчетов связан с файлы определения отчетов (RDL), обрабатываемых на сервере отчетов служб отчетов SQL Server или сервера отчетов Power BI. Эта веб-часть средства просмотра отчетов не может использоваться с отчетами Power BI, размещенных на сервере отчетов Power BI.
 
 Используйте следующие инструкции, чтобы вручную развернуть пакет решения, добавить веб-части средства просмотра отчетов в среде SharePoint Server 2013 или SharePoint Server 2016. При развертывании решения — это обязательный шаг по настройке веб-части.
 
 **Веб-часть средства просмотра отчетов — это пакет решения автономной и не связан с режима интеграции с SharePoint для служб SQL Server Reporting Services.**
 
 ## <a name="requirements"></a>Требования
-
-**Поддерживаемые операционные системы:**  
-* Windows Server 2008 R2 SP1 и более поздних версий
 
 **Поддерживает версии SharePoint Server:**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/15/2017
 
 Веб-часть средства просмотра отчетов доступен в центре загрузки Майкрософт.
 
-[Загрузка пакета решения веб-части средства просмотра отчетов](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[Загрузка пакета решения веб-части средства просмотра отчетов](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>Развертывание решения фермы
 
@@ -84,7 +81,7 @@ ms.lasthandoff: 09/15/2017
 
     ![Параметры сайта, щелкните значок шестеренки.](media/sharepoint-site-settings.png)
 
-    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто доступен сайта SharePoint, введя *http://<computer name> * открыть корневой коллекции сайтов.
+    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто доступен сайта SharePoint, введя *http://<computer name>*  открыть корневой коллекции сайтов.
 
 3. В **Администрирование семейства сайтов**выберите **компоненты семейства веб-**.
 
@@ -92,7 +89,7 @@ ms.lasthandoff: 09/15/2017
 
 5. Выберите **Активировать**.
 
-    ![Активация функции веб-части средства просмотра отчетов](media/web-part-activiate-feature.png)
+    ![Активировать средства просмотра отчетов веб-часть компонентов](media/web-part-activiate-feature.png)
 
 6. Повторите для дополнительных семейств, открыв каждого сайта и выбрав действия сайта.
 
@@ -124,7 +121,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![Параметры сайта, щелкните значок шестеренки.](media/sharepoint-site-settings.png)
 
-    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто доступен сайта SharePoint, введя *http://<computer name> * открыть корневой коллекции сайтов.
+    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто доступен сайта SharePoint, введя *http://<computer name>*  открыть корневой коллекции сайтов.
 
 2. В разделе **веб-дизайнера**выберите **веб-части**.
 
@@ -135,6 +132,22 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
     ![Изменение и удаление веб-части средства просмотра отчетов: собственный режим](media/report-viewer-native-mode-edit-delete.png)
 
 Удаление веб-части может выполняться с помощью PowerShell, но не является прямой командой, для него. Пример скрипта см. в разделе [удаление веб-частей из коллекции веб-частей](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+
+## <a name="supported-languages"></a>Поддерживаемые языки
+
+В веб-части поддерживаются следующие языки:
+
+* Английский (en)
+* Немецкий (de)
+* Испанский (sp)
+* Французский (fr)
+* Итальянский (it)
+* Японский (Япония)
+* Корейский (ko)
+* Португальский (Португалия)
+* Русский (ru)
+* Китайский (упрощенное письмо - zh-HANS и zh-CHS)
+* Китайский (традиционный - zh-HANT и zh-CHT)
 
 ## <a name="next-steps"></a>Следующие шаги
 

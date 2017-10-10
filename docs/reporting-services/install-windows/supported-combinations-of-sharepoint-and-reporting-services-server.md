@@ -1,5 +1,5 @@
 ---
-title: "Поддерживаемые сочетания SharePoint и сервер служб Reporting Services | Документы Microsoft"
+title: "Поддерживаемые сочетания SharePoint и служб отчетов сервера | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/01/2017
@@ -19,15 +19,15 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Поддерживаемые сочетания SharePoint и сервером служб Reporting Services
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Поддерживаемые сочетания SharePoint и службы отчетов сервера
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Поддерживаемые сочетания SharePoint и компонентов служб Reporting Services
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Поддерживаемые сочетания компонентов SharePoint и Reporting Services
 
  В следующей таблице представлены поддерживаемые сочетания сервера отчетов, надстройки служб Reporting Services для продуктов SharePoint и продуктов SharePoint. Сочетания, отсутствующие в следующей таблице, не поддерживаются
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 
  Ссылки на страницы загрузки см. в статье [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
- **Дополнительные замечания**
+ **Дополнительные вопросы:**
 
 - Установите обновление, чтобы обновить все серверы SharePoint в пределах фермы. Сюда входят серверы приложений и веб-интерфейса.
 
@@ -86,4 +86,4 @@ ms.lasthandoff: 08/09/2017
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

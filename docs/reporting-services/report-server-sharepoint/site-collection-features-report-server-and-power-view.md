@@ -1,7 +1,7 @@
 ---
-title: "Активируйте сервер отчетов и Power View Integration Features in SharePoint | Документы Microsoft"
+title: "Активация функций интеграции Power View в SharePoint и сервер отчетов | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,38 +10,38 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
-caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bca4115307f7bf9dab5ffc9d2ab02ababb209d65
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: e97378914a59fab938fc3e4c7926847effcffc94
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="site-collection-features---report-server-and-power-view"></a>Компоненты семейства веб - сервера отчетов и Power View
-  Функции семейства веб-сайтов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обычно активируются по умолчанию после установки надстройки служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях эти функции требуется активировать вручную.  
+# <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Активация функций интеграции Power View в SharePoint и сервер отчетов
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  После установки по умолчанию активируются компоненты семейства сайтов службы Reporting Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] надстройки для продуктов SharePoint. В некоторых случаях необходимо вручную активировать эти компоненты.  
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+
+ При установке надстройки служб Reporting Services для продуктов SharePoint 2010 после установки продукта SharePoint, затем функцию интеграции сервера отчетов и интеграция Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов необходимо активировать эти компоненты вручную. Например, если у вас есть коллекции сайтов **http://[my имя сервера] /sites/ [имя сайта коллекции]** необходимо вручную активировать компоненты семейства сайтов службы Reporting Services.  
   
- При установке надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2010 после установки продукта SharePoint функции интеграции с сервером отчетов и с Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов потребуется активировать эти функции вручную. Например, если имеется семейство веб-сайтов **http://[имя_сервера]/sites/[имя_семейства_веб-сайтов]** , то потребуется вручную активировать функции семейства веб-сайтов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
-  
- Когда корневого семейства веб-сайтов нет, надстройка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] занесет в журнал сообщение, подобное приведенному далее.  
+ Если нет корневого семейства веб-сайтов, надстройка служб Reporting Services регистрируют сообщение, аналогичное приведенному ниже.  
   
  «Веб-приложение SharePoint 80 не содержит корневого семейства веб-сайтов»  
   
- Сообщение будет сохранено в журнале установки надстройки с именем «RS_SP_#.log», где # ― это увеличивающийся номер. Файл журнала сохраняется в папку Temp текущего пользователя, например C:\Users\\[пользователь]\AppData\Local\Temp. Дополнительные сведения о параметрах ведения журнала надстройки см. в разделе [Установка или удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Чтобы найти сообщение, в журнале установки надстройки с именем «RS_SP_ # .log», где # представляет номер с приращением. Этот файл журнала находится в текущей папке Temp пользователей, например C:\Users\\[имя пользователя] \AppData\Local\Temp. Дополнительные сведения о параметрах ведения журнала надстройки см. в разделе [Установка или удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+
+## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>Активировать сервер отчетов и Power View integration возможности коллекции сайтов
   
- В этом разделе:  
-  
--   [Активация функций семейства веб-сайтов для интеграции с сервером отчетов и Power View](#bkmk_features)  
-  
--   [Активация и деактивация функций семейства веб-сайтов для центра администрирования служб Reporting Services](#bkmk_centraladmin)  
-  
-##  <a name="bkmk_features"></a> Активация функций семейства веб-сайтов для интеграции с сервером отчетов и Power View  
-  
-1.  Откройте в браузере веб-сайт, где нужно активировать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+1.  Откройте в браузере на сайт место функции служб Reporting Services active.  
   
 2.  Щелкните **Действия сайта**.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  Деактивация компонентов выполняется схожим образом, только вместо кнопки **Активировать** нужно нажать кнопку **Деактивировать**.  
   
-##  <a name="bkmk_centraladmin"></a> Активация и деактивация функций семейства веб-сайтов для центра администрирования служб Reporting Services  
+## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>Активация и деактивация службы Reporting Services центра администрирования сайта компонент коллекции
   
 1.  Откройте в браузере центр администрирования SharePoint.  
   
@@ -71,10 +71,8 @@ ms.lasthandoff: 08/09/2017
   
  Деактивация компонента выполняется схожим образом, только вместо кнопки **Активировать** нужно нажать кнопку **Деактивировать**.  
   
-## <a name="next-steps"></a>Следующие шаги  
- После активации компонента можно продолжить интеграцию сервера.  
-  
-## <a name="see-also"></a>См. также  
- [Установка или удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
-  
-  
+## <a name="next-steps"></a>Следующие шаги
+
+После активации компонента можно продолжить интеграцию сервера.
+
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

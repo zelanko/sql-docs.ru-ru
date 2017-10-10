@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4fe098c9d9f9b8e01deee95c1d52e3582b13658
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5462b0eb9a5eedc48e841ba8aae3bb3514be447d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (многомерные выражения)
@@ -51,7 +51,7 @@ Level_Expression.Hierarchy
  Допустимое многомерное выражение, возвращающее уровень.  
   
 ### <a name="examples"></a>Примеры  
- В следующем примере возвращается имя иерархии Calendar Year в измерении Data куба Adventure Works.  
+ Следующий пример возвращает имя иерархии Calendar Year в измерении Date в кубе AdventureWorks.  
   
  `WITH`  
   

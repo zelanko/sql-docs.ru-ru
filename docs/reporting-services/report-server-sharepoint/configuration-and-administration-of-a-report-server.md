@@ -1,7 +1,7 @@
 ---
-title: "Настройка и администрирование сервера отчетов | Документы Microsoft"
+title: "Настройка и администрирование сервера отчетов SQL Server Reporting Services | Документы Microsoft"
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,31 +10,34 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d6afebe39f0d7c25df5d88ecd021c1d6dbc84d
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
+# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>Настройка и администрирование сервера отчетов SQL Server Reporting Services
 
-# <a name="configuration-and-administration-of-a-report-server"></a>Настройка и администрирование сервера отчетов
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services является Серверная платформа отчетов, которая предоставляет полный спектр готовых к использованию средств и служб для создания, развертывания и управления отчетами организации, а также функции программирования, которые позволяют расширить и настроить функциональность отчетов. Среду создания отчетов можно интегрировать с продуктами SharePoint, чтобы пользоваться всеми преимуществами среды совместной работы, которые обеспечивает сайт SharePoint.  
-  
-## <a name="in-this-section"></a>В этом разделе  
- В следующих разделах можно ознакомиться с основными понятиями, сценариями развертывания, процедурами и прочими сведениями, относящимися к интеграции среды служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с продуктами или технологиями SharePoint.  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services представляют собой серверную платформу для создания отчетов, которая предоставляет широкий спектр готовых к использованию средств и служб для создания и развертывания отчетов организации и управления ими, а также функции программирования, которые позволят расширить и настроить функциональность отчетов. Среду создания отчетов можно интегрировать с продуктами SharePoint, чтобы пользоваться всеми преимуществами среды совместной работы, которые обеспечивает сайт SharePoint.
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+
+Используйте следующие разделы помогут вам понять основные понятия, сценариях развертывания, процедуры и более для интеграции с продуктом или технологией SharePoint среду служб Reporting Services:  
   
 -   Параметры меню в библиотеке документов SharePoint  
   
     -   [Диспетчер предупреждений данных для пользователей SharePoint](../../reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Обновление учетных данных в источниках данных отчетов с сайта SharePoint](../../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
@@ -56,12 +59,12 @@ SQL Server Reporting Services является Серверная платфор
   
 -   [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [Сравнение локального режима. и подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+-   [Отчеты, созданные в локальном режиме и Отчеты, созданные в подключенном режиме, в средстве просмотра отчетов &#40;службы Reporting Services в режиме интеграции с SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
 -   [Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
 -   [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- Общие сведения о [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], в разделе [служб Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации. Дополнительные сведения о других компонентах, средствах и ресурсах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в [электронной документации по SQL Server](../../sql-server/sql-server-technical-documentation.md).  
+ Дополнительные общие сведения о службах отчетов см. в разделе [служб Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации. Дополнительные сведения о других компонентах, средствах и ресурсах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в [электронной документации по SQL Server](../../sql-server/sql-server-technical-documentation.md).  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

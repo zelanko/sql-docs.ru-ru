@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -55,13 +55,12 @@ ms.lasthandoff: 09/27/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -69,9 +68,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -131,13 +130,13 @@ PRIMARY
   
 ОЧИСТИТЬ PROCEDURE_CACHE  
 
-Очищает кэш процедур для базы данных. Это может быть выполнена на сервере-источнике и баз данных-получателей.  
+Очищает кэш процедур (план) для базы данных. Это может быть выполнена на сервере-источнике и баз данных-получателей.  
 
-IDENTITY_CACHE = { **ON** | {OFF}  
+IDENTITY_CACHE  **=**  { **ON** | {OFF}  
 
-**Применяется к**: 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии) 
+**Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (компонент находится в общедоступной предварительной версии) 
 
-Включает или отключает кэш идентификации на уровне базы данных. Значение по умолчанию — **ON**. Кэширование удостоверение используется для повышения производительности INSERT для таблицы со столбцами идентификаторов. Чтобы избежать пропусков значений столбца идентификаторов в случаях, когда сервер неожиданно перезапускается или при сбое сервера-получателя, отключите параметр IDENTITY_CACHE. Этот параметр аналогичен SQL Server трассировки флаг 272, за исключением того, что оно может быть задано на уровне базы данных, а не только на уровне сервера.   
+Включает или отключает кэш идентификации на уровне базы данных. Значение по умолчанию — **ON**. Кэширование удостоверение используется для повышения производительности INSERT для таблицы со столбцами идентификаторов. Чтобы избежать пропусков значений столбца идентификаторов в случаях, когда сервер неожиданно перезапускается или при сбое сервера-получателя, отключите параметр IDENTITY_CACHE. Этот параметр, похожие на существующие [272 флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), за исключением того, что оно может быть задано на уровне базы данных, а не только на уровне сервера.   
 
 > [!NOTE] 
 > Этот параметр можно задать только для ПЕРВИЧНОЙ. Дополнительные сведения см. в разделе [столбцы идентификаторов](create-table-transact-sql-identity-property.md).  
@@ -145,7 +144,7 @@ IDENTITY_CACHE = { **ON** | {OFF}
 
 ##  <a name="Permissions"></a> Разрешения  
  Необходимо изменить любой конфигурации области базы данных   
-в базе данных. Это разрешение можно предоставить пользователем, имеющим разрешение CONTROL на базу данных  
+в базе данных. Это разрешение можно предоставить пользователем, имеющим разрешение CONTROL на базу данных.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  При настройке базы данных-получатели имеют разные области Параметры конфигурации из их основных всех баз данных-получателей будет использовать ту же конфигурацию. Нельзя настроить разные параметры для отдельных баз данных-получателей.  
@@ -268,7 +267,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### <a name="g-set-identitycache"></a>Ж. Набор IDENTITY_CACHE
 
-**Применяется к**: 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии) 
+**Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (компонент находится в общедоступной предварительной версии) 
 
 В этом примере отключается кэша идентификаторов.
 
@@ -279,6 +278,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 ### <a name="maxdop-resources"></a>Ресурсы MAXDOP 
+* [Степень параллелизма](../../relational-databases/query-processing-architecture-guide.md#DOP)
 * [Рекомендации и инструкции для параметра конфигурации «max degree of parallelism» в SQL Server](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION ресурсы    
@@ -286,18 +286,18 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING ресурсы    
+* [Сканирование параметров](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * [«Я чуждо параметр!»](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES ресурсы    
+* [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server модель оптимизатора запросов исправление трассировки флаг 4199 обслуживания](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Дополнительные сведения  
  [sys.database_scoped_configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Представления каталогов баз данных и файлов (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Флаги трассировки &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
- [sys.Configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [Параметры конфигурации сервера &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

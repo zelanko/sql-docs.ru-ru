@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Просмотр и изучение данных с помощью SQL (Пошаговое руководство)
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    Если в таблице не отображаются данные, см. раздел [Устранение неполадок](/walkthrough-prepare-the-data.md) в предыдущей статье.
+    Если в таблице не отображаются данные, см. раздел [Устранение неполадок](walkthrough-prepare-the-data.md) в предыдущей статье.
 
 4. Эта таблица данных оптимизирована для вычислений с использованием наборов путем добавления [индекса columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md). Выполните следующую инструкцию для создания краткую сводку для таблицы.
 
@@ -69,9 +69,9 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Сведение данных с помощью R](/walkthrough-view-and-summarize-data-using-r.md)
+[Сведение данных с помощью R](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Подготовка данных с помощью PowerShell](/walkthrough-prepare-the-data.md)
+[Подготовка данных с помощью PowerShell](walkthrough-prepare-the-data.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Установка служб Reporting Services в режиме SharePoint | Документы Microsoft"
+title: "Установка режима интеграции с SharePoint служб Reporting Services | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/01/2016
@@ -19,11 +19,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 17effa28932798a3cd35427a0a7104d4aa355b56
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-sharepoint-mode"></a>Установка режима интеграции с SharePoint для служб Reporting Services
@@ -44,7 +44,8 @@ ms.lasthandoff: 08/09/2017
 |**Сервер отчетов** . Сервер отчетов служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , установленный в режиме SharePoint|Сервер отчетов обеспечивает обработку и подготовку данных и отчетов, а также обработку подписок и предупреждений об изменении данных. Сервер отчетов в режиме SharePoint предназначен для установки как общая служба SharePoint.<br /><br /> **Как установить** : используйте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Надстройка** . Сервер отчетов служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint ( **rsSharePoint.msi**).|Эта надстройка устанавливает страницы пользовательского интерфейса и компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервер клиентского веб-интерфейса SharePoint. В компоненты пользовательского интерфейса входят [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], страницы в центре администрирования SharePoint, страницы компонентов, используемые в библиотеках документов SharePoint, и страницы предупреждений об изменении данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> **Как установить**  : скачайте надстройку из Интернета или используйте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>В этом разделе
+
  [Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
  [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
@@ -68,4 +69,4 @@ ms.lasthandoff: 08/09/2017
  [Архитектура предупреждений об изменении данных и рабочий процесс](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [Диспетчер предупреждений данных для оповещения администраторов](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1edcf3e322d8348436d2cfd6b0097226db7ce3e3
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Развертывание модели R и использовать его в SQL
@@ -213,7 +213,7 @@ ms.lasthandoff: 09/01/2017
 
 + [Сценарии и шаблоны решений для обработки и анализа данных](data-science-scenarios-and-solution-templates.md)
 
-+ [Дополнительные аналитические функции в базе данных для разработчиков SQL (руководство)](/sqldev-in-database-r-for-sql-developers.md)
++ [Дополнительные аналитические функции в базе данных для разработчиков SQL (руководство)](sqldev-in-database-r-for-sql-developers.md)
 
 + [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
@@ -221,7 +221,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Построить модель R и сохранить его в SQL Server](/walkthrough-build-and-save-the-model.md)
+[Построить модель R и сохранить его в SQL Server](walkthrough-build-and-save-the-model.md)
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6750b73e1b6833c9cb80c69d758351d961990f7a
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: e2d11d2cc57d275e952ff371ddf99c34dcae323d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="count-transact-sql"></a>Функция COUNT (Transact-SQL)
@@ -106,11 +106,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67  
   
- `67`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="b-using-count"></a>Б. Использование функции COUNT(*)  
 В следующем примере определяется общее количество служащих, работающих в компании [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
@@ -123,11 +124,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+290  
   
- `290`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="c-using-count-with-other-aggregates"></a>В. Использование функции COUNT(*) совместно с другими статистическими функциями  
 В следующем примере показывается, что функция `COUNT(*)` в списке выбора может сочетаться с другими агрегатными функциями. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
@@ -141,13 +143,14 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`----------- ---------------------`
+```
+----------- ---------------------
+14            3472.1428
   
-`14            3472.1428`
+(1 row(s) affected)
+```
   
-`(1 row(s) affected)`
-  
-### <a name="c-using-the-over-clause"></a>В. Использование предложения OVER  
+### <a name="d-using-the-over-clause"></a>Г. Использование предложения OVER  
 В следующем примере рассматривается применение функций MIN, MAX, AVG и COUNT с предложением OVER для получения статистических значений для каждого из отделов в таблице `HumanResources.Department` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
@@ -192,7 +195,7 @@ Tool Design                   8.62                  29.8462               23.505
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-count-and-distinct"></a>Г. Использование функции COUNT и параметра DISTINCT  
+### <a name="e-using-count-and-distinct"></a>Д. Использование функции COUNT и параметра DISTINCT  
 В следующем примере перечислены количество различных должностей, которые могут содержать служащие, работающие в конкретной компании.
   
 ```sql
@@ -204,11 +207,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67
+```  
   
- `67`  
-  
-### <a name="e-using-count"></a>Д. Использование функции COUNT(*)  
+### <a name="f-using-count"></a>Е. Использование функции COUNT(*)  
 В следующем примере возвращается общее число строк в `dbo.DimEmployee` таблицы.
   
 ```sql
@@ -220,11 +224,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-------------`
+```
+-------------
+296
+```  
   
- `296`  
-  
-### <a name="f-using-count-with-other-aggregates"></a>Е. Использование функции COUNT(*) совместно с другими статистическими функциями  
+### <a name="g-using-count-with-other-aggregates"></a>Ж. Использование функции COUNT(*) совместно с другими статистическими функциями  
 В следующем примере объединяются `COUNT(*)` с другими статистическими функциями в списке ВЫБОРА. Запрос возвращает количество торговых представителей с годовой объем продаж больше 500 000 долларов и среднее квоты продаж.
   
 ```sql
@@ -238,13 +243,13 @@ WHERE SalesAmountQuota > 500000 AND CalendarYear = 2001;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`TotalCount  Average Sales Quota`
+```
+TotalCount  Average Sales Quota
+----------  -------------------
+10          683800.0000
+```
   
-`----------  -------------------`
-  
-`10          683800.0000`
-  
-### <a name="g-using-count-with-having"></a>Ж. Использование СЧЕТЧИКА с HAVING  
+### <a name="h-using-count-with-having"></a>З. Использование СЧЕТЧИКА с HAVING  
 В следующем примере СЧЕТЧИК с предложением HAVING для возврата отделов компании, которая имеет более чем на 15 сотрудников.
   
 ```sql
@@ -259,15 +264,14 @@ HAVING COUNT(EmployeeKey) > 15;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`DepartmentName  EmployeesInDept`
+```
+DepartmentName  EmployeesInDept
+--------------  ---------------
+Sales           18
+Production      179
+```
   
-`--------------  ---------------`
-  
-`Sales           18`
-  
-`Production      179`
-  
-### <a name="h-using-count-with-over"></a>З. С помощью СЧЕТЧИКА с больше  
+### <a name="i-using-count-with-over"></a>И. С помощью СЧЕТЧИКА с больше  
 В следующем примере СЧЕТЧИК с предложением OVER для возврата количества продуктов, которые содержатся в каждом из указанного заказов на продажу.
   
 ```sql
@@ -281,13 +285,12 @@ WHERE SalesOrderNumber IN (N'SO53115',N'SO55981');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`ProductCount   SalesOrderID`
-  
-`------------   -----------------`
-  
-`3              SO53115`
-  
-`1              SO55981`
+```
+ProductCount   SalesOrderID`
+------------   -----------------
+3              SO53115
+1              SO55981
+```
   
 ## <a name="see-also"></a>См. также:
 [Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Установка компонентов обучения компьютер без доступа к Интернету | Документы Microsoft"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 10/0522/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 41ff26c5ff2c41f600be5f45fd66dec31672b803
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Установка компонентов обучения компьютер без доступа к Интернету
@@ -112,6 +112,16 @@ Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?L
 Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
 Откройте Microsoft Python     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
 Сервер Microsoft Python    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
+**SQL Server RTM 2017 г.** |
+Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
+Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
+Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Сервер Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+**SQL Server 2017 г. CU1** |
+Microsoft R Open     |использовать prervious|
+Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
+Откройте Microsoft Python     |использовать предыдущее |
+Сервер Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 
 ### <a name="bkmk_2016Installers"></a>Загружаемые файлы для SQL Server 2016
 

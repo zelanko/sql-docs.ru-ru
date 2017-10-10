@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Развертывание проекта служб SSIS из командной строки с ISDeploymentWizard.exe
 Этого краткого руководства показано, как развернуть проект служб SSIS из командной строки, запустив мастер развертывания служб интеграции, `ISDeploymentWizard.exe`.
 
-Дополнительные сведения о мастере развертывания служб интеграции см. в разделе [мастер развертывания служб Integration Services](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+Дополнительные сведения о мастере развертывания служб интеграции см. в разделе [мастер развертывания служб Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Запуск мастера развертывания служб Integration Services
 1. Откройте окно командной строки.
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/22/2017
   
 5.  После завершения процесса развертывания **результатов** откроется страница. На ней отображается состояние выполнения каждого действия.
     -   Если не удалось выполнить действие, нажмите кнопку **сбой** в **результат** столбец для отображения описания ошибки.
-    -   При необходимости щелкните **сохранить отчет... ** для сохранения результатов в XML-файл.
+    -   При необходимости щелкните **сохранить отчет...**  для сохранения результатов в XML-файл.
     -   Нажмите кнопку **закрыть** для завершения работы мастера.
 
 ## <a name="next-steps"></a>Следующие шаги

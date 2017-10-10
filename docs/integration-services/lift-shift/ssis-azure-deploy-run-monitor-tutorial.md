@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: c6018dbd63e9762b974ddc05995d5d2e3622ee26
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Развертывание, запуск и отслеживание пакета служб SSIS в Azure
@@ -22,7 +22,7 @@ ms.lasthandoff: 09/25/2017
 
 Прежде чем начать, убедитесь, что у вас есть 17,2 или более поздней версии среды SQL Server Management Studio. Загрузить последнюю версию SSMS [загрузить SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Также убедитесь, что настройка базы данных SSISDB и подготовить выполнения интеграции служб SSIS Azure. Сведения о настройке служб SSIS в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Также убедитесь, что настройка базы данных SSISDB и подготовить выполнения интеграции служб SSIS Azure. Сведения о настройке служб SSIS в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Подключения к базе данных SSISDB
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 09/25/2017
   
 5.  После завершения процесса развертывания **результатов** откроется страница. На ней отображается состояние выполнения каждого действия.
     -   Если не удалось выполнить действие, выберите **сбой** в **результат** столбец для отображения описания ошибки.
-    -   При необходимости установите **сохранить отчет... ** для сохранения результатов в XML-файл.
+    -   При необходимости установите **сохранить отчет...**  для сохранения результатов в XML-файл.
     -   Выберите **закрыть** для завершения работы мастера.
 
 ## <a name="run-a-package"></a>Запуск пакета
@@ -86,7 +86,7 @@ ms.lasthandoff: 09/25/2017
 
 2. Щелкните правой кнопкой мыши и выберите **Execute** Открытие **выполнение пакета** диалоговое окно.
 
-3.  В **выполнение пакета** диалоговом окне настройте выполнение пакета с помощью параметров на **параметры**, **диспетчеры соединений**, и **Дополнительно ** вкладки.
+3.  В **выполнение пакета** диалоговом окне настройте выполнение пакета с помощью параметров на **параметры**, **диспетчеры соединений**, и **Дополнительно**  вкладки.
 
 4.  Выберите **ОК** для запуска пакета.
 

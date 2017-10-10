@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e1eeda5d365f5c625e68c498c741754bf59c9d7
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>Создание учетных данных области базы данных (Transact-SQL)
@@ -103,7 +103,7 @@ GO
 ```  
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>Б. Создание базы данных в области видимости учетные данные для подписанного URL-адреса.   
-В следующем примере создаются учетные данные уровня базы данных, которые можно использовать для создания [внешнего источника данных](../../t-sql/statements/create-external-data-source-transact-sql.md), который можно сделать объема массовых операций, таких как [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
+В следующем примере создаются учетные данные уровня базы данных, которые можно использовать для создания [внешнего источника данных](../../t-sql/statements/create-external-data-source-transact-sql.md), который можно сделать объема массовых операций, таких как [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Подписи общего доступа не может использоваться с PolyBase в SQL Server, APS или хранилища данных SQL.
 ```tsql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

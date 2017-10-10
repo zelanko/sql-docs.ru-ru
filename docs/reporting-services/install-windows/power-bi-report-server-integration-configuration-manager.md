@@ -2,7 +2,7 @@
 title: "Питание интеграция сервера отчетов BI (диспетчер конфигурации) | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/17/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,14 @@ f1_keywords:
 - pbi
 - power bi
 - power bi integration
-ms.assetid: 902b7c31-7399-4855-90f2-42f89d847fff
-caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -33,13 +31,11 @@ ms.lasthandoff: 08/17/2017
 
 Страница  **Интеграция с Power BI** в диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется для регистрации сервера отчетов в нужном управляемом клиенте Azure Active Directory (AD), чтобы предоставить пользователям сервера отчетов возможность закрепления поддерживаемых элементов отчетов на панелях мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Список поддерживаемых элементов, которые можно закреплять, см. в статье [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-![rs_powerbi_icon](../../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")
-
 ##  <a name="bkmk_requirements"></a> Требования к интеграции с Power BI
 
 Помимо подключения к Интернету, необходимого для перехода к службе [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , для обеспечения интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]нужно выполнить приведенные ниже требования.
 
-- **Azure Active Directory.** Организация должна использовать Azure Active Directory для управления каталогами и удостоверениями служб Azure и веб-приложений. Дополнительные сведения см. в разделе [Что такое Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/).
+- **Azure Active Directory.** Организация должна использовать Azure Active Directory для управления каталогами и удостоверениями служб Azure и веб-приложений. Дополнительные сведения см. в разделе [что такое Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **Управляемый клиент.** Панель мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , на которой будут закрепляться элементы отчетов, должна входить в управляемый клиент Azure AD.  Управляемый клиент создается автоматически во время оформления первой подписки на службы Azure, такие как Office 365 и Microsoft Intune.   Распространенные клиенты сейчас не поддерживается.  Дополнительные сведения см. в подразделах "Что такое клиент Azure AD" и "Какую версию Azure AD выбрать" в разделе [Что такое Azure Active Directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
@@ -53,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 
 Дополнительные сведения о том, как хранить учетные данные, см. в разделе «Настройка сохраненных учетных данных для источника данных отчета» в [хранить учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
-Администратор может просмотреть файлы журнала  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для получения дополнительной информации.  Будут отображены сообщения, аналогичные приведенным далее. ![Примечание](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") это отличный способ проверки и отслеживания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] файлы журналов заключается в использовании [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query над файлами.  Дополнительные сведения и короткий видео ролик см. в документе [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
+Администратор может просмотреть файлы журнала  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для получения дополнительной информации.  Будут отображены сообщения, аналогичные приведенным далее. Отличным способом проверки и отслеживания файлов журналов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query.  Дополнительные сведения и короткий видео ролик см. в документе [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
     subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
@@ -65,15 +61,13 @@ ms.lasthandoff: 08/17/2017
 
 1. Откройте страницу интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 
-     ![rs_powerbi_integration](../../reporting-services/install-windows/media/ssrs-powerbi-integration.png "rs_powerbi_integration")
-
 2. Выберите **Зарегистрировать в Power BI**.
 
 3. В диалоговом окне входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] введите учетные данные, используемые для входа в [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
 4. После завершения регистрации в разделе **Сведения о регистрации в Power BI** появятся идентификатор клиента Azure и URL-адреса перенаправления.  URL-адреса используются в ходе процесса входа для панели мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] с целью взаимодействия с зарегистрированным сервером отчетов.
 
-5. ![Примечание](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") выберите **копирования** кнопку в **результатов** чтобы скопировать сведения о регистрации в буфер обмена Windows, и их можно сохранить для дальнейшего использования.
+5. Нажмите кнопку **Копировать** в окне **Результаты** , чтобы скопировать сведения о регистрации в буфер обмена Windows и сохранить их для дальнейшего использования.
 
 ##  <a name="bkmk_unregister"></a> Отмена регистрации в Power BI
 
@@ -127,7 +121,7 @@ ms.lasthandoff: 08/17/2017
 
 1. Пользователь просматривает отчеты в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] и при первом закреплении элемента отчета из [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]
 
-2. он будет перенаправлен на страницу входа в Azure AD. Кроме того, выполнить вход можно со страницы [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Когда пользователь входит в управляемый клиент Azure, между его учетной записью Azure и разрешениями [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается связь.  Дополнительные сведения см. в разделе [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. он будет перенаправлен на страницу входа в Azure AD. Кроме того, выполнить вход можно со страницы [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Когда пользователь входит в управляемый клиент Azure, между его учетной записью Azure и разрешениями [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается связь.  Дополнительные сведения см. в статье [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
 3. Маркер безопасности пользователя возвращается на сервер отчетов и
 
@@ -139,7 +133,7 @@ ms.lasthandoff: 08/17/2017
 
 7. Создается подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для управления запланированным обновлением элемента отчета на плитке панели мониторинга. Подписка использует маркер безопасности, который был создан при входе пользователя в систему.
 
-     **ПРИМЕЧАНИЕ.**  Маркер действует в течение **90 дней**, после чего пользователю необходимо выполнить вход еще раз, чтобы создать маркер. По истечении срока действия маркера закрепленные плитки по-прежнему будут отображаться на панели мониторинга, но данные обновляться не будут.  Для подписок, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используемых для закрепленных элементов, будут выводиться сообщения об ошибках до тех пор, пока не будет создан новый маркер пользователя. См. статью [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5). для получения дополнительных сведений.
+     Маркер действует для **90 дней**, после чего пользователю необходимо выполнить вход еще раз, чтобы создать новый маркер пользователя. По истечении срока действия маркера закрепленные плитки по-прежнему будут отображаться на панели мониторинга, но данные обновляться не будут.  Для подписок, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используемых для закрепленных элементов, будут выводиться сообщения об ошибках до тех пор, пока не будет создан новый маркер пользователя. В разделе [мои параметры для интеграции с Power BI &#40; веб-портале &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). для получения дополнительных сведений.
 
 Когда пользователь закрепляет элемент второй раз, шаги 1–4 пропускаются. Вместо них из базы данных ReportServer извлекается идентификатор приложения и URL-адреса, и поток продолжается с шага 5.
 
@@ -163,8 +157,8 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Мои параметры для интеграции с Power BI](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Мои параметры для интеграции с Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

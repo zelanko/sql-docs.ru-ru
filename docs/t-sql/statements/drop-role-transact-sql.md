@@ -28,10 +28,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8262eae6ed14104da08cf182326f49c3221876a
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 86266835ec5d54ce08bdf7fe18d93dd9d4de1737
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
@@ -79,7 +79,7 @@ DROP ROLE role_name
  Чтобы удалить роль сервера, используйте [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
- Требуется **ALTER ANY ROLE** разрешения в базе данных или **РЕГУЛИРОВАТЬ** разрешений на роль или членство в **db_securityadmin**.  
+ Требуется **ALTER ANY ROLE** разрешения в базе данных или **УПРАВЛЕНИЯ** разрешений на роль или членство в **db_securityadmin**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется роль базы данных `purchasing` из `AdventureWorks2012` базы данных.  

@@ -10,24 +10,24 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Установка SQL Server и создать базу данных в Red Hat
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-В этом учебнике быстрого запуска сначала необходимо установить 2017 г. SQL Server в Red Hat Enterprise Linux (RHEL) 7.3. Подключитесь с **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом учебнике быстрого запуска сначала необходимо установить 2017 г. SQL Server в Red Hat Enterprise Linux (RHEL) 7.3 +. Подключитесь с **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!TIP]
 > Этот учебник требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономного](sql-server-linux-setup.md#offline) процедуры установки. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Необходимо иметь компьютер RHEL 7.3 с **по крайней мере 3,25 ГБ** памяти.
+Необходимо иметь RHEL 7.3 или 7.4 машину с **по крайней мере 3,25 ГБ** памяти.
 
 Чтобы установить Red Hat Enterprise Linux на компьютере, перейдите к [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Можно также создать RHEL виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image RHEL` в вызове `az vm create`.
 
@@ -52,7 +52,6 @@ ms.lasthandoff: 10/02/2017
 1. Выполните следующие команды для установки SQL Server:
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-server
    ```
 
@@ -95,14 +94,12 @@ ms.lasthandoff: 10/02/2017
 1. При наличии предыдущей версии **mssql средства** установлены, удалите старую unixODBC пакеты.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Выполните следующие команды для установки **mssql средства** комплект разработчика unixODBC.
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 

@@ -1,7 +1,7 @@
 ---
 title: "Настройка служб Reporting Services для использования альтернативного имени субъекта | Документы Microsoft"
 ms.custom: 
-ms.date: 03/20/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,34 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
-caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c4d975e93e77f43c481b44644faaa310963527b
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка Reporting Services для использования альтернативного имени субъекта
-  В этом разделе объясняется, как настроить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS), чтобы использовать альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.  
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка служб Reporting Services для использования альтернативного имени субъекта
+
+В этом разделе описывается Настройка Reporting Services (SSRS) для использования альтернативного имени субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.
+
+Инструкции применяются к URL-адресу службы отчетов, а также URL-адресу веб-службы.
+
+Чтобы использовать SAN, SSL-сертификат должен быть зарегистрирован на сервере, подписан и иметь закрытый ключ. Самозаверяющий сертификат использовать невозможно.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме|  
+ URL-адреса в службах Reporting Services можно настроить для использования сертификата SSL. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать многих URL-адресов и совместно использовать порт SSL с другими приложениями. SAN выглядит `www.s2.com`.  
   
- Инструкции применяются к URL-адресу службы отчетов, а также URL-адресу веб-службы.  
+ Дополнительные сведения о параметрах протокола SSL для служб Reporting Services см. в разделе [Настройка соединений SSL для сервера отчетов в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
- Чтобы использовать SAN, SSL-сертификат должен быть зарегистрирован на сервере, подписан и иметь закрытый ключ. Самозаверяющий сертификат использовать невозможно.  
-  
- URL-адреса в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно настроить для использования SSL-сертификата. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать и быть допустимой для многих URL-адресов, а также совместно использовать порт SSL с другими приложениями. SAN выглядит следующим образом: www.s2.com.  
-  
- Дополнительные сведения о параметрах SSL для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
-  
-### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы  
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL веб-службы
   
 1.  Запустите диспетчер конфигурации служб Reporting Services.  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Откройте файл rsreportserver.config.  
   
-     Файл для служб SSRS в собственном режиме находится в следующей папке по умолчанию.  
+     Для служб SSRS в собственном режиме файл расположен в папке по умолчанию:  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -59,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Скопируйте раздел URL-адреса для приложения веб-службы сервера отчетов.  
   
-     Например, далее указан исходный раздел URL-адреса.  
+     Например следующий исходный раздел URL-адрес будет:  
   
     ```  
         <URL>  
@@ -70,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
     ```  
   
-     Ниже указан измененный раздел URL-адреса.  
+     Имеет следующий измененный раздел URL-адрес:
   
     ```  
     <URL>  
@@ -100,7 +95,7 @@ ms.lasthandoff: 08/09/2017
     Netsh>http  
     ```  
   
-8.  Отобразите существующие urlacl, введя следующее.  
+8.  Отобразите существующие urlacl, введя следующее:
   
     ```  
     Netsh http>show urlacl  
@@ -128,10 +123,11 @@ ms.lasthandoff: 08/09/2017
   
 10. Щелкните на странице **Состояние сервера отчетов** диспетчера конфигурации Reporting Services кнопку **Остановить** , а затем нажмите **Запустить** , чтобы перезапустить сервер отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:
+
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Службы Reporting Services Configuration Manager &#40; Основной режим &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Изменение файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Настройка URL-адреса сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
-  
-  
+ [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Изменение файла конфигурации служб Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

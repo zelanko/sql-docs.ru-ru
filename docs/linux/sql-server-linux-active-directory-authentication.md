@@ -2,7 +2,7 @@
 title: "Проверка подлинности Active Directory с SQL Server для Linux | Документы Microsoft"
 description: "Этот учебник шаги конфигурации используется для проверки подлинности AAD для SQL Server в Linux."
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
@@ -11,10 +11,10 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 57b03ac7c571bc23477b49c39104fa48220495cb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Проверка подлинности Active Directory с SQL Server в Linux
@@ -50,13 +50,15 @@ ms.lasthandoff: 09/25/2017
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> В настоящее время единственного способа проверки подлинности поддерживается для конечной точки зеркального отображения базы данных является СЕРТИФИКАТ. Метод проверки подлинности WINDOWS будет включена в будущем выпуске.
+> Ограничения:
+> - В настоящее время единственного способа проверки подлинности поддерживается для конечной точки зеркального отображения базы данных является СЕРТИФИКАТ. Метод проверки подлинности WINDOWS будет включена в будущем выпуске.
+> - инструменты сторонних AD как Centrify, Powerbroker и Vintela не поддерживаются. 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Присоединение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену AD
 
 Выполните следующие действия, чтобы присоединить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену Active Directory:
 
-1. Используйте ** [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html) ** для присоединения к домену AD хост-компьютере. Если это еще не сделано, установите на клиентские пакеты Kerberos и realmd [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера с помощью диспетчера пакетов дистрибутив Linux:
+1. Используйте  **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**  для присоединения к домену AD хост-компьютере. Если это еще не сделано, установите на клиентские пакеты Kerberos и realmd [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера с помощью диспетчера пакетов дистрибутив Linux:
 
    ```bash
    # RHEL
@@ -170,7 +172,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Создайте пользователя AD для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задать имя участника-службы
 
   > [!NOTE]
-  > В следующих шагах мы будем использовать ваш [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо будет ** [создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn) ** перед продолжением.
+  > В следующих шагах мы будем использовать ваш [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо будет  **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  перед продолжением.
 
 1. На контроллере домена запустите [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) команду PowerShell, чтобы создать нового пользователя AD с помощью пароля, срок действия не ограничен. В этом примере имена учетной записи «mssql», но имя учетной записи может быть любое. Вам будет предложено ввести новый пароль для учетной записи:
 
@@ -206,7 +208,7 @@ ms.lasthandoff: 09/25/2017
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Создание файла keytab для пользователя AD, созданный на предыдущем шаге. В этом случае мы будем использовать ** [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. При появлении запроса введите пароль для этой учетной записи AD.
+2. Создание файла keytab для пользователя AD, созданный на предыдущем шаге. В этом случае мы будем использовать  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. При появлении запроса введите пароль для этой учетной записи AD.
 
    ```bash
    sudo ktutil

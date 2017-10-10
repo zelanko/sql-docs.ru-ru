@@ -1,6 +1,6 @@
 ---
 title: "Точность прогноза и сдвинуть рабочих нагрузок SQL Server Integration Services в облаке | Документы Microsoft"
-ms.date: 09/28/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 85ab11747276f0c6c58b13cd409df3e5774915ae
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Усилие SQL Server Integration Services рабочих нагрузок в облако
@@ -46,12 +46,15 @@ ms.lasthandoff: 09/29/2017
 
 Необходимо подготовить SSIS IR один раз. После этого можно использовать знакомые средства, такие как SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS) для развертывания, настройки, запуска, отслеживание, планирования и управления пакетами.
 
-Фабрика данных также поддерживает другие типы интеграции среды выполнения. Дополнительные сведения о IR служб SSIS и других типов среды выполнения интеграции см. в разделе [выполнения интеграции в фабрике данных Azure](/azure/data-factory/concepts-integration-runtime.md).
+> [!NOTE]
+> Во время этого общедоступной предварительной версии выполнения служб SSIS интеграции Azure доступен только в регионах Восток США и Северной Европе.
+
+Фабрика данных также поддерживает другие типы интеграции среды выполнения. Дополнительные сведения о IR служб SSIS и других типов среды выполнения интеграции см. в разделе [выполнения интеграции в фабрике данных Azure](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime).
 
 ## <a name="prerequisites"></a>Предварительные требования
 Возможности, описанные в этом разделе требуется SQL Server Data Tools (SSDT) 17,2 или более поздней версии, но не требуют 2017 г. SQL Server или SQL Server 2016. При развертывании пакетов в Azure, мастер развертывания пакетов всегда обновляет пакеты в формате последней версии пакета.
 
-Дополнительные сведения о предварительных требованиях в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Дополнительные сведения о предварительных требованиях в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="ssis-features-on-azure"></a>Компоненты служб SSIS в Azure
 
@@ -68,7 +71,7 @@ ms.lasthandoff: 09/29/2017
 ## <a name="common-tasks"></a>Общие задачи
 
 ### <a name="provision"></a>Подготовка
-Прежде чем можно развернуть и выполнение пакетов служб SSIS в Azure, необходимо подготовить базу данных каталога SSISDB и выполнения служб SSIS интеграции Azure. Необходимо выполнить подготовку действия в этой статье: [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Прежде чем можно развернуть и выполнение пакетов служб SSIS в Azure, необходимо подготовить базу данных каталога SSISDB и выполнения служб SSIS интеграции Azure. Необходимо выполнить подготовку действия в этой статье: [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ### <a name="deploy-and-run-packages"></a>Развертывание и запуск пакетов
 Для развертывания проектов и выполнения пакетов в базе данных SQL, можно использовать один из нескольких знакомые средства и параметры создания скриптов:
@@ -92,6 +95,6 @@ ms.lasthandoff: 09/29/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 Чтобы приступить к работе с рабочими нагрузками служб SSIS в Azure, см. в следующих статьях:
--   [Усилие пакетов служб SQL Server Integration Services (SSIS) для Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)
+-   [Усилие пакетов служб SQL Server Integration Services (SSIS) для Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 -   [Развертывание, запуск и отслеживание пакета служб SSIS в Azure](ssis-azure-deploy-run-monitor-tutorial.md)
 

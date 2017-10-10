@@ -1,7 +1,7 @@
 ---
-title: "Добавление типов служб Reporting Services содержимого в библиотеку SharePoint | Документы Microsoft"
+title: "Добавьте типы содержимого служб Reporting Services в библиотеку SharePoint | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,24 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Добавление типов содержимого служб Reporting Services в библиотеку SharePoint
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обеспечивают стандартные типы содержимого SharePoint, предназначенные для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и определений отчетов (RDL) построителя отчетов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов.  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint  
-  
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Добавьте типы содержимого служб Reporting Services в библиотеке SharePoint
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обеспечивают стандартные типы содержимого SharePoint, предназначенные для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и определений отчетов (RDL) построителя отчетов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов.
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+
  Добавить типы содержимого в библиотеку может администратор веб-сайта или пользователь с разрешениями уровня «Полный доступ».  
   
  Типы содержимого служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и управление типами содержимого будут автоматически включены во всех библиотеках документов для существующих семейств веб-сайтов, созданных на основе следующих типов шаблонов сайтов.  
@@ -112,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  После завершения добавления типов содержимого нажмите кнопку **ОК**.  
   
-9. > [!NOTE]  
+    > [!NOTE]  
     >  Если группа типов содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно:  
   
     -   Надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint еще не установлена. Дополнительные сведения см. в статье [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Раздел включает сведения об установке надстройки и пошаговом выполнении установки файлов надстройки для обхода проблем.  
@@ -155,7 +161,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  После завершения добавления типов содержимого нажмите кнопку **ОК**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a> Активация типов содержимого и управления содержимым для нескольких сайтов бизнес-аналитики  
+##  <a name="bkmk_enable_multiple_sites"></a>Чтобы включить типы содержимого и управления содержимым для нескольких сайтов бизнес-Аналитики  
   
 1.  Для серверов отчетов SQL Server Reporting Services 2008 и 2008 R2 можно включить типы содержимого и управление содержимым для нескольких сайтов центра бизнес-аналитики:  
   
@@ -169,7 +175,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)  
   

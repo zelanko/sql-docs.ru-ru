@@ -1,6 +1,6 @@
 ---
 title: "Установка служб интеграции SQL Server в Linux | Документы Microsoft"
-description: "В этом разделе описывается установка служб интеграции SQL Server в Linux."
+description: "В этом разделе описывается установка служб SQL Server Integration Services (SSIS) для Linux."
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -8,13 +8,12 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
-ms.assetid: 
+ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 520b650e0f1dac950797d481609478c6c6548f5a
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка SQL Server Integration Services (SSIS) для Linux
@@ -31,37 +30,36 @@ ms.lasthandoff: 10/02/2017
 ## <a name="ubuntu"></a>Установка служб SSIS для Ubuntu
 Чтобы установить `mssql-server-is` пакет в Ubuntu, выполните следующие действия:
 
-1.  Импорт ключей GPG общедоступный репозиторий.
+1. Импорт ключей GPG общедоступный репозиторий.
 
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    ```
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
 
-2.  Регистрация в Microsoft SQL Server Ubuntu репозиторий.
+2. Регистрация в Microsoft SQL Server Ubuntu репозиторий.
 
-    ```bash
-    curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
-    ```
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   ```
 
-3.  Выполните следующие команды для установки SQL Server Integration Services.
+3. Выполните следующие команды для установки SQL Server Integration Services.
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install -y mssql-server-is
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y mssql-server-is
+   ```
 
+4. После установки служб Integration Services, запустите `ssis-conf`. Дополнительные сведения см. в разделе [настройки служб SSIS в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
 
-4.  После установки служб Integration Services, запустите `ssis-conf`. Дополнительные сведения см. в разделе [настройки служб SSIS в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
+5. После завершения конфигурации задайте путь.
 
-5.  После завершения конфигурации задайте путь.
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>Обновление служб SSIS
 Если у вас уже есть `mssql-server-is` установлены, можно обновить до последней версии с помощью следующей команды:
@@ -79,47 +77,30 @@ sudo apt-get remove msssql-server-is
 ## <a name="RHEL"></a>Установка служб SSIS на RHEL
 Чтобы установить `mssql-server-is` пакет в RHEL, выполните следующие действия:
 
+1. Загрузите файл конфигурации Microsoft SQL Server Red Hat репозитория.
 
-1.  Перейдите в режим суперпользователя.
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
 
-    ```bash
-    sudo su
-    ```
+1. Выполните следующие команды для установки SQL Server Integration Services.
 
-
-2.  Загрузите файл конфигурации Microsoft SQL Server Red Hat репозитория.
-
-    ```bash
-    curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
-    ```
+   ```bash
+   sudo yum install -y mssql-server-is
+   ```
 
 
-3.  Выход из режима суперпользователя.
+1. После установки, выполните `ssis-conf`. Дополнительные сведения см. в разделе [настройки служб SSIS в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
 
-    ```bash
-    exit
-    ```
+   ```bash
+   sudo /opt/ssis/bin/ssis-conf setup
+   ```
 
+1. После завершения конфигурации задайте путь.
 
-4.  Выполните следующие команды для установки SQL Server Integration Services.
-
-    ```bash
-    sudo yum install -y mssql-server-is
-    ```
-
-
-5.  После установки, выполните `ssis-conf`. Дополнительные сведения см. в разделе [настройки служб SSIS в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
-
-    ```bash
-    sudo /opt/ssis/bin/ssis-conf setup
-    ```
-
-
-6.  После завершения конфигурации задайте путь.
-
-    ```bash
-    export PATH=/opt/ssis/bin:$PATH
-    ```
+   ```bash
+   export PATH=/opt/ssis/bin:$PATH
+   ```
 
 ### <a name="update-ssis"></a>Обновление служб SSIS
 Если у вас уже есть `mssql-server-is` установлены, можно обновить до последней версии с помощью следующей команды:

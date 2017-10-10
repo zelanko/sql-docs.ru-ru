@@ -1,7 +1,7 @@
 ---
 title: "Вычисляемые столбцы (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,17 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5155ce65d240db9bec2f01ada5dcba61c9926037
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="calculated-columns"></a>Вычисляемые столбцы
   Вычисляемые столбцы в табличной модели позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Вычисляемый столбец впоследствии может использоваться в отчете, сводной таблице или сводной диаграмме, как и любой другой столбец.  
-  
-> [!NOTE]  
->  Вычисляемые столбцы не поддерживаются для табличных моделей в режиме DirectQuery. Дополнительные сведения см. в разделе [режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+ 
   
   
 ##  <a name="bkmk_understanding"></a> Преимущества  
@@ -86,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [Вычисления](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
+

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/02/2017
 
 | Платформа | Поддерживаемые версии | Получить
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 | [Получить RHEL 7.3](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 или 7.4 | [Получить RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | с пакетом обновления 2 для версии 12 | [Получить SP2 SLES версии 12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Подсистема docker** | 1.8+ | [Получить Docker](http://www.docker.com/products/overview)
@@ -49,9 +49,6 @@ ms.lasthandoff: 10/02/2017
 | **Процессорных ядер** | 2 ядра |
 | **Тип процессора** | x64 совместим только |
 
-> [!NOTE]
-> Модуль SQL Server был протестирован до 1 ТБ памяти в данный момент.
-
 Если вы используете **сетевой файловой системы (NFS)** удаленные общие ресурсы в рабочей среде, ознакомьтесь со следующими требованиями поддержки:
 
 - Использование NFS версии **4.2 или более поздней версии**. NFS более ранних версий не поддерживают необходимые компоненты, такие как fallocate и создания разреженный файл, общие для современных файловых систем.
@@ -66,6 +63,7 @@ SQL Server в Linux можно установить из командной ст
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Установите на Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Запустите на Docker](quickstart-install-connect-docker.md)
+- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 ## <a id="upgrade"></a>Обновление SQL Server
 
@@ -122,6 +120,12 @@ SQL Server в Linux можно установить из командной ст
    | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
    | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
+1. Для **Ubuntu только**, Импорт ключей GPG общедоступный репозиторий.
+
+   ```bash
+   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
 1. Настройте новый репозиторий.
 
    | Платформа | Хранилище | Command |
@@ -130,17 +134,8 @@ SQL Server в Linux можно установить из командной ст
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
    | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
-
-1. Обновление системы.
-
-   | Платформа | Команда обновления |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
-
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [Установка](#platforms) или [обновление](#upgrade) SQL Server на новое хранилище.
 

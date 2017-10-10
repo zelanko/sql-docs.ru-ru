@@ -1,7 +1,7 @@
 ---
-title: "Устранение неполадок установки служб Reporting Services | Документы Microsoft"
+title: "Устранение неполадок при установке служб Reporting Services | Документы Microsoft"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8a70fbb9bd9f54b06544f8d9b625c7998f74109d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 08/09/2017
   
  Сведения о других ошибках и проблемах, связанных со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , см. в разделе [Устранение неполадок и ошибок служб SSRS.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- В случае обнаружения проблемы, описанной в заметках о выпуске, см. статью [Заметки о выпуске в Интернете](http://go.microsoft.com/fwlink/?linkid=236893) .  
+ Просмотрите [заметки о выпуске в Интернете](http://go.microsoft.com/fwlink/?linkid=236893) в случае обнаружения проблемы, описанной в заметках о выпуске.  
   
-##  <a name="bkmk_setuplogs"></a> Проверка журналов установки  
+##  <a name="bkmk_setuplogs"></a>Проверка журналов установки  
  Ошибки установки записываются в файлы журналов, расположенные в папке **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** . При каждом запуске программы установки там создается новая вложенная папка. Эта вложенная папка имеет имя, включающее время и дату запуска программы установки. Дополнительные сведения о просмотре файлов журналов установки см. в статье [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 -   Журналы содержат набор файлов.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Откройте файл *_RS\_\*_ComponentUpdateSetup.log, чтобы просмотреть сведения об установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-##  <a name="bkmk_prereq"></a> Проверка требований, необходимых для установки  
+##  <a name="bkmk_prereq"></a>Проверить наличие необходимых компонентов  
  Программа установки автоматически проверяет требования, необходимые для установки. Однако при устранении неполадок, возникших в процессе установки, бывает полезно знать, на соответствие каким именно требованиям производится проверка.  
   
 -   Требования к учетной записи для запуска программы установки включают членство в локальной группе «Администраторы». Программа установки должна иметь разрешения на добавление файлов, параметров реестра, создание локальных групп безопасности и предоставление разрешений. При установке конфигурации по умолчанию программа установки должна иметь разрешения на создание базы данных сервера отчетов на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором выполняется установка.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  Программа установки больше не проверяет наличие служб IIS или [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требуются компоненты MDAC 2.0 и платформа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 2.0. Если эти компоненты не установлены, то будет произведена их установка.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> Устранение неполадок установки в режиме интеграции с SharePoint  
+##  <a name="bkmk_tshoot_sharepoint"></a>Устранение неполадок oroblems с установки в режиме SharePoint  
   
 -   [Диспетчер конфигурации служб Reporting Services не запускается](#bkmk_configmanager_notstart)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Отображается сообщение об ошибке: RS_SHP не поддерживается для действия PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Диспетчер конфигурации служб Reporting Services не запускается
+### <a name="bkmk_configmanager_notstart"></a>Диспетчер конфигурации служб отчетов не запускается
 
  **Описание:** эта проблема не будет изначально в SQL Server 2012 и более поздних версий. Службы Reporting Services рассчитаны на архитектуру служб SharePoint. Диспетчер конфигурации больше не нужен для настройки и администрирования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме совместимости с SharePoint.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Установите службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint с установочного носителя SQL Server.  
   
- **Примечание.** Если при выполнении одного из описанных обходных путей открыта **консоль управления SharePoint 2013/2016** , закройте и снова откройте ее.  
+ Если **консоль управления SharePoint 2013/2016** открыт во время выполнения одного из описанных обходных путей, закройте и снова откройте консоль управления.  
   
  Дополнительные сведения см. в следующих разделах:  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Значок стрелки, используемый с обратно к верхней](../../analysis-services/instances/media/uparrow16x16.gif "значок стрелки, используемый с обратно к верхней") [Устранение неполадок установки в режиме интеграции с SharePoint с](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> Устранение неполадок установки в собственном режиме  
+##  <a name="bkmk_tshoot_native"></a>Устранение неполадок установки в собственном режиме  
   
 ###  <a name="PerfCounters"></a> Счетчики производительности невидимы после обновления до Windows Vista или Windows Server 2008  
  Если выполнено обновление операционной системы с переходом к версии [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] или [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] на компьютере, где работают службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], то после обновления счетчики производительности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не будут установлены.  

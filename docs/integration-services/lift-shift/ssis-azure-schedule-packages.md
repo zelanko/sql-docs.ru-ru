@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Запланировать выполнение пакета служб SSIS в Azure
@@ -58,13 +58,13 @@ ms.lasthandoff: 09/25/2017
 
 ## <a name="elastic"></a>Планирование пакета с заданий эластичных баз данных SQL
 
-Дополнительные сведения о эластичной задания в базе данных SQL см. в разделе [базы данных горизонтально масштабируемого облака управление](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Дополнительные сведения о эластичной задания в базе данных SQL см. в разделе [базы данных горизонтально масштабируемого облака управление](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Предварительные требования
 
 Перед эластичной заданий можно использовать для планирования пакетов служб SSIS, хранимые в базе данных каталога SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
 
-1.  Установка и настройка компонентов заданий эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке эластичной базы данных заданий](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
+1.  Установка и настройка компонентов заданий эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке эластичной базы данных заданий](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Создание уровня базы данных учетных данных, используемых заданиями для отправки команд в базе данных каталога служб SSIS. Дополнительные сведения см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -110,7 +110,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 3.  Создайте выходной набор данных, который управляет планированием.
 4.  Создание конвейера фабрики данных, который использует действие хранимую процедуру SQL Server для запуска пакета служб SSIS.
 
-Этот раздел содержит обзор этих действий. Весь учебник фабрики данных выходит за рамки данной статьи. Дополнительные сведения см. в разделе [действия хранимой процедуры SQL Server](/azure/data-factory/data-factory-stored-proc-activity.md).
+Этот раздел содержит обзор этих действий. Весь учебник фабрики данных выходит за рамки данной статьи. Дополнительные сведения см. в разделе [действия хранимой процедуры SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Создать связанную службу для базы данных SQL, на котором размещена SSISDB
 Связанная служба позволяет подключиться к SSISDB фабрики данных.
@@ -221,4 +221,4 @@ GO
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения об агенте SQL Server см. в разделе [заданий агента SQL Server для пакетов](../packages/sql-server-agent-jobs-for-packages.md).
 
-Дополнительные сведения о эластичной задания в базе данных SQL см. в разделе [базы данных горизонтально масштабируемого облака управление](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Дополнительные сведения о эластичной задания в базе данных SQL см. в разделе [базы данных горизонтально масштабируемого облака управление](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

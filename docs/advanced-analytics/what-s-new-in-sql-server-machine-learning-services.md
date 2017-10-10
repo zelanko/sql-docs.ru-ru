@@ -2,7 +2,7 @@
 title: "Какой &#39; новые возможности службы обучения машины | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Новые возможности службы обучения машины в SQL Server
@@ -37,6 +37,16 @@ CATCH, то последняя объявление! [Python в 2017 г. SQL Ser
 
 Сервер Microsoft машины обучения в SQL Server теперь предоставляет полную поддержку построения и развертывания решений машины обучения в R или Python. Вот краткое описание этой версии.
 
+> [!IMPORTANT]
+> 
+> Службы машины обучения, включая использование R или Python, в настоящее время не поддерживаются при запуске SQL Server в Linux или в базе данных Azure SQL. Поиск изменений в более поздней версии.
+> 
+> Собственный оценки с помощью функции ПРОГНОЗИРОВАНИЯ в настоящее время поддерживается в выпуске Linux.
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Новые возможности в накопительный пакет обновления 1 для SQL Server 2017 г.
+
+Теперь можно обновить компоненты Python и R сервер обучения машины 9.2.1. Этот выпуск предлагает множество улучшений в **revoscalepy** и **RevoScaleR**, включая повышение производительности.
+ 
 ### <a name="in-database-python-integration"></a>Интеграция Python в базе данных
 
 Можно запустить Python в хранимых процедурах или Python удаленно с помощью имени компьютера SQL Server в контексте выполнения. Такая интеграция открывает новые пути для подавляющего сообщества разработчиков Python и специалистов по анализу данных, чтобы использовать возможности SQL Server. 

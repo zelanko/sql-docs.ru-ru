@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: cfc4ae035e699ac496760cd0fc540e72fd463a50
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Развертывание проекта служб SSIS из кода Visual Studio с помощью Transact-SQL
@@ -21,7 +21,7 @@ ms.lasthandoff: 09/22/2017
 > [!NOTE]
 > Метод, описанный в этой статье не доступен, при подключении к серверу базы данных SQL Azure с VS Code. `catalog.deploy_project` Хранимая процедура ожидает, что путь к `.ispac` файл в локальной (локально) файловой системы.
 
-Кода Visual Studio — это редактор кода для Windows, macOS и Linux, которая поддерживает расширения, включая `mssql` расширения для подключения к Microsoft SQL Server, базы данных SQL Azure или хранилище данных SQL Azure. Дополнительные сведения о VS Code см. в разделе [Visual Studio Cod](https://code.visualstudio.com/).
+Кода Visual Studio — это редактор кода для Windows, macOS и Linux, которая поддерживает расширения, включая `mssql` расширения для подключения к Microsoft SQL Server, базы данных SQL Azure или хранилище данных SQL Azure. Дополнительные сведения о VS Code см. в разделе [кода Visual Studio](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/22/2017
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Укажите режим языковой SQL в VS Code
 
-Чтобы включить `mssql` команды и T-SQL IntelliSense, указывает режим языка задается **SQL** в код Visual Studio.
+Чтобы включить `mssql` команды и T-SQL IntelliSense, режим языка **SQL** в код Visual Studio.
 
 1. Откройте Visual Studio Code и затем открыть новое окно. 
 

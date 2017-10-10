@@ -1,7 +1,7 @@
 ---
-title: "Добавление веб-части средства просмотра отчетов на страницу SharePoint | Документы Microsoft"
-ms.custom: Add the Report Viewer web part to a page within your SharePoint site.
-ms.date: 09/15/2017
+title: "Добавление веб-части для просмотра отчетов служб отчетов SQL Server на страницу SharePoint | Документы Microsoft"
+ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
+ms.date: 09/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,14 +14,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 033d8092cab4e6aa0889f153d5e2e7d75ae31b03
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="add-report-viewer-web-part-to-a-sharepoint-page"></a>Добавление веб-части средства просмотра отчетов на страницу SharePoint
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Добавить на страницу SharePoint веб-часть для просмотра отчетов служб отчетов SQL Server
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -34,6 +34,8 @@ ms.lasthandoff: 09/15/2017
 * Для успешной загрузки отчетов служба Claims to Windows Token Service (C2WTS), необходимо настроить для Kerberos ограниченного делегирования. Дополнительные сведения о настройке C2WTS см. в разделе [Claims to Windows Token Service (C2WTS) и службы Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 
 * Веб-часть средства просмотра отчетов должны быть развернуты в ферму SharePoint. Сведения по развертыванию решений средства просмотра отчетов веб-части проекта см. в разделе [развертывание веб-части средства просмотра отчетов на сайте SharePoint](deploy-report-viewer-web-part.md).
+
+* Чтобы добавить веб-часть на веб-страницу, необходимо иметь разрешение на добавление и настройка страниц на уровне сайта. При использовании параметров безопасности по умолчанию это разрешение предоставлено членам группы **Владельцы** , имеющим уровень разрешений «Полный доступ».
 
 ## <a name="add-web-part"></a>Добавление веб-части
 
@@ -49,7 +51,7 @@ ms.lasthandoff: 09/15/2017
 
 4. В разделе **категории**выберите ** SQL Server Reporting Services (Native mode). В разделе **частей**выберите **средство просмотра отчетов**. Выберите **добавить**.
 
-    ![Добавьте веб-части средства просмотра отчетов.](media/sharepoint-report-viewer-web-part.png)
+    ![Добавление веб-части средства просмотра отчетов.](media/sharepoint-report-viewer-web-part.png)
 
     Могут возникать с ошибкой. Ошибка: так как URL-адрес сервера отчетов по умолчанию задано значение *http://localhost* и могут быть недоступны в этом расположении.
 
@@ -78,6 +80,5 @@ ms.lasthandoff: 09/15/2017
 * Веб-часть средства просмотра отчетов не может использоваться в современных страниц в SharePoint.
 * Нельзя использовать в отчетах Power BI в веб-части средства просмотра отчетов.
 * Если вы не видите веб-части средства просмотра отчетов, добавление на страницу, убедитесь, что у вас есть [развертывания веб-части средства просмотра отчетов](deploy-report-viewer-web-part.md).
-* Ссылка в верхней части веб-части приводит к ошибке и не перехода в любом месте.
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

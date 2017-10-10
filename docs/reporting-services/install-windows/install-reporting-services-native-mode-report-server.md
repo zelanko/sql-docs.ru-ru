@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3e535ef444e43860e35befbf0f33fe1eb582801d
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services в основном режиме
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/17/2017
   
 -   Сведения о подключении (так называемый источник данных или DSN) для баз данных сервера отчетов.  
   
- Программа установки не производит настройку учетной записи автоматического выполнения, электронной почты сервера отчетов, резервного копирования ключей шифрования и масштабного развертывания. Для настройки этих свойств вы можете использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ Программа установки не производит настройку учетной записи автоматического выполнения, электронной почты сервера отчетов, резервного копирования ключей шифрования и масштабного развертывания. Для настройки этих свойств вы можете использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
   
 ##  <a name="bkmk_whentoinstalldefaultconfig"></a> Ситуации, требующие установки конфигурации по умолчанию для основного режима  
  При конфигурации по умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются в рабочее состояние, и сервер отчетов можно использовать сразу после завершения программы установки. Выберите этот режим, чтобы сократить количество шагов и пропустить выполнение задач настройки, которые в противном случае пришлось бы выполнять в средстве настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -155,7 +155,7 @@ ms.lasthandoff: 08/17/2017
   
 9. Правила конфигурации компонентов: проверьте переданные правила. Если все правила выполнены, мастер установки автоматически перейдет в состояние **готовности к установке** .  В контексте [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]эти правила позволяют проверить, существует ли каталог сервера отчетов и временный каталог базы данных.  
   
-10. ![Примечание](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")на **готовности к установке** запишите путь к файлу конфигурации, — можно ссылаться на него в дальнейшем для получения сводки о начальной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] конфигурации в том числе об установленных компонентах, учетных записей служб и администраторов.  
+10. На странице **готовности к установке** запишите путь к файлу конфигурации — он понадобится вам позже для получения сводки о начальной конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая сведения об установленных компонентах, учетных записях служб и администраторах.  
   
 11. После завершения мастера установки SQL Server проверьте установку собственного режима по умолчанию, используя следующие основные шаги.  
   
@@ -188,8 +188,8 @@ ms.lasthandoff: 08/17/2017
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Установка в режиме "только файлы" (службы Reporting Services)](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [Инициализация сервера отчетов](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
-[Настройка соединений SSL для сервера отчетов в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
 

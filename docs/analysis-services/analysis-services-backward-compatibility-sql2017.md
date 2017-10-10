@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 972ab981eccb6271dfa2f18e0b482f43020ff36b
+ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
+ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Обратная совместимость служб Analysis (SQL 2017 г.)
@@ -40,10 +40,11 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|  
 |**Режим, категория**|**Компонент**|
-|Табличный|Удаленные связанные группы мер|
+|Multidimensional|Интеллектуальный анализ данных|
+|Multidimensional|Удаленные связанные группы мер|
 |Табличный|Моделей на уровне совместимости 1100 и 1103|
 |Табличный|Свойства табличной модели объекта: Column.IsDefaultImage Column.TableDetailPosition Column.IsDefaultLabel,|
-|Multidimensional|Интеллектуальный анализ данных|
+
 
 ## <a name="discontinued-features"></a>Неподдерживаемые функции
 Объект *неподдерживаемой* был объявлен устаревшим в более ранних версиях. Он может по-прежнему включены в текущем выпуске, но больше не поддерживается. Неподдерживаемые функции могут быть удалены в будущем выпуске или обновить.
@@ -70,8 +71,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="behavior-changes"></a>Изменения в поведении
 Объект *изменение поведения* влияет на работу одной функции в текущей версии по сравнению с предыдущим выпуском. Описываются только существенных изменений в поведении. Изменения в пользовательский интерфейс, не включаются.
 
-В этом выпуске нет изменений поведения.
+Изменения в MDSCHEMA_MEASUREGROUP_DIMENSIONS и DISCOVER_CALC_DEPENDENCY, описанные в [новые возможности CTP-версия SQL Server 2017 г 2.1 для служб Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) объявления.
 
 
 ## <a name="see-also"></a>См. также:
 [Обратная совместимость служб Analysis (SQL Server 2016)](analysis-services-backward-compatibility.md)
+
