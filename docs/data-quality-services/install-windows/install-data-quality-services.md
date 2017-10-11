@@ -36,7 +36,7 @@ ms.lasthandoff: 09/12/2017
 >   
 >  Используйте преобразование «Очистка DQS» из служб Integration Services, которое выполняет очистку данных в процессе обработки пакетов служб Integration Services. Этот компонент устанавливается автоматически при установке служб Integration Services. Сведения об установке служб Integration Services см. в статье [Установка служб Integration Services](../../integration-services/install-windows/install-integration-services.md).  
 >   
->  Включите интеграцию служб DQS в службах Master Data Services, чтобы использовать функции сопоставления служб DQS в надстройке служб Master Data Services для Excel. Дополнительные сведения см. в разделе [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
+>  Включите интеграцию служб DQS в службах Master Data Services, чтобы использовать функции сопоставления служб DQS в надстройке служб Master Data Services для Excel. Дополнительные сведения см. в разделе [Включение интеграции служб Data Quality Services со службами Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   
  Установка DQS представляет собой процесс из трех частей.  
   
