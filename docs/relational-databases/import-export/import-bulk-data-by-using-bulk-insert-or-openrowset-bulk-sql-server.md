@@ -26,10 +26,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)
@@ -37,7 +37,8 @@ ms.lasthandoff: 10/04/2017
 
   Этот раздел содержит общие сведения об использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT и INSERT...SELECT * FROM OPENROWSET(BULK...) для массового импорта данных из файла данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В разделе также описываются вопросы безопасности при использовании BULK INSERT и OPENROWSET(BULK…), а также применение этих методов для массового импорта из удаленного источника данных.  
   
-> **ПРИМЕЧАНИЕ.** При использовании инструкции BULK INSERT или OPENROWSET(BULK…) важно понимать, каким образом выполняется олицетворение в версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в подразделе «Вопросы безопасности» далее в этом разделе.  
+> [!NOTE]
+> При использовании инструкции BULK INSERT или OPENROWSET(BULK…) важно понимать, каким образом выполняется олицетворение в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и более поздних версиях. Дополнительные сведения см. в подразделе «Вопросы безопасности» далее в этом разделе.  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT, инструкция  
  Инструкция BULK INSERT загружает данные из файла данных в таблицу. Эти функциональные возможности аналогичны тем, которые предоставляются параметром **in** команды **bcp** , но чтение файла данных выполняется процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Описание синтаксиса инструкции BULK INSERT см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/04/2017
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Массовый импорт из удаленного файла данных  
  Чтобы использовать инструкции BULK INSERT или INSERT...SELECT \* FROM OPENROWSET(BULK...) для массового импорта данных с другого компьютера, необходимо, чтобы файл данных был доступен на обоих компьютерах. Укажите общий файл данных в формате UNC, то есть в следующем формате: **\\\\***Имя сервера***\\***Общая папка***\\***Путь***\\***Имя файла*. Кроме того, используемая учетная запись должна обладать разрешениями, необходимыми для чтения этого файла на удаленном диске.  
   
- Например, инструкция `BULK INSERT` производит массовый импорт в таблицу `SalesOrderDetail` базы данных `AdventureWorks` из файла данных с именем `newdata.txt`. Этот файл данных находится в общей папке `\dailyorders` , расположенной в общем сетевом каталоге `salesforce` компьютера с именем `computer2`.  
+ Например, инструкция `BULK INSERT` производит массовый импорт в таблицу `SalesOrderDetail` базы данных `AdventureWorks` из файла данных с именем `newdata.txt`. Этот файл данных находится в общей папке `\dailyorders`, расположенной в общем сетевом каталоге `salesforce` компьютера с именем `computer2`.  
   
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -120,7 +121,8 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **ПРИМЕЧАНИЕ.** Это ограничение не применяется к служебной программе **bcp** , потому что клиент считывает файл независимо от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> [!NOTE]
+> Это ограничение не применяется к служебной программе **bcp**, потому что клиент читает файл независимо от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   

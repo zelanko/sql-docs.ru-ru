@@ -17,11 +17,11 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Пропуск столбца таблицы с помощью файла форматирования (SQL Server)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sample-table-and-data-file"></a>Образец таблицы и файла данных  
  Для следующих примеров требуется таблица с именем `myTestSkipCol` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] схемы **dbo** . Создайте таблицу следующим образом:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -48,7 +48,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  Чтобы выполнить массовый импорт данных из таблицы `myTestSkipCol2.dat` в таблицу `myTestSkipCol` , файл форматирования должен сопоставлять первое поле данных с `Col1`, а второе поле данных с `Col3`, пропуская поле `Col2`.  
@@ -59,7 +58,7 @@ GO
 ### <a name="creating-a-default-non-xml-format-file"></a>Создание файла форматирования в формате, отличном от XML, по умолчанию  
  В этой статье используется файл форматирования по умолчанию в формате, отличном от XML, созданный для образца таблицы `myTestSkipCol` с помощью следующей команды **bcp** :  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -109,7 +108,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### <a name="using-bulk-insert"></a>Использование предложения BULK INSERT  
  Следующий пример работает с использованием любого из файлов форматирования, отличных от XML и создаваемых в подразделе «Методы изменения не XML-файла форматирования» ранее в этом разделе. В этом примере измененный файл форматирования называется `C:\myTestSkipCol2.fmt`. Чтобы использовать `BULK INSERT` для массового импорта файла данных `myTestSkipCol2.dat` , в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -130,13 +129,13 @@ GO
 ### <a name="creating-a-default-xml-format-file"></a>Создание XML-файла форматирования по умолчанию  
  Следующие примеры измененных файлов форматирования базируются на образце таблицы `myTestSkipCol` и файла данных, созданных в подразделе «Образец таблицы и файла данных» ранее в этом разделе. Следующая команда **bcp`myTestSkipCol` создает XML-файл форматирования по умолчанию для таблицы** .  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  Результирующий файл форматирования в формате, отличном от XML, описывает сопоставления один к одному между полями файла данных и столбцами таблицы следующим образом:  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -158,7 +157,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### <a name="examples"></a>Примеры  
  В примерах этого раздела используется образец таблицы `myTestSkipCol` и образец файла данных `myTestSkipCol2.dat` , создаваемых в подразделе «Образец таблицы и файла данных» ранее в этом разделе. Для импортирования данных из файла `myTestSkipCol2.dat` в таблицу `myTestSkipCol` в примерах используется следующий измененный XML-файл форматирования `myTestSkipCol2-x.xml`. Следующий пример основан на файле форматирования, создаваемом в подразделе «Создание не XML-файла форматирования по умолчанию» ранее в этом разделе.  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -177,7 +176,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выполните:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -194,7 +193,7 @@ GO
   
  В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выполните:  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  

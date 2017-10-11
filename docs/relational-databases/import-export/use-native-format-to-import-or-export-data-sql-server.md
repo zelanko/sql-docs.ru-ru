@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 889a414674b3b87ca528f1af2a54261c723c4555
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
@@ -106,7 +106,8 @@ ms.lasthandoff: 07/31/2017
 
 ### **Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже скрипт создает тестовую базу данных, таблицу с именем `myNative` и заполняет таблицу начальными значениями.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -133,7 +134,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myNative.fmt`в формате, отличном от XML, на основе схемы `myNative`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующие команды:
 
-```
+```cmd
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
 
 REM Review file
@@ -151,7 +152,8 @@ Notepad D:\BCP\myNative.fmt
 
 ### **Использование bcp и собственного формата для экспорта данных**<a name="bcp_native_export"></a>
 **-n** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующие команды:
-```
+
+```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
 REM Review results
@@ -160,7 +162,8 @@ NOTEPAD D:\BCP\myNative.bcp
 
 ### **Использование bcp и собственного формата для импорта данных без файла форматирования**<a name="bcp_native_import"></a>
 **-n** и команда **IN** .  В командной строке введите следующие команды:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
 
@@ -173,7 +176,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 
 ### **Использование bcp и собственного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_native_import_fmt"></a>
 **-n** и **-f** и команда **IN** .  В командной строке введите следующие команды:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
 
@@ -186,7 +190,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 
 ### **Использование инструкции BULK INSERT и собственного формата без файла форматирования**<a name="bulk_native"></a>
 Аргумент**DATAFILETYPE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
     FROM 'D:\BCP\myNative.bcp'
@@ -200,7 +205,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
 
 ### **Использование инструкции BULK INSERT и собственного формата с файлом форматирования, не являющимся XML**<a name="bulk_native_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
    FROM 'D:\BCP\myNative.bcp'
@@ -214,7 +220,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
 
 ### **Использование инструкции OPENROWSET и собственного формата с файлом форматирования, не являющимся XML**<a name="openrowset_native_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative
     SELECT *

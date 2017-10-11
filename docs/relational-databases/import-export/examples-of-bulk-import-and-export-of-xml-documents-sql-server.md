@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/27/2017
 -   BULK INSERT  
   
 -   Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).  
-  
- **Примечание.** Дополнительные сведения: 
-  - [Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
-   - [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-    - [Как импортировать XML в SQL Server с помощью компонента массовой загрузки XML.](https://support.microsoft.com/en-us/kb/316005)
-     - [Коллекции XML-схем (SQL Server)](../xml/xml-schema-collections-sql-server.md)
+
+Дополнительные сведения см. в следующих разделах:
+- [Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
+- [Как импортировать XML в SQL Server с помощью компонента массовой загрузки XML.](https://support.microsoft.com/en-us/kb/316005)
+- [Коллекции XML-схем (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Примеры  
  Далее следуют примеры.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="sample-table"></a>Образец таблицы  
  Для проверки представленного ниже примера A необходимо создать образец таблицы `T`.  
   
-```  
+```sql
 USE tempdb  
 CREATE TABLE T (IntCol int, XmlCol xml);  
 GO  
@@ -79,8 +79,8 @@ GO
 #### <a name="sample-data-file"></a>Образец файла данных  
  Перед запуском примера А необходимо создать файл в кодировке UTF-8 (`C:\SampleFolder\SampleData3.txt`), содержащий следующий образец, который определяет схему в кодировке `UTF-8` .  
   
-```  
-\<?xml version="1.0" encoding="UTF-8"?>  
+```xml  
+<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -91,7 +91,7 @@ GO
 #### <a name="example-a"></a>Пример A  
  В этом примере используется параметр `SINGLE_BLOB` в инструкции `INSERT ... SELECT * FROM OPENROWSET(BULK...)` для импорта данных из файла с именем `SampleData3.txt` и вставки экземпляра данных XML в таблицу с одним столбцом, образец таблицы `T`.  
   
-```  
+```sql
 INSERT INTO T(XmlCol)  
 SELECT * FROM OPENROWSET(  
    BULK 'c:\SampleFolder\SampleData3.txt',  
@@ -120,7 +120,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="sample-data-file"></a>Образец файла данных  
  В примере Б используется измененная версия образца файла данных `SampleData3.txt` из предыдущего примера. Для запуска этого примера нужно изменить содержимое этого файла следующим образом:  
   
-```  
+```xml
 <Root>  
           <ProductDescription ProductModelID="10">  
              <Summary>Some New Text</Summary>  
@@ -130,7 +130,7 @@ SELECT * FROM OPENROWSET(
   
 #### <a name="example-b"></a>Пример B-адреса  
   
-```  
+```sql  
 -- Query before update shows initial state of XmlCol values.  
 SELECT * FROM T  
 UPDATE T  
@@ -166,14 +166,14 @@ GO
 #### <a name="sample-data-file"></a>Образец файла данных  
  Перед проверкой этого примера массового импорта создайте файл (`C:\temp\Dtdfile.xml`), содержащий следующий образец данных:  
   
-```  
+```xml 
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
 #### <a name="sample-table"></a>Образец таблицы  
  В примере В используется образец таблицы `T1` , созданный следующей инструкцией `CREATE TABLE` :  
   
-```  
+```sql  
 USE tempdb;  
 CREATE TABLE T1(XmlCol xml);  
 GO  
@@ -182,7 +182,7 @@ GO
 #### <a name="example-c"></a>Пример В  
  В этом примере используется `OPENROWSET(BULK...)` и в предложении `CONVERT` указывается параметр `SELECT` для импорта XML-данных из `Dtdfile.xml` в образец таблицы `T1`.  
   
-```  
+```sql
 INSERT T1  
   SELECT CONVERT(xml, BulkColumn, 2) FROM   
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
@@ -226,7 +226,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
   
  В этом примере показано, как использовать эти признаки конца поля в образце таблицы `xTable` . Чтобы создать этот образец таблицы, используйте следующую инструкцию `CREATE TABLE` :  
   
-```  
+```sql
 USE tempdb;  
 CREATE TABLE xTable (xCol xml);  
 GO  
@@ -246,7 +246,7 @@ GO
 #### <a name="example-d"></a>Пример Г  
  В этом примере используется файл форматирования `Xmltable.fmt` в инструкции `BULK INSERT` для импорта содержимого файла XML-данных с именем `Xmltable.dat`.  
   
-```  
+```sql
 BULK INSERT xTable   
 FROM 'C:\Xmltable.dat'  
 WITH (FORMATFILE = 'C:\Xmltable.fmt');  
@@ -258,7 +258,7 @@ GO
 ## <a name="bulk_export_xml_data"></a> Массовый экспорт XML-данных  
  В следующем примере для выполнения массового экспорта XML-данных из таблицы, созданной в предыдущем примере при помощи того же XML-файла форматирования, используется программа `bcp` . В следующей команде `bcp` `<server_name>` и `<instance_name>` являются заполнителями, которые должны быть заменены соответствующими значениями:  
   
-```  
+```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
 ```  
   

@@ -14,7 +14,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Использование кода Visual Studio для создания и выполнения скриптов Transact-SQL для SQL Server
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 В этом разделе показано, как использовать **mssql** расширения для Visual Studio код (VS) для разработки баз данных SQL Server.
 
-Код Visual Studio — это редактор графического кода для Linux, macOS и Windows, которая поддерживает расширения. [**Mssql** расширения VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
+Код Visual Studio — это редактор графического кода для Linux, macOS и Windows, которая поддерживает расширения. [ **Mssql** расширения VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
 
 ## <a name="install-vs-code"></a>Установить VS Code
 1. Если вы еще не установили VS Code [загрузки и установки VS Code] на компьютере.

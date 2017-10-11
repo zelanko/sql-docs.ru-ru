@@ -17,11 +17,11 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 927bc546612f0d56ce857a41fbb2ba49ca32d47e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата для импорта и экспорта данных (SQL Server)
@@ -81,7 +81,8 @@ ms.lasthandoff: 06/22/2017
 
 ### **Образец таблицы**<a name="sample_table"></a>
 Приведенный ниже скрипт создает тестовую базу данных, таблицу с именем `myChar` и заполняет таблицу начальными значениями.  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -108,7 +109,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ### **Образец файла форматирования в формате, отличном от XML**<a name="nonxml_format_file"></a>
 SQL Server поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования.  Файл форматирования не в формате XML поддерживается более ранними версиями SQL Server.  Дополнительные сведения см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания файла форматирования `myChar.fmt`в формате, отличном от XML, на основе схемы `myChar`.  Чтобы создать файл форматирования с помощью служебной программы [bcp](../../tools/bcp-utility.md) , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** .  Параметр format также требует наличия параметра **-f** .  Кроме того, в этом примере квалификатор **c** используется для указания символьных данных, а **T** используется для указания доверенного подключения, в рамках которого применяется встроенная система безопасности.  В командной строке введите следующую команду:
 
-```
+```cmd
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
 
 REM Review file
@@ -126,7 +127,8 @@ Notepad D:\BCP\myChar.fmt
 
 ### **Использование bcp и символьного формата для экспорта данных**<a name="bcp_char_export"></a>
 Параметр**-c** и команда **OUT** .  Примечание. Файл данных, созданный в этом примере, будет использоваться во всех последующих примерах.  В командной строке введите следующую команду:
-```
+
+```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
 
 REM Review results
@@ -135,7 +137,8 @@ NOTEPAD D:\BCP\myChar.bcp
 
 ### **Использование bcp и символьного формата для импорта данных без файла форматирования**<a name="bcp_char_import"></a>
 Параметр**-c** и команда **IN** .  В командной строке введите следующую команду:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -148,7 +151,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **Использование bcp и символьного формата для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_char_import_fmt"></a>
 Параметры**-c** и **-f** switches и **IN** commи.  В командной строке введите следующую команду:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myChar;"
 
@@ -161,7 +165,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 
 ### **Использование инструкции BULK INSERT и символьного формата без файла форматирования**<a name="bulk_char"></a>
 Аргумент**DATAFILETYPE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
     FROM 'D:\BCP\myChar.bcp'
@@ -175,7 +180,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **Использование инструкции BULK INSERT и символьного формата с файлом форматирования, не являющимся XML**<a name="bulk_char_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
    FROM 'D:\BCP\myChar.bcp'
@@ -189,7 +195,8 @@ SELECT * FROM TestDatabase.dbo.myChar;
 
 ### **Использование инструкции OPENROWSET и символьного формата с файлом форматирования, не являющимся XML**<a name="openrowset_char_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar;  -- for testing
 INSERT INTO TestDatabase.dbo.myChar
     SELECT *
