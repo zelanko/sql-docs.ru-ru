@@ -81,7 +81,7 @@ ms.lasthandoff: 08/30/2017
   
     -   Для СУБД Oracle сервер имеет не более одной базы данных, поэтому нет необходимости указывать базу данных.  
   
-    -   Для СУБД IBM DB2 база данных указывается в строке соединения с DB2. Дополнительные сведения см. в статье [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   Для СУБД IBM DB2 база данных указывается в строке соединения с DB2. Дополнительные сведения см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   Если распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняется на 64-разрядной платформе, нужно использовать 64-разрядную версию соответствующего поставщика OLE DB.  
   
