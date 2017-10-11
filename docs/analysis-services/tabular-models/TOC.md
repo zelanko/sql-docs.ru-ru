@@ -20,6 +20,7 @@
 ### [Поддерживаемые источники данных](data-sources-supported-ssas-tabular.md)  
 ### [Поддерживаемые типы данных](data-types-supported-ssas-tabular.md)  
 ### [Олицетворение](impersonation-ssas-tabular.md)  
+### [Импорт данных с помощью машинного запроса](ssas-import-query.md)
 ### [Импорт данных — реляционный источник данных](ssas-import-data-relational-data-source.md)  
 ### [Импорт данных — многомерный источник данных](ssas-import-data-multidimensional-data-source.md)  
 ### [Импорт данных — поток данных](ssas-import-data-data-feed.md)  
