@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Дополнительные сведения об использовании символьного формата данных Юникод см. в статье [Использование символьного формата Юникод для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>Е. Использование файла форматирования с параметром кодовой страницы  
- При создании файла форматирования с помощью bcp-команды (например, "`bcp forma`t…" ) в этом файле записываются сведения о параметрах сортировки или кодовой странице.   
+При создании файла форматирования с помощью команды bcp (то есть с помощью `bcp format`) сведения о параметрах сортировки и кодовой странице будут записаны в файл форматирования.   
 В следующем примере файла форматирования для таблицы с 5 столбцами указаны параметры сортировки.  
   
 ```  
