@@ -59,7 +59,7 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  Если в [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] имеются существующие базы знаний с теми же именами, что и у импортируемых баз данных, к именам импортируемых баз данных будет добавлен символ подчеркивания (_) и целочисленное значение, отсчитываемое от единицы. Например, если повторяется домен «CompanyName», то импортируемый домен получит имя «CompanyName_1».  
   
 ## <a name="see-also"></a>См. также:  
- [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Экспорт базы знаний в файл DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [Импорт базы знаний из файла DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
