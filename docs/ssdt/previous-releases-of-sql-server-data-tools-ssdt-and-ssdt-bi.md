@@ -1,7 +1,7 @@
 ---
 title: "Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI) | Документация Майкрософт"
 ms.custom: 
-ms.date: 07/28/2017
+ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb4fd4eebca0f88f1b630598be30bca780fad3b9
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: dcc05f9e7bb009bb164f3577b7a82ba7b1c9b215
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI)
@@ -34,10 +34,11 @@ SSDT обладает обратной совместимостью. Это оз
 
 ## <a name="recent-downloads"></a>Последние загрузки
 
-Доступ к трем последним загруженным файлам предоставляется на случай маловероятных проблем с [последним выпуском](download-sql-server-data-tools-ssdt.md). 
+Последние несколько скачиваний представлены на случай, если, что маловероятно, у вас возникнут какие-то проблемы с [последним выпуском](download-sql-server-data-tools-ssdt.md). 
 
 |Выпуск| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.2|[SSDT для VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* Недоступно|
 |17.1|[SSDT для VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* Недоступно|
 |17.0|[SSDT для VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* Недоступно|
 |16.5|[SSDT для VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT для VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
