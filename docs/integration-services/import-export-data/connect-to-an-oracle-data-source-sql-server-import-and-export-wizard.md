@@ -71,7 +71,9 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-string-format"></a>Формат строки соединения
 Ниже приведен формат строки соединения.
 
+    ```
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+    ```
 
 ### <a name="enter-the-connection-string"></a>Введите строку подключения
 Введите строку подключения в **ConnectionString** , либо ввести имя DSN в **Dsn** в **выберите источник данных** или **Выбор назначения** страницы. Введите строку подключения, мастер анализирует строку и отображает отдельные свойства и их значения в списке.

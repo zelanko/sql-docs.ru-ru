@@ -93,7 +93,9 @@ ms.lasthandoff: 08/28/2017
 
 В этом примере будет использоваться следующая строка подключения, которая подключается к Microsoft SQL Server.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 Введите строку подключения в **ConnectionString** на **выберите источник данных** или **Выбор назначения** страницы. Введите строку подключения, мастер анализирует строку и отображает отдельные свойства и их значения в списке.
 
@@ -138,20 +140,24 @@ ms.lasthandoff: 08/28/2017
 
 10. Откройте сохраненный файл с «Блокнот» или другом текстовом редакторе. Далее приведено содержимое из нашего примера SQL Server.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. Скопируйте и вставьте необходимые значения в строку подключения, в котором пары «имя значение» разделенных точкой с запятой.
 
     После собрать необходимые значения из файла образца DSN, имеется следующая строка подключения.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     Не требуется обычно все параметры источника данных, созданные, администратор источников данных ODBC для создания строки подключения, которое работает.  
     -   Всегда необходимо указывать драйвер ODBC.

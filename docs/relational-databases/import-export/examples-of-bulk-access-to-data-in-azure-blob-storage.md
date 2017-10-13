@@ -42,7 +42,7 @@ ms.lasthandoff: 09/14/2017
  
 Создайте учетные данные области базы данных, используя параметр `IDENTITY` со значением `SHARED ACCESS SIGNATURE`. Используйте секрет с вашего портала Azure. Например:  
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -51,7 +51,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Получение доступа к данным в CSV-файле, ссылающегося на расположение хранилища BLOB-объектов Azure   
 В следующем примере используется внешний источник данных, указывающий на учетную запись Azure `newinvoices`.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -61,7 +61,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 
 Затем инструкция `OPENROWSET` добавляет имя контейнера (`week3`) к описанию файла. Имя файла — `inv-2017-01-19.csv`.
-```tsql     
+```sql     
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -70,7 +70,7 @@ SELECT * FROM OPENROWSET(
 
 Выполнив инструкцию `BULK INSERT`, используйте контейнер и описание файла:
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'week3/inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -80,7 +80,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 ## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>Получение доступа к данным в CSV-файле, ссылающегося на контейнер хранилища BLOB-объектов Azure   
 
 В следующем примере используется внешний источник данных, указывающий на контейнер `week3` в учетной записи хранения Azure.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -90,7 +90,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 ```  
   
 Затем `OPENROWSET` инструкция не добавляет имя контейнера к описанию файла:
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
@@ -99,7 +99,7 @@ SELECT * FROM OPENROWSET(
 
 Не используйте имя контейнера в описании, если применяется `BULK INSERT`: 
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',

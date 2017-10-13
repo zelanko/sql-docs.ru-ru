@@ -123,7 +123,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>В. Создание файла форматирования в формате, отличном от XML для данных в собственном формате в кодировке Юникод  
  Чтобы создать для таблицы `HumanResources.Department` файл форматирования в формате, отличном от XML для данных в собственном формате с кодировкой Юникод, используется следующая команда:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
 ```  
   
@@ -132,7 +132,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
 #### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>Г. Создание файла форматирования в формате, отличном от XML для символьных данных в кодировке Юникод  
  Чтобы создать для таблицы `HumanResources.Department` файл форматирования в формате, отличном от XML для символьных данных в кодировке Юникод, использующий признак конца по умолчанию, применяется следующая команда:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
 ```  
   

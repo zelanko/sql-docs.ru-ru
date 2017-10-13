@@ -72,14 +72,18 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-string-format"></a>Формат строки соединения
 Ниже приведен формат строки соединения. 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>Введите строку подключения
 Введите строку подключения в **ConnectionString** , либо ввести имя DSN в **Dsn** в **выберите источник данных** или **Выбор назначения** страницы. Введите строку подключения, мастер анализирует строку и отображает отдельные свойства и их значения в списке.
 
 В следующем примере эта строка подключения.
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 Вот экрана, которое будет отображаться после ввода строки подключения.
 
