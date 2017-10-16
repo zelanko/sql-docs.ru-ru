@@ -109,7 +109,7 @@ ListPrice != 500
 ```  
   
 ## <a name="see-also"></a>См. также  
- [== &#40; Равенства &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [\== &#40; Равенства &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
  [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
