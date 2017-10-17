@@ -1,6 +1,6 @@
 ---
 title: "Новые возможности в Reporting Services (SSRS) | Документы Microsoft"
-ms.date: 07/02/2017
+ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -9,21 +9,14 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- what's new [Reporting Services]
-- Reporting Services, what's new
-- SQL Server Reporting Services, what's new
-- SSRS, what's new
-ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-caps.latest.revision: 206
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
+ms.translationtype: MT
+ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
+ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
@@ -32,20 +25,32 @@ ms.lasthandoff: 08/09/2017
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
 Дополнительные сведения о новых возможностях SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Охватывает основные функциональные аспекты и обновляется по мере выпуска новых элементов.
-  
+
   Сведения о новых возможностях в других компонентах SQL Server см. в разделе [новые возможности SQL Server 2017 г.](../sql-server/what-s-new-in-sql-server-2017.md) или [новые возможности SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
-  
+
  **Загрузка** ![download](../analysis-services/media/download.png "download")
- 
-- Чтобы загрузить техническую версию отчетов (январь 2017 г.) Power BI в службах SQL Server Reporting Services и выпуск Power BI Desktop (службы SQL Server Reporting Services), перейдите в **[Центр загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=839351)**.
-  
--   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
-  
--   Есть учетная запись Azure?  Затем перейдите  **[здесь](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)**  Чтобы запустить виртуальную машину с уже установленным SQL Server.  
 
- ![Примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") текущие заметки о выпуске в разделе [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) или [заметки о выпуске сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/).
+- Чтобы загрузить службы отчетов SQL Server 2017 г., перейдите на  **[центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-Сведения о сервере отчетов Power BI см. в разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Текущие заметки о выпуске в разделе [заметки о выпуске SQL Server 2017 г.](../sql-server/sql-server-2017-release-notes.md) или [заметки о выпуске сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Сведения о сервере отчетов Power BI см. в разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+
+## <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
+
+### <a name="comments-on-reports"></a>Комментарии в отчетах
+
+В отчетах теперь доступны комментарии, позволяющие сообщать свою точку зрения и взаимодействовать с другими пользователями. Для комментариев также доступны вложения.
+
+![Комментарии в сервере отчетов](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+
+Дополнительные сведения см. в разделе [добавлять комментарии к отчету на сервере отчетов в](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
+
+### <a name="dax-queries-in-reporting-tools"></a>Запросы DAX в средства создания отчетов
+
+В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services, перетаскивая нужные поля в конструкторах запросов. См. [блог по Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+
+### <a name="rest-api-support"></a>Поддержка API-интерфейса REST
+
+Чтобы включить Разработка современных приложений и настройки, SQL Server Reporting Services теперь поддерживает полностью OpenAPI совместимые API RESTful. Полный API спецификации и документация теперь находится на [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Поддержка DAX теперь в построитель отчетов и SQL Server Data Tools в конструкторе запросов
 
@@ -106,7 +111,7 @@ ms.lasthandoff: 08/09/2017
  
 Дополнительные сведения см. в разделе:  
   
--   [Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [Поддерживаемые сочетания SharePoint и Reporting Server служб и надстройки &#40; SQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [Где найти надстройку службы Reporting Services для продуктов SharePoint](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -131,9 +136,9 @@ ms.lasthandoff: 08/09/2017
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- Дополнительные сведения см. в разделах [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) и [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
+ Дополнительные сведения см. в разделе [интеграции сервера отчетов Power BI &#40; Configuration Manager &#41; ](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) и [элементы ПИН-код Reporting Services на информационных панелях Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
- **Визуализация в PowerPoint и экспорт**: новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+ **Визуализация в PowerPoint и экспорт** : новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -175,7 +180,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![Список параметров в области данных отчета и в области параметров](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "список параметров в области данных отчета и в области параметров")  
 
   
-**Поддержка высокого уровня Разрешения:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] поддерживает масштабирование высокого DPI (точек на дюйм) и устройств.  Дополнительные сведения о высоком разрешении см. в следующих разделах:  
+**Поддержка высокого разрешения** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] поддерживает масштабирование с высоким разрешением (DPI; точек на дюйм) и соответствующие устройства.  Дополнительные сведения о высоком разрешении см. в следующих разделах:  
   
 -   [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -189,7 +194,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Обратная совместимость](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
 [Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Обновление и перенос служб Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-[Сервер отчетов бизнес-Аналитики Power](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
+[службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+[Сервер отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

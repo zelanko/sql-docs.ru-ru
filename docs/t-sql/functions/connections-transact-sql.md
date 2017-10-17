@@ -32,7 +32,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40connections-transact-sql"></a>& #x 40; & #x 40; СОЕДИНЕНИЯ (Transact-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;СОЕДИНЕНИЯ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Возвращает количество попыток соединения — успешных или неуспешных — с момента запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/19/2017
   
 Чтобы отобразить отчет, содержащий ряд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статистику, включая попытки соединений, запустите **sp_monitor**.
   
-@@MAX_CONNECTIONS — максимальное число соединений, разрешенных одновременно на сервер. @@CONNECTIONS увеличивается с попытками входа, поэтому@CONNECTIONS может быть больше, чем @@MAX_CONNECTIONS.
+@@MAX_CONNECTIONS — максимальное число соединений, разрешенных одновременно на сервер. @@CONNECTIONS увеличивается с попытками входа, поэтому @@CONNECTIONS может быть больше, чем @@MAX_CONNECTIONS .
   
 ## <a name="examples"></a>Примеры  
 Следующий пример возвращает число попыток входа в систему на текущую дату и время.
