@@ -18,11 +18,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>Файлы формата, отличные от XML (SQL Server)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Можно создать файл формата для определенного типа данных, например символьных данных или собственных данных.  
   
-     Можно создать файл форматирования в формате, отличном от XML, который будет содержать определяемые в интерактивном режиме атрибуты для каждого поля данных. Дополнительные сведения см. в разделе [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   Можно создать файл форматирования в формате, отличном от XML, который будет содержать определяемые в интерактивном режиме атрибуты для каждого поля данных. Дополнительные сведения см. в разделе [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
 >  XML-файлы формата имеют несколько преимуществ над файлами формата, отличными от XML. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  На следующей схеме показаны поля учебного файла форматирования в формате, отличном от XML.  
   
- ![Идентифицирует поля файла форматирования в формате, отличном от XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Идентифицирует поля файла форматирования в формате, отличном от XML")  
+ ![Идентифицирует поля файла в формате, отличном от XML](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
  Поля **Version** и **Number of columns** встречаются только один раз. Описание этих параметров приводится в следующей таблице.  
   

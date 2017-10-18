@@ -17,11 +17,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 9d5d0f33d21e61741bd021dc012c70a43207a13f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 |Контур|
 |---|
-|[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />[Создание файлов форматирования](#create_format_file)<br />&emsp;&#9679;&emsp;[Создание файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Изменение файла форматирования в формате, отличном от XML](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Создание XML-файла форматирования](#xml_format_file)<br />&emsp;&#9679;&emsp;[Изменение XML-файла форматирования](#modify_xml_format_file)<br />[Импорт данных с использованием файла форматирования для сопоставления столбцов таблицы полям файла данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование bcp и файла форматирования в формате, отличном от XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Использование bcp и XML-файла форматирования](#bcp_xml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и файла форматирования в формате, отличном от XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и XML-файла форматирования](#bulk_xml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и файла форматирования в формате, отличном от XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и XML-файла форматирования](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[Пример условий теста](#etc)<br />&emsp;&#9679;&emsp;[Образец таблицы](#sample_table)<br />&emsp;&#9679;&emsp;[Образец файла данных](#sample_data_file)<br />[Создание файлов форматирования](#create_format_file)<br />&emsp;&#9679;&emsp;[Создание файла форматирования в формате, отличном от XML](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Изменение файла форматирования в формате, отличном от XML](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[Создание XML-файла форматирования](#xml_format_file)<br />&emsp;&#9679;&emsp;[Изменение XML-файла форматирования](#modify_xml_format_file)<br />[Импорт данных с использованием файла форматирования для сопоставления столбцов таблицы полям файла данных](#import_data)<br />&emsp;&#9679;&emsp;[Использование bcp и файла форматирования в формате, отличном от XML](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Использование bcp и XML-файла форматирования](#bcp_xml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и файла форматирования в формате, отличном от XML](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Использование BULK INSERT и XML-файла форматирования](#bulk_xml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и файла форматирования в формате, отличном от XML](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Использование OPENROWSET(BULK…) и XML-файла форматирования](#openrowset_xml)|
 
 > [!NOTE]  
 >  И файлы форматирования, отличные от XML, и XML-файлы форматирования можно использовать для массового импорта файла данных в таблицу с помощью команды служебной программы [bcp](../../tools/bcp-utility.md), а также инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Дополнительные сведения см. в разделе [Использование файла форматирования для массового импорта данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 
 ### Образец таблицы<a name="sample_table"></a>
 Приведенный ниже сценарий создает тестовую базу данных и таблицу с именем `myRemap`.  Выполните следующий код Transact-SQL в Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -77,9 +77,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### Изменение файла форматирования в формате, отличном от XML <a name="modify_nonxml_format_file"></a>
 Терминологию см. в разделе [Структура файлов форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) .  Откройте `D:\BCP\myRemap.fmt` в Блокноте и внесите следующие изменения:
-1) Переупорядочите строки файла форматирования, чтобы они отображались в том же порядке, что и данные в `myRemap.bcp`.
-2) Убедитесь, что значения порядка полей в файле узлов идут последовательно.
-3) Убедитесь, что после последней строки файла форматирования расположен символ возврата каретки.
+1.  Переупорядочите строки файла форматирования, чтобы они отображались в том же порядке, что и данные в `myRemap.bcp`.
+2.  Убедитесь, что значения порядка полей в файле узлов идут последовательно.
+3.  Убедитесь, что после последней строки файла форматирования расположен символ возврата каретки.
 
 Сравните изменения:     
 **Перед**
@@ -115,9 +115,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### Изменение XML-файла форматирования <a name="modify_xml_format_file"></a>
 Терминологию см. в разделе [Синтаксис схемы для XML-файлов форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) .  Откройте `D:\BCP\myRemap.xml` в Блокноте и внесите следующие изменения:
-1) Порядок, в котором объявлены элементы \<FIELD> в файле форматирования, является порядком, в котором эти поля будут расположены в файле данных, поэтому обратите порядок элементов \<FIELD> с атрибутами ID, равными 2 и 3.
-2) Убедитесь, что значения атрибутов ID \<FIELD> идут последовательно.
-3) Порядок элементов \<COLUMN> в элементе \<ROW> задает порядок, в котором они будут возвращены массовой операцией.  XML-файл форматирования назначает каждому элементу \<COLUMN> локальное имя, не имеющее отношения к столбцу целевой таблицы операции массового импорта.  Порядок элементов \<COLUMN> не зависит от порядка элементов \<FIELD> в определении \<RECORD>.  Каждый элемент \<COLUMN> соответствует элементу \<FIELD> (чей идентификатор задан в атрибуте SOURCE элемента \<COLUMN>).  Таким образом, единственными атрибутами, требующими пересмотра, являются значения SOURCE \<COLUMN>.  Обратите порядок атрибутов 2 и 3 SOURCE \<COLUMN>.
+1. Порядок, в котором объявлены элементы \<FIELD> в файле форматирования, является порядком, в котором эти поля будут расположены в файле данных, поэтому обратите порядок элементов \<FIELD> с атрибутами ID, равными 2 и 3.
+2. Убедитесь, что значения атрибутов ID \<FIELD> идут последовательно.
+3. Порядок элементов \<COLUMN> в элементе \<ROW> задает порядок, в котором они будут возвращены массовой операцией.  XML-файл форматирования назначает каждому элементу \<COLUMN> локальное имя, не имеющее отношения к столбцу целевой таблицы операции массового импорта.  Порядок элементов \<COLUMN> не зависит от порядка элементов \<FIELD> в определении \<RECORD>.  Каждый элемент \<COLUMN> соответствует элементу \<FIELD> (чей идентификатор задан в атрибуте SOURCE элемента \<COLUMN>).  Таким образом, единственными атрибутами, требующими пересмотра, являются значения SOURCE \<COLUMN>.  Обратите порядок атрибутов 2 и 3 SOURCE \<COLUMN>.
 
 Сравните изменения:  
 **Перед**
@@ -180,7 +180,7 @@ bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 
 ### Использование [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Выполните следующий код Transact-SQL в Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### Использование [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Выполните следующий код Transact-SQL в Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -212,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Выполните следующий код Transact-SQL в Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -231,7 +231,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### Использование [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и [XML-файла форматирования](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Выполните следующий код Transact-SQL в Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
