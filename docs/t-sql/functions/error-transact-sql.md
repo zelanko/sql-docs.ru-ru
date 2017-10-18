@@ -30,7 +30,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>& #x 40; & #x 40; Ошибка (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Ошибка (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает номер ошибки для последней выполненной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,11 +53,11 @@ ms.lasthandoff: 09/01/2017
   
  Поскольку @@ERROR снят для каждой выполняемой инструкции, проверяйте ее сразу после инструкции и повторно сохраните его в локальную переменную для последующей проверки.  
   
- Для обработки ошибок используйте конструкцию TRY...CATCH. TRY... CATCH построения также поддерживает дополнительные системные функции (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE), возвращающие более подробные сведения, чем @@ERROR. Кроме того, TRY...CATCH поддерживает функцию ERROR_NUMBER, которая не ограничена тем, что возвращает номер ошибки немедленно после выполнения инструкции. Дополнительные сведения см. в разделе [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Для обработки ошибок используйте конструкцию TRY...CATCH. TRY... CATCH построения также поддерживает дополнительные системные функции (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE), возвращающие более подробные сведения, чем @@ERROR . Кроме того, TRY...CATCH поддерживает функцию ERROR_NUMBER, которая не ограничена тем, что возвращает номер ошибки немедленно после выполнения инструкции. Дополнительные сведения см. в разделе [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. С помощью@ERROR для обнаружения конкретной ошибки  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. С помощью @@ERROR для обнаружения конкретной ошибки  
  В следующем примере функция `@@ERROR` используется для проверки проверочного ограничения (ошибка 547) в инструкции `UPDATE`.  
   
 ```  
@@ -71,7 +71,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>Б. С помощью@ERROR чтобы условно выхода из процедуры  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>Б. С помощью @@ERROR чтобы условно выхода из процедуры  
  В следующем примере используется `IF...ELSE` инструкции для проверки `@@ERROR` после `INSERT` инструкции в хранимой процедуре. Значение переменной `@@ERROR` определяет код возврата, который отправляется вызывающей программе и указывает на успешное или неуспешное выполнение процедуры.  
   
 ```  
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>В. С помощью@ERROR с @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>В. С помощью @@ERROR с @@ROWCOUNT   
  В следующем примере инструкция `@@ERROR` с `@@ROWCOUNT` используется для проверки операции инструкции `UPDATE`. Значение `@@ERROR` проверяется на ошибки, а `@@ROWCOUNT` обеспечивает успешное применение обновления к строке таблицы.  
   
 ```  
