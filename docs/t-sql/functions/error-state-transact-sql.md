@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98b5a1ecfbfd9efd84f8a5cc55454aaaec6f8423
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 2d5448d8dbd738177acbcd407448d7a10d835a23
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
@@ -105,21 +105,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block"></a>В. Использование функции ERROR_STATE в блоке CATCH  
- В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Возвращается состояние ошибки.  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide by zero error  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_STATE() AS ErrorState;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>Г. Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
+### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>В. Использование функции ERROR_STATE в блоке CATCH вместе с другими средствами обработки ошибок  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с состоянием ошибки возвращаются сведения, относящиеся к этой ошибке.  
   
 ```  

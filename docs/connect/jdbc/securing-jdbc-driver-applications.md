@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>Защита приложений драйвера JDBC
@@ -32,13 +32,14 @@ ms.lasthandoff: 09/09/2017
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[Защита строк подключения](../../connect/jdbc/securing-connection-strings.md)|Описывает техники защиты информации, используемые для подключения к источнику данных.|  
-|[Проверка пользовательского ввода](../../connect/jdbc/validating-user-input.md)|Описывает техники проверки вводимых пользователем данных.|  
+|[Обеспечение безопасности строк подключений](../../connect/jdbc/securing-connection-strings.md)|Описывает техники защиты информации, используемые для подключения к источнику данных.|  
+|[Проверка вводимых пользователем данных](../../connect/jdbc/validating-user-input.md)|Описывает техники проверки вводимых пользователем данных.|  
 |[Безопасность приложений](../../connect/jdbc/application-security.md)|Описывает использование разрешений политики Java для обеспечения безопасности приложения драйвера JDBC.|  
-|[С помощью шифрования SSL](../../connect/jdbc/using-ssl-encryption.md)|Описывает установление безопасного канала связи с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью Secure Sockets Layer (SSL).|  
-|[Режим FIPS](../../connect/jdbc/fips-mode.md)|Описывает способы использования драйвера JDBC в режиме FIPS complainant.| 
+|[Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)|Описывает установление безопасного канала связи с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью Secure Sockets Layer (SSL).|  
+|[Режим FIPS](../../connect/jdbc/fips-mode.md)|Описывает способы использования драйвера JDBC в режиме совместимости с FIPS.| 
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

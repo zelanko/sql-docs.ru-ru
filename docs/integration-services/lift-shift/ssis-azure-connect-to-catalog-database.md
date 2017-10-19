@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 646999095957abb4e615b59b316b6ca59155dea3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Подключения к базе данных каталога SSISDB в Azure
@@ -48,6 +48,9 @@ ms.lasthandoff: 09/25/2017
    | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, указанный при создании сервера. |
 
 3. **Подключения к базе данных SSISDB**. Выберите **параметры** разверните **соединение с сервером** диалоговое окно. В развернутом **соединение с сервером** выберите **свойства соединения** вкладки. В **подключение к базе данных** выберите или введите `SSISDB`.
+
+    > [!IMPORTANT]
+    > Если вы не выбрали `SSISDB` при подключении, могут не отображаться в обозревателе объектов каталога служб SSIS.
 
 4. Выберите **Connect**.
 

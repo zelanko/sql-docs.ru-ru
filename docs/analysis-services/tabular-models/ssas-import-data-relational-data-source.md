@@ -1,7 +1,7 @@
 ---
 title: "Импорт из реляционного источника данных (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db6dd24d059f8c478967bc3c69652aaec0aeb51
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d45d72ca09a8abce6d29f018fcbaa8f54415a637
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="import-data---relational-data-source"></a>Импорт данных - источник реляционных данных
-  С помощью мастера импорта таблиц можно импортировать данные из разных реляционных баз данных: Этот мастер доступен в меню [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Модель ****  . Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик. Дополнительные сведения о поддерживаемых источниках данных и поставщиках см. в разделе [Поддерживаемые источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
-  
+  Для табличных моделей на 1200 и более низких уровнях совместимости можно импортировать данные из разнообразных реляционных баз данных с помощью мастера импорта таблиц. Этот мастер доступен в меню [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Модель ****  . Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик. Дополнительные сведения о поддерживаемых источниках данных и поставщиках см. в разделе [Поддерживаемые источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md). 
+ 
  Мастер импорта таблиц поддерживает импорт данных из следующих источников данных:  
   
  **Реляционные базы данных**  
@@ -69,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [Поддерживаемые источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

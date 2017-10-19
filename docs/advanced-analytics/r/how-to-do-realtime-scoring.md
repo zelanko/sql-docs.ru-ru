@@ -1,7 +1,7 @@
 ---
 title: "Как выполнять оценки в реальном времени или собственного оценки в SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Как выполнять оценки в реальном времени или собственного оценки в SQL Server
 
-В этом разделе содержатся инструкции и образец кода для выполнения оценки в реальном времени и собственные оценки функции SQL Server 2016 и 2017 г. SQL Server. Оценки в реальном времени и оценки собственного предназначена для повышения производительности операций оценки небольшими группами.
+В этом разделе содержатся инструкции и образец кода для выполнения оценки в реальном времени и собственные функции количественной оценки 2017 г. SQL Server и SQL Server 2016. Оценки в реальном времени и оценки собственного предназначена для повышения производительности операций оценки небольшими группами.
 
 Оценки в реальном времени и оценки собственного призваны позволяют использовать модель машинного обучения без необходимости устанавливать R. Все, что нужно сделать — получить предварительно обученные модели в совместимом формате и сохраните его в базе данных SQL Server.
 
@@ -30,11 +30,11 @@ ms.lasthandoff: 09/01/2017
 Для быстрого пакетный прогноз поддерживаются следующие параметры:
 
 + **Оценки собственного**: функция ПРОГНОЗИРОВАНИЯ T-SQL в SQL Server 2017 г.
-+ **В реальном времени оценки**: использование sp_rxPredict хранимой процедуры в SQL Server 2016 или 2017 г. SQL Server.
++ **В реальном времени оценки**: с помощью хранимой процедуры\_rxPredict хранимую процедуру в SQL Server 2016 или 2017 г. SQL Server.
 
 > [!NOTE]
 > В SQL Server 2017 г., рекомендуется использовать функции ПРОГНОЗИРОВАНИЯ.
-> Для использования sp_rxPredict необходимо включить интеграцию SQLCLR. Рассмотрите влияние на безопасность, прежде чем включать этот параметр.
+> Чтобы использовать sp\_rxPredict необходимо включить интеграцию SQLCLR. Рассмотрите влияние на безопасность, прежде чем включать этот параметр.
 
 Процесс подготовки модели и затем формировать оценки очень похож:
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 
 + При использовании sp\_rxPredict, требуются некоторые дополнительные шаги. В разделе [включить оценки в реальном времени](#bkmk_enableRtScoring).
 
-+ На момент написания этой статьи только RevoScaleR и MicrosoftML можно создать совместимых моделей. Дополнительные типы могут отображаться в будущем. Список поддерживаемых алгоритмов см. в разделе [оценки в реальном времени](../real-time-scoring.md).
++ В настоящее время только RevoScaleR и MicrosoftML можно создать совместимых моделей. Дополнительные типы могут отображаться в будущем. Список поддерживаемых алгоритмов см. в разделе [оценки в реальном времени](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>Сериализация и хранение
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="native-scoring-with-predict"></a>Оценки с PREDICT машинный код
 
-В этом примере предстоит создать модель и вызов функции прогнозирования в реальном времени из T-SQL.
+В этом примере создания модели и затем вызывать функции прогнозирования в реальном времени из T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Шаг 1. Подготовка и сохранить модель
 
@@ -159,7 +159,7 @@ FROM ml_models;
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +181,7 @@ go
 Необходимо включить эту функцию для каждой базы данных, который требуется использовать для оценки. Администратор сервера должен программа командной строки, RegisterRExt.exe, входящий в состав пакета RevoScaleR.
 
 > [!NOTE]
-> Для оценки работы в режиме реального времени, функции SQL CLR необходимо включить в экземпляр и база данных должна быть отмечена как доверенная. При выполнении скрипта, эти действия выполняются автоматически. Тем не менее следует рассмотреть результаты дополнительную защиту для этого.
+> Для оценки работы в режиме реального времени, функции SQL CLR необходимо включить в экземпляр и база данных должна быть отмечена как доверенная. При выполнении скрипта, эти действия выполняются автоматически. Тем не менее следует рассмотреть влияние на дополнительную безопасность.
 
 1. Откройте командную строку и перейдите к папке, где находится RegisterRExt.exe. При установке по умолчанию можно использовать следующий путь:
     
@@ -209,12 +209,9 @@ go
 > 
 > В SQL Server 2017 г дополнительные меры безопасности находятся в месте, чтобы предотвратить возникновение проблем с интеграцией со средой CLR. Эти меры налагаются дополнительные ограничения на использование этой хранимой процедуры.
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>Шаг 2. Подготовка и сохранить модель
 
-Двоичный формат, требуемый sp\_rxPredict является таким же, как для ПРОГНОЗА.
-
-Поэтому в коде R включают в себя вызов [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)и не забудьте указать _realtimeScoringOnly_ = TRUE, как показано в примере:
+Двоичный формат, требуемый sp\_rxPredict является таким же, как для ПРОГНОЗА. Поэтому в коде R включают в себя вызов [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)и не забудьте указать _realtimeScoringOnly_ = TRUE, как показано в примере:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +219,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Шаг 3. Вызов sp_rxPredict
 
-Вызовите sp_rxPredict, как и любой другой хранимой процедуры. В текущем выпуске, хранимая процедура принимает только два параметра:  _@model_  для модели в двоичном формате и  _@inputData_  для данных, используемыми при оценке, определенное как допустимый SQL-запрос .
+Вызывается sp\_rxPredict, как и любую другую хранимую процедуру. В текущем выпуске, хранимая процедура принимает только два параметра:  _@model_  для модели в двоичном формате и  _@inputData_  для данных, используемыми при оценке, определенное как допустимый SQL-запрос .
 
 Поскольку двоичный формат имеет те же данные, используется функция PREDICT, можно использовать в таблице модели и данные из предыдущего примера.
 
@@ -238,17 +235,22 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> Вызов `sp_rxPredict` завершается сбоем, если входные данные для оценки не включает столбцы, которые соответствуют требованиям модели. В настоящее время поддерживаются только следующие типы данных .NET: double, float, short, ushort, long, ulong и string.
+> Вызов sp\_rxPredict завершается ошибкой, если входные данные для оценки не содержит столбцов, которые соответствуют требованиям модели. В настоящее время поддерживаются только следующие типы данных .NET: double, float, short, ushort, long, ulong и string.
 > 
 > Таким образом может потребоваться отфильтровать неподдерживаемых типов в качестве входных данных перед его использованием для оценки в реальном времени.
 > 
 > Сведения о соответствующих типов SQL см. в разделе [сопоставление типов SQL-CLR](https://msdn.microsoft.com/library/bb386947.aspx) или [сопоставления данных о параметрах CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-### <a name="disable-realtime-scoring"></a>Отключить оценки в реальном времени
+## <a name="disable-realtime-scoring"></a>Отключить оценки в реальном времени
 
 Чтобы отключить функции количественной оценки в реальном времени, откройте окно командной строки с повышенными привилегиями и выполните следующую команду:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>В реальном времени, оценки в Microsoft R Server
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Оценки в Microsoft R Server или обучения компьютера в реальном времени
 
-Сведения, касающиеся в реальном времени оценки в распределенной среде, в зависимости от Microsoft R Server можно найти [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) функции в [mrsDeploy пакета](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), который поддерживает Публикация модели для оценки в качестве новой веб-службы, запущенные на сервере R в реальном времени.
+Машины обучения сервер поддерживает распределенные в реальном времени, оценки из моделей, которые опубликованы как веб-службы. Дополнительные сведения см. в следующих статьях:
 
++ [Что такое веб-служб в компьютере обучения сервер?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [Что такое ввода в эксплуатацию](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Развертывание модели Python в виде веб-службы с azureml модели management sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Опубликовать как веб-службу в блоке кода R или модели в реальном времени](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [пакет mrsdeploy для R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

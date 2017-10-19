@@ -39,10 +39,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
@@ -190,7 +190,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 ![Таблица преобразования типов данных](../../t-sql/data-types/media/lrdatahd.png "таблица преобразования типов данных")
   
-При преобразовании между **datetimeoffset** и символьными типами **char**, **varchar**, **nchar**, и **nvarchar ** преобразованный часовой пояс часть смещения должна иметь по две цифры для часов и Минут, например, -08:00.
+При преобразовании между **datetimeoffset** и символьными типами **char**, **varchar**, **nchar**, и **nvarchar**  преобразованный часовой пояс часть смещения должна иметь по две цифры для часов и Минут, например, -08:00.
   
 > [!NOTE]  
 >  Поскольку данные в Юникоде всегда использует четное число байтов, будьте осторожны при преобразовании **двоичных** или **varbinary** в Юникод или обратно, поддерживаемые типы данных. Например, при следующем преобразовании не будет возвращено шестнадцатеричное значение 41, в данном случае будет получено значение 4100: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`.  
@@ -219,7 +219,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>Усечение и округление результатов
-При преобразовании символьных или двоичных выражений (**char**, **nchar**, **nvarchar**, **varchar**, **двоичныйфайл**, или **varbinary**) к выражению другого типа данных, данные могут быть усечены, отображаться только частично или возвращается сообщение об ошибке, так как результат слишком мал для отображения. Преобразования в **char**, **varchar**, **nchar**, **nvarchar**, **двоичных**, и ** varbinary** усекаются, за исключением перечисленных в следующей таблице.
+При преобразовании символьных или двоичных выражений (**char**, **nchar**, **nvarchar**, **varchar**, **двоичныйфайл**, или **varbinary**) к выражению другого типа данных, данные могут быть усечены, отображаться только частично или возвращается сообщение об ошибке, так как результат слишком мал для отображения. Преобразования в **char**, **varchar**, **nchar**, **nvarchar**, **двоичных**, и  **varbinary** усекаются, за исключением перечисленных в следующей таблице.
   
 |Из типа данных|В тип данных|Результат|  
 |---|---|---|
@@ -304,7 +304,7 @@ SELECT  CAST(10.6496 AS int) as trunc1,
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Возвращает сообщение об ошибке при попытке преобразовать нечисловые **char**, **nchar**, **varchar**, или **nvarchar** данные преобразуются в **int **, **float**, **числовое**, или **десятичное**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также возвращает ошибку, если пустая строка (» «) преобразуется в **числовое** или **десятичное**.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Возвращает сообщение об ошибке при попытке преобразовать нечисловые **char**, **nchar**, **varchar**, или **nvarchar** данные преобразуются в **int** , **float**, **числовое**, или **десятичное**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также возвращает ошибку, если пустая строка (» «) преобразуется в **числовое** или **десятичное**.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>Некоторые преобразования даты и времени являются недетерминированными
 Следующая таблица содержит стили, для которых преобразование строк в тип datetime недетерминировано.
@@ -318,7 +318,7 @@ SELECT  CAST(10.6496 AS int) as trunc1,
 <sup>1</sup> за исключением стилей 20 и 21
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)
-Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], при использовании параметров сортировки дополнительных символов (SC) Операция CAST из **nchar** или **nvarchar** для **nchar** или ** nvarchar** меньшей длиной не будет выполнять усечение внутри суррогатной пары; усечение происходит перед дополнительным символом. Например, выполнение следующего фрагмента кода приведет к тому, что в `@x` останется лишь `'ab'`. Места недостаточно для размещения дополнительного символа.
+Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], при использовании параметров сортировки дополнительных символов (SC) Операция CAST из **nchar** или **nvarchar** для **nchar** или  **nvarchar** меньшей длиной не будет выполнять усечение внутри суррогатной пары; усечение происходит перед дополнительным символом. Например, выполнение следующего фрагмента кода приведет к тому, что в `@x` останется лишь `'ab'`. Места недостаточно для размещения дополнительного символа.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
@@ -391,54 +391,44 @@ Computed
 ```  
   
 ### <a name="c-using-cast-to-concatenate"></a>В. Использование функции CAST для объединения строк  
-В следующем примере несимвольные недвоичные выражения объединяются с помощью функции `CAST`.
+Следующий пример Сцепляет несимвольных выражения приведения. Использует AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM Production.Product  
+FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 ListPrice
-------------------
+------------------------
 The list price is 357.06
 The list price is 364.09
 The list price is 364.09
 The list price is 364.09
-The list price is 364.09
-(5 row(s) affected)  
-```
+The list price is 364.09  
+```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>Г. Использование функции CAST для получения удобочитаемого текста  
-В следующем примере функция `CAST` используется для преобразования значений столбца `Name` к значениям типа `char(10)`.
+В следующем примере используется ПРИВЕДЕНИЕ в списке ВЫБОРА для преобразования `Name` столбец **char(10)** столбца. Использует AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT DISTINCT CAST(p.Name AS char(10)) AS Name, s.UnitPrice  
-FROM Sales.SalesOrderDetail AS s   
-JOIN Production.Product AS p   
-    ON s.ProductID = p.ProductID  
-WHERE Name LIKE 'Long-Sleeve Logo Jersey, M';  
-GO  
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name       UnitPrice
----------- -----------
-Long-Sleev 31.2437
-Long-Sleev 32.4935
-Long-Sleev 49.99
-(3 row(s) affected)  
-```
+Name        UnitPrice
+----------  ---------
+Long-Sleev  31.2437
+Long-Sleev  32.4935
+Long-Sleev  49.99  
+```  
   
 ### <a name="e-using-cast-with-the-like-clause"></a>Д. Использование функции CAST с предложением LIKE  
 В следующем примере столбец значений `money` типа `SalesYTD` преобразуется в тип `int`, а затем в тип `char(20)` так, чтобы его можно было использовать в предложении `LIKE`.
@@ -673,47 +663,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-to-concatenate"></a>М. Использование функции CAST для объединения строк  
-Следующий пример Сцепляет несимвольных выражения приведения. Использует AdventureWorksDW.
-  
-```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM dbo.DimProduct  
-WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09  
-```  
-  
-### <a name="m-using-cast-to-produce-more-readable-text"></a>Н. Использование функции CAST для получения удобочитаемого текста  
-В следующем примере используется ПРИВЕДЕНИЕ в списке ВЫБОРА для преобразования `Name` столбец **char(10)** столбца. Использует AdventureWorksDW.
-  
-```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
-FROM dbo.DimProduct  
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-Name        UnitPrice
-----------  ---------
-Long-Sleev  31.2437
-Long-Sleev  32.4935
-Long-Sleev  49.99  
-```  
-  
-### <a name="n-using-cast-with-the-like-clause"></a>О. Использование функции CAST с предложением LIKE  
+### <a name="l-using-cast-with-the-like-clause"></a>М. Использование функции CAST с предложением LIKE  
 В следующем примере выполняется преобразование **money** столбца `ListPrice` для **int** типа и затем **char(20)** тип, так что он может использоваться с предложением LIKE. Использует AdventureWorksDW.
   
 ```sql
@@ -722,7 +672,7 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="o-using-cast-and-convert-with-datetime-data"></a>П. Использование функций CAST и CONVERT с данными типа datetime  
+### <a name="m-using-cast-and-convert-with-datetime-data"></a>Н. Использование функций CAST и CONVERT с данными типа datetime  
 В следующем примере отображается текущая дата и время, использует ПРИВЕДЕНИЯ для изменения текущей даты и времени в символьный тип данных, а затем использует CONVERT отобразить дату и время в формате ISO 8601. Использует AdventureWorksDW.
   
 ```sql

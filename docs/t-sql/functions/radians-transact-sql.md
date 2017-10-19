@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6350b2f53082b4d671f3f8b54aa1f9d31a6235ef
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 64c662ed806f5173c506756433318d589a42d4ea
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
@@ -119,24 +119,6 @@ The RADIANS of the angle is: 0.00257041
  (1 row(s) affected)  
 ---------------------------------------   
 The RADIANS of the angle is: 3.44022                          
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-radians-to-show-00"></a>В. Использование функции RADIANS для вывода 0,0  
- В следующем примере возвращается результат `0.0`, так как для преобразования в радианы c помощью функции `RADIANS` задано слишком маленькое числовое значение.  
-  
-```  
-SELECT RADIANS(1e-307)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
--------------------   
-0.0                        
 (1 row(s) affected)  
 ```  
   

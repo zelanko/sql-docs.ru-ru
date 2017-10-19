@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Развертывание, запуск и отслеживание пакета служб SSIS в Azure
@@ -22,7 +22,7 @@ ms.lasthandoff: 10/06/2017
 
 Прежде чем начать, убедитесь, что у вас есть 17,2 или более поздней версии среды SQL Server Management Studio. Загрузить последнюю версию SSMS [загрузить SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Также убедитесь, что настройка базы данных SSISDB и подготовить выполнения интеграции служб SSIS Azure. Сведения о настройке служб SSIS в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
+Также убедитесь, что настройка базы данных SSISDB и подготовить выполнения интеграции служб SSIS Azure. Сведения о настройке служб SSIS в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Подключения к базе данных SSISDB
 

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -119,7 +119,7 @@ PRIMARY
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | ОСНОВНОЙ}  
 
-Включает или отключает исправления оптимизации запросов независимо от уровня совместимости базы данных. Значение по умолчанию — **OFF**. Это эквивалентно Включение [флагу трассировки 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Включает или отключает исправления оптимизации запросов независимо от уровня совместимости базы данных. Значение по умолчанию — **OFF**, который отключает запрос исправления оптимизации, которые были выпущены после наивысший доступный уровень совместимости был введен для определенной версии (post RTM). Установка этого параметра **ON** эквивалентен включению [флагу трассировки 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > Для выполнения этой задачи на уровне запроса, добавьте **QUERYTRACEON** [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, для выполнения этой задачи на уровне запроса, добавить ПОДСКАЗКУ используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) вместо использования флага трассировки.  
@@ -140,7 +140,6 @@ IDENTITY_CACHE  **=**  { **ON** | {OFF}
 
 > [!NOTE] 
 > Этот параметр можно задать только для ПЕРВИЧНОЙ. Дополнительные сведения см. в разделе [столбцы идентификаторов](create-table-transact-sql-identity-property.md).  
->
 
 ##  <a name="Permissions"></a> Разрешения  
  Необходимо изменить любой конфигурации области базы данных   
@@ -156,7 +155,7 @@ IDENTITY_CACHE  **=**  { **ON** | {OFF}
  Событие ALTER_DATABASE_SCOPED_CONFIGURATION добавляется как события DDL, который может использоваться для запуска триггера DDL. Это дочерние группы ALTER_DATABASE_EVENTS триггера.  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
- **MAXDOP**  
+**MAXDOP**  
   
  Детализированные параметры можно переопределить глобальных правил и, регулятор ресурсов можно ограничить все остальные параметры MAXDOP.  Логика для параметра MAXDOP выглядит следующим образом:  
   
@@ -170,15 +169,15 @@ IDENTITY_CACHE  **=**  { **ON** | {OFF}
   
 -   Параметр хранимой процедуры sp_configure переопределяется параметр регулятора ресурсов.  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  При использовании QUERYTRACEON подсказки для оптимизатора запросов прежних версий или исправлений оптимизатора запросов будет условие OR между указание запроса и установки, то есть если либо включен, будут применяться параметры конфигурации уровня базы данных.  
   
- **GeoDR**  
+**GeoDR**  
   
  Для чтения вторичной базы данных, например группы доступности AlwaysOn и GeoReplication, используйте значение получателей, проверяя состояние базы данных. Хотя мы не перекомпилировать во время отработки отказа и технически основным есть запросы, использующие параметры получателя, идея заключается в том, что параметр между первичной и вторичной зависит только при рабочей нагрузке отличается, поэтому их переполнение кэша запросы используя оптимальной конфигурации, тогда как новые запросы будут принимать новые параметры, которые подходят для них.  
   
- **DacFx**  
+**DacFx**  
   
  Поскольку ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server 2016, которая влияет на схему базы данных, Экспорт схемы (с данными или без) не будет невозможно импортировать с более старой версией SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или < C2 настроек [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] базы данных, используемой этой новой функции не удастся импортировать на сервер нижнего уровня.  
   
@@ -245,7 +244,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;
 в случае географической репликации.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>Д. Набор QUERY_OPTIMIZER_HOTFIXES  

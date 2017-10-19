@@ -1,7 +1,7 @@
 ---
 title: "Инструкция DBCC INPUTBUFFER (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba54322c814911babe19e172a2cfafc4f00011a7
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -49,22 +49,23 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *session_id*  
- Идентификатор сеанса, связанный с каждым активным первичным соединением.  
+*session_id*  
+Идентификатор сеанса, связанный с каждым активным первичным соединением.  
   
- *идентификатор_запроса*  
- Строгий (пакетный) запрос для поиска в текущем сеансе.  
- Следующий запрос возвращает *request_id*:  
+*идентификатор_запроса*  
+Строгий (пакетный) запрос для поиска в текущем сеансе.  
+
+Следующий запрос возвращает *request_id*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
- на  
- Позволяет задавать параметры.  
+на  
+Позволяет задавать параметры.  
   
- NO_INFOMSGS  
- Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
+NO_INFOMSGS  
+Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
 DBCC INPUTBUFFER возвращает набор строк со следующими столбцами.
@@ -77,7 +78,7 @@ DBCC INPUTBUFFER возвращает набор строк со следующ�
   
 Например, в случае, когда последним событием в буфере было DBCC INPUTBUFFER(11), инструкция DBCC INPUTBUFFER возвращает следующий результирующий набор.
   
-```sql
+```
 EventType      Parameters EventInfo               
 -------------- ---------- ---------------------   
 Language Event 0          DBCC INPUTBUFFER (11)  
@@ -86,7 +87,10 @@ Language Event 0          DBCC INPUTBUFFER (11)
   
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
-  
+
+> [!NOTE]
+> Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, используйте [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) для возвращения сведений об инструкциях, отправленных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ## <a name="permissions"></a>Permissions  
 На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется один из следующих:
 -   Пользователь должен быть членом **sysadmin** предопределенной роли сервера.  
@@ -120,7 +124,8 @@ DBCC INPUTBUFFER (52);
 
 ## <a name="see-also"></a>См. также:  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+[sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+[sys.dm_exec_input_buffer &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: bdfc7ef9eb8048f1009f3c7f1a61533b6b620f37
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 4b39b8dce2a9d6b940936a6d7072fc41c2b67e8f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Настройка образов контейнеров 2017 г. SQL Server на Docker
@@ -32,7 +32,47 @@ ms.lasthandoff: 10/02/2017
 
 - [Запускать образ контейнера 2017 г. SQL Server с помощью Docker](quickstart-install-connect-docker.md)
 
-В этом разделе конфигурации предоставляет дополнительное подключение и сценарии использования в следующих разделах.
+Этот раздел конфигурации содержит сценарии использования дополнительных в следующих разделах.
+
+## <a id="production"></a>Запустите производственного образы контейнеров
+
+Краткого руководства в предыдущем разделе выполняется бесплатный выпуск SQL Server Developer из Docker Hub. Большая часть информации по-прежнему применяется в том случае, если вы хотите запустить производства образы контейнеров, таких как выпуски Enterprise, Standard или Web. Однако существуют некоторые различия, которые здесь описаны.
+
+- SQL Server можно использовать в производственной среде, только если у вас есть действительная лицензия. Можно получить бесплатную лицензию SQL Server Express рабочей [здесь](https://go.microsoft.com/fwlink/?linkid=857693). Лицензии SQL Server Standard и Enterprise Edition доступны через [корпоративного лицензирования Майкрософт](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
+
+- Образы контейнеров рабочей среде SQL Server должны извлекаться с [Docker хранилище](https://store.docker.com). Если вы уже нет, создайте учетную запись в хранилище Docker.
+
+- Образ контейнера разработчика в магазине Docker можно настроить для запуска в выпусках производства. Для запуска рабочей версии, выполните следующие действия:
+
+   1. Во-первых Войдите на свой идентификатор docker из командной строки.
+
+      ```bash
+      docker login
+      ```
+
+   1. Далее необходимо для получения бесплатной разработчик образ контейнера в хранилище Docker. Последовательно выберите пункты [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), нажмите кнопку **продолжить извлечение**и следуйте инструкциям.
+
+   1. Просмотрите требования и процедуры [краткого руководства](quickstart-install-connect-docker.md). Однако имеются два отличия. Необходимо получить изображение **хранилище/microsoft/mssql-server-linux:\<имя тега\>**  магазине Docker. При этом необходимо указать производственного выпуска с **MSSQL_PID** переменной среды. Приведенный ниже показано, как выполнять последний образ контейнера 2017 г. SQL Server Enterprise Edition:
+
+      ```bash
+      docker run --name sqlenterprise \
+         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
+         -d store/microsoft/mssql-server-linux:2017-latest
+      ```
+
+      ```PowerShell
+      docker run --name sqlenterprise `
+         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "MSSQL_PID=Enterprise" -p 1433:1433 `
+         -d "store/microsoft/mssql-server-linux:2017-latest"
+      ```
+
+      > [!IMPORTANT]
+      > Путем передачи значения **Y** для переменной среды **ACCEPT_EULA** и значение edition **MSSQL_PID**, вы выражаете наличие допустимым и существующих лицензию выпуск и версия SQL Server, которую планируется использовать. Вы также соглашаетесь с тем, что использование программного обеспечения SQL Server, работающих в образ контейнера Docker, подпадают под условия лицензии SQL Server.
+
+      > [!NOTE]
+      > Полный список возможных значений для **MSSQL_PID**, в разделе [SQL Server можно настроить параметры с переменными среды на Linux](sql-server-linux-configure-environment-variables.md).
 
 ## <a name="connect-and-query"></a>Подключения и запроса
 

@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: cd64185b31ad5aba9496e55031eae15ae46d5180
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 33fcf5ceb2481b517844cb5334dd67c97b039b77
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/17/2017
 
 ---
-# <a name="x40x40language-transact-sql"></a>& #x 40; & #x 40; ЯЗЫК (Transact-SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;ЯЗЫК (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает название используемого в данный момент языка.  
@@ -51,21 +51,6 @@ ms.lasthandoff: 09/19/2017
  Чтобы просмотреть сведения о настройках языка, включая допустимые официальные названия языков, запустите **sp_helplanguage** без указания аргументов.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращается язык текущего сеанса.  
-  
-```  
-SELECT @@LANGUAGE AS 'Language Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Language Name                   
-------------------------------  
-us_english                      
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере возвращается язык текущего сеанса.  
   
 ```  

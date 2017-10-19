@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0ee3350b200f0f42203a89d06ddb587b0792ee18
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 2189ba0ca7245fcd098d2af55b381afc465a7fab
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
@@ -218,15 +218,15 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>В. Поиск объектов, принадлежащих определенной схеме  
- В следующем примере свойство `SchemaId` возвращает все объекты, которые принадлежат схеме `Production`.  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: поиск таблиц, принадлежащих определенной схеме  
+ Следующий пример возвращает все таблицы в схеме dbo.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
+-- Uses AdventureWorks  
+  
 SELECT name, object_id, type_desc  
 FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'Production')  
+WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
 ORDER BY type_desc, name;  
 GO  
 ```  
@@ -243,19 +243,6 @@ IF OBJECTPROPERTY (OBJECT_ID(N'dbo.DimReseller'),'ISTABLE') = 1
    SELECT 'DimReseller is a table.'  
 ELSE   
    SELECT 'DimReseller is not a table.';  
-GO  
-```  
-  
-### <a name="e-finding-the-tables-that-belong-to-a-specific-schema"></a>Д. Поиск таблиц, принадлежащих определенной схеме  
- Следующий пример возвращает все таблицы в схеме dbo.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT name, object_id, type_desc  
-FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
-ORDER BY type_desc, name;  
 GO  
 ```  
   
