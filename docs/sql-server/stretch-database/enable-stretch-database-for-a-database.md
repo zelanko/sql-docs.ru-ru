@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  Чтобы включить базу данных Stretch на сервере вручную, выполните команду **sp_configure** и включите параметр **remote data archive** . В следующем примере включается параметр **remote data archive** путем изменения его значения на 1.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
