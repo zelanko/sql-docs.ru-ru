@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)
@@ -39,14 +39,14 @@ ms.lasthandoff: 07/31/2017
   
 Ниже приведен пример инструкции **SELECT** с предложением **FOR JSON** и ее выходные данные.
   
- ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
+ ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>Вариант 1. Вы управляете выходными данными с помощью FOR JSON PATH
 В режиме **PATH** можно использовать синтаксис с точкой — например, `'Item.Price'` — для форматирования вложенных выходных данных.  
 
 Ниже приведен пример запроса, где режим **PATH** с предложением **FOR JSON** . В следующем примере также используется параметр **ROOT** для указания именованного корневого элемента. 
   
- ![Диаграмма передачи выходных данных FOR JSON](../../relational-databases/json/media/forjson-example1.png "Диаграмма передачи выходных данных FOR JSON")  
+ ![Схема потока выходных данных FOR JSON](../../relational-databases/json/media/forjson-example1.png) 
 
 ### <a name="more-info-about-for-json-path"></a>Дополнительные сведения о FOR JSON PATH
 Более подробные сведения и примеры см. в разделе [Форматирование вложенных выходных данных JSON с помощью режима PATH &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
@@ -102,7 +102,7 @@ FOR JSON AUTO
         -   По умолчанию SQL Server Management Studio (SSMS) сцепляет результаты в одну строку, если выходной параметр **В виде сетки**. В строке состояния SSMS отображается действительное число строк.
         -   В других клиентских приложениях может потребоваться внести код, который будет перераспределять большой объем результатов в одну общую допустимую строку JSON, объединяя содержимое множества записей. Пример этого кода в приложении C# см. в разделе [Использование выходных данных FOR JSON в клиентском приложении C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
   
-     ![Пример выходных данных FOR JSON](../../relational-databases/json/media/forjson-example2.png "Пример выходных данных FOR JSON")  
+     ![Пример выходных данных FOR JSON](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  Результаты форматируются в виде массива объектов JSON.  
   
@@ -148,14 +148,15 @@ FOR JSON AUTO
 ```  
 
  Дополнительные сведения о том, какое содержимое отображается в выходных данных предложения **FOR JSON**, см. в следующих статьях.  
+
 -   [Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-Предложение **FOR JSON** использует правила, описанные в этом разделе, для преобразования типов данных SQL в типы JSON в выходных данных JSON.  
+    Предложение **FOR JSON** использует правила, описанные в этом разделе, для преобразования типов данных SQL в типы JSON в выходных данных JSON.  
 
 -   [Как FOR JSON экранирует специальные и управляющие символы (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- Предложение **FOR JSON** экранирует специальные символы и представляет управляющие символы в выходных данных JSON, как описано в этом разделе.  
+    Предложение **FOR JSON** экранирует специальные символы и представляет управляющие символы в выходных данных JSON, как описано в этом разделе.  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Много определенных решений, варианты использования и рекомендации см. в [записях блога о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) (категории SQL Server и Azure SQL Database (База данных SQL Azure), автор — руководитель программ корпорации Майкрософт Йован Попович (Jovan Popovic)).
+Большое количество решений, варианты использования и рекомендации см. в [записях Йована Поповича (Jovan Popovic), руководителя программы Майкрософт, в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure.
   
 ## <a name="see-also"></a>См. также:  
  [Предложение FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)   

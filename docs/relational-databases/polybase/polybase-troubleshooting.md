@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Устранение неполадок c PolyBase
@@ -224,7 +224,7 @@ ms.lasthandoff: 10/06/2017
  ## <a name="known-limitations"></a>Известные ограничения
  
  PolyBase имеет следующие ограничения. 
- - Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 1 МБ. 
+ - Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 32 МБ в SQL Server или 1 МБ в хранилище данных Azure SQL. 
  - PolyBase не поддерживает типы данных Hive 0.12+ (например, Char(), VarChar()).   
  - При экспорте данных в формате файлов ORC из SQL Server или хранилища данных SQL Azure столбцы с большим объемом текста могут ограничиваться всего 50 столбцами из-за ошибок нехватки памяти в Java. Чтобы обойти эту проблему, экспортируйте подмножество столбцов.
  - Не удается прочесть или записать данные, зашифрованные в местах хранения в Hadoop. Сюда входят зашифрованные зоны HDFS или прозрачное шифрование.

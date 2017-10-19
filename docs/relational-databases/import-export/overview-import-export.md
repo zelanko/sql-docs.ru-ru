@@ -1,7 +1,7 @@
 ---
 title: "Импорт и экспорт данных в SQL Server и базе данных SQL Azure | Microsoft Docs"
 ms.custom: 
-ms.date: 09/12/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 3c41be0642b13b63367c5601b716b506808472e7
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Импорт и экспорт данных в SQL Server и базе данных SQL Azure
@@ -31,6 +31,11 @@ ms.lasthandoff: 09/14/2017
 
 ### <a name="use-bcp-from-the-command-prompt"></a>Используйте BCP в командной строке
 Вы можете импортировать и экспортировать данные с помощью служебной программы командной строки BCP. Дополнительные сведения см. в разделе [Массовый импорт и экспорт данных с использованием программы BCP](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+
+### <a name="use-the-import-flat-file-wizard"></a>Использование мастера импорта неструктурированных файлов
+Если вам не нужны все параметры конфигурации, доступные в окне мастера экспорта и импорта (а также другие средства), вы можете импортировать текстовый файл в SQL Server с помощью **мастера импорта неструктурированных файлов** в SQL Server Management Studio (SSMS). Дополнительные сведения см. в следующих статьях:
+- [Новые возможности SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [Общие сведения о новом мастере импорта неструктурированных файлов в SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>Использование мастера импорта и экспорта SQL Server
 Мастер импорта и экспорта SQL Server позволяет вам экспортировать данные из самых разных источников и импортировать их во множество различных назначений. Чтобы использовать мастер, необходимо установить SQL Server Integration Services (SSIS) или SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).

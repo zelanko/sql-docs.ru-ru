@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
@@ -349,7 +349,8 @@ ms.lasthandoff: 09/27/2017
 - [ALTER TABLE (Transact-SQL)](../t-sql/statements/alter-table-transact-sql.md) теперь позволяет выполнять многие действия по изменению столбцов с сохранением доступности таблицы.
 - Динамическое административное представление полнотекстового индекса [sys.dm_fts_index_keywords_position_by_document (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) возвращает расположение ключевых слов в документах. Это представление, кроме того, было добавлено в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 и [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1.
 - Новое указание запроса **NO_PERFORMANCE_SPOOL** позволяет предотвратить добавление оператора очередей в планы запроса. Это может повысить производительность при выполнении нескольких параллельных запросов с операциями очередей. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).
-- Инструкция [FORMATMESSAGE (Transact-SQL)](../t-sql/functions/formatmessage-transact-sql.md) теперь принимает аргумент msg_string. Максимальный размер ключа для индексов NONCLUSTERED увеличен до 1700 байт.
+- Инструкция [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) теперь принимает аргумент msg_string.
+- Максимальный размер ключа индекса для НЕКЛАСТЕРИЗОВАННЫХ индексов увеличен до 1700 байт.
 - Добавлен новый синтаксис DROP IF для инструкций удаления, связанных с AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER и VIEW. Описание синтаксиса см. в отдельных разделах, посвященных синтаксису.
 - Параметр MAXDOP добавлен в [DBCC CHECKTABLE (Transact-SQL)](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) и [DBCC CHECKFILEGROUP (Transact-SQL)](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) для указания степени параллелизма.
 - Теперь можно указать значение SESSION_CONTEXT. Включает функцию [SESSION_CONTEXT (Transact-SQL)](../t-sql/functions/session-context-transact-sql.md), функцию [CURRENT_TRANSACTION_ID (Transact-SQL)](../t-sql/functions/current-transaction-id-transact-sql.md) и процедуру [sp_set_session_context (Transact-SQL)](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).
