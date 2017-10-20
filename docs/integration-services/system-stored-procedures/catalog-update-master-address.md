@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>Синтаксис
 
 ```sql
-update_master_address [@MasterAddress = ] masterAddress
+catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>Аргументы

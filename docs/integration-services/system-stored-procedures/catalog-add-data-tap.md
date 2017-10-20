@@ -29,13 +29,12 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```sql  
-add_data_tap [ @execution_id = ] execution_id  
-[ @task_package_path = ] task_package_path  
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
-OUTPUT  
+catalog.add_data_tap [ @execution_id = ] execution_id  
+, [ @task_package_path = ] task_package_path  
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -70,7 +69,7 @@ OUTPUT
 ## <a name="example"></a>Пример  
  В следующем примере отвод данных создается в пути потока данных `'Paths[OLE DB Source.OLE DB Source Output]`, в задаче потока данных `\Package\Data Flow Task`. Полученные данные хранятся в `output0.txt` файл в папке DataDumps (\<*диск*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
-```  
+```sql
 Declare @execution_id bigint  
 Exec SSISDB.Catalog.create_execution @folder_name='Packages',@project_name='SSISPackages', @package_name='Package.dtsx',@reference_id=Null, @use32bitruntime=False, @execution_id=@execution_id OUTPUT  
   
@@ -79,7 +78,6 @@ Exec SSISDB.Catalog.set_execution_parameter_value @execution_id,50, 'LOGGING_LEV
 Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[OLE DB Source.OLE DB Source Output]', @data_filename = 'output0.txt'  
   
 Exec SSISDB.Catalog.start_execution @execution_id  
-  
 ```  
   
 ## <a name="remarks"></a>Замечания  
