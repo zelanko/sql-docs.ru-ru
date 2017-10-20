@@ -20,8 +20,8 @@
 # Заметки о выпуске
 
 ## [Заметки о выпуске SQL Server](sql-server-release-notes.md)
-## [Заметки о выпуске для SQL Server 2016](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 Release Notes (Заметки о выпуске SQL Server 2017)](sql-server-2017-release-notes.md)
+## [Заметки о выпуске для SQL Server 2016](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
 ## [ Заметки о выпуске SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
 ## [Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)](sql-server-2012-sp3-release-notes.md)
