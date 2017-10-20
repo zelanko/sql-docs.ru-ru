@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="basic-requirements-for-the-filter-function"></a>Основные требования для функции фильтров  
  Встроенная функция с табличным значением, необходимая для предиката фильтра базы данных Stretch, выглядит как показано в следующем примере.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -94,7 +94,7 @@ RETURN  SELECT 1 AS is_eligible
   
      Ниже приведен пример, в котором проверяется, меньше ли значение столбца *date*, чем 01.01.2016.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -116,7 +116,7 @@ RETURN  SELECT 1 AS is_eligible
   
      Ниже приведен пример, в котором проверяется, соответствует ли значение столбца *shipment_status*  одному из значений `IN (N'Completed', N'Returned', N'Cancelled')`.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -160,7 +160,7 @@ RETURN  SELECT 1 AS is_eligible
 ## <a name="add-a-filter-function-to-a-table"></a>Добавление функции фильтров в таблицу  
  Добавьте функцию фильтров в таблицу путем выполнения инструкции **ALTER TABLE** и указания существующей встроенной функции с табличным значением в качестве значения параметра **FILTER_PREDICATE** . Например:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -185,7 +185,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 
 Например, если указать трехкомпонентное имя столбца, как показано в следующем примере, инструкция выполнится успешно, но последующие запросы, адресованные таблице, завершатся ошибкой.
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(dbo.SensorTelemetry.ScanDate),
@@ -195,7 +195,7 @@ ALTER TABLE SensorTelemetry
 
 Вместо этого укажите функцию фильтров с однокомпонентным именем столбца, как показано в следующем примере.
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON  (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(ScanDate),
@@ -209,7 +209,7 @@ ALTER TABLE SensorTelemetry
   
 1. Измените направление миграции и верните уже перенесенные данные. Отменить эту операцию после запуска невозможно. С вас также взимается плата за исходящую передачу данных (вывод) в Azure. Дополнительные сведения см. в разделе [Принципы ценообразования Azure](https://azure.microsoft.com/pricing/details/data-transfers/).  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
@@ -220,7 +220,7 @@ ALTER TABLE SensorTelemetry
   
 4. Добавьте функцию в таблицу и перезапустите перенос данных в Azure.  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE  
             (           
@@ -233,7 +233,7 @@ ALTER TABLE SensorTelemetry
 ## <a name="filter-rows-by-date"></a>Фильтрация строк по дате  
  В следующем примере выполняется перенос строк, в которых столбец **date** содержит значение до 1 января 2016 г.  
   
-```tsql  
+```sql  
 -- Filter by date  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_date(@date datetime2)  
@@ -248,7 +248,7 @@ GO
 ## <a name="filter-rows-by-the-value-in-a-status-column"></a>Фильтрация строк по значению в столбце состояния  
  В следующем примере выполняется перенос строк, в которых столбец **status** содержит одно из указанных значений.  
   
-```tsql  
+```sql  
 -- Filter by status column  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_status(@status nvarchar(128))  
@@ -269,7 +269,7 @@ GO
   
  Начните с функции фильтров, как в следующем примере, в котором переносятся строки, где столбец **systemEndTime** содержит значение до 1 января 2016 г.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20160101(@systemEndTime datetime2)   
 RETURNS TABLE   
 WITH SCHEMABINDING    
@@ -281,7 +281,7 @@ RETURN SELECT 1 AS is_eligible
   
  Примените функцию фильтров к таблице.  
   
-```tsql  
+```sql  
 ALTER TABLE <table name>   
 SET (   
         REMOTE_DATA_ARCHIVE = ON   
@@ -302,7 +302,7 @@ SET (
   
 3.  При необходимости удалите предыдущую функцию фильтра, которая больше не используется, путем вызова **DROP FUNCTION**. (Этот шаг не показан в примере.)  
   
-```tsql  
+```sql  
 BEGIN TRAN  
 GO  
         /*(1) Create new predicate function definition */  
@@ -332,7 +332,7 @@ COMMIT ;
   
 -   В следующем примере два простых условия объединяются с помощью логического оператора AND.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate((@column1 datetime, @column2 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -350,7 +350,7 @@ COMMIT ;
   
 -   В следующем примере используется несколько условий и детерминированное преобразование с CONVERT.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example1(@column1 datetime, @column2 int, @column3 nvarchar)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -363,7 +363,7 @@ COMMIT ;
   
 -   В следующем примере используются математические операторы и функции.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example2(@column1 float)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -376,7 +376,7 @@ COMMIT ;
   
 -   В следующем примере используются операторы BETWEEN и NOT BETWEEN. Такое использование допускается, если полученная функция соответствует описанным здесь правилам после замены операторов BETWEEN и NOT BETWEEN эквивалентными выражениями AND и OR.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -390,7 +390,7 @@ COMMIT ;
   
      Предыдущая функция эквивалентна следующей функции после замены операторов BETWEEN и NOT BETWEEN на соответствующие выражения AND и OR.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -405,7 +405,7 @@ COMMIT ;
   
 -   Следующая функция является недопустимой, поскольку содержит недетерминированное преобразование.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example5(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -418,7 +418,7 @@ COMMIT ;
   
 -   Следующая функция является недопустимой, поскольку содержит вызов недетерминированной функции.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example6(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -431,7 +431,7 @@ COMMIT ;
   
 -   Следующая функция является недопустимой, поскольку содержит вложенный запрос.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example7(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -444,7 +444,7 @@ COMMIT ;
   
 -   Следующие функции являются недопустимыми, поскольку при определении функции выражения, использующие алгебраические операторы или встроенные функции, должны оцениваться как константы. Нельзя включать ссылки на столбцы в алгебраические выражения или вызовы функций.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -465,7 +465,7 @@ COMMIT ;
   
 -   Следующая функция является недопустимой, поскольку нарушает описанные здесь правила после замены оператора BETWEEN на эквивалентное выражение AND.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example10(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING  
@@ -478,7 +478,7 @@ COMMIT ;
   
      Предыдущая функция эквивалентна следующей функции после замены оператора BETWEEN на соответствующее выражение AND. Эта функция является недопустимой, так как простые условия могут использовать только логический оператор OR.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example11(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -492,7 +492,7 @@ COMMIT ;
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Как база данных Stretch применяет функцию фильтров  
  База данных Stretch применяет функцию фильтров к таблице и определяет подходящие строки при помощи оператора CROSS APPLY. Например:  
   
-```tsql  
+```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
 ```  
   
@@ -501,7 +501,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
 ## <a name="replacePredicate"></a>Замена существующей функции фильтров  
  Можно заменить ранее заданную функцию фильтров, выполнив инструкцию **ALTER TABLE** снова и указав новое значение для параметра **FILTER_PREDICATE** . Например:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate2(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -523,7 +523,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 ### <a name="example-of-a-valid-replacement"></a>Пример допустимой замены  
  Предположим, что следующая функция является текущей функцией фильтров.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_old(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -537,7 +537,7 @@ GO
   
  Следующая функция является допустимой заменой, поскольку новая константа даты (указывающая более позднюю дату отсечки) делает функцию менее строгой.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_new(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -552,7 +552,7 @@ GO
 ### <a name="examples-of-replacements-that-arent-valid"></a>Примеры недопустимых замен  
  Следующая функция не является допустимой заменой, поскольку новая константа даты (указывающая более раннюю дату отсечки) не делает функцию менее строгой.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_1(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -566,7 +566,7 @@ GO
   
  Следующая функция не является допустимой заменой, поскольку один из операторов сравнения был удален.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_2(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -580,7 +580,7 @@ GO
   
  Следующая функция не является допустимой заменой, поскольку новое условие было добавлено с логическим оператором AND.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_3(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -596,7 +596,7 @@ GO
 ## <a name="remove-a-filter-function-from-a-table"></a>Удаление функции фильтров из таблицы  
  Чтобы выполнить миграцию всей таблицы вместо переноса выбранных строк, удалите существующую функцию, присвоив **FILTER_PREDICATE**  значение null. Например:  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = NULL,  
     MIGRATION_STATE = <desired_migration_state>  

@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 Вызовите хранимую процедуру [catalog]. [update_logdb_info] с Sql Server имя и строку соединения в качестве параметров.
 
 #### <a name="example"></a>Пример
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

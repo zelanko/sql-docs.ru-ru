@@ -85,7 +85,7 @@ cleanup_server_log
 ## <a name="example"></a>Пример  
  В следующем примере вызывается cleanup_server_log хранимой процедуры.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

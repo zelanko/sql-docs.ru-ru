@@ -84,7 +84,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>Анализ выходных данных проверки XML с помощью запроса Transact-SQL  
  Если результат проверки XML содержит большое количество ошибок, можно использовать запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы загрузить выходные данные в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Затем можно проанализировать список ошибок, используя все возможности языка T-SQL, включая предложения WHERE, GROUP BY, ORDER BY, JOIN и т. д.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

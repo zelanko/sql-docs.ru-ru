@@ -94,7 +94,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>Пример  
  В следующем примере вызывается cleanup_server_execution_keys хранимой процедуры.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

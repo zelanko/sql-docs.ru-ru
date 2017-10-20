@@ -85,7 +85,7 @@ ms.lasthandoff: 07/29/2017
   
  Ниже приведен пример, в котором переносится вся таблица и перенос данных начинается немедленно.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -95,7 +95,7 @@ GO
   
  Ниже приведен пример, в котором переносятся только строки, возвращаемые встроенной функцией с табличным значением `dbo.fn_stretchpredicate` . Начало переноса откладывается. Дополнительные сведения о функции фильтров см. в разделе [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -112,7 +112,7 @@ ALTER TABLE <table name>
   
  Ниже приведен пример, в котором переносится вся таблица и перенос данных начинается немедленно.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name>
@@ -123,7 +123,7 @@ GO
   
  Ниже приведен пример, в котором переносятся только строки, возвращаемые встроенной функцией с табличным значением `dbo.fn_stretchpredicate` . Начало переноса откладывается. Дополнительные сведения о функции фильтров см. в разделе [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name> 

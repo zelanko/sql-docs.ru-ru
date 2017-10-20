@@ -73,7 +73,7 @@ ms.lasthandoff: 09/01/2017
   
     -   Укажите, нужно ли сделать копию удаленных данных или подключиться к копии (рекомендуется).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 Catalog.startup  
 ```  
   

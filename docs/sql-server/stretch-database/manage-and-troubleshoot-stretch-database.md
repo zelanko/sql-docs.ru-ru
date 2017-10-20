@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  
  Чтобы увидеть, сколько места занимает таблица с поддержкой Stretch в SQL Server, выполните указанную ниже инструкцию.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -65,7 +65,7 @@ GO
  
 Чтобы увидеть, сколько места занимает таблица с поддержкой Stretch в Azure, выполните указанную ниже инструкцию.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -119,7 +119,7 @@ GO
   
 Например, следующий запрос возвращает только локальные результаты.  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;
