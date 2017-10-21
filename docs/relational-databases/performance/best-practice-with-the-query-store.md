@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Интервал сбора статистики** . Определяет уровень детализации для собираемой статистики среды выполнения (значение по умолчанию — 1 час). Рекомендуется использовать меньшее значение, если требуется большая степень детализации или меньшее время на обнаружение и устранение проблем, но помните, что это значение будет напрямую влиять на объем данных в хранилище запросов. Чтобы задать другое значение для интервала сбора статистики, используйте SSMS или Transact-SQL:  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Порог устаревания запросов (в днях)** . Политика очистки на основе времени, которая управляет сроком хранения статистики среды выполнения и неактивных запросов.  
@@ -86,7 +86,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Режим очистки на основе размера.** Указывает, должна ли происходить автоматическая очистка, когда объем данных в хранилище запросов достигнет предельного значения.  
