@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: craigg
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
@@ -22,8 +22,6 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] предоставляет руководства, которые помогут вам изучить новые технологии и возможности. Руководства по более ранним версиям обычно подходят и к более поздним. При упоминании новой функции в руководстве также указывается минимальная необходимая версия.  
      
 -   Если в руководстве используется одна из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], необходимо загрузить и использовать последнюю версию из CodePlex. Дополнительные сведения см. в статье [Примеры баз данных и сценариев AdventureWorks для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
