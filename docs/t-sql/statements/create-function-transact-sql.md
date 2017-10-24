@@ -39,11 +39,12 @@ caps.latest.revision: 162
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80708ece5b84d5e8477e2c6cc8ab5c0618bdc2a5
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -365,9 +366,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [,... *n*  ]) Определяет тип данных таблицы для [!INCLUDE[tsql](../../includes/tsql-md.md)] функции. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
+ *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [ ,... *n*  ]) Определяет тип данных таблицы для [!INCLUDE[tsql](../../includes/tsql-md.md)] функции. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
   
- \<clr_table_type_definition > ({ *column_name**data_type* } [,... *n*  ]) **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+ \<clr_table_type_definition > ({ *column_name**data_type* } [ ,... *n*  ]) **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
   
  Определяет табличные типы данных для функции CLR. Объявление таблицы включает только имена столбцов и типы данных. Таблица всегда помещается в первичную файловую группу.  
   
@@ -537,7 +538,7 @@ RETURNS return_data_type
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ссылаться на нужный метод, если он переопределен в классе, метод указанным в \<method_specifier >, должен иметь следующие характеристики: 
   
--   Получают одинаковое число параметров, которое указано в [,...*n* ].  
+-   Получают одинаковое число параметров, которое указано в [ ,...*n* ].  
   
 -   Принимать все параметры по значению, а не по ссылке.  
   
@@ -774,7 +775,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-clr-function"></a>Г. Создание функции CLR  
- В следующем примере создается функция CLR `len`_`s`. Перед ее созданием сборка `SurrogateStringFunction.dll` регистрируется в локальной базе данных.  
+ В примере создается функция CLR `len_s`. Перед ее созданием сборка `SurrogateStringFunction.dll` регистрируется в локальной базе данных.  
   
 **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
