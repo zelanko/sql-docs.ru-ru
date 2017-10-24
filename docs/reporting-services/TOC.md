@@ -71,6 +71,8 @@
 
 
 # Разработчик
+## [REST API](developer/rest-api.md)
+## [Примеры REST API](https://github.com/Microsoft/Reporting-Services)
 ## [Интеграция приложений](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [Веб-службы сервера отчетов](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Расширения](../reporting-services/extensions/reporting-services-extension-library.md)
