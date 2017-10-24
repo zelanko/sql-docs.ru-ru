@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e86935bc6eef3ea1e709cd27c916d972dd13b9f
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Выполнение консоли SSMA (OracleToSQL)
@@ -673,7 +673,7 @@ Force нагрузки-/ target-базы данных источника
   
 -   `write-summary-report-to`Указывает путь, где будет создан отчет. Если указано только имя папки, сохраните файл с именем **ConvertSQLReport.XML** создается. (необязательно)  
   
-    Отчетов, создания имеет 2 далее подкатегорий, viz..,:  
+    Создания имеет 2 viz Далее подкатегорий, отчет.:  
   
     -   отчет ошибки (= «true/false», по умолчанию как «false» (необязательные атрибуты)).  
   

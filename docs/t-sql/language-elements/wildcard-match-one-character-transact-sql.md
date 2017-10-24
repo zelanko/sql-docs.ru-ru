@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (шаблон — совпадение одного символа) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Используйте символ подчеркивания `_` к любому символу в операции сравнения строк, который использует сопоставление с шаблоном, такой как `LIKE` и `PATINDEX`.  
+Используйте символы подчеркивания в соответствии с любым символом в операции сравнения строк, который использует сопоставление с шаблоном, такой как `LIKE` и `PATINDEX`.  
   
 ## <a name="examples"></a>Примеры  
 
@@ -62,10 +63,10 @@ msdb
 Для представления нескольких символов можно использовать несколько символов подчеркивания. Изменение `LIKE` критерии для включения двух символов подчеркивания `'m__%` включает базу данных master в результат.
 
 ### <a name="b-more-complex-example"></a>Б. более сложный пример
- В следующем примере используется оператор `_` для поиска в таблице `Person` всех людей, у которых имя состоит из трех букв и заканчивается на `an`.  
+ В следующем примере оператор _ для поиска всех людей в `Person` таблицы, имеющая трехбуквенное имя первого, который заканчивается на `an`.  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [% (Шаблон — символ(ы) для сопоставления)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Шаблон — символ(ы) для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; (Шаблон — символ(ы) должны совпасть)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

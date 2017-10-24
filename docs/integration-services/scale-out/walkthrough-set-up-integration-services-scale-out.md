@@ -14,10 +14,10 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9cc5c653fe454b45148583f2e17654657a85b0a5
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="walkthrough-set-up-integration-services-scale-out"></a>Пошаговое руководство. Настройка масштабного развертывания Integration Services
@@ -144,7 +144,7 @@ ms.lasthandoff: 08/03/2017
 
 #### <a name="example"></a>Пример
 В этом примере включается работника Out шкалы на компьютер а.
-```tsql
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --

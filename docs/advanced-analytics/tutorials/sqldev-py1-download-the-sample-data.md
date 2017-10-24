@@ -1,7 +1,7 @@
 ---
 title: "Шаг 1: Загрузите образцы данных | Документы Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,50 +20,59 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 147860e9af8cce86d1a7ccbd3e53f20d240fcd49
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: b2ac1eeb53ba9f9a0dcbf86ee772db9c8b2d3553
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-1-download-the-sample-data"></a>Шаг 1. Скачивание образца данных
+# <a name="step-1-download-the-sample-data"></a>Шаг 1: Загрузите образец данных
 
-На этом шаге будет загрузить образец набора данных, а также скрипты. Данные и файлы скриптов опубликованы в Github, однако скрипт PowerShell скачает данные и файлы скриптов в выбранный вами локальный каталог.
+В этой статье является частью учебника [analytics Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-## <a name="download-the-data-and-scripts"></a>Скачивание образцов данных и скриптов
+Данные и скриптов в этом учебнике используются на Github. На этом шаге используется сценарий PowerShell для загрузки файлов данных и сценариев в локальный каталог, по своему выбору.
+
+## <a name="run-the-script"></a>Запустите сценарий
 
 1. Откройте командную консоль Windows PowerShell.
 
     Используйте параметр **Запуск от имени администратора**, если права администратора требуются для создания целевой каталог или записывать файлы в указанное назначение.
 
-2. Выполните приведенные ниже команды PowerShell, изменив значение параметра *DestDir* на любой локальный каталог.  Значение по умолчанию, мы используем здесь — **TempPythonSQL**.
+2. Выполните приведенные ниже команды PowerShell, изменив значение параметра *DestDir* на любой локальный каталог.  Значение по умолчанию, мы используем здесь — `C:\temp\pysql`.
 
-    ```
+    ```ps
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/PythonSQL/Download_Scripts_SQL_Walkthrough.ps1'
     $ps1_dest = "$pwd\Download_Scripts_SQL_Walkthrough.ps1"
     $wc = New-Object System.Net.WebClient
     $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\tempPythonSQL'
+    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\temp\pysql'
     ```
     
     Если папка, указанная в параметре *DestDir* , не существует, она будет создана скриптом PowerShell.
     
-    Возникает сообщение об ошибке можно временно задать политику выполнения скриптов PowerShell для **Неограниченный** только в данном пошаговом руководстве, с помощью **обхода** аргумент и изменения в текущей области видимости сеанс. Выполнение этой команды не приводит к изменению конфигурации.
+    Возникает сообщение об ошибке, временно задать политику для выполнения скриптов PowerShell **Неограниченный** в данном пошаговом руководстве, с помощью **обхода** аргумент и областей изменения в текущем сеансе. Выполнение этой команды не приводит к изменению конфигурации.
     
-    `Set\-ExecutionPolicy Bypass \-Scope Process`
-
-3. В зависимости от скорости подключения к Интернету скачивание может занять определенное время. После скачивания всех файлов скрипт PowerShell откроет папку, указанную в параметре  *DestDir*. В командное строке PowerShell выполните приведенную ниже команду и просмотрите скачанные файлы.
-
+    ```ps
+    Set-ExecutionPolicy Bypass -Scope Process
     ```
+
+3. В зависимости от подключения к Интернету загрузка может занять некоторое время. 
+
+## <a name="view-the-results"></a>Просмотр результатов
+
+После скачивания всех файлов скрипт PowerShell откроет папку, указанную в параметре  *DestDir*. 
+
++ В командной строке PowerShell выполните следующую команду, чтобы вывести список файлов, которые были загружены.
+
+    ```ps
     ls
     ```
-**Результаты:**
 
 ![Список файлов, скачанных скриптом PowerShell](media/sqldev-python-filelist.png "Список файлов, скачанных скриптом PowerShell")
 
 ## <a name="next-step"></a>Следующий шаг
 
-[Шаг 2. Импорт данных в SQL Server с помощью PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
+[Шаг 2. Импорт данных в SQL Server с помощью PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
 ## <a name="previous-step"></a>Предыдущий шаг
 

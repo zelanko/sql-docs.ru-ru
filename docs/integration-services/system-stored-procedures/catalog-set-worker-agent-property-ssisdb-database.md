@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (база данных SSISDB)
@@ -28,22 +28,22 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>Синтаксис
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>Аргументы
-[ @WorkerAgentId =] *WorkerAgentId*  
-Идентификатор агента работника шкалы ожидания рабочего процесса. *WorkerAgentId* — **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId*  
+Агент рабочий идентификатор из шкалы Out работника. *WorkerAgentId* — **uniqueidentifier**.
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 Имя свойства. *PropertyName* — **nvarchar(256)**.
 
-[ @PropertyValue =] *PropertyValue*  
+[@PropertyValue =] *PropertyValue*  
 Значение свойства. *PropertyValue* — **nvarchar(max)**.
 
 ## <a name="remarks"></a>Замечания
-Допустимые имена свойств **DisplayName**, **описание**, **теги**.
+Допустимые имена свойств являются **DisplayName**, **описание**, **теги**.
 
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -58,7 +58,7 @@ set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = 
   
 -   Членство в **sysadmin** роли сервера
 
-## <a name="erros-and-warnings"></a>Erros и предупреждения
+## <a name="errors-and-warnings"></a>Ошибки и предупреждения
   Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
   
 -   Пользователь не имеет соответствующих разрешений 
@@ -67,4 +67,4 @@ set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = 
 
 -   Недопустимое имя свойства.
 
--   Значение свойства не vilid.  
+-   Недопустимое значение свойства.  

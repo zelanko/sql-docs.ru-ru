@@ -28,11 +28,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c433b6c78ce1ce62c9d64d7d6dfd7f8ddbe0ff27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -179,7 +180,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-simple-cursor-and-syntax"></a>A. Использование простого курсора и синтаксиса  
- Результирующий набор, создаваемый при открытии данного курсора, включает в себя все строки и столбцы таблицы. Этот курсор можно обновлять, все обновления и удаления представлены в выборке для этого курсора. `FETCH``NEXT`доступна только выборка, поскольку `SCROLL` параметр не указан.  
+
+Результирующий набор, создаваемый при открытии данного курсора, включает в себя все строки и столбцы таблицы. Этот курсор можно обновлять, все обновления и удаления представлены в выборке для этого курсора. `FETCH NEXT`доступна только выборка, поскольку `SCROLL` параметр не указан.  
+
   
 ```  
 DECLARE vend_cursor CURSOR  
@@ -261,3 +264,4 @@ DEALLOCATE vendor_cursor;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

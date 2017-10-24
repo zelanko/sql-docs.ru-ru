@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
@@ -268,34 +268,12 @@ Microsoft JDBC Driver for SQL Server имеются следующие пост�
 ### <a name="using-azure-key-vault-provider"></a>Использование поставщика хранилища ключей Azure
 Хранилище ключей Azure удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. Microsoft JDBC Driver for SQL Server включает встроенный поставщик, SQLServerColumnEncryptionAzureKeyVaultProvider, для приложений, имеющих ключи, хранящиеся в хранилище ключей Azure. Этот поставщик называется AZURE_KEY_VAULT. Для использования поставщика хранилища ключей Azure хранилища, разработчик приложения должен создавать хранилища и ключи в Azure и настроить приложение для доступа к ключам. Дополнительные сведения о настройке хранилища ключей и создания главного ключа столбца посвящены [хранилище ключей Azure — шаг за шагом, Дополнительные сведения о настройке хранилища ключей](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) и [создании главных ключей столбцов в хранилище ключей Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Чтобы использовать хранилище ключей Azure, клиентские приложения должны создать экземпляр SQLServerColumnEncryptionAzureKeyVaultProvider и зарегистрируйте его в драйвере. Проверка подлинности делегаты драйвера JDBC приложения через интерфейс вызывается SQLServerKeyVaultAuthenticationCallback, который имеет метод для получения маркера доступа из хранилища ключей. Для создания экземпляра поставщика хранилища ключей Azure хранилища, разработчику приложения необходимо предоставить реализацию только метод, вызываемый **getAccessToken** получает маркер доступа для ключа, хранящегося в хранилище ключей Azure.  
-  
-Ниже приведен пример инициализации SQLServerKeyVaultAuthenticationCallback и SQLServerColumnEncryptionAzureKeyVaultProvider:  
+Чтобы использовать хранилище ключей Azure, клиентские приложения должны создать экземпляр SQLServerColumnEncryptionAzureKeyVaultProvider и зарегистрируйте его в драйвере.
+
+Ниже приведен пример инициализации SQLServerColumnEncryptionAzureKeyVaultProvider:  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 После приложение создает экземпляр SQLServerColumnEncryptionAzureKeyVaultProvider, приложению необходимо зарегистрировать экземпляр в драйвере Microsoft JDBC для SQL Server с помощью Метод SQLServerConnection.registerColumnEncryptionKeyStoreProviders(). Настоятельно рекомендуется, поиск имени и по умолчанию, AZURE_KEY_VAULT, который можно получить путем вызова SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API зарегистрирован экземпляр. С помощью имени по умолчанию позволит вам средств, таких как SQL Server Management Studio или PowerShell, для подготовки ключей и управление ими постоянное шифрование (средства используйте имя по умолчанию для создания объекта метаданных для главного ключа столбца). Примере ниже показан регистрации поставщика хранилища ключей Azure. Дополнительные сведения о методе SQLServerConnection.registerColumnEncryptionKeyStoreProviders(). в разделе [всегда зашифрованы Справочник по API для драйвера JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md). 
@@ -653,3 +631,4 @@ connection.close();
  [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

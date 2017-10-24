@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Возможности интеграции служб, поддерживаемые различными выпусками SQL Server
@@ -28,8 +28,8 @@ ms.lasthandoff: 08/03/2017
   
 Последние заметки о выпуске и возможности новой информации см. следующие статьи:
 -   [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
--   [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [Новые возможности служб Integration Services в SQL Server 2017 г.](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
+-   [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
+-   [Новые возможности служб Integration Services в SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **Оцените SQL Server 2016!**    
 
@@ -70,8 +70,8 @@ ms.lasthandoff: 08/03/2017
   
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Назначение высокой производительности Oracle от Attunity|Да|||||  
-|Назначение Teradata высокой производительности от компании Attunity|Да|||||  
+|Высокопроизводительный Oracle источника и назначения от компании Attunity|Да|||||  
+|Источник Teradata высокой производительности и назначение от компании Attunity|Да|||||  
 |Источник и назначение SAP BW|Да|||||  
 |Назначение «Обучение модели интеллектуального анализа данных»|Да|||||  
 |Назначение «Обработка измерений»|Да|||||  
@@ -81,7 +81,6 @@ ms.lasthandoff: 08/03/2017
   
 |Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Постоянный (высокопроизводительные) уточняющие запросы|Да|||||  
 |Изменить компоненты отслеживания измененных данных attunity <sup>1</sup>|Да|||||  
 |Преобразование «Запрос интеллектуального анализа данных»|Да|||||  
 |«Нечеткое группирование» и «Нечеткий уточняющий запрос»|Да|||||  

@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Задает значение параметра в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Связывает значение с переменной среды или назначает литеральное значение, которое будет использоваться по умолчанию, если не будет назначено других значений.  
+  Задает значение параметра в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Связывает значение с переменной среды или назначает литеральное значение, которое используется по умолчанию при назначении другие значения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  Тип параметра. Значение `20` указывает параметр проекта, значение `30` — параметр пакета. *Object_type* — **smallInt**.  
   
- [ @folder_name =] *имя_папки*  
+ [@folder_name =] *имя_папки*  
  Имя папки, в которой содержится параметр. *Имя_папки* — **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Имя проекта, в котором содержится параметр. *Project_name* — **nvarchar(128)**.  
   
- [ @parameter_name =] *parameter_name*  
+ [@parameter_name =] *parameter_name*  
  Имя параметра. *Parameter_name* — **nvarchar(128)**.  
   
- [ @parameter_value =] *parameter_value*  
+ [@parameter_value =] *parameter_value*  
  Значение параметра. *Parameter_value* — **sql_variant**.  
   
- [ @object_name =] *object_name*  
+ [@object_name =] *object_name*  
  Имя пакета. Этот аргумент обязателен, если параметр является параметром пакета. *Object_name* — **nvarchar(260)**.  
   
- [ @value_type =] *value_type*  
- Тип значения параметра. Используйте символ `V` указывает, что *parameter_value* литеральное значение, которое будет использоваться другие значения по умолчанию назначаются перед выполнением. Используйте символ `R` указывает, что *parameter_value* является значением, на которую указывает ссылка и ему было присвоено имя переменной среды. Этот аргумент является необязательным. По умолчанию используется символ `V`. *Value_type* — **char(1)**.  
+ [@value_type =] *value_type*  
+ Тип значения параметра. Используйте символ `V` указывает, что *parameter_value* является литеральное значение, которое используется по умолчанию, если перед выполнением назначены другие значения. Используйте символ `R` указывает, что *parameter_value* является значением, на которую указывает ссылка и ему было присвоено имя переменной среды. Этот аргумент является необязательным. По умолчанию используется символ `V`. *Value_type* — **char(1)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

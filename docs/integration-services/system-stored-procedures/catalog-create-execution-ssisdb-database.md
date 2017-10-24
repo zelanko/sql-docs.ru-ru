@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (база данных SSISDB)
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
+ [@folder_name =] *имя_папки*  
  Имя папки, содержащей пакет, который необходимо выполнить. *Имя_папки* — **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Имя проекта, содержащего пакет, который необходимо выполнить. *Project_name* — **nvarchar(128)**.  
   
- [ @package_name =] *имя_пакета*  
+ [@package_name =] *имя_пакета*  
  Имя пакета, который необходимо выполнить. *Имя_пакета* — **nvarchar(260)**.  
   
- [ @reference_id =] *reference_id*  
+ [@reference_id =] *reference_id*  
  Уникальный идентификатор ссылки на среду. Этот параметр является необязательным. *Reference_id* — **bigint**.  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  Указывает, должна ли использоваться 32-разрядная среда выполнения для запуска этого пакета в 64-разрядной операционной системе. Используйте значение 1 для запуска пакета в 32-разрядной средой выполнения при запуске в 64-разрядной операционной системе. Используйте значение 0, чтобы выполнить пакет в 64-разрядной среде выполнения при прогоне в 64-разрядной операционной системе. Этот параметр является необязательным. *Use32bitruntime* — **бит**.  
  
- [ @runinscaleout =] *runinscaleout*  
- Укажите, является ли выполнение в масштабное развертывание. Используйте значение 1 для выполнения пакета в масштабное развертывание. Используйте значение 0 для выполнения пакета без масштабное развертывание. Этот параметр является необязательным. Ему присваивается DEFAULT_EXECUTION_MODE в [SSISDB]. [catalog]. [catalog_properties], если не указан. *Runinscaleout* — **бит**. 
+ [@runinscaleout =] *runinscaleout*  
+ Укажите, является ли выполнение в масштабное развертывание. Используйте значение 1 для выполнения пакета в масштабное развертывание. Используйте значение 0 для выполнения пакета без масштабное развертывание. Этот параметр является необязательным. Если не указан, его значение равно DEFAULT_EXECUTION_MODE в [SSISDB]. [catalog]. [catalog_properties]. *Runinscaleout* — **бит**. 
  
- [ @useanyworker =] *useanyworker*  
-  Указывает, разрешено ли рабочие Out шкалы для выполнения. Используйте значение 1 для выполнения пакета с любого масштаба Out работника. Используйте значение 0, чтобы показать, что не все ожидания работников для масштабирования для выполнения пакета. Этот параметр является необязательным. Оно присвоено значение 1, если не указано. *Useanyworker* — **бит**. 
+ [@useanyworker =] *useanyworker*  
+  Указывает, разрешено ли рабочие Out шкалы для выполнения. Используйте значение 1 для выполнения пакета с любого масштаба Out работника. Используйте значение 0, чтобы показать, что не все ожидания работников для масштабирования для выполнения пакета. Этот параметр является необязательным. Если не указан, его значение равно 1. *Useanyworker* — **бит**. 
   
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  Возвращает уникальный идентификатор для экземпляра выполнения. *Execution_id* — **bigint**.  
 
   
@@ -77,7 +77,7 @@ create_execution [ @folder_name = folder_name
 ## <a name="example"></a>Пример  
  В следующем примере вызов catalog.create_execution для создания экземпляра выполнения пакета Child1.dtsx, который не находится в масштабное развертывание. Проект Project1 служб Integration Services содержит пакет. В этом примере выполняется вызов catalog.set_execution_parameter_value для задания значений для параметров Parameter1, Parameter2 и LOGGING_LEVEL. В этом примере выполняется вызов catalog.start_execution для запуска экземпляра выполнения.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,7 +89,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
@@ -98,7 +97,7 @@ GO
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Permissions  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   разрешения READ и EXECUTE на проект, а также, если применимо, разрешение READ на среду, указанную в ссылке  

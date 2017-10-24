@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: a15f88d8bc7d7684e8e8d0014bb24a082c5b0be2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Установка SQL Server и создать базу данных на SUSE Linux Enterprise Server
@@ -31,6 +31,9 @@ ms.lasthandoff: 10/02/2017
 
 Чтобы установить SUSE Linux Enterprise Server на компьютере, перейдите к [https://www.suse.com/products/server](https://www.suse.com/products/server). Можно также создать SLES виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image SLES` в вызове `az vm create`.
 
+> [!NOTE]
+> В настоящее время [подсистемы Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве целевого объекта установки.
+
 Другие требования к системе см. в разделе [требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Установка SQL Server
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/02/2017
 Чтобы настроить SQL Server на SLES, выполните следующие команды в конечном для установки **mssql server** пакета:
 
 > [!IMPORTANT]
-> Если вы ранее установили CTP-версия или версия-КАНДИДАТ release 2017 г. SQL Server, необходимо сначала удалить старое хранилище перед регистрацией один репозиториев общедоступной версии. Дополнительные сведения см. в разделе [изменить репозиториев из репозитория предварительного просмотра в репозитории общедоступной версии](sql-server-linux-change-repo.md)
+> Если вы ранее установили CTP-версия или версия-КАНДИДАТ release 2017 г. SQL Server, необходимо сначала удалить старое хранилище перед регистрацией один репозиториев общедоступной версии. Дополнительные сведения см. в разделе [изменить репозиториев из репозитория предварительного просмотра в репозитории GA](sql-server-linux-change-repo.md).
 
 1. Загрузите файл конфигурации Microsoft SQL Server SLES репозитория:
 

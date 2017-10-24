@@ -26,24 +26,24 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df818b30ca850fbb3b7cb0df816aacb6afa12a76
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 9a65a49a1e6d8c23a28b117fc90b0276ce185556
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает номер идентификатора файла (ID) для указанного логического имени файла данных, файла журнала, или полнотекстового файла в текущей базе данных.  
+Возвращает номер идентификатора файла (ID) для указанного логического имени файла данных, файла журнала, или полнотекстового файла в текущей базе данных.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 FILE_IDEX ( file_name )  
 ```  
   
@@ -64,12 +64,12 @@ FILE_IDEX ( file_name )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Получение идентификатора для указанного файла  
- Следующий пример возвращает идентификатор файла `AdventureWorks_Data`.  
+Следующий пример возвращает идентификатор файла `AdventureWorks_Data`.  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX('AdventureWorks2012_Data')AS 'File ID';  
+SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
 GO  
 ```  
   
@@ -83,13 +83,12 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>Б. Получение идентификатора файла, имя которого неизвестно  
- Следующий пример возвращает идентификатор файла журнала базы данных `AdventureWorks`, выбрав логическое имя файла из представления каталога `sys.database`_`files`, где тип файла равен `1` (логический).  
+В следующем примере возвращается идентификатор `AdventureWorks` файла журнала, выбрав логическое имя файла из `sys.database_files` представление, где тип файла равен каталога `1` (журнал).  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX((SELECT TOP(1)name FROM sys.database_files   
-WHERE type = 1))AS 'File ID';  
+SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
 GO  
 ```  
   
@@ -102,7 +101,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>В. Получение идентификатора файла полнотекстового файла каталога  
- Следующий пример возвращает идентификатор полнотекстового файла, выбрав логическое имя файла из представления каталога `sys.database`_`files`, где тип файла равен `4` (полнотекстовой). Этот пример возвращает значение NULL, если полнотекстовый каталог не существует.  
+В следующем примере возвращается идентификатор файла полнотекстового файла, выбрав логическое имя файла из `sys.database_files` представление, где тип файла равен каталога `4` (полнотекстовой). Этот пример возвращает значение NULL, если полнотекстовый каталог не существует.  
   
 ```tsql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
@@ -115,3 +114,4 @@ AS 'File_ID';
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
+

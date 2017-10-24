@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: d5f7a249e43619e0730da0a30fd5597788441bb8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Установка SQL Server и создать базу данных в Red Hat
@@ -38,7 +38,7 @@ ms.lasthandoff: 10/06/2017
 Чтобы настроить SQL Server на RHEL, выполните следующие команды в конечном для установки **mssql server** пакета:
 
 > [!IMPORTANT]
-> Если вы ранее установили CTP-версия или версия-КАНДИДАТ release 2017 г. SQL Server, необходимо сначала удалить старое хранилище перед регистрацией один репозиториев общедоступной версии. Дополнительные сведения см. в разделе [изменить репозиториев из репозитория предварительного просмотра в репозитории общедоступной версии](sql-server-linux-change-repo.md)
+> Если вы ранее установили CTP-версия или версия-КАНДИДАТ release 2017 г. SQL Server, необходимо сначала удалить старое хранилище перед регистрацией один репозиториев общедоступной версии. Дополнительные сведения см. в разделе [изменить репозиториев из репозитория предварительного просмотра в репозитории GA](sql-server-linux-change-repo.md).
 
 1. Чтобы Загрузите файл конфигурации репозитория Microsoft SQL Server Red Hat.
 

@@ -26,11 +26,12 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7572e82178b211fba9967a88cb16c20d059c7b52
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c46fb930d1bba04b4a30725cc3c40e196b3f9a8b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
@@ -56,16 +57,6 @@ UPPER ( character_expression )
  **varchar** или **nvarchar**  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере функции `UPPER` и `RTRIM` используются для получения из таблицы `Person` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] фамилий всех людей, при этом все символы фамилии преобразуются в символы верхнего регистра, соответствующая символьная строка обрезается и производится ее сцепление со строкой имени.  
-  
-```  
-SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  
-FROM Person.Person  
-ORDER BY LastName;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере используется `UPPER` и `RTRIM` функций, возвращающих фамилий всех людей в `dbo.DimEmployee` таблицы, чтобы он находится в верхнем регистре, усеченную и сцепленные со строкой имени.  
   
 ```  

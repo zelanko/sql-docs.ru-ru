@@ -2,8 +2,8 @@
 title: "Установка моделей предварительно обученные машинного обучения в SQL Server | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/15/2017
-ms.prod: sql-server-2016
+ms.date: 10/18/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,34 +15,42 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Установить предварительно обученные машинного обучения моделей, основанных на SQL Server
 
-В этом разделе описывает, как добавлять предварительно обученные модели на экземпляре SQL Server, уже имеет служб R или машины обучения службы установлены.
+В этой статье описывает, как добавлять предварительно обученные модели на экземпляре SQL Server, уже имеет служб R или машины обучения службы установлены.
 
-Обновление для Microsoft R Server (или установки обновления Microsoft Server обучения машины) предоставляются предварительно обученные модели. Сведения о том, как обновить экземпляр и получить последнюю версию Microsoft R см. в разделе [обновление компонентов R в экземпляре служб R](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Предварительно обученные модели представляют собой параметр при установке Microsoft R Server или обучения компьютере, на сервер с помощью автономного установщика. Можно использовать этот установщик для получения только предварительно обученные модели или его можно использовать для обновления машинного обучения компонентов в экземпляр SQL Server 2016 или 2017 г. SQl Server.
 
-Эти модели можно установить только выполнив отдельного установщика Windows для R Server.
-Однако существуют некоторые дополнительные действия для использования при установке моделей на сервере SQL Server. В этом разделе описывается процесс.
+После загрузки предварительно обученные модели с помощью программы установки, существуют некоторые дополнительные действия по настройке моделей для использования с SQL Server. В этой статье описан процесс.
+
+Дополнительные сведения см. в следующих статьях:
+
++ [Предварительно обученный моделей машинного обучения для анализа и образа обнаружения мнений](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
+
++ [Обновление компонентов R в экземпляре служб R](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## <a name="benefits-of-using-pretrained-models"></a>Преимущества использования предварительно обученные модели
 
-Предварительно обученной модели сделаны доступными для поддержки клиентов, которые требуются для выполнения задач, таких как анализ мнений или изображения featurization, но не имеет ресурсы для получения больших наборов данных или обучения сложные модели. С помощью предварительно обученной модели позволяет приступить к работе над текста и наиболее эффективного обработки изображений.
+Эти предварительно обученной модели, созданные для клиентов, которым требуется выполнять задачи, такие как анализ мнений или изображения featurization, но нет ресурсов для получения больших наборов данных или обучения сложные модели. С помощью предварительно обученной модели позволяет приступить к работе над текста и наиболее эффективного обработки изображений.
 
-В настоящее время модели, которые доступны являются моделями глубокие нейронные сети (DNN) для анализа и изображение классификация мнений. Все четыре предварительно обученные модели были обучена на CNTK. Конфигурации всех сетей, был основан на следующих справочных реализаций:
+В настоящее время модели, которые доступны являются моделями глубокие нейронные сети (DNN) для анализа и изображение классификация мнений. Все предварительно обученные модели прошли обучение с помощью корпорации Майкрософт [Toolkit сети вычисление](https://cntk.ai/Features/Index.html), или **CNTK**. 
+
+Конфигурации всех сетей, был основан на следующих справочных реализаций:
 
 + ResNet 18
 + ResNet 50
 + ResNet 101
 + AlexNet
 
-Дополнительные сведения о глубокие остаточные сетях и их реализации с помощью CNTK статьях:
+Дополнительные сведения о сетях углубленного обучения и их реализации с помощью CNTK статьях:
 
 + [Специалисты корпорации Майкрософт алгоритм задает его вехи ImageNet запроса](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
@@ -50,60 +58,74 @@ ms.lasthandoff: 09/19/2017
 
 ## <a name="how-to-install-the-models-on-sql-server"></a>Установка моделей на сервере SQL Server
 
-   > [!NOTE]
-   > 
-   > Если используется отдельный установщик на основе Windows для установки Microsoft R Server или обновите экземпляр сервера SQL Server, предварительно обученные модели будут доступны из установщика. В разделе [Установка R Server для Windows](https://docs.microsoft.com/en-us/r-server/install/r-server-install-windows).
-   > 
-   > Для использования с Microsoft R Server модели может потребоваться некоторые дополнительные действия. Дополнительные сведения см. в разделе [описывается установка и развертывание предварительно обучения моделей машинного обучения с MicrosoftML](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models)
+1. Запустите отдельного установщика Windows для компьютера сервера обучения. Для расположения загрузки см.:
 
-1. Предварительно обученные модели не устанавливаются по умолчанию при установке SQL Server; их необходимо добавить, запустив программу установки из командной строки после завершения программы установки SQL Server.
+    + [Установка машинного обучения для Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+    + [Установка R Server 9.1 для Windows](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
-2. Откройте командную строку и перейдите к папке установки начальной загрузки для SQL Server, который также содержит установщик Microsoft R.
+2. Выбор компонентов для установки зависит от того, получение только модели, или выполнение других обновлений с помощью установщика.
+ 
+    + Если это новую установку сервера Machine обучения, и не требуется вносить другие изменения R или Python компоненты, выберите **только** параметр предварительно обученные модели. Примите все остальные, включая лицензионных соглашений.
 
-    В экземпляре по умолчанию, версия-Кандидат 1 SQL Server 2017 г. выражение будет следующим:
+    + Обновление компонентов R или Python, в то же время, выберите язык (R, Python и/или), который требуется обновить и выберите параметр предварительно обученные модели. Выберите один или несколько экземпляров для применения этих изменений.
+
+    + Если ранее вы установили машины Server обучения и обновленные компоненты R или Python, с помощью параметра привязки, оставьте все ранее выбранные варианты **как**и выберите параметры предварительно обученные модели. Не отменяйте Выбор все ранее выбранные параметры, или они будут удалены.
+
+3. После завершения установки откройте командную строку Windows **администратор**и перейдите к папке установки начальной загрузки для SQL Server, который также содержит установщик Microsoft R. Папка в экземпляре по умолчанию 2017 г. SQL Server, будет:
     
-    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017RC1\x64\`
+    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-3. Укажите компонент для установки и папки, куда предварительно обученные модели должны быть добавлены, используя следующие аргументы:
+4. Укажите компонент для установки, версии и к папке, содержащей исходные файлы модели, используя аргументы RSetup.exe, как показано в следующих примерах:
 
-  + Использование моделей с **R_SERVICES**
+  + Использование моделей с **R_SERVICES**, используйте следующий синтаксис и пути:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-    Например чтобы включить использование предварительно обученные моделей с помощью R в экземпляре по умолчанию 2017 г. SQL Server, запуске этой инструкции:
+    Например чтобы включить использование последней версии предварительно обученные модели для R в экземпляре по умолчанию 2017 г. SQL Server, запуске этой инструкции:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + Использование моделей с **PYTHON_SERVICES**
+    Для именованного экземпляра команда будет выглядеть примерно следующим образом:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-    Например чтобы включить использование предварительно обученные модели, с помощью Python, для экземпляра по умолчанию SQL Server 2017 г запуске этой инструкции:
+  + Использование моделей с **PYTHON_SERVICES**, используйте следующий синтаксис и пути:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-4. Для параметра версии поддерживаются следующие значения:
+    Например позволяя использовать последнюю версию предварительно обученные модели для Python в экземпляре по умолчанию 2017 г. SQL Server, выполните эту инструкцию:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+    Для именованного экземпляра команда будет выглядеть примерно следующим образом:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+5. Для параметра версии поддерживаются следующие значения:
 
     + Версия-кандидат 0: **9.1.0.0**
     + Версия-кандидат 1: **9.2.0.22**
-    + Номер последней версии (не освобождается): **9.2.0.100**
+    + RTM: **9.2.0.100**
+    + Накопительное обновление 1: **9.2.0.24**
 
-5. Если установка выполнена успешно, следующие модели должны быть добавлены в ваш R\_СЛУЖБ или PYTHON\_папок СЛУЖБ:
+6. Если установка выполнена успешно, следующие модели должны быть добавлены в ваш R\_СЛУЖБ или PYTHON\_папок СЛУЖБ:
 
-    - AlexNet_Updated.model
-    - ImageNet1K_mean.xml
+    - AlexNet\_Updated.model
+    - ImageNet1K\_mean.xml
     - pretrained.Model
-    - ResNet_101_Updated.model
-    - ResNet_18_Updated.model
-    - ResNet_50_Updated.model
+    - ResNet\_101\_Updated.model
+    - ResNet\_18\_Updated.model
+    - ResNet\_50\_Updated.model
 
 ## <a name="examples"></a>Примеры
 
-После установки моделей путем вызова из кода R можно использовать модели.
+После установки моделей можно использовать модели путем вызова из кода приложения.
 
 ### <a name="image-featurization-example"></a>Пример featurization изображения
 
-Предварительно обученные модели для изображений поддерживает featurization изображений, которые предоставляются. Чтобы использовать модель, вызовите **featurizeImage** преобразования.
+Предварительно обученные модели для изображений поддерживает featurization изображений, которые предоставляются. Это модель была обучена с помощью [CNTK](https://docs.microsoft.com/cognitive-toolkit/). 
+
+Чтобы использовать модель, вызовите **featurizeImage** преобразования.
 
 + [featurizeImage: преобразование Featurization образ машины обучения](https://docs.microsoft.com/r-server/r-reference/microsoftml/featurizeimage)
 
@@ -125,12 +147,12 @@ ms.lasthandoff: 09/19/2017
 ```
 
 > [!NOTE]
-> 
-> Не является возможность считывать или изменять самой предварительно обученные модели. Эта конкретная модель основана на [CNTK](https://docs.microsoft.com/cognitive-toolkit/) модели, но были сжаты с использованием собственного формата для повышения производительности.
+> Это не возможность считывать или изменять предварительно обученные модели, так как они будут сжаты, использование собственного формата для повышения производительности.
+
 
 ### <a name="text-analysis-example"></a>Пример анализа текста
 
-В этом примере демонстрируется использование предварительно обученные модели для классификации:
+См. следующий пример показывает, как использовать модель featurization предварительно обученные текст для текстовой классификации:
 
 [Анализ мнений, с помощью Featurizer текста](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

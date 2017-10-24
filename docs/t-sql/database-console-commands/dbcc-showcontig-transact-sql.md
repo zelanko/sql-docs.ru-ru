@@ -28,11 +28,12 @@ caps.latest.revision: 78
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 770b21498e0159c1ac30eb4ea8a192b6597b4ebe
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 901067b9bd9c85887b66ea8d32999cf439873952
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -204,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>Б. Использование функции OBJECT_ID для получения идентификатора таблицы и представления sys.indexes для получения идентификатора индекса  
-В следующем примере используется `OBJECT`_`ID` и `sys.indexes` представления для получения идентификатора таблицы и индекса для каталога `AK_Product_Name` индекс `Production.Product` в таблицу [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных.
+В следующем примере используется `OBJECT_ID` и `sys.indexes` представления для получения идентификатора таблицы и индекса для каталога `AK_Product_Name` индекс `Production.Product` в таблицу [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных.
   
 ```sql  
 USE AdventureWorks2012;  

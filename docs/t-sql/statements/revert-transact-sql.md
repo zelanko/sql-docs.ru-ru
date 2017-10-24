@@ -26,11 +26,12 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2074ef0a9e434ac5c427c5438633c61ead0eb25a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 033442da3e10fd834963df30ea071a220464de6f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -76,7 +77,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- Инструкция `REVERT`, определенная в модуле `usp`_`myproc`, переключает контекст выполнения, установленный внутри модуля, но не влияет на контекст выполнения, установленный снаружи модуля. Контекст выполнения для сеанса остается установленным в `login1`.  
+ `REVERT` Инструкция, определенная в `usp_myproc` переключает контекст выполнения, установленный внутри модуля, но не влияет на контекст выполнения, установленный снаружи модуля. Контекст выполнения для сеанса остается установленным в `login1`.  
   
  При указании в качестве отдельной инструкции REVERT применяется к инструкциям EXECUTE AS, определенным внутри пакета или сеанса. Инструкция REVERT не будет иметь эффекта, если соответствующая инструкция EXECUTE AS содержит предложение WITH NO REVERT. В этом случае контекст выполнения остается в силе до завершения сеанса.  
   

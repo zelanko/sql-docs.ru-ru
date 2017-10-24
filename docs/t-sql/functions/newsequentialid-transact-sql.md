@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a453b99d7ab0512e57275b5ad1805f5a66522ba
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 39bd8a393a9cc3e19e457cda98c0521492e07911
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  Если важна конфиденциальность, то не следует применять эту функцию. Значение следующего формируемого идентификатора GUID можно предугадать и, следовательно, получить доступ к данным, связанным с этим идентификатором GUID.  
   
- NEWSEQUENTIALID является оболочкой для Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) функции.  
+ NEWSEQUENTIALID является оболочкой для Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) функции с некоторыми [байтов перестановка применения](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
 >  Функция UuidCreateSequential имеет зависимости оборудования. На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно разработать кластеры последовательные значения, при перемещении баз данных (например, автономные базы данных) на другие компьютеры. При использовании Always On и на [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], может образоваться кластеры последовательные значения, если база данных переходит на другой компьютер.  

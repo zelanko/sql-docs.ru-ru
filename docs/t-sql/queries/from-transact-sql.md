@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>Предложение FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>О. Использование простого предложения FROM  
- В следующем примере извлекается `SalesTerritoryID` и `SalesTerritoryRegion` столбцы из `DimSalesTerritory` таблицы.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>П. Использование синтаксиса INNER JOIN  
+### <a name="n-using-the-inner-join-syntax"></a>О. Использование синтаксиса INNER JOIN  
  В следующем примере возвращается `SalesOrderNumber`, `ProductKey`, и `EnglishProductName` столбцы из `FactInternetSales` и `DimProduct` таблиц, где ключ соединения `ProductKey`, соответствует в обеих таблицах. `SalesOrderNumber` И `EnglishProductName` столбцы каждого существует в одной из таблиц, поэтому нет необходимости указывать псевдоним таблицы с этими столбцами, как показано; эти псевдонимы приводятся исключительно для удобства чтения. Слово **AS** до псевдоним имя не является обязательным, но рекомендуется для удобства чтения и для соответствия стандарту ANSI.  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>Т. С помощью синтаксиса LEFT OUTER JOIN и RIGHT OUTER JOIN  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>П. С помощью синтаксиса LEFT OUTER JOIN и RIGHT OUTER JOIN  
  Следующий пример соединяет `FactInternetSales` и `DimProduct` таблицы на `ProductKey` столбцов. Синтаксис левого внешнего соединения сохраняет несовпадающие строки из левой (`FactInternetSales`) таблицы. Поскольку `FactInternetSales` таблица не содержит `ProductKey` значения, которые не соответствуют `DimProduct` таблицы, этот запрос возвращает те же строки в первом примере внутреннее соединение выше.  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>У. С помощью синтаксиса FULL OUTER JOIN  
+### <a name="p-using-the-full-outer-join-syntax"></a>Т. С помощью синтаксиса FULL OUTER JOIN  
  В следующем примере показано полное внешнее соединение, которое возвращает все строки из обоих соединяемых таблиц, но возвращает значение NULL для значения, которые не соответствуют из другой таблицы.  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>Ф. Использование синтаксиса CROSS JOIN  
+### <a name="q-using-the-cross-join-syntax"></a>У. Использование синтаксиса CROSS JOIN  
  В следующем примере возвращается векторное произведение `FactInternetSales` и `DimSalesTerritory` таблицы. Список всех возможных комбинаций `SalesOrderNumber` и `SalesTerritoryKey` возвращаются. Обратите внимание на отсутствие `ON` предложение в запросе перекрестного соединения.  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>Х. Использование производной таблицы  
+### <a name="r-using-a-derived-table"></a>Ф. Использование производной таблицы  
  Следующий пример использует производную таблицу ( `SELECT` инструкции после `FROM` предложение) для возврата `CustomerKey` и `LastName` столбцы всех клиентов в `DimCustomer` в таблице `BirthDate` значения позже 1 января 1970 года и фамилию 'Smith'.  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. УМЕНЬШИТЬ пример указание соединения  
+### <a name="s-reduce-join-hint-example"></a>Х. УМЕНЬШИТЬ пример указание соединения  
  В следующем примере используется `REDUCE` указание соединения для изменения обработки производной таблицы в запросе. При использовании `REDUCE` указание соединения в этом запросе `fis.ProductKey` запланировано, репликации и вноситься distinct и затем присоединить их к `DimProduct` при случайном порядке из `DimProduct` на `ProductKey`. Результирующая таблица производного распространяется на `fis.ProductKey`.  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>Ф. Пример указания REPLICATE соединения  
+### <a name="t-replicate-join-hint-example"></a>T. Пример указания REPLICATE соединения  
  В следующем примере показан один и тот же запрос аналогичен предыдущему примеру, за исключением того, что `REPLICATE` указание соединения используется вместо `REDUCE` указание соединения. Использование `REPLICATE` указание приводит значений в `ProductKey` (объединяющий) столбец из `FactInternetSales` таблицы реплицируются на все узлы. `DimProduct` Таблица соединяется с реплицированной версии этих значений.  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>Х. Использование подсказки РАСПРОСТРАНЕНИЯ для обеспечения перемещения в случайном порядке для объединения несовместимых распространения  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>Ф. Использование подсказки РАСПРОСТРАНЕНИЯ для обеспечения перемещения в случайном порядке для объединения несовместимых распространения  
  В следующем запросе используется указание запроса РАСПРОСТРАНЕНИЯ на соединении несовместимые распространения. Это гарантирует, что оптимизатор запросов будет использовать для перемещения в случайном порядке в плане запроса. Это также гарантирует план запроса не будет использовать перемещения широковещательной рассылки, который перемещает распределенные таблицы в реплицированную таблицу.  
   
  В следующем примере указанием REDISTRIBUTE принудительно случайный порядок перемещения на таблицу FactInternetSales, поскольку ProductKey столбец распределения для DimProduct и не является столбцом распределения для FactInternetSales.  

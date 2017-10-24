@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>Условие поиска (Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Использование предложения WHERE вместе с синтаксисом LIKE и ESCAPE  
- В ходе выполнения следующего примера производится поиск строк, для которых элементы столбца `LargePhotoFileName` содержат символы `green_`, а также для символа-шаблона `ESCAPE` используется параметр `_`. Без указания параметра `ESCAPE` в ходе выполнения запроса будет производиться поиск всех описанных значений, содержащих слово `green`, за которым следует любой единичный символ, отличный от `_`.  
+ Следующий пример выполняет поиск строк, для которых `LargePhotoFileName` столбец содержит символы `green_`и использует `ESCAPE` поскольку _ является подстановочным знаком. Без указания `ESCAPE` параметр, запрос будет выполнять поиск всех описанных значений, содержащих слово `green` следуют любой символ, отличный от символа _.  
   
 ```  
 USE AdventureWorks2012 ;  

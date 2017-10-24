@@ -1,7 +1,7 @@
 ---
 title: "Шаг 4. Создание функций данных с помощью T-SQL | Документация Майкрософт"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Шаг 4. Создание характеристик данных с помощью T-SQL
 
 После исследования данных вы собрали некоторые аналитические данные из данных и не переходить на *компонентов engineering*. Этот процесс создания признаков на основе необработанных данных может быть важным этапом в расширенных аналитических инструментов моделирования.
+
+В этой статье является частью учебника [analytics Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 На этом этапе вы научитесь создавать характеристики на основе необработанных данных с помощью функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Затем вы вызовите эту функцию из хранимой процедуры, чтобы создать таблицу, содержащую значения характеристик.
 
@@ -121,14 +123,11 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-step"></a>Следующий шаг
 
-[Шаг 5. Обучение и сохранение модели с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Шаг 5: Обучение и сохранить модель Python, с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Шаг 3. Анализ и визуализация данных](sqldev-py3-explore-and-visualize-the-data.md)
+[Шаг 3. Анализ и визуализация данных](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>См. также:
-
-[Машинного обучения служб с Python](../python/sql-server-python-services.md)
 
 

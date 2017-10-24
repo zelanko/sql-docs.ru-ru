@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9e285e62e2b391939d8811b5a194a12ad55636d
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (база данных SSISDB)
@@ -28,9 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
-configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
+```sql
+catalog.configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -51,7 +50,7 @@ configure_catalog [ @property_name = ] property_name , [ @property_value = ] pro
   
  Эта хранимая процедура может выполняться только в то время, когда не обрабатываются такие состояния, как «ожидание» (pending), «в очереди» (queued), «выполняется» (running) и «приостановлено» (paused).  
   
- Во время настройки каталога всех остальных хранимых процедур ошибкой с сообщением об ошибке «Сервер идет настройка».  
+ Во время настройки каталога всех остальных хранимых процедур ошибкой с сообщением об ошибке «Сервер идет настройка.»
   
  Когда каталог настроен, в журнал операций заносится запись.  
   

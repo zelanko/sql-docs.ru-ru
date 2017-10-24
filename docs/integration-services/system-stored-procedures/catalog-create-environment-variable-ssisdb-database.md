@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (база данных SSISDB)
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
+ [@folder_name =] *имя_папки*  
  Имя папки, которая содержит среду. *Имя_папки* — **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  Имя среды. *Environment_name* — **nvarchar(128)**.  
   
- [ @variable_name =] *имя_переменной*  
+ [@variable_name =] *имя_переменной*  
  Имя переменной среды. *Имя_переменной* — **nvarchar(128)**.  
   
- [ @data_type =] *data_type*  
- Тип данных переменной. Поддерживаемые типы данных переменной среды **логическое**, **байтов**, **DateTime**, **двойные**, **Int16**, **Int32**, **Int64**, **один**, **строка**, **UInt32**и ** UInt64**. Типы данных переменной среды не поддерживаются: **Char**, **DBNull**, **объекта**, и **Sbyte**. Тип данных *data_type* параметр **nvarchar(128)**.  
+ [@data_type =] *data_type*  
+ Тип данных переменной. Поддерживаемые типы данных переменной среды **логическое**, **байтов**, **DateTime**, **двойные**, **Int16**, **Int32**, **Int64**, **один**, **строка**, **UInt32**и  **UInt64**. Типы данных переменной среды не поддерживаются: **Char**, **DBNull**, **объекта**, и **Sbyte**. Тип данных *data_type* параметр **nvarchar(128)**.  
   
- [ @sensitive =] *конфиденциальных*  
+ [@sensitive =] *конфиденциальных*  
  Указывает, содержит переменная конфиденциальное значение или нет. Значение `1` указывает, что значение переменной среды является конфиденциальным, а значение `0` — что оно таковым не является. Конфиденциальное значение шифруется при его сохранении. Значение, которое не является конфиденциальным хранится в виде обычного текста. *Конфиденциальных* — **бит**.  
   
- [ @value =] *значение*  
+ [@value =] *значение*  
  Значение переменной среды. *Значение* — **sql_variant**.  
   
- [ @description =] *описание*  
+ [@description =] *описание*  
  Описание переменной среды. *Значение* — **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
@@ -92,7 +92,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  Рассмотрите возможность использования **Int16** в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вместо неподдерживаемого **Sbyte** тип данных.  
   
- Значение, передаваемое в эту хранимую процедуру *значение* преобразуется из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] тип данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных согласно следующей таблице:  
+ Значение, передаваемое в эту хранимую процедуру *значение* параметр преобразуется из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] тип данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных согласно следующей таблице:  
   
 |Тип данных служб Integration Services|Тип данных SQL Server|  
 |------------------------------------|--------------------------|  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**Один**|Точное числовое значение: **десятичное**, **числовое**; Приблизительное числовое: **float**, **real**|  
 |**Строковые значения**|**varchar**, **nvarchar**, **char**|  
-|**UInt32**|**int** (это близкое доступное сопоставление с **Uint32**.)|  
-|**UInt64**|**bigint** (это близкое доступное сопоставление с **Uint64**.)|  
+|**UInt32**|**int** (**int** является близкое доступное сопоставление с **Uint32**.)|  
+|**UInt64**|**bigint** (**int** является близкое доступное сопоставление с **Uint64**.)|  
   
   

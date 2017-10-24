@@ -24,11 +24,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f482d424c6be56d89e8ec5b99cff30b2ddab0b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1fd13b0b05dcb3b15d37d5a642a734b99ad004e5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (объединение строк) (Transact-SQL)
@@ -158,18 +159,7 @@ GO
  ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-string-concatenation"></a>Д. Использование объединения строк  
- В следующем примере создается единственный столбец под заголовком столбца `Name` из столбцов нескольких знаков, где за фамилией контактного представителя следуют запятая, пробел и имя контактного лица. Результирующий набор сортируется в алфавитном порядке по возрастанию, сначала по фамилии, а затем по имени.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### <a name="f-using-multiple-string-concatenation"></a>Е. Использование объединения нескольких строк  
+### <a name="e-using-multiple-string-concatenation"></a>Д. Использование объединения нескольких строк  
  Следующий пример Сцепляет несколько строк в одну длинную строку для отображения фамилии и первой буквы инициалов вице-президентов в образце базы данных. После фамилии ставится запятая, а после первой буквы инициалов — точка.  
   
 ```  

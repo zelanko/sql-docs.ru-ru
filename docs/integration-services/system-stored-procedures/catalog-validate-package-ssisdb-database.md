@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4dbd030c457bfb90ac4ec7fae886de28f96854
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (база данных SSISDB)
@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -59,7 +58,7 @@ validate_package [ @folder_name = ] folder_name
  Указывает, должна ли использоваться 32-разрядная среда выполнения для запуска этого пакета в 64-разрядной операционной системе. Используйте значение `1` для запуска пакета в 32-разрядной средой выполнения при запуске в 64-разрядной операционной системе. Используйте значение `0` для выполнения пакета в 64-разрядной среде выполнения при его запуске в 64-разрядной операционной системе. Этот параметр является необязательным. *Use32bitruntime* — **бит**.  
   
  [ @environment_scope =] *environment_scope*  
- Указывает ссылки на среду, которые учитываются при проверке. Если это значение равно `A`, то в проверку включены все ссылки на среду, связанные с проектом. Если это значение равно `S`, то включена лишь единственная ссылка на среду. Если это значение равно `D`, то никакие ссылки на среду не включены и каждый параметр, чтобы пройти проверку, должен иметь литеральное значение по умолчанию. Этот параметр является необязательным. По умолчанию будет использоваться символ `D`. *Environment_scope* — **Char(1)**.  
+ Указывает ссылки на среду, которые учитываются при проверке. Если это значение равно `A`, то в проверку включены все ссылки на среду, связанные с проектом. Если это значение равно `S`, то включена лишь единственная ссылка на среду. Если это значение равно `D`, то никакие ссылки на среду не включены и каждый параметр, чтобы пройти проверку, должен иметь литеральное значение по умолчанию. Этот параметр является необязательным. Символ `D` используется по умолчанию. *Environment_scope* — **Char(1)**.  
   
  [ @reference_id =] *reference_id*  
  Уникальный идентификатор ссылки на среду. Этот параметр является обязательным только в том случае, если включены единственная ссылка на среду в проверке, когда *environment_scope* — `S`. *Reference_id* — **bigint**.  
@@ -97,6 +96,6 @@ validate_package [ @folder_name = ] folder_name
 -   Параметры пакета ссылаются на переменные, но в проверку не включены ссылочные среды  
   
 ## <a name="remarks"></a>Замечания  
- Проверка помогает выявить проблемы, которые помешают пакету правильно выполняться. Используйте [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) или [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) представлений для контроля состояния проверки.  
+ Проверка помогает выявить проблемы, которые могут мешать успешному выполнению пакета. Используйте [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) или [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) представлений для контроля состояния проверки.  
   
   

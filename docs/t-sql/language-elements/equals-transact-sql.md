@@ -24,11 +24,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf23c40678950000b65a66dc29bdba8b4615c7b1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 5e6a0baf8fb2f060ab1819613cc1b417ff2c9802
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-equals-transact-sql"></a>= (равно) (Transact-SQL)
@@ -91,7 +92,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>Б. Сравнение значений NULL и значений, отличных от NULL  
- Следующий пример иллюстрирует использование операторов «равно» (`=`) и «не равно» (`<>`) для сравнения со значениями `NULL` и не NULL в таблице. Этот пример также демонстрирует, что использование конструкции `IS NULL` не зависит от значения параметра `SET ANSI`_`NULLS`.  
+ Следующий пример иллюстрирует использование операторов «равно» (`=`) и «не равно» (`<>`) для сравнения со значениями `NULL` и не NULL в таблице. В примере также показано, `IS NULL` не подвержены `SET ANSI_NULLS` параметр.  
   
 ```  
 -- Create table t1 and insert 3 rows.  

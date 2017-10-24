@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (база данных SSISDB)
@@ -28,28 +28,28 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
- Имя папки, в которой будет развернут проект. *Имя_папки* — **nvarchar(128)**.  
+ [@folder_name =] *имя_папки*  
+ Имя папки, где развернут проект. *Имя_папки* — **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Имя нового или обновленного проекта в папке. *Project_name* — **nvarchar(128)**.  
   
- [ @projectstream =] *projectstream*  
+ [@projectstream =] *projectstream*  
  Двоичное содержимое файла развертываний проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (с расширением ISPAC).  
   
  Можно использовать инструкцию SELECT с функцией OPENROWSET и поставщиком больших наборов строк BULK для получения двоичного содержимого файла. Пример см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Дополнительные сведения о OPENROWSET см. в разделе [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
   
  *Projectstream* — **varbinary(MAX)**  
   
- [ @operation_id =] *operation_id*  
+ [@operation_id =] *operation_id*  
  Возвращает уникальный идентификатор для операции развертывания. *Operation_id* — **bigint**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
@@ -58,7 +58,7 @@ deploy_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Permissions  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения CREATE_OBJECTS на папку для развертывания нового проекта или разрешения MODIFY на проект для обновления проекта  

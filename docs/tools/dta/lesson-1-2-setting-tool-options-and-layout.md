@@ -18,11 +18,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f62f296fd14cefdeeb0f13b99d03852eaf44850a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Занятие 1-2-Настройка параметров средств и макета
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/02/2017
     -   По умолчанию установлен флажок **Запрашивать подтверждение перед остановкой анализа сеанса** , что позволяет избежать случайной остановки сеанса настройки до завершения анализа рабочей нагрузки в помощнике по настройке ядра СУБД.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2: С помощью помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Занятие 2. Применение помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка кластера общего диска Red Hat Enterprise Linux для SQL Server
@@ -61,7 +61,7 @@ ms.lasthandoff: 10/02/2017
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> Во время установки сервера главный ключ создается для экземпляра SQL Server и размещается в var/opt/mssql/секреты /-ключ компьютера. SQL Server в Linux, всегда выполняется под локальной учетной записью, называется mssql. Так как он является локальной учетной записью, его подлинность, не являющихся общими между узлами. Таким образом необходимо скопировать ключ шифрования от основного узла для каждого дополнительного узла, поэтому каждой учетной записи локального mssql можно получить доступ к его расшифровать главный ключ сервера. 
+> Во время установки, созданный для экземпляра SQL Server и помещается в главный ключ сервера `/var/opt/mssql/secrets/machine-key`. SQL Server в Linux, всегда выполняется под локальной учетной записью, называется mssql. Так как он является локальной учетной записью, его подлинность, не являющихся общими между узлами. Таким образом необходимо скопировать ключ шифрования от основного узла для каждого дополнительного узла, поэтому каждой учетной записи локального mssql можно получить доступ к его расшифровать главный ключ сервера. 
 
 1. На основном узле, создайте имя входа SQL server для Pacemaker и предоставьте имени входа разрешение для запуска `sp_server_diagnostics`. Pacemaker будет использовать эту учетную запись, чтобы проверить, какой узел работает под управлением SQL Server. 
 

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 70359d539bc7b4fc6dd70de8bbb7e16be5d71208
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (база данных SSISDB)
@@ -28,19 +28,19 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
-start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_count]  
+```sql  
+catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  Уникальный идентификатор для экземпляра выполнения. *Execution_id* — **bigint**.
  
- [ @retry_count =] *число_повторов*  
- Число повторных попыток в случае, если происходит сбой выполнения. Она вступает в силу только при выполнении в масштабное развертывание. Этот параметр является необязательным. Оно присвоено значение 0, если не указано. *Число_повторов* — **int**.
+ [@retry_count =] *число_повторов*  
+ Число повторных попыток в случае, если происходит сбой выполнения. Она вступает в силу только при выполнении в масштабное развертывание. Этот параметр является необязательным. Если не указан, его значение равно 0. *Число_повторов* — **int**.
   
 ## <a name="remarks"></a>Замечания  
- Выполнение применяется для задания значений параметров, которые будут использоваться пакетом в течение одного экземпляра выполнения пакета. После создания экземпляра исполнения и до его начала соответствующий проект должен быть повторно развернут. В этом случае экземпляр исполнения будет ссылаться на устаревший проект. Из-за этого хранимая процедура завершится с ошибкой.  
+ Выполнение применяется для указания значений параметров, используемых пакетом во время один экземпляр выполнения пакета. После создания экземпляра исполнения и до его начала соответствующий проект должен быть повторно развернут. В этом случае экземпляр выполнения ссылается на проект, который является устаревшим. Это недопустимая ссылка приводит к сбою хранимой процедуры.  
   
 > [!NOTE]  
 >  Исполнения можно начинать только один раз. Запустить экземпляр выполнения, он должен быть создан (значение `1` в **состояние** столбец [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) представления).  
@@ -48,7 +48,7 @@ start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_coun
 ## <a name="example"></a>Пример  
  В следующем примере выполняется вызов catalog.create_execution для создания экземпляра выполнения пакета Child1.dtsx. Проект Project1 служб Integration Services содержит пакет. В этом примере выполняется вызов catalog.set_execution_parameter_value для задания значений для параметров Parameter1, Parameter2 и LOGGING_LEVEL. В этом примере выполняется вызов catalog.start_execution для запуска экземпляра выполнения.  
   
-```  
+```sql
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -60,7 +60,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  

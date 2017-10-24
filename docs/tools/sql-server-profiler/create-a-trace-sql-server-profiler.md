@@ -16,11 +16,12 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: adc6db788d4245009d2f70b8af01b84730cb7bb7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>создать трассировку (приложение SQL Server Profiler)
@@ -52,15 +53,15 @@ ms.lasthandoff: 08/02/2017
   
 5.  При необходимости установите флажок **Включить время остановки трассировки** и укажите дату и время остановки.  
   
-6.  Чтобы добавить или удалить события, столбцы данных или фильтры, перейдите на вкладку **Выбор событий**. Дополнительные сведения см. в разделе [указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md).  
+6.  Чтобы добавить или удалить события, столбцы данных или фильтры, перейдите на вкладку **Выбор событий**  . Дополнительные сведения см. в разделе [указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md).  
   
 7.  Чтобы запустить трассировку, нажмите кнопку **Выполнить** .  
   
 ## <a name="see-also"></a>См. также:  
  [Разрешения, необходимые для запуска приложения SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Сопоставление трассировки с журналом производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
 

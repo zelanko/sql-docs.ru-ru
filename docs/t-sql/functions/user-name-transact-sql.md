@@ -27,11 +27,12 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5179a5d031dbc654f1624f4d64c3e94bf28efe40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
@@ -128,14 +129,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username"></a>Д. Использование USER_NAME.  
- Следующий пример возвращает имя пользователя по его идентификатору `13`.  
-  
-```  
-SELECT USER_NAME(13);  
-```  
-  
-### <a name="f-using-username-without-an-id"></a>Е. Использование USER_NAME без идентификатора  
+### <a name="e-using-username-without-an-id"></a>Д. Использование USER_NAME без идентификатора  
  Следующий пример демонстрирует поиск имени текущего пользователя без указания его идентификатора.  
   
 ```  
@@ -144,14 +138,12 @@ SELECT USER_NAME();
   
  Ниже приведен результирующий набор для пользователя, вошедшего в систему.  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
 ```  
 ------------------------------   
 User7                              
 ```  
   
-### <a name="g-using-username-in-the-where-clause"></a>Ж. Использование USER_NAME в предложении WHERE  
+### <a name="f-using-username-in-the-where-clause"></a>Е. Использование USER_NAME в предложении WHERE  
  Следующий пример иллюстрирует поиск в таблице `sysusers` строки, имя которой равняется результату работы системной функции `USER_NAME` для пользователя с идентификационным номером, равным `1`.  
   
 ```  
