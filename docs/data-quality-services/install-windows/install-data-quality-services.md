@@ -105,7 +105,7 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_editor**  
   
-     По умолчанию, если учетная запись пользователя является членом предопределенной роли сервера sysadmin, этот пользователь может выполнять вход на [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с помощью клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , даже если его учетной записи не назначена ни одна из ролей служб DQS. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../../data-quality-services/dqs-security.md).  
+     По умолчанию, если учетная запись пользователя является членом предопределенной роли сервера sysadmin, этот пользователь может выполнять вход на [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с помощью клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , даже если его учетной записи не назначена ни одна из ролей служб DQS. Дополнительные сведения о трех ролях служб DQS см. в разделе [Безопасность DQS](../../data-quality-services/dqs-security.md).  
   
      Дополнительные сведения см. в статье [Предоставление ролей DQS пользователям](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
