@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  Закрытие исходного **записей** не закрывает ее копии также не закрывает копии закройте исходные или любой из других копий.  
   
  Можно клонировать **записей** объекта, если он поддерживает закладки. Закладка значения являются взаимозаменяемыми; то есть закладки ссылку из одного **записей** относится к одной и той же записи в одном из его клонов.
+

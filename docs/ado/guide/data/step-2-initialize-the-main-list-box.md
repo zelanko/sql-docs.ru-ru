@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c291da043764d9599311704af86952eec47578b6
@@ -57,3 +58,4 @@ End Sub
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Шаг 1: Настройка проекта Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [Шаг 3: Заполнения списка полей](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Используйте **AbsolutePage** свойство для идентификации номер страницы, на котором расположена текущая запись. Опять же поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступно.  
   
  **AbsolutePage** начинается с 1 и имеет значение 1, если текущая запись является первой записью в **записей**. Задайте это свойство, чтобы перейти к первой записи определенной страницы. Получить общее число страниц из **PageCount** свойство.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  Отчет перекрестной проверки имеет одинаковый формат для всех типов моделей; настраивать его нельзя. Однако содержимое отчета отличается в зависимости от типа модели, анализ которой был произведен, и от типа данных прогнозируемого атрибута. Результаты отчета можно скопировать в буфер обмена для последующей работы с ними в Excel.  
   
   
+

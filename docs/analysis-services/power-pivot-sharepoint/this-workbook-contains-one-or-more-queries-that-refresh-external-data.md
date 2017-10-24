@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f400a5513fcd16ea5344157e451d06b8fe103796
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/01/2017
  Или можно создать новое надежное местоположение для сайтов, содержащих книги [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , а затем изменить параметры конфигурации только для этого сайта. Дополнительные сведения см. в разделе [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
   
+

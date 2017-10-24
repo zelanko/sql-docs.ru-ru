@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  Для создания нерегламентированных отчетов в SharePoint пользователь, создающий отчет, должен иметь разрешения SharePoint для файла соединения BISM (BISM-файл) и  семантического шаблона базы данных бизнес-аналитики. Контекст безопасности соединения определяется пользователем, создающим отчет в интерактивном режиме.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a14a03b6b0a0e2e879d745fd8d2f341c1bbf6c54
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 -   *msado20.tlb*, библиотека типов ADO 2.0  
   
  Если приложение должно использовать любой из этих библиотек ADO для обеспечения обратной совместимости, необходимо импортировать соответствующую версию библиотеки типов. Чтобы сделать это, выполните процедуры, описанные в предыдущем разделе, заменив *msado15.dll* по *msadoXX.tlb*, где *XX* представляет номер версии, необходимо импортировать.
+

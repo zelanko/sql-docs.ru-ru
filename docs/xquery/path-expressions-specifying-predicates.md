@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
@@ -229,3 +230,4 @@ WHERE CatalogDescription.exist('
  Предикаты также могут влиять на статически выведенный тип выражения. Целые литеральные значения и **last()** функции уменьшают количество элементов шага фильтрации выражения до одного.  
   
   
+

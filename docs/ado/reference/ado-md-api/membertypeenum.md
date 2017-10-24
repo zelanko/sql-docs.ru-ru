@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a8335dcc0f713859f72971a699438b2535550ac
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |**adMemberMeasure**|2|Указывает, что **член** объект принадлежит в измерении Measures и представляет количественный атрибут.|  
 |**adMemberRegular**|1|По умолчанию. Указывает, что **член** объект представляет экземпляр бизнес-сущности.|  
 |**adMemberUnknown**|0|Не удается определить тип члена.|
+

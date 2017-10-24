@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
 + [Настройка производительности для R в SQL Server — методы и результаты](..\r\performance-case-study-r-services.md)
 
     Обобщает данные использовался две конкретные случаи, как была протестирована производительности и влияние на результаты оптимизации.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d43a2b5a6417104461287b109ba06ed3438cc00e
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  [Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule-пример свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Ключи коллекции свойств, методов и событий](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Объект ключа (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+

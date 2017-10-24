@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
@@ -111,3 +112,4 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  В этом примере создается новое приложение службы. База данных приложения службы создается на сервере баз данных с именем AdvWorks-SRV01, который был установлен в качестве именованного экземпляра [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Это является обычной конфигурацией для большинства установок [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Для создания базы данных нужно обладать разрешениями dbcreator на соответствующем экземпляре SQL Server. Необходимо также быть членом роли db_owner в базе данных конфигурации SharePoint. Поскольку это первое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме, оно должно быть членом группы прокси-сервера по умолчанию.  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  Записей, полученных из кэша не отражают параллельных изменений, внесенных другими пользователями в исходных данных. Чтобы принудительно обновить кэшированные данные, используйте [Resync](../../../ado/reference/ado-api/resync-method.md) метод.  
   
  Если **CacheSize** задано значение больше 1, методы навигации ([переместить](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) может привести к переходу для удаленной запись, если происходит удаление после записи были получены. После первоначальной fetch последующих операций удаления не отразится в кэше данных до попытки получить доступ к значению данных из удаленной строки. Однако задание **CacheSize** 1 устраняет эту проблему, так как удаленные строки не могут быть выбраны.
+

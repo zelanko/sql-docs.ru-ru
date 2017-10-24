@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/01/2017
  В ссылочном измерении гранулярность указывается путем идентификации атрибута, определяющего связь между ссылочным измерением и группой мер, соответствующей главной таблице измерения. Когда несколько ссылочных измерений последовательно соединены вместе, ссылки определяют связь между самым внешним измерением и группой мер.  
   
   
+

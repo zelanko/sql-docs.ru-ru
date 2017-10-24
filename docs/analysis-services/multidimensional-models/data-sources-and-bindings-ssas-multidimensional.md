@@ -39,6 +39,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
@@ -194,3 +195,4 @@ ms.lasthandoff: 09/01/2017
  Еще одним элементом, который может использоваться в коллекции **Binding** и не существующим непосредственно в библиотеке DDL, является объект **ParentColumnID**, который применяется во вложенных таблицах для интеллектуального анализа данных. В этом случае необходимо идентифицировать родительский столбец вложенной таблицы, для которого предоставляется привязка.  
   
   
+

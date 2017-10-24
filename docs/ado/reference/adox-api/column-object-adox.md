@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5a8a5047f4cd4655ebe1dd041e44949ca361c54
@@ -74,3 +75,4 @@ ms.lasthandoff: 09/09/2017
  [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

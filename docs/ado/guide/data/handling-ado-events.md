@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/09/2017
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   
  [Типы событий](../../../ado/guide/data/types-of-events.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ec860c8e4d3766b983e38589418637c1d4eb3cc9
@@ -44,3 +45,4 @@ ADO состоит из девяти следующие объекты и чет
   
 ## <a name="see-also"></a>См. также:  
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)
+

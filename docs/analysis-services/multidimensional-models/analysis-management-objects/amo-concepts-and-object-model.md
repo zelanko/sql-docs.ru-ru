@@ -26,6 +26,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  Объекты AMO не могут быть использованы для выполнения запросов к данным. Запросы к данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], в том числе кубам и моделям интеллектуального анализа данных, из пользовательского приложения необходимо выполнять с помощью ADOMD.NET. Дополнительные сведения см. в разделе [разработка с использованием ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
   
+

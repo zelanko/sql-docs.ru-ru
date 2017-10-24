@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   Откройте измерение, к которому необходимо добавить бизнес-аналитику, и на панели инструментов нажмите кнопку **Добавить бизнес-аналитику** . Можно также щелкнуть правой кнопкой мыши измерение в окне "Обозреватель объектов" или в обозревателе решений, а затем выбрать пункт **Добавить бизнес-аналитику**.  
   
   
+

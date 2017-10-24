@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Убедитесь, что **записей** объекты не находятся за пределами **записей** перед попыткой перемещения указателя записи. Если вы попытаетесь **MoveNext** при **EOF** имеет значение True или **MovePrev** при **BOF** имеет значение True, возникнет ошибка. При выполнении любого из **переместить** методов при обоих **EOF** и **BOF** имеют значение True, будет сформирована ошибка.  
   
  Также возникнут ошибки при попытке выполнения операций, таких как **Seek** и **найти** с пустым **записей**.
+

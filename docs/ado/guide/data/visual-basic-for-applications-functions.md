@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2352c6de536981aee960617ad5afc8f2598721e6
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  [Предложение APPEND фигуры](../../../ado/guide/data/shape-append-clause.md)   
  [Команды фигуры в целом](../../../ado/guide/data/shape-commands-in-general.md)   
  [Предложение COMPUTE фигуры](../../../ado/guide/data/shape-compute-clause.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
 3.  Перезапустите службу SQL Server для экземпляра изменена конфигурация. При этом будет автоматически перезапущена связанный [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] также службы.
 
 3. Если вы используете пользовательскую конфигурацию безопасности или планируете использовать SQL Server для поддержки удаленных контекстов вычислений, могут потребоваться дополнительные действия. Дополнительные сведения см. в разделе [Устранение неполадок при установке обучения машины](../machine-learning-troubleshooting-faq.md).
+

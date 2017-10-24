@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
@@ -358,3 +359,4 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для **вложенные запросы** свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES** свойство в [ Поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) или **DBPROP_MSMD_SUBQUERIES** см. в разделе **Вычисляемые элементы в подзапросах выборки и вложенных кубах**.  
   
   
+

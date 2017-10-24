@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
@@ -52,3 +53,4 @@ Set oRs = Nothing
 ```  
   
  Обратите внимание, что **oRs.Open** принимает строку подключения (*sConn*), вместо **подключения** объекта (*oConn*), в качестве значения его ** ActiveConnection** параметра. Также применяется тип курсор на стороне клиента, задав **CursorLocation** свойство **записей** объекта. Опять же, сравните это с **HelloData** примере.
+

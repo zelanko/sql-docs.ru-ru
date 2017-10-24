@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  На странице **Контекст именования** мастера можно определить контекст именования, которые мастер формирования схем использует при формировании определенных объектов в базе данных предметной области. Дополнительные сведения о параметрах на странице **Соглашения о наименовании** см. в разделе [Указание контекста именования (мастер формирования схем) (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b).  
   
   
+

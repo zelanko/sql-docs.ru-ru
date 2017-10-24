@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
      Как видно, разрешения базы данных и файлов, ранее предоставленные учетной записи «NT Service\ MSOLAP$TABULAR», теперь недействительны. Чтобы обеспечить нормальную работу выполняемых службой задач и операций, необходимо предоставить новые разрешения на базу данных и файлы учетной записи «NT Service\ MSOLAP$TAB2».  
   
   
+

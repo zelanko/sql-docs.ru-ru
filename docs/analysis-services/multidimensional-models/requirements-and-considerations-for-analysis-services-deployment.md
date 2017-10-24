@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
 -   Если при низкой производительности запросов невозможно увеличить ресурсы процессора и памяти на локальном сервере, то следует рассмотреть возможность развертывания проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на одном или нескольких рабочих серверах. Затем для объединения серверов в один кластер можно использовать функцию балансировки нагрузки сети (NLB). В кластере NLB запросы автоматически распространяются на несколько серверов, входящих в кластер NLB.  
   
   
+

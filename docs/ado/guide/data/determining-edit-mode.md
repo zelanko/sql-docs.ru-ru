@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca4098a61984e009a2874fdca55d898938ce702d
@@ -37,3 +38,4 @@ ADO поддерживает редактирования буфера, связ
 |**adEditDelete**|Указывает, что текущая запись была удалена.|  
   
  **EditMode** может возвращать допустимое значение только в том случае, если текущая запись. **EditMode** вернет ошибку, если **BOF** или **EOF** — **True** или если текущая запись была удалена.
+

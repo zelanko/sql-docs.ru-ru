@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
@@ -105,3 +106,4 @@ ms.lasthandoff: 09/01/2017
 11. В файловой системе компьютера откройте следующую папку, чтобы определить, были ли файлы кэшированы на диск. Наличие кэшированных файлов служит еще одним подтверждением работоспособности развертывания. Чтобы просмотреть кэш файлов, перейдите в папку приложения службы [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default. Каждая кэшируемая база данных хранится в собственной папке, схема именования которых основана на идентификаторах GUID и гарантирует уникальность имен.  
   
   
+

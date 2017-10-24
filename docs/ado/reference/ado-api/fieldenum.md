@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a8533cd43964bf7bd2a456ff2cadce1be00b223
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|Ссылается на поле, содержащее значение по умолчанию [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта, связанного с **записи**.|  
 |**adRecordURL**|-2|Ссылается на поле, содержащее абсолютный URL-адрес строки для текущего **записи**.|
+

@@ -14,6 +14,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
@@ -71,3 +72,4 @@ ms.lasthandoff: 08/02/2017
 >  При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ошибка инструментария WMI, содержащая фразу «не реализовано [0x80004001]», может указывать на то, что на целевом компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не установлен.  
   
   
+

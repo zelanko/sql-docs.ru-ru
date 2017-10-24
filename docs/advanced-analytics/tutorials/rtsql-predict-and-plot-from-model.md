@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
@@ -183,3 +184,4 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 + [Приступая к работе с MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     Дополнительные сведения о быстрой, масштабируемые алгоритмов машинного обучения из Microsoft Research.
+

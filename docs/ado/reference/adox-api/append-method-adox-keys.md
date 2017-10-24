@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5821bdda7ae3276d8da83267de45ba46ad6bfbb
@@ -68,3 +69,4 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append-метод (ADOX пользователей)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Append-метод (ADOX представления)](../../../ado/reference/adox-api/append-method-adox-views.md)
+

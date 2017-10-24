@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  [Поддерживает](../../../ado/reference/ado-api/supports-method.md) метода является более подробно описаны ниже.  
   
  За исключением случая клонированного **наборы записей**, закладки являются уникальными для **записей** , в котором они были созданы, даже при использовании той же команде. Это означает, что нельзя использовать **закладки** получения **набора записей** для перемещения в той же записи в секунду **набора записей** открыт с помощью одной команды.
+

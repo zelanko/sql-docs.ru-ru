@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e742ed932bb76434d19fae839f4a39fecc6a2eb8
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  Описание службы " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер" и механизма ее работы см. в разделе [Служба браузера SQL Server](../../tools/configuration-manager/sql-server-browser-service.md).  
   
   
+

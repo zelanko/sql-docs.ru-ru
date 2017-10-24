@@ -28,6 +28,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/01/2017
      Если необходимое значение любого из этих параметров не задано, инструкции INSERT, UPDATE, DELETE, DBCC CHECKDB и DBCC CHECKTABLE для индексированных представлений или таблиц с индексами на основе вычисляемых столбцов не смогут быть выполнены. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сформирует ошибку с указанием всех неправильно заданных параметров. Также [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет выполнять инструкции SELECT на этих таблицах или индексных представлениях, как будто индексы на вычисляемых столбцах или на представлениях не существуют.  
   
   
+

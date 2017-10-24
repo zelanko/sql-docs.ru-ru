@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
 |Изменить схему представления источников данных|В меню **Представление источника данных** выберите пункт **Изменить представление источника данных**.<br /><br /> — или —<br /><br /> Щелкните правой кнопкой мыши панель **Представление источника данных** и выберите команду **Изменить представление источника данных**.|  
   
   
+

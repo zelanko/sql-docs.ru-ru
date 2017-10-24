@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fc94f80cde09f6ad55de3a108b6fd16ef74444f1
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

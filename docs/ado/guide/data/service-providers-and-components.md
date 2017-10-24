@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  Например, механизм курсору, такие как [служба курсора для OLE DB](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), — это компонент службы, который может использовать данные из хранилища данных последовательные, и последовательного выводить прокручиваемый данные. Другие поставщики широко используются в ADO включают [поставщик Microsoft OLE DB сохраняемости (поставщик службы ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (для сохранения данных в файле), [службы Microsoft Data Shaping Service для OLE DB (ADO поставщиком услуг) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (для иерархических **наборы записей**) и [поставщик Microsoft OLE DB удаленного взаимодействия (поставщик службы ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (для вызова поставщиков данных на удаленном компьютере).  
   
  Дополнительные сведения о службе и поставщики данных см. в разделе [приложение A: поставщики](../../../ado/guide/appendixes/appendix-a-providers.md).
+

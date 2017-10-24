@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
@@ -61,3 +62,4 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET не устанавливается на автономный клиентский веб-интерфейс (WFE), настроенный для центра администрирования.|Нет|Нет|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET — это клиентская библиотека служб Analysis Services, которая поддерживает соединение с базой данных служб Analysis Services. В развертывании [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint компонент ADOMD.NET обеспечивает доступ к встроенным отчетам на панели мониторинга управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] в центре администрирования. Фактически встроенные отчеты — это книги [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , которые содержат внедренные данные служб Analysis Services. Панель управления использует ADOMD.NET для отправки запроса на соединение с сервером, который загружает данные, содержащиеся в книге.<br /><br /> В топологиях, где центр администрирования работает на автономном сервере клиентского веб-интерфейса, необходимо вручную установить ADOMD.NET, чтобы просматривать эти отчеты на панели управления. Дополнительные сведения можно найти в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
   
+

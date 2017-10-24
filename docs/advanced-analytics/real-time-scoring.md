@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
@@ -121,3 +122,4 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Как сделать оценки в реальном времени](r/how-to-do-realtime-scoring.md)
+

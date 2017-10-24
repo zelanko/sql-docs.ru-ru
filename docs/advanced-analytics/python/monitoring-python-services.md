@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 79165746d00ad0f381cd702ef9ac31358f4e136d
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/01/2017
 > Поддержка Python — это новая функция в SQL Server 2017 г. и в предварительной версии. Искать дополнительные сведения в ближайшее время.
 
 Как правило вы можете отслеживать любого внешнего сценария, в том числе, обрабатывающий Python, с помощью того же платформы, предоставленный для выполнения скриптов R в SQL Server 2016. Дополнительные сведения см. в разделе [мониторинг служб R](../r/monitoring-r-services.md).
+

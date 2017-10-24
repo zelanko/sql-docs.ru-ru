@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
@@ -70,3 +71,4 @@ ms.lasthandoff: 09/01/2017
     >  После завершения работы мастера кубов можно воспользоваться конструктором кубов, чтобы настроить куб. Кроме того, добавить, удалить и настроить атрибуты и иерархии в созданном измерении можно с помощью конструктора изменений.  
   
   
+

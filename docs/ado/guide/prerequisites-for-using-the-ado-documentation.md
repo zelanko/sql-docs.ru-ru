@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3f24131913e671adb505f51ad467db0cdb1b7caf
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
  Так как ADO используется для доступа к данным из различных источников, некоторые основные сведения о систем управления реляционными базами данных и интерактивной аналитической обработки (OLAP) и знакомство с в Интернете и в Интернете необходимо также протоколов.  
   
  Так как ADO и связанные технологии OLE DB основаны на модели объектов Microsoft компонентов (COM), знание COM поможет вам лучше понять сложных понятиях в ADO.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |**adFieldIntegrityViolation**|10|Указывает, что поле не может изменяться, так как это вычисленное или производное сущности.|  
 |**adFieldIsNull**|3|Указывает, что поставщик возвратил значение null.|  
 |**adFieldOutOfSpace**|22|Указывает, что поставщик не удается получить достаточно места для завершения перемещения или копирования операции.|
+

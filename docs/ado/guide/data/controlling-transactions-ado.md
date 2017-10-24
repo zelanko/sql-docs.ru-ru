@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
@@ -84,3 +85,4 @@ oConn.Close
  Здесь обработки транзакций используется, чтобы две записи обновляется как одну единицу работы, и что названия двух продуктов либо взаимозаменяемыми, либо вообще не изменяется.  
   
  Подробные обсуждения обработки транзакций см. в разделе [обновление и сохранение данных](../../../ado/guide/data/updating-and-persisting-data.md).
+

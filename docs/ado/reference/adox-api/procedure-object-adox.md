@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 225a864f43c9da7d67de58482f632b914822bd1b
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
  [Процедуры добавления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Процедуры удаления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+

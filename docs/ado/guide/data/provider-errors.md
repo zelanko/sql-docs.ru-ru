@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  **Ошибка** объект также используется при возникновении ошибок, связанных с событием. Можно определить, произошла ли ошибка в процессе, который вызывает событие ADO, проверив **ошибка** объект, переданный как параметр события.  
   
  Если операция, вызывающая событие успешно, подтвердила *adStatus* обработчика событий будет присвоено *adStatusOK*. С другой стороны, если операции, вызвавшей событие был неудачным *adStatus* параметра равным *adStatusErrorsOccurred*. В этом случае *pError* будет содержать параметр **ошибка** объектом, содержащим описание ошибки.
+

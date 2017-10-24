@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  На странице **Завершение работы мастера кубов** можно просмотреть группы мер, меры и измерения в новом кубе. В поле **Имя куба** введите имя нового куба. Затем после проверки куба нажмите кнопку **Готово**. Нажмите кнопку **Назад** , чтобы вернуться к любой из предыдущих страниц мастера и исправить тот или иной параметр.  
   
   
+

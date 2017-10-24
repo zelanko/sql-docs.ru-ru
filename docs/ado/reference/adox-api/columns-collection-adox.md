@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 21bf59bef5782c63a272fb16ba1a07889c6fad67
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/09/2017
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+

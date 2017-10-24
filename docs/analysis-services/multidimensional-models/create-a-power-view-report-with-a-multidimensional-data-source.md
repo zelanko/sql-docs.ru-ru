@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b60f1804e6d465a397704b284c30611b42524420
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 -   В библиотеке SharePoint щелкните стрелку рядом с общим соединением с источником данных отчета RSDS (RSDS-файл, который подключается к многомерной модели) и нажмите кнопку **Создать отчет Power View**.  
   
   
+

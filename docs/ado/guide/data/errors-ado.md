@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 271e5d4e246a59d7adb97b6e4dc5db4c08875e1c
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 Любая операция, включающее объекты ADO можно создать одну или несколько ошибок поставщика. Как возникли ошибки, один или несколько **ошибка** объекты размещаются в **ошибки** коллекцию **подключения** объекта. Дополнительные сведения об обработке предупреждений и ошибок в приложении ADO см. в разделе [обработка ошибок](../../../ado/guide/data/error-handling.md).  
   
  Ошибки приложения может быть инициировано отдельным механизмом. Например, в Visual Basic **Err** объекта будет содержать ошибки уровня приложения.
+
