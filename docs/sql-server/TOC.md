@@ -19,16 +19,15 @@
 
 # Заметки о выпуске
 
-## [Заметки о выпуске SQL Server](sql-server-release-notes.md)
-## [SQL Server 2017 Release Notes (Заметки о выпуске SQL Server 2017)](sql-server-2017-release-notes.md)
-## [Заметки о выпуске для SQL Server 2016](sql-server-2016-release-notes.md)
-## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-## [ Заметки о выпуске SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
-## [Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-## [Заметки о выпуске SQL Server 2012](sql-server-2012-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+## [Заметки о SQL Server 2017](sql-server-2017-release-notes.md)
+## [Заметки о SQL Server 2016](sql-server-2016-release-notes.md)
+## [Заметки о SQL Server 2014](sql-server-2014-release-notes.md)
+## [Заметки о SQL Server 2012 с пакетом обновления 4 (SP4)](sql-server-2012-sp4-release-notes.md)
+## [Заметки о SQL Server 2012 с пакетом обновления 3 (SP3)](sql-server-2012-sp3-release-notes.md)
+## [Заметки о SQL Server 2012 с пакетом обновления 2 (SP2)](sql-server-2012-sp2-release-notes.md)
+## [Заметки о SQL Server 2012 с пакетом обновления 1 (SP1)](sql-server-2012-sp1-release-notes.md)
+## [Заметки о SQL Server 2012](sql-server-2012-release-notes.md)
+## [Заметки о SQL Server 2008 R2 с пакетом обновления 2 (SP2)](sql-server-2008-r2-sp2-release-notes.md)
 
 # [службы Analysis Services](../analysis-services/analysis-services.md)
 # [Ядро СУБД](../database-engine/sql-server-database-engine-overview.md)
@@ -42,4 +41,17 @@
 # [Помощник по миграции данных](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Учебные материалы по SQL Server](tutorials-for-sql-server-2016.md)
-# [Отображение локального содержимого в окне справки](sql-server-help-installation.md)
+
+# Ресурсы
+## Блоги
+### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+### [Ядро СУБД SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [Безопасность SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
+
+## Справка и обратная связь
+### [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
+### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
+### [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+### [Reddit](https://www.reddit.com/r/SQLServer)
+## [Отображение локального содержимого в окне справки](sql-server-help-installation.md)
