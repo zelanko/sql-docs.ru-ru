@@ -64,9 +64,9 @@ ms.lasthandoff: 09/26/2017
 >  Прикладные программные интерфейсы служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] несовместимы с языками скриптов на основе COM, такими как VBScript.  
   
 ## <a name="locating-assemblies"></a>Поиск сборок  
- В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] сборки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Имеется отдельный глобальный кэш сборок для .NET 4, расположенный в * \<диска >*: \Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], обычно в папке GAC_MSIL.  
+ В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] сборки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Имеется отдельный глобальный кэш сборок для .NET 4, расположенный в  *\<диска >*: \Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], обычно в папке GAC_MSIL.  
   
- Как в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ядро [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] DLL-файлам расширения также находятся в * \<диска >*: \Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
+ Как в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ядро [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] DLL-файлам расширения также находятся в  *\<диска >*: \Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Сборки общего назначения  
  В следующей таблице перечислены сборки, часто используемые при программировании для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с использованием [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

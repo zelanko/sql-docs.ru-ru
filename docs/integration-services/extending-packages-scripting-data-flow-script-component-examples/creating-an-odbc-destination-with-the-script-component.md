@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   **OdbcCommand** ожидает позиционированных параметров. Позиции параметров отмечаются вопросительными знаками (?) в тексте команды. (В отличие от этого **SqlCommand** ожидает именованных параметров.)  
   
- В этом примере используется **Person.Address** в таблицу **AdventureWorks** образца базы данных. В примере передается первый и четвертый столбец * *int*AddressID*** и **Город nvarchar (30)** столбцы этой таблицы данных в потоке. Тех же данных используется в источнике, преобразования и назначения образцы в разделе [разработка определенных типов компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ В этом примере используется **Person.Address** в таблицу **AdventureWorks** образца базы данных. В примере передается первый и четвертый столбец  **int*AddressID*** и **Город nvarchar (30)** столбцы этой таблицы данных в потоке. Тех же данных используется в источнике, преобразования и назначения образцы в разделе [разработка определенных типов компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Настройка этого примера компонента скрипта  
   

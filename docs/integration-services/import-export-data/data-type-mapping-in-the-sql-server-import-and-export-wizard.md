@@ -26,8 +26,8 @@ ms.lasthandoff: 09/26/2017
   
 ##  <a name="wizardMapping"></a> Каким образом мастер выполняет сопоставление типов данных источника и назначения?
 При сопоставлении типов данных из одной системы или версии базы данных с другой мастер использует файлы сопоставления, устанавливаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, он может сопоставить типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типами данных Oracle. По умолчанию файлы сопоставления в XML-формате устанавливаются в следующие папки.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (для 64-разрядная версия)
--   **\Microsoft SQL C:\Program файлы (x86) Server\130\DTSMappingFiles\* * (для 32-разрядная версия).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (для 64-разрядная версия)
+-   **\Microsoft SQL C:\Program файлы (x86) Server\130\DTSMappingFiles\**  (для 32-разрядная версия).  
   
  Если существующий файл сопоставления был изменен или в папку был добавлен новый файл сопоставления, необходимо закрыть и заново открыть мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , чтобы загрузить новые или измененные файлы.  
  

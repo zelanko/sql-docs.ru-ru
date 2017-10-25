@@ -24,7 +24,7 @@ ms.lasthandoff: 09/26/2017
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Приводит к приостановке выполняемого пакета и создает файл дампа. Файл хранится в * \<диска >*: папка \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Приводит к приостановке выполняемого пакета и создает файл дампа. Файл хранится в  *\<диска >*: папка \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Синтаксис  
   
