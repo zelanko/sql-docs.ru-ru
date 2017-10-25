@@ -1,5 +1,5 @@
 ---
-title: "Разрешения для элементов иерархии (службы Master Data Services) | Документы Майкрософт"
+title: "Разрешения для элементов иерархии (Master Data Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 11
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 831587a0a6a3c86491ea0b2e7fba1595664e8897
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5df8a0f0c01842c00c3698146e84ed78e6320683
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Разрешения на элементы иерархии (службы Master Data Services)
@@ -69,8 +69,8 @@ ms.lasthandoff: 09/07/2017
 ## <a name="see-also"></a>См. также:  
  [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)   
- [Иерархии (службы Master Data Services)](../master-data-services/hierarchies-master-data-services.md)   
- [Срочное применение разрешения для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [Члены &#40; Службы Master Data Services &#41;](../master-data-services/members-master-data-services.md)   
+ [Иерархии &#40; Службы Master Data Services &#41;](../master-data-services/hierarchies-master-data-services.md)   
+ [Срочное применение разрешений элемента &#40; Службы Master Data Services &#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   
