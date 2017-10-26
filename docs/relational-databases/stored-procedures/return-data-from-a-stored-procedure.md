@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Возврат данных из хранимой процедуры
@@ -111,7 +111,7 @@ GO
     >  Закрытое состояние имеет значение только во время возврата. Например, можно при выполнении процедуры закрыть курсор, снова открыть его позже в процедуре и возвратить этот результирующий набор курсора в вызывающий пакет, процедуру или триггер.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Примеры выходных параметров курсора  
- В следующем примере создается процедура, которая указывает выходной параметр `@currency`_`cursor` , используя тип данных **cursor** . Процедура затем будет вызвана из пакета.  
+ В следующем примере создается процедура, которая указывает выходной параметр `@currency_cursor`, используя тип данных **cursor**. Процедура затем будет вызвана из пакета.  
   
  Сначала создайте процедуру, которая объявляет и затем открывает курсор в таблице Currency.  
   
