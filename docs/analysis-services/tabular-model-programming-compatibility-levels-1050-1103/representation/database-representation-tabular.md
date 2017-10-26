@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 52b7a92280566258321a46ecfb2c489e81267965
@@ -96,3 +97,4 @@ catch (Exception createDBxc)
  Чтобы получить практический опыт по использованию объектов AMO для создания и обработки представлений базы данных см. исходный код в образце Tabular AMO 2012; в частности, проверьте следующий исходный код: Database.cs. Этот образец доступен на сайте Codeplex. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
   
   
+

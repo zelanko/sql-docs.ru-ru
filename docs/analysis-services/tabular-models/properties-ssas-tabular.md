@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Предоставляет описания и шаги настройки свойств моделирования и развертывания, установленных по умолчанию. Свойства по умолчанию применяются к новым проектам табличной модели. При необходимости после создания проекта эти свойства в конкретном проекте модели можно изменить.|  
   
   
+

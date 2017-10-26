@@ -1,7 +1,7 @@
 ---
 title: "READTEXT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Считывает **текст**, **ntext**, или **изображения** значения из **текст**, **ntext**, или **изображения ** столбца, начиная с указанной позиции и чтение заданного числа байтов.  
   

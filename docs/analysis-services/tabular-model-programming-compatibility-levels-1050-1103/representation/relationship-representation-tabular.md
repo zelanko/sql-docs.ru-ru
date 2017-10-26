@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c11ae09c8c6bef956333c8a9cbee62f43992f91b
@@ -232,3 +233,4 @@ private void setPKColumn(AMO.Database tabularDb, string PKTableName, string PKCo
  Однако, чтобы получить основные сведения об использовании объектов AMO для создания представлений связи и управления ими, ознакомьтесь с исходным кодом примера преобразования объектов AMO в табличную модель. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
   
   
+

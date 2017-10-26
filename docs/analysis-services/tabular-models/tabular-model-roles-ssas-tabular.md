@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b93ee4d0dcbf746c2df43ea4cf423368e118247f
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 |[Управление ролями с помощью среды SSMS (табличные службы SSAS)](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)|Описывает, как создавать роли, добавлять члены в роль и исключать их из роли, изменять разрешения для роли, а также добавлять, редактировать или удалять фильтры уровня строк с помощью DAX.|  
   
   
+

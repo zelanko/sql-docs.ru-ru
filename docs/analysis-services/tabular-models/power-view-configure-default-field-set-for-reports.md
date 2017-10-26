@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc0a2fd4178189a072a9b194e502ae1c58de3f92
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  После создания набора полей по умолчанию можно также указать заголовки по умолчанию, изображения, групповые поведения или указать, должны строки, содержащие одно значение, группироваться вместе в одну строку или отображаться по отдельности. Дополнительные сведения см. в разделе [Настройка свойств работы таблицы для отчетов Power View (табличные службы SSAS)](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
   
+

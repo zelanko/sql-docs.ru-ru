@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
@@ -231,3 +232,4 @@ private void addStaticKPI(object sender, EventArgs e)
  Чтобы получить представление об использовании объектов AMO для создания и управления ключевой показатель эффективности представлений см. исходный код объектов AMO в образец «Tabular»; в частности, проверьте следующий исходный код: AddKPIs.cs. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
   
   
+

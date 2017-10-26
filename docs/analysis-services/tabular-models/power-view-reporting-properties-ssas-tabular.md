@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/01/2017
 |[Настройка свойств работы таблицы для отчетов Power View (табличные службы SSAS)](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|Описывает настройку свойств поведения таблицы, предлагающих более гранулярный уровень для строк сведений. Задание свойств поведения таблицы изменяет режим группирования для строк сведений и обеспечивает более эффективное размещение идентификационных сведений в виде мозаики, карточек или диаграмм.|  
   
   
+

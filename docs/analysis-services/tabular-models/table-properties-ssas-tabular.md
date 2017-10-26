@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a72cbc5fe8e27ee559f748fd93c50a7db8f75a94
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/01/2017
 2.  В окне **Свойства** щелкните свойство и введите значение или нажмите кнопку для открытия дополнительных параметров конфигурации.  
   
   
+
