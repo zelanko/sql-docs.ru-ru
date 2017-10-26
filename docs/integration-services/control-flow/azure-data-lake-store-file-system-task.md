@@ -15,6 +15,7 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
@@ -53,3 +54,4 @@ ms.lasthandoff: 10/11/2017
 - **AzureDataLakeDirectory:** указывает исходный каталог ADLS, которая содержит файлы для загрузки.
 - **SearchRecursively:** указывает, следует ли выполнять поиск рекурсивно в исходный каталог для файлов для загрузки.
 - **LocalDirectory:** указывает каталог назначения, чтобы сохранить загруженные файлы.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f2ff8a97d45d75c3e93d4aa3111b653c9612b889
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/26/2017
  Установите флажок «Удалить несопоставленные входные столбцы», чтобы игнорировать несопоставленные столбцы в назначении пути данных. При нажатии кнопки «Просмотр изменений» будет отображен список изменений, которые будут внесены при нажатии кнопки «ОК».  
   
   
+

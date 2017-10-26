@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
@@ -139,3 +140,4 @@ ms.lasthandoff: 09/09/2017
  Каждая таблица значений на вкладке **Значения домена** содержит значение DQS_NULL. Значение NULL в источнике данных будет отображаться как SQL_NULL в таблице значений. Вы можете задать одно или несколько значений, эквивалентных NULL, в качестве синонимов для DQS_NULL. После этого все значения NULL и значения, эквивалентные NULL, будут обрабатываться как DQS_NULL.  
   
   
+

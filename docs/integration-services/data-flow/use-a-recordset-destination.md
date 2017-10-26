@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
@@ -178,3 +179,4 @@ ms.lasthandoff: 08/03/2017
      Если был указан допустимый SMTP-сервер и задан собственный адрес электронной почты, будут получены подтверждения о невозможности отправки сообщений задачей «Отправка почты» вымышленным менеджерам по продажам [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
   
+

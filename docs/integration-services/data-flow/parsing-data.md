@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ ms.lasthandoff: 09/26/2017
   
  Стандартный синтаксический анализ поддерживает преобразование международных типов данных, которое нужно использовать, если формат данных не поддерживается быстрым синтаксическим анализом. Дополнительные сведения об API-интерфейсе автоматизации преобразования типов данных см. в статье «API-интерфейсы преобразования типов данных» в [библиотеке MSDN](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
+

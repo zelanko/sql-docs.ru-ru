@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  База данных Inventory содержит таблицу ProductsInventory, в которой есть столбцы ProductID и StockOnHand. Таблица Shipments со столбцами ProductID, CustomerID и Quantity хранит данные об отгрузке товаров заказчикам. Таблица ProductInventory должна ежедневно обновляться на основании данных из таблицы Shipments. Уменьшить указанное в таблице ProductInventory количество товара на основании данных об отгрузке можно с помощью единственной инструкции MERGE. Если запас товара на складе упал до 0, инструкция MERGE может также удалить строку этого продукта из таблицы ProductInventory.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  Экспорт домена в файл DQS. Эта команда отображает диалоговое окно **Экспорт в файл данных** . Эта команда доступна в меню **Экспорт** на панели меню в верхней части страницы или при щелчке правой кнопки мыши в области списка доменов. Дополнительные сведения см. в статье [Экспорт домена в файл .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
   
+
