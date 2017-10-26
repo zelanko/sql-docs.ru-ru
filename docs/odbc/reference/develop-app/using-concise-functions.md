@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  **SQLSetDescRec** и **SQLGetDescRec** — это краткие функции, устанавливающие или получающие несколько поля дескриптора, которые влияют на тип данных и хранения данных столбца или параметра с помощью одного вызова. **SQLSetDescRec** — это эффективный способ, чтобы изменить привязку данных столбца или параметра в один шаг.  
   
  **SQLSetStmtAttr** и **SQLGetStmtAttr** служат в качестве краткого функции в некоторых случаях. (См. [поля дескриптора](../../../odbc/reference/develop-app/descriptor-fields.md).)
+

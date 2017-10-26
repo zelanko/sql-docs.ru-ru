@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  В Visual FoxPro записи хранятся в таблице. Каждая строка таблицы представляет запись, а столбцы таблицы представляют поля записи. Каждая таблица Visual FoxPro хранится в отдельном файле с расширением .dbf. Таблицы Visual FoxPro, можно связать с базой данных.  
   
  FoxPro версии 2. *x* таблицы не связаны с базой данных.
+

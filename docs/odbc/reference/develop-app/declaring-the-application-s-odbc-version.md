@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  Приложения, выполните ODBC 3. *x* спецификации необходимо использовать код условия не использовать функциональные возможности в ODBC 3.* x* при работе с ODBC 2.* x* драйверы. ODBC 2. *x* драйверы не поддерживают функциональные возможности в ODBC 3.* x* только потому, что приложение объявляет, обусловленные ODBC 3.* x* спецификации. Кроме того ODBC 3. *x* драйверы не прекращение для поддержки функциональных возможностей в ODBC 3.* x* только потому, что приложение объявляет, что он следует ODBC 2.* x* спецификации.
+

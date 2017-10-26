@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 6.  Вызовы **SQLParamData** еще раз, чтобы указать, что он отправил всех данных для столбца. Если имеются какие-либо столбцы данных времени выполнения, для которых не были отправлены данные, драйвер возвращает SQL_NEED_DATA и уникальное значение для следующего столбца данных во время выполнения; приложение возвращается к шагу 5. Если отправки данных для всех столбцов данных времени выполнения данные для строки отправляется к источнику данных. **SQLParamData** возвращает SQL_SUCCESS или SQL_SUCCESS_WITH_INFO и может возвращать любой SQLSTATE **SQLBulkOperations** или **SQLSetPos** может возвращать.  
   
  После **SQLBulkOperations** или **SQLSetPos** возвращает SQL_NEED_DATA и перед данных полностью отправлен для последнего столбца данных во время выполнения, инструкция находится в состоянии необходимые данные. В этом состоянии, приложение может вызвать только **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, или **SQLGetDiagRec**; все остальные функции возвращают SQLSTATE HY010 (функция ошибка последовательности). Вызов **SQLCancel** отменяет выполнение инструкции и возвращает его предыдущее состояние. Дополнительные сведения см. в разделе [приложение б: ODBC состояния перехода таблицы](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+

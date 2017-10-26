@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fcc680ec815afa700c00c9d8a69c5826944153a4
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  В этом разделе рассматриваются вопросы применения **SQLCloseCursor** функции в библиотеку курсоров. Общие сведения о **SQLCloseCursor**, в разделе [функция SQLCloseCursor](../../../odbc/reference/syntax/sqlclosecursor-function.md).  
   
  Библиотека курсоров не поддерживает вызов **SQLCloseCursor** без открытого курсора. Пытаться это вернет SQLSTATE 24000 (недопустимое состояние курсора). Вызов **SQLFreeStmt** с *параметр* из SQL_CLOSE при никакой курсор открыт поддерживается библиотекой курсоров.
+

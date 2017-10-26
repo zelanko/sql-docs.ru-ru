@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 206f9072242ba103bb39b01ead1393cc469a4700
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="parameter-markers-in-procedure-calls"></a>Маркеры параметров в вызове процедуры
 При вызове процедуры, которые принимают параметры, совместимые приложения должны использовать маркеры параметров вместо значений параметров literal. Некоторые источники данных не поддерживают использование значений литерала параметра в вызове процедуры. Дополнительные сведения о параметрах см. в разделе [параметров инструкции](../../../odbc/reference/develop-app/statement-parameters.md). Дополнительные сведения о вызове процедуры см. в разделе [вызовы процедур](../../../odbc/reference/develop-app/procedure-calls.md)далее в этом разделе.
+

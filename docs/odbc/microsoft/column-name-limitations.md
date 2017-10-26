@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Знак вертикальной черты (&#124;) нельзя использовать в имени столбца ли имя заключено в кавычки назад, или нет.  
   
  При использовании драйвера текстового драйвер предоставляет имя по умолчанию, если не указано имя столбца. Например драйвер вызывает F1 первый столбец, второй столбец F2 и т. д.
+

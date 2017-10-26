@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |107|Использование функции ODBC вместо инструкций SQL для выполнения определенных операций базы данных: **SQLSetPos** с SQL_POSITION и SQL_REFRESH.|  
 |108|Получить доступ к содержимому несколько результирующих наборов, создаваемые пакеты и хранимые процедуры путем вызова **SQLMoreResults**.|  
 |109|Разделения транзакциях, объединяющих несколько функций ODBC с true атомарность и возможность указывать SQL_ROLLBACK в **SQLEndTran**.|
+

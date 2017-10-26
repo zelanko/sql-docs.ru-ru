@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  При выборе источника данных, диспетчер драйверов создает строку подключения, указав этот источник данных и передает его в драйвере. Драйвер может затем запросить пользователя для любых дополнительных сведений, которые необходимы.  
   
  Условия, при которых драйвер запрашивает пользователя управляются *DriverCompletion* флаг; имеются параметры всегда выводить запрос, запрос при необходимости или никогда не запрашивать подтверждение. Полное описание этого флага см. в разделе [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) описание функции.
+

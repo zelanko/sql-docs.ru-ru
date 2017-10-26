@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2545fba508ef3862834743ddaa8dd74183123b30
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="driver-specific-hardware-and-software-requirements"></a>Специфические для драйвера оборудованию и программному обеспечению  
   
 -   MicrosoftAccess и dBASEdrivers могут потребовать внесения изменений в файлы Autoexec.bat и Config.sys.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d664d15e359070b33f5fb9f7ac2c4737ee900351
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [Числовые функции (Visual FoxPro драйвер ODBC)](../../odbc/microsoft/numeric-functions-visual-foxpro-odbc-driver.md)  
   
 -   [Время и функции даты (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)
+

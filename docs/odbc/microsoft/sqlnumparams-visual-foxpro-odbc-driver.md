@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dde6591396630690960d517be646039f893d821e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Возвращает число параметров в инструкции SQL. Число параметров должно быть равно числу вопросительных знаков в инструкции SQL, передаваемый [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
   
  Дополнительные сведения о грамматике SQL см. в разделе [поддерживается синтаксис SQL ODBC](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md). Дополнительные сведения об этой функции см. в разделе [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) в *справочнике программиста ODBC*.
+

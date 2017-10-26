@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc96de9df9724e500709488054b3357b3c7e50aa
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="not-null-in-create-table-statements"></a>NOT NULL в инструкции CREATE TABLE
 Некоторые и особенно системной базы данных, не поддерживают **NOT NULL** ограничение столбца в **CREATE TABLE** инструкции. Дополнительные сведения см. в разделе параметр SQL_NON_NULLABLE_COLUMNS в [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) описание функции.
+

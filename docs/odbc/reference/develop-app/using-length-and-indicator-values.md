@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   ЗНАЧЕНИЕ SQL_DEFAULT_PARAM. Процедура — Чтобы использовать значение по умолчанию для входного параметра в процедуре вместо значения в соответствующий буфер данных.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** или **SQLSetPos** позволяет не учитывать значение в буфер данных. При обновлении строки данных с помощью вызова **SQLBulkOperations** или **SQLSetPos,** значение столбца не изменяется. При вставке новой строки данных с помощью вызова **SQLBulkOperations**, значение столбца установлено в значение по умолчанию или, если столбец имеет значение по умолчанию, значение NULL.
+

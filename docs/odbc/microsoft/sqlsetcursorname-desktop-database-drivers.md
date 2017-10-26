@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ee0a3a3d5aa5404a062a11410f0ae2adf072e240
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlsetcursorname-desktop-database-drivers"></a>SQLSetCursorName (драйверы для настольных баз данных)
 Так как драйвер не поддерживает позиционированного обновления или удаления, WHERE CURRENT OF *cursorname* синтаксис, **SQLSetCursorName** поддерживается, но не может использоваться для позиционированных обновлений. Он может использоваться только при включенном библиотеку курсоров и приложение использует **SQLExtendedFetch**.
+

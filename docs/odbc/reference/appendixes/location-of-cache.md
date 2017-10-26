@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 645ff6dc68fec7cf332face2fe53a43555887a48
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Если библиотека курсоров в Microsoft® WindowsNT® или Windows 2000 пытается кэшировать данные во временном файле в текущем каталоге приложения, запущенного из папки только для чтения или компакт-дисков (например, образец библиотеки классов Microsoft Foundation) SQLSTATE HY000 будет возвращено (Общая ошибка-не удалось создать файловый буфер).
+

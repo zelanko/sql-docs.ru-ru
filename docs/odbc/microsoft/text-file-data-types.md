@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|Теоретически ограничение, накладываемое на ширину столбца LONGCHAR либо фиксированной длины или с разделителями таблица является 65500K. Text ISAM чаще для предоставления надежного поддерживают до около 32 КБ.|  
   
  Дополнительные ограничения на типы данных можно найти в [ограничения типа данных](../../odbc/microsoft/data-type-limitations.md).
+

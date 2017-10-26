@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Выделяет память для дескриптора инструкции и связывает дескриптора инструкции с соединением, определяемое *hdbc*. Диспетчер драйверов передает этот вызов на драйвер, который выделяет память для *hstmt* структуры.  
   
  Дополнительные сведения см. в разделе [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) в *справочнике программиста ODBC*.
+

@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   [Общие ошибки проверки](../../../odbc/reference/develop-app/general-error-checks.md)  
   
 -   [Диспетчер драйверов ошибки и предупреждения проверки](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
+

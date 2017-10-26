@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
@@ -50,3 +51,4 @@ _C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /
  [b] Если точности интервала одно поле (один год или месяц), можно преобразовать интервал тип SQL для любой точное числовое значение (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG или SQL_C_NUMERIC).  
   
  Преобразования по умолчанию интервала тип SQL — соответствующие типы данных C интервал. Затем приложение привязывает столбца или параметра (или задает поле SQL_DESC_DATA_PTR в соответствующей записи Отменить) для указания инициализированный SQL_INTERVAL_STRUCT структуры (или передает указатель в качестве структуруSQL_INTERVAL_STRUCT*TargetValuePtr* аргумента в вызове **SQLGetData**).
+

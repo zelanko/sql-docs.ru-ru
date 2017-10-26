@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  Библиотека курсоров реализует такое же поведение курсора после фиксации или отката в качестве источника данных транзакций. То есть, фиксация или откат транзакции, либо путем вызова **SQLEndTran** или с помощью атрибута соединения SQL_ATTR_AUTOCOMMIT, могут привести к источнику данных для удаления планов доступа и закрытие курсоров для всех инструкций для подключения. Дополнительные сведения см. в разделе типы информации SQL_CURSOR_COMMIT_BEHAVIOR и SQL_CURSOR_ROLLBACK_BEHAVIOR в [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e59fd91f1347d3521b0bcf3667cf7bb0482b5cd3
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 -   [Выбор грамматику SQL](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
   
 -   [Создание инструкций SQL с возможностью взаимодействия](../../../odbc/reference/develop-app/constructing-interoperable-sql-statements.md)
+

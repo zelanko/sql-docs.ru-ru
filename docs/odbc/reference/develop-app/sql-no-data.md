@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c42213c629c5fa79cd5c6522f4a36f29f36bd8c
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlnodata"></a>ЗНАЧЕНИЕ SQL_NO_DATA
 Когда ODBC 3. *x* приложение вызывает **SQLExecDirect**, **SQLExecute**, или **SQLParamData** в ODBC 2.* x* драйвер на выполнение поисковое обновление или удаление инструкцию, которая не влияет на все строки в источнике данных, драйвер должен возвращать значение SQL_SUCCESS, а не значение SQL_NO_DATA. Когда ODBC 2. *x* или ODBC 3.* x* приложения, работа с ODBC 3.* x* драйвер вызывает **SQLExecDirect**, **SQLExecute**, или **SQLParamData** с тем же ODBC 3.* x* драйвер вернет значение SQL_NO_DATA.
+

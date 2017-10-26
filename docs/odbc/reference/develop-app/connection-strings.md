@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLBrowseConnect**, которой завершается строка подключения итеративного с источником данных.  
   
  **SQLConnect** не использует строку подключения; с помощью **SQLConnect** является аналогом подключение с помощью строки подключения с ровно три пары ключ значение (имя источника данных, и при необходимости, пользователь идентификатор и пароль) .
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bbb6396dc1a49d984834ec6f105b3a9ba42d95c4
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  При преобразовании данных C отметки времени в символьные данные SQL, результирующий символьных данных находится в «*гггг*-*мм*-*дд* *hh*:*мм*:*ss*[.* f... *]» формата.  
   
  Драйвер не учитывает значение длины/индикатора при преобразовании данных из типа данных timestamp C и предполагает, что размер типа данных timestamp C размер буфера данных. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.
+

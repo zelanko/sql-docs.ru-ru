@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
@@ -57,3 +58,4 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |ЗНАЧЕНИЕ SQL_NO_DATA|Больше нет данных была доступна. Приложение вызывает **SQLGetDiagRec** или **SQLGetDiagField** для получения дополнительных сведений. Один или несколько записей состояния, определяемым драйвером в 02xxx класса могут быть возвращены. **Примечание:** в ODBC 2.* x*, это возвращать код называется SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Дополнительные сведения о соединениях необходим или необходимы дополнительные данные, например, когда параметр данные передаются во время выполнения. Приложение вызывает **SQLGetDiagRec** или **SQLGetDiagField** для получения дополнительных сведений в том случае, если таковые имеются.|  
 |SQL_STILL_EXECUTING|Функция, которая была запущена асинхронно все еще выполняется. Приложение вызывает **SQLGetDiagRec** или **SQLGetDiagField** для получения дополнительных сведений в том случае, если таковые имеются.|
+

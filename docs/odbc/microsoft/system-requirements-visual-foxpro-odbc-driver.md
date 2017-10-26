@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  Драйвер ODBC для Visual FoxPro поддерживает двухбайтовые кодировки (DBCS). Дополнительные сведения см. в разделе [Многоязыковая поддержка](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
  Драйвер не поддерживает 16-разрядных приложений Microsoft Windows версии 3.1.
+

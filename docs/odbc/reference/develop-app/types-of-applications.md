@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ ms.lasthandoff: 09/09/2017
     -   Использует новые функции в более поздней версии ODBC, только в пределах условного кода.  
   
     -   Ограничено условного код для обработки изменения поведения или зарегистрировался быть более ранней версии приложения ODBC.
+

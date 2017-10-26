@@ -20,6 +20,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
@@ -87,3 +88,4 @@ ms.lasthandoff: 06/22/2017
 |[MSSQL_REPL027183](../../relational-databases/replication/mssql-repl027183.md)|Процессу слияния не удалось перечислить изменения в статьях с параметризованными фильтрами строк. Если эта ошибка продолжает возникать, увеличьте тайм-аут запроса для этого процесса, уменьшите срок хранения публикации и оптимизируйте индексы по опубликованным таблицам.|  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 363a727cd209f7ed3a5994f353f1e21922fe00ca
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  Если имя источника данных не указан, диспетчер драйверов пользователю сведения (в зависимости от значения *fDriverCompletion* аргумент) и затем продолжит работу. Если требуются дополнительные сведения, драйвер ODBC для Visual FoxPro отображает диалоговое окно запроса.  
   
  Дополнительные сведения см. в разделе [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) в *справочнике программиста ODBC*.
+

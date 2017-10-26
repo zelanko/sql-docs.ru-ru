@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/09/2017
 |timestamp|Если значение вставляемых в столбец отметки времени драйвером Paradox, то впоследствии, полученных из столбца, возвращенного значения могут отличаться от вставленное значение по мере 1 секунды из-за округления.|  
   
  Дополнительные ограничения на типы данных можно найти в [ограничения типа данных](../../odbc/microsoft/data-type-limitations.md).
+

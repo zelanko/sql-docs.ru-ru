@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26d4afc99e13e8abd5579a01b461eb6df2a05571
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 |Microsoft Access, Microsoft Excel или Microsoft Word|[Доступ к данным Visual FoxPro с Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
 |Приложение C или C++|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
 |Приложения Visual Basic|[С помощью драйвера ODBC Visual FoxPro вместе с приложением Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|
+

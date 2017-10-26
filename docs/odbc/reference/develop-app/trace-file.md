@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82062fe767847023cd1aa6614173b292b0bff378
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  Файл трассировки содержит журнал каждого вызова функции ODBC, с типами данных и значения всех аргументов. Он регистрирует все входные функции и заносит в журнал все возвращенные функции с коды возврата и состояния ошибки.  
   
  В ODBC 3*.x*, параметры для функции соединения не предоставлены Библиотека трассировки.
+

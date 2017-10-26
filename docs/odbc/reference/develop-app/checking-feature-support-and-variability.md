@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5528f451adf12d12fe5cdb1c51f5c5d0053c9145
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  Приложение может определить, поддерживается ли атрибут инструкции или соединения, вызвав **SQLSetStmtAttr** или **SQLSetConnectAttr** с этим атрибутом. Если функция возвращает значение SQL_SUCCESS или SQL_SUCCESS_WITH_INFO, атрибут поддерживается; Если возвращается значение SQL_ERROR и SQLSTATE HYC00 (не реализованы дополнительные функции), атрибут не поддерживается.  
   
  Приложения можно также определить ограниченный объем сведений перед подключением к драйверу, вызвав **SQLDrivers**.
+

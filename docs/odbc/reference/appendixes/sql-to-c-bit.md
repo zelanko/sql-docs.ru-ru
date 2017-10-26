@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5432e5f4a47dde5b3ad64059a8f2eb1de9ba1691
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  [b] это размер соответствующие типы данных C.  
   
  При преобразовании в символьный C бит данных SQL возможными значениями являются «0» и «1».
+

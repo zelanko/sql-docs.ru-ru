@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
@@ -84,3 +85,4 @@ RETCODE SQLInstallerError(
  Чтобы получить несколько ошибок для вызова функции, приложение вызывает **SQLInstallerError** несколько раз.  
   
  Если нет дополнительных сведений, **SQLInstallerError** вернет значение SQL_NO_DATA, *pfErrorCode* аргумент не определен, *pcbErrorMsg* аргумент равен 0, и *lpszErrorMsg* аргумент содержит один символ завершения null (если не *cbErrorMsgMax* аргумент равен 0).
+

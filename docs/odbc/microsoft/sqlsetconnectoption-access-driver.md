@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION всегда является SQL_TXN_READ_COMMITTED.|  
   
  [1] атомарные транзакции не поддерживается драйвером Microsoft Access. При фиксации транзакции с помощью драйвера Microsoft Access, конечное задержки существует между времени, транзакция завершается и значения записываются на диск. Эта задержка определяется задержки, встроенные в ядро Microsoft Jet. Время ожидания страницы не будет меньше, чем минимальное значение, даже если параметр PageTimeout имеет значение ниже этого значения. Как следствие, нет никакой гарантии, что зафиксированные данные стабильна, так как во время задержки могут быть внесены изменения.
+

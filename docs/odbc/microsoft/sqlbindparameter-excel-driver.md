@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 013f19579815dfcac2fcfe78cbbe41919bff9c15
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  В этом разделе сведения драйвера Excel. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  При использовании драйвера Microsoft Excel при выполнении инструкции INSERT, в котором используется параметр, чтобы вставить значение NULL в столбец SQL_CHAR будет возвращено значение SQL_SUCCESS_WITH_INFO с кодом SQLSTATE 01004, «Усеченный данных».
+

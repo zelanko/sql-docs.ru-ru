@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a96868755475c6fd72b2dd977375fbe0d88c22df
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 4.  Диспетчер драйверов возвращает дескриптор инструкции диспетчера драйверов к приложению в переменную приложения.  
   
  Дескриптор инструкции определяет, какие инструкции для использования при вызове функций ODBC. Дополнительные сведения о дескрипторах инструкции см. в разделе [дескрипторов инструкций](../../../odbc/reference/develop-app/statement-handles.md).
+

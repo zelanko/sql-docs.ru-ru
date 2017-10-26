@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  Фиксация или откат транзакции, либо путем явного вызова **SQLEndTran** или по работе в режиме автоматической фиксации, вызывает некоторые источники данных закрыть все курсоры для всех инструкций в соединении. Дополнительные сведения см. в разделе атрибуты SQL_CURSOR_COMMIT_BEHAVIOR и SQL_CURSOR_ROLLBACK_BEHAVIOR [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) описание функции.
+

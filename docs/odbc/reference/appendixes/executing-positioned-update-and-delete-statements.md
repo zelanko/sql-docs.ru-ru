@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 |Позиционированные delete|SQL_ROW_DELETED|Старые значения|Старые значения|  
   
  [1] приложения необходимо обновить значения в буферы строк перед выполнением инструкции позиционированного обновления; После выполнения инструкции позиционированного обновления, библиотеку курсоров копирует значения в буферы строк в свой кэш.
+

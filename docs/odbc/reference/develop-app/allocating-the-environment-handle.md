@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  Когда **SQLFreeHandle** вызывается версиях драйвера, структура, используемая для хранения сведений о среде. Обратите внимание, что **SQLFreeHandle** не может вызываться для дескриптора среды до после освобождения всех дескрипторов соединений на этот дескриптор среды.  
   
  Дополнительные сведения о дескриптора среды см. в разделе [обрабатывает среды](../../../odbc/reference/develop-app/environment-handles.md).
+

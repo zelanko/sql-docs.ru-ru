@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |Файлы, используемые драйвером базы данных каждого рабочего стола|Файлы драйверов ODBC|  
 |Файлы Microsoft Jet, используемые драйверу базы данных рабочего стола|Файлы Microsoft Jet|  
 |IISAM файлов драйверов, которые предоставляют доступ к данным между Microsoft Jet и других СУБД|Устанавливаемый ISAM файлы драйверов|
+

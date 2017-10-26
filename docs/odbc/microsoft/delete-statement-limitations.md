@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  Драйвер dBASE не поддерживает упаковки таблицу для удаления значений «удалено».  
   
  Для драйвера Paradox удаление строки из таблицы таблица должна иметь уникальный индекс (Paradox первичный ключ).
+

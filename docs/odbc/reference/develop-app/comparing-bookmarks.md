@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7ebcf375311af498dbb4c777707b7febcddb05a3
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="comparing-bookmarks"></a>Сравнение закладки
 Поскольку закладки сравнимы байтов, их можно проверять на равенство и неравенство. Чтобы сделать это, приложение обрабатывает каждой закладке как массив байтов и сравнивает две закладки байт за байтом. Поскольку закладки, обязательно отличаться только внутри результирующего набора, нет смысла для сравнения закладки, которые были получены из различных результирующих наборов.
+

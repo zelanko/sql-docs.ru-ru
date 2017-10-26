@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|Строка была удалена с момента последней загрузки.|  
 |SQL_ROW_ADDED|Строка была вставлена **SQLBulkOperations**. Если строка выбирается заново или обновляется в соответствии с **SQLSetPos**, она находится в состоянии SQL_ROW_SUCCESS.<br /><br /> Это значение не задается **SQLFetch** или **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|Набор строк перекрывающегося конца результирующего набора и строки не был возвращен, что значение соответствовало этот элемент массив состояния строк.|
+

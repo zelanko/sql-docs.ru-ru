@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Универсальные приложения, особенно тех, которые поддерживают нерегламентированные запросы, практически никогда не узнать, метаданные результирующих наборов, которые они создают. Поэтому необходимо обнаружить метаданные во время выполнения с помощью функций **SQLNumResultCols**, **SQLDescribeCol**, и **SQLColAttribute**, которые описаны в Следующий раздел [SQLDescribeCol и SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Все приложения, независимо от их типа можно жестко закодировать метаданных для результирующих наборов, возвращаемых функциями каталога. Эти результирующие наборы, определяются в справочном разделе данного руководства.
+

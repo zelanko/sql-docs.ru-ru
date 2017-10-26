@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9460f4f4bbc522fc421b7e40b261fe17a8410a09
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Если приложение вызывает **SQLRowCount** с помощью инструкции, связанные с позиционированного обновления или инструкции delete, библиотеку курсоров возвращает количество строк, затронутых при выполнении инструкции.  
   
  Если приложение вызывает **SQLRowCount** после **ВЫБЕРИТЕ** инструкция, библиотеку курсоров возвращает – 1.
+

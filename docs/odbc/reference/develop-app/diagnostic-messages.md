@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/09/2017
  [1] в этом случае драйвер используется в качестве драйвер и источником данных.  
   
  Квадратные скобки (**[]**) должны быть включены в сообщение и не указывает необязательные элементы.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74410e39c16c2239471f3f2d328bf29a39dc7cec
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Связывает имя курсора с дескриптором активный оператор, *hstmt*. **SQLSetCursorName** включается в API драйвера ODBC Visual FoxPro, так как он входит в состав функции API-интерфейса ODBC уровня ядра; его нельзя использовать с другими функциями API, драйвер поддерживает позиционированные обновления.  
   
  Дополнительные сведения см. в разделе [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md) в *справочнике программиста ODBC*.
+

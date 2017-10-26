@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3. *x* приложения не должны использовать **SQLExtendedFetch** или атрибут SQL_ROWSET_SIZE инструкции. Вместо этого используйте **SQLFetchScroll** и атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции. ODBC 3. *x* приложения не должны использовать **SQLSetPos** с *операции* из SQL_ADD, но следует использовать **SQLBulkOperations** с *Операции* из SQL_ADD.
+

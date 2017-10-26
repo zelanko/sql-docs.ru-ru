@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 3.  Вызовы **SQLBulkOperations** с *операции* аргументу присвоено SQL_ADD.  
   
  После **SQLBulkOperations** возвращает текущую строку без изменений. Если связанное закладки столбца (0) **SQLBulkOperations** возвращает закладки вставляемых строк в буфере строк привязан к этому столбцу.
+

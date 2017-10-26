@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
@@ -46,3 +47,4 @@ SELECT * FROM Lines
 ```  
   
  в том же дескрипторе инструкции привязки столбцов для первого результирующего набора действуют по-прежнему так как привязки, который хранится в структуре инструкции. В большинстве случаев это не рекомендуется программирования и следует избегать. Вместо этого приложение должно вызывать **SQLFreeStmt** с параметром SQL_UNBIND, чтобы отменить привязку всех старые столбцы, а затем привязать новые.
+

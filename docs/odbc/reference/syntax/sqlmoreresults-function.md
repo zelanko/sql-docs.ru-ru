@@ -23,6 +23,7 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 772bfd3d05d620840ea43c9f1313b4d94add10de
@@ -122,3 +123,4 @@ SQLRETURN SQLMoreResults(
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Извлечение параметров вывода с помощью SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)
+

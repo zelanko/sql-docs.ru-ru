@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 6.  Вызовы **SQLBulkOperations** с *операции* SQL_UPDATE_BY_BOOKMARK значение аргумента.  
   
  Для каждой строки, отправляемое в источник данных, как обновление буферы приложения должны иметь допустимую строку данных. Если буферы приложения заполняются выборкой, если была сохранена массив состояния строк, и состояние для строки имеет значение SQL_ROW_DELETED, SQL_ROW_ERROR или SQL_ROW_NOROW, недопустимые данные может непреднамеренно отправляться к источнику данных.
+

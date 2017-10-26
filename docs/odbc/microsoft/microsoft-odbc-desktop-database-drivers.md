@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
@@ -75,3 +76,4 @@ ODBC — это API, использует язык SQL (Structured Query) в к�
 -   [Ошибок ODBC](../../odbc/microsoft/odbc-errors.md)  
   
 -   [Поддерживаемые ODBC функций API](../../odbc/microsoft/supported-odbc-api-functions.md)
+

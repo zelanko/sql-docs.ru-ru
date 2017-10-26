@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e449fd186255d508724754b2038b8f2233d6300e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Связывает буфер с маркер параметра в инструкции SQL. Драйвер ODBC для Visual FoxPro поддерживает входные параметры в соответствии с *fParamType* аргумент.  
   
  Дополнительные сведения см. в разделе [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) в *справочнике программиста ODBC*.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  Библиотека курсоров поддерживает вызов метода **SQLBindCol** для привязки столбца закладки.  
   
  При работе с ODBC 2. *x* драйвер, библиотеку курсоров возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера) при **SQLBindCol** вызывается для настройки размера буфера для столбца закладки значение не равно 4. При работе с ODBC 3*.x* драйверов, библиотеку курсоров обеспечивает буфера быть любого размера.
+

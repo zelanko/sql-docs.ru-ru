@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ff92186a7523904cf9db8f1b5a8ac1814384354
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
 -   [Взаимодействие инструкций SQL](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)  
   
 -   [Escape-последовательности ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)
+

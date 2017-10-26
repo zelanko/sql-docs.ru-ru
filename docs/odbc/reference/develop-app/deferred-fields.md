@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   Если поле SQL_DESC_OCTET_LENGTH_PTR в APD имеет значение null, а параметр — строку символов, драйвер предполагает, что строка является символом null. Для вывода динамических параметров значение null в этом поле не позволяет драйвер возвращает сведения о длине. (Если параметр символьной строки не указывает на поле SQL_DESC_TYPE, SQL_DESC_OCTET_LENGTH_PTR поля учитывается.)  
   
  Приложение не должно освобождать или отменить переменных, используемых для отложенных полей между связывает их с полями и временем, драйвер считывает или записывает их.
+

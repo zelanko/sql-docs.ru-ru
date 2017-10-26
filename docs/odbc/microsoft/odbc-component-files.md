@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6eb418fd3c116745ada1034ae8526a7455b1343
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Некоторые файлы, необходимые более чем в одном компоненте. Эти файлы должны распространяться, если требуется повторно распространить все драйверы ODBC системной базы данных с коммерческих приложений.  
   
  Эти файлы устанавливаются в каталог \Windows\System для Windows 95 или более поздней версии или в папке \Windows\System32 для Windows NT 3.51 или более поздней версии и Windows 2000. Если ODBC файлы были установлены в другом каталоге, убедитесь, использовать более новые файлы в \Windows\System (или System32) каталог.
+

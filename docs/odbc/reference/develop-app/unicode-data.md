@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
@@ -52,3 +53,4 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Драйверы Юникода по-прежнему должны поддерживать типы данных ANSI, включая SQL_CHAR. При работе с драйвером Юникод приложение связывает SQL_CHAR, диспетчер драйверов не сопоставляются SQL_CHAR данных SQL_WCHAR. Драйвер Юникода необходимо принять данных SQL_CHAR.  
   
  Диспетчер драйверов драйвера и имена DSN хранятся в Юникоде и сопоставляет их с ANSI при необходимости. Если символ Юникода не удается сопоставить в символ ANSI (как это может произойти при использовании символов из кодовую страницу, которая не является страницей машинный код компьютера в имена DSN и драйверов), символы, которые не могут быть преобразованы, представляются sup символ по умолчанию plied системой.
+

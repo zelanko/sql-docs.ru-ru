@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
  После **SQLExecute** или **SQLExecDirect** возвращает SQL_NEED_DATA и перед данных полностью отправлен для последнего параметра данных времени выполнения, инструкция находится в состоянии необходимые данные. Хотя инструкция находится в состоянии требуются данные, приложение может вызвать только **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, или **SQLGetDiagRec**; все остальные функции возвращают SQLSTATE HY010 (функция ошибка последовательности). Вызов **SQLCancel** отменяет выполнение инструкции и возвращает его предыдущее состояние. Дополнительные сведения см. в разделе [приложение б: ODBC состояния перехода таблицы](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Пример отправки данных во время выполнения см. в разделе [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) описание функции.
+

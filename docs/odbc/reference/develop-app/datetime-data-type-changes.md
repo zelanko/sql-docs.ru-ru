@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/09/2017
  [1] в результате использования этого ODBC 3. *x* приложения, работа с ODBC 2.* x* драйвер может использовать коды даты, времени или timestamp, возвращенные в результирующих наборов, которые возвращаются функциями каталога.  
   
  [2] в результате использования этого ODBC 3. *x* приложения, работа с ODBC 3.* x* драйвер может использовать коды даты, времени или timestamp, возвращенные в результирующих наборов, которые возвращаются функциями каталога.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 417603891bee2561c35485b09b6e52648c99cbb8
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   [Асинхронное выполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
 -   [Освобождение дескриптора инструкции](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)
+

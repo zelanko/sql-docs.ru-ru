@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  На следующем рисунке две различные конфигурации для драйверов на основе файлов, один, в котором хранятся данные локально, и другой, в котором он находится на сетевом файловом сервере.  
   
  ![Две конфигурации файла &#45; на основе драйверы](../../odbc/reference/media/pr06.gif "pr06")
+

@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
 -   Отключение от источника данных.  
   
  Поскольку большинство данных доступа осуществляются с помощью SQL, основная задача, для которой приложения используют ODBC является отправлять инструкции SQL и получение результатов (если таковые имеются) при выполнении этих инструкций. Другие задачи, для которых приложения используют ODBC включают определение и настройка для возможности драйверов и просмотра каталога базы данных.
+

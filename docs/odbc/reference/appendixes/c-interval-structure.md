@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
@@ -74,3 +75,4 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  *Interval_type* поле SQL_INTERVAL_STRUCT указывает приложению, какая структура удерживается в объединении и также относятся какие элементы структуры. *Interval_sign* поле имеет значение SQL_FALSE, если поле интервала не подписан; если его значение равно SQL_TRUE, начальные поля является отрицательным. Значение в начале само поле всегда равно без знака, независимо от значения *interval_sign*. *Interval_sign* поле действует как бит знака.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="rowset"></a>набор строк  
  Блоки данных, хранящихся в курсоре, представляющий строки, полученные из источника данных.
+

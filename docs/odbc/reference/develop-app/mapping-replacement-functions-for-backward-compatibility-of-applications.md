@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
@@ -482,3 +483,4 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  Когда ODBC 3. *x* приложения, работа с ODBC 2.* x* драйвер вызывает **SQLSetStmtAttr** для задания атрибута SQL_ATTR_USE_BOOKMARKS SQL_UB_VARIABLE, диспетчер драйверов устанавливает атрибут SQL_UB_ON в базовый ODBC 2.* x* драйвера.
+

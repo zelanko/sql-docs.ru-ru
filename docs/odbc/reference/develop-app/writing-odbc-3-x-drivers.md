@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/09/2017
  [5] при определенных обстоятельствах драйверы должны поддерживать эту функцию. Дополнительные сведения см. в разделе справочной странице этой функции.  
   
  [6] можно выбрать поддержку драйвер **SQLGetFunctions** Если набор функций, поддерживаемых драйвером зависит от подключения для соединения.
+

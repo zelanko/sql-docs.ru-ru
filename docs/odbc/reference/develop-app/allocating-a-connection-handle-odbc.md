@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  Это важно отметить, что выделение дескриптора соединения не совпадает с загрузки драйвера. Драйвер не будет загружена, пока функция подключения. Таким образом, после выделения дескриптора соединения и перед подключением к драйверу или источнику данных только функции, приложение может вызвать с дескриптором соединения являются **SQLSetConnectAttr**, **SQLGetConnectAttr**, или **SQLGetInfo** с параметром SQL_ODBC_VER. Вызов других функций с дескриптора соединения, такие как **SQLEndTran**, возвращает SQLSTATE 08003 (соединение не открыто). Дополнительные сведения см. [приложение б: ODBC состояния перехода таблицы](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Дополнительные сведения о дескрипторов соединений см. в разделе [дескрипторов соединений](../../../odbc/reference/develop-app/connection-handles.md).
+

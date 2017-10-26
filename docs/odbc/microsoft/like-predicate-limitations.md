@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5668f03e785c0d27133965f16af40ce69c2a2567
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  Не поддерживается использование предложение escape в предикате LIKE.  
   
  Не следует выполнять сравнение LIKE на столбец, содержащий данные типа данных числовой или число с плавающей запятой. Результаты могут быть непредсказуемыми. Дополнительные сведения см. в разделе *Microsoft Jet базы данных подсистемы Руководство программиста*.
+

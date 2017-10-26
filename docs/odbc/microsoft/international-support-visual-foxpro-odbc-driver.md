@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="sort-order"></a>порядок сортировки  
  Порядки сортировки включить правила сортировки различных *языкового стандарта*s, позволяя правильно сортировать данные на этих языках. В Visual FoxPro текущий порядок сортировки определяет результаты выражения символов и порядок, в котором отображаются записи в индексированных или сортировки таблицы.
+

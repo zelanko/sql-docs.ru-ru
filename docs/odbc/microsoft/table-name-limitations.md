@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Когда используется драйвер Microsoft Access, имя таблицы — длиннее 64 символов.  
   
  При использовании dBASE драйвера Microsoft Excel 3.0 или 4.0, Paradox или текст, ключевые слова MS-DOS, CON, AUX, LPT1, LPT2 не должны использоваться как имена таблиц.
+

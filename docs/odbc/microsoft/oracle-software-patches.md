@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Поскольку Oracle устраняет ошибки в текущей версии и затем retrofits их на более ранние версии, с помощью обновления программного обеспечения, рекомендуется загрузить последние исправление. Это особенно верно для компонентов сервера клиента Oracle. Если у вас есть вопросы об установке этих исправлений, обратитесь в службу поддержки Oracle.
+

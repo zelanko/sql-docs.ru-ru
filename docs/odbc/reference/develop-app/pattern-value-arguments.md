@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 2. *x* драйверы не поддерживают шаблонов поиска в *CatalogName* аргумент в **SQLTables**. ODBC 3*.x* драйверы примите шаблонов поиска в этот аргумент, если атрибут среды SQL_ATTR_ ODBC_VERSION установлен в значение SQL_OV_ODBC3; они не принимают шаблонов поиска в этот аргумент, если оно равно SQL_OV_ODBC2.  
   
  Передача пустой указатель к аргументу шаблон поиска не ограничивает поиск этого аргумента; то есть указателем null и шаблон поиска % (символы) считаются эквивалентными. Однако нулевой длины поиск шаблона — то есть допустимый указатель на строку нулевой длины — совпадает только с пустой строкой (»»).
+

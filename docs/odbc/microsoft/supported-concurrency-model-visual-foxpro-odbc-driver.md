@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f3348850a76bb831c236fd1c1ee49fb89b97504
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="row-versioning"></a>управление версиями строк  
  По существу timestamp поддержки, сравнения версий строк во время обновления.
+

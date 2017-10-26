@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Возвращает список процедур в источнике данных. Упакованные процедур имя ПРОЦЕДУРЫ столбец находится в *packagename.procedurename* формат.<br /><br /> Поскольку Oracle не предоставляет способ различать упакованных процедуры из упакованных функций, драйвер возвращает SQL_PT_UNKNOWN для столбца PROCEDURE_TYPE.|  
 |**SQLSetPos**|Задает положение курсора в набор строк. Можно использовать **SQLSetPos** с **SQLGetData** для получения строк из несвязанных столбцов после позиционирования курсора для конкретной строки в наборе строк. Строки добавляются к результирующему набору с помощью *fOption* SQL_ADD добавляются после последней строки в результирующем наборе.|  
 |**SQLSetScrollOptions**|Задает параметры, которые управляют поведением курсоров, связанные с дескриптором инструкции hstmt. Дополнительные сведения см. в разделе [типа курсора и параллелизма сочетания](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+

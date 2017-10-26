@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
  SQLSTATE HYC00 (дополнительная возможность не реализована) особенно важен, так как он является единственным способом, в котором приложение может определить, поддерживает ли драйвер конкретного атрибута инструкции или соединения.  
   
  Полный список SQLSTATE какие функции и возвращают их в разделе [коды ошибок ODBC приложение A:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Подробное описание условий, при которых каждая функция может возвращать определенный SQLSTATE см. в этой функции.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Прокрутка поддерживается в ODBC 2. *x* драйверы с **SQLExtendedFetch**. Дополнительные сведения см. в разделе [блочных курсоров, Прокручиваемые курсоры и обратной совместимости](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)в приложении G: драйвер рекомендации для обеспечения обратной совместимости.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
@@ -54,3 +55,4 @@ _C_TYPE_TIMESTAMP|Часть долей секунды отметки време
  [f] это размер соответствующие типы данных C.  
   
  При преобразовании в символьный C данных timestamp SQL результирующая строка находится в «*гггг*-*мм*-*дд* *hh *:*мм*:*ss*[.* f... *]» формат, где можно использовать до девяти цифр для долей секунды. Этот формат не влияют настройки Windows® страны. (За исключением десятичного разделителя и долей секунды, весь формат должно использоваться, независимо от того, точность типа данных timestamp SQL.)
+

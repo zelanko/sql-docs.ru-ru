@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dab3cacffff383170a6403065c555f5ef105f672
@@ -49,3 +50,4 @@ Microsoft Visual FoxPro — это мощная среда объектно ор
 |Просмотреть список поддерживаемого оборудования и программного обеспечения|[Требования к системе](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
  Сведения о загрузке и установке драйвера Visual FoxPro ODBC см. в разделе [драйвера ODBC для Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) на загрузки MSDN.
+

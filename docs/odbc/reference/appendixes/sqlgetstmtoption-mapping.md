@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
@@ -58,3 +59,4 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  Параметр инструкции SQL_GET_BOOKMARK рекомендуется к использованию в ODBC 3*.x*. Для ODBC 3*.x* драйвер для работы с ODBC 2.* x* приложений, использующих SQL_GET_BOOKMARK, он должен поддерживать SQL_GET_BOOKMARK. Для ODBC 3*.x* драйвер для работы с ODBC 2.* x* приложений, он должен поддерживать значение SQL_USE_BOOKMARKS SQL_UB_ON и должны предоставлять закладки фиксированной длины. Если ODBC 3*.x* драйвер поддерживает только закладки переменной длины, но закладки не фиксированной длины, она должна вернуть SQLSTATE HYC00 (дополнительная возможность не реализована) Если ODBC 2.* x* приложения пытается установить SQL_USE_BOOKMARKS для SQL_UB_ON.  
   
  Для ODBC 3*.x* драйвера, диспетчер драйверов больше не проверяет, является ли *параметр* — между SQL_STMT_OPT_MIN и SQL_STMT_OPT_MAX или больше, чем SQL_CONNECT_OPT_DRVR_START. Драйвер должен установите этот флажок.
+

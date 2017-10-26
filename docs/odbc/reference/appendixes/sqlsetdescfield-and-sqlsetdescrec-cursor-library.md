@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  Библиотека курсоров не поддерживает изменения поле SQL_DESC_BIND_TYPE в APD или Отменить при открытом курсоре. Поле SQL_DESC_BIND_TYPE можно изменить только в том случае, если курсор закрыт, и перед открытием нового курсора. Только поля дескриптора, что библиотека курсоров поддерживает изменения, когда курсор открыт, SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR и SQL_DESC_ROWS_PROCESSED_ PTR.  
   
  Библиотека курсоров не поддерживает изменение поля SQL_DESC_COUNT Отменить после **SQLExtendedFetch** или **SQLFetchScroll** был вызван до закрытия курсора.
+

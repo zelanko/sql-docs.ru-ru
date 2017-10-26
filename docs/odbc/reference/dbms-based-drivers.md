@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  На следующем рисунке три различные конфигурации для драйверов на основе DBMS. В первой конфигурации драйвера и источник данных находятся на том же компьютере. Во втором драйвер и источник данных находятся на разных компьютерах. В третьем драйвер и источник данных находятся на разных компьютерах и шлюз располагается между ними, размещенный на компьютере еще один.  
   
  ![Три конфигурации для СУБД &#45; на основе драйверы](../../odbc/reference/media/pr07.gif "pr07")
+

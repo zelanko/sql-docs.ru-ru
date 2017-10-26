@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
  [b] для варианта «н/д» драйвер может при необходимости вернуть SQL_SUCCESS_WITH_INFO и 01S07 при отсутствии частичное усечение.  
   
  Драйвер не учитывает значение длины/индикатора при преобразовании данных из числовых типов данных C и предполагается, что размер буфера данных размер числовой тип данных C. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.
+

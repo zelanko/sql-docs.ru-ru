@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aad9b74b9813c0526df87437999b66f27e95414
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|Единственным допустимым аргументом для *szTableOwner* имеет значение NULL, так как ни один из драйверов не поддерживает имена владельцев. С *szTableOwner* значение NULL, возвращаются все таблицы. В столбце TABLE_OWNER возвращается значение NULL.|  
 |*szTableQualifier*|Microsoft Excel 3.0 или 4.0 драйвера вместе, при вызове метода **SQLTables** со значением для *szTableQualifier* , но имя существующей таблицы, драйвер создает таблицу с таким именем.<br /><br /> В столбце TABLE_QUALIFIER **SQLTables** возвращает путь к каталогу.|  
 |*SzTableType*|Для Microsoft Excel 3.0 или 4.0 «TABLE» является поддерживается только тип таблицы.<br /><br /> Для более поздних версий файлов Microsoft Excel «SYSTEM TABLE» возвращается для имена листов (таблицы с «$» со стороны) и «TABLE» возвращается для таблиц в листах.|
+

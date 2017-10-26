@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  ODBC определяет широкий спектр идентификаторы типов SQL. Тем не менее драйвер не требуется использовать все эти идентификаторы. Вместо этого он использует только идентификаторы, он должен предоставлять типы данных SQL, поддерживаемые в базовом источнике данных. Если в источнике данных поддерживает следующие типы данных SQL для какой идентификатор типа не соответствует, драйвер можно определить идентификаторы еще один тип. Дополнительные сведения см. в разделе [типов данных драйвера, дескрипторов типов, типов данных, типы диагностики и атрибуты](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Полное описание идентификаторы типа SQL см. в разделе [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) в типах данных приложение D:.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 70649ee51ec7b5c2ef3926706f802da8189fc3b2
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
 -   [Выполнение пакетов](../../../odbc/reference/develop-app/executing-batches.md)  
   
 -   [Ошибки и пакетов](../../../odbc/reference/develop-app/errors-and-batches.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Возвращает квадратный корень из *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Возвращает тангенс *float_exp*, где *float_exp* угла в радианах.|  
 |**TRUNCATE (** *числовое_выражение*, *целое_выражение***)** (ODBC 2.0)|Возвращает *числовое_выражение* усекается до *целое_выражение* помещает справа от десятичной запятой. Если *целое_выражение* отрицательное, *числовое_выражение* усекается до &#124;* целое_выражение*&#124; разрядов слева от десятичной запятой.|
+
