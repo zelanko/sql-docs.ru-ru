@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  он может вызвать **SQLColumns** по столбцу OrderID.  
   
  Единственный случай, в котором приложение нельзя легко определить метаданные параметров — когда пользователь вводит параметризованную инструкцию. В этом случае приложение вызывает **SQLPrepare** к подготовке инструкции, **SQLNumParams** для определения количества параметров, и **SQLDescribeParam** для описания Каждый параметр. Тем не менее, как было указано ранее, большинство источников данных не позволяют обнаружить метаданные параметров, поэтому драйвер **SQLDescribeParam** широко не поддерживается.
+

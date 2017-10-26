@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 83040ffdab8b9715fc8caeb024bec6a9fc05d4d4
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
      Поскольку SQL_C_DEFAULT предоставляется для удобства программирования, приложение не приводит к потере любые функции, если он задает фактический тип данных C.  
   
  Таблица, показывающая тип данных C по умолчанию для каждого типа данных SQL включается в [преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)далее в этом приложении.
+

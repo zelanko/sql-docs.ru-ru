@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |209|Значение атрибута инструкции SQL_ATTR_CONCURRENCY по крайней мере одно значение, отличное от SQL_CONCUR_READ_ONLY.|  
 |210|Возможность запрос времени ожидания входа в систему и запросов SQL (параметре и SQL_ATTR_QUERY_TIMEOUT).|  
 |211|Возможность изменить уровень изоляции по умолчанию; возможность выполнения транзакций с уровнем изоляции «serializable».|
+

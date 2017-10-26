@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Чтобы определить, поддерживает ли драйвер escape-последовательности ODBC для литералов интервал, приложение вызывает **SQLGetTypeInfo**. Источник данных поддерживает тип интервала datetime, должно также поддерживать соответствующие escape-последовательность.  
   
  Источники данных также могут поддерживать литералами даты и времени, определенные в спецификации ANSI SQL-92, отличающихся от escape-последовательности ODBC для литералов даты и времени интервала. Чтобы определить, поддерживает ли источник данных ANSI литералы, приложение вызывает **SQLGetInfo** с параметром SQL_ANSI_SQL_DATETIME_LITERALS.
+

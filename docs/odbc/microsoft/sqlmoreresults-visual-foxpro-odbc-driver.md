@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Определяет, являются ли ожидающие Дополнительные результаты на дескрипторе инструкции *hstmt*, содержащий инструкции SELECT, UPDATE, INSERT или DELETE и если да, инициализирует обработку для этих результатов.  
   
  Дополнительные сведения см. в разделе [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) в *справочнике программиста ODBC*.
+

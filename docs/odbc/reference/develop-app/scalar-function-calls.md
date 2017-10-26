@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
@@ -56,3 +57,4 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  Чтобы определить, скалярные функции, которые поддерживаются источником данных, приложение вызывает **SQLGetInfo** SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS и SQL_TIMEDATE_ Параметры функции. Чтобы определить какие операции преобразования, поддерживаемые **преобразовать** приложение вызывает функцию, **SQLGetInfo** с одним из параметров, которые начинаются с SQL_CONVERT.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64e6dfe9f31eb983170f08e9fcd3e0705ba9ae62
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   **О вкладке** перечислены установленные файлы компонентов ODBC.  
   
  После добавления источника данных, можно использовать **администратор источников данных ODBC** диалоговое окно «», чтобы настроить доступ к источнику данных. Выберите источник данных и затем выберите одну из вкладок, чтобы изменить или просмотреть сведения.
+

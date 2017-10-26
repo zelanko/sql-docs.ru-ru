@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  Если приложение вызывает **SQLGetData** для возврата данных в тип datetime или тип C интервал, используются начальные точность по умолчанию интервал и интервал секунды. Если либо по умолчанию не является допустимым, то приложение должно вызвать **SQLSetDescField** для установки либо поле дескриптора или **SQLSetDescRec** для задания SQL_DESC_PRECISION. Вызов **SQLGetData** должен иметь *TargetType* из SQL_ARD_TYPE, чтобы использовать значения в поля дескриптора.  
   
  Когда **SQLPutData** вызывается интервала точности и интервал секунд точности считываются из поля записи дескриптора, которые соответствуют параметру данных во время выполнения или столбец, являющиеся APD поля для вызовов Чтобы **SQLExecute** или **SQLExecDirect**, или Отменить поля для вызовов **SQLBulkOperations** или **SQLSetPos**.
+

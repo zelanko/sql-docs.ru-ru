@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  Когда запрашиваются все типы данных в вызове **SQLGetTypeInfo**, результирующий набор, возвращаемый функцией будет содержать SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP, как определено в ODBC 3*.x*, и SQL_DATE, SQL_TIME и SQL_TIMESTAMP, как определено в ODBC 2. *x*.  
   
  Из-за как ODBC 3*.x* диспетчера драйверов выполняет сопоставление типов даты, времени и отметок времени данных, ODBC 3*.x* драйверы нужно будет только выбрать **#defines** 91, 92, и 93 для даты, времени и типы данных timestamp C введено в *TargetType* аргументы **SQLBindCol** и **SQLGetData** или * ValueType* аргумент **SQLBindParameter**и нужно будет только выбрать **#defines** 91, 92 и 93 для даты, времени и типы данных timestamp SQL, введенных в *ParameterType* аргумент **SQLBindParameter** или *DataType* аргумент **SQLGetTypeInfo**. Дополнительные сведения см. в разделе [изменения типов данных даты и времени](../../../odbc/reference/develop-app/datetime-data-type-changes.md).
+

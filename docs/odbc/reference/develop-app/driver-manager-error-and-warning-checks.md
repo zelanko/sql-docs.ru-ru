@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce87b9dbed8cfa6ca621cb72c36220c13ecb0929
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 -   Диспетчер драйверов проверяет, реализует ли драйвер **SQLGetFunctions**. Если драйвер не реализует **SQLGetFunctions**, диспетчер драйверов реализует и проверяет все ошибки и предупреждения в нем.  
   
 -   Диспетчер драйверов частично реализует **SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**, ** SQLFreeHandle**, **SQLGetDiagRec**, и **SQLGetDiagField** и проверяет некоторые ошибки в этих функций. Так как оба выполняют аналогичные операции может вернуть те же ошибки, как драйвер для некоторых из этих функций. Например, диспетчер драйверов или драйвер может возвращать SQLSTATE IM008 (Сбой диалогового окна) при вызове одной не удалось отобразить диалоговое окно входа для **SQLDriverConnect**.
+

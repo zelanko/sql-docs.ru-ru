@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d13cad1b6946e1c446faa77a1a193752c05da702
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 -   [Уровни согласованности интерфейса](../../../odbc/reference/develop-app/interface-conformance-levels.md)  
   
 -   [Уровни согласованности SQL](../../../odbc/reference/develop-app/sql-conformance-levels.md)
+

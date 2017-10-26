@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 558789a4f435e9fc54176b1423d71369f6b4cc22
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |timestamp|Тип данных TIMESTAMP невозможно привести к самой функцией CONVERT.|  
 |TINYINT|TINYINT значения всегда равны число без знака.|  
 |Строки с нулевой длиной|При использовании dBASE, Microsoft Excel, Paradox или Textdriver вставки строки нулевой длины в столбец фактически вставляет значение NULL вместо него.|
+

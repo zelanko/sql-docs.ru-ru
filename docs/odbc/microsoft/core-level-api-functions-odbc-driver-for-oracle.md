@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|Связывает имя курсора с дескриптором активный оператор, *hstmt*.|  
 |**SQLSetParam**|Заменить SQLBindParameter в ODBC 2. *x*.|  
 |**SQLTransact**|Запрашивает операции фиксации или отката для всех активных операций на все дескрипторы инструкций (hstmts), связанный с подключением или для всех подключений, связанных с этим дескриптором среды *henv*. В случае фиксации в ручной режим транзакции остается активным; Вы можете выполнить откат транзакции или повторите операцию фиксации. Если операция фиксации не в режиме автоматической транзакции, транзакция откатывается автоматически. транзакция не может быть неактивным.|
+

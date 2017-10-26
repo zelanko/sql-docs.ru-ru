@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 |Пулы, созданные|Количество активных, включая активные и удалить пулы пулов. Этот счетчик был добавлен в Windows 8 для драйверов, управление соединениями в пуле соединений. Дополнительные сведения см. в разделе [Driver-Aware Connection Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Необходимо указать собственные параметры наблюдения. Образцы для наблюдения за производительностью была включена в данную версию ODBC.
+

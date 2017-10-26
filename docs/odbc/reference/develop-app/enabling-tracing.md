@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d80f7e70915c11a3a45f90d2821b9c1bd137d9dd
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
 -   Вызовите **SQLSetConnectAttr** для задания атрибута соединения SQL_ATTR_TRACE SQL_OPT_TRACE_ON. Это включает или отключает трассировку в течение всего соединения. Дополнительные сведения см. в разделе [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) описание функции.  
   
 -   Используйте **ODBCSharedTraceFlag** для выключать трассировку динамически. (Дополнительные сведения см. в разделе Далее [динамической трассировки](../../../odbc/reference/develop-app/dynamic-tracing.md).)
+

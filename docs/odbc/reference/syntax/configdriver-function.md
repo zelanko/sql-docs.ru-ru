@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
@@ -102,3 +103,4 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>Сообщения  
  Подпрограмма установки драйвера можно отправить текстовое сообщение приложению, завершающуюся значением null в виде строки *lpszMsg* буфера. Сообщение будет усечен до *cbMsgMax* минус символу конечное значение null по **ConfigDriver** функционировать, если оно больше или равно *cbMsgMax* символов.
+

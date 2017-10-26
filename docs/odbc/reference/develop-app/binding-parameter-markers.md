@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd8c39160ee6cafbbc9f041565a57ea29680bef7
@@ -66,3 +67,4 @@ SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL
   
 > [!NOTE]  
 >  В ODBC версии 1.0 параметры были связаны с **SQLSetParam**. Диспетчер драйверов сопоставляет вызовы между **SQLSetParam** и **SQLBindParameter**, в зависимости от версии используемого приложения и драйвер ODBC.
+

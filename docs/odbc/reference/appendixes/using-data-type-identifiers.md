@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f29b6e27866b5893c6875ee5c438d7c13a996e9
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTypeInfo** — для получения списка поддерживаемых типов данных  
   
  Идентификаторы типа данных, хранятся в поле SQL_DESC_CONCISE_TYPE дескриптора. Дескриптор функции **SQLSetDescField** и **SQLSetDescRec** может использоваться с типами соответствующих для выполнения задач, перечисленных в списке выше. Дополнительные сведения см. в разделе [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).
+

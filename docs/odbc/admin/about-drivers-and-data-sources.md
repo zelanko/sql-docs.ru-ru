@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Пользовательских и системных источников данных которые в совокупности называются *машины* источники данных, поскольку они являются локальными для компьютера.  
   
  Каждый из этих источников данных имеет вкладку в **администратор источников данных ODBC** диалоговое окно. Дополнительные сведения о доступных источниках данных см. в разделе [Источники данных](../../odbc/reference/data-sources.md).
+

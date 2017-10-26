@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f08ffe2a80f89040dc148543c2b3a3985b76eca
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Назначает дисковое пространство для столбца результирующего и указывает тип результата. Когда [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) или [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) — вызывается, драйвер помещает данные для всех связанных столбцов назначенного расположения. В разделе [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) для сопоставления типов данных ODBC и Visual FoxPro.  
   
  Дополнительные сведения см. в разделе [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) в *справочнике программиста ODBC*.
+

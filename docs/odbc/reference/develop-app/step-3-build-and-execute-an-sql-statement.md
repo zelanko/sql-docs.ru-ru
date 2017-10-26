@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |**ВЫБЕРИТЕ** или каталога, функция|[Шаг 4а: получить результаты](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**ОБНОВЛЕНИЕ**, **удаление**, или **вставки**|[Шаг 4б: количество строк выборки](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Все инструкции SQL|Шаг 3: Построение и выполнение инструкций SQL (этот раздел) или [шаг 5: зафиксировать транзакцию](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+

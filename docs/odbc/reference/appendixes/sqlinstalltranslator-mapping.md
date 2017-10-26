@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07308a2c737f2fbe6857d8a65a913f881b8e658f
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlinstalltranslator-mapping"></a>Сопоставление SQLInstallTranslator
 Когда ODBC 2. *x* приложение вызывает **SQLInstallTranslator** через ODBC 3*.x* драйвера, диспетчер драйверов сопоставляет вызов **SQLInstallTranslatorEx**. Приложение не должно вызывать **SQLInstallTranslator** в ODBC 3*.x* диспетчера драйверов с *lpszInfFile* аргументу присвоено значение, отличное от NULL. ODBC. INF-файл, используемый в ODBC 2. *x* больше не поддерживается в ODBC 3*.x*, даже для обеспечения обратной совместимости.
+

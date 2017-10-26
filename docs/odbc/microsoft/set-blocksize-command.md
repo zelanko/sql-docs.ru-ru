@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d0c98afd9479e1a7de4f7a14834909962f274f1e
@@ -39,3 +40,4 @@ SET BLOCKSIZE TO nBytes
   
 ## <a name="remarks"></a>Замечания  
  ЗАДАЙТЕ размер блока по умолчанию — 64. Чтобы сбросить размер блока другое значение, после создания файла, присваивается новое значение и создать новую таблицу с помощью команды Копировать. Новая таблица имеет размер указанного блока.
+

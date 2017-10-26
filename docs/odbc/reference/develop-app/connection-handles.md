@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
  При подключении к источнику данных в основном используются дескрипторов соединений (**SQLConnect**, **SQLDriverConnect**, или **SQLBrowseConnect**), выполняется отключение от данных источник (**SQLDisconnect**), получение сведений об источнике драйвера и данные (**SQLGetInfo**), получение диагностики (**SQLGetDiagField** и **SQLGetDiagRec**) и выполнение транзакций (**SQLEndTran**). Они также используются при установке и получении атрибуты соединения (**SQLSetConnectAttr** и **SQLGetConnectAttr**) и при получении инструкции SQL в собственном формате (**SQLNativeSql **).  
   
  Дескрипторы соединений выделяются с **SQLAllocHandle** и освобождается с помощью **SQLFreeHandle**.
+

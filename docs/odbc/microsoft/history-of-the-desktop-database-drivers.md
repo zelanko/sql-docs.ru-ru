@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Драйверы version3.5 были разработаны для работы с ODBC2. *x*. Несмотря на то, что они также работают с ODBC 3.0, они не поддерживают все функции ODBC 3.0. Дополнительные сведения о работе этих драйверов ODBC 3.0 см. в разделе [обратной совместимости и соответствия стандартам](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+

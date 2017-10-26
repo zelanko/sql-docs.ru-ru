@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
@@ -304,3 +305,4 @@ ms.lasthandoff: 09/09/2017
 |C0<br /><br /> Нет Env.|C1<br /><br /> Не выделено|C2<br /><br /> Выделенные|C3<br /><br /> Требуются данные|C4<br /><br /> Подключен|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(СИСТЕМЫ)|(СИСТЕМЫ)|(СИСТЕМЫ)|(СИСТЕМЫ)|(СИСТЕМЫ)|--|--|
+

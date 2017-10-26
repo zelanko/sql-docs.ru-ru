@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  [c] это размер соответствующие типы данных C.  
   
  При преобразовании в символьный C Дата данных SQL результирующая строка находится в «*гггг*-*мм*-*дд*» формата. Этот формат не влияют настройки Windows® страны.
+

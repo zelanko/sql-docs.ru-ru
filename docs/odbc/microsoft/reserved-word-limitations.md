@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b155e40a073b12da94cbb0fc0bd2929440a1020d
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="reserved-word-limitations"></a>Ограничения зарезервированное слово
 Не используйте зарезервированные слова, перечисленные в грамматику SQL в приложении С *справочнике программиста ODBC* (или краткая форма эти зарезервированные слова) как идентификаторы (то есть имена таблиц или столбцов), если не заключить слово назад кавычки (').
+

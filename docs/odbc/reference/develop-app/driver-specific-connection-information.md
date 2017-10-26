@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Пар «ключевое_слово значение» в **SQLDriverConnect** должны отвечать определенным правилам синтаксиса. Ключевые слова и их значения не должны содержать **[] {} (),? \*=! @** символов. Значение **DSN** ключевое слово не может состоять только из пробелов и не должно содержать начальные пробелы. Из-за грамматики реестра ключевые слова и имена источников данных не может содержать обратную косую черту (\\) символов. Не допускаются пробелы вокруг знака равенства в паре «ключевое_слово значение».  
   
  **FILEDSN** ключевое слово может использоваться в вызове **SQLDriverConnect** для указания имени файла, содержащего сведения об источнике данных (в разделе [подключение с помощью файловых источников данных](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)далее в этом разделе). **SAVEFILE** ключевое слово может использоваться для указания имени DSN с файла, в котором выполнены пары «ключевое слово значение», успешное подключение при помощи вызова **SQLDriverConnect** будут сохранены. Дополнительные сведения о файловых источников данных см. в разделе [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) описание функции.
+

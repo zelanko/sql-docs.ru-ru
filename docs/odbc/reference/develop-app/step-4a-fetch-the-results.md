@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  Полное описание извлечение результатов см. в разделе [получение результатов (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) и [получение результатов (Дополнительно)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  Теперь приложение возвращает «Шаг 3: построение и выполнение инструкции SQL» для выполнения другой инструкции в той же транзакции; или переход к «Шаг 5: фиксации транзакции» для фиксации или отката транзакции.
+

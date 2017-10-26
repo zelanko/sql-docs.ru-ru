@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
          (2) драйвер округляет строка по оси Y для подходящего масштаба, (который также может быть равен нулю) и записывает результат в компьютерной телефонии  
   
          (3) драйвер ни усекает ни округляет, но только копирует первые символы LT Y в компьютерной телефонии
+

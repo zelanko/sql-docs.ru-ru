@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  Теперь можно использовать Microsoft Access для работы с данными в импортированные таблицы Visual FoxPro. Данные, которые вы импортируете, моментальный снимок данных, хранимых в Visual FoxPro; изменения, внесенные в импортированные данные не отправляются обратно в источник данных Visual FoxPro.  
   
  Изменения, внесенные в Microsoft Access, чтобы изменить данные в источнике данных Visual FoxPro см. в разделе [запросов и обновление Visual FoxPro данных из Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md).
+

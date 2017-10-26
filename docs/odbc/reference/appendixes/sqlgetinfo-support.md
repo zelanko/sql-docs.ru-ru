@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x* приложения, работа с ODBC 3*.x* драйвер не должен вызывать **SQLGetInfo** с *свойство* аргументы описано в Приведенный выше таблице, но следует использовать функции ODBC 3*.x* *свойство* аргументы, перечисленные в следующем абзаце. Не существует однозначного соответствия между *свойство* аргументы, используемые в ODBC 2.* x* и тех, которые используются в ODBC 3*.x*. ODBC 3*.x* приложения, работа с ODBC 2.* x* драйвера, с другой стороны, следует использовать *свойство* аргументы, описанные выше.  
   
  Некоторые типы сведений в приведенной выше таблице устарели и были заменены типами сведения атрибуты курсора. Эти устаревшие сведения типы: SQL_FETCH_DIRECTION, SQL_LOCK_TYPES, SQL_POS_OPERATIONS, SQL_POSITIONED_STATEMENTS, SQL_SCROLL_CONCURRENCY и SQL_STATIC_SENSITIVITY. Новые типы атрибуты курсора, SQL_XXX_CURSOR_ATTRIBUTES2 SQL_XXX_CURSOR_ATTRIBUTES1and, где XXX равно динамический, FORWARD_ONLY, KEYSET_DRIVEN или СТАТИЧЕСКИЙ. Каждый новый тип указывает возможности драйверов для типа одного курсора. Дополнительные сведения об этих параметрах см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) описание функции.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 94d240284ce0273e0700bfbabfb38fd0a41884cf
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 |Отправка данных для обновления или вставки строки в результирующий набор|Отложенные входные данные|**SQLBindCol**|**SQLSetPos**|  
 |Возвращение данных для выходных и входных/выходных параметров|Отложенный выход|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |Возвращен результирующий набор данных|Отложенный выход|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+

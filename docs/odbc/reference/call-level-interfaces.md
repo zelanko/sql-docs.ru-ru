@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 3.  Если инструкция является инструкцией SELECT, приложение вызывает функцию CLI для возврата результатов в буферы приложения. Как правило эта функция возвращает одну строку или один столбец данных за один раз.  
   
 4.  Приложение вызывает функцию CLI для отключения от СУБД.
+

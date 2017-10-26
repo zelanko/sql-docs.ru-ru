@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
 |TEXT|Если строки столбца содержат более одного типа данных Microsoft Excel, драйвер ODBC Microsoft Excel присваивает столбцу типа данных SQL_VARCHAR. Есть одно исключение: Если столбец содержит только двух-трех типов данных даты и времени (даты, времени и даты и времени), драйвер ODBC Microsoft Excel присваивает тип данных SQL_TIMESTAMP столбцу.<br /><br /> Создание ТЕКСТОВОГО столбца, равную нулю или неизвестной длины фактически возвращает столбец 255 байт.<br /><br /> Символьного литерала могут содержать любой символ ANSI (1-255 в десятичном формате). Используйте две стоящие рядом одинарные кавычки ("") для представления символ одинарной кавычки (').<br /><br /> Вставка значения NULL в столбец с типом данных, отличный от SQL_VARCHAR вызовет тип данных столбца, который следует изменить на SQL_VARCHAR.|  
   
  Дополнительные ограничения на типы данных можно найти в [ограничения типа данных](../../odbc/microsoft/data-type-limitations.md).
+

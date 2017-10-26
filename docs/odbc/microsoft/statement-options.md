@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|Возвращает 32-разрядное целое число, указывающее позицию текущей строки в результирующем наборе. Получить только; не удалось установить.|  
 |SQL_ROWSET_SIZE|Не может превышать 4 294 967 296 строк; Тем не менее необходимо иметь достаточный объем виртуальной памяти в компьютер, чтобы обработать вашу заявку.|  
 |SQL_USE_BOOKMARKS|Поддерживает настройку SQL_USE_BOOKMARKS для SQL_UB_ON и предоставляет закладки фиксированной длины.|
+

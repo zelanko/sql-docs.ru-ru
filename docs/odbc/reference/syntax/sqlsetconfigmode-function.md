@@ -23,6 +23,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8919f758c486e6569b9620fcaa7bcf76f4dac0f
@@ -82,3 +83,4 @@ BOOL SQLSetConfigMode(
 |Создание источника данных|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
 |Соединение с источником данных, используется поле строки или диалоговое окно соединения|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Получение режима конфигурации|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
+

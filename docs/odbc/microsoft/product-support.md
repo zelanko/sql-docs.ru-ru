@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5301b546930ff5d23dff507e52a325013092c02b
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="product-support"></a>Поддержка продуктов
 Поддержка ODBC обеспечивается службы технической поддержки Майкрософт. Из-за множества продуктов Microsoft ODBC как основные компоненты и также распространять драйверы ODBC, службы технической поддержки Майкрософт считает ODBC, чтобы быть частью каждого продукта, как компонент. Поддержка ODBC предоставляется в соответствии с соглашением поддержки этого продукта. Дополнительные сведения в документации конкретного продукта.
+

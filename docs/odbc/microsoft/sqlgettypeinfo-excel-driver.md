@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cbcc75d7a527104ced19727797e282b63af2a6ae
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE будет возвращаться в столбце с возможностью поиска для байта, счетчик, Double, Single, Long и короткого типов данных. (LIKE возможность достигается путем преобразования значения в символ с помощью преобразования канонические функции ODBC, затем сравнение.)  
   
  При использовании драйвера Microsoft Excel, имена типов ODBC возвращаются в столбце TYPE_NAME, возвращенный **SQLGetTypeInfo**.
+

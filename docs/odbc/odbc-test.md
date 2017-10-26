@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c5396150d9b3ae7e3c79fa3568c1468f775cb8e
@@ -41,3 +42,4 @@ Microsoft® ODBC теста — приложение включен ODBC, мож
  Разделы справки, которые были ранее включены в этом разделе документации теперь содержатся в программе тестирования ODBC. Откройте Odbcte32.exe или Odbct32w.exe открыть **справки** меню, а затем нажмите **разделы справки**.  
   
  Обратите внимание, что 64-разрядные версии этих приложений, предназначены для 64-разрядных операционных системах Microsoft Windows, совпадают с именами 32-разрядных версиях, даже если они находятся в отдельных файлах. т. е. имя для версию Юникода для 64-разрядной версии ODBC теста будет odbct32w.exe.
+

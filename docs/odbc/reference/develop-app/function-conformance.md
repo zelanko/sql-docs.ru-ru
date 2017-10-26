@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/09/2017
  [1] важных функций этой функции доступны только на более высоких уровнях совместимости.  
   
  [2] Задание определенные атрибуты нестандартные значения зависит от уровня совместимости. Дополнительные сведения см. следующий раздел, [соответствия атрибута](../../../odbc/reference/develop-app/attribute-conformance.md).
+

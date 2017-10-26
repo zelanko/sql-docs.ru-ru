@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 4.  Вызовы **SQLBulkOperations** с *операции* SQL_FETCH_BY_BOOKMARK значение аргумента.  
   
  Нет необходимости для приложения с помощью массива операций строк Запретить операцию для выполнения на определенные столбцы. Приложение выбирает строки, которые необходимо извлечь, скопировав закладки только для тех строк, в массиве привязанных закладки.
+

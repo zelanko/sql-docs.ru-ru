@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a799e2c52a7dbb21ed10ed08512e3aad28fab
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Извлекает список сведений о одной таблицы и индексы или имена тегов, связанных с таблицей. Драйвер возвращает данные в виде результирующего набора.  
   
  Дополнительные сведения см. в разделе [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) в *справочнике программиста ODBC*.
+

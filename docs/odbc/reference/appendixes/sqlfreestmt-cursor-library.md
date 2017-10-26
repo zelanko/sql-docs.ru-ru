@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b648c069c3930e923db8a929f7203807c67b128e
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  В этом разделе рассматриваются вопросы применения **SQLFreeStmt** функции в библиотеку курсоров. Общие сведения о **SQLFreeStmt**, в разделе [SQLFreeStmt, функция](../../../odbc/reference/syntax/sqlfreestmt-function.md).  
   
  Если приложение вызывает **SQLFreeStmt** с параметром SQL_UNBIND после вызова **SQLExtendedFetch**, **SQLFetch**, или **SQLFetchScroll**, библиотека курсоров возвращает сообщение об ошибке. Прежде чем его можно отменить привязку столбцов результирующего набора, приложение должно вызвать **SQLCloseCursor** или **SQLFreeStmt** с параметром SQL_CLOSE.
+

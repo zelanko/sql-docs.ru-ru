@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 >  Поддержка Visual Studio Analyzer был удален начиная с Windows 8 (Visual Studio Analyzer была включена только в предыдущих версиях Visual Studio.). Альтернативные способы устранения неполадок механизм используйте предложение трассировки.  
   
  Анализатор Visual Studio® обеспечивает производительность и отладочной информации о слоя ODBC. Все исходящие события порождаются в интерфейс верхнего уровня для представления в виде точных рисунок максимально отношении время, затраченное на компонентов ODBC. Анализатор Visual Studio требуется любого источника событий для регистрации при настройке источника. Дополнительные сведения об этом типе трассировки см. в документации Visual Studio.
+

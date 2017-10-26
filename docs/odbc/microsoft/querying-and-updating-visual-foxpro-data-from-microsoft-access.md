@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef01b8c5a21d65fb99f5f190fd159d90f3ac78b2
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  Теперь можно использовать Microsoft Access для запроса и обновления данных в связанных таблицах Visual FoxPro. Изменения, вносимые в связанные данные отправляются обратно в источник данных Visual FoxPro.  
   
  Если не хотите, чтобы изменения, внесенные в Microsoft Access, чтобы повлиять на данные в источнике данных Visual FoxPro см. в разделе [импорта Visual FoxPro данных в Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).
+

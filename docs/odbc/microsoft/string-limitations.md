@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e6f9d8add08f80b59adaa42f02bc1da006356081
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  Знак вертикальной черты (&#124;) не может использоваться в строке ли символ заключен в кавычки назад или нет.  
   
  Для максимальной совместимости приложений следует передавать параметры строки вместо передачи строки в кавычках.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46ad4937f804e5557d153ff94dd9c6ab559c9f81
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
   
  Драйвер ODBC для Oracle версии 2.0 и 2.5 поддерживает синонимы, при вызовах Oracle хранимых процедур. Синонимы работать должным образом при использовании с другими объектами базы данных Oracle, таких как таблицы.
+

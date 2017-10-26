@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c0a20af8dc2a35ba451890472ad1af73e01d8688
@@ -48,3 +49,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
 ```  
   
  Из-за ошибки в источнике данных, драйвер добавлен префикс для идентификатор источника данных ([Rdb]) диагностическое сообщение. Так как драйвер компонента, сопряженный с источником данных, он добавляется префиксы для поставщика ([Microsoft]) и идентификатор ([Rdb драйвер ODBC]) диагностическое сообщение.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  ![Привязка по наиболее широкой границе выравнивания](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Несмотря на то, что это решение оставляет больше уязвимости, код для реализации его относительно простой и быстрый. В большинстве случаев это смещения штраф оплачено неиспользуемую память. Пример использования этого метода см. в разделе [с помощью SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).
+

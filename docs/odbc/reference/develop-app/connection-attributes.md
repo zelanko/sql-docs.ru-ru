@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d62657134276621442c58639d1ef1c7f2a4b63e0
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
  После подключения необходимо указать атрибуты соединения преобразования (SQL_ATTR_TRANSLATE_DLL и SQL_ATTR_TRANSLATE_OPTION).  
   
  Все остальные атрибуты соединения можно задать в любое время. Дополнительные сведения см. в разделе [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) описание функции. (Атрибуты соединения не может задаваться на уровне среды вызов **SQLSetEnvAttr**.)
+

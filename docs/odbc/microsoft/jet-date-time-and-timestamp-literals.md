@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1a98ca0b68198dada19e4ac81f8637798a99b95
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   Литералы времени {t '*значение*"}, где *значений*e находится в форме «чч»  
   
  Для отметки времени литералов {ts*значение*"}, где *значений*e — в виде «гггг мм дд чч [. f...]».
+

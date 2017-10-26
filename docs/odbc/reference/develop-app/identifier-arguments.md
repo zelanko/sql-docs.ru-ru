@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Заключенные в кавычки идентификаторы используются для различения имени столбца true псевдо столбец с таким же именем, например ROWID в Oracle. Если «ROWID» передается в качестве аргумента для функции каталога, функция будет работать со столбцом псевдо ROWID, если он существует. Если псевдо столбец не существует, функция будет работать со столбцом «ROWID». Если ROWID передается в качестве аргумента для функции каталога, функция будет работать со столбцом ROWID.  
   
  Дополнительные сведения о нестандартных идентификаторов см. в разделе [идентификаторы в кавычках](../../../odbc/reference/develop-app/quoted-identifiers.md).
+

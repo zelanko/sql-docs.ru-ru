@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991f555cb1cc1428b182b306e60c82703a33745d
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 (Этот элемент управления является доступны, только если версии 4. *x* выбран формат.)  
   
  В выпуске версии базы данных Microsoft Jet 4.0 шифрование базы данных разрешено, при создании базы данных Access. В разделе *Справочник программиста ядра Jet базы данных* для получения дополнительных сведений.
+

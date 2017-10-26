@@ -1,7 +1,7 @@
 ---
 title: "Импорт данных с помощью собственного запроса (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>Импорт данных при помощи собственного запроса
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 Для табличных моделей 1400 новые возможности получения данных в проектах Visual Studio Analysis Services обеспечивает огромную гибкость в том, как можно объединять данные во время импорта. Эта статья описывает создание подключения к источнику данных и последующего создания собственного SQL-запрос для задания импорта данных.
 

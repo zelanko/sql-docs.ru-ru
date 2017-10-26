@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   Удалите все ранее установленные компоненты.  
   
  После установки драйвер на компьютере, программа установки компонентов установленного драйвера распознает и предоставляются дополнительные диалоговые окна, позволяющие изменять конфигурацию драйвера.
+

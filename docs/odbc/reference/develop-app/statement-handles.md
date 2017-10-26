@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  Дескрипторы инструкций используются в большинстве функций ODBC. В частности, они используются в функциях привязать параметры и привести столбцы набора (**SQLBindParameter** и **SQLBindCol**), Подготовка и выполнение инструкций (**SQLPrepare** **SQLExecute**, и **SQLExecDirect**), извлечь метаданные (**SQLColAttribute** и **SQLDescribeCol**), fetch результаты (**SQLFetch**) и получения диагностических (**SQLGetDiagField** и **SQLGetDiagRec**). Они также используются в функции каталогов (**SQLColumns**, **SQLTables**и так далее) и ряд других функций.  
   
  Дескрипторы инструкций выделяются с **SQLAllocHandle** и освобождается с помощью **SQLFreeHandle**.
+

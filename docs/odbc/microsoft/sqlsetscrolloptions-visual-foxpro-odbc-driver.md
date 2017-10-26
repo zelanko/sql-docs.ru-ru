@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 63efd04bc43855c08a6de02d5396bea45eabbc68
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Драйвер ODBC для Visual FoxPro поддерживает только SQL_CONCUR_READ_ONLY; он не поддерживает *fConcurrency* значение SQL_CONCUR_ROWVER. Драйвер преобразует SQL_KEYSET_SIZE, SQL_CURSOR_DYNAMIC и SQL_CURSOR_KEYSET_DRIVEN SQL_SCROLL_STATIC с предупреждением ODBC_01S02.  
   
  Дополнительные сведения см. в разделе [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) в *справочнике программиста ODBC*.
+

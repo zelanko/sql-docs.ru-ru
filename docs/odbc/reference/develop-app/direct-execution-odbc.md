@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
@@ -57,3 +58,4 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   Отправляет инструкции и значения параметров, преобразованных в источник данных для выполнения.  
   
     -   Возвращает все ошибки. Сюда входят виртуализации или состояние диагностики, как SQLSTATE 24000 (недопустимое состояние курсора), синтаксические ошибки, такие как SQLSTATE 42000 (синтаксическая ошибка или нарушение доступа) и семантические ошибки, такие как SQLSTATE 42S02 (базовая таблица или представление не найдены).
+

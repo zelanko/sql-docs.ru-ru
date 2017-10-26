@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e642685b670fa872c1a34d2d10fed815e5a6fa7e
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   Единица плюс явных или подразумеваемых секунды. Если точность секунды не указан, значение по умолчанию — 6.  
   
  Конкретные длина значения столбцов для каждого типа данных interval содержатся в [размер столбца](../../../odbc/reference/appendixes/column-size.md).
+

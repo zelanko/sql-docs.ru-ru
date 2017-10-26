@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
@@ -63,3 +64,4 @@ ODBC определяет два набора типов данных: SQL ти�
 -   [Преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  Описание типов данных ODBC см. в разделе [типы данных ODBC в](../../../odbc/reference/develop-app/data-types-in-odbc.md). Сведения о типах данных драйвера SQL см. в документации драйвера.
+

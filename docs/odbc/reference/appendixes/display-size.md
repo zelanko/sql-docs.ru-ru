@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3faac66828cdc408f9bd153377a3aefe74b882b0
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|36 (количество символов в *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* формат|  
   
  [] Если драйвер не может определить длину столбца или параметра типы переменных, возвращается значение SQL_NO_TOTAL.
+

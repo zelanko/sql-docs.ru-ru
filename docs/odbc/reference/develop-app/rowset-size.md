@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos** использует размер набора строк, которая действует на предшествующий ему вызов **SQLFetch** или **SQLFetchScroll**, так как **SQLSetPos** работает на набор строк, которое уже было задано. **SQLSetPos** также получают новый размер набора строк при **SQLBulkOperations** был вызван после изменения размера набора строк.  
   
 -   **SQLBulkOperations** использует размер набора строк в силе во время вызова, так как он выполняет операции с таблицей, независимо от любого извлеченных строк.
+

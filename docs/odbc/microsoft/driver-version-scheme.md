@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  С помощью выпуска 2.573.2973, соглашение об именовании привело к путанице 2.573 является более ранней версии, чем 2,73, что каждый раздел номер сборки следует рассматривать отдельно. Номер 573 превышает 73, поэтому он является более новой версии. Кроме того «2.5» указывает номер версии драйвера.
+

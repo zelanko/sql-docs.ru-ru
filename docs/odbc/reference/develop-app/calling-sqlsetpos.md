@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
@@ -46,3 +47,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  Когда приложение вызывает **SQLSetStmtAttr** для задания значения SQL_ATTR_ROW_STATUS_PTR, задает диспетчер драйверов *fSetPosError* toTRUE равны.  
   
 4.  Когда приложение вызывает **SQLSetPos**, с *fSetPosError* равно TRUE, диспетчер драйверов вызывает ошибку SQL_ERROR с SQLSTATE HY011 (атрибут нельзя установить сейчас) указывает, что приложение Предпринята попытка вызова **SQLSetPos** после изменения состояния строки указателя, но до вызова метода **SQLFetchScroll**.
+

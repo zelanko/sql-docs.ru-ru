@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 76805b2f2c5bbabfef4fede0c8bad5ba068bff74
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="default-subkey"></a>Раздел по умолчанию
 Реестр может указать источник данных по умолчанию в разделе, по умолчанию. Этот подраздел является особым случаем подраздела спецификации источника данных и имеет те же значения, как любые другие данные источника спецификации подраздела. Единственное различие — что оно не указано как значение в подразделе источников данных ODBC.
+

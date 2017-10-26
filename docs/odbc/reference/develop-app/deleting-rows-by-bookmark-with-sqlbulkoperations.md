@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db7e04c5bf76855afdb24676c905c5cccbc60cbc
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 2.  Устанавливает атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции количество закладок и привязывает буфер, содержащий значение или массив закладки для столбца с номером 0.  
   
 3.  Вызовы **SQLBulkOperations** с *операции* значение SQL_DELETE_BY_BOOKMARK.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll реализует функции ODBC поверх API-Интерфейс Microsoft Jet. Однако имеется однозначное соответствие между функциями ODBC и Microsoft Jet, отсутствует. Множество факторов, таких как модели курсора и сопоставление SQL не прямая связь функций.  
   
  Драйвер ODBC находится между модулем Microsoft Jet и диспетчер драйверов ODBC. Некоторые функции ODBC, вызвана приложением обрабатываются диспетчером драйверов и не передаются в драйвер. Для этих функций Microsoft Jet никогда не видит вызова, так как он не имеет прямое подключение к диспетчеру драйверов функции.
+

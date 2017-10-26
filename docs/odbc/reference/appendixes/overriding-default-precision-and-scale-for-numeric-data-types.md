@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 613ec65d838a525251b6682cca477c5c8d24a162
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Если приложение вызывает **SQLGetData** для возврата данных в структуру SQL_C_NUMERIC, используются поля SQL_DESC_SCALE и SQL_DESC_PRECISION по умолчанию. Если значения по умолчанию не подходят, приложение должно вызвать **SQLSetDescRec** или **SQLSetDescField** для установите значения полей, а затем вызвать **SQLGetData** с *TargetType* из SQL_ARD_TYPE, чтобы использовать значения в поля дескриптора.  
   
  При **SQLPutData** — вызывается, при вызове функции используется SQL_DESC_SCALE и SQL_DESC_PRECISION поля дескриптора записи, которая соответствует данных времени выполнения параметр или столбец, являющиеся APD поля для вызовов ** SQLExecute** или **SQLExecDirect**, или Отменить поля для вызовов **SQLBulkOperations** или **SQLSetPos**.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f2725f312691d3cb644f9a096b5f469f1356c55
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   Имя индекса должно соответствовать соглашению об именах dBASE индекса. dBASE III требует каждого индекса в отдельном файле, каждый из которых .ndx расширения. В dBASE IV индексы создаются как имена тегов, которые хранятся в одном MDX-файла. MDX-файла имеет такое же базовое имя файла базы данных (например, Emp.mdx является индексный файл базы данных Emp.dbf).  
   
 -   dBASE определяет уникальный индекс как элемент, где добавляется только одна запись из набора с одинаковыми значениями ключа индекса.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6062933f8f6d144b31da430788e8edd75da2eea
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Библиотека курсоров неправильно возвращает SQLSTATE 34000 (недопустимое имя курсора), если имя курсора является недопустимым в позиционированного обновления или инструкции delete, который передается в *InStatementText* аргумент **SQLNativeSql **. **SQLNativeSql** не предназначен для возврата синтаксических ошибок, которые возвращаются только при подготовке инструкции или выполнения.
+

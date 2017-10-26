@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0481be69797c1050b901c54b3ffde023bfdfb1a
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Подключается к источнику данных, который может представлять собой [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md) или каталог [таблиц](../../odbc/microsoft/visual-foxpro-terminology.md). Драйвер ODBC для Visual FoxPro игнорирует *szUID*, *cbUID*, *szAuthStr*, и *cbAuthStr* аргументы.  
   
  Дополнительные сведения см. в разделе [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) в *справочнике программиста ODBC*.
+

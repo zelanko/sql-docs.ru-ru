@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 44565d371ca75d4d707274b90d52794473f63a72
@@ -54,3 +55,4 @@ ms.lasthandoff: 06/22/2017
 -   Если действие, которое необходимо предпринять, включает отправку сообщения по электронной почте, необходимо настроить учетную запись электронной почты. Рекомендуется использовать компонент Database Mail. Дополнительные сведения о настройке компонента Database Mail см. в разделе [Создание учетной записи компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
   
+

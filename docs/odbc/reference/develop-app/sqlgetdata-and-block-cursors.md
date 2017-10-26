@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 715e521f5c8ee5e578ee7a21dd324d3dfb2bb239
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
 **SQLGetData** работает для одного столбца из одной строки и не удалось извлечь массив, содержащий данные из нескольких строк. Это так, как использовать основной **SQLGetData** — выборка данных long в части, и почти или совсем нет причин для этого для более чем одной строке за раз.  
   
  Для использования **SQLGetData** с блочными, приложение сначала вызывает **SQLSetPos** для позиционирования курсора на одну строку. Затем он вызывает **SQLGetData** для столбца в этой строке. Однако такое поведение является необязательным. Чтобы определить, что драйвер поддерживает использование **SQLGetData** с блочных курсоров, приложение вызывает **SQLGetInfo** с параметром SQL_GETDATA_EXTENSIONS.
+

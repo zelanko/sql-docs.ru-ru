@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2a56fee03c4e839324ffe958031861f0e71bdeb
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 5.  Нажмите кнопку ОК, чтобы сохранить изменения и закрыть диалоговое окно администратора источника данных ODBC.  
   
  Изменения вступят в силу при очередном доступа к источнику данных из приложения.
+

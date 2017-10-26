@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69912ee54db3be2ef7fb068bfe26e76cbf05cdc0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Возвращает одну строку из результирующего набора в расположениях, указанных в предыдущих вызовов [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md). Подготавливает драйвер для вызова [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) для несвязанных столбцов.  
   
  Дополнительные сведения см. в разделе [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) в *справочнике программиста ODBC*.
+

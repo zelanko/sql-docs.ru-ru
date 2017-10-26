@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e7232773b97a66fc0b1b047e3fb8cc4212754f0
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_BIT|Нет|н/д|  
   
  Драйвер не учитывает значение длины/индикатора при преобразовании данных из типа данных bit C и предполагает, что размер типа данных bit C размер буфера данных. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.
+

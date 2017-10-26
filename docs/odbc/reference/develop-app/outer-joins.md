@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  Для определения типа внешнего соединения, поддерживаемые источником данных и драйвера, приложение вызывает **SQLGetInfo** с SQL_OJ_CAPABILITIES флаг. Тип внешнего соединения, которые могут поддерживаться слева, справа, полной обработки или вложенные внешние соединения; внешние соединения, в котором имена столбцов в **ON** предложение не имеют имен их соответствующих таблиц в том же порядке **OUTER JOIN** предложения; внутренние соединения в сочетании с внешних соединений; и внешние соединения с помощью Любой оператор сравнения ODBC. Если тип данных SQL_OJ_CAPABILITIES возвращает 0, поддерживается без предложения внешнего соединения.
+

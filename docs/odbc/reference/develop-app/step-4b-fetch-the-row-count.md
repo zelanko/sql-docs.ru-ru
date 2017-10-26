@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b3526d1aad0475cb487f9c1fba6822604286834
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  Если инструкция выполняется на шаге 3 была **обновление**, **удаление**, или **вставить** инструкция, приложение получает количество затронутых строк с ** SQLRowCount**. Дополнительные сведения см. в разделе [определение число затронутых строк](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
  Теперь приложение возвращается к шагу 3, для выполнения другой инструкции в той же транзакции или переходит к шагу 5 для фиксации или отката транзакции.
+

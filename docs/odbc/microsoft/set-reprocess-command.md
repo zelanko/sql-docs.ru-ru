@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Замечания  
  Первая попытка блокировка файла или записи не всегда успешно. Как правило запись или файл заблокирован другим пользователем в сети. УСТАНОВИТЬ повторно ОБРАБОТАТЬ определяет ли Visual FoxPro дополнительных предпринимает попытки блокировка файла или записи, при начальной не удалось. Можно указать либо сколько раз дополнительных попыток выполняются или выполняются как долго попыток. Обработчика ОШИБОК ON влияет как неудачных блокировки, обрабатываются попыток.
+

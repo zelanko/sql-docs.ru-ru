@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: be45f11a17e340fb3a6999c242fce208ae733210
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE будет возвращаться в столбце с возможностью поиска для байта, счетчик, Double, Single, Long и короткого типов данных. (LIKE возможность достигается путем преобразования значения в символ с помощью преобразования канонические функции ODBC, затем сравнение.)  
   
  При использовании драйвера текстового **SQLGetTypeInfo** возвращает CASE_SENSITIVE значение FALSE для текста, типы данных (CHAR и LONGCHAR), если типы данных фактически чувствительны к регистру.
+

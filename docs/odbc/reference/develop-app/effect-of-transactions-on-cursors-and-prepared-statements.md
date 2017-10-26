@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  Приложения, особенно на экране в которых пользователь прокручивает вокруг результирующего набора и обновления или удаляются строки, должна быть указана в код решения этой проблемы.  
   
  Чтобы определить, как источник данных ведет себя при фиксации или отката транзакции, приложение вызывает **SQLGetInfo** параметры SQL_CURSOR_COMMIT_BEHAVIOR и SQL_CURSOR_ROLLBACK_BEHAVIOR.
+

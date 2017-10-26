@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa51b3cd9096203955d80cceaf7ecc82d9a909ba
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="date-arithmetic"></a>Дата арифметические операции
 Драйвер поддерживает сложение и вычитание целое число в столбце даты, времени или отметки времени. Для столбца даты целочисленное значение указывает число дней для добавления или вычитания. Для столбца времени или TIMESTAMP целое число указывает количество секунд для добавления или вычитания.
+

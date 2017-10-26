@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9441a955eaa4a9001b7acd655f7753e32f49e68e
@@ -85,3 +86,4 @@ ms.lasthandoff: 09/09/2017
 ||[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|интерфейс ODBC|Отменяет обработку на инструкции или соединения.|  
 ||[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|ISO-92|Фиксирует или откатывает транзакцию.|  
 |Завершение подключения|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|ISO-92<br /><br /> ISO-92|Закрывает соединение.<br /><br /> Освобождает дескриптор среды, соединения, оператор или дескриптора.|
+

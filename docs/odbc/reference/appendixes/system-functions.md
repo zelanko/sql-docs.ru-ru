@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 |**БАЗЫ ДАННЫХ ()** (ODBC 1.0)|Возвращает имя базы данных, соответствующий дескриптор соединения. (Имя базы данных можно получить, вызвав **SQLGetConnectOption** с параметром SQL_CURRENT_QUALIFIER.)|  
 |**IFNULL (** *exp*,*значение***)** (ODBC 1.0)|Если *exp* имеет значение null, *значение* возвращается. Если *exp* не равно null, *exp* возвращается. Тип данных или типы *значение* должен быть совместим с типом данных *exp*.|  
 |**(ПОЛЬЗОВАТЕЛЬ)** (ODBC 1.0)|Возвращает имя пользователя в СУБД. (Имя пользователя можно получить посредством **SQLGetInfo** , указав тип данных: SQL_USER_NAME.) Это может отличаться от имени входа.|
+
