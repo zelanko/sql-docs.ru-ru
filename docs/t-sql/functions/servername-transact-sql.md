@@ -30,7 +30,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40servername-transact-sql"></a>& #x 40; & #x 40; Имя сервера (Transact-SQL)
+# <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;Имя сервера (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает имя локального сервера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

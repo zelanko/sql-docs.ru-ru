@@ -90,7 +90,7 @@ The ACOS of the number is: 3.14159
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Математические функции & #40; Transact-SQL & #41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Функции](../../t-sql/functions/functions.md)
   
   

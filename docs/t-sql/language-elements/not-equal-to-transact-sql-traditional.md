@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="not-equal-to-transact-sql---traditional"></a>Не равно (Transact SQL) — традиционный
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Сравнивает два выражения (оператор сравнения). При сравнении ненулевых выражений результат принимает значение TRUE, если левый операнд не равен правому, в противном случае результат принимает значение FALSE. Если один или оба операнда имеют значение NULL, см. в разделе [SET ANSI_NULLS & #40; Transact-SQL & #41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  Сравнивает два выражения (оператор сравнения). При сравнении ненулевых выражений результат принимает значение TRUE, если левый операнд не равен правому, в противном случае результат принимает значение FALSE. Если один или оба операнда имеют значение NULL, см. в разделе [SET ANSI_NULLS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,8 +83,8 @@ ProductCategoryID Name
   
 ## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Операторы & #40; Transact-SQL & #41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Операторы сравнения & #40; Transact-SQL & #41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Операторы сравнения &#40; Transact-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   
 
