@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  Следующая инструкция SQL показывает применяемую по умолчанию инструкцию CREATE TABLE, которую предоставляет мастер настройки пакета.  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

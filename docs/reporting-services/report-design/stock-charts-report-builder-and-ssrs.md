@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4a37208813e989353a381070e1ecfa0888e1e33b
 ms.contentlocale: ru-ru
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Биржевая диаграмма](../../reporting-services/report-design/media/rs-stockchart.gif "биржевая диаграмма")  
   
- Пример биржевой диаграммы доступен в виде образца отчета построителя отчетов. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример биржевой диаграммы доступен в виде образца отчета построителя отчетов. Дополнительные сведения о загрузке этого образца и других отчетов см. в разделе [примеры отчетов построителя отчетов и конструктора отчетов](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 -   При создании осей метки на них обычно начинаются с нуля.  Обычно колебания курса акций не так велики, как разброс значений в других наборах данных. В связи с этим можно отключить метки осей, начиная с нуля, чтобы обеспечить лучший просмотр данных. Это можно сделать, установив свойство **IncludeZero** в значение **false** в диалоговом окне **Свойства оси** окна «Свойства». Дополнительные сведения о том, как диаграмма создает метки осей, см. в разделе [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
--   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют множество вычисляемых формул для работы с биржевыми диаграммами, включая «Индикатор цен», «Индекс относительной силы», «Схождение/расхождение скользящего среднего» и т.п.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют множество вычисляемых формул для работы с биржевыми диаграммами, включая «Индикатор цен», «Индекс относительной силы», «Схождение/расхождение скользящего среднего» и т.п.  
 
 ## Следующие шаги
 
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/09/2017
 [Диалоговое окно «Свойства оси», параметры оси](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

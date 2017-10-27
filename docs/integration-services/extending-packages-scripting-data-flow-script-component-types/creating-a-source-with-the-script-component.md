@@ -142,7 +142,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Создайте и настройте компонент назначения, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначения или образец компонента назначения, демонстрируемый в [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), который ожидает  **AddressID** и **Город** столбцов. Затем соедините компонент источника с назначением. (Можно соединить источник непосредственно с назначением, не выполняя никаких преобразований.) Можно создать целевую таблицу, выполнив следующую [!INCLUDE[tsql](../../includes/tsql-md.md)] в **AdventureWorks** базы данных:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -275,7 +275,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  Создайте и настройте компонент назначения, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначения или образец компонента назначения, демонстрируемый в [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Затем соедините компонент источника с назначением. (Можно соединить источник непосредственно с назначением, не выполняя никаких преобразований.) Можно создать целевую таблицу, выполнив следующую [!INCLUDE[tsql](../../includes/tsql-md.md)] в **AdventureWorks** базы данных:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

@@ -98,18 +98,18 @@ ms.lasthandoff: 08/03/2017
 ### <a name="connection-string-format"></a>Формат строки соединения
 Ниже приведен формат строки соединения, использующего встроенную проверку подлинности Windows.
 
-    Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Ниже приведен формат строки соединения, использующей проверку подлинности SQL Server вместо встроенной проверки подлинности Windows.
 
-     Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;
+     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>Введите строку подключения
 Введите строку подключения в **ConnectionString** , либо ввести имя DSN в **Dsn** в **выберите источник данных** или **Выбор назначения** страницы. Введите строку подключения, мастер анализирует строку и отображает отдельные свойства и их значения в списке.
 
 В следующем примере эта строка подключения.
 
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 Вот экрана, которое будет отображаться после ввода строки подключения.
 

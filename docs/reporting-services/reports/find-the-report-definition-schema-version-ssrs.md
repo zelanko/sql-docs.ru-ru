@@ -19,7 +19,8 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
 ms.contentlocale: ru-ru
@@ -93,3 +94,4 @@ ms.lasthandoff: 08/09/2017
 [Язык определения отчетов](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

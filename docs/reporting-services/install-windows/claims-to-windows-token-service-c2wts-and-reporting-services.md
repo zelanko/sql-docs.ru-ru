@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ C2WTS также является обязательным в режиме SQL S
 4. Запустите службу Claims to Windows Token Service через Центр администрирования SharePoint на **управление службами на сервере** страницы. Служба должна быть запущена на сервере, который будет выполнять действие. Например, при наличии сервера, то есть WFE и другого сервера, сервера приложений с общей службы SQL Server Reporting Services работает, только необходимо запустить C2WTS на сервере приложений. C2WTS требуется только на веб-сервере, если вы используете веб-части средства просмотра отчетов.
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+
