@@ -161,7 +161,7 @@ else
   
 6.  Создайте и настройте компонент назначения, который ожидает, что **AddressID** и **Город** столбцы, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначения или образец компонента назначения, показанный в [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Затем соедините выход преобразования с компонентом назначения. Можно создать целевую таблицу, выполнив следующую [!INCLUDE[tsql](../../includes/tsql-md.md)] в **AdventureWorks** базы данных:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -215,7 +215,7 @@ public class ScriptMain:
   
 7.  Создайте и настройте два компонента назначения, которые ожидают **AddressID** и **Город** столбцы, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначения, неструктурированный файл или образец компонента назначения показанные в [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Затем соедините каждый из выходов преобразования с одним из компонентов назначения. Можно создать целевые таблицы, запустив [!INCLUDE[tsql](../../includes/tsql-md.md)] следующую (с уникальными именами таблиц) в **AdventureWorks** базы данных:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  

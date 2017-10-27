@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  Создайте целевую таблицу, выполнив следующую команду Transact-SQL в **AdventureWorks** базы данных:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

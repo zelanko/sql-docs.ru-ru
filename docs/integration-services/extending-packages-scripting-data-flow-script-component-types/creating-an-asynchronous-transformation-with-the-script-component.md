@@ -132,7 +132,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  Создайте и настройте компонент назначения для первого выхода, ожидающего **AddressID** и **Город** столбцы, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначения или образец компонента назначения показанные в [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md),. Затем подсоедините первый выход преобразования, **MyAddressOutput**, к компоненту назначения. Можно создать целевую таблицу, выполнив следующую [!INCLUDE[tsql](../../includes/tsql-md.md)] в **AdventureWorks** базы данных:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

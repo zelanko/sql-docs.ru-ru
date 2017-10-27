@@ -196,7 +196,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>Создание связанного сервера с помощью поставщика OLE DB для служб SSIS  
  Создайте связанный сервер с помощью поставщика OLE DB для служб SSIS (SSISOLEDB), выполнив следующий запрос в SQL Server Management Studio.  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -217,7 +217,7 @@ GO
   
 1.  Перед созданием представления введите и выполните следующий запрос в новом окне запроса. OPENQUERY является функцией, возвращающей набор строк, которая поддерживается сервером SQL Server. Она выполняет указанный запрос к заданному связанному серверу с помощью поставщика OLE DB, связанного со связанным сервером. Из предложения FROM запроса можно ссылаться на функцию OPENQUERY как на имя таблицы. Дополнительные сведения см. в разделе [Документация по OPENQUERY в библиотеке MSDN](http://msdn.microsoft.com/library/ms188427.aspx) .  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -227,7 +227,7 @@ GO
   
 2.  Создайте представление в базе данных **TestDB** в данном пошаговом руководстве, выполнив следующий запрос:  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -240,14 +240,14 @@ GO
   
 3.  Протестируйте представление, выполнив следующий запрос.  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### <a name="openquery-function"></a>Функция OPENQUERY  
  Для функции OPENQUERY используется следующий синтаксис:  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   
