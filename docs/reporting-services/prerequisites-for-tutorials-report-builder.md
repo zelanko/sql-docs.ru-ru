@@ -16,7 +16,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2c2056dccbb2d65e880928e4ec37a70080cfbf53
 ms.contentlocale: ru-ru
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 При прохождении учебников по построителю отчетов требуется возможность просмотра и сохранения отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] с разбивкой на страницы на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов. Для данных все учебники используются запросы, которые должны быть обработаны экземпляром служб SQL Server.  
   
-Если нет доступа к серверу отчетов, сайту или источнику данных, изучить работу с построителем отчетов можно путем построения отчета вне сети. В разделе [учебник: Создание стандартного отчета с диаграммой автономных &#40; Построитель отчетов &#41; ](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+Если нет доступа к серверу отчетов, сайту или источнику данных, изучить работу с построителем отчетов можно путем построения отчета вне сети. См. раздел [Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>Требования
 
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/09/2017
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

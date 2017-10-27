@@ -20,6 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/27/2017
 [Учебники по службам Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+

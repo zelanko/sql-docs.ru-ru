@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
@@ -56,3 +57,4 @@ ms.lasthandoff: 10/06/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 Чтобы приступить к работе с обновленной веб-части средства просмотра отчетов, см. [развертывание веб-части средства просмотра отчетов на сайте SharePoint](deploy-report-viewer-web-part.md).
+

@@ -25,11 +25,12 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 10769f49396bcf32d437e4bee9b04cbc2a3c8d9c
+ms.workload: On Demand
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5fd4d415e452549e80aa12b9eb1397bf83ce6557
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="report-server-web-service"></a>веб-служба сервера отчетов
@@ -44,17 +45,17 @@ ms.lasthandoff: 08/09/2017
 -   Разрабатывать приложения с использованием любого набора средств разработки с поддержкой протокола SOAP. Дополнительные сведения см. в разделе [The Role of SOAP в службах Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md).  
   
 ## <a name="programming-diagram"></a>Диаграмма программирования  
- ![Параметры development Server, веб-службы отчетов](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "параметры разработки веб-сервера отчетов службы")  
+ ![Параметры разработки отчетов веб-сервера службы](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Report Server Web service development options")  
 Доступные способы разработки веб-службы для служб Reporting Services  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Методы веб-службы сервера отчетов](../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)  
+ [Методы веб-службы для сервера отчетов](../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)  
  Описывает функции и методы каждой веб-службы сервера отчетов.  
   
  [Роль протокола SOAP в службах Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)  
  Предоставляет общие сведения о протоколе SOAP, дает описание его использования в веб-службах сервера отчетов.  
   
- [Доступ к API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)  
+ [Доступ к API-Интерфейс SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)  
  Описывает язык WSDL и предоставляет URL-адреса для доступа к файлу WSDL служб Reporting Services.  
   
  [Создание приложений с помощью веб-службы и .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/09/2017
  [Сценарий с служебную программу rs.exe и веб-службы](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
  Содержит общие сведения о среде исполнения сценариев служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Технический справочник по &#40; Службы SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Технический справочник (службы SSRS)](../../reporting-services/technical-reference-ssrs.md)  
  Содержит справочные материалы по методам веб-служб сервера отчетов и по соответствующим сложным типам.  
   
 ## <a name="user-requirements-for-web-service-development"></a>Требования к пользователям для разработки с использованием веб-службы  
@@ -83,3 +84,4 @@ ms.lasthandoff: 08/09/2017
  [Веб-службы сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+

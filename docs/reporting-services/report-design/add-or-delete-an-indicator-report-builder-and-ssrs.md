@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: ru-ru
@@ -31,11 +32,11 @@ ms.lasthandoff: 08/09/2017
   
  Можно обновить значения и состояния индикаторов. Дополнительные сведения см. в следующих разделах:  
   
--   [Изменение значков индикаторов и наборов индикаторов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Изменение значков индикаторов и наборов индикаторов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Выбор и настройка единиц измерения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Задание и настройка единиц измерения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Задание области действия синхронизации &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Задание области действия синхронизации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Поскольку индикатор располагается внутри панели датчиков, необходимо выбрать вместо панели индикатор при необходимости настройки индикатора с помощью диалогового окна **Свойства индикатора** или панели **Свойства** . На следующем рисунке отображается выбранный индикатор на панели датчиков.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>Добавление индикатора в таблицу или матрицу  
   
-1.  Откройте существующий отчет или создайте новый отчет, содержащий таблицу и матрицу с данными, которые необходимо отобразить. Дополнительные сведения см. в разделе [Tables &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) или [матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
+1.  Откройте существующий отчет или создайте новый отчет, содержащий таблицу и матрицу с данными, которые необходимо отобразить. Дополнительные сведения см. в разделах [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) или [Матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
 2.  Вставьте столбец в таблицу или матрицу. Дополнительные сведения см. в разделе [Вставка или удаление столбца (построитель отчетов и службы SSRS)](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
@@ -76,6 +77,7 @@ ms.lasthandoff: 08/09/2017
 2.  Щелкните **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Индикаторы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
+

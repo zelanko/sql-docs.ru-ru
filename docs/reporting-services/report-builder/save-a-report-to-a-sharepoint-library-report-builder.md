@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6e87cb6c8daa8744b676d5ed78ed8339705f28e
 ms.contentlocale: ru-ru
@@ -42,6 +43,7 @@ ms.lasthandoff: 08/09/2017
     >  Если не сохранять измененный отчет в течение более 10 часов, он отключается от сервера без сохранения. Если это произойдет, в правой нижней строке состояния щелкните **Отключение**, затем щелкните **Подключение**. Последний сервер будет в списке доступных серверов. Выберите его, и отчет вновь подключится.  
   
 ## <a name="see-also"></a>См. также  
- [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
+

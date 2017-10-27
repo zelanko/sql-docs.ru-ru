@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
 ms.contentlocale: ru-ru
@@ -75,3 +76,4 @@ ms.lasthandoff: 08/09/2017
  [Публикация и повторная публикация элементов отчетов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   
+

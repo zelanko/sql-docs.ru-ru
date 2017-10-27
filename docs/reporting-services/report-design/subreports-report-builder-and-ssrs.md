@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: ru-ru
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  Вложенный отчет можно поместить в основную часть отчета или в область данных. Если поместить вложенный отчет в область данных, он будет повторяться с каждым экземпляром группы или строки в области данных. Для передачи во вложенный отчет значения из группы или строки используйте в свойстве значения вложенного отчета выражение поля для поля, содержащего значение, которое необходимо передать в качестве параметра вложенного отчета.  
   
- Дополнительные сведения о работе с вложенными отчетами см. в разделе [добавить вложенный отчет и параметры &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Дополнительные сведения о работе с вложенными отчетами см. в разделе [Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Указание имен и расположения вложенных отчетов  
  Основной отчет можно настроить таким образом, чтобы он ссылался на вложенный отчет, расположенный в другой папке на том же сервере отчетов.  
@@ -60,6 +61,7 @@ ms.lasthandoff: 08/09/2017
  В построителе отчетов для предварительного просмотра вложенного отчета в основном отчете оба отчета должны находиться на одном сервере отчетов либо нужно указать полный путь к вложенному отчету.  
   
 ## <a name="see-also"></a>См. также  
- [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
+

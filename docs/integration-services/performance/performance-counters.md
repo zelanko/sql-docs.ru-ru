@@ -58,13 +58,13 @@ ms.lasthandoff: 09/27/2017
   
  В следующем примере функция возвращает статистику для запущенного выполнения с идентификатором 34.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
  В следующем примере функция возвращает статистику для всех выполнений, запущенных на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

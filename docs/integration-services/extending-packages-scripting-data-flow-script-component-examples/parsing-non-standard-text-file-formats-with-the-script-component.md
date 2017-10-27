@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Выберите целевую базу данных и откройте окно нового запроса. Чтобы создать целевую таблицу, выполните в окне запросов следующий скрипт.  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  Выберите целевую базу данных и откройте окно нового запроса. Чтобы создать целевые таблицы, выполните в окне запросов следующий скрипт.  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

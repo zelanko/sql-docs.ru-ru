@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9939a592288fb5bc031dc53b94ac21c3809d0314
 ms.contentlocale: ru-ru
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
-  Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или сервер отчетов, см. раздел [Установка SQL Server 2016 из мастера установки &#40; Настройка &#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [управление сервером отчетов служб Reporting собственный режим служб](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+  Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или не настроили сервер отчетов, см. разделы [Установка SQL Server 2016 из мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Чтобы продолжить, нажмите кнопку **Разрешить** .  
   
-3.  В качестве URL-адреса укажите URL-адрес диспетчера отчетов. Инструкции см. в разделе [диспетчера отчетов &#40; Собственный режим служб SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации.  
+3.  В качестве URL-адреса укажите URL-адрес диспетчера отчетов. Инструкции см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Выберите меню **Сервис**.  
   
@@ -190,3 +191,4 @@ ms.lasthandoff: 08/09/2017
  [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
+

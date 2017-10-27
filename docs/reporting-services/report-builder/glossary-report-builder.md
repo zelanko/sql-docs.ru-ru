@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
 ms.contentlocale: ru-ru
@@ -375,6 +376,7 @@ ms.lasthandoff: 08/09/2017
 |ось y|См. другой элемент: ось значений (y)|  
   
 ## <a name="see-also"></a>См. также  
- [Отчет разработки концепции &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
+

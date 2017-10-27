@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
@@ -83,3 +84,4 @@ ms.lasthandoff: 08/17/2017
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

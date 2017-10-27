@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
 ms.contentlocale: ru-ru
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Где найти надстройку службы Reporting Services для продуктов SharePoint
 
-Надстройка служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) для продуктов и технологий SharePoint (rssharepoint.msi) представляет собой скачиваемый через Интернет файл, который предоставляет возможности для интеграции сервера отчетов с развернутой средой SharePoint.  
+Надстройка служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) для продуктов и технологий SharePoint (rssharepoint.msi) представляет собой скачиваемый через Интернет файл, который предоставляет возможности для интеграции сервера отчетов с развернутой средой SharePoint.  
   
 > [!IMPORTANT]  
 >  Список поддерживаемых сочетаний надстройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], сервера отчетов и SharePoint см. в разделе [Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -59,9 +60,9 @@ ms.lasthandoff: 08/09/2017
   
  Дополнительные сведения о загрузке и установке надстройки см. в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   **Надстройка для пакета обновления 1 (SP1):**  [надстройка Microsoft® SQL Server® 2012 с пакетом обновления 1 (SP1) Reporting Services для Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **Пакет обновления 1 (SP1):**  [Microsoft® SQL Server® 2012 с пакетом обновления 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Надстройка служб Reporting Services для продуктов SharePoint 2010
 
@@ -70,6 +71,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[После удаления надстройки служб Reporting Services в зоне, отличной от зоны по умолчанию, страницы SharePoint будут недоступны для просмотра](http://support.microsoft.com/kb/2009212)  
+[Вы не можете для просмотра в зоне не по умолчанию, страницы SharePoint после удаления надстройки служб Reporting Services](http://support.microsoft.com/kb/2009212)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

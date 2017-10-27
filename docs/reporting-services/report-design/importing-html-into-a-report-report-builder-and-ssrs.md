@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
 ms.contentlocale: ru-ru
@@ -91,3 +92,4 @@ ms.lasthandoff: 08/09/2017
  [Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   
+

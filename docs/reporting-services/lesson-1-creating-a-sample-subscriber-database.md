@@ -16,7 +16,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: ru-ru
@@ -64,7 +65,7 @@ ms.lasthandoff: 08/09/2017
     GO  
     ```  
   
-7.  Нажмите кнопку **! Выполнение** на панели инструментов.  
+7.  Нажмите кнопку **! Выполнить** на панели инструментов.  
   
 8.  С помощью инструкции SELECT удостоверьтесь, что создано три строки данных. Например: `select * from OrderInfo`  
   
@@ -80,3 +81,4 @@ ms.lasthandoff: 08/09/2017
 [Создание простого табличного отчета](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -16,7 +16,8 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
 ms.contentlocale: ru-ru
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 Ознакомьтесь со сведениями о мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , оптимизированных для мобильных устройств, подключенных к локальным данным и содержащих различные визуализации данных. 
 
 >[!NOTE]
->  . Требуется перенести содержимое сервера Datazen, такое как панели мониторинга и ключевые индикаторы производительности на сервер SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? Воспользуйтесь [помощником по миграции SQL Server для Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  Необходимо перенести содержимое Datazen сервера, таких как панели мониторинга и ключевые показатели эффективности в SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] сервера? Воспользуйтесь [помощником по миграции SQL Server для Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 

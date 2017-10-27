@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
@@ -94,3 +95,4 @@ FROM T
 |[Продвижение часто используемых XML-значений с помощью вычисляемых столбцов](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Описывает использование продвижения свойств в вычисляемых столбцах и таблицах свойств.|  
   
   
+

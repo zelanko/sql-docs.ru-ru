@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 > [!WARNING]  
 >  Представление catalog.execution_component_phases предоставляет эти сведения, если в качестве уровня ведения журнала выполнения пакетов задано значение Performance или Verbose. Дополнительные сведения см. в разделе [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, subcomponent_name, execution_path,  
     SUM(DATEDIFF(ms,start_time,end_time)) as active_time,  

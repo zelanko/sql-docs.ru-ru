@@ -15,7 +15,8 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
 ms.contentlocale: ru-ru
@@ -131,3 +132,4 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 [Настройка диспетчера отчетов для передачи файлов cookie нестандартной проверки подлинности](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

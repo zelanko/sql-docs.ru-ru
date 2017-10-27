@@ -15,6 +15,7 @@ applies_to:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 26e1da5a720aab965d014cada16f85086e0f70a0
@@ -62,3 +63,4 @@ ms.lasthandoff: 10/20/2017
 Сведения о SQL Server 2017 г REST API служб Reporting Services см. в разделе [разработка с помощью API REST для служб Reporting Services](../developer/rest-api.md).
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+
