@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  При использовании консоли конструктора Oracle CDC изменения определяются автоматически. При обновлении конфигурации Oracle CDC непосредственно при помощи SQL необходимо вызвать следующую процедуру для того, чтобы служба Oracle CDC обнаружила изменения в конфигурации:  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  Пароль интеллектуального анализа журнала сохраняется в зашифрованном виде путем использования асимметричного ключа с фиксированным именем `xdbcdc_asym_key` , который создается автоматически при помощи следующей команды:  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

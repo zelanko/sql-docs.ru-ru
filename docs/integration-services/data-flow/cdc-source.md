@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>Этот скрипт используется для выявления проблем и воспроизведения их в среде SQL Server Management Studio  
  Операцией источника CDC управляет операция задачи «Управление CDC», выполняемая перед вызовом источника CDC. Задача «Управление CDC» подготавливает значение переменной пакета состояния CDC для включения начального и конечного номеров LSN. Задача выполняет функции, эквивалентные следующему скрипту:  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

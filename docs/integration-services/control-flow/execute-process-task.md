@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Если для написания приложения используется Microsoft Visual Basic, задайте свойство **My.Application.CommandLineArgs** . В следующем примере устанавливается свойство **My.Application.CommandLineArgs** , чтобы получить два аргумента.  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

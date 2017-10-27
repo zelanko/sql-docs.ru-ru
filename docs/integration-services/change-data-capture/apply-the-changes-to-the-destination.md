@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
      Например, инструкция UPDATE для таблицы «Заказчики» может иметь следующий синтаксис:  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/03/2017
   
      Например, инструкция DELETE для таблицы «Заказчики» может иметь следующий синтаксис:  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  
