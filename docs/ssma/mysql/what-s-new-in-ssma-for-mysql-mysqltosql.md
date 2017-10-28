@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
@@ -182,3 +183,4 @@ V7.1 выпуск SSMA для Access содержит следующие изм�
 -   Добавлена поддержка для миграции как локального SQL Server и Azure SQL.  
   
 -   **Функция моментальный снимок:** миграции схемы и данных из MySQL таблиц и индексов и ограничений.
+

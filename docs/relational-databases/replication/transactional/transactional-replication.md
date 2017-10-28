@@ -17,6 +17,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c496335127a2f2d8acbacec53efa8ecdae697cfc
@@ -88,3 +89,4 @@ ms.lasthandoff: 06/22/2017
  Агент распространителя работает на распространителе для принудительных подписок и на подписчике для подписок по запросу. Агент перемещает транзакции из базы данных распространителя на подписчик. Если подписка отмечена для проверки подлинности, агент распространителя также проверяет соответствие данных на издателе и подписчике.  
   
   
+

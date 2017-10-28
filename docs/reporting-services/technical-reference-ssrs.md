@@ -20,7 +20,8 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d0e65c6d190976934fa9c5177585cc88a34df8fa
 ms.contentlocale: ru-ru
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/09/2017
  [Службы Reporting Services Справочник по библиотеке поставщика WMI &#40; Службы SSRS &#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

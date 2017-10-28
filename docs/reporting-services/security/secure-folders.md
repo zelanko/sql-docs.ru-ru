@@ -20,7 +20,8 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
 ms.contentlocale: ru-ru
@@ -53,3 +54,4 @@ ms.lasthandoff: 08/09/2017
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
+

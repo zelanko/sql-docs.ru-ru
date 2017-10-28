@@ -22,7 +22,8 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 935e2d44cbfd0363832eb6401b63d4a0b36623b4
 ms.contentlocale: ru-ru
@@ -70,9 +71,10 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  Учетная запись, указанная в параметре *Account* , запрашивает права **LogonAsService** в Windows. Метод предоставляет эти права указанной учетной записи.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+
