@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
@@ -207,3 +208,4 @@ V7.1 выпуск SSMA для Access содержит следующие изм�
   
 ## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+

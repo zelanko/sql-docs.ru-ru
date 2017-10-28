@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
@@ -285,3 +286,4 @@ GO
  Имеется возможность включить семантическое индексирование на столбцах не в Юникоде с помощью кода языка, содержащего только слова в Юникоде, например кода 1049, обозначающего русский язык. В этом случае семантические индексы на этом столбце никогда не возвратят каких-либо результатов.  
   
   
+

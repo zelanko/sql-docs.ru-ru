@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ WideWorldImportersDW имеет возможность произвольным 
 Приблизительно необходимое количество строк вставляются в `Fact.Sale` таблицу в 2012 году. Процедура искусственно ограничивает количество строк в день 50000. Это может быть изменен, но позволяет избежать accidential overinflations таблицы.
 
 Кроме того, процедура применяется кластеризованном индексирования, если он уже не применены.
+

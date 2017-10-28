@@ -1,7 +1,7 @@
 ---
 title: "Функция TEXTPTR (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Текст и изображения функции - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает указатель на текст значение, соответствующее **текст**, **ntext**, или **изображения** столбца в **varbinary** формат. Извлеченное значение указателя текста может быть использовано в инструкциях READTEXT, WRITETEXT и UPDATETEXT.  
   

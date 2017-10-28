@@ -17,7 +17,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: ru-ru
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Чтобы отчет был доступен для просмотра с существующими источниками данных, необходимы разрешения на их использование из клиента конструктора отчетов. Дополнительные сведения см. в разделе [Подключения к данным, источники данных и строки подключения](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- После добавления отчета можно определить источники данных и наборы данных, а также разработать макет отчета. Чтобы приступить к работе, см. [создание простого табличного отчета &#40; Учебник по службам SSRS &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) или [Tables &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ После добавления отчета можно определить источники данных и наборы данных, а также разработать макет отчета. Чтобы приступить к работе, см. разделы [Создание простого табличного отчета (учебник по службам SSRS)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) или [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>Добавление отчета с помощью мастера отчетов  
   

@@ -14,7 +14,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ru-ru
@@ -111,3 +112,4 @@ ms.lasthandoff: 08/09/2017
 Затем можно **изменить** или **удалить** планы из списка. Параметр **Новый на основе существующего** доступен, когда выбран один и только один план обновления кэша. При выборе этого параметра создаваемый план обновления будет скопирован из исходного плана. Страница плана обновления кэша открывается предварительно заполненная подробными сведениями выбранного плана. Затем можно изменить параметры плана обновления и сохранить план с новым описанием.  
 
 Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+
