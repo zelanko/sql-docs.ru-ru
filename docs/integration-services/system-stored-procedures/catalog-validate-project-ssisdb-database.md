@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  При полной проверке подтверждается, что все переменные среды, на которые указывают ссылки, находятся во включенных в проверку средах, на которые указывают ссылки. В результатах полной проверки перечисляются недействительные ссылки на среды, а также переменные сред, на которые указывают ссылки, которые не удалось найти ни в одной из входящих в проверку сред, на которые указывают ссылки.  
   
   
+

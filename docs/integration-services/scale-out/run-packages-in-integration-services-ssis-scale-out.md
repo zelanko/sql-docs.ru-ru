@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ GO
 
 ## <a name="run-package-in-sql-agent-job"></a>Запустите пакет в задании агента SQL
 Задание агента Sql Server вы можете запустить пакет служб SSIS как один шаг задания. Чтобы запустить пакет в масштабное развертывание, можно использовать выше режим выполнения по умолчанию. После настройки по умолчанию режим выполнения для «Масштабное развертывание» будет выполняться пакетов из заданий агента Sql Server в масштабное развертывание.
+

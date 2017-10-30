@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ ms.lasthandoff: 10/17/2017
 |Извлечение терминов и «Уточняющий запрос термина»|Да|||||  
 
 <sup>1</sup> компоненты измененных данных attunity требуют Enterprise edition. Change Data Capture Service и записать конструктор данных, тем не менее, не требуют Enterprise edition. Можно использовать конструктор и служба на компьютере, где не установлено служб SSIS.
+

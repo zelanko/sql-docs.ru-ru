@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 4639379a65fc28c363f6510c1a393df8840dc7f8
@@ -41,3 +42,4 @@ PowerShell предоставляет среду с широкими возмо�
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения о SQL Server в Linux см. в разделе [SQL Server в Linux](sql-server-linux-overview.md).
+

@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
@@ -227,3 +228,4 @@ GO
 Дополнительные сведения об агенте SQL Server см. в разделе [заданий агента SQL Server для пакетов](../packages/sql-server-agent-jobs-for-packages.md).
 
 Дополнительные сведения о эластичной задания в базе данных SQL см. в разделе [базы данных горизонтально масштабируемого облака управление](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+
