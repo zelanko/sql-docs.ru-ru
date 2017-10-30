@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  Скрипты задачи «Скрипт» и компонента «Скрипт», которые явно ссылаются на файл ADODB.dll, могут не выполняться или не обновляться на компьютерах, на которых не установлена среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Чтобы обновить эти скрипты задачи "Скрипт" и компонента скрипта, рекомендуется удалить зависимость от файла ADODB.dll.  Ado.Net — это рекомендуемая альтернатива для такого управляемого кода, как скрипты VB и C#.  
   
   
+

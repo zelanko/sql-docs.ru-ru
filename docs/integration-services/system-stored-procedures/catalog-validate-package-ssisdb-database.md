@@ -17,6 +17,7 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
@@ -99,3 +100,4 @@ catalog.validate_package [ @folder_name = ] folder_name
  Проверка помогает выявить проблемы, которые могут мешать успешному выполнению пакета. Используйте [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) или [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) представлений для контроля состояния проверки.  
   
   
+

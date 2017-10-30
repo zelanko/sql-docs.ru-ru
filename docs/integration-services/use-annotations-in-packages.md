@@ -18,6 +18,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dabeecf1a4e2715bf4ccd214ac21ff3311f27411
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/26/2017
 7.  Чтобы добавить заметку к группе, щелкните правой кнопкой мыши заметку и выберите пункт **Группа**.  
   
 8.  Чтобы сохранить обновленный пакет, в меню **Файл** выберите команду **Сохранить все**.  
+

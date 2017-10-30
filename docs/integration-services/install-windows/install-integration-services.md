@@ -22,6 +22,7 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e91abac8902868dc9edefc1466fb2d25a602462
@@ -96,3 +97,4 @@ ms.lasthandoff: 09/26/2017
 >  Среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 32-разрядная среда разработки для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], не поддерживается на 64-разрядных платформах [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] и не устанавливается на серверы на базе процессоров [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].    
     
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d2e74c467cc0f94d15bdd4a42a300a842012ecd5
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/03/2017
  Выберите этот параметр для использования значения переменной, сохраненного в среде, на которую ссылается проект или пакет. Чтобы добавить ссылку среды к проекту или пакету, используйте диалоговое окно **Настройка** . Дополнительные сведения см. в статье [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md).  
   
   
+

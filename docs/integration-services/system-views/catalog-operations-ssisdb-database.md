@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f9d1969e9fe7bcb2104003cfab057effcd35da5d
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/26/2017
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
+
