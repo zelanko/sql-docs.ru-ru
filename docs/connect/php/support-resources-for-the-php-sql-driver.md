@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 Для коллег посетите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [форум](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-Чтобы оставить отзыв, задать вопросы или узнать о планах группы разработчиков, посетите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [[!INCLUDE[ssDriverPHP](../Token/ssDriverPHP_md.md)]](http://go.microsoft.com/fwlink/?LinkID=108675).  
+Чтобы оставить отзыв, задать вопросы или узнать о планах группы разработчиков, посетите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [блог группы разработчиков](http://go.microsoft.com/fwlink/?LinkID=108675).   
   
 [Исходный код драйвера Microsoft PHP Driver for SQL Server на сайте Github](https://github.com/azure/msphpsql)  
   
