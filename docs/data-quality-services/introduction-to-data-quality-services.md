@@ -88,7 +88,7 @@ ms.lasthandoff: 09/09/2017
   
  **Процессы качества данных в службах Master Data Services**  
   
- Службы Data Quality Services интегрированы в службы Master Data Services (MDS), что позволяет исключать дубликаты в исходных данных и основных данных в рамках надстройки Microsoft SQL Server 2014 Master Data Services для Microsoft Excel. Для выполнения сопоставления загрузите данные, управляемые службами MDS, в лист Excel, и объедините их с данными, не управляемыми службами MDS, а затем осуществите сопоставление в рамках Excel. Компоненты [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] должны устанавливаться вместе с MDS. Дополнительные сведения см. в статье  [Data Quality Matching in the MDS Add-in for Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
+ Службы Data Quality Services интегрированы в службы Master Data Services (MDS), что позволяет исключать дубликаты в исходных данных и основных данных в рамках надстройки Microsoft SQL Server 2014 Master Data Services для Microsoft Excel. Для выполнения сопоставления загрузите данные, управляемые службами MDS, в лист Excel, и объедините их с данными, не управляемыми службами MDS, а затем осуществите сопоставление в рамках Excel. Компоненты [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] должны устанавливаться вместе с MDS. Дополнительные сведения см. в статье  [Сопоставление качества данных в надстройке MDS для Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
   
 
