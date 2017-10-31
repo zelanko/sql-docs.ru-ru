@@ -1,5 +1,5 @@
 ---
-title: "Диаграммы \"дерево\" и \"солнечные лучи\" в Reporting Services | Документация Майкрософт"
+title: "Диаграмма \"дерево\" и \"солнечные лучи\" диаграмм в SQL Server Reporting Services | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,141 +15,144 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
-ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
 ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/30/2017
 
 ---
-# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services
+# <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Диаграмма "дерево" и "солнечные лучи" диаграмм в службах Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  Визуализации "дерево" и "солнечные лучи" [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] прекрасно подходят для визуального представления иерархических данных.   В этом разделе описывается добавление диаграммы "дерево" или "солнечные лучи" в отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, в раздел включен пример запроса Adventureworks, который поможет вам приступить к работе.  
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] визуализации диаграмма "дерево" и "солнечные лучи" прекрасно подходят для визуального представления иерархических данных. В этой статье приведен обзор способов добавления диаграммы диаграмма "дерево" или "солнечные лучи" [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчета. Статья также включает пример запроса AdventureWorks, помогут вам приступить к работе.  
   
-##  <a name="bkmk_treemap_chart"></a> Диаграмма "дерево"  
- ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
+##  <a name="bkmk_treemap_chart"></a>Диаграмма, диаграмма "дерево"  
+
+Диаграммы диаграмма "дерево" делит область диаграммы на прямоугольники, представляющие разные уровни и относительные размеры иерархии данных. Эта схема аналогична ветвям дерева, начинающимся от ствола и разделяющимся на ветви меньшего и меньшего размера. Каждый прямоугольник разбивается на более мелкие прямоугольники, представляющие следующий уровень в иерархии. Прямоугольники диаграмма верхнего уровня дерева упорядочены самый большой прямоугольник в левом верхнем углу диаграммы, чтобы наименьшего прямоугольника в правом нижнем углу.  В прямоугольнике следующий уровень, помимо прочего, упорядочивается в виде прямоугольников от левого верхнего угла до правого нижнего угла.  
+
+Например на следующем рисунке диаграмма образца, Юго-Запад Территория является наибольшим и Германия — наименьшей. На юго-западной территории область шоссейных велосипедов больше области горных велосипедов.  
+ 
+![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
- Диаграмма "дерево" делит область диаграммы на прямоугольники, представляющие разные уровни и относительные размеры иерархии данных. Эта схема аналогична ветвям дерева, начинающимся от ствола и разделяющимся на ветви меньшего и меньшего размера. Каждый прямоугольник разбивается на более мелкие прямоугольники, представляющие следующий уровень в иерархии. Прямоугольники верхнего уровня дерева упорядочены так, что самый большой прямоугольник находится в верхнем левом углу диаграммы, а самый маленький — в правом нижнем углу.  В прямоугольнике следующий уровень, помимо прочего, упорядочивается в виде прямоугольников от левого верхнего угла до правого нижнего угла.  
-  
- Например на следующем рисунке пример дерева карты, Юго-Запад Территория является наибольшим и Германия — наименьшей. На юго-западной территории область шоссейных велосипедов больше области горных велосипедов.  
-  
- ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
-  
-### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Вставка диаграммы "дерево" и настройка для образца данных Adventureworks  
+### <a name="to-insert-a-treemap-chart-and-set-up-the-sample-adventureworks-data"></a>Вставка диаграммы диаграмма "дерево" и настройка образца данных AdventureWorks  
    
-[!NOTE] Перед добавлением диаграммы в отчет создайте источник данных и набора данных.  Образец данных и образец запроса см. в разделе [Образец данных Adventureworks](#bkmk_sample_data) этой статьи.  
+> [!NOTE]
+> Перед добавлением диаграммы в отчет создайте источник данных и набора данных.  Образец данных и образец запроса см. в разделе [образец данных AdventureWorks](#bkmk_sample_data).  
   
-1.  Щелкните правой кнопкой мыши рабочую область конструирования, выберите команду **Вставить**и щелкните пункт **Диаграмма** .  
-  
-     Выберите диаграмму "дерево" ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
-  
-     ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
-  
-2.  Измените положение и размер диаграммы.   Для использования с образцом данных достаточно начать с диаграммы шириной в 5 дюймов.  
+1.  Щелкните правой кнопкой мыши область конструктора, а затем выберите **вставить** > **диаграммы**. Выберите **древовидной диаграммы** значок.
+
+    ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
+   
+2.  Измените положение и размер диаграммы. Для использования с образцом данных, с диаграммы шириной в 5 дюймов является достаточно начать.  
   
 3.  Добавьте следующие поля из образца данных.  
   
-    |||  
-    |-|-|  
-    |![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")|**Значения:** LineTotal<br /><br /> **Группы категорий:** добавлять в следующем порядке:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> **Группы рядов:** TerritoryName|  
+    * **Значения**: LineTotal
+    * **Группы категорий** (в следующем порядке):
+        1. «Категория»
+        2. SubcategoryName
+    * **Группы рядов**: TerritoryName  
+
+    ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
-4.  Чтобы оптимизировать размер страницы для общей схемы дерева, задайте положение условных обозначений внизу.  
+4.  Чтобы оптимизировать размер страницы для общей схемы диаграммы-дерева, задайте положение условных обозначений внизу.  
   
-5.  Чтобы добавить всплывающие подсказки, отображающие подкатегорию и общую сумму, щелкните правой кнопкой мыши **LineTotal** и нажмите **Свойства рядов**.  
+5.  Чтобы добавить всплывающие подсказки, отображающие подкатегорию и общую сумму, щелкните правой кнопкой мыши **LineTotal**, а затем выберите **свойства ряда**.  
   
      ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
-     Задайте в свойстве **Tooltip** следующее значение:  
+     Задать **подсказка** свойство следующее значение:  
   
     ```  
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
     ```  
   
-     Дополнительные сведения см. в разделе [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
+    Дополнительные сведения см. в разделе [отображение подсказок в ряд &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
   
-6.  Измените заголовок диаграммы по умолчанию на "Продажи по категориям и по территории".  
+6.  Измените заголовок диаграммы по умолчанию на **продажи по категориям и по территории**.  
   
-7.  Количество отображаемых значений меток зависит от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников.  Чтобы видеть больше меток, измените значение свойства шрифта LineTotal на 8 pt вместо значения по умолчанию 10 pt.  
+7.  Количество отображаемых значений меток зависит от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников. Чтобы видеть больше меток, измените **шрифт метки** свойство **LineTotal** для **10пт** по умолчанию **8pt**.  
   
   
-##  <a name="bkmk_sunburst_chart"></a> Диаграмма "солнечные лучи"  
- ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
+##  <a name="bkmk_sunburst_chart"></a>Диаграмма "солнечные лучи"  
+ 
+На диаграмме "солнечные лучи" Иерархия представляется рядами кругов. Верхним уровнем иерархии является в центре, а более низкие уровни иерархии, отображаемых за пределами центра кольца.  Самый низкий иерархический уровень представляет внешнее кольцо.  
   
- На диаграмме "солнечные лучи" иерархия представляется рядами кругов, причем наивысший иерархический уровень находится в центре, а более низкие уровни иерархии отображаются в виде колец за центром.  Самый низкий иерархический уровень представляет внешнее кольцо.  
+![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
- ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
+### <a name="to-insert-a-sunburst-chart-and-set-up-the-sample-adventureworks-data"></a>Вставка диаграммы "солнечные лучи" и настройка образца данных AdventureWorks  
+> [!NOTE] 
+> Перед добавлением диаграммы в отчет создайте источник данных и набора данных. Образец данных и образец запроса см. в разделе [образец данных AdventureWorks](#bkmk_sample_data).  
   
-### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Вставка диаграммы "солнечные лучи" и настройка для образца данных Adventureworks  
- [!NOTE] Перед добавлением диаграммы в отчет создайте источник данных и набора данных.  Образец данных и образец запроса см. в разделе [Образец данных Adventureworks](#bkmk_sample_data) этой статьи.  
+1.  Щелкните правой кнопкой мыши область конструктора, а затем выберите **вставить** > **диаграммы**. Выберите **"солнечные лучи"** значок.
+     
+     ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
   
-1.  Щелкните правой кнопкой мыши рабочую область конструирования, выберите команду **Вставить**и щелкните пункт **Диаграмма** .  
-  
-     Выберите диаграмму "солнечные лучи" ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon").  
-  
-     ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
-  
-2.  Измените положение и размер диаграммы.   Для использования с образцом данных достаточно начать с диаграммы шириной в 5 дюймов.  
+2.  Измените положение и размер диаграммы. Для использования с образцом данных, с диаграммы шириной в 5 дюймов является достаточно начать.  
   
 3.  Добавьте следующие поля из образца данных.  
-  
-    |||  
-    |-|-|  
-    |![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")|**Значения:** LineTotal<br /><br /> **Группы категорий:** добавлять в следующем порядке:<br /><br /> 1) CategoryName<br /><br /> 2) SubcategoryName<br /><br /> 3) SalesReasonName<br /><br /> **Группы рядов:** TerritoryName|  
+
+    * **Значения**: LineTotal
+    * **Группы категорий** (в следующем порядке):
+        1. «Категория»
+        2. SubcategoryName
+        3. SalesReasonName
+    * **Группы рядов**: TerritoryName  
+
+    ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4.  Чтобы оптимизировать размер страницы для общей схемы диаграммы "солнечные лучи", задайте положение условных обозначений внизу.  
   
-5.  Измените заголовок диаграммы по умолчанию на "Продажи по категориям и по территории с причинами покупки".  
+5.  Измените заголовок диаграммы по умолчанию на **к категории продаж по территории с причинами покупки**.  
   
-6.
-    |||  
-    |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|Чтобы добавить значения групп категорий в диаграмму "солнечные лучи" как метки, установите свойство метки **Visible** =true и свойство метки **UseValueAsLabel**=False.<br /><br /> Отображаемые значения меток зависят от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников.  Чтобы видеть больше меток, измените значение свойства шрифта LineTotal на 8 pt вместо значения по умолчанию 10 pt.|
+6. Чтобы добавить значения групп категорий "солнечные лучи" как метки, задайте свойства label **видимый = true** и **UseValueAsLabel = false**.<br /><br /> Отображаемые значения меток зависят от размера шрифта, размера общей области диаграммы и размера определенных прямоугольников.  Чтобы видеть больше меток, измените **шрифт метки** свойство **LineTotal** для **10пт** по умолчанию **8pt**.
+
+    ![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")
   
 7.  Если требуется другой диапазон цветов, измените свойство диаграммы **Palette** .  
-  
-  
+    
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   
   
-##  <a name="bkmk_sample_data"></a> Образец данных Adventureworks  
- В этом разделе содержится образец запроса и основные шаги для создания источника данных и набора данных в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Если в вашем отчете уже имеется источник данных и набор данных, этот раздел можно пропустить.  
+##  <a name="bkmk_sample_data"></a>Образец данных AdventureWorks  
+ Этот раздел содержит образец запроса и основные шаги для создания источника данных и набора данных в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Если в вашем отчете уже имеется источник данных и набора данных, этот раздел можно пропустить.  
   
- Запрос возвращает подробные данные заказа на продажу Adventureworks с территорией продажи, категорией продукта, подкатегорией продукта и данными о причине покупки.  
+ Запрос возвращает подробные данные заказа на продажу AdventureWorks с территорией продаж, категории продукта, Подкатегория продукта и данными о причине покупки.  
   
-1.  **Получение данных:**  
+1.  **Получить данные**.  
   
-     Запрос в этом разделе основан на базе данных Adventureworks, которую можно загрузить на странице  [полной резервной копии базы данных Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
+     Запрос в этом разделе основан на базе данных AdventureWorks, который можно загрузить с сайта GitHub: [AdventureWorks 2016 полной резервной копии](https://github.com/Microsoft/sql-server-samples/releases).  
   
-     Дополнительные сведения о том, как установить базу данных, см. в документе [How to install Adventure Works 2014 Sample Databases.pdf](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
-2.  **Создание источника данных:**  
+2.  **Создать источник данных**.  
   
-    1.  В области **Данные отчета** щелкните правой кнопкой мыши пункт **Источник данных** и выберите команду **Добавить источник данных**.  
+    1.  В разделе **данные отчета**, щелкните правой кнопкой мыши **источники данных**, а затем выберите **добавить источник данных**.  
   
     2.  Установите флажок **Использовать соединение, внедренное в отчет**.  
   
     3.  Выберите тип подключения **Microsoft SQL Server**.  
   
-    4.  Введите строку подключения к вашему серверу и базе данных, например:  
+    4.  Введите строку подключения к серверу и базе данных. Например:  
   
         ```  
-        Data Source=[server name];Initial Catalog=AdventureWorks2014  
+        Data Source=[server name];Initial Catalog=AdventureWorks2016  
         ```  
   
-    5.  Рекомендуется выполнить проверку с помощью кнопки **Проверить подключение** , а затем нажать кнопку **ОК**.  
+    5.  Чтобы проверить соединение, выберите **проверить подключение** и затем выберите **ОК**.  
   
-     Дополнительные сведения о создании источника данных см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Дополнительные сведения о создании источника данных см. в разделе [добавить и проверить подключение данных &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-3.  **Создание набора данных**  
+3.  **Создать набор данных**.  
   
-    -   В области **Данные отчета** щелкните правой кнопкой мыши пункт **Наборы данных** и выберите команду **Добавить набор данных**.  
+    1. В разделе **данные отчета**, щелкните правой кнопкой мыши **наборы данных**и выберите **добавьте набор данных**.  
   
-    -   Установите флажок **Использовать набор данных, внедренный в отчет**.  
+    2. Установите флажок **Использовать набор данных, внедренный в отчет**.  
   
-    -   Выберите источник данных, созданный на предыдущих шагах.  
+    3. Выберите источник данных, созданный вами.  
   
-    -   Выберите тип запроса **Текст** , затем скопируйте и вставьте следующий запрос в текстовое поле **Запрос:** .  
+    4. Выберите **текст** запрос типа, а затем скопируйте и вставьте следующий запрос в **запроса** текстовое поле:  
   
         ```  
         SELECT    Sales.SalesOrderHeader.SalesOrderID, Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderDetail.SalesOrderDetailID, Sales.SalesOrderDetail.ProductID, Sales.SalesOrderDetail.LineTotal,   
@@ -174,18 +177,17 @@ ms.lasthandoff: 10/02/2017
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    -   Нажмите кнопку **ОК**.  
+    5. Нажмите кнопку **ОК**.  
   
-     Дополнительные сведения о создании набора данных см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+     Дополнительные сведения о создании набора данных см. в разделе [создать общий набор данных или внедренный набор данных &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>См. также:  
- [Представление конструктора общих наборов данных (построитель отчетов)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Отображение всплывающих подсказок для ряда &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
- [Учебник. Диаграммы "дерево" в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
- [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
-  
-  
+* [Общий конструктор наборов данных &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
+* [Отображение всплывающих подсказок для ряда &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
+* [Учебник: Древовидные диаграммы в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+<br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
