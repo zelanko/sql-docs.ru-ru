@@ -257,7 +257,7 @@ ms.lasthandoff: 10/10/2017
 
 Дополнительные сведения об использовании VS Code см. в разделе [документации Visual Studio Code](https://code.visualstudio.com/docs).
 
-[** mssql ** расширения VS Code]:https://aka.ms/mssql-marketplace
+[**mssql** расширения VS Code]:https://aka.ms/mssql-marketplace
 [загрузки и установки VS Code]:https://code.visualstudio.com/Download
 [.Net Core инструкции]:https://www.microsoft.com/net/core
 [управления профилями подключения]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
