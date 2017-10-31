@@ -16,8 +16,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: ru-ru
@@ -114,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="bkmk_redeploy"></a>Повторное развертывание отчета  
   
-1.  Повторно разверните отчет, с тем чтобы конфигурация подписки, которая будет создана на следующем занятии, могла использовать изменения, внесенные на этом занятии. Дополнительные сведения о свойствах проекта, использованных в учебнике по таблицам, см. в разделе "Публикация отчета на сервере отчетов (необязательно)" [занятия 6 "Добавление группирования и итогов" (службы Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Повторно разверните отчет, с тем чтобы конфигурация подписки, которая будет создана на следующем занятии, могла использовать изменения, внесенные на этом занятии. Дополнительные сведения о свойствах проекта, используемая в этом учебнике таблицы, см в разделе «Публикация отчета на сервере отчетов (необязательно)» для [Lesson 6: Добавление группирования и итогов &#40; Службы Reporting Services &#41; ](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  На панели инструментов щелкните **Построить** , а затем ― **Развернуть учебник**.  
   
