@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |||  
 |-|-|  
-|[СР.](../../t-sql/functions/avg-transact-sql.md)|[МИН.](../../t-sql/functions/min-transact-sql.md)|  
-|[CHECKSUM_AGG](../../t-sql/functions/checksum-agg-transact-sql.md)|[СУММА](../../t-sql/functions/sum-transact-sql.md)|  
-|[СЧЕТЧИК](../../t-sql/functions/count-transact-sql.md)|[STDEV](../../t-sql/functions/stdev-transact-sql.md)|  
-|[ФУНКЦИЯ COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)|[STDEVP](../../t-sql/functions/stdevp-transact-sql.md)|  
-|[ГРУППИРОВАНИЕ](../../t-sql/functions/grouping-transact-sql.md)|[VAR](../../t-sql/functions/var-transact-sql.md)|  
-|[ФУНКЦИЯ GROUPING_ID](../../t-sql/functions/grouping-id-transact-sql.md)|[ФУНКЦИЯ VARP](../../t-sql/functions/varp-transact-sql.md)|  
+|[AVG](../../t-sql/functions/avg-transact-sql.md)|[MIN](../../t-sql/functions/min-transact-sql.md)|  
+|[CHECKSUM_AGG](../../t-sql/functions/checksum-agg-transact-sql.md)|[SUM](../../t-sql/functions/sum-transact-sql.md)|  
+|[COUNT](../../t-sql/functions/count-transact-sql.md)|[STDEV](../../t-sql/functions/stdev-transact-sql.md)|  
+|[COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)|[STDEVP](../../t-sql/functions/stdevp-transact-sql.md)|  
+|[GROUPING](../../t-sql/functions/grouping-transact-sql.md)|[VAR](../../t-sql/functions/var-transact-sql.md)|  
+|[GROUPING_ID](../../t-sql/functions/grouping-id-transact-sql.md)|[VARP](../../t-sql/functions/varp-transact-sql.md)|  
 |[MAX](../../t-sql/functions/max-transact-sql.md)||  
   
 ## <a name="see-also"></a>См. также:
