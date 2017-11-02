@@ -327,7 +327,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  
 1.  Нажмите CTRL+SHIFT+ESC, чтобы отобразить диспетчер задач.  
 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
-3.  В диалоговом окне **Создание новой задачи** введите **cmd **в поле** Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем** .  
+3.  В диалоговом окне **Создание новой задачи** введите **cmd **в поле** Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем**.  
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
