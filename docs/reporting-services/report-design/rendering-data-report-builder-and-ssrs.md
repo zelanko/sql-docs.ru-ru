@@ -17,10 +17,10 @@ ms.author: maggies
 manager: erikre
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 209938a6f1f5562fb3e5bfb70be713d2eb9b8285
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Подготовка данных к просмотру (построитель отчетов и службы SSRS)
@@ -47,17 +47,17 @@ ms.lasthandoff: 08/09/2017
   
 -   Свойство DataElementStyle в формате XML указывает, отображается ли данный элемент отчета как элемент или как атрибут XML.  
   
- Параметр экспорта CSV сохраняет данные отчета в простом текстовом файле без форматирования, с запятыми в качестве разделителей. По умолчанию в качестве разделителя для полей и строк используется запятая (,), но это свойство можно изменить с помощью изменения настройки сведений об устройстве. Полученный файл может быть открыт в электронных таблицах (например в Office SharePoint Server) или импортирован в другие программы. Файл с расширением CSV также можно открыть в текстовом редакторе, например в Блокноте. При обращении к CSV-файлу как к URL-адресу он возвращает тип MIME **text/csv**. Это файлы MIME версии 1.0. Дополнительные сведения о сохранении отчета в файлах формата CSV см. в разделе [Экспорт в CSV-файл (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
+ Параметр экспорта CSV сохраняет данные отчета в простом текстовом файле без форматирования, с запятыми в качестве разделителей. По умолчанию в качестве разделителя для полей и строк используется запятая (,), но это свойство можно изменить с помощью изменения настройки сведений об устройстве. Полученный файл может быть открыт в электронных таблицах (например в Office SharePoint Server) или импортирован в другие программы. Файл с расширением CSV также можно открыть в текстовом редакторе, например в Блокноте. При обращении к CSV-файлу как к URL-адресу он возвращает тип MIME **text/csv**. Это файлы MIME версии 1.0. Дополнительные сведения о сохранении отчета в формате CSV см. в разделе [Экспорт в CSV-файл &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
- При выборе экспорта данных отчета XML-файл сохраняет отчет как XML-файл. XML-схема уникальна для каждого отчета. Информация о макете отчета не сохраняется при экспорте в формат XML. XML-документ, созданный таким образом, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению. Дополнительные сведения о сохранении отчета в файлах формата XML см. в разделе [Экспорт в XML (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
+ При выборе экспорта данных отчета XML-файл сохраняет отчет как XML-файл. XML-схема уникальна для каждого отчета. Информация о макете отчета не сохраняется при экспорте в формат XML. XML-документ, созданный таким образом, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению. Дополнительные сведения о сохранении отчета в формате XML см. в разделе [Экспорт в XML &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение отрисовки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных подготовки отчетов к просмотру расширения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Настройки сведений об устройстве в службах Reporting Services](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Службы Reporting Services настройки сведений об устройстве](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   
 
