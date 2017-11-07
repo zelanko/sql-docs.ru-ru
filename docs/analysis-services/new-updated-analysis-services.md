@@ -4,7 +4,7 @@ description: "Отображение фрагментов обновленное
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: 
 ms.service: na
 ms.topic: updart-autogen
