@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Проверка целостности всех страниц и структур, составляющих таблицу или индексированное представление.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Проверка целостности всех страниц и структур, составляющих таблицу или индексированное представление.
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Синтаксис    
@@ -160,7 +160,7 @@ DBCC CHECKTABLE
 [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Моментальный снимок внутренней базы данных    
-Для обеспечения согласованности транзакций, необходимой для выполнения этих проверок, инструкция DBCC CHECKTABLE использует внутренний моментальный снимок базы данных. Дополнительные сведения см. в разделе [Просмотр размера разреженного файла моментального снимка базы данных &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) и в разделе «DBCC внутренней базы данных моментальных снимков использование» [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+Для обеспечения согласованности транзакций, необходимой для выполнения этих проверок, инструкция DBCC CHECKTABLE использует внутренний моментальный снимок базы данных. Дополнительные сведения см. в разделе [Просмотр размера разреженного файла моментального снимка базы данных & #40; Transact-SQL & #41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) и в разделе «DBCC внутренней базы данных моментальных снимков использование» [DBCC & #40; Transact-SQL & #41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Если моментальный снимок не может быть создан или указана подсказка TABLOCK, инструкция DBCC CHECKTABLE запрашивает совмещаемую блокировку таблицы, чтобы обеспечить необходимую согласованность.
     
 > [!NOTE]    
