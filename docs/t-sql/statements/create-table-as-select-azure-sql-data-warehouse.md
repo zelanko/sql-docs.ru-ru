@@ -2,7 +2,7 @@
 title: "Создание TABLE AS SELECT (хранилище данных Azure SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/07/2016
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 
