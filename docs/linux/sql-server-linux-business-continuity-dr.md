@@ -1,8 +1,9 @@
 ---
 title: "Аварийное восстановление для SQL Server для Linux | Документы Microsoft"
 description: 
-author: mihaelab
+author: allanhirt
 ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
