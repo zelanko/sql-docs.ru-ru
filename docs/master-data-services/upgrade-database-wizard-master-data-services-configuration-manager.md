@@ -1,5 +1,5 @@
 ---
-title: "Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services) | Документы Microsoft"
+title: "Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7823eb8d6b5b4a591f38e0e6dae1a4f8fdbadb80
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1b43487f640dea05d9d29c195cd660db8bd24574
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/01/2017
   
 |Имя элемента управления|Description|  
 |------------------|-----------------|  
-|**Экземпляр SQL Server**|Имя выбранного в данный момент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] экземпляра.|  
+|**Экземпляр SQL Server**|Имя выбранного в данный момент экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] .|  
 |**База данных служб основных данных**|Имя выбранной в данный момент базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
   
 ## <a name="progress-and-finish"></a>Ход выполнения и завершение  
@@ -40,7 +41,8 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также:  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Установка служб Master Data Services и настройка](../master-data-services/master-data-services-installation-and-configuration.md)  
+[Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Обновление служб Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   
+

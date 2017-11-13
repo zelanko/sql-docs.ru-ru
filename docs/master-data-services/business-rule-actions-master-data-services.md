@@ -1,5 +1,5 @@
 ---
-title: "Действия бизнес-правил (Master Data Services) | Документы Microsoft"
+title: "Действия бизнес-правил (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a4d478795952951063dab5ef6979f517997ff3f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e95b13ecedad9aaaacb948bc907a9c8950e136de
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="business-rule-actions-master-data-services"></a>Действия бизнес-правил (службы Master Data Services)
@@ -73,8 +74,9 @@ ms.lasthandoff: 09/01/2017
 |**запуск рабочего процесса**|Инициирует внешний рабочий процесс. Данные, вызвавшие это действие, передаются рабочему процессу. Дополнительные сведения см. в статье [Интеграция рабочих процессов SharePoint со службами Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Это действие допустимо для текстовых, числовых значений, дат и ссылок.|  
   
 ## <a name="see-also"></a>См. также:  
- [Условия бизнес-правил &#40; Службы Master Data Services &#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [Бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
- [Создание и публикация бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Условия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
+ [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   
+
