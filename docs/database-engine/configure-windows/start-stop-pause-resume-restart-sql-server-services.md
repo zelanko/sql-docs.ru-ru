@@ -194,7 +194,7 @@ ms.lasthandoff: 08/02/2017
 3.  При появлении запроса о необходимости выполнения действия нажмите кнопку **Да**.  
   
 ##  <a name="CommandPrompt"></a> В окне командной строки с помощью команд net  
- Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд [!INCLUDE[msCoName](../../includes/msconame-md.md)]  **** Windows.  
+ Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд [!INCLUDE[msCoName](../../includes/msconame-md.md)] **net** Windows.  
   
 ###  <a name="dbDefault"></a> Запуск экземпляра сервера по умолчанию [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
