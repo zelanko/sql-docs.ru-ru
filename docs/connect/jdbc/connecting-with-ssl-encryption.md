@@ -25,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="connecting-with-ssl-encryption"></a>Соединение с помощью SSL-шифрования
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  В примерах из этого раздела описывается использование свойств строки соединения, которые разрешают приложениям использовать шифрование SSL в приложении Java. Дополнительные сведения об этих новых соединений строка свойства, такие как **шифрования**, **trustServerCertificate**, **trustStore**, ** trustStorePassword**, и **hostNameInCertificate**, в разделе [задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
+  В примерах из этого раздела описывается использование свойств строки соединения, которые разрешают приложениям использовать шифрование SSL в приложении Java. Дополнительные сведения об этих новых соединений строка свойства, такие как **шифрования**, **trustServerCertificate**, **trustStore**,  **trustStorePassword**, и **hostNameInCertificate**, в разделе [задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
   
  При **шифрования** свойству **true** и **trustServerCertificate** свойству **true**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не будет проверять [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL-сертификат. Обычно это требуется для разрешает соединения в тестовой среде, например where [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] экземпляр имеет только самозаверяющий сертификат.  
   

@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  Следующие значения длины могут использоваться в качестве значения длины/индикатора:  
   
--   *n*, где * n * > 0.  
+-   *n*, где  *n*  > 0.  
   
 -   0.  
   

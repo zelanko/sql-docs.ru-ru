@@ -54,7 +54,7 @@ DataControl.Handler = String
   
  Обработчик по умолчанию называется **MSDFMAP. Обработчик**, и его параметр по умолчанию с именем файла настроек **MSDFMAP. INI**. Это свойство можно используйте для вызова альтернативные настройки файлы, созданные администратором сервера.  
   
- Вместо него следует использовать параметр **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства; т. е»**обработчик =** * handlerName параметр1, параметр2...; *".  
+ Вместо него следует использовать параметр **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства; т. е»**обработчик =**  *handlerName параметр1, параметр2...;* ".  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

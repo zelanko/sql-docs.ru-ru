@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  В ODBC 3. *x*, функция ODBC 2.0 **SQLGetStmtOption** будет заменен **SQLGetStmtAttr**. Дополнительные сведения см. в разделе [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какой диспетчера драйверов преобразует эту функцию для при ODBC 2. *x* при работе с ODBC 3.* x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  Дополнительные сведения о какой диспетчера драйверов преобразует эту функцию для при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -29,15 +29,15 @@ ms.lasthandoff: 09/09/2017
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Типов данных драйвера, дескрипторов типов, типов данных, типы диагностики и атрибуты
 Драйверы можно выделить драйвера значения для следующего:  
   
--   **Индикаторы тип данных SQL** они используются в *ParameterType* в **SQLBindParameter** и *DataType* в **SQLGetTypeInfo** и возвращенный **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, ** SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  
+-   **Индикаторы тип данных SQL** они используются в *ParameterType* в **SQLBindParameter** и *DataType* в **SQLGetTypeInfo** и возвращенный **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  
   
--   **Поля дескриптора** они используются в *FieldIdentifier* в **SQLColAttribute**, **SQLGetDescField**, и **SQLSetDescField **.  
+-   **Поля дескриптора** они используются в *FieldIdentifier* в **SQLColAttribute**, **SQLGetDescField**, и **SQLSetDescField** .  
   
 -   **Диагностические поля** они используются в *DiagIdentifier* в **SQLGetDiagField** и **SQLGetDiagRec**.  
   
 -   **Сведения о типах** они используются в *свойство* в **SQLGetInfo**.  
   
--   **Инструкция атрибутов соединения и** они используются в *атрибута* в **SQLGetConnectAttr**, **SQLGetStmtAttr**, ** SQLSetConnectAttr**, и **SQLSetStmtAttr**.  
+-   **Инструкция атрибутов соединения и** они используются в *атрибута* в **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, и **SQLSetStmtAttr**.  
   
  Для каждого из этих элементов, есть два набора значений: Зарезервировано для использования в ODBC и значений зарезервировано для использования с помощью драйверов. Перед реализацией значения драйвера, создатель драйвера должен запросить значение для каждого типа, зависящего от драйвера, поля или атрибута из Open Group. Для новых разработок драйвер используется диапазон, описанные в следующей таблице. Диспетчер драйверов ODBC 3.8 не выдаст ошибку, если используется неизвестное значение, не находится в диапазоне, описанных ниже. Тем не менее более поздних версиях диспетчера драйверов может возникнуть ошибка, если неизвестные значения, которые не находятся в диапазоне принимаются.  
   

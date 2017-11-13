@@ -53,7 +53,7 @@ SQLRETURN  SQLGetPoolID (
  Когда **SQLGetPoolID** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, диспетчер драйверов будут использовать **HandleType** из SQL_HANDLE_DBC_INFO_TOKEN и **обработки** из *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Замечания  
- **SQLGetPoolID** используется для получения идентификатора пула, исходя из набора сведений о соединении (из **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, и ** SQLSetConnectInfo**). Этот идентификатор используется для идентификации набора подключений, которые могут быть взаимозаменяемыми пул (возможно, требуется дополнительный сброса). Идентификатор пула будет использоваться для идентификации пула соединений для этой группы подключений.  
+ **SQLGetPoolID** используется для получения идентификатора пула, исходя из набора сведений о соединении (из **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, и  **SQLSetConnectInfo**). Этот идентификатор используется для идентификации набора подключений, которые могут быть взаимозаменяемыми пул (возможно, требуется дополнительный сброса). Идентификатор пула будет использоваться для идентификации пула соединений для этой группы подключений.  
   
  Всякий раз, когда драйвер возвращает значение SQL_ERROR или SQL_INVALID_HANDLE, диспетчер драйверов возвращает приложению ошибку (в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) или [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   

@@ -98,10 +98,10 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- ВЫРАЖЕНИЕ CREATION_DISPOSITION ** = ** CREATE_NEW  
+ ВЫРАЖЕНИЕ CREATION_DISPOSITION  **=**  CREATE_NEW  
  Создает новый ключ на устройстве расширенного управления ключами.  Если ключ уже существует в устройстве, оператор завершается с ошибкой.  
   
- ВЫРАЖЕНИЕ CREATION_DISPOSITION ** = ** OPEN_EXISTING  
+ ВЫРАЖЕНИЕ CREATION_DISPOSITION  **=**  OPEN_EXISTING  
  Сопоставляет симметричный ключ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с существующим ключом системы расширенного управления ключами. Если выражение CREATION_DISPOSITION = OPEN_EXISTING не предусмотрено, значением по умолчанию является CREATE_NEW.  
   
  *имя_сертификата*  

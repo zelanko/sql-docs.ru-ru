@@ -53,7 +53,7 @@ sqlsrv_field_metadata( resource $stmt)
 |Размер|Число символов для полей символьного типа (char(n), varchar(n), nchar(n), nvarchar(n), XML). Число байтов для полей двоичного типа (binary(n), varbinary(n), UDT). Значение**NULL** для других типов данных SQL Server.|  
 |Точность|Точность для типов переменной точности (real, numeric, decimal, datetime2, datetimeoffset и time). Значение**NULL** для других типов данных SQL Server.|  
 |Масштаб|Масштаб для типов переменного масштаба (numeric, decimal, datetime2, datetimeoffset и time). Значение**NULL** для других типов данных SQL Server.|  
-|Допускает значения NULL|Перечислимое значение, указывающее, является ли столбец значение NULL (**SQLSRV_NULLABLE_YES**), столбец не допускает значения NULL (**SQLSRV_NULLABLE_NO**), или оно неизвестно, допускает ли столбец значение NULL (** SQLSRV_NULLABLE_UNKNOWN**).|  
+|Допускает значения NULL|Перечислимое значение, указывающее, является ли столбец значение NULL (**SQLSRV_NULLABLE_YES**), столбец не допускает значения NULL (**SQLSRV_NULLABLE_NO**), или оно неизвестно, допускает ли столбец значение NULL ( **SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Следующая таблица содержит дополнительные сведения о ключах для каждого подмассива (дополнительные сведения об этих типах см. в документации по SQL Server):  
   

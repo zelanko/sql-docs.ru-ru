@@ -28,13 +28,13 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Задает разрешения, доступные для изменения данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), откройте [запись](../../../ado/reference/ado-api/record-object-ado.md), или указания значения для [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство ** Запись** и [поток](../../../ado/reference/ado-api/stream-object-ado.md) объектов.  
+Задает разрешения, доступные для изменения данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), откройте [запись](../../../ado/reference/ado-api/record-object-ado.md), или указания значения для [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство  **Запись** и [поток](../../../ado/reference/ado-api/stream-object-ado.md) объектов.  
   
 |Константа|Значение|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Указывает разрешения только для чтения.|  
 |**adModeReadWrite**|3|Указывает, разрешения на чтение и запись.|  
-|**adModeRecursive**|0x400000|Используется в сочетании с другими * \*ShareDeny\* * значения (**adModeShareDenyNone**, **adModeShareDenyWrite**, или **adModeShareDenyRead**) распространение ограничения управления доступом для всех вложенных записей текущего **записи**. Он не оказывает воздействия, если **записи** не имеет потомков. Ошибка во время выполнения создается в том случае, если она используется с **adModeShareDenyNone** только. Тем не менее, он может использоваться с **adModeShareDenyNone** в сочетании с другими значениями. Например, можно использовать «**adModeRead** или **adModeShareDenyNone** или **adModeRecursive**».|  
+|**adModeRecursive**|0x400000|Используется в сочетании с другими  *\*ShareDeny\**  значения (**adModeShareDenyNone**, **adModeShareDenyWrite**, или **adModeShareDenyRead**) распространение ограничения управления доступом для всех вложенных записей текущего **записи**. Он не оказывает воздействия, если **записи** не имеет потомков. Ошибка во время выполнения создается в том случае, если она используется с **adModeShareDenyNone** только. Тем не менее, он может использоваться с **adModeShareDenyNone** в сочетании с другими значениями. Например, можно использовать «**adModeRead** или **adModeShareDenyNone** или **adModeRecursive**».|  
 |**adModeShareDenyNone**|16|Дает возможность другим пользователям установить соединение с другими разрешениями. Другим пользователям не может быть запрещен доступ ни для чтения, ни для записи.|  
 |**adModeShareDenyRead**|4|Запрет другим пользователям открывать соединение с разрешениями на чтение.|  
 |**adModeShareDenyWrite**|8|Запрет другим пользователям открывать соединение с разрешениями на запись.|  

@@ -66,7 +66,7 @@ BOOL SQLWritePrivateProfileString(
  Функция возвращает значение TRUE, если он прошел успешно, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLWritePrivateProfileString** возвращает значение FALSE, связанный с ним * \*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены * \*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
+ Когда **SQLWritePrivateProfileString** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Description|  
 |---------------------|-----------|-----------------|  

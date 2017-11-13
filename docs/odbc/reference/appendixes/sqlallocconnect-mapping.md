@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlallocconnect-mapping"></a>Сопоставление SQLAllocConnect
-Если приложение вызывает **SQLAllocConnect** через ODBC 3.* x* драйвера, вызов **SQLAllocConnect**(*henv*, *phdbc*) сопоставляется **SQLAllocHandle** следующим образом:  
+Если приложение вызывает **SQLAllocConnect** через ODBC 3. *x* драйвера, вызов **SQLAllocConnect**(*henv*, *phdbc*) сопоставляется **SQLAllocHandle** следующим образом:  
   
 1.  Диспетчер драйверов выделяет соединение и возвращает его в приложение.  
   

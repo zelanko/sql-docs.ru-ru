@@ -50,7 +50,7 @@ ms.lasthandoff: 09/09/2017
   
  Ошибка во время выполнения возникает, если не удается найти уникальный базовой таблицы.  
   
- Эти динамические свойства добавляются к **записей** объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции при [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству ** adUseClient**.  
+ Эти динамические свойства добавляются к **записей** объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции при [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству  **adUseClient**.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

@@ -42,7 +42,7 @@ ms.lasthandoff: 09/09/2017
 -   **doNotPrompt = true**  
   
 ## <a name="remarks"></a>Замечания  
- До появления [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], приложение должно было указывать встроенную проверку подлинности (с помощью Kerberos или NTLM, в зависимости от доступный) с помощью **integratedSecurity** свойства соединения и посредством указания библиотеки ** sqljdbc_auth.dll**, как описано в [построения URL-АДРЕСЕ соединения](../../connect/jdbc/building-the-connection-url.md).  
+ До появления [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], приложение должно было указывать встроенную проверку подлинности (с помощью Kerberos или NTLM, в зависимости от доступный) с помощью **integratedSecurity** свойства соединения и посредством указания библиотеки  **sqljdbc_auth.dll**, как описано в [построения URL-АДРЕСЕ соединения](../../connect/jdbc/building-the-connection-url.md).  
   
  Начиная с версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], приложение может использовать **authenticationScheme** свойства соединения, чтобы указать, что для подключения к базе данных с использованием Kerberos интегрированной проверки подлинности с использованием чисто Java Kerberos Реализация:  
   

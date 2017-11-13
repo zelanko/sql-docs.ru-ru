@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Пример свойства точности (VC ++) и NumericScale
-В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числовой масштаб и точность полей в ***скидки*** таблицу *** Pubs*** базы данных.  
+В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числовой масштаб и точность полей в ***скидки*** таблицу  ***Pubs*** базы данных.  
   
 ```  
 // BeginNumericScaleCpp.cpp  

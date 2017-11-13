@@ -47,7 +47,7 @@ ms.lasthandoff: 09/09/2017
   
  Если попытаться вызвать [Сброс](../../../ado/reference/rds-api/reset-method-rds.md), [обновление](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), или [записей](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) тогда как другая асинхронная операция, которая может изменить [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей** выполняется, возникает ошибка.  
   
- При возникновении ошибки во время асинхронной операции, **RDS. DataControl** объекта [состояние готовности](../../../ado/reference/rds-api/readystate-property-rds.md) значение изменяется с **adcReadyStateLoaded** для **adcReadyStateComplete**и ** Набор записей** значение свойства остается *ничего не*.  
+ При возникновении ошибки во время асинхронной операции, **RDS. DataControl** объекта [состояние готовности](../../../ado/reference/rds-api/readystate-property-rds.md) значение изменяется с **adcReadyStateLoaded** для **adcReadyStateComplete**и  **Набор записей** значение свойства остается *ничего не*.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
