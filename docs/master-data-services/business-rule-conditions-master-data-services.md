@@ -1,5 +1,5 @@
 ---
-title: "Условия бизнес-правил (службы Master Data Services) | Документы Майкрософт"
+title: "Условия бизнес-правил (Master Data Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,15 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 2690cc49bb989c02cd361010d3c3317534349cd2
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47b8ae7924ae590156479209b2ae0ba639d07ec
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Условия бизнес-правил (службы Master Data Services)
@@ -57,9 +56,8 @@ ms.lasthandoff: 09/07/2017
 >  Если бизнес-правило содержит условие, выполняющее сравнение двух значений, и применяется к элементу, в котором оба значения содержат значение NULL, этот элемент не проходит проверку.  
   
 ## <a name="see-also"></a>См. также:  
- [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)   
- [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
- [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [Действия бизнес-правил &#40; Службы Master Data Services &#41;](../master-data-services/business-rule-actions-master-data-services.md)   
+ [Бизнес-правила &#40; Службы Master Data Services &#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Создание и публикация бизнес-правило &#40; Службы Master Data Services &#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Требования к базе данных (службы Master Data Services) | Документы Майкрософт"
+title: "Базы данных (Master Data Services) требования | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,15 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 caps.latest.revision: 18
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 16858dc8ab6dcad69792697b88811cba2689b1fe
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9f48345ef6fb8bd0a27bf2d40a829e53e2eae308
 ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="database-requirements-master-data-services"></a>Требования к базе данных (службы Master Data Services)
@@ -74,10 +73,9 @@ ms.lasthandoff: 09/07/2017
   
 ## <a name="see-also"></a>См. также:  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
- [Создание базы данных служб Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [Создать базу данных служб Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [База данных служб Master Data Services](../../master-data-services/master-data-services-database.md)   
- [Диалоговое окно "Подключение к базе данных служб Master Data Services"](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
- [Мастер создания базы данных (диспетчер конфигурации служб Master Data Services)](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
+ [Подключиться к диалоговое окно базы данных служб Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
+ [Создание базы данных мастер &#40; Диспетчер конфигурации Master Data Services &#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   
   
-
