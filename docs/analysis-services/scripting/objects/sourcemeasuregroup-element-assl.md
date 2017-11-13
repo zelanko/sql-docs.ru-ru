@@ -64,14 +64,14 @@ ms.lasthandoff: 09/01/2017
 |Дочерние элементы|None|  
   
 ## <a name="remarks"></a>Замечания  
- Дополнительные сведения о **привязки** типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) **привязки** тип и иерархию наследования **привязки ** типов, в разделе [тип привязки данных & #40; ASSL & #41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
+ Дополнительные сведения о **привязки** типа, включая таблицы объектов языка сценариев служб Analysis Services (ASSL) **привязки** тип и иерархию наследования **привязки**  типов, в разделе [тип привязки данных &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
   
- Обзор привязок данных в ASSL см. в разделе [& #40; источники данных и привязки Многомерные службы SSAS & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Обзор привязок данных в ASSL см. в разделе [&#40; источники данных и привязки Многомерные службы SSAS &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  Элементы, соответствующие родителям элемента **SourceMeasureGroup** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MiningStructureColumn> и <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   
 ## <a name="see-also"></a>См. также:  
- [Объекты & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
 

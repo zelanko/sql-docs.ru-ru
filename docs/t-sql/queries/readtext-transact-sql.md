@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Считывает **текст**, **ntext**, или **изображения** значения из **текст**, **ntext**, или **изображения ** столбца, начиная с указанной позиции и чтение заданного числа байтов.  
+  Считывает **текст**, **ntext**, или **изображения** значения из **текст**, **ntext**, или **изображения**  столбца, начиная с указанной позиции и чтение заданного числа байтов.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [ПОДСТРОКИ](../../t-sql/functions/substring-transact-sql.md) вместо этого функцию.  
@@ -65,11 +65,11 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
  Вызывает блокировку считывания для текстового значения до окончания транзакции. Другие пользователи могут считывать значение, но не могут изменять его.  
   
 ## <a name="remarks"></a>Замечания  
- Используйте [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) функции для получения допустимого *text_ptr* значение. TEXTPTR возвращает указатель на **текст**, **ntext**, или **изображения** столбца в указанной строке или в **текст**, **ntext **, или **изображения** столбца в последней строке, возвращенные запросом, если возвращается более одной строки. Поскольку TEXTPTR возвращает 16-байтовую двоичную строку, рекомендуется объявить локальную переменную для хранения текстового указателя, а затем использовать эту переменную с READTEXT. Дополнительные сведения об объявлении локальной переменной см. в разделе [DECLARE @local_variable & #40; Transact-SQL & #41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+ Используйте [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) функции для получения допустимого *text_ptr* значение. TEXTPTR возвращает указатель на **текст**, **ntext**, или **изображения** столбца в указанной строке или в **текст**, **ntext** , или **изображения** столбца в последней строке, возвращенные запросом, если возвращается более одной строки. Поскольку TEXTPTR возвращает 16-байтовую двоичную строку, рекомендуется объявить локальную переменную для хранения текстового указателя, а затем использовать эту переменную с READTEXT. Дополнительные сведения об объявлении локальной переменной см. в разделе [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутристрочные текстовые указатели могут существовать, но при этом быть недействительными. Дополнительные сведения о **текст в строке** см. в разделе [sp_tableoption & #40; Transact-SQL & #41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Дополнительные сведения о допустимости указателей текста см. в разделе [sp_invalidate_textptr & #40; Transact-SQL & #41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутристрочные текстовые указатели могут существовать, но при этом быть недействительными. Дополнительные сведения о **текст в строке** см. в разделе [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Дополнительные сведения о допустимости указателей текста см. в разделе [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- Значение @@TEXTSIZE функция заменяет размер, указанный для READTEXT, если оно меньше размера, указанного для READTEXT. @@TEXTSIZE Функция указывает предельное число байтов данных, возвращаемых инструкцией SET TEXTSIZE набора. Дополнительные сведения о том, как определить настройку сеанса для TEXTSIZE см. в разделе [SET TEXTSIZE & #40; Transact-SQL & #41; ](../../t-sql/statements/set-textsize-transact-sql.md).  
+ Значение @@TEXTSIZE функция заменяет размер, указанный для READTEXT, если оно меньше размера, указанного для READTEXT. @@TEXTSIZE Функция указывает предельное число байтов данных, возвращаемых инструкцией SET TEXTSIZE набора. Дополнительные сведения о том, как определить настройку сеанса для TEXTSIZE см. в разделе [SET TEXTSIZE &#40; Transact-SQL &#41; ](../../t-sql/statements/set-textsize-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  Разрешения READTEXT по умолчанию принадлежат пользователям, имеющим разрешения SELECT для указанной таблицы. Разрешения могут быть переданы при передаче разрешений SELECT.  
