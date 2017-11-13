@@ -22,11 +22,12 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
+ms.workload: Inactive
+ms.translationtype: MT
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>создать, изменить или удалить папку (диспетчер отчетов)
@@ -34,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-create-a-folder"></a>Создание папки  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов выберите корневую папку, а затем нажмите **Создать папку**. Либо, чтобы создать папку внутри существующей папки, перейдите к этой папке на странице **Содержимое** , а затем щелкните папку, чтобы открыть ее. После этого нажмите **Создать папку**.  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 08/09/2017
 7.  Для сохранения изменений нажмите кнопку **Применить** .  
   
 ## <a name="see-also"></a>См. также  
- [Страница «Создание папки» &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
- [Страница «содержимое» &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Страница "Создание папки" (диспетчер отчетов)](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 
