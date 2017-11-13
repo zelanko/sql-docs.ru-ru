@@ -20,8 +20,7 @@ caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cbb4f5f3af2a8986fdc7384ad4da1740f2be6638
 ms.contentlocale: ru-ru
@@ -54,4 +53,3 @@ ms.lasthandoff: 08/09/2017
  [Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
   
   
-

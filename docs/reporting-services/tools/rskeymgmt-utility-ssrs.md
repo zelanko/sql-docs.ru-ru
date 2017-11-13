@@ -26,8 +26,7 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: ru-ru
@@ -187,4 +186,3 @@ rskeymgmt -r <installationID>
  [Настройка и управление ключами &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

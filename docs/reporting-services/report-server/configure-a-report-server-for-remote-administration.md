@@ -20,8 +20,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
 ms.contentlocale: ru-ru
@@ -146,7 +145,7 @@ ms.lasthandoff: 08/09/2017
 13. В столбце **Разрешить** установите флажки **Включить учетную запись**, **Включить удаленно**и **Прочесть безопасность**, затем нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Службы Reporting Services Configuration Manager &#40; Основной режим &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
 
