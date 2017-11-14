@@ -1,12 +1,15 @@
 ---
 title: "FieldStatusEnum | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Указывает [состояние](../../../ado/reference/ado-api/status-property-ado-field.md) из [объект поля](../../../ado/reference/ado-api/field-object.md).  
   
- **AdFieldPending\* ** значения указывают на операцию, которая вызвала нужно задать состояние и могут объединяться с другими значениями состояния.  
+ **AdFieldPending\***  значения указывают на операцию, которая вызвала нужно задать состояние и могут объединяться с другими значениями состояния.  
   
 |Константа|Значение|Description|  
 |--------------|-----------|-----------------|  

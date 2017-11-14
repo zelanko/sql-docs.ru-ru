@@ -1,12 +1,15 @@
 ---
 title: "При создании экземпляра события ADO: Visual C++ | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -72,7 +75,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  Классы событий, наследуются **IUnknown**, поэтому также необходимо реализовать **QueryInterface**, **AddRef**, и **выпуска** методы. Также можно реализуйте конструкторы и деструкторы классов. Выбор инструментов Visual C++, с которыми наиболее удобен для упрощения этой части задачи.  
   
- Создание его известных, обработчиками событий доступны, выполнив **QueryInterface** на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов для ** IConnectionPointContainer** и **IConnectionPoint** интерфейсов. Затем выдать **IConnectionPoint::Advise** для каждого класса.  
+ Создание его известных, обработчиками событий доступны, выполнив **QueryInterface** на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов для  **IConnectionPointContainer** и **IConnectionPoint** интерфейсов. Затем выдать **IConnectionPoint::Advise** для каждого класса.  
   
  Предположим, вы используете логической функцией, которая возвращает **True** Если успешно сообщает **записей** объекта наличие доступных обработчиков событий.  
   

@@ -52,7 +52,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  Объектную переменную, которая представляет **записей** объекта.  
   
 ## <a name="remarks"></a>Замечания  
- [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [сервера](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства должны быть заданы, прежде чем использовать **SubmitChanges** метод с ** RDS. DataControl** объекта.  
+ [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [сервера](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства должны быть заданы, прежде чем использовать **SubmitChanges** метод с  **RDS. DataControl** объекта.  
   
  При вызове метода [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) метод после вызова **SubmitChanges** для той же **записей** объекта, **CancelUpdate** вызов завершается ошибкой, так как изменения уже были зафиксированы.  
   

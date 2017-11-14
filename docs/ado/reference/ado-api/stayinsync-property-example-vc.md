@@ -1,12 +1,15 @@
 ---
 title: "Пример свойства StayInSync (VC ++) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="stayinsync-property-example-vc"></a>Пример свойства StayInSync (VC ++)
 В этом примере показано, как [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) свойство облегчает доступ к строкам в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Внешний цикл отображает имя и фамилия каждого автора, состояние и идентификатор. Добавленный **записей** для каждой строки, извлекается из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции и автоматически назначено **rstTitleAuthor** по **StayInSync ** свойство всякий раз, когда родительский **записей** перемещается на новую строку. Внутренний цикл отображаются четыре поля из каждой строки в добавленных записей.  
+ Внешний цикл отображает имя и фамилия каждого автора, состояние и идентификатор. Добавленный **записей** для каждой строки, извлекается из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции и автоматически назначено **rstTitleAuthor** по **StayInSync**  свойство всякий раз, когда родительский **записей** перемещается на новую строку. Внутренний цикл отображаются четыре поля из каждой строки в добавленных записей.  
   
 ```  
 // BeginStayInSyncCpp.cpp  

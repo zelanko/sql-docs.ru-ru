@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Управление курсоры и курсоры, путем вызова **SQLCloseCursor**, **SQLGetCursorName**, и **SQLSetCursorName**.  
   
--   Получить доступ к описанию (метаданные) результирующих наборов, вызвав **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, и **SQLRowCount **. (Использование этих функций для столбца с номером 0 для получения метаданных закладки компонент 204 в [согласованности интерфейс на уровне 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Получить доступ к описанию (метаданные) результирующих наборов, вызвав **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, и **SQLRowCount** . (Использование этих функций для столбца с номером 0 для получения метаданных закладки компонент 204 в [согласованности интерфейс на уровне 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
 -   Запрос словаря данных путем вызова функции каталога **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, и **SQLTables**.  
   

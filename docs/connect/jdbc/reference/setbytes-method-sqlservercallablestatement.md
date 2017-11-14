@@ -53,7 +53,7 @@ public void setBytes(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Замечания  
- В предыдущей версии драйвера, можно использовать SQLServerCallableStatement.setBytes для преобразования значений между массивами байтов и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] тип данных **даты**, **время**, **datetime2 **, или **datetimeoffset**. Теперь при вызове этого метода с такими типами данных возникает исключение, указывающее, что такое преобразование не поддерживается.  
+ В предыдущей версии драйвера, можно использовать SQLServerCallableStatement.setBytes для преобразования значений между массивами байтов и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] тип данных **даты**, **время**, **datetime2** , или **datetimeoffset**. Теперь при вызове этого метода с такими типами данных возникает исключение, указывающее, что такое преобразование не поддерживается.  
   
  Этот метод setBytes указывается с помощью метода setBytes в интерфейсе java.sql.CallableStatement.  
   

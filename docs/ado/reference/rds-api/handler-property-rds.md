@@ -1,12 +1,15 @@
 ---
 title: "Свойство обработчика (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -54,7 +57,7 @@ DataControl.Handler = String
   
  Обработчик по умолчанию называется **MSDFMAP. Обработчик**, и его параметр по умолчанию с именем файла настроек **MSDFMAP. INI**. Это свойство можно используйте для вызова альтернативные настройки файлы, созданные администратором сервера.  
   
- Вместо него следует использовать параметр **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства; т. е»**обработчик =** * handlerName параметр1, параметр2...; *".  
+ Вместо него следует использовать параметр **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства; т. е»**обработчик =**  *handlerName параметр1, параметр2...;* ".  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

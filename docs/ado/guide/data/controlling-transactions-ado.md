@@ -1,12 +1,15 @@
 ---
 title: "Управление транзакциями (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="controlling-transactions-ado"></a>Управление транзакциями (ADO)
-ADO поддерживает обработку в рамках подключения с помощью транзакций **BeginTrans**, **CommitTrans**, и **RollbackTrans** методы ** Подключение** объекта. Общее представление о реализации обработки транзакций в ADO проиллюстрирован в следующем фрагменте кода.  
+ADO поддерживает обработку в рамках подключения с помощью транзакций **BeginTrans**, **CommitTrans**, и **RollbackTrans** методы  **Подключение** объекта. Общее представление о реализации обработки транзакций в ADO проиллюстрирован в следующем фрагменте кода.  
   
 ```  
 Const DS = "MySqlServer"  

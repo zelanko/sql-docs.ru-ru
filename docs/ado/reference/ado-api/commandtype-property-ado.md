@@ -1,12 +1,15 @@
 ---
 title: "Свойство CommandType (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="remarks"></a>Замечания  
  Используйте **CommandType** свойство оптимизировать вычисление [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство.  
   
- Если **CommandType** значение свойства установлено значение по умолчанию **adCmdUnknown**, могут возникнуть снижение производительности, так как ADO необходимо выполнять вызовы к поставщику для определения ** CommandText** свойство является инструкции SQL, имя таблицы или хранимой процедуры. Если вы знаете, какой тип команды вы используете, задание **CommandType** свойство предписывает ADO, чтобы перейти на соответствующий код. Если **CommandType** свойства не соответствует типу команды в **CommandText** свойства, произошла ошибка при вызове [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) метод.  
+ Если **CommandType** значение свойства установлено значение по умолчанию **adCmdUnknown**, могут возникнуть снижение производительности, так как ADO необходимо выполнять вызовы к поставщику для определения  **CommandText** свойство является инструкции SQL, имя таблицы или хранимой процедуры. Если вы знаете, какой тип команды вы используете, задание **CommandType** свойство предписывает ADO, чтобы перейти на соответствующий код. Если **CommandType** свойства не соответствует типу команды в **CommandText** свойства, произошла ошибка при вызове [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) метод.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

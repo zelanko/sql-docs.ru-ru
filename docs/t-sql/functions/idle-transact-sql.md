@@ -33,7 +33,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40idle-transact-sql"></a>& #x 40; & #x 40; IDLE (Transact-SQL)
+# <a name="x40x40idle-transact-sql"></a>&#x40;&#x40; IDLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает значение времени простоя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с момента его последнего запуска. Результат указывается в приращениях времени ЦП или «тактах» и является совокупным для всех ЦП, поэтому может превысить фактическое затраченное время. Умножьте@TIMETICKS преобразовать в микросекунды.  
@@ -74,9 +74,9 @@ Idle microseconds  as of
   
 ## <a name="see-also"></a>См. также:  
  [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)   
- [Системные статистические функции &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Системные статистические функции &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
 

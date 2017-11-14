@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, где *p* является точности интервала. [ d]|  
 |SQL_GUID|36 (количество символов в *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* формат)|  
   
- [] для ODBC 1.0 приложения вызывающую **SQLSetParam** в драйвер ODBC 2.0 и ODBC 2.0 приложением, вызывающим метод **SQLBindParameter** в драйвере ODBC 1.0 при \* * StrLen_or_IndPtr* является значение SQL_DATA_AT_EXEC для типа SQL_LONGVARCHAR или SQL_LONGVARBINARY *ColumnSize* должно быть присвоено общая длина данных, отправляемых не точности как определено в этой таблице.  
+ [] для ODBC 1.0 приложения вызывающую **SQLSetParam** в драйвер ODBC 2.0 и ODBC 2.0 приложением, вызывающим метод **SQLBindParameter** в драйвере ODBC 1.0 при \*  *StrLen_or_IndPtr* является значение SQL_DATA_AT_EXEC для типа SQL_LONGVARCHAR или SQL_LONGVARBINARY *ColumnSize* должно быть присвоено общая длина данных, отправляемых не точности как определено в этой таблице.  
   
  [b] Если драйвер не может определить длину столбца или параметра для переменной типа, он возвращает SQL_NO_TOTAL.  
   

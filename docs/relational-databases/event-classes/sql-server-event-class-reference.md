@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-event-class-reference"></a>Руководство по классам событий SQL Server
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you record events as they occur in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Записанные события являются экземплярами классов событий в определении трассировки. В приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]классы событий и категории их событий можно найти на вкладке **Выбор событий** окна **Свойства файла трассировки** .  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] позволяет записывать события, происходящие в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Записанные события являются экземплярами классов событий в определении трассировки. В приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]классы событий и категории их событий можно найти на вкладке **Выбор событий** окна **Свойства файла трассировки** .  
   
  В приведенной ниже таблице описаны категории событий и перечислены связанные с ними классы событий.  
   

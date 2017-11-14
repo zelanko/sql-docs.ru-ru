@@ -1,12 +1,15 @@
 ---
 title: "NumericScale и пример точности свойства (Visual Basic) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale и пример точности свойства (Visual Basic)
-В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числовой масштаб и точность полей в ***скидки*** таблицу *** Pubs*** базы данных.  
+В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числовой масштаб и точность полей в ***скидки*** таблицу  ***Pubs*** базы данных.  
   
 ```  
 'BeginNumericScaleVB  

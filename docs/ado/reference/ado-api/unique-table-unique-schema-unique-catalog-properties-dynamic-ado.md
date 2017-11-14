@@ -1,12 +1,15 @@
 ---
 title: "Элемент управления изменений в таблице базового набора записей (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -50,7 +53,7 @@ ms.lasthandoff: 09/09/2017
   
  Ошибка во время выполнения возникает, если не удается найти уникальный базовой таблицы.  
   
- Эти динамические свойства добавляются к **записей** объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции при [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству ** adUseClient**.  
+ Эти динамические свойства добавляются к **записей** объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции при [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству  **adUseClient**.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

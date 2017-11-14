@@ -1,12 +1,15 @@
 ---
 title: "Параметры события | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -56,7 +59,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Если вы определили в событие будет, следует продолжить операцию, оставьте *состояние* параметр без изменений. При условии, что не задан параметр status входящих **adStatusCantDeny**, однако можно отменить выполняющуюся операцию, изменив *состояние* для **adStatusCancel**. При этом имеет полные события, связанные с операцией его *состояние* равным **adStatusErrorsOccurred**. **Ошибка** объекта, переданного в событие завершения будет содержать значение **adErrOperationCancelled**.  
   
- Если вы больше не требуется для обработки события, можно установить *состояние* для **adStatusUnwantedEvent** и приложения больше не будет получать уведомление о событии. Однако следует помните, что некоторые события могут вызываться для более чем одной из причин. В этом случае необходимо указать **adStatusUnwantedEvent** для каждого из возможных причин. Например, чтобы прекратить получение уведомлений об ожидающих **RecordChange** событий, необходимо задать *состояние* параметр **adStatusUnwantedEvent** для ** adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, и **adRsnFirstChange** как только они происходят.  
+ Если вы больше не требуется для обработки события, можно установить *состояние* для **adStatusUnwantedEvent** и приложения больше не будет получать уведомление о событии. Однако следует помните, что некоторые события могут вызываться для более чем одной из причин. В этом случае необходимо указать **adStatusUnwantedEvent** для каждого из возможных причин. Например, чтобы прекратить получение уведомлений об ожидающих **RecordChange** событий, необходимо задать *состояние* параметр **adStatusUnwantedEvent** для  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, и **adRsnFirstChange** как только они происходят.  
   
 |Значение|Description|  
 |-----------|-----------------|  
@@ -64,7 +67,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Запросить отмену операции, которые будут возникать.|  
   
 ## <a name="error-parameter"></a>Ошибка параметра  
- *Ошибка* параметр является ссылкой на ADO [ошибка](../../../ado/reference/ado-api/error-object.md) объекта. При *состояние* параметра равным **adStatusErrorsOccurred**, **ошибки** содержит сведения о том, почему произошел сбой операции. Если операция отменена будет событие, связанное с событием завершения, задав *состояние* параметр **adStatusCancel**, ошибка объекта всегда имеет значение ** adErrOperationCancelled**.  
+ *Ошибка* параметр является ссылкой на ADO [ошибка](../../../ado/reference/ado-api/error-object.md) объекта. При *состояние* параметра равным **adStatusErrorsOccurred**, **ошибки** содержит сведения о том, почему произошел сбой операции. Если операция отменена будет событие, связанное с событием завершения, задав *состояние* параметр **adStatusCancel**, ошибка объекта всегда имеет значение  **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Параметр объекта  
  Каждое событие получает один или несколько объектов, представляющих объекты, которые участвуют в операции. Например **ExecuteComplete** событие получает **команда** объекта, **записей** объекта и **подключения** объекта.  

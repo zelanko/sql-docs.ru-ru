@@ -1,12 +1,15 @@
 ---
 title: "Повторная синхронизация метод | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -58,14 +61,14 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  Если повторная синхронизация не удастся из-за конфликта с базовыми данными (например, запись удалена другим пользователем), поставщик возвращает предупреждения, чтобы [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции и во время выполнения возникает ошибка. Используйте [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство (**adFilterConflictingRecords**) и [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для поиска записей с конфликтами.  
   
- Если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и [Resync команда](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) динамических свойств и **записей** является результатом выполнения операции СОЕДИНЕНИЯ на несколько таблиц, а затем ** Повторная синхронизация** метод будет выполняться команду, заданную в **Resync команда** свойство только для таблицы, указанной в **уникальной таблицы** свойство.  
+ Если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и [Resync команда](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) динамических свойств и **записей** является результатом выполнения операции СОЕДИНЕНИЯ на несколько таблиц, а затем  **Повторная синхронизация** метод будет выполняться команду, заданную в **Resync команда** свойство только для таблицы, указанной в **уникальной таблицы** свойство.  
   
 ## <a name="fields"></a>Поля  
  Используйте **Resync** метода для повторной синхронизации значения **поля** коллекцию **записи** объекта с базового источника данных. [Число](../../../ado/reference/ado-api/count-property-ado.md) этот метод не повлияло на свойство.  
   
  Если *ResyncValues* равно **adResyncAllValues** (значение по умолчанию), [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [значение](../../../ado/reference/ado-api/value-property-ado.md), и [ OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) свойства [поле](../../../ado/reference/ado-api/field-object.md) синхронизацию объектов в коллекции. Если *ResyncValues* равно **adResyncUnderlyingValues**только **UnderlyingValue** свойство синхронизированным.  
   
- Значение **состояние** свойства каждого **поле** во время вызова также влияет на поведение **Resync**. Для **поле** объектов, у которых **состояние** значения **adFieldPendingUnknown** или **adFieldPendingInsert**, **повторной синхронизации ** не делает ничего. Для **состояние** значения **adFieldPendingChange** или **adFieldPendingDelete**, **Resync** синхронизирует значения данных для поля, по-прежнему существует в источнике данных.  
+ Значение **состояние** свойства каждого **поле** во время вызова также влияет на поведение **Resync**. Для **поле** объектов, у которых **состояние** значения **adFieldPendingUnknown** или **adFieldPendingInsert**, **повторной синхронизации**  не делает ничего. Для **состояние** значения **adFieldPendingChange** или **adFieldPendingDelete**, **Resync** синхронизирует значения данных для поля, по-прежнему существует в источнике данных.  
   
  **Повторная синхронизация** не будет изменять **состояние** значения **поля** объекты, пока не произойдет ошибка при **Resync** вызывается. Например, если оно больше не существует, то поставщик возвратит соответствующей **состояние** значение для **поле** объект, такой как **adFieldDoesNotExist**. Возвращаемый **состояние** значения могут быть логически объединены в значение **состояние** свойство.  
   

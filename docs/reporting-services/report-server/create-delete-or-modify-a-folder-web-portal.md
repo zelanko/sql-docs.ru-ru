@@ -14,8 +14,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: ru-ru
@@ -27,9 +26,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>Создание папки  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запуск [диспетчера отчетов &#40; Собственный режим служб SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  На веб-портале выберите в раскрывающемся меню **Создать** пункт **Папка**. Либо, чтобы создать папку внутри существующей папки, перейдите к этой папке и выберите в раскрывающемся меню **Создать** пункт **Папка** .  
+2.  На веб-портале выберите в раскрывающемся меню **Создать** пункт **Папка** . Либо, чтобы создать папку внутри существующей папки, перейдите к этой папке и выберите в раскрывающемся меню **Создать** пункт **Папка** .  
   
      Откроется диалоговое окно **Создать папку в** .  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 08/09/2017
 6.  Для сохранения изменений нажмите кнопку **Применить** .  
   
 ## <a name="see-also"></a>См. также  
- [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

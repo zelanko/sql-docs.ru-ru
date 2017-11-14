@@ -1,0 +1,6 @@
+# [Создание приложения поставщика OLE DB для собственного клиента SQL Server](creating-a-sql-server-native-client-ole-db-provider-application.md)
+# [О свойствах OLE DB](about-ole-db-properties.md)
+# [Установление подключения к источнику данных](establishing-a-connection-to-a-data-source.md)
+# [Выполнение команды](executing-a-command.md)
+# [Обработка результатов](processing-results.md)
+# [Использование предложения OUTPUT с OLE DB в собственном клиенте SQL Server](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)

@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Появился в версии: Полное соответствие стандартам 1.0 ODBC: рекомендуется к использованию  
   
  **Сводка**  
- Функция ODBC 2.0 **SQLParamOptions** был заменен в ODBC 3.* x* вызовы [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Функция ODBC 2.0 **SQLParamOptions** был заменен в ODBC 3. *x* вызовы [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какой диспетчера драйверов преобразует эту функцию для при ODBC 2. *x* при работе с ODBC 3.* x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  Дополнительные сведения о какой диспетчера драйверов преобразует эту функцию для при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, в разделе [сопоставление устаревшие функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
   
 ## <a name="remarks"></a>Замечания  
  В разделе [сведения ODBC 64-разрядных](../../../odbc/reference/odbc-64-bit-information.md), если приложение будет выполняться на 64-разрядной операционной системе.  

@@ -27,13 +27,13 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlstate-mappings"></a>Сопоставления SQLSTATE
-В этом разделе рассматриваются значениях SQLSTATE для ODBC 2. *x* и ODBC 3.* x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE. в разделе [коды ошибок ODBC приложение A:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+В этом разделе рассматриваются значениях SQLSTATE для ODBC 2. *x* и ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE. в разделе [коды ошибок ODBC приложение A:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  В ODBC 3. *x*HYxxx SQLSTATE возвращаются вместо S1xxx и 42Sxx SQLSTATE возвращаются вместо S00XX. Это было сделано в соответствии со стандартами Open Group и ISO. Во многих случаях сопоставление не один к одному, поскольку стандарты переопределен Интерпретация несколько SQLSTATE.  
   
- Когда ODBC 2. *x* обновить приложение ODBC 3.* x* приложения, приложение должно измениться ожидать ODBC 3.* x* SQLSTATE, а не ODBC 2.* x* SQLSTATE. В следующей таблице перечислены функции ODBC 3. *x* SQLSTATE, каждый ODBC 2.* x* сопоставляется SQLSTATE.  
+ Когда ODBC 2. *x* обновить приложение ODBC 3. *x* приложения, приложение должно измениться ожидать ODBC 3. *x* SQLSTATE, а не ODBC 2. *x* SQLSTATE. В следующей таблице перечислены функции ODBC 3. *x* SQLSTATE, каждый ODBC 2. *x* сопоставляется SQLSTATE.  
   
- Если SQL_OV_ODBC2 имеет значение атрибута среды SQL_ATTR_ODBC_VERSION, драйвер отправляет ODBC 2. *x* SQLSTATE, а не ODBC 3.* x* SQLSTATE при **SQLGetDiagField** или **SQLGetDiagRec** вызывается. Можно определить конкретного сопоставления, отмечая ODBC 2*.x* SQLSTATE в столбец 1 следующей таблицы, которая соответствует ODBC 3.* x* SQLSTATE в столбце 2.  
+ Если SQL_OV_ODBC2 имеет значение атрибута среды SQL_ATTR_ODBC_VERSION, драйвер отправляет ODBC 2. *x* SQLSTATE, а не ODBC 3. *x* SQLSTATE при **SQLGetDiagField** или **SQLGetDiagRec** вызывается. Можно определить конкретного сопоставления, отмечая ODBC 2*.x* SQLSTATE в столбец 1 следующей таблицы, которая соответствует ODBC 3. *x* SQLSTATE в столбце 2.  
   
 |ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Комментарии|  
 |-------------------------|-------------------------|--------------|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/09/2017
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2. *x* SQLSTATE S1002 сопоставляется ODBC 3.* x* SQLSTATE 07009, если базовая функция **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch **, **SQLFetchScroll**, или **SQLGetData**.|  
+|S1002|07009|ODBC 2. *x* SQLSTATE S1002 сопоставляется ODBC 3. *x* SQLSTATE 07009, если базовая функция **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch** , **SQLFetchScroll**, или **SQLGetData**.|  
 |S1003|HY003 И СООБЩЕНИЕМ||  
 |S1004|HY004||  
 |S1008|HY008||  
@@ -67,7 +67,7 @@ ms.lasthandoff: 09/09/2017
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3. *x* SQLSTATE 07009 сопоставляется ODBC 2.* x* S1093 SQLSTATE, если базовая функция **SQLBindParameter** или **SQLDescribeParam**.|  
+|S1093|07009|ODBC 3. *x* SQLSTATE 07009 сопоставляется ODBC 2. *x* S1093 SQLSTATE, если базовая функция **SQLBindParameter** или **SQLDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -87,5 +87,5 @@ ms.lasthandoff: 09/09/2017
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC 3. *x* SQLSTATE 07008 сопоставляется ODBC 2.* x* SQLSTATE S1000.
+>  ODBC 3. *x* SQLSTATE 07008 сопоставляется ODBC 2. *x* SQLSTATE S1000.
 

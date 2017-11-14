@@ -1,12 +1,15 @@
 ---
 title: "Маркировка бизнес-объектов как безопасный для сценариев | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -48,7 +51,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  На последнем шаге мастера установки приложений создает .htm и CAB-файл. Затем можно скопировать эти файлы на целевой компьютер и дважды щелкните htm-файл для загрузки страницы и правильно зарегистрировать сервер.  
   
- Так как бизнес-объекта будут установлены в каталоге Windows\System32\Occache по умолчанию, переместите его в папку Windows\System32 и измените **HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32** раздел реестра для сопоставления правильный путь.
+ Так как бизнес-объекта будут установлены в каталоге Windows\System32\Occache по умолчанию, переместите его в папку Windows\System32 и измените **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** раздел реестра для сопоставления правильный путь.
 
 
 

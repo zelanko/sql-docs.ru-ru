@@ -243,7 +243,7 @@ ms.lasthandoff: 09/13/2017
 
     ![службы ssRS-remove старого rvcontrol элементов](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Щелкните правой кнопкой мыши в любом месте на панели инструментов, а затем выберите **Выбор элементов... **.
+3. Щелкните правой кнопкой мыши в любом месте на панели инструментов, а затем выберите **Выбор элементов...** .
 
     ![службы ssRS элемент панели инструментов выберите](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

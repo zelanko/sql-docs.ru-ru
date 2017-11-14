@@ -1,12 +1,15 @@
 ---
 title: "WillChangeRecord и RecordChangeComplete события (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -58,7 +61,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  Когда **RecordChangeComplete** — вызывается, этот параметр имеет значение **adStatusOK** при успешном выполнении операции, которая вызвала событие или для **adStatusErrorsOccurred** Если Сбой операции.  
   
- Прежде чем **WillChangeRecord** возвращает, присвойте этому параметру значение **adStatusCancel** чтобы запросить отмену операции, которое вызвало это событие или установите этот параметр, ** adStatusUnwantedEvent** для предотвращения последующих уведомлений.  
+ Прежде чем **WillChangeRecord** возвращает, присвойте этому параметру значение **adStatusCancel** чтобы запросить отмену операции, которое вызвало это событие или установите этот параметр,  **adStatusUnwantedEvent** для предотвращения последующих уведомлений.  
   
  Прежде чем **RecordChangeComplete** возвращает, присвойте этому параметру значение **adStatusUnwantedEvent** для предотвращения последующих уведомлений.  
   

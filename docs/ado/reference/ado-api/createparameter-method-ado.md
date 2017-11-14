@@ -1,12 +1,15 @@
 ---
 title: "Метод CreateParameter (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -62,7 +65,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
  Этот метод не добавляет автоматически **параметр** объект **параметры** коллекцию [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Это позволяет задать дополнительные свойства которого ADO значения будет проверена при присоединении **параметр** в коллекцию.  
   
- Если указать тип данных переменной длины в *тип* аргумент, необходимо либо передать *размер* аргумент или набор [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md) свойство **параметр ** объекта перед его добавлением **параметры** коллекции; в противном случае возникает ошибка.  
+ Если указать тип данных переменной длины в *тип* аргумент, необходимо либо передать *размер* аргумент или набор [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md) свойство **параметр**  объекта перед его добавлением **параметры** коллекции; в противном случае возникает ошибка.  
   
  При указании типа numeric (**adNumeric** или **adDecimal**) в *тип* аргумента, то необходимо также задать [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства.  
   

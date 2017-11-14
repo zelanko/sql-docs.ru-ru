@@ -1,12 +1,15 @@
 ---
 title: "Метод CancelUpdate (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -44,7 +47,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  При добавлении новой строки при вызове **CancelUpdate** метод, текущая строка становится строка, которая была текущей до [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) вызова.  
   
- Если в режим редактирования и требуется перемещение текущей записи (например, с помощью [переместить](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), или [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы), можно использовать ** CancelUpdate** к отмене всех ожидающих изменений. Может потребоваться в случае, если обновление успешно не могут быть зарегистрированы в источник данных. Например, попытка удаления будет закрыто, происходит сбой из-за нарушения ссылочной целостности **записей** в режиме редактирования после вызова [удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
+ Если в режим редактирования и требуется перемещение текущей записи (например, с помощью [переместить](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), или [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы), можно использовать  **CancelUpdate** к отмене всех ожидающих изменений. Может потребоваться в случае, если обновление успешно не могут быть зарегистрированы в источник данных. Например, попытка удаления будет закрыто, происходит сбой из-за нарушения ссылочной целостности **записей** в режиме редактирования после вызова [удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
 ## <a name="record"></a>Записей  
  **CancelUpdate** метод отменяет все ожидающие операции вставки или удаления [поле](../../../ado/reference/ado-api/field-object.md) объектов и отменяет ожидающие обновления существующих полей и восстанавливает их исходные значения. [Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойства всех полей в **поля** коллекции задано значение **adFieldOK**.  

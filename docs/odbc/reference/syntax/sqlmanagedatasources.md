@@ -54,7 +54,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources** возвращает FALSE, если *hwnd* не является допустимым дескриптором окна. В противном случае возвращает значение TRUE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLManageDataSources** возвращает значение FALSE, связанный с ним * \*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены * \*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
+ Когда **SQLManageDataSources** возвращает значение FALSE, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Description|  
 |---------------------|-----------|-----------------|  

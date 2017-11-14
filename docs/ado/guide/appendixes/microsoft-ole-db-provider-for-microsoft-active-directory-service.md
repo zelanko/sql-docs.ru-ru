@@ -1,12 +1,15 @@
 ---
 title: "Поставщик Microsoft OLE DB для службы Microsoft Active Directory | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -90,7 +93,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>Поведение набора записей  
  В следующих таблицах перечислены возможности, доступные в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект открыт с помощью этого поставщика. Только тип статического курсора (**adOpenStatic**) доступен.  
   
- Дополнительные сведения о **записей** поведение конфигурации поставщика, запустите [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод и перечисление [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию ** Набор записей** для определения того, присутствуют ли динамические свойства от поставщика.  
+ Дополнительные сведения о **записей** поведение конфигурации поставщика, запустите [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод и перечисление [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию  **Набор записей** для определения того, присутствуют ли динамические свойства от поставщика.  
   
  **Доступность стандартных свойств набора записей ADO:**  
   

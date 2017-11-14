@@ -82,7 +82,7 @@ shutdown /r /t 1
  До версии 4.0 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], требовалось Добавление имени сервера к параметру UserId в строке подключения. Например, user@servername. Начиная с версии 4.0 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], нет необходимости для добавления @servername к параметру UserId в строке подключения.  
   
  Для использования шифрования необходимо задать hostNameInCertificate  
- При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true**. (Если имя сервера в строке подключения указано *shortName*.* имя_домена*, задайте **hostNameInCertificate** свойства \*.* имя_домена*.)  
+ При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true**. (Если имя сервера в строке подключения указано *shortName*. *имя_домена*, задайте **hostNameInCertificate** свойства \*. *имя_домена*.)  
   
  Например:  
   

@@ -85,23 +85,23 @@ ALTER SERVER AUDIT audit_name
  FILEPATH **= "***os_file_path***"**  
  Путь следа аудита. Имя файла формируется на основе имени аудита и его идентификатора GUID.  
   
- Параметр MAXSIZE ** = ** *max_size*  
+ Параметр MAXSIZE  **=**  *max_size*  
  Задает максимальный размер, до которого может увеличиваться файл аудита. *Max_size* значение должно быть целое число, за которым следует **МБ**, **ГБ**, **ТБ**, или **неограниченное количество**. Минимальный размер, который можно указать для *max_size* 2 **МБ** , максимальное — 2 147 483 647 **ТБ**. Когда **неограниченное количество** указан, файл будет увеличиваться до заполнения диска. Указав значение менее 2 МБ вызывает ошибку MSG_MAXSIZE_TOO_SMALL. Значение по умолчанию — **неограниченное количество**.  
   
- MAX_ROLLOVER_FILES ** = ** *целое* | **без ограничений**  
+ MAX_ROLLOVER_FILES  **=**  *целое* | **без ограничений**  
  Задает максимальное число файлов, которые хранятся в файловой системе. Если установлено значение max_rollover_files = 0, отсутствует ограничение на количество файлов продолжения, которые создаются. Значение по умолчанию — 0. Максимальное число файлов, которое можно указать, составляет 2 147 483 647.  
   
  MAX_FILES =*целое число со знаком*  
  Задает максимальное число файлов аудита, которые могут быть созданы. Не наведите курсор на первый файл при достижении этого предела. При достижении предела MAX_FILES любое действие, которое вызывает дополнительных событий аудита для создаваемого завершается с ошибкой.  
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ПАРАМЕТР RESERVE_DISK_SPACE ** = ** {ON | {OFF}  
+ ПАРАМЕТР RESERVE_DISK_SPACE  **=**  {ON | {OFF}  
  Этот параметр заранее размещает на диске файл в соответствии со значением MAXSIZE. Применяется, только если значение MAXSIZE не равно UNLIMITED. Значение по умолчанию — OFF.  
   
- QUEUE_DELAY ** = ** *целое число со знаком*  
+ QUEUE_DELAY  **=**  *целое число со знаком*  
  Определяет задержку в миллисекундах, после которой продолжается выполнение действий аудита. Значение 0 соответствует синхронной доставке. Минимальное значение задаваемой задержки запроса составляет 1000 (1 секунда), и это значение используется по умолчанию. Максимальное значение составляет 2 147 483 647 (2 147 483,647 секунд или 24 дня, 20 часов, 31 минута и 23,647 секунд). Если указано недопустимое значение, возникает ошибка MSG_INVALID_QUEUE_DELAY.  
   
- ON_FAILURE ** = ** {ПРОДОЛЖИТЬ | ЗАВЕРШЕНИЕ РАБОТЫ | FAIL_OPERATION}  
+ ON_FAILURE  **=**  {ПРОДОЛЖИТЬ | ЗАВЕРШЕНИЕ РАБОТЫ | FAIL_OPERATION}  
  Указывает, будет ли экземпляр, выполняющий запись в целевой объект, вызывать ошибку, продолжать работу или остановится, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может выполнить запись в журнал аудита.  
   
  CONTINUE  
@@ -114,7 +114,7 @@ SHUTDOWN
  Действия с базой данных завершаются ошибкой, если они вызывают события аудита. Действия, которые не вызывают события аудита, можно продолжить, но могут быть отсутствуют события аудита. Аудит продолжает попытки регистрации событий и возобновляется, если причина сбоя будет устранена. Используйте этот параметр, если обеспечение полного аудита более важно, чем полный доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
  **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
   
- СОСТОЯНИЕ ** = ** {ON | {OFF}  
+ СОСТОЯНИЕ  **=**  {ON | {OFF}  
  Включает или отключает аудит из сбора записей. При изменении состояния работающего аудита (из ON в OFF) создается запись аудита об остановке аудита, об остановившем аудит участнике и времени остановки аудита.  
   
  Параметр MODIFY NAME = *new_audit_name*  
@@ -125,7 +125,7 @@ SHUTDOWN
  **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  event_field_name  
- Имя поля события, которое идентифицирует источник предиката. Поля аудита описаны в [sys.fn_get_audit_file & #40; Transact-SQL & #41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Аудиту могут быть подвержены все поля, за исключением `file_name` и `audit_file_offset`.  
+ Имя поля события, которое идентифицирует источник предиката. Поля аудита описаны в [sys.fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Аудиту могут быть подвержены все поля, за исключением `file_name` и `audit_file_offset`.  
  **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  number  
@@ -189,7 +189,7 @@ GO
 ```  
   
 ### <a name="c-changing-a-server-audit-where-clause"></a>В. Изменение предложения WHERE аудита сервера  
- В следующем примере изменяется where предложения, созданная в примере из [CREATE SERVER AUDIT & #40; Transact-SQL & #41; ](../../t-sql/statements/create-server-audit-transact-sql.md). Новое предложение WHERE фильтрует события определяемой пользователем идентификатором 27.  
+ В следующем примере изменяется where предложения, созданная в примере из [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). Новое предложение WHERE фильтрует события определяемой пользователем идентификатором 27.  
   
 ```tsql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
@@ -228,23 +228,23 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [DROP SERVER AUDIT & #40; Transact-SQL & #41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [Создание СПЕЦИФИКАЦИИ АУДИТА сервера & #40; Transact-SQL & #41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION & #40; Transact-SQL & #41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION & #40; Transact-SQL & #41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА базы данных & #40; Transact-SQL & #41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION & #40; Transact-SQL & #41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА базы данных & #40; Transact-SQL & #41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION & #40; Transact-SQL & #41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file & #40; Transact-SQL & #41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_audits & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [Создание СПЕЦИФИКАЦИИ АУДИТА сервера &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [Создание аудита сервера и спецификации аудита сервера](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

@@ -52,7 +52,7 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- В предыдущем трех случаях *ConnectionHandle* аргументу присвоено значение в *hdbc*, *атрибута* аргументу присвоено значение в *fOption *и *ValuePtr* аргумент имеет значение совпадает со значением *pvParam*.  
+ В предыдущем трех случаях *ConnectionHandle* аргументу присвоено значение в *hdbc*, *атрибута* аргументу присвоено значение в *fOption* и *ValuePtr* аргумент имеет значение совпадает со значением *pvParam*.  
   
  Для параметров соединения строкой, определяемой ODBC задает диспетчер драйверов *BufferLength* аргумента в вызове **SQLGetConnectAttr** в стандартных максимальную длину (SQL_MAX_OPTION_STRING_LENGTH); параметра соединения нестроковые *BufferLength* имеет значение 0.  
   

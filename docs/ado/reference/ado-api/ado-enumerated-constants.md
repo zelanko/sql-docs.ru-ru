@@ -1,12 +1,15 @@
 ---
 title: "ADO перечисляемые константы | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/09/2017
 |[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)|Указывает закладка, показывающая, где должен начать операцию.|  
 |[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|Указывает, как следует интерпретировать аргумент команды.|  
 |[CompareEnum](../../../ado/reference/ado-api/compareenum.md)|Указывает относительную позицию двух записей, представленный закладок.|  
-|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Задает разрешения, доступные для изменения данных в **подключения**, откройте **запись**, или указания значения для **режим** свойство ** Запись** и **поток** объектов.|  
+|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Задает разрешения, доступные для изменения данных в **подключения**, откройте **запись**, или указания значения для **режим** свойство  **Запись** и **поток** объектов.|  
 |[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)|Указывает ли **откройте** метод **подключения** должен возвращать объект после (синхронно) или до (асинхронно) подключения.|  
 |[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)|Указывает, следует ли отображать диалоговое окно для запроса отсутствуют параметры при открытии соединения с источником данных ODBC.|  
 |[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|Задает поведение **CopyRecord** метод.|  

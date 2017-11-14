@@ -1,12 +1,15 @@
 ---
 title: "Обязательные параметры клиента | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Задать [CursorLocation свойство (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient**.  
   
--   Укажите имя обработчика, используемого в [DataControl объекта (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **обработчик** свойства, или [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) строка подключения объекта»** Обработчик**=» ключевое слово. (Невозможно задать обработчик в **подключения** строка подключения объекта.)  
+-   Укажите имя обработчика, используемого в [DataControl объекта (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **обработчик** свойства, или [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) строка подключения объекта» **Обработчик**=» ключевое слово. (Невозможно задать обработчик в **подключения** строка подключения объекта.)  
   
  Служб удаленных рабочих СТОЛОВ предоставляет обработчик по умолчанию на сервере с именем **MSDFMAP. Обработчик**. (Файл настроек по умолчанию называется MSDFMAP. INI).  
   
@@ -71,7 +74,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Укажите либо [свойства обработчика (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) свойства или ключевым словом; [свойства поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) свойства или ключевого слова; и *CustomerById* и * CustomerDatabase* идентификаторы. Затем откройте **записей** объекта  
+ Укажите либо [свойства обработчика (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) свойства или ключевым словом; [свойства поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) свойства или ключевого слова; и *CustomerById* и  *CustomerDatabase* идентификаторы. Затем откройте **записей** объекта  
   
  службы Reporting Services. Откройте «CustomerById(4)», «обработчик = MSDFMAP. Обработчик;» & _  
   

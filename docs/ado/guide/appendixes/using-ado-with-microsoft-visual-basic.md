@@ -1,12 +1,15 @@
 ---
 title: "Использование ADO с помощью Microsoft Visual Basic | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/09/2017
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>Для ссылки ADO из Microsoft Visual Basic
 
-1.  В Visual Basic из **проекта** последовательно выберите пункты **ссылок... **.
+1.  В Visual Basic из **проекта** последовательно выберите пункты **ссылок...** .
 
 2.  Выберите **Microsoft ActiveX Data Objects x.x библиотеки** из списка. Убедитесь, что по крайней мере также выбираются следующие библиотеки:
 
@@ -55,7 +58,7 @@ ms.lasthandoff: 09/09/2017
 
 1.  В Microsoft Access, выберите или создайте модуль из **модули** вкладке **базы данных** окна.
 
-2.  На **средства** последовательно выберите пункты **ссылок... **.
+2.  На **средства** последовательно выберите пункты **ссылок...** .
 
 3.  Выберите **Microsoft ActiveX Data Objects x.x библиотеки** из списка. Убедитесь, что по крайней мере также выбираются следующие библиотеки:
 

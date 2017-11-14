@@ -74,7 +74,7 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString** возвращает целочисленное значение, указывающее число считанных символов.  
   
 ## <a name="diagnostics"></a>Диагностика  
- При вызове **SQLGetPrivateProfileString** происходит сбой, связанный с ним * \*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены * \*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
+ При вызове **SQLGetPrivateProfileString** происходит сбой, связанный с ним  *\*pfErrorCode* значение можно получить путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и описание каждого из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Description|  
 |---------------------|-----------|-----------------|  

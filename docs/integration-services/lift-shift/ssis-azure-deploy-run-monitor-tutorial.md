@@ -36,7 +36,7 @@ ms.lasthandoff: 10/13/2017
 
 2. **Подключиться к серверу**. В **соединение с сервером** диалоговом окне введите следующие сведения:
 
-   | Настройка       | Предлагаемое значение | Description | 
+   | Настройка       | Предлагаемое значение | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. Если требуется указать имя сервера, см. раздел [подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md). |
@@ -112,7 +112,7 @@ Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Na
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Получить состояние выполнения интеграции служб SSIS Azure
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntimeStatus -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

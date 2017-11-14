@@ -1,12 +1,15 @@
 ---
 title: "Свойство ConnectionString (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -48,7 +51,7 @@ ms.lasthandoff: 09/09/2017
   
  После установки **ConnectionString** свойств и открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, поставщик может изменить содержимое свойства, например, путем сопоставления имен аргументов определяемых ADO для их эквиваленты для конкретного поставщика.  
   
- **ConnectionString** свойство автоматически наследует значение, используемое для *ConnectionString* аргумент [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод, поэтому переопределение текущего ** ConnectionString** во время **откройте** вызова метода.  
+ **ConnectionString** свойство автоматически наследует значение, используемое для *ConnectionString* аргумент [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод, поэтому переопределение текущего  **ConnectionString** во время **откройте** вызова метода.  
   
  Поскольку *имя файла* аргумент указывает ADO для загрузки связанного поставщика, невозможно передать оба *поставщика* и *имя файла* аргументы.  
   

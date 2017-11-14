@@ -1,12 +1,15 @@
 ---
 title: "Изменение данных | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -48,7 +51,7 @@ ms.lasthandoff: 09/09/2017
 'EndEditIntro  
 ```  
   
- Важные изменения в код включает в себя параметр **CursorLocation** свойство **подключения** равное **adUseClient** в * GetNewConnection* (показано в следующем примере), функции, которая указывает на использование клиентских курсоров. Дополнительные сведения о различиях между клиентских и серверных курсоров см. в разделе [основные сведения о курсорах и блокировок](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ Важные изменения в код включает в себя параметр **CursorLocation** свойство **подключения** равное **adUseClient** в  *GetNewConnection* (показано в следующем примере), функции, которая указывает на использование клиентских курсоров. Дополнительные сведения о различиях между клиентских и серверных курсоров см. в разделе [основные сведения о курсорах и блокировок](../../../ado/guide/data/understanding-cursors-and-locks.md).  
   
  **CursorLocation** свойства **adUseClient** параметр перемещает положение курсора из источника данных (SQL Server, в данном случае) расположение кода клиента (настольной рабочей станции). Этот параметр принудительно ADO вызываемый обработчик курсора клиента для OLE DB для клиента, чтобы создавать и управлять ими курсор.  
   

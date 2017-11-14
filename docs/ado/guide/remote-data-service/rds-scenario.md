@@ -1,12 +1,15 @@
 ---
 title: "Сценарии служб удаленных рабочих СТОЛОВ | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/09/2017
   
  Этот сценарий предполагает, что вы знаете, как использовать основные теги разметки HTML, методы привязки данных используйте DHTML и программы с элементами управления ActiveX.  
   
- После установки пакета SDK в каталоге SDK на samples\dataaccess\rds\AddressBook\AddressBook.asp можно найти полный исходный код для примера приложения адресной книги. Чтобы просмотреть сценарий адресную книгу, введите в Internet Explorer 4.0 или более поздней версии, * *http://*веб-сервере*/RDS/AddressBook/AddressBook.asp** где *веб-сервере* имя присвоенное Windows NT 4.0 или Windows 2000, веб-сервере, на котором работает сервер Internet Information Services (IIS) и ASP.  
+ После установки пакета SDK в каталоге SDK на samples\dataaccess\rds\AddressBook\AddressBook.asp можно найти полный исходный код для примера приложения адресной книги. Чтобы просмотреть сценарий адресную книгу, введите в Internet Explorer 4.0 или более поздней версии,  **http://*веб-сервере*/RDS/AddressBook/AddressBook.asp** где *веб-сервере* имя присвоенное Windows NT 4.0 или Windows 2000, веб-сервере, на котором работает сервер Internet Information Services (IIS) и ASP.  
   
 ## <a name="introduction-to-address-book"></a>Введение в адресную книгу  
  Образец приложения адресная книга предоставляет простой online адресной книги, можно использовать для публикации каталога с возможностью поиска через интрасеть. Адресная книга разработан таким образом, пользователь может вводить строку поиска в одно или несколько полей для запроса сведений о сотрудниках. Чтобы показать основные возможности удаленной службы данных, пример приложения намеренно хранится на небольшой минимальное число объектов и полей.  

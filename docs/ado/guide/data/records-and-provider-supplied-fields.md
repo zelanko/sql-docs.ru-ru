@@ -1,12 +1,15 @@
 ---
 title: "Записи и поля поставщик предоставил | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="records-and-provider-supplied-fields"></a>Записи и поля поставщик предоставил
 При [запись](../../../ado/reference/ado-api/record-object-ado.md) объект открыт, его источник может быть текущей строки открытого [записей](../../../ado/reference/ado-api/recordset-object-ado.md), абсолютный URL-адрес или относительный URL-адрес в сочетании с открытым [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта .  
   
- Если **запись** открывается из **записей**, **запись** объекта [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекция будет содержать все поля из ** Набор записей**, а также все поля, добавленные с базовым поставщиком.  
+ Если **запись** открывается из **записей**, **запись** объекта [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекция будет содержать все поля из  **Набор записей**, а также все поля, добавленные с базовым поставщиком.  
   
  Поставщик может вставить дополнительные поля, используемые в качестве дополнительных характеристики **записи**. В результате **запись** имеют уникальные поля не в **записей** как целое или любой **запись** производным от другой строке **записей**.  
   

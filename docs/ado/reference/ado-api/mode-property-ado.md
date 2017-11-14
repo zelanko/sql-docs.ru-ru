@@ -1,12 +1,15 @@
 ---
 title: "Свойство режима (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 Указывает имеющиеся права на изменение данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [запись](../../../ado/reference/ado-api/record-object-ado.md), или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение. Значение по умолчанию для **подключения** — **adModeUnknown**. Значение по умолчанию для **запись** объект **adModeRead**. Значение по умолчанию для **поток** связанные с базового источника (открыть URL-адрес как источник или как значение по умолчанию **поток** из **запись**) — ** adModeRead**. Значение по умолчанию для **поток** не связан с основной источник (экземпляр в памяти) — **adModeUnknown**.  
+ Возвращает или задает [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение. Значение по умолчанию для **подключения** — **adModeUnknown**. Значение по умолчанию для **запись** объект **adModeRead**. Значение по умолчанию для **поток** связанные с базового источника (открыть URL-адрес как источник или как значение по умолчанию **поток** из **запись**) —  **adModeRead**. Значение по умолчанию для **поток** не связан с основной источник (экземпляр в памяти) — **adModeUnknown**.  
   
 ## <a name="remarks"></a>Замечания  
  Используйте **режим** свойство, чтобы задать или получить разрешения на доступ используется поставщиком для текущего соединения. Можно задать **режим** свойства только если **подключения** объект закрыт.  

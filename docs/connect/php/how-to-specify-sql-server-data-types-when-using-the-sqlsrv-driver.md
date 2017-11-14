@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  Создайте массив *$params* , используемый при подготовке или выполнении запроса. Обратите внимание, что при указании типа данных SQL Server каждый элемент массива *$params* также должен быть массивом.  
   
-4.  Укажите требуемый тип данных SQL Server, используя соответствующую **SQLSRV_SQLTYPE_\* ** константы в качестве четвертого параметра в каждом подмассиве массива *$params* массива. Полный список **SQLSRV_SQLTYPE_\* ** константы, в разделе SQLTYPEs [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Например, в следующем коде *$changeDate*, *$rate*и *$payFrequency* соответственно указаны как типы SQL Server **datetime**, **money**и **tinyint** в массиве *$params* . Так как для параметра *$employeeId* тип SQL Server не указан и параметр инициализируется целым числом, используется тип SQL Server по умолчанию **integer** .  
+4.  Укажите требуемый тип данных SQL Server, используя соответствующую **SQLSRV_SQLTYPE_\***  константы в качестве четвертого параметра в каждом подмассиве массива *$params* массива. Полный список **SQLSRV_SQLTYPE_\***  константы, в разделе SQLTYPEs [константы &#40; Драйверы Майкрософт для PHP для SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Например, в следующем коде *$changeDate*, *$rate*и *$payFrequency* соответственно указаны как типы SQL Server **datetime**, **money**и **tinyint** в массиве *$params* . Так как для параметра *$employeeId* тип SQL Server не указан и параметр инициализируется целым числом, используется тип SQL Server по умолчанию **integer** .  
   
     ```  
     $employeeId = 5;  

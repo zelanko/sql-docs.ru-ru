@@ -31,7 +31,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40identity-transact-sql"></a>& #x 40; & #x 40; УДОСТОВЕРЕНИЕ (Transact-SQL)
+# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40; УДОСТОВЕРЕНИЕ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Системная функция, которая возвращает значение идентификатора, вставленное последним.  
@@ -89,7 +89,7 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT (Transact-SQL)](../../t-sql/functions/ident-current-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [SCOPE_IDENTITY &#40; Transact-SQL &#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
+ [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
   
   

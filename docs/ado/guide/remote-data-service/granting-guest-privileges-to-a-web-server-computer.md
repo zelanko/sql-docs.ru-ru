@@ -1,12 +1,15 @@
 ---
 title: "Предоставление прав гостевой веб-сервере | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 4.  В **свойства гости** диалоговое окно, нажмите кнопку **добавить**.  
   
-5.  Если учетной записи анонимного Web server не отображается в списке в **Выбор пользователей или групп** диалогового окна введите его имя (IUSR_*ComputerName*) в нижней пустое поле и нажмите кнопку **добавить **.  
+5.  Если учетной записи анонимного Web server не отображается в списке в **Выбор пользователей или групп** диалогового окна введите его имя (IUSR_*ComputerName*) в нижней пустое поле и нажмите кнопку **добавить** .  
   
 6.  Нажмите кнопку **ОК**.
 

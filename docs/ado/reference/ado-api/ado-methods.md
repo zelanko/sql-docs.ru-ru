@@ -1,12 +1,15 @@
 ---
 title: "Методы ADO | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 |[BeginTrans CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Управляет обработки в пределах транзакций **подключения** объекта следующим образом:<br /><br /> **BeginTrans** — начинает новую транзакцию.<br /><br /> **CommitTrans** — сохраняет все изменения и завершает текущую транзакцию. Он также может запустить новую транзакцию.<br /><br /> **RollbackTrans** — отменяет все изменения и завершает текущую транзакцию. Он также может запустить новую транзакцию.|  
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Отменяет выполнение ожидающих вызова асинхронного метода.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Отменяет ожидающие пакетного обновления.|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Отменяет все изменения, внесенные в текущем или новом строку **записей** объекта, или **поля** коллекцию **запись** объект перед вызовом метода ** Обновление** метод.|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Отменяет все изменения, внесенные в текущем или новом строку **записей** объекта, или **поля** коллекцию **запись** объект перед вызовом метода  **Обновление** метод.|  
 |[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|Удаляет все **ошибка** объектов из **ошибки** коллекции.|  
 |[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Создает дубликат **записей** объекта из существующего **записей** объекта. При необходимости указывает точную копию только для чтения.|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Закрывает открытый объект и все зависимые объекты.|  

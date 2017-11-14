@@ -46,11 +46,11 @@ ms.lasthandoff: 09/09/2017
   
  Библиотека курсоров поддерживает только значение атрибута инструкции SQL_ATTR_SIMULATE_CURSOR SQL_SC_NON_UNIQUE.  
   
- Несмотря на то, что спецификации ODBC поддерживает вызовы **SQLSetStmtAttr** с атрибутами SQL_ATTR_PARAM_BIND_TYPE или SQL_ATTR_ROW_BIND_TYPE после **SQLFetch** или **SQLFetchScroll ** был вызван, курсор не содержит библиотеки. Прежде чем его можно изменить тип привязки в библиотеку курсоров, приложение должно закрыть курсор. Библиотека курсоров поддерживает изменение SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR и атрибуты инструкции SQL_ATTR_PARAMS_PROCESSED_PTR, когда курсор открыт.  
+ Несмотря на то, что спецификации ODBC поддерживает вызовы **SQLSetStmtAttr** с атрибутами SQL_ATTR_PARAM_BIND_TYPE или SQL_ATTR_ROW_BIND_TYPE после **SQLFetch** или **SQLFetchScroll**  был вызван, курсор не содержит библиотеки. Прежде чем его можно изменить тип привязки в библиотеку курсоров, приложение должно закрыть курсор. Библиотека курсоров поддерживает изменение SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR и атрибуты инструкции SQL_ATTR_PARAMS_PROCESSED_PTR, когда курсор открыт.  
   
  Приложение может вызвать **SQLSetStmtAttr** с **атрибута** из SQL_ATTR_ROW_ARRAY_SIZE, чтобы изменить размер набора строк при открытом курсоре. Новый размер набора строк вступят в силу при очередном **SQLFetchScroll** или **SQLFetch** вызывается.  
   
- Библиотека курсоров поддерживает настройку SQL_ATTR_PARAM_BIND_OFFSET_PTR или SQL_ATTR_ROW_BIND_OFFSET_PTR атрибут инструкции для включения привязки смещения. Смещение привязки не будет использоваться для выполнения запросов к **SQLFetch** при использовании библиотеки курсоров ODBC 2.* x* драйвера.  
+ Библиотека курсоров поддерживает настройку SQL_ATTR_PARAM_BIND_OFFSET_PTR или SQL_ATTR_ROW_BIND_OFFSET_PTR атрибут инструкции для включения привязки смещения. Смещение привязки не будет использоваться для выполнения запросов к **SQLFetch** при использовании библиотеки курсоров ODBC 2. *x* драйвера.  
   
  Библиотека курсоров поддерживает присвоение атрибуту инструкции SQL_ATTR_USE_BOOKMARKS SQL_UB_VARIABLE.
 
