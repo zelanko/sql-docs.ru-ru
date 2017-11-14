@@ -1,0 +1,11 @@
+# [Дата и время усовершенствования (OLE DB)](date-and-time-improvements-ole-db.md)
+
+# [Сравнимость для IRowsetFind](comparability-for-irowsetfind.md)
+# [Преобразования (OLE DB)](conversions-ole-db.md)
+# [Преобразования, выполняемые от клиента к серверу](conversions-performed-from-client-to-server.md)
+# [Преобразования, выполняемые с сервера клиенту](conversions-performed-from-server-to-client.md)
+# [Поддержка типов данных даты OLE DB и улучшения времени](data-type-support-for-ole-db-date-and-time-improvements.md)
+# [Метаданные - даты и времени и наборы строк схемы](metadata-date-and-time-and-schema-rowsets.md)
+# [Метаданные - параметра и набор строк](metadata-parameter-and-rowset.md)
+# [Новых функций даты и времени с предыдущими версиями SQL Server (OLE DB)](new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)
+# [Поддержка API-Интерфейс OLE DB для даты и времени усовершенствования](ole-db-api-support-for-date-and-time-enhancements.md)

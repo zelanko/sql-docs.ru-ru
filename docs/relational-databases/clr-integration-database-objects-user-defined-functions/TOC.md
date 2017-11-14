@@ -1,0 +1,6 @@
+# [Определяемые пользователем функции CLR](clr-user-defined-functions.md)
+# [Скалярные функции CLR](clr-scalar-valued-functions.md)
+# [Возвращающие табличные значения функции CLR](clr-table-valued-functions.md)
+# [Среда CLR определяемого пользователем агрегата - вызов функций](clr-user-defined-aggregate-invoking-functions.md)
+# [Среда CLR определяемых пользователем статистических функций - требования](clr-user-defined-aggregates-requirements.md)
+# [Определяемые пользователем статистические функции CLR](clr-user-defined-aggregates.md)

@@ -1,0 +1,5 @@
+# [Выполнение запросов инструкции (ODBC)](executing-queries-how-to-topics-odbc.md)
+# [Непосредственное выполнение инструкции (ODBC)](execute-a-statement-directly-odbc.md)
+# [Подготовка и выполнение инструкции (ODBC)](prepare-and-execute-a-statement-odbc.md)
+# [Указание параметров курсора (ODBC)](set-cursor-options-odbc.md)
+# [Использование инструкции (ODBC)](use-a-statement-odbc.md)

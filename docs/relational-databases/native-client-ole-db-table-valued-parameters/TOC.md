@@ -1,0 +1,10 @@
+# [Возвращающие табличные значения параметров (OLE DB)](table-valued-parameters-ole-db.md)
+
+# [Выполнение команд, содержащих возвращающие табличные значения параметров](executing-commands-containing-table-valued-parameters.md)
+# [Вставка данных в возвращающих табличные значения параметров](inserting-data-into-table-valued-parameters.md)
+# [Поддержка типов табличное значение параметра OLE DB (методы)](ole-db-table-valued-parameter-type-support-methods.md)
+# [Поддержка типов табличное значение параметра OLE DB (свойства)](ole-db-table-valued-parameter-type-support-properties.md)
+# [Поддержка типов табличное значение параметра OLE DB](ole-db-table-valued-parameter-type-support.md)
+# [Наборы строк схемы изменены табличное значение параметров OLE DB](schema-rowsets-changed-for-ole-db-table-valued-parameters.md)
+# [Создание набора строк возвращающего табличное значение параметра](table-valued-parameter-rowset-creation.md)
+# [Обнаружение типа возвращающего табличное значение параметра](table-valued-parameter-type-discovery.md)
