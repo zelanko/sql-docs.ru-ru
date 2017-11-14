@@ -1,0 +1,7 @@
+# [Класс ClientNetLibInfo](clientnetlibinfo-class.md)
+# [Свойство Date (класс ClientNetLibInfo)](date-property-clientnetlibinfo-class.md)
+# [Свойство FileName (класс ClientNetLibInfo)](filename-property-clientnetlibinfo-class.md)
+# [Свойство ProtocolDisplayName (класс ClientNetLibInfo)](protocoldisplayname-property-clientnetlibinfo-class.md)
+# [Свойство ProtocolName (класс ClientNetLibInfo)](protocolname-property-clientnetlibinfo-class.md)
+# [Свойство Size (класс ClientNetLibInfo)](size-property-clientnetlibinfo-class.md)
+# [Свойство Version (класс ClientNetLibInfo)](version-property-clientnetlibinfo-class.md)
